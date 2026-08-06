@@ -67,7 +67,7 @@ _COVER_FACE_ESSAY = re.compile(
 )
 # Live host for runtime URL checks only — never write this into git batch JSON.
 # Prefer PUBLIC_SITE_URL hostname; fallback for offline validate when env empty.
-_LEGACY_REFERENCE_HOST_FALLBACK = "mayai.ru"
+_LEGACY_REFERENCE_HOST_FALLBACK = ""  # no personal default host
 MCP_RESOLUTION = "2K"
 KIE_IMAGE_MODEL = "gpt-image-2-image-to-image"
 

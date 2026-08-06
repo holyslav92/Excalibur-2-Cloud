@@ -269,6 +269,7 @@ def main() -> int:
         "Артур Хорошев",
         "Хорошев",
         "blog.tema.ru",
+        "mayai.ru",
     )
     privacy_hits: list[str] = []
     scan_roots = [

@@ -16,7 +16,7 @@ Hard gate перед image API:
 
 - `quad-mcp-batch.json` пересобран текущим run, а не взят из старого article artifact
 - `validation.prompt_chars <= 3500`
-- `reference_url_hosted` содержит `mayai.ru`; `files.catbox.moe` запрещён для reference
+- `reference_url_hosted` — URL тенанта или локальный asset; сторонние временные хосты (catbox и т.п.) запрещены для reference
 - `jobs[0].mcp_args.resolution == "2K"`
 
 | Панель | Роль | Герой |
