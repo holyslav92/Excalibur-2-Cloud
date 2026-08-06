@@ -26,7 +26,7 @@ description: Pick topic from live channel/news hype, not invented series clones.
    стать темой-обзором, не только очередной how-to про Cursor.
 2. Telegram-каналы / ленты по нише — минимум:
    - `(scout signal — см. tenant-config.scout_signal_urls)` или каналы из tenant-config.cta_links / scout_signal_urls (смысл/тема, **не копипаст**
-     подачи и фраз Артура; он не писатель статей). Если прямой ссылкой
+     подачи чужого канала; сигнал ≠ стиль статьи). Если прямой ссылкой
      недоступно — бери свежий SERP по «CTA тенанта автоматизация нейросети
      Make Cursor AI».
    - 1–2 **чужих** канала/медиа про Cursor / Make / AI-агентов / автоматизацию

@@ -23,7 +23,8 @@ Skills: `setup-excalibur-blog`, `setup-voice-excalibur-blog`, `setup-visual-exca
 - Пока `complete=false` — Director не публикует.
 - Повторный Setup Voice/Visual допускается (обновление слога/визуала).
 
-## Inbox
+## Inbox / log
 
+- Ответы человека (без секретов): `memory/setup/answers.md`
 - Тексты/ссылки слога: `memory/setup/voice-inbox/`
 - Картинки/референсы: `memory/setup/visual-inbox/` (+ копируются в `memory/cover/assets/`)

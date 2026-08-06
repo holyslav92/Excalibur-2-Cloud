@@ -148,7 +148,7 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
         "canvas_file": "cover/canvas-quad.png",
         "layout": "2x2",
         "pipeline": "quad_canvas_1x_image_api",
-        "style_preset": "pink_cat_digital_collage_ru",
+        "style_preset": "tenant_unset",
         "style_file": "memory/cover/quad-style-pink-cat-digital-collage-ru.json",
         "blog_hero": "memory/cover/blog-hero.json",
         "inline_types_catalog": "memory/cover/inline-visual-types.json",

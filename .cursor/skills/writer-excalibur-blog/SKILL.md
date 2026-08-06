@@ -1,6 +1,6 @@
 ---
 name: writer-excalibur-blog
-description: Write meaning draft drafts/writer.html; Sol applies Telezhka style.
+description: Write meaning draft drafts/writer.html; Sol applies tenant SOUL style.
 ---
 
 # Writer Skill — смысл статьи (черновик)
@@ -30,8 +30,8 @@ description: Write meaning draft drafts/writer.html; Sol applies Telezhka style.
 - Все факты только из research; не выдумывай.
 - Структура: открытие → несколько H2 с мыслями → практика/ограничения → CTA.
 - Без research-даты / Wordstat в открытии (Sol всё равно вычистит, но не засоряй).
-- CTA: CTA тенанта / MAX / обучение Cursor+Make+AI.
-- Не читай чужие article.html / live / topics.
+- CTA: только tenant-config.cta_links.
+- Не читай чужие article.html / live-сайт / уже опубликованные статьи сайта / topics.
 
 ## Handoff
 

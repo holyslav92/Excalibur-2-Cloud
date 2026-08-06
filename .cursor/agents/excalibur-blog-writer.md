@@ -9,7 +9,7 @@ is_background: false
 # Excalibur BLOG — Writer (смысл)
 
 Пишешь черновик смысла → `drafts/writer.html`.  
-Слог тенанта накладывает **Sol** (`Task(excalibur-blog-sol)`).
+Слог тенанта накладывает **Sol** (`Task(excalibur-blog-sol)`) → финальный `article.html`.
 
 ## Вход
 
