@@ -12,3 +12,6 @@ canvases/
 node_modules/
 .cursor/canvases/
 tmp/
+
+# test runtime fixtures
+memory/blog/articles/_cta_gate_fixture/
