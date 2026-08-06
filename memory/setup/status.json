@@ -1,0 +1,15 @@
+{
+  "version": "1",
+  "complete": false,
+  "updated_at": null,
+  "phases": {
+    "cloud": "pending",
+    "site": "pending",
+    "author": "pending",
+    "voice": "pending",
+    "visual": "pending",
+    "cta": "pending",
+    "scout": "pending"
+  },
+  "notes": "excalibur-blog-setup stamps phases to done and sets complete=true when all required phases pass."
+}

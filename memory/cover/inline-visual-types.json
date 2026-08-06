@@ -1,0 +1,12 @@
+{
+  "status": "SETUP_REQUIRED",
+  "comment": "Inline panel type catalog. Setup Visual may extend. Cover agent picks per H2.",
+  "types": [
+    "table",
+    "workflow",
+    "checklist",
+    "ui_explanation",
+    "fact_card",
+    "comparison"
+  ]
+}

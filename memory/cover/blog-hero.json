@@ -1,0 +1,18 @@
+{
+  "hero_id": "blog-host",
+  "status": "SETUP_REQUIRED",
+  "name_ru": "",
+  "cover_mode": "unset",
+  "reference_image": "",
+  "reference_notes": "Filled by excalibur-blog-setup-visual. No default personal face or outfit lock.",
+  "visual_lock": {},
+  "outfit_rule": "",
+  "prompt_fragment": "",
+  "cover_hook_rules": [
+    "cover_hook invents Cover agent from reader_pain; no script templates",
+    "meme_caption_ru always empty unless tenant explicitly allows"
+  ],
+  "reference_url_hosted": "",
+  "reference_url_source": "",
+  "reference_url_updated_at": null
+}
