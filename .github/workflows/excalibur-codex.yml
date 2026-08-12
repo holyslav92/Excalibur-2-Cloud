@@ -5,6 +5,11 @@ on:
     # 12:00, 14:00, 16:00, 18:00 at UTC+5.
     - cron: '0 7,9,11,13 * * *'
   workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Тема статьи (необязательно)'
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -73,7 +78,7 @@ jobs:
             --ephemeral \
             --output-last-message "$RUNNER_TEMP/codex-last-message.txt" \
             -m "$ANYMODEL_MODEL" \
-            "Read AGENTS.md, CLOUD-AUTOMATION.md, shared/pipeline-canon.json, and shared/tenant-config.json. If setup is incomplete, stop with a clear error. Otherwise run the complete Excalibur pipeline for one new article: doctor, today, Scout if needed, research_start, Research, Title, Writer, Sol, pipeline canon and all gates, cover/schema/indexer, then publish using the existing SFTP publish script. Use the repository's existing format and contracts. Do not put secrets in files or output. Use PUBLIC_SITE_URL from the environment. Finish only after reporting the exact result and any blocker." \
+            "Read AGENTS.md, CLOUD-AUTOMATION.md, shared/pipeline-canon.json, and shared/tenant-config.json. If setup is incomplete, stop with a clear error. Otherwise run the complete Excalibur pipeline for one new article on the requested topic: ${{ inputs.topic }}. Use Scout only when no topic was provided. Run research_start, Research, Title, Writer, Sol, pipeline canon and all gates, cover/schema/indexer, then publish using the existing SFTP publish script. Use the repository's existing format and contracts. Do not put secrets in files or output. Use PUBLIC_SITE_URL from the environment. Finish only after reporting the exact result and any blocker." \
             2>&1 | tee "$RUNNER_TEMP/codex-run.log"
 
       - name: Commit generated safe artifacts
@@ -85,4 +90,3 @@ jobs:
             git commit -m "chore: automated Excalibur article run"
             git push origin HEAD:main
           fi
-
