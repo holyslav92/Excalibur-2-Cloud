@@ -4,7 +4,7 @@ The workflow installs Codex CLI and configures it as an OpenAI-compatible
 custom provider using the Responses wire protocol:
 
 - `base_url`: `https://anymodel.org/v1`
-- model: `gpt-5.6-sol`
+- model: `gpt-5.6-terra`
 - auth: `OPENAI_API_KEY` populated at runtime from `ANYMODEL_API_KEY`
 
 Add only this repository secret:

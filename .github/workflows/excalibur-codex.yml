@@ -21,7 +21,7 @@ jobs:
       PUBLIC_SITE_URL: https://tymenrieltor.ru
       EXCALIBUR_BLOG_ALLOW_PUBLISH: yes
       ANYMODEL_BASE_URL: https://anymodel.org/v1
-      ANYMODEL_MODEL: gpt-5.6-sol
+      ANYMODEL_MODEL: gpt-5.6-terra
       FTP_ROOT: .
 
     steps:
