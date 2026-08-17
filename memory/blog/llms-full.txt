@@ -1,10 +1,10 @@
-# Maya AI — Excalibur BLOG - Full LLM Knowledge Base
+# The Риэлтор - Full LLM Knowledge Base
 This file contains full plain-text articles optimized for AI reasoning and semantic search.
 
 ---
 
 ## Эскроу в Тюмени защищает деньги, а не срок — ДДУ читают до брони
-- **URL**: {{SITE_BASE}}/eskrou-v-tyumeni-proveryayut-do-broni/
+- **URL**: {{SITE_BASE}}/blog/novostrojki/eskrou-v-tyumeni-proveryayut-do-broni/
 - **Summary**: Эскроу в Тюмени защищает деньги, а не срок — ДДУ читают до брони
 
 В шоуруме тюменской новостройки разговор идёт по одному сценарию. Планировка на экране, кофе, менеджер доводит до фразы, после которой человек выдыхает: «У нас эскроу, всё по 214-ФЗ, деньги застрахованы». Через двадцать минут покупатель платит за бронь и уезжает домой с буклетом. Не с проектом договора — с буклетом.

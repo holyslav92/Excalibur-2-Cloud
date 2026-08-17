@@ -3,11 +3,11 @@
   "@graph": [
     {
       "@type": "BlogPosting",
-      "@id": "{{SITE_BASE}}/eskrou-v-tyumeni-proveryayut-do-broni/",
-      "url": "{{SITE_BASE}}/eskrou-v-tyumeni-proveryayut-do-broni/",
+      "@id": "{{SITE_BASE}}/blog/novostrojki/eskrou-v-tyumeni-proveryayut-do-broni/",
+      "url": "{{SITE_BASE}}/blog/novostrojki/eskrou-v-tyumeni-proveryayut-do-broni/",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{SITE_BASE}}/eskrou-v-tyumeni-proveryayut-do-broni/"
+        "@id": "{{SITE_BASE}}/blog/novostrojki/eskrou-v-tyumeni-proveryayut-do-broni/"
       },
       "headline": "Эскроу в Тюмени защищает деньги, а не срок — ДДУ читают до брони",
       "name": "Эскроу в Тюмени защищает деньги, а не срок — ДДУ читают до брони",
@@ -136,9 +136,9 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "{{SITE_BASE}}/eskrou-v-tyumeni-proveryayut-do-broni/#faq",
+      "@id": "{{SITE_BASE}}/blog/novostrojki/eskrou-v-tyumeni-proveryayut-do-broni/#faq",
       "isPartOf": {
-        "@id": "{{SITE_BASE}}/eskrou-v-tyumeni-proveryayut-do-broni/"
+        "@id": "{{SITE_BASE}}/blog/novostrojki/eskrou-v-tyumeni-proveryayut-do-broni/"
       },
       "inLanguage": "ru-RU",
       "mainEntity": [

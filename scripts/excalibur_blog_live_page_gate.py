@@ -158,7 +158,7 @@ def inspect(
         if probe and probe not in plain:
             errors.append("expected article body probe not found on live page")
     entry = re.search(
-        r"<div\b[^>]*id=[\"']article-content[\"'][^>]*>(.*?)</div>",
+        r"<div\b[^>]*(?:id=[\"']article-content[\"']|class=[\"'][^\"']*\barticle-page__content\b)[^>]*>(.*?)</div>",
         html,
         flags=re.I | re.S,
     )
@@ -186,7 +186,7 @@ def inspect(
                     errors.append(f"article image unavailable: {src.group(1)}")
 
     featured = re.search(
-        r"<div\b[^>]*class=[\"'][^\"']*post-thumbnail[^\"']*[\"'][^>]*>(.*?)</div>",
+        r"<(?:div|figure)\b[^>]*class=[\"'][^\"']*(?:post-thumbnail|article-page__cover)[^\"']*[\"'][^>]*>(.*?)</(?:div|figure)>",
         html,
         flags=re.I | re.S,
     )

@@ -22,7 +22,7 @@ def project_root() -> Path:
     return Path(__file__).resolve().parents[1]
 
 
-def validate_schema_text(text: str) -> list[str]:
+def validate_schema_text(text: str, *, allow_blog_path: bool = False) -> list[str]:
     errors: list[str] = []
     if not text.strip():
         errors.append("schema.jsonld is empty")
@@ -37,7 +37,7 @@ def validate_schema_text(text: str) -> list[str]:
             f"schema.jsonld contains literal {REDACTED_LITERAL!r}; "
             f"use {SITE_BASE_PLACEHOLDER} (git-safe) or live PUBLIC_SITE_URL only in runtime expand, never copy from old schemas/tool display"
         )
-    if re.search(r"(?:\{\{SITE_BASE\}\}|https?://[^\"']+)/blog/", text):
+    if not allow_blog_path and re.search(r"(?:\{\{SITE_BASE\}\}|https?://[^\"']+)/blog/", text):
         errors.append("schema article URLs must be {{SITE_BASE}}/<slug>/, not /blog/<slug>/")
     return errors
 
@@ -173,7 +173,17 @@ def main() -> int:
         text = ""
     else:
         text = schema_path.read_text(encoding="utf-8")
-        errors.extend(validate_schema_text(text))
+        meta: dict[str, Any] = {}
+        meta_path = article_dir / "article.meta.json"
+        if meta_path.is_file():
+            try:
+                loaded_meta = json.loads(meta_path.read_text(encoding="utf-8"))
+                if isinstance(loaded_meta, dict):
+                    meta = loaded_meta
+            except json.JSONDecodeError:
+                pass
+        allow_blog_path = str(meta.get("canonical_path") or "").startswith("/blog/")
+        errors.extend(validate_schema_text(text, allow_blog_path=allow_blog_path))
         try:
             schema_data = json.loads(text)
         except json.JSONDecodeError:
@@ -186,16 +196,17 @@ def main() -> int:
         ]
         if "BlogPosting" not in types:
             errors.append("schema.jsonld must contain BlogPosting")
-        meta: dict[str, Any] = {}
-        meta_path = article_dir / "article.meta.json"
-        if meta_path.is_file():
-            try:
-                loaded_meta = json.loads(meta_path.read_text(encoding="utf-8"))
-                if isinstance(loaded_meta, dict):
-                    meta = loaded_meta
-            except json.JSONDecodeError:
-                pass
         slug = str(meta.get("slug") or article_dir.name.split("-", 1)[-1]).strip("/")
+        canon = str(meta.get("canonical_path") or "").strip()
+        if canon:
+            if not canon.startswith("/"):
+                canon = "/" + canon
+            if not canon.endswith("/"):
+                canon = canon + "/"
+            expected_url = f"{SITE_BASE_PLACEHOLDER}{canon}"
+        else:
+            expected_suffix = f"/{slug}/"
+            expected_url = f"{SITE_BASE_PLACEHOLDER}{expected_suffix}"
         posting_urls: list[str] = []
         for item in objects:
             if str(item.get("@type") or "") != "BlogPosting":
@@ -208,8 +219,6 @@ def main() -> int:
                     posting_urls.extend(
                         str(value.get(k) or "") for k in ("@id", "url")
                     )
-        expected_suffix = f"/{slug}/"
-        expected_url = f"{SITE_BASE_PLACEHOLDER}{expected_suffix}"
         if expected_url not in posting_urls:
             errors.append(
                 f"BlogPosting URL/@id must include exact canonical {expected_url}"

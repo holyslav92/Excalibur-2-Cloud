@@ -513,6 +513,14 @@ def load_article(article_dir: Path, *, public_base: str = "") -> dict:
         "cover_title": cover_media["title"],
         "schema_jsonld": schema_raw,
         "topic_id": meta.get("topic_id", ""),
+        "category_ids": [
+            int(x)
+            for x in (
+                meta.get("wp_category_ids")
+                or ([meta.get("wp_category_id")] if meta.get("wp_category_id") else [])
+            )
+            if str(x).strip().isdigit()
+        ],
         "inline_images": inline_images,
         "site_base_expanded": bool(public_base) and SITE_BASE_PLACEHOLDER not in schema_raw,
     }
@@ -599,6 +607,10 @@ if (is_wp_error($post_id)) {{
     echo 'ERR post: ' . $post_id->get_error_message() . PHP_EOL;
     exit(1);
 }}
+if (!empty($p['category_ids']) && is_array($p['category_ids'])) {{
+    wp_set_post_categories($post_id, array_map('intval', $p['category_ids']));
+    echo 'OK categories=' . implode(',', array_map('intval', $p['category_ids'])) . PHP_EOL;
+}}
 echo 'OK post=' . $post_id . ' slug=' . $slug . PHP_EOL;
 
 if (!empty($p['cover_b64'])) {{
@@ -643,7 +655,10 @@ if (!empty($p['cover_b64'])) {{
 }}
 
 if (!empty($p['schema_jsonld'])) {{
-    update_post_meta($post_id, '_excalibur_blog_schema_jsonld', wp_slash($p['schema_jsonld']));
+    $schema_slashed = wp_slash($p['schema_jsonld']);
+    update_post_meta($post_id, '_excalibur_blog_schema_jsonld', $schema_slashed);
+    // Тема tymenrieltor-light читает schema из _teya_schema_jsonld.
+    update_post_meta($post_id, '_teya_schema_jsonld', $schema_slashed);
     echo 'OK schema_meta=1' . PHP_EOL;
 }}
 
