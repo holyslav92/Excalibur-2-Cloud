@@ -1,7 +1,7 @@
 ---
 name: excalibur-blog-writer
 description: "Writer: meaning draft drafts/writer.html; Sol styles for publish."
-model: inherit
+model: claude-opus-5-thinking-high
 readonly: false
 is_background: false
 ---

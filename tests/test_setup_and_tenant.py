@@ -24,6 +24,9 @@ class SetupTenantTests(unittest.TestCase):
         self.assertFalse(tenant.get("cta_required"))
         self.assertIn("https://t.me/Tyumen_Rieltor", tenant.get("cta_links") or [])
         self.assertTrue(tenant.get("dzen_rf_pack"))
+        self.assertEqual(tenant.get("image_provider"), "derouter")
+        self.assertEqual(tenant.get("inline_panel_count"), 7)
+        self.assertEqual(tenant.get("article_text_model"), "claude-opus-5-thinking-high")
 
     def test_setup_agents_present(self) -> None:
         for rel in (

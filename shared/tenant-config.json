@@ -16,6 +16,10 @@
     "https://t.me/Tyumen_Rieltor"
   ],
   "cover_mode": "host_reference",
+  "image_provider": "derouter",
+  "cover_pipeline": "dual_2k_quad_8_panels",
+  "inline_panel_count": 7,
+  "article_text_model": "claude-opus-5-thinking-high",
   "dzen_rf_pack": true,
   "scout_signal_urls": [
     "https://dzen.ru/holyslav",

@@ -26,12 +26,14 @@ TYPE_PRIORITY = [
     "tool_screenshot",
     "infographic_card",
 ]
-DEFAULT_SLOT_MAP = {
-    "cover": "top_left",
-    "inline_1": "top_right",
-    "inline_2": "bottom_left",
-    "inline_3": "bottom_right",
-}
+from excalibur_blog_cover_slots import (
+    ALL_SLOT_KEYS,
+    CANVAS_FILES,
+    DEFAULT_SLOT_MAP,
+    INLINE_SLOT_KEYS,
+    MIN_H2_FOR_INLINE,
+    PIPELINE_ID,
+)
 
 
 def project_root() -> Path:
@@ -94,9 +96,9 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
     meta = load_json(meta_path) if meta_path.is_file() else {}
     types_catalog = load_json(root / "memory/cover/inline-visual-types.json")
     h2s = extract_h2_titles(article_dir / "article.html")
-    if len(h2s) < 3:
+    if len(h2s) < MIN_H2_FOR_INLINE:
         raise ValueError(
-            f"article needs at least 3 real H2 anchors for inline-01..03; found {len(h2s)}"
+            f"article needs at least {MIN_H2_FOR_INLINE} real H2 anchors for inline-01..07; found {len(h2s)}"
         )
     topic_id = meta.get("topic_id") or article_dir.name.split("-")[0]
 
@@ -117,7 +119,7 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
 
     used: set[str] = set()
     slots: dict[str, Any] = {"cover": cover}
-    for idx, slot_key in enumerate(("inline_1", "inline_2", "inline_3"), start=1):
+    for idx, slot_key in enumerate(INLINE_SLOT_KEYS, start=1):
         h2 = h2s[idx - 1] if idx - 1 < len(h2s) else f"Секция {idx}"
         old = ((preserve or {}).get("slots") or {}).get(slot_key) or {}
         visual_type = str(old.get("visual_type") or "").strip() or pick_visual_type(
@@ -145,9 +147,9 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
 
     return {
         "topic_id": topic_id,
-        "canvas_file": "cover/canvas-quad.png",
+        "canvas_files": list(CANVAS_FILES),
         "layout": "2x2",
-        "pipeline": "quad_canvas_1x_image_api",
+        "pipeline": PIPELINE_ID,
         "style_preset": "tenant_unset",
         "style_file": "memory/cover/quad-style-pink-cat-digital-collage-ru.json",
         "blog_hero": "memory/cover/blog-hero.json",
@@ -156,9 +158,8 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
         "cover_hook_highlight": highlight,
         "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
         "mcp_note": (
-            "PRIMARY: ONE Kie API job via excalibur_blog_kie_gpt_image2_api.py "
-            "(KIE_API_KEY). Cover agent must invent cover_hook + all scene_hint/alt "
-            "before --write-batch. White hoodie lock = blog-hero.json only."
+            "PRIMARY: MCP DEROOTER, два 2K кадра (8 панелей). "
+            "Kie не использовать. Cover agent invents cover_hook + scene_hint/alt."
         ),
         "slots": slots,
         "cover_keys_ru": list((preserve or {}).get("cover_keys_ru") or []),
@@ -193,7 +194,7 @@ def main() -> int:
     missing = []
     if not manifest.get("cover_hook"):
         missing.append("cover_hook")
-    for key in ("cover", "inline_1", "inline_2", "inline_3"):
+    for key in ALL_SLOT_KEYS:
         slot = manifest["slots"][key]
         if not slot.get("scene_hint"):
             missing.append(f"{key}.scene_hint")
@@ -201,10 +202,10 @@ def main() -> int:
             missing.append(f"{key}.alt")
     if missing:
         print(
-            "WARN agent must invent before Kie: " + ", ".join(missing),
+            "WARN agent must invent before Derouter: " + ", ".join(missing),
             file=sys.stderr,
         )
-    for key in ("inline_1", "inline_2", "inline_3"):
+    for key in INLINE_SLOT_KEYS:
         s = manifest["slots"][key]
         print(f"  {key}: {s['visual_type']} -> {s['h2_anchor']}")
     return 0

@@ -77,7 +77,7 @@ def validate_cover_text(data: dict) -> dict:
         _check_text(errors, error_fields, "sticky", sticky, min_words=1, max_words=5, max_chars=32)
 
     labels = data.get("inline_labels") or {}
-    for key in ("inline_1", "inline_2", "inline_3"):
+    for key in [f"inline_{i}" for i in range(1, 8)]:
         panel_labels = labels.get(key) or []
         if not isinstance(panel_labels, list) or not (2 <= len(panel_labels) <= 6):
             errors.append(f"{key}: labels must be 2-6 short strings, got {panel_labels!r}")
