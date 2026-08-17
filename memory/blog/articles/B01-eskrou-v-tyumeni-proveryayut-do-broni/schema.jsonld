@@ -1,0 +1,196 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/eskrou-v-tyumeni-proveryayut-do-broni/",
+      "url": "{{SITE_BASE}}/eskrou-v-tyumeni-proveryayut-do-broni/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/eskrou-v-tyumeni-proveryayut-do-broni/"
+      },
+      "headline": "Эскроу в Тюмени защищает деньги, а не срок — ДДУ читают до брони",
+      "name": "Эскроу в Тюмени защищает деньги, а не срок — ДДУ читают до брони",
+      "description": "Счёт эскроу держит сумму дольщика до ввода дома, но срок передачи, площадь, качество и плата за бронь живут вне его. Что проверить в проекте ДДУ и ЕИСЖС до оплаты брони в Тюмени.",
+      "inLanguage": "ru-RU",
+      "datePublished": "2026-08-17",
+      "dateModified": "2026-08-17",
+      "wordCount": 2584,
+      "isAccessibleForFree": true,
+      "articleSection": "Новостройки и ДДУ",
+      "keywords": [
+        "эскроу",
+        "ДДУ",
+        "214-ФЗ",
+        "новостройки Тюмени",
+        "договор бронирования",
+        "срок передачи объекта",
+        "ЕИСЖС"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Счёт эскроу в долевом строительстве"
+        },
+        {
+          "@type": "Thing",
+          "name": "Договор участия в долевом строительстве"
+        }
+      ],
+      "contentLocation": {
+        "@type": "Place",
+        "name": "Тюмень"
+      },
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#person"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "creator": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#person"
+      },
+      "reviewedBy": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#person"
+      },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Статья 13.2 Федерального закона № 177-ФЗ «О страховании вкладов»",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_45769/6b586a628dc7fb0aac4275fa2f11e5282ccdded3/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Постановление Правительства РФ от 30 декабря 2025 года № 2227",
+          "url": "https://www.garant.ru/products/ipo/prime/doc/413296336/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Ключевая ставка Банка России",
+          "url": "https://www.cbr.ru/hd_base/keyrate/"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#person",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "description": "Риэлтор в Тюмени: сделки лично в городе; по России и за рубежом — с партнёрскими агентствами, сопровождение от консультации до ключей или Росреестра.",
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "image": "{{SITE_BASE}}/wp-content/themes/tymenrieltor-light/assets/images/portrait.jpg",
+      "telephone": "+7 922 001 6505",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Тюмень",
+        "streetAddress": "ул. Свердлова, д. 5, корп. 2",
+        "addressCountry": "RU"
+      },
+      "knowsAbout": [
+        "вторичка Тюмени",
+        "новостройки и эскроу",
+        "аренда",
+        "дома и коттеджи Тюмень/Тобольск",
+        "коммерческая недвижимость",
+        "ипотека и маткапитал",
+        "юридическое сопровождение ДКП/ДДУ"
+      ],
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "{{SITE_BASE}}/",
+        "{{SITE_BASE}}/rieltor-tyumen/",
+        "{{SITE_BASE}}/kontakty/",
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://t.me/holyslav92",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "legalName": "ИП Шакин Святослав Сергеевич",
+      "url": "{{SITE_BASE}}/",
+      "telephone": "+7 922 001 6505",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Тюмень и Тюменская область"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Тюмень",
+        "streetAddress": "ул. Свердлова, д. 5, корп. 2",
+        "addressCountry": "RU"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://t.me/holyslav92",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "{{SITE_BASE}}/eskrou-v-tyumeni-proveryayut-do-broni/#faq",
+      "isPartOf": {
+        "@id": "{{SITE_BASE}}/eskrou-v-tyumeni-proveryayut-do-broni/"
+      },
+      "inLanguage": "ru-RU",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Эскроу гарантирует, что дом достроят?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Счёт эскроу гарантирует, что застройщик не получит ваши деньги до разрешения на ввод в эксплуатацию, а вы получите их обратно при расторжении договора. Сроки, качество и сам факт достройки он не обеспечивает — за это отвечает застройщик по ДДУ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько вернут, если банк лишится лицензии?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "100 % остатка на счёте эскроу, но не более 10 млн рублей (ст. 13.2 ФЗ-177). Лимит 30 млн — это внесённый законопроект со сроком вступления с 1 января 2027 года и только для страховых случаев после этой даты. Сегодня работают 10 млн."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Начисляются ли проценты на деньги, лежащие на эскроу?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Проценты не начисляются, вознаграждение банку тоже не выплачивается (ст. 15.5 ч. 5). При расторжении договора возвращается номинал внесённой суммы."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Вернут ли деньги за бронирование?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Зависит от формулировки в договоре бронирования. «Оплата услуги» — вернуть почти невозможно. «Аванс в счёт цены договора» — возврат реален. В цену ДДУ плата за бронь не засчитывается: вся цена договора обязана идти на счёт эскроу."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли расторгнуть ДДУ, если застройщик прислал письмо о переносе срока?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Само по себе письмо о переносе, когда фактической просрочки ещё нет, основанием для одностороннего отказа не является: изменить срок можно только соглашением сторон, а спорить придётся в суде. Односторонний отказ работает при просрочке передачи объекта более чем на два месяца (ст. 9 ч. 1 п. 1)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как проверить банк, в котором открывают счёт эскроу?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "По проекту ДДУ и карточке жилого комплекса в ЕИСЖС. Перечень банков по постановлению № 697 Банк России с 1 января 2026 года не публикует, поэтому совет «сверься со списком на сайте ЦБ» больше не работает."
+          }
+        }
+      ]
+    }
+  ]
+}
