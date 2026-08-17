@@ -1,0 +1,107 @@
+{
+  "topic_id": "B01",
+  "canvas_files": [
+    "cover/canvas-quad-01.png",
+    "cover/canvas-quad-02.png"
+  ],
+  "layout": "2x2",
+  "pipeline": "dual_2k_quad_8_panels",
+  "cover_hook": "Эскроу защищает деньги, а не срок",
+  "cover_hook_highlight": "деньги",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "alt": "Иллюстрация: эскроу защищает деньги, а не срок сдачи дома",
+      "scene_hint": "Host LARGE left navy blazer; tiny key-house right; #FFF",
+      "meme_caption_ru": "",
+      "sticky": "договор читаем до брони"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Что счёт эскроу делает на самом деле",
+      "visual_type": "infographic_card",
+      "scene_hint": "checklist card no faces #FFF",
+      "alt": "Схема: Что счёт эскроу делает на самом деле",
+      "labels": [
+        "деньги после регистрации",
+        "лежат до ввода дома",
+        "стройку банк не проверяет"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Страховка — 10 миллионов, и это цифра на сегодня",
+      "visual_type": "infographic_card",
+      "scene_hint": "checklist card no faces #FFF",
+      "alt": "Схема: Страховка — 10 миллионов, и это цифра на сегодня",
+      "labels": [
+        "сегодня 10 миллионов",
+        "если банк лишат лицензии",
+        "лимит поднимут в 2027"
+      ]
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Проценты не начисляются: вернут номинал",
+      "visual_type": "infographic_card",
+      "scene_hint": "checklist card no faces #FFF",
+      "alt": "Схема: Проценты не начисляются: вернут номинал",
+      "labels": [
+        "процентов банк не платит",
+        "вернут ту же сумму",
+        "ипотеку платите вы"
+      ]
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "В договоре два срока, а отвечают только за один",
+      "visual_type": "infographic_card",
+      "scene_hint": "checklist card no faces #FFF",
+      "alt": "Схема: В договоре два срока, а отвечают только за один",
+      "labels": [
+        "срок ввода дома",
+        "срок передачи ключей",
+        "отвечают за передачу",
+        "спрашивайте про вторую дату"
+      ]
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Корпус, этаж, площадь и качество живут в тексте договора",
+      "visual_type": "infographic_card",
+      "scene_hint": "checklist card no faces #FFF",
+      "alt": "Схема: Корпус, этаж, площадь и качество живут в тексте договора",
+      "labels": [
+        "корпус и этаж",
+        "площадь: допуск до 5%",
+        "гарантия пять лет",
+        "банк это не читает"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Деньги за бронь на эскроу не попадают",
+      "visual_type": "infographic_card",
+      "scene_hint": "checklist card no faces #FFF",
+      "alt": "Схема: Деньги за бронь на эскроу не попадают",
+      "labels": [
+        "бронь мимо эскроу",
+        "услуга — не вернут",
+        "аванс — вернут"
+      ]
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что поднять до брони и где это лежит",
+      "visual_type": "infographic_card",
+      "scene_hint": "checklist card no faces #FFF",
+      "alt": "Схема: Что поднять до брони и где это лежит",
+      "labels": [
+        "наш.дом.рф",
+        "проектная декларация",
+        "архив версий",
+        "проект ДДУ до оплаты"
+      ]
+    }
+  }
+}
