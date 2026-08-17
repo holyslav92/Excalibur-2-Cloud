@@ -9,3 +9,4 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 
 | topic_id | slug | title | status |
 |----------|------|-------|--------|
+| B01 | eskrou-v-tyumeni-proveryayut-do-broni | Эскроу в Тюмени защищает деньги, а не срок — ДДУ читают до брони | published |

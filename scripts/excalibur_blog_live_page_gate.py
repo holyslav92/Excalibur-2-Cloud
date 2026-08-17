@@ -27,7 +27,9 @@ _SHARE_CHROME_SPLIT = (
     r"(?:<!--\s*Share\s+buttons\s*-->|"
     r"<div\b[^>]*\bclass=[\"'][^\"']*\barticle-share\b|"
     r"<aside\b[^>]*\bclass=[\"'][^\"']*\barticle-share\b|"
-    r"<section\b[^>]*\bclass=[\"'][^\"']*\barticle-share\b)"
+    r"<section\b[^>]*\bclass=[\"'][^\"']*\barticle-share\b|"
+    r"<footer\b[^>]*\bclass=[\"'][^\"']*\barticle-page__footer\b|"
+    r"<div\b[^>]*\bclass=[\"'][^\"']*\barticle-page__footer-cta\b)"
 )
 
 
