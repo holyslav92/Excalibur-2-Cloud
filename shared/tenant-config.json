@@ -1,16 +1,27 @@
 {
   "version": "1.0",
   "setup_complete": false,
-  "brand_name": "",
+  "brand_name": "The Риэлтор",
   "language": "ru",
-  "niche": "",
-  "content_goals": [],
-  "author_id": "",
+  "niche": "Недвижимость Тюмени: вторичка, новостройки, аренда, дома, коммерция; сделки по России и за рубежом через партнёров",
+  "content_goals": [
+    "Разборы рисков сделки до аванса (ЕГРН, доверенность, маткапитал, детские доли, эскроу)",
+    "Практические чеклисты покупки, продажи и аренды в Тюмени",
+    "Лиды на консультацию личного риэлтора Святослава Шакина",
+    "Публикации в блог сайта и зеркало на Дзен «Советы от риелтора»"
+  ],
+  "author_id": "svyatoslav-shakin",
   "cta_required": false,
-  "cta_links": [],
-  "cover_mode": "unset",
+  "cta_links": [
+    "https://t.me/Tyumen_Rieltor"
+  ],
+  "cover_mode": "host_reference",
   "dzen_rf_pack": true,
-  "scout_signal_urls": [],
+  "scout_signal_urls": [
+    "https://dzen.ru/holyslav",
+    "{{SITE_BASE}}/blog/",
+    "https://t.me/holyslav92"
+  ],
   "interlink_old_articles": false,
   "style_files": {
     "soul": "shared/SOUL.md",
@@ -20,7 +31,7 @@
   "cover_files": {
     "hero": "memory/cover/blog-hero.json",
     "design_code": "memory/cover/cover-design-code.json",
-    "style_preset": ""
+    "style_preset": "memory/cover/quad-style-the-rieltor.json"
   },
-  "comment": "Filled by excalibur-blog-setup. Pipeline agents read this file. Do not put secrets here."
+  "comment": "Filled by excalibur-blog-setup from tymenrieltor.ru. Pipeline agents read this file. Do not put secrets here. Live hostname only via PUBLIC_SITE_URL → {{SITE_BASE}}."
 }
