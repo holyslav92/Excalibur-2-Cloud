@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "article_dir": "memory/blog/articles/B01-eskrou-v-tyumeni-proveryayut-do-broni",
+  "cta_required": false,
+  "required": [
+    "https://t.me/Tyumen_Rieltor"
+  ],
+  "present": {
+    "https://t.me/Tyumen_Rieltor": true
+  },
+  "errors": []
+}

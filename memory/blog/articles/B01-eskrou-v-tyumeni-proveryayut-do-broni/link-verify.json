@@ -1,0 +1,62 @@
+{
+  "source": "memory/blog/articles/B01-eskrou-v-tyumeni-proveryayut-do-broni/article.html",
+  "total_links": 6,
+  "failed_count": 0,
+  "verdict": "pass",
+  "links": [
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_45769/6b586a628dc7fb0aac4275fa2f11e5282ccdded3/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
+      "url": "https://t-l.ru/406060.html",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
+      "url": "https://vsluh.ru/novosti/nedvizhimost/tyumenskiy-rosreestr-zaregistriroval-za-polgoda-bolee-9-tys-dogovorov-dolevogo-uchastiya_428383/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
+      "url": "https://www.garant.ru/products/ipo/prime/doc/413296336/",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
+      "url": "https://www.cbr.ru/hd_base/keyrate/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
+      "url": "https://t.me/Tyumen_Rieltor",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    }
+  ]
+}

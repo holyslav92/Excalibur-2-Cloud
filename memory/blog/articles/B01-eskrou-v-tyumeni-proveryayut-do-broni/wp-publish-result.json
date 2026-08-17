@@ -1,0 +1,28 @@
+{
+  "slug": "eskrou-v-tyumeni-proveryayut-do-broni",
+  "topic_id": "B01",
+  "permalink": "{{SITE_BASE}}/blog/novostrojki/eskrou-v-tyumeni-proveryayut-do-broni/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B01-eskrou-v-tyumeni-proveryayut-do-broni/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 99270,
+    "detected_format": "png"
+  },
+  "raw_output": "OK categories=38\nOK post=8688 slug=eskrou-v-tyumeni-proveryayut-do-broni\nOK featured_image=8689\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=8690 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/eskrou-v-tyumeni-proveryayut-do-broni-inline-01.png\nOK inline_alt=8690\nOK inline_caption=8690\nOK inline_description=8690\nOK inline_image_upload=8691 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/eskrou-v-tyumeni-proveryayut-do-broni-inline-02.png\nOK inline_alt=8691\nOK inline_caption=8691\nOK inline_description=8691\nOK inline_image_upload=8692 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/eskrou-v-tyumeni-proveryayut-do-broni-inline-03.png\nOK inline_alt=8692\nOK inline_caption=8692\nOK inline_description=8692\nOK inline_image_upload=8693 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/eskrou-v-tyumeni-proveryayut-do-broni-inline-04.png\nOK inline_alt=8693\nOK inline_caption=8693\nOK inline_description=8693\nOK inline_image_upload=8694 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/eskrou-v-tyumeni-proveryayut-do-broni-inline-05.png\nOK inline_alt=8694\nOK inline_caption=8694\nOK inline_description=8694\nOK inline_image_upload=8695 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/eskrou-v-tyumeni-proveryayut-do-broni-inline-06.png\nOK inline_alt=8695\nOK inline_caption=8695\nOK inline_description=8695\nOK inline_image_upload=8696 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/eskrou-v-tyumeni-proveryayut-do-broni-inline-07.png\nOK inline_alt=8696\nOK inline_caption=8696\nOK inline_description=8696\npermalink={{SITE_BASE}}/blog/novostrojki/eskrou-v-tyumeni-proveryayut-do-broni/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "post_id": 8688,
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/novostrojki/eskrou-v-tyumeni-proveryayut-do-broni/",
+    "errors": []
+  }
+}

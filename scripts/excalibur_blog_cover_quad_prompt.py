@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build MCP prompt + batch for ONE quad canvas (4 panels) with hero i2i reference."""
+"""Build Derouter MCP prompts + batch for TWO 2K quad canvases (8 panels)."""
 
 from __future__ import annotations
 
@@ -69,7 +69,19 @@ _COVER_FACE_ESSAY = re.compile(
 # Prefer PUBLIC_SITE_URL hostname; fallback for offline validate when env empty.
 _LEGACY_REFERENCE_HOST_FALLBACK = ""  # no personal default host
 MCP_RESOLUTION = "2K"
-KIE_IMAGE_MODEL = "gpt-image-2-image-to-image"
+KIE_IMAGE_MODEL = "unused-kie-disabled"
+
+from excalibur_blog_cover_slots import (
+    ALL_SLOT_KEYS,
+    CANVAS_COUNT,
+    CANVAS_FILES,
+    CANVAS_SLOT_GROUPS,
+    IMAGE_PROVIDER,
+    INLINE_SLOT_KEYS,
+    MCP_SERVER,
+    PIPELINE_ID,
+    RESOLUTION,
+)
 
 
 def required_reference_host_runtime() -> str:
@@ -120,7 +132,7 @@ def inline_panel_prompt(slot: dict, types_catalog: dict) -> str:
 def warn_long_scene_hints(manifest: dict) -> None:
     """Advisory: long raw scene_hint blows MCP budget; cover face essays omit host."""
     slots = manifest.get("slots") or {}
-    for key in ("cover", "inline_1", "inline_2", "inline_3"):
+    for key in ALL_SLOT_KEYS:
         raw = " ".join(str((slots.get(key) or {}).get("scene_hint") or "").split())
         if not raw:
             continue
@@ -159,7 +171,7 @@ def _topic_blob(manifest: dict, article_dir: Path | None = None) -> str:
         " ".join(str(x) for x in (manifest.get("cover_keys_ru") or [])),
     ]
     slots = manifest.get("slots") or {}
-    for key in ("cover", "inline_1", "inline_2", "inline_3"):
+    for key in ALL_SLOT_KEYS:
         slot = slots.get(key) or {}
         parts.append(str(slot.get("h2_anchor") or ""))
         parts.append(str(slot.get("scene_hint") or ""))
@@ -305,6 +317,7 @@ def build_prompt(
     types_catalog: dict,
     design_code: dict,
     article_dir: Path | None = None,
+    canvas_index: int = 0,
 ) -> str:
     slots = manifest.get("slots") or {}
 
@@ -312,7 +325,7 @@ def build_prompt(
         return slots.get(key) or {}
 
     cover = slot("cover")
-    i1, i2, i3 = slot("inline_1"), slot("inline_2"), slot("inline_3")
+    group = CANVAS_SLOT_GROUPS[canvas_index]
     fact_locks = topic_fact_lock_lines(manifest, article_dir)
     cat_ok = style_allows_cat_stickers(style)
     cat_hero = style_is_situational_cat_hero(style)
@@ -420,14 +433,18 @@ def build_prompt(
         "",
         reference_line,
         "",
-        f'Top-left COVER TEXT LOCK: the ONLY large headline is EXACTLY this Russian sentence: «{cover_hook_text}» — big bold condensed Cyrillic, black #141821, '
-        f'{highlight_rule}; any other large/headline text (especially English like "TOKEN BURN RATE") is FORBIDDEN.{sticky_lock} '
-        "no keyword list card; "
-        f"scene: {compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; {cover_scene_tail}",
+        (
+            f'Top-left COVER TEXT LOCK: the ONLY large headline is EXACTLY this Russian sentence: «{cover_hook_text}» — big bold condensed Cyrillic, black #141821, '
+            f'{highlight_rule}; any other large/headline text (especially English like "TOKEN BURN RATE") is FORBIDDEN.{sticky_lock} '
+            "no keyword list card; "
+            f"scene: {compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; {cover_scene_tail}"
+            if canvas_index == 0
+            else f"Top-left inline: {inline_panel_prompt(slot(group[0]), types_catalog)}"
+        ),
         "",
-        f"Top-right inline: {inline_panel_prompt(i1, types_catalog)}",
-        f"Bottom-left inline: {inline_panel_prompt(i2, types_catalog)}",
-        f"Bottom-right inline: {inline_panel_prompt(i3, types_catalog)}",
+        f"Top-right inline: {inline_panel_prompt(slot(group[1]), types_catalog)}",
+        f"Bottom-left inline: {inline_panel_prompt(slot(group[2]), types_catalog)}",
+        f"Bottom-right inline: {inline_panel_prompt(slot(group[3]), types_catalog)}",
         "",
         inline_suffix,
     ]
@@ -507,19 +524,29 @@ def main() -> int:
             return 1
 
     warn_long_scene_hints(manifest)
-    prompt = build_prompt(
-        manifest, style, hero, types_catalog, design_code, article_dir=article_dir
-    )
-    if not validate_prompt_budget(prompt):
-        return 1
-    prompt_path = article_dir / "cover" / "quad-mcp-prompt.txt"
-    prompt_path.write_text(prompt + "\n", encoding="utf-8")
-    print(f"OK prompt={prompt_path} chars={len(prompt)} max={MAX_MCP_PROMPT_CHARS}")
+    prompts = []
+    for canvas_index in range(CANVAS_COUNT):
+        prompt = build_prompt(
+            manifest,
+            style,
+            hero,
+            types_catalog,
+            design_code,
+            article_dir=article_dir,
+            canvas_index=canvas_index,
+        )
+        if not validate_prompt_budget(prompt):
+            return 1
+        suffix = "" if canvas_index == 0 else f"-{canvas_index + 1:02d}"
+        prompt_path = article_dir / "cover" / f"quad-mcp-prompt{suffix}.txt"
+        if canvas_index == 0:
+            prompt_path = article_dir / "cover" / "quad-mcp-prompt.txt"
+        prompt_path.write_text(prompt + "\n", encoding="utf-8")
+        print(f"OK prompt={prompt_path} chars={len(prompt)} max={MAX_MCP_PROMPT_CHARS}")
+        prompts.append(prompt)
+    (article_dir / "cover" / "quad-mcp-prompt-02.txt").write_text(prompts[1] + "\n", encoding="utf-8")
 
     if args.write_batch:
-        # Cover copy is agent-owned. This script transports the completed
-        # manifest to Kie; it must not evaluate wording or suggest alternatives.
-        cover_slot = (manifest.get("slots") or {}).get("cover") or {}
         hook = str(manifest.get("cover_hook") or "").strip()
         highlight = str(manifest.get("cover_hook_highlight") or "").strip()
         required_errors: list[str] = []
@@ -529,12 +556,11 @@ def main() -> int:
             required_errors.append(
                 "cover_hook_highlight empty — Cover agent must choose it"
             )
-        for key in ("cover", "inline_1", "inline_2", "inline_3"):
+        for key in ALL_SLOT_KEYS:
             slot = (manifest.get("slots") or {}).get(key) or {}
             if not str(slot.get("scene_hint") or "").strip():
                 required_errors.append(
-                    f"{key}.scene_hint empty — Cover agent must invent it "
-                    "(no script templates; situational cat hero invents unique scene)"
+                    f"{key}.scene_hint empty — Cover agent must invent it"
                 )
             if not str(slot.get("alt") or "").strip():
                 required_errors.append(f"{key}.alt empty — Cover agent must invent alt")
@@ -547,79 +573,58 @@ def main() -> int:
             for err in required_errors:
                 print(f"  - {err}", file=sys.stderr)
             return 1
-        api_input = {
-            "prompt": prompt,
-            "input_urls": [batch_ref_url],
-            "aspect_ratio": "16:9",
-            "resolution": MCP_RESOLUTION,
-        }
+        jobs = []
+        for idx, prompt in enumerate(prompts):
+            api_input = {
+                "prompt": prompt,
+                "input_urls": [batch_ref_url],
+                "aspect_ratio": "16:9",
+                "resolution": RESOLUTION,
+            }
+            jobs.append(
+                {
+                    "slot": f"canvas_quad_{idx + 1:02d}",
+                    "canvas_file": CANVAS_FILES[idx],
+                    "panels": list(CANVAS_SLOT_GROUPS[idx]),
+                    "tool": MCP_SERVER,
+                    "note": "Derouter MCP 2K i2i. Два кадра → 8 панелей. Без Kie.",
+                    "mcp_args": {**api_input},
+                }
+            )
         batch = {
-            "pipeline": "quad_canvas_1x_image_api",
+            "pipeline": PIPELINE_ID,
+            "provider": IMAGE_PROVIDER,
+            "mcp_server": MCP_SERVER,
             "reference_url_hosted": batch_ref_url,
             "cover_hero_mode": style.get("cover_hero_mode") or "host",
             "prefer_local_reference": prefer_local_reference,
             "local_reference": local_reference if prefer_local_reference else "",
-            "output_canvas": "cover/canvas-quad.png",
+            "output_canvases": list(CANVAS_FILES),
             "expected_runtime_seconds": 900,
             "preferred_image_flow": {
-                "provider": "kie.ai",
-                "model": KIE_IMAGE_MODEL,
-                "script": "python scripts/excalibur_blog_kie_gpt_image2_api.py --article-dir <article_dir>",
-                "api_key_env": "KIE_API_KEY",
+                "provider": IMAGE_PROVIDER,
+                "mcp_server": MCP_SERVER,
+                "script": "python scripts/excalibur_blog_derouter_image.py --article-dir <article_dir> --url-1 … --url-2 …",
                 "result_path": "cover/quad-mcp-result.json",
                 "apply_script": "python scripts/excalibur_blog_quad_apply.py --article-dir <article_dir> --inject-html",
-                "note": "PRIMARY Cloud path when KIE_API_KEY is set. Do NOT call sync MCP gpt-image-2 first — it often times out (-32001) on 2K i2i. createTask -> recordInfo polls in shell.",
+                "note": "PRIMARY: MCP DEROOTER, ровно 2 jobs 2K. Kie не использовать.",
             },
-            "timeout_policy": {
-                "tool": "gpt-image-2",
-                "timeout_error": "HTTP MCP tool execution failed: MCP error -32001: Request timed out",
-                "not_final_blocker": True,
-                "sync_create_max_attempts": 1,
-                "backend_max_wait_seconds": 900,
-                "recommended_async_poll_interval_seconds": 10,
-                "recommended_async_max_wait_seconds": 900,
-                "backend_note": "If KIE_API_KEY is set, skip MCP entirely and use preferred_image_flow. Sync MCP -32001 is client timeout; do not blind-retry create.",
-                "preferred_async_flow": {
-                    "primary": "python scripts/excalibur_blog_kie_gpt_image2_api.py --article-dir <article_dir> when KIE_API_KEY is set.",
-                    "create": "Legacy MCP only if KIE_API_KEY missing: use async image create/start MCP tool if present. Call once with jobs[0].mcp_args and record task_id.",
-                    "status": "Poll status/result MCP tool by task_id every 10-15 seconds until url is ready, up to backend_max_wait_seconds.",
-                    "idempotency": "Do not create a second image job unless status/result confirms the previous job was not created or failed.",
-                },
-                "blocker_only_if": "KIE_API_KEY missing AND sync gpt-image-2 times out with -32001 and no generated URL, task_id, or async status/result MCP tool is available.",
-                "mcp_invocation": "Legacy fallback ONLY when KIE_API_KEY is missing. If KIE_API_KEY is set, call scripts/excalibur_blog_kie_gpt_image2_api.py and do not invoke MCP gpt-image-2.",
-                "log_recovery": "If the MCP/Cloud log or expanded MCP tool response already contains a generated image URL after the HTTP timeout, treat it as success: save that URL to cover/quad-mcp-result.json yourself or pass it directly to quad_apply. Do not search cover/* for the URL; it will not exist there until you save it. Do not start another image job while a generated URL exists.",
-                "recovery_needed": "If there is no URL/task_id and no async status/result tool after a sync timeout, stop with COVER MCP ASYNC BLOCKER. Do not blindly retry and create a duplicate generation.",
-                "instruction": "If KIE_API_KEY is set: run kie_gpt_image2_api.py only — never start with sync MCP gpt-image-2. If KIE_API_KEY is missing: prefer async MCP tools; if only sync gpt-image-2 exists, call it once. After -32001, inspect MCP logs for URL/task_id; do not blind-retry sync create. Without URL do not split/apply.",
-            },
-            "jobs": [
-                {
-                    "slot": "canvas_quad",
-                    "tool": "gpt-image-2",
-                    "note": "ONE successful image only — 4 panels inside, then excalibur_blog_cover_quad_split.py. Prefer Kie API script when KIE_API_KEY set. MCP is fallback only if key missing. HTTP -32001 from sync gpt-image-2 means client timeout; do not blindly retry sync create.",
-                    "api_args": {
-                        "model": KIE_IMAGE_MODEL,
-                        "input": api_input,
-                    },
-                    "mcp_args": {
-                        **api_input,
-                    },
-                }
-            ],
+            "jobs": jobs,
             "validation": {
-                "prompt_chars": len(prompt),
+                "prompt_chars": max(len(p) for p in prompts),
                 "max_prompt_chars": MAX_MCP_PROMPT_CHARS,
-                # Git-safe placeholder only — never live PUBLIC_SITE_URL host / [REDACTED].
                 "required_reference_host": SITE_HOST_PLACEHOLDER,
-                "resolution": MCP_RESOLUTION,
+                "resolution": RESOLUTION,
+                "jobs": CANVAS_COUNT,
+                "panels": 8,
             },
         }
         batch_path = article_dir / "cover" / "quad-mcp-batch.json"
         save_json(batch_path, batch)
-        # Runtime expand check (does not write live host into batch).
         live = resolve_public_base_from_env()
         if live and SITE_BASE_PLACEHOLDER in batch_ref_url:
             _ = expand_site_base(batch_ref_url, live)
-        print(f"OK batch={batch_path} jobs=1 input_urls=1 git_safe_ref={batch_ref_url}")
+        print(f"OK batch={batch_path} jobs={CANVAS_COUNT} git_safe_ref={batch_ref_url}")
 
     return 0
 

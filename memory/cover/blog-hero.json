@@ -1,18 +1,29 @@
 {
-  "hero_id": "blog-host",
-  "status": "SETUP_REQUIRED",
-  "name_ru": "",
-  "cover_mode": "unset",
-  "reference_image": "",
-  "reference_notes": "Filled by excalibur-blog-setup-visual. No default personal face or outfit lock.",
-  "visual_lock": {},
-  "outfit_rule": "",
-  "prompt_fragment": "",
+  "hero_id": "svyatoslav-shakin",
+  "status": "ok",
+  "name_ru": "Святослав Шакин",
+  "cover_mode": "host_reference",
+  "reference_image": "memory/cover/assets/portrait.jpg",
+  "reference_notes": "PRIMARY lock: full-body portrait.jpg. Landing waist-up (portrait-landing.jpg) is secondary likeness only. Face from these files only — no default pipeline host, no pink-cat, no white hoodie.",
+  "visual_lock": {
+    "person": "adult man 30–40, Slavic features, short dark hair, natural smile, no glasses, no beard lock, no headphones",
+    "hair": "short dark hair, neat, natural texture",
+    "face": "same face as memory/cover/assets/portrait.jpg; confident calm smile; do not invent another person",
+    "outfit": "slim navy blazer, black crew-neck t-shirt, navy trousers, black dress shoes; one hand in pocket allowed",
+    "forbid": "white hoodie, pink hoodie, headphones, earbuds, sunglasses, baseball cap, pink-cat mascot, other face"
+  },
+  "outfit_rule": "Always slim navy blazer over a black crew-neck t-shirt, navy trousers, black dress shoes. Never white hoodie, never headphones, never branded merch of other agencies.",
+  "prompt_fragment": "same man as reference: short dark hair, smile, slim navy blazer, black crew tee; LARGE left; no hoodie, no headphones; #FFF",
   "cover_hook_rules": [
     "cover_hook invents Cover agent from reader_pain; no script templates",
     "meme_caption_ru always empty unless tenant explicitly allows"
   ],
-  "reference_url_hosted": "",
-  "reference_url_source": "",
-  "reference_url_updated_at": null
+  "meme_caption_ru": "",
+  "reference_url_hosted": "{{SITE_BASE}}/wp-content/themes/tymenrieltor-light/assets/images/portrait.jpg",
+  "reference_url_source": "tenant_theme_asset",
+  "reference_url_updated_at": "2026-08-17T12:00:00Z",
+  "secondary_references": [
+    "memory/cover/assets/portrait-landing.jpg",
+    "memory/cover/assets/portrait-640.webp"
+  ]
 }

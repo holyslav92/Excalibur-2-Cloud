@@ -1,27 +1,48 @@
 {
-  "design_code_id": "tenant_unset",
-  "status": "SETUP_REQUIRED",
-  "label_ru": "Заполняется Setup Visual из референсов тенанта",
-  "reference_notes": "Нет дефолтного чужого бренд-коллажа. Setup Visual пишет palette, motifs, cover/inline rules.",
+  "design_code_id": "the_rieltor_twilight_gold",
+  "status": "ok",
+  "label_ru": "The Риэлтор — twilight + золото, host на cover, informative collage на белом",
+  "reference_notes": "Палитра сайта tymenrieltor-light. Панели cover/inline — чистый #FFFFFF. Золото и ink — акценты коллажа и предметов, не заливка фона. Логотип дома+ключ — мелкий предмет/мотив, не watermark.",
   "cover_rules": [
-    "Один cover_hook разумной длины; meme_caption_ru по умолчанию пуст",
-    "Стиль и герой — только из blog-hero.json + этого design-code после Setup",
-    "Запрещён штамп пайплайна на PNG: «EXCALIBUR» / sword lockup"
+    "Один cover_hook (18–42 символа кириллицы); meme_caption_ru пуст",
+    "Герой только Святослав из blog-hero.json: navy blazer + чёрный crew, LARGE слева",
+    "Один tiny/small предмет сделки справа: ключ, золотой дом-силуэт, папка ЕГРН, дверь/замок — не равный вес с лицом",
+    "Фон панели #FFFFFF; запрещены beige/cream/gray/grunge/gradient full-panel",
+    "Hook: bold condensed Cyrillic ink #141821; один punch-word золотом #dcc5a1 (не hot-pink)",
+    "Слои: torn paper, tape, gold sticky, карточки документов — премиум, не мем",
+    "Запрещён штамп пайплайна на PNG: «EXCALIBUR» / sword lockup / pink-cat / Instagram"
   ],
   "inline_rules": [
-    "Только информация конкретного H2",
-    "Без людей/лиц на inline, если tenant не разрешил иное",
-    "Generated UI не выдавать за реальный screenshot"
+    "Только информация конкретного H2: comparison table, workflow, checklist, UI explanation, fact card",
+    "Без людей, лиц и героя на inline",
+    "3–6 читаемых кириллических labels; finished collage того же языка, что cover",
+    "Generated UI не выдавать за скриншот ЦИАН/Авито/Госуслуг",
+    "Фон #FFFFFF; золото только accent marker/underline/sticky; не all-gold headline",
+    "Пустые серые плейсхолдеры и голый SaaS-slide = blocker"
   ],
-  "visual_motifs": [],
+  "visual_motifs": [
+    "золотой ключ и силуэт дома как мелкий предмет (не логотип-watermark на всю панель)",
+    "папка/выписка/печать как метафора проверки до аванса",
+    "дверь, замок, связка ключей как метафора сделки",
+    "twilight gold: тёплый металл на белой бумаге, спокойная премиум-тишина",
+    "корнер-лента / torn paper / gold sticky — не pink banners"
+  ],
   "color_palette": {
     "background": "#FFFFFF",
+    "panel_background": "#FFFFFF",
     "ink": "#141821",
-    "accent_primary": "",
-    "usage": "Set by Setup Visual"
+    "ink_deep": "#1a1508",
+    "twilight": "#05070f",
+    "twilight_panel": "#0e1322",
+    "accent_primary": "#dcc5a1",
+    "accent_gold_mid": "#ecd9b6",
+    "accent_gold_light": "#f3e6c9",
+    "paper": "#eef1f6",
+    "muted": "#7b8399",
+    "usage": "Panels always #FFFFFF. Hook/labels ink #141821. Gold #dcc5a1 for one highlight word, tape, tiny house-key prop. Twilight hexes are brand mood only — not full-panel backgrounds."
   },
-  "typography_reference": "",
-  "cover_panel_prompt_block": "",
-  "inline_information_block": "",
-  "global_negative": "sterile empty white, meme reaction cutouts, pipeline name watermark, stock banner, beige gradient spam"
+  "typography_reference": "Site: Cormorant Garamond (display) + Manrope (UI). Cover canvas: bold condensed Cyrillic for hook/labels; do not paint site wordmark as watermark.",
+  "cover_panel_prompt_block": "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic ink, gold #dcc5a1 one accent only. Host LARGE left from reference: navy blazer, black crew tee, short dark hair, smile; tiny deal-prop (key/house/folder) right. Torn paper, gold tape/sticky. No hoodie, no headphones, no cat, no pink.",
+  "inline_information_block": "Same finished collage language: white #FFF, black condensed RU labels, gold accent markers, paper/tape/cards. No people/faces. 3–6 exact labels. Explain the H2 (table, steps, checklist, fact card). No fake marketplace screenshots.",
+  "global_negative": "white hoodie, headphones, pink-cat, hot-pink #FF1493, beige gradient, cream full-panel, Instagram/Facebook lockup, EXCALIBUR stamp, sword badge, other face, meme reaction, Drake, facepalm, stock banner, logo watermark, 9:16, Latin headline, empty gray boxes, CIAN/Avito fake screenshot"
 }

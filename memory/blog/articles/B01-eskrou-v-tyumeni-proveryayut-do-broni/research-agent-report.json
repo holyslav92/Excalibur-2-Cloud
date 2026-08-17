@@ -1,0 +1,142 @@
+{
+  "agent": "excalibur-blog-research",
+  "step": "research",
+  "status": "PASS",
+  "topic_id": "B01",
+  "slug": "eskrou-v-tyumeni-proveryayut-do-broni",
+  "title": "Эскроу в Тюмени проверяют до брони",
+  "tenant": "The Риэлтор / Святослав Шакин",
+  "research_date": "2026-08-17",
+  "today_iso": "2026-08-17",
+  "outputs": {
+    "research_notes": "memory/blog/articles/B01-eskrou-v-tyumeni-proveryayut-do-broni/research-notes.md"
+  },
+  "freshness": {
+    "has_fresh_external_signal": true,
+    "fresh_signal_window_days": 4,
+    "fresh_signals": [
+      {
+        "type": "news",
+        "title": "168 многоквартирных домов по «долевке» поставили на учет в Тюменской области",
+        "source": "ИА «Тюменская линия» / Росреестр по Тюменской области",
+        "url": "https://t-l.ru/406060.html",
+        "published_at": "2026-08-13",
+        "accessed_at": "2026-08-17"
+      },
+      {
+        "type": "news",
+        "title": "В Тюменской области за 2025 год и первое полугодие 2026-го поставили на учет 168 многоквартирных домов",
+        "source": "Тюменская область сегодня",
+        "url": "https://tumentoday.ru/2026/08/15/v_tyumenskoy_oblasti_za_2025_god_i_pervoye_polugodiye_2026go_postavili_na_uchet_168_mnogokvartirnykh_domov/",
+        "published_at": "2026-08-15",
+        "accessed_at": "2026-08-17"
+      },
+      {
+        "type": "community_channel",
+        "title": "Канал тенанта: пост про 120 млн м² строительства и 83 млн м² непроданного жилья",
+        "source": "t.me/Tyumen_Rieltor",
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "published_at": "fresh_top_post_2026-08",
+        "accessed_at": "2026-08-17"
+      },
+      {
+        "type": "regulator",
+        "title": "Ключевая ставка Банка России 14,00% (страница обновлена 17.08.2026)",
+        "source": "Банк России",
+        "url": "https://www.cbr.ru/hd_base/keyrate/",
+        "published_at": "2026-08-17",
+        "accessed_at": "2026-08-17"
+      }
+    ]
+  },
+  "checks": {
+    "research_date_is_today": true,
+    "all_sources_have_accessed_at": true,
+    "source_count": 26,
+    "live_sources_verified": true,
+    "scout_signal_urls_checked": true,
+    "reader_problem_present": true,
+    "reader_outcome_present": true,
+    "practical_facts_present": true,
+    "constraints_present": true,
+    "voice_angle_present": true,
+    "surprising_fact_present": true,
+    "writer_safe_urls_present": true,
+    "writer_safe_urls_http_verified": true,
+    "no_h2_outline": true,
+    "no_faq_skeleton": true,
+    "no_action_outline": true,
+    "no_pain_solution_map": true,
+    "no_ready_lead": true,
+    "no_invented_numbers": true,
+    "overlap_source": "published-titles-only.md",
+    "overlap_titles_count": 0,
+    "overlap_conflict": false,
+    "read_neighbor_article_html": false,
+    "read_live_site_prose": false
+  },
+  "scout_signal_review": [
+    {
+      "url": "https://m2.ru/tyumen/novostroyki/eskrou-scheta/do-8-mln-rub/",
+      "verdict": "USABLE",
+      "http_status": 200,
+      "note": "30 ЖК до 8 млн ₽ в Тюмени по фильтру «эскроу-счёт». Смежные фильтры дают 15/27/31/78 ЖК и диапазон цен 3 302 250–69 850 000 ₽. Это витрина агрегатора на дату доступа, не реестр — трактовать как срез ассортимента."
+    },
+    {
+      "url": "https://yasnodom.com/upload/iblock/e23/Avgust-Liflet.pdf",
+      "verdict": "USABLE_WITH_WARNING",
+      "http_status": 200,
+      "note": "Буклет дома «Август», ул. Лукоянова 28А, Свердловский район ПЕРМИ, ООО СЗ «ОСТ-1», сроки 3 кв. 2020 — 3 кв. 2022. НЕ Тюмень и НЕ свежий. Годится только как пример буклетных формулировок («застрахованы до 10 млн руб.», «бесплатное бронирование», «строго соблюдаем ФЗ-214»), нельзя выдавать за тюменский объект."
+    }
+  ],
+  "serp_quality": {
+    "file": "research-serp.json",
+    "verdict": "UNRELIABLE_AS_FACT_SOURCE",
+    "issues": [
+      "сниппеты не соответствуют заголовкам результатов (смещены)",
+      "часть результатов не по теме (мобилизация в Тюмени)",
+      "большая часть выдачи про эскроу в ИЖС по договорам подряда, а не про ДДУ в новостройках"
+    ],
+    "action": "все факты собраны заново напрямую с первоисточников; SERP использован только как список кандидатов"
+  },
+  "wordstat": {
+    "status": "SKIPPED",
+    "reason": "MCP-сервер Wordstat недоступен в окружении (GetMcpTools pattern=wordstat → 0 совпадений)",
+    "blocker": false
+  },
+  "writer_safe_urls": [
+    "https://t.me/Tyumen_Rieltor",
+    "https://www.cbr.ru/hd_base/keyrate/",
+    "https://t-l.ru/406060.html",
+    "https://vsluh.ru/novosti/nedvizhimost/tyumenskiy-rosreestr-zaregistriroval-za-polgoda-bolee-9-tys-dogovorov-dolevogo-uchastiya_428383/",
+    "https://www.garant.ru/products/ipo/prime/doc/413296336/",
+    "https://www.consultant.ru/document/cons_doc_LAW_45769/6b586a628dc7fb0aac4275fa2f11e5282ccdded3/",
+    "https://m2.ru/tyumen/novostroyki/eskrou-scheta/do-8-mln-rub/"
+  ],
+  "mention_only_no_link": [
+    {
+      "name": "наш.дом.рф (ЕИСЖС)",
+      "reason": "curl 403 (антибот); в браузере работает"
+    },
+    {
+      "name": "rosreestr.gov.ru",
+      "reason": "curl 000 — недоступен из окружения сборки"
+    }
+  ],
+  "hard_constraints_for_writer": [
+    "Лимит страхования эскроу на 17.08.2026 — 10 млн ₽. 30 млн ₽ — только законопроект № 1240316-8 со сроком с 01.01.2027.",
+    "Не советовать проверять банк в перечне ЦБ: Банк России прекратил публикацию перечня по ПП № 697 с 01.01.2026 (ФЗ № 475-ФЗ от 13.12.2024).",
+    "Не называть число банков-агентов — проверяемого источника нет.",
+    "Мораторий на начисление неустоек снят с 01.01.2026 (ПП № 2227). Действует отсрочка выплат до 31.12.2026 по требованиям, предъявленным до 01.01.2026.",
+    "Не смешивать эскроу по ДДУ (наша тема) с эскроу в ИЖС по договорам подряда.",
+    "PDF yasnodom — объект в Перми, не в Тюмени.",
+    "Банк-эскроу-агент не контролирует качество строительства и не проверяет условия ДДУ."
+  ],
+  "dzen_rf_gate": {
+    "dzen_rf_pack": true,
+    "blocked_entities_in_topic": false,
+    "note": "Тема — российское жилищное право и рынок Тюмени. RF-blocked сущностей нет. CTA-канал Telegram — разрешённая площадка."
+  },
+  "incident_report": "none",
+  "next_step": "title"
+}

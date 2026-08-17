@@ -1,6 +1,44 @@
 {
   "registry_version": "1.0",
-  "comment": "E-E-A-T Authors Registry. Filled by excalibur-blog-setup. SETUP_REQUIRED until author block done.",
-  "status": "SETUP_REQUIRED",
-  "authors": []
+  "comment": "E-E-A-T Authors Registry. The Риэлтор / Святослав Шакин.",
+  "status": "ok",
+  "authors": [
+    {
+      "id": "svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "honorific": "Сертифицированный специалист NMarket.PRO — «Гуру продаж недвижимости»",
+      "worksFor": "The Риэлтор",
+      "legal_name": "ИП Шакин Святослав Сергеевич",
+      "bio_short": "Риэлтор в Тюмени: сделки лично в городе; по России и за рубежом — с партнёрскими агентствами, сопровождение от консультации до ключей или Росреестра.",
+      "bio_long": "Святослав Шакин — личный риэлтор, бренд The Риэлтор. Живёт и работает в Тюмени. Более 10 лет: покупка и аренда жилья, новостройки, коммерция, сложные сделки на вторичке (маткапитал, наследство, детские доли, доверенности). Сертификат NMarket.PRO «Гуру продаж недвижимости». Проверяет объекты и договоры до аванса, ведёт безопасный расчёт и регистрацию права. По России и за рубежом подключает проверенные агентства с менеджерами на месте; клиент общается с ним напрямую.",
+      "knowsAbout": [
+        "вторичка Тюмени",
+        "новостройки и эскроу",
+        "аренда",
+        "дома и коттеджи Тюмень/Тобольск",
+        "коммерческая недвижимость",
+        "ипотека и маткапитал",
+        "юридическое сопровождение ДКП/ДДУ"
+      ],
+      "address": {
+        "addressLocality": "Тюмень",
+        "streetAddress": "ул. Свердлова, д. 5, корп. 2"
+      },
+      "telephone": "+7 922 001 6505",
+      "email": "svyatsvyatsvyat2020@yandex.ru",
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "sameAs": [
+        "{{SITE_BASE}}/",
+        "{{SITE_BASE}}/rieltor-tyumen/",
+        "{{SITE_BASE}}/kontakty/",
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://t.me/holyslav92",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ],
+      "image": "memory/cover/assets/portrait.jpg"
+    }
+  ]
 }

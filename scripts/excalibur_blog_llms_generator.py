@@ -59,6 +59,7 @@ def load_articles(blog_dir: Path) -> list[dict[str, Any]]:
 
                 articles.append({
                     "slug": meta.get("slug", article_dir.name),
+                    "canonical_path": str(meta.get("canonical_path") or "").strip(),
                     "title": meta_ab.get("title_aeo") or meta_ab.get("title_seo") or meta.get("title") or meta.get("h1", article_dir.name),
                     "description": aeo_desc,
                     "plain_text": plain_text,
@@ -68,8 +69,15 @@ def load_articles(blog_dir: Path) -> list[dict[str, Any]]:
     return articles
 
 
-def article_url(site_base: str, blog_path: str, slug: str) -> str:
+def article_url(site_base: str, blog_path: str, slug: str, canonical_path: str = "") -> str:
     site_base = site_base.rstrip("/")
+    canon = (canonical_path or "").strip()
+    if canon:
+        if not canon.startswith("/"):
+            canon = "/" + canon
+        if not canon.endswith("/"):
+            canon = canon + "/"
+        return f"{site_base}{canon}"
     path = "/" + blog_path.strip("/")
     if path == "/":
         return f"{site_base}/{slug}/"
@@ -91,7 +99,7 @@ def build_llms_txt(
         ""
     ]
     for a in articles:
-        url = article_url(site_base, blog_path, a["slug"])
+        url = article_url(site_base, blog_path, a["slug"], a.get("canonical_path") or "")
         lines.append(f"- [{a['title']}]({url}): {a['description']}")
 
     return "\n".join(lines) + "\n"
@@ -107,7 +115,7 @@ def build_llms_full_txt(site_name: str, articles: list[dict[str, Any]], site_bas
     ]
 
     for a in articles:
-        url = article_url(site_base, blog_path, a["slug"])
+        url = article_url(site_base, blog_path, a["slug"], a.get("canonical_path") or "")
         lines.extend([
             f"## {a['title']}",
             f"- **URL**: {url}",
