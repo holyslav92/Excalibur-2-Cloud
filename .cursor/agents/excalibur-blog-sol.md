@@ -1,7 +1,7 @@
 ---
 name: excalibur-blog-sol
 description: "Sol: rewrite Writer meaning into tenant-SOUL final article.html."
-model: inherit
+model: claude-opus-5-thinking-high
 readonly: false
 is_background: false
 ---

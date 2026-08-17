@@ -46,7 +46,11 @@ python3 scripts/excalibur_blog_research_start.py --topic-id <ID> --title "<short
 ### 0 Scout? (только после Дзен+РФ при pack)
 ### 1–2 Research → Title
 ### 3 Writer (смысл)
-`Task(excalibur-blog-writer)` → `drafts/writer.html`.
+`Task(excalibur-blog-writer)` с **model `claude-opus-5-thinking-high`** → `drafts/writer.html`.
+Не меньше **7 H2** до FAQ.
+
+### 3b Sol (финальный слог)
+`Task(excalibur-blog-sol)` с **model `claude-opus-5-thinking-high`** → `article.html`
 
 ### 3b Sol (финальный слог)
 `Task(excalibur-blog-sol)` → `article.html` + `drafts/variant-a.html`  
@@ -63,6 +67,8 @@ python3 scripts/excalibur_blog_opening_meta_gate.py --article-dir <dir>
 Сломан **смысл/факты** → верни **Writer**, потом снова Sol.
 
 ### 5 Cover-text || Schema → Cover
+Картинки: **MCP DEROOTER**, ровно **2 генерации 2K** → split на 8 (cover + 7 inline).
+Kie не использовать. Контракт: `shared/derouter-image-contract.md`.
 ### 6 Indexer → Publish
 ### 7 Fixer → merge → learner
 

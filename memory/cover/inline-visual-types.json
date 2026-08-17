@@ -1,12 +1,30 @@
 {
-  "status": "SETUP_REQUIRED",
-  "comment": "Inline panel type catalog. Setup Visual may extend. Cover agent picks per H2.",
-  "types": [
-    "table",
-    "workflow",
-    "checklist",
-    "ui_explanation",
-    "fact_card",
-    "comparison"
-  ]
+  "status": "ok",
+  "comment": "Inline panel type catalog for The Риэлтор. Cover agent picks per H2. No people on inline.",
+  "types": {
+    "comparison_table_ui": {
+      "label_ru": "сравнительная таблица",
+      "keywords": ["сравн", "vs", "или", "вторич", "новострой", "ипотек", "аренд", "эскроу", "дду"]
+    },
+    "workflow_diagram": {
+      "label_ru": "пошаговая схема сделки",
+      "keywords": ["как", "шаг", "порядок", "сделк", "аванс", "договор", "регистрац"]
+    },
+    "checklist_board": {
+      "label_ru": "чеклист проверки",
+      "keywords": ["чек", "проверь", "список", "егрн", "доверенност", "маткапитал", "доли"]
+    },
+    "schema_faq_ui": {
+      "label_ru": "схема риска / вопрос",
+      "keywords": ["риск", "ошибк", "почему", "если", "нельзя"]
+    },
+    "tool_screenshot": {
+      "label_ru": "объяснение экрана (сгенерированный UI, не скриншот ЦИАН)",
+      "keywords": ["кабинет", "выписк", "форма", "заявк", "калькулятор"]
+    },
+    "infographic_card": {
+      "label_ru": "карточка факта",
+      "keywords": ["срок", "сумм", "доля", "налог", "госпошлин", "факт"]
+    }
+  }
 }

@@ -7,6 +7,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def _seven_labels(**overrides):
+    data = {f"inline_{i}": ["проверка", "до аванса"] for i in range(1, 8)}
+    data.update(overrides)
+    return data
+
+
 class CoverTextTest(unittest.TestCase):
     def test_gate_pass_on_clear_russian_strings(self) -> None:
         import sys
@@ -18,11 +24,11 @@ class CoverTextTest(unittest.TestCase):
                 "hook": "Cursor стал дешевле на треть",
                 "highlight": "дешевле",
                 "sticky": "новой модели нет",
-                "inline_labels": {
-                    "inline_1": ["заявление 3 августа", "минус 20–30%", "без новой модели"],
-                    "inline_2": ["с экраном", "без экрана", "до 80%"],
-                    "inline_3": ["MCP", "навыки", "экран"],
-                },
+                "inline_labels": _seven_labels(
+                    inline_1=["заявление 3 августа", "минус 20–30%", "без новой модели"],
+                    inline_2=["с экраном", "без экрана", "до 80%"],
+                    inline_3=["MCP", "навыки", "экран"],
+                ),
             }
         )
         self.assertEqual(verdict["status"], "PASS")
@@ -37,11 +43,7 @@ class CoverTextTest(unittest.TestCase):
                 "hook": "Token burn rate",
                 "highlight": "burn",
                 "sticky": "",
-                "inline_labels": {
-                    "inline_1": ["токены", "экран"],
-                    "inline_2": ["токены", "экран"],
-                    "inline_3": ["токены", "экран"],
-                },
+                "inline_labels": _seven_labels(),
             }
         )
         self.assertEqual(verdict["status"], "BLOCK")
@@ -57,11 +59,7 @@ class CoverTextTest(unittest.TestCase):
                 "hook": "Cursor стал дешевле на треть",
                 "highlight": "бюджет",
                 "sticky": "",
-                "inline_labels": {
-                    "inline_1": ["токены", "экран"],
-                    "inline_2": ["токены", "экран"],
-                    "inline_3": ["токены", "экран"],
-                },
+                "inline_labels": _seven_labels(),
             }
         )
         self.assertEqual(verdict["status"], "BLOCK")
