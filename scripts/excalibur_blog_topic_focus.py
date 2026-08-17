@@ -134,6 +134,33 @@ ALLOW_PATTERNS: tuple[str, ...] = (
     r"обзор",
 )
 
+# Ядро тенанта The Риэлтор (недвижимость Тюмени) — поверх дефолтного AI-ядра.
+TENANT_ALLOW_PATTERNS: tuple[str, ...] = (
+    r"эскроу",
+    r"eskrou",
+    r"егрн",
+    r"риэлтор",
+    r"риелтор",
+    r"тюмен",
+    r"квартир",
+    r"\bдду\b",
+    r"ипотек",
+    r"маткапитал",
+    r"аванс",
+    r"росреестр",
+    r"вторичк",
+    r"застройщик",
+    r"новострой",
+    r"опек",
+    r"доверенност",
+    r"наследств",
+    r"аренд",
+)
+
+
+def _allow_patterns() -> tuple[str, ...]:
+    return ALLOW_PATTERNS + TENANT_ALLOW_PATTERNS
+
 
 def normalize(text: str) -> str:
     return re.sub(r"\s+", " ", (text or "").strip().lower())
@@ -165,7 +192,7 @@ def focus_check(text: str) -> dict[str, Any]:
             }
 
     allow_hit = None
-    for pat in ALLOW_PATTERNS:
+    for pat in _allow_patterns():
         if re.search(pat, blob, flags=re.IGNORECASE):
             allow_hit = pat
             break
@@ -174,8 +201,7 @@ def focus_check(text: str) -> dict[str, Any]:
             "status": "BLOCK",
             "blocker": "TOPIC FOCUS BLOCKER",
             "reason": (
-                "no core-focus marker (Cursor/subagents/rules/skills/MCP/"
-                "leadgen/autopost/Make/n8n/AI-model/news-automation)"
+                "no core-focus marker (tenant realty / Cursor / automation)"
             ),
             "deny_hit": None,
             "allow_hit": None,
