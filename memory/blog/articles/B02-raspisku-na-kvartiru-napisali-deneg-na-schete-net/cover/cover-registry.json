@@ -1,0 +1,86 @@
+{
+  "topic_id": "B02",
+  "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Расписка написана, но денег на счёте нет — риск при покупке квартиры в Тюмени",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-18T10:28:49+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Расписка написана, но денег на счёте нет — риск при покупке квартиры в Тюмени",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Кейс: договор подписан, расписка написана, денег на счёте нет",
+      "h2_anchor": "Что произошло в кейсе: договор есть, денег нет",
+      "visual_type": "workflow_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Правильный порядок расчётов при покупке квартиры в Тюмени",
+      "h2_anchor": "Правильный порядок: деньги, договор, регистрация, расписка",
+      "visual_type": "comparison_table_ui",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Разница между нотариальным договором и депозитом нотариуса",
+      "h2_anchor": "Нотариальная сделка и депозит нотариуса — не одно и то же",
+      "visual_type": "checklist_board",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Как работает аккредитив при покупке квартиры на вторичке",
+      "h2_anchor": "Аккредитив при покупке квартиры: как работает",
+      "visual_type": "schema_faq_ui",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Сроки аккредитива и регистрации в Росреестре — закладывать запас",
+      "h2_anchor": "Сроки аккредитива и регистрации: закладывать запас",
+      "visual_type": "infographic_card",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Тарифы аккредитива, депозита нотариуса и СБР в Тюмени",
+      "h2_anchor": "Тарифы и альтернативы: Сбер, СБР, вилка по рынку",
+      "visual_type": "tool_screenshot",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Почему расписка не заменяет аккредитив при покупке квартиры",
+      "h2_anchor": "Почему расписка не заменяет аккредитив",
+      "visual_type": "comparison_table_ui",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

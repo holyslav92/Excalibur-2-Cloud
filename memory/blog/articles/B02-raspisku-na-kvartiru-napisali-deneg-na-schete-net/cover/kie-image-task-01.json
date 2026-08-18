@@ -1,0 +1,16 @@
+{
+  "task_id": "f8c1fef716a7d44eb20863b7f4053758",
+  "source": "kie-api",
+  "state": "success",
+  "create_attempts": 1,
+  "result_path": "memory/blog/articles/B02-raspisku-na-kvartiru-napisali-deneg-na-schete-net/cover/quad-mcp-result-01.json",
+  "updated_at_epoch": 1787048690,
+  "file_upload_fallback": true,
+  "file_upload": {
+    "source": "prefer_local_reference",
+    "upload_path": "excalibur-blog/hero",
+    "local_name": "face-hoodie-airpods.jpeg",
+    "download_host": "tempfile.redpandaai.co",
+    "cover_hero_mode": null
+  }
+}
