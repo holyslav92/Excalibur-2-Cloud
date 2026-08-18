@@ -1,0 +1,9 @@
+{
+  "topic_id": "B02",
+  "description": "Договор подписан, расписка на столе — а на счёте пусто. В Тюмени так теряют не только нервы: порядок расчётов решает, останется ли квартира вашей.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

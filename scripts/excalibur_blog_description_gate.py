@@ -115,6 +115,7 @@ def main() -> int:
     if not args.article_dir:
         print("FAIL --article-dir required", file=sys.stderr)
         return 1
+    article_dir = Path(args.article_dir)
     if not article_dir.is_absolute():
         article_dir = root / article_dir
 

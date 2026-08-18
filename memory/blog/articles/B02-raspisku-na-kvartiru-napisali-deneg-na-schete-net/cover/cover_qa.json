@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-cover-qa",
+  "status": "PASS",
+  "checked_at": "2026-08-18",
+  "topic_id": "B02",
+  "checks": {
+    "identity_face_28yo": true,
+    "light_high_key": true,
+    "motif_no_collision_14d": true,
+    "people_in_8_set": true,
+    "cats_cadence_ok": true,
+    "wordstat_stickers_1_3": true,
+    "identity_real_files": true
+  },
+  "notes": "Cover: host 28yo blazer, high-key flare; meme cat+man stickers; hook РАСПИСКУ/ДЕНЕГ НЕТ; Тюмень sticker. 8 PNG present. wordstat_stickers: купить квартиру в тюмени, аккредитив."
+}
