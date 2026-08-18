@@ -8,40 +8,35 @@
       "split": {
         "source_canvas": "memory/blog/articles/B02-raspisku-na-kvartiru-napisali-deneg-na-schete-net/cover/canvas-quad-01.png",
         "source_size_px": [
-          2048,
-          1152
+          1672,
+          941
         ],
         "panel_size_px": [
-          1024,
-          576
+          829,
+          464
         ],
         "split_meta": {
-          "split_mode": "mechanical_center",
-          "h_gutter_px": null,
-          "v_gutter_px": null,
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 464,
+            "end": 479
+          },
+          "v_gutter_px": {
+            "start": 829,
+            "end": 844
+          },
           "requested_mode": "auto",
-          "fallback_reason": "gutter_too_far_from_center",
-          "rejected_gutter": {
-            "h_gutter_px": {
-              "start": 586,
-              "end": 641
+          "gutter_quality": {
+            "h_center_offset_px": 1.0,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0097,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0097,
+              "bottom_right": 0.0085
             },
-            "v_gutter_px": {
-              "start": 1017,
-              "end": 1065
-            },
-            "gutter_quality": {
-              "h_center_offset_px": 37.5,
-              "v_center_offset_px": 17.0,
-              "max_aspect_crop_loss": 0.1072,
-              "per_panel_crop_loss": {
-                "top_left": 0.0239,
-                "top_right": 0.0563,
-                "bottom_left": 0.1072,
-                "bottom_right": 0.0763
-              },
-              "reject_reason": "gutter_too_far_from_center"
-            }
+            "reject_reason": null
           }
         },
         "output_size_px": [
@@ -55,37 +50,37 @@
             "box_px": {
               "left": 0,
               "top": 0,
-              "right": 1024,
-              "bottom": 576
+              "right": 829,
+              "bottom": 464
             },
             "raw_box_px": {
               "left": 0,
               "top": 0,
-              "right": 1024,
-              "bottom": 576
+              "right": 829,
+              "bottom": 464
             },
             "size_px": [
               1200,
               675
             ],
             "aspect_ratio": "16:9",
-            "alt": "Расписка написана, но денег на счёте нет — риск при покупке квартиры в Тюмени",
+            "alt": "Расписка написана, денег нет — звоните риэлтору в Тюмени",
             "h2_anchor": null
           },
           "inline_1": {
             "file": "cover/inline-01.png",
             "quadrant": "top_right",
             "box_px": {
-              "left": 1024,
+              "left": 844,
               "top": 0,
-              "right": 2048,
-              "bottom": 576
+              "right": 1672,
+              "bottom": 464
             },
             "raw_box_px": {
-              "left": 1024,
+              "left": 844,
               "top": 0,
-              "right": 2048,
-              "bottom": 576
+              "right": 1672,
+              "bottom": 464
             },
             "size_px": [
               1200,
@@ -99,16 +94,16 @@
             "file": "cover/inline-02.png",
             "quadrant": "bottom_left",
             "box_px": {
-              "left": 0,
-              "top": 576,
-              "right": 1024,
-              "bottom": 1152
+              "left": 4,
+              "top": 479,
+              "right": 825,
+              "bottom": 941
             },
             "raw_box_px": {
               "left": 0,
-              "top": 576,
-              "right": 1024,
-              "bottom": 1152
+              "top": 479,
+              "right": 829,
+              "bottom": 941
             },
             "size_px": [
               1200,
@@ -122,16 +117,16 @@
             "file": "cover/inline-03.png",
             "quadrant": "bottom_right",
             "box_px": {
-              "left": 1024,
-              "top": 576,
-              "right": 2048,
-              "bottom": 1152
+              "left": 847,
+              "top": 479,
+              "right": 1668,
+              "bottom": 941
             },
             "raw_box_px": {
-              "left": 1024,
-              "top": 576,
-              "right": 2048,
-              "bottom": 1152
+              "left": 844,
+              "top": 479,
+              "right": 1672,
+              "bottom": 941
             },
             "size_px": [
               1200,
@@ -166,20 +161,20 @@
           "rejected_gutter": {
             "h_gutter_px": {
               "start": 437,
-              "end": 468
+              "end": 464
             },
             "v_gutter_px": {
               "start": 787,
               "end": 828
             },
             "gutter_quality": {
-              "h_center_offset_px": 18.0,
+              "h_center_offset_px": 20.0,
               "v_center_offset_px": 28.5,
               "max_aspect_crop_loss": 0.0794,
               "per_panel_crop_loss": {
                 "top_left": 0.0127,
                 "top_right": 0.0794,
-                "bottom_left": 0.0634,
+                "bottom_left": 0.0713,
                 "bottom_right": 0.0
               },
               "reject_reason": "gutter_too_far_from_center"
@@ -295,6 +290,6 @@
     "skip inline_4: already correct under H2 — Аккредитив при покупке квартиры: как работает",
     "skip inline_5: already correct under H2 — Сроки аккредитива и регистрации: закладывать запас",
     "skip inline_6: already correct under H2 — Тарифы и альтернативы: Сбер, СБР, вилка по рынку",
-    "moved inline_7 → H2 — Почему расписка не заменяет аккредитив (was under [почему расписка не заменяет аккредитив]; removed=1)"
+    "skip inline_7: already correct under H2 — Почему расписка не заменяет аккредитив"
   ]
 }
