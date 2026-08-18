@@ -1,0 +1,100 @@
+{
+  "agent": "excalibur-blog",
+  "step": "research_complete",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-18",
+    "today_ru": "18.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B02",
+    "title": "Расписку на квартиру написали. Денег на счёте нет",
+    "h1": "Расписку на квартиру написали. Денег на счёте нет",
+    "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+    "primary_query": "купить квартиру в тюмени",
+    "angle_query": "аккредитив при покупке квартиры",
+    "klyshin_hook": "receipt_no_money",
+    "priority": "P0"
+  },
+  "research": {
+    "research_date": "2026-08-18",
+    "status": "PASS",
+    "key_facts_count": 24,
+    "fresh_signal_urls": [
+      "https://t.me/klyshin_A",
+      "https://www.mirkvartir.ru/journal/assistant/2026/08/11/akkreditiv-zachem-on/",
+      "https://dzen.ru/a/alDKtMpc2E9VFSeQ"
+    ],
+    "wordstat": {
+      "source": "mcp-kv",
+      "regions": ["55", "11176"],
+      "p0_phrase": "купить квартиру в тюмени",
+      "p0_volume": 23060,
+      "angle_phrase": "аккредитив при покупке квартиры",
+      "angle_volume": 43,
+      "rework_log": "безопасный расчет (5) → аккредитив (43) → P0 купить квартиру в тюмени (23060)"
+    }
+  },
+  "search_queries": [
+    {
+      "id": "klyshin_signal",
+      "query": "site:t.me klyshin_A расписка денег нет аккредитив",
+      "purpose": "живой community-сигнал Scout"
+    },
+    {
+      "id": "akkreditiv_2026",
+      "query": "аккредитив при покупке квартиры 2026 условия раскрытия ЕГРН",
+      "purpose": "механизм и официальные условия"
+    },
+    {
+      "id": "raspiska_risks",
+      "query": "расписка при покупке квартиры риски ВС РФ 2026",
+      "purpose": "судебная практика по расписке"
+    },
+    {
+      "id": "safe_payments",
+      "query": "безопасный расчет при покупке квартиры аккредитив депозит нотариуса",
+      "purpose": "сравнение способов расчёта"
+    },
+    {
+      "id": "tyumen_local",
+      "query": "безопасный расчёт покупка квартиры Тюмень аккредитив СБР",
+      "purpose": "локальный контекст тенанта"
+    }
+  ],
+  "next_step": "Title → Writer(смысл)",
+  "writer_allowed_sources": [
+    "shared/writer-master-prompt.md",
+    "research-notes.md",
+    "title-brief.json",
+    "published-titles-only.md"
+  ],
+  "sol_allowed_sources": [
+    "shared/SOUL.md",
+    "shared/soul-examples/",
+    "drafts/writer.html",
+    "title-brief.json",
+    "research-notes.md"
+  ],
+  "writer_titles_only": "published-titles-only.md",
+  "forbidden_sources_for_writer": [
+    "memory/blog/articles/*/article.html",
+    "memory/blog/articles/*/drafts",
+    "memory/topics/ (deleted — do not recreate)",
+    "memory/content-lessons.md",
+    "shared/golden-benchmark",
+    "QA reports",
+    "neighbor research-notes as prose exemplars",
+    "old article bodies"
+  ],
+  "published_titles_count": 0,
+  "dzen_rf_gate": {
+    "read": true,
+    "rf_blocked_checked": true,
+    "meta_heroes": false
+  }
+}
