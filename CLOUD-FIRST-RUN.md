@@ -76,7 +76,7 @@ Memories в Tools должны быть OFF.
 
 ### B) Longform blog (после setup)
 
-4×/день YEKT (09, 12, 16, 20). См. `CLOUD-AUTOMATION.md`.
+4×/будни YEKT (09, 12, 15, 17 — окно 9–17, **не** 20:00). См. `CLOUD-AUTOMATION.md`.
 
 ### Identity photos (host_reference)
 

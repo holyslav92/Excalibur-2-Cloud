@@ -13,7 +13,7 @@
 | Image API key (Kie / provider) | unknown | Нужен для Cover |
 | Yandex Metrika tokens | optional | Content-learner |
 | First-run automation = Setup prompt | yes | Этот прогон |
-| Daily automation = CLOUD-AUTOMATION.md (после setup) | pending | Включать после complete=true |
+| Daily automation = CLOUD-AUTOMATION.md (после setup) | pending | 4× будни YEKT: 09:00, 12:00, 15:00, 17:00 (окно 9–17; не 20:00). Cursor Automations, не GHA |
 
 ## Разница First-run vs Daily
 

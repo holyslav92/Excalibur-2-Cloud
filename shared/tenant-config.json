@@ -16,9 +16,11 @@
   "inline_image_count": 7,
   "publish_schedule": {
     "timezone": "Asia/Yekaterinburg",
-    "slots_local": ["09:00", "12:00", "16:00", "20:00"],
+    "weekdays_only": true,
+    "slots_local": ["09:00", "12:00", "15:00", "17:00"],
     "runs_per_day": 4,
-    "note": "Longform: cover 1200×675 + 7 inline-quad. Daily short posts на сайте — отдельный поток, не этот automation."
+    "window_local": "09:00-17:00",
+    "note": "Longform Cursor Automation: 4 weekday slots YEKT (owner 9–17). NOT 20:00. Daily short posts on site — отдельный поток. Publish only when FTP secrets + EXCALIBUR_BLOG_ALLOW_PUBLISH=yes on process (never git)."
   },
   "image_generation": {
     "provider": "derouter-rest",
