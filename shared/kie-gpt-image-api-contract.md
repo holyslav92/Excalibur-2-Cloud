@@ -7,8 +7,16 @@ Primary Cloud path for Excalibur BLOG cover generation.
 ```text
 1. mcp-derouter (when MCP tools loaded on VM)
 2. KIE_API_KEY set  → scripts/excalibur_blog_kie_gpt_image2_api.py only
-2. KIE_API_KEY missing → legacy MCP gpt-image-2 (async tools if present; sync once max)
+3. KIE_API_KEY missing → legacy MCP Kie sync image tool (async Kie script preferred; sync once max)
 ```
+
+## Image model lock (HARD — owner)
+
+**FORBIDDEN** for blog cover/inline (even after Kie sync MCP timeout): `flux2-pro-text-to-image`, `flux2-pro-image-to-image`, Seedream, `nano_banana*`, `z-image`, off-pipeline demo canvases.
+
+On timeout: retry `excalibur_blog_kie_gpt_image2_api.py` (`createTask` + poll). **Do not** hop to Flux.
+
+Canvas 2 (inline-only): batch without `input_urls` → Kie t2i. Canvas 1: i2i + `identity-real`.
 
 If `KIE_API_KEY` is present in Cloud Secrets/env, **do not** call sync MCP `gpt-image-2` first.
 Director/Task prompts must not force «ONE MCP gpt-image-2» as the primary path.
