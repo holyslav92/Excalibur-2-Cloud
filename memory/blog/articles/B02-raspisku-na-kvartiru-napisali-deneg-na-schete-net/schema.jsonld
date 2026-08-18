@@ -1,0 +1,100 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "sameAs": [
+        "{{SITE_BASE}}/",
+        "{{SITE_BASE}}/rieltor-tyumen/",
+        "{{SITE_BASE}}/kontakty/",
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://t.me/holyslav92",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/"
+      },
+      "url": "{{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+      "headline": "В Тюмени расписку за квартиру написали — денег на счёте нет",
+      "description": "В Тюмени расписку за квартиру написали — денег на счёте нет",
+      "datePublished": "2026-08-18",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "{{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Можно ли подписать договор у нотариуса, а аккредитив открыть на следующий день?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Технически можно — но это тот самый риск «расписку написали, денег нет». Деньги нужно разместить под контролем до подписания договора или зафиксировать аванс отдельным соглашением с понятным зачётом."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чем депозит нотариуса отличается от нотариального договора?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нотариальное удостоверение — про форму и волю сторон. Депозит нотариуса — отдельная услуга: деньги лежат на специальном счёте до регистрации. Без депозита нотариус деньги не держит."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли на вторичке использовать эскроу?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Эскроу по ФЗ-214 — инструмент новостроек (ДДУ). На вторичке в Тюмени — аккредитив, СБР или депозит нотариуса."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "На сколько дней открывать аккредитив?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "С запасом: 60–90 дней, а не 30. Учитывайте сроки регистрации (3–9 рабочих дней) и риск приостановки Росреестром."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Защищает ли расписка продавца, если деньги не пришли?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Слабо. Без банковского следа продавцу сложнее доказать неполучение, а покупатель может ссылаться на фото расписки. Расписка не создаёт обязанность банка перечислить деньги."
+          }
+        }
+      ]
+    }
+  ]
+}
