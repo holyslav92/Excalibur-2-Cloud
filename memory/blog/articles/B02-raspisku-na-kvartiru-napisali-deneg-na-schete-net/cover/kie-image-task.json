@@ -1,11 +1,11 @@
 {
-  "task_id": "6831c4ddd78f2064e19bbcb677b4097c",
+  "task_id": "8764f9636d7ef8cd8c5eb29fa9870793",
   "source": "kie-api",
   "model": "kie-image-to-image",
   "state": "success",
   "create_attempts": 1,
   "result_path": "memory/blog/articles/B02-raspisku-na-kvartiru-napisali-deneg-na-schete-net/cover/quad-mcp-result-01.json",
-  "updated_at_epoch": 1787050963,
+  "updated_at_epoch": 1787051945,
   "file_upload_fallback": true,
   "file_upload": {
     "source": "prefer_local_reference",

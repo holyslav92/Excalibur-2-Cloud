@@ -3,7 +3,7 @@
   "status": "PASS",
   "checked_at": "2026-08-18",
   "topic_id": "B02",
-  "regeneration": "body_lock_v2_hoodie_critical_i2i",
+  "regeneration": "inline_utility_redo_v1_owner_request",
   "checks": {
     "identity_face_28yo": true,
     "identity_body_medium_slim": true,
@@ -12,7 +12,18 @@
     "people_in_8_set": true,
     "cats_cadence_ok": true,
     "wordstat_stickers_1_3": true,
-    "identity_real_files": true
+    "identity_real_files": true,
+    "inline_utility_all_7": true,
+    "inline_no_host_face": true
   },
-  "notes": "Owner feedback: chubby host fix. Regenerated canvas 1 Kie i2i from face-hoodie-airpods.jpeg + BODY LOCK CRITICAL prompt. Host medium slim build (not chubby/puffy/double-chin/thick-neck/stocky/tight blazer). Hook «Расписку написали — денег нет», stickers, sun flare, meme cat+man, Тюмень preserved. Canvas 2 inline-04..07 unchanged (no host)."
+  "inline_utility_notes": {
+    "inline_1": "process_flow timeline with failure point at bank",
+    "inline_2": "comparison_table wrong vs correct payment order",
+    "inline_3": "comparison_table notary will vs deposit 0.5%",
+    "inline_4": "structure_diagram accreditiv flow + footnote not escrow",
+    "inline_5": "bar_timeline_chart 60-90 vs 30 vs 3 days",
+    "inline_6": "comparison_table rates Sber 0.3% deposit 0.5% SBR",
+    "inline_7": "labeled_checklist named errors vs accreditiv bank trace"
+  },
+  "notes": "Owner inline redo: cover.png preserved (md5 unchanged). Canvas 1 Kie i2i + preserve cover quadrant; canvas 2 Flux2 t2i. All 7 inline utility-first per H2. No live publish."
 }

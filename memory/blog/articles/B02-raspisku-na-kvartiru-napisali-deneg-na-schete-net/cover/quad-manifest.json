@@ -4,6 +4,7 @@
   "layout": "2x2",
   "pipeline": "quad_canvas_2x_image_api_longform",
   "inline_count": 7,
+  "mcp_note": "Owner inline redo: utility-first panels; cover preserved; Kie fallback (derouter down).",
   "canvases": [
     {
       "index": 1,
@@ -41,7 +42,6 @@
   "cover_hook": "Расписку написали — денег нет",
   "cover_hook_highlight": "денег",
   "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
-  "mcp_note": "Kie fallback (derouter down): 2K i2i canvas 1 with identity-real; canvas 2 t2i. Host lock = blog-hero.json navy blazer.",
   "cover_keys_ru": [],
   "wordstat_stickers": [
     "купить квартиру в тюмени",
@@ -67,78 +67,81 @@
     "inline_1": {
       "quadrant": "top_right",
       "h2_anchor": "Что произошло в кейсе: договор есть, денег нет",
-      "visual_type": "workflow_diagram",
-      "scene_hint": "Case flow: ДКП→расписка→банк fail→фото расписок; bright schematic; labels readable; no faces; #FFF",
-      "alt": "Кейс: договор подписан, расписка написана, денег на счёте нет",
+      "visual_type": "process_flow",
+      "scene_hint": "Numbered timeline 1→2→3→FAIL: договор→расписка→баланс 0₽→расчёт сорвался; red X at bank; photo callout aside not step 5",
+      "alt": "Таймлайн сорвавшейся сделки: договор, расписка, нулевой баланс, срыв расчёта",
       "labels": [
-        "договор подписан",
-        "расписка написана",
-        "денег на счёте нет",
-        "расчёт сорвался",
-        "фото расписок"
+        "1 договор подписан",
+        "2 расписка написана",
+        "3 баланс 0 ₽",
+        "срыв: расчёт сорвался",
+        "улика: фото расписок"
       ]
     },
     "inline_2": {
       "quadrant": "bottom_left",
       "h2_anchor": "Правильный порядок: деньги, договор, регистрация, расписка",
-      "visual_type": "comparison_table_ui",
-      "scene_hint": "Table wrong vs right order: деньги→ДКП→регистрация→расписка; green path; bright panel; #FFF",
-      "alt": "Правильный порядок расчётов при покупке квартиры в Тюмени",
+      "visual_type": "comparison_table",
+      "scene_hint": "Two columns: left red WRONG (расписка/договор до денег); right green CORRECT аккредитив→ДКП→регистрация→расписка; different rows",
+      "alt": "Сравнение ошибочного и правильного порядка расчётов при покупке квартиры",
       "labels": [
-        "сначала деньги",
-        "потом договор",
-        "потом регистрация",
-        "расписка в конце",
-        "аккредитив до ДКП"
+        "ошибка: до банка",
+        "расписка заранее",
+        "норма: аккредитив",
+        "ДКП → регистрация",
+        "расписка в конце"
       ]
     },
     "inline_3": {
       "quadrant": "bottom_right",
       "h2_anchor": "Нотариальная сделка и депозит нотариуса — не одно и то же",
-      "visual_type": "checklist_board",
-      "scene_hint": "Split cards: удостоверение vs депозит 0,5%; meme cat sticker; checklist; outcome до аванса; #FFF",
-      "alt": "Разница между нотариальным договором и депозитом нотариуса",
+      "visual_type": "comparison_table",
+      "scene_hint": "Split columns: нотариус удостоверяет волю NOT cash vs депозит 0,5% holds money min1000; no duplicate bullets",
+      "alt": "Разница: нотариальное удостоверение и депозит нотариуса 0,5%",
       "labels": [
-        "нотариус не держит",
-        "депозит отдельно",
-        "разные услуги",
-        "удостоверение воли"
+        "нотариус: воля",
+        "не держит деньги",
+        "депозит 0,5%",
+        "мин 1 000 ₽",
+        "отдельная услуга"
       ]
     },
     "inline_4": {
       "quadrant": "top_left",
       "h2_anchor": "Аккредитив при покупке квартиры: как работает",
-      "visual_type": "schema_faq_ui",
-      "scene_hint": "FAQ flow: деньги на счёте→блок→раскрытие по ЕГРН; bright accordion UI; no host; #FFF",
-      "alt": "Как работает аккредитив при покупке квартиры на вторичке",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Flow blocks: деньги в банке→блокировка→раскрытие по ЕГРН→безотзывный покрытый; footnote «не эскроу» aside",
+      "alt": "Схема аккредитива: деньги на счёте, раскрытие по ЕГРН, безотзывный покрытый",
       "labels": [
-        "деньги на счёте",
+        "деньги в банке",
+        "блокировка средств",
         "раскрытие по ЕГРН",
         "безотзывный покрытый",
-        "не эскроу"
+        "сноска: не эскроу"
       ]
     },
     "inline_5": {
       "quadrant": "top_right",
       "h2_anchor": "Сроки аккредитива и регистрации: закладывать запас",
-      "visual_type": "infographic_card",
-      "scene_hint": "Timeline cards: 60–90 дней vs 30; регистрация 3 дня; bright infographic; meme sticker; #FFF",
-      "alt": "Сроки аккредитива и регистрации в Росреестре — закладывать запас",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bar chart: аккредитив 60-90d tall vs 30d short red vs регистрация 3d; comparable scale not 4 calendars",
+      "alt": "График сроков: аккредитив 60–90 дней против 30 дней и регистрация 3 дня",
       "labels": [
         "60–90 дней",
         "не 30 дней",
-        "срок с запасом",
-        "регистрация 3 дня"
+        "регистрация 3 дня",
+        "запас на приостановку"
       ]
     },
     "inline_6": {
       "quadrant": "bottom_left",
       "h2_anchor": "Тарифы и альтернативы: Сбер, СБР, вилка по рынку",
-      "visual_type": "tool_screenshot",
-      "scene_hint": "Comparison schematic: Сбер 0,3%, депозит 0,5%, СБР ВТБ; illustrated bank UI; not real screenshot; #FFF",
-      "alt": "Тарифы аккредитива, депозита нотариуса и СБР в Тюмени",
+      "visual_type": "comparison_table",
+      "scene_hint": "Rate table columns: Сбер 0,3% min15000 | депозит 0,5% | СБР ВТБ; compare before advance",
+      "alt": "Таблица тарифов: Сбер 0,3%, депозит нотариуса 0,5%, СБР ВТБ",
       "labels": [
         "Сбер 0,3%",
+        "мин 15 000 ₽",
         "депозит 0,5%",
         "СБР ВТБ",
         "сравнить до аванса"
@@ -147,14 +150,15 @@
     "inline_7": {
       "quadrant": "bottom_right",
       "h2_anchor": "Почему расписка не заменяет аккредитив",
-      "visual_type": "comparison_table_ui",
-      "scene_hint": "Table: расписка vs аккредитив; bank trace wins; bright columns; meme people sticker; #FFF",
-      "alt": "Почему расписка не заменяет аккредитив при покупке квартиры",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Two columns named errors left (расписка до банка, договор до денег, 30д) vs аккредитив bank trace EGRN right",
+      "alt": "Типичные ошибки с распиской против банковского следа аккредитива",
       "labels": [
-        "типичные ошибки",
-        "до аванса",
-        "банк согласовать",
-        "Тюмень сделки"
+        "расписка до банка",
+        "договор до денег",
+        "аккредитив 30 дней",
+        "нет банковского следа",
+        "аккредитив: след ЕГРН"
       ]
     }
   }
