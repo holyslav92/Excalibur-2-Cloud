@@ -12,6 +12,10 @@ from pathlib import Path
 REQUIRED_CHECKS = (
     "identity_face_28yo",
     "identity_body_medium_slim",
+    "cover_phone_readable",
+    "board_stationery_ok",
+    "typography_cyrillic_clean",
+    "meme_density_inline_ok",
     "light_high_key",
     "motif_no_collision_14d",
     "people_in_8_set",
@@ -82,6 +86,9 @@ def validate_cover_qa(article_dir: Path, root: Path) -> dict:
             stickers = manifest.get("wordstat_stickers") or []
             if not (1 <= len(stickers) <= 3):
                 errors.append(f"wordstat_stickers count {len(stickers)}, need 1-3 in quad-manifest")
+            phone = str(manifest.get("cover_phone_cta") or "").strip()
+            if phone != "+7 922 001 65 05":
+                errors.append("cover_phone_cta must be '+7 922 001 65 05' in quad-manifest")
             slots = manifest.get("slots") or {}
             allowed_types = {
                 "comparison_table",

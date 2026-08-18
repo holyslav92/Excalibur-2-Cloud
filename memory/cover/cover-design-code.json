@@ -34,12 +34,14 @@
     "тёплый финал сделки"
   ],
   "cover_rules": [
-    "host_reference=true; лицо и телосложение только identity-real/* (28 лет, medium slim build)",
-    "BODY LOCK: medium/slim as refs — FAIL if chubby, overweight, puffy cheeks, double chin, thick neck, wide torso in tight blazer",
+    "host_reference=true; лицо и телосложение только identity-real/* (28 лет, medium-slim SLIMMER than refs)",
+    "BODY LOCK: SLIMMER than identity-real hoodie+office selfies — FAIL if chubby, puffy cheeks, thick waist, double chin, thick neck",
+    "COVER PHONE: readable CTA «+7 922 001 65 05» on phone screen or gold tape sticker — not tiny unreadable",
+    "BOARD STATIONERY: light investigation-board tape/pins/strings/paper scraps — high-key beautiful, NOT dark crime-board",
     "LIGHT BRIGHT high-key: sun flare, light leak, glow, airy whites — no dark cinematic",
     "Cover изобретает сцену с нуля; no recurring default props",
     "1–3 designer stickers with LIVE Wordstat phrases (Тюмень/область) — readable, not spam",
-    "Meme cats + meme people cutouts welcome; Святослав host LARGE; surprise variety",
+    "Meme cats + meme people cutouts on COVER (1–2); inlines: meme on 2–3 of 7 panels only — rest clean charts/tables",
     "8-image set per article includes people (cover host); cats across week often enough",
     "cover_hook 18–42 кириллицы; meme_caption_ru пуст",
     "Панели #FFFFFF; ink #141821; gold #dcc5a1 один accent",
@@ -47,7 +49,7 @@
   ],
   "inline_rules": [
     "Longform: 7 inline (inline_1…inline_7) — UTILITY-FIRST per H2 (см. inline-visual-types.json)",
-    "Стиль = одобренная обложка B02: #FFFFFF high-key, gold #dcc5a1 / black #141821, torn paper, gold tape, sun flare, collage",
+    "Стиль = одобренная обложка B02: #FFFFFF high-key, gold #dcc5a1 / black #141821, torn paper, gold tape, pins, thin strings, sun flare, collage",
     "Без лица Святослава / host / identity-real на inline — host ТОЛЬКО на cover",
     "UTILITY TEST (FAIL): без абзаца читатель не выносит факт/порядок/число/сравнение; ряд иконок+3 слова = FAIL",
     "Типы (предпочтение): comparison_table → process_flow → bar_timeline_chart → structure_diagram → labeled_checklist → fact_card",

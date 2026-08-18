@@ -53,9 +53,10 @@ def sanitize_cover_scene_hint(scene: str, highlight: str) -> str:
     return _PINK_WORD_IN_SCENE.sub(_repl, scene)
 
 
-BODY_LOCK = "medium slim as identity-real refs; lean oval face; NOT chubby/puffy/double-chin/thick-neck/stocky/tight blazer"
-INLINE_UTILITY_LOCK = "UTILITY: fact/order/number/comparison for H2; no icon row+3 words; no host"
-INLINE_BAN_EXTRA = "icon row slogans; duplicate labels; desk scene; empty UI; cover copy; celebrity memes"
+BODY_LOCK = "medium-slim lean waist; NOT chubby/puffy/thick-waist/thick-neck"
+COVER_PHONE_CTA = "+7 922 001 65 05"
+BOARD_STATIONERY = "tape/pins/strings/paper scraps; high-key #FFF/gold; not noir"
+INLINE_BAN_EXTRA = "icon slogans; empty cells; desk scene; cover copy; celebrity memes"
 MAX_MCP_PROMPT_CHARS = 3500
 # Compact limits leave headroom under 3500 after style boilerplate (INC-20260721-0837).
 # Cover raw ≈80–140 (from blog-hero lock); inline ≈100–220. Long MUST/face essays
@@ -113,17 +114,15 @@ def inline_panel_prompt(slot: dict, types_catalog: dict) -> str:
     type_id = slot.get("visual_type") or "fact_card"
     type_def = (types_catalog.get("types") or {}).get(type_id) or {}
     label = type_def.get("label_ru", type_id)
-    utility = compact(type_def.get("utility") or "", 48)
-    h2 = compact(slot.get("h2_anchor", ""), 95)
+    h2 = compact(slot.get("h2_anchor", ""), 72)
     scene = compact(slot.get("scene_hint", ""), INLINE_SCENE_HINT_COMPACT)
-    base = (
-        f"{label}; H2 «{h2}»; {INLINE_UTILITY_LOCK}; scene: {scene}; "
-        f"#FFF collage; {utility}; no host."
-    )
+    base = f"{label}; «{h2}»; {scene}."
     labels = [str(x).strip() for x in (slot.get("labels") or []) if str(x).strip()]
     if labels:
-        exact = ", ".join(f"«{x}»" for x in labels)
-        base += f" LABELS: {exact}."
+        exact = " | ".join(labels)
+        base += f" TXT:{exact}."
+    if slot.get("meme_sticker"):
+        base += " +meme sticker."
     return base
 
 
@@ -380,7 +379,7 @@ def build_prompt(
         or design_code.get("cover_panel_prompt_block")
         or design_code.get("inline_information_block")
         or "",
-        520,
+        380,
     )
     if not style_prefix:
         style_prefix = (
@@ -408,12 +407,11 @@ def build_prompt(
             else ""
         )
         panel_lines.append(
-            f"Top-left COVER TEXT LOCK: headline EXACTLY «{cover_hook_text}» — bold condensed Cyrillic "
-            f"black #141821, {highlight_rule}.{sticky_lock} "
-            f"Host LARGE left = same 28yo i2i identity-real ({BODY_LOCK}); blazer relaxed; INVENT bright high-key sun flare; "
-            f"scene: {compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; "
-            f"1-3 Wordstat demand stickers; meme cat and/or meme people sticker cutouts; "
-            f"#FFF high-key; no plastic face; no scene clone; no dark cinematic; no inventory default props"
+            f"TL COVER TXT «{cover_hook_text}» bold Cyrillic black, {highlight_rule}.{sticky_lock} "
+            f"Phone EXACT «{COVER_PHONE_CTA}» readable CTA sticker. "
+            f"Host i2i left ({BODY_LOCK}); sun flare; "
+            f"{compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; "
+            f"1-2 meme stickers; {BOARD_STATIONERY}; Wordstat/Tyumen; #FFF; perfect Cyrillic"
         )
         inline_keys = [k for k in canvas_slots if k != "cover"]
         for label, key in zip(quadrant_labels[1:], inline_keys[:3]):
@@ -423,19 +421,17 @@ def build_prompt(
             panel_lines.append(f"{label} inline: {inline_panel_prompt(slot(key), types_catalog)}")
 
     ban_line = (
-        "Ban: dark cinematic/low-key/twilight; daypart formula; inventory default props "
-        "(keys/hologram/desk/balcony/doc-only office); Drake/facepalm/Salt Bae/celebrity; keyword spam; "
-        f"EXCALIBUR stamp/white hoodie/fake CIAN screenshot; chubby/puffy host ban; {INLINE_BAN_EXTRA}."
+        "Ban: dark/low-key; inventory props; celebrity memes; EXCALIBUR stamp; chubby host; "
+        f"{INLINE_BAN_EXTRA}."
     )
     reference_line = (
-        "REFERENCE FACE+BODY only on cover top-left when has_cover: identity-real live photo "
-        f"(28yo; {BODY_LOCK}); invent scene; never AI hero-ref; no headphones."
+        f"Cover TL only: i2i identity-real ({BODY_LOCK}); invent scene; no AI hero-ref."
         if has_cover
-        else "NO Svytoslav host face on inline — informative collage; meme cat/people stickers OK."
+        else "Inlines: no host face; meme stickers OK on flagged panels."
     )
     inline_suffix = (
-        "Inline all: #FFF high-key collage, gold/black labels, torn paper/tape; "
-        "max 1 tiny cat-sticker; teach fact/order/number; no host face; 3–6 labels."
+        f"Inline all: #FFF collage, gold/black Cyrillic labels, {BOARD_STATIONERY}; "
+        "dense facts/numbers; exact TXT per panel; meme only if +meme; no icon soup; zero typos."
     )
 
     lines = [
