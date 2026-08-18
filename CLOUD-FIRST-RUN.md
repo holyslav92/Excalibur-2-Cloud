@@ -61,9 +61,9 @@ Task(excalibur-blog-setup-voice) и Task(excalibur-blog-setup-visual).
 Memories в Tools должны быть OFF.
 ```
 
-### B) Daily blog (после setup)
+### B) Longform blog (после setup)
 
-См. `CLOUD-AUTOMATION.md`.
+4×/день YEKT (09, 12, 16, 20). См. `CLOUD-AUTOMATION.md`.
 
 ## 6. Проверка
 

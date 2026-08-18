@@ -11,10 +11,32 @@
     "Публикации в блог сайта и зеркало на Дзен «Советы от риелтора»"
   ],
   "author_id": "svyatoslav-shakin",
+  "publish_format": "longform",
+  "inline_image_count": 7,
+  "publish_schedule": {
+    "timezone": "Asia/Yekaterinburg",
+    "slots_local": ["09:00", "12:00", "16:00", "20:00"],
+    "runs_per_day": 4,
+    "note": "Longform: cover 1200×675 + 7 inline-quad. Daily short posts на сайте — отдельный поток, не этот automation."
+  },
+  "image_generation": {
+    "provider": "mcp-derouter",
+    "resolution": "2K",
+    "canvases_per_article": 2,
+    "panels_per_canvas": 4,
+    "total_images": 8
+  },
   "cta_required": false,
   "cta_links": [
     "https://t.me/Tyumen_Rieltor"
   ],
+  "cta_channels": {
+    "telegram_lead": "https://t.me/Tyumen_Rieltor",
+    "telegram_personal": "https://t.me/holyslav92",
+    "phone": "+79220016505",
+    "vk": "https://vk.ru/tymenrieltor",
+    "guides": "{{SITE_BASE}}/gajdy/"
+  },
   "cover_mode": "host_reference",
   "dzen_rf_pack": true,
   "scout_signal_urls": [
@@ -33,5 +55,5 @@
     "design_code": "memory/cover/cover-design-code.json",
     "style_preset": "memory/cover/quad-style-the-rieltor.json"
   },
-  "comment": "Filled by excalibur-blog-setup from tymenrieltor.ru. Pipeline agents read this file. Do not put secrets here. Live hostname only via PUBLIC_SITE_URL → {{SITE_BASE}}."
+  "comment": "The Риэлтор / tymenrieltor.ru. Secrets only in Cloud (PUBLIC_SITE_URL, SFTP, EXCALIBUR_BLOG_ALLOW_PUBLISH). Do not enable publish in git."
 }

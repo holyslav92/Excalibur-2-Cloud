@@ -2,25 +2,42 @@
 
 Локальные референсы для `cover_mode=host_reference`. Чужие CDN/catbox не использовать.
 
-## Герой (PRIMARY lock)
+## Hero identity lock (PRIMARY)
 
-- `portrait.jpg` — полный рост: мужчина 30–40, короткие тёмные волосы, улыбка, slim navy blazer, чёрная футболка-crew, navy брюки, чёрные туфли, рука в кармане; тёмная каменная стена. **i2i reference.**
-- `portrait-landing.jpg` — поясной портрет, сумерки, фонари, берёзы, navy blazer (вторичный likeness).
-- `portrait-640.webp` — webp-вариант портрета.
+Два эталона от владельца + запасной likeness:
 
-Публичный URL эталона (тема сайта, не catbox):
+| Файл | Роль |
+|------|------|
+| `hero-ref-office-risk-hologram.jpg` | Лицо + mood «риск всплывёт позже» (офис, документы, нотариус). **Не копировать композицию на каждый пост.** |
+| `hero-ref-balcony-keys-sunset.jpg` | Лицо + mood success/ключи (балкон, закат). **Не копировать композицию на каждый пост.** |
+| `portrait.jpg` | Запасной full-body likeness (navy blazer, тёмная стена). |
+| `portrait-landing.jpg` | Поясной, сумерки, берёзы. |
+| `portrait-640.webp` | Webp-вариант. |
+
+Публичный URL для i2i (тема сайта):
 
 `{{SITE_BASE}}/wp-content/themes/tymenrieltor-light/assets/images/portrait.jpg`
 
+## Emotion bank (Cover выбирает одну на статью)
+
+- спокойная уверенность
+- настороженность
+- жёсткий стоп
+- лёгкая ирония
+- сосредоточенный разбор документов
+- тёплое «ключ получен»
+
+Правило: **новая эмоция + новая поза + новый фон** каждый раз. Лицо узнаваемое, сцена не штамп.
+
+## Longform visuals
+
+8 изображений на статью: `cover.png` 1200×675 + `inline-01…07.png` (7× `figure.inline-quad`).
+2 quad-canvas × 2K (mcp-derouter) → split 2×2.
+
 ## Марка / mood (`style-refs/`)
 
-- `style-refs/logo-the-rieltor.png` — золотой дом+ключ на чёрном (мотив предмета, не watermark обложки).
-- `style-refs/logo-the-rieltor-88.webp` — компактный логотип.
-- `style-refs/favicon-gold-180.png` и корневой `favicon-gold-180.png` — золотой акцент.
-- `style-refs/bg-site-twilight.webp` — twilight-настроение сайта; **не** фон панелей quad (панели `#FFFFFF`).
-
-Inbox (`memory/setup/visual-inbox/`): те же файлы + `certificate.png` (NMarket.PRO — не клеить на cover как штамп).
+См. `style-refs/README` в каталоге. Inbox: `memory/setup/visual-inbox/` (копии hero-ref + logo).
 
 ## Запреты
 
-Чужое лицо, pink-cat, белое худи пайплайна, EXCALIBUR stamp, beige gradient, Instagram.
+Чужое лицо, pink-cat, белое худи, EXCALIBUR stamp, beige gradient, клон композиции эталонных hero-ref.

@@ -15,6 +15,8 @@ import re
 import sys
 from pathlib import Path
 
+from excalibur_blog_quad_slots import INLINE_SLOT_KEYS, active_inline_keys, inline_count_from_tenant
+
 BRAND_WHITELIST = {
     "cursor", "make", "mcp", "ai", "openai", "google", "microsoft", "nvidia",
     "meta", "claude", "grok", "qwen", "gmail", "sheets", "deepmind", "hugging",
@@ -59,7 +61,7 @@ def _check_text(errors: list[str], errors_out: list[str], field: str, value: str
         errors.append(f"{field}: empty of readable text — write Russian")
 
 
-def validate_cover_text(data: dict) -> dict:
+def validate_cover_text(data: dict, inline_count: int = 7) -> dict:
     errors: list[str] = []
     error_fields: list[str] = []
 
@@ -77,7 +79,7 @@ def validate_cover_text(data: dict) -> dict:
         _check_text(errors, error_fields, "sticky", sticky, min_words=1, max_words=5, max_chars=32)
 
     labels = data.get("inline_labels") or {}
-    for key in ("inline_1", "inline_2", "inline_3"):
+    for key in active_inline_keys(inline_count):
         panel_labels = labels.get(key) or []
         if not isinstance(panel_labels, list) or not (2 <= len(panel_labels) <= 6):
             errors.append(f"{key}: labels must be 2-6 short strings, got {panel_labels!r}")
@@ -116,7 +118,11 @@ def main() -> int:
         print(f"❌ COVER TEXT BLOCKER: bad JSON: {exc}", file=sys.stderr)
         return 1
 
-    verdict = validate_cover_text(data)
+    tenant_path = root / "shared/tenant-config.json"
+    tenant = json.loads(tenant_path.read_text(encoding="utf-8")) if tenant_path.is_file() else {}
+    inline_count = inline_count_from_tenant(tenant)
+
+    verdict = validate_cover_text(data, inline_count=inline_count)
     out_name = Path(args.output).name
     out_path = article_dir / out_name
     out_path.write_text(json.dumps(verdict, ensure_ascii=False, indent=2) + "\n",

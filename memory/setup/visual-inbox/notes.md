@@ -1,43 +1,31 @@
 # Visual inbox — The Риэлтор
 
-Дата: 2026-08-17
+Дата: 2026-08-18
 
 ## cover_mode
 
-`host_reference` — на обложке человек-герой: **Святослав Шакин**.
+`host_reference` — на обложке **Святослав Шакин** (узнаваемое лицо).
 
-## Референсы (локально)
+## Hero identity lock (владелец)
 
-- `portrait.jpg` — основной портрет (тема сайта, 576×1024).
-- `portrait-landing.jpg` — портрет лендинга.
-- `portrait-640.webp` — webp-вариант.
-- `logo-the-rieltor.png` / `logo-the-rieltor-88.webp` — логотип «The Риэлтор».
-- `favicon-gold-180.png` — золотой акцент марки.
-- `bg-site-twilight.webp` — twilight-фон сайта (настроение, не фон панелей cover: панели на белом).
-- `certificate.png` — сертификат NMarket.PRO (не клеить на cover как коллаж-штамп).
+- `hero-ref-office-risk-hologram.jpg` — офис, документы, «НОТАРИУС», голограмма риска. Mood: «всплывёт позже». **Не шаблон каждой обложки.**
+- `hero-ref-balcony-keys-sunset.jpg` — балкон, закат, ключи. Mood: success. **Не шаблон каждой обложки.**
+- `portrait.jpg`, `portrait-landing.jpg`, `portrait-640.webp` — запасные likeness.
 
-## Палитра с живого сайта (тема tymenrieltor-light)
+## Emotion bank
 
-- Чернила / twilight: `#05070f`, `#0e1322`, `#1a1508`
-- Бумага / свет: `#eef1f6`, `#fff`
-- Золото: `#dcc5a1`, `#ecd9b6`, `#f3e6c9`
-- Приглушённый серо-синий текст: `#7b8399`, `#b8bfce`
-- Шрифты: Cormorant Garamond (заголовок) + Manrope (текст)
+Cover выбирает одну эмоцию под тему: спокойная уверенность / настороженность / жёсткий стоп / лёгкая ирония / разбор документов / тёплое «ключ получен».
 
-Cover/inline панели по контракту — белый `#FFFFFF`. Золото и тёмный ink — акценты коллажа, типографика hook, предметы.
+Каждый кадр — **другая** поза, жест, сцена. Запрещён copy-paste композиции эталонов.
 
-## Язык надписей
+## Longform
 
-Только русский. `meme_caption_ru` пустой.
+Обложка + 7 inline-quad. 2× quad-canvas 2K (mcp-derouter).
+
+## Палитра (tymenrieltor-light)
+
+Ink `#141821`, золото `#dcc5a1`, панели `#FFFFFF`, twilight mood `#05070f` (не фон панелей).
 
 ## Запреты
 
-- Чужие лица, pink-cat, EXCALIBUR watermark, beige-gradient spam.
-- Instagram/Facebook lockup.
-- Логотип конкурентов / застройщиков как бренд обложки.
-- Не выдавать generated UI за скриншот ЦИАН/Авито.
-- На inline — без лица героя (только cover).
-
-## Настроение
-
-Премиум-тишина, «недвижимость как произведение искусства», спокойная уверенность, деловой тёмный twilight + тёплое золото, не кричащий риелторский красный.
+Чужие лица, pink-cat, EXCALIBUR, белое худи, Instagram, fake ЦИАН screenshot, клон hero-ref кадров.

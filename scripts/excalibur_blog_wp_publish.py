@@ -24,6 +24,7 @@ from excalibur_blog_site_base import (
 from excalibur_repo_paths import repo_relative
 from image_validate import sniff_image_format, validate_image_file
 from excalibur_blog_live_page_gate import inspect as inspect_live_page
+from excalibur_blog_quad_slots import active_inline_keys, inline_count_from_tenant
 from excalibur_blog_pipeline_canon import (
     _plain,
     description_clones_opening,
@@ -1056,7 +1057,13 @@ def check_publish_prerequisites(
     )
     if not article_html or len(article_html) < 200:
         blockers.append("article.html missing or too small")
-    for slot in ("inline_1", "inline_2", "inline_3"):
+    tenant_path = project_root() / "shared/tenant-config.json"
+    try:
+        tenant = json.loads(tenant_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        tenant = {}
+    inline_count = inline_count_from_tenant(tenant)
+    for slot in active_inline_keys(inline_count):
         if article_html.count(f'data-slot="{slot}"') != 1:
             blockers.append(f"article.html requires exactly one {slot} slot")
 

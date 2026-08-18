@@ -23,7 +23,8 @@ class CoverTextTest(unittest.TestCase):
                     "inline_2": ["с экраном", "без экрана", "до 80%"],
                     "inline_3": ["MCP", "навыки", "экран"],
                 },
-            }
+            },
+            inline_count=3,
         )
         self.assertEqual(verdict["status"], "PASS")
 
@@ -42,7 +43,8 @@ class CoverTextTest(unittest.TestCase):
                     "inline_2": ["токены", "экран"],
                     "inline_3": ["токены", "экран"],
                 },
-            }
+            },
+            inline_count=3,
         )
         self.assertEqual(verdict["status"], "BLOCK")
         self.assertTrue(any("Latin words" in e for e in verdict["errors"]))
@@ -62,7 +64,8 @@ class CoverTextTest(unittest.TestCase):
                     "inline_2": ["токены", "экран"],
                     "inline_3": ["токены", "экран"],
                 },
-            }
+            },
+            inline_count=3,
         )
         self.assertEqual(verdict["status"], "BLOCK")
 

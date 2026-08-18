@@ -1,31 +1,47 @@
 {
   "design_code_id": "the_rieltor_twilight_gold",
   "status": "ok",
-  "label_ru": "The Риэлтор — twilight + золото, host на cover, informative collage на белом",
-  "reference_notes": "Палитра сайта tymenrieltor-light. Панели cover/inline — чистый #FFFFFF. Золото и ink — акценты коллажа и предметов, не заливка фона. Логотип дома+ключ — мелкий предмет/мотив, не watermark.",
+  "label_ru": "The Риэлтор — host_reference, twilight+золото, emotion bank",
+  "reference_notes": "Эталоны лица: hero-ref-office-risk-hologram.jpg + hero-ref-balcony-keys-sunset.jpg (+ portrait.jpg запасной). Палитра tymenrieltor-light. Панели cover/inline — #FFFFFF. Золото/ink — акценты коллажа.",
+  "host_reference": true,
+  "identity_lock_files": [
+    "memory/cover/assets/hero-ref-office-risk-hologram.jpg",
+    "memory/cover/assets/hero-ref-balcony-keys-sunset.jpg",
+    "memory/cover/assets/portrait.jpg"
+  ],
+  "composition_rule": "Каждая обложка — новая сцена: другая эмоция, поза, жест, фон. Запрещено копировать 1-в-1 офис с голограммой или балкон с ключами.",
+  "emotion_bank": [
+    "спокойная уверенность",
+    "настороженность",
+    "жёсткий стоп",
+    "лёгкая ирония",
+    "сосредоточенный разбор документов",
+    "тёплое «ключ получен»"
+  ],
   "cover_rules": [
+    "host_reference=true; лицо только с identity_lock_files",
+    "Cover agent выбирает ОДНУ эмоцию из emotion_bank под тему H1",
+    "Новая композиция каждый раз: другой жест/предмет/фон; не клон эталонных кадров",
     "Один cover_hook (18–42 символа кириллицы); meme_caption_ru пуст",
-    "Герой только Святослав из blog-hero.json: navy blazer + чёрный crew, LARGE слева",
-    "Один tiny/small предмет сделки справа: ключ, золотой дом-силуэт, папка ЕГРН, дверь/замок — не равный вес с лицом",
-    "Фон панели #FFFFFF; запрещены beige/cream/gray/grunge/gradient full-panel",
-    "Hook: bold condensed Cyrillic ink #141821; один punch-word золотом #dcc5a1 (не hot-pink)",
-    "Слои: torn paper, tape, gold sticky, карточки документов — премиум, не мем",
-    "Запрещён штамп пайплайна на PNG: «EXCALIBUR» / sword lockup / pink-cat / Instagram"
+    "Герой LARGE слева: navy/charcoal blazer, короткие тёмные волосы, узнаваемое лицо",
+    "Один tiny/small предмет сделки справа: ключ, папка ЕГРН, дверь — не равный вес с лицом",
+    "Фон панели #FFFFFF; hook ink #141821; один punch-word золотом #dcc5a1",
+    "Слои: torn paper, gold tape/sticky, карточки документов — премиум, не мем",
+    "Запрещён штамп EXCALIBUR / pink-cat / белое худи / Instagram"
   ],
   "inline_rules": [
-    "Только информация конкретного H2: comparison table, workflow, checklist, UI explanation, fact card",
-    "Без людей, лиц и героя на inline",
-    "3–6 читаемых кириллических labels; finished collage того же языка, что cover",
+    "Longform: 7 inline-панелей (inline_1…inline_7) — без людей и лиц",
+    "Только информация конкретного H2: comparison, workflow, checklist, fact card",
+    "3–6 кириллических labels; finished collage того же языка, что cover",
     "Generated UI не выдавать за скриншот ЦИАН/Авито/Госуслуг",
-    "Фон #FFFFFF; золото только accent marker/underline/sticky; не all-gold headline",
-    "Пустые серые плейсхолдеры и голый SaaS-slide = blocker"
+    "Фон #FFFFFF; золото только accent; пустые плейсхолдеры = blocker"
   ],
   "visual_motifs": [
-    "золотой ключ и силуэт дома как мелкий предмет (не логотип-watermark на всю панель)",
-    "папка/выписка/печать как метафора проверки до аванса",
-    "дверь, замок, связка ключей как метафора сделки",
-    "twilight gold: тёплый металл на белой бумаге, спокойная премиум-тишина",
-    "корнер-лента / torn paper / gold sticky — не pink banners"
+    "золотой ключ и силуэт дома — мелкий предмет, не watermark",
+    "папка/выписка/печать — метафора проверки до аванса",
+    "дверь, замок, связка ключей",
+    "twilight gold на белой бумаге",
+    "torn paper / gold sticky — не pink banners"
   ],
   "color_palette": {
     "background": "#FFFFFF",
@@ -39,10 +55,10 @@
     "accent_gold_light": "#f3e6c9",
     "paper": "#eef1f6",
     "muted": "#7b8399",
-    "usage": "Panels always #FFFFFF. Hook/labels ink #141821. Gold #dcc5a1 for one highlight word, tape, tiny house-key prop. Twilight hexes are brand mood only — not full-panel backgrounds."
+    "usage": "Panels #FFFFFF. Hook/labels ink #141821. Gold #dcc5a1 for one highlight. Twilight — mood only."
   },
-  "typography_reference": "Site: Cormorant Garamond (display) + Manrope (UI). Cover canvas: bold condensed Cyrillic for hook/labels; do not paint site wordmark as watermark.",
-  "cover_panel_prompt_block": "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic ink, gold #dcc5a1 one accent only. Host LARGE left from reference: navy blazer, black crew tee, short dark hair, smile; tiny deal-prop (key/house/folder) right. Torn paper, gold tape/sticky. No hoodie, no headphones, no cat, no pink.",
-  "inline_information_block": "Same finished collage language: white #FFF, black condensed RU labels, gold accent markers, paper/tape/cards. No people/faces. 3–6 exact labels. Explain the H2 (table, steps, checklist, fact card). No fake marketplace screenshots.",
-  "global_negative": "white hoodie, headphones, pink-cat, hot-pink #FF1493, beige gradient, cream full-panel, Instagram/Facebook lockup, EXCALIBUR stamp, sword badge, other face, meme reaction, Drake, facepalm, stock banner, logo watermark, 9:16, Latin headline, empty gray boxes, CIAN/Avito fake screenshot"
+  "typography_reference": "Cormorant Garamond + Manrope. Cover: bold condensed Cyrillic hook.",
+  "cover_panel_prompt_block": "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic, gold #dcc5a1 one accent. Host LARGE left = same man as i2i reference (emotion from bank, NEW pose/scene). Tiny deal-prop right. Torn paper, gold tape. No hoodie, no cat, no pink, no composition clone of hero refs.",
+  "inline_information_block": "Same collage language: white #FFF, black RU labels, gold accents, paper/tape/cards. No people/faces. 3–6 labels per H2 panel.",
+  "global_negative": "white hoodie, headphones, pink-cat, hot-pink, beige gradient, Instagram, EXCALIBUR stamp, other face, meme, composition clone of office hologram or balcony keys, empty gray boxes, fake CIAN screenshot"
 }

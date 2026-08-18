@@ -46,16 +46,11 @@
 ## Главный герой визуала
 
 - **cover_mode:** `host_reference`
-- **герой:** Святослав Шакин (лицо только с `portrait.jpg` / landing; не дефолт пайплайна)
-- **одежда lock:** slim navy blazer, чёрный crew, navy брюки, чёрные туфли; **без** белого худи и наушников
-- **reference / lock:** `memory/cover/blog-hero.json` + `memory/cover/assets/portrait.jpg`
-- **URL эталона:** `{{SITE_BASE}}/wp-content/themes/tymenrieltor-light/assets/images/portrait.jpg`
-- **style preset:** `memory/cover/quad-style-the-rieltor.json` (`the_rieltor_twilight_gold`)
-- **палитра:** панели `#FFFFFF`; ink `#141821` / `#1a1508`; золото `#dcc5a1` `#ecd9b6` `#f3e6c9`; twilight `#05070f` `#0e1322` — mood сайта, не фон quad
-- **мотивы:** мелкий золотой ключ-дом (не лого-watermark), папка/ключи/дверь как метафора сделки
-- **запреты cover:** pink-cat, EXCALIBUR stamp, beige gradient, Instagram, чужое лицо
-- **inline:** без людей; 3–6 RU labels; не выдавать UI за скрин ЦИАН/Авито
-- **meme_caption_ru:** пусто
+- **identity lock:** `hero-ref-office-risk-hologram.jpg`, `hero-ref-balcony-keys-sunset.jpg` (+ `portrait.jpg` запасной)
+- **emotion bank:** спокойная уверенность / настороженность / жёсткий стоп / ирония / разбор документов / «ключ получен»
+- **правило:** новая поза и сцена каждый раз; не клонировать композицию эталонов
+- **одежда:** navy/charcoal blazer; без белого худи
+- **longform:** cover 1200×675 + 7 inline-quad; 2× quad 2K (mcp-derouter)
 
 ## Scout
 

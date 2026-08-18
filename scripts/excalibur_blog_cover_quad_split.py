@@ -12,18 +12,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-QUADRANT_ORDER = ("top_left", "top_right", "bottom_left", "bottom_right")
-DEFAULT_SLOT_MAP = {
-    "cover": "top_left",
-    "inline_1": "top_right",
-    "inline_2": "bottom_left",
-    "inline_3": "bottom_right",
-}
-INLINE_FILES = {
-    "inline_1": "inline-01.png",
-    "inline_2": "inline-02.png",
-    "inline_3": "inline-03.png",
-}
+from excalibur_blog_quad_slots import (
+    CANVAS_1_SLOTS,
+    DEFAULT_SLOT_MAP,
+    INLINE_FILES,
+    active_inline_keys,
+    all_split_slot_keys,
+    canvas_specs_for_inline_count,
+    inline_count_from_manifest,
+)
 PANEL_ASPECT = 16 / 9
 RECOMMENDED_CANVAS = (2048, 1152)  # 2×2 grid of 1024×576 (16:9 each)
 DEFAULT_OUTPUT_SIZE = (1200, 675)
@@ -97,7 +94,9 @@ def default_manifest(article_dir: Path, canvas_rel: str) -> dict[str, Any]:
             "meme_caption_ru": "",
         }
     }
-    for idx, slot_key in enumerate(("inline_1", "inline_2", "inline_3"), start=1):
+    inline_count = 7
+    inline_keys = active_inline_keys(inline_count)
+    for idx, slot_key in enumerate(inline_keys, start=1):
         h2 = h2s[idx - 1] if idx - 1 < len(h2s) else f"Секция {idx}"
         slots[slot_key] = {
             "quadrant": DEFAULT_SLOT_MAP[slot_key],
@@ -330,6 +329,7 @@ def split_canvas(
     canvas_path: Path,
     cover_dir: Path,
     manifest: dict[str, Any],
+    slot_keys: tuple[str, ...],
     output_size: tuple[int, int] | None,
     *,
     split_mode: str = "auto",
@@ -354,7 +354,7 @@ def split_canvas(
         outputs: dict[str, Any] = {}
         slots = manifest.get("slots") or {}
 
-        for slot_key in ("cover", "inline_1", "inline_2", "inline_3"):
+        for slot_key in slot_keys:
             slot = slots.get(slot_key) or {}
             quadrant = resolve_quadrant(slot, slot_key)
             raw_box = quadrant_boxes[quadrant]
@@ -389,13 +389,17 @@ def split_canvas(
         }
 
 
-def build_registry(article_dir: Path, manifest: dict[str, Any], split_info: dict[str, Any]) -> dict[str, Any]:
+def build_registry(
+    article_dir: Path,
+    manifest: dict[str, Any],
+    split_outputs: dict[str, Any],
+) -> dict[str, Any]:
     meta_path = article_dir / "article.meta.json"
     meta = load_json(meta_path) if meta_path.is_file() else {}
     style = manifest.get("style_preset") or "quad_canvas"
 
     assets = []
-    for slot_key, item in split_info["outputs"].items():
+    for slot_key, item in split_outputs.items():
         role = "cover" if slot_key == "cover" else "inline"
         slot_meta = (manifest.get("slots") or {}).get(slot_key) or {}
         assets.append(
@@ -417,7 +421,7 @@ def build_registry(article_dir: Path, manifest: dict[str, Any], split_info: dict
         "style_preset": style,
         "pipeline": manifest.get("pipeline") or "quad_canvas_1x_mcp",
         "file": "cover/cover.png",
-        "alt": split_info["outputs"]["cover"].get("alt") or meta.get("h1") or "",
+        "alt": (split_outputs.get("cover") or {}).get("alt") or meta.get("h1") or "",
         "aspect_ratio": "16:9",
         "canvas_source": manifest.get("canvas_file", "cover/canvas-quad.png"),
         "generated_at": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
@@ -473,7 +477,12 @@ def _remove_slot_figures(html: str, slot_key: str) -> tuple[str, int, list[str]]
     return "".join(parts), count, preceding
 
 
-def inject_figures(article_html: Path, split_info: dict[str, Any], dry_run: bool) -> list[str]:
+def inject_figures(
+    article_html: Path,
+    split_outputs: dict[str, Any],
+    inline_keys: tuple[str, ...],
+    dry_run: bool,
+) -> list[str]:
     """Insert or relocate inline <figure> tags after manifest h2_anchor.
 
     If a figure for the slot already exists under the correct H2 with matching
@@ -485,8 +494,8 @@ def inject_figures(article_html: Path, split_info: dict[str, Any], dry_run: bool
     html = article_html.read_text(encoding="utf-8")
     changes: list[str] = []
 
-    for slot_key in ("inline_1", "inline_2", "inline_3"):
-        item = split_info["outputs"][slot_key]
+    for slot_key in inline_keys:
+        item = split_outputs[slot_key]
         src = item["file"]
         alt = item.get("alt") or ""
         h2 = item.get("h2_anchor")
@@ -563,9 +572,10 @@ def create_demo_canvas(path: Path, style_label: str) -> None:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="Split 2x2 cover canvas into cover + 3 inline PNGs")
+    ap = argparse.ArgumentParser(description="Split 2x2 quad canvas into cover + inline PNGs")
     ap.add_argument("--article-dir", required=True, help="memory/blog/articles/<id>-<slug>")
-    ap.add_argument("--canvas", default="", help="Path to canvas-quad.png (default: cover/canvas-quad.png)")
+    ap.add_argument("--canvas", default="", help="Path to canvas PNG (default from manifest/canvas-index)")
+    ap.add_argument("--canvas-index", type=int, default=0, help="1 or 2 for longform dual canvas; 0=single legacy")
     ap.add_argument("--manifest", default="", help="cover/quad-manifest.json (auto-generated if missing)")
     ap.add_argument(
         "--output-size",
@@ -605,7 +615,38 @@ def main() -> int:
     cover_dir = article_dir / "cover"
     cover_dir.mkdir(parents=True, exist_ok=True)
 
-    canvas_rel = args.canvas or "cover/canvas-quad.png"
+    manifest_path = Path(args.manifest) if args.manifest else cover_dir / "quad-manifest.json"
+    if not manifest_path.is_absolute():
+        manifest_path = article_dir / manifest_path
+
+    if not manifest_path.is_file():
+        print(
+            "❌ QUAD SPLIT BLOCKER: missing cover/quad-manifest.json — "
+            "Cover agent must invent cover_hook + scene_hint + alt first "
+            "(no auto prose templates)",
+            file=sys.stderr,
+        )
+        return 1
+
+    manifest = load_json(manifest_path)
+    inline_count = inline_count_from_manifest(manifest)
+    inline_keys = active_inline_keys(inline_count)
+    canvas_specs = canvas_specs_for_inline_count(inline_count)
+
+    canvas_index = args.canvas_index
+    if canvas_index <= 0 and len(canvas_specs) == 1:
+        canvas_index = 1
+    if canvas_index <= 0:
+        print("❌ QUAD SPLIT BLOCKER: pass --canvas-index 1 or 2 for longform", file=sys.stderr)
+        return 1
+
+    spec = next((s for s in canvas_specs if s["index"] == canvas_index), None)
+    if not spec:
+        print(f"❌ QUAD SPLIT BLOCKER: unknown canvas-index={canvas_index}", file=sys.stderr)
+        return 1
+
+    slot_keys: tuple[str, ...] = tuple(spec["slots"])
+    canvas_rel = args.canvas or str(spec["canvas_file"])
     canvas_path = Path(canvas_rel)
     if not canvas_path.is_absolute():
         canvas_path = article_dir / canvas_path
@@ -618,24 +659,10 @@ def main() -> int:
         print(f"❌ QUAD SPLIT BLOCKER: canvas not found: {canvas_path}", file=sys.stderr)
         return 1
 
-    manifest_path = Path(args.manifest) if args.manifest else cover_dir / "quad-manifest.json"
-    if not manifest_path.is_absolute():
-        manifest_path = article_dir / manifest_path
-
-    if manifest_path.is_file():
-        manifest = load_json(manifest_path)
-    else:
-        print(
-            "❌ QUAD SPLIT BLOCKER: missing cover/quad-manifest.json — "
-            "Cover agent must invent cover_hook + scene_hint + alt first "
-            "(no auto prose templates)",
-            file=sys.stderr,
-        )
-        return 1
-
+    validate_keys = slot_keys if "cover" in slot_keys else slot_keys
     missing_alt = [
         key
-        for key in ("cover", "inline_1", "inline_2", "inline_3")
+        for key in validate_keys
         if not ((manifest.get("slots") or {}).get(key) or {}).get("alt")
     ]
     if missing_alt:
@@ -654,7 +681,7 @@ def main() -> int:
             return 1
 
     if args.dry_run:
-        print(f"DRY RUN canvas={canvas_path} manifest={manifest_path}")
+        print(f"DRY RUN canvas={canvas_path} manifest={manifest_path} slots={slot_keys}")
         print(json.dumps(manifest, ensure_ascii=False, indent=2))
         return 0
 
@@ -663,24 +690,56 @@ def main() -> int:
             canvas_path,
             cover_dir,
             manifest,
+            slot_keys,
             output_size,
             split_mode=args.split_mode,
         )
     except ValueError as exc:
         print(f"❌ QUAD SPLIT BLOCKER: {exc}", file=sys.stderr)
         return 1
-    registry = build_registry(article_dir, manifest, split_info)
-    save_json(cover_dir / "cover-registry.json", registry)
 
-    report = {
-        "agent": "excalibur-blog-cover-quad-split",
-        "status": "PASS",
-        "manifest": str(manifest_path.relative_to(article_dir)).replace("\\", "/"),
-        "split": split_info,
-    }
+    registry_path = cover_dir / "cover-registry.json"
+    merged_outputs: dict[str, Any] = {}
+    if registry_path.is_file():
+        old_registry = load_json(registry_path)
+        for asset in old_registry.get("assets") or []:
+            slot = asset.get("slot")
+            if slot:
+                merged_outputs[slot] = {
+                    "file": asset.get("file"),
+                    "alt": asset.get("alt") or "",
+                    "h2_anchor": asset.get("h2_anchor"),
+                }
+    merged_outputs.update(split_info["outputs"])
+    registry = build_registry(article_dir, manifest, merged_outputs)
+    save_json(registry_path, registry)
+
+    report_path = cover_dir / "quad-split-report.json"
+    report: dict[str, Any] = {"agent": "excalibur-blog-cover-quad-split", "status": "PASS"}
+    if report_path.is_file():
+        try:
+            report = load_json(report_path)
+        except json.JSONDecodeError:
+            report = {"agent": "excalibur-blog-cover-quad-split", "status": "PASS"}
+    report.setdefault("splits", [])
+    report["splits"] = [s for s in report.get("splits", []) if s.get("canvas_index") != canvas_index]
+    report["splits"].append(
+        {
+            "canvas_index": canvas_index,
+            "manifest": str(manifest_path.relative_to(article_dir)).replace("\\", "/"),
+            "split": split_info,
+        }
+    )
+    report["manifest"] = str(manifest_path.relative_to(article_dir)).replace("\\", "/")
+
     if args.inject_html:
         article_path = article_dir / "article.html"
-        inject_log = inject_figures(article_path, split_info, dry_run=False)
+        inject_log = inject_figures(
+            article_path,
+            merged_outputs,
+            inline_keys,
+            dry_run=False,
+        )
         report["html_inject"] = inject_log
         inject_errors = [
             item
@@ -689,7 +748,7 @@ def main() -> int:
         ]
         if article_path.is_file():
             injected_html = article_path.read_text(encoding="utf-8")
-            for slot_key in ("inline_1", "inline_2", "inline_3"):
+            for slot_key in inline_keys:
                 count = len(list(_slot_figure_pattern(slot_key).finditer(injected_html)))
                 if count != 1:
                     inject_errors.append(
@@ -698,18 +757,20 @@ def main() -> int:
         if inject_errors:
             report["status"] = "BLOCK"
             report["errors"] = inject_errors
-    save_json(cover_dir / "quad-split-report.json", report)
+    save_json(report_path, report)
 
     if report["status"] != "PASS":
         for error in report.get("errors") or []:
             print(f"❌ INLINE INJECT BLOCKER: {error}", file=sys.stderr)
         return 1
 
-    print(f"OK cover={cover_dir / 'cover.png'}")
-    for slot_key in ("inline_1", "inline_2", "inline_3"):
-        print(f"OK {slot_key}={cover_dir / INLINE_FILES[slot_key]}")
-    print(f"OK registry={cover_dir / 'cover-registry.json'}")
-    print(f"OK report={cover_dir / 'quad-split-report.json'}")
+    for slot_key in slot_keys:
+        if slot_key == "cover":
+            print(f"OK cover={cover_dir / 'cover.png'}")
+        else:
+            print(f"OK {slot_key}={cover_dir / INLINE_FILES[slot_key]}")
+    print(f"OK registry={registry_path}")
+    print(f"OK report={report_path}")
     return 0
 
 
