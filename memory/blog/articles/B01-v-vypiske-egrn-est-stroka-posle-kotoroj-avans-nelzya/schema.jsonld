@@ -1,0 +1,100 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "sameAs": [
+        "{{SITE_BASE}}/",
+        "{{SITE_BASE}}/rieltor-tyumen/",
+        "{{SITE_BASE}}/kontakty/",
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://t.me/holyslav92",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/"
+      },
+      "url": "{{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/",
+      "headline": "В выписке ЕГРН есть строка, после которой аванс вносить нельзя",
+      "description": "В выписке ЕГРН есть строка, после которой аванс вносить нельзя",
+      "datePublished": "2026-08-18",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "{{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Достаточно ли краткой справки из ЕГРН?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. До аванса нужна полная выписка об основных характеристиках и зарегистрированных правах — с разделом 2 и реквизитом 4."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что значит «не зарегистрировано» в реквизите 4?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Это официальная формулировка Росреестра: обременений на объект нет. Это не повод спешить с авансом без проверки истории прав и продавца."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли внести аванс, если в выписке ипотека?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ипотека — не безусловный стоп, но аванс только после письменного согласия банка или подтверждённой схемы погашения и переоформления."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Кто снимает запрет «без личного участия собственника»?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Только сам собственник лично — через МФЦ, Росреестр или Госуслуги. После снятия нужна новая выписка без этой строки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Почему нельзя ориентироваться на слова «выписка чистая»?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Потому что «чистая» без расшифровки реквизита 4 ничего не значит. Продавец может искренне забыть о своём запрете, а риелтор продавца не обязан объяснять каждую строку — он отвечает только на заданные вопросы."
+          }
+        }
+      ]
+    }
+  ]
+}
