@@ -1,15 +1,22 @@
 {
   "design_code_id": "the_rieltor_twilight_gold",
   "status": "ok",
-  "label_ru": "The Риэлтор — host_reference, twilight+золото, emotion bank",
-  "reference_notes": "Эталоны лица: hero-ref-office-risk-hologram.jpg + hero-ref-balcony-keys-sunset.jpg (+ portrait.jpg запасной). Палитра tymenrieltor-light. Панели cover/inline — #FFFFFF. Золото/ink — акценты коллажа.",
+  "label_ru": "The Риэлтор — host_reference, twilight+золото, emotion bank, live identity",
+  "reference_notes": "Лицо: identity-real/* (4 live фото, 28 лет). scene-composition-only/* — mood без FACE. Палитра tymenrieltor-light. Панели #FFFFFF.",
   "host_reference": true,
+  "age_lock": 28,
   "identity_lock_files": [
-    "memory/cover/assets/hero-ref-office-risk-hologram.jpg",
-    "memory/cover/assets/hero-ref-balcony-keys-sunset.jpg",
-    "memory/cover/assets/portrait.jpg"
+    "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
+    "memory/cover/assets/identity-real/face-office-selfie.jpeg",
+    "memory/cover/assets/identity-real/face-greenhouse-yahweh.png",
+    "memory/cover/assets/identity-real/face-immortal-regiment.jpeg"
   ],
-  "composition_rule": "Каждая обложка — новая сцена: другая эмоция, поза, жест, фон. Запрещено копировать 1-в-1 офис с голограммой или балкон с ключами.",
+  "scene_composition_only_files": [
+    "memory/cover/assets/scene-composition-only/hero-ref-office-risk-hologram.jpg",
+    "memory/cover/assets/scene-composition-only/hero-ref-balcony-keys-sunset.jpg"
+  ],
+  "scene_composition_rule": "AI hero-ref JPGs: mood/композиция ONLY. Hard ban: FACE source, copy face/pose 1:1.",
+  "composition_rule": "Каждая обложка — новая сцена: другая эмоция, поза, жест, фон. Запрещён copy-paste любого референсного кадра (4 live + 2 scene-only).",
   "emotion_bank": [
     "спокойная уверенность",
     "настороженность",
@@ -19,15 +26,16 @@
     "тёплое «ключ получен»"
   ],
   "cover_rules": [
-    "host_reference=true; лицо только с identity_lock_files",
+    "host_reference=true; лицо только identity-real/* (28 лет, round face, sandy hair)",
+    "i2i ротирует 4 live-файла; hero-ref AI — НЕ для лица",
     "Cover agent выбирает ОДНУ эмоцию из emotion_bank под тему H1",
-    "Новая композиция каждый раз: другой жест/предмет/фон; не клон эталонных кадров",
+    "Новая композиция каждый раз: другой жест/предмет/фон; не клон референсных сцен",
     "Один cover_hook (18–42 символа кириллицы); meme_caption_ru пуст",
-    "Герой LARGE слева: navy/charcoal blazer, короткие тёмные волосы, узнаваемое лицо",
+    "Герой LARGE слева: узнаваемое лицо Шакина, smart-casual blazer/jacket",
     "Один tiny/small предмет сделки справа: ключ, папка ЕГРН, дверь — не равный вес с лицом",
     "Фон панели #FFFFFF; hook ink #141821; один punch-word золотом #dcc5a1",
     "Слои: torn paper, gold tape/sticky, карточки документов — премиум, не мем",
-    "Запрещён штамп EXCALIBUR / pink-cat / белое худи / Instagram"
+    "Запрещён штамп EXCALIBUR / pink-cat / белое худи / plastic uncanny face"
   ],
   "inline_rules": [
     "Longform: 7 inline-панелей (inline_1…inline_7) — без людей и лиц",
@@ -58,7 +66,7 @@
     "usage": "Panels #FFFFFF. Hook/labels ink #141821. Gold #dcc5a1 for one highlight. Twilight — mood only."
   },
   "typography_reference": "Cormorant Garamond + Manrope. Cover: bold condensed Cyrillic hook.",
-  "cover_panel_prompt_block": "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic, gold #dcc5a1 one accent. Host LARGE left = same man as i2i reference (emotion from bank, NEW pose/scene). Tiny deal-prop right. Torn paper, gold tape. No hoodie, no cat, no pink, no composition clone of hero refs.",
+  "cover_panel_prompt_block": "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic, gold #dcc5a1 one accent. Host LARGE left = same 28yo man as i2i identity-real reference (round face, sandy hair, NEW pose/emotion/scene; never clone reference scenes). Tiny deal-prop right. Torn paper, gold tape. No plastic face, no hoodie, no cat, no pink.",
   "inline_information_block": "Same collage language: white #FFF, black RU labels, gold accents, paper/tape/cards. No people/faces. 3–6 labels per H2 panel.",
-  "global_negative": "white hoodie, headphones, pink-cat, hot-pink, beige gradient, Instagram, EXCALIBUR stamp, other face, meme, composition clone of office hologram or balcony keys, empty gray boxes, fake CIAN screenshot"
+  "global_negative": "plastic uncanny face, aged 35-45, airbrushed skin, AI hero-ref face, white hoodie, headphones, pink-cat, hot-pink, beige gradient, Instagram, EXCALIBUR stamp, other face, meme, composition clone of any reference photo, empty gray boxes, fake CIAN screenshot"
 }

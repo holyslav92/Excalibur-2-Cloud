@@ -21,8 +21,8 @@ PRIMARY: **mcp-derouter**, `resolution: 2K`. Kie — legacy fallback.
 
 ## Hero identity lock
 
-- `hero-ref-office-risk-hologram.jpg` — лицо + mood риска
-- `hero-ref-balcony-keys-sunset.jpg` — лицо + success/ключи
+- `memory/cover/assets/identity-real/*` — **4 live photos** (28 лет, round face, sandy hair). i2i ротация.
+- `scene-composition-only/hero-ref-*.jpg` — mood ONLY, **never FACE source**
 - `blog-hero.json` → `emotion_bank`, `composition_rule`
 
 **Каждая обложка:** новая эмоция/поза/сцена. **Запрещён** copy-paste композиции эталонов.
@@ -42,9 +42,9 @@ python3 scripts/excalibur_blog_quad_apply.py --article-dir <dir> --canvas-index 
 ## Visual locks (The Риэлтор)
 
 - Панели `#FFFFFF`; ink `#141821`; gold `#dcc5a1` один accent
-- Cover: host LARGE left, navy/charcoal blazer, tiny deal-prop right
+- Cover: host LARGE left, smart-casual blazer, identity-real face lock, tiny deal-prop right
 - Inline: без людей; 3–6 RU labels; тот же collage-язык
-- Запреты: white hoodie, pink-cat, EXCALIBUR stamp, beige gradient, clone hero-ref comps
+- Запреты: plastic/uncanny face, AI hero-ref as face, white hoodie, pink-cat, EXCALIBUR stamp, beige gradient, clone any reference scene
 
 ## Blockers
 

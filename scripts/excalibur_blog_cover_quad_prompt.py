@@ -11,6 +11,7 @@ import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
+from excalibur_blog_identity_real import pick_identity_reference
 from excalibur_blog_quad_slots import (
     CANVAS_1_SLOTS,
     active_inline_keys,
@@ -366,8 +367,9 @@ def build_prompt(
         panel_lines.append(
             f"Top-left COVER TEXT LOCK: headline EXACTLY «{cover_hook_text}» — bold condensed Cyrillic "
             f"black #141821, {highlight_rule}.{sticky_lock} "
-            f"Host LARGE left from reference: navy blazer, black crew tee, smile; "
-            f"scene: {compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; tiny deal-prop right; #FFF"
+            f"Host LARGE left = same 28yo man as i2i identity-real (round face, sandy hair, approachable); "
+            f"smart-casual blazer; NEW pose/emotion; scene: {compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; "
+            f"tiny deal-prop right; #FFF; no plastic face; no scene clone"
         )
         inline_keys = [k for k in canvas_slots if k != "cover"]
         for label, key in zip(quadrant_labels[1:], inline_keys[:3]):
@@ -381,8 +383,8 @@ def build_prompt(
         "EXCALIBUR stamp/pink-cat/white hoodie/headphones/fake CIAN screenshot."
     )
     reference_line = (
-        "REFERENCE FACE only on cover top-left when has_cover: blog-hero visual_lock; "
-        "no headphones."
+        "REFERENCE FACE only on cover top-left when has_cover: identity-real live photo "
+        "(28yo, round face, sandy hair); never AI hero-ref face; no headphones on host."
         if has_cover
         else "NO people/faces on any panel — informative inline collage only."
     )
@@ -457,7 +459,21 @@ def main() -> int:
     for spec in canvas_specs:
         has_cover = bool(spec.get("has_cover"))
         canvas_slots = tuple(spec["slots"])
+        identity_spec: dict[str, str] = {}
+        identity_rel = ""
         if has_cover:
+            topic_id = str(manifest.get("topic_id") or "").strip()
+            slug = str(manifest.get("slug") or article_dir.name).strip()
+            identity_spec = pick_identity_reference(topic_id, slug)
+            identity_rel = f"memory/cover/assets/identity-real/{identity_spec['file']}"
+            identity_path = root / identity_rel
+            if not identity_path.is_file():
+                print(
+                    f"❌ IDENTITY BLOCKER: missing live reference {identity_rel} "
+                    f"(stage via memory/setup/visual-inbox/)",
+                    file=sys.stderr,
+                )
+                return 1
             ref_url = (hero.get("reference_url_hosted") or "").strip()
             if not ref_url:
                 print("❌ COVER HERO BLOCKER: reference_url_hosted missing", file=sys.stderr)
@@ -517,6 +533,8 @@ def main() -> int:
         batch = {
             "pipeline": manifest.get("pipeline") or "quad_canvas_2x_image_api_longform",
             "canvas_index": spec["index"],
+            "identity_reference_local": identity_rel if has_cover else "",
+            "identity_reference_id": identity_spec["id"] if has_cover else "",
             "reference_url_hosted": batch_ref_url,
             "output_canvas": spec["canvas_file"],
             "result_path": spec["result_file"],

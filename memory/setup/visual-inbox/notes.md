@@ -1,31 +1,42 @@
 # Visual inbox — The Риэлтор
 
-Дата: 2026-08-18
+Дата: 2026-08-18 (обновлено: identity-real)
 
 ## cover_mode
 
-`host_reference` — на обложке **Святослав Шакин** (узнаваемое лицо).
+`host_reference` — на обложке **Святослав Шакин** (узнаваемое лицо, 28 лет).
 
-## Hero identity lock (владелец)
+## Identity lock (live photos ONLY)
 
-- `hero-ref-office-risk-hologram.jpg` — офис, документы, «НОТАРИУС», голограмма риска. Mood: «всплывёт позже». **Не шаблон каждой обложки.**
-- `hero-ref-balcony-keys-sunset.jpg` — балкон, закат, ключи. Mood: success. **Не шаблон каждой обложки.**
-- `portrait.jpg`, `portrait-landing.jpg`, `portrait-640.webp` — запасные likeness.
+Положите **оригинальные бинарники** (не AI) с точными именами:
+
+- `face-hoodie-airpods.jpeg` — крупный план, родинки (PRIMARY)
+- `face-office-selfie.jpeg` — селфи, серая футболка
+- `face-greenhouse-yahweh.png` — оранжерея, YAHWEH (likeness only)
+- `face-immortal-regiment.jpeg` — только лицо (не клонировать сцену)
+
+После загрузки:
+
+```bash
+python3 scripts/excalibur_blog_identity_real.py --stage-from-inbox
+```
+
+Копии остаются здесь; канон — `memory/cover/assets/identity-real/`.
+
+**Важно:** вложения в чат Cloud Agent **не сохраняются** на диск VM — кладите файлы в этот каталог через workspace (drag-and-drop), не только в сообщение.
+
+## Scene composition (NOT face)
+
+`scene-composition-only/` в assets — AI hero-ref для mood. **Не** использовать как лицо.
 
 ## Emotion bank
 
-Cover выбирает одну эмоцию под тему: спокойная уверенность / настороженность / жёсткий стоп / лёгкая ирония / разбор документов / тёплое «ключ получен».
-
-Каждый кадр — **другая** поза, жест, сцена. Запрещён copy-paste композиции эталонов.
+6 эмоций в `blog-hero.json`; каждый кадр — другая поза/сцена.
 
 ## Longform
 
 Обложка + 7 inline-quad. 2× quad-canvas 2K (mcp-derouter).
 
-## Палитра (tymenrieltor-light)
-
-Ink `#141821`, золото `#dcc5a1`, панели `#FFFFFF`, twilight mood `#05070f` (не фон панелей).
-
 ## Запреты
 
-Чужие лица, pink-cat, EXCALIBUR, белое худи, Instagram, fake ЦИАН screenshot, клон hero-ref кадров.
+AI-reconstructed faces, plastic look, клон референсных сцен, pink-cat, EXCALIBUR, белое худи.

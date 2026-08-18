@@ -46,7 +46,7 @@
 ## Главный герой визуала
 
 - **cover_mode:** `host_reference`
-- **identity lock:** `hero-ref-office-risk-hologram.jpg`, `hero-ref-balcony-keys-sunset.jpg` (+ `portrait.jpg` запасной)
+- **identity lock:** `memory/cover/assets/identity-real/*` (4 live фото, 28 лет); `scene-composition-only/hero-ref-*.jpg` — mood only, не лицо
 - **emotion bank:** спокойная уверенность / настороженность / жёсткий стоп / ирония / разбор документов / «ключ получен»
 - **правило:** новая поза и сцена каждый раз; не клонировать композицию эталонов
 - **одежда:** navy/charcoal blazer; без белого худи

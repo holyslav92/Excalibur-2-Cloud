@@ -35,7 +35,7 @@ Writer = смысл (`drafts/writer.html`). Sol = слог Клышина / фа
 2. **Canvas 2** (mcp-derouter 2K): inline_4…7 → split 2×2
 3. Итого: `cover.png` 1200×675 + `inline-01…07.png`, inject `figure.inline-quad` data-slot=inline_1…7
 
-Hero lock: `memory/cover/assets/hero-ref-*.jpg` — лицо узнаваемое, **новая эмоция/поза** каждый раз (emotion bank в `blog-hero.json`).
+Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 28 лет, **новая эмоция/поза** каждый раз. AI `scene-composition-only/hero-ref-*` — не для лица.
 
 ## Automation prompt
 

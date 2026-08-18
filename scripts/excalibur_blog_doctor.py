@@ -249,6 +249,24 @@ def main() -> int:
                 errors,
                 warnings,
             )
+        from excalibur_blog_identity_real import missing_identity_files
+
+        missing_identity = missing_identity_files(root)
+        check(
+            not missing_identity,
+            "identity-real live photos present (4 files)",
+            errors,
+            warnings,
+        )
+        if missing_identity:
+            for rel in missing_identity:
+                print(f"  missing: {rel}")
+        check(
+            not (root / "memory/cover/assets/hero-ref-office-risk-hologram.jpg").is_file(),
+            "reconstructed AI hero-ref removed from assets root",
+            errors,
+            warnings,
+        )
     else:
         check(
             True,

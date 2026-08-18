@@ -65,6 +65,19 @@ Memories в Tools должны быть OFF.
 
 4×/день YEKT (09, 12, 16, 20). См. `CLOUD-AUTOMATION.md`.
 
+### Identity photos (host_reference)
+
+Вложения в чат Cloud Agent **не попадают** на диск VM. Live-фото владельца кладите в
+`memory/setup/visual-inbox/` с каноническими именами (`face-hoodie-airpods.jpeg`, …),
+затем:
+
+```bash
+python3 scripts/excalibur_blog_identity_real.py --stage-from-inbox
+python3 scripts/excalibur_blog_identity_real.py --check
+```
+
+Канон: `memory/cover/assets/identity-real/`. AI `scene-composition-only/` — не для лица.
+
 ## 6. Проверка
 
 ```bash

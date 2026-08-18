@@ -2,42 +2,41 @@
 
 Локальные референсы для `cover_mode=host_reference`. Чужие CDN/catbox не использовать.
 
-## Hero identity lock (PRIMARY)
+## Identity lock (PRIMARY) — live photos
 
-Два эталона от владельца + запасной likeness:
+Каталог `identity-real/` — **единственный** source of truth для лица:
 
 | Файл | Роль |
 |------|------|
-| `hero-ref-office-risk-hologram.jpg` | Лицо + mood «риск всплывёт позже» (офис, документы, нотариус). **Не копировать композицию на каждый пост.** |
-| `hero-ref-balcony-keys-sunset.jpg` | Лицо + mood success/ключи (балкон, закат). **Не копировать композицию на каждый пост.** |
-| `portrait.jpg` | Запасной full-body likeness (navy blazer, тёмная стена). |
-| `portrait-landing.jpg` | Поясной, сумерки, берёзы. |
-| `portrait-640.webp` | Webp-вариант. |
+| `identity-real/face-hoodie-airpods.jpeg` | PRIMARY geometry lock |
+| `identity-real/face-office-selfie.jpeg` | Round face, stubble |
+| `identity-real/face-greenhouse-yahweh.png` | Full body likeness (no scene clone) |
+| `identity-real/face-immortal-regiment.jpeg` | Face only (no scene clone) |
 
-Публичный URL для i2i (тема сайта):
+i2i **ротирует** все четыре (`blog-hero.json` → `i2i_reference_rotation`).
 
-`{{SITE_BASE}}/wp-content/themes/tymenrieltor-light/assets/images/portrait.jpg`
+## Scene composition only (NOT face)
 
-## Emotion bank (Cover выбирает одну на статью)
+`scene-composition-only/hero-ref-*.jpg` — AI mood refs. **Запрещено** как FACE source.
 
-- спокойная уверенность
-- настороженность
-- жёсткий стоп
-- лёгкая ирония
-- сосредоточенный разбор документов
-- тёплое «ключ получен»
+## Legacy likeness (secondary, not primary)
 
-Правило: **новая эмоция + новая поза + новый фон** каждый раз. Лицо узнаваемое, сцена не штамп.
+| Файл | Роль |
+|------|------|
+| `portrait.jpg` | Старый full-body navy blazer (сайт) |
+| `portrait-landing.jpg` | Поясной, сумерки |
+| `portrait-640.webp` | Webp |
 
-## Longform visuals
+## Emotion bank
 
-8 изображений на статью: `cover.png` 1200×675 + `inline-01…07.png` (7× `figure.inline-quad`).
-2 quad-canvas × 2K (mcp-derouter) → split 2×2.
+Cover выбирает одну эмоцию на статью; **новая** поза/сцена каждый раз.
 
-## Марка / mood (`style-refs/`)
+## Longform
 
-См. `style-refs/README` в каталоге. Inbox: `memory/setup/visual-inbox/` (копии hero-ref + logo).
+8 изображений: cover + 7 inline. 2× quad-canvas 2K (mcp-derouter) → split 2×2.
+
+Inbox: `memory/setup/visual-inbox/` (копии identity-real + logo).
 
 ## Запреты
 
-Чужое лицо, pink-cat, белое худи, EXCALIBUR stamp, beige gradient, клон композиции эталонных hero-ref.
+Чужое лицо, plastic/uncanny face, AI hero-ref как лицо, pink-cat, белое худи, клон любой референсной сцены.

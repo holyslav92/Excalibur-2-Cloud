@@ -3,37 +3,68 @@
   "status": "ok",
   "name_ru": "Святослав Шакин",
   "cover_mode": "host_reference",
+  "age_lock": 28,
   "reference_images": [
     {
-      "id": "office_risk_hologram",
-      "file": "memory/cover/assets/hero-ref-office-risk-hologram.jpg",
+      "id": "hoodie_airpods",
+      "file": "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
+      "role": "identity_lock_primary",
+      "notes": "Лучший facial geometry lock: крупный план, родинки.",
+      "do_not_clone_scene": true
+    },
+    {
+      "id": "office_selfie",
+      "file": "memory/cover/assets/identity-real/face-office-selfie.jpeg",
       "role": "identity_lock",
-      "mood": "риск всплывёт позже — документы, голограмма дома, нотариус",
-      "do_not_copy_composition": true
+      "notes": "Круглое лицо, лёгкая щетина.",
+      "do_not_clone_scene": true
+    },
+    {
+      "id": "greenhouse_yahweh",
+      "file": "memory/cover/assets/identity-real/face-greenhouse-yahweh.png",
+      "role": "identity_lock",
+      "notes": "Full body likeness only; не клонировать оранжерею/YAHWEH.",
+      "do_not_clone_scene": true
+    },
+    {
+      "id": "immortal_regiment",
+      "file": "memory/cover/assets/identity-real/face-immortal-regiment.jpeg",
+      "role": "identity_lock_face_only",
+      "notes": "Только лицо; не клонировать марш/портрет в руках.",
+      "do_not_clone_scene": true
+    }
+  ],
+  "scene_composition_references": [
+    {
+      "id": "office_risk_hologram",
+      "file": "memory/cover/assets/scene-composition-only/hero-ref-office-risk-hologram.jpg",
+      "role": "scene_composition_only",
+      "mood": "риск всплывёт позже — офис, голограмма",
+      "hard_rule": "NEVER use as FACE source; do not copy face or pose 1:1"
     },
     {
       "id": "balcony_keys_sunset",
-      "file": "memory/cover/assets/hero-ref-balcony-keys-sunset.jpg",
-      "role": "identity_lock",
-      "mood": "success / ключи — спокойная уверенность на закате",
-      "do_not_copy_composition": true
+      "file": "memory/cover/assets/scene-composition-only/hero-ref-balcony-keys-sunset.jpg",
+      "role": "scene_composition_only",
+      "mood": "success / ключи на закате",
+      "hard_rule": "NEVER use as FACE source; do not copy face or pose 1:1"
     }
   ],
-  "reference_image": "memory/cover/assets/hero-ref-office-risk-hologram.jpg",
-  "reference_image_secondary": "memory/cover/assets/hero-ref-balcony-keys-sunset.jpg",
-  "reference_notes": "PRIMARY identity lock: два эталона лица владельца (офис+риск / балкон+ключи). Лицо и типаж — только с этих кадров + portrait.jpg как запасной likeness. Каждая новая обложка: ДРУГАЯ эмоция, поза, жест, сцена — запрещено копировать композицию эталонов 1-в-1.",
+  "reference_image": "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
+  "reference_image_secondary": "memory/cover/assets/identity-real/face-office-selfie.jpeg",
+  "reference_notes": "PRIMARY identity lock: четыре LIVE-фото в memory/cover/assets/identity-real/ (не AI). i2i ротирует их по topic_id. Лицо: 28 лет, круглое лицо, полные щёки, короткие светло-русые/песочные волосы, fair skin, approachable. Запрещены plastic/uncanny лица и hero-ref AI как FACE source. scene-composition-only/ — только mood/композиция без копирования лица/позы 1:1. Каждая обложка: НОВАЯ эмоция, поза, жест, сцена — не клон ни одного из шести референсных кадров.",
   "visual_lock": {
-    "person": "adult man 30–40, Slavic features, short dark hair, light stubble, warm eyes, same face as hero-ref-* and portrait.jpg",
-    "hair": "short dark hair, neat, natural texture",
-    "face": "oval face, defined jaw, calm confident smile; do not invent another person",
+    "person": "adult man exactly 28 years old, Slavic, round face with full cheeks, short light-brown/sandy hair, fair skin, warm approachable eyes, slight closed-mouth smile or theme-matched emotion",
+    "hair": "short light-brown/sandy hair, natural texture, not dark, not 35–45 aged",
+    "face": "same face as identity-real/* live photos only; soft round cheeks; light stubble ok; distinct moles on chin/cheek when visible; NOT airbrushed, NOT plastic, NOT uncanny, NOT a different person",
     "outfit_variants": [
-      "slim navy blazer + white or black crew/button shirt",
-      "charcoal jacket + cream henley (office scenes)"
+      "navy/charcoal blazer + dark tee (editorial cover default)",
+      "smart-casual shirt or henley for office/document scenes"
     ],
-    "forbid": "white hoodie, pink-cat, headphones, sunglasses, other face, copy-paste of reference compositions"
+    "forbid": "AI-reconstructed hero-ref faces, 35–45 age look, airbrushed skin, plastic/uncanny face, white hoodie, pink-cat, headphones in cover host, sunglasses, other person, copy-paste of any reference scene (greenhouse, Immortal Regiment, breakroom selfie, hoodie selfie, office hologram, balcony keys)"
   },
-  "outfit_rule": "Smart-casual риэлтор: navy blazer или charcoal jacket; без белого худи пайплайна, без наушников.",
-  "prompt_fragment": "same man as i2i reference: short dark hair, stubble, navy/charcoal blazer; LARGE left; new pose/emotion per article; no hoodie; #FFF",
+  "outfit_rule": "Cover host: smart-casual риэлтор (blazer/jacket). Лицо только с identity-real. Без белого худи, без AirPods на cover (они только в selfie-ref).",
+  "prompt_fragment": "same man as i2i identity-real reference: 28yo, round face, sandy hair, fair skin, approachable; LARGE left; NEW pose/emotion/scene per article; no scene clone; #FFF",
   "emotion_bank": [
     {
       "id": "calm_confidence",
@@ -66,24 +97,25 @@
       "when": "успешная сделка, финал без хвастовства"
     }
   ],
-  "composition_rule": "Cover agent picks ONE emotion from emotion_bank per article. Invent NEW scene_hint: другой ракурс, жест, предмет, фон. Never clone office hologram desk or balcony keys sunset composition.",
+  "composition_rule": "Cover picks ONE emotion from emotion_bank. Invent NEW scene_hint: другой ракурс, жест, предмет, фон. Never clone greenhouse, Immortal Regiment, office selfie, hoodie selfie, office hologram desk, or balcony keys sunset.",
   "cover_hook_rules": [
     "cover_hook invents Cover-text agent; Cover picks emotion + scene",
     "meme_caption_ru always empty"
   ],
   "meme_caption_ru": "",
-  "reference_url_hosted": "{{SITE_BASE}}/wp-content/themes/tymenrieltor-light/assets/images/portrait.jpg",
-  "reference_url_hosted_alt": "{{SITE_BASE}}/wp-content/uploads/excalibur/hero-ref-office-risk-hologram.jpg",
-  "reference_url_source": "tenant_theme_asset + owner hero refs",
-  "reference_url_updated_at": "2026-08-18T06:55:00Z",
+  "reference_url_hosted": "{{SITE_BASE}}/wp-content/uploads/excalibur/identity-real/face-hoodie-airpods.jpeg",
+  "reference_url_hosted_alt": "{{SITE_BASE}}/wp-content/uploads/excalibur/identity-real/face-office-selfie.jpeg",
+  "reference_url_source": "identity-real live photos (upload to WP media on publish)",
+  "reference_url_updated_at": "2026-08-18T07:25:00Z",
   "secondary_references": [
-    "memory/cover/assets/hero-ref-balcony-keys-sunset.jpg",
-    "memory/cover/assets/portrait.jpg",
-    "memory/cover/assets/portrait-landing.jpg",
-    "memory/cover/assets/portrait-640.webp"
+    "memory/cover/assets/identity-real/face-greenhouse-yahweh.png",
+    "memory/cover/assets/identity-real/face-immortal-regiment.jpeg"
   ],
   "i2i_reference_rotation": [
-    "memory/cover/assets/hero-ref-office-risk-hologram.jpg",
-    "memory/cover/assets/hero-ref-balcony-keys-sunset.jpg"
-  ]
+    "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
+    "memory/cover/assets/identity-real/face-office-selfie.jpeg",
+    "memory/cover/assets/identity-real/face-greenhouse-yahweh.png",
+    "memory/cover/assets/identity-real/face-immortal-regiment.jpeg"
+  ],
+  "i2i_reference_rotation_note": "Derouter/Kie i2i MUST rotate these four live files per article (topic_id hash). NEVER hero-ref AI JPGs as face source."
 }
