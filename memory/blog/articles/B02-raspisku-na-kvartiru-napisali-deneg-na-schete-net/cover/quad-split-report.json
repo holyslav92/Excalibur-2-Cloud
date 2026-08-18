@@ -162,27 +162,27 @@
           "h_gutter_px": null,
           "v_gutter_px": null,
           "requested_mode": "auto",
-          "fallback_reason": "aspect_crop_loss_too_high",
+          "fallback_reason": "gutter_too_far_from_center",
           "rejected_gutter": {
             "h_gutter_px": {
-              "start": 465,
-              "end": 504
+              "start": 437,
+              "end": 468
             },
             "v_gutter_px": {
-              "start": 830,
-              "end": 842
+              "start": 787,
+              "end": 828
             },
             "gutter_quality": {
-              "h_center_offset_px": 14.0,
-              "v_center_offset_px": 0.0,
-              "max_aspect_crop_loss": 0.0639,
+              "h_center_offset_px": 18.0,
+              "v_center_offset_px": 28.5,
+              "max_aspect_crop_loss": 0.0794,
               "per_panel_crop_loss": {
-                "top_left": 0.0,
-                "top_right": 0.0,
-                "bottom_left": 0.0639,
-                "bottom_right": 0.0639
+                "top_left": 0.0127,
+                "top_right": 0.0794,
+                "bottom_left": 0.0634,
+                "bottom_right": 0.0
               },
-              "reject_reason": "aspect_crop_loss_too_high"
+              "reject_reason": "gutter_too_far_from_center"
             }
           }
         },
