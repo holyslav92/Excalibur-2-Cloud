@@ -23,7 +23,7 @@
 
 ```text
 Scout? → research_start → Research → Title → Writer → Sol
-→ Cover-text || Schema → Cover (2× quad 2K) → Indexer → Publish
+→ Description → Cover-text || Schema → Cover → Cover-QA → Indexer → Publish
 → Fixer → merge → Content-learner
 ```
 
@@ -53,7 +53,7 @@ dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
 needs_scout → Scout (signal_urls из tenant).
 research_start → Research → Title → Writer → Sol.
 После Sol: pipeline_canon stamp + opening_meta + html_linter.
-Cover-text || Schema → Cover (mcp-derouter 2K ×2 canvas); Indexer; Publish только если EXCALIBUR_BLOG_ALLOW_PUBLISH=yes.
+Description → Cover-text || Schema → Cover → Cover-QA; Indexer; Publish только если EXCALIBUR_BLOG_ALLOW_PUBLISH=yes.
 Fixer → merge → content-learner.
 ```
 

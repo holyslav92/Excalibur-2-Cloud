@@ -21,7 +21,7 @@ description: Директор Excalibur-2-Cloud — Writer смысл, Sol фи�
 
 ```text
 Scout? → research_start → Research → Title → Writer
-→ Sol → Cover-text||Schema → Cover → Indexer → Publish
+→ Sol → Description → Cover-text||Schema → Cover → Cover-QA → Indexer → Publish
 ```
 
 - **Writer** — смысл → `drafts/writer.html`
@@ -52,6 +52,10 @@ python3 scripts/excalibur_blog_research_start.py --topic-id <ID> --title "<short
 `Task(excalibur-blog-sol)` → `article.html` + `drafts/variant-a.html`  
 из смысла Writer + SOUL/examples. Не выдумывает факты.
 
+### 3c Description (Дзен-карточка)
+`Task(excalibur-blog-description)` → `description-brief.json`  
+после Sol stamp. Gate: `excalibur_blog_description_gate.py`.
+
 ### 4 Stamp + structural checks (shell, не LLM)
 ```bash
 python3 scripts/excalibur_blog_pipeline_canon.py --article-dir <dir> --stamp
@@ -63,6 +67,9 @@ python3 scripts/excalibur_blog_opening_meta_gate.py --article-dir <dir>
 Сломан **смысл/факты** → верни **Writer**, потом снова Sol.
 
 ### 5 Cover-text || Schema → Cover
+### 5b Cover-QA
+`Task(excalibur-blog-cover-qa)` → `cover/cover_qa.json` PASS. FAIL → Cover.
+
 ### 6 Indexer → Publish
 ### 7 Fixer → merge → learner
 

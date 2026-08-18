@@ -7,7 +7,9 @@ description: "④a Cover: 2× quad mcp-derouter 2K, light/meme/Wordstat stickers
 
 ## Когда
 
-После Sol PASS + Cover-text gate PASS. Параллельно Schema.
+После Sol PASS + Description gate PASS + Cover-text gate PASS. Параллельно Schema.
+
+**После Cover:** `excalibur-blog-cover-qa` → `cover/cover_qa.json` PASS → Indexer.
 
 **Канон:** `memory/cover/cover-canon.json` · Skill agent: `agents/excalibur-blog-cover.md`
 

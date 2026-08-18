@@ -16,8 +16,8 @@
 
 ```text
 Scout? → research_start → Research → Title → Writer(смысл)
-→ Sol(слог) → Cover-text || Schema → Cover → Indexer(llms)
-→ Publish → Fixer → merge → Content-learner
+→ Sol(слог) → Description → Cover-text || Schema → Cover → Cover-QA
+→ Indexer(llms) → Publish → Fixer → merge → Content-learner
 ```
 
 **Writer** → `drafts/writer.html` (факты и смысл).  
@@ -26,7 +26,9 @@ Scout? → research_start → Research → Title → Writer(смысл)
 После Sol — stamp `pipeline_canon` + structural checks. Прозу после Sol
 не переписывают (кроме возврата Sol при FAIL гейтов слога).
 
-**Title** → `title-brief.json`.
+**Title** → `title-brief.json`. **Description** → `description-brief.json` (Дзен-карточка, после Sol).
+
+**18 ролей** (см. `.cursor/agents/FOR-AGENTS.md`): 16 pipeline + `excalibur-blog-description` + `excalibur-blog-cover-qa`.
 
 Никто не читает уже опубликованные статьи сайта — только
 `published-titles-only.md` / `shared/published-titles.md` для anti-dup.
@@ -46,6 +48,7 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - topics / SEO-хвосты
 - Writer/Sol читают старые article.html / live-сайт как образец
 - Publish без pipeline_canon stamp
+- Publish без `cover/cover_qa.json` PASS или без `description-brief.json`
 - Scout/тема без **Klyshin×Wordstat dual gate**, без rework-лога или с выдуманными частотами
 - Scout **drop hook** при слабом Wordstat без цикла rework (локализация Тюмень, buyer-жаргон: егрн, наследство, ипотека, аванс…)
 - Scout/тема про RF-blocked heroes без Дзен-канона (если `dzen_rf_pack`)

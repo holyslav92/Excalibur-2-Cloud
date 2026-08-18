@@ -105,6 +105,7 @@ def main() -> int:
         "shared/soul-examples/SOURCE.md",
         "shared/soul-examples/post-to-article.md",
         "shared/dzen-content-rules.md",
+        "shared/dzen-description-rules.md",
         "shared/rf-blocked-entities.json",
         "shared/pipeline-canon.json",
         "shared/published-titles.md",
@@ -119,7 +120,13 @@ def main() -> int:
         "agents/excalibur-blog-research.md",
         "agents/excalibur-blog-title.md",
         "agents/excalibur-blog-cover-text.md",
+        "agents/excalibur-blog-description.md",
+        "agents/excalibur-blog-cover-qa.md",
         "agents/excalibur-blog-publish.md",
+        "skills/description-excalibur-blog/SKILL.md",
+        "skills/cover-qa-excalibur-blog/SKILL.md",
+        "scripts/excalibur_blog_description_gate.py",
+        "scripts/excalibur_blog_cover_qa_gate.py",
         "skills/setup-excalibur-blog/SKILL.md",
         "skills/setup-voice-excalibur-blog/SKILL.md",
         "skills/setup-visual-excalibur-blog/SKILL.md",
@@ -144,6 +151,43 @@ def main() -> int:
         check((root / rel).is_file(), f"{rel} exists", errors, warnings)
 
     check((root / ".cursor/agents").is_dir(), ".cursor/agents exists", errors, warnings)
+
+    CANONICAL_PIPELINE_AGENTS = (
+        "excalibur-blog-setup",
+        "excalibur-blog-setup-voice",
+        "excalibur-blog-setup-visual",
+        "excalibur-blog-director",
+        "excalibur-blog-scout",
+        "excalibur-blog-research",
+        "excalibur-blog-title",
+        "excalibur-blog-writer",
+        "excalibur-blog-sol",
+        "excalibur-blog-description",
+        "excalibur-blog-cover-text",
+        "excalibur-blog-schema",
+        "excalibur-blog-cover",
+        "excalibur-blog-cover-qa",
+        "excalibur-blog-indexer",
+        "excalibur-blog-publish",
+        "excalibur-blog-fixer",
+        "excalibur-blog-content-learner",
+    )
+    for agent_name in CANONICAL_PIPELINE_AGENTS:
+        for agents_dir in (root / "agents", root / ".cursor/agents"):
+            rel = f"{agents_dir.name}/{agent_name}.md"
+            check(
+                (agents_dir / f"{agent_name}.md").is_file(),
+                f"{rel} exists",
+                errors,
+                warnings,
+            )
+    cursor_agent_files = sorted((root / ".cursor/agents").glob("excalibur-blog-*.md"))
+    check(
+        len(cursor_agent_files) == len(CANONICAL_PIPELINE_AGENTS),
+        f"18 pipeline agent files in .cursor/agents (got {len(cursor_agent_files)})",
+        errors,
+        warnings,
+    )
     check(module_available("PIL"), "Pillow available", errors, warnings)
     check(module_available("numpy"), "numpy available", errors, warnings)
 
@@ -289,6 +333,8 @@ def main() -> int:
         for gate_cmd in (
             [sys.executable, str(root / "scripts/excalibur_blog_cover_motif_gate.py"), "doctor"],
             [sys.executable, str(root / "scripts/excalibur_blog_wordstat_gate.py"), "doctor"],
+            [sys.executable, str(root / "scripts/excalibur_blog_cover_qa_gate.py"), "--doctor"],
+            [sys.executable, str(root / "scripts/excalibur_blog_description_gate.py"), "--doctor"],
         ):
             proc = subprocess.run(gate_cmd, cwd=root, capture_output=True, text=True, check=False)
             label = gate_cmd[1].rsplit("/", 1)[-1]

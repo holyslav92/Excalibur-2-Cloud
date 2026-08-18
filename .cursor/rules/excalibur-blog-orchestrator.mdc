@@ -32,10 +32,12 @@ alwaysApply: false
 3. `excalibur-blog-writer` → `drafts/writer.html` (смысл)
 4. `excalibur-blog-sol` → `article.html` (слог SOUL + examples)
 5. shell: `pipeline_canon --stamp` + opening_meta + html_linter
-6. **ПАРАЛЛЕЛЬНО** cover-text + schema → cover
-7. `excalibur-blog-indexer`
-8. `excalibur-blog-publish`
-9. fixer(open) → merge_to_main → content-learner
+6. `excalibur-blog-description` → `description-brief.json`
+7. **ПАРАЛЛЕЛЬНО** cover-text + schema → cover
+8. `excalibur-blog-cover-qa` → `cover/cover_qa.json` PASS
+9. `excalibur-blog-indexer`
+10. `excalibur-blog-publish`
+11. fixer(open) → merge_to_main → content-learner
 
 Канон: `shared/pipeline-canon.json`.
 **Не возвращать** Critic/Panel/Thesis/Voice/Headline/Glavred/Visual QA.

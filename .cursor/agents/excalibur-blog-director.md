@@ -22,8 +22,8 @@ is_background: false
 
 ```text
 Scout? → research_start → Research → Title → Writer
-→ Sol → Cover-text || Schema → Cover → Indexer → Publish
-→ Fixer → merge → Content-learner
+→ Sol → Description → Cover-text || Schema → Cover → Cover-QA
+→ Indexer → Publish → Fixer → Content-learner
 ```
 
 Writer = смысл (`drafts/writer.html`).  
@@ -37,8 +37,8 @@ Sol = финальный слог (`article.html`) по SOUL + soul-examples.
 1. Scout? + research_start
 2. Research → Title → Writer → **Sol**
 3. shell `pipeline_canon --stamp` + opening_meta + html_linter
-4. cover-text || schema → Cover
-5. indexer → publish
+4. **Description** → cover-text || schema → Cover
+5. **Cover-QA** → indexer → publish
 6. Fixer → merge → content-learner
 
 Skill: `skills/director-excalibur-blog/SKILL.md`
