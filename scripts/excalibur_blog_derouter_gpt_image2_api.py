@@ -36,11 +36,15 @@ from excalibur_blog_site_base import (
 DEFAULT_API_KEY_ENV = "DEROUTER_API_KEY"
 DEFAULT_MODEL_ENV = "DEROUTER_IMAGE_MODEL"
 DEFAULT_SIZE_ENV = "DEROUTER_IMAGE_SIZE"
-# DEROUTER_IMAGE_MODEL обязателен в Cloud Secrets (id из GET /v1/models).
-DEFAULT_SIZE_2K_16_9 = "1536x1024"
+DEFAULT_QUALITY_ENV = "DEROUTER_IMAGE_QUALITY"
+# Quad canvas exact 2K 16:9 per Derouter Image tab (not aspect_ratio API field).
+DEFAULT_SIZE_2K_16_9 = "2048x1152"
+DEFAULT_QUALITY = "auto"
+# Images MUST use api-direct — api.derouter.ai hits Cloudflare ~100s → HTTP 524 on gen.
 PRIMARY_DIRECT_BASE = "https://api-direct.derouter.ai/openai/v1"
 FALLBACK_DIRECT_BASE = "https://api-direct.apikey.cloud/openai/v1"
 DEFAULT_TIMEOUT_SECONDS = 600
+MIN_TIMEOUT_SECONDS = 240
 DEFAULT_MAX_RETRIES = 1
 DEFAULT_RETRY_WAIT_SECONDS = 5
 DEFAULT_LOCAL_REFERENCE = "memory/cover/assets/blog-hero-reference.png"
@@ -98,8 +102,13 @@ def default_size() -> str:
     return (os.environ.get(DEFAULT_SIZE_ENV) or DEFAULT_SIZE_2K_16_9).strip() or DEFAULT_SIZE_2K_16_9
 
 
+def default_quality() -> str:
+    return (os.environ.get(DEFAULT_QUALITY_ENV) or DEFAULT_QUALITY).strip() or DEFAULT_QUALITY
+
+
 def is_retryable_http(status: int) -> bool:
-    return status in {401, 403, 408, 429, 500, 502, 503, 504}
+    # 524 = Cloudflare timeout when hitting non-direct api.derouter.ai for images.
+    return status in {401, 403, 408, 429, 500, 502, 503, 504, 524}
 
 
 def _guess_mime(path: Path) -> str:
@@ -152,13 +161,12 @@ def batch_mcp_args(batch_path: Path) -> dict[str, Any]:
     return out
 
 
-def resolve_local_reference_path(
+def resolve_local_reference_paths(
     *,
     root: Path,
     batch_path: Path,
-    image_input: dict[str, Any],
-) -> Path | None:
-    """Prefer batch local_reference / identity_reference_local over remote URLs."""
+) -> list[Path]:
+    """Local identity-real files for /images/edits — never input_urls or data-URL JSON."""
     batch = load_json(batch_path)
     candidates: list[str] = []
     if batch.get("prefer_local_reference"):
@@ -166,19 +174,23 @@ def resolve_local_reference_path(
         if local_ref:
             candidates.append(local_ref)
     identity_local = str(batch.get("identity_reference_local") or "").strip()
-    if identity_local:
+    if identity_local and identity_local not in candidates:
         candidates.append(identity_local)
     if not candidates:
-        return None
+        return []
+    paths: list[Path] = []
     for rel in candidates:
         path = Path(rel)
         if not path.is_absolute():
             path = root / path
         if path.is_file():
-            return path
-    raise DerouterApiError(
-        f"prefer_local_reference/identity_reference_local set but file missing: {candidates[0]}"
-    )
+            paths.append(path)
+            break
+    if not paths:
+        raise DerouterApiError(
+            f"prefer_local_reference/identity_reference_local set but file missing: {candidates[0]}"
+        )
+    return paths
 
 
 def http_json_post(
@@ -224,13 +236,11 @@ def http_multipart_post(
     api_key: str,
     *,
     fields: dict[str, str],
-    file_field: str,
-    file_path: Path,
+    files: list[tuple[str, Path]],
     timeout: int,
 ) -> dict[str, Any]:
+    """Multipart POST; multi-ref uses repeated image[] parts per Derouter docs."""
     boundary = "----ExcaliburDerouterBoundary"
-    mime = _guess_mime(file_path)
-    file_bytes = file_path.read_bytes()
     parts: list[bytes] = []
     for name, value in fields.items():
         parts.append(
@@ -240,15 +250,19 @@ def http_multipart_post(
                 f"{value}\r\n"
             ).encode("utf-8")
         )
-    parts.append(
-        (
-            f"--{boundary}\r\n"
-            f'Content-Disposition: form-data; name="{file_field}"; filename="{file_path.name}"\r\n'
-            f"Content-Type: {mime}\r\n\r\n"
-        ).encode("utf-8")
-    )
-    parts.append(file_bytes)
-    parts.append(f"\r\n--{boundary}--\r\n".encode("utf-8"))
+    for field_name, file_path in files:
+        mime = _guess_mime(file_path)
+        file_bytes = file_path.read_bytes()
+        parts.append(
+            (
+                f"--{boundary}\r\n"
+                f'Content-Disposition: form-data; name="{field_name}"; filename="{file_path.name}"\r\n'
+                f"Content-Type: {mime}\r\n\r\n"
+            ).encode("utf-8")
+        )
+        parts.append(file_bytes)
+        parts.append(b"\r\n")
+    parts.append(f"--{boundary}--\r\n".encode("utf-8"))
     body = b"".join(parts)
 
     request = urllib.request.Request(
@@ -283,28 +297,21 @@ def http_multipart_post(
     return parsed
 
 
-def parse_image_response(parsed: dict[str, Any]) -> tuple[bytes, str]:
-    """Return (image_bytes, source_kind) from OpenAI-style images response."""
+def parse_image_response(parsed: dict[str, Any]) -> bytes:
+    """Derouter images API returns data[0].b64_json (PNG), not a URL."""
     data = parsed.get("data")
     if not isinstance(data, list) or not data:
         raise DerouterApiError(f"Derouter response missing data[]: {list(parsed.keys())}")
     item = data[0]
     if not isinstance(item, dict):
         raise DerouterApiError("Derouter data[0] is not an object")
-    if item.get("b64_json"):
-        try:
-            return base64.b64decode(str(item["b64_json"])), "b64_json"
-        except Exception as exc:  # noqa: BLE001
-            raise DerouterApiError("Derouter b64_json decode failed") from exc
-    url = str(item.get("url") or "").strip()
-    if url.startswith("https://"):
-        request = urllib.request.Request(url, headers={"User-Agent": "ExcaliburDerouter/1.0"})
-        try:
-            with urllib.request.urlopen(request, timeout=120) as response:
-                return response.read(), "url"
-        except urllib.error.URLError as exc:
-            raise DerouterApiError(f"Failed to download Derouter result url: {exc.reason}") from exc
-    raise DerouterApiError("Derouter response has neither b64_json nor https url")
+    b64 = item.get("b64_json")
+    if not b64:
+        raise DerouterApiError("Derouter response missing data[0].b64_json (URL field not used)")
+    try:
+        return base64.b64decode(str(b64))
+    except Exception as exc:  # noqa: BLE001
+        raise DerouterApiError("Derouter b64_json decode failed") from exc
 
 
 def call_generations(
@@ -314,14 +321,15 @@ def call_generations(
     model: str,
     prompt: str,
     size: str,
+    quality: str,
     timeout: int,
 ) -> dict[str, Any]:
     url = f"{base_url.rstrip('/')}/images/generations"
-    payload = {
+    payload: dict[str, Any] = {
         "model": model,
         "prompt": prompt,
         "size": size,
-        "n": 1,
+        "quality": quality,
     }
     return http_json_post(url, api_key, payload, timeout=timeout)
 
@@ -332,23 +340,21 @@ def call_edits(
     api_key: str,
     model: str,
     prompt: str,
-    size: str,
-    image_path: Path,
+    image_paths: list[Path],
     timeout: int,
 ) -> dict[str, Any]:
     url = f"{base_url.rstrip('/')}/images/edits"
     fields = {
         "model": model,
         "prompt": prompt,
-        "size": size,
-        "n": "1",
     }
+    file_field = "image[]" if len(image_paths) > 1 else "image"
+    files = [(file_field, path) for path in image_paths]
     return http_multipart_post(
         url,
         api_key,
         fields=fields,
-        file_field="image",
-        file_path=image_path,
+        files=files,
         timeout=timeout,
     )
 
@@ -361,14 +367,15 @@ def generate_image(
     api_key: str,
     model: str,
     size: str,
+    quality: str,
     timeout: int,
     primary_base: str,
     fallback_base: str,
     max_retries: int,
     retry_wait: int,
 ) -> tuple[bytes, dict[str, Any]]:
-    local_ref = resolve_local_reference_path(root=root, batch_path=batch_path, image_input=image_input)
-    use_edits = local_ref is not None
+    local_refs = resolve_local_reference_paths(root=root, batch_path=batch_path)
+    use_edits = bool(local_refs)
     bases = [primary_base]
     if fallback_base and fallback_base != primary_base:
         bases.append(fallback_base)
@@ -380,18 +387,16 @@ def generate_image(
             attempts += 1
             try:
                 if use_edits:
-                    assert local_ref is not None
                     parsed = call_edits(
                         base_url=base,
                         api_key=api_key,
                         model=model,
                         prompt=str(image_input["prompt"]),
-                        size=size,
-                        image_path=local_ref,
+                        image_paths=local_refs,
                         timeout=timeout,
                     )
                     kind = "edits"
-                    ref_name = local_ref.name
+                    ref_names = [p.name for p in local_refs]
                 else:
                     parsed = call_generations(
                         base_url=base,
@@ -399,22 +404,26 @@ def generate_image(
                         model=model,
                         prompt=str(image_input["prompt"]),
                         size=size,
+                        quality=quality,
                         timeout=timeout,
                     )
                     kind = "generations"
-                    ref_name = ""
-                image_bytes, source_kind = parse_image_response(parsed)
+                    ref_names = []
+                image_bytes = parse_image_response(parsed)
                 meta = {
                     "source": "derouter-api",
                     "model": model,
                     "size": size,
+                    "quality": quality,
                     "endpoint": kind,
                     "host": urllib.parse.urlparse(base).netloc,
-                    "response_kind": source_kind,
+                    "response_kind": "b64_json",
                     "attempts": attempts,
                 }
-                if ref_name:
-                    meta["local_reference"] = ref_name
+                if ref_names:
+                    meta["local_reference"] = ref_names[0]
+                    if len(ref_names) > 1:
+                        meta["local_references"] = ref_names
                 return image_bytes, meta
             except DerouterRetryable as exc:
                 last_error = exc
@@ -481,18 +490,23 @@ def main() -> int:
         batch_meta = load_json(batch_path)
         model = default_model()
         size = default_size()
-        local_ref = resolve_local_reference_path(root=root, batch_path=batch_path, image_input=image_input)
-        mode = "edits" if local_ref else "generations"
+        quality = default_quality()
+        local_refs = resolve_local_reference_paths(root=root, batch_path=batch_path)
+        mode = "edits" if local_refs else "generations"
 
         dry_payload = {
             "mode": mode,
             "model": model,
             "size": size,
+            "quality": quality,
             "primary_base": args.primary_base,
             "fallback_base": args.fallback_base,
+            "timeout_seconds": max(MIN_TIMEOUT_SECONDS, int(args.timeout)),
             "prompt_chars": len(str(image_input.get("prompt") or "")),
-            "local_reference": str(local_ref.relative_to(root)) if local_ref and local_ref.is_relative_to(root) else (str(local_ref) if local_ref else ""),
-            "has_input_urls": bool(image_input.get("input_urls")),
+            "local_references": [
+                str(p.relative_to(root)) if p.is_relative_to(root) else str(p) for p in local_refs
+            ],
+            "note": "images always api-direct; no aspect_ratio field; response b64_json only",
         }
         if args.dry_run:
             print(json.dumps(dry_payload, ensure_ascii=False, indent=2))
@@ -514,30 +528,35 @@ def main() -> int:
             api_key=api_key,
             model=model,
             size=size,
-            timeout=max(30, int(args.timeout)),
+            quality=quality,
+            timeout=max(MIN_TIMEOUT_SECONDS, int(args.timeout)),
             primary_base=args.primary_base,
             fallback_base=args.fallback_base,
             max_retries=max(0, int(args.max_retries)),
             retry_wait=max(0, int(args.retry_wait)),
         )
 
-        canvas_index = int(batch_meta.get("canvas_index") or 1)
-        local_name = f".derouter-canvas-{canvas_index:02d}.png"
-        local_path = article_dir / "cover" / local_name
-        local_path.parent.mkdir(parents=True, exist_ok=True)
-        local_path.write_bytes(image_bytes)
-        rel_local = str(local_path.relative_to(article_dir))
+        output_canvas = str(batch_meta.get("output_canvas") or "").strip()
+        if output_canvas:
+            canvas_path = article_dir / output_canvas
+        else:
+            canvas_index = int(batch_meta.get("canvas_index") or 1)
+            canvas_path = article_dir / "cover" / f"canvas-quad-{canvas_index:02d}.png"
+        canvas_path.parent.mkdir(parents=True, exist_ok=True)
+        canvas_path.write_bytes(image_bytes)
+        rel_canvas = str(canvas_path.relative_to(article_dir))
 
         record: dict[str, Any] = {
-            "local_path": rel_local,
+            "local_path": rel_canvas,
             "source": "derouter-api",
             "model": model,
             "size": size,
+            "quality": quality,
             "bytes": len(image_bytes),
             **meta,
         }
         save_json(result_path, record)
-        print(f"OK local_path={rel_local} bytes={len(image_bytes)} mode={mode}")
+        print(f"OK local_path={rel_canvas} bytes={len(image_bytes)} mode={mode}")
         print(f"OK result={result_path}")
         return 0
     except DerouterRetryable as exc:
