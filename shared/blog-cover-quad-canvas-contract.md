@@ -53,9 +53,16 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 ## Visual locks (The Риэлтор)
 
 - Панели `#FFFFFF` high-key; ink `#141821`; gold `#dcc5a1` один accent; sun flare/glow OK
-- Cover: host LARGE left, smart-casual blazer, invented bright scene, Wordstat stickers, meme stickers
-- Inline: без лица Святослава; meme cat/people stickers на 1–2 панелях; 3–6 RU labels
-- Запреты: dark cinematic, daypart formula, inventory default props, plastic face, AI hero-ref face, empty doc-only office
+- **Cover:** host LARGE left, smart-casual blazer, invented bright scene, Wordstat stickers, meme stickers
+- **Inline (7 шт.) — UTILITY-FIRST** (канон: `memory/cover/inline-visual-types.json`):
+  - Стиль = одобренная обложка B02: белый high-key, золото/чёрный, скотч, рваная бумага, солнце, коллаж
+  - **Без лица host / identity-real** — host только на cover
+  - **Тест пользы (FAIL):** читатель без абзаца выносит факт/порядок/число/сравнение по H2; ряд иконок + 3 слова = FAIL
+  - Типы: `comparison_table`, `process_flow`, `bar_timeline_chart`, `structure_diagram`, `labeled_checklist`, `fact_card`
+  - Labels = факты из статьи (цифры, порядок, инструменты), не слоганы настроения
+  - Optional ONE tiny cat-sticker — не герой кадра
+- Запреты inline: icon row+caption; дубли подписей; риэлтор за столом; пустой UI; копипаст cover; Salt Bae/Drake/celebrity; «не эскроу» как шаг процесса
+- Запреты общие: dark cinematic, daypart formula, inventory default props, plastic face, AI hero-ref face, empty doc-only office
 
 ## Blockers
 

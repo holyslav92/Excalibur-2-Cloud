@@ -20,7 +20,9 @@ FAIL → **вернуть Cover** (не Indexer/Publish).
 4. **Люди в 8-set** — host на cover; в наборе из 8 изображений есть люди (host и/или meme-people stickers).
 5. **Коты** — meme-cat на cover/inline **или** недельная каденция не просела (не 3+ статей подряд без кота).
 6. **Wordstat stickers** — 1–3 читаемых стикера с live P0-фразами (из `quad-manifest.json` → `wordstat_stickers`).
-7. **identity-real** — 4 live-файла на месте (`excalibur_blog_identity_real.py`).
+7. **identity-real** — 4 live-файла на месте.
+8. **Inline utility (все 7)** — каждый inline проходит тест пользы: факт/порядок/число/сравнение по H2; не ряд иконок+3 слова; не host face.
+9. **inline_no_host_face** — ни на одном inline нет лица Святослава / identity-real.
 
 Канон: `memory/cover/cover-canon.json`.
 
@@ -40,7 +42,9 @@ FAIL → **вернуть Cover** (не Indexer/Publish).
     "people_in_8_set": true,
     "cats_cadence_ok": true,
     "wordstat_stickers_1_3": true,
-    "identity_real_files": true
+    "identity_real_files": true,
+    "inline_utility_all_7": true,
+    "inline_no_host_face": true
   },
   "notes": "кратко: что смотрел"
 }

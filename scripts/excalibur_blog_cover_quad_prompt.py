@@ -54,6 +54,8 @@ def sanitize_cover_scene_hint(scene: str, highlight: str) -> str:
 
 
 BODY_LOCK = "medium slim as identity-real refs; lean oval face; NOT chubby/puffy/double-chin/thick-neck/stocky/tight blazer"
+INLINE_UTILITY_LOCK = "UTILITY: fact/order/number/comparison for H2; no icon row+3 words; no host"
+INLINE_BAN_EXTRA = "icon row slogans; duplicate labels; desk scene; empty UI; cover copy; celebrity memes"
 MAX_MCP_PROMPT_CHARS = 3500
 # Compact limits leave headroom under 3500 after style boilerplate (INC-20260721-0837).
 # Cover raw ≈80–140 (from blog-hero lock); inline ≈100–220. Long MUST/face essays
@@ -108,20 +110,20 @@ def compact(value: object, limit: int) -> str:
 
 
 def inline_panel_prompt(slot: dict, types_catalog: dict) -> str:
-    type_id = slot.get("visual_type") or "infographic_card"
+    type_id = slot.get("visual_type") or "fact_card"
     type_def = (types_catalog.get("types") or {}).get(type_id) or {}
     label = type_def.get("label_ru", type_id)
+    utility = compact(type_def.get("utility") or "", 48)
     h2 = compact(slot.get("h2_anchor", ""), 95)
     scene = compact(slot.get("scene_hint", ""), INLINE_SCENE_HINT_COMPACT)
-    base = f"{label}; H2: «{h2}»; scene: {scene}; no host face."
+    base = (
+        f"{label}; H2 «{h2}»; {INLINE_UTILITY_LOCK}; scene: {scene}; "
+        f"#FFF collage; {utility}; no host."
+    )
     labels = [str(x).strip() for x in (slot.get("labels") or []) if str(x).strip()]
     if labels:
         exact = ", ".join(f"«{x}»" for x in labels)
-        base += (
-            f" TEXT LOCK: render ONLY these exact Russian strings on this panel: "
-            f"{exact}. Every letter in Cyrillic, exactly as written. "
-            "No other words, no English, no invented headlines."
-        )
+        base += f" LABELS: {exact}."
     return base
 
 
@@ -422,8 +424,8 @@ def build_prompt(
 
     ban_line = (
         "Ban: dark cinematic/low-key/twilight; daypart formula; inventory default props "
-        "(keys/hologram/desk/balcony/doc-only office); Drake/facepalm; keyword spam; "
-        "EXCALIBUR stamp/white hoodie/fake CIAN screenshot; chubby/puffy host ban."
+        "(keys/hologram/desk/balcony/doc-only office); Drake/facepalm/Salt Bae/celebrity; keyword spam; "
+        f"EXCALIBUR stamp/white hoodie/fake CIAN screenshot; chubby/puffy host ban; {INLINE_BAN_EXTRA}."
     )
     reference_line = (
         "REFERENCE FACE+BODY only on cover top-left when has_cover: identity-real live photo "
@@ -432,9 +434,8 @@ def build_prompt(
         else "NO Svytoslav host face on inline — informative collage; meme cat/people stickers OK."
     )
     inline_suffix = (
-        "Inline all: bright high-key #FFF, black condensed RU labels, gold accent markers, "
-        "paper/tape/cards; optional meme cat/people sticker on 1-2 panels; "
-        "NO Svytoslav host face; 3–6 exact labels per panel."
+        "Inline all: #FFF high-key collage, gold/black labels, torn paper/tape; "
+        "max 1 tiny cat-sticker; teach fact/order/number; no host face; 3–6 labels."
     )
 
     lines = [
@@ -442,7 +443,7 @@ def build_prompt(
         "Canvas 2048x1152 exact 2x2; four 16:9 panels (1024x576); thin white gutters; no bleed.",
         "",
         ban_line,
-        "TEXT LANGUAGE LOCK: all visible text is RUSSIAN Cyrillic only.",
+        "TEXT LANGUAGE LOCK: all visible text is RUSSIAN Cyrillic only; exact LABELS per panel only.",
         "",
         reference_line,
         "",

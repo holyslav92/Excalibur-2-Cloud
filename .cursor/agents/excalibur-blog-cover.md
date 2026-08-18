@@ -35,7 +35,7 @@ Cover генерирует **2×** quad-холста 2×2 (**mcp-derouter** 2K i
 3. **Light & bright:** sun flare, light leak, glow, airy #FFFFFF — no dark cinematic.
 4. **Мемы:** meme cat + meme people sticker cutouts; host Святослав LARGE left.
 5. **1–3 Wordstat stickers** — live high-frequency RU queries (Тюмень/область), из research/handoff.
-6. **Identity + body lock:** i2i `identity-real/*`; medium slim build; NOT chubby/puffy/thick neck.
+6. **Identity:** i2i `identity-real/*` only; new emotion/pose; no scene clone.
 
 ## Пайплайн
 
@@ -81,6 +81,14 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 |--------|-------|
 | 1 | cover, inline_1…3 |
 | 2 | inline_4…7 |
+
+## Inline utility (v3)
+
+- Канон: `memory/cover/inline-visual-types.json`
+- **Тест пользы:** каждый inline учит факт/порядок/число/сравнение по H2 — FAIL если ряд иконок+3 слова
+- **NO host face** на inline; стиль = одобренная B02 обложка (high-key collage)
+- Cover-text labels = **факты** из статьи, не слоганы
+- Cover-QA checks: `inline_utility_all_7`, `inline_no_host_face`
 
 ## Blockers
 

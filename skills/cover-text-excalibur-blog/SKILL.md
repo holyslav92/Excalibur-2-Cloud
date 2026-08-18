@@ -49,10 +49,9 @@ description: "Cover-text: exact Russian inscriptions in cover-text.json, gate PA
    дословно, не пиши определение, не метафору без темы.
 3. `highlight` — одно слово ИЗ hook (пишется розовым).
 4. `sticky` — до 5 слов, короткая фраза-реакция.
-5. `wordstat_stickers` — **1–3** фразы из **того же live MCP-KV pull**, что Scout (high-frequency buyer queries в Тюмени/области). Не random, не brand vanity «риэлтор тюмень» unless вторичный sticker.
-6. `inline_labels.*` — 2–6 коротких подписей на панель (1–4 слова).
-   Подписи на стикерах/карточках, не предложения.
-7. Без канцелярита, без SEO-хвостов, без «время», без латиницы кроме
+5. `wordstat_stickers` — **1–3** фразы из live Wordstat (Тюмень).
+6. `inline_labels.*` — **3–6 фактов на панель** (цифры, порядок, инструменты из `article.html`). Не слоганы настроения, не «типичные ошибки» без конкретики.
+7. Labels — короткие (1–4 слова), но несут **пользу**: срок, %, шаг, сравнение.
    брендов (Cursor, Make, MCP, AI, OpenAI…).
 
 ## Gate (обязательно до Kie)

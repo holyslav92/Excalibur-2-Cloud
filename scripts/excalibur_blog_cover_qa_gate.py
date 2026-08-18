@@ -18,6 +18,8 @@ REQUIRED_CHECKS = (
     "cats_cadence_ok",
     "wordstat_stickers_1_3",
     "identity_real_files",
+    "inline_utility_all_7",
+    "inline_no_host_face",
 )
 
 REQUIRED_IMAGES = (
@@ -80,6 +82,30 @@ def validate_cover_qa(article_dir: Path, root: Path) -> dict:
             stickers = manifest.get("wordstat_stickers") or []
             if not (1 <= len(stickers) <= 3):
                 errors.append(f"wordstat_stickers count {len(stickers)}, need 1-3 in quad-manifest")
+            slots = manifest.get("slots") or {}
+            allowed_types = {
+                "comparison_table",
+                "process_flow",
+                "bar_timeline_chart",
+                "structure_diagram",
+                "labeled_checklist",
+                "fact_card",
+                "workflow_diagram",
+                "checklist_board",
+                "schema_faq_ui",
+                "tool_screenshot",
+                "infographic_card",
+            }
+            for i in range(1, 8):
+                key = f"inline_{i}"
+                slot = slots.get(key) or {}
+                if not str(slot.get("visual_type") or "").strip():
+                    errors.append(f"{key}.visual_type missing in quad-manifest")
+                elif str(slot.get("visual_type")) not in allowed_types:
+                    errors.append(f"{key}.visual_type invalid: {slot.get('visual_type')}")
+                labels = slot.get("labels") or []
+                if not (2 <= len(labels) <= 6):
+                    errors.append(f"{key}.labels count {len(labels)}, need 2-6")
         except json.JSONDecodeError:
             errors.append("quad-manifest.json invalid JSON")
 

@@ -82,6 +82,14 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 | 1 | cover, inline_1…3 |
 | 2 | inline_4…7 |
 
+## Inline utility (v3)
+
+- Канон: `memory/cover/inline-visual-types.json`
+- **Тест пользы:** каждый inline учит факт/порядок/число/сравнение по H2 — FAIL если ряд иконок+3 слова
+- **NO host face** на inline; стиль = одобренная B02 обложка (high-key collage)
+- Cover-text labels = **факты** из статьи, не слоганы
+- Cover-QA checks: `inline_utility_all_7`, `inline_no_host_face`
+
 ## Blockers
 
 | Код | Причина |

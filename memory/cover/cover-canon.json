@@ -75,5 +75,30 @@
     "panels_per_canvas": 4,
     "total_images": 8,
     "split": "2x2 per canvas"
+  },
+  "inline_utility": {
+    "catalog": "memory/cover/inline-visual-types.json",
+    "utility_test": "Reader without paragraph extracts fact/order/number/comparison for H2; icon row + 3-word captions = FAIL",
+    "style_match_cover": "B02-approved: #FFFFFF high-key, gold/black, torn paper, tape, sun flare, collage",
+    "no_host_face": true,
+    "preferred_types": [
+      "comparison_table",
+      "process_flow",
+      "bar_timeline_chart",
+      "structure_diagram",
+      "labeled_checklist",
+      "fact_card"
+    ],
+    "forbidden": [
+      "host face on inline",
+      "icon row with mood captions",
+      "duplicate labels across cards",
+      "decorative realtor desk scene",
+      "empty UI",
+      "cover copy-paste",
+      "Salt Bae Drake celebrity",
+      "не эскроу as process step"
+    ],
+    "cover_qa_checks": ["inline_utility_all_7", "inline_no_host_face"]
   }
 }
