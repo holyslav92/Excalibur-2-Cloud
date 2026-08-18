@@ -11,4 +11,4 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 |----------|------|-------|--------|
 | B01 | v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya | В выписке ЕГРН есть строка, после которой аванс вносить нельзя | ready |
 | B02 | raspisku-na-kvartiru-napisali-deneg-na-schete-net | Расписку на квартиру написали, а денег на счёте нет | published |
-| B03 | na-matkapital-kupili-detskie-doli-proverte | В Тюмени на маткапитал купили — а детей в выписке нет | ready |
+| B03 | na-matkapital-kupili-detskie-doli-proverte | На маткапитал купили — детских долей в выписке нет | ready |
