@@ -39,7 +39,7 @@ Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 
 
 **Cover canon v2:** `memory/cover/cover-canon.json` — light/bright, мемы, Wordstat-стикеры, anti-repeat 14д. **Запрещена** daypart-формула (desk/street/close talk/night split).
 
-**Wordstat:** Scout hard gate — live спрос + Тюмень/область (region ids 55, 11176 в `memory/cover/wordstat-geo.json`).
+**Wordstat:** Scout hard gate via **MCP-KV** (`wordstat_get_*`). P0 buyer demand in Tyumen regions; Cover stickers from same live pull. Enable MCP-KV in Cloud Automation Tools (dashboard connector — never git).
 
 ## Automation prompt
 

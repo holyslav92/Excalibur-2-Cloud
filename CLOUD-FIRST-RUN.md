@@ -24,9 +24,9 @@
 | `FTP_HOST` / `FTP_USER` / `FTP_PASS` / `FTP_ROOT` | SFTP publish (имена FTP_*, транспорт SFTP) |
 | `EXCALIBUR_BLOG_ALLOW_PUBLISH` | `yes` только когда готовы публиковать |
 | Image API (mcp-derouter 2K) | Cover longform 2× quad canvas |
-| `WORDSTAT_API_KEY` + `WORDSTAT_FOLDER_ID` (или `YANDEX_SEARCH_API_KEY` + `YANDEX_FOLDER_ID`) | **Scout hard gate** — без Wordstat тема не берётся |
-| MCP Wordstat (`mcp-yandex-wordstat`, см. `.cursor/mcp.json.example`) | live спрос + регион Тюмень (55, 11176) |
-| MCP tokens (legacy) | `MCP_KV_TOKEN` — сохранить если уже есть |
+| **MCP-KV** (Automation → Tools) | **Wordstat PRIMARY** — `wordstat_get_*` tools; personal connector from mcp-kv.ru dashboard (**never git**) |
+| `MCP_KV_TOKEN` | Optional Cloud Secret if not using dashboard connector |
+| `WORDSTAT_*` / `YANDEX_*` | Optional API fallback (secondary to MCP-KV) |
 | `YANDEX_METRIKA_*` | Опционально Content-learner |
 
 Рекомендуется Runtime Secrets для паролей (не светятся в transcript).
@@ -44,12 +44,22 @@
 
 ## 4. MCP
 
-Подключите нужные MCP в Cloud / automation tools:
+**Обязательно для Scout:** включите **MCP-KV** в Automation → Tools (личный connector с dashboard mcp-kv.ru — **не коммитить** SSE URL / connector id / tokens в git).
 
-- **Wordstat (Scout — обязательно):** `npx -y mcp-yandex-wordstat` + Secrets `WORDSTAT_API_KEY` / `WORDSTAT_FOLDER_ID` (шаблон `.cursor/mcp.json.example`). Scout **FAIL**, если Wordstat не настроен или нет регионального спроса Тюмень (region ids `55`, `11176` — `memory/cover/wordstat-geo.json`).
+Wordstat tools (server `MCP-KV`):
+
+- `wordstat_get_user_info` — preflight
+- `wordstat_get_top_requests(phrase, regions, numPhrases)`
+- `wordstat_get_regions` / `wordstat_get_regions_tree` / `wordstat_get_dynamics`
+
+Регионы тенанта: lookup → `memory/cover/wordstat-geo.json` (Тюмень / область; compare RU `225`).
+
+Scout **FAIL**, если Wordstat MCP недоступен или handoff без live частот. P0 — buyer queries (купить квартиру, новостройки, ипотека, ЕГРН…), **не** brand «риэлтор тюмень».
+
+Также подключите:
+
 - Image generation **mcp-derouter** 2K (Cover PRIMARY)
 - WordPress content blob (если используете MCP publish helpers)
-- Legacy `user-mcp-kv` — сохранить если уже подключён; не заменяет official Wordstat
 
 ## 5. Two automations
 

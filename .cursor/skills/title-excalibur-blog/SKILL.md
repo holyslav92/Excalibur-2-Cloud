@@ -30,15 +30,15 @@ description: Invent one catchy human H1 with clear subject. No SEO tails, no lab
 - **Коротко и по-русски**, ~50–70 символов. Без англицизмов, без списка
   терминов. Продуктовое имя — только одно, если без него тема не ясна.
 
-## Wordstat (обязательно для угла и формулировок)
+## Wordstat (MCP-KV — обязательно для угла)
 
-Из Scout/Research handoff (`wordstat:` с regions 55,11176):
+Из Scout handoff (`wordstat:` с **mcp_kv live** частотами):
 
-- выбери **естественную** форму H1 (не SEO-хвост);
-- подтяни 1–2 живые фразы для lead/H2 candidates;
-- Cover-text возьмёт топ для `wordstat_stickers`.
+- P0 buyer-фразы (не brand «риэлтор тюмень») → естественный H1
+- 1–2 живые формулировки для lead / H2 candidates
+- Cover-text возьмёт топ для `wordstat_stickers` (1–3 high-frequency из того же pull)
 
-**Не** вставляй самую частотную фразу в title как ключ. GEO Тюмень + SEO — dual use.
+**Не** вставляй сырую SEO-фразу в title. GEO Тюмень + SEO — dual use.
 
 ## Выход
 

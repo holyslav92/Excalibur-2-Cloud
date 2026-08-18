@@ -80,10 +80,12 @@ class WordstatGateTest(unittest.TestCase):
                 "=== SCOUT ===\nwordstat: skip\n",
                 encoding="utf-8",
             )
-            env = {
-                "WORDSTAT_API_KEY": "test",
-                "WORDSTAT_FOLDER_ID": "folder",
-            }
+            env = {"EXCALIBUR_PROJECT_ROOT": str(tmp)}
+            (Path(tmp) / "memory/cover").mkdir(parents=True)
+            geo_src = ROOT / "memory/cover/wordstat-geo.json"
+            (Path(tmp) / "memory/cover/wordstat-geo.json").write_text(
+                geo_src.read_text(encoding="utf-8"), encoding="utf-8"
+            )
             proc = subprocess.run(
                 [
                     sys.executable,
@@ -101,11 +103,86 @@ class WordstatGateTest(unittest.TestCase):
             self.assertEqual(proc.returncode, 1)
             self.assertIn("skip", proc.stderr.lower())
 
+    def test_handoff_rejects_brand_vanity_only(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "memory/cover").mkdir(parents=True)
+            geo_src = ROOT / "memory/cover/wordstat-geo.json"
+            (root / "memory/cover/wordstat-geo.json").write_text(
+                geo_src.read_text(encoding="utf-8"), encoding="utf-8"
+            )
+            handoff = root / "handoff.md"
+            handoff.write_text(
+                "\n".join(
+                    [
+                        "=== SCOUT ===",
+                        "wordstat_preflight: mcp-kv wordstat_get_user_info OK",
+                        "wordstat: mcp_kv live | regions 55,11176 | «риэлтор тюмень» 47",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            env = {"EXCALIBUR_PROJECT_ROOT": str(root)}
+            proc = subprocess.run(
+                [
+                    sys.executable,
+                    str(ROOT / "scripts/excalibur_blog_wordstat_gate.py"),
+                    "handoff",
+                    "--handoff",
+                    str(handoff),
+                ],
+                cwd=ROOT,
+                env={**dict(**{k: v for k, v in __import__("os").environ.items()}), **env},
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            self.assertEqual(proc.returncode, 1)
+            self.assertIn("buyer", proc.stderr.lower())
+
+    def test_handoff_accepts_mcp_kv_buyer_p0(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "memory/cover").mkdir(parents=True)
+            geo_src = ROOT / "memory/cover/wordstat-geo.json"
+            (root / "memory/cover/wordstat-geo.json").write_text(
+                geo_src.read_text(encoding="utf-8"), encoding="utf-8"
+            )
+            handoff = root / "handoff.md"
+            handoff.write_text(
+                "\n".join(
+                    [
+                        "=== SCOUT ===",
+                        "wordstat_preflight: mcp-kv wordstat_get_user_info OK",
+                        "wordstat: mcp_kv live | regions 55,11176 vs RU 225 | P0 «купить квартиру в тюмени» 23060",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            env = {"EXCALIBUR_PROJECT_ROOT": str(root)}
+            proc = subprocess.run(
+                [
+                    sys.executable,
+                    str(ROOT / "scripts/excalibur_blog_wordstat_gate.py"),
+                    "handoff",
+                    "--handoff",
+                    str(handoff),
+                ],
+                cwd=ROOT,
+                env={**dict(**{k: v for k, v in __import__("os").environ.items()}), **env},
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            self.assertEqual(proc.returncode, 0, proc.stderr)
+
     def test_scout_skill_hard_gate(self) -> None:
         s = (ROOT / "skills/scout-excalibur-blog/SKILL.md").read_text(encoding="utf-8")
         self.assertIn("HARD GATE", s)
-        self.assertIn("11176", s)
-        self.assertNotIn("не blocker", s.lower())
+        self.assertIn("MCP-KV", s)
+        self.assertIn("wordstat_get_user_info", s)
+        self.assertIn("риэлтор тюмень", s.lower())
+        self.assertNotIn("mcp-yandex-wordstat", s.lower())
 
     def test_cover_canon_rejects_daypart(self) -> None:
         canon = json.loads((ROOT / "memory/cover/cover-canon.json").read_text(encoding="utf-8"))

@@ -24,9 +24,9 @@ class TitleSubjectWordstatTest(unittest.TestCase):
         s = (ROOT / "skills/scout-excalibur-blog/SKILL.md").read_text(encoding="utf-8")
         low = s.lower()
         self.assertIn("hard gate", low)
-        self.assertIn("11176", s)
-        self.assertIn("2–4", s)
-        self.assertNotIn("partial, не blocker", low)
+        self.assertIn("mcp-kv", low)
+        self.assertIn("wordstat_get_top_requests", low)
+        self.assertIn("риэлтор тюмень", low)
 
     def test_research_uses_multiple_wordstat_calls(self) -> None:
         r = (ROOT / "skills/excalibur-research/SKILL.md").read_text(encoding="utf-8")

@@ -1,13 +1,4 @@
 {
-  "mcpServers": {
-    "mcp-yandex-wordstat": {
-      "command": "npx",
-      "args": ["-y", "mcp-yandex-wordstat"],
-      "env": {
-        "WORDSTAT_API_KEY": "${WORDSTAT_API_KEY}",
-        "WORDSTAT_FOLDER_ID": "${WORDSTAT_FOLDER_ID}"
-      }
-    }
-  },
-  "_comment": "Copy to Cursor user MCP config. Keep user-mcp-kv if already wired. Scout FAIL if Wordstat not configured. Region ids: memory/cover/wordstat-geo.json (Tyumen 55, oblast 11176)."
+  "_comment": "PRIMARY Wordstat path for Cloud Agents: enable MCP-KV in Automation → Tools (personal connector from mcp-kv.ru dashboard — never commit SSE URL or tokens to git). Optional local: MCP_KV_TOKEN in Cloud Secrets.",
+  "mcpServers": {}
 }

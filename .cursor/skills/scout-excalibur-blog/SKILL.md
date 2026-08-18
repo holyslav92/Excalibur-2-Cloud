@@ -1,100 +1,77 @@
 ---
 name: scout-excalibur-blog
-description: Pick topic from live channel/news hype with Wordstat hard gate (Tyumen geo).
+description: Pick P0 topic from live signal + MCP-KV Wordstat buyer demand (Tyumen geo).
 ---
 
-# Scout — тема из живого сигнала + Wordstat hard gate
+# Scout — живой сигнал + MCP-KV Wordstat (buyer P0)
 
-Ты **не придумываешь** тему из старых заголовков. Сначала — живой сигнал **и** подтверждённый спрос Wordstat с affinity **Тюмень / Тюменская область**.
+Тему выбираешь из **buyer-спроса** (купить квартиру, новостройки, ипотека, ЕГРН…)
+в Тюмени/области — **не** из brand vanity «риэлтор тюмень» (~низкий объём).
 
-## Wordstat — HARD GATE (не optional)
+## Wordstat — HARD GATE (MCP-KV)
 
-**Без настроенного Wordstat Scout = BLOCK.** Перед выбором темы:
+**Частоты не выдумывать.** Если `CallMcpTool` на MCP-KV Wordstat недоступен → **SCOUT BLOCK**.
 
 ```bash
 python3 scripts/excalibur_blog_wordstat_gate.py config
 ```
 
-Должен быть `OK`. Иначе — `WORDSTAT NOT CONFIGURED`, handoff не пишем.
+### Preflight (обязательно, первый solo CallMcpTool)
 
-### MCP
+`MCP-KV` → `wordstat_get_user_info`  
+Если ошибка / tool missing → **WORDSTAT MCP BLOCKER**, handoff не пишем.
 
-- PRIMARY: `mcp-yandex-wordstat` (`npx -y mcp-yandex-wordstat`) — см. `.cursor/mcp.json.example`
-- Legacy `user-mcp-kv` — сохранить если уже есть; **не заменяет** official Wordstat
-- Tool: `wordstat_get_top_requests` (или эквивалент пакета)
+### Регионы (lookup, не гадать)
 
-### Регион (не угадывать)
+1. `wordstat_get_regions_tree` — если `memory/cover/wordstat-geo.json` устарел
+2. Канон после lookup: **Тюмень=55**, **Тюменская область=11176**, **Россия=225**
 
-`memory/cover/wordstat-geo.json`:
+### P0 buyer seeds (gold)
 
-- город **Тюмень** = `55`
-- **Тюменская область** = `11176`
+`wordstat_get_top_requests` с `regions: ["55","11176"]`, `numPhrases` 10–50:
 
-**Каждый** Wordstat-вызов: `regions: [55, 11176]` (или параметр пакета с этими id).
+- купить квартиру тюмень
+- новостройки тюмень
+- ипотека тюмень
+- проверка егрн / выписка егрн
+- эскроу / дду
+- аренда квартира тюмень
 
-### Вызовы
+**Сравнение:** тот же `phrase` с `regions: ["225"]` когда нужен national контекст.
 
-2–4 **отдельных** solo `CallMcpTool` (по одному за turn):
+**Optional:** `wordstat_get_dynamics` на выбранный P0.
 
-1. родительская фраза + «Тюмень»
-2. синоним / угол сделки
-3. смежный риск (ЕГРН, аванс, доверенность…)
-4. optional — район/ЖК если уместно
+### НЕ P0 (brand vanity — только справка)
 
-Смотришь **частотности** и **топ-похожие**. Тема без регионального спроса → **другой угол или BLOCK**.
+«риэлтор тюмень», «услуги риэлтора тюмень» — низкий объём. Не строить тему только из них.
 
-### Handoff wordstat field (обязательно)
+### Handoff (обязательно)
 
 ```text
-wordstat: Тюмень regions 55,11176 | «квартира тюмень» 12400 | «проверить квартиру перед покупкой» 3200 | …
+wordstat_preflight: mcp-kv wordstat_get_user_info OK
+wordstat: mcp_kv live | regions 55,11176 vs RU 225 | P0 «купить квартиру в тюмени» 23060 | «новостройки тюмень» … | brand_vanity «риэлтор тюмень» 1164 (not P0)
 ```
 
-Запрещено: `skip`, `PARTIAL`, пустое поле, только national без Тюмени.
-
-После handoff:
+Запрещено: `skip`, `PARTIAL`, выдуманные частоты, только brand query.
 
 ```bash
 python3 scripts/excalibur_blog_wordstat_gate.py handoff
 ```
 
-## Откуда брать тему
+## Внешний сигнал
 
-1. **Новости/хайп** недвижимости, сделок, ипотеки, законов — с датой доступа.
-2. Каналы тенанта (`scout_signal_urls`) + 1–2 чужих источника.
-3. **Wordstat** — подтверждение спроса (см. выше).
-4. `published-titles-only.md` — только anti-dup.
+1. Новости/хайп недвижимости + `scout_signal_urls` (≥2 URL, сегодня)
+2. Wordstat P0 buyer volume (см. выше)
+3. `published-titles-only.md` — anti-dup only
 
 ## Выход
 
-`.cursor/excalibur-blog-handoff.md`:
-
-```text
-=== EXCALIBUR BLOG SCOUT ===
-topic_id: B111
-title: <короткий title>
-external_signal: ...
-signal_urls:
-- ...
-- ...
-signal_accessed: YYYY-MM-DD
-wordstat: Тюмень 55,11176 | «фраза» частота | ...
-incident_report: none
-```
-
-Без `signal_urls` + сегодня + **live wordstat с Тюменью** — Scout **BLOCK**.
-
-## Жёсткие запреты
-
-- Тема без Wordstat / без регионального affinity Тюмень
-- Invent из published-titles / «продолжим серию»
-- RF DENY heroes (`rf-blocked-entities.json`, `dzen-content-rules.md`)
-- `memory/topics/`, SEO-хвосты, research_start, publish
-- Читать live-статьи сайта как образец
+`.cursor/excalibur-blog-handoff.md` — см. шаблон выше + `topic_id`, `title`, `external_signal`, `signal_urls`.
 
 ## Алгоритм
 
-1. `wordstat_gate.py config` → OK
-2. WebFetch / SERP → сигнал + URL
-3. 2–4 Wordstat calls с regions 55+11176
-4. `--suggest-next` → один title из спроса
+1. `wordstat_get_user_info` → OK
+2. 3–4× `wordstat_get_top_requests` (P0 seeds, regions 55+11176)
+3. WebFetch сигнал → URL
+4. Title из **buyer P0**, не из «риэлтор тюмень»
 5. handoff + `wordstat_gate.py handoff` → стоп

@@ -8,7 +8,7 @@
 | Automation Tools → **Memories = OFF** | action_needed | Выключить вручную; docs: Memories ON by default |
 | Secrets: PUBLIC_SITE_URL | action_needed | Значение: сайт тенанта (https в Secrets, в git — {{SITE_BASE}}) |
 | Secrets: FTP_HOST / FTP_USER / FTP_PASS / FTP_ROOT | unknown | Нужны перед Publish |
-| MCP Wordstat (Scout **hard gate**) | required in prod | `WORDSTAT_API_KEY` + `WORDSTAT_FOLDER_ID`; regions 55+11176 |
+| MCP-KV Wordstat (Scout **hard gate**) | required in Cloud Tools | `wordstat_get_user_info` + `wordstat_get_top_requests`; dashboard connector — never git |
 | MCP WordPress blob / image API (если нужны) | optional | WP уже на сайте тенанта |
 | Image API key (Kie / provider) | unknown | Нужен для Cover |
 | Yandex Metrika tokens | optional | Content-learner |
