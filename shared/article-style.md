@@ -60,7 +60,7 @@
 - Основной: `https://t.me/Tyumen_Rieltor`.
 - Допустимы при уместности (не все в каждой статье): MAX, `+7 922 001-65-05`, `t.me/holyslav92`, `vk.ru/tymenrieltor`, `/gajdy/`.
 - `cta_required=false`, но если ссылка в списке — гейт ждёт её в HTML: **один раз после пользы**.
-- `interlink_old_articles=false`.
+- `interlink_old_articles=true` — 1–3 outbound в новой статье + post-publish inbound (см. `shared/interlink-contract.md`).
 
 ## Запреты площадок
 

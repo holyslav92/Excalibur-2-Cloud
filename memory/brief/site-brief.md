@@ -70,4 +70,7 @@
 - Эмодзи в тексте статей
 - Герой статьи = RF-blocked (Meta/Instagram/…)
 - Секреты и live hostname в git-артефактах (только `{{SITE_BASE}}`)
-- Interlink на старые статьи (`interlink_old_articles=false`)
+
+## Перелинковка
+
+- Interlink включён: `interlink_old_articles=true` → `shared/interlink-contract.md`

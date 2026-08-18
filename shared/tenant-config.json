@@ -57,7 +57,7 @@
     "contract": "shared/writer-model-contract.md",
     "fail_loud_if_unavailable": true
   },
-  "interlink_old_articles": false,
+  "interlink_old_articles": true,
   "style_files": {
     "soul": "shared/SOUL.md",
     "article_style": "shared/article-style.md",

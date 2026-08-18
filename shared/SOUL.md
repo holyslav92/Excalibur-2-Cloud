@@ -63,7 +63,7 @@ Writer смысл уже собрал. Ты (Sol) даёшь **слог** по �
 - Нет «лучший риэлтор Тюмени», «№1», «гарантия», «нулевой риск»
 - Нет SEO-хвоста в H1
 - CTA из `shared/tenant-config.json` → после пользы; основной `https://t.me/Tyumen_Rieltor`
-- `interlink_old_articles=false`
+- `interlink_old_articles=true` — перекрёстные ссылки: `shared/interlink-contract.md`
 - Не затирай `drafts/writer.html`
 - Не читай live-сайт / старые `article.html` как образец смысла
 

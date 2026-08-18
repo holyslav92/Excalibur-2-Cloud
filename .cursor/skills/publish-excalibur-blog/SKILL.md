@@ -198,7 +198,17 @@ Dry-run: **агент читает** `cover_media` / `inline_media` — все �
 
 ### 7. Post-publish
 
-Interlinker удалён. Не добавляй inbound-ссылки из старых статей.
+Если `tenant-config.interlink_old_articles=true`:
+
+```bash
+python3 scripts/excalibur_blog_post_publish_interlink.py \
+  --article-dir <article_dir> --dry-run
+python3 scripts/excalibur_blog_post_publish_interlink.py \
+  --article-dir <article_dir>
+```
+
+Контракт: `shared/interlink-contract.md`.
+
 Опционально: deploy llms (`--deploy-llms` / `excalibur_blog_llms_deploy.py`).
 
 ## Handoff block (шаблон)

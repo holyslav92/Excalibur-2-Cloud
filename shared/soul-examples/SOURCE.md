@@ -33,6 +33,6 @@
 - Факты — только Writer/research.
 - Секреты и live hostname не в git (`{{SITE_BASE}}`).
 - `dzen_rf_pack`: мат запрещён; VPN запрещён.
-- `interlink_old_articles=false`.
+- `interlink_old_articles=true`.
 
 Пока этот файл заполнен — Sol может запускаться после Writer.
