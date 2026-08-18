@@ -1,12 +1,13 @@
 {
-  "url": "https://tempfile.aiquickdraw.com/p/f8c1fef716a7d44eb20863b7f4053758_1_1787048673_4059.png",
+  "url": "https://tempfile.aiquickdraw.com/p/6831c4ddd78f2064e19bbcb677b4097c_1_1787050957_5989.png",
   "urls": [
-    "https://tempfile.aiquickdraw.com/p/f8c1fef716a7d44eb20863b7f4053758_1_1787048673_4059.png"
+    "https://tempfile.aiquickdraw.com/p/6831c4ddd78f2064e19bbcb677b4097c_1_1787050957_5989.png"
   ],
-  "task_id": "f8c1fef716a7d44eb20863b7f4053758",
+  "task_id": "6831c4ddd78f2064e19bbcb677b4097c",
   "source": "kie-api",
+  "model": "kie-image-to-image",
   "state": "success",
-  "costTime": 91,
-  "completeTime": 1787048675422,
-  "createTime": 1787048584244
+  "costTime": 85,
+  "completeTime": 1787050958950,
+  "createTime": 1787050872916
 }
