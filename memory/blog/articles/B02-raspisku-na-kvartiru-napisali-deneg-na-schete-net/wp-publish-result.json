@@ -1,0 +1,27 @@
+{
+  "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+  "topic_id": "B02",
+  "post_id": 8720,
+  "permalink": "{{SITE_BASE}}/blog/bez-rubriki/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+  "publish_method": "sftp",
+  "publish_date": "2026-08-18",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B02-raspisku-na-kvartiru-napisali-deneg-na-schete-net/cover/cover.png",
+    "md5": "57c54809f221824110b2bf4b66afab8d",
+    "source": "owner_approved_v3"
+  },
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/bez-rubriki/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+    "errors": []
+  },
+  "notes": "Test publish owner-approved B02. Theme tymenrieltor-light patched for schema+live-gate; WP Rocket cache purged post-publish."
+}
