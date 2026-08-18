@@ -24,6 +24,19 @@ identity-real i2i → 2× quad canvas 2048×1152 (mcp-derouter 2K)
 
 PRIMARY: **mcp-derouter** 2K. Kie — legacy fallback only.
 
+## Image model lock (HARD)
+
+| Allowed | Forbidden |
+|---------|-----------|
+| mcp-derouter (if loaded) | flux2-pro-text-to-image |
+| `excalibur_blog_kie_gpt_image2_api.py` (async Kie GPT Image 2) | flux2-pro-image-to-image |
+| MCP-KV Kie sync image tool only if Kie script blocked | Seedream, nano_banana*, z-image |
+| | Off-pipeline «demo» canvases |
+
+**On Kie sync MCP timeout:** retry `excalibur_blog_kie_gpt_image2_api.py` — **never** Flux/Seedream/nano_banana/z-image.
+
+MCP-KV on Cloud = Wordstat + optional Kie sync image (contract). See `shared/blog-cover-quad-canvas-contract.md`.
+
 ## Cover canon (v2)
 
 1. **Invent from scratch** — no inventory lock; no default keys/hologram/desk/balcony.
@@ -88,6 +101,7 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 - COVER MOTIF BLOCKER (14-day collision)
 - COVER HERO BLOCKER (identity-real missing)
 - DEROUTER/KIE BLOCKER
+- **IMAGE MODEL BLOCKER** — Flux/Seedream/nano_banana/z-image or off-pipeline demo canvas
 - daypart formula / inventory default / doc-only office / dark cinematic
 
 ## QA

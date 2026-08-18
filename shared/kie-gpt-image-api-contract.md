@@ -5,7 +5,8 @@ Primary Cloud path for Excalibur BLOG cover generation.
 ## Order of preference (mandatory)
 
 ```text
-1. KIE_API_KEY set  → scripts/excalibur_blog_kie_gpt_image2_api.py only
+1. mcp-derouter (when MCP tools loaded on VM)
+2. KIE_API_KEY set  → scripts/excalibur_blog_kie_gpt_image2_api.py only
 2. KIE_API_KEY missing → legacy MCP gpt-image-2 (async tools if present; sync once max)
 ```
 

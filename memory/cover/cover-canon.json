@@ -76,6 +76,23 @@
     "total_images": 8,
     "split": "2x2 per canvas"
   },
+  "image_allowlist": {
+    "allowed": [
+      "mcp-derouter (when MCP tools loaded)",
+      "scripts/excalibur_blog_kie_gpt_image2_api.py (Kie GPT Image 2 async: createTask + poll)",
+      "mcp-kv Kie sync image tool only when Kie script unavailable — same model, no sync timeout hop"
+    ],
+    "forbidden": [
+      "flux2-pro-text-to-image",
+      "flux2-pro-image-to-image",
+      "seedream",
+      "nano_banana",
+      "nano_banana_2",
+      "z-image",
+      "off-pipeline demo canvases / lone prompts without Scout×Wordstat article"
+    ],
+    "timeout_rule": "If Kie sync MCP times out → retry Kie async script; NEVER hop to Flux/Seedream/nano_banana/z-image"
+  },
   "inline_utility": {
     "catalog": "memory/cover/inline-visual-types.json",
     "utility_test": "Reader without paragraph extracts fact/order/number/comparison for H2; icon row + 3-word captions = FAIL",

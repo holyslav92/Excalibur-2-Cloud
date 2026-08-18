@@ -97,6 +97,7 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 | COVER MOTIF BLOCKER | collision 14-day anti-repeat |
 | COVER HERO BLOCKER | нет identity-real / reference_url |
 | DEROUTER/KIE BLOCKER | нет URL после 2K |
+| IMAGE MODEL BLOCKER | Flux/Seedream/nano_banana/z-image или off-pipeline demo |
 | COVER STYLE BLOCKER | dark cinematic, daypart formula, inventory default props, empty doc-only office |
 
 ## Fragment

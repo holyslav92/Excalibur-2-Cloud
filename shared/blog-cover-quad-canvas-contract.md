@@ -17,7 +17,23 @@ Cover после `article.html` + Sol PASS.
 | 1 | `canvas-quad-01.png` | cover, inline_1…3 |
 | 2 | `canvas-quad-02.png` | inline_4…7 |
 
-PRIMARY: **mcp-derouter**, `resolution: 2K`. Kie — legacy fallback.
+PRIMARY: **mcp-derouter**, `resolution: 2K`. Kie — legacy fallback only.
+
+## Image model lock (HARD — owner)
+
+**ALLOWED for cover/inline only:**
+
+1. **mcp-derouter** — when Derouter MCP tools are actually loaded on the agent VM.
+2. **`scripts/excalibur_blog_kie_gpt_image2_api.py`** — Kie GPT Image 2 async (`createTask` + poll), 2K; canvas 1 i2i with `identity-real`; canvas 2 t2i (prompt-only batch).
+3. **MCP-KV Kie sync image tool** — only if Kie script cannot run; same Kie model. On timeout → retry async Kie script, **not** another image tool.
+
+**FORBIDDEN** (even after MCP timeout): `flux2-pro-text-to-image`, `flux2-pro-image-to-image`, Seedream, `nano_banana*`, `z-image`.
+
+**MCP-KV on Cloud:** Wordstat (`wordstat_*`) + optionally Kie sync image. Not a buffet of image models.
+
+**No off-pipeline demos:** one uncut prompt ≠ article. Full canon: Scout×Wordstat → … → Cover only.
+
+Kie contract: `shared/kie-gpt-image-api-contract.md`
 
 ## Cover canon (v2)
 

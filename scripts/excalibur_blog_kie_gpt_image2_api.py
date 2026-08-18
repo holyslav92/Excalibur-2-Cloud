@@ -236,17 +236,17 @@ def batch_mcp_args(batch_path: Path) -> dict[str, Any]:
     input_urls = args.get("input_urls")
     if not prompt:
         raise KieApiError("Missing prompt in jobs[0].mcp_args")
-    if not isinstance(input_urls, list) or not input_urls:
-        raise KieApiError("Missing non-empty input_urls in jobs[0].mcp_args")
-    expanded_urls = expand_input_urls(input_urls)
-    if not expanded_urls:
-        raise KieApiError("Missing non-empty input_urls in jobs[0].mcp_args after expand")
-    return {
+    out: dict[str, Any] = {
         "prompt": prompt,
-        "input_urls": expanded_urls,
         "aspect_ratio": args.get("aspect_ratio") or "auto",
         "resolution": args.get("resolution") or "1K",
     }
+    if isinstance(input_urls, list) and input_urls:
+        expanded_urls = expand_input_urls(input_urls)
+        if not expanded_urls:
+            raise KieApiError("Missing non-empty input_urls in jobs[0].mcp_args after expand")
+        out["input_urls"] = expanded_urls
+    return out
 
 
 def _guess_mime(path: Path) -> str:
