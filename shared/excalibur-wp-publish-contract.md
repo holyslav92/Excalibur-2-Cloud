@@ -67,7 +67,7 @@ python3 scripts/excalibur_blog_wp_publish.py \
 6. **Media completeness**: `WARN cover` / неполный inline upload → publish **fail** (не `OK post=` alone)
 7. Post meta `_excalibur_blog_schema_jsonld` — JSON-LD для `single.php`
 8. Post meta `_excalibur_blog_skip_theme_faq` = `1` — сигнал теме **не** добавлять глобальный FAQ-блок
-9. Опционально `--deploy-llms` / `excalibur_blog_llms_deploy.py` — upload `llms.txt` + `llms-full.txt` в корень WP
+9. После publish — `llms.txt` + `llms-full.txt` в корень WP (`--deploy-llms` или `tenant-config.publish_options.deploy_llms_after_publish=true`)
 
 Маппинг полей WP Media Library:
 

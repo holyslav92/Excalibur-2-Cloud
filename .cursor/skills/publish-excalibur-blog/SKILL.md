@@ -163,6 +163,8 @@ python3 scripts/excalibur_blog_wp_publish.py \
   --article-dir memory/blog/articles/<topic_id>-<slug>
 ```
 
+По умолчанию (если `tenant-config.publish_options.deploy_llms_after_publish=true`) после успешного publish скрипт сам заливает `llms.txt` + `llms-full.txt`. Явный флаг `--deploy-llms` — то же самое.
+
 Скрипт:
 - грузит bootstrap сразу через **SFTP/SSH** (порт 22 по умолчанию), без FTP-попытки;
 - если настроенный `SSH_ROOT`/`FTP_ROOT` возвращает SFTP ENOENT до upload, один раз пробует `.` и пишет warning без раскрытия секретов; после такого warning лучше обновить Cloud Secret root на `.`;
@@ -172,7 +174,7 @@ python3 scripts/excalibur_blog_wp_publish.py \
 - загружает **все локальные inline `<img>`**, пишет те же media meta и подменяет `src` на WP media URL;
 - не засчитает WARN медиа / неполный upload как успех;
 - пишет post meta `_excalibur_blog_schema_jsonld`;
-- по твоей команде `--deploy-llms` → SFTP `llms.txt` + `llms-full.txt` в корень WP.
+- по умолчанию (tenant `deploy_llms_after_publish`) или `--deploy-llms` → SFTP `llms.txt` + `llms-full.txt` в корень WP.
 
 Dry-run: **агент читает** `cover_media` / `inline_media` — все флаги `true`, иначе чини registry/HTML до publish.
 
@@ -209,7 +211,7 @@ python3 scripts/excalibur_blog_post_publish_interlink.py \
 
 Контракт: `shared/interlink-contract.md`.
 
-Опционально: deploy llms (`--deploy-llms` / `excalibur_blog_llms_deploy.py`).
+Опционально: `--deploy-llms` (или авто из tenant `publish_options.deploy_llms_after_publish`).
 
 ## Handoff block (шаблон)
 

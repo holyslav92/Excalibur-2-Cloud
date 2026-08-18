@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "article_dir": "memory/blog/articles/B01-v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya",
+  "cta_required": true,
+  "required": [
+    "https://t.me/Tyumen_Rieltor",
+    "tel:+79220016505"
+  ],
+  "present": {
+    "https://t.me/Tyumen_Rieltor": true,
+    "tel:+79220016505": true,
+    "cta_channels.max": true
+  },
+  "errors": []
+}

@@ -35,6 +35,16 @@ def project_root() -> Path:
     return Path(__file__).resolve().parents[1]
 
 
+def tenant_deploy_llms_default(root: Path) -> bool:
+    path = root / "shared/tenant-config.json"
+    try:
+        tenant = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    opts = tenant.get("publish_options") or {}
+    return bool(opts.get("deploy_llms_after_publish"))
+
+
 PUBLISH_ENV_KEYS = {
     "PUBLIC_SITE_URL",
     "WP_HOME",
@@ -1414,7 +1424,8 @@ def main() -> int:
         encoding="utf-8",
     )
     upsert_publish_ledger(root, payload, permalink or safe_permalink)
-    if args.deploy_llms:
+    deploy_llms = bool(args.deploy_llms or tenant_deploy_llms_default(root))
+    if deploy_llms:
         from excalibur_blog_llms_deploy import deploy_llms_files
 
         deploy_report = deploy_llms_files(root, env, public)

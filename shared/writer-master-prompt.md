@@ -22,8 +22,8 @@
 - Чистый HTML-фрагмент без `<h1>` → `drafts/writer.html`
 - Открытие + H2 с мыслями + практика/ограничения + CTA (если есть в tenant)
 - Факты только из research
-- Ссылки CTA: **только** из `tenant-config.cta_links` (если пусто и
-  `cta_required=false` — CTA можно не ставить)
+- Ссылки CTA: **только** из `tenant-config.cta_links` + MAX по `cta_channels.max`
+  (`cta_required=true` — Telegram + tel + слово MAX обязательны)
 - При `interlink_old_articles=true`: 1–3 ссылки на slug из
   `shared/published-articles.md` (контекстно, не спам)
 - По-русски (или language тенанта) ясно, без SEO-хвостов и без research-даты в лиде

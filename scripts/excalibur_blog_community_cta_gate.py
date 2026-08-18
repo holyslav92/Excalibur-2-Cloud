@@ -22,6 +22,10 @@ def load_tenant(root: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def normalize_phone_digits(value: str) -> str:
+    return re.sub(r"\D", "", value or "")
+
+
 def url_patterns(url: str) -> re.Pattern[str]:
     """Build a loose href matcher for a concrete CTA URL."""
     url = (url or "").strip()
@@ -38,7 +42,40 @@ def url_patterns(url: str) -> re.Pattern[str]:
     return re.compile(pat, re.I)
 
 
-def check_html(html: str, links: list[str], *, required: bool) -> tuple[list[str], dict[str, bool]]:
+def check_tel_link(html: str, tel_url: str) -> bool:
+    digits = normalize_phone_digits(tel_url.removeprefix("tel:"))
+    if len(digits) < 10:
+        return False
+    tail = digits[-10:]
+    if re.search(rf"tel:\+?{re.escape(digits)}", html or "", re.I):
+        return True
+    if re.search(rf"tel:\+?7{re.escape(tail)}", html or "", re.I):
+        return True
+    return tail in normalize_phone_digits(html or "")
+
+
+def check_max_channel(html: str, max_cfg: str, phone: str) -> tuple[bool, str]:
+    cfg = (max_cfg or "").strip()
+    if not cfg:
+        return True, ""
+    if not cfg.startswith("phone:"):
+        return True, ""
+    if not re.search(r"\bMAX\b", html or "", re.I):
+        return False, "missing MAX mention in CTA block (cta_channels.max=phone)"
+    phone_digits = normalize_phone_digits(cfg.split(":", 1)[1] or phone)
+    if phone_digits and not check_tel_link(html, f"tel:+{phone_digits.lstrip('0')}"):
+        return False, "MAX block requires tenant phone (tel: or digits)"
+    return True, ""
+
+
+def check_html(
+    html: str,
+    links: list[str],
+    *,
+    required: bool,
+    max_cfg: str = "",
+    phone: str = "",
+) -> tuple[list[str], dict[str, bool]]:
     errors: list[str] = []
     present: dict[str, bool] = {}
     if not links:
@@ -46,11 +83,17 @@ def check_html(html: str, links: list[str], *, required: bool) -> tuple[list[str
             errors.append("cta_required=true but tenant-config.cta_links is empty")
         return errors, present
     for link in links:
-        cre = url_patterns(link)
-        ok = bool(cre.search(html or ""))
+        if link.lower().startswith("tel:"):
+            ok = check_tel_link(html, link)
+        else:
+            ok = bool(url_patterns(link).search(html or ""))
         present[link] = ok
         if not ok:
             errors.append(f"missing required CTA href {link}")
+    max_ok, max_err = check_max_channel(html, max_cfg, phone)
+    present["cta_channels.max"] = max_ok
+    if not max_ok and max_err:
+        errors.append(max_err)
     return errors, present
 
 
@@ -69,6 +112,9 @@ def main() -> int:
     tenant = load_tenant(root)
     links = [str(x).strip() for x in (tenant.get("cta_links") or []) if str(x).strip()]
     cta_required = bool(tenant.get("cta_required"))
+    channels = tenant.get("cta_channels") or {}
+    max_cfg = str(channels.get("max") or "").strip()
+    phone = str(channels.get("phone") or "").strip()
 
     html_path = article_dir / "article.html"
     errors: list[str] = []
@@ -81,7 +127,13 @@ def main() -> int:
         if not links and not cta_required:
             present = {}
         else:
-            link_errors, present = check_html(html, links, required=cta_required)
+            link_errors, present = check_html(
+                html,
+                links,
+                required=cta_required,
+                max_cfg=max_cfg,
+                phone=phone,
+            )
             errors.extend(link_errors)
     if not links and not cta_required:
         present = {}

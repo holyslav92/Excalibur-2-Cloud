@@ -56,10 +56,12 @@
 
 ## CTA
 
-- Ссылки из `shared/tenant-config.json` → `cta_links`.
+- Обязательно (`cta_required=true`): ссылки из `shared/tenant-config.json` → `cta_links`.
 - Основной: `https://t.me/Tyumen_Rieltor`.
-- Допустимы при уместности (не все в каждой статье): MAX, `+7 922 001-65-05`, `t.me/holyslav92`, `vk.ru/tymenrieltor`, `/gajdy/`.
-- `cta_required=false`, но если ссылка в списке — гейт ждёт её в HTML: **один раз после пользы**.
+- Телефон: `tel:+79220016505` (отображение `+7 922 001 65 05`).
+- MAX: личный номер Святослава — в CTA-блоке слово **MAX** + тот же `tel:` (отдельной max.ru-ссылки нет).
+- Допустимы при уместности: `t.me/holyslav92`, `vk.ru/tymenrieltor`, `wa.me/79220016505`, `/gajdy/`.
+- **Один раз после пользы**, не в каждом абзаце.
 - `interlink_old_articles=true` — 1–3 outbound в новой статье + post-publish inbound (см. `shared/interlink-contract.md`).
 
 ## Запреты площадок

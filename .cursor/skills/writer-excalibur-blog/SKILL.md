@@ -40,7 +40,7 @@ description: Write meaning draft drafts/writer.html; Sol applies tenant SOUL sty
 - Все факты только из research; не выдумывай.
 - Структура: открытие → несколько H2 с мыслями → практика/ограничения → CTA.
 - Без research-даты / Wordstat в открытии (Sol всё равно вычистит, но не засоряй).
-- CTA: только tenant-config.cta_links.
+- CTA: `tenant-config.cta_links` + MAX по `cta_channels.max` (обязательно при `cta_required=true`).
 - Не читай чужие article.html / live-сайт / уже опубликованные статьи сайта / topics.
 
 ## Handoff

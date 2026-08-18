@@ -30,16 +30,24 @@
     "panels_per_canvas": 4,
     "total_images": 8
   },
-  "cta_required": false,
+  "cta_required": true,
   "cta_links": [
-    "https://t.me/Tyumen_Rieltor"
+    "https://t.me/Tyumen_Rieltor",
+    "tel:+79220016505"
   ],
   "cta_channels": {
     "telegram_lead": "https://t.me/Tyumen_Rieltor",
     "telegram_personal": "https://t.me/holyslav92",
     "phone": "+79220016505",
+    "phone_display": "+7 922 001 65 05",
+    "max": "phone:+79220016505",
     "vk": "https://vk.ru/tymenrieltor",
+    "whatsapp": "https://wa.me/79220016505",
     "guides": "{{SITE_BASE}}/gajdy/"
+  },
+  "publish_options": {
+    "deploy_llms_after_publish": true,
+    "derouter_image_quality": "high"
   },
   "cover_mode": "host_reference",
   "dzen_rf_pack": true,

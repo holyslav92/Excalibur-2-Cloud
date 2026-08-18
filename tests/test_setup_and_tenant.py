@@ -21,8 +21,11 @@ class SetupTenantTests(unittest.TestCase):
         self.assertEqual(tenant.get("brand_name"), "The Риэлтор")
         self.assertEqual(tenant.get("author_id"), "svyatoslav-shakin")
         self.assertEqual(tenant.get("cover_mode"), "host_reference")
-        self.assertFalse(tenant.get("cta_required"))
+        self.assertTrue(tenant.get("cta_required"))
         self.assertIn("https://t.me/Tyumen_Rieltor", tenant.get("cta_links") or [])
+        self.assertIn("tel:+79220016505", tenant.get("cta_links") or [])
+        self.assertTrue(tenant.get("interlink_old_articles"))
+        self.assertTrue((tenant.get("publish_options") or {}).get("deploy_llms_after_publish"))
         self.assertTrue(tenant.get("dzen_rf_pack"))
 
     def test_setup_agents_present(self) -> None:
@@ -64,7 +67,8 @@ class SetupTenantTests(unittest.TestCase):
         article_dir.mkdir(parents=True, exist_ok=True)
         try:
             (article_dir / "article.html").write_text(
-                '<p>Консультация: <a href="https://t.me/Tyumen_Rieltor">Telegram</a></p>\n',
+                '<p>Напишите в <a href="https://t.me/Tyumen_Rieltor">Telegram</a>, '
+                'в MAX по номеру <a href="tel:+79220016505">+7 922 001 65 05</a>.</p>\n',
                 encoding="utf-8",
             )
             proc = subprocess.run(

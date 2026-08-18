@@ -37,7 +37,8 @@
 ## CTA
 
 - основной: https://t.me/Tyumen_Rieltor
-- cta_required: false (ссылка одна — гейт всё равно ждёт её, если список не пуст)
+- телефон / MAX: tel:+79220016505, в тексте слово MAX
+- cta_required: true
 
 ## Scout
 
