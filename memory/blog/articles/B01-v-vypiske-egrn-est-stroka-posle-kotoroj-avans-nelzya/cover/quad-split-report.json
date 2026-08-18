@@ -165,22 +165,22 @@
           "fallback_reason": "aspect_crop_loss_too_high",
           "rejected_gutter": {
             "h_gutter_px": {
-              "start": 571,
-              "end": 581
+              "start": 570,
+              "end": 615
             },
             "v_gutter_px": {
-              "start": 1017,
-              "end": 1064
+              "start": 944,
+              "end": 1058
             },
             "gutter_quality": {
-              "h_center_offset_px": 0.0,
-              "v_center_offset_px": 16.5,
-              "max_aspect_crop_loss": 0.0298,
+              "h_center_offset_px": 16.5,
+              "v_center_offset_px": 23.0,
+              "max_aspect_crop_loss": 0.0684,
               "per_panel_crop_loss": {
-                "top_left": 0.0,
-                "top_right": 0.0298,
-                "bottom_left": 0.0,
-                "bottom_right": 0.0298
+                "top_left": 0.0684,
+                "top_right": 0.0228,
+                "bottom_left": 0.0112,
+                "bottom_right": 0.0354
               },
               "reject_reason": "aspect_crop_loss_too_high"
             }
@@ -292,9 +292,9 @@
     "skip inline_1: already correct under H2 — Какую выписку заказать и куда смотреть",
     "skip inline_2: already correct under H2 — Что в реквизите 4 блокирует аванс",
     "skip inline_3: already correct under H2 — Строка, которую ставит сам продавец — и часто забывает снять",
-    "injected inline_4 after H2 — Ипотека, детские доли и несколько собственников — не всегда «стоп», но аванс рано",
-    "injected inline_5 after H2 — Что ещё смотреть в той же выписке",
-    "injected inline_6 after H2 — Что ЕГРН не покажет и что проверить отдельно",
-    "injected inline_7 after H2 — Ограничения и честные оговорки"
+    "skip inline_4: already correct under H2 — Ипотека, детские доли и несколько собственников — не всегда «стоп», но аванс рано",
+    "skip inline_5: already correct under H2 — Что ещё смотреть в той же выписке",
+    "skip inline_6: already correct under H2 — Что ЕГРН не покажет и что проверить отдельно",
+    "skip inline_7: already correct under H2 — Ограничения и честные оговорки"
   ]
 }

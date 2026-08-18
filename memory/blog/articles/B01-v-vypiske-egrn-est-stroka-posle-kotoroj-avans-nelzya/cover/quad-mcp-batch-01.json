@@ -12,6 +12,8 @@
     "inline_2",
     "inline_3"
   ],
+  "prefer_local_reference": true,
+  "local_reference": "memory/cover/assets/identity-real/face-office-selfie.jpeg",
   "preferred_image_flow": {
     "provider": "mcp-derouter",
     "mcp_server": "mcp-derouter",
