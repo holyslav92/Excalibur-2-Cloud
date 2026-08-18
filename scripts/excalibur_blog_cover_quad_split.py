@@ -33,6 +33,7 @@ GUTTER_WHITE_FRACTION = 0.92
 GUTTER_MAX_CENTER_OFFSET_PX = 28
 GUTTER_MAX_ASPECT_CROP_LOSS = 0.02
 SPLIT_MODES = ("auto", "mechanical", "gutter")
+QUADRANT_ORDER = ("top_left", "top_right", "bottom_left", "bottom_right")
 
 
 from excalibur_repo_paths import repo_relative
@@ -495,6 +496,8 @@ def inject_figures(
     changes: list[str] = []
 
     for slot_key in inline_keys:
+        if slot_key not in split_outputs:
+            continue
         item = split_outputs[slot_key]
         src = item["file"]
         alt = item.get("alt") or ""
@@ -749,6 +752,8 @@ def main() -> int:
         if article_path.is_file():
             injected_html = article_path.read_text(encoding="utf-8")
             for slot_key in inline_keys:
+                if slot_key not in merged_outputs:
+                    continue
                 count = len(list(_slot_figure_pattern(slot_key).finditer(injected_html)))
                 if count != 1:
                     inject_errors.append(
