@@ -275,6 +275,46 @@ def git_safe_reference_url(ref_url: str) -> str:
     return redact_site_base(value)
 
 
+def run_motif_gate(root: Path, manifest: dict, article_dir: Path) -> bool:
+    """Preflight anti-repeat if cover_motifs present in manifest."""
+    motifs = (manifest.get("cover_motifs") or {})
+    if not isinstance(motifs, dict) or not motifs:
+        return True
+    import subprocess
+
+    cmd = [
+        sys.executable,
+        str(root / "scripts/excalibur_blog_cover_motif_gate.py"),
+        "check",
+        "--topic-id",
+        str(manifest.get("topic_id") or ""),
+        "--slug",
+        str(manifest.get("slug") or article_dir.name),
+    ]
+    field_map = {
+        "composition": "composition",
+        "location": "location",
+        "meme": "meme",
+        "prop_set": "prop-set",
+        "sticker_set": "sticker-set",
+        "joke": "joke",
+    }
+    for key, flag in field_map.items():
+        value = str(motifs.get(key) or "").strip()
+        if value:
+            cmd.extend([f"--{flag}", value])
+    proc = subprocess.run(cmd, cwd=root, capture_output=True, text=True, check=False)
+    if proc.returncode != 0:
+        if proc.stdout.strip():
+            print(proc.stdout.strip(), file=sys.stderr)
+        if proc.stderr.strip():
+            print(proc.stderr.strip(), file=sys.stderr)
+        return False
+    if proc.stdout.strip():
+        print(proc.stdout.strip())
+    return True
+
+
 def validate_prompt_budget(prompt: str) -> bool:
     prompt_chars = len(prompt)
     if prompt_chars <= MAX_MCP_PROMPT_CHARS:
@@ -367,9 +407,11 @@ def build_prompt(
         panel_lines.append(
             f"Top-left COVER TEXT LOCK: headline EXACTLY «{cover_hook_text}» — bold condensed Cyrillic "
             f"black #141821, {highlight_rule}.{sticky_lock} "
-            f"Host LARGE left = same 28yo man as i2i identity-real (round face, sandy hair, approachable); "
-            f"smart-casual blazer; NEW pose/emotion; scene: {compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; "
-            f"tiny deal-prop right; #FFF; no plastic face; no scene clone"
+            f"Host LARGE left = same 28yo man as i2i identity-real (round face, sandy hair); "
+            f"smart-casual blazer; INVENT bright high-key scene with sun flare/light leak/glow; "
+            f"scene: {compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; "
+            f"1-3 Wordstat demand stickers; meme cat and/or meme people sticker cutouts; "
+            f"#FFF high-key; no plastic face; no scene clone; no dark cinematic; no inventory default props"
         )
         inline_keys = [k for k in canvas_slots if k != "cover"]
         for label, key in zip(quadrant_labels[1:], inline_keys[:3]):
@@ -379,18 +421,20 @@ def build_prompt(
             panel_lines.append(f"{label} inline: {inline_panel_prompt(slot(key), types_catalog)}")
 
     ban_line = (
-        "Ban: memes/reaction/facepalm/animals/joke captions/keyword spam/"
-        "EXCALIBUR stamp/pink-cat/white hoodie/headphones/fake CIAN screenshot."
+        "Ban: dark cinematic/low-key/twilight; daypart formula; inventory default props "
+        "(keys/hologram/desk/balcony/doc-only office); Drake/facepalm; keyword spam; "
+        "EXCALIBUR stamp/white hoodie/fake CIAN screenshot."
     )
     reference_line = (
         "REFERENCE FACE only on cover top-left when has_cover: identity-real live photo "
-        "(28yo, round face, sandy hair); never AI hero-ref face; no headphones on host."
+        "(28yo, round face, sandy hair); invent scene; never AI hero-ref face; no headphones on host."
         if has_cover
-        else "NO people/faces on any panel — informative inline collage only."
+        else "NO Svytoslav host face on inline — informative collage; meme cat/people stickers OK."
     )
     inline_suffix = (
-        "Inline all: white #FFF, black condensed RU labels, gold accent markers, "
-        "paper/tape/cards; NO people/faces; 3–6 exact labels per panel."
+        "Inline all: bright high-key #FFF, black condensed RU labels, gold accent markers, "
+        "paper/tape/cards; optional meme cat/people sticker on 1-2 panels; "
+        "NO Svytoslav host face; 3–6 exact labels per panel."
     )
 
     lines = [
@@ -503,6 +547,10 @@ def main() -> int:
 
         if not args.write_batch:
             continue
+
+        if has_cover and not run_motif_gate(root, manifest, article_dir):
+            print("❌ COVER MOTIF BLOCKER: 14-day anti-repeat collision", file=sys.stderr)
+            return 1
 
         required_errors: list[str] = []
         if has_cover:

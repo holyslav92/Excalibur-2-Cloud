@@ -267,6 +267,32 @@ def main() -> int:
             errors,
             warnings,
         )
+        for cover_marker in (
+            "memory/cover/cover-canon.json",
+            "memory/cover/used-motifs.json",
+            "memory/cover/wordstat-geo.json",
+        ):
+            check((root / cover_marker).is_file(), f"{cover_marker} exists", errors, warnings)
+        canon_path = root / "memory/cover/cover-canon.json"
+        if canon_path.is_file():
+            try:
+                canon = json.loads(canon_path.read_text(encoding="utf-8"))
+                daypart = canon.get("forbidden_daypart_formula") or {}
+                check(
+                    bool(daypart.get("never_use")),
+                    "cover-canon rejects daypart formula",
+                    errors,
+                    warnings,
+                )
+            except json.JSONDecodeError:
+                check(False, "cover-canon.json valid JSON", errors, warnings)
+        for gate_cmd in (
+            [sys.executable, str(root / "scripts/excalibur_blog_cover_motif_gate.py"), "doctor"],
+            [sys.executable, str(root / "scripts/excalibur_blog_wordstat_gate.py"), "doctor"],
+        ):
+            proc = subprocess.run(gate_cmd, cwd=root, capture_output=True, text=True, check=False)
+            label = gate_cmd[1].rsplit("/", 1)[-1]
+            check(proc.returncode == 0, f"{label} doctor", errors, warnings)
     else:
         check(
             True,

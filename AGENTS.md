@@ -31,7 +31,7 @@ Scout? → research_start → Research → Title → Writer(смысл)
 Никто не читает уже опубликованные статьи сайта — только
 `published-titles-only.md` / `shared/published-titles.md` для anti-dup.
 
-`memory/topics/` запрещена. Scout → handoff + `signal_urls` + Wordstat
+`memory/topics/` запрещена. Scout → handoff + `signal_urls` + **Wordstat hard gate** (regions Тюмень 55, область 11176 — без live спроса тема BLOCK). Cover canon: `memory/cover/cover-canon.json` (light/meme/anti-repeat 14д).
 (из tenant / site-brief).
 
 ```bash

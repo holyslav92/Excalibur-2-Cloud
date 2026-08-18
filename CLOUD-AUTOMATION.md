@@ -35,7 +35,11 @@ Writer = смысл (`drafts/writer.html`). Sol = слог Клышина / фа
 2. **Canvas 2** (mcp-derouter 2K): inline_4…7 → split 2×2
 3. Итого: `cover.png` 1200×675 + `inline-01…07.png`, inject `figure.inline-quad` data-slot=inline_1…7
 
-Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 28 лет, **новая эмоция/поза** каждый раз. AI `scene-composition-only/hero-ref-*` — не для лица.
+Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 28 лет, **новая выдуманная сцена** каждый раз. AI `scene-composition-only/hero-ref-*` — не для лица.
+
+**Cover canon v2:** `memory/cover/cover-canon.json` — light/bright, мемы, Wordstat-стикеры, anti-repeat 14д. **Запрещена** daypart-формула (desk/street/close talk/night split).
+
+**Wordstat:** Scout hard gate — live спрос + Тюмень/область (region ids 55, 11176 в `memory/cover/wordstat-geo.json`).
 
 ## Automation prompt
 
@@ -53,7 +57,7 @@ Cover-text || Schema → Cover (mcp-derouter 2K ×2 canvas); Indexer; Publish т
 Fixer → merge → content-learner.
 ```
 
-Секреты только из Cloud Secrets (`PUBLIC_SITE_URL`, SFTP, image MCP, `EXCALIBUR_BLOG_ALLOW_PUBLISH`).
+Секреты только из Cloud Secrets (`PUBLIC_SITE_URL`, SFTP, image MCP, **Wordstat API**, `EXCALIBUR_BLOG_ALLOW_PUBLISH`).
 
 ## Отдельный поток Daily (не этот automation)
 

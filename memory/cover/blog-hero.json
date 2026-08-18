@@ -64,7 +64,13 @@
     "forbid": "AI-reconstructed hero-ref faces, 35–45 age look, airbrushed skin, plastic/uncanny face, white hoodie, pink-cat, headphones in cover host, sunglasses, other person, copy-paste of any reference scene (greenhouse, Immortal Regiment, breakroom selfie, hoodie selfie, office hologram, balcony keys)"
   },
   "outfit_rule": "Cover host: smart-casual риэлтор (blazer/jacket). Лицо только с identity-real. Без белого худи, без AirPods на cover (они только в selfie-ref).",
-  "prompt_fragment": "same man as i2i identity-real reference: 28yo, round face, sandy hair, fair skin, approachable; LARGE left; NEW pose/emotion/scene per article; no scene clone; #FFF",
+  "cover_canon": "memory/cover/cover-canon.json",
+  "invention_rule": "Cover agent изобретает каждую обложку с нуля — surprise, variety. No inventory lock, no default recurring props (keys, hologram, desk, balcony). Anti-repeat 14д: memory/cover/used-motifs.json.",
+  "light_bright_rule": "HIGH-KEY only: светлые панели, sun flare, light leak, glow, airy. Dark cinematic — запрещён.",
+  "meme_rule": "Мем-коты и мем-люди (стикеры) — часть системы, не редкий easter egg. Cover host = люди; коты/мем-реакции на cover и 1–2 inline.",
+  "wordstat_stickers_rule": "1–3 designer stickers с LIVE Wordstat фразами темы (Тюмень/область, regions 55+11176). Не random spam.",
+  "forbidden_daypart_formula": "REJECTED навсегда: morning desk+document / day street / evening close talk / night split «как продают / что в выписке»",
+  "prompt_fragment": "same man as i2i identity-real: 28yo, round face, sandy hair; LARGE left; INVENT new bright high-key scene+meme+Wordstat stickers; sun flare/glow; anti-repeat; no scene clone; #FFF",
   "emotion_bank": [
     {
       "id": "calm_confidence",
@@ -97,7 +103,7 @@
       "when": "успешная сделка, финал без хвастовства"
     }
   ],
-  "composition_rule": "Cover picks ONE emotion from emotion_bank. Invent NEW scene_hint: другой ракурс, жест, предмет, фон. Never clone greenhouse, Immortal Regiment, office selfie, hoodie selfie, office hologram desk, or balcony keys sunset.",
+  "composition_rule": "Cover picks mood from emotion_bank but INVENTS brand-new scene (location, meme, joke, props, stickers) every time. Run motif gate before generate. Never clone greenhouse, Immortal Regiment, office selfie, hoodie selfie, office hologram, balcony keys, or daypart formula slots.",
   "cover_hook_rules": [
     "cover_hook invents Cover-text agent; Cover picks emotion + scene",
     "meme_caption_ru always empty"

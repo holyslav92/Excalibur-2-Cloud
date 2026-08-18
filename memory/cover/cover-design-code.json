@@ -1,8 +1,9 @@
 {
-  "design_code_id": "the_rieltor_twilight_gold",
+  "design_code_id": "the_rieltor_light_meme_wordstat",
   "status": "ok",
-  "label_ru": "The Риэлтор — host_reference, twilight+золото, emotion bank, live identity",
-  "reference_notes": "Лицо: identity-real/* (4 live фото, 28 лет). scene-composition-only/* — mood без FACE. Палитра tymenrieltor-light. Панели #FFFFFF.",
+  "label_ru": "The Риэлтор — light/bright, мемы, Wordstat-стикеры, live identity, anti-repeat",
+  "canon_file": "memory/cover/cover-canon.json",
+  "reference_notes": "Лицо: identity-real/* (4 live, 28 лет). Cover изобретает сцену с нуля. High-key свет, мем-коты/люди, 1–3 Wordstat-стикера. Панели #FFFFFF.",
   "host_reference": true,
   "age_lock": 28,
   "identity_lock_files": [
@@ -15,58 +16,60 @@
     "memory/cover/assets/scene-composition-only/hero-ref-office-risk-hologram.jpg",
     "memory/cover/assets/scene-composition-only/hero-ref-balcony-keys-sunset.jpg"
   ],
-  "scene_composition_rule": "AI hero-ref JPGs: mood/композиция ONLY. Hard ban: FACE source, copy face/pose 1:1.",
-  "composition_rule": "Каждая обложка — новая сцена: другая эмоция, поза, жест, фон. Запрещён copy-paste любого референсного кадра (4 live + 2 scene-only).",
+  "scene_composition_rule": "AI hero-ref JPGs: mood ONLY. Hard ban: FACE source, copy face/pose 1:1.",
+  "invention_rule": "Каждая обложка — новая выдуманная сцена: другая локация, мем, жест, шутка, стикеры. Без inventory lock и без дефолтных props (ключи/голограмма/стол/балкон).",
+  "anti_repeat": {
+    "window_days": 14,
+    "log": "memory/cover/used-motifs.json",
+    "gate": "scripts/excalibur_blog_cover_motif_gate.py"
+  },
+  "forbidden_daypart_formula": "REJECTED: morning desk+document / day street / evening close talk / night split — never use",
+  "composition_rule": "Cover agent изобретает композицию с нуля под тему H1. Эмоция из emotion_bank — только настроение, не фиксированная сцена. Anti-repeat 14д.",
   "emotion_bank": [
     "спокойная уверенность",
     "настороженность",
     "жёсткий стоп",
     "лёгкая ирония",
-    "сосредоточенный разбор документов",
-    "тёплое «ключ получен»"
+    "сосредоточенный разбор",
+    "тёплый финал сделки"
   ],
   "cover_rules": [
-    "host_reference=true; лицо только identity-real/* (28 лет, round face, sandy hair)",
-    "i2i ротирует 4 live-файла; hero-ref AI — НЕ для лица",
-    "Cover agent выбирает ОДНУ эмоцию из emotion_bank под тему H1",
-    "Новая композиция каждый раз: другой жест/предмет/фон; не клон референсных сцен",
-    "Один cover_hook (18–42 символа кириллицы); meme_caption_ru пуст",
-    "Герой LARGE слева: узнаваемое лицо Шакина, smart-casual blazer/jacket",
-    "Один tiny/small предмет сделки справа: ключ, папка ЕГРН, дверь — не равный вес с лицом",
-    "Фон панели #FFFFFF; hook ink #141821; один punch-word золотом #dcc5a1",
-    "Слои: torn paper, gold tape/sticky, карточки документов — премиум, не мем",
-    "Запрещён штамп EXCALIBUR / pink-cat / белое худи / plastic uncanny face"
+    "host_reference=true; лицо только identity-real/* (28 лет)",
+    "LIGHT BRIGHT high-key: sun flare, light leak, glow, airy whites — no dark cinematic",
+    "Cover изобретает сцену с нуля; no recurring default props",
+    "1–3 designer stickers with LIVE Wordstat phrases (Тюмень/область) — readable, not spam",
+    "Meme cats + meme people cutouts welcome; Святослав host LARGE; surprise variety",
+    "8-image set per article includes people (cover host); cats across week often enough",
+    "cover_hook 18–42 кириллицы; meme_caption_ru пуст",
+    "Панели #FFFFFF; ink #141821; gold #dcc5a1 один accent",
+    "Запрещены: plastic face, AI hero-ref face, white hoodie, empty office/doc-only, daypart formula"
   ],
   "inline_rules": [
-    "Longform: 7 inline-панелей (inline_1…inline_7) — без людей и лиц",
-    "Только информация конкретного H2: comparison, workflow, checklist, fact card",
-    "3–6 кириллических labels; finished collage того же языка, что cover",
-    "Generated UI не выдавать за скриншот ЦИАН/Авито/Госуслуг",
-    "Фон #FFFFFF; золото только accent; пустые плейсхолдеры = blocker"
+    "Longform: 7 inline (inline_1…inline_7) — информатика H2 + meme cat/people sticker cutouts на 1–2 панелях",
+    "Без лица Святослава на inline; допустимы мем-люди/коты как стикеры",
+    "3–6 кириллических labels; тот же light collage-язык что cover",
+    "Generated UI — схема, не скриншот ЦИАН/Госуслуг",
+    "Фон #FFFFFF; high-key; пустые плейсхолдеры = blocker"
   ],
   "visual_motifs": [
-    "золотой ключ и силуэт дома — мелкий предмет, не watermark",
-    "папка/выписка/печать — метафора проверки до аванса",
-    "дверь, замок, связка ключей",
-    "twilight gold на белой бумаге",
-    "torn paper / gold sticky — не pink banners"
+    "sun flare / light leak / soft glow на белой бумаге",
+    "мем-кот стикер (толстый белый контур)",
+    "мем-человек реакция (не Drake/facepalm banned set)",
+    "Wordstat-стикер с живым запросом",
+    "torn paper / gold tape — премиум коллаж"
   ],
   "color_palette": {
     "background": "#FFFFFF",
     "panel_background": "#FFFFFF",
     "ink": "#141821",
-    "ink_deep": "#1a1508",
-    "twilight": "#05070f",
-    "twilight_panel": "#0e1322",
     "accent_primary": "#dcc5a1",
     "accent_gold_mid": "#ecd9b6",
     "accent_gold_light": "#f3e6c9",
-    "paper": "#eef1f6",
-    "muted": "#7b8399",
-    "usage": "Panels #FFFFFF. Hook/labels ink #141821. Gold #dcc5a1 for one highlight. Twilight — mood only."
+    "light_glow": "#fff8ee",
+    "usage": "High-key #FFFFFF panels. Sun flare/glow allowed. No twilight/dark cinematic backgrounds."
   },
-  "typography_reference": "Cormorant Garamond + Manrope. Cover: bold condensed Cyrillic hook.",
-  "cover_panel_prompt_block": "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic, gold #dcc5a1 one accent. Host LARGE left = same 28yo man as i2i identity-real reference (round face, sandy hair, NEW pose/emotion/scene; never clone reference scenes). Tiny deal-prop right. Torn paper, gold tape. No plastic face, no hoodie, no cat, no pink.",
-  "inline_information_block": "Same collage language: white #FFF, black RU labels, gold accents, paper/tape/cards. No people/faces. 3–6 labels per H2 panel.",
-  "global_negative": "plastic uncanny face, aged 35-45, airbrushed skin, AI hero-ref face, white hoodie, headphones, pink-cat, hot-pink, beige gradient, Instagram, EXCALIBUR stamp, other face, meme, composition clone of any reference photo, empty gray boxes, fake CIAN screenshot"
+  "typography_reference": "Cormorant Garamond + Manrope. Cover: bold condensed Cyrillic hook + Wordstat sticker labels.",
+  "cover_panel_prompt_block": "High-key RU editorial collage, bright airy #FFFFFF, sun flare/light leak/glow, BLACK #141821 Cyrillic, gold #dcc5a1 accent. Host LARGE left = same 28yo man as i2i identity-real (NEW invented scene/emotion; never clone refs). 1-3 Wordstat sticker labels. Meme cat and/or meme people sticker cutouts. No dark cinematic, no inventory props, no doc-only office.",
+  "inline_information_block": "Same bright collage: white #FFF, black RU labels, gold accents, optional meme cat/people sticker. No Svytoslav face. 3–6 labels per H2.",
+  "global_negative": "dark cinematic, low-key noir, twilight panel, plastic uncanny face, AI hero-ref face, white hoodie, inventory lock props (keys hologram desk balcony default), empty office documents only, daypart formula, pink-cat, EXCALIBUR stamp, fake CIAN screenshot, SEO spam wall"
 }

@@ -23,9 +23,10 @@ class TitleSubjectWordstatTest(unittest.TestCase):
     def test_scout_uses_multiple_wordstat_calls(self) -> None:
         s = (ROOT / "skills/scout-excalibur-blog/SKILL.md").read_text(encoding="utf-8")
         low = s.lower()
-        self.assertIn("несколько вызовов", low)
-        self.assertIn("2–4", low)
-        self.assertNotIn("solo `callmcptool`, 1 вызов", low)
+        self.assertIn("hard gate", low)
+        self.assertIn("11176", s)
+        self.assertIn("2–4", s)
+        self.assertNotIn("partial, не blocker", low)
 
     def test_research_uses_multiple_wordstat_calls(self) -> None:
         r = (ROOT / "skills/excalibur-research/SKILL.md").read_text(encoding="utf-8")

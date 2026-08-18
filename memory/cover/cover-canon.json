@@ -1,0 +1,77 @@
+{
+  "canon_id": "the_rieltor_light_meme_wordstat_v2",
+  "status": "ok",
+  "label_ru": "The Риэлтор — изобретение с нуля, light/bright, мемы, Wordstat-стикеры, anti-repeat 14д",
+  "forbidden_daypart_formula": {
+    "status": "REJECTED_BY_OWNER",
+    "never_use": true,
+    "slots": {
+      "morning": "desk + document",
+      "day": "street/entrance",
+      "evening": "close talk to camera",
+      "night": "split «как продают / что в выписке»"
+    },
+    "note": "Удалено навсегда. Расписание публикаций 09/12/16/20 YEKT ≠ формула обложки."
+  },
+  "invention_rule": "Cover agent INVENTS every cover from scratch to surprise. No inventory lock. No recurring default props (keys, hologram, desk, balcony, documents-only office). Variety is the product.",
+  "anti_repeat": {
+    "window_days": 14,
+    "log_file": "memory/cover/used-motifs.json",
+    "collision_fields": [
+      "composition",
+      "location",
+      "meme",
+      "prop_set",
+      "sticker_set",
+      "joke"
+    ],
+    "preflight_script": "scripts/excalibur_blog_cover_motif_gate.py",
+    "after_14_days_motif_may_return": true
+  },
+  "light_bright": {
+    "required": true,
+    "style": "high-key, светлые картинки, airy",
+    "effects": ["sun flare", "light leak", "glow", "soft bloom"],
+    "forbidden": ["dark cinematic", "twilight mood panel", "low-key noir", "moody black background"]
+  },
+  "meme_system": {
+    "required": true,
+    "people": "Святослав host on cover; meme-people cutouts allowed on cover/inline stickers",
+    "cats": "meme-cat sticker cutouts — often enough across weekly posts; not every frame",
+    "per_article_8_set": {
+      "must_include_people": true,
+      "people_source": "cover host counts; optional meme-people stickers on 1–2 inline",
+      "cats_frequency": "at least one cat motif per article OR ensure weekly cadence has cats",
+      "forbidden": ["empty office only-documents cover", "sterile host+text without stickers"]
+    }
+  },
+  "wordstat_stickers": {
+    "required": true,
+    "count": "1–3 readable designer stickers per cover",
+    "source": "live Wordstat top + similar queries for topic",
+    "geo": "memory/cover/wordstat-geo.json",
+    "not": ["random words", "spam wall", "SEO tail dump"]
+  },
+  "identity_lock": {
+    "source": "memory/cover/assets/identity-real/",
+    "age": 28,
+    "face": "live photos only; emotions/poses change",
+    "forbidden_scene_clone": [
+      "greenhouse",
+      "Immortal Regiment",
+      "office selfie",
+      "hoodie selfie",
+      "office hologram",
+      "balcony keys sunset"
+    ],
+    "forbidden_faces": ["reconstructed AI hero-ref", "plastic uncanny"]
+  },
+  "pipeline": {
+    "primary": "mcp-derouter",
+    "resolution": "2K",
+    "canvases": 2,
+    "panels_per_canvas": 4,
+    "total_images": 8,
+    "split": "2x2 per canvas"
+  }
+}

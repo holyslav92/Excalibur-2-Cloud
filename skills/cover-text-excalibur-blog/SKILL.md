@@ -31,6 +31,7 @@ description: "Cover-text: exact Russian inscriptions in cover-text.json, gate PA
   "hook": "Cursor стал дешевле на треть",
   "highlight": "дешевле",
   "sticky": "новой модели нет",
+  "wordstat_stickers": ["квартира тюмень", "проверить егрн"],
   "inline_labels": {
     "inline_1": ["заявление 3 августа", "минус 20–30%", "без новой модели"],
     "inline_2": ["с работой за экраном", "минус 80%", "проверь сам"],
@@ -48,9 +49,10 @@ description: "Cover-text: exact Russian inscriptions in cover-text.json, gate PA
    дословно, не пиши определение, не метафору без темы.
 3. `highlight` — одно слово ИЗ hook (пишется розовым).
 4. `sticky` — до 5 слов, короткая фраза-реакция.
-5. `inline_labels.*` — 2–6 коротких подписей на панель (1–4 слова).
+5. `wordstat_stickers` — **1–3** короткие фразы из live Wordstat (Тюмень/область) для designer stickers на cover. Брать из `research-notes.md` / Scout handoff; не random spam.
+6. `inline_labels.*` — 2–6 коротких подписей на панель (1–4 слова).
    Подписи на стикерах/карточках, не предложения.
-6. Без канцелярита, без SEO-хвостов, без «время», без латиницы кроме
+7. Без канцелярита, без SEO-хвостов, без «время», без латиницы кроме
    брендов (Cursor, Make, MCP, AI, OpenAI…).
 
 ## Gate (обязательно до Kie)

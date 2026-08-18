@@ -1,0 +1,13 @@
+{
+  "tenant_geo": "Тюмень / Тюменская область",
+  "primary_city_ru": "Тюмень",
+  "primary_oblast_ru": "Тюменская область",
+  "region_ids": {
+    "tyumen_city": 55,
+    "tyumen_oblast": 11176
+  },
+  "scout_required_region_ids": [55, 11176],
+  "lookup_note": "Канонические ID Wordstat/Direct: город Тюмень=55, Тюменская область=11176. Scout передаёт regions=[55,11176] в каждый Wordstat-вызов. Верификация дерева: GetRegionsTree / wordstat getRegionsTree.",
+  "affinity_rule": "Тема без регионального спроса в Тюмени/области → Scout BLOCK (национальный хайп без локального угла не берём).",
+  "seo_geo_dual": "Фразы Wordstat служат и поиску (SEO), и локальному GEO (районы, ЖК, «в Тюмени»)."
+}

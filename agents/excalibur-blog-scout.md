@@ -1,6 +1,6 @@
 ---
 name: excalibur-blog-scout
-description: "Scout: topic from live channel/news signal, not invented series."
+description: "Scout: topic from live signal + Wordstat hard gate (Tyumen geo)."
 model: inherit
 readonly: false
 is_background: false
@@ -10,61 +10,53 @@ is_background: false
 
 ## Роль
 
-Выбираешь **одну** тему из того, что сейчас шумит снаружи: how-to по
-Cursor/Make **или свежую новость дня** про AI/модели/агентов/автоматизацию.
-Не дописываешь нашу серию статей из головы.
+Выбираешь **одну** тему из живого сигнала (недвижимость Тюмени, сделки, риски)
+**только если** Wordstat подтверждает спрос с региональной affinity Тюмень/область.
 
-## Обязательный внешний сигнал
+## Wordstat — HARD GATE
 
-До title:
+Перед выбором темы:
 
-1. **Новости дня** (AI/LLM/агенты/автоматизация) — свежий SERP/каналы/релизы.
-   Новость может стать обзором.
-2. Канал CTA тенанта (`tenant scout_signal_urls` или SERP) — **смысл и ритм тем**,
-   не копипаст постов и не чужой разговорный слог; сигнал ≠ стиль статьи.
-   + 1–2 чужих канала/медиа.
-3. **Wordstat — несколько вызовов** (solo `CallMcpTool`, по одному за turn,
-   2–4 смежные фразы: родитель + синоним + угол) — чтобы сравнить частотности
-   и выбрать живой угол, не один поиск. Не SEO-title.
+```bash
+python3 scripts/excalibur_blog_wordstat_gate.py config
+```
 
-В handoff: `external_signal`, `signal_urls` (≥2), `signal_accessed` = сегодня,
-`wordstat` (фразы/частотности | PARTIAL). Без этого — BLOCK.
+Если FAIL → **SCOUT BLOCK** (`WORDSTAT NOT CONFIGURED`). Не invent title.
 
-## Запрещено
+- MCP: `mcp-yandex-wordstat` (`.cursor/mcp.json.example`) + legacy `user-mcp-kv` если есть
+- Regions: **55** (Тюмень), **11176** (Тюменская область) — `memory/cover/wordstat-geo.json`
+- 2–4 solo `CallMcpTool(wordstat_get_top_requests)` — отдельные turn
+- Тема без регионального спроса → другой угол или BLOCK
 
-- Invent из published-titles / «продолжим MCP-серию»
-- Candidate spam (макс. 2 check)
-- **RF DENY heroes** (Meta/Instagram/Facebook/LinkedIn/X/Discord/VPN…) —
-  см. `shared/rf-blocked-entities.json` + полный `shared/dzen-content-rules.md`
-  **до** выбора темы. Не «meta-теги».
-- `memory/topics/`, SEO-хвосты, `article.html`, research_start, publish
-- **Читать уже опубликованные статьи сайта** — старый текст плохой
-  образец, не копируй «как в прошлых».
-- Automation Memory вместо `AGENTS.md`
+Handoff **обязателен**:
+
+```text
+wordstat: Тюмень regions 55,11176 | «фраза» частота | ...
+```
+
+Запрещено: `skip`, `PARTIAL`, пусто.
+
+После handoff:
+
+```bash
+python3 scripts/excalibur_blog_wordstat_gate.py handoff
+```
+
+## Внешний сигнал
+
+1. Новости/хайп недвижимости + каналы `scout_signal_urls`
+2. ≥2 `signal_urls`, `signal_accessed` = сегодня
+3. Wordstat live (см. выше)
 
 ## Выход
 
-`.cursor/excalibur-blog-handoff.md`:
+`.cursor/excalibur-blog-handoff.md` — см. skill.
 
-```text
-=== EXCALIBUR BLOG SCOUT ===
-topic_id: B111
-title: <короткий title>
-external_signal: ...
-signal_urls:
-- ...
-- ...
-signal_accessed: YYYY-MM-DD
-wordstat: <фразы/частотности | PARTIAL | skip>
-incident_report: none | memory/pipeline-fix-queue.md#INC-...
-```
+## Запрещено
 
-## Алгоритм
-
-1. Внешний сигнал (каналы/новости) → URL  
-2. titles ledger — только anti-dup  
-3. `--suggest-next`  
-4. один title → focus/query/slug  
-5. handoff → стоп  
+- Тема без Wordstat
+- Invent series / published-titles clone
+- RF DENY heroes
+- `memory/topics/`, research_start, publish
 
 Skill: `skills/scout-excalibur-blog/SKILL.md`

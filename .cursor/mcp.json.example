@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "mcp-yandex-wordstat": {
+      "command": "npx",
+      "args": ["-y", "mcp-yandex-wordstat"],
+      "env": {
+        "WORDSTAT_API_KEY": "${WORDSTAT_API_KEY}",
+        "WORDSTAT_FOLDER_ID": "${WORDSTAT_FOLDER_ID}"
+      }
+    }
+  },
+  "_comment": "Copy to Cursor user MCP config. Keep user-mcp-kv if already wired. Scout FAIL if Wordstat not configured. Region ids: memory/cover/wordstat-geo.json (Tyumen 55, oblast 11176)."
+}

@@ -41,14 +41,15 @@
 - **стиль:** `shared/article-style.md` + `shared/SOUL.md` + `shared/dzen-content-rules.md`
 - **темы:** Scout → handoff `topic_id` + короткий title; `memory/topics/` запрещена
 - **anti-dup:** только `published-titles-only.md` / `shared/published-titles.md` — не читать live-статьи как образец Writer/Sol
-- **Wordstat:** желателен для Scout (MCP), не обязателен для старта
+- **Wordstat:** **обязателен** для Scout (MCP + Cloud Secrets). Без live спроса и региональной affinity Тюмень (55, 11176) — тема не берётся. Cover-stickers и Title/H2 тянут топ-фразы из Wordstat.
 
 ## Главный герой визуала
 
 - **cover_mode:** `host_reference`
 - **identity lock:** `memory/cover/assets/identity-real/*` (4 live фото, 28 лет); `scene-composition-only/hero-ref-*.jpg` — mood only, не лицо
-- **emotion bank:** спокойная уверенность / настороженность / жёсткий стоп / ирония / разбор документов / «ключ получен»
-- **правило:** новая поза и сцена каждый раз; не клонировать композицию эталонов
+- **emotion bank:** настроение, не фиксированная сцена; cover **изобретает** с нуля
+- **light/bright:** high-key, sun flare, мемы, Wordstat-стикеры; anti-repeat 14д (`cover-canon.json`)
+- **правило:** новая выдуманная сцена; запрещена daypart-формула и inventory props
 - **одежда:** navy/charcoal blazer; без белого худи
 - **longform:** cover 1200×675 + 7 inline-quad; 2× quad 2K (mcp-derouter)
 
