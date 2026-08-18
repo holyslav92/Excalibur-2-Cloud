@@ -3,7 +3,7 @@
   "status": "PASS",
   "checked_at": "2026-08-18",
   "topic_id": "B02",
-  "regeneration": "inline_utility_redo_v1_owner_request",
+  "regeneration": "inline_7_correct_path_redo_v2_owner_visual",
   "checks": {
     "identity_face_28yo": true,
     "identity_body_medium_slim": true,
@@ -23,7 +23,7 @@
     "inline_4": "structure_diagram accreditiv flow + footnote not escrow",
     "inline_5": "bar_timeline_chart 60-90 vs 30 vs 3 days",
     "inline_6": "comparison_table rates Sber 0.3% deposit 0.5% SBR",
-    "inline_7": "labeled_checklist named errors vs accreditiv bank trace"
+    "inline_7": "labeled_checklist 4 error→correct rows; ПРАВИЛЬНЫЙ ПУТЬ all labels visible"
   },
-  "notes": "Owner inline redo: cover.png preserved. Canvas 1 Kie i2i + preserve cover quadrant; canvas 2 Kie t2i (no Flux). All 7 inline utility-first. Image allowlist: derouter/Kie only. No live publish."
+  "notes": "inline-07 redo: Derouter canvas-2 quality=high; inline-04..06 preserved; cover.png md5 locked. No live publish."
 }
