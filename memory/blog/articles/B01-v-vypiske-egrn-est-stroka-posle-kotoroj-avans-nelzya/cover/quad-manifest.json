@@ -1,0 +1,162 @@
+{
+  "topic_id": "B01",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Одна строка в ЕГРН — без аванса",
+  "cover_hook_highlight": "аванса",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: mcp-derouter in Cursor Cloud — 2K i2i, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "ищу квартиру",
+    "вторичка без сюрпризов",
+    "сначала выписку"
+  ],
+  "cover_motifs": {
+    "composition": "host_large_left_points_at_glowing_egrn_tablet_sun_flare",
+    "location": "bright_glass_registry_atrium_white_marble_tyumen",
+    "meme": "distracted_boyfriend_sticker_plus_thinking_cat_cutout",
+    "prop_set": "egrn_pdf_fold_red_marker_tiny_apartment_icon",
+    "sticker_set": "wordstat_paper_stickers_meme_people_reaction_cutout",
+    "joke": "sticky_аванс_сегодня_crossed_red_x"
+  },
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Проверка выписки ЕГРН перед авансом — одна строка может остановить сделку",
+      "scene_hint": "Host LARGE left, navy blazer, wary; glowing EGRN tablet, red req.4 line; sun flare; meme cat + boyfriend sticker; Wordstat stickers; #FFF",
+      "meme_caption_ru": "",
+      "sticky": "выписку уже смотрели"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Какую выписку заказать и куда смотреть",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "Workflow Госуслуги→выписка→раздел 2→реквизит 4; labels readable; top-down order; bright schematic UI; #FFF",
+      "alt": "Как заказать полную выписку ЕГРН и найти раздел 2, реквизит 4",
+      "labels": [
+        "раздел 2",
+        "реквизит 4",
+        "не справка",
+        "свежая выписка",
+        "перед авансом"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что в реквизите 4 блокирует аванс",
+      "visual_type": "comparison_table_ui",
+      "scene_hint": "Table: арест, запрет, рента, суд vs не зарегистрировано; stop/ok columns; bright panel; no faces; #FFF",
+      "alt": "Строки в реквизите 4 ЕГРН, при которых аванс вносить нельзя",
+      "labels": [
+        "арест",
+        "запрет регистрации",
+        "рента",
+        "судебные права",
+        "не зарегистрировано"
+      ]
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Строка, которую ставит сам продавец — и часто забывает снять",
+      "visual_type": "checklist_board",
+      "scene_hint": "Checklist: запрет без личного, снять лично; sticky notes; meme cat sticker; outcome до аванса; #FFF",
+      "alt": "Запрет регистрации без личного участия — почему продавец забывает снять",
+      "labels": [
+        "запрет без личного",
+        "продавец забыл",
+        "по доверенности нельзя",
+        "снять лично"
+      ]
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Ипотека, детские доли и несколько собственников — не всегда «стоп», но аванс рано",
+      "visual_type": "schema_faq_ui",
+      "scene_hint": "FAQ cards: ипотека, доли детей, согласие банка, все подписи; bright accordion UI; no host; #FFF",
+      "alt": "Ипотека, детские доли и несколько собственников — когда аванс ещё рано",
+      "labels": [
+        "ипотека не стоп",
+        "доли детей",
+        "согласие банка",
+        "все подписи"
+      ]
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Что ещё смотреть в той же выписке",
+      "visual_type": "tool_screenshot",
+      "scene_hint": "EGRN viewer schematic: цепочка прав, владельцы, кадастр, состав; tab UI; illustrated not screenshot; #FFF",
+      "alt": "Другие разделы выписки ЕГРН: цепочка прав и состав собственников",
+      "labels": [
+        "цепочка прав",
+        "смена владельцев",
+        "кадастровые данные",
+        "состав собственников"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что ЕГРН не покажет и что проверить отдельно",
+      "visual_type": "infographic_card",
+      "scene_hint": "Four tiles: ФССП, банкротство, доверенность, прописка; plus EGRN; bright infographic grid; #FFF",
+      "alt": "Что проверить помимо выписки ЕГРН: ФССП, банкротство, доверенность",
+      "labels": [
+        "ФССП отдельно",
+        "банкротство",
+        "доверенность",
+        "прописка"
+      ]
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Ограничения и честные оговорки",
+      "visual_type": "comparison_table_ui",
+      "scene_hint": "Plan vs rush columns: аванс после проверки, новая выписка, до денег; green check path; meme sticker; #FFF",
+      "alt": "Аванс только после проверки выписки — честные оговорки для Тюмени",
+      "labels": [
+        "аванс после проверки",
+        "новая выписка",
+        "до денег",
+        "Тюмень сделки"
+      ]
+    }
+  }
+}

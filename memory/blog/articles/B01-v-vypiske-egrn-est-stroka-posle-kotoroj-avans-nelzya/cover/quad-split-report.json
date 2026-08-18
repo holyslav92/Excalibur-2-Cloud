@@ -1,0 +1,300 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B01-v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2688,
+          1520
+        ],
+        "panel_size_px": [
+          1344,
+          760
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 754,
+              "end": 814
+            },
+            "v_gutter_px": {
+              "start": 1337,
+              "end": 1382
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 24.0,
+              "v_center_offset_px": 15.5,
+              "max_aspect_crop_loss": 0.0613,
+              "per_panel_crop_loss": {
+                "top_left": 0.0,
+                "top_right": 0.0252,
+                "bottom_left": 0.0613,
+                "bottom_right": 0.0391
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1344,
+              "bottom": 760
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1344,
+              "bottom": 760
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Проверка выписки ЕГРН перед авансом — одна строка может остановить сделку",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1344,
+              "top": 0,
+              "right": 2688,
+              "bottom": 760
+            },
+            "raw_box_px": {
+              "left": 1344,
+              "top": 0,
+              "right": 2688,
+              "bottom": 760
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Как заказать полную выписку ЕГРН и найти раздел 2, реквизит 4",
+            "h2_anchor": "Какую выписку заказать и куда смотреть"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 760,
+              "right": 1344,
+              "bottom": 1520
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 760,
+              "right": 1344,
+              "bottom": 1520
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Строки в реквизите 4 ЕГРН, при которых аванс вносить нельзя",
+            "h2_anchor": "Что в реквизите 4 блокирует аванс"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1344,
+              "top": 760,
+              "right": 2688,
+              "bottom": 1520
+            },
+            "raw_box_px": {
+              "left": 1344,
+              "top": 760,
+              "right": 2688,
+              "bottom": 1520
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Запрет регистрации без личного участия — почему продавец забывает снять",
+            "h2_anchor": "Строка, которую ставит сам продавец — и часто забывает снять"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B01-v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 571,
+              "end": 581
+            },
+            "v_gutter_px": {
+              "start": 1017,
+              "end": 1064
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 0.0,
+              "v_center_offset_px": 16.5,
+              "max_aspect_crop_loss": 0.0298,
+              "per_panel_crop_loss": {
+                "top_left": 0.0,
+                "top_right": 0.0298,
+                "bottom_left": 0.0,
+                "bottom_right": 0.0298
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Ипотека, детские доли и несколько собственников — когда аванс ещё рано",
+            "h2_anchor": "Ипотека, детские доли и несколько собственников — не всегда «стоп», но аванс рано"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Другие разделы выписки ЕГРН: цепочка прав и состав собственников",
+            "h2_anchor": "Что ещё смотреть в той же выписке"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Что проверить помимо выписки ЕГРН: ФССП, банкротство, доверенность",
+            "h2_anchor": "Что ЕГРН не покажет и что проверить отдельно"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Аванс только после проверки выписки — честные оговорки для Тюмени",
+            "h2_anchor": "Ограничения и честные оговорки"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Какую выписку заказать и куда смотреть",
+    "skip inline_2: already correct under H2 — Что в реквизите 4 блокирует аванс",
+    "skip inline_3: already correct under H2 — Строка, которую ставит сам продавец — и часто забывает снять",
+    "injected inline_4 after H2 — Ипотека, детские доли и несколько собственников — не всегда «стоп», но аванс рано",
+    "injected inline_5 after H2 — Что ещё смотреть в той же выписке",
+    "injected inline_6 after H2 — Что ЕГРН не покажет и что проверить отдельно",
+    "injected inline_7 after H2 — Ограничения и честные оговорки"
+  ]
+}

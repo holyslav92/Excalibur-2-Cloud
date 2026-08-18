@@ -1,0 +1,17 @@
+{
+  "source": "memory/blog/articles/B01-v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/article.html",
+  "total_links": 1,
+  "failed_count": 0,
+  "verdict": "pass",
+  "links": [
+    {
+      "url": "https://t.me/Tyumen_Rieltor",
+      "kind": "external",
+      "status": null,
+      "ok": true,
+      "skipped": true,
+      "method": null,
+      "error": null
+    }
+  ]
+}
