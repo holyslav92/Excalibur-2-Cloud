@@ -11,6 +11,11 @@ is_background: false
 Пишешь черновик смысла → `drafts/writer.html`.  
 Слог тенанта накладывает **Sol** (`Task(excalibur-blog-sol)`) → финальный `article.html`.
 
+## Модель (HARD)
+
+**mcp-derouter** + `DEROUTER_TEXT_MODEL` (Opus). См. `shared/writer-model-contract.md`.  
+DEROUTER down → `DEROUTER WRITER BLOCKER`, не weaker fallback.
+
 ## Вход
 
 - `shared/writer-master-prompt.md`

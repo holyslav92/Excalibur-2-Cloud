@@ -41,10 +41,19 @@
   "cover_mode": "host_reference",
   "dzen_rf_pack": true,
   "scout_signal_urls": [
+    "https://t.me/klyshin_A",
     "https://dzen.ru/holyslav",
     "{{SITE_BASE}}/blog/",
     "https://t.me/holyslav92"
   ],
+  "scout_klyshin_topic_bank": "memory/scout/klyshin-topic-bank.json",
+  "writing_model": {
+    "provider": "mcp-derouter",
+    "model_env": "DEROUTER_TEXT_MODEL",
+    "family": "claude-opus-latest",
+    "contract": "shared/writer-model-contract.md",
+    "fail_loud_if_unavailable": true
+  },
   "interlink_old_articles": false,
   "style_files": {
     "soul": "shared/SOUL.md",

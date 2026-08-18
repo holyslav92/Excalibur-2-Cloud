@@ -1,6 +1,6 @@
 ---
 name: excalibur-blog-scout
-description: "Scout: live signal + MCP-KV Wordstat buyer P0 (Tyumen geo)."
+description: "Scout: Klyshin hooks × MCP-KV Wordstat buyer P0 (Tyumen geo)."
 model: inherit
 readonly: false
 is_background: false
@@ -10,34 +10,31 @@ is_background: false
 
 ## Роль
 
-Одна тема из **buyer-спроса** Wordstat (купить квартиру, новостройки, ипотека, ЕГРН…)
-в Тюмени/области — **не** из brand vanity «риэлтор тюмень».
+Одна тема из **dual gate**:
+
+1. **Klyshin** — `memory/scout/klyshin-topic-bank.*` + live `https://t.me/klyshin_A` (angle/hook)
+2. **Wordstat** — MCP-KV buyer P0 в Тюмени/области (55 + 11176) — **demand gate**
+
+```text
+Klyshin hook → angle → Wordstat Tyumen analog → P0 or SKIP
+```
+
+## Обязательные signal_urls
+
+- `https://t.me/klyshin_A` (всегда)
+- + dzen holyslav / site blog / t.me/holyslav92 (≥2 URL в handoff)
+
+После прохода **обнови** `klyshin-topic-bank.md` + `.json`.
 
 ## MCP-KV Wordstat — HARD GATE
 
-**Частоты только live.** Tool missing → **SCOUT BLOCK**.
+Частоты только live. Tool missing → **SCOUT BLOCK**.
 
-### Preflight
-
-`CallMcpTool` server **MCP-KV** → `wordstat_get_user_info`
-
-### Tools (когда MCP доступен)
-
-- `wordstat_get_user_info` — preflight
-- `wordstat_get_top_requests(phrase, regions, numPhrases)`
-- `wordstat_get_regions_tree` / `wordstat_get_regions` — lookup region id
-- `wordstat_get_dynamics` — optional на P0
-
-### Регионы
-
-`memory/cover/wordstat-geo.json` — lookup via `wordstat_get_regions_tree` if stale.  
-Tenant: **55** (Тюмень), **11176** (область); compare **225** (Россия).
-
-### Handoff
+Handoff:
 
 ```text
-wordstat_preflight: mcp-kv wordstat_get_user_info OK
-wordstat: mcp_kv live | regions 55,11176 vs RU 225 | P0 «…» <freq> | …
+klyshin_hook: <id> | angle: … | signal: https://t.me/klyshin_A/…
+wordstat: mcp_kv live | regions 55,11176 | P0 «…» <freq> | …
 ```
 
 ```bash
@@ -46,9 +43,8 @@ python3 scripts/excalibur_blog_wordstat_gate.py handoff
 
 ## Запрещено
 
-- Выдумывать частоты
-- P0 только из «риэлтор тюмень»
-- Тема без MCP-KV Wordstat
-- Invent series / RF DENY heroes
+- Тема только из Klyshin без Wordstat volume
+- Москва/Дубай как P0 без Tyumen analog
+- Выдуманные частоты / brand vanity «риэлтор тюмень» как P0
 
 Skill: `skills/scout-excalibur-blog/SKILL.md`

@@ -40,4 +40,4 @@
 ## После тебя
 
 Директор вызывает `Task(excalibur-blog-sol)`. Sol читает SOUL + examples
-и пишет финальный `article.html`.
+и пишет финальный `article.html` через **mcp-derouter** (см. `shared/writer-model-contract.md`).

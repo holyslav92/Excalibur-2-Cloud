@@ -293,6 +293,15 @@ def main() -> int:
             proc = subprocess.run(gate_cmd, cwd=root, capture_output=True, text=True, check=False)
             label = gate_cmd[1].rsplit("/", 1)[-1]
             check(proc.returncode == 0, f"{label} doctor", errors, warnings)
+        klyshin_bank = str(tenant.get("scout_klyshin_topic_bank") or "").strip()
+        if klyshin_bank:
+            bank_path = root / klyshin_bank
+            check(bank_path.is_file(), f"{klyshin_bank} exists", errors, warnings)
+            md_path = root / "memory/scout/klyshin-topic-bank.md"
+            check(md_path.is_file(), "memory/scout/klyshin-topic-bank.md exists", errors, warnings)
+            signals = tenant.get("scout_signal_urls") or []
+            has_klyshin = any("klyshin" in str(u).lower() for u in signals)
+            check(has_klyshin, "scout_signal_urls includes t.me/klyshin_A", errors, warnings)
     else:
         check(
             True,

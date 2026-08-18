@@ -31,8 +31,9 @@ Scout? → research_start → Research → Title → Writer(смысл)
 Никто не читает уже опубликованные статьи сайта — только
 `published-titles-only.md` / `shared/published-titles.md` для anti-dup.
 
-`memory/topics/` запрещена. Scout → handoff + `signal_urls` + **MCP-KV Wordstat hard gate** (buyer P0 in Tyumen regions; never invent frequencies). Cover canon: `memory/cover/cover-canon.json`.
-(из tenant / site-brief).
+`memory/topics/` запрещена. Scout → handoff + `signal_urls` + **dual gate: Klyshin hooks (`memory/scout/klyshin-topic-bank.*`) × MCP-KV Wordstat** (buyer P0 Tyumen 55+11176; Klyshin = angle, Wordstat = demand). Cover canon: `memory/cover/cover-canon.json`.
+
+**Writer/Sol:** текст через **mcp-derouter** + `DEROUTER_TEXT_MODEL` (Opus). Если derouter down → `DEROUTER WRITER/SOL BLOCKER`, без тихого fallback. См. `shared/writer-model-contract.md`.
 
 ```bash
 python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
@@ -45,6 +46,7 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - topics / SEO-хвосты
 - Writer/Sol читают старые article.html / live-сайт как образец
 - Publish без pipeline_canon stamp
+- Scout/тема без **Klyshin×Wordstat dual gate** или с выдуманными частотами
 - Scout/тема про RF-blocked heroes без Дзен-канона (если `dzen_rf_pack`)
 - Sol выдумывает факты, которых нет в `drafts/writer.html` / research
 - Запуск пайплайна до завершения Setup

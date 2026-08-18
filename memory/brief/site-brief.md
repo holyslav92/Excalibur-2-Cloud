@@ -39,9 +39,9 @@
 - **формат:** how-to / чеклист / troubleshooting сделки / разбор риска до аванса
 - **канон:** `shared/pipeline-canon.json`
 - **стиль:** `shared/article-style.md` + `shared/SOUL.md` + `shared/dzen-content-rules.md`
-- **темы:** Scout → handoff `topic_id` + короткий title; `memory/topics/` запрещена
+- **темы:** Scout → handoff `topic_id` + короткий title; **Klyshin hook bank** (`memory/scout/`) × Wordstat P0; `memory/topics/` запрещена
 - **anti-dup:** только `published-titles-only.md` / `shared/published-titles.md` — не читать live-статьи как образец Writer/Sol
-- **Wordstat:** **обязателен** через **MCP-KV** (`wordstat_get_user_info` preflight + `wordstat_get_top_requests`). P0 = buyer queries (купить квартиру, новостройки, ипотека, ЕГРН…), не brand «риэлтор тюмень». Cover stickers = top phrases из того же pull.
+- **Wordstat:** **обязателен** через **MCP-KV**. **Klyshin** (`https://t.me/klyshin_A`) — hook bank, всегда вместе с Wordstat. P0 = buyer queries в Тюмени, не brand «риэлтор тюмень».
 
 ## Главный герой визуала
 

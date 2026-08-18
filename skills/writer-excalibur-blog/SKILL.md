@@ -5,6 +5,16 @@ description: Write meaning draft drafts/writer.html; Sol applies tenant SOUL sty
 
 # Writer Skill — смысл статьи (черновик)
 
+## Модель (HARD)
+
+Текст Writer — через **mcp-derouter** + `DEROUTER_TEXT_MODEL` (Claude Opus 4.6/5).
+Контракт: `shared/writer-model-contract.md`.
+
+Если DEROUTER недоступен → **`DEROUTER WRITER BLOCKER`** в handoff.  
+**Запрещено** молча писать на weaker model.
+
+Тон Klyshin (кейс, короткие абзацы) допустим; **автор фактов** — Святослав / Тюмень.
+
 Ты пишешь **смысл**: факты, тезисы, ограничения, CTA.  
 Финал слога делает **Sol** (`excalibur-blog-sol`) по SOUL + examples.
 
