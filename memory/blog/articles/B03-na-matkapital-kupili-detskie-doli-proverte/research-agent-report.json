@@ -11,34 +11,34 @@
       {
         "url": "https://t.me/klyshin_A",
         "type": "community",
-        "note": "5 схем: маткапитал без долей → оспаривание; hook matkapital_child_shares"
+        "note": "18.08.2026 вебинар: проверка до аванса, маткапитал и детские доли в списке рисков"
       },
       {
-        "url": "https://regions.ru/obschestvo/porjadok-prodazhi-kvartir-s-detskimi-doljami-v-2026-godu-chto-objazany-sdelat-roditeli",
-        "type": "media",
-        "note": "Чаплин 2026: опека + нотариус; отмена согласия банка на выделение долей"
-      },
-      {
-        "url": "https://companies.rbc.ru/news/Tg0aoV6yHY/kak-prodat-kvartiru-s-materinskim-kapitalom-pravovyie-nyuansyi-2026/",
-        "type": "media",
-        "note": "недействительность без выделения долей"
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Видео «5 схем законного отъёма квартиры»: схема №4 маткапитал без долей детям → дети оспаривают"
       }
     ]
   },
   "wordstat": {
-    "regions": ["55", "11176"],
+    "regions": ["55", "11176", "225"],
     "p0_phrase": "купить квартиру в тюмени",
-    "p0_volume": 23060,
-    "angle_phrase": "детская доля в квартире",
-    "angle_volume": 41,
-    "rework_from": "маткапитал при покупке квартиры (14)",
+    "p0_volume": 40410,
+    "matkapital_phrase": "маткапитал при покупке квартиры",
+    "matkapital_volume": 1838,
+    "child_share_phrase": "детская доля в квартире",
+    "child_share_volume": 2001,
     "partial": []
   },
   "overlap_check": {
     "file": "published-titles-only.md",
+    "published_angles_excluded": [
+      "B01: стоп-строки ЕГРН до аванса",
+      "B02: расписка без денег на счёте"
+    ],
     "duplicates_found": false
   },
-  "key_facts_count": 22,
+  "key_facts_count": 32,
   "outputs": {
     "research_notes": "research-notes.md",
     "research_context": "research-context.json",

@@ -18,30 +18,50 @@
     "primary_query": "На маткапитал купили — детские доли проверьте",
     "priority": "P0"
   },
+  "scout_handoff": {
+    "external_signal": "Клышин: 5 схем пост-покупки — маткапитал без выделения долей → дети оспаривают; связка с ЕГРН/опекой до аванса",
+    "signal_urls": [
+      "https://t.me/klyshin_A",
+      "https://dzen.ru/holyslav",
+      "https://t.me/holyslav92"
+    ],
+    "klyshin_hook": "matkapital_child_shares",
+    "signal_accessed": "2026-08-18"
+  },
+  "wordstat_snapshot": {
+    "regions": ["55", "11176", "225"],
+    "accessed_at": "2026-08-18",
+    "phrases": [
+      { "phrase": "купить квартиру в тюмени", "totalCount": 40410, "role": "P0" },
+      { "phrase": "маткапитал при покупке квартиры", "totalCount": 1838 },
+      { "phrase": "детская доля в квартире", "totalCount": 2001 },
+      { "phrase": "сколько сейчас материнский капитал в 2026", "totalCount": 1737 }
+    ]
+  },
   "search_queries": [
     {
       "id": "primary_fresh",
-      "query": "На маткапитал купили — детские доли проверьте 2026",
+      "query": "маткапитал детские доли проверка покупка квартиры 2026",
       "purpose": "актуальный SERP"
     },
     {
       "id": "title_fresh",
-      "query": "На маткапитал купили — детские доли проверьте 2026",
+      "query": "на маткапитал купили детские доли проверьте",
       "purpose": "SERP по человеческому title"
     },
     {
       "id": "official_docs",
-      "query": "На маткапитал купили — детские доли проверьте official docs 2026",
+      "query": "256-ФЗ выделение долей детям маткапитал статья 10",
       "purpose": "официальные docs"
     },
     {
-      "id": "github_evidence",
-      "query": "site:github.com На маткапитал купили — детские доли проверьте 2026",
-      "purpose": "GitHub evidence"
+      "id": "tyumen_local",
+      "query": "купить квартиру тюмень маткапитал проверка",
+      "purpose": "локальный контекст"
     },
     {
       "id": "community_experience",
-      "query": "На маткапитал купили — детские доли проверьте forum problems опыт 2026",
+      "query": "маткапитал не выделили доли детям оспорить сделку",
       "purpose": "форумы и живые проблемы"
     }
   ],
