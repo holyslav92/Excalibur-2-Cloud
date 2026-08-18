@@ -2,7 +2,7 @@
 
 > **TENANT:** The Риэлтор / tymenrieltor.ru — `memory/cover/*`, `shared/tenant-config.json`.
 
-# Excalibur BLOG — Quad Canvas (mcp-derouter 2K)
+# Excalibur BLOG — Quad Canvas (Derouter REST 2K)
 
 Cover после `article.html` + Sol PASS.
 
@@ -17,23 +17,25 @@ Cover после `article.html` + Sol PASS.
 | 1 | `canvas-quad-01.png` | cover, inline_1…3 |
 | 2 | `canvas-quad-02.png` | inline_4…7 |
 
-PRIMARY: **mcp-derouter**, `resolution: 2K`. Kie — legacy fallback only.
+PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`), `resolution: 2K`, 16:9. Kie — secondary fallback only.
 
 ## Image model lock (HARD — owner)
 
-**ALLOWED for cover/inline only:**
+**Order of preference:**
 
-1. **mcp-derouter** — when Derouter MCP tools are actually loaded on the agent VM.
-2. **`scripts/excalibur_blog_kie_gpt_image2_api.py`** — Kie GPT Image 2 async (`createTask` + poll), 2K; canvas 1 i2i with `identity-real`; canvas 2 t2i (prompt-only batch).
-3. **MCP-KV Kie sync image tool** — only if Kie script cannot run; same Kie model. On timeout → retry async Kie script, **not** another image tool.
+```text
+1. DEROUTER_API_KEY → scripts/excalibur_blog_derouter_gpt_image2_api.py (api-direct, 2K)
+2. KIE_API_KEY      → scripts/excalibur_blog_kie_gpt_image2_api.py (after Derouter auth/5xx + retry)
+3. neither          → BLOCKER
+```
 
-**FORBIDDEN** (even after MCP timeout): `flux2-pro-text-to-image`, `flux2-pro-image-to-image`, Seedream, `nano_banana*`, `z-image`.
+**FORBIDDEN** (even after timeout): `flux2-pro-text-to-image`, `flux2-pro-image-to-image`, Seedream, `nano_banana*`, `z-image`, `mcp-derouter/start-mcp.sh`.
 
-**MCP-KV on Cloud:** Wordstat (`wordstat_*`) + optionally Kie sync image. Not a buffet of image models.
+**MCP-KV on Cloud:** Wordstat (`wordstat_*`) only for Scout/Cover stickers. Not a buffet of image models.
 
 **No off-pipeline demos:** one uncut prompt ≠ article. Full canon: Scout×Wordstat → … → Cover only.
 
-Kie contract: `shared/kie-gpt-image-api-contract.md`
+Contracts: `shared/derouter-gpt-image-api-contract.md`, `shared/kie-gpt-image-api-contract.md`
 
 ## Cover canon (v2)
 
@@ -60,7 +62,8 @@ python3 scripts/excalibur_blog_cover_text_gate.py --article-dir <dir>
 python3 scripts/excalibur_blog_quad_manifest.py --article-dir <dir> --merge
 python3 scripts/excalibur_blog_cover_motif_gate.py check --topic-id <id> --composition "..." --location "..." ...
 python3 scripts/excalibur_blog_cover_quad_prompt.py --article-dir <dir> --write-batch
-# mcp-derouter ×2 → quad-mcp-result-01.json, quad-mcp-result-02.json
+# Derouter REST ×2 → quad-mcp-result-01.json, quad-mcp-result-02.json
+# python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir <dir> --batch cover/quad-mcp-batch-01.json --result cover/quad-mcp-result-01.json --fallback-kie
 python3 scripts/excalibur_blog_quad_apply.py --article-dir <dir> --canvas-index 1 --inject-html
 python3 scripts/excalibur_blog_quad_apply.py --article-dir <dir> --canvas-index 2 --inject-html
 python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --composition "..." ...

@@ -7,10 +7,10 @@ description: Write meaning draft drafts/writer.html; Sol applies tenant SOUL sty
 
 ## Модель (HARD)
 
-Текст Writer — через **mcp-derouter** + `DEROUTER_TEXT_MODEL` (Claude Opus 4.6/5).
+Текст Writer — через **Derouter REST** (`DEROUTER_API_KEY`) + **`claude-opus-5`** на `https://api.derouter.ai/openai/v1/chat/completions`.
 Контракт: `shared/writer-model-contract.md`.
 
-Если DEROUTER недоступен → **`DEROUTER WRITER BLOCKER`** в handoff.  
+Если `DEROUTER_API_KEY` отсутствует или API недоступен → **`DEROUTER WRITER BLOCKER`** в handoff.  
 **Запрещено** молча писать на weaker model.
 
 Тон Klyshin (кейс, короткие абзацы) допустим; **автор фактов** — Святослав / Тюмень.

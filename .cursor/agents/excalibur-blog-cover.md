@@ -1,6 +1,6 @@
 ---
 name: excalibur-blog-cover
-description: "④a Cover: 2× quad canvas mcp-derouter 2K i2i, light/meme/Wordstat, anti-repeat."
+description: "④a Cover: 2× quad canvas Derouter REST 2K i2i, light/meme/Wordstat, anti-repeat."
 model: inherit
 readonly: false
 is_background: false
@@ -18,7 +18,7 @@ is_background: false
 
 ## Роль
 
-Cover генерирует **2×** quad-холста 2×2 (**mcp-derouter** 2K i2i PRIMARY) → `cover.png` + `inline-01…07.png`.
+Cover генерирует **2×** quad-холста 2×2 (**Derouter REST** + `DEROUTER_IMAGE_MODEL`, api-direct 2K PRIMARY) → `cover.png` + `inline-01…07.png`.
 
 Каждая обложка **изобретается с нуля** (surprise, variety). Anti-repeat: `memory/cover/used-motifs.json`.
 
@@ -51,7 +51,10 @@ python3 scripts/excalibur_blog_cover_motif_gate.py check \
   --topic-id <id> --composition "..." --location "..." --meme "..." ...
 
 python3 scripts/excalibur_blog_cover_quad_prompt.py --article-dir "$ARTICLE" --write-batch
-# mcp-derouter ×2 (canvas 1 + 2) → quad-mcp-result-01.json, quad-mcp-result-02.json
+python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICLE" \
+  --batch cover/quad-mcp-batch-01.json --result cover/quad-mcp-result-01.json --fallback-kie
+python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICLE" \
+  --batch cover/quad-mcp-batch-02.json --result cover/quad-mcp-result-02.json --fallback-kie
 
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 1 --inject-html
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 2 --inject-html
@@ -96,7 +99,7 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 |-----|---------|
 | COVER MOTIF BLOCKER | collision 14-day anti-repeat |
 | COVER HERO BLOCKER | нет identity-real / reference_url |
-| DEROUTER/KIE BLOCKER | нет URL после 2K |
+| DEROUTER API KEY MISSING / DEROUTER BLOCKER / KIE API BLOCKER | нет canvas URL/local_path после 2K |
 | IMAGE MODEL BLOCKER | Flux/Seedream/nano_banana/z-image или off-pipeline demo |
 | COVER STYLE BLOCKER | dark cinematic, daypart formula, inventory default props, empty doc-only office |
 

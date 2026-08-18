@@ -23,7 +23,7 @@
 | `PUBLIC_SITE_URL` | Live сайт; в артефактах остаётся `{{SITE_BASE}}` |
 | `FTP_HOST` / `FTP_USER` / `FTP_PASS` / `FTP_ROOT` | SFTP publish (имена FTP_*, транспорт SFTP) |
 | `EXCALIBUR_BLOG_ALLOW_PUBLISH` | `yes` только когда готовы публиковать |
-| Image API (mcp-derouter 2K) | Cover longform 2× quad canvas |
+| Image API (Derouter REST 2K) | Cover longform 2× quad canvas |
 | **MCP-KV** (Automation → Tools) | **Wordstat PRIMARY** — `wordstat_get_*` tools; personal connector from mcp-kv.ru dashboard (**never git**) |
 | `MCP_KV_TOKEN` | Optional Cloud Secret if not using dashboard connector |
 | `WORDSTAT_*` / `YANDEX_*` | Optional API fallback (secondary to MCP-KV) |
@@ -58,7 +58,7 @@ Scout **FAIL**, если Wordstat MCP недоступен или handoff без
 
 Также подключите:
 
-- Image generation **mcp-derouter** 2K (Cover PRIMARY)
+- Image generation **Derouter REST** (`DEROUTER_IMAGE_MODEL`), 2K (Cover PRIMARY; Kie secondary)
 - WordPress content blob (если используете MCP publish helpers)
 
 ## 5. Two automations

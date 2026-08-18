@@ -1,6 +1,6 @@
 ---
 name: cover-excalibur-blog
-description: "④a Cover: 2× quad mcp-derouter 2K, light/meme/Wordstat stickers, anti-repeat 14d."
+description: "④a Cover: 2× quad Derouter REST 2K, light/meme/Wordstat stickers, anti-repeat 14d."
 ---
 
 # Cover Agent — longform 8 images, light/meme canon
@@ -16,26 +16,25 @@ description: "④a Cover: 2× quad mcp-derouter 2K, light/meme/Wordstat stickers
 ## Архитектура
 
 ```text
-identity-real i2i → 2× quad canvas 2048×1152 (mcp-derouter 2K)
+identity-real i2i → 2× quad canvas 2048×1152 (Derouter REST 2K)
   canvas 1: cover + inline_1..3
   canvas 2: inline_4..7
 → split 2×2 → cover.png + inline-01..07.png → inject
 ```
 
-PRIMARY: **mcp-derouter** 2K. Kie — legacy fallback only.
+PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`, api-direct 2K). Kie — secondary after Derouter auth/5xx.
 
 ## Image model lock (HARD)
 
 | Allowed | Forbidden |
 |---------|-----------|
-| mcp-derouter (if loaded) | flux2-pro-text-to-image |
-| `excalibur_blog_kie_gpt_image2_api.py` (async Kie GPT Image 2) | flux2-pro-image-to-image |
-| MCP-KV Kie sync image tool only if Kie script blocked | Seedream, nano_banana*, z-image |
+| `excalibur_blog_derouter_gpt_image2_api.py` (PRIMARY) | flux2-pro-text-to-image |
+| `excalibur_blog_kie_gpt_image2_api.py` (after Derouter fail) | flux2-pro-image-to-image |
+| | Seedream, nano_banana*, z-image |
+| | mcp-derouter/start-mcp.sh |
 | | Off-pipeline «demo» canvases |
 
-**On Kie sync MCP timeout:** retry `excalibur_blog_kie_gpt_image2_api.py` — **never** Flux/Seedream/nano_banana/z-image.
-
-MCP-KV on Cloud = Wordstat + optional Kie sync image (contract). See `shared/blog-cover-quad-canvas-contract.md`.
+**On Derouter auth/5xx:** one retry + fallback host → then Kie script — **never** Flux/Seedream/nano_banana/z-image.
 
 ## Cover canon (v2)
 
@@ -71,7 +70,10 @@ python3 scripts/excalibur_blog_cover_motif_gate.py check --topic-id <id> \
   --composition "..." --location "..." --meme "..." --sticker-set "..."
 
 python3 scripts/excalibur_blog_cover_quad_prompt.py --article-dir "$ARTICLE" --write-batch
-# mcp-derouter: 2 jobs (canvas-index 1 and 2)
+python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICLE" \
+  --batch cover/quad-mcp-batch-01.json --result cover/quad-mcp-result-01.json --fallback-kie
+python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICLE" \
+  --batch cover/quad-mcp-batch-02.json --result cover/quad-mcp-result-02.json --fallback-kie
 
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 1 --inject-html
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 2 --inject-html
@@ -87,7 +89,7 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 - `wordstat_stickers` — 1–3 phrases from Scout/Research Wordstat
 - `slots.inline_1…7` — H2 anchors, `visual_type` (utility catalog), scene_hint, fact labels (3–6)
 
-## Self-check before derouter
+## Self-check before Derouter REST
 
 - [ ] `cover_motifs` filled + motif gate PASS
 - [ ] light/bright language in scene_hint (no dark cinematic)
@@ -100,7 +102,7 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 
 - COVER MOTIF BLOCKER (14-day collision)
 - COVER HERO BLOCKER (identity-real missing)
-- DEROUTER/KIE BLOCKER
+- DEROUTER API KEY MISSING / DEROUTER BLOCKER / KIE API BLOCKER
 - **IMAGE MODEL BLOCKER** — Flux/Seedream/nano_banana/z-image or off-pipeline demo canvas
 - daypart formula / inventory default / doc-only office / dark cinematic
 

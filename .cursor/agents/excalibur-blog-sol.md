@@ -13,8 +13,8 @@ is_background: false
 
 ## Модель (HARD)
 
-**mcp-derouter** + `DEROUTER_TEXT_MODEL` (Opus). `shared/writer-model-contract.md`.  
-DEROUTER down → `DEROUTER SOL BLOCKER`.
+**Derouter REST** + `claude-opus-5` (`DEROUTER_API_KEY`). `shared/writer-model-contract.md`.  
+DEROUTER down / key missing → `DEROUTER SOL BLOCKER`.
 
 Skill: `skills/sol-excalibur-blog/SKILL.md`  
 Душа: `shared/SOUL.md` + `shared/soul-examples/`  

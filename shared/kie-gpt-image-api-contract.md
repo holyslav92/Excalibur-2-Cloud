@@ -5,10 +5,12 @@ Primary Cloud path for Excalibur BLOG cover generation.
 ## Order of preference (mandatory)
 
 ```text
-1. mcp-derouter (when MCP tools loaded on VM)
-2. KIE_API_KEY set  → scripts/excalibur_blog_kie_gpt_image2_api.py only
-3. KIE_API_KEY missing → legacy MCP Kie sync image tool (async Kie script preferred; sync once max)
+1. DEROUTER_API_KEY set → scripts/excalibur_blog_derouter_gpt_image2_api.py (PRIMARY)
+2. KIE_API_KEY set      → scripts/excalibur_blog_kie_gpt_image2_api.py (after Derouter auth/5xx + one retry)
+3. neither              → BLOCKER
 ```
+
+See `shared/derouter-gpt-image-api-contract.md` for Derouter REST (api-direct, 600s, i2i via /images/edits).
 
 ## Image model lock (HARD — owner)
 

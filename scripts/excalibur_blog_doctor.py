@@ -143,6 +143,8 @@ def main() -> int:
         "scripts/excalibur_blog_opening_meta_gate.py",
         "scripts/excalibur_blog_writer_ready_gate.py",
         "scripts/excalibur_blog_cover_text_gate.py",
+        "scripts/excalibur_blog_derouter_gpt_image2_api.py",
+        "scripts/excalibur_blog_kie_gpt_image2_api.py",
         "scripts/excalibur_blog_wp_publish.py",
         "scripts/excalibur_blog_merge_to_main.py",
         "scripts/excalibur_blog_community_cta_gate.py",
@@ -427,6 +429,23 @@ def main() -> int:
     if args.publish:
         check(env.get("EXCALIBUR_BLOG_ALLOW_PUBLISH", "").lower() == "yes", "EXCALIBUR_BLOG_ALLOW_PUBLISH=yes", errors, warnings)
         check(setup_complete, "setup complete before --publish", errors, warnings)
+
+    derouter_key = os.environ.get("DEROUTER_API_KEY", "").strip()
+    check(
+        bool(derouter_key),
+        "DEROUTER_API_KEY set (Cover PRIMARY; missing → DEROUTER API KEY MISSING at gen time)",
+        errors,
+        warnings,
+        warn=True,
+    )
+    derouter_model = os.environ.get("DEROUTER_IMAGE_MODEL", "").strip()
+    check(
+        bool(derouter_model),
+        "DEROUTER_IMAGE_MODEL set (Cover image model id)",
+        errors,
+        warnings,
+        warn=True,
+    )
 
     # Dzen + RF canon must be readable before Scout (when pack enabled)
     if tenant.get("dzen_rf_pack", True):

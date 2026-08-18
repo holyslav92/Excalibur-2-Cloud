@@ -13,8 +13,8 @@ is_background: false
 
 ## Модель (HARD)
 
-**mcp-derouter** + `DEROUTER_TEXT_MODEL` (Opus). См. `shared/writer-model-contract.md`.  
-DEROUTER down → `DEROUTER WRITER BLOCKER`, не weaker fallback.
+**Derouter REST** + `claude-opus-5` (`DEROUTER_API_KEY`). См. `shared/writer-model-contract.md`.  
+DEROUTER down / key missing → `DEROUTER WRITER BLOCKER`, не weaker fallback.
 
 ## Вход
 

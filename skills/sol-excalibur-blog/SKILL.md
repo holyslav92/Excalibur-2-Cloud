@@ -7,10 +7,10 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 
 ## Модель (HARD)
 
-Финальный рерайт — через **mcp-derouter** + `DEROUTER_TEXT_MODEL` (Claude Opus 4.6/5).
+Финальный рерайт — через **Derouter REST** (`DEROUTER_API_KEY`) + **`claude-opus-5`**.
 Контракт: `shared/writer-model-contract.md`.
 
-Если DEROUTER недоступен → **`DEROUTER SOL BLOCKER`**. Без тихого fallback.
+Если `DEROUTER_API_KEY` отсутствует или API недоступен → **`DEROUTER SOL BLOCKER`**. Без тихого fallback.
 
 **Имя агента:** Sol (`excalibur-blog-sol`).  
 Ты берёшь **смысл** черновика Writer и **переписываешь** статью слогом

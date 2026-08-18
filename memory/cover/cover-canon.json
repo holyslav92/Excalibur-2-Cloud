@@ -69,7 +69,7 @@
     "forbidden_faces": ["reconstructed AI hero-ref", "plastic uncanny"]
   },
   "pipeline": {
-    "primary": "mcp-derouter",
+    "primary": "derouter-rest",
     "resolution": "2K",
     "canvases": 2,
     "panels_per_canvas": 4,
@@ -78,11 +78,11 @@
   },
   "image_allowlist": {
     "allowed": [
-      "mcp-derouter (when MCP tools loaded)",
-      "scripts/excalibur_blog_kie_gpt_image2_api.py (Kie GPT Image 2 async: createTask + poll)",
-      "mcp-kv Kie sync image tool only when Kie script unavailable — same model, no sync timeout hop"
+      "scripts/excalibur_blog_derouter_gpt_image2_api.py (Derouter REST image API, api-direct, 2K 16:9)",
+      "scripts/excalibur_blog_kie_gpt_image2_api.py (Kie async image API — secondary after Derouter auth/5xx)"
     ],
     "forbidden": [
+      "mcp-derouter/start-mcp.sh",
       "flux2-pro-text-to-image",
       "flux2-pro-image-to-image",
       "seedream",
@@ -91,7 +91,7 @@
       "z-image",
       "off-pipeline demo canvases / lone prompts without Scout×Wordstat article"
     ],
-    "timeout_rule": "If Kie sync MCP times out → retry Kie async script; NEVER hop to Flux/Seedream/nano_banana/z-image"
+    "timeout_rule": "Derouter auth/5xx → one retry + fallback host; then Kie script. NEVER Flux/Seedream/nano_banana/z-image"
   },
   "inline_utility": {
     "catalog": "memory/cover/inline-visual-types.json",

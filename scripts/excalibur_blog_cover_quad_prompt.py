@@ -589,12 +589,13 @@ def main() -> int:
             "result_path": spec["result_file"],
             "slots": list(canvas_slots),
             "preferred_image_flow": {
-                "provider": "mcp-derouter",
-                "mcp_server": "mcp-derouter",
+                "provider": "derouter-rest",
+                "script": "scripts/excalibur_blog_derouter_gpt_image2_api.py",
                 "resolution": MCP_RESOLUTION,
                 "note": (
-                    "PRIMARY Cloud path: ONE mcp-derouter 2K i2i job per canvas. "
-                    "Legacy Kie script only if derouter unavailable."
+                    "PRIMARY: Derouter REST image API (api-direct, 2K 16:9). "
+                    "Fallback: excalibur_blog_kie_gpt_image2_api.py when DEROUTER auth/5xx. "
+                    "FORBIDDEN: flux2-pro-*, Seedream, nano_banana*, z-image, mcp-derouter/start-mcp.sh."
                 ),
                 "apply_script": (
                     "python3 scripts/excalibur_blog_quad_apply.py "
@@ -604,7 +605,7 @@ def main() -> int:
             "jobs": [
                 {
                     "slot": "canvas_quad",
-                    "tool": "mcp-derouter",
+                    "tool": "derouter-rest",
                     "mcp_args": api_input,
                 }
             ],
