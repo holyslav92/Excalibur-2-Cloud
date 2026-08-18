@@ -1,0 +1,48 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B03",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-18",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "5 схем: маткапитал без долей → оспаривание; hook matkapital_child_shares"
+      },
+      {
+        "url": "https://regions.ru/obschestvo/porjadok-prodazhi-kvartir-s-detskimi-doljami-v-2026-godu-chto-objazany-sdelat-roditeli",
+        "type": "media",
+        "note": "Чаплин 2026: опека + нотариус; отмена согласия банка на выделение долей"
+      },
+      {
+        "url": "https://companies.rbc.ru/news/Tg0aoV6yHY/kak-prodat-kvartiru-s-materinskim-kapitalom-pravovyie-nyuansyi-2026/",
+        "type": "media",
+        "note": "недействительность без выделения долей"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 23060,
+    "angle_phrase": "детская доля в квартире",
+    "angle_volume": 41,
+    "rework_from": "маткапитал при покупке квартиры (14)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "key_facts_count": 22,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}
