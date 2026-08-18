@@ -11,6 +11,7 @@ from pathlib import Path
 
 REQUIRED_CHECKS = (
     "identity_face_28yo",
+    "identity_body_medium_slim",
     "light_high_key",
     "motif_no_collision_14d",
     "people_in_8_set",

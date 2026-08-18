@@ -43,13 +43,17 @@ def main() -> int:
     cover_dir.mkdir(parents=True, exist_ok=True)
 
     url = args.url.strip()
-    result_name = f"quad-mcp-result-{args.canvas_index:02d}.json" if args.canvas_index != 1 else "quad-mcp-result.json"
+    result_name = f"quad-mcp-result-{args.canvas_index:02d}.json"
+    legacy_result_name = "quad-mcp-result.json" if args.canvas_index == 1 else ""
     if not url:
-        result_path = cover_dir / result_name
-        if not result_path.is_file() and args.canvas_index == 1:
-            result_path = cover_dir / "quad-mcp-result-01.json"
-        if result_path.is_file():
-            url = (json.loads(result_path.read_text(encoding="utf-8")).get("url") or "").strip()
+        candidates = [cover_dir / result_name]
+        if legacy_result_name:
+            candidates.append(cover_dir / legacy_result_name)
+        for result_path in candidates:
+            if result_path.is_file():
+                url = (json.loads(result_path.read_text(encoding="utf-8")).get("url") or "").strip()
+                if url:
+                    break
     if not url:
         print(f"❌ QUAD APPLY BLOCKER: pass --url or cover/{result_name}", file=sys.stderr)
         return 1

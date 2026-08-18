@@ -55,7 +55,9 @@
   "identity_lock": {
     "source": "memory/cover/assets/identity-real/",
     "age": 28,
-    "face": "live photos only; emotions/poses change",
+    "body_build": "medium slim athletic — match identity-real refs (hoodie selfie, office selfie, greenhouse); NOT chubby, NOT overweight, NOT puffy cheeks, NOT double chin, NOT thick neck, NOT wide torso in tight blazer",
+    "face": "live photos only; oval face not puffy; emotions/poses change",
+    "forbidden_body": ["chubby", "overweight", "puffy face", "puffy cheeks", "double chin", "stocky", "thick waist", "thick neck", "wide torso tight blazer"],
     "forbidden_scene_clone": [
       "greenhouse",
       "Immortal Regiment",

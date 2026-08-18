@@ -52,16 +52,17 @@
   ],
   "reference_image": "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
   "reference_image_secondary": "memory/cover/assets/identity-real/face-office-selfie.jpeg",
-  "reference_notes": "PRIMARY identity lock: четыре LIVE-фото в memory/cover/assets/identity-real/ (не AI). i2i ротирует их по topic_id. Лицо: 28 лет, круглое лицо, полные щёки, короткие светло-русые/песочные волосы, fair skin, approachable. Запрещены plastic/uncanny лица и hero-ref AI как FACE source. scene-composition-only/ — только mood/композиция без копирования лица/позы 1:1. Каждая обложка: НОВАЯ эмоция, поза, жест, сцена — не клон ни одного из шести референсных кадров.",
+  "reference_notes": "PRIMARY identity lock: четыре LIVE-фото в memory/cover/assets/identity-real/ (не AI). i2i ротирует их по topic_id. Лицо и телосложение: 28 лет, **medium/slim build как на референсах** (hoodie selfie, office selfie, greenhouse) — овальное лицо без пухлых щёк, короткие светло-русые/песочные волосы, fair skin. Запрещены: chubby/overweight, puffy cheeks, double chin, thick neck, wide torso в обтягивающем пиджаке, plastic/uncanny лица, hero-ref AI как FACE source. Каждая обложка: НОВАЯ эмоция, поза, жест, сцена — не клон ни одного из шести референсных кадров.",
   "visual_lock": {
-    "person": "adult man exactly 28 years old, Slavic, round face with full cheeks, short light-brown/sandy hair, fair skin, warm approachable eyes, slight closed-mouth smile or theme-matched emotion",
+    "person": "adult man exactly 28 years old, Slavic, medium slim athletic build matching identity-real live photos, oval face (NOT puffy), short light-brown/sandy hair, fair skin, warm approachable eyes, slight closed-mouth smile or theme-matched emotion",
+    "body": "medium build, slim waist, normal neck, shoulders proportional; blazer fits comfortably NOT straining; same body proportions as identity-real refs (hoodie selfie, office selfie, greenhouse)",
     "hair": "short light-brown/sandy hair, natural texture, not dark, not 35–45 aged",
-    "face": "same face as identity-real/* live photos only; soft round cheeks; light stubble ok; distinct moles on chin/cheek when visible; NOT airbrushed, NOT plastic, NOT uncanny, NOT a different person",
+    "face": "same face as identity-real/* live photos only; oval face, NOT puffy cheeks, NOT double chin; light stubble ok; distinct moles on chin/cheek when visible; NOT airbrushed, NOT plastic, NOT uncanny, NOT a different person, NOT chubby",
     "outfit_variants": [
-      "navy/charcoal blazer + dark tee (editorial cover default)",
+      "navy/charcoal blazer + dark tee (editorial cover default) — relaxed fit, not tight on torso",
       "smart-casual shirt or henley for office/document scenes"
     ],
-    "forbid": "AI-reconstructed hero-ref faces, 35–45 age look, airbrushed skin, plastic/uncanny face, white hoodie, pink-cat, headphones in cover host, sunglasses, other person, copy-paste of any reference scene (greenhouse, Immortal Regiment, breakroom selfie, hoodie selfie, office hologram, balcony keys)"
+    "forbid": "AI-reconstructed hero-ref faces, 35–45 age look, airbrushed skin, plastic/uncanny face, chubby, overweight, puffy face, puffy cheeks, double chin, stocky build, thick neck, wide torso in tight blazer, white hoodie, pink-cat, headphones in cover host, sunglasses, other person, copy-paste of any reference scene (greenhouse, Immortal Regiment, breakroom selfie, hoodie selfie, office hologram, balcony keys)"
   },
   "outfit_rule": "Cover host: smart-casual риэлтор (blazer/jacket). Лицо только с identity-real. Без белого худи, без AirPods на cover (они только в selfie-ref).",
   "cover_canon": "memory/cover/cover-canon.json",
@@ -70,7 +71,7 @@
   "meme_rule": "Мем-коты и мем-люди (стикеры) — часть системы, не редкий easter egg. Cover host = люди; коты/мем-реакции на cover и 1–2 inline.",
   "wordstat_stickers_rule": "1–3 designer stickers с LIVE Wordstat фразами темы (Тюмень/область, regions 55+11176). Не random spam.",
   "forbidden_daypart_formula": "REJECTED навсегда: morning desk+document / day street / evening close talk / night split «как продают / что в выписке»",
-  "prompt_fragment": "same man as i2i identity-real: 28yo, round face, sandy hair; LARGE left; INVENT new bright high-key scene+meme+Wordstat stickers; sun flare/glow; anti-repeat; no scene clone; #FFF",
+  "prompt_fragment": "same man as i2i identity-real: 28yo, medium slim build, oval face (not puffy), sandy hair; LARGE left; INVENT new bright high-key scene+meme+Wordstat stickers; sun flare/glow; anti-repeat; no scene clone; NOT chubby; #FFF",
   "emotion_bank": [
     {
       "id": "calm_confidence",

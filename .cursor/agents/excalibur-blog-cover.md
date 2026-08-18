@@ -35,7 +35,7 @@ Cover генерирует **2×** quad-холста 2×2 (**mcp-derouter** 2K i
 3. **Light & bright:** sun flare, light leak, glow, airy #FFFFFF — no dark cinematic.
 4. **Мемы:** meme cat + meme people sticker cutouts; host Святослав LARGE left.
 5. **1–3 Wordstat stickers** — live high-frequency RU queries (Тюмень/область), из research/handoff.
-6. **Identity:** i2i `identity-real/*` only; new emotion/pose; no scene clone.
+6. **Identity + body lock:** i2i `identity-real/*`; medium slim build; NOT chubby/puffy/thick neck.
 
 ## Пайплайн
 

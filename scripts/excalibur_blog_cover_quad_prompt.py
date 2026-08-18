@@ -53,6 +53,7 @@ def sanitize_cover_scene_hint(scene: str, highlight: str) -> str:
     return _PINK_WORD_IN_SCENE.sub(_repl, scene)
 
 
+BODY_LOCK = "medium slim as identity-real refs; lean oval face; NOT chubby/puffy/double-chin/thick-neck/stocky/tight blazer"
 MAX_MCP_PROMPT_CHARS = 3500
 # Compact limits leave headroom under 3500 after style boilerplate (INC-20260721-0837).
 # Cover raw ≈80–140 (from blog-hero lock); inline ≈100–220. Long MUST/face essays
@@ -407,8 +408,7 @@ def build_prompt(
         panel_lines.append(
             f"Top-left COVER TEXT LOCK: headline EXACTLY «{cover_hook_text}» — bold condensed Cyrillic "
             f"black #141821, {highlight_rule}.{sticky_lock} "
-            f"Host LARGE left = same 28yo man as i2i identity-real (round face, sandy hair); "
-            f"smart-casual blazer; INVENT bright high-key scene with sun flare/light leak/glow; "
+            f"Host LARGE left = same 28yo i2i identity-real ({BODY_LOCK}); blazer relaxed; INVENT bright high-key sun flare; "
             f"scene: {compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; "
             f"1-3 Wordstat demand stickers; meme cat and/or meme people sticker cutouts; "
             f"#FFF high-key; no plastic face; no scene clone; no dark cinematic; no inventory default props"
@@ -423,11 +423,11 @@ def build_prompt(
     ban_line = (
         "Ban: dark cinematic/low-key/twilight; daypart formula; inventory default props "
         "(keys/hologram/desk/balcony/doc-only office); Drake/facepalm; keyword spam; "
-        "EXCALIBUR stamp/white hoodie/fake CIAN screenshot."
+        "EXCALIBUR stamp/white hoodie/fake CIAN screenshot; chubby/puffy host ban."
     )
     reference_line = (
-        "REFERENCE FACE only on cover top-left when has_cover: identity-real live photo "
-        "(28yo, round face, sandy hair); invent scene; never AI hero-ref face; no headphones on host."
+        "REFERENCE FACE+BODY only on cover top-left when has_cover: identity-real live photo "
+        f"(28yo; {BODY_LOCK}); invent scene; never AI hero-ref; no headphones."
         if has_cover
         else "NO Svytoslav host face on inline — informative collage; meme cat/people stickers OK."
     )

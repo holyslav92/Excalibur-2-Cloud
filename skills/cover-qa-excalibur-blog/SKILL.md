@@ -14,7 +14,7 @@ FAIL → **вернуть Cover** (не Indexer/Publish).
 
 ## Что проверяешь (визуально + артефакты)
 
-1. **Лицо хоста** — 28-летний Святослав по `identity-real/*`; не пластик, не AI, не чужой человек.
+1. **Лицо + телосложение хоста** — 28-летний Святослав по `identity-real/*`; **medium slim build** как на референсах (hoodie/office/greenhouse). **FAIL** если chubby, overweight, puffy cheeks, double chin, thick neck, wide torso в обтягивающем пиджаке.
 2. **Light / high-key** — светлая картинка, sun flare/glow; **нет** dark cinematic / low-key / twilight.
 3. **Motif 14д** — нет коллизии с `memory/cover/used-motifs.json` (composition/location/meme…).
 4. **Люди в 8-set** — host на cover; в наборе из 8 изображений есть люди (host и/или meme-people stickers).
@@ -34,6 +34,7 @@ FAIL → **вернуть Cover** (не Indexer/Publish).
   "topic_id": "B01",
   "checks": {
     "identity_face_28yo": true,
+    "identity_body_medium_slim": true,
     "light_high_key": true,
     "motif_no_collision_14d": true,
     "people_in_8_set": true,

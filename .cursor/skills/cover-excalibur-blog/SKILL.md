@@ -31,7 +31,7 @@ PRIMARY: **mcp-derouter** 2K. Kie — legacy fallback only.
 3. **Light & bright** — high-key, sun flare, light leak, glow; **no dark cinematic**.
 4. **Memes required** — meme cats + meme people stickers; host Святослав; 8-set includes people.
 5. **Wordstat stickers** — 1–3 readable labels from live Wordstat (Тюмень regions 55+11176).
-6. **Identity** — `identity-real/*` only; 28yo; no scene clone; no AI faces.
+6. **Identity + body lock** — `identity-real/*` i2i; 28yo; medium slim build as refs; NOT chubby, NOT puffy cheeks, NOT thick neck; no scene clone; no AI faces.
 7. **REJECTED daypart formula** — never morning desk / day street / evening close / night split.
 
 ## Runbook

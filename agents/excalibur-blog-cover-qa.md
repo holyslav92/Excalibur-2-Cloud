@@ -18,6 +18,7 @@ FAIL → **вернуть Cover**, не пускать Indexer/Publish.
 ## FAIL если
 
 - лицо не 28yo Святослав vs `identity-real/*` (пластик / AI / чужой)
+- **телосложение толще референсов** — chubby, puffy cheeks, double chin, thick neck, wide torso в tight blazer → FAIL
 - dark cinematic / не high-key light
 - motif collision 14д (`used-motifs.json`)
 - нет людей в 8-image set; коты пропали слишком часто за неделю
