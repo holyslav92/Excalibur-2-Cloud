@@ -41,7 +41,7 @@
 - **стиль:** `shared/article-style.md` + `shared/SOUL.md` + `shared/dzen-content-rules.md`
 - **темы:** Scout → handoff `topic_id` + короткий title; **Klyshin hook bank** (`memory/scout/`) × Wordstat P0; `memory/topics/` запрещена
 - **anti-dup:** только `published-titles-only.md` / `shared/published-titles.md` — не читать live-статьи как образец Writer/Sol
-- **Wordstat:** **обязателен** через **MCP-KV**. **Klyshin** (`https://t.me/klyshin_A`) — hook bank, всегда вместе с Wordstat. P0 = buyer queries в Тюмени, не brand «риэлтор тюмень».
+- **Wordstat:** **обязателен** через **MCP-KV**. **Klyshin** (`https://t.me/klyshin_A`) — hook bank, всегда вместе с Wordstat. Алгоритм: evaluate + **rework for demand** (слабый объём → локализация Тюмень, buyer-жаргон, similar queries; skip только после исчерпания rework). P0 = buyer queries в Тюмени (55+11176), не brand «риэлтор тюмень». Title — Klyshin rhythm; P0 — demand spine для stickers/H2.
 
 ## Главный герой визуала
 

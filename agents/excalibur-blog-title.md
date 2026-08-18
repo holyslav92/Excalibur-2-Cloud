@@ -16,7 +16,7 @@ is_background: false
 ## Жёстко
 
 - Ритм: разговорная сцена («Расписку написали. Денег не получили» — *свой* текст).
-- Угол из Scout `klyshin_hook`; P0 Wordstat — для demand, не вставлять в H1.
+- Угол из Scout `klyshin_hook`; final P0 Wordstat — demand spine под H1 (stickers/H2 из reworked queries).
 - Предложение с подлежащим и действием, ~50–70 символов.
 - Без «полный гайд», «2026», brand vanity «риэлтор тюмень».
 - Дзен-канон: без кликбейта (`shared/dzen-content-rules.md`).

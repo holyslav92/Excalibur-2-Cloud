@@ -24,17 +24,17 @@ description: Invent one catchy human H1 with clear subject. No SEO tails, no lab
 - **Коротко**, ~50–70 символов. Без «полный гайд», «2026», двоеточие+ключ.
 - Энергия примеров (не копировать): «Моего образования хватит»; «В квартире живёт бабушка. Только бабушки нет»; «Автооценка может стоить миллион».
 
-Угол из Scout: `klyshin_hook` в handoff + P0 Wordstat для demand, не для вставки в H1.
+Угол из Scout: `klyshin_hook` в handoff + final P0 Wordstat как **demand spine** (не вставлять в H1; stickers/H2 — из reworked live queries).
 
 ## Wordstat (MCP-KV — обязательно для угла)
 
-Из Scout handoff (`wordstat:` с **mcp_kv live** частотами):
+Из Scout handoff (`wordstat_rework` + `wordstat:` с **mcp_kv live** частотами):
 
-- P0 buyer-фразы (не brand «риэлтор тюмень») → естественный H1
-- 1–2 живые формулировки для lead / H2 candidates
+- Final P0 buyer-фразы (не brand «риэлтор тюмень») → demand spine под case-hook H1
+- 1–2 живые формулировки для lead / H2 candidates (из reworked cluster)
 - Cover-text возьмёт топ для `wordstat_stickers` (1–3 high-frequency из того же pull)
 
-**Не** вставляй сырую SEO-фразу в title. GEO Тюмень + SEO — dual use.
+**Не** вставляй сырую SEO-фразу в title. H1 = Klyshin rhythm; Wordstat = spine под ним.
 
 ## Выход
 

@@ -4,12 +4,26 @@
   "source_label": "Алексей Клышин — юрист по недвижимости",
   "updated_at": "2026-08-18",
   "accessed_at": "2026-08-18",
-  "algorithm": "klyshin_hook → candidate_angle → wordstat_tyumen_analog → P0_or_skip",
+  "algorithm": "klyshin_hook → wordstat_probe → rework_for_demand → final_P0_or_skip_after_rework",
   "wordstat_gate": {
     "provider": "mcp-kv",
     "regions": ["55", "11176"],
     "compare_ru": "225",
-    "rule": "P0 only if Tyumen+oblast volume supports buyer intent; weak volume → skip hook"
+    "rule": "Always evaluate Klyshin hook via Wordstat; weak volume → rework (localize Tyumen, buyer jargon, similar queries) until buyer P0 cluster; skip only after rework exhausted (not brand vanity)",
+    "rework_vocabulary": [
+      "егрн",
+      "наследство",
+      "ипотека",
+      "новостройка",
+      "аванс",
+      "пенсионер",
+      "доверенность",
+      "банкротство",
+      "маткапитал",
+      "вторичка",
+      "аккредитив"
+    ],
+    "handoff_log_fields": ["klyshin_hook", "wordstat_rework", "wordstat"]
   },
   "localize_rule": "Facts and city = Святослав Шакин / Тюмень. Do not copy Moscow/Dubai/МКАД as P0.",
   "hooks": [
@@ -19,6 +33,7 @@
       "angle": "предавансовая проверка до аванса",
       "klyshin_signal": "Пост 2026-08: отчёт 2900 ₽, список документов до аванса — «Сначала проверка. Потом аванс.»",
       "wordstat_probes": ["проверка квартиры перед покупкой", "предавансовая проверка квартиры", "выписка егрн квартира"],
+      "rework_hints": ["егрн", "аванс", "купить квартиру в тюмени"],
       "tyumen_localize": true,
       "status": "seed"
     },
@@ -154,7 +169,7 @@
     {
       "topic_id": "B01",
       "hook_ids": ["pre_advance_check"],
-      "note": "ЕГРН / аванс — Tyumen P0 «купить квартиру в тюмени» 23060"
+      "note": "ЕГРН / аванс — rework: егрн cluster → final P0 «купить квартиру в тюмени» 23060"
     }
   ]
 }

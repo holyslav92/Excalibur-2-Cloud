@@ -50,11 +50,30 @@
   "scout_workflow": [
     "CallMcpTool MCP-KV wordstat_get_user_info (preflight)",
     "wordstat_get_regions_tree once if ids stale",
-    "wordstat_get_top_requests(phrase, regions=[55,11176], numPhrases) for 3-4 P0 seeds",
+    "Pick Klyshin hook from memory/scout/klyshin-topic-bank.*",
+    "wordstat_get_top_requests(phrase, regions=[55,11176], numPhrases) on hook + probes",
     "optional wordstat_get_top_requests same phrase regions=[225] to compare",
-    "optional wordstat_get_dynamics on chosen P0",
+    "weak volume → REWORK: localize Tyumen, swap to buyer search jargon (егрн, наследство, ипотека, аванс…), pull similar queries, pick nearest high-frequency cluster with same risk/story",
+    "skip ONLY after rework exhausted — no honest buyer-intent cluster (not brand vanity)",
+    "handoff log: klyshin_hook (original) + wordstat_rework + wordstat (final P0 phrase+frequency)",
     "handoff: mcp_kv live frequencies only — never invent"
   ],
-  "affinity_rule": "Тема без регионального buyer-спроса в Тюмени/области → Scout BLOCK.",
-  "seo_geo_dual": "Живые Wordstat-фразы → Title/H2/Cover stickers (SEO + GEO Тюмень)."
+  "rework_vocabulary": [
+    "егрн",
+    "выписка егрн",
+    "наследство",
+    "наследники",
+    "ипотека",
+    "новостройка",
+    "аванс",
+    "задаток",
+    "пенсионер",
+    "доверенность",
+    "банкротство",
+    "маткапитал",
+    "вторичка",
+    "аккредитив"
+  ],
+  "affinity_rule": "Klyshin hook must pass Wordstat evaluate+rework cycle until a Tyumen/область buyer P0 cluster is found; weak first probe is not a skip.",
+  "seo_geo_dual": "Final P0 Wordstat-фразы → demand spine; Title stays Klyshin hook; stickers/H2 from reworked live queries."
 }

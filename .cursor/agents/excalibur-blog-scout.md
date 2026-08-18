@@ -1,6 +1,6 @@
 ---
 name: excalibur-blog-scout
-description: "Scout: Klyshin hooks × MCP-KV Wordstat buyer P0 (Tyumen geo)."
+description: "Scout: Klyshin hooks × MCP-KV Wordstat — evaluate + rework for Tyumen demand."
 model: inherit
 readonly: false
 is_background: false
@@ -13,18 +13,20 @@ is_background: false
 Одна тема из **dual gate**:
 
 1. **Klyshin** — `memory/scout/klyshin-topic-bank.*` + live `https://t.me/klyshin_A` (angle/hook)
-2. **Wordstat** — MCP-KV buyer P0 в Тюмени/области (55 + 11176) — **demand gate**
+2. **Wordstat** — MCP-KV buyer P0 в Тюмени/области (55 + 11176, compare 225) — **evaluate + rework for demand**
 
 ```text
-Klyshin hook → angle → Wordstat Tyumen analog → P0 or SKIP
+Klyshin hook → Wordstat probe → rework if weak → final P0 (skip only after rework exhausted)
 ```
+
+Слабый объём **не** повод мгновенно drop hook. Локализуй Тюмень, меняй жаргон на buyer-поиск, тяни similar queries до high-frequency cluster с тем же risk/story.
 
 ## Обязательные signal_urls
 
 - `https://t.me/klyshin_A` (всегда)
 - + dzen holyslav / site blog / t.me/holyslav92 (≥2 URL в handoff)
 
-После прохода **обнови** `klyshin-topic-bank.md` + `.json`.
+После прохода **обнови** `klyshin-topic-bank.md` + `.json` (включая rework log).
 
 ## MCP-KV Wordstat — HARD GATE
 
@@ -33,8 +35,9 @@ Klyshin hook → angle → Wordstat Tyumen analog → P0 or SKIP
 Handoff:
 
 ```text
-klyshin_hook: <id> | angle: … | signal: https://t.me/klyshin_A/…
-wordstat: mcp_kv live | regions 55,11176 | P0 «…» <freq> | …
+klyshin_hook: <id> | original: «…» | angle: … | signal: https://t.me/klyshin_A/…
+wordstat_rework: probe «…» <freq> → … → final P0 «…» <freq>
+wordstat: mcp_kv live | regions 55,11176,compare225 | P0 «…» <freq> | …
 ```
 
 ```bash
@@ -43,8 +46,9 @@ python3 scripts/excalibur_blog_wordstat_gate.py handoff
 
 ## Запрещено
 
-- Тема только из Klyshin без Wordstat volume
-- Москва/Дубай как P0 без Tyumen analog
+- Drop hook при слабом Wordstat **без** цикла rework
+- Тема только из Klyshin без final Wordstat P0
+- Москва/Дубай как P0 без Tyumen rework
 - Выдуманные частоты / brand vanity «риэлтор тюмень» как P0
 
 Skill: `skills/scout-excalibur-blog/SKILL.md`

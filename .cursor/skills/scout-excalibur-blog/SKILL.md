@@ -1,28 +1,37 @@
 ---
 name: scout-excalibur-blog
-description: Pick P0 topic from Klyshin hooks × MCP-KV Wordstat buyer demand (Tyumen geo).
+description: Pick P0 topic from Klyshin hooks × MCP-KV Wordstat — evaluate and rework for Tyumen demand.
 ---
 
-# Scout — Klyshin hooks × Wordstat (dual gate)
+# Scout — Klyshin hooks × Wordstat (evaluate + rework)
 
 Тему выбираешь из **двух обязательных источников**:
 
-1. **Wordstat (demand gate)** — buyer-спрос в Тюмени/области (55 + 11176).
-2. **Алексей Клышин (angle bank)** — `memory/scout/klyshin-topic-bank.md` + `.json`, канал `https://t.me/klyshin_A`.
+1. **Алексей Клышин (angle bank)** — `memory/scout/klyshin-topic-bank.md` + `.json`, канал `https://t.me/klyshin_A`.
+2. **Wordstat (demand spine)** — MCP-KV buyer-спрос в Тюмени/области (55 + 11176), сравнение с RU **225**.
 
-Klyshin **не** заменяет частоты. Алгоритм:
+Klyshin **не** заменяет частоты. Wordstat **не** binary skip gate.
+
+## Алгоритм (канон)
 
 ```text
-Klyshin hook → candidate angle → Wordstat top_requests (Tyumen analog) → P0 or SKIP
+1. Klyshin hook/angle (bank + live @klyshin_A)
+2. wordstat_get_top_requests: hook phrase + tyumen analogs (regions 55, 11176; compare 225)
+3. Слабый объём → НЕ drop. Rework:
+   - локализовать на Тюмень
+   - заменить жаргон на поисковые формулировки (егрн, наследство, ипотека, новостройка, аванс, пенсионер, доверенность, банкротство…)
+   - wordstat_get_top_requests по similar queries
+   - выбрать ближайший high-frequency cluster с тем же risk/story
+4. Title — ритм Klyshin (case hook). P0 Wordstat — demand spine под H1; stickers/H2 из reworked live queries
+5. Skip ТОЛЬКО если после rework нет честного buyer-intent кластера (не brand vanity)
+6. Лог: original Klyshin hook + final Wordstat P0 phrase+volume (+ rework steps)
 ```
-
-Слабый Wordstat → **skip hook**, даже если пост Клышина яркий.
 
 ## Klyshin — ALWAYS joint with Wordstat
 
 - Читай `memory/scout/klyshin-topic-bank.md` + свежий `https://t.me/s/klyshin_A`
-- После Scout **обнови** банк: `last_seen`, новые hooks, `used_in_articles`
-- **Не копируй** Москву/Дубай/МКАД как P0 — локализуй на Тюмень или drop
+- После Scout **обнови** банк: `last_seen`, `wordstat_rework_log`, `final_p0`, `used_in_articles`
+- **Не копируй** Москву/Дубай/МКАД как P0 — локализуй на Тюмень или rework до Tyumen cluster
 - Факты в статье: **Святослав Шакин / Тюмень**, не копипаст канала
 
 `scout_signal_urls` (tenant-config): **klyshin_A** + dzen holyslav + site blog + t.me/holyslav92
@@ -45,22 +54,23 @@ python3 scripts/excalibur_blog_wordstat_gate.py config
 1. `wordstat_get_regions_tree` — если `memory/cover/wordstat-geo.json` устарел
 2. Канон после lookup: **Тюмень=55**, **Тюменская область=11176**, **Россия=225**
 
-### P0 buyer seeds (gold)
+### Rework vocabulary (buyer search spine)
 
-`wordstat_get_top_requests` с `regions: ["55","11176"]`, `numPhrases` 10–50:
+При слабом объёме на «юридическом» hook — пробуй живые кластеры:
 
-- купить квартиру тюмень
-- новостройки тюмень
-- ипотека тюмень
-- проверка егрн / выписка егрн
-- эскроу / дду
-- аренда квартира тюмень
+- егрн / выписка егрн / проверка егрн
+- наследство / наследники / отказ от наследства
+- ипотека / новостройка / вторичка
+- аванс / задаток / безопасный расчёт / аккредитив
+- пенсионер / пожилой продавец / опека
+- доверенность / банкротство / торги
+- маткапитал / детская доля
 
-Для каждого Klyshin-hook — **отдельный** `top_requests` по `wordstat_probes` из json.
+Для каждого rework-раунда — **отдельный** `top_requests` по probe; сохраняй частоты.
 
 **Сравнение:** тот же `phrase` с `regions: ["225"]` когда нужен national контекст.
 
-**Optional:** `wordstat_get_dynamics` на выбранный P0.
+**Optional:** `wordstat_get_dynamics` на выбранный final P0.
 
 ### НЕ P0 (brand vanity — только справка)
 
@@ -70,8 +80,9 @@ python3 scripts/excalibur_blog_wordstat_gate.py config
 
 ```text
 wordstat_preflight: mcp-kv wordstat_get_user_info OK
-wordstat: mcp_kv live | regions 55,11176 vs RU 225 | P0 «купить квартиру в тюмени» 23060 | …
-klyshin_hook: <hook_id> | angle: <…> | signal: https://t.me/klyshin_A/…
+klyshin_hook: <hook_id> | original: «…» | angle: <…> | signal: https://t.me/klyshin_A/…
+wordstat_rework: probe «…» <freq> → … → final P0 «купить квартиру в тюмени» 23060 | clusters tried: …
+wordstat: mcp_kv live | regions 55,11176,compare225 | P0 «…» <freq> | …
 ```
 
 ```bash
@@ -81,19 +92,19 @@ python3 scripts/excalibur_blog_wordstat_gate.py handoff
 ## Внешний сигнал
 
 1. **klyshin_A** + ≥1 другой URL из `scout_signal_urls` (сегодня)
-2. Wordstat P0 buyer volume для выбранного hook
+2. Wordstat final P0 buyer volume после rework-цикла
 3. `published-titles-only.md` — anti-dup only
 
 ## Выход
 
-`.cursor/excalibur-blog-handoff.md` — topic_id, title (Klyshin rhythm draft OK), external_signal, signal_urls, wordstat + klyshin_hook lines.
+`.cursor/excalibur-blog-handoff.md` — topic_id, title draft (Klyshin rhythm), external_signal, signal_urls, klyshin_hook + wordstat_rework + wordstat lines.
 
-## Алгоритм
+## Чеклист
 
 1. `wordstat_get_user_info` → OK
 2. Fetch klyshin_A + holyslav/dzen signals
 3. Pick hook from bank or fresh post → update bank
-4. 3–4× `wordstat_get_top_requests` (P0 seeds + hook probes, regions 55+11176)
-5. If volume weak → next hook or SCOUT BLOCK
-6. Title angle from hook; P0 phrase from Wordstat, not brand vanity
+4. `wordstat_get_top_requests` на hook + probes (55+11176; compare 225)
+5. Слабый объём → rework (локализация + buyer jargon + similar queries) — **не** мгновенный skip
+6. Final P0 + title angle; лог original hook + final phrase+volume
 7. handoff + `wordstat_gate.py handoff` → стоп

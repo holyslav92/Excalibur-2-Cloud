@@ -87,6 +87,24 @@ def is_brand_vanity_only(value: str, geo: dict) -> bool:
     return False
 
 
+def handoff_has_klyshin_hook(handoff_text: str) -> tuple[bool, str]:
+    value = parse_handoff_field(handoff_text, "klyshin_hook")
+    if not value:
+        return False, "klyshin_hook field missing in handoff (required: original Klyshin hook id/angle)"
+    if "original" not in value.casefold() and "|" not in value:
+        return False, "klyshin_hook must log original hook (e.g. klyshin_hook: <id> | original: «…»)"
+    return True, value
+
+
+def handoff_has_rework_log(handoff_text: str) -> tuple[bool, str]:
+    value = parse_handoff_field(handoff_text, "wordstat_rework")
+    if not value:
+        return False, "wordstat_rework field missing (log probe → rework → final P0 cluster)"
+    if not FREQ_RE.search(value):
+        return False, "wordstat_rework must include numeric frequencies from MCP-KV probes"
+    return True, value
+
+
 def handoff_has_live_wordstat(handoff_text: str, geo: dict) -> tuple[bool, str]:
     value = parse_handoff_wordstat(handoff_text)
     if not value:
@@ -122,6 +140,11 @@ def cmd_config(root: Path) -> int:
     print(f"OK tools: {', '.join(geo.get('mcp_tools') or [])}")
     print(f"OK tenant regions: {ids} (compare RU {geo.get('russia_region_id')})")
     print("NOTE Scout preflight: CallMcpTool wordstat_get_user_info — FAIL if tool missing")
+    print("NOTE Scout canon: Klyshin hook → Wordstat probe → rework for demand (not skip-if-weak)")
+    print("NOTE handoff fields: klyshin_hook (original) + wordstat_rework + wordstat (final P0)")
+    rework = geo.get("rework_vocabulary") or []
+    if rework:
+        print(f"NOTE rework vocabulary: {', '.join(str(x) for x in rework[:8])}…")
     if wordstat_env_fallback_configured():
         print("OK optional env fallback present (MCP_KV_TOKEN or Yandex API keys)")
     else:
@@ -139,13 +162,21 @@ def cmd_handoff(root: Path, args: argparse.Namespace) -> int:
 
     geo = load_geo(root)
     text = handoff_path.read_text(encoding="utf-8")
+    ok_klyshin, reason_k = handoff_has_klyshin_hook(text)
+    if not ok_klyshin:
+        print(f"FAIL SCOUT WORDSTAT GATE: {reason_k}", file=sys.stderr)
+        return 1
+    ok_rework, reason_r = handoff_has_rework_log(text)
+    if not ok_rework:
+        print(f"FAIL SCOUT WORDSTAT GATE: {reason_r}", file=sys.stderr)
+        return 1
     ok_handoff, reason = handoff_has_live_wordstat(text, geo)
     if not ok_handoff:
         print(f"FAIL SCOUT WORDSTAT GATE: {reason}", file=sys.stderr)
         return 1
 
     ids = geo.get("scout_required_region_ids") or []
-    print(f"OK scout wordstat handoff (mcp_kv live); region_ids={ids}")
+    print(f"OK scout wordstat handoff (mcp_kv live, klyshin+rework log); region_ids={ids}")
     return 0
 
 
