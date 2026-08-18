@@ -1,0 +1,17 @@
+{
+  "source": "memory/blog/articles/B02-raspisku-na-kvartiru-napisali-deneg-na-schete-net/article.html",
+  "total_links": 1,
+  "failed_count": 0,
+  "verdict": "pass",
+  "links": [
+    {
+      "url": "https://t.me/Tyumen_Rieltor",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    }
+  ]
+}
