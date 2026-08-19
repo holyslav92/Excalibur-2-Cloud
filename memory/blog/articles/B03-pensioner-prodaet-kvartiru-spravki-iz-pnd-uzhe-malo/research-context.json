@@ -1,0 +1,102 @@
+{
+  "agent": "excalibur-blog",
+  "step": "research_start",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-19",
+    "today_ru": "19.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "среда"
+  },
+  "topic": {
+    "topic_id": "B03",
+    "title": "Пенсионер продаёт квартиру — справки из ПНД уже мало",
+    "h1": "Пенсионер продаёт квартиру — справки из ПНД уже мало",
+    "slug": "pensioner-prodaet-kvartiru-spravki-iz-pnd-uzhe-malo",
+    "primary_query": "Пенсионер продаёт квартиру — справки из ПНД уже мало",
+    "priority": "P0"
+  },
+  "scout_handoff": {
+    "signal_date": "2026-08-19",
+    "signal_source": "Клышин Алексей (@klyshin_A)",
+    "signal_urls": [
+      "https://t.me/s/klyshin_A"
+    ],
+    "hook_summary": "Очередь в Институт Сербского ~месяц; при покупке у пенсионера 70+ справка ПНД часто недостаточна; медосвидетельствование ~32 000 ₽; сроки сделки; рынок перестраховывается после оспариваний"
+  },
+  "wordstat": {
+    "accessed_at": "2026-08-19",
+    "queries": [
+      {
+        "phrase": "купить квартиру в тюмени",
+        "region": 55,
+        "total_count": 17989
+      },
+      {
+        "phrase": "институт сербского",
+        "region": 225,
+        "total_count": 10198
+      },
+      {
+        "phrase": "проверка квартиры перед покупкой",
+        "region": 55,
+        "total_count": 8
+      }
+    ]
+  },
+  "search_queries": [
+    {
+      "id": "primary_fresh",
+      "query": "Пенсионер продаёт квартиру — справки из ПНД уже мало 2026",
+      "purpose": "актуальный SERP"
+    },
+    {
+      "id": "title_fresh",
+      "query": "Пенсионер продаёт квартиру — справки из ПНД уже мало 2026",
+      "purpose": "SERP по человеческому title"
+    },
+    {
+      "id": "official_docs",
+      "query": "Пенсионер продаёт квартиру — справки из ПНД уже мало official docs 2026",
+      "purpose": "официальные docs"
+    },
+    {
+      "id": "github_evidence",
+      "query": "site:github.com Пенсионер продаёт квартиру — справки из ПНД уже мало 2026",
+      "purpose": "GitHub evidence"
+    },
+    {
+      "id": "community_experience",
+      "query": "Пенсионер продаёт квартиру — справки из ПНД уже мало forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы"
+    }
+  ],
+  "next_step": "Title → Writer (research-notes.md ready, research-agent-report.json PASS)",
+  "writer_allowed_sources": [
+    "shared/writer-master-prompt.md",
+    "research-notes.md",
+    "title-brief.json",
+    "published-titles-only.md"
+  ],
+  "sol_allowed_sources": [
+    "shared/SOUL.md",
+    "shared/soul-examples/",
+    "drafts/writer.html",
+    "title-brief.json",
+    "research-notes.md"
+  ],
+  "writer_titles_only": "published-titles-only.md",
+  "forbidden_sources_for_writer": [
+    "memory/blog/articles/*/article.html",
+    "memory/blog/articles/*/drafts",
+    "memory/topics/ (deleted — do not recreate)",
+    "memory/content-lessons.md",
+    "shared/golden-benchmark",
+    "QA reports",
+    "neighbor research-notes as prose exemplars",
+    "old article bodies"
+  ],
+  "published_titles_count": 0
+}

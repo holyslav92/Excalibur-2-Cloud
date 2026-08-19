@@ -1,0 +1,24 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B03",
+  "slug": "pensioner-prodaet-kvartiru-spravki-iz-pnd-uzhe-malo",
+  "status": "PASS",
+  "research_date": "2026-08-19",
+  "fresh_signal_verified": true,
+  "fresh_signal_source": "https://t.me/s/klyshin_A",
+  "fresh_signal_note": "Пост Клышина про очередь в Институт Сербского ~1 месяц, цену ~32 000 ₽ и недостаточность ПНД при сделках с пенсионерами 70+; доступ 2026-08-19",
+  "wordstat_calls": 3,
+  "wordstat_partial": false,
+  "law_coverage": [
+    "ГК РФ ст. 29",
+    "ГК РФ ст. 177",
+    "ГК РФ ст. 171",
+    "ГК РФ ст. 167",
+    "Закон № 3185-1 ст. 23"
+  ],
+  "outputs": {
+    "research_notes": "memory/blog/articles/B03-pensioner-prodaet-kvartiru-spravki-iz-pnd-uzhe-malo/research-notes.md",
+    "research_context_updated": true
+  },
+  "blockers": []
+}
