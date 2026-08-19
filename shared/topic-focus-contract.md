@@ -14,7 +14,15 @@
 ## Ядро (ALLOW — новая тема обязана попасть сюда)
 
 Новая тема **обязана** содержать минимум один маркер ядра в title
-(проверяется вместе со slug):
+(проверяется вместе со slug).
+
+**Профиль тенанта:** `shared/tenant-config.json` → `topic_focus_profile`.
+По умолчанию — Cursor/AI ядро ниже. Для `real_estate` (The Риэлтор) —
+маркеры buyer demand: ЕГРН, квартира, ипотека, сделка, аванс, ДДУ,
+эскроу, новостройка, аренда, риэлтор, Тюмень и т.п. (см.
+`REAL_ESTATE_ALLOW_PATTERNS` в `scripts/excalibur_blog_topic_focus.py`).
+
+### Cursor / AI (default profile)
 
 - Cursor / вайбкодинг / Composer / Cloud Agents / Automations (Cursor)
 - субагенты / `.cursor/rules` / Ruleset / skills / MCP
