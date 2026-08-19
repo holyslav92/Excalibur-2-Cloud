@@ -1,0 +1,59 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B01",
+  "slug": "povestka-prodavcu-sdelka-vstanet",
+  "status": "PASS",
+  "research_date": "2026-08-19",
+  "fresh_signal": {
+    "verified": true,
+    "signal_type": "news",
+    "signal_date": "2026-08-06",
+    "primary_urls": [
+      "https://abnews.ru/news/2026/8/6/prodazha-kvartiry-vstala-na-pauzu-kak-rosreestr-mozhet-zablokirovat-sdelku",
+      "https://t-j.ru/check-povestka/",
+      "https://www.restate.ru/material/prosrochennaya-povestka-mozhet-zablokirovat-registraciyu-sdelki-s-zhilem-189843.html"
+    ],
+    "note": "Свежий медиа-сигнал недели 06–14.08.2026; нормативная база — ФЗ-53 ст. 7.1/8.3, ПП №506, действует с 14.04.2025"
+  },
+  "wordstat": {
+    "accessed_at": "2026-08-19",
+    "calls": 4,
+    "queries": [
+      {
+        "phrase": "проверка продавца",
+        "regions": ["225"],
+        "totalCount": 4712,
+        "top_related": "проверка продавца квартиры — 436"
+      },
+      {
+        "phrase": "выписка из реестра повесток",
+        "regions": ["225"],
+        "totalCount": 5879,
+        "top_related": "при покупке недвижимости — 463"
+      },
+      {
+        "phrase": "повестка военкомат недвижимость",
+        "regions": ["225"],
+        "totalCount": 276,
+        "partial": true
+      },
+      {
+        "phrase": "проверка продавца квартиры",
+        "regions": ["55"],
+        "totalCount": 2,
+        "note": "низкая частота в регионе 55; scout handoff: проверка квартиры перед покупкой 1899, ипотека тюмень 6471"
+      }
+    ]
+  },
+  "artifacts": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "blockers": [],
+  "handoff": {
+    "next_step": "title",
+    "reader_problem_confirmed": "покупатель в Тюмени вносит аванс, регистрация встаёт из-за блокировки продавца по реестру повесток",
+    "legal_covered_in_research": true
+  }
+}

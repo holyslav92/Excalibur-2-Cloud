@@ -1,0 +1,26 @@
+{
+  "style_id": "the_rieltor_twilight_gold",
+  "status": "ok",
+  "label_ru": "The Риэлтор — host + twilight gold collage",
+  "design_code": "memory/cover/cover-design-code.json",
+  "cover_mode": "host_reference",
+  "cover_hero_mode": "host_reference",
+  "skip_human_host": false,
+  "allows_animal_stickers": false,
+  "allowed_animal_motif": "",
+  "local_reference": "memory/cover/assets/portrait.jpg",
+  "prefer_local_reference": false,
+  "global_prompt_prefix": "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic, gold #dcc5a1 one accent. Host LARGE left = same man as i2i reference, navy blazer + black crew tee, short dark hair, smile. Tiny key/house/folder prop. Torn paper, gold tape. No hoodie, no headphones, no cat, no pink, no EXCALIBUR.",
+  "hook_ink": "#141821",
+  "hook_accent": "#dcc5a1",
+  "panel_background": "#FFFFFF",
+  "forbidden": [
+    "pink-cat",
+    "white hoodie",
+    "headphones",
+    "EXCALIBUR stamp",
+    "beige gradient",
+    "Instagram",
+    "other person's face"
+  ]
+}

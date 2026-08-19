@@ -1,0 +1,16 @@
+{
+  "task_id": "1edc4068f9bf14acf4b76cc344d52074",
+  "source": "kie-api",
+  "model": "kie-image-i2i",
+  "state": "created",
+  "create_response": {
+    "code": 200,
+    "msg": "success",
+    "data": {
+      "taskId": "1edc4068f9bf14acf4b76cc344d52074",
+      "recordId": "1edc4068f9bf14acf4b76cc344d52074"
+    }
+  },
+  "create_attempt": 1,
+  "created_at_epoch": 1787160117
+}

@@ -1,0 +1,75 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/the-rieltor-logo.png"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{SITE_BASE}}/#website",
+      "url": "{{SITE_BASE}}/",
+      "name": "The Риэлтор",
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "inLanguage": "ru-RU"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#author",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "sameAs": [
+        "{{SITE_BASE}}/",
+        "{{SITE_BASE}}/rieltor-tyumen/",
+        "{{SITE_BASE}}/kontakty/",
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://t.me/holyslav92",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/povestka-prodavcu-sdelka-vstanet/#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/povestka-prodavcu-sdelka-vstanet/"
+      },
+      "headline": "Аванс внесён — Росреестр встаёт из‑за повестки продавца",
+      "description": "Договор подписан, аванс на счёте — и Росреестр ставит регистрацию на паузу. Как повестка военкомату у продавца блокирует сделку и что проверить до аванса в Тюмени.",
+      "datePublished": "2026-08-19",
+      "dateModified": "2026-08-19",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#author"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "url": "{{SITE_BASE}}/povestka-prodavcu-sdelka-vstanet/",
+      "inLanguage": "ru-RU",
+      "isPartOf": {
+        "@id": "{{SITE_BASE}}/#website"
+      },
+      "about": [
+        "повестка военкомат",
+        "реестр повесток",
+        "Росреестр",
+        "вторичка Тюмень",
+        "проверка продавца"
+      ]
+    }
+  ]
+}

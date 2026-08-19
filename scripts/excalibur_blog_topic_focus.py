@@ -8,8 +8,10 @@ the card mentions «Cursor». Soft Scout prompts failed repeatedly (B91–B99).
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -134,6 +136,81 @@ ALLOW_PATTERNS: tuple[str, ...] = (
     r"обзор",
 )
 
+# The Риэлтор / недвижимость — buyer demand, не AI/Cursor ядро.
+REAL_ESTATE_ALLOW_PATTERNS: tuple[str, ...] = (
+    r"егрн",
+    r"росреестр",
+    r"квартир",
+    r"недвижим",
+    r"ипотек",
+    r"риэлтор",
+    r"риелтор",
+    r"аванс",
+    r"задаток",
+    r"сделк",
+    r"дду\b",
+    r"эскроу",
+    r"новострой",
+    r"вторичк",
+    r"аренд",
+    r"дом\b",
+    r"таунхаус",
+    r"маткапитал",
+    r"дол[еи]\b",
+    r"доверенност",
+    r"выписк",
+    r"обременен",
+    r"залог",
+    r"покуп",
+    r"продаж",
+    r"тюмен",
+    r"жк\b",
+    r"застройщик",
+    r"оценк\w*\s+квартир",
+    r"приемк\w*\s+квартир",
+    r"чек[\s-]?лист",
+)
+
+
+def project_root() -> Path:
+    return Path(__file__).resolve().parent.parent
+
+
+@lru_cache(maxsize=1)
+def _tenant_config() -> dict[str, Any]:
+    path = project_root() / "shared" / "tenant-config.json"
+    if not path.is_file():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def allow_patterns_for_tenant() -> tuple[str, ...]:
+    """Tenant-specific ALLOW set; default = Cursor/AI core."""
+    tenant = _tenant_config()
+    profile = str(tenant.get("topic_focus_profile") or "").strip().lower()
+    niche = str(tenant.get("niche") or "").lower()
+    brand = str(tenant.get("brand_name") or "").lower()
+    if profile in {"real_estate", "realestate", "rieltor"}:
+        return REAL_ESTATE_ALLOW_PATTERNS
+    if "недвижим" in niche or "риэлтор" in brand or "риелтор" in brand:
+        return REAL_ESTATE_ALLOW_PATTERNS
+    return ALLOW_PATTERNS
+
+
+def core_focus_hint() -> str:
+    if allow_patterns_for_tenant() is REAL_ESTATE_ALLOW_PATTERNS:
+        return (
+            "real-estate buyer demand (EGRN/apartment/mortgage/deal/Tyumen/"
+            "realtor/checklist)"
+        )
+    return (
+        "Cursor/subagents/rules/skills/MCP/leadgen/autopost/Make/n8n/"
+        "AI-model/news-automation"
+    )
+
 
 def normalize(text: str) -> str:
     return re.sub(r"\s+", " ", (text or "").strip().lower())
@@ -165,7 +242,7 @@ def focus_check(text: str) -> dict[str, Any]:
             }
 
     allow_hit = None
-    for pat in ALLOW_PATTERNS:
+    for pat in allow_patterns_for_tenant():
         if re.search(pat, blob, flags=re.IGNORECASE):
             allow_hit = pat
             break
@@ -173,10 +250,7 @@ def focus_check(text: str) -> dict[str, Any]:
         return {
             "status": "BLOCK",
             "blocker": "TOPIC FOCUS BLOCKER",
-            "reason": (
-                "no core-focus marker (Cursor/subagents/rules/skills/MCP/"
-                "leadgen/autopost/Make/n8n/AI-model/news-automation)"
-            ),
+            "reason": f"no core-focus marker ({core_focus_hint()})",
             "deny_hit": None,
             "allow_hit": None,
         }

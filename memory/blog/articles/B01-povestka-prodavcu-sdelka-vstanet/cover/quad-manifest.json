@@ -1,0 +1,158 @@
+{
+  "topic_id": "B01",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Повестка продавца стопорит Росреестр",
+  "cover_hook_highlight": "стопорит",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: Derouter REST (DEROUTER_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Повестка продавца и остановка регистрации в Росреестре",
+      "scene_hint": "Host LARGE left blazer; bright cork board tape pins red thread; tiny повестка; card +7 922 001 65 05; meme cat+people; sun flare #FFF",
+      "meme_caption_ru": "",
+      "sticky": "ЕГРН не покажет"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Что именно блокирует Росреестр — и почему ЕГРН этого не покажет",
+      "visual_type": "checklist_board",
+      "scene_hint": "Checklist-board: ЕГРН только объект vs реестр повесток на участника; 2 колонки сравнения; gold markers; torn paper; NO people/faces",
+      "alt": "Сравнение: что видит ЕГРН и чего не покажет реестр повесток",
+      "labels": [
+        "только по объекту",
+        "ЕГРН не видит",
+        "реестр повесток",
+        "меры на участника",
+        "два реестра"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "20 дней после даты явки: когда запрет реально появляется",
+      "visual_type": "comparison_table_ui",
+      "scene_hint": "Timeline table: 7д вручение → дата явки → +20д → блок регистрации; arrows; tiny meme-cat sticker corner; NO host face",
+      "alt": "Сроки: от повестки до блока регистрации в Росреестре",
+      "labels": [
+        "7 дней вручение",
+        "дата явки",
+        "плюс 20 дней",
+        "блок регистрации",
+        "повестка не финал"
+      ]
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Как Росреестр проверяет: договор, доверенность и любая недвижимость продавца",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "Workflow: подача заявления → проверка учёта на момент подачи → блок/OK; arrows 1-2-3; доверенность не обходит; NO people",
+      "alt": "Схема: как Росреестр проверяет продавца и покупателя при регистрации",
+      "labels": [
+        "на момент подачи",
+        "не дата договора",
+        "доверенность не спасёт",
+        "продавец и покупатель",
+        "любая недвижимость"
+      ]
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Не теория: Самара весной 2026 и что это значит для Тюмени",
+      "visual_type": "schema_faq_ui",
+      "scene_hint": "Fact card: Самара весна 2026 стоп РР; обмен данных; Тюмень +74% ипотека контекст; map pins; NO people/memes",
+      "alt": "Кейс Самары 2026 и практика для сделок в Тюмени",
+      "labels": [
+        "Самара весна",
+        "апрель 2026",
+        "стоп регистрации",
+        "обмен данных",
+        "не теория"
+      ]
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Выписка из реестра повесток: кто заказывает и когда",
+      "visual_type": "tool_screenshot",
+      "scene_hint": "UI-схема реестрповесток.рф: только сам закажет; не риэлтор; timing 1-2 дня; tiny meme-people sticker; NO host",
+      "alt": "Кто и когда заказывает выписку из реестра повесток",
+      "labels": [
+        "только сам закажет",
+        "не риэлтор",
+        "за день до сделки",
+        "больше 20 дней",
+        "выписка с подписью"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Кого проверять: не только мужчины 18–30",
+      "visual_type": "infographic_card",
+      "scene_hint": "Infographic age bands: не только 18-30; муж до 65; жен до 50; запас; bars with numbers; tiny meme-cat; NO host face",
+      "alt": "Кого проверять по возрасту: не только молодые призывники",
+      "labels": [
+        "не только 18–30",
+        "запас и женщины",
+        "мужчины до 65",
+        "женщины до 50",
+        "все на учёте"
+      ]
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Как снять блок и когда Росреестр возобновит регистрацию",
+      "visual_type": "comparison_table_ui",
+      "scene_hint": "Table GOOD path: явка → снятие за сутки → РР до 3 раб.дней; vs срыв банка; green checks; NO people/memes",
+      "alt": "Как снять блок регистрации и сроки возобновления",
+      "labels": [
+        "явка в военкомат",
+        "снятие за сутки",
+        "три рабочих дня",
+        "не навсегда",
+        "срыв сроков банка"
+      ]
+    }
+  },
+  "cover_keys_ru": [
+    "повестка продавца",
+    "реестр повесток",
+    "ипотека Тюмень"
+  ]
+}

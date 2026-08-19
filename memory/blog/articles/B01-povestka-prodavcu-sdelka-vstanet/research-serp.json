@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-19",
+    "today_ru": "19.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "среда"
+  },
+  "topic": {
+    "topic_id": "B01",
+    "title": "Повестка продавцу — сделка встанет",
+    "h1": "Повестка продавцу — сделка встанет",
+    "slug": "povestka-prodavcu-sdelka-vstanet",
+    "primary_query": "Повестка продавцу — сделка встанет",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "Повестка продавцу — сделка встанет 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "У покупателей и продавцов недвижимости теперь требуют выписку из ...",
+          "url": "https://www.banki.ru/news/daytheme/?id=11026319",
+          "snippet": ""
+        },
+        {
+          "title": "Электронная повестка через Госуслуги в 2026: что делать пошагово",
+          "url": "https://armhelp.ru/blog/elektronnaya-povestka-gosuslugi/",
+          "snippet": "В соцсетях обсуждают, что риелторы просят предоставить на сделку выписку из реестра повесток. Такой документ понадобится и продавцам, и покупателям. Разбираемся, почему это важно, что делать, если вы покупаете или продаете квартиру в 2026 году."
+        },
+        {
+          "title": "Электронная повестка и единый реестр: что важно в 2026",
+          "url": "https://integrolaw.ru/blog/elektronnaya-povestka-reestr-2026",
+          "snippet": "Пошаговый алгоритм действий при получении электронной повестки через Госуслуги в 2026 году. Когда повестка считается врученной, какие ограничения действуют, как обжаловать. На основе ..."
+        },
+        {
+          "title": "Единый реестр повесток: как работает в 2026 году",
+          "url": "https://www.klerk.ru/blogs/povestoknet/702580/",
+          "snippet": "С 2024-2026 годов повестки в России работают по-новому: заработал единый реестр, а электронные повестки получили юридическую силу. Для тех, кто уехал, это главный источник тревоги. Разберём, как всё устроено. Повестки размещаются в едином реестре."
+        },
+        {
+          "title": "Как работает единый реестр повесток в 2026 году",
+          "url": "https://companies.rbc.ru/news/2QzIY5sm0Y/kak-rabotaet-edinyij-reestr-povestok-v-2026-godu/",
+          "snippet": "Единый реестр повесток в 2026 году: как приходят электронные повестки, когда они считаются врученными и какие ограничения грозят при неявке."
+        },
+        {
+          "title": "Выписка из реестра повесток при покупке недвижимости в 2026: что это ...",
+          "url": "https://t-j.ru/check-povestka/",
+          "snippet": "С января 2026 года работает единый реестр повесток. Но многие до сих пор не до конца понимают, как именно он функционирует, какие права и обязанности накладывает, и что делать, если пришла повестка. В этом материале я разберу ключевые аспекты реестра — от принципа работы до ответственности за неявку."
+        }
+      ],
+      "searched_at": "2026-08-19"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "Повестка продавцу — сделка встанет 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "У покупателей и продавцов недвижимости теперь требуют выписку из ...",
+          "url": "https://www.banki.ru/news/daytheme/?id=11026319",
+          "snippet": ""
+        },
+        {
+          "title": "Электронная повестка через Госуслуги в 2026: что делать пошагово",
+          "url": "https://armhelp.ru/blog/elektronnaya-povestka-gosuslugi/",
+          "snippet": "В соцсетях обсуждают, что риелторы просят предоставить на сделку выписку из реестра повесток. Такой документ понадобится и продавцам, и покупателям. Разбираемся, почему это важно, что делать, если вы покупаете или продаете квартиру в 2026 году."
+        },
+        {
+          "title": "Электронная повестка и единый реестр: что важно в 2026",
+          "url": "https://integrolaw.ru/blog/elektronnaya-povestka-reestr-2026",
+          "snippet": "Пошаговый алгоритм действий при получении электронной повестки через Госуслуги в 2026 году. Когда повестка считается врученной, какие ограничения действуют, как обжаловать. На основе ..."
+        },
+        {
+          "title": "Единый реестр повесток: как работает в 2026 году",
+          "url": "https://www.klerk.ru/blogs/povestoknet/702580/",
+          "snippet": "С 2024-2026 годов повестки в России работают по-новому: заработал единый реестр, а электронные повестки получили юридическую силу. Для тех, кто уехал, это главный источник тревоги. Разберём, как всё устроено. Повестки размещаются в едином реестре."
+        },
+        {
+          "title": "Как работает единый реестр повесток в 2026 году",
+          "url": "https://companies.rbc.ru/news/2QzIY5sm0Y/kak-rabotaet-edinyij-reestr-povestok-v-2026-godu/",
+          "snippet": "Единый реестр повесток в 2026 году: как приходят электронные повестки, когда они считаются врученными и какие ограничения грозят при неявке."
+        },
+        {
+          "title": "Выписка из реестра повесток при покупке недвижимости в 2026: что это ...",
+          "url": "https://t-j.ru/check-povestka/",
+          "snippet": "С января 2026 года работает единый реестр повесток. Но многие до сих пор не до конца понимают, как именно он функционирует, какие права и обязанности накладывает, и что делать, если пришла повестка. В этом материале я разберу ключевые аспекты реестра — от принципа работы до ответственности за неявку."
+        }
+      ],
+      "searched_at": "2026-08-19"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "Повестка продавцу — сделка встанет official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "У покупателей и продавцов недвижимости теперь требуют выписку из ...",
+          "url": "https://www.banki.ru/news/daytheme/?id=11026319",
+          "snippet": ""
+        },
+        {
+          "title": "Судебная повестка по гражданскому делу. Форма № 20",
+          "url": "https://blank-obrazets.ru/sudebnaya_povestka_po_grazhdanskomu_delu_forma_n_20.htm",
+          "snippet": "В соцсетях обсуждают, что риелторы просят предоставить на сделку выписку из реестра повесток. Такой документ понадобится и продавцам, и покупателям. Разбираемся, почему это важно, что делать, если вы покупаете или продаете квартиру в 2026 году."
+        },
+        {
+          "title": "Повестка: бланки и образцы 2026",
+          "url": "https://blank-obrazets.ru/temy/povestka/",
+          "snippet": "Судебная повестка по гражданскому делу. Форма № 20 Документ относится к группе «Повестка»."
+        },
+        {
+          "title": "Единый реестр повесток: как работает в 2026 году",
+          "url": "https://www.klerk.ru/blogs/povestoknet/702580/",
+          "snippet": "Судебная повестка по гражданскому делу для эксперта (свидетеля, переводчика или иного лица). Форма № 39. Судебная повестка по делу об административном правонарушении для лица, привлекаемого к административной ответственности. Форма № 40."
+        },
+        {
+          "title": "Как работает единый реестр повесток в 2026 году",
+          "url": "https://companies.rbc.ru/news/2QzIY5sm0Y/kak-rabotaet-edinyij-reestr-povestok-v-2026-godu/",
+          "snippet": "Единый реестр повесток в 2026 году: как приходят электронные повестки, когда они считаются врученными и какие ограничения грозят при неявке."
+        },
+        {
+          "title": "Повестка в 2026 году: от Госуслуг до запрета выезда.",
+          "url": "https://dzen.ru/a/aUzrEmH0q38D-3OL",
+          "snippet": "С января 2026 года электронный реестр — официальный и юридически значимый инструмент. Повестка в нем имеет такую же юридическую силу, что и бумажный документ, который вручили лично."
+        }
+      ],
+      "searched_at": "2026-08-19"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com Повестка продавцу — сделка встанет 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "VIFB/dataset.jpg at master · xingchenzhang/VIFB · GitHub",
+          "url": "https://github.com/xingchenzhang/VIFB/blob/master/dataset.jpg",
+          "snippet": ""
+        },
+        {
+          "title": "LabelPaw/assets/f22a8de7a22a45aeaf7ecc5dea3809b4-177985711229425.png at ...",
+          "url": "https://github.com/luohuabuxiema/LabelPaw/blob/main/assets/f22a8de7a22a45aeaf7ecc5dea3809b4-177985711229425.png",
+          "snippet": "Contribute to xingchenzhang/VIFB development by creating an account on GitHub."
+        },
+        {
+          "title": "greencart/client/src/assets/seller-productlist_page.JPG at main ...",
+          "url": "https://github.com/antonyjudu/greencart/blob/main/client/src/assets/seller-productlist_page.JPG",
+          "snippet": "Contribute to luohuabuxiema/LabelPaw development by creating an account on GitHub."
+        },
+        {
+          "title": "GUSH3R/assets/teaser.png at main · abkeito/GUSH3R · GitHub",
+          "url": "https://github.com/abkeito/GUSH3R/blob/main/assets/teaser.png",
+          "snippet": "Grocery store application using MERN full stack development - antonyjudu/greencart"
+        },
+        {
+          "title": "CBN/23.2.jpg at main · Campus-Business/CBN · GitHub",
+          "url": "https://github.com/Campus-Business/CBN/blob/main/23.2.jpg",
+          "snippet": "Contribute to abkeito/GUSH3R development by creating an account on GitHub."
+        },
+        {
+          "title": "USP/assets/case_study1.png at main · wangkevin02/USP · GitHub",
+          "url": "https://github.com/wangkevin02/USP/blob/main/assets/case_study1.png",
+          "snippet": "Contribute to Campus-Business/CBN development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-08-19"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "Повестка продавцу — сделка встанет forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Форум продавцов на Озон. Обсуждение «Ozon Seller».",
+          "url": "https://mp-forum.ru/forums/ozon.36/",
+          "snippet": ""
+        },
+        {
+          "title": "У покупателей и продавцов недвижимости теперь требуют выписку из ...",
+          "url": "https://www.banki.ru/news/daytheme/?id=11026319",
+          "snippet": "Задать вопрос по продажам на Ozon и получить ответы от опытных продавцов. Отзывы о работе с маркетплейсом и кабинетом Озон Селлер."
+        },
+        {
+          "title": "ЧЕК ЛИСТ ⚠ О чем нужно спросить продавца перед сделкой Подборка ...",
+          "url": "https://vk.com/wall-185319744_4023",
+          "snippet": "В соцсетях обсуждают, что риелторы просят предоставить на сделку выписку из реестра повесток. Такой документ понадобится и продавцам, и покупателям. Разбираемся, почему это важно, что делать, если вы покупаете или продаете квартиру в 2026 году."
+        },
+        {
+          "title": "Какие вопросы задать продавцу на показе: список для покупателя в 2026 ...",
+          "url": "https://dzen.ru/a/aYq0v7QyR0fE8ru7",
+          "snippet": "У вас уже готова финансовая и юридическая схемы сделки? У вас есть другая недвижимость, куда вы сможете встать на регистрационный учет после продажи этой недвижимости?"
+        },
+        {
+          "title": "Клиент говорит нет на Авито: 7 приёмов, которые переворачивают отказ в ...",
+          "url": "https://vk.com/@automate_routine-klient-govorit-net-na-avito-7-priemov-kotorye-perevorachivau",
+          "snippet": "Вопросы продавцу недвижимости — это ключевой инструмент риск-менеджмента для покупателя, позволяющий выявить юридические «мины» (банкротство, маткапитал) и скрытые дефекты объекта до ..."
+        },
+        {
+          "title": "Как работает единый реестр повесток в 2026 году",
+          "url": "https://companies.rbc.ru/news/2QzIY5sm0Y/kak-rabotaet-edinyij-reestr-povestok-v-2026-godu/",
+          "snippet": "Вы получите 7 рабочих приемов, которые превращают безнадежные отказы в реальные сделки и учат продавать даже самым скептически настроенным покупателям."
+        }
+      ],
+      "searched_at": "2026-08-19"
+    }
+  ],
+  "errors": []
+}

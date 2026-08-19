@@ -1,0 +1,17 @@
+{
+  "task_id": "01be2a5ddcd24ba76b89c13ee435edb7",
+  "source": "kie-api",
+  "model": "kie-image-i2i",
+  "state": "success",
+  "create_attempts": 1,
+  "result_path": "memory/blog/articles/B01-povestka-prodavcu-sdelka-vstanet/cover/quad-mcp-result-01.json",
+  "updated_at_epoch": 1787160427,
+  "file_upload_fallback": true,
+  "file_upload": {
+    "source": "prefer_local_reference",
+    "upload_path": "excalibur-blog/hero",
+    "local_name": "face-office-selfie.jpeg",
+    "download_host": "tempfile.redpandaai.co",
+    "cover_hero_mode": null
+  }
+}
