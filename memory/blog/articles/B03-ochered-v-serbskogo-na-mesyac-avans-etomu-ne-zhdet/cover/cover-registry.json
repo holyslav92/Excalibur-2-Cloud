@@ -1,0 +1,86 @@
+{
+  "topic_id": "B03",
+  "slug": "ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Очередь в Сербского на месяц — почему аванс по сделке с пожилым продавцом не ждёт",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-19T15:35:44+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Очередь в Сербского на месяц — почему аванс по сделке с пожилым продавцом не ждёт",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Справка из ПНД на показе — почему этого мало до аванса у пожилого продавца",
+      "h2_anchor": "«ПНД есть» — и вы уже готовы внести аванс",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Месяц очереди в Сербского против двух недель до сделки по задатку",
+      "h2_anchor": "Очередь в Сербского и цена, которые не вписываются в аванс",
+      "visual_type": "workflow_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Разница между справкой ПНД и актом медосвидетельствования перед сделкой",
+      "h2_anchor": "Справка ПНД и освидетельствование — не одно и то же",
+      "visual_type": "checklist_board",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Когда в Тюмени планировать медосвидетельствование до внесения аванса",
+      "h2_anchor": "Когда в Тюмени точно планировать врача до аванса",
+      "visual_type": "schema_faq_ui",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Диагнозы и состояния, при которых сделку с пожилым продавцом не закрывают",
+      "h2_anchor": "Диагнозы и состояния, при которых сделку не закрывают",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Как встроить медосвидетельствование в календарь сделки в Тюмени",
+      "h2_anchor": "Как встроить в календарь сделки в Тюмени",
+      "visual_type": "tool_screenshot",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Что отвечать на «не усложняйте» про медосмотр перед авансом",
+      "h2_anchor": "Нотариус, риелтор и реплики «не усложняйте»",
+      "visual_type": "infographic_card",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

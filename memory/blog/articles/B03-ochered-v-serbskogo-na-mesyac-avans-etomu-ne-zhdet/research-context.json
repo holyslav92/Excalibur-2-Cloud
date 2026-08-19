@@ -1,0 +1,107 @@
+{
+  "agent": "excalibur-blog",
+  "step": "research_complete",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-19",
+    "today_ru": "19.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "среда"
+  },
+  "topic": {
+    "topic_id": "B03",
+    "title": "Очередь в Сербского на месяц — аванс этому не ждёт",
+    "h1": "Очередь в Сербского на месяц — аванс этому не ждёт",
+    "slug": "ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet",
+    "primary_query": "купить квартиру в тюмени",
+    "secondary_query": "купить квартиру в тюмени вторичка",
+    "risk_query": "справка из пнд для сделок с недвижимостью",
+    "priority": "P0"
+  },
+  "external_signal": {
+    "source": "klyshin_A",
+    "hook": "elderly_pnd_serbsky",
+    "signal_urls": [
+      "https://t.me/s/klyshin_A",
+      "https://t.me/s/klyshin_A/1234"
+    ],
+    "signal_accessed": "2026-08-19",
+    "summary": "Очередь НМИЦ Сербского ~1 месяц, освидетельствование ~32 000 ₽; ПНД недостаточно; при 70+/80+ и авансе/ипотеке сроки ломаются"
+  },
+  "wordstat_summary": {
+    "accessed_at": "2026-08-19",
+    "regions": {
+      "rf": "225",
+      "tyumen_obl": "111"
+    },
+    "phrases": [
+      {"phrase": "купить квартиру в тюмени", "region": "225", "totalCount": 40647},
+      {"phrase": "купить квартиру в тюмени", "region": "111", "totalCount": 144},
+      {"phrase": "купить квартиру в тюмени вторичка", "region": "225", "totalCount": 6583},
+      {"phrase": "справка из пнд для сделок с недвижимостью", "region": "225", "totalCount": 1218},
+      {"phrase": "проверка квартиры перед покупкой", "region": "225", "totalCount": 1899}
+    ]
+  },
+  "tenant": {
+    "brand": "The Риэлтор",
+    "author": "Святослав Шакин",
+    "city": "Тюмень",
+    "cta_telegram": "https://t.me/Tyumen_Rieltor"
+  },
+  "search_queries": [
+    {
+      "id": "klyshin_signal",
+      "query": "Клышин очередь Сербского пенсионер сделка 2026",
+      "purpose": "community signal"
+    },
+    {
+      "id": "serbsky_queue",
+      "query": "очередь Институт Сербского освидетельствование недвижимость 2026",
+      "purpose": "актуальный SERP по медосмотру"
+    },
+    {
+      "id": "pnd_limits",
+      "query": "справка ПНД сделка недвижимость недостаточно защита",
+      "purpose": "правовой контекст ст. 177 ГК"
+    },
+    {
+      "id": "tyumen_secondary",
+      "query": "купить квартиру тюмень вторичка рынок 2026",
+      "purpose": "тюменская локализация спроса"
+    },
+    {
+      "id": "tyumen_pnd",
+      "query": "тюмень справка ПНД продажа квартиры",
+      "purpose": "местные диспансеры"
+    }
+  ],
+  "next_step": "Title → Writer(смысл)",
+  "writer_allowed_sources": [
+    "shared/writer-master-prompt.md",
+    "research-notes.md",
+    "title-brief.json",
+    "published-titles-only.md"
+  ],
+  "sol_allowed_sources": [
+    "shared/SOUL.md",
+    "shared/soul-examples/",
+    "drafts/writer.html",
+    "title-brief.json",
+    "research-notes.md"
+  ],
+  "writer_titles_only": "published-titles-only.md",
+  "forbidden_sources_for_writer": [
+    "memory/blog/articles/*/article.html",
+    "memory/blog/articles/*/drafts",
+    "memory/topics/ (deleted — do not recreate)",
+    "memory/content-lessons.md",
+    "shared/golden-benchmark",
+    "QA reports",
+    "neighbor research-notes as prose exemplars",
+    "old article bodies"
+  ],
+  "published_titles_count": 0,
+  "research_status": "PASS"
+}

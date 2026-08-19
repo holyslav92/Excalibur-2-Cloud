@@ -1,0 +1,156 @@
+{
+  "topic_id": "B03",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Месяц в Сербского — аванс не ждёт",
+  "cover_hook_highlight": "аванс",
+  "cover_phone_cta": "+7 922 001 65 05",
+  "wordstat_stickers": ["купить квартиру в тюмени", "вторичка", "справка ПНД"],
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: Derouter REST (DEROUTER_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Очередь в Сербского на месяц — почему аванс по сделке с пожилым продавцом не ждёт",
+      "scene_hint": "Host LARGE left alert wary navy blazer; points torn 30-day calendar vs red ADVANCE stamp; Serbsky ticket; sun flare #FFF; meme cat+people; Wordstat stickers",
+      "meme_caption_ru": "",
+      "sticky": "ПНД не щит"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«ПНД есть» — и вы уже готовы внести аванс",
+      "visual_type": "comparison_table",
+      "scene_hint": "DIAGRAM-ONLY no humans: comparison table ПНД vs сделкоспособность; columns суд/до аванса; gold headers icons only",
+      "alt": "Справка из ПНД на показе — почему этого мало до аванса у пожилого продавца",
+      "labels": [
+        "справка не щит",
+        "не воля в сделке",
+        "задаток через 14 дней",
+        "продавец 70+",
+        "без врача риск"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Очередь в Сербского и цена, которые не вписываются в аванс",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "DIAGRAM-ONLY no humans no blazer: bar timeline 30d queue vs 14d deal FAIL zone; thinking-cat meme corner",
+      "alt": "Месяц очереди в Сербского против двух недель до сделки по задатку",
+      "labels": [
+        "очередь около месяца",
+        "осмотр ~32 000 ₽",
+        "аванс не ждёт",
+        "сделка 14 дней",
+        "врач до задатка"
+      ]
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Справка ПНД и освидетельствование — не одно и то же",
+      "visual_type": "checklist_board",
+      "scene_hint": "DIAGRAM-ONLY no humans: two-column checklist ПНД учёт vs акт освидетельствования; checkmarks icons text",
+      "alt": "Разница между справкой ПНД и актом медосвидетельствования перед сделкой",
+      "labels": [
+        "ПНД не то же",
+        "учёт не воля",
+        "акт на сделку",
+        "согласие письменно",
+        "опрос один час"
+      ]
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Когда в Тюмени точно планировать врача до аванса",
+      "visual_type": "schema_faq_ui",
+      "scene_hint": "DIAGRAM-ONLY no humans no blazer: decision tree icons продавец 70+ branches STOP flags → врач до аванса",
+      "alt": "Когда в Тюмени планировать медосвидетельствование до внесения аванса",
+      "labels": [
+        "80+ без врача",
+        "70+ при сомнениях",
+        "единственное жильё",
+        "родственники молчат",
+        "срочная скидка"
+      ]
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Диагнозы и состояния, при которых сделку не закрывают",
+      "visual_type": "process_flow",
+      "scene_hint": "Process flow red STOP gates: деменция → стоп, острый психоз → стоп, несделкоспособность → отпустить сделку; arrows reading order; surprised-guy meme sticker small; NO host",
+      "alt": "Диагнозы и состояния, при которых сделку с пожилым продавцом не закрывают",
+      "labels": [
+        "деменция стоп",
+        "острый психоз",
+        "несделкоспособность",
+        "второй раз риск",
+        "лучше отпустить"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Как встроить в календарь сделки в Тюмени",
+      "visual_type": "tool_screenshot",
+      "scene_hint": "DIAGRAM-ONLY no humans: Gantt calendar UI week1-3 ЕГРН врач согласие сделка; illustrated schematic",
+      "alt": "Как встроить медосвидетельствование в календарь сделки в Тюмени",
+      "labels": [
+        "сначала ЕГРН",
+        "запись к врачу",
+        "согласие до аванса",
+        "сделка после акта",
+        "хранить 3 года"
+      ]
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Нотариус, риелтор и реплики «не усложняйте»",
+      "visual_type": "infographic_card",
+      "scene_hint": "Quote comparison card: left column «не усложняйте» myths vs right facts ПНД не воля, нотариус не щит, право на врача; tiny drake meme sticker; NO host face",
+      "alt": "Что отвечать на «не усложняйте» про медосмотр перед авансом",
+      "labels": [
+        "ПНД не воля",
+        "нотариус не щит",
+        "риелтор продавца",
+        "не усложняйте",
+        "право на врача"
+      ]
+    }
+  },
+  "cover_keys_ru": []
+}

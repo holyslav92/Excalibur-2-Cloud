@@ -1,0 +1,100 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "sameAs": [
+        "{{SITE_BASE}}/",
+        "{{SITE_BASE}}/rieltor-tyumen/",
+        "{{SITE_BASE}}/kontakty/",
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://t.me/holyslav92",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet/"
+      },
+      "url": "{{SITE_BASE}}/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet/",
+      "headline": "Квартира у пенсионера — очередь в Сербского на месяц, аванс этому не ждёт",
+      "description": "Квартира у пенсионера — очередь в Сербского на месяц, аванс этому не ждёт",
+      "datePublished": "2026-08-19",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "{{SITE_BASE}}/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Достаточно ли справки из ПНД для суда?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Справка показывает отсутствие диспансерного учёта на дату выдачи, но не доказывает состояние продавца в момент подписания договора. При оспаривании по ст. 177 ГК РФ весомее акт целевого освидетельствования."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько ждать очередь в Сербского?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "По публичным сигналам рынка в августе 2026 — около месяца. Иногда клиника предлагает окна раньше, но на это нельзя строить график с уже внесённым авансом."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли внести аванс и параллельно записаться к врачу?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Можно — но рискованно: при срыве сроков вы теряете задаток, альтернативу или ипотечное одобрение. Безопаснее: запись и согласие продавца до задатка, дата сделки после заключения врача."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Кто платит за освидетельствование?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Обычно договариваются стороны; ориентир по Сербскому — порядка 32 000 ₽. Госсправки ПНД/НД в Тюмени — бесплатно или за символическую плату, но они не заменяют полноценное освидетельствование при высоком риске."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Обязан ли продавец идти к врачу?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "По закону — нет. Покупатель может настоять как условие сделки. Отказ продавца — повод искать другой объект, а не вносить аванс «на авось»."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet",
+  "topic_id": "B03",
+  "permalink": "{{SITE_BASE}}/blog/bez-rubriki/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B03-ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1267042,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=8740 slug=ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet\nOK featured_image=8741\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=8742 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet-inline-01.png\nOK inline_alt=8742\nOK inline_caption=8742\nOK inline_description=8742\nOK inline_image_upload=8743 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet-inline-02.png\nOK inline_alt=8743\nOK inline_caption=8743\nOK inline_description=8743\nOK inline_image_upload=8744 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet-inline-03.png\nOK inline_alt=8744\nOK inline_caption=8744\nOK inline_description=8744\nOK inline_image_upload=8745 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet-inline-04.png\nOK inline_alt=8745\nOK inline_caption=8745\nOK inline_description=8745\nOK inline_image_upload=8746 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet-inline-05.png\nOK inline_alt=8746\nOK inline_caption=8746\nOK inline_description=8746\nOK inline_image_upload=8747 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet-inline-06.png\nOK inline_alt=8747\nOK inline_caption=8747\nOK inline_description=8747\nOK inline_image_upload=8748 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet-inline-07.png\nOK inline_alt=8748\nOK inline_caption=8748\nOK inline_description=8748\npermalink={{SITE_BASE}}/blog/bez-rubriki/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/bez-rubriki/ochered-v-serbskogo-na-mesyac-avans-etomu-ne-zhdet/",
+    "errors": []
+  }
+}

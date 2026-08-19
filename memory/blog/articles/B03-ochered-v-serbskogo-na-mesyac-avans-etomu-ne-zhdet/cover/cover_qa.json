@@ -1,0 +1,37 @@
+{
+  "agent": "excalibur-blog-cover-qa",
+  "status": "PASS",
+  "checked_at": "2026-08-19",
+  "topic_id": "B03",
+  "regeneration": "derouter_v2_no_host_on_inlines",
+  "cover_md5": "9f83da091ed80cec98337ac3a0139644",
+  "checks": {
+    "identity_face_28yo": true,
+    "identity_body_medium_slim": true,
+    "cover_phone_readable": true,
+    "board_stationery_ok": true,
+    "typography_cyrillic_clean": true,
+    "meme_density_inline_ok": true,
+    "light_high_key": true,
+    "motif_no_collision_14d": true,
+    "people_in_8_set": true,
+    "cats_cadence_ok": true,
+    "wordstat_stickers_1_3": true,
+    "identity_real_files": true,
+    "inline_utility_all_7": true,
+    "inline_no_host_face": true
+  },
+  "inline_utility_notes": {
+    "inline_1": "comparison_table ПНД vs сделкоспособность + риск до аванса rows",
+    "inline_2": "bar timeline 30d queue vs 14d FAIL zone; thinking-cat meme",
+    "inline_3": "two-column checklist ПНД учёт vs акт освидетельствования",
+    "inline_4": "decision tree продавец 70+ risk flags → врач до аванса",
+    "inline_5": "process flow 5 STOP gates; surprised-guy meme sticker",
+    "inline_6": "Gantt calendar week1-3 ЕГРН→врач→согласие→сделка",
+    "inline_7": "myths vs facts card; drake meme sticker"
+  },
+  "phone_note": "Cover CTA banner +7 922 001 65 05 readable at thumbnail.",
+  "body_lock_note": "Host medium-slim navy blazer; no chubby/puffy vs identity-real refs.",
+  "meme_density_note": "Cover: cat thumbs-up + Gatsby + shocked guy; inlines meme on 2, 5, 7 (3 of 7).",
+  "notes": "Derouter api-direct 2K; canvas-1 edits+i2i; canvas-2 generations; v2 regen after inline host-face FAIL on v1."
+}
