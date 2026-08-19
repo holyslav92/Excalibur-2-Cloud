@@ -31,6 +31,7 @@
   "inline_types_catalog": "memory/cover/inline-visual-types.json",
   "cover_hook": "Расписку написали — денег нет",
   "cover_hook_highlight": "денег",
+  "cover_emotion": "bewildered shock «где деньги?» — eyebrows raised HIGH, mouth open in disbelief, side-eye; FORBIDDEN closed-mouth smile",
   "cover_phone_cta": "+7 922 001 65 05",
   "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
   "cover_keys_ru": [],
@@ -48,7 +49,8 @@
       "quadrant": "top_left",
       "role": "cover_editorial_hero",
       "alt": "Расписка написана, денег нет — звоните риэлтору в Тюмени",
-      "scene_hint": "SLIM host left; investigation-board tape/pins/strings; phone shows +7 922 001 65 05; meme cat+people; Tyumen tag; sun flare",
+      "cover_emotion": "bewildered shock «где деньги?» — eyebrows raised HIGH, mouth open in disbelief, side-eye; NO smile",
+      "scene_hint": "bewildered side-eye at empty receipt/bank «где деньги?»; SLIM host; light board; phone CTA; memes; sun flare",
       "meme_caption_ru": "",
       "sticky": "бумага есть — счёт пуст"
     },

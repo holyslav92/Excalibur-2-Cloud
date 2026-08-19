@@ -43,8 +43,9 @@ PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`, api-dir
 3. **Light & bright** — high-key, sun flare, light leak, glow; **no dark cinematic**.
 4. **Memes required** — meme cats + meme people stickers; host Святослав; 8-set includes people.
 5. **Wordstat stickers** — 1–3 readable labels from live Wordstat (Тюмень regions 55+11176).
-6. **Identity + body lock** — `identity-real/*` i2i; medium slim build как refs; NOT chubby/puffy/thick neck.
-7. **REJECTED daypart formula** — never morning desk / day street / evening close / night split.
+6. **Identity + body lock** — `face-studio-2026-06-23.jpg` i2i (WHO only); medium slim; NOT chubby.
+7. **Expression invention (HARD)** — эмоция/мимика/поза **новые каждый раз** под hook; `scene_hint` + `cover_emotion` называют эмоцию (шок, side-eye, гримаса, недоумение…). i2i: «same person, NEW expression, do not copy reference smile/pose». Копия студийной улыбки 1:1 = FAIL.
+8. **REJECTED daypart formula** — never morning desk / day street / evening close / night split.
 
 ## Inline canon (v3 utility-first)
 
@@ -84,7 +85,8 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 ## manifest fields (agent)
 
 - `cover_hook`, `cover_hook_highlight` — from cover-text.json
-- `slots.cover.scene_hint` — bright invented scene (~80–140 chars)
+- `slots.cover.scene_hint` — bright invented scene (~80–140 chars) **+ named emotion**
+- `slots.cover.cover_emotion` — hook-matched face (shock, side-eye, grimace, bewildered…); never «same as reference»
 - `cover_motifs` — composition, location, meme, prop_set, sticker_set, joke
 - `wordstat_stickers` — 1–3 phrases from Scout/Research Wordstat
 - `slots.inline_1…7` — H2 anchors, `visual_type` (utility catalog), scene_hint, fact labels (3–6)

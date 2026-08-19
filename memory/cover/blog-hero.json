@@ -60,17 +60,19 @@
   "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
   "reference_image": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
   "reference_image_secondary": "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
-  "reference_notes": "FACE PRIMARY: face-studio-2026-06-23.jpg — единственный i2i input для лица. Hoodie+office — только body_build (medium-slim). Greenhouse+regiment — scene_composition_only, never FACE. 28 лет, овальное лицо, тёмно-каштановые волосы, лёгкая щетина, warm eyes. Cover-QA FAIL если лицо не тот же человек (jaw/stubble/hairline/eyes) или chubby vs portrait.",
+  "reference_notes": "FACE PRIMARY: face-studio-2026-06-23.jpg — единственный i2i input для идентичности (кости, hairline, глаза, щетина, 28 лет). Эмоция/поза/мимика — НОВЫЕ каждый раз под hook статьи; копировать студийную улыбку 1:1 = FAIL. Hoodie+office — body_build only. Greenhouse+regiment — scene only.",
+  "expression_invention_rule": "Reference = WHO (identity), not HOW (pose/emotion). scene_hint обязан называть эмоцию (шок, side-eye, гримаса, смех, недоумение…). i2i: «same person, NEW expression for hook, do not copy reference smile/pose».",
   "visual_lock": {
-    "person": "adult man exactly 28 years old, Slavic, medium slim athletic build, oval face (NOT puffy), short dark-brown hair brushed to side, fair skin, warm dark-brown eyes, light stubble, slight closed-mouth smile — match face-studio-2026-06-23.jpg",
+    "person": "adult man exactly 28 years old, Slavic, medium slim athletic build, oval face (NOT puffy), short dark-brown hair, fair skin, warm dark-brown eyes, light stubble — identity from face-studio-2026-06-23.jpg",
     "body": "medium-slim build per hoodie+office body refs; blazer relaxed fit; NOT chubby, NOT puffy",
-    "hair": "short dark-brown hair, natural texture, clean hairline — match studio portrait",
-    "face": "same face as face-studio-2026-06-23.jpg ONLY; oval jaw, light stubble, hairline, eyes; NOT plastic, NOT uncanny, NOT different person, NOT chubby",
+    "hair": "short dark-brown hair, natural texture, clean hairline — match studio identity lock",
+    "face": "same person as face-studio-2026-06-23.jpg; bone structure, hairline, eye shape, stubble; NOT plastic, NOT different person, NOT chubby",
+    "expression": "INVENT per article hook every run — eyebrows, mouth, gaze, head tilt, hands, pose FREE; FAIL if polite studio closed-mouth smile copied 1:1",
     "outfit_variants": [
       "navy/charcoal blazer + dark tee (editorial cover default) — relaxed fit, not tight on torso",
       "smart-casual shirt or henley for office/document scenes"
     ],
-    "forbid": "AI-reconstructed hero-ref faces, 35–45 age look, airbrushed skin, plastic/uncanny face, chubby, overweight, puffy face, puffy cheeks, double chin, stocky build, thick neck, wide torso in tight blazer, white hoodie, pink-cat, headphones in cover host, sunglasses, other person, copy-paste of any reference scene (greenhouse, Immortal Regiment, breakroom selfie, hoodie selfie, office hologram, balcony keys)"
+    "forbid": "AI-reconstructed hero-ref faces, 35–45 age look, airbrushed skin, plastic/uncanny face, chubby, overweight, puffy face, copy-paste studio polite smile/pose from reference, same-as-reference expression freeze, white hoodie, pink-cat, headphones in cover host, sunglasses, other person, copy-paste of any reference scene (greenhouse, Immortal Regiment, breakroom selfie, hoodie selfie, office hologram, balcony keys)"
   },
   "outfit_rule": "Cover host: outfit may change with hook; FACE must match face-studio-2026-06-23.jpg only. No white hoodie/AirPods on cover.",
   "cover_canon": "memory/cover/cover-canon.json",
@@ -79,7 +81,7 @@
   "meme_rule": "Мем-коты и мем-люди (стикеры) — часть системы, не редкий easter egg. Cover host = люди; коты/мем-реакции на cover и 1–2 inline.",
   "wordstat_stickers_rule": "1–3 designer stickers с LIVE Wordstat фразами темы (Тюмень/область, regions 55+11176). Не random spam.",
   "forbidden_daypart_formula": "REJECTED навсегда: morning desk+document / day street / evening close talk / night split «как продают / что в выписке»",
-  "prompt_fragment": "same man as i2i face-studio-2026-06-23: 28yo, medium slim, dark-brown hair, light stubble, oval jaw; LARGE left; invent bright high-key scene+meme+Wordstat; NOT chubby; #FFF",
+  "prompt_fragment": "same person i2i face-studio-2026-06-23, NEW hook-matched expression (not reference smile); 28yo medium-slim; LARGE left; bright high-key scene+meme+Wordstat; NOT chubby; #FFF",
   "emotion_bank": [
     {
       "id": "calm_confidence",

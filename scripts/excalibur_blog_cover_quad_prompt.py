@@ -53,7 +53,12 @@ def sanitize_cover_scene_hint(scene: str, highlight: str) -> str:
     return _PINK_WORD_IN_SCENE.sub(_repl, scene)
 
 
-BODY_LOCK = "face-studio-2026-06-23 jaw/stubble/hairline; medium-slim; NOT chubby/puffy"
+BODY_LOCK = "face-studio identity: jaw/stubble/hairline/eyes; medium-slim; NOT chubby/puffy"
+I2I_EXPRESSION_LOCK = (
+    "same person as reference, NEW expression for the hook, "
+    "do NOT copy reference closed-mouth smile/pose/head angle; "
+    "FORBIDDEN polite studio smile"
+)
 COVER_PHONE_CTA = "+7 922 001 65 05"
 BOARD_STATIONERY = "tape/pins/strings/paper scraps; high-key #FFF/gold; not noir"
 INLINE_BAN_EXTRA = "icon slogans; empty cells; desk scene; cover copy; celebrity memes"
@@ -398,6 +403,9 @@ def build_prompt(
             if highlight
             else "paint at most ONE punch word in gold #dcc5a1"
         )
+        cover_emotion = compact(
+            str(cover.get("cover_emotion") or manifest.get("cover_emotion") or ""), 120
+        )
         cover_scene = sanitize_cover_scene_hint(str(cover.get("scene_hint") or ""), highlight)
         cover_hook_text = compact(manifest.get("cover_hook", ""), 120)
         cover_sticky = compact(str(cover.get("sticky") or ""), 48)
@@ -406,10 +414,15 @@ def build_prompt(
             if cover_sticky
             else ""
         )
+        emotion_clause = (
+            f"Expression: {cover_emotion}. {I2I_EXPRESSION_LOCK}."
+            if cover_emotion
+            else f"{I2I_EXPRESSION_LOCK}."
+        )
         panel_lines.append(
             f"TL COVER TXT «{cover_hook_text}» bold Cyrillic black, {highlight_rule}.{sticky_lock} "
             f"Phone EXACT «{COVER_PHONE_CTA}» readable CTA sticker. "
-            f"Host i2i left ({BODY_LOCK}); sun flare; "
+            f"Host i2i left ({BODY_LOCK}); {emotion_clause} sun flare; "
             f"{compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; "
             f"1-2 meme stickers; {BOARD_STATIONERY}; Wordstat/Tyumen; #FFF; perfect Cyrillic"
         )
@@ -425,7 +438,7 @@ def build_prompt(
         f"{INLINE_BAN_EXTRA}."
     )
     reference_line = (
-        f"Cover TL only: i2i face-studio-2026-06-23 ({BODY_LOCK}); invent scene; no AI hero-ref."
+        f"Cover TL only: i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}; invent scene; no AI hero-ref."
         if has_cover
         else "Inlines: no host face; meme stickers OK on flagged panels."
     )

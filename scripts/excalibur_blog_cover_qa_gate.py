@@ -12,6 +12,7 @@ from pathlib import Path
 REQUIRED_CHECKS = (
     "identity_face_28yo",
     "identity_body_medium_slim",
+    "identity_expression_invented",
     "cover_phone_readable",
     "board_stationery_ok",
     "typography_cyrillic_clean",

@@ -14,8 +14,9 @@ FAIL → **вернуть Cover** (не Indexer/Publish).
 
 ## Что проверяешь (визуально + артефакты)
 
-1. **Лицо + телосложение хоста** — 28-летний Святослав по `identity-real/*`; **medium slim build** как на референсах (hoodie/office/greenhouse). **FAIL** если chubby, overweight, puffy cheeks, double chin, thick neck, wide torso в обтягивающем пиджаке.
-2. **Light / high-key** — светлая картинка, sun flare/glow; **нет** dark cinematic / low-key / twilight.
+1. **Лицо + телосложение хоста** — тот же человек что `face-studio-2026-06-23.jpg` (кости, hairline, глаза, щетина, 28 лет); **medium slim**. FAIL: chubby, другой человек.
+2. **Эмоция НЕ копия референса** — выражение под hook статьи (шок, side-eye, гримаса, недоумение «где деньги?»…). **FAIL** если вежливая студийная closed-mouth smile 1:1 как на reference. PASS если живая мимика под тему.
+3. **Light / high-key** — светлая картинка, sun flare/glow; **нет** dark cinematic / low-key / twilight.
 3. **Motif 14д** — нет коллизии с `memory/cover/used-motifs.json` (composition/location/meme…).
 4. **Люди в 8-set** — host на cover; в наборе из 8 изображений есть люди (host и/или meme-people stickers).
 5. **Коты** — meme-cat на cover/inline **или** недельная каденция не просела (не 3+ статей подряд без кота).
@@ -37,6 +38,7 @@ FAIL → **вернуть Cover** (не Indexer/Publish).
   "checks": {
     "identity_face_28yo": true,
     "identity_body_medium_slim": true,
+    "identity_expression_invented": true,
     "light_high_key": true,
     "motif_no_collision_14d": true,
     "people_in_8_set": true,
@@ -65,6 +67,6 @@ python3 scripts/excalibur_blog_cover_qa_gate.py --article-dir "$ARTICLE"
 
 - COVER QA BLOCKER — любой check false
 - identity-real missing
-- dark cinematic / wrong face → return Cover
+- dark cinematic / wrong face / reference smile clone → return Cover
 
 Agent: `agents/excalibur-blog-cover-qa.md`
