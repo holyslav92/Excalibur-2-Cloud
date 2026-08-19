@@ -1,0 +1,27 @@
+{
+  "slug": "na-matkapital-kupili-detskie-doli-proverte",
+  "topic_id": "B03",
+  "permalink": "{{SITE_BASE}}/blog/bez-rubriki/na-matkapital-kupili-detskie-doli-proverte/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B03-na-matkapital-kupili-detskie-doli-proverte/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1231430,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=8730 slug=na-matkapital-kupili-detskie-doli-proverte\nOK featured_image=8731\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=8732 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/na-matkapital-kupili-detskie-doli-proverte-inline-01.png\nOK inline_alt=8732\nOK inline_caption=8732\nOK inline_description=8732\nOK inline_image_upload=8733 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/na-matkapital-kupili-detskie-doli-proverte-inline-02.png\nOK inline_alt=8733\nOK inline_caption=8733\nOK inline_description=8733\nOK inline_image_upload=8734 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/na-matkapital-kupili-detskie-doli-proverte-inline-03.png\nOK inline_alt=8734\nOK inline_caption=8734\nOK inline_description=8734\nOK inline_image_upload=8735 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/na-matkapital-kupili-detskie-doli-proverte-inline-04.png\nOK inline_alt=8735\nOK inline_caption=8735\nOK inline_description=8735\nOK inline_image_upload=8736 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/na-matkapital-kupili-detskie-doli-proverte-inline-05.png\nOK inline_alt=8736\nOK inline_caption=8736\nOK inline_description=8736\nOK inline_image_upload=8737 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/na-matkapital-kupili-detskie-doli-proverte-inline-06.png\nOK inline_alt=8737\nOK inline_caption=8737\nOK inline_description=8737\nOK inline_image_upload=8738 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/na-matkapital-kupili-detskie-doli-proverte-inline-07.png\nOK inline_alt=8738\nOK inline_caption=8738\nOK inline_description=8738\npermalink={{SITE_BASE}}/blog/bez-rubriki/na-matkapital-kupili-detskie-doli-proverte/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/bez-rubriki/na-matkapital-kupili-detskie-doli-proverte/",
+    "errors": []
+  }
+}
