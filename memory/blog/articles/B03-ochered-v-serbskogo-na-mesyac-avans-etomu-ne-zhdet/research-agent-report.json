@@ -1,0 +1,53 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B03",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-19",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/s/klyshin_A",
+        "type": "community",
+        "note": "Август 2026: очередь Сербского ~месяц, ~32 000 ₽, ПНД не броня, пожилой продавец + аванс"
+      },
+      {
+        "url": "https://habitora.ru/iz-za-moshennichestva-s-nedvizhimostyu-ochered-2026-07-29",
+        "type": "news",
+        "note": "29.07.2026: пересказ волны очередей и практики ВС РФ"
+      },
+      {
+        "url": "https://aif.ru/realty/house/kazus-dolinoy-v-deystvii-za-spravkami-o-psihicheskom-zdorove-stoyat-ocheredi",
+        "type": "news",
+        "note": "Очереди в Сербском после казуса Долиной, ~30 900 ₽"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["225", "111"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume_rf": 40647,
+    "p0_volume_tyumen_obl": 144,
+    "secondary_phrase": "купить квартиру в тюмени вторичка",
+    "secondary_volume_rf": 6583,
+    "pnd_phrase": "справка из пнд для сделок с недвижимостью",
+    "pnd_volume_rf": 1218,
+    "check_phrase": "проверка квартиры перед покупкой",
+    "check_volume_rf": 1899,
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "key_facts_count": 22,
+  "tyumen_localization": true,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}
