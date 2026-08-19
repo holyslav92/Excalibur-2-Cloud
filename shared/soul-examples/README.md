@@ -9,4 +9,4 @@
 | `good-outputs.md` | Живые удачные фрагменты + Calibration |
 | `bad-outputs.md` | Анти-паттерны |
 
-Пока `<!-- SETUP_REQUIRED -->` в файлах — Setup не завершён.
+Голос тенанта The Риэлтор заполнен 2026-08-17 (Setup Voice). Маркеров `SETUP_REQUIRED` в этих файлах быть не должно.

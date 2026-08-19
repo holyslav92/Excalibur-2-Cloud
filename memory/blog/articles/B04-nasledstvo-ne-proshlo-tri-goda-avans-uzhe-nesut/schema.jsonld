@@ -1,0 +1,76 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut/#article",
+      "headline": "Сын от первого брака без отказа — аванс уже несут",
+      "description": "В выписке один собственник — и все успокаиваются. А сын от прошлого брака без нотариального отказа может всплыть уже после аванса.",
+      "datePublished": "2026-08-19",
+      "dateModified": "2026-08-19",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@type": "Person",
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#person",
+        "name": "Святослав Шакин",
+        "jobTitle": "Личный риэлтор в Тюмени",
+        "url": "{{SITE_BASE}}/rieltor-tyumen/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Риэлтор",
+        "url": "{{SITE_BASE}}/"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "{{SITE_BASE}}/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Достаточно ли одного собственника в выписке ЕГРН?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли верить словам «он отказался от наследства»?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Если прошло больше шести месяцев после смерти, наследник уже не может претендовать?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Может."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Зачем запрос в реестр наследственных дел?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Реестр ФНП показывает, открывалось ли наследственное дело, у какого нотариуса и в отношении кого."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что делать, если риелтор торопит с авансом?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Зафиксируйте чеклист документов письменно (мессенджер или e-mail). Запросите отказы и справки до передачи денег."
+          }
+        }
+      ]
+    }
+  ]
+}

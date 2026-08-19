@@ -1,17 +1,73 @@
 {
   "version": "1.0",
-  "setup_complete": false,
-  "brand_name": "",
+  "setup_complete": true,
+  "brand_name": "The Риэлтор",
   "language": "ru",
-  "niche": "",
-  "content_goals": [],
-  "author_id": "",
-  "cta_required": false,
-  "cta_links": [],
-  "cover_mode": "unset",
+  "niche": "Недвижимость Тюмени: вторичка, новостройки, аренда, дома, коммерция; сделки по России и за рубежом через партнёров",
+  "topic_focus_profile": "real_estate",
+  "content_goals": [
+    "Разборы рисков сделки до аванса (ЕГРН, доверенность, маткапитал, детские доли, эскроу)",
+    "Практические чеклисты покупки, продажи и аренды в Тюмени",
+    "Лиды на консультацию личного риэлтора Святослава Шакина",
+    "Публикации в блог сайта и зеркало на Дзен «Советы от риелтора»"
+  ],
+  "author_id": "svyatoslav-shakin",
+  "publish_format": "longform",
+  "inline_image_count": 7,
+  "publish_schedule": {
+    "timezone": "Asia/Yekaterinburg",
+    "weekdays_only": true,
+    "slots_local": ["09:00", "12:00", "15:00", "17:00"],
+    "runs_per_day": 4,
+    "window_local": "09:00-17:00",
+    "note": "Longform Cursor Automation: 4 weekday slots YEKT (owner 9–17). NOT 20:00. Daily short posts on site — отдельный поток. Publish only when FTP secrets + EXCALIBUR_BLOG_ALLOW_PUBLISH=yes on process (never git)."
+  },
+  "image_generation": {
+    "provider": "derouter-rest",
+    "script": "scripts/excalibur_blog_derouter_gpt_image2_api.py",
+    "resolution": "2K",
+    "canvases_per_article": 2,
+    "panels_per_canvas": 4,
+    "total_images": 8
+  },
+  "cta_required": true,
+  "cta_links": [
+    "https://t.me/Tyumen_Rieltor",
+    "tel:+79220016505"
+  ],
+  "cta_channels": {
+    "telegram_lead": "https://t.me/Tyumen_Rieltor",
+    "telegram_personal": "https://t.me/holyslav92",
+    "phone": "+79220016505",
+    "phone_display": "+7 922 001 65 05",
+    "max": "phone:+79220016505",
+    "vk": "https://vk.ru/tymenrieltor",
+    "whatsapp": "https://wa.me/79220016505",
+    "guides": "{{SITE_BASE}}/gajdy/"
+  },
+  "publish_options": {
+    "deploy_llms_after_publish": true,
+    "derouter_image_quality": "high"
+  },
+  "cover_mode": "host_reference",
   "dzen_rf_pack": true,
-  "scout_signal_urls": [],
-  "interlink_old_articles": false,
+  "scout_signal_urls": [
+    "https://t.me/klyshin_A",
+    "https://dzen.ru/holyslav",
+    "{{SITE_BASE}}/blog/",
+    "https://t.me/holyslav92"
+  ],
+  "scout_klyshin_topic_bank": "memory/scout/klyshin-topic-bank.json",
+  "writing_model": {
+    "provider": "derouter-rest",
+    "model": "claude-opus-5",
+    "model_env": "DEROUTER_TEXT_MODEL",
+    "endpoint": "https://api.derouter.ai/openai/v1/chat/completions",
+    "family": "claude-opus-5",
+    "contract": "shared/writer-model-contract.md",
+    "fail_loud_if_unavailable": true
+  },
+  "interlink_old_articles": true,
   "style_files": {
     "soul": "shared/SOUL.md",
     "article_style": "shared/article-style.md",
@@ -20,7 +76,7 @@
   "cover_files": {
     "hero": "memory/cover/blog-hero.json",
     "design_code": "memory/cover/cover-design-code.json",
-    "style_preset": ""
+    "style_preset": "memory/cover/quad-style-the-rieltor.json"
   },
-  "comment": "Filled by excalibur-blog-setup. Pipeline agents read this file. Do not put secrets here."
+  "comment": "The Риэлтор / tymenrieltor.ru. Secrets only in Cloud (PUBLIC_SITE_URL, SFTP, EXCALIBUR_BLOG_ALLOW_PUBLISH). Do not enable publish in git."
 }

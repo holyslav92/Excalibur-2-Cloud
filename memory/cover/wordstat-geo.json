@@ -1,0 +1,79 @@
+{
+  "primary_source": "mcp-kv",
+  "mcp_server": "MCP-KV",
+  "mcp_tools": [
+    "wordstat_get_user_info",
+    "wordstat_get_top_requests",
+    "wordstat_get_regions",
+    "wordstat_get_regions_tree",
+    "wordstat_get_dynamics"
+  ],
+  "tenant_geo": "Тюмень / Тюменская область",
+  "primary_city_ru": "Тюмень",
+  "primary_oblast_ru": "Тюменская область",
+  "russia_region_id": 225,
+  "region_ids": {
+    "tyumen_city": 55,
+    "tyumen_oblast": 11176
+  },
+  "scout_required_region_ids": [55, 11176],
+  "compare_region_ids": [225],
+  "region_ids_verified_via": "MCP-KV wordstat_get_regions_tree",
+  "region_ids_verified_at": "2026-08-18",
+  "region_lookup_names": {
+    "55": "Тюмень",
+    "11176": "Тюменская область",
+    "225": "Россия"
+  },
+  "p0_buyer_seed_phrases": [
+    "купить квартиру",
+    "новостройки",
+    "ипотека",
+    "проверка егрн",
+    "егрн",
+    "эскроу",
+    "дду",
+    "аренда квартира",
+    "вторичка",
+    "материнский капитал",
+    "доверенность",
+    "наследство квартира",
+    "опека"
+  ],
+  "brand_vanity_queries_not_p0": [
+    "риэлтор тюмень",
+    "услуги риэлтора тюмень",
+    "лучшие риэлторы тюмени",
+    "агентство недвижимости тюмень"
+  ],
+  "brand_vanity_note": "Низкий объём (порядка десятков–сотен/мес). P0-темы Scout берёт из buyer-запросов, не из brand vanity.",
+  "scout_workflow": [
+    "CallMcpTool MCP-KV wordstat_get_user_info (preflight)",
+    "wordstat_get_regions_tree once if ids stale",
+    "Pick Klyshin hook from memory/scout/klyshin-topic-bank.*",
+    "wordstat_get_top_requests(phrase, regions=[55,11176], numPhrases) on hook + probes",
+    "optional wordstat_get_top_requests same phrase regions=[225] to compare",
+    "weak volume → REWORK: localize Tyumen, swap to buyer search jargon (егрн, наследство, ипотека, аванс…), pull similar queries, pick nearest high-frequency cluster with same risk/story",
+    "skip ONLY after rework exhausted — no honest buyer-intent cluster (not brand vanity)",
+    "handoff log: klyshin_hook (original) + wordstat_rework + wordstat (final P0 phrase+frequency)",
+    "handoff: mcp_kv live frequencies only — never invent"
+  ],
+  "rework_vocabulary": [
+    "егрн",
+    "выписка егрн",
+    "наследство",
+    "наследники",
+    "ипотека",
+    "новостройка",
+    "аванс",
+    "задаток",
+    "пенсионер",
+    "доверенность",
+    "банкротство",
+    "маткапитал",
+    "вторичка",
+    "аккредитив"
+  ],
+  "affinity_rule": "Klyshin hook must pass Wordstat evaluate+rework cycle until a Tyumen/область buyer P0 cluster is found; weak first probe is not a skip.",
+  "seo_geo_dual": "Final P0 Wordstat-фразы → demand spine; Title stays Klyshin hook; stickers/H2 from reworked live queries."
+}

@@ -93,6 +93,16 @@
     "MAX",
     "YouTube"
   ],
-  "cta_ok": [],
-  "comment_cta": "Filled from tenant-config.cta_links by Setup"
+  "cta_ok": [
+    "https://t.me/Tyumen_Rieltor",
+    "https://t.me/holyslav92",
+    "https://dzen.ru/holyslav",
+    "https://vk.ru/tymenrieltor",
+    "https://wa.me/79220016505",
+    "tel:+79220016505",
+    "{{SITE_BASE}}/kontakty/",
+    "{{SITE_BASE}}/blog/",
+    "{{SITE_BASE}}/rieltor-tyumen/"
+  ],
+  "comment_cta": "The Риэлтор: Telegram/Дзен/VK/WA + site paths via {{SITE_BASE}}"
 }

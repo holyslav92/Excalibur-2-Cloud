@@ -11,6 +11,13 @@ import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
+from excalibur_blog_identity_real import pick_identity_reference
+from excalibur_blog_quad_slots import (
+    CANVAS_1_SLOTS,
+    active_inline_keys,
+    canvas_specs_for_inline_count,
+    inline_count_from_manifest,
+)
 from excalibur_blog_site_base import (
     REDACTED_LITERAL,
     SITE_BASE_PLACEHOLDER,
@@ -46,6 +53,10 @@ def sanitize_cover_scene_hint(scene: str, highlight: str) -> str:
     return _PINK_WORD_IN_SCENE.sub(_repl, scene)
 
 
+BODY_LOCK = "medium-slim lean waist; NOT chubby/puffy/thick-waist/thick-neck"
+COVER_PHONE_CTA = "+7 922 001 65 05"
+BOARD_STATIONERY = "tape/pins/strings/paper scraps; high-key #FFF/gold; not noir"
+INLINE_BAN_EXTRA = "icon slogans; empty cells; desk scene; cover copy; celebrity memes"
 MAX_MCP_PROMPT_CHARS = 3500
 # Compact limits leave headroom under 3500 after style boilerplate (INC-20260721-0837).
 # Cover raw ≈80–140 (from blog-hero lock); inline ≈100–220. Long MUST/face essays
@@ -100,27 +111,31 @@ def compact(value: object, limit: int) -> str:
 
 
 def inline_panel_prompt(slot: dict, types_catalog: dict) -> str:
-    type_id = slot.get("visual_type") or "infographic_card"
+    type_id = slot.get("visual_type") or "fact_card"
     type_def = (types_catalog.get("types") or {}).get(type_id) or {}
     label = type_def.get("label_ru", type_id)
-    h2 = compact(slot.get("h2_anchor", ""), 95)
+    h2 = compact(slot.get("h2_anchor", ""), 72)
     scene = compact(slot.get("scene_hint", ""), INLINE_SCENE_HINT_COMPACT)
-    base = f"{label}; H2: «{h2}»; scene: {scene}; no host face."
+    base = f"{label}; «{h2}»; {scene}."
     labels = [str(x).strip() for x in (slot.get("labels") or []) if str(x).strip()]
     if labels:
-        exact = ", ".join(f"«{x}»" for x in labels)
-        base += (
-            f" TEXT LOCK: render ONLY these exact Russian strings on this panel: "
-            f"{exact}. Every letter in Cyrillic, exactly as written. "
-            "No other words, no English, no invented headlines."
-        )
+        exact = " | ".join(labels)
+        base += f" TXT:{exact}."
+    if slot.get("meme_sticker"):
+        base += " +meme sticker."
     return base
+
+
+def _manifest_slot_keys(manifest: dict) -> tuple[str, ...]:
+    inline_count = inline_count_from_manifest(manifest)
+    keys = ["cover"] + list(active_inline_keys(inline_count))
+    return tuple(keys)
 
 
 def warn_long_scene_hints(manifest: dict) -> None:
     """Advisory: long raw scene_hint blows MCP budget; cover face essays omit host."""
     slots = manifest.get("slots") or {}
-    for key in ("cover", "inline_1", "inline_2", "inline_3"):
+    for key in _manifest_slot_keys(manifest):
         raw = " ".join(str((slots.get(key) or {}).get("scene_hint") or "").split())
         if not raw:
             continue
@@ -159,7 +174,7 @@ def _topic_blob(manifest: dict, article_dir: Path | None = None) -> str:
         " ".join(str(x) for x in (manifest.get("cover_keys_ru") or [])),
     ]
     slots = manifest.get("slots") or {}
-    for key in ("cover", "inline_1", "inline_2", "inline_3"):
+    for key in _manifest_slot_keys(manifest):
         slot = slots.get(key) or {}
         parts.append(str(slot.get("h2_anchor") or ""))
         parts.append(str(slot.get("scene_hint") or ""))
@@ -262,6 +277,46 @@ def git_safe_reference_url(ref_url: str) -> str:
     return redact_site_base(value)
 
 
+def run_motif_gate(root: Path, manifest: dict, article_dir: Path) -> bool:
+    """Preflight anti-repeat if cover_motifs present in manifest."""
+    motifs = (manifest.get("cover_motifs") or {})
+    if not isinstance(motifs, dict) or not motifs:
+        return True
+    import subprocess
+
+    cmd = [
+        sys.executable,
+        str(root / "scripts/excalibur_blog_cover_motif_gate.py"),
+        "check",
+        "--topic-id",
+        str(manifest.get("topic_id") or ""),
+        "--slug",
+        str(manifest.get("slug") or article_dir.name),
+    ]
+    field_map = {
+        "composition": "composition",
+        "location": "location",
+        "meme": "meme",
+        "prop_set": "prop-set",
+        "sticker_set": "sticker-set",
+        "joke": "joke",
+    }
+    for key, flag in field_map.items():
+        value = str(motifs.get(key) or "").strip()
+        if value:
+            cmd.extend([f"--{flag}", value])
+    proc = subprocess.run(cmd, cwd=root, capture_output=True, text=True, check=False)
+    if proc.returncode != 0:
+        if proc.stdout.strip():
+            print(proc.stdout.strip(), file=sys.stderr)
+        if proc.stderr.strip():
+            print(proc.stderr.strip(), file=sys.stderr)
+        return False
+    if proc.stdout.strip():
+        print(proc.stdout.strip())
+    return True
+
+
 def validate_prompt_budget(prompt: str) -> bool:
     prompt_chars = len(prompt)
     if prompt_chars <= MAX_MCP_PROMPT_CHARS:
@@ -305,129 +360,90 @@ def build_prompt(
     types_catalog: dict,
     design_code: dict,
     article_dir: Path | None = None,
+    *,
+    canvas_slots: tuple[str, ...] | None = None,
+    has_cover: bool = True,
 ) -> str:
     slots = manifest.get("slots") or {}
+    canvas_slots = canvas_slots or tuple(CANVAS_1_SLOTS)
 
     def slot(key: str) -> dict:
         return slots.get(key) or {}
 
-    cover = slot("cover")
-    i1, i2, i3 = slot("inline_1"), slot("inline_2"), slot("inline_3")
     fact_locks = topic_fact_lock_lines(manifest, article_dir)
     cat_ok = style_allows_cat_stickers(style)
     cat_hero = style_is_situational_cat_hero(style)
 
-    highlight = compact(manifest.get("cover_hook_highlight", ""), 24)
-    highlight_rule = (
-        f'paint ONLY the highlight word "{highlight}" in hot-pink #FF1493; '
-        f'hook text must match exactly — do not substitute «время»/traffic markers'
-        if highlight
-        else "paint at most ONE punch word in hot-pink #FF1493"
-    )
-    cover_scene = sanitize_cover_scene_hint(
-        str(cover.get("scene_hint") or ""), highlight
-    )
-    cover_hook_text = compact(manifest.get("cover_hook", ""), 120)
-    cover_sticky = compact(str(cover.get("sticky") or ""), 48)
-    sticky_lock = (
-        f" Small pink sticky with EXACTLY «{cover_sticky}» in Cyrillic."
-        if cover_sticky
-        else ""
-    )
-    # Prefer style preset locks when present (cat digital collage vs editorial).
     style_prefix = compact(
         style.get("global_prompt_prefix")
         or design_code.get("cover_panel_prompt_block")
+        or design_code.get("inline_information_block")
         or "",
-        520,
+        380,
     )
     if not style_prefix:
         style_prefix = (
-            "Dense collage RU editorial, WHITE #FFFFFF, BLACK #141821 Cyrillic ink, "
-            "hot-pink #FF1493 one accent only. Every panel: torn paper, tape, "
-            "≥2 topic stickers, sticky, ≥1 educational UI card (labels from scene_hint). "
-            "Busy collage, not sterile."
+            "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic ink, "
+            "gold #dcc5a1 one accent only. Torn paper, gold tape/sticky, informative UI cards."
         )
-    if cat_hero:
-        ban_line = (
-            "Ban: ANY human face/host/bearded man/glasses portrait/white-hoodie person/"
-            "Drake/facepalm/stock watermarks/keyword spam/«Ключевые темы»/"
-            "Latin lookalike Cyrillic/pipeline stamps/EXCALIBUR badge. "
-            "Cover hero MUST be ONE LARGE situational funny cat "
-            "(anthropomorphic everyday scene unique to this article)."
+
+    quadrant_labels = ("Top-left", "Top-right", "Bottom-left", "Bottom-right")
+    panel_lines: list[str] = []
+
+    if has_cover and "cover" in canvas_slots:
+        cover = slot("cover")
+        highlight = compact(manifest.get("cover_hook_highlight", ""), 24)
+        highlight_rule = (
+            f'paint ONLY the highlight word "{highlight}" in gold #dcc5a1'
+            if highlight
+            else "paint at most ONE punch word in gold #dcc5a1"
         )
-        cover_scene_tail = (
-            "LARGE situational cat is the ONLY living hero; invent unique scene; "
-            "pink banners/tape; NO human; no tiny corner-only stickers as hero."
+        cover_scene = sanitize_cover_scene_hint(str(cover.get("scene_hint") or ""), highlight)
+        cover_hook_text = compact(manifest.get("cover_hook", ""), 120)
+        cover_sticky = compact(str(cover.get("sticky") or ""), 48)
+        sticky_lock = (
+            f" Small gold sticky with EXACTLY «{cover_sticky}» in Cyrillic."
+            if cover_sticky
+            else ""
         )
-        reference_line = (
-            "STYLE LOCK only (colors/collage language from reference plate). "
-            "Do NOT copy any human face from reference. Cover subject = cat."
+        panel_lines.append(
+            f"TL COVER TXT «{cover_hook_text}» bold Cyrillic black, {highlight_rule}.{sticky_lock} "
+            f"Phone EXACT «{COVER_PHONE_CTA}» readable CTA sticker. "
+            f"Host i2i left ({BODY_LOCK}); sun flare; "
+            f"{compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; "
+            f"1-2 meme stickers; {BOARD_STATIONERY}; Wordstat/Tyumen; #FFF; perfect Cyrillic"
         )
-        inline_suffix = (
-            "Inline all: dense collage — BLACK heading, UI card, ≥2 stickers+tape/sticky; "
-            "NO people/faces/host/Drake/EXCALIBUR badge; no cover-hook duplicate; "
-            "cats optional tiny accent only. Neg: sterile white, human faces, watermark, 9:16."
-        )
-    elif cat_ok:
-        ban_line = (
-            "Ban: Drake/facepalm/human reaction cutouts/joke speech bubbles/"
-            "stock watermarks/keyword spam/«Ключевые темы»/Latin lookalike Cyrillic/"
-            "pipeline stamps/EXCALIBUR badge or sword. ALLOW funny cat sticker-cutouts "
-            "with thick white outline (redraw; do not paste stock photos)."
-        )
-        cover_scene_tail = (
-            "host+face LARGE left; 1–2 funny cat stickers (white outline) "
-            "tiny/medium right; pink banners/tape; no sterile/Drake/canned EN filler."
-        )
-        reference_line = (
-            "REFERENCE FACE only top-left when cover_mode=host_reference: use blog-hero visual_lock; "
-            "expressive editorial pose; no headphones; no human meme reaction."
-        )
-        inline_suffix = (
-            "Inline all: dense collage — BLACK heading, UI card, ≥2 stickers+tape/sticky; "
-            "optional ONE tiny cat sticker; NO people/faces/host/Drake/EXCALIBUR badge; "
-            "no cover-hook duplicate. Neg: sterile white, all-pink headline, keyword spam, "
-            "watermark, logo, 9:16, unreadable text, extra faces."
-        )
+        inline_keys = [k for k in canvas_slots if k != "cover"]
+        for label, key in zip(quadrant_labels[1:], inline_keys[:3]):
+            panel_lines.append(f"{label} inline: {inline_panel_prompt(slot(key), types_catalog)}")
     else:
-        ban_line = (
-            "Ban: memes/reaction emoji/facepalm/animals/joke captions/silhouettes/"
-            "keyword spam/«Ключевые темы»/Latin lookalike Cyrillic/pipeline stamps/"
-            "EXCALIBUR badge or sword."
-        )
-        cover_scene_tail = (
-            "host+face; dense collage + topic object; no sterile/meme/canned EN chat filler."
-        )
-        reference_line = (
-            "REFERENCE FACE only top-left when cover_mode=host_reference: use blog-hero visual_lock; "
-            "expressive editorial pose; no headphones; no meme reaction."
-        )
-        inline_suffix = (
-            "Inline all: dense collage — BLACK heading, UI card, ≥2 stickers+tape/sticky; "
-            "NO people/faces/host/meme/EXCALIBUR badge; no cover-hook duplicate. "
-            "Neg: sterile white, all-pink headline, keyword spam, watermark, logo, 9:16, "
-            "unreadable text, extra faces."
-        )
+        for label, key in zip(quadrant_labels, list(canvas_slots)[:4]):
+            panel_lines.append(f"{label} inline: {inline_panel_prompt(slot(key), types_catalog)}")
+
+    ban_line = (
+        "Ban: dark/low-key; inventory props; celebrity memes; EXCALIBUR stamp; chubby host; "
+        f"{INLINE_BAN_EXTRA}."
+    )
+    reference_line = (
+        f"Cover TL only: i2i identity-real ({BODY_LOCK}); invent scene; no AI hero-ref."
+        if has_cover
+        else "Inlines: no host face; meme stickers OK on flagged panels."
+    )
+    inline_suffix = (
+        f"Inline all: #FFF collage, gold/black Cyrillic labels, {BOARD_STATIONERY}; "
+        "dense facts/numbers; exact TXT per panel; meme only if +meme; no icon soup; zero typos."
+    )
+
     lines = [
-        # NEVER open with "Excalibur BLOG" — models stamp that phrase as a logo
-        # badge on every panel (INC-20260723-1223 / user correction).
         style_prefix,
         "Canvas 2048x1152 exact 2x2; four 16:9 panels (1024x576); thin white gutters; no bleed.",
         "",
         ban_line,
-        "TEXT LANGUAGE LOCK: all visible text is RUSSIAN Cyrillic only. Renderable strings are given per panel in TEXT LOCK lines — render them exactly. No English headline, no Latin slogan, no pseudo-Cyrillic squiggles, no invented words.",
+        "TEXT LANGUAGE LOCK: all visible text is RUSSIAN Cyrillic only; exact LABELS per panel only.",
         "",
         reference_line,
         "",
-        f'Top-left COVER TEXT LOCK: the ONLY large headline is EXACTLY this Russian sentence: «{cover_hook_text}» — big bold condensed Cyrillic, black #141821, '
-        f'{highlight_rule}; any other large/headline text (especially English like "TOKEN BURN RATE") is FORBIDDEN.{sticky_lock} '
-        "no keyword list card; "
-        f"scene: {compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; {cover_scene_tail}",
-        "",
-        f"Top-right inline: {inline_panel_prompt(i1, types_catalog)}",
-        f"Bottom-left inline: {inline_panel_prompt(i2, types_catalog)}",
-        f"Bottom-right inline: {inline_panel_prompt(i3, types_catalog)}",
+        *panel_lines,
         "",
         inline_suffix,
     ]
@@ -440,7 +456,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--article-dir", required=True)
     ap.add_argument("--manifest", default="cover/quad-manifest.json")
-    ap.add_argument("--write-batch", action="store_true", help="Write cover/quad-mcp-batch.json")
+    ap.add_argument("--canvas-index", type=int, default=0, help="Write batch for canvas 1 or 2; 0=all")
+    ap.add_argument("--write-batch", action="store_true", help="Write quad-mcp-batch JSON per canvas")
     args = ap.parse_args()
 
     root = project_root()
@@ -471,155 +488,133 @@ def main() -> int:
 
     cat_hero = style_is_situational_cat_hero(style)
     local_reference = str(style.get("local_reference") or "").strip()
-    prefer_local_reference = False
-    if cat_hero and local_reference:
-        local_path = root / local_reference
-        if not local_path.is_file():
-            print(
-                f"❌ COVER STYLE BLOCKER: local_reference missing: {local_reference}",
-                file=sys.stderr,
-            )
-            return 1
-        # Git-safe placeholder; Kie uploads local_reference before createTask.
-        batch_ref_url = (
-            f"{SITE_BASE_PLACEHOLDER}/wp-content/uploads/excalibur/"
-            f"{Path(local_reference).name}"
-        )
-        prefer_local_reference = True
-    else:
-        ref_url = (hero.get("reference_url_hosted") or "").strip()
-        if not ref_url:
-            print(
-                "❌ COVER HERO BLOCKER: reference_url_hosted missing. Run excalibur_blog_hero_reference_url.py",
-                file=sys.stderr,
-            )
-            return 1
-        if not validate_reference_url(ref_url):
-            return 1
-        # Committed batch always uses {{SITE_BASE}}; Kie API expands at runtime.
-        batch_ref_url = git_safe_reference_url(ref_url)
-        if REDACTED_LITERAL in batch_ref_url:
-            print(
-                "❌ COVER HERO BLOCKER: cannot derive git-safe reference_url_hosted; "
-                f"set blog-hero.json to {SITE_BASE_PLACEHOLDER}/wp-content/.../ava.jpg",
-                file=sys.stderr,
-            )
+
+    inline_count = inline_count_from_manifest(manifest)
+    canvas_specs = canvas_specs_for_inline_count(inline_count)
+    if args.canvas_index:
+        canvas_specs = [s for s in canvas_specs if s["index"] == args.canvas_index]
+        if not canvas_specs:
+            print(f"❌ PROMPT BLOCKER: unknown canvas-index={args.canvas_index}", file=sys.stderr)
             return 1
 
-    warn_long_scene_hints(manifest)
-    prompt = build_prompt(
-        manifest, style, hero, types_catalog, design_code, article_dir=article_dir
-    )
-    if not validate_prompt_budget(prompt):
-        return 1
-    prompt_path = article_dir / "cover" / "quad-mcp-prompt.txt"
-    prompt_path.write_text(prompt + "\n", encoding="utf-8")
-    print(f"OK prompt={prompt_path} chars={len(prompt)} max={MAX_MCP_PROMPT_CHARS}")
-
-    if args.write_batch:
-        # Cover copy is agent-owned. This script transports the completed
-        # manifest to Kie; it must not evaluate wording or suggest alternatives.
-        cover_slot = (manifest.get("slots") or {}).get("cover") or {}
-        hook = str(manifest.get("cover_hook") or "").strip()
-        highlight = str(manifest.get("cover_hook_highlight") or "").strip()
-        required_errors: list[str] = []
-        if not hook:
-            required_errors.append("cover_hook empty — Cover agent must write it")
-        if not highlight:
-            required_errors.append(
-                "cover_hook_highlight empty — Cover agent must choose it"
-            )
-        for key in ("cover", "inline_1", "inline_2", "inline_3"):
-            slot = (manifest.get("slots") or {}).get(key) or {}
-            if not str(slot.get("scene_hint") or "").strip():
-                required_errors.append(
-                    f"{key}.scene_hint empty — Cover agent must invent it "
-                    "(no script templates; situational cat hero invents unique scene)"
+    for spec in canvas_specs:
+        has_cover = bool(spec.get("has_cover"))
+        canvas_slots = tuple(spec["slots"])
+        identity_spec: dict[str, str] = {}
+        identity_rel = ""
+        if has_cover:
+            topic_id = str(manifest.get("topic_id") or "").strip()
+            slug = str(manifest.get("slug") or article_dir.name).strip()
+            identity_spec = pick_identity_reference(topic_id, slug)
+            identity_rel = f"memory/cover/assets/identity-real/{identity_spec['file']}"
+            identity_path = root / identity_rel
+            if not identity_path.is_file():
+                print(
+                    f"❌ IDENTITY BLOCKER: missing live reference {identity_rel} "
+                    f"(stage via memory/setup/visual-inbox/)",
+                    file=sys.stderr,
                 )
-            if not str(slot.get("alt") or "").strip():
-                required_errors.append(f"{key}.alt empty — Cover agent must invent alt")
+                return 1
+            ref_url = (hero.get("reference_url_hosted") or "").strip()
+            if not ref_url:
+                print("❌ COVER HERO BLOCKER: reference_url_hosted missing", file=sys.stderr)
+                return 1
+            if not validate_reference_url(ref_url):
+                return 1
+            batch_ref_url = git_safe_reference_url(ref_url)
+        else:
+            batch_ref_url = ""
+
+        warn_long_scene_hints(manifest)
+        prompt = build_prompt(
+            manifest,
+            style,
+            hero,
+            types_catalog,
+            design_code,
+            article_dir=article_dir,
+            canvas_slots=canvas_slots,
+            has_cover=has_cover,
+        )
+        if not validate_prompt_budget(prompt):
+            return 1
+        prompt_path = article_dir / "cover" / Path(str(spec["prompt_file"])).name
+        prompt_path.write_text(prompt + "\n", encoding="utf-8")
+        print(f"OK prompt={prompt_path} chars={len(prompt)} max={MAX_MCP_PROMPT_CHARS}")
+
+        if not args.write_batch:
+            continue
+
+        if has_cover and not run_motif_gate(root, manifest, article_dir):
+            print("❌ COVER MOTIF BLOCKER: 14-day anti-repeat collision", file=sys.stderr)
+            return 1
+
+        required_errors: list[str] = []
+        if has_cover:
+            if not str(manifest.get("cover_hook") or "").strip():
+                required_errors.append("cover_hook empty")
+            if not str(manifest.get("cover_hook_highlight") or "").strip():
+                required_errors.append("cover_hook_highlight empty")
+        for key in canvas_slots:
+            slot_data = (manifest.get("slots") or {}).get(key) or {}
+            if not str(slot_data.get("scene_hint") or "").strip():
+                required_errors.append(f"{key}.scene_hint empty")
+            if not str(slot_data.get("alt") or "").strip():
+                required_errors.append(f"{key}.alt empty")
         if required_errors:
-            print(
-                "❌ COVER MANIFEST BLOCKER: agent-owned fields are missing; "
-                "complete quad-manifest.json before image API.",
-                file=sys.stderr,
-            )
+            print("❌ COVER MANIFEST BLOCKER:", file=sys.stderr)
             for err in required_errors:
                 print(f"  - {err}", file=sys.stderr)
             return 1
-        api_input = {
+
+        api_input: dict[str, object] = {
             "prompt": prompt,
-            "input_urls": [batch_ref_url],
             "aspect_ratio": "16:9",
             "resolution": MCP_RESOLUTION,
         }
+        if batch_ref_url:
+            api_input["input_urls"] = [batch_ref_url]
+
         batch = {
-            "pipeline": "quad_canvas_1x_image_api",
+            "pipeline": manifest.get("pipeline") or "quad_canvas_2x_image_api_longform",
+            "canvas_index": spec["index"],
+            "identity_reference_local": identity_rel if has_cover else "",
+            "identity_reference_id": identity_spec["id"] if has_cover else "",
             "reference_url_hosted": batch_ref_url,
-            "cover_hero_mode": style.get("cover_hero_mode") or "host",
-            "prefer_local_reference": prefer_local_reference,
-            "local_reference": local_reference if prefer_local_reference else "",
-            "output_canvas": "cover/canvas-quad.png",
-            "expected_runtime_seconds": 900,
+            "output_canvas": spec["canvas_file"],
+            "result_path": spec["result_file"],
+            "slots": list(canvas_slots),
             "preferred_image_flow": {
-                "provider": "kie.ai",
-                "model": KIE_IMAGE_MODEL,
-                "script": "python scripts/excalibur_blog_kie_gpt_image2_api.py --article-dir <article_dir>",
-                "api_key_env": "KIE_API_KEY",
-                "result_path": "cover/quad-mcp-result.json",
-                "apply_script": "python scripts/excalibur_blog_quad_apply.py --article-dir <article_dir> --inject-html",
-                "note": "PRIMARY Cloud path when KIE_API_KEY is set. Do NOT call sync MCP gpt-image-2 first — it often times out (-32001) on 2K i2i. createTask -> recordInfo polls in shell.",
-            },
-            "timeout_policy": {
-                "tool": "gpt-image-2",
-                "timeout_error": "HTTP MCP tool execution failed: MCP error -32001: Request timed out",
-                "not_final_blocker": True,
-                "sync_create_max_attempts": 1,
-                "backend_max_wait_seconds": 900,
-                "recommended_async_poll_interval_seconds": 10,
-                "recommended_async_max_wait_seconds": 900,
-                "backend_note": "If KIE_API_KEY is set, skip MCP entirely and use preferred_image_flow. Sync MCP -32001 is client timeout; do not blind-retry create.",
-                "preferred_async_flow": {
-                    "primary": "python scripts/excalibur_blog_kie_gpt_image2_api.py --article-dir <article_dir> when KIE_API_KEY is set.",
-                    "create": "Legacy MCP only if KIE_API_KEY missing: use async image create/start MCP tool if present. Call once with jobs[0].mcp_args and record task_id.",
-                    "status": "Poll status/result MCP tool by task_id every 10-15 seconds until url is ready, up to backend_max_wait_seconds.",
-                    "idempotency": "Do not create a second image job unless status/result confirms the previous job was not created or failed.",
-                },
-                "blocker_only_if": "KIE_API_KEY missing AND sync gpt-image-2 times out with -32001 and no generated URL, task_id, or async status/result MCP tool is available.",
-                "mcp_invocation": "Legacy fallback ONLY when KIE_API_KEY is missing. If KIE_API_KEY is set, call scripts/excalibur_blog_kie_gpt_image2_api.py and do not invoke MCP gpt-image-2.",
-                "log_recovery": "If the MCP/Cloud log or expanded MCP tool response already contains a generated image URL after the HTTP timeout, treat it as success: save that URL to cover/quad-mcp-result.json yourself or pass it directly to quad_apply. Do not search cover/* for the URL; it will not exist there until you save it. Do not start another image job while a generated URL exists.",
-                "recovery_needed": "If there is no URL/task_id and no async status/result tool after a sync timeout, stop with COVER MCP ASYNC BLOCKER. Do not blindly retry and create a duplicate generation.",
-                "instruction": "If KIE_API_KEY is set: run kie_gpt_image2_api.py only — never start with sync MCP gpt-image-2. If KIE_API_KEY is missing: prefer async MCP tools; if only sync gpt-image-2 exists, call it once. After -32001, inspect MCP logs for URL/task_id; do not blind-retry sync create. Without URL do not split/apply.",
+                "provider": "derouter-rest",
+                "script": "scripts/excalibur_blog_derouter_gpt_image2_api.py",
+                "resolution": MCP_RESOLUTION,
+                "note": (
+                    "PRIMARY: Derouter REST image API (api-direct, 2K 16:9). "
+                    "Fallback: excalibur_blog_kie_gpt_image2_api.py when DEROUTER auth/5xx. "
+                    "FORBIDDEN: flux2-pro-*, Seedream, nano_banana*, z-image, mcp-derouter/start-mcp.sh."
+                ),
+                "apply_script": (
+                    "python3 scripts/excalibur_blog_quad_apply.py "
+                    f"--article-dir <article_dir> --canvas-index {spec['index']} --inject-html"
+                ),
             },
             "jobs": [
                 {
                     "slot": "canvas_quad",
-                    "tool": "gpt-image-2",
-                    "note": "ONE successful image only — 4 panels inside, then excalibur_blog_cover_quad_split.py. Prefer Kie API script when KIE_API_KEY set. MCP is fallback only if key missing. HTTP -32001 from sync gpt-image-2 means client timeout; do not blindly retry sync create.",
-                    "api_args": {
-                        "model": KIE_IMAGE_MODEL,
-                        "input": api_input,
-                    },
-                    "mcp_args": {
-                        **api_input,
-                    },
+                    "tool": "derouter-rest",
+                    "mcp_args": api_input,
                 }
             ],
             "validation": {
                 "prompt_chars": len(prompt),
                 "max_prompt_chars": MAX_MCP_PROMPT_CHARS,
-                # Git-safe placeholder only — never live PUBLIC_SITE_URL host / [REDACTED].
-                "required_reference_host": SITE_HOST_PLACEHOLDER,
+                "required_reference_host": SITE_HOST_PLACEHOLDER if has_cover else "",
                 "resolution": MCP_RESOLUTION,
             },
         }
-        batch_path = article_dir / "cover" / "quad-mcp-batch.json"
+        batch_path = article_dir / "cover" / Path(str(spec["batch_file"])).name
         save_json(batch_path, batch)
-        # Runtime expand check (does not write live host into batch).
-        live = resolve_public_base_from_env()
-        if live and SITE_BASE_PLACEHOLDER in batch_ref_url:
-            _ = expand_site_base(batch_ref_url, live)
-        print(f"OK batch={batch_path} jobs=1 input_urls=1 git_safe_ref={batch_ref_url}")
+        print(f"OK batch={batch_path} canvas={spec['index']} jobs=1")
 
     return 0
 

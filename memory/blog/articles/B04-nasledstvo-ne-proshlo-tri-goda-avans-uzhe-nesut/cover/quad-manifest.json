@@ -1,0 +1,161 @@
+{
+  "topic_id": "B04",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Скрытый наследник без отказа",
+  "cover_hook_highlight": "наследник",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: Derouter REST (DEROUTER_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "cover_motifs": {
+    "composition": "host_large_left_points_hidden_heir_document_phone_cta_sun_flare",
+    "location": "bright_white_notary_waiting_tyumen_high_key_glass",
+    "meme": "shrug_guy_sticker_plus_skeptical_cat_cutout",
+    "prop_set": "egrn_one_owner_tiny_missing_heir_card_phone_screen",
+    "sticker_set": "wordstat_nasledstvo_kupit_kvartiru_tyuymeni_proverka",
+    "joke": "sticky_один_собственник_arrow_to_сын_всплывёт"
+  },
+  "wordstat_stickers": [
+    "проверка квартиры при наследстве",
+    "купить квартиру в тюмени",
+    "наследство квартира продажа"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Обложка: скрытый наследник без отказа при покупке квартиры в Тюмени",
+      "scene_hint": "Host LARGE left slim blazer; выписка один собственник; tiny карточка сын без отказа; телефон +7 922 001 65 05; светлая доска скотч; мем-кот; sun flare #FFF",
+      "meme_caption_ru": "",
+      "sticky": "не броня"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Один собственник в выписке не закрывает наследственный риск",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "labeled_checklist #FFF: один собственник ЕГРН мало наследники риск; error vs correct rows; gold tape pins; NO faces; sun flare",
+      "alt": "Чеклист: почему один собственник в ЕГРН не закрывает наследственный риск",
+      "labels": [
+        "один собственник",
+        "ЕГРН мало",
+        "наследники",
+        "риск"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Предавансовый отчёт за 2 900 ₽: что показывает красная строка",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "bar chart #FFF: 2900 рублей красная строка документы до аванса; gold accent; NO faces; torn paper tape",
+      "alt": "Схема: что показывает красная строка в предавансовом отчёте за 2900 рублей",
+      "labels": [
+        "2900 рублей",
+        "красная строка",
+        "документы",
+        "до аванса"
+      ]
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Сын от первого брака без отказа — наследник, которого «не считают»",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison_table #FFF: первый брак сын без отказа не считают columns; green red X; NO faces; tiny cat sticker",
+      "alt": "Таблица: сын от первого брака без нотариального отказа",
+      "labels": [
+        "первый брак",
+        "сын",
+        "без отказа",
+        "не считают"
+      ]
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "«Отказа не будет, покупайте так» — почему это не аргумент",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "process_flow #FFF: устный отказ ст.1157 нотариус не аргумент numbered steps; gold pins; NO faces",
+      "alt": "Схема: почему «отказа не будет» не аргумент для покупателя",
+      "labels": [
+        "устный отказ",
+        "ст. 1157",
+        "нотариус",
+        "не аргумент"
+      ]
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Три года, шесть месяцев и восстановление: когда риск ещё жив",
+      "visual_type": "checklist_board",
+      "scene_hint": "timeline bar #FFF: три года шесть месяцев иск давности восстановление; durations labeled; NO faces",
+      "alt": "Таймлайн: три года, шесть месяцев и восстановление срока наследства",
+      "labels": [
+        "три года",
+        "шесть месяцев",
+        "иск давности",
+        "восстановление"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Чеклист документов до аванса по наследственной цепочке",
+      "visual_type": "schema_faq_ui",
+      "scene_hint": "labeled_checklist #FFF: чеклист реестр ФНП отказы наследство rows; gold tape; NO faces",
+      "alt": "Чеклист документов по наследственной цепочке до аванса",
+      "labels": [
+        "чеклист",
+        "реестр ФНП",
+        "отказы",
+        "наследство"
+      ]
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Ипотека, титул и когда лучше пропустить объект",
+      "visual_type": "tool_screenshot",
+      "scene_hint": "comparison_table #FFF: ипотека титул пропустить Тюмень bank vs risk columns; NO faces; meme people sticker small",
+      "alt": "Сравнение: ипотека, титул и когда лучше пропустить объект",
+      "labels": [
+        "ипотека",
+        "титул",
+        "пропустить",
+        "Тюмень"
+      ]
+    }
+  },
+  "cover_keys_ru": []
+}

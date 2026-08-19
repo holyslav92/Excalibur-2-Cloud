@@ -29,7 +29,8 @@ def project_root() -> Path:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--article-dir", required=True)
-    ap.add_argument("--url", default="", help="MCP result URL (or read cover/quad-mcp-result.json)")
+    ap.add_argument("--url", default="", help="MCP result URL (or read result json)")
+    ap.add_argument("--canvas-index", type=int, default=1, help="Canvas index 1 or 2 (longform)")
     ap.add_argument("--inject-html", action="store_true")
     ap.add_argument("--output-size", default="1200x675")
     args = ap.parse_args()
@@ -42,21 +43,55 @@ def main() -> int:
     cover_dir.mkdir(parents=True, exist_ok=True)
 
     url = args.url.strip()
+    local_path: Path | None = None
+    result_name = f"quad-mcp-result-{args.canvas_index:02d}.json"
+    legacy_result_name = "quad-mcp-result.json" if args.canvas_index == 1 else ""
     if not url:
-        result_path = cover_dir / "quad-mcp-result.json"
-        if result_path.is_file():
-            url = (json.loads(result_path.read_text(encoding="utf-8")).get("url") or "").strip()
-    if not url:
-        print("❌ QUAD APPLY BLOCKER: pass --url or cover/quad-mcp-result.json", file=sys.stderr)
+        candidates = [cover_dir / result_name]
+        if legacy_result_name:
+            candidates.append(cover_dir / legacy_result_name)
+        for result_path in candidates:
+            if result_path.is_file():
+                result_data = json.loads(result_path.read_text(encoding="utf-8"))
+                url = (result_data.get("url") or "").strip()
+                local_rel = (result_data.get("local_path") or "").strip()
+                if local_rel:
+                    local_path = Path(local_rel)
+                    if not local_path.is_absolute():
+                        local_path = article_dir / local_path
+                if url or local_path:
+                    break
+    if not url and not local_path:
+        print(f"❌ QUAD APPLY BLOCKER: pass --url or cover/{result_name}", file=sys.stderr)
         return 1
 
-    canvas_path = cover_dir / "canvas-quad.png"
-    data, _evidence = download_url_bytes(url)
+    manifest_path = cover_dir / "quad-manifest.json"
+    canvas_file = f"canvas-quad-{args.canvas_index:02d}.png"
+    if manifest_path.is_file():
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        for spec in manifest.get("canvases") or []:
+            if spec.get("index") == args.canvas_index:
+                canvas_file = Path(str(spec.get("canvas_file", canvas_file))).name
+                break
+
+    canvas_path = cover_dir / canvas_file
+    if local_path and local_path.is_file():
+        data = local_path.read_bytes()
+    else:
+        data, _evidence = download_url_bytes(url)
     canvas_path.write_bytes(data)
     print(f"OK canvas={canvas_path}")
 
-    result_json = cover_dir / "quad-mcp-result.json"
-    result_json.write_text(json.dumps({"url": url}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    result_json = cover_dir / result_name
+    result_out: dict[str, str] = {}
+    if url:
+        result_out["url"] = url
+    if local_path and local_path.is_file():
+        rel = local_path
+        if rel.is_relative_to(article_dir):
+            rel = rel.relative_to(article_dir)
+        result_out["local_path"] = str(rel)
+    result_json.write_text(json.dumps(result_out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     cmd = [
         sys.executable,
@@ -65,6 +100,8 @@ def main() -> int:
         str(article_dir),
         "--manifest",
         "cover/quad-manifest.json",
+        "--canvas-index",
+        str(args.canvas_index),
         "--output-size",
         args.output_size,
     ]

@@ -1,0 +1,27 @@
+{
+  "slug": "nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut",
+  "topic_id": "B04",
+  "permalink": "{{SITE_BASE}}/blog/bez-rubriki/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B04-nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1206221,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=8760 slug=nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut\nOK featured_image=8761\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=8762 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut-inline-01.png\nOK inline_alt=8762\nOK inline_caption=8762\nOK inline_description=8762\nOK inline_image_upload=8763 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut-inline-02.png\nOK inline_alt=8763\nOK inline_caption=8763\nOK inline_description=8763\nOK inline_image_upload=8764 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut-inline-03.png\nOK inline_alt=8764\nOK inline_caption=8764\nOK inline_description=8764\nOK inline_image_upload=8765 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut-inline-04.png\nOK inline_alt=8765\nOK inline_caption=8765\nOK inline_description=8765\nOK inline_image_upload=8766 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut-inline-05.png\nOK inline_alt=8766\nOK inline_caption=8766\nOK inline_description=8766\nOK inline_image_upload=8767 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut-inline-06.png\nOK inline_alt=8767\nOK inline_caption=8767\nOK inline_description=8767\nOK inline_image_upload=8768 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut-inline-07.png\nOK inline_alt=8768\nOK inline_caption=8768\nOK inline_description=8768\npermalink={{SITE_BASE}}/blog/bez-rubriki/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/bez-rubriki/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut/",
+    "errors": []
+  }
+}

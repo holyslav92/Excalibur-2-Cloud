@@ -1,0 +1,24 @@
+{
+  "agent": "excalibur-blog-cover-qa",
+  "status": "PASS",
+  "checked_at": "2026-08-19",
+  "topic_id": "B04",
+  "regeneration": "kie_fallback_after_derouter_model_discontinued",
+  "checks": {
+    "identity_face_28yo": true,
+    "identity_body_medium_slim": true,
+    "cover_phone_readable": true,
+    "board_stationery_ok": true,
+    "typography_cyrillic_clean": true,
+    "meme_density_inline_ok": true,
+    "light_high_key": true,
+    "motif_no_collision_14d": true,
+    "people_in_8_set": true,
+    "cats_cadence_ok": true,
+    "wordstat_stickers_1_3": true,
+    "identity_real_files": true,
+    "inline_utility_all_7": true,
+    "inline_no_host_face": true
+  },
+  "notes": "Kie image API fallback; identity via Kie file upload office selfie; Derouter model discontinued on platform."
+}
