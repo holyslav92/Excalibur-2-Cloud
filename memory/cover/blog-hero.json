@@ -6,31 +6,38 @@
   "age_lock": 28,
   "reference_images": [
     {
+      "id": "face_studio_2026",
+      "file": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+      "role": "face_primary",
+      "notes": "ONLY FACE i2i source. Studio portrait 2026-06-23: jaw, stubble, hairline, dark-brown hair, warm eyes.",
+      "do_not_clone_scene": true
+    },
+    {
       "id": "hoodie_airpods",
       "file": "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
-      "role": "identity_lock_primary",
-      "notes": "Лучший facial geometry lock: крупный план, родинки.",
+      "role": "body_build_only",
+      "notes": "Medium-slim build only — NOT FACE source.",
       "do_not_clone_scene": true
     },
     {
       "id": "office_selfie",
       "file": "memory/cover/assets/identity-real/face-office-selfie.jpeg",
-      "role": "identity_lock",
-      "notes": "Круглое лицо, лёгкая щетина.",
+      "role": "body_build_only",
+      "notes": "Medium-slim build only — NOT FACE source.",
       "do_not_clone_scene": true
     },
     {
       "id": "greenhouse_yahweh",
       "file": "memory/cover/assets/identity-real/face-greenhouse-yahweh.png",
-      "role": "identity_lock",
-      "notes": "Full body likeness only; не клонировать оранжерею/YAHWEH.",
+      "role": "scene_composition_only",
+      "notes": "Scene mood only; never FACE; do not clone greenhouse.",
       "do_not_clone_scene": true
     },
     {
       "id": "immortal_regiment",
       "file": "memory/cover/assets/identity-real/face-immortal-regiment.jpeg",
-      "role": "identity_lock_face_only",
-      "notes": "Только лицо; не клонировать марш/портрет в руках.",
+      "role": "scene_composition_only",
+      "notes": "Scene mood only; never FACE; do not clone march/portrait.",
       "do_not_clone_scene": true
     }
   ],
@@ -50,28 +57,29 @@
       "hard_rule": "NEVER use as FACE source; do not copy face or pose 1:1"
     }
   ],
-  "reference_image": "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
-  "reference_image_secondary": "memory/cover/assets/identity-real/face-office-selfie.jpeg",
-  "reference_notes": "PRIMARY identity lock: четыре LIVE-фото в memory/cover/assets/identity-real/ (не AI). i2i ротирует их по topic_id. Лицо и телосложение: 28 лет, **medium/slim build как на референсах** (hoodie selfie, office selfie, greenhouse) — овальное лицо без пухлых щёк, короткие светло-русые/песочные волосы, fair skin. Запрещены: chubby/overweight, puffy cheeks, double chin, thick neck, wide torso в обтягивающем пиджаке, plastic/uncanny лица, hero-ref AI как FACE source. Каждая обложка: НОВАЯ эмоция, поза, жест, сцена — не клон ни одного из шести референсных кадров.",
+  "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+  "reference_image": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+  "reference_image_secondary": "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
+  "reference_notes": "FACE PRIMARY: face-studio-2026-06-23.jpg — единственный i2i input для лица. Hoodie+office — только body_build (medium-slim). Greenhouse+regiment — scene_composition_only, never FACE. 28 лет, овальное лицо, тёмно-каштановые волосы, лёгкая щетина, warm eyes. Cover-QA FAIL если лицо не тот же человек (jaw/stubble/hairline/eyes) или chubby vs portrait.",
   "visual_lock": {
-    "person": "adult man exactly 28 years old, Slavic, medium slim athletic build matching identity-real live photos, oval face (NOT puffy), short light-brown/sandy hair, fair skin, warm approachable eyes, slight closed-mouth smile or theme-matched emotion",
-    "body": "medium build, slim waist, normal neck, shoulders proportional; blazer fits comfortably NOT straining; same body proportions as identity-real refs (hoodie selfie, office selfie, greenhouse)",
-    "hair": "short light-brown/sandy hair, natural texture, not dark, not 35–45 aged",
-    "face": "same face as identity-real/* live photos only; oval face, NOT puffy cheeks, NOT double chin; light stubble ok; distinct moles on chin/cheek when visible; NOT airbrushed, NOT plastic, NOT uncanny, NOT a different person, NOT chubby",
+    "person": "adult man exactly 28 years old, Slavic, medium slim athletic build, oval face (NOT puffy), short dark-brown hair brushed to side, fair skin, warm dark-brown eyes, light stubble, slight closed-mouth smile — match face-studio-2026-06-23.jpg",
+    "body": "medium-slim build per hoodie+office body refs; blazer relaxed fit; NOT chubby, NOT puffy",
+    "hair": "short dark-brown hair, natural texture, clean hairline — match studio portrait",
+    "face": "same face as face-studio-2026-06-23.jpg ONLY; oval jaw, light stubble, hairline, eyes; NOT plastic, NOT uncanny, NOT different person, NOT chubby",
     "outfit_variants": [
       "navy/charcoal blazer + dark tee (editorial cover default) — relaxed fit, not tight on torso",
       "smart-casual shirt or henley for office/document scenes"
     ],
     "forbid": "AI-reconstructed hero-ref faces, 35–45 age look, airbrushed skin, plastic/uncanny face, chubby, overweight, puffy face, puffy cheeks, double chin, stocky build, thick neck, wide torso in tight blazer, white hoodie, pink-cat, headphones in cover host, sunglasses, other person, copy-paste of any reference scene (greenhouse, Immortal Regiment, breakroom selfie, hoodie selfie, office hologram, balcony keys)"
   },
-  "outfit_rule": "Cover host: smart-casual риэлтор (blazer/jacket). Лицо только с identity-real. Без белого худи, без AirPods на cover (они только в selfie-ref).",
+  "outfit_rule": "Cover host: outfit may change with hook; FACE must match face-studio-2026-06-23.jpg only. No white hoodie/AirPods on cover.",
   "cover_canon": "memory/cover/cover-canon.json",
   "invention_rule": "Cover agent изобретает каждую обложку с нуля — surprise, variety. No inventory lock, no default recurring props (keys, hologram, desk, balcony). Anti-repeat 14д: memory/cover/used-motifs.json.",
   "light_bright_rule": "HIGH-KEY only: светлые панели, sun flare, light leak, glow, airy. Dark cinematic — запрещён.",
   "meme_rule": "Мем-коты и мем-люди (стикеры) — часть системы, не редкий easter egg. Cover host = люди; коты/мем-реакции на cover и 1–2 inline.",
   "wordstat_stickers_rule": "1–3 designer stickers с LIVE Wordstat фразами темы (Тюмень/область, regions 55+11176). Не random spam.",
   "forbidden_daypart_formula": "REJECTED навсегда: morning desk+document / day street / evening close talk / night split «как продают / что в выписке»",
-  "prompt_fragment": "same man as i2i identity-real: 28yo, medium slim build, oval face (not puffy), sandy hair; LARGE left; INVENT new bright high-key scene+meme+Wordstat stickers; sun flare/glow; anti-repeat; no scene clone; NOT chubby; #FFF",
+  "prompt_fragment": "same man as i2i face-studio-2026-06-23: 28yo, medium slim, dark-brown hair, light stubble, oval jaw; LARGE left; invent bright high-key scene+meme+Wordstat; NOT chubby; #FFF",
   "emotion_bank": [
     {
       "id": "calm_confidence",
@@ -110,19 +118,16 @@
     "meme_caption_ru always empty"
   ],
   "meme_caption_ru": "",
-  "reference_url_hosted": "{{SITE_BASE}}/wp-content/uploads/excalibur/identity-real/face-hoodie-airpods.jpeg",
-  "reference_url_hosted_alt": "{{SITE_BASE}}/wp-content/uploads/excalibur/identity-real/face-office-selfie.jpeg",
-  "reference_url_source": "identity-real live photos (upload to WP media on publish)",
-  "reference_url_updated_at": "2026-08-18T07:25:00Z",
+  "reference_url_hosted": "{{SITE_BASE}}/wp-content/uploads/2026/06/2026-06-23-15.57.42.jpg",
+  "reference_url_hosted_alt": "{{SITE_BASE}}/wp-content/uploads/excalibur/identity-real/face-hoodie-airpods.jpeg",
+  "reference_url_source": "face-studio-2026-06-23.jpg live on tymenrieltor.ru",
+  "reference_url_updated_at": "2026-08-19T18:05:00Z",
   "secondary_references": [
-    "memory/cover/assets/identity-real/face-greenhouse-yahweh.png",
-    "memory/cover/assets/identity-real/face-immortal-regiment.jpeg"
+    "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
+    "memory/cover/assets/identity-real/face-office-selfie.jpeg"
   ],
   "i2i_reference_rotation": [
-    "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
-    "memory/cover/assets/identity-real/face-office-selfie.jpeg",
-    "memory/cover/assets/identity-real/face-greenhouse-yahweh.png",
-    "memory/cover/assets/identity-real/face-immortal-regiment.jpeg"
+    "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg"
   ],
-  "i2i_reference_rotation_note": "Derouter/Kie i2i MUST rotate these four live files per article (topic_id hash). NEVER hero-ref AI JPGs as face source."
+  "i2i_reference_rotation_note": "FACE i2i MUST use face-studio-2026-06-23.jpg only. Hoodie/office = body_build only. Greenhouse/regiment = never FACE."
 }

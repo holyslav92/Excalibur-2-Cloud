@@ -3,12 +3,22 @@
   "status": "ok",
   "label_ru": "The Риэлтор — light/bright, мемы, Wordstat-стикеры, live identity, anti-repeat",
   "canon_file": "memory/cover/cover-canon.json",
-  "reference_notes": "Лицо: identity-real/* (4 live, 28 лет). Cover изобретает сцену с нуля. High-key свет, мем-коты/люди, 1–3 Wordstat-стикера. Панели #FFFFFF.",
+  "reference_notes": "FACE: face-studio-2026-06-23.jpg only. Body: hoodie+office. Greenhouse/regiment = scene only.",
   "host_reference": true,
   "age_lock": 28,
+  "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
   "identity_lock_files": [
+    "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
     "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
     "memory/cover/assets/identity-real/face-office-selfie.jpeg",
+    "memory/cover/assets/identity-real/face-greenhouse-yahweh.png",
+    "memory/cover/assets/identity-real/face-immortal-regiment.jpeg"
+  ],
+  "body_build_only_files": [
+    "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
+    "memory/cover/assets/identity-real/face-office-selfie.jpeg"
+  ],
+  "not_face_source_files": [
     "memory/cover/assets/identity-real/face-greenhouse-yahweh.png",
     "memory/cover/assets/identity-real/face-immortal-regiment.jpeg"
   ],
@@ -34,8 +44,8 @@
     "тёплый финал сделки"
   ],
   "cover_rules": [
-    "host_reference=true; лицо и телосложение только identity-real/* (28 лет, medium-slim SLIMMER than refs)",
-    "BODY LOCK: SLIMMER than identity-real hoodie+office selfies — FAIL if chubby, puffy cheeks, thick waist, double chin, thick neck",
+    "host_reference=true; FACE only face-studio-2026-06-23.jpg; body medium-slim per hoodie+office refs",
+    "BODY LOCK: match studio portrait jaw/stubble/hairline; FAIL if chubby or different person",
     "COVER PHONE: readable CTA «+7 922 001 65 05» on phone screen or gold tape sticker — not tiny unreadable",
     "BOARD STATIONERY: light investigation-board tape/pins/strings/paper scraps — high-key beautiful, NOT dark crime-board",
     "LIGHT BRIGHT high-key: sun flare, light leak, glow, airy whites — no dark cinematic",

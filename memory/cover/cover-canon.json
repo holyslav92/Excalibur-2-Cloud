@@ -53,11 +53,20 @@
     "not": ["random words", "spam wall", "SEO tail dump"]
   },
   "identity_lock": {
+    "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+    "body_build_refs": [
+      "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
+      "memory/cover/assets/identity-real/face-office-selfie.jpeg"
+    ],
+    "not_face_source": [
+      "memory/cover/assets/identity-real/face-greenhouse-yahweh.png",
+      "memory/cover/assets/identity-real/face-immortal-regiment.jpeg"
+    ],
     "source": "memory/cover/assets/identity-real/",
     "age": 28,
-    "body_build": "medium-slim SLIMMER than identity-real refs (lean waist, oval face); NOT chubby, NOT puffy, NOT thick waist vs hoodie+office selfies",
-    "cover_body_rule": "FAIL Cover-QA if host looks heavier/chubbier/puffier than identity-real hoodie+office selfies",
-    "face": "live photos only; oval face not puffy; emotions/poses change",
+    "body_build": "medium-slim per hoodie+office body refs; NOT chubby vs face-studio portrait",
+    "cover_body_rule": "FAIL Cover-QA if host looks heavier/chubbier than face-studio-2026-06-23 or body refs",
+    "face": "face-studio-2026-06-23.jpg only for FACE; match jaw, stubble, hairline, eyes",
     "forbidden_body": ["chubby", "overweight", "puffy face", "puffy cheeks", "double chin", "stocky", "thick waist", "thick neck", "wide torso tight blazer"],
     "forbidden_scene_clone": [
       "greenhouse",
@@ -121,7 +130,7 @@
   },
   "owner_visual_polish": {
     "cover_phone_required": "+7 922 001 65 05",
-    "cover_body": "medium-slim SLIMMER than identity-real; Cover-QA FAIL if chubby/puffy/thick waist",
+    "cover_body": "medium-slim vs face-studio-2026-06-23; Cover-QA FAIL if chubby/puffy or wrong person",
     "board_stationery": "light tape/pins/strings on white investigation board — high-key, not noir",
     "meme_density": "cover: 1–2 memes required; inlines: meme on 2–3 of 7 only",
     "typography": "handsome condensed black Cyrillic + gold accent; zero spelling errors; no Latin garbage",

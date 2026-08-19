@@ -300,7 +300,7 @@ def main() -> int:
         missing_identity = missing_identity_files(root)
         check(
             not missing_identity,
-            "identity-real live photos present (4 files)",
+            "identity-real live photos present (face_primary + body/scene refs)",
             errors,
             warnings,
         )

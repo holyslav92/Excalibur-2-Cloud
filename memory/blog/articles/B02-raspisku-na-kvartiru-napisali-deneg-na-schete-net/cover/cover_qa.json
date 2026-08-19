@@ -1,10 +1,11 @@
 {
   "agent": "excalibur-blog-cover-qa",
   "status": "PASS",
-  "checked_at": "2026-08-18",
+  "checked_at": "2026-08-19",
   "topic_id": "B02",
-  "regeneration": "owner_visual_polish_v3_full_cover_plus_7_inlines",
-  "cover_md5": "57c54809f221824110b2bf4b66afab8d",
+  "regeneration": "owner_face_primary_studio_lock_canvas1_cover_only",
+  "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+  "cover_md5": "962bb4338bf485407d757e1cc4e28b9d",
   "checks": {
     "identity_face_28yo": true,
     "identity_body_medium_slim": true,
@@ -21,17 +22,18 @@
     "inline_utility_all_7": true,
     "inline_no_host_face": true
   },
+  "identity_note": "FACE i2i source = face-studio-2026-06-23.jpg only. Host matches studio portrait: dark-brown hair, light stubble, oval jaw, warm eyes, medium-slim blazer. Kie i2i fallback (Derouter edits 400 discontinued).",
   "inline_utility_notes": {
-    "inline_1": "process_flow timeline 6 steps + FAIL at bank; meme cat",
-    "inline_2": "comparison_table wrong vs correct payment order",
-    "inline_3": "comparison_table notary will vs deposit 0.5%",
+    "inline_1": "process_flow timeline — preserved from pre-regen backup (no host face)",
+    "inline_2": "comparison_table wrong vs correct — preserved backup",
+    "inline_3": "comparison_table notary vs deposit — preserved backup",
     "inline_4": "structure_diagram accreditiv flow + footnote not escrow",
     "inline_5": "bar_timeline_chart 60-90 vs 30 vs 3 days; meme cat thumbs-up",
     "inline_6": "comparison_table rates Sber 0.3% deposit 0.5% SBR",
-    "inline_7": "labeled_checklist 4 error→correct rows; ПРАВИЛЬНЫЙ ПУТЬ all 4 filled; meme cat"
+    "inline_7": "labeled_checklist 4 error→correct rows; meme cat"
   },
-  "phone_note": "Cover CTA banner shows +7 922 001 65 05 with spaces; readable at thumbnail scale.",
-  "body_lock_note": "Host medium-slim vs identity-real refs; no chubby/puffy/thick-waist on regen v3.",
-  "meme_density_note": "Cover: cat+people cutouts; inlines: meme on inline_1, inline_5, inline_7 (3 of 7).",
-  "notes": "Derouter api-direct quality=high; canvas-1 edits+i2i full regen; canvas-2: inline_5+inline_7 new, inline_4+inline_6 preserved from backup (no host face). EXCALIBUR_BLOG_ALLOW_PUBLISH off — no live publish."
+  "phone_note": "Cover phone sticker +7 922 001 65 05 readable; hook «Расписку написали — денег нет» preserved.",
+  "body_lock_note": "Host medium-slim vs face-studio portrait; no chubby/puffy on cover regen.",
+  "meme_density_note": "Cover: cat+people cutouts on investigation board; inlines unchanged.",
+  "notes": "Canvas-1 regen with face-studio-2026-06-23 i2i; inline-01..03 restored from backup. No live publish."
 }

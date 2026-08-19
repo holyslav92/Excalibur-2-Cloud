@@ -51,7 +51,7 @@
 ## Главный герой визуала
 
 - **cover_mode:** `host_reference`
-- **identity lock:** `memory/cover/assets/identity-real/*` (4 live фото, 28 лет); `scene-composition-only/hero-ref-*.jpg` — mood only, не лицо
+- **identity lock:** `face-studio-2026-06-23.jpg` = ONLY FACE i2i; hoodie+office = body only; greenhouse/regiment = scene only
 - **emotion bank:** настроение, не фиксированная сцена; cover **изобретает** с нуля
 - **light/bright:** high-key, sun flare, мемы, Wordstat-стикеры; anti-repeat 14д (`cover-canon.json`)
 - **правило:** новая выдуманная сцена; запрещена daypart-формула и inventory props

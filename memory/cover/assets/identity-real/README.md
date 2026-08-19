@@ -1,24 +1,33 @@
 # Identity-real — live photos (SOURCE OF TRUTH)
 
-**Только эти четыре файла** задают лицо Святослава Шакина (28 лет) для i2i. Это live-фото, не AI.
+## FACE (единственный i2i source)
 
 | Файл | Роль |
 |------|------|
-| `face-hoodie-airpods.jpeg` | PRIMARY geometry lock (родинки, крупный план) |
-| `face-office-selfie.jpeg` | Круглое лицо, щетина |
-| `face-greenhouse-yahweh.png` | Full-body likeness; **не клонировать** оранжерею |
-| `face-immortal-regiment.jpeg` | **Только лицо**; не клонировать марш/портрет |
+| `face-studio-2026-06-23.jpg` | **face_primary** — ONLY `/images/edits` input; jaw, stubble, hairline, eyes |
+
+Live URL: `https://tymenrieltor.ru/wp-content/uploads/2026/06/2026-06-23-15.57.42.jpg`
+
+## Body / scene (НЕ лицо)
+
+| Файл | Роль |
+|------|------|
+| `face-hoodie-airpods.jpeg` | `body_build_only` — medium-slim build, не FACE |
+| `face-office-selfie.jpeg` | `body_build_only` — medium-slim build, не FACE |
+| `face-greenhouse-yahweh.png` | `scene_composition_only` — не FACE, не клонировать оранжерею |
+| `face-immortal-regiment.jpeg` | `scene_composition_only` — не FACE, не клонировать марш |
 
 Копии держать в `memory/setup/visual-inbox/`.
 
-## i2i rotation
+## i2i
 
-`blog-hero.json` → `i2i_reference_rotation` — derouter/Kie ротирует по `topic_id`.
+`pick_identity_reference()` → **всегда** `face-studio-2026-06-23.jpg` (без ротации).
 
 ## Запрещено как FACE source
 
-- `scene-composition-only/hero-ref-*.jpg` (AI-стилизованные обложки)
-- `portrait.jpg` / `portrait-landing.jpg` (старый navy-blazer set, не primary)
+- hoodie / office / greenhouse / regiment (см. роли выше)
+- `scene-composition-only/hero-ref-*.jpg`
+- `portrait.jpg` / `portrait-landing.jpg`
 
 ## Staging
 

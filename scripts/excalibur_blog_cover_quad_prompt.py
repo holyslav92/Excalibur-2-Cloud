@@ -53,7 +53,7 @@ def sanitize_cover_scene_hint(scene: str, highlight: str) -> str:
     return _PINK_WORD_IN_SCENE.sub(_repl, scene)
 
 
-BODY_LOCK = "medium-slim lean waist; NOT chubby/puffy/thick-waist/thick-neck"
+BODY_LOCK = "face-studio-2026-06-23 jaw/stubble/hairline; medium-slim; NOT chubby/puffy"
 COVER_PHONE_CTA = "+7 922 001 65 05"
 BOARD_STATIONERY = "tape/pins/strings/paper scraps; high-key #FFF/gold; not noir"
 INLINE_BAN_EXTRA = "icon slogans; empty cells; desk scene; cover copy; celebrity memes"
@@ -425,7 +425,7 @@ def build_prompt(
         f"{INLINE_BAN_EXTRA}."
     )
     reference_line = (
-        f"Cover TL only: i2i identity-real ({BODY_LOCK}); invent scene; no AI hero-ref."
+        f"Cover TL only: i2i face-studio-2026-06-23 ({BODY_LOCK}); invent scene; no AI hero-ref."
         if has_cover
         else "Inlines: no host face; meme stickers OK on flagged panels."
     )
