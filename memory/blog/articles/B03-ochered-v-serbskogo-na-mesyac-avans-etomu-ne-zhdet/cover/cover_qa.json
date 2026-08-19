@@ -1,0 +1,37 @@
+{
+  "agent": "excalibur-blog-cover-qa",
+  "status": "PASS",
+  "checked_at": "2026-08-19",
+  "topic_id": "B03",
+  "regeneration": "derouter_api_direct_canvas1_edits_canvas2_generations",
+  "cover_md5": "68c0231776537baa15a14f00dcc8427c",
+  "checks": {
+    "identity_face_28yo": true,
+    "identity_body_medium_slim": true,
+    "cover_phone_readable": true,
+    "board_stationery_ok": true,
+    "typography_cyrillic_clean": true,
+    "meme_density_inline_ok": true,
+    "light_high_key": true,
+    "motif_no_collision_14d": true,
+    "people_in_8_set": true,
+    "cats_cadence_ok": true,
+    "wordstat_stickers_1_3": true,
+    "identity_real_files": true,
+    "inline_utility_all_7": true,
+    "inline_no_host_face": true
+  },
+  "inline_utility_notes": {
+    "inline_1": "comparison_table ПНД vs освидетельствование; meme cat",
+    "inline_2": "workflow timeline month queue vs advance deadline",
+    "inline_3": "checklist ПНД учёт vs акт день сделки",
+    "inline_4": "red-flag FAQ cards 80+ 70+",
+    "inline_5": "process_flow STOP gates; meme guy",
+    "inline_6": "numbered steps 1-5 before advance",
+    "inline_7": "quote cards + TG; meme cat"
+  },
+  "phone_note": "Cover banner +7 922 001 65 05 readable with icon.",
+  "body_lock_note": "Host medium-slim navy blazer; matches identity-real refs.",
+  "meme_density_note": "Cover: cat speech bubble + host; inlines meme on inline_1, inline_5, inline_7 (3 of 7).",
+  "notes": "Derouter api-direct 2K; canvas-1 edits+i2i; canvas-2 generations."
+}

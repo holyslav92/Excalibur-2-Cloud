@@ -1,0 +1,9 @@
+{
+  "topic_id": "B03",
+  "description": "Справка из ПНД на столе — и все спокойны. А очередь в Сербского месяц, аванс уже завтра: в Тюмени так срывают сделку с пожилым продавцом.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
