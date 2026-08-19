@@ -1,0 +1,10 @@
+{
+  "gate": "writer-meaning",
+  "status": "PASS",
+  "errors": [],
+  "metrics": {
+    "h2": 8,
+    "inline_figures": 7,
+    "words": 2028
+  }
+}
