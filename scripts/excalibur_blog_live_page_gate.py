@@ -30,6 +30,13 @@ _SHARE_CHROME_SPLIT = (
     r"<section\b[^>]*\bclass=[\"'][^\"']*\barticle-share\b)"
 )
 
+# Theme article footer CTA (article-page__footer) sits after FAQ answers but
+# before </article>; H3 inside must not count as thematic FAQ (B04 / INC-20260819).
+_FAQ_FOOTER_CHROME_SPLIT = (
+    r"(?:<footer\b[^>]*\bclass=[\"'][^\"']*\barticle-page__footer\b|"
+    r"<div\b[^>]*\bclass=[\"'][^\"']*\barticle-page__footer\b)"
+)
+
 
 def _normalize_faq_plain(text: str) -> str:
     """Match schema_gate FAQ plain-text rules (post-anchor space vs punctuation).
@@ -219,6 +226,12 @@ def inspect(
         faq_body = re.split(
             _SHARE_CHROME_SPLIT,
             faq_bodies[0],
+            maxsplit=1,
+            flags=re.I,
+        )[0]
+        faq_body = re.split(
+            _FAQ_FOOTER_CHROME_SPLIT,
+            faq_body,
             maxsplit=1,
             flags=re.I,
         )[0]
