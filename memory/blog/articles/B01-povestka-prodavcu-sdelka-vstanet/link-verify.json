@@ -1,0 +1,26 @@
+{
+  "source": "memory/blog/articles/B01-povestka-prodavcu-sdelka-vstanet/article.html",
+  "total_links": 2,
+  "failed_count": 0,
+  "verdict": "pass",
+  "links": [
+    {
+      "url": "https://xn--b1afabzvcegckfhg.xn--p1ai/",
+      "kind": "external",
+      "status": null,
+      "ok": true,
+      "skipped": true,
+      "method": null,
+      "error": null
+    },
+    {
+      "url": "https://t.me/Tyumen_Rieltor",
+      "kind": "external",
+      "status": null,
+      "ok": true,
+      "skipped": true,
+      "method": null,
+      "error": null
+    }
+  ]
+}
