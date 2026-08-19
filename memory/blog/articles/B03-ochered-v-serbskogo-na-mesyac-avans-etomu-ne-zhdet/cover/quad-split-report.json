@@ -23,22 +23,22 @@
           "fallback_reason": "aspect_crop_loss_too_high",
           "rejected_gutter": {
             "h_gutter_px": {
-              "start": 467,
+              "start": 474,
               "end": 492
             },
             "v_gutter_px": {
-              "start": 831,
-              "end": 840
+              "start": 834,
+              "end": 837
             },
             "gutter_quality": {
-              "h_center_offset_px": 9.0,
+              "h_center_offset_px": 12.5,
               "v_center_offset_px": 0.5,
-              "max_aspect_crop_loss": 0.0409,
+              "max_aspect_crop_loss": 0.0443,
               "per_panel_crop_loss": {
-                "top_left": 0.0,
-                "top_right": 0.0,
-                "bottom_left": 0.0397,
-                "bottom_right": 0.0409
+                "top_left": 0.0105,
+                "top_right": 0.0084,
+                "bottom_left": 0.0432,
+                "bottom_right": 0.0443
               },
               "reject_reason": "aspect_crop_loss_too_high"
             }
@@ -162,7 +162,29 @@
           "h_gutter_px": null,
           "v_gutter_px": null,
           "requested_mode": "auto",
-          "fallback_reason": "gutter_bands_not_found"
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 441,
+              "end": 495
+            },
+            "v_gutter_px": {
+              "start": 814,
+              "end": 848
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 2.5,
+              "v_center_offset_px": 5.0,
+              "max_aspect_crop_loss": 0.0485,
+              "per_panel_crop_loss": {
+                "top_left": 0.0369,
+                "top_right": 0.0485,
+                "bottom_left": 0.0258,
+                "bottom_right": 0.0376
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
         },
         "output_size_px": [
           1200,

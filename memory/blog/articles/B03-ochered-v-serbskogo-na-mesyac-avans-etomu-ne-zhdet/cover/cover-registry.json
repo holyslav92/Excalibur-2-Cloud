@@ -8,7 +8,7 @@
   "alt": "Очередь в Сербского на месяц — почему аванс по сделке с пожилым продавцом не ждёт",
   "aspect_ratio": "16:9",
   "canvas_source": "cover/canvas-quad-01.png",
-  "generated_at": "2026-08-19T15:28:26+00:00",
+  "generated_at": "2026-08-19T15:35:44+00:00",
   "assets": [
     {
       "role": "cover",
@@ -25,7 +25,7 @@
       "file": "cover/inline-01.png",
       "alt": "Справка из ПНД на показе — почему этого мало до аванса у пожилого продавца",
       "h2_anchor": "«ПНД есть» — и вы уже готовы внести аванс",
-      "visual_type": "comparison_table_ui",
+      "visual_type": "comparison_table",
       "aspect_ratio": "16:9"
     },
     {
