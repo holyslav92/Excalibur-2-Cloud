@@ -1,0 +1,44 @@
+{
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "canvas_index": 1,
+  "identity_reference_local": "memory/cover/assets/identity-real/face-office-selfie.jpeg",
+  "identity_reference_id": "office_selfie",
+  "prefer_local_reference": true,
+  "local_reference": "memory/cover/assets/identity-real/face-office-selfie.jpeg",
+  "reference_url_hosted": "{{SITE_BASE}}/wp-content/uploads/excalibur/identity-real/face-hoodie-airpods.jpeg",
+  "output_canvas": "cover/canvas-quad-01.png",
+  "result_path": "cover/quad-mcp-result-01.json",
+  "slots": [
+    "cover",
+    "inline_1",
+    "inline_2",
+    "inline_3"
+  ],
+  "preferred_image_flow": {
+    "provider": "derouter-rest",
+    "script": "scripts/excalibur_blog_derouter_gpt_image2_api.py",
+    "resolution": "2K",
+    "note": "PRIMARY: Derouter REST image API (api-direct, 2K 16:9). Fallback: excalibur_blog_kie_gpt_image2_api.py when DEROUTER auth/5xx. FORBIDDEN: flux2-pro-*, Seedream, nano_banana*, z-image, mcp-derouter/start-mcp.sh.",
+    "apply_script": "python3 scripts/excalibur_blog_quad_apply.py --article-dir <article_dir> --canvas-index 1 --inject-html"
+  },
+  "jobs": [
+    {
+      "slot": "canvas_quad",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic, gold #dcc5a1 one accent. Host LARGE left = same man as i2i reference, navy blazer + black crew tee, short dark hair, smile. Tiny key/house/folder prop. Torn paper, gold tape. No hoodie, no headphones, no cat, no pink, no EXCALIBUR.\nCanvas 2048x1152 exact 2x2; four 16:9 panels (1024x576); thin white gutters; no bleed.\nBan: dark cinematic/low-key/twilight; daypart formula; inventory default props (keys/hologram/desk/balcony/doc-only office); Drake/facepalm/Salt Bae/celebrity; keyword spam; EXCALIBUR stamp/white hoodie/fake CIAN screenshot; chubby/puffy host ban; icon row slogans; duplicate labels; desk scene; empty UI; cover copy; celebrity memes.\nTEXT LANGUAGE LOCK: all visible text is RUSSIAN Cyrillic only; exact LABELS per panel only.\nREFERENCE FACE+BODY only on cover top-left when has_cover: identity-real live photo (28yo; medium slim as identity-real refs; lean oval face; NOT chubby/puffy/double-chin/thick-neck/stocky/tight blazer); invent scene; never AI hero-ref; no headphones.\nTop-left COVER TEXT LOCK: headline EXACTLY «Повестка продавца стопорит Росреестр» — bold condensed Cyrillic black #141821, paint ONLY the highlight word \"стопорит\" in gold #dcc5a1. Small gold sticky with EXACTLY «ЕГРН не покажет» in Cyrillic. Host LARGE left = same 28yo i2i identity-real (medium slim as identity-real refs; lean oval face; NOT chubby/puffy/double-chin/thick-neck/stocky/tight blazer); blazer relaxed; INVENT bright high-key sun flare; scene: Host LARGE left blazer; bright cork board tape pins red thread; tiny повестка; card +7 922 001 65 05; meme cat+people; sun flare #FFF; 1-3 Wordstat demand stickers; meme cat and/or meme people sticker cutouts; #FFF high-key; no plastic face; no scene clone; no dark cinematic; no inventory default props\nTop-right inline: чеклист проверки; H2 «Что именно блокирует Росреестр — и почему ЕГРН этого не покажет»; UTILITY: fact/order/number/comparison for H2; no icon row+3 words; no host; scene: Checklist-board: ЕГРН только объект vs реестр повесток на участника; 2 колонки сравнения; gold markers; torn paper; NO people/faces; #FFF collage; ; no host. LABELS: «только по объекту», «ЕГРН не видит», «реестр повесток», «меры на участника», «два реестра».\nBottom-left inline: сравнительная таблица; H2 «20 дней после даты явки: когда запрет реально появляется»; UTILITY: fact/order/number/comparison for H2; no icon row+3 words; no host; scene: Timeline table: 7д вручение → дата явки → +20д → блок регистрации; arrows; tiny meme-cat sticker corner; NO host face; #FFF collage; ; no host. LABELS: «7 дней вручение», «дата явки», «плюс 20 дней», «блок регистрации», «повестка не финал».\nBottom-right inline: пошаговая схема сделки; H2 «Как Росреестр проверяет: договор, доверенность и любая недвижимость продавца»; UTILITY: fact/order/number/comparison for H2; no icon row+3 words; no host; scene: Workflow: подача заявления → проверка учёта на момент подачи → блок/OK; arrows 1-2-3; доверенность не обходит; NO people; #FFF collage; ; no host. LABELS: «на момент подачи», «не дата договора», «доверенность не спасёт», «продавец и покупатель», «любая недвижимость».\nInline all: #FFF high-key collage, gold/black labels, torn paper/tape; max 1 tiny cat-sticker; teach fact/order/number; no host face; 3–6 labels.",
+        "aspect_ratio": "16:9",
+        "resolution": "2K",
+        "input_urls": [
+          "{{SITE_BASE}}/wp-content/uploads/excalibur/identity-real/face-hoodie-airpods.jpeg"
+        ]
+      }
+    }
+  ],
+  "validation": {
+    "prompt_chars": 3331,
+    "max_prompt_chars": 3500,
+    "required_reference_host": "{{SITE_HOST}}",
+    "resolution": "2K"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "task_id": "6cba0153e8cd90148e1962fc1e16ec7b",
+  "source": "kie-api",
+  "model": "kie-image-i2i",
+  "state": "success",
+  "create_attempts": 1,
+  "result_path": "memory/blog/articles/B01-povestka-prodavcu-sdelka-vstanet/cover/quad-mcp-result-02.json",
+  "updated_at_epoch": 1787160572,
+  "file_upload_fallback": true,
+  "file_upload": {
+    "source": "prefer_local_reference",
+    "upload_path": "excalibur-blog/hero",
+    "local_name": "white-canvas-2k-16x9.png",
+    "download_host": "tempfile.redpandaai.co",
+    "cover_hero_mode": null
+  }
+}

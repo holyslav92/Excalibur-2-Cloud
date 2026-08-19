@@ -40,6 +40,11 @@ SPLIT_MODES = ("auto", "mechanical", "gutter")
 
 from excalibur_repo_paths import repo_relative
 
+try:
+    from excalibur_blog_cover_slots import INLINE_FILES as LONGFORM_INLINE_FILES
+except ImportError:
+    LONGFORM_INLINE_FILES = {}
+
 
 def project_root() -> Path:
     env_root = os.environ.get("EXCALIBUR_PROJECT_ROOT", "").strip()
@@ -319,6 +324,34 @@ def validate_panel_boxes(boxes: dict[str, tuple[int, int, int, int]]) -> list[st
     return errors
 
 
+def slot_keys_for_canvas(canvas_path: Path, manifest: dict[str, Any]) -> tuple[str, ...]:
+    """Map a canvas file to manifest slot keys (4-panel or longform 8-panel)."""
+    canvas_name = canvas_path.name
+    inline_count = int(manifest.get("inline_count") or 3)
+    for spec in manifest.get("canvases") or []:
+        spec_name = Path(str(spec.get("canvas_file") or "")).name
+        if spec_name == canvas_name:
+            slots = tuple(str(s) for s in (spec.get("slots") or []) if s)
+            if len(slots) == 4:
+                return slots
+    if inline_count == 7 and "02" in canvas_name:
+        return ("inline_4", "inline_5", "inline_6", "inline_7")
+    return ("cover", "inline_1", "inline_2", "inline_3")
+
+
+def output_filename_for_slot(slot_key: str) -> str:
+    if slot_key == "cover":
+        return "cover.png"
+    if slot_key in LONGFORM_INLINE_FILES:
+        return LONGFORM_INLINE_FILES[slot_key]
+    if slot_key in INLINE_FILES:
+        return INLINE_FILES[slot_key]
+    if slot_key.startswith("inline_"):
+        idx = int(slot_key.split("_", 1)[1])
+        return f"inline-{idx:02d}.png"
+    return f"{slot_key}.png"
+
+
 def resolve_quadrant(slot: dict[str, Any], slot_key: str) -> str:
     q = slot.get("quadrant")
     if q:
@@ -333,6 +366,7 @@ def split_canvas(
     output_size: tuple[int, int] | None,
     *,
     split_mode: str = "auto",
+    slot_keys: tuple[str, ...] | None = None,
 ) -> dict[str, Any]:
     from PIL import Image
 
@@ -353,8 +387,9 @@ def split_canvas(
 
         outputs: dict[str, Any] = {}
         slots = manifest.get("slots") or {}
+        keys = slot_keys or slot_keys_for_canvas(canvas_path, manifest)
 
-        for slot_key in ("cover", "inline_1", "inline_2", "inline_3"):
+        for slot_key in keys:
             slot = slots.get(slot_key) or {}
             quadrant = resolve_quadrant(slot, slot_key)
             raw_box = quadrant_boxes[quadrant]
@@ -364,7 +399,7 @@ def split_canvas(
             if output_size:
                 crop = crop.resize(output_size, Image.Resampling.LANCZOS)
 
-            out_name = "cover.png" if slot_key == "cover" else INLINE_FILES[slot_key]
+            out_name = output_filename_for_slot(slot_key)
             out_path = cover_dir / out_name
             crop.save(out_path, format="PNG", optimize=True)
             outputs[slot_key] = {
@@ -389,7 +424,13 @@ def split_canvas(
         }
 
 
-def build_registry(article_dir: Path, manifest: dict[str, Any], split_info: dict[str, Any]) -> dict[str, Any]:
+def build_registry(
+    article_dir: Path,
+    manifest: dict[str, Any],
+    split_info: dict[str, Any],
+    *,
+    merge_existing: bool = False,
+) -> dict[str, Any]:
     meta_path = article_dir / "article.meta.json"
     meta = load_json(meta_path) if meta_path.is_file() else {}
     style = manifest.get("style_preset") or "quad_canvas"
@@ -410,19 +451,32 @@ def build_registry(article_dir: Path, manifest: dict[str, Any], split_info: dict
             }
         )
 
-    return {
+    registry = {
         "topic_id": manifest.get("topic_id") or meta.get("topic_id"),
         "slug": meta.get("slug"),
         "cover_family": meta.get("cover_family") or "brand_collage",
         "style_preset": style,
         "pipeline": manifest.get("pipeline") or "quad_canvas_1x_mcp",
         "file": "cover/cover.png",
-        "alt": split_info["outputs"]["cover"].get("alt") or meta.get("h1") or "",
+        "alt": split_info["outputs"].get("cover", {}).get("alt") or meta.get("h1") or "",
         "aspect_ratio": "16:9",
         "canvas_source": manifest.get("canvas_file", "cover/canvas-quad.png"),
         "generated_at": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
         "assets": assets,
     }
+    if merge_existing:
+        reg_path = article_dir / "cover" / "cover-registry.json"
+        if reg_path.is_file():
+            prior = load_json(reg_path)
+            prior_assets = {a.get("slot"): a for a in (prior.get("assets") or []) if a.get("slot")}
+            for asset in assets:
+                prior_assets[asset["slot"]] = asset
+            registry["assets"] = list(prior_assets.values())
+            if prior.get("alt"):
+                registry["alt"] = prior["alt"]
+            if prior.get("file"):
+                registry["file"] = prior["file"]
+    return registry
 
 
 _H2_RE = re.compile(r"<h2[^>]*>(.*?)</h2>", re.I | re.S)
@@ -485,7 +539,10 @@ def inject_figures(article_html: Path, split_info: dict[str, Any], dry_run: bool
     html = article_html.read_text(encoding="utf-8")
     changes: list[str] = []
 
-    for slot_key in ("inline_1", "inline_2", "inline_3"):
+    for slot_key in sorted(
+        (k for k in split_info["outputs"] if k.startswith("inline_")),
+        key=lambda k: int(k.split("_", 1)[1]),
+    ):
         item = split_info["outputs"][slot_key]
         src = item["file"]
         alt = item.get("alt") or ""
@@ -633,9 +690,10 @@ def main() -> int:
         )
         return 1
 
+    slot_keys = slot_keys_for_canvas(canvas_path, manifest)
     missing_alt = [
         key
-        for key in ("cover", "inline_1", "inline_2", "inline_3")
+        for key in slot_keys
         if not ((manifest.get("slots") or {}).get(key) or {}).get("alt")
     ]
     if missing_alt:
@@ -665,11 +723,13 @@ def main() -> int:
             manifest,
             output_size,
             split_mode=args.split_mode,
+            slot_keys=slot_keys,
         )
     except ValueError as exc:
         print(f"❌ QUAD SPLIT BLOCKER: {exc}", file=sys.stderr)
         return 1
-    registry = build_registry(article_dir, manifest, split_info)
+    merge_registry = "cover" not in slot_keys
+    registry = build_registry(article_dir, manifest, split_info, merge_existing=merge_registry)
     save_json(cover_dir / "cover-registry.json", registry)
 
     report = {
@@ -689,7 +749,9 @@ def main() -> int:
         ]
         if article_path.is_file():
             injected_html = article_path.read_text(encoding="utf-8")
-            for slot_key in ("inline_1", "inline_2", "inline_3"):
+            for slot_key in slot_keys:
+                if not slot_key.startswith("inline_"):
+                    continue
                 count = len(list(_slot_figure_pattern(slot_key).finditer(injected_html)))
                 if count != 1:
                     inject_errors.append(
@@ -705,9 +767,12 @@ def main() -> int:
             print(f"❌ INLINE INJECT BLOCKER: {error}", file=sys.stderr)
         return 1
 
-    print(f"OK cover={cover_dir / 'cover.png'}")
-    for slot_key in ("inline_1", "inline_2", "inline_3"):
-        print(f"OK {slot_key}={cover_dir / INLINE_FILES[slot_key]}")
+    if "cover" in split_info["outputs"]:
+        print(f"OK cover={cover_dir / 'cover.png'}")
+    for slot_key in slot_keys:
+        if slot_key == "cover":
+            continue
+        print(f"OK {slot_key}={cover_dir / output_filename_for_slot(slot_key)}")
     print(f"OK registry={cover_dir / 'cover-registry.json'}")
     print(f"OK report={cover_dir / 'quad-split-report.json'}")
     return 0

@@ -1,0 +1,144 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "manifest": "cover/quad-manifest.json",
+  "split": {
+    "source_canvas": "memory/blog/articles/B01-povestka-prodavcu-sdelka-vstanet/cover/canvas-quad-02.png",
+    "source_size_px": [
+      2048,
+      1152
+    ],
+    "panel_size_px": [
+      976,
+      558
+    ],
+    "split_meta": {
+      "split_mode": "gutter_detect",
+      "h_gutter_px": {
+        "start": 558,
+        "end": 596
+      },
+      "v_gutter_px": {
+        "start": 976,
+        "end": 1044
+      },
+      "requested_mode": "auto",
+      "gutter_quality": {
+        "h_center_offset_px": 1.0,
+        "v_center_offset_px": 14.0,
+        "max_aspect_crop_loss": 0.0161,
+        "per_panel_crop_loss": {
+          "top_left": 0.0161,
+          "top_right": 0.012,
+          "bottom_left": 0.0126,
+          "bottom_right": 0.0159
+        },
+        "reject_reason": null
+      }
+    },
+    "output_size_px": [
+      1200,
+      675
+    ],
+    "outputs": {
+      "inline_4": {
+        "file": "cover/inline-04.png",
+        "quadrant": "top_left",
+        "box_px": {
+          "left": 0,
+          "top": 4,
+          "right": 976,
+          "bottom": 553
+        },
+        "raw_box_px": {
+          "left": 0,
+          "top": 0,
+          "right": 976,
+          "bottom": 558
+        },
+        "size_px": [
+          1200,
+          675
+        ],
+        "aspect_ratio": "16:9",
+        "alt": "Кейс Самары 2026 и практика для сделок в Тюмени",
+        "h2_anchor": "Не теория: Самара весной 2026 и что это значит для Тюмени"
+      },
+      "inline_5": {
+        "file": "cover/inline-05.png",
+        "quadrant": "top_right",
+        "box_px": {
+          "left": 1050,
+          "top": 0,
+          "right": 2042,
+          "bottom": 558
+        },
+        "raw_box_px": {
+          "left": 1044,
+          "top": 0,
+          "right": 2048,
+          "bottom": 558
+        },
+        "size_px": [
+          1200,
+          675
+        ],
+        "aspect_ratio": "16:9",
+        "alt": "Кто и когда заказывает выписку из реестра повесток",
+        "h2_anchor": "Выписка из реестра повесток: кто заказывает и когда"
+      },
+      "inline_6": {
+        "file": "cover/inline-06.png",
+        "quadrant": "bottom_left",
+        "box_px": {
+          "left": 0,
+          "top": 599,
+          "right": 976,
+          "bottom": 1148
+        },
+        "raw_box_px": {
+          "left": 0,
+          "top": 596,
+          "right": 976,
+          "bottom": 1152
+        },
+        "size_px": [
+          1200,
+          675
+        ],
+        "aspect_ratio": "16:9",
+        "alt": "Кого проверять по возрасту: не только молодые призывники",
+        "h2_anchor": "Кого проверять: не только мужчины 18–30"
+      },
+      "inline_7": {
+        "file": "cover/inline-07.png",
+        "quadrant": "bottom_right",
+        "box_px": {
+          "left": 1052,
+          "top": 596,
+          "right": 2040,
+          "bottom": 1152
+        },
+        "raw_box_px": {
+          "left": 1044,
+          "top": 596,
+          "right": 2048,
+          "bottom": 1152
+        },
+        "size_px": [
+          1200,
+          675
+        ],
+        "aspect_ratio": "16:9",
+        "alt": "Как снять блок регистрации и сроки возобновления",
+        "h2_anchor": "Как снять блок и когда Росреестр возобновит регистрацию"
+      }
+    }
+  },
+  "html_inject": [
+    "injected inline_4 after H2 — Не теория: Самара весной 2026 и что это значит для Тюмени",
+    "injected inline_5 after H2 — Выписка из реестра повесток: кто заказывает и когда",
+    "injected inline_6 after H2 — Кого проверять: не только мужчины 18–30",
+    "injected inline_7 after H2 — Как снять блок и когда Росреестр возобновит регистрацию"
+  ]
+}
