@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "agent": "excalibur-blog-research",
+  "status": "PASS",
+  "verdict": "PASS",
+  "topic_id": "B04",
+  "title": "Наследство не прошло три года — аванс уже несут",
+  "research_date": "2026-08-19",
+  "tenant": "The Риэлтор",
+  "external_signal": {
+    "fresh": true,
+    "source": "klyshin_A",
+    "signal_urls": [
+      "https://t.me/s/klyshin_A"
+    ],
+    "signal_accessed": "2026-08-19",
+    "summary": "Предавансовый отчёт 2900₽: наследство <3 лет, сын от первого брака без нотариального отказа; «покупайте так» отклонено до аванса",
+    "secondary_fresh": {
+      "url": "https://news-kursk.ru/society/2026/08/15/202881.html",
+      "published": "2026-08-15",
+      "accessed": "2026-08-19"
+    }
+  },
+  "wordstat": {
+    "status": "PARTIAL",
+    "note": "Handoff + rework: strong Tyumen buyer cluster; inheritance tails low volume",
+    "queries": [
+      {
+        "phrase": "купить квартиру в тюмени",
+        "region": "55",
+        "totalCount": 17989,
+        "accessed_at": "2026-08-19"
+      },
+      {
+        "phrase": "купить квартиру в тюмени вторичка",
+        "region": "55",
+        "totalCount": 3038,
+        "accessed_at": "2026-08-19"
+      },
+      {
+        "phrase": "проверка квартиры перед покупкой",
+        "region": "55",
+        "totalCount": 8,
+        "accessed_at": "2026-08-19"
+      },
+      {
+        "phrase": "проверка квартиры при наследстве",
+        "region": "55",
+        "status": "empty_response",
+        "accessed_at": "2026-08-19"
+      },
+      {
+        "phrase": "наследство квартира продажа риски",
+        "region": "225",
+        "totalCount_only": 15,
+        "accessed_at": "2026-08-19"
+      }
+    ]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "published_angles_avoid": [
+      "B01 — ЕГРН / предавансовая проверка (общий угол)",
+      "B02 — расписка / порядок расчётов",
+      "B03 — Сербский / пожилой продавец"
+    ],
+    "b04_unique_angle": "Наследство <3 лет, неучтённый наследник (ребёнок от 1-го брака), нотариальные отказы, аванс до документов"
+  },
+  "dzen_rf_gate": "PASS",
+  "artifacts": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "writer_handoff": {
+    "reader_problem": "Аванс на наследственную квартиру при <3 лет после смерти и неучтённом наследнике без отказа",
+    "reader_outcome": "Знает чеклист до аванса и когда отказаться от «покупайте так»",
+    "key_facts": [
+      "Предавансовый отчёт 2900₽ выявил красные риски: наследство <3 лет, сын от 1-го брака, отказа нет",
+      "Устный отказ наследника юридически ничтожен — только нотариальный (ст. 1157 ГК РФ)",
+      "Срок вступления 6 мес., но суд/согласие наследников может восстановить права (ст. 1155 ГК РФ)",
+      "3 года — ориентир снижения риска оспаривания, не гарантия",
+      "Один собственник в ЕГРН не исключает наследников первой очереди",
+      "Тюмень Wordstat: «купить квартиру в тюмени» 17989 (регион 55)"
+    ],
+    "surprising_fact": "Вопрос про первый брак и детей от него часто вскрывает наследника только после звонка по чеклисту из отчёта",
+    "voice_angle": "Тюменский риелтор: сначала документы/звонок, потом аванс — не наоборот"
+  },
+  "blockers": [],
+  "incident_report": "none"
+}

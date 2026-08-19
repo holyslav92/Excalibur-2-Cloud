@@ -1,0 +1,100 @@
+{
+  "agent": "excalibur-blog",
+  "step": "research_start",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-19",
+    "today_ru": "19.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "среда"
+  },
+  "topic": {
+    "topic_id": "B04",
+    "title": "Наследство не прошло три года — аванс уже несут",
+    "h1": "Наследство не прошло три года — аванс уже несут",
+    "slug": "nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut",
+    "primary_query": "Наследство не прошло три года — аванс уже несут",
+    "priority": "P0"
+  },
+  "search_queries": [
+    {
+      "id": "primary_fresh",
+      "query": "Наследство не прошло три года — аванс уже несут 2026",
+      "purpose": "актуальный SERP"
+    },
+    {
+      "id": "title_fresh",
+      "query": "Наследство не прошло три года — аванс уже несут 2026",
+      "purpose": "SERP по человеческому title"
+    },
+    {
+      "id": "official_docs",
+      "query": "Наследство не прошло три года — аванс уже несут official docs 2026",
+      "purpose": "официальные docs"
+    },
+    {
+      "id": "github_evidence",
+      "query": "site:github.com Наследство не прошло три года — аванс уже несут 2026",
+      "purpose": "GitHub evidence"
+    },
+    {
+      "id": "community_experience",
+      "query": "Наследство не прошло три года — аванс уже несут forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы"
+    }
+  ],
+  "next_step": "Research reads research-serp.json, does its own thinking and writes research-notes.md",
+  "writer_allowed_sources": [
+    "shared/writer-master-prompt.md",
+    "research-notes.md",
+    "title-brief.json",
+    "published-titles-only.md"
+  ],
+  "sol_allowed_sources": [
+    "shared/SOUL.md",
+    "shared/soul-examples/",
+    "drafts/writer.html",
+    "title-brief.json",
+    "research-notes.md"
+  ],
+  "writer_titles_only": "published-titles-only.md",
+  "forbidden_sources_for_writer": [
+    "memory/blog/articles/*/article.html",
+    "memory/blog/articles/*/drafts",
+    "memory/topics/ (deleted — do not recreate)",
+    "memory/content-lessons.md",
+    "shared/golden-benchmark",
+    "QA reports",
+    "neighbor research-notes as prose exemplars",
+    "old article bodies"
+  ],
+  "published_titles_count": 3,
+  "scout_handoff": {
+    "external_signal": "Клышин — предавансовый отчёт 2900 ₽ загорел красным: после наследства не прошло 3 года, есть ребёнок от первого брака без отказа; «покупайте так» не работает",
+    "klyshin_hook": "дети от первого брака и отказы — три года не прошло",
+    "signal_urls": ["https://t.me/s/klyshin_A"],
+    "signal_accessed": "2026-08-19"
+  },
+  "research_completed": {
+    "agent": "excalibur-blog-research",
+    "completed_at": "2026-08-19",
+    "status": "PASS",
+    "fresh_signal_verified": true
+  },
+  "wordstat_summary": {
+    "status": "PARTIAL",
+    "tyumen_buy_cluster": {
+      "phrase": "купить квартиру в тюмени",
+      "region": "55",
+      "totalCount": 17989
+    },
+    "inheritance_tails": "low volume / empty on some probes"
+  },
+  "overlap_avoid": [
+    "B01 ЕГРН / предаванс (общий)",
+    "B02 расписка / расчёты",
+    "B03 Сербский / пожилой продавец"
+  ]
+}
