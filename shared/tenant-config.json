@@ -62,11 +62,13 @@
   "scout_klyshin_topic_bank": "memory/scout/klyshin-topic-bank.json",
   "writing_model": {
     "provider": "derouter-rest",
+    "scope": "factory-brain-all-text-roles",
     "model": "claude-opus-5",
     "model_env": "DEROUTER_TEXT_MODEL",
     "endpoint": "https://api.derouter.ai/openai/v1/chat/completions",
     "family": "claude-opus-5",
-    "contract": "shared/writer-model-contract.md",
+    "script": "scripts/excalibur_blog_derouter_opus_chat.py",
+    "contract": "shared/derouter-opus-brain-contract.md",
     "fail_loud_if_unavailable": true
   },
   "interlink_old_articles": true,
