@@ -1,0 +1,17 @@
+{
+  "pipeline": "cover_wordstat_patch",
+  "canvas_index": 0,
+  "identity_reference_local": "memory/blog/articles/B03-pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/cover/cover.png",
+  "output_canvas": "cover/cover.png",
+  "result_path": "cover/cover-patch-wordstat-result.json",
+  "jobs": [
+    {
+      "slot": "cover_patch",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "Edit this cover image IN PLACE. KEEP the host face, jaw-drop expression, pose, white shirt, phone CTA «+7 922 001 65 05», hook «Перед задатком подарили дочери» with gold «дочери», sticky «карточка не ЕГРН» EXACTLY unchanged — do NOT repaint or move the person.\nADD 3 new gold-tape Cyrillic Wordstat sticker labels near the corkboard/strings area (readable condensed black text on gold tape):\n«банкротство продавца квартиры»\n«купить квартиру в тюмени»\n«торги по банкротству квартира»\nHigh-key bright #FFFFFF collage style, sun flare, pins/strings. Perfect Cyrillic, zero typos. No other text changes.",
+        "resolution": "2K"
+      }
+    }
+  ]
+}

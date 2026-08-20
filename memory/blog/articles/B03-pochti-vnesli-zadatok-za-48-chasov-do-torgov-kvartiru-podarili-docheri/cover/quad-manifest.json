@@ -117,7 +117,8 @@
       "quadrant": "top_left",
       "h2_anchor": "Дарение дочери — правовая рамка",
       "visual_type": "structure_diagram",
-      "scene_hint": "Legal blocks diagram: ст.61.2→3 года→согласие ФУ→приостановка; footnote «не автоотмена» aside",
+      "meme_sticker": false,
+      "scene_hint": "ONLY block diagram on white board: ст.61.2→3 года→согласие ФУ→213.25; footnote «не автоотмена»; ZERO host face/person/portrait",
       "alt": "Оспаривание дарения родственнику при банкротстве — что смотреть до задатка",
       "labels": [
         "ст. 61.2 127-ФЗ",
@@ -148,7 +149,8 @@
       "quadrant": "bottom_left",
       "h2_anchor": "Пять ошибок, из-за которых на торгах теряют деньги",
       "visual_type": "labeled_checklist",
-      "scene_hint": "2 cols: ОШИБКИ left vs ПРАВИЛЬНО right; 5 numbered rows BOTH columns filled Cyrillic",
+      "meme_sticker": false,
+      "scene_hint": "2 cols ОШИБКИ vs ПРАВИЛЬНО; 5 numbered rows BOTH columns; utility-only; ZERO host face; NO meme stickers",
       "alt": "Типичные ошибки покупателя перед внесением задатка на торгах",
       "labels": [
         "только карточка",
