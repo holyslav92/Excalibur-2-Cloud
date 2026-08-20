@@ -1,12 +1,23 @@
 #!/usr/bin/env python3
-"""Cover QA gate — stamp cover/cover_qa.json after visual checks."""
+"""Cover QA gate — pixel checks on cover.png + stamp cover/cover_qa.json.
+
+Publish/Indexer blocked unless PNG bytes PASS (not agent manifest lie).
+"""
 
 from __future__ import annotations
 
 import argparse
 import json
 import sys
+from datetime import date
 from pathlib import Path
+
+from excalibur_blog_cover_qa_pixels import (
+    analyze_cover_pixels,
+    load_json,
+    md5_file,
+    stamp_cover_qa_json,
+)
 
 
 REQUIRED_CHECKS = (
@@ -32,6 +43,25 @@ REQUIRED_CHECKS = (
     "inline_no_co_host_human",
     "inline_meme_sticker_scale",
     "meme_people_real_catalog",
+    "pixel_qa_reads_png_not_prompt",
+    "pixel_host_close_up",
+    "pixel_wordstat_not_opaque_bars",
+    "pixel_title_zone_clear",
+    "pixel_meme_zone_clear",
+)
+
+PIXEL_REQUIRED = (
+    "pixel_qa_reads_png_not_prompt",
+    "pixel_host_close_up",
+    "pixel_host_not_distant_fullbody",
+    "pixel_wordstat_not_opaque_bars",
+    "pixel_wordstat_not_edge_truncated",
+    "pixel_title_zone_clear",
+    "pixel_meme_zone_clear",
+    "pixel_wordstat_phrases_not_truncated",
+    "pixel_phone_readable",
+    "pixel_light_high_key",
+    "pixel_manifest_outfit_matches",
 )
 
 BANNED_OUTFIT_TOKENS = (
@@ -67,10 +97,6 @@ REQUIRED_IMAGES = (
 
 def project_root() -> Path:
     return Path(__file__).resolve().parents[1]
-
-
-def load_json(path: Path) -> dict:
-    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def normalize_token(value: str) -> str:
@@ -152,7 +178,7 @@ def validate_emotion_not_recent_copy(manifest: dict, root: Path) -> bool:
     return True
 
 
-def validate_cover_qa(article_dir: Path, root: Path) -> dict:
+def validate_cover_qa(article_dir: Path, root: Path, *, stamp: bool = True) -> dict:
     errors: list[str] = []
     qa_path = article_dir / "cover" / "cover_qa.json"
 
@@ -166,97 +192,127 @@ def validate_cover_qa(article_dir: Path, root: Path) -> dict:
         if not (article_dir / rel).is_file():
             errors.append(f"missing image: {rel}")
 
-    if not qa_path.is_file():
-        errors.append("cover/cover_qa.json missing — run excalibur-blog-cover-qa")
-        return {"status": "FAIL", "errors": errors}
-
-    try:
-        qa = load_json(qa_path)
-    except json.JSONDecodeError as exc:
-        return {"status": "FAIL", "errors": [f"cover_qa.json invalid JSON: {exc}"]}
-
-    if str(qa.get("agent") or "") != "excalibur-blog-cover-qa":
-        errors.append("cover_qa.json agent must be excalibur-blog-cover-qa")
-    if str(qa.get("status") or "").upper() != "PASS":
-        errors.append(f"cover_qa.json status must be PASS, got {qa.get('status')!r}")
-
-    checks = qa.get("checks") or {}
-    for key in REQUIRED_CHECKS:
-        if not checks.get(key):
-            errors.append(f"cover_qa check failed or missing: {key}")
-
+    cover_path = article_dir / "cover" / "cover.png"
     manifest_path = article_dir / "cover" / "quad-manifest.json"
+    manifest = load_json(manifest_path) if manifest_path.is_file() else None
+    topic_id = str((manifest or {}).get("topic_id") or "")
+    meta_path = article_dir / "article.meta.json"
+    if meta_path.is_file():
+        try:
+            topic_id = topic_id or str(load_json(meta_path).get("topic_id") or "")
+        except json.JSONDecodeError:
+            pass
+
+    pixel_result = analyze_cover_pixels(cover_path, manifest=manifest)
+    for key in PIXEL_REQUIRED:
+        if not pixel_result.checks.get(key):
+            errors.append(f"pixel check failed: {key}")
+    for err in pixel_result.errors:
+        if err not in errors:
+            errors.append(err)
+
     meme_catalog = root / "memory" / "cover" / "meme-top100.json"
     if not meme_catalog.is_file():
         errors.append("memory/cover/meme-top100.json missing — meme catalog required")
-    if manifest_path.is_file():
-        try:
-            manifest = load_json(manifest_path)
-            stickers = manifest.get("wordstat_stickers") or []
-            if not (1 <= len(stickers) <= 3):
-                errors.append(f"wordstat_stickers count {len(stickers)}, need 1-3 in quad-manifest")
-            phone = str(manifest.get("cover_phone_cta") or "").strip()
-            if phone != "+7 922 001 65 05":
-                errors.append("cover_phone_cta must be '+7 922 001 65 05' in quad-manifest")
-            slots = manifest.get("slots") or {}
-            allowed_types = {
-                "comparison_table",
-                "process_flow",
-                "bar_timeline_chart",
-                "structure_diagram",
-                "labeled_checklist",
-                "fact_card",
-                "workflow_diagram",
-                "checklist_board",
-                "schema_faq_ui",
-                "tool_screenshot",
-                "infographic_card",
-            }
-            for i in range(1, 8):
-                key = f"inline_{i}"
-                slot = slots.get(key) or {}
-                if not str(slot.get("visual_type") or "").strip():
-                    errors.append(f"{key}.visual_type missing in quad-manifest")
-                elif str(slot.get("visual_type")) not in allowed_types:
-                    errors.append(f"{key}.visual_type invalid: {slot.get('visual_type')}")
-                labels = slot.get("labels") or []
-                if not (2 <= len(labels) <= 6):
-                    errors.append(f"{key}.labels count {len(labels)}, need 2-6")
-            motifs = manifest.get("cover_motifs") or {}
-            if not motifs.get("outfit"):
-                errors.append("cover_motifs.outfit missing — variety lock requires invented outfit")
-            if not motifs.get("action"):
-                errors.append("cover_motifs.action missing — variety lock requires invented action")
-            if not motifs.get("emotion"):
-                errors.append("cover_motifs.emotion missing — variety lock requires hook emotion")
-            if not motifs.get("pose_framing"):
-                errors.append("cover_motifs.pose_framing missing — variety lock requires pose/framing")
-            if not validate_title_not_occluded(manifest):
-                errors.append("wordstat_sticker_positions overlap title zone (x must be ≥0.68)")
-            if not validate_outfit_invented(manifest):
-                errors.append("outfit_invented FAIL: black-blazer+left-bust+side-eye combo or empty outfit")
-            if not validate_action_invented(manifest):
-                errors.append("action_invented FAIL: cover_motifs.action too short or missing")
-            if not validate_emotion_not_recent_copy(manifest, root):
-                errors.append(
-                    "emotion_not_copied_from_recent_covers FAIL: emotion/pose repeats last covers"
-                )
-        except json.JSONDecodeError:
-            errors.append("quad-manifest.json invalid JSON")
+
+    if manifest_path.is_file() and manifest:
+        stickers = manifest.get("wordstat_stickers") or []
+        if not (1 <= len(stickers) <= 4):
+            errors.append(f"wordstat_stickers count {len(stickers)}, need 1-4 in quad-manifest")
+        phone = str(manifest.get("cover_phone_cta") or "").strip()
+        if phone != "+7 922 001 65 05":
+            errors.append("cover_phone_cta must be '+7 922 001 65 05' in quad-manifest")
+        slots = manifest.get("slots") or {}
+        allowed_types = {
+            "comparison_table",
+            "process_flow",
+            "bar_timeline_chart",
+            "structure_diagram",
+            "labeled_checklist",
+            "fact_card",
+            "workflow_diagram",
+            "checklist_board",
+            "schema_faq_ui",
+            "tool_screenshot",
+            "infographic_card",
+        }
+        for i in range(1, 8):
+            key = f"inline_{i}"
+            slot = slots.get(key) or {}
+            if not str(slot.get("visual_type") or "").strip():
+                errors.append(f"{key}.visual_type missing in quad-manifest")
+            elif str(slot.get("visual_type")) not in allowed_types:
+                errors.append(f"{key}.visual_type invalid: {slot.get('visual_type')}")
+            labels = slot.get("labels") or []
+            if not (2 <= len(labels) <= 6):
+                errors.append(f"{key}.labels count {len(labels)}, need 2-6")
+        motifs = manifest.get("cover_motifs") or {}
+        if not motifs.get("outfit"):
+            errors.append("cover_motifs.outfit missing — variety lock requires invented outfit")
+        if not motifs.get("action"):
+            errors.append("cover_motifs.action missing — variety lock requires invented action")
+        if not motifs.get("emotion"):
+            errors.append("cover_motifs.emotion missing — variety lock requires hook emotion")
+        if not motifs.get("pose_framing"):
+            errors.append("cover_motifs.pose_framing missing — variety lock requires pose/framing")
+        if not validate_title_not_occluded(manifest):
+            errors.append("wordstat_sticker_positions overlap title zone (x must be ≥0.68)")
+        if not validate_outfit_invented(manifest):
+            errors.append("outfit_invented FAIL: black-blazer+left-bust+side-eye combo or empty outfit")
+        if not validate_action_invented(manifest):
+            errors.append("action_invented FAIL: cover_motifs.action too short or missing")
+        if not validate_emotion_not_recent_copy(manifest, root):
+            errors.append(
+                "emotion_not_copied_from_recent_covers FAIL: emotion/pose repeats last covers"
+            )
 
     status = "PASS" if not errors else "FAIL"
-    return {"status": status, "errors": errors}
+
+    if stamp:
+        stamp_cover_qa_json(article_dir, pixel_result, topic_id=topic_id)
+        qa = load_json(qa_path)
+        qa["gate_status"] = status
+        qa["gate_errors"] = errors
+        qa_path.write_text(json.dumps(qa, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    if qa_path.is_file() and status == "PASS":
+        try:
+            qa = load_json(qa_path)
+        except json.JSONDecodeError:
+            qa = {}
+        if str(qa.get("status") or "").upper() != "PASS":
+            errors.append(f"cover_qa.json status must be PASS, got {qa.get('status')!r}")
+            status = "FAIL"
+        stamped_md5 = str(qa.get("cover_md5") or "")
+        live_md5 = md5_file(cover_path) if cover_path.is_file() else ""
+        if stamped_md5 and live_md5 and stamped_md5 != live_md5:
+            errors.append(f"cover_qa.json cover_md5 mismatch: stamp={stamped_md5} png={live_md5}")
+            status = "FAIL"
+        checks = qa.get("checks") or {}
+        for key in REQUIRED_CHECKS:
+            if not checks.get(key):
+                errors.append(f"cover_qa check failed or missing: {key}")
+                status = "FAIL"
+        if not qa.get("pixel_qa"):
+            errors.append("cover_qa.json pixel_qa flag missing — run pixel gate")
+            status = "FAIL"
+
+    return {"status": status, "errors": errors, "pixel": pixel_result.to_dict()}
 
 
 def cmd_doctor(root: Path) -> int:
-    agent_cursor = root / ".cursor/agents/excalibur-blog-cover-qa.md"
-    agent_repo = root / "agents/excalibur-blog-cover-qa.md"
-    skill = root / "skills/cover-qa-excalibur-blog/SKILL.md"
-    for path in (agent_cursor, agent_repo, skill):
+    paths = (
+        root / ".cursor/agents/excalibur-blog-cover-qa.md",
+        root / "agents/excalibur-blog-cover-qa.md",
+        root / "skills/cover-qa-excalibur-blog/SKILL.md",
+        root / "scripts/excalibur_blog_cover_qa_pixels.py",
+        root / "scripts/excalibur_blog_cover_fixer.py",
+    )
+    for path in paths:
         if not path.is_file():
             print(f"FAIL missing {path.relative_to(root)}", file=sys.stderr)
             return 1
-    print("OK cover-qa agent + skill present")
+    print("OK cover-qa agent + skill + pixel/fix scripts present")
     return 0
 
 
@@ -264,6 +320,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Cover QA gate for longform 8-image set")
     parser.add_argument("--article-dir", help="Article directory to validate")
     parser.add_argument("--doctor", action="store_true", help="Repo-level doctor check")
+    parser.add_argument("--no-stamp", action="store_true", help="Validate only, do not rewrite cover_qa.json")
     args = parser.parse_args()
     root = project_root()
 
@@ -278,11 +335,11 @@ def main() -> int:
     if not article_dir.is_absolute():
         article_dir = root / article_dir
 
-    result = validate_cover_qa(article_dir, root)
+    result = validate_cover_qa(article_dir, root, stamp=not args.no_stamp)
     if result["status"] != "PASS":
         print(f"FAIL COVER QA GATE: {'; '.join(result['errors'])}", file=sys.stderr)
         return 1
-    print("OK cover QA stamp (cover_qa.json PASS)")
+    print("OK cover QA stamp (cover_qa.json PASS + pixel bytes)")
     return 0
 
 

@@ -33,10 +33,14 @@ FAIL → **вернуть Cover**, не пускать Indexer/Publish.
 
 ## PASS
 
-Пишешь `cover/cover_qa.json` со всеми `checks: true`, `status: PASS`.
+Пишешь `cover/cover_qa.json` через gate (не руками):
 
 ```bash
 python3 scripts/excalibur_blog_cover_qa_gate.py --article-dir <dir>
+# FAIL → Fixer:
+python3 scripts/excalibur_blog_cover_fixer.py --article-dir <dir>
 ```
+
+Gate **читает PNG bytes**, не manifest. FAIL если opaque Wordstat bars, truncation, title/meme overlap, distant host, manifest outfit lie.
 
 Skill: `skills/cover-qa-excalibur-blog/SKILL.md`

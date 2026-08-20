@@ -169,6 +169,26 @@ def apply_solo_result(
         return 1
     img_bytes, _ = download_url_bytes(url)
     out.write_bytes(img_bytes)
+    # Solo cover regen must be 16:9 editorial cover, not full quad canvas.
+    if slot_key == "cover" and out.is_file():
+        try:
+            from PIL import Image
+
+            with Image.open(out) as im:
+                w, h = im.size
+                if w > h * 1.4:
+                    # Likely 2×2 quad canvas — take top-left panel.
+                    panel = im.crop((0, 0, w // 2, h // 2))
+                    panel = panel.convert("RGB").resize((1200, 675), Image.Resampling.LANCZOS)
+                    panel.save(out, format="PNG")
+                    raw_backup = cover_dir / "cover-quad-regen-raw.png"
+                    im.convert("RGB").save(raw_backup, format="PNG")
+                    print(f"OK solo regen {slot_key} → cropped top-left panel → {out.name}")
+                    return 0
+                if im.size != (1200, 675):
+                    im.convert("RGB").resize((1200, 675), Image.Resampling.LANCZOS).save(out, format="PNG")
+        except Exception as exc:
+            print(f"WARN cover resize/crop: {exc}", file=sys.stderr)
     print(f"OK solo regen {slot_key} → {out.name}")
     return 0
 

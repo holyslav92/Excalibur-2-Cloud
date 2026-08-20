@@ -41,10 +41,6 @@ Cover slot → solo i2i; inline → utility t2i. Derouter primary, Kie посл�
 10. **inline_no_co_host_human** — нет stock model / generated man / handsome realtor / large meme person как co-host или presenter на inline.
 11. **inline_meme_sticker_scale** — если мем-человек на inline, он ≤15% кадра, угол/край, не герой.
 12. **meme_people_real_catalog** — people-memes из `memory/cover/meme-top100.json`, не выдуманные лица.
-13. **title_not_occluded** — Wordstat stickers не перекрывают заголовок; x≥0.68 или PIL overlay справа.
-14. **outfit_invented** — новый outfit каждый cover; FAIL на «black blazer + left bust + side-eye» combo.
-15. **action_invented** — host делает действие (документ/ключи/жест/вход), не статичный bust.
-16. **emotion_not_copied_from_recent_covers** — эмоция/поза не копируют последние 2–3 обложки.
 
 Канон: `memory/cover/cover-canon.json`.
 
@@ -87,9 +83,13 @@ Cover slot → solo i2i; inline → utility t2i. Derouter primary, Kie посл�
 ```bash
 ARTICLE="memory/blog/articles/<topic_id>-<slug>"
 python3 scripts/excalibur_blog_cover_qa_gate.py --article-dir "$ARTICLE"
+# или Fixer loop (overlay/regen → re-QA bytes):
+python3 scripts/excalibur_blog_cover_fixer.py --article-dir "$ARTICLE"
 ```
 
-Только `OK cover QA stamp` → Indexer.
+Gate читает **PNG bytes** (`cover_qa_pixels.py`), пишет `cover_qa.json` с `pixel_qa=true` и `cover_md5`. Publish блокируется без PASS + md5 match.
+
+Только `OK cover QA stamp` → Indexer/Publish.
 
 ## Blockers
 

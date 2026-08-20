@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import base64
+import hashlib
 import io
 import json
 import os
@@ -460,10 +461,14 @@ def load_article(article_dir: Path, *, public_base: str = "") -> dict:
     schema_path = article_dir / "schema.jsonld"
     cover_b64 = ""
     cover_evidence: dict[str, object] = {}
+    cover_filename = ""
     cover_reg = article_dir / "cover" / "cover-registry.json"
     if cover_path.is_file():
+        cover_bytes = cover_path.read_bytes()
         cover_evidence = normalize_cover_png(cover_path, cover_reg, project_root())
-        cover_b64 = base64.b64encode(cover_path.read_bytes()).decode("ascii")
+        cover_b64 = base64.b64encode(cover_bytes).decode("ascii")
+        cover_hash = hashlib.md5(cover_bytes).hexdigest()[:12]
+        cover_filename = f"{meta['slug']}-cover-{cover_hash}.png"
     schema_raw = ""
     if schema_path.is_file():
         schema_raw = schema_path.read_text(encoding="utf-8").strip()
@@ -556,6 +561,7 @@ def load_article(article_dir: Path, *, public_base: str = "") -> dict:
         ),
         "content": content,
         "cover_b64": cover_b64,
+        "cover_filename": cover_filename,
         "cover_evidence": cover_evidence,
         "cover_alt": cover_media["alt"],
         "cover_caption": cover_media["caption"],
@@ -567,6 +573,7 @@ def load_article(article_dir: Path, *, public_base: str = "") -> dict:
         "category_ids": category_ids,
         "category_slugs": category_slugs,
         "site_base_expanded": bool(public_base) and SITE_BASE_PLACEHOLDER not in schema_raw,
+        "featured_only": False,
     }
 
 
@@ -663,10 +670,11 @@ if (!empty($p['category_ids']) && is_array($p['category_ids'])) {{
 
 if (!empty($p['cover_b64'])) {{
     $bin = base64_decode($p['cover_b64']);
+    $cover_name = !empty($p['cover_filename']) ? (string) $p['cover_filename'] : ($slug . '-cover.png');
     $tmp = wp_tempnam('excalibur-cover-' . $slug . '.png');
     file_put_contents($tmp, $bin);
     $file_array = [
-        'name' => $slug . '-cover.png',
+        'name' => $cover_name,
         'tmp_name' => $tmp,
         'type' => 'image/png',
         'error' => 0,
@@ -716,7 +724,7 @@ echo 'OK skip_theme_faq_meta=1' . PHP_EOL;
 echo 'OK skip_engagement_quiz_meta=1' . PHP_EOL;
 echo 'OK skip_side_stickers_meta=1' . PHP_EOL;
 
-if (!empty($p['inline_images'])) {{
+if (!empty($p['inline_images']) && empty($p['featured_only'])) {{
     $content_updated = $p['content'];
     foreach ($p['inline_images'] as $img) {{
         $bin = base64_decode($img['b64']);
@@ -1081,13 +1089,56 @@ def check_publish_prerequisites(
     require_freshness_gate: bool = True,
     require_swarm_gates: bool = True,
     allow_stale_freshness: bool = False,
+    featured_only: bool = False,
 ) -> list[str]:
     """Enforce contract gates before WP upload (unless --skip-gates).
 
     ``allow_stale_freshness`` (media-refresh path): keep link-verify /
     cover / schema; only freshness STALE is tolerated when a report exists.
+
+    ``featured_only``: cover re-upload on published post — only pixel Cover-QA PASS.
     """
     blockers: list[str] = []
+
+    if featured_only:
+        root = project_root()
+        cover_path = article_dir / "cover" / "cover.png"
+        if not cover_path.is_file():
+            blockers.append("cover/cover.png missing")
+        meta_path = article_dir / "article.meta.json"
+        try:
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            meta = {}
+            blockers.append("article.meta.json missing/invalid")
+        wp_post_id = meta.get("wp_post_id") or meta.get("post_id")
+        if not wp_post_id:
+            blockers.append("featured-only requires wp_post_id in article.meta.json")
+        topic_id = str(meta.get("topic_id") or "").upper()
+        if ledger_status_for_topic(root, topic_id) != "published":
+            blockers.append(f"featured-only requires ledger status=published (topic_id={topic_id})")
+        cover_qa_path = article_dir / "cover" / "cover_qa.json"
+        cover_qa_gate = _gate_json_status(cover_qa_path)
+        if cover_qa_gate != "PASS":
+            blockers.append(f"cover/cover_qa.json status={cover_qa_gate or 'missing'} (need PASS)")
+        elif cover_qa_path.is_file():
+            try:
+                cover_qa = json.loads(cover_qa_path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                blockers.append("cover/cover_qa.json invalid JSON")
+                cover_qa = {}
+            if not cover_qa.get("pixel_qa"):
+                blockers.append("cover/cover_qa.json missing pixel_qa stamp")
+            stamped_md5 = str(cover_qa.get("cover_md5") or "")
+            if cover_path.is_file() and stamped_md5:
+                live_md5 = hashlib.md5(cover_path.read_bytes()).hexdigest()
+                if live_md5 != stamped_md5:
+                    blockers.append(
+                        f"cover/cover.png md5={live_md5} != cover_qa stamped md5={stamped_md5}"
+                    )
+        return blockers
+
+    blockers = []
 
     link_path = article_dir / "link-verify.json"
     if not link_path.is_file():
@@ -1174,9 +1225,28 @@ def check_publish_prerequisites(
                 f"(need {'PASS or STALE' if allow_stale_freshness else 'PASS'})"
             )
 
-    cover_qa_gate = _gate_json_status(article_dir / "cover" / "cover_qa.json")
+    cover_qa_path = article_dir / "cover" / "cover_qa.json"
+    cover_qa_gate = _gate_json_status(cover_qa_path)
     if cover_qa_gate != "PASS":
         blockers.append(f"cover/cover_qa.json status={cover_qa_gate or 'missing'} (need PASS)")
+    elif cover_qa_path.is_file():
+        try:
+            cover_qa = json.loads(cover_qa_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            blockers.append("cover/cover_qa.json invalid JSON")
+            cover_qa = {}
+        if not cover_qa.get("pixel_qa"):
+            blockers.append("cover/cover_qa.json missing pixel_qa stamp — run cover_qa_gate on PNG bytes")
+        stamped_md5 = str(cover_qa.get("cover_md5") or "")
+        if cover_path.is_file() and stamped_md5:
+            live_md5 = hashlib.md5(cover_path.read_bytes()).hexdigest()
+            if live_md5 != stamped_md5:
+                blockers.append(
+                    f"cover/cover.png md5={live_md5} != cover_qa stamped md5={stamped_md5}"
+                )
+        gate_status = str(cover_qa.get("gate_status") or cover_qa.get("status") or "").upper()
+        if gate_status != "PASS":
+            blockers.append(f"cover/cover_qa.json gate_status={gate_status or 'empty'} (need PASS on pixels)")
 
     if not (article_dir / "description-brief.json").is_file():
         blockers.append("description-brief.json missing")
@@ -1203,7 +1273,7 @@ def evaluate_publish_output(out: str, payload: dict[str, Any]) -> dict[str, Any]
     media_warns = [line for line in lines if line.startswith("WARN cover:") or line.startswith("WARN inline_img_upload:")]
     featured_ok = any(line.startswith("OK featured_image=") for line in lines)
     inline_ok = sum(1 for line in lines if line.startswith("OK inline_image_upload="))
-    expected_inline = len(payload.get("inline_images") or [])
+    expected_inline = 0 if payload.get("featured_only") else len(payload.get("inline_images") or [])
     expect_cover = bool(payload.get("cover_b64"))
 
     errors: list[str] = []
@@ -1255,6 +1325,14 @@ def main() -> int:
             "Skip link-verify / cover / schema / freshness / swarm "
             "prerequisites (emergency only; prefer --media-refresh for cover "
             "re-upload of already-published posts)"
+        ),
+    )
+    ap.add_argument(
+        "--featured-only",
+        action="store_true",
+        help=(
+            "With --media-refresh: upload featured cover only; gates = pixel Cover-QA PASS + "
+            "ledger published + wp_post_id (skip quality-bar-9 / inline re-upload)"
         ),
     )
     ap.add_argument(
@@ -1314,6 +1392,10 @@ def main() -> int:
         )
         return 2
 
+    if args.featured_only and not args.media_refresh:
+        print("BLOCKER: --featured-only requires --media-refresh", file=sys.stderr)
+        return 2
+
     allow_stale_freshness = bool(args.media_refresh or args.allow_stale_freshness)
 
     if args.media_refresh:
@@ -1340,6 +1422,7 @@ def main() -> int:
             require_freshness_gate=not args.dry_run,
             require_swarm_gates=not args.dry_run,
             allow_stale_freshness=allow_stale_freshness,
+            featured_only=bool(args.featured_only),
         )
         if gate_blockers:
             print("BLOCKER: publish prerequisites failed:", file=sys.stderr)
@@ -1364,6 +1447,7 @@ def main() -> int:
         print("WARN --skip-gates: publishing without link-verify/schema prerequisites", file=sys.stderr)
 
     payload = load_article(article_dir, public_base=public)
+    payload["featured_only"] = bool(args.featured_only)
     php = build_php(payload)
 
     if args.dry_run:

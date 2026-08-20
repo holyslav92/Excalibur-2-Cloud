@@ -128,6 +128,8 @@ def main() -> int:
         "skills/cover-qa-excalibur-blog/SKILL.md",
         "scripts/excalibur_blog_description_gate.py",
         "scripts/excalibur_blog_cover_qa_gate.py",
+        "scripts/excalibur_blog_cover_qa_pixels.py",
+        "scripts/excalibur_blog_cover_fixer.py",
         "scripts/excalibur_blog_quad_manifest_preflight.py",
         "scripts/excalibur_blog_cover_wordstat_overlay.py",
         "scripts/excalibur_blog_quality_bar_9_gate.py",
