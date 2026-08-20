@@ -30,6 +30,7 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 7. `drafts/writer.html` — смысл от Writer (**обязателен**)
 8. `title-brief.json` — H1 не ломай в SEO
 9. `research-notes.md` — только сверка фактов (не копируй research в лид)
+10. `shared/published-articles.md` — если interlink включён: **сохрани** outbound-ссылки Writer
 
 ## Не читаешь
 
@@ -46,6 +47,8 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
    - лид без research-даты и термин-дампа;
    - имя автора корпуса в тексте **не** писать;
    - Дзен: **без мата**.
+   - **Interlink:** не удаляй outbound-ссылки на sibling из `drafts/writer.html`;
+     при необходимости переформулируй якорь, но оставь 1–3 живые ссылки.
 4. Сохрани:
    - `article.html` — **финал для публикации**
    - `drafts/variant-a.html` — копия финала

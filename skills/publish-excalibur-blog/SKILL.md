@@ -64,6 +64,8 @@ openers). Канон в article — `<h2>Частые вопросы</h2>`; bare
 | Content evidence | optional/legacy; missing → SKIP (не Publish BLOCK) |
 | Freshness | `freshness-report.json` → PASS |
 | Pipeline canon | `pipeline_canon=human-first-v1`, `editorial_swarm=false` |
+| WP рубрики | `article.meta.json` → `wp_category_slugs` или `topic_defaults`; gate `wp-categories-gate.json` PASS |
+| Interlink outbound | `interlink-gate.json` PASS (1–3 ссылки на published siblings) |
 | Credentials | `FTP_HOST`/`FTP_USER`/`FTP_PASS`/`FTP_ROOT=.` + `PUBLIC_SITE_URL` |
 | Allow flag | `EXCALIBUR_BLOG_ALLOW_PUBLISH=yes` |
 

@@ -28,7 +28,8 @@ description: Write meaning draft drafts/writer.html; Sol applies tenant SOUL sty
 2. `research-notes.md`
 3. `title-brief.json`
 4. `published-titles-only.md`
-5. `shared/dzen-content-rules.md` + RF (не герой Meta/…) — кратко
+5. `shared/published-articles.md` — **только** `status=published` для outbound interlink
+6. `shared/dzen-content-rules.md` + RF (не герой Meta/…) — кратко
 
 ## Не обязан читать (это зона Sol)
 
@@ -43,6 +44,8 @@ description: Write meaning draft drafts/writer.html; Sol applies tenant SOUL sty
 - Структура: открытие → несколько H2 с мыслями → практика/ограничения → CTA.
 - Без research-даты / Wordstat в открытии (Sol всё равно вычистит, но не засоряй).
 - CTA: `tenant-config.cta_links` + MAX по `cta_channels.max` (обязательно при `cta_required=true`).
+- **Interlink (если `interlink_old_articles=true`):** 1–3 контекстные `<a href="/blog/...">` на
+  опубликованные sibling из ledger; якорь по смыслу H2, не «читайте также» в каждом абзаце.
 - Не читай чужие article.html / live-сайт / уже опубликованные статьи сайта / topics.
 
 ## Handoff

@@ -49,6 +49,8 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - Writer/Sol читают старые article.html / live-сайт как образец
 - Publish без pipeline_canon stamp
 - Publish без `cover/cover_qa.json` PASS или без `description-brief.json`
+- Publish **без рубрик WP** (`wp_category_slugs` / `topic_defaults`) при `wp_categories_required=true`
+- Publish **без outbound interlink** (1–3 ссылки на опубликованные sibling) при `interlink_old_articles=true`
 - Scout/тема без **Klyshin×Wordstat dual gate**, без rework-лога или с выдуманными частотами
 - Scout **drop hook** при слабом Wordstat без цикла rework (локализация Тюмень, buyer-жаргон: егрн, наследство, ипотека, аванс…)
 - Scout/тема про RF-blocked heroes без Дзен-канона (если `dzen_rf_pack`)
@@ -68,3 +70,15 @@ python3 scripts/excalibur_blog_research_start.py --topic-id <id> --title "<short
 
 Директор: `.cursor/agents/excalibur-blog-director.md` (не Task).  
 Setup: `.cursor/agents/excalibur-blog-setup.md` (не Task).
+
+## Publish (рубрики + перелинковка)
+
+**Рубрики:** перед каждым publish в `article.meta.json` задай `wp_category_slugs`
+или положись на `shared/wp-blog-categories.json` → `topic_defaults`. Скрипт publish
+всегда вызывает `wp_set_post_categories`; без рубрики — **BLOCKER**
+(`wp_categories_required=true`).
+
+**Перелинковка:** при `interlink_old_articles=true` Writer/Sol добавляют 1–3
+контекстные ссылки на sibling из `shared/published-articles.md` (`status=published`).
+После publish — inbound «Читайте также» в 1–3 старых постах (авто из
+`publish_options.auto_interlink_after_publish`). Контракт: `shared/interlink-contract.md`.

@@ -74,6 +74,34 @@ class WpCategoriesInterlinkTests(unittest.TestCase):
         self.assertEqual(report["status"], "PASS")
         self.assertGreaterEqual(len(report["outbound_found"]), 1)
 
+    def test_ledger_upsert_dedupes_legacy_row(self) -> None:
+        import sys
+
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_wp_publish import upsert_publish_ledger
+
+        ledger_path = ROOT / "shared/published-articles.md"
+        backup = ledger_path.read_text(encoding="utf-8")
+        try:
+            ledger_path.write_text(
+                "# ledger\n\n"
+                "| topic_id | slug | status | url |\n"
+                "|----------|------|--------|-----|\n"
+                "| B02 | old-slug | published | /blog/bez-rubriki/old-slug/ |\n",
+                encoding="utf-8",
+            )
+            upsert_publish_ledger(
+                ROOT,
+                {"topic_id": "B02", "slug": "new-slug"},
+                "https://example.com/blog/vtorichka-i-riski/new-slug/",
+            )
+            text = ledger_path.read_text(encoding="utf-8")
+            self.assertEqual(text.count("B02"), 1)
+            self.assertIn("/blog/vtorichka-i-riski/new-slug/", text)
+            self.assertNotIn("bez-rubriki", text)
+        finally:
+            ledger_path.write_text(backup, encoding="utf-8")
+
 
 if __name__ == "__main__":
     unittest.main()

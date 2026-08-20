@@ -8,6 +8,7 @@ import io
 import json
 import os
 import re
+import subprocess
 import sys
 import urllib.request
 from pathlib import Path
@@ -31,6 +32,42 @@ from excalibur_blog_pipeline_canon import (
     validate_article_canon,
 )
 from excalibur_blog_wp_categories import category_gate_errors, resolve_category_ids
+
+def load_tenant_config(root: Path) -> dict[str, Any]:
+    path = root / "shared/tenant-config.json"
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def _run_article_gate_script(root: Path, article_dir: Path, script_name: str) -> int:
+    """Run a gate script for article_dir; returns process exit code."""
+    script = root / "scripts" / script_name
+    rel_dir = article_dir.relative_to(root) if article_dir.is_relative_to(root) else article_dir
+    proc = subprocess.run(
+        [sys.executable, str(script), "--article-dir", str(rel_dir)],
+        cwd=str(root),
+        check=False,
+    )
+    return int(proc.returncode)
+
+
+def _ledger_row_topic_id(cells: list[str]) -> str:
+    if len(cells) >= 5 and len(cells[0]) >= 4 and cells[0][:4].isdigit():
+        return cells[1].upper()
+    if cells and cells[0].upper().startswith("B"):
+        return cells[0].upper()
+    return ""
+
+
+def _ledger_row_slug(cells: list[str]) -> str:
+    if len(cells) >= 5 and len(cells[0]) >= 4 and cells[0][:4].isdigit():
+        return cells[2]
+    if len(cells) >= 2:
+        return cells[1]
+    return ""
+
 
 def project_root() -> Path:
     return Path(__file__).resolve().parents[1]
@@ -922,18 +959,24 @@ def upsert_publish_ledger(root: Path, payload: dict[str, Any], permalink: str) -
     ledger_url = ledger_url_for_commit(permalink, slug)
     row = f"| {date.today().isoformat()} | {topic_id} | {slug} | {ledger_url} | published |"
     lines = ledger_path.read_text(encoding="utf-8").splitlines()
+    kept: list[str] = []
     replaced = False
-    for index, line in enumerate(lines):
+    for line in lines:
         if not line.startswith("|"):
+            kept.append(line)
             continue
         cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
-        if len(cells) >= 2 and cells[1].upper() == topic_id:
-            lines[index] = row
-            replaced = True
-            break
+        row_topic = _ledger_row_topic_id(cells)
+        row_slug = _ledger_row_slug(cells)
+        if row_topic == topic_id or (slug and row_slug == slug):
+            if not replaced:
+                kept.append(row)
+                replaced = True
+            continue
+        kept.append(line)
     if not replaced:
-        lines.append(row)
-    ledger_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+        kept.append(row)
+    ledger_path.write_text("\n".join(kept).rstrip() + "\n", encoding="utf-8")
 
 
 def parse_article_qa_verdict(article_dir: Path) -> str:
@@ -1100,8 +1143,18 @@ def check_publish_prerequisites(
         if not isinstance(theme_blocks, dict) or theme_blocks.get(key) != "skip":
             blockers.append(f"article.meta.json theme_blocks.{key}=skip required")
     blockers.extend(validate_article_canon(article_dir, project_root()))
-    blockers.extend(category_gate_errors(project_root(), article_dir))
+    root = project_root()
+    tenant = load_tenant_config(root)
+    if bool(tenant.get("wp_categories_required", True)):
+        categories_rc = _run_article_gate_script(root, article_dir, "excalibur_blog_wp_categories.py")
+        if categories_rc != 0:
+            blockers.append("wp-categories-gate failed (run excalibur_blog_wp_categories.py)")
+    blockers.extend(category_gate_errors(root, article_dir))
 
+    if tenant.get("interlink_old_articles"):
+        interlink_rc = _run_article_gate_script(root, article_dir, "excalibur_blog_interlinker.py")
+        if interlink_rc != 0:
+            blockers.append("interlink-gate failed (add 1–3 outbound links to published siblings)")
     interlink_gate = article_dir / "interlink-gate.json"
     if interlink_gate.is_file():
         try:
@@ -1455,11 +1508,9 @@ def main() -> int:
         if deploy_report.get("status") != "PASS":
             return 1
 
-    tenant = json.loads((root / "shared/tenant-config.json").read_text(encoding="utf-8"))
+    tenant = load_tenant_config(root)
     auto_interlink = bool((tenant.get("publish_options") or {}).get("auto_interlink_after_publish"))
     if auto_interlink and tenant.get("interlink_old_articles"):
-        import subprocess
-
         interlink_proc = subprocess.run(
             [
                 sys.executable,
@@ -1471,7 +1522,8 @@ def main() -> int:
             check=False,
         )
         if interlink_proc.returncode != 0:
-            print("WARN post-publish interlink failed", file=sys.stderr)
+            print("BLOCKER: post-publish interlink failed", file=sys.stderr)
+            return 1
     return 0
 
 
