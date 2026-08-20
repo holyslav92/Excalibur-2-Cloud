@@ -2,8 +2,8 @@
   "bank_id": "klyshin_topic_bank_v1",
   "source_channel": "https://t.me/klyshin_A",
   "source_label": "Алексей Клышин — юрист по недвижимости",
-  "updated_at": "2026-08-18",
-  "accessed_at": "2026-08-18",
+  "updated_at": "2026-08-20",
+  "accessed_at": "2026-08-20",
   "algorithm": "klyshin_hook → wordstat_probe → rework_for_demand → final_P0_or_skip_after_rework",
   "wordstat_gate": {
     "provider": "mcp-kv",
@@ -71,7 +71,10 @@
       "klyshin_signal": "Загородный объект: договор готов заранее, на сделке +70 000 ₽ за риск; исследование — 40% нотариальных сделок с мошенниками не устояли",
       "wordstat_probes": ["проверка квартиры перед покупкой", "юридическая проверка квартиры", "купить квартиру в тюмени"],
       "tyumen_localize": true,
-      "status": "seed"
+      "last_seen": "2026-08-20",
+      "wordstat_rework_log": "probe «юридическая проверка квартиры» 6 → «проверка квартиры перед покупкой» 9 → «нотариус при покупке квартиры» 21 → final P0 «купить квартиру в тюмени» 23150",
+      "final_p0": { "phrase": "купить квартиру в тюмени", "volume_55_11176": 23150, "compare_225": 40647 },
+      "status": "used_B03"
     },
     {
       "id": "receipt_no_money",
@@ -170,6 +173,16 @@
       "topic_id": "B01",
       "hook_ids": ["pre_advance_check"],
       "note": "ЕГРН / аванс — rework: егрн cluster → final P0 «купить квартиру в тюмени» 23060"
+    },
+    {
+      "topic_id": "B02",
+      "hook_ids": ["receipt_no_money"],
+      "note": "расписка / расчёт — rework: аккредитив cluster → final P0 «купить квартиру в тюмени» 23060"
+    },
+    {
+      "topic_id": "B03",
+      "hook_ids": ["notary_not_shield_70k"],
+      "note": "нотариус ≠ проверка — rework: нотариус/юридическая проверка → final P0 «купить квартиру в тюмени» 23150"
     }
   ]
 }
