@@ -1,9 +1,9 @@
 {
   "agent": "excalibur-blog-cover-qa",
-  "status": "FAIL",
+  "status": "PASS",
   "checked_at": "2026-08-20",
   "topic_id": "B03",
-  "regeneration": "re-qa_after_fix_quad2_wordstat_patch",
+  "regeneration": "final_qa_after_meme_fix_inline_02_03",
   "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
   "cover_emotion_requested": "jaw-drop shock — eyebrows HIGH, mouth open at EGRN «дарение» line; NO closed-mouth smile",
   "checks": {
@@ -13,7 +13,7 @@
     "cover_phone_readable": true,
     "board_stationery_ok": true,
     "typography_cyrillic_clean": true,
-    "meme_density_inline_ok": false,
+    "meme_density_inline_ok": true,
     "light_high_key": true,
     "motif_no_collision_14d": true,
     "people_in_8_set": true,
@@ -23,18 +23,15 @@
     "inline_utility_all_7": true,
     "inline_no_host_face": true
   },
-  "fail_reasons": [
-    "meme_density_inline_ok: мем-стикеры на inline-01, 02, 03, 05, 07 (5/7); канон 2–3 из 7. inline-02/03 сохранены с cat-мемами — убрать стикеры или перегенерировать utility-only"
-  ],
-  "fixed_since_last_qa": [
-    "inline_no_host_face: inline-04..07 без портрета хоста",
-    "wordstat_stickers_1_3: 3 gold-tape P0-стикера на cover (банкротство продавца / купить квартиру в тюмени / торги по банкротству)"
-  ],
-  "return_to_cover": {
-    "preserve": ["cover/cover.png", "cover/inline-04.png", "cover/inline-05.png", "cover/inline-06.png", "cover/inline-07.png"],
-    "regenerate": ["cover/inline-02.png", "cover/inline-03.png"],
-    "inline_02_fix": "structure_diagram ЕФРСБ→ЭТП→задаток — utility-only, ZERO cat/meme stickers",
-    "inline_03_fix": "labeled_checklist ЕГРН 48ч — utility-only, ZERO grumpy-cat; red STOP icon OK без meme-face"
+  "meme_density_detail": {
+    "inline_with_meme": ["inline-01", "inline-05", "inline-07"],
+    "inline_utility_only": ["inline-02", "inline-03", "inline-04", "inline-06"],
+    "count": "3/7",
+    "canon": "2–3 of 7"
   },
-  "notes": "Re-QA после fix: cover identity/expression/phone/wordstat PASS; quad-2 inlines без host face; inline utility 7/7 OK. Блокер — meme density 5/7 (нужно 2–3): сохранённые inline-02/03 с cat-мемами."
+  "fixed_since_last_qa": [
+    "inline-02: structure_diagram ЕФРСБ→ЭТП→задаток — utility-only, zero cat/meme stickers",
+    "inline-03: labeled_checklist ЕГРН 48ч — utility-only, red STOP icon only, zero grumpy-cat/meme-face"
+  ],
+  "notes": "Final Cover-QA после meme fix inline-02/03: cover identity/expression/phone/wordstat PASS; meme density 3/7 (01 thinking-cat+Travolta, 05 this-is-fine cat, 07 meme-cats); inline-02/03 utility-only; inline utility 7/7; no host face on inlines."
 }
