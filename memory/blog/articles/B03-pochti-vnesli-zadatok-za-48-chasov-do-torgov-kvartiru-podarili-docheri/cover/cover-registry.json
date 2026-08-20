@@ -8,7 +8,7 @@
   "alt": "Перед задатком на торгах квартиру подарили дочери — проверка ЕГРН в Тюмени",
   "aspect_ratio": "16:9",
   "canvas_source": "cover/canvas-quad-01.png",
-  "generated_at": "2026-08-20T08:06:53+00:00",
+  "generated_at": "2026-08-20T08:27:54+00:00",
   "assets": [
     {
       "role": "cover",
@@ -35,7 +35,9 @@
       "alt": "Схема этапов торгов по банкротству от ЕФРСБ до оплаты лота",
       "h2_anchor": "Как устроены торги по банкротству",
       "visual_type": "structure_diagram",
-      "aspect_ratio": "16:9"
+      "aspect_ratio": "16:9",
+      "patched_at": "2026-08-20T08:27:54+00:00",
+      "patch": "inline_utility_meme_density_fix"
     },
     {
       "role": "inline",
@@ -44,7 +46,9 @@
       "alt": "Чеклист проверки лота перед внесением задатка на ЭТП",
       "h2_anchor": "Чеклист ЕГРН за 48 часов до задатка",
       "visual_type": "labeled_checklist",
-      "aspect_ratio": "16:9"
+      "aspect_ratio": "16:9",
+      "patched_at": "2026-08-20T08:27:54+00:00",
+      "patch": "inline_utility_meme_density_fix"
     },
     {
       "role": "inline",

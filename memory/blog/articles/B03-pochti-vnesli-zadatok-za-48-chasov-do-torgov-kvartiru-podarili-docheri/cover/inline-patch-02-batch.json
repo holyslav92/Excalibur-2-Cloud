@@ -1,0 +1,17 @@
+{
+  "pipeline": "inline_utility_patch",
+  "canvas_index": 0,
+  "output_canvas": "cover/inline-02-raw.png",
+  "result_path": "cover/inline-patch-02-result.json",
+  "jobs": [
+    {
+      "slot": "inline_2",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 RU editorial utility panel, high-key bright #FFFFFF collage, gold #dcc5a1 / black #141821 Cyrillic, torn paper, gold tape, pins, thin strings, sun flare. NO host face, NO person, NO portrait. FORBIDDEN: cat stickers, meme faces, grumpy cat, wojak, celebrity memes, animal stickers.\nсхема устройства механизма; «Как устроены торги по банкротству»; Flow blocks tape+string: ЕФРСБ→ЭТП→задаток→торги→оплата; numbered arrows between blocks; dense facts. TXT:ЕФРСБ → площадка | Альфалот | Сбербанк-АСТ | задаток 5–20% | минус 10% этап | возврат 5 дней.\nUtility-only diagram on white board; perfect Cyrillic labels; zero typos; no decorative icons without facts.",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}

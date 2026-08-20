@@ -87,7 +87,8 @@
       "quadrant": "bottom_left",
       "h2_anchor": "Как устроены торги по банкротству",
       "visual_type": "structure_diagram",
-      "scene_hint": "Flow blocks tape+string: ЕФРСБ→ЭТП→задаток→торги→оплата; arrows numbered; no host face",
+      "meme_sticker": false,
+      "scene_hint": "Flow blocks tape+string: ЕФРСБ→ЭТП→задаток→торги→оплата; arrows numbered; utility-only; ZERO cat/meme stickers; no host face",
       "alt": "Схема этапов торгов по банкротству от ЕФРСБ до оплаты лота",
       "labels": [
         "ЕФРСБ → площадка",
@@ -102,7 +103,8 @@
       "quadrant": "bottom_right",
       "h2_anchor": "Чеклист ЕГРН за 48 часов до задатка",
       "visual_type": "labeled_checklist",
-      "scene_hint": "Numbered checklist on taped board; pins on each step; red STOP at final row; all Cyrillic readable",
+      "meme_sticker": false,
+      "scene_hint": "Numbered checklist on taped board; pins on each step; red STOP icon at final row; utility-only; ZERO grumpy-cat/meme-face stickers; all Cyrillic readable",
       "alt": "Чеклист проверки лота перед внесением задатка на ЭТП",
       "labels": [
         "ЕФРСБ сначала",

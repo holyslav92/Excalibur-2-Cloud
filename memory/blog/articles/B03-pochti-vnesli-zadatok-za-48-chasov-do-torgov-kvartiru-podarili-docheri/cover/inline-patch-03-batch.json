@@ -1,0 +1,17 @@
+{
+  "pipeline": "inline_utility_patch",
+  "canvas_index": 0,
+  "output_canvas": "cover/inline-03-raw.png",
+  "result_path": "cover/inline-patch-03-result.json",
+  "jobs": [
+    {
+      "slot": "inline_3",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 RU editorial utility panel, high-key bright #FFFFFF collage, gold #dcc5a1 / black #141821 Cyrillic, torn paper, gold tape, pins, thin strings, sun flare. NO host face, NO person, NO portrait. FORBIDDEN: cat stickers, meme faces, grumpy cat, wojak, celebrity memes, animal stickers.\nчеклист ошибок vs правильный путь; «Чеклист ЕГРН за 48 часов до задатка»; Numbered checklist on taped board; pins on each step; red STOP icon at final row. TXT:ЕФРСБ сначала | выписка в день | переходы прав | реквизит 4 | сверка с ЕФРСБ | стоп до задатка.\nUtility-only checklist; perfect Cyrillic; zero typos; no meme stickers.",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}
