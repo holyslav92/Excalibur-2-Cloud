@@ -1,0 +1,27 @@
+{
+  "title": "Сделку с квартирой оспорили через год: покупатель проверил всё — и потерял",
+  "h1": "Сделку с квартирой оспорили через год: покупатель проверил всё — и потерял",
+  "slug": "2026-08-15t080218-396z",
+  "topic_id": "B06",
+  "author_id": "svyatoslav-shakin",
+  "article_mode": "B",
+  "description": "Год после регистрации — повестка: продавец оспаривает сделку. Что говорит ВС РФ 2026 о добросовестном приобретателе и почему «продавец вернёт деньги» — миф",
+  "date": "2026-08-15",
+  "wp_post_id": 8665,
+  "wp_category_slugs": [
+    "vtorichka-i-riski"
+  ],
+  "pipeline_canon": "human-first-v2",
+  "editorial_swarm": false,
+  "theme_blocks": {
+    "faq": "skip",
+    "quiz": "skip",
+    "side_stickers": "skip"
+  },
+  "repair_job": {
+    "type": "truncate_fix",
+    "original_wp_post_id": 8665,
+    "dzen_url": "https://dzen.ru/a/aoAdHa3UpQP2PxbO",
+    "repaired_at": "2026-08-20"
+  }
+}

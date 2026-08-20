@@ -1,0 +1,16 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "inline_4",
+  "output_canvas": "cover/inline-04.png",
+  "jobs": [
+    {
+      "slot": "inline_4",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 editorial infographic panel, high-key #FFF, gold/black Cyrillic.\nсхема устройства механизма; «Тюменская специфика: два запрета и одна ловушка»; Flow blocks: запрет без личного участия → доверенность блок | ловушка лично в МФЦ под давлением; 22 010 stat callout. TXT:22 010 запретов | Q1 2026 Тюмень | доверенность не спасёт | лично в МФЦ | под влиянием мошенников | +114% к 2025.\nNEGATIVE: . icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face. tape/pins/strings/paper scraps; high-key #FFF/gold; not noir.\nTEXT LANGUAGE LOCK: Russian Cyrillic only.\n",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}

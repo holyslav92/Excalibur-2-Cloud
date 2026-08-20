@@ -1,0 +1,16 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "inline_6",
+  "output_canvas": "cover/inline-06.png",
+  "jobs": [
+    {
+      "slot": "inline_6",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 editorial infographic panel, high-key #FFF, gold/black Cyrillic.\nсравнительная таблица с колонками; «Миф: «деньги продавец просто вернёт»»; МИФ vs РЕАЛЬНОСТЬ two columns; red myth left; green reality right; реституция footnote. TXT:миф: вернёт сразу | реальность: годы суда | реституция двусторонняя | квартиру отберут | деньги — исполнение | нет гарантии.\nNEGATIVE: . icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face. tape/pins/strings/paper scraps; high-key #FFF/gold; not noir.\nTEXT LANGUAGE LOCK: Russian Cyrillic only.\n",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}

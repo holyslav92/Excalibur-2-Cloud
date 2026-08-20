@@ -1,0 +1,16 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "inline_7",
+  "output_canvas": "cover/inline-07.png",
+  "jobs": [
+    {
+      "slot": "inline_7",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 editorial infographic panel, high-key #FFF, gold/black Cyrillic.\nсравнительная таблица с колонками; «Сколько стоит сопровождение и что в него входит»; Price table: 60 000–150 000 ₽ range; rows что входит; footnote «не гарантия» gold tape. TXT:от 60 000 ₽ | до 150 000 ₽ | проверка документов | участие в сделке | общение с банком | не «гарантия». +tiny meme sticker only (≤15% frame, corner accent from memory/cover/meme-top100.json; NO co-host human; NO presenter).\nNEGATIVE: tiny meme sticker ≤15% frame corner only from meme-top100.json. icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face. tape/pins/strings/paper scraps; high-key #FFF/gold; not noir.\nTEXT LANGUAGE LOCK: Russian Cyrillic only.\n",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "inline_3",
+  "output_canvas": "cover/inline-03.png",
+  "jobs": [
+    {
+      "slot": "inline_3",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 editorial infographic panel, high-key #FFF, gold/black Cyrillic.\nсравнительная таблица с колонками; «Что суд считает признаками неосмотрительности»; Table rows: признак неосмотрительности | что проверить; red flags left column; pins on headers. TXT:цена ниже рынка | наличные без следа | сделка за 1 день | ЕГРН не проверили | без встречи с продавцом | скрытые аресты.\nNEGATIVE: . icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face. tape/pins/strings/paper scraps; high-key #FFF/gold; not noir.\nTEXT LANGUAGE LOCK: Russian Cyrillic only.\n",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}

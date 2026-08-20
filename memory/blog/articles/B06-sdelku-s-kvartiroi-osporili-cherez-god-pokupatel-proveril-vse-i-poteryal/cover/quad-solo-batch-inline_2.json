@@ -1,0 +1,16 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "inline_2",
+  "output_canvas": "cover/inline-02.png",
+  "jobs": [
+    {
+      "slot": "inline_2",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 editorial infographic panel, high-key #FFF, gold/black Cyrillic.\nсравнительная таблица с колонками; «Почему «все документы чистые» перестало быть гарантией»; Two columns: МИФ «документы чистые» vs ФАКТ ВС 2026; gold tape headers; добросовестный приобретатель row. TXT:чистые документы | ≠ риск ноль | ВС июль 2026 | добросовестный покупатель | заблуждение продавца | оценка суда.\nNEGATIVE: . icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face. tape/pins/strings/paper scraps; high-key #FFF/gold; not noir.\nTEXT LANGUAGE LOCK: Russian Cyrillic only.\n",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}
