@@ -1,0 +1,86 @@
+{
+  "topic_id": "B03",
+  "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Перед задатком на торгах квартиру подарили дочери — проверка ЕГРН в Тюмени",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-20T07:50:36+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Перед задатком на торгах квартиру подарили дочери — проверка ЕГРН в Тюмени",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Сравнение карточки лота на ЭТП и свежей выписки ЕГРН — два разных документа",
+      "h2_anchor": "«Карточка чистая» — самая дорогая фраза на торгах",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Схема этапов торгов по банкротству от ЕФРСБ до оплаты лота",
+      "h2_anchor": "Как устроены торги по банкротству",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Чеклист проверки лота перед внесением задатка на ЭТП",
+      "h2_anchor": "Чеклист ЕГРН за 48 часов до задатка",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Оспаривание дарения родственнику при банкротстве — что смотреть до задатка",
+      "h2_anchor": "Дарение дочери — правовая рамка",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Сравнение задатка на торгах по банкротству и в обычной сделке",
+      "h2_anchor": "Задаток на ЭТП и обычная сделка",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Типичные ошибки покупателя перед внесением задатка на торгах",
+      "h2_anchor": "Пять ошибок, из-за которых на торгах теряют деньги",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Примеры квартир на торгах по банкротству в Тюмени",
+      "h2_anchor": "Тюмень — живые лоты августа 2026 года",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

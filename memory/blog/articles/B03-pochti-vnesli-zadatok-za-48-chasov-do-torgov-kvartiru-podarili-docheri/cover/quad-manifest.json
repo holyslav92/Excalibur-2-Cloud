@@ -1,0 +1,180 @@
+{
+  "topic_id": "B03",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Перед задатком подарили дочери",
+  "cover_hook_highlight": "дочери",
+  "cover_emotion": "jaw-drop shock — eyebrows HIGH, mouth open, wide eyes at EGRN «дарение» line; FORBIDDEN closed-mouth smile",
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: Derouter REST api-direct 2K; light investigation board; memes cat+people; Wordstat stickers",
+  "wordstat_stickers": [
+    "банкротство продавца квартиры",
+    "купить квартиру в тюмени",
+    "торги по банкротству квартира"
+  ],
+  "cover_motifs": {
+    "composition": "host_slim_left_jaw_drop_points_egrn_gift_line_string_web_sun_flare",
+    "location": "bright_white_corkboard_investigation_tyumen_glass_atrium",
+    "meme": "woman_yelling_cat_sticker_plus_surprised_wojak_cutout",
+    "prop_set": "efrsb_lot_card_egrn_fold_gift_deed_red_circle_daughter_icon_phone_cta",
+    "sticker_set": "wordstat_bankrotstvo_torgi_tyumen_gold_tape_phone_number",
+    "joke": "sticky_карточка_чистая_green_check_fake_crossed_red_x"
+  },
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Перед задатком на торгах квартиру подарили дочери — проверка ЕГРН в Тюмени",
+      "cover_emotion": "jaw-drop shock — eyebrows HIGH, mouth open, wide eyes; NO smile",
+      "scene_hint": "jaw-drop shock at EGRN «дарение дочери»; SLIM host LARGE left; white board tape pins strings; phone CTA; memes; sun flare; pink «дочери»",
+      "meme_caption_ru": "",
+      "sticky": "карточка не ЕГРН"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Карточка чистая» — самая дорогая фраза на торгах",
+      "visual_type": "comparison_table",
+      "meme_sticker": true,
+      "scene_hint": "Split columns: КАРТОЧКА ЭТП vs ВЫПИСКА ЕГРН; red X on «чистая»; string links rows; thinking-cat sticker corner",
+      "alt": "Сравнение карточки лота на ЭТП и свежей выписки ЕГРН — два разных документа",
+      "labels": [
+        "4 лота параллельно",
+        "15 млн рынок",
+        "11,7 млн вход",
+        "2 дня до задатка",
+        "дарение дочери",
+        "задаток не внесли"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Как устроены торги по банкротству",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Flow blocks tape+string: ЕФРСБ→ЭТП→задаток→торги→оплата; arrows numbered; no host face",
+      "alt": "Схема этапов торгов по банкротству от ЕФРСБ до оплаты лота",
+      "labels": [
+        "ЕФРСБ → площадка",
+        "Альфалот",
+        "Сбербанк-АСТ",
+        "задаток 5–20%",
+        "минус 10% этап",
+        "возврат 5 дней"
+      ]
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Чеклист ЕГРН за 48 часов до задатка",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Numbered checklist on taped board; pins on each step; red STOP at final row; all Cyrillic readable",
+      "alt": "Чеклист проверки лота перед внесением задатка на ЭТП",
+      "labels": [
+        "ЕФРСБ сначала",
+        "выписка в день",
+        "переходы прав",
+        "реквизит 4",
+        "сверка с ЕФРСБ",
+        "стоп до задатка"
+      ]
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Дарение дочери — правовая рамка",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Legal blocks diagram: ст.61.2→3 года→согласие ФУ→приостановка; footnote «не автоотмена» aside",
+      "alt": "Оспаривание дарения родственнику при банкротстве — что смотреть до задатка",
+      "labels": [
+        "ст. 61.2 127-ФЗ",
+        "3 года оспаривания",
+        "согласие ФУ",
+        "ст. 213.25",
+        "торги приостановили",
+        "не автоотмена"
+      ]
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Задаток на ЭТП и обычная сделка",
+      "visual_type": "comparison_table",
+      "meme_sticker": true,
+      "scene_hint": "2-col table ТОРГИ vs ОБЫЧНАЯ СДЕЛКА; rows with durations; this-is-fine cat sticker on «заморозка» row",
+      "alt": "Сравнение задатка на торгах по банкротству и в обычной сделке",
+      "labels": [
+        "проиграл: 5 дней",
+        "победитель 30 дней",
+        "не оплатил — штраф",
+        "ипотека почти нет",
+        "заморозка месяцы",
+        "свои правила торгов"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Пять ошибок, из-за которых на торгах теряют деньги",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "2 cols: ОШИБКИ left vs ПРАВИЛЬНО right; 5 numbered rows BOTH columns filled Cyrillic",
+      "alt": "Типичные ошибки покупателя перед внесением задатка на торгах",
+      "labels": [
+        "только карточка",
+        "дарение ≠ отмена",
+        "5–20% задаток",
+        "без ипотеки",
+        "не один лот",
+        "4 лота в работе"
+      ]
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Тюмень — живые лоты августа 2026 года",
+      "visual_type": "comparison_table",
+      "meme_sticker": true,
+      "scene_hint": "3-row lot table with prices+deadlines; bar markers for задаток%; distracted-boyfriend sticker on risky row",
+      "alt": "Примеры квартир на торгах по банкротству в Тюмени",
+      "labels": [
+        "7,2 млн Тихий",
+        "задаток 20%",
+        "до 25 августа",
+        "проживает супруг",
+        "3,6 млн Широтная",
+        "выписка решает"
+      ]
+    }
+  },
+  "cover_keys_ru": []
+}
