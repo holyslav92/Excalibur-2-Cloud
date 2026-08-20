@@ -38,6 +38,17 @@ ALLOWED_TAGS: set[str] = {
     "br",
 }
 
+# Теги-алиасы, которые autofix заменяет на whitelist ДО lint (Sol/Writer часто шлют <strong>).
+TAG_ALIAS_FIXES: tuple[tuple[str, str], ...] = (
+    ("strong", "b"),
+    ("em", "i"),
+)
+
+HTML_WHITELIST_PROMPT_LINE = (
+    "HTML whitelist: use <b> not <strong>, <i> not <em>; allowed body tags: "
+    + ", ".join(sorted(ALLOWED_TAGS))
+)
+
 
 def detect_anchor_toc(html: str) -> list[str]:
     """Fail if article contains in-body table of contents (anchor link list)."""
@@ -259,6 +270,36 @@ class HTMLTagLinter(HTMLParser):
             self.errors.append(f"Line {line}, Col {col}: Unclosed HTML tag <{tag}> at end of document.")
 
 
+def autofix_html_aliases(html: str) -> tuple[str, list[str]]:
+    """Заменить alias-теги на whitelist-эквиваленты; вернуть (html, список правок)."""
+    fixes: list[str] = []
+    out = html
+    for old_tag, new_tag in TAG_ALIAS_FIXES:
+        open_pat = re.compile(rf"<{old_tag}(\s[^>]*)?>", re.IGNORECASE)
+        close_pat = re.compile(rf"</{old_tag}\s*>", re.IGNORECASE)
+        open_count = len(open_pat.findall(out))
+        close_count = len(close_pat.findall(out))
+        if open_count or close_count:
+            out = open_pat.sub(lambda m: f"<{new_tag}{m.group(1) or ''}>", out)
+            out = close_pat.sub(f"</{new_tag}>", out)
+            fixes.append(f"<{old_tag}>→<{new_tag}> ({open_count} open, {close_count} close)")
+    return out, fixes
+
+
+def autofix_html_file(html_path: Path, *, write: bool = True) -> dict[str, Any]:
+    """Autofix alias-тегов в файле; опционально перезаписать."""
+    original = html_path.read_text(encoding="utf-8")
+    fixed, fixes = autofix_html_aliases(original)
+    changed = fixed != original
+    if write and changed:
+        html_path.write_text(fixed, encoding="utf-8")
+    return {
+        "file": str(html_path.name),
+        "changed": changed,
+        "fixes": fixes,
+    }
+
+
 def lint_html_file(html_path: Path, whitelist: set[str]) -> dict[str, Any]:
     html_content = html_path.read_text(encoding="utf-8")
     linter = HTMLTagLinter(whitelist)
@@ -280,11 +321,23 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="Excalibur BLOG HTML Whitelist & Nesting Linter")
     ap.add_argument("html", type=Path, help="Path to article.html")
     ap.add_argument("-o", "--output", type=Path, help="Path to write html-linter-report.json")
+    ap.add_argument(
+        "--fix",
+        action="store_true",
+        help="Autofix alias tags (<strong>→<b>, <em>→<i>) before lint; rewrite file",
+    )
     args = ap.parse_args()
 
     if not args.html.is_file():
         print(f"File not found: {args.html}", file=sys.stderr)
         return 2
+
+    if args.fix:
+        fix_report = autofix_html_file(args.html, write=True)
+        if fix_report["fixes"]:
+            print(f"HTML Autofix: {', '.join(fix_report['fixes'])}")
+        else:
+            print("HTML Autofix: no alias tags to fix")
 
     report = lint_html_file(args.html, ALLOWED_TAGS)
     text = json.dumps(report, ensure_ascii=False, indent=2)

@@ -113,6 +113,7 @@ def main() -> int:
             py,
             str(scripts / "excalibur_blog_html_linter.py"),
             str(html),
+            "--fix",
             "-o",
             str(article_dir / "html-linter-report.json"),
         ],

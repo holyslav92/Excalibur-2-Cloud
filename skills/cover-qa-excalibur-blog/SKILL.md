@@ -12,6 +12,18 @@ description: "Cover-QA: visual gate after Cover, before Indexer/Publish; stamp c
 
 FAIL → **вернуть Cover** (не Indexer/Publish).
 
+**Panel-only regen (default):** не перегенерировать оба canvas целиком. Только failed slots:
+
+```bash
+python3 scripts/excalibur_blog_quad_regen_panels.py \
+  --article-dir "$ARTICLE" \
+  --slots inline_2,inline_3 \
+  --inject-html
+```
+
+Cover slot → solo i2i; inline → utility t2i. Derouter primary, Kie после 524/quota.
+Сохранить approved cover: `quad_preserve_cover.py` если regen canvas-1 inlines.
+
 ## Что проверяешь (визуально + артефакты)
 
 1. **Лицо + телосложение хоста** — тот же человек что `face-studio-2026-06-23.jpg` (кости, hairline, глаза, щетина, 28 лет); **medium slim**. FAIL: chubby, другой человек.
