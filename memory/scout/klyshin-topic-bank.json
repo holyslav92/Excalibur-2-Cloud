@@ -2,8 +2,8 @@
   "bank_id": "klyshin_topic_bank_v1",
   "source_channel": "https://t.me/klyshin_A",
   "source_label": "Алексей Клышин — юрист по недвижимости",
-  "updated_at": "2026-08-18",
-  "accessed_at": "2026-08-18",
+  "updated_at": "2026-08-20",
+  "accessed_at": "2026-08-20",
   "algorithm": "klyshin_hook → wordstat_probe → rework_for_demand → final_P0_or_skip_after_rework",
   "wordstat_gate": {
     "provider": "mcp-kv",
@@ -96,9 +96,28 @@
       "hook_ru": "за 48 часов до задатка квартиру подарили дочери",
       "angle": "торги, банкротство, внезапный переход права",
       "klyshin_signal": "Торги: переход права за неделю до задатка, дарение дочери в процедуре банкротства",
-      "wordstat_probes": ["торги по банкротству квартира", "проверка квартиры перед покупкой", "купить квартиру в тюмени"],
+      "klyshin_post_url": "https://t.me/klyshin_A/3142",
+      "last_seen": "2026-08-20",
+      "wordstat_probes": ["торги по банкротству квартира", "банкротство продавца квартиры", "купить квартиру в тюмени"],
+      "wordstat_rework_log": [
+        "probe «торги по банкротству квартира» 23 (55+11176)",
+        "probe «купить квартиру на торгах» 9",
+        "probe «банкротство продавца квартиры» 30 (buyer cluster)",
+        "similar «торги банкротов» 68",
+        "final P0 «купить квартиру в тюмени» 23066"
+      ],
+      "final_p0": {
+        "phrase": "купить квартиру в тюмени",
+        "volume": 23066,
+        "regions": ["55", "11176"],
+        "compare_ru_volume": 40585
+      },
+      "sticker_clusters": [
+        { "phrase": "банкротство продавца квартиры", "volume": 30 },
+        { "phrase": "торги по банкротству квартира", "volume": 23 }
+      ],
       "tyumen_localize": true,
-      "status": "seed"
+      "status": "used_B03"
     },
     {
       "id": "matkapital_child_shares",
@@ -170,6 +189,17 @@
       "topic_id": "B01",
       "hook_ids": ["pre_advance_check"],
       "note": "ЕГРН / аванс — rework: егрн cluster → final P0 «купить квартиру в тюмени» 23060"
+    },
+    {
+      "topic_id": "B02",
+      "hook_ids": ["receipt_no_money"],
+      "note": "Расписка / расчёты — rework: аккредитив cluster → final P0 «купить квартиру в тюмени»"
+    },
+    {
+      "topic_id": "B03",
+      "hook_ids": ["bankruptcy_auction_48h"],
+      "scout_date": "2026-08-20",
+      "note": "Торги/банкротство — rework: торги 23 → банкротство продавца 30 → final P0 «купить квартиру в тюмени» 23066"
     }
   ]
 }
