@@ -42,4 +42,5 @@
 ## После тебя
 
 Директор вызывает `Task(excalibur-blog-sol)`. Sol читает SOUL + examples
-и пишет финальный `article.html` через **mcp-derouter** (см. `shared/writer-model-contract.md`).
+и пишет финальный `article.html` через `scripts/excalibur_blog_derouter_opus_chat.py`
+(см. `shared/derouter-opus-brain-contract.md`). Cursor не пишет прозу своей моделью.

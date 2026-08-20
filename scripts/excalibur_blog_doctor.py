@@ -127,7 +127,7 @@ def main() -> int:
         "skills/cover-qa-excalibur-blog/SKILL.md",
         "scripts/excalibur_blog_description_gate.py",
         "scripts/excalibur_blog_cover_qa_gate.py",
-        "skills/setup-excalibur-blog/SKILL.md",
+        "shared/derouter-opus-brain-contract.md",
         "skills/setup-voice-excalibur-blog/SKILL.md",
         "skills/setup-visual-excalibur-blog/SKILL.md",
         "skills/writer-excalibur-blog/SKILL.md",
@@ -143,6 +143,7 @@ def main() -> int:
         "scripts/excalibur_blog_opening_meta_gate.py",
         "scripts/excalibur_blog_writer_ready_gate.py",
         "scripts/excalibur_blog_cover_text_gate.py",
+        "scripts/excalibur_blog_derouter_opus_chat.py",
         "scripts/excalibur_blog_derouter_gpt_image2_api.py",
         "scripts/excalibur_blog_kie_gpt_image2_api.py",
         "scripts/excalibur_blog_wp_publish.py",
@@ -433,18 +434,45 @@ def main() -> int:
     derouter_key = os.environ.get("DEROUTER_API_KEY", "").strip()
     check(
         bool(derouter_key),
-        "DEROUTER_API_KEY set (Cover PRIMARY; missing → DEROUTER API KEY MISSING at gen time)",
+        "DEROUTER_API_KEY set (factory brain + Cover; missing → DEROUTER * BLOCKER)",
         errors,
         warnings,
         warn=True,
     )
-    derouter_model = os.environ.get("DEROUTER_IMAGE_MODEL", "").strip()
+    derouter_text_model = (os.environ.get("DEROUTER_TEXT_MODEL") or "claude-opus-5").strip()
     check(
-        bool(derouter_model),
+        bool(derouter_text_model) and "opus" in derouter_text_model.lower(),
+        f"DEROUTER_TEXT_MODEL Opus family ({derouter_text_model or 'unset'}; script default claude-opus-5)",
+        errors,
+        warnings,
+        warn=True,
+    )
+    derouter_image_model = os.environ.get("DEROUTER_IMAGE_MODEL", "").strip()
+    check(
+        bool(derouter_image_model),
         "DEROUTER_IMAGE_MODEL set (Cover image model id)",
         errors,
         warnings,
         warn=True,
+    )
+    brain = tenant.get("writing_model") or {}
+    check(
+        brain.get("script") == "scripts/excalibur_blog_derouter_opus_chat.py",
+        "tenant writing_model.script → excalibur_blog_derouter_opus_chat.py",
+        errors,
+        warnings,
+    )
+    check(
+        brain.get("contract") == "shared/derouter-opus-brain-contract.md",
+        "tenant writing_model.contract → derouter-opus-brain-contract.md",
+        errors,
+        warnings,
+    )
+    check(
+        brain.get("fail_loud_if_unavailable") is True,
+        "tenant writing_model.fail_loud_if_unavailable=true",
+        errors,
+        warnings,
     )
 
     # Dzen + RF canon must be readable before Scout (when pack enabled)
