@@ -50,8 +50,11 @@ Scout? → research_start → Research → Title → Writer → Sol
 - **Indexer** — `llms.txt` / `llms-full.txt` (без правок `article.html`).
 - **Publish** — **только если одновременно**:
   1. в Cloud Secrets уже есть SFTP: `FTP_HOST`, `FTP_USER`, `FTP_PASS`, `FTP_ROOT` (и `PUBLIC_SITE_URL`);
-  2. на **этот процесс** выставлен `EXCALIBUR_BLOG_ALLOW_PUBLISH=yes` (env / Runtime Secret, **не git**).
+  2. на **этот процесс** выставлен `EXCALIBUR_BLOG_ALLOW_PUBLISH=yes` (env / Runtime Secret, **не git**);
+  3. `quality-bar-9.json` → `all_pass: true` (см. `shared/quality-bar-9.md`).
 - Если allow flag или FTP **нет** — run завершается после Indexer + артефактов в репо (**без live publish**).
+- Live = **SFTP replace** на tymenrieltor.ru; не жди merge `article.html` в `main` для выхода на сайт.
+- **Код и канон** (scripts, shared/*, skills, gates) — в `main`. Артефакты статьи — в ветке run / PR automation.
 - **Не коммитить** `EXCALIBUR_BLOG_ALLOW_PUBLISH=yes` в репозиторий, `.env`, `tenant-config` или Cloud Secrets в git.
 
 Writer = смысл (`drafts/writer.html`). Sol = слог тенанта (`shared/SOUL.md`).
@@ -81,6 +84,23 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 `DEROUTER <ROLE> BLOCKER` в stderr → **стоп** пайплайна.
 Контракт: `shared/derouter-opus-brain-contract.md`.
 
+**Нет run_budget / circuit breaker** — не добавляй wall-clock или billed caps поверх Derouter.
+
+## Conversion + quality bar 9/10 (HARD before Publish)
+
+Главная задача статьи — увести читателя в **Telegram** или **MAX** до ухода с страницы.
+Канон URL: `shared/tenant-config.json` → `cta_channels` / `cta_links`.
+
+| Зона | Когда | Что |
+|------|-------|-----|
+| **Early** | после hook + TL;DR, первый экран | brand beat (Святослав, The Риэлтор, Тюмень) + curiosity + **только TG + MAX** |
+| **Mid** | после главного чеклиста | лёгкий nudge TG + MAX (`excalibur-cta-mid`) |
+| **End** | финал | dual CTA «консультация» / «сразу в сделку» + полный набор (TG, MAX, site, Дзен, VK, guides, about) |
+
+- Телефон `+7 922 001 65 05` — на **cover** + **один раз** в теле.
+- **Interlink:** 2–4 контекстные ссылки на sibling из `shared/published-articles.md` (`status=published`).
+- Gate: `python3 scripts/excalibur_blog_quality_bar_9_gate.py --article-dir <dir>` → `quality-bar-9.json` all_pass.
+
 ## Visual longform (8 изображений)
 
 1. **Canvas 1** (Derouter REST 2K i2i): cover + inline_1…3 → split 2×2
@@ -97,26 +117,39 @@ Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 
 
 ## Automation prompt
 
+Скопируй блок ниже в **Instructions** каждого из 4 Cursor Automations (09/12/15/17 YEKT):
+
 ```text
-Прочитай AGENTS.md + shared/pipeline-canon.json + shared/tenant-config.json.
+Прочитай AGENTS.md + shared/pipeline-canon.json + shared/tenant-config.json + shared/quality-bar-9.md + CLOUD-AUTOMATION.md.
 Если setup_complete != true — остановись (Setup).
 Игнорируй Automation Memory. Memories = OFF.
 
-Ты — ТОНКИЙ ДИРИЖЁР (default Composer — не переключать). Прозу текстовых ролей пишет ТОЛЬКО
+Ты — ТОНКИЙ ДИРИЖЁР (default Composer — НЕ переключать модель). Прозу текстовых ролей пишет ТОЛЬКО
 scripts/excalibur_blog_derouter_opus_chat.py:
   powerful claude-opus-5 → scout/title/writer/sol
   utility gpt-5.6-terra → research/description/cover-text/schema/cover-scene
 Не пиши Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene своей моделью.
-DEROUTER <ROLE> BLOCKER → стоп пайплайна.
+DEROUTER <ROLE> BLOCKER → стоп пайплайна. Нет run_budget / circuit breaker.
 
 doctor + today.
 dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
 needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
 research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
-После Sol: pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 (shared/quality-bar-9.md).
-Description → Cover-text || Schema → Cover (scene/prompt text via derouter --role cover-scene) → Cover-QA → Indexer.
+
+Conversion (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
+  Early после hook+TL;DR: brand beat + curiosity + ТОЛЬКО Telegram https://t.me/Tyumen_Rieltor и MAX https://max.ru/id561413315447_biz
+  Mid после главного чеклиста: лёгкий TG+MAX (excalibur-cta-mid)
+  End: dual CTA консультация / сразу в сделку + полный набор (site, guides, Dzen, VK, about)
+  Телефон +7 922 001 65 05 на cover + один раз в теле
+  Interlink 2–4 sibling из shared/published-articles.md (status=published)
+
+После Sol: pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → quality-bar-9.json all_pass.
+Description → Cover-text || Schema → Cover (cover-scene via derouter) → Cover-QA (phone on cover, inline utility) → Indexer.
+
 Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе И quality-bar-9.json all_pass; иначе STOP после Indexer.
-Fixer → merge → content-learner.
+Live = SFTP replace (не жди merge article в main для сайта). Код/канон — в main.
+
+Один run = одна статья. Fixer → merge code fixes → content-learner.
 ```
 
 Секреты только из Cloud Secrets (`PUBLIC_SITE_URL`, SFTP, image API, Wordstat MCP). Allow flag — **runtime only**, не в git.

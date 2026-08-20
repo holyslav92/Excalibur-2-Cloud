@@ -42,9 +42,11 @@ Sol = финальный слог (`article.html`) по SOUL + soul-examples.
    `shared/rf-blocked-entities.json` (Meta/Instagram/… — не тема).
 1. Scout? + research_start
 2. Research → Title → Writer → **Sol**
-3. shell `pipeline_canon --stamp` + opening_meta + html_linter
+3. shell `pipeline_canon --stamp` + opening_meta + html_linter + **quality-bar-9** (`shared/quality-bar-9.md`)
 4. **Description** → cover-text || schema → Cover
-5. **Cover-QA** → indexer → publish
-6. Fixer → merge → content-learner
+5. **Cover-QA** → indexer → publish (только при quality-bar-9 all_pass + FTP + EXCALIBUR_BLOG_ALLOW_PUBLISH=yes)
+6. Fixer → merge code to main → content-learner
+
+Conversion canon: early TG+MAX после lead/TL;DR; mid после чеклиста; end dual CTA + полный набор каналов; interlink 2–4 sibling. CTA URLs — `tenant-config.cta_channels`.
 
 Skill: `skills/director-excalibur-blog/SKILL.md`

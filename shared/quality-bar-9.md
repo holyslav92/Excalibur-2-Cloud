@@ -6,11 +6,10 @@
 
 **Главная задача статьи — conversion:** увести читателя в **Telegram** или **MAX** до того, как он уйдёт. Не оставлять единственный CTA в футере.
 
-Канонические URL — `shared/tenant-config.json` → `cta_channels`:
+Канонические URL — `shared/tenant-config.json` → `cta_channels` / `cta_links` (PUBLIC_SITE_URL = tymenrieltor.ru):
 - Telegram (PRIMARY): https://t.me/Tyumen_Rieltor
 - MAX (PRIMARY): https://max.ru/id561413315447_biz
-- Сайт: `/` (tymenrieltor.ru)
-- PDF-гайды: `/gajdy/`
+- Сайт / guides / about: `{{SITE_BASE}}`, `{{SITE_BASE}}/gajdy/`, `{{SITE_BASE}}/rieltor-tyumen/`
 - Дзен: https://dzen.ru/holyslav
 - VK: https://vk.ru/tymenrieltor
 - Телефон: `+7 922 001 65 05` / `tel:+79220016505` — на cover + **один раз** в теле

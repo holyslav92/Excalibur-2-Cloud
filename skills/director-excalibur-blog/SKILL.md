@@ -82,9 +82,12 @@ python3 scripts/excalibur_blog_research_start.py --topic-id <ID> --title "<short
 python3 scripts/excalibur_blog_pipeline_canon.py --article-dir <dir> --stamp
 python3 scripts/excalibur_blog_html_linter.py <dir>/article.html --fix
 python3 scripts/excalibur_blog_opening_meta_gate.py --article-dir <dir>
+python3 scripts/excalibur_blog_quality_bar_9_gate.py --article-dir <dir>
 ```
 
-Плохой **слог/открытие** → верни **Sol**.  
+**Quality bar 9/10** (`shared/quality-bar-9.md`): conversion early/mid/end TG+MAX, interlink 2–4, 2000–2600 слов. Без `quality-bar-9.json` all_pass → не Publish.
+
+Плохой **слог/открытие/CTA** → верни **Sol**.  
 Сломан **смысл/факты** → верни **Writer**, потом снова Sol.
 
 ### 5 Cover-text || Schema → Cover

@@ -49,10 +49,10 @@ Longform (7 inline): **3 части на первом проходе** — не 
 ## Правила смысла
 
 - Все факты только из research; не выдумывай.
-- Структура: открытие → несколько H2 с мыслями → практика/ограничения → CTA.
+- Структура: открытие + TL;DR → **early CTA (TG+MAX only)** → H2 с мыслями → главный чеклист → **mid CTA** → практика → **end CTA** (dual + полный набор каналов).
 - Без research-даты / Wordstat в открытии (Sol всё равно вычистит, но не засоряй).
-- CTA: `tenant-config.cta_links` + MAX по `cta_channels.max` (обязательно при `cta_required=true`).
-- **Interlink (если `interlink_old_articles=true`):** 1–3 контекстные `<a href="/blog/...">` на
+- CTA conversion: early/mid/end по `shared/quality-bar-9.md`; PRIMARY — Telegram + MAX URL из `cta_channels`; телефон один раз в теле.
+- **Interlink (если `interlink_old_articles=true`):** **2–4** контекстные `<a href="/blog/...">` на
   опубликованные sibling из ledger; якорь по смыслу H2, не «читайте также» в каждом абзаце.
 - Не читай чужие article.html / live-сайт / уже опубликованные статьи сайта / topics.
 

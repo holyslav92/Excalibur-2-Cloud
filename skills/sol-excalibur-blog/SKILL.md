@@ -58,13 +58,13 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
    - имя автора корпуса в тексте **не** писать;
    - Дзен: **без мата**.
    - **Interlink:** не удаляй outbound-ссылки на sibling из `drafts/writer.html`;
-     при необходимости переформулируй якорь, но оставь 1–3 живые ссылки.
+     при необходимости переформулируй якорь, но оставь **2–4** живые ссылки.
 4. Сохрани:
    - `article.html` — **финал для публикации**
    - `drafts/variant-a.html` — копия финала
    - не затирай `drafts/writer.html`
 5. Сверка с `bad-outputs.md` перед сдачей.
-6. **Quality bar 9/10:** `shared/quality-bar-9.md` — 2000–2600 слов, brand+phone+socials+dual CTA в теле; после Sol запусти `excalibur_blog_quality_bar_9_gate.py` → `quality-bar-9.json` all_pass.
+6. **Quality bar 9/10:** `shared/quality-bar-9.md` — conversion early/mid/end CTA, 2–4 interlink, 2000–2600 слов; после Sol запусти `excalibur_blog_quality_bar_9_gate.py` → `quality-bar-9.json` all_pass.
 
 ## Запреты
 

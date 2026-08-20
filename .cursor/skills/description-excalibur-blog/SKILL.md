@@ -24,7 +24,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 **После Sol** (`article.html` + `pipeline_canon` stamp).  
 **До Cover-text** (и параллельно Schema можно готовить позже, но Description — до cover-text).  
-Quality bar: description не дублирует H1/лид — см. `shared/quality-bar-9.md`.
+Quality bar: description не дублирует H1/лид — см. `shared/quality-bar-9.md`. Conversion CTA — зона Sol/Writer, не в description-brief.
 
 ## Вход
 

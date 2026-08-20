@@ -37,7 +37,8 @@
     "tel:+79220016505"
   ],
   "cta_channels": {
-    "site": "/",
+    "site": "{{SITE_BASE}}",
+    "site_path": "/",
     "telegram_lead": "https://t.me/Tyumen_Rieltor",
     "telegram_personal": "https://t.me/holyslav92",
     "phone": "+79220016505",
@@ -46,9 +47,12 @@
     "dzen": "https://dzen.ru/holyslav",
     "vk": "https://vk.ru/tymenrieltor",
     "whatsapp": "https://wa.me/79220016505",
-    "guides": "/gajdy/",
-    "about": "/rieltor-tyumen/",
-    "contacts": "/kontakty/"
+    "guides": "{{SITE_BASE}}/gajdy/",
+    "guides_path": "/gajdy/",
+    "about": "{{SITE_BASE}}/rieltor-tyumen/",
+    "about_path": "/rieltor-tyumen/",
+    "contacts": "{{SITE_BASE}}/kontakty/",
+    "contacts_path": "/kontakty/"
   },
   "wp_categories_required": true,
   "publish_options": {

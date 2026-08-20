@@ -11,9 +11,7 @@
       "topic_id": "B02",
       "post_id": null,
       "source": "ledger"
-    }
-  ],
-  "outbound_missing_suggestions": [
+    },
     {
       "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
       "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
@@ -21,7 +19,9 @@
       "topic_id": "B04",
       "post_id": null,
       "source": "ledger"
-    },
+    }
+  ],
+  "outbound_missing_suggestions": [
     {
       "slug": "rosfinmonitoring-sdelka-nedvizhimost-cheklis-tyumen-2026",
       "title": "Росфинмониторинг и сделка с недвижимостью: чеклист для Тюмени",
@@ -36,6 +36,14 @@
       "permalink": "",
       "topic_id": "",
       "post_id": 8456,
+      "source": "siblings"
+    },
+    {
+      "slug": "na-matkapital-kupili-detskie-doli-proverte",
+      "title": "На маткапитал купили — детских долей в выписке нет",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8730,
       "source": "siblings"
     }
   ],
@@ -69,9 +77,9 @@
     {
       "post_id": 8456,
       "marker": "data-excalibur-interlink-from=\"pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri\"",
-      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri\"><b>Читайте также:</b> <a href=\"{{SITE_BASE}}/blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/\">Почти внесли задаток на торгах — квартиру подарили дочери</a></p>"
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri\"><b>Читайте также:</b> <a href=\"/blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/\">Почти внесли задаток на торгах — квартиру подарили дочери</a></p>"
     }
   ],
-  "new_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/",
+  "new_url": "/blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/",
   "dry_run": false
 }
