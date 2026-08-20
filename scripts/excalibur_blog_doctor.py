@@ -129,6 +129,7 @@ def main() -> int:
         "scripts/excalibur_blog_description_gate.py",
         "scripts/excalibur_blog_cover_qa_gate.py",
         "scripts/excalibur_blog_quad_manifest_preflight.py",
+        "scripts/excalibur_blog_cover_typography.py",
         "scripts/excalibur_blog_cover_wordstat_overlay.py",
         "scripts/excalibur_blog_quality_bar_9_gate.py",
         "scripts/excalibur_blog_quad_regen_panels.py",
@@ -340,6 +341,24 @@ def main() -> int:
                 )
             except json.JSONDecodeError:
                 check(False, "cover-canon.json valid JSON", errors, warnings)
+        style_path = root / "memory/cover/quad-style-the-rieltor.json"
+        if style_path.is_file():
+            style_txt = style_path.read_text(encoding="utf-8")
+            check(
+                "Host LARGE left" not in style_txt,
+                "quad-style prefix does not force Host LARGE left + model Wordstat",
+                errors,
+                warnings,
+            )
+        design_path = root / "memory/cover/cover-design-code.json"
+        if design_path.is_file():
+            design_txt = design_path.read_text(encoding="utf-8")
+            check(
+                "Host LARGE left" not in design_txt,
+                "cover-design-code does not force Host LARGE left",
+                errors,
+                warnings,
+            )
         for gate_cmd in (
             [sys.executable, str(root / "scripts/excalibur_blog_cover_motif_gate.py"), "doctor"],
             [sys.executable, str(root / "scripts/excalibur_blog_wordstat_gate.py"), "doctor"],

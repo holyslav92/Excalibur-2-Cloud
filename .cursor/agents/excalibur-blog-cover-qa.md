@@ -20,7 +20,8 @@ FAIL → **вернуть Cover**, не пускать Indexer/Publish.
 - лицо не тот же человек что `face-studio-2026-06-23.jpg` (пластик / AI / чужой)
 - **эмоция скопирована с референса или последних 2–3 covers** — side-eye + left bust + black blazer combo → FAIL
 - **outfit/action не изобретены** — пустые cover_motifs.outfit/action или default black blazer bust → FAIL
-- **Wordstat stickers на заголовке** — title_not_occluded FAIL → PIL overlay x≥0.68
+- **Wordstat stickers на заголовке / на человеке** — title_not_occluded FAIL если нет `cover_typography=pil_only` или x стикера вне 0.68–0.90
+- **модель нарисовала буквы** — на cover.png кириллица/телефон/адрес в фото (не PIL-карточка слева и не рейл справа) → вернуть Cover, не Publish
 - **телосложение толще референсов** — chubby, puffy cheeks, double chin, thick neck, wide torso в tight blazer → FAIL
 - dark cinematic / не high-key light
 - motif collision 14д (`used-motifs.json`)

@@ -81,18 +81,31 @@ class WriterChunkTest(unittest.TestCase):
 
 
 class WordstatOverlayTest(unittest.TestCase):
-    def test_overlay_script_import(self) -> None:
+    def test_typography_keeps_stickers_inside_frame(self) -> None:
         sys.path.insert(0, str(ROOT / "scripts"))
-        from excalibur_blog_cover_wordstat_overlay import stamp_wordstat_stickers
+        from excalibur_blog_cover_typography import compose_cover_typography, RAIL_LEFT
 
         with tempfile.TemporaryDirectory() as tmp:
             from PIL import Image
 
             path = Path(tmp) / "cover.png"
-            Image.new("RGB", (400, 225), "#FFFFFF").save(path)
-            report = stamp_wordstat_stickers(path, ["ипотека тюмень"])
+            Image.new("RGB", (1200, 675), "#88AACC").save(path)
+            report = compose_cover_typography(
+                path,
+                hook="-2 МЛН уценили",
+                highlight="уценили",
+                phone="+7 922 001 65 05",
+                stickers=["купить квартиру в тюмени", "банкротство продавца"],
+                sticky="задаток сегодня",
+            )
             self.assertEqual(report["status"], "OK")
-            self.assertTrue(path.is_file())
+            self.assertGreaterEqual(report["rail_left"], 0.68)
+            for pos in report["sticker_positions"]:
+                self.assertGreaterEqual(pos[0], RAIL_LEFT - 0.01)
+                self.assertLess(pos[0], 0.90)
+                self.assertLessEqual(pos[0] + 0.26, 1.01)
+            img = Image.open(path)
+            self.assertEqual(img.size, (1200, 675))
 
 
 if __name__ == "__main__":

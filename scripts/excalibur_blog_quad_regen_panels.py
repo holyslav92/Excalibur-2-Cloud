@@ -71,15 +71,16 @@ def build_panel_prompt(manifest: dict[str, Any], slot_key: str, root: Path) -> s
     hero = load_json(hero_path) if hero_path.is_file() else {}
 
     if slot_key == "cover":
-        return build_prompt(
-            manifest,
-            style,
-            hero,
-            types_catalog,
-            design_code,
-            canvas_slots=("cover",),
-            has_cover=True,
+        from excalibur_blog_cover_quad_prompt import (
+            build_cover_photo_prompt,
+            cover_photo_prompt_errors,
         )
+
+        prompt = build_cover_photo_prompt(manifest, solo=True)
+        errors = cover_photo_prompt_errors(prompt)
+        if errors:
+            raise SystemExit("❌ COVER PHOTO BLOCKER: " + "; ".join(errors))
+        return prompt
 
     neg = slot_negatives(slot_key, slot)
     base = inline_panel_prompt(slot, types_catalog)
@@ -112,9 +113,15 @@ def write_solo_batch(
     batch = {
         "pipeline": "quad_solo_panel_regen",
         "slot": slot_key,
-        "output_canvas": f"cover/{INLINE_FILES.get(slot_key, slot_key + '.png')}",
+        "output_canvas": (
+            "cover/cover-raw.png" if slot_key == "cover" else f"cover/{INLINE_FILES.get(slot_key, slot_key + '.png')}"
+        ),
         "jobs": [{"slot": slot_key, "tool": "derouter-rest", "mcp_args": api_input}],
     }
+    if slot_key == "cover":
+        batch["prefer_local_reference"] = True
+        batch["local_reference"] = "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg"
+        batch["identity_reference_local"] = batch["local_reference"]
     save_json(batch_path, batch)
     return batch_path
 
@@ -151,7 +158,7 @@ def apply_solo_result(
     local_rel = (data.get("local_path") or "").strip()
     cover_dir = article_dir / "cover"
     if slot_key == "cover":
-        out = cover_dir / "cover.png"
+        out = cover_dir / "cover-raw.png"
     else:
         out = cover_dir / INLINE_FILES.get(slot_key, f"{slot_key}.png")
 
@@ -161,6 +168,8 @@ def apply_solo_result(
             local = article_dir / local
         if local.is_file():
             out.write_bytes(local.read_bytes())
+            if slot_key == "cover":
+                (cover_dir / "cover.png").write_bytes(out.read_bytes())
             print(f"OK solo regen {slot_key} → {out.name}")
             return 0
 
@@ -169,6 +178,8 @@ def apply_solo_result(
         return 1
     img_bytes, _ = download_url_bytes(url)
     out.write_bytes(img_bytes)
+    if slot_key == "cover":
+        (cover_dir / "cover.png").write_bytes(img_bytes)
     print(f"OK solo regen {slot_key} → {out.name}")
     return 0
 
@@ -222,12 +233,15 @@ def main() -> int:
         if rc != 0:
             return rc
 
-    if args.wordstat_overlay and "cover" in slot_keys:
-        overlay = root / "scripts/excalibur_blog_cover_wordstat_overlay.py"
-        subprocess.call(
+    if "cover" in slot_keys:
+        overlay = root / "scripts/excalibur_blog_cover_typography.py"
+        rc = subprocess.call(
             [sys.executable, str(overlay), "--article-dir", str(article_dir)],
             cwd=str(root),
         )
+        if rc != 0:
+            print("❌ COVER TYPOGRAPHY BLOCKER after solo cover regen", file=sys.stderr)
+            return rc
 
     if args.inject_html:
         split_script = root / "scripts/excalibur_blog_cover_quad_split.py"

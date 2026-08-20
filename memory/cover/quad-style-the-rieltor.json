@@ -17,7 +17,7 @@
   "anti_repeat_log": "memory/cover/used-motifs.json",
   "wordstat_geo": "memory/cover/wordstat-geo.json",
   "prefer_local_reference": true,
-  "global_prompt_prefix": "High-key bright RU editorial collage, airy #FFFFFF, sun flare/light leak/soft glow, BLACK #141821 Cyrillic, gold #dcc5a1 accent. Host LARGE left = same 28yo man i2i face-studio-2026-06-23 (jaw/stubble/hairline lock), medium slim (NOT chubby). 1-3 Wordstat stickers (Тюмень). Meme cat/people cutouts. No dark cinematic, no inventory props.",
+  "global_prompt_prefix": "High-key bright PHOTO/collage, airy #FFFFFF, sun flare/light leak/soft glow, gold #dcc5a1 accent. Cover = photograph with ZERO letters (PIL later). Host i2i RIGHT full/mid body, medium slim (NOT chubby). Tiny meme cat OK. Inlines = Cyrillic labels. No dark cinematic, no inventory props.",
   "hook_ink": "#141821",
   "hook_accent": "#dcc5a1",
   "panel_background": "#FFFFFF",

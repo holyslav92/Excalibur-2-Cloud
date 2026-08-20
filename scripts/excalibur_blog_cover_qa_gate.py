@@ -83,12 +83,15 @@ def field_has_banned_tokens(value: str, tokens: tuple[str, ...]) -> bool:
 
 
 def validate_title_not_occluded(manifest: dict) -> bool:
+    if str(manifest.get("cover_typography") or "") != "pil_only":
+        return False
     positions = manifest.get("wordstat_sticker_positions")
     if not isinstance(positions, list) or not positions:
-        return True
+        return False
     for pos in positions:
         if isinstance(pos, (list, tuple)) and len(pos) >= 2:
-            if float(pos[0]) < 0.68:
+            x = float(pos[0])
+            if x < 0.68 or x > 0.90:
                 return False
     return True
 

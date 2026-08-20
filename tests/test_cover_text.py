@@ -69,14 +69,23 @@ class CoverTextTest(unittest.TestCase):
         )
         self.assertEqual(verdict["status"], "BLOCK")
 
-    def test_prompt_has_text_lock_and_russian_hook(self) -> None:
+    def test_prompt_cover_is_photo_only_inlines_keep_labels(self) -> None:
         import sys
         sys.path.insert(0, str(ROOT / "scripts"))
-        from excalibur_blog_cover_quad_prompt import build_prompt
+        from excalibur_blog_cover_quad_prompt import (
+            build_cover_photo_prompt,
+            build_prompt,
+            cover_photo_prompt_errors,
+        )
 
         manifest = {
             "cover_hook": "Cursor стал дешевле на треть",
             "cover_hook_highlight": "дешевле",
+            "cover_motifs": {
+                "outfit": "olive overshirt",
+                "pose_framing": "host RIGHT",
+                "action": "holds blank folder",
+            },
             "slots": {
                 "cover": {"scene_hint": "Host face LARGE left half", "sticky": "новой модели нет"},
                 "inline_1": {
@@ -91,10 +100,23 @@ class CoverTextTest(unittest.TestCase):
         }
         prompt = build_prompt(manifest, {}, {}, {}, {})
         self.assertIn("TEXT LANGUAGE LOCK", prompt)
-        self.assertIn("«Cursor стал дешевле на треть»", prompt)
-        self.assertIn("exact LABELS per panel", prompt)
+        self.assertIn("PHOTO ONLY", prompt)
         self.assertIn("минус 20–30%", prompt)
-        self.assertIn("«новой модели нет»", prompt)
+        self.assertNotIn("COVER TXT", prompt)
+        self.assertNotIn("Host LARGE left", prompt)
+        self.assertNotIn("«Cursor стал дешевле на треть»", prompt)
+        self.assertNotIn("«новой модели нет»", prompt)
+        self.assertEqual(cover_photo_prompt_errors(prompt), [])
+        solo = build_cover_photo_prompt(manifest, solo=True)
+        self.assertIn("ONE single 16:9 photograph", solo)
+        self.assertEqual(cover_photo_prompt_errors(solo), [])
+        self.assertNotIn("+7 922", solo)
+
+    def test_style_files_do_not_force_left_bust_wordstat(self) -> None:
+        style = (ROOT / "memory/cover/quad-style-the-rieltor.json").read_text(encoding="utf-8")
+        design = (ROOT / "memory/cover/cover-design-code.json").read_text(encoding="utf-8")
+        self.assertNotIn("Host LARGE left", style)
+        self.assertNotIn("Host LARGE left", design)
 
     def test_overlay_script_removed(self) -> None:
         self.assertFalse(
