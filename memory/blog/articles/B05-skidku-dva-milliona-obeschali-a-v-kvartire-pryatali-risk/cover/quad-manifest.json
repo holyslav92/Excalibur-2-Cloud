@@ -6,8 +6,9 @@
   "inline_types_catalog": "memory/cover/inline-visual-types.json",
   "cover_hook": "-2 МЛН уценили",
   "cover_hook_highlight": "уценили",
-  "cover_emotion": "shocked disbelief — raised brows, wide eyes, tight jaw; NOT side-eye, NOT reference smile",
+  "cover_emotion": "alert wary disbelief — one brow up, tight lips, eyes wide; NOT studio smile, NOT mustard vest repeat",
   "cover_phone_cta": "+7 922 001 65 05",
+  "wordstat_pil_only": true,
   "wordstat_stickers": [
     "купить квартиру в тюмени",
     "банкротство продавца квартиры",
@@ -15,36 +16,37 @@
   ],
   "wordstat_sticker_positions": [
     [
-      0.728,
-      0.84
+      0.12,
+      0.099
     ],
     [
-      0.728,
-      0.84
+      0.128,
+      0.2
     ],
     [
-      0.728,
-      0.84
+      0.12,
+      0.28
     ]
   ],
+  "wordstat_stickers_pil_applied": true,
   "cover_motifs": {
-    "composition": "extreme_closeup_face_shoulders_left_headline_board_no_right_bars",
-    "location": "bright_white_investigation_board_wall_indoor_high_key",
-    "meme": "thinking_cat_sticker_small_top_right_corner_only",
-    "prop_set": "egrn_folder_edge_minus_2mln_red_tag_phone_cta_bottom",
-    "sticker_set": "NO_wordstat_on_canvas_PIL_adds_paper_stickers_bottom_right_only",
+    "composition": "extreme_closeup_face_shoulders_center_right_clean_board_left",
+    "location": "bright_white_investigation_board_wall_high_key_sun_flare",
+    "meme": "thinking_cat_sticker_bottom_right_corner_80px_clearance",
+    "prop_set": "egrn_folder_edge_minus_2mln_red_tag_phone_cta_bottom_left",
+    "sticker_set": "PIL_wordstat_top_left_only_NO_canvas_wordstat_NO_chest_text",
     "joke": "sticky_zadatok_segodnya_yellow_note_pinned_left",
-    "outfit": "mustard linen shirt + open navy utility vest + no blazer",
-    "emotion": "shocked_disbelief_raised_brows",
-    "pose_framing": "extreme_closeup_host_large_face_center_right_looking_at_camera",
-    "action": "both_hands_spread_egrn_pages_toward_camera_showing_hidden_risk"
+    "outfit": "terracotta merino crewneck + light grey unstructured jacket open (NO black blazer, NO navy mustard vest)",
+    "emotion": "alert_wary_one_brow_up",
+    "pose_framing": "extreme_closeup_host_face_shoulders_large_center_right_eyes_camera",
+    "action": "one_hand_flat_on_egrn_folder_other_pointing_at_minus_2mln_tag"
   },
   "slots": {
     "cover": {
       "role": "cover_editorial_hero",
       "alt": "Скидка два миллиона на квартиру в Тюмени — проверка рисков до задатка",
-      "cover_emotion": "shocked disbelief — raised brows, wide eyes; NOT side-eye",
-      "scene_hint": "EXTREME CLOSE-UP: host face+shoulders LARGE near camera center-right; mustard linen shirt+navy utility vest (NO black blazer); shocked disbelief at «-2 МЛН уценили» board left; EGRN pages toward camera; headline CLEAR center-left; NO Wordstat text/bars on canvas (added later); tiny thinking-cat sticker top-right only; phone +7 922 001 65 05 bottom; sun flare; #FFF high-key",
+      "cover_emotion": "alert wary disbelief — one brow up, tight lips, wide eyes; NOT studio smile",
+      "scene_hint": "EXTREME CLOSE-UP face+shoulders LARGE center-right; terracotta merino + light grey open jacket (clean, NO text on clothes); alert wary expression; «-2 МЛН уценили» headline CLEAR center-left sacred; EGRN folder edge; tiny thinking-cat sticker bottom-right ONLY with empty margin; ZERO Wordstat on canvas; ZERO text on chest/vest; phone +7 922 001 65 05 bottom-left; sun flare; #FFF high-key",
       "meme_caption_ru": "",
       "sticky": "задаток сегодня"
     },
@@ -126,6 +128,5 @@
       ]
     }
   },
-  "wordstat_stickers_pil_applied": true,
   "wordstat_overlay_style": "paper_sticker_v2"
 }

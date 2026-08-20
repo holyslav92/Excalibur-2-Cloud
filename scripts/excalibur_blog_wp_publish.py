@@ -309,9 +309,14 @@ def resolve_cover_media_fields(
             if isinstance(asset, dict) and asset.get("role") == "cover":
                 cover_asset = asset
                 break
+    quad_alt = ""
+    if isinstance(quad_manifest, dict):
+        slot = (quad_manifest.get("slots") or {}).get("cover") or {}
+        quad_alt = str(slot.get("alt") or "").strip()
     alt = (
         meta.get("cover_alt")
         or meta.get("cover_alt_text")
+        or quad_alt
         or reg.get("alt")
         or reg.get("cover_alt_text")
         or cover_asset.get("alt")
@@ -696,6 +701,14 @@ if (!empty($p['cover_b64'])) {{
     }} else {{
         set_post_thumbnail($post_id, (int) $att_id);
         $excalibur_apply_attachment_meta((int) $att_id, $cover_meta);
+        $cover_url = wp_get_attachment_url((int) $att_id);
+        if ($cover_url) {{
+            update_post_meta($post_id, '_yoast_wpseo_opengraph-image', $cover_url);
+            update_post_meta($post_id, '_yoast_wpseo_opengraph-image-id', (int) $att_id);
+            update_post_meta($post_id, '_yoast_wpseo_twitter-image', $cover_url);
+            update_post_meta($post_id, '_yoast_wpseo_twitter-image-id', (int) $att_id);
+            echo 'OK yoast_social_image=1' . PHP_EOL;
+        }}
         echo 'OK featured_image=' . (int) $att_id . PHP_EOL;
         if ($cover_meta['alt'] !== '') {{
             echo 'OK featured_alt=1' . PHP_EOL;

@@ -19,11 +19,14 @@ from typing import Any
 TITLE_ZONE = (0.0, 0.0, 0.62, 0.38)
 MEME_ZONE = (0.82, 0.0, 1.0, 0.20)
 PHONE_ZONE = (0.55, 0.72, 1.0, 1.0)
+TOPLEFT_WORDSTAT_ZONE = (0.02, 0.04, 0.40, 0.36)
 
+# Wordstat stickers — только top-left sacred free zone (не title, не meme, не phone)
 DEFAULT_POSITIONS = (
-    (0.70, 0.52),
-    (0.68, 0.68),
-    (0.66, 0.84),
+    (0.12, 0.10),
+    (0.14, 0.20),
+    (0.16, 0.28),
+    (0.18, 0.34),
 )
 
 
@@ -204,22 +207,25 @@ def stamp_wordstat_stickers(
     else:
         anchors = [(int(w * px), int(h * py)) for px, py in DEFAULT_POSITIONS[: len(clean)]]
 
-    # Сдвинуть якоря в безопасные зоны (не title, не meme, не телефон)
+    # Сдвинуть якоря только внутрь top-left sacred zone
     safe_anchors: list[tuple[int, int]] = []
     for idx, (ax, ay) in enumerate(anchors):
         xf = ax / w
         yf = ay / h
         if _zone_overlap(xf, yf, 0.24, 0.12, TITLE_ZONE):
-            xf = 0.70
-            yf = 0.52 + idx * 0.16
+            xf = 0.12 + (idx % 2) * 0.04
+            yf = 0.10 + idx * 0.10
         if _zone_overlap(xf, yf, 0.20, 0.14, MEME_ZONE):
-            xf = 0.68
-            yf = 0.56 + idx * 0.14
+            xf = 0.14 + idx * 0.02
+            yf = 0.12 + idx * 0.08
         if _zone_overlap(xf, yf, 0.24, 0.10, PHONE_ZONE) and yf > 0.78:
-            xf = 0.70
-            yf = 0.50 + idx * 0.12
-        ax = max(margin, min(int(xf * w), w - max_sticker_w - margin))
-        ay = max(margin, min(int(yf * h), h - int(h * 0.14) - margin))
+            xf = 0.16
+            yf = 0.22 + idx * 0.08
+        # clamp to top-left only
+        xf = max(TOPLEFT_WORDSTAT_ZONE[0], min(xf, TOPLEFT_WORDSTAT_ZONE[2] - 0.08))
+        yf = max(TOPLEFT_WORDSTAT_ZONE[1], min(yf, TOPLEFT_WORDSTAT_ZONE[3] - 0.06))
+        ax = max(margin, min(int(xf * w), int(w * TOPLEFT_WORDSTAT_ZONE[2]) - max_sticker_w - margin))
+        ay = max(margin, min(int(yf * h), int(h * TOPLEFT_WORDSTAT_ZONE[3]) - int(h * 0.08)))
         safe_anchors.append((ax, ay))
 
     composed = img.copy()
@@ -283,6 +289,11 @@ def main() -> int:
         action="store_true",
         help="Restore cover.png from cover-quad-raw.png before stamping",
     )
+    ap.add_argument(
+        "--top-left-only",
+        action="store_true",
+        help="Force Wordstat anchors in top-left sacred zone only",
+    )
     args = ap.parse_args()
 
     root = project_root()
@@ -310,11 +321,11 @@ def main() -> int:
         return 0
 
     phrases = manifest.get("wordstat_stickers") or []
-    positions = manifest.get("wordstat_sticker_positions")
+    positions = None if args.top_left_only else manifest.get("wordstat_sticker_positions")
     report = stamp_wordstat_stickers(
         cover_path,
         phrases,
-        force=args.force,
+        force=args.force or args.top_left_only,
         sticker_positions=positions,
         style="paper",
     )

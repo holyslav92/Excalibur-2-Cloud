@@ -50,6 +50,10 @@ REQUIRED_CHECKS = (
     "pixel_meme_zone_clear",
     "pixel_wordstat_not_on_host_chest",
     "pixel_meme_not_occluded_by_wordstat",
+    "pixel_wordstat_only_top_left",
+    "pixel_no_text_on_clothing",
+    "pixel_no_inpaint_artifacts",
+    "pixel_meme_clearance_80px",
 )
 
 PIXEL_REQUIRED = (
@@ -62,6 +66,10 @@ PIXEL_REQUIRED = (
     "pixel_meme_zone_clear",
     "pixel_wordstat_not_on_host_chest",
     "pixel_meme_not_occluded_by_wordstat",
+    "pixel_wordstat_only_top_left",
+    "pixel_no_text_on_clothing",
+    "pixel_no_inpaint_artifacts",
+    "pixel_meme_clearance_80px",
     "pixel_wordstat_phrases_not_truncated",
     "pixel_phone_readable",
     "pixel_light_high_key",
@@ -115,6 +123,14 @@ def field_has_banned_tokens(value: str, tokens: tuple[str, ...]) -> bool:
 def validate_title_not_occluded(manifest: dict) -> bool:
     positions = manifest.get("wordstat_sticker_positions")
     if not isinstance(positions, list) or not positions:
+        return True
+    if manifest.get("wordstat_pil_only"):
+        # PIL Wordstat — только top-left sacred zone (не title center, не meme)
+        for pos in positions:
+            if isinstance(pos, (list, tuple)) and len(pos) >= 2:
+                x, y = float(pos[0]), float(pos[1])
+                if x > 0.42 or y > 0.36:
+                    return False
         return True
     for pos in positions:
         if isinstance(pos, (list, tuple)) and len(pos) >= 2:

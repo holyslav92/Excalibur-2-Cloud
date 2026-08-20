@@ -443,10 +443,16 @@ def build_prompt(
         )
         wordstat = manifest.get("wordstat_stickers") or []
         wordstat_line = ""
-        if wordstat:
+        pil_only = bool(manifest.get("wordstat_pil_only"))
+        if wordstat and not pil_only:
             phrases = " | ".join(compact(str(x), 36) for x in wordstat[:3])
             wordstat_line = (
                 f" Wordstat stickers EXACT Cyrillic: «{phrases}» readable gold tape labels."
+            )
+        elif pil_only:
+            wordstat_line = (
+                " ZERO Wordstat labels on canvas — NO text on clothes/chest; "
+                "PIL adds 2-4 paper stickers top-left only after render."
             )
         panel_lines.append(
             f"TL COVER TXT «{cover_hook_text}» bold Cyrillic black, {highlight_rule}.{sticky_lock} "
@@ -505,6 +511,62 @@ def build_prompt(
     if fact_locks:
         lines.extend(["", *fact_locks])
     return "\n".join(line for line in lines if line)
+
+
+def build_solo_cover_prompt(
+    manifest: dict,
+    style: dict,
+    hero: dict,
+    design_code: dict,
+) -> str:
+    """Solo 16:9 cover regen — без quad-canvas; Wordstat только PIL top-left после рендера."""
+    cover = (manifest.get("slots") or {}).get("cover") or {}
+    motifs = manifest.get("cover_motifs") or {}
+    hook = compact(manifest.get("cover_hook", ""), 120)
+    highlight = compact(manifest.get("cover_hook_highlight", ""), 24)
+    highlight_rule = (
+        f'paint ONLY the word "{highlight}" in gold #dcc5a1 brush accent'
+        if highlight
+        else "one gold accent word max"
+    )
+    emotion = compact(str(cover.get("cover_emotion") or manifest.get("cover_emotion") or ""), 120)
+    scene = sanitize_cover_scene_hint(str(cover.get("scene_hint") or ""), highlight)
+    sticky = compact(str(cover.get("sticky") or ""), 48)
+    outfit = compact(str(motifs.get("outfit") or ""), 100)
+    sticky_line = f' Yellow sticky EXACT «{sticky}» pinned left.' if sticky else ""
+
+    style_prefix = compact(
+        style.get("global_prompt_prefix") or design_code.get("cover_panel_prompt_block") or "",
+        320,
+    )
+    if "Wordstat" in style_prefix:
+        style_prefix = style_prefix.replace(
+            "1-3 Wordstat stickers (Тюмень). ",
+            "NO Wordstat on canvas (PIL top-left after). ",
+        )
+
+    bans = (
+        "BAN HARD: ANY Cyrillic/latin text on clothes/jacket/vest/chest/torso; Wordstat/tape labels on host body; "
+        "gold horizontal bars on person; blue/cyan outline halos on hair/face; smeared ghost text; black blazer; "
+        "mustard+navy vest repeat; dark cinematic; chubby host; polite studio smile copy; text on skin."
+    )
+
+    return (
+        f"{style_prefix}\n"
+        "ONE SINGLE 16:9 cover frame 1200x675 — NOT a 2x2 grid, NOT four panels, NOT quad canvas, NOT split collage.\n"
+        f"{bans}\n"
+        "TEXT LOCK: Russian Cyrillic only. Allowed on-canvas text: headline hook, phone CTA, one small sticky — NOTHING else.\n"
+        f"Headline EXACT «{hook}» bold black left sacred zone, {highlight_rule}.\n"
+        f"Phone EXACT «{COVER_PHONE_CTA}» white torn paper bottom-left.\n"
+        f"{sticky_line}\n"
+        f"Host i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}. "
+        f"Outfit INVENTED: {outfit}. Expression: {emotion}.\n"
+        f"{compact(scene, COVER_SCENE_HINT_COMPACT)}. "
+        "EXTREME CLOSE-UP face+shoulders large center-right. "
+        "Tiny thinking-cat meme sticker bottom-right corner ONLY — ≥80px clear margin from any other element. "
+        "ZERO Wordstat labels on canvas — PIL adds 2-3 paper stickers top-left after render. "
+        "Sun flare, tape/pins aesthetic on board only, perfect Cyrillic, #FFF bright."
+    )
 
 
 def main() -> int:

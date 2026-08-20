@@ -22,6 +22,13 @@ MEME_ZONE = (0.82, 0.0, 1.0, 0.18)  # правый верх — meme sticker (ba
 MEME_GUARD_ZONE = (0.68, 0.0, 1.0, 0.42)  # legacy — верхний правый угол
 MEME_OCCLUSION_ZONE = (0.62, 0.58, 0.98, 0.90)  # cat + chest stickers overlap
 TOPLEFT_WORDSTAT_SAFE = (0.0, 0.0, 0.44, 0.32)  # taped Wordstat on board — allowed
+TOPLEFT_WORDSTAT_ALLOWED = (0.0, 0.0, 0.42, 0.36)  # единственная зона PIL Wordstat
+WORDSTAT_RIGHT_FORBIDDEN = (0.44, 0.30, 1.0, 0.96)  # справа/низ — Wordstat запрещён
+CLOTHING_NO_TEXT_ZONE = (0.46, 0.46, 0.98, 0.94)  # одежда/грудь — без текста
+FACE_ARTIFACT_ZONE = (0.30, 0.05, 0.78, 0.52)  # лицо — без синих артефактов
+NECK_INPAINT_ZONE = (0.42, 0.50, 0.68, 0.62)  # шея — без inpaint blob
+CAT_MEME_CORE = (0.72, 0.60, 0.98, 0.90)  # cat meme sticker bbox heuristic
+MEME_CLEARANCE_PX = 80
 CHEST_PEEL_ZONE = (0.48, 0.28, 0.96, 0.74)  # host chest — legacy QA bbox
 CHEST_WORDSTAT_ZONE = (0.50, 0.44, 0.96, 0.88)  # жилет ниже лица — Wordstat forbidden
 CHEST_PEEL_ACTIVE = (0.50, 0.44, 0.98, 0.92)  # нижняя часть жилета + мем — только здесь peel
@@ -103,6 +110,24 @@ def _is_gold_sticker(r: int, g: int, b: int, *, tol: int = 38) -> bool:
     return abs(r - gr) <= tol and abs(g - gg) <= tol and abs(b - gb) <= tol
 
 
+def _is_grey_woven_fabric(r: int, g: int, b: int) -> bool:
+    """Серая/бежевая ткань пиджака — не Wordstat paper."""
+    if abs(r - g) <= 16 and abs(g - b) <= 20 and abs(r - b) <= 22:
+        lum = _luminance(r, g, b)
+        if 138 <= lum <= 228:
+            return True
+    return False
+
+
+def _is_warm_garment_pixel(r: int, g: int, b: int) -> bool:
+    """Терракотовый/рыжий трикотаж и переходы к коже — не ghost text."""
+    if _is_skin(r, g, b):
+        return True
+    if r >= 105 and g >= 28 and b <= 98 and r - b >= 40 and r - g >= 12:
+        return True
+    return False
+
+
 def _is_pure_white_paper(r: int, g: int, b: int) -> bool:
     """Белая/off-white бумага мем-стикера (не Wordstat tan label)."""
     if r >= 246 and g >= 244 and b >= 238:
@@ -117,11 +142,14 @@ def _is_paper_wordstat_pixel(r: int, g: int, b: int) -> bool:
         return False
     if _is_skin(r, g, b):
         return False
+    if _is_grey_woven_fabric(r, g, b):
+        return False
+    if _is_warm_garment_pixel(r, g, b):
+        return False
     # рыжая шерсть cat meme — не Wordstat label
     if r >= 195 and g <= 178 and r - g >= 28:
         return False
-    if _is_gold_sticker(r, g, b, tol=32):
-        return True
+    # gold brushstroke под «уценили» — title typography, не Wordstat sticker
     lum = _luminance(r, g, b)
     if lum < 105 or lum > 248:
         return False
@@ -163,8 +191,255 @@ def _paper_frac_in_zone(
     return paper / max(total, 1)
 
 
+def _ghost_wordstat_paper_frac_in_zone(
+    img,
+    zone: tuple[float, float, float, float],
+    *,
+    exclude_zones: tuple[tuple[float, float, float, float], ...] | None = None,
+) -> float:
+    """Tan paper только там, где рядом тёмные буквы (ghost Wordstat), не текстура ткани."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    x0 = int(zone[0] * w)
+    y0 = int(zone[1] * h)
+    x1 = max(x0 + 1, int(zone[2] * w))
+    y1 = max(y0 + 1, int(zone[3] * h))
+    excludes = list(exclude_zones or ())
+    total = 0
+    paper = 0
+    for y in range(y0, y1, 2):
+        for x in range(x0, x1, 2):
+            xf, yf = x / w, y / h
+            if any(z[0] <= xf <= z[2] and z[1] <= yf <= z[3] for z in excludes):
+                continue
+            total += 1
+            r, g, b = rgb.getpixel((x, y))
+            if not _is_paper_wordstat_pixel(r, g, b):
+                continue
+            if _in_norm_zone(xf, yf, TOPLEFT_WORDSTAT_ALLOWED):
+                paper += 1
+                continue
+            has_ink = False
+            for dy in range(-5, 6):
+                for dx in range(-5, 6):
+                    nx, ny = x + dx, y + dy
+                    if 0 <= nx < w and 0 <= ny < h and _is_dark_ink_pixel(*rgb.getpixel((nx, ny))):
+                        has_ink = True
+                        break
+                if has_ink:
+                    break
+            if has_ink:
+                paper += 1
+    return paper / max(total, 1)
+
+
+def cover_composition_ok(img) -> bool:
+    """Полноценная обложка: заголовок, подбородок, кот, телефон — не случайный crop."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    title_upper = title_lower = 0
+    for y in range(int(h * 0.08), int(h * 0.28)):
+        for x in range(int(w * 0.02), int(w * 0.58)):
+            if _luminance(*rgb.getpixel((x, y))) < 60:
+                title_upper += 1
+    for y in range(int(h * 0.24), int(h * 0.52)):
+        for x in range(int(w * 0.02), int(w * 0.58)):
+            r, g, b = rgb.getpixel((x, y))
+            if _luminance(r, g, b) < 70 or _is_gold_sticker(r, g, b, tol=36):
+                title_lower += 1
+    chin_skin = cat_orange = phone_dark = 0
+    for y in range(int(h * 0.38), int(h * 0.68)):
+        for x in range(int(w * 0.32), int(w * 0.78)):
+            if _is_skin(*rgb.getpixel((x, y))):
+                chin_skin += 1
+    for y in range(int(h * 0.58), int(h * 0.95)):
+        for x in range(int(w * 0.68), int(w * 0.98)):
+            r, g, b = rgb.getpixel((x, y))
+            if r >= 175 and g <= 168 and r - g >= 22:
+                cat_orange += 1
+    for y in range(int(h * 0.72), int(h * 0.96)):
+        for x in range(int(w * 0.02), int(w * 0.42)):
+            if _luminance(*rgb.getpixel((x, y))) < 70:
+                phone_dark += 1
+    return title_upper >= 350 and title_lower >= 350 and chin_skin >= 450 and cat_orange >= 80 and phone_dark >= 120
+
+
 def _in_norm_zone(xf: float, yf: float, zone: tuple[float, float, float, float]) -> bool:
     return zone[0] <= xf <= zone[2] and zone[1] <= yf <= zone[3]
+
+
+def _is_dark_ink_pixel(r: int, g: int, b: int) -> bool:
+    """Тёмные буквы / ghost text на одежде."""
+    if _is_grey_woven_fabric(r, g, b):
+        return False
+    if _is_warm_garment_pixel(r, g, b):
+        return False
+    lum = _luminance(r, g, b)
+    if lum > 78:
+        return False
+    if max(r, g, b) - min(r, g, b) < 28:
+        return False
+    return True
+
+
+def _is_blue_artifact_pixel(r: int, g: int, b: int) -> bool:
+    """Синие контуры inpaint/segmentation на лице и жилете."""
+    lum = _luminance(r, g, b)
+    if lum < 35 or lum > 215:
+        return False
+    return b > r + 14 and b > g + 10
+
+
+def _frac_predicate_in_zone(
+    img,
+    zone: tuple[float, float, float, float],
+    predicate,
+    *,
+    exclude_zones: tuple[tuple[float, float, float, float], ...] | None = None,
+) -> float:
+    w, h = img.size
+    rgb = img.convert("RGB")
+    x0 = int(zone[0] * w)
+    y0 = int(zone[1] * h)
+    x1 = max(x0 + 1, int(zone[2] * w))
+    y1 = max(y0 + 1, int(zone[3] * h))
+    excludes = list(exclude_zones or ())
+    total = 0
+    matched = 0
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            xf, yf = x / w, y / h
+            if any(z[0] <= xf <= z[2] and z[1] <= yf <= z[3] for z in excludes):
+                continue
+            total += 1
+            if predicate(*rgb.getpixel((x, y))):
+                matched += 1
+    return matched / max(total, 1)
+
+
+def _local_variance(img, x: int, y: int, radius: int = 2) -> float:
+    w, h = img.size
+    rgb = img.convert("RGB")
+    vals: list[float] = []
+    for dy in range(-radius, radius + 1):
+        for dx in range(-radius, radius + 1):
+            nx, ny = x + dx, y + dy
+            if 0 <= nx < w and 0 <= ny < h:
+                r, g, b = rgb.getpixel((nx, ny))
+                vals.append(_luminance(r, g, b))
+    if len(vals) < 5:
+        return 999.0
+    mean = sum(vals) / len(vals)
+    return sum((v - mean) ** 2 for v in vals) / len(vals)
+
+
+def _inpaint_smear_frac(img) -> float:
+    """Ghost smear: tan/cream пятна с соседними тёмными буквами (не текстура ткани)."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    zone = CHEST_WORDSTAT_ZONE
+    x0 = int(zone[0] * w)
+    y0 = int(zone[1] * h)
+    x1 = int(zone[2] * w)
+    y1 = int(zone[3] * h)
+    smear = 0
+    total = 0
+    for y in range(y0, y1, 2):
+        for x in range(x0, x1, 2):
+            xf, yf = x / w, y / h
+            if _in_norm_zone(xf, yf, TOPLEFT_WORDSTAT_ALLOWED):
+                continue
+            if _in_norm_zone(xf, yf, FACE_EXCLUDE_ZONE):
+                continue
+            if _in_norm_zone(xf, yf, CAT_MEME_CORE):
+                continue
+            total += 1
+            r, g, b = rgb.getpixel((x, y))
+            if not _is_paper_wordstat_pixel(r, g, b):
+                continue
+            has_ink = False
+            for dy in range(-4, 5):
+                for dx in range(-4, 5):
+                    nx, ny = x + dx, y + dy
+                    if 0 <= nx < w and 0 <= ny < h and _is_dark_ink_pixel(*rgb.getpixel((nx, ny))):
+                        has_ink = True
+                        break
+                if has_ink:
+                    break
+            if has_ink and _local_variance(img, x, y, 3) < 120.0:
+                smear += 1
+    return smear / max(total, 1)
+
+
+def _cat_meme_center(img) -> tuple[int, int]:
+    """Центр cat meme sticker (orange fur cluster) в правом нижнем углу."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    x0 = int(CAT_MEME_CORE[0] * w)
+    y0 = int(CAT_MEME_CORE[1] * h)
+    x1 = int(CAT_MEME_CORE[2] * w)
+    y1 = int(CAT_MEME_CORE[3] * h)
+    sx = sy = cnt = 0
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            r, g, b = rgb.getpixel((x, y))
+            if r >= 175 and g <= 165 and r - g >= 25:
+                sx += x
+                sy += y
+                cnt += 1
+            elif _is_pure_white_paper(r, g, b) and y > h * 0.62:
+                sx += x
+                sy += y
+                cnt += 1
+    if cnt < 80:
+        return (int(w * 0.86), int(h * 0.78))
+    return (sx // cnt, sy // cnt)
+
+
+def _meme_clearance_paper_frac(img, clearance_px: int = MEME_CLEARANCE_PX) -> float:
+    """Wordstat paper в clearance вокруг cat meme (не внутри core)."""
+    w, h = img.size
+    cx, cy = _cat_meme_center(img)
+    x0 = max(0, cx - clearance_px - 90)
+    y0 = max(0, cy - clearance_px - 70)
+    x1 = min(w, cx + clearance_px + 90)
+    y1 = min(h, cy + clearance_px + 70)
+    core_x0 = int(CAT_MEME_CORE[0] * w)
+    core_y0 = int(CAT_MEME_CORE[1] * h)
+    core_x1 = int(CAT_MEME_CORE[2] * w)
+    core_y1 = int(CAT_MEME_CORE[3] * h)
+    zone = (x0 / w, y0 / h, x1 / w, y1 / h)
+    raw = _ghost_wordstat_paper_frac_in_zone(
+        img,
+        zone,
+        exclude_zones=(TOPLEFT_WORDSTAT_ALLOWED, TITLE_ZONE, CAT_MEME_CORE),
+    )
+    # вычитаем core cat — clearance ring only
+    rgb = img.convert("RGB")
+    paper = total = 0
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            if core_x0 <= x <= core_x1 and core_y0 <= y <= core_y1:
+                continue
+            total += 1
+            r, g, b = rgb.getpixel((x, y))
+            if not _is_paper_wordstat_pixel(r, g, b):
+                continue
+            xf, yf = x / w, y / h
+            if _in_norm_zone(xf, yf, TOPLEFT_WORDSTAT_ALLOWED) or _in_norm_zone(xf, yf, TITLE_ZONE):
+                continue
+            has_ink = False
+            for dy in range(-5, 6):
+                for dx in range(-5, 6):
+                    nx, ny = x + dx, y + dy
+                    if 0 <= nx < w and 0 <= ny < h and _is_dark_ink_pixel(*rgb.getpixel((nx, ny))):
+                        has_ink = True
+                        break
+                if has_ink:
+                    break
+            if has_ink:
+                paper += 1
+    return paper / max(total, 1) if total else raw
 
 
 def _peel_active_zone(xf: float, yf: float) -> bool:
@@ -706,11 +981,11 @@ def analyze_cover_pixels(
         errors.append(f"pixel_meme_zone_clear FAIL: {len(meme_bands)} bar band(s) on meme")
 
     # --- paper Wordstat on chest / over meme cat (not just bars) ---
-    qa_excludes = (TOPLEFT_WORDSTAT_SAFE, FACE_EXCLUDE_ZONE)
-    chest_paper = _paper_frac_in_zone(
+    qa_excludes = (TOPLEFT_WORDSTAT_ALLOWED, FACE_EXCLUDE_ZONE, CAT_MEME_CORE)
+    chest_paper = _ghost_wordstat_paper_frac_in_zone(
         img, CHEST_WORDSTAT_ZONE, exclude_zones=qa_excludes
     )
-    meme_paper = _paper_frac_in_zone(
+    meme_paper = _ghost_wordstat_paper_frac_in_zone(
         img, MEME_OCCLUSION_ZONE, exclude_zones=qa_excludes
     )
     evidence["chest_wordstat_paper_frac"] = round(chest_paper, 4)
@@ -724,6 +999,64 @@ def analyze_cover_pixels(
     if not checks["pixel_meme_not_occluded_by_wordstat"]:
         errors.append(
             f"pixel_meme_not_occluded_by_wordstat FAIL: paper_frac={meme_paper:.3f} on meme zone"
+        )
+
+    # --- Wordstat только top-left (не на одежде/справа) ---
+    right_paper = _ghost_wordstat_paper_frac_in_zone(
+        img,
+        WORDSTAT_RIGHT_FORBIDDEN,
+        exclude_zones=(FACE_EXCLUDE_ZONE, CAT_MEME_CORE, TITLE_ZONE, TOPLEFT_WORDSTAT_ALLOWED),
+    )
+    evidence["wordstat_right_forbidden_paper_frac"] = round(right_paper, 4)
+    checks["pixel_wordstat_only_top_left"] = right_paper < 0.006
+    if not checks["pixel_wordstat_only_top_left"]:
+        errors.append(
+            f"pixel_wordstat_only_top_left FAIL: paper_frac={right_paper:.3f} outside top-left zone"
+        )
+
+    # --- ghost/garbled text on clothing ---
+    clothing_ink = _frac_predicate_in_zone(
+        img,
+        CLOTHING_NO_TEXT_ZONE,
+        _is_dark_ink_pixel,
+        exclude_zones=(FACE_EXCLUDE_ZONE, CAT_MEME_CORE, TITLE_ZONE),
+    )
+    evidence["clothing_dark_ink_frac"] = round(clothing_ink, 4)
+    checks["pixel_no_text_on_clothing"] = clothing_ink < 0.045
+    if not checks["pixel_no_text_on_clothing"]:
+        errors.append(
+            f"pixel_no_text_on_clothing FAIL: dark_ink_frac={clothing_ink:.3f} on chest/clothes"
+        )
+
+    # --- inpaint blobs: blue outlines + neck smear + low-variance tan smears ---
+    face_blue = _frac_predicate_in_zone(img, FACE_ARTIFACT_ZONE, _is_blue_artifact_pixel)
+    chest_blue = _frac_predicate_in_zone(
+        img, CHEST_WORDSTAT_ZONE, _is_blue_artifact_pixel, exclude_zones=(FACE_EXCLUDE_ZONE,)
+    )
+    neck_skin = _frac_predicate_in_zone(img, NECK_INPAINT_ZONE, _is_skin)
+    smear_frac = _inpaint_smear_frac(img)
+    evidence["face_blue_artifact_frac"] = round(face_blue, 4)
+    evidence["chest_blue_artifact_frac"] = round(chest_blue, 4)
+    evidence["neck_skin_blob_frac"] = round(neck_skin, 4)
+    evidence["inpaint_smear_frac"] = round(smear_frac, 4)
+    checks["pixel_no_inpaint_artifacts"] = (
+        face_blue < 0.0015
+        and chest_blue < 0.012
+        and smear_frac < 0.08
+    )
+    if not checks["pixel_no_inpaint_artifacts"]:
+        errors.append(
+            "pixel_no_inpaint_artifacts FAIL: "
+            f"face_blue={face_blue:.4f} chest_blue={chest_blue:.3f} smear={smear_frac:.3f}"
+        )
+
+    # --- cat meme clearance ≥80px from Wordstat paper ---
+    clearance_paper = _meme_clearance_paper_frac(img, MEME_CLEARANCE_PX)
+    evidence["meme_clearance_wordstat_paper_frac"] = round(clearance_paper, 4)
+    checks["pixel_meme_clearance_80px"] = clearance_paper < 0.008
+    if not checks["pixel_meme_clearance_80px"]:
+        errors.append(
+            f"pixel_meme_clearance_80px FAIL: paper_frac={clearance_paper:.3f} within 80px of cat"
         )
 
     # --- truncated phrase heuristics (partial words at strip edge) ---
@@ -791,6 +1124,8 @@ def stamp_cover_qa_json(
             checks.get("pixel_title_zone_clear", False)
             and checks.get("pixel_wordstat_not_on_host_chest", False)
             and checks.get("pixel_meme_not_occluded_by_wordstat", False)
+            and checks.get("pixel_no_text_on_clothing", False)
+            and checks.get("pixel_meme_clearance_80px", False)
         ),
         "outfit_invented": checks.get("pixel_manifest_outfit_matches", False),
         "action_invented": True,

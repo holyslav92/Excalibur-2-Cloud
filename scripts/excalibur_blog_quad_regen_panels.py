@@ -71,6 +71,12 @@ def build_panel_prompt(manifest: dict[str, Any], slot_key: str, root: Path) -> s
     hero = load_json(hero_path) if hero_path.is_file() else {}
 
     if slot_key == "cover":
+        if manifest.get("wordstat_pil_only"):
+            design_path = root / "memory/cover/cover-design-code.json"
+            design_code = load_json(design_path) if design_path.is_file() else {}
+            from excalibur_blog_cover_quad_prompt import build_solo_cover_prompt
+
+            return build_solo_cover_prompt(manifest, style, hero, design_code)
         return build_prompt(
             manifest,
             style,
@@ -135,6 +141,39 @@ def run_image_api(root: Path, article_dir: Path, batch_path: Path, result_path: 
     return subprocess.call(cmd, cwd=str(root))
 
 
+def _pick_best_cover_panel(im) -> Any:
+    """Из 2×2 quad canvas выбрать панель с лучшим pixel QA score."""
+    from PIL import Image
+
+    import tempfile
+
+    from excalibur_blog_cover_qa_pixels import analyze_cover_pixels, cover_composition_ok
+
+    w, h = im.size
+    crops = [
+        im.crop((w // 2, h // 2, w, h)),
+        im.crop((w // 2, 0, w, h // 2)),
+        im.crop((0, h // 2, w // 2, h)),
+        im.crop((0, 0, w // 2, h // 2)),
+    ]
+    best_panel = crops[0].convert("RGB").resize((1200, 675), Image.Resampling.LANCZOS)
+    best_score = -9999
+    for crop in crops:
+        panel = crop.convert("RGB").resize((1200, 675), Image.Resampling.LANCZOS)
+        with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
+            tmp_path = Path(tmp.name)
+            panel.save(tmp_path, format="PNG")
+        result = analyze_cover_pixels(tmp_path)
+        tmp_path.unlink(missing_ok=True)
+        if not cover_composition_ok(panel):
+            continue
+        score = sum(1 for v in result.checks.values() if v) * 10 - len(result.errors) * 25
+        if score > best_score:
+            best_score = score
+            best_panel = panel
+    return best_panel
+
+
 def apply_solo_result(
     article_dir: Path,
     slot_key: str,
@@ -174,16 +213,27 @@ def apply_solo_result(
         try:
             from PIL import Image
 
+            from excalibur_blog_cover_qa_pixels import cover_composition_ok
+
             with Image.open(out) as im:
+                raw_backup = cover_dir / "cover-quad-raw.png"
+                im.convert("RGB").save(raw_backup, format="PNG")
+                rgb = im.convert("RGB")
+                probe = (
+                    rgb
+                    if rgb.size == (1200, 675)
+                    else rgb.resize((1200, 675), Image.Resampling.LANCZOS)
+                )
+                if cover_composition_ok(probe):
+                    if rgb.size != (1200, 675):
+                        probe.save(out, format="PNG")
+                    print(f"OK solo regen {slot_key} → single 16:9 resize → {out.name}")
+                    return 0
                 w, h = im.size
                 if w > h * 1.4:
-                    # Likely 2×2 quad canvas — take top-left panel.
-                    panel = im.crop((0, 0, w // 2, h // 2))
-                    panel = panel.convert("RGB").resize((1200, 675), Image.Resampling.LANCZOS)
+                    panel = _pick_best_cover_panel(im)
                     panel.save(out, format="PNG")
-                    raw_backup = cover_dir / "cover-quad-regen-raw.png"
-                    im.convert("RGB").save(raw_backup, format="PNG")
-                    print(f"OK solo regen {slot_key} → cropped top-left panel → {out.name}")
+                    print(f"OK solo regen {slot_key} → best face panel → {out.name}")
                     return 0
                 if im.size != (1200, 675):
                     im.convert("RGB").resize((1200, 675), Image.Resampling.LANCZOS).save(out, format="PNG")
@@ -228,24 +278,58 @@ def main() -> int:
         return 1
 
     for slot_key in slot_keys:
-        prompt = build_panel_prompt(manifest, slot_key, root)
-        with_i2i = slot_key == "cover"
-        batch_path = write_solo_batch(
-            article_dir, slot_key, prompt, with_i2i=with_i2i, ref_url=ref_url
-        )
-        result_path = article_dir / "cover" / f"quad-solo-result-{slot_key}.json"
-        rc = run_image_api(root, article_dir, batch_path, result_path)
-        if rc != 0:
-            print(f"❌ PANEL REGEN BLOCKER: {slot_key} image API exit={rc}", file=sys.stderr)
-            return rc
-        rc = apply_solo_result(article_dir, slot_key, result_path, root)
-        if rc != 0:
-            return rc
+        max_attempts = 6 if slot_key == "cover" else 1
+        for attempt in range(1, max_attempts + 1):
+            prompt = build_panel_prompt(manifest, slot_key, root)
+            with_i2i = slot_key == "cover"
+            batch_path = write_solo_batch(
+                article_dir, slot_key, prompt, with_i2i=with_i2i, ref_url=ref_url
+            )
+            result_path = article_dir / "cover" / f"quad-solo-result-{slot_key}.json"
+            rc = run_image_api(root, article_dir, batch_path, result_path)
+            if rc != 0:
+                print(f"❌ PANEL REGEN BLOCKER: {slot_key} image API exit={rc}", file=sys.stderr)
+                return rc
+            rc = apply_solo_result(article_dir, slot_key, result_path, root)
+            if rc != 0:
+                return rc
+            if slot_key != "cover":
+                break
+            from excalibur_blog_cover_qa_pixels import analyze_cover_pixels
+
+            pre = analyze_cover_pixels(article_dir / "cover" / "cover.png", manifest=manifest)
+            model_dirty = pre.status != "PASS" or not (
+                pre.checks.get("pixel_host_close_up")
+                and pre.checks.get("pixel_phone_readable")
+                and pre.checks.get("pixel_no_text_on_clothing")
+                and pre.checks.get("pixel_wordstat_only_top_left")
+                and pre.checks.get("pixel_wordstat_not_on_host_chest")
+                and pre.checks.get("pixel_meme_not_occluded_by_wordstat")
+                and pre.checks.get("pixel_no_inpaint_artifacts")
+            )
+            if not model_dirty:
+                print(f"OK cover base clean before PIL overlay (attempt {attempt})")
+                break
+            print(
+                f"WARN cover attempt {attempt}/{max_attempts} model artifacts: "
+                + "; ".join(pre.errors[:4]),
+                file=sys.stderr,
+            )
+            if attempt >= max_attempts:
+                print("❌ PANEL REGEN BLOCKER: cover base still dirty after retries", file=sys.stderr)
+                return 1
 
     if args.wordstat_overlay and "cover" in slot_keys:
         overlay = root / "scripts/excalibur_blog_cover_wordstat_overlay.py"
         subprocess.call(
-            [sys.executable, str(overlay), "--article-dir", str(article_dir)],
+            [
+                sys.executable,
+                str(overlay),
+                "--article-dir",
+                str(article_dir.relative_to(root)),
+                "--force",
+                "--top-left-only",
+            ],
             cwd=str(root),
         )
 
