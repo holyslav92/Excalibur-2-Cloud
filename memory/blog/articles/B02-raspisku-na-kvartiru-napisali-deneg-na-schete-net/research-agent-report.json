@@ -38,6 +38,14 @@
     "file": "published-titles-only.md",
     "duplicates_found": false
   },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 2,
+    "entities_checked": ["sberbank"],
+    "errors": [],
+    "lesson": "B02 fix: person 3400 RUB for individuals; legal/loc is for legal entities only"
+  },
   "key_facts_count": 24,
   "outputs": {
     "research_notes": "research-notes.md",

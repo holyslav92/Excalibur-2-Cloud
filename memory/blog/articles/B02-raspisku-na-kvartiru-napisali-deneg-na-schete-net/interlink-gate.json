@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "topic_id": "B02",
+  "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+  "candidates_count": 3,
+  "outbound_found": [
+    {
+      "slug": "rosfinmonitoring-sdelka-nedvizhimost-cheklis-tyumen-2026",
+      "title": "Росфинмониторинг и сделка с недвижимостью: чеклист для Тюмени"
+    },
+    {
+      "slug": "bank-otkazal-po-domu-cheklist-starogo-fonda-v-tyumeni",
+      "title": "Банк отказал по дому? Чеклист старого фонда в Тюмени"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

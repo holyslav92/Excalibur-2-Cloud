@@ -152,6 +152,42 @@ def main() -> int:
     cta = _load_json(article_dir / "community-cta-gate.json")
     record("community_cta", cta_rc == 0 and _hard_ok(cta), f"exit={cta_rc}")
 
+    categories_rc = run_cmd(
+        root,
+        [
+            py,
+            str(scripts / "excalibur_blog_wp_categories.py"),
+            "--article-dir",
+            str(article_dir),
+        ],
+    )
+    categories = _load_json(article_dir / "wp-categories-gate.json")
+    record("wp_categories", categories_rc == 0 and _hard_ok(categories), f"exit={categories_rc}")
+
+    interlink_rc = run_cmd(
+        root,
+        [
+            py,
+            str(scripts / "excalibur_blog_interlinker.py"),
+            "--article-dir",
+            str(article_dir),
+        ],
+    )
+    interlink = _load_json(article_dir / "interlink-gate.json")
+    record("interlink", interlink_rc == 0 and _hard_ok(interlink), f"exit={interlink_rc}")
+
+    official_rc = run_cmd(
+        root,
+        [
+            py,
+            str(scripts / "excalibur_blog_research_official_gate.py"),
+            "--article-dir",
+            str(article_dir),
+        ],
+    )
+    official = _load_json(article_dir / "research-official-gate.json")
+    record("research_official", official_rc == 0 and _hard_ok(official), f"exit={official_rc}")
+
     opening_rc = run_cmd(
         root,
         [

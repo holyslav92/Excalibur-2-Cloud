@@ -25,7 +25,9 @@ class SetupTenantTests(unittest.TestCase):
         self.assertIn("https://t.me/Tyumen_Rieltor", tenant.get("cta_links") or [])
         self.assertIn("tel:+79220016505", tenant.get("cta_links") or [])
         self.assertTrue(tenant.get("interlink_old_articles"))
+        self.assertTrue(tenant.get("wp_categories_required"))
         self.assertTrue((tenant.get("publish_options") or {}).get("deploy_llms_after_publish"))
+        self.assertTrue((tenant.get("publish_options") or {}).get("auto_interlink_after_publish"))
         self.assertTrue(tenant.get("dzen_rf_pack"))
 
     def test_setup_agents_present(self) -> None:

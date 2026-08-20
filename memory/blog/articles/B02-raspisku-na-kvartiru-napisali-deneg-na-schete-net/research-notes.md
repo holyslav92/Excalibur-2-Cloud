@@ -126,6 +126,15 @@
 
 ---
 
+## official_verifications
+
+| claim | audience | value | official_url | accessed_at | verified |
+|-------|----------|-------|--------------|-------------|----------|
+| Сбер: комиссия за аккредитив при купле-продаже недвижимости | физлица | 3 400 ₽ | https://www.sberbank.ru/ru/person/payments/special_acc/accreditive | 2026-08-20 | yes |
+| Сбер: аккредитив для юрлиц | юрлица | 0,3% / мин. 15 000 ₽ | https://www.sberbank.ru/ru/legal/bankingservice/loc | 2026-08-20 | yes (не для бытовой сделки физлиц) |
+
+---
+
 ## source_table
 
 | id | title | url | type | accessed_at | used_for |
@@ -147,7 +156,7 @@
 
 - https://t.me/klyshin_A
 - https://www.mirkvartir.ru/journal/assistant/2026/08/11/akkreditiv-zachem-on/
-- https://www.sberbank.ru/ru/legal/bankingservice/loc
+- https://www.sberbank.ru/ru/person/payments/special_acc/accreditive
 - https://gradbase.ru/guide/raschety-pri-pokupke-kvartiry
 - https://gradbase.ru/guide/akkreditiv-pri-pokupke-kvartiry
 - https://www.garant.ru/news/2066968/
