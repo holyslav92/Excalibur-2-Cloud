@@ -3,6 +3,7 @@
   "status": "FAIL",
   "checked_at": "2026-08-20",
   "topic_id": "B03",
+  "regeneration": "re-qa_after_fix_quad2_wordstat_patch",
   "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
   "cover_emotion_requested": "jaw-drop shock — eyebrows HIGH, mouth open at EGRN «дарение» line; NO closed-mouth smile",
   "checks": {
@@ -17,25 +18,23 @@
     "motif_no_collision_14d": true,
     "people_in_8_set": true,
     "cats_cadence_ok": true,
-    "wordstat_stickers_1_3": false,
+    "wordstat_stickers_1_3": true,
     "identity_real_files": true,
     "inline_utility_all_7": true,
-    "inline_no_host_face": false
+    "inline_no_host_face": true
   },
   "fail_reasons": [
-    "inline_no_host_face: inline-04, inline-05, inline-06, inline-07 — портрет хоста слева (белая рубашка); host только на cover",
-    "wordstat_stickers_1_3: на cover нет читаемых P0-стикеров из manifest (банкротство продавца квартиры / купить квартиру в тюмени / торги по банкротству квартира); есть только hook + sticky «карточка не ЕГРН»",
-    "meme_density_inline_ok: мем на всех 7 inline; канон 2–3 из 7"
+    "meme_density_inline_ok: мем-стикеры на inline-01, 02, 03, 05, 07 (5/7); канон 2–3 из 7. inline-02/03 сохранены с cat-мемами — убрать стикеры или перегенерировать utility-only"
+  ],
+  "fixed_since_last_qa": [
+    "inline_no_host_face: inline-04..07 без портрета хоста",
+    "wordstat_stickers_1_3: 3 gold-tape P0-стикера на cover (банкротство продавца / купить квартиру в тюмени / торги по банкротству)"
   ],
   "return_to_cover": {
-    "preserve": ["cover/cover.png", "cover/inline-01.png", "cover/inline-02.png", "cover/inline-03.png"],
-    "regenerate": ["cover/inline-04.png", "cover/inline-05.png", "cover/inline-06.png", "cover/inline-07.png"],
-    "cover_patch": "Добавить 2–3 gold-tape Wordstat-стикера на cover (без перегенерации лица): «банкротство продавца квартиры», «купить квартиру в тюмени», «торги по банкротству квартира» — читаемый condensed Cyrillic, рядом с доской/нитками",
-    "inline_04_fix": "structure_diagram по H2 «Дарение дочери — правовая рамка»: только блок-схема ст.61.2→3 года→ФУ→213.25 на белой доске; meme-cat sticker угол; ZERO host face",
-    "inline_05_fix": "comparison_table ТОРГИ vs ОБЫЧНАЯ СДЕЛКА — только таблица + this-is-fine cat на строке «заморозка»; ZERO host face",
-    "inline_06_fix": "labeled_checklist ОШИБКИ vs ПРАВИЛЬНО — 5 строк, обе колонки; meme только Roll Safe или убрать; ZERO host face",
-    "inline_07_fix": "comparison_table 3 лота Тюмени + distracted-boyfriend на рискованной строке; ZERO host face",
-    "meme_density_rule": "Оставить мемы на inline-01, inline-05, inline-07 (3/7); inline-02/03/04/06 — utility-only или без cat-sticker"
+    "preserve": ["cover/cover.png", "cover/inline-04.png", "cover/inline-05.png", "cover/inline-06.png", "cover/inline-07.png"],
+    "regenerate": ["cover/inline-02.png", "cover/inline-03.png"],
+    "inline_02_fix": "structure_diagram ЕФРСБ→ЭТП→задаток — utility-only, ZERO cat/meme stickers",
+    "inline_03_fix": "labeled_checklist ЕГРН 48ч — utility-only, ZERO grumpy-cat; red STOP icon OK без meme-face"
   },
-  "notes": "Cover PASS по identity (medium-slim, jaw-drop ≠ studio smile), phone +7 922 001 65 05, high-key доска. Inline 01–03 OK. Блокер — host face на quad-2 inlines + Wordstat stickers на cover."
+  "notes": "Re-QA после fix: cover identity/expression/phone/wordstat PASS; quad-2 inlines без host face; inline utility 7/7 OK. Блокер — meme density 5/7 (нужно 2–3): сохранённые inline-02/03 с cat-мемами."
 }
