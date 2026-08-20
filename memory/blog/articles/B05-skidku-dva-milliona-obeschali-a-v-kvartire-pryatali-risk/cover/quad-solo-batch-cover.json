@@ -1,16 +1,13 @@
 {
-  "pipeline": "quad_solo_cover_regen_v4",
+  "pipeline": "quad_solo_panel_regen",
   "slot": "cover",
-  "identity_reference_local": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
-  "prefer_local_reference": true,
-  "local_reference": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
-  "output_canvas": "cover/cover.png",
+  "output_canvas": "cover/cover-raw.png",
   "jobs": [
     {
       "slot": "cover",
       "tool": "derouter-rest",
       "mcp_args": {
-        "prompt": "ONE single 16:9 photo cover, NOT a 2x2 grid, NOT four panels, NOT infographic collage.\nHigh-key sunny outdoor photo, airy #FFFFFF, gold #dcc5a1 accent, clean layout.\nSame 28yo man i2i from face reference (jaw, hairline, stubble, medium-slim). FORBIDDEN: black blazer, black t-shirt, studio bust, clenched fist, left talking-head crop, side-eye.\nOUTFIT: white oxford shirt sleeves rolled + camel tan chinos + brown leather belt + loafers. NO jacket. NO blazer. NO puffer. NO blue hoodie.\nPOSE: three-quarter FULL BODY on the RIGHT half of frame, standing at a bright apartment entrance, holding open EGRN folder in left hand, right hand pointing at a small red price tag «-2 МЛН» on the folder — action, not portrait bust.\nFACE: calm explaining look at camera, slight concerned brow, closed mouth.\nTITLE ZONE left 40% completely empty of stickers: huge readable Cyrillic «-2 МЛН уценили», word «уценили» gold. White sky/wall behind title. Nothing overlaps title.\nNO wordstat search bars. NO gold tape labels. NO stacked UI cards. Phone number «+7 922 001 65 05» as one small gold sticker bottom-right only.\nTiny thinking-cat sticker top-right corner under 8% of frame.\nSmall yellow sticky «задаток сегодня» on the folder, not on the title.\nSunny Tyumen entrance, glass door, sun flare. Perfect Cyrillic.",
+        "prompt": "ONE single 16:9 photograph, NOT a 2x2 grid, NOT four panels, NOT infographic collage. High-key bright PHOTO, airy #FFFFFF, sun flare/light leak/soft glow. Cover is a real outdoor photograph, not a collage. Host i2i CENTER-RIGHT, full/mid body, medium slim (NOT chubby). Tiny meme cat corner OK. No dark cinematic, no inventory props. ZERO letters: no Cyrillic, no Latin, no digits, no phone, no street address, no building signs, no stickers, no tape labels, no price tags, no headlines. Blank folder/papers without writing. Empty LEFT 35% (sky/wall) for later PIL title. Empty FAR RIGHT 28% (sky/wall) for later PIL stickers — host must NOT occupy x>0.70. Host i2i CENTER-RIGHT action pose, body between 38% and 68% of frame width (face-studio identity: jaw/stubble/hairline/eyes; medium-slim; NOT chubby/puffy). Expression: calm direct explanatory gaze; NOT squint NOT fist. same person as reference, NEW expression for the hook, do NOT copy reference closed-mouth smile/pose/head angle; FORBIDDEN polite studio smile. OUTFIT: white oxford shirt rolled sleeves + camel tan chinos + brown belt + loafers. POSE: full_body_center_right_far_right_empty_for_pil_rail. ACTION: holds blank dark folder at sunny entrance. Scene: FULL BODY center-right at sunny entrance; white oxford camel chinos; blank folder; empty far right wall. tiny meme top-right corner only (never on face, never bottom-left). FORBIDDEN: black blazer, left bust, side-eye, 2x2 grid, any readable letters on walls/clothes/folder.",
         "aspect_ratio": "16:9",
         "resolution": "2K",
         "input_urls": [
@@ -18,5 +15,8 @@
         ]
       }
     }
-  ]
+  ],
+  "prefer_local_reference": true,
+  "local_reference": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+  "identity_reference_local": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg"
 }

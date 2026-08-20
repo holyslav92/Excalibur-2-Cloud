@@ -99,7 +99,7 @@ def build_cover_photo_prompt(manifest: dict, *, solo: bool = False) -> str:
     )
     cover_scene = strip_cover_letter_directives(str(cover.get("scene_hint") or ""))
     outfit = compact(str(motifs.get("outfit") or ""), 120)
-    pose = compact(str(motifs.get("pose_framing") or "full/mid body host on RIGHT half"), 100)
+    pose = compact(str(motifs.get("pose_framing") or "full/mid body host CENTER-RIGHT, far right empty"), 100)
     action = compact(str(motifs.get("action") or "holds a blank dark folder"), 100)
     action = re.sub(r"(?i)minus.?2|price.?tag|-2|млн|phone|sticker|tag", "blank folder", action)
     emotion_clause = (
@@ -116,11 +116,12 @@ def build_cover_photo_prompt(manifest: dict, *, solo: bool = False) -> str:
         f"{frame} {PHOTO_COVER_PREFIX} "
         f"ZERO letters: no Cyrillic, no Latin, no digits, no phone, no street address, "
         f"no building signs, no stickers, no tape labels, no price tags, no headlines. "
-        f"Blank folder/papers without writing. Empty left third (sky/wall) for later PIL title. "
-        f"Host i2i RIGHT/action pose ({BODY_LOCK}). {emotion_clause} "
+        f"Blank folder/papers without writing. Empty LEFT 35% (sky/wall) for later PIL title. "
+        f"Empty FAR RIGHT 28% (sky/wall) for later PIL stickers — host must NOT occupy x>0.70. "
+        f"Host i2i CENTER-RIGHT action pose, body between 38% and 68% of frame width ({BODY_LOCK}). {emotion_clause} "
         f"OUTFIT: {outfit or 'invented non-black-blazer clothes'}. POSE: {pose}. ACTION: {action}. "
         f"Scene: {cover_scene or 'sunny Tyumen entrance, glass, sun flare'}. "
-        f"tiny meme corner only. FORBIDDEN: black blazer, left bust, side-eye, 2x2 grid, "
+        f"tiny meme top-right corner only (never on face, never bottom-left). FORBIDDEN: black blazer, left bust, side-eye, 2x2 grid, "
         f"any readable letters on walls/clothes/folder."
     )
 
@@ -135,7 +136,7 @@ COVER_PHONE_CTA = "+7 922 001 65 05"
 BOARD_STATIONERY = "tape/pins/strings/paper scraps; high-key #FFF/gold; not noir"
 PHOTO_COVER_PREFIX = (
     "High-key bright PHOTO, airy #FFFFFF, sun flare/light leak/soft glow. "
-    "Cover is a real outdoor photograph, not a collage. Host i2i RIGHT, full/mid body, "
+    "Cover is a real outdoor photograph, not a collage. Host i2i CENTER-RIGHT, full/mid body, "
     "medium slim (NOT chubby). Tiny meme cat corner OK. No dark cinematic, no inventory props."
 )
 # Модель не должна получать кириллицу/телефон — иначе снова рисует стикеры на человеке.

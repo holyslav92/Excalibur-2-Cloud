@@ -25,7 +25,7 @@
     ],
     [
       0.72,
-      0.329
+      0.33
     ]
   ],
   "cover_motifs": {
@@ -37,7 +37,7 @@
     "joke": "sticky_via_pil_not_model",
     "outfit": "white oxford shirt rolled sleeves + camel tan chinos + brown belt + loafers",
     "emotion": "calm_explaining_concerned_brow",
-    "pose_framing": "three_quarter_full_body_host_RIGHT_entrance_not_left_bust",
+    "pose_framing": "full_body_center_right_far_right_empty_for_pil_rail",
     "action": "holds blank dark folder at sunny entrance"
   },
   "slots": {
@@ -45,7 +45,7 @@
       "role": "cover_editorial_hero",
       "alt": "Скидка два миллиона — риски до задатка",
       "cover_emotion": "calm direct explanatory gaze; NOT squint NOT fist",
-      "scene_hint": "FULL BODY RIGHT at sunny apartment entrance; white oxford camel chinos; blank dark folder; empty left sky",
+      "scene_hint": "FULL BODY center-right at sunny entrance; white oxford camel chinos; blank folder; empty far right wall",
       "meme_caption_ru": "",
       "sticky": "задаток сегодня",
       "meme_sticker": true,
