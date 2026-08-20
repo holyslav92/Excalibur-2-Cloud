@@ -1,0 +1,169 @@
+{
+  "topic_id": "B03",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Маткапитал — детей в выписке нет",
+  "cover_hook_highlight": "детей",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: Derouter REST (DEROUTER_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "cover_phone_cta": "+7 922 001 65 05",
+  "wordstat_stickers": ["купить квартиру в тюмени", "детская доля"],
+  "cover_motifs": {
+    "composition": "host_slim_left_white_board_tape_pins_phone_cta_memes_flare",
+    "location": "bright_sunlit_tyumen_light_board_scotch_pins_thread",
+    "meme": "confused_cat_plus_woman_pointing_cutout",
+    "prop_set": "egrn_printout_child_drawing_scraps_phone_readable_cta",
+    "sticker_set": "wordstat_tyumen_detskaya_dolya_gold_tape_phone",
+    "joke": "sticky_доли_детям_arrow_empty_выписка"
+  },
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Маткапитал в сделке — детей в выписке нет, звоните риэлтору",
+      "scene_hint": "SLIM medium-slim host 28 left; bright white investigation board scotch tape pins red thread; phone shows +7 922 001 65 05; meme cat+people stickers; Wordstat stickers; sun flare high-key; Tyumen tag; navy blazer NOT hoodie",
+      "meme_caption_ru": "",
+      "sticky": "доли детям — проверьте"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Закон: маткапитал = общая собственность с детьми",
+      "visual_type": "comparison_table",
+      "scene_hint": "White high-key comparison table UI taped; 256-FZ row; gold headers; NO host face",
+      "alt": "Схема общей собственности с маткапиталом: родители и дети",
+      "labels": [
+        "256-ФЗ",
+        "общая собственность",
+        "доли детям",
+        "срок 6 мес",
+        "ПФР контроль",
+        "риск оспаривания"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что видеть в выписке ЕГРН до аванса",
+      "visual_type": "structure_diagram",
+      "scene_hint": "EGRN structure diagram on white board; red marker only-parents box; NO host face",
+      "alt": "Чеклист выписки ЕГРН: собственники, дети, обременения",
+      "labels": [
+        "выписка ЕГРН",
+        "только родители",
+        "красный маркер",
+        "дети в ЕГРН",
+        "обременения",
+        "уведомление ПФР"
+      ]
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Если дети — собственники: опека и нотариус",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "Workflow arrows: опека → нотариус → регистрация; taped pins; NO host face",
+      "alt": "Схема продажи с детской долей: опека и нотариус",
+      "labels": [
+        "опека 15 дней",
+        "нотариальный ДКП",
+        "согласие письменное",
+        "ничтожность без опеки",
+        "деньги на счёт ребёнка",
+        "не ухудшить жильё"
+      ]
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Изменение 2026: банк на выделение долей — не нужен, риск остался",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "2026 vs still-risk checklist columns; gold checkmarks; NO host face",
+      "alt": "Таблица изменений 2026: банк на выделение и оставшиеся риски",
+      "labels": [
+        "с 01.01.2026",
+        "банк не нужен",
+        "на выделение",
+        "обязанность осталась",
+        "согласие на продажу",
+        "ипотека отдельно"
+      ]
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Маткапитал без долей — суд может забрать квартиру после покупки",
+      "visual_type": "checklist_board",
+      "scene_hint": "Risk chain flowchart PFR lawsuit restitution; red warning; NO host face",
+      "alt": "Цепочка риска: маткапитал без долей — оспаривание сделки",
+      "labels": [
+        "ПФР возврат",
+        "опека иск",
+        "реституция",
+        "5–10 лет ипотека",
+        "доли «потом»",
+        "риск покупателя"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Чеклист покупателя до аванса",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Numbered checklist 1-6 with timeline bar; opека duration bar; NO host face",
+      "alt": "Чеклист до аванса: ЕГРН, маткапитал, опека, банк",
+      "labels": [
+        "1. ЕГРН",
+        "2. маткапитал",
+        "3. нет детей",
+        "4. опека",
+        "5. банк",
+        "6. без скидки"
+      ]
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Типичные ошибки в Тюмени",
+      "visual_type": "schema_faq_ui",
+      "scene_hint": "Wrong vs right comparison rows; meme cat sticker corner; NO host face",
+      "alt": "Сравнение типичных ошибок покупателя при маткапитале",
+      "labels": [
+        "без детей → маткапитал",
+        "2026 ≠ безопасность",
+        "аванс до опеки",
+        "регистрация не быстрая"
+      ]
+    }
+  },
+  "cover_keys_ru": []
+}

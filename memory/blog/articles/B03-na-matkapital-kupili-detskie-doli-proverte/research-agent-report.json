@@ -1,0 +1,48 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B03",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-18",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "18.08.2026 вебинар: проверка до аванса, маткапитал и детские доли в списке рисков"
+      },
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Видео «5 схем законного отъёма квартиры»: схема №4 маткапитал без долей детям → дети оспаривают"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 40410,
+    "matkapital_phrase": "маткапитал при покупке квартиры",
+    "matkapital_volume": 1838,
+    "child_share_phrase": "детская доля в квартире",
+    "child_share_volume": 2001,
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "published_angles_excluded": [
+      "B01: стоп-строки ЕГРН до аванса",
+      "B02: расписка без денег на счёте"
+    ],
+    "duplicates_found": false
+  },
+  "key_facts_count": 32,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}

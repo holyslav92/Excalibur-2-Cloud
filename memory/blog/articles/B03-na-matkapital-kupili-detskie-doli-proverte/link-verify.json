@@ -1,0 +1,37 @@
+{
+  "source": "memory/blog/articles/B03-na-matkapital-kupili-detskie-doli-proverte/article.html",
+  "total_links": 3,
+  "failed_count": 0,
+  "verdict": "pass",
+  "links": [
+    {
+      "url": "{{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/"
+    },
+    {
+      "url": "{{SITE_BASE}}/blog/bez-rubriki/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/blog/bez-rubriki/raspisku-na-kvartiru-napisali-deneg-na-schete-net/"
+    },
+    {
+      "url": "https://t.me/Tyumen_Rieltor",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-18",
+    "today_ru": "18.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B03",
+    "title": "На маткапитал купили — детские доли проверьте",
+    "h1": "На маткапитал купили — детские доли проверьте",
+    "slug": "na-matkapital-kupili-detskie-doli-proverte",
+    "primary_query": "На маткапитал купили — детские доли проверьте",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "На маткапитал купили — детские доли проверьте 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Онлайн-расчет долей при покупке жилья на материнский капитал в 2026 ...",
+          "url": "https://ppt.ru/calc/raschet-doley-pri-pokupke-zhilya-na-materinskiy-kapital",
+          "snippet": ""
+        },
+        {
+          "title": "Как выделить детские доли при покупке жилья с маткапиталом",
+          "url": "https://www.cian.ru/stati-kak-vydelit-detskie-doli-pri-pokupke-zhilja-s-matkapitalom-336684/",
+          "snippet": "Калькулятор расчета долей при покупке жилья на материнский капитал Родители обязаны выделить детские доли при покупке жилья за счет материнского капитала. Но конкретных цифр в законе 256-ФЗ нет. На практике доли ..."
+        },
+        {
+          "title": "Выделение долей детям по маткапиталу: пошаговая инструкция и риски | АН ...",
+          "url": "https://vladis.ru/blog/vydelenie-doley-detyam-po-matkapitalu-polnyj-gid",
+          "snippet": "Наделить детей долями после покупки жилья с использованием маткапитала — прямая обязанность родителей. Рассказываем, в какой срок это нужно сделать, надо ли выделять доли другим членам семьи и во сколько обойдётся эта процедура."
+        },
+        {
+          "title": "Выделение долей по маткапиталу 2026: все правила, расчет и оформление",
+          "url": "https://fskfamily.ru/blog/kak-vydelit-detskie-doli-pri-pokupke-zhilya-s-matkapitalom-poshagovaya-instrukciya/",
+          "snippet": "Пошаговая инструкция по выделению долей детям при использовании маткапитала. Узнайте, когда и как это сделать, как рассчитать размер долей, сколько стоит нотариус и как потом продать ..."
+        },
+        {
+          "title": "Покупка квартиры с маткапиталом: риски и проверка — Эксперты АН «Владис»",
+          "url": "https://vladis.ru/blog/pokupka-kvartiry-s-matkapitalom-riski",
+          "snippet": "Данная инструкция детально объясняет, как выделить доли детям по материнскому капиталу, правильно рассчитать пропорции и зарегистрировать изменения в 2026 году."
+        },
+        {
+          "title": "Материнский капитал и выделение долей: новое в 2026 году",
+          "url": "https://harant.ru/blog/nedvizhimost/materinskij-kapital-i-vydelenie-dolej-novoe-v-2026-godu/",
+          "snippet": "Чем опасна покупка квартиры с маткапиталом? Узнайте, как проверить продавца на невыделенные детские доли. Чек-лист документов и безопасные сценарии сделки, чтобы избежать ..."
+        }
+      ],
+      "searched_at": "2026-08-18"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "На маткапитал купили — детские доли проверьте 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Выделение долей по маткапиталу 2026: все правила, расчет и оформление",
+          "url": "https://fskfamily.ru/blog/kak-vydelit-detskie-doli-pri-pokupke-zhilya-s-matkapitalom-poshagovaya-instrukciya/",
+          "snippet": ""
+        },
+        {
+          "title": "Выделение долей детям по маткапиталу: пошаговая инструкция и риски | АН ...",
+          "url": "https://vladis.ru/blog/vydelenie-doley-detyam-po-matkapitalu-polnyj-gid",
+          "snippet": "Данная инструкция детально объясняет, как выделить доли детям по материнскому капиталу, правильно рассчитать пропорции и зарегистрировать изменения в 2026 году."
+        },
+        {
+          "title": "Как выделить детские доли при покупке жилья с маткапиталом",
+          "url": "https://www.cian.ru/stati-kak-vydelit-detskie-doli-pri-pokupke-zhilja-s-matkapitalom-336684/",
+          "snippet": "Пошаговая инструкция по выделению долей детям при использовании маткапитала. Узнайте, когда и как это сделать, как рассчитать размер долей, сколько стоит нотариус и как потом продать ..."
+        },
+        {
+          "title": "Онлайн-расчет долей при покупке жилья на материнский капитал в 2026 ...",
+          "url": "https://ppt.ru/calc/raschet-doley-pri-pokupke-zhilya-na-materinskiy-kapital",
+          "snippet": "Наделить детей долями после покупки жилья с использованием маткапитала — прямая обязанность родителей. Рассказываем, в какой срок это нужно сделать, надо ли выделять доли другим членам семьи и во сколько обойдётся эта процедура."
+        },
+        {
+          "title": "Калькулятор долей по материнскому капиталу онлайн",
+          "url": "https://calculatorov.ru/kalkulyator-doley-po-materinskomu-kapitalu-onlayn/",
+          "snippet": "Калькулятор расчета долей при покупке жилья на материнский капитал Родители обязаны выделить детские доли при покупке жилья за счет материнского капитала. Но конкретных цифр в законе 256-ФЗ нет. На практике доли ..."
+        },
+        {
+          "title": "Выделение долей по материнскому капиталу совершеннолетним детям ...",
+          "url": "https://law-treaty.ru/materials/publication/?id=28",
+          "snippet": "Рассчитайте минимальные доли в жилье при использовании материнского капитала. Формула, примеры расчёта и онлайн-калькулятор для семей с детьми."
+        }
+      ],
+      "searched_at": "2026-08-18"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "На маткапитал купили — детские доли проверьте official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Выделение долей по маткапиталу 2026: все правила, расчет и оформление",
+          "url": "https://fskfamily.ru/blog/kak-vydelit-detskie-doli-pri-pokupke-zhilya-s-matkapitalom-poshagovaya-instrukciya/",
+          "snippet": ""
+        },
+        {
+          "title": "Как выделить детские доли при покупке жилья с маткапиталом",
+          "url": "https://www.cian.ru/stati-kak-vydelit-detskie-doli-pri-pokupke-zhilja-s-matkapitalom-336684/",
+          "snippet": "Данная инструкция детально объясняет, как выделить доли детям по материнскому капиталу, правильно рассчитать пропорции и зарегистрировать изменения в 2026 году."
+        },
+        {
+          "title": "Доли в квартире с материнским капиталом: правила распределения",
+          "url": "https://www.cian.ru/stati-materinskij-kapital-i-doli-suprugov-v-kvartire-336830/",
+          "snippet": "Наделить детей долями после покупки жилья с использованием маткапитала — прямая обязанность родителей. Рассказываем, в какой срок это нужно сделать, надо ли выделять доли другим членам семьи и во сколько обойдётся эта процедура."
+        },
+        {
+          "title": "Выделение долей по материнскому капиталу совершеннолетним детям ...",
+          "url": "https://law-treaty.ru/materials/publication/?id=28",
+          "snippet": "Жильё, при покупке которого был использован федеральный материнский капитал, должно быть оформлено в общую собственность всех членов семьи — размер долей определяется по соглашению (статья 10 Федерального закона от 29.12.2006 № 256-ФЗ)."
+        },
+        {
+          "title": "Материнский капитал и выделение долей: новое в 2026 году",
+          "url": "https://harant.ru/blog/nedvizhimost/materinskij-kapital-i-vydelenie-dolej-novoe-v-2026-godu/",
+          "snippet": "Использование материнского капитала для покупки или строительства жилья порождает у семьи юридическую обязанность оформить недвижимость в общую собственность всех её членов. Главный вопрос, который возникает у родителей: нужно ли выделять доли детям, если на момент оформления они уже достигли 18 лет?"
+        },
+        {
+          "title": "Как выделить доли детям при покупке жилья на маткапитал: пошаговая ...",
+          "url": "https://nisrevue.ru/kak-vydelit-doli-detam-pri-pokupke-zil-a-na-matkapital-posagovaa-instrukcia",
+          "snippet": "Выделение долей детям и супругам при использовании материнского капитала — пошаговая инструкция с учётом требований закона и новых правил 2026 года."
+        }
+      ],
+      "searched_at": "2026-08-18"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com На маткапитал купили — детские доли проверьте 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "OpenDDE/assets/hiring.png at main · aurekaresearch/OpenDDE",
+          "url": "https://github.com/aurekaresearch/OpenDDE/blob/main/assets/hiring.png",
+          "snippet": ""
+        },
+        {
+          "title": "Illegal-Mod-Sites/SITES.md at master · StopModReposts/Illegal ... - GitHub",
+          "url": "https://github.com/StopModReposts/Illegal-Mod-Sites/blob/master/SITES.md",
+          "snippet": "An Open-source Drug Discovery Engine. Contribute to aurekaresearch/OpenDDE development by creating an account on GitHub."
+        },
+        {
+          "title": "coursera-ddp-shiny/corpora/ru_50k.txt at master - GitHub",
+          "url": "https://github.com/spujadas/coursera-ddp-shiny/blob/master/corpora/ru_50k.txt",
+          "snippet": "The following is a list of known sites illegally distributing several mods. The names are listed as the url without dots. Remember that even if a site is not listed here, it may still contain stolen mods. Bypassing AdFly links count as redistribution. The site has moved to the StopModReposts.org website. Click here to see the site list."
+        },
+        {
+          "title": "agent_exploration/fig/5levels.png at main · banyikun/agent_exploration ...",
+          "url": "https://github.com/banyikun/agent_exploration/blob/main/fig/5levels.png",
+          "snippet": "Coursera Developing Data Products Week 4 Peer-graded Assignment: Shiny - spujadas/coursera-ddp-shiny"
+        },
+        {
+          "title": "gophers/vector/projects/wwgl.svg at master · egonelbre/gophers",
+          "url": "https://github.com/egonelbre/gophers/blob/master/vector/projects/wwgl.svg",
+          "snippet": "Agent Exploration Toward Artificial General Intelligence: A Survey - banyikun/agent_exploration"
+        },
+        {
+          "title": "fight-game/icon.svg at main · awesomedino168/fight-game · GitHub",
+          "url": "https://github.com/awesomedino168/fight-game/blob/main/icon.svg",
+          "snippet": "Contribute to egonelbre/gophers development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-08-18"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "На маткапитал купили — детские доли проверьте forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Выделение долей по маткапиталу 2026: все правила, расчет и оформление",
+          "url": "https://fskfamily.ru/blog/kak-vydelit-detskie-doli-pri-pokupke-zhilya-s-matkapitalom-poshagovaya-instrukciya/",
+          "snippet": ""
+        },
+        {
+          "title": "Материнский капитал и выделение долей: новое в 2026 году",
+          "url": "https://harant.ru/blog/nedvizhimost/materinskij-kapital-i-vydelenie-dolej-novoe-v-2026-godu/",
+          "snippet": "Данная инструкция детально объясняет, как выделить доли детям по материнскому капиталу, правильно рассчитать пропорции и зарегистрировать изменения в 2026 году."
+        },
+        {
+          "title": "Как выделить детские доли при покупке жилья с маткапиталом",
+          "url": "https://www.cian.ru/stati-kak-vydelit-detskie-doli-pri-pokupke-zhilja-s-matkapitalom-336684/",
+          "snippet": "Выделение долей детям и супругам при использовании материнского капитала — пошаговая инструкция с учётом требований закона и новых правил 2026 года."
+        },
+        {
+          "title": "Выделение доли детям при покупке квартиры 2026",
+          "url": "https://legascom.ru/notes/11065-vydelenie-doli-detyam-pri-pokupke-kvartiry-2026",
+          "snippet": "Наделить детей долями после покупки жилья с использованием маткапитала — прямая обязанность родителей. Рассказываем, в какой срок это нужно сделать, надо ли выделять доли другим членам семьи и во сколько обойдётся эта процедура."
+        },
+        {
+          "title": "Купили квартиру на маткапитал, а доли детям не выделили? Чем это грозит ...",
+          "url": "https://dzen.ru/a/aZDgPc7DcV3v1wNW",
+          "snippet": "За 25 лет практики я помог сотням семей правильно выделить доли детям при использовании маткапитала. В этой статье — только практика: как сделать всё по закону, без риска потерять жильё или деньги. Когда нужно выделять доли детям? Обязательно, если: • Использован материнский капитал (по ФЗ №256 ФЗ)."
+        },
+        {
+          "title": "Доли в квартире с материнским капиталом: правила распределения",
+          "url": "https://www.cian.ru/stati-materinskij-kapital-i-doli-suprugov-v-kvartire-336830/",
+          "snippet": "Допустим, долгие годы вы не выделяли доли своим же детям, вас не проверяли и за руку не поймали. Но приходит время продавать квартиру. И тут выясняется, что доли детям не выделены."
+        }
+      ],
+      "searched_at": "2026-08-18"
+    }
+  ],
+  "wordstat": {
+    "source": "mcp-kv wordstat_get_top_requests",
+    "regions": ["55", "11176", "225"],
+    "accessed_at": "2026-08-18",
+    "queries": [
+      {
+        "phrase": "купить квартиру в тюмени",
+        "totalCount": 40410,
+        "top": ["купить квартиру в тюмени вторичка 6515", "купить квартиру комнатную в тюмени 6013"]
+      },
+      {
+        "phrase": "маткапитал при покупке квартиры",
+        "totalCount": 1838,
+        "top": ["доли при покупке квартиры при маткапитале 567", "маткапитал при покупке квартиры в ипотеку 187"]
+      },
+      {
+        "phrase": "детская доля в квартире",
+        "totalCount": 2001,
+        "top": ["продажа детской доли в квартире 455", "продажа детских долей в квартире опека 132"]
+      },
+      {
+        "phrase": "сколько сейчас материнский капитал в 2026",
+        "totalCount": 1737
+      }
+    ]
+  },
+  "fresh_community_signals": [
+    {
+      "url": "https://t.me/klyshin_A",
+      "type": "telegram",
+      "date": "2026-08-18",
+      "note": "Вебинар проверки до аванса; маткапитал в рисках"
+    },
+    {
+      "url": "https://t.me/klyshin_A",
+      "type": "telegram",
+      "date": "2026-08-18",
+      "note": "Видео 5 схем: маткапитал без долей детям"
+    }
+  ],
+  "errors": []
+}

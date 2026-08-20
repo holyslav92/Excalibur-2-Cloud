@@ -1,0 +1,36 @@
+{
+  "agent": "excalibur-blog-cover-qa",
+  "status": "PASS",
+  "checked_at": "2026-08-18",
+  "topic_id": "B03",
+  "regeneration": "B03_derouter_canvas1_i2i_canvas2_t2i",
+  "checks": {
+    "identity_face_28yo": true,
+    "identity_body_medium_slim": true,
+    "cover_phone_readable": true,
+    "board_stationery_ok": true,
+    "typography_cyrillic_clean": true,
+    "meme_density_inline_ok": true,
+    "light_high_key": true,
+    "motif_no_collision_14d": true,
+    "people_in_8_set": true,
+    "cats_cadence_ok": true,
+    "wordstat_stickers_1_3": true,
+    "identity_real_files": true,
+    "inline_utility_all_7": true,
+    "inline_no_host_face": true
+  },
+  "inline_utility_notes": {
+    "inline_1": "comparison_table_ui 256-FZ ownership rows",
+    "inline_2": "structure_diagram EGRN owners children markers",
+    "inline_3": "workflow_diagram opека notary registration",
+    "inline_4": "labeled_checklist 2026 bank vs remaining risks",
+    "inline_5": "risk chain PFR lawsuit restitution flow",
+    "inline_6": "numbered checklist 1-6 before advance",
+    "inline_7": "wrong vs right error comparison rows"
+  },
+  "phone_note": "Cover torn-paper banner +7 922 001 65 05 readable at thumbnail.",
+  "body_lock_note": "Host medium-slim beige blazer; no chubby/puffy vs identity-real refs.",
+  "meme_density_note": "Cover: cat «а где дети?» + confused woman meme; inlines utility-first no host face.",
+  "notes": "Derouter api-direct REST 2K; canvas-1 edits i2i identity-real; canvas-2 generations."
+}

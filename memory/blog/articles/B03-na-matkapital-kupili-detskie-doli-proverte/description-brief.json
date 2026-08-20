@@ -1,0 +1,9 @@
+{
+  "topic_id": "B03",
+  "description": "В выписке только родители, а маткапитал в сделке уже был. В Тюмени так покупатели вносят аванс — и узнают про детские доли, когда опека и суд уже не спасут.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

@@ -170,6 +170,16 @@
       "topic_id": "B01",
       "hook_ids": ["pre_advance_check"],
       "note": "ЕГРН / аванс — rework: егрн cluster → final P0 «купить квартиру в тюмени» 23060"
+    },
+    {
+      "topic_id": "B02",
+      "hook_ids": ["receipt_no_money"],
+      "note": "расписка / аккредитив — P0 23060"
+    },
+    {
+      "topic_id": "B03",
+      "hook_ids": ["matkapital_child_shares"],
+      "note": "wordstat rework: маткапитал 14 → детская доля 41 → P0 23060"
     }
   ]
 }
