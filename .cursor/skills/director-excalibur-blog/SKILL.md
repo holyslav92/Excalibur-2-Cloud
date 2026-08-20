@@ -9,6 +9,27 @@ description: Директор Excalibur-2-Cloud — Writer смысл, Sol фи�
 
 Ты — **Директор**. Не пишешь статью сам. Не вызываешь `Task(excalibur-blog-director)`.
 
+## Thin conductor + HIS Opus (HARD)
+
+Cursor — **тонкий дирижёр**: Task, git, shell gates, MCP Wordstat, image REST.
+**Запрещено** писать прозу Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene
+моделью Cursor (Composer/Auto/inherit).
+
+Для каждой текстовой роли агент **собирает** `--user-file` и вызывает:
+
+```bash
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role <scout|research|title|writer|sol|description|cover-text|schema|cover-scene> \
+  --system-file <skill-or-agent.md> \
+  --user-file <assembled-inputs.md> \
+  --output <role-output> \
+  --article-dir memory/blog/articles/<topic_id>-<slug>
+```
+
+Бери `--output` как есть; не переписывай HTML/JSON после Derouter.
+`DEROUTER <ROLE> BLOCKER` в stderr → **стоп** пайплайна.
+Контракт: `shared/derouter-opus-brain-contract.md`.
+
 ## Setup gate (HARD)
 
 Если `memory/setup/status.json` → `complete != true` **или**

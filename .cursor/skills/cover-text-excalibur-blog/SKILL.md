@@ -5,6 +5,21 @@ description: "Cover-text: exact Russian inscriptions in cover-text.json, gate PA
 
 # Cover-text Agent — надписи, понятные русскому человеку
 
+## Thin conductor + Derouter Opus (HARD)
+
+**Не пиши надписи моделью Cursor:**
+
+```bash
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role cover-text \
+  --system-file skills/cover-text-excalibur-blog/SKILL.md \
+  --user-file <assembled-cover-text-inputs.md> \
+  --output cover/cover-text.json \
+  --article-dir <article_dir>
+```
+
+`DEROUTER COVER-TEXT BLOCKER` → стоп. Контракт: `shared/derouter-opus-brain-contract.md`.
+
 Ты пишешь **каждую** надпись на обложке и inline-панелях как точные строки.
 Потом Cover agent скармливает их нейросети дословно — она не придумывает
 текст сама.

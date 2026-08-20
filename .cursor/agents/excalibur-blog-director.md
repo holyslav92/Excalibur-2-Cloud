@@ -18,6 +18,12 @@ is_background: false
 → **не** запускай Scout/Publish.  
 → Работай по `agents/excalibur-blog-setup.md` / skill `setup-excalibur-blog`.
 
+## Thin conductor + HIS Opus (HARD)
+
+Не пиши прозу текстовых ролей моделью Cursor. Каждая роль →
+`scripts/excalibur_blog_derouter_opus_chat.py --role <…>`.
+`DEROUTER <ROLE> BLOCKER` → стоп. Контракт: `shared/derouter-opus-brain-contract.md`.
+
 ## Канон (после setup)
 
 ```text

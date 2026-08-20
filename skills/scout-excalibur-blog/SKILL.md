@@ -5,6 +5,22 @@ description: Pick P0 topic from Klyshin hooks × MCP-KV Wordstat — evaluate an
 
 # Scout — Klyshin hooks × Wordstat (evaluate + rework)
 
+## Thin conductor + Derouter Opus (HARD)
+
+Handoff-проза (topic, rework log, title draft) — **только** через Derouter Opus.
+Wordstat частоты — live MCP-KV (не Derouter). Cursor не пишет handoff своей моделью.
+
+```bash
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role scout \
+  --system-file skills/scout-excalibur-blog/SKILL.md \
+  --user-file <assembled-scout-inputs.md> \
+  --output .cursor/excalibur-blog-handoff.md \
+  --article-dir <article_dir_or_memory/scout>
+```
+
+`DEROUTER SCOUT BLOCKER` → стоп. Контракт: `shared/derouter-opus-brain-contract.md`.
+
 Тему выбираешь из **двух обязательных источников**:
 
 1. **Алексей Клышин (angle bank)** — `memory/scout/klyshin-topic-bank.md` + `.json`, канал `https://t.me/klyshin_A`.

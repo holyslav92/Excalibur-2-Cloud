@@ -5,6 +5,21 @@ description: Invent one catchy human H1 with clear subject. No SEO tails, no lab
 
 # Title Agent — цепкий заголовок с понятной темой
 
+## Thin conductor + Derouter Opus (HARD)
+
+**Не пиши H1 моделью Cursor.** Собери `--user-file` из research + Scout handoff:
+
+```bash
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role title \
+  --system-file skills/title-excalibur-blog/SKILL.md \
+  --user-file <assembled-title-inputs.md> \
+  --output title-brief.json \
+  --article-dir <article_dir>
+```
+
+`DEROUTER TITLE BLOCKER` → стоп. Контракт: `shared/derouter-opus-brain-contract.md`.
+
 ## Вход
 
 - `research-notes.md` текущей темы (включая Wordstat-фразы из Scout/Research)

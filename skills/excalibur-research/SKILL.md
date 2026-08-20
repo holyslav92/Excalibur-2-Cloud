@@ -5,6 +5,21 @@ description: Current-date facts from live sources; no invented series continuati
 
 # Research — факты сейчас, не выдумка
 
+## Thin conductor + Derouter Opus (HARD)
+
+Синтез `research-notes.md` — **только** через Derouter Opus. Live fetch/MCP — Cursor; прозу notes — Derouter.
+
+```bash
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role research \
+  --system-file skills/excalibur-research/SKILL.md \
+  --user-file <assembled-research-inputs.md> \
+  --output research-notes.md \
+  --article-dir <article_dir>
+```
+
+`DEROUTER RESEARCH BLOCKER` → стоп. Контракт: `shared/derouter-opus-brain-contract.md`.
+
 Задача: дать Writer достоверные факты и боль читателя по теме, которую Scout
 взял из **живого** сигнала. Не придумывать каркас и не дописывать соседнюю статью.
 

@@ -5,6 +5,22 @@ description: "④a Cover: 2× quad Derouter REST 2K, light/meme/Wordstat sticker
 
 # Cover Agent — longform 8 images, light/meme canon
 
+## Thin conductor + Derouter Opus (HARD)
+
+**scene_hint, cover_emotion, prompt invention** — только Derouter Opus (`--role cover-scene`).
+PNG generation — `excalibur_blog_derouter_gpt_image2_api.py` (не chat).
+
+```bash
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role cover-scene \
+  --system-file skills/cover-excalibur-blog/SKILL.md \
+  --user-file <assembled-cover-scene-inputs.md> \
+  --output cover/scene-draft.json \
+  --article-dir <article_dir>
+```
+
+Merge scene fields в `quad-manifest.json` без рерайта Cursor. `DEROUTER COVER-SCENE BLOCKER` → стоп.
+
 ## Когда
 
 После Sol PASS + Description gate PASS + Cover-text gate PASS. Параллельно Schema.
