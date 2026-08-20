@@ -142,7 +142,8 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
         labels = ct_labels.get(slot_key) or old.get("labels") or []
         slots[slot_key] = {
             "quadrant": DEFAULT_SLOT_MAP[slot_key],
-            "h2_anchor": old.get("h2_anchor") or h2,
+            # article.html — единственный источник истины для inject; не сохранять укороченные anchors
+            "h2_anchor": h2,
             "visual_type": visual_type,
             "scene_hint": str(old.get("scene_hint") or "").strip(),
             "alt": str(old.get("alt") or "").strip(),
