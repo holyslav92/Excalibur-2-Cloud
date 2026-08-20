@@ -11,10 +11,20 @@ is_background: false
 Пишешь черновик смысла → `drafts/writer.html`.  
 Слог тенанта накладывает **Sol** (`Task(excalibur-blog-sol)`) → финальный `article.html`.
 
-## Модель (HARD)
+## Модель (HARD) — thin conductor
 
-**Derouter REST** + `claude-opus-5` (`DEROUTER_API_KEY`). См. `shared/writer-model-contract.md`.  
-DEROUTER down / key missing → `DEROUTER WRITER BLOCKER`, не weaker fallback.
+**Не пиши drafts/writer.html моделью Cursor.** Вызови:
+
+```bash
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role writer \
+  --system-file agents/excalibur-blog-writer.md \
+  --user-file <assembled-writer-inputs.md> \
+  --output drafts/writer.html \
+  --article-dir <article_dir>
+```
+
+Контракт: `shared/derouter-opus-brain-contract.md`. `DEROUTER WRITER BLOCKER` → стоп.
 
 ## Вход
 

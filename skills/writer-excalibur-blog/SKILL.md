@@ -5,13 +5,21 @@ description: Write meaning draft drafts/writer.html; Sol applies tenant SOUL sty
 
 # Writer Skill — смысл статьи (черновик)
 
-## Модель (HARD)
+## Модель (HARD) — thin conductor
 
-Текст Writer — через **Derouter REST** (`DEROUTER_API_KEY`) + **`claude-opus-5`** на `https://api.derouter.ai/openai/v1/chat/completions`.
-Контракт: `shared/writer-model-contract.md`.
+**Не пиши прозу моделью Cursor.** Собери `--user-file` из research/title-brief и вызови Derouter Opus:
 
-Если `DEROUTER_API_KEY` отсутствует или API недоступен → **`DEROUTER WRITER BLOCKER`** в handoff.  
-**Запрещено** молча писать на weaker model.
+```bash
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role writer \
+  --system-file skills/writer-excalibur-blog/SKILL.md \
+  --user-file <assembled-writer-inputs.md> \
+  --output drafts/writer.html \
+  --article-dir <article_dir>
+```
+
+Контракт: `shared/derouter-opus-brain-contract.md`.
+`DEROUTER WRITER BLOCKER` → стоп. Запрещён тихий fallback на Composer/Auto.
 
 Тон Klyshin (кейс, короткие абзацы) допустим; **автор фактов** — Святослав / Тюмень.
 

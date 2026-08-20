@@ -56,6 +56,27 @@ Scout? → research_start → Research → Title → Writer → Sol
 
 Writer = смысл (`drafts/writer.html`). Sol = слог тенанта (`shared/SOUL.md`).
 
+## Thin conductor + HIS Opus (HARD)
+
+Cursor Automation — **тонкий дирижёр**: doctor, git, MCP Wordstat, image REST, gates.
+**Запрещено** писать прозу Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene
+моделью Cursor (Composer/Auto/inherit).
+
+Для каждой текстовой роли вызывай:
+
+```bash
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role <scout|research|title|writer|sol|description|cover-text|schema|cover-scene> \
+  --system-file <skill-or-agent.md> \
+  --user-file <assembled-inputs.md> \
+  --output <role-output> \
+  --article-dir memory/blog/articles/<topic_id>-<slug>
+```
+
+Бери `--output` как есть; не переписывай HTML/JSON после Derouter.
+`DEROUTER <ROLE> BLOCKER` в stderr → **стоп** пайплайна.
+Контракт: `shared/derouter-opus-brain-contract.md` · модель: `claude-opus-5` via Derouter.
+
 ## Visual longform (8 изображений)
 
 1. **Canvas 1** (Derouter REST 2K i2i): cover + inline_1…3 → split 2×2
@@ -75,12 +96,17 @@ Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 
 Если setup_complete != true — остановись (Setup).
 Игнорируй Automation Memory. Memories = OFF.
 
+Ты — ТОНКИЙ ДИРИЖЁР. Прозу текстовых ролей пишет ТОЛЬКО
+scripts/excalibur_blog_derouter_opus_chat.py (Derouter claude-opus-5).
+Не пиши Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene своей моделью.
+DEROUTER <ROLE> BLOCKER → стоп пайплайна.
+
 doctor + today.
 dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
-needs_scout → Scout (signal_urls из tenant).
-research_start → Research → Title → Writer → Sol.
+needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
+research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
 После Sol: pipeline_canon stamp + opening_meta + html_linter.
-Description → Cover-text || Schema → Cover → Cover-QA → Indexer.
+Description → Cover-text || Schema → Cover (scene/prompt text via derouter --role cover-scene) → Cover-QA → Indexer.
 Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе; иначе STOP после Indexer.
 Fixer → merge → content-learner.
 ```

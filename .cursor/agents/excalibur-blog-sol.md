@@ -11,10 +11,21 @@ is_background: false
 Ты **Sol**. Writer уже написал смысл в `drafts/writer.html`.  
 Ты переписываешь его в слог тенанта → финальный `article.html`.
 
-## Модель (HARD)
+## Модель (HARD) — thin conductor
 
-**Derouter REST** + `claude-opus-5` (`DEROUTER_API_KEY`). `shared/writer-model-contract.md`.  
-DEROUTER down / key missing → `DEROUTER SOL BLOCKER`.
+**Не пиши article.html моделью Cursor.** Вызови:
+
+```bash
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role sol \
+  --system-file agents/excalibur-blog-sol.md \
+  --user-file <assembled-sol-inputs.md> \
+  --output article.html \
+  --article-dir <article_dir>
+```
+
+`cp article.html drafts/variant-a.html` — shell, не рерайт Cursor.
+Контракт: `shared/derouter-opus-brain-contract.md`. `DEROUTER SOL BLOCKER` → стоп.
 
 Skill: `skills/sol-excalibur-blog/SKILL.md`  
 Душа: `shared/SOUL.md` + `shared/soul-examples/`  

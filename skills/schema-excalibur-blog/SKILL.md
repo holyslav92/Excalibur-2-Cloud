@@ -5,6 +5,21 @@ description: Excalibur BLOG Schema — BlogPosting + optional FAQPage, author re
 
 # Excalibur BLOG — Schema
 
+## Thin conductor + Derouter Opus (HARD)
+
+**Не пиши schema.jsonld моделью Cursor:**
+
+```bash
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role schema \
+  --system-file skills/schema-excalibur-blog/SKILL.md \
+  --user-file <assembled-schema-inputs.md> \
+  --output schema.jsonld \
+  --article-dir <article_dir>
+```
+
+`DEROUTER SCHEMA BLOCKER` → стоп. Контракт: `shared/derouter-opus-brain-contract.md`.
+
 ## Вход
 
 - `article.html`, `article.meta.json`, `research-notes.md`

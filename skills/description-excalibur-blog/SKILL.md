@@ -5,6 +5,21 @@ description: "Description: Dzen card teaser after Sol; Klyshin rhythm; not title
 
 # Description — Dzen card teaser
 
+## Thin conductor + Derouter Opus (HARD)
+
+**Не пиши description моделью Cursor:**
+
+```bash
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role description \
+  --system-file skills/description-excalibur-blog/SKILL.md \
+  --user-file <assembled-description-inputs.md> \
+  --output description-brief.json \
+  --article-dir <article_dir>
+```
+
+`DEROUTER DESCRIPTION BLOCKER` → стоп. Контракт: `shared/derouter-opus-brain-contract.md`.
+
 ## Когда
 
 **После Sol** (`article.html` + `pipeline_canon` stamp).  

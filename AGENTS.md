@@ -35,7 +35,13 @@ Scout? → research_start → Research → Title → Writer(смысл)
 
 `memory/topics/` запрещена. Scout → handoff + `signal_urls` + **dual gate: Klyshin hooks (`memory/scout/klyshin-topic-bank.*`) × MCP-KV Wordstat** (Tyumen 55+11176, compare RU 225). Klyshin = angle/hook; Wordstat = **evaluate + rework for demand** (не binary skip: слабый объём → локализация/переформулировка до buyer P0; skip только если после rework нет честного buyer-intent кластера). В handoff логировать **original Klyshin hook** + **final P0 phrase+volume**. Cover canon: `memory/cover/cover-canon.json`.
 
-**Writer/Sol:** текст через **Derouter REST** (`DEROUTER_API_KEY`) + `claude-opus-5` на `https://api.derouter.ai/openai/v1/chat/completions`. Если ключ/API недоступен → `DEROUTER WRITER/SOL BLOCKER`, без тихого fallback. См. `shared/writer-model-contract.md`. **Cover:** Derouter REST image API — `shared/derouter-gpt-image-api-contract.md`.
+**Factory brain (все текстовые роли):** Cursor — **тонкий дирижёр**; прозу пишет только
+`scripts/excalibur_blog_derouter_opus_chat.py` → Derouter REST (`DEROUTER_API_KEY`) +
+`claude-opus-5`. Роли: Scout, Research synthesis, Title, Writer, Sol, Description,
+Cover-text, Schema, Cover-scene. При недоступности → `DEROUTER <ROLE> BLOCKER`, без
+тихого fallback на Composer/Auto. См. `shared/derouter-opus-brain-contract.md`.
+**Cover PNG:** Derouter REST image API — `shared/derouter-gpt-image-api-contract.md`.
+**Wordstat:** MCP-KV. **Cover-QA:** Python gates, не «глаз» агента.
 
 ```bash
 python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
@@ -53,6 +59,7 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - Scout **drop hook** при слабом Wordstat без цикла rework (локализация Тюмень, buyer-жаргон: егрн, наследство, ипотека, аванс…)
 - Scout/тема про RF-blocked heroes без Дзен-канона (если `dzen_rf_pack`)
 - Sol выдумывает факты, которых нет в `drafts/writer.html` / research
+- Cursor пишет Scout/Title/Writer/Sol/Description/Cover-text/Schema prose своей моделью вместо `excalibur_blog_derouter_opus_chat.py`
 - Запуск пайплайна до завершения Setup
 
 ## Preflight
