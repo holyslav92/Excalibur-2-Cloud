@@ -1,0 +1,169 @@
+{
+  "topic_id": "B03",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "mcp_note": "B03 notary +70k; Derouter api-direct 2K; light board tape/pins/strings; phone CTA",
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": ["cover", "inline_1", "inline_2", "inline_3"],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": ["inline_4", "inline_5", "inline_6", "inline_7"],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Нотариус проверил — +70 тысяч сверху",
+  "cover_hook_highlight": "тысяч",
+  "cover_emotion": "jaw-drop shock at hidden +70k — eyebrows HIGH, mouth open, pointing at notary seal vs rising price tag; FORBIDDEN closed-mouth smile",
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени",
+    "нотариус при покупке квартиры",
+    "купить квартиру в тюмени вторичка"
+  ],
+  "cover_motifs": {
+    "composition": "host_slim_left_jaw_drop_notary_seal_rising_70k_counter_board",
+    "location": "bright_white_notary_prep_room_investigation_board_sun_flare_tyumen",
+    "meme": "cat_judge_gavel_sticker_plus_wide_eyes_guy_reaction_cutout",
+    "prop_set": "red_notary_seal_masking_tape_phone_cta_plus_70k_counter_pins_strings",
+    "sticker_set": "wordstat_tyumen_kupit_kvartiru_notarius_gold_tape_stickers",
+    "joke": "sticky_договор_готов_crossed_arrow_plus_70k"
+  },
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Нотариус проверил, но +70 тысяч сверху — звоните риэлтору в Тюмени",
+      "cover_emotion": "jaw-drop shock at +70k beside notary seal — eyebrows HIGH, mouth open; NO smile",
+      "scene_hint": "jaw-drop shock at +70k vs notary seal; SLIM host left; light board tape/pins/strings; phone CTA; memes; Wordstat; sun flare",
+      "meme_caption_ru": "",
+      "sticky": "печать не вся проверка"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Что на самом деле означает «нотариус проверил»",
+      "visual_type": "comparison_table",
+      "scene_hint": "ZERO human portraits; two-column taped board ПРОВЕРЯЕТ vs НЕ ПРОВЕРЯЕТ; pins; string links; all 6 labels in cells",
+      "alt": "Таблица: что нотариус проверяет и что не входит в удостоверение",
+      "labels": [
+        "личность участников",
+        "выписка ЕГРН",
+        "согласие супруга",
+        "реестр банкротов",
+        "воля сторон",
+        "не биография объекта"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Печать нотариуса не закрывает риски, которых нет в реестрах",
+      "visual_type": "labeled_checklist",
+      "meme_sticker": true,
+      "scene_hint": "ZERO human portraits; checklist board red X on 6 risk rows; tiny cat-sticker only; tape+pins; NOT in EGRN highlighted",
+      "alt": "Чеклист рисков вне реестров: маткапитал, баня, ЖКХ, мошенники, история",
+      "labels": [
+        "маткапитал вне ЕГРН",
+        "незарегистрированная баня",
+        "долги ЖКХ",
+        "давление мошенников",
+        "четыре сделки назад",
+        "не в выписке"
+      ]
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Почему на загороде сумма может вырасти уже у стола нотариуса",
+      "visual_type": "process_flow",
+      "scene_hint": "ZERO human portraits; numbered flow 1→6 on board; step 5 +70 000 ₽ gold; string links; sun flare",
+      "alt": "Процесс: брак, участок, постройки, согласие супруга — итог +70 000 ₽",
+      "labels": [
+        "брак продавца",
+        "дом и участок",
+        "постройки вне ЕГРН",
+        "согласие супруга",
+        "плюс 70 000 ₽",
+        "не новый тариф"
+      ]
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Из чего складывается нотариальный тариф в Тюменской области",
+      "visual_type": "comparison_table",
+      "scene_hint": "ZERO human portraits; tariff table only; tape corners; регион 10k, 7k+0.2%, доля max 20k; 31k vs extras column",
+      "alt": "Таблица тарифов Тюменской области: региональный, федеральный, доля, допдействия",
+      "labels": [
+        "регион 10 000 ₽",
+        "31 000 без допов",
+        "7 000 плюс 0,2%",
+        "доля макс 20 000",
+        "без допдействий",
+        "супруг отдельно"
+      ]
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Когда нотариус обязателен, а когда это выбор сторон",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "ZERO human portraits; two cols ОБЯЗАТЕЛЬНО vs ВЫБОР; green checks vs grey; tiny cat meme only; all 6 labels",
+      "alt": "Чеклист: когда нотариус обязателен (доля, дарение, опека) и когда выбор",
+      "labels": [
+        "доля обязательно",
+        "дарение обязательно",
+        "опека обязательно",
+        "один собственник выбор",
+        "рента обязательно",
+        "форма не проверка"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что проверить до аванса, если договор уже «готов»",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "ZERO human portraits; pre-advance checklist 6 numbered rows; pins+strings; fresh EGRN gold highlight; board only",
+      "alt": "Чеклист до аванса: ЕГРН, история, супруг, маткапитал, участок, ГПЗУ",
+      "labels": [
+        "свежая ЕГРН",
+        "история переходов",
+        "супруг и развод",
+        "маткапитал отдельно",
+        "обход участка",
+        "границы ГПЗУ"
+      ]
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что нотариус не может гарантировать за покупателя",
+      "visual_type": "bar_timeline_chart",
+      "meme_sticker": true,
+      "scene_hint": "ZERO human portraits; bar chart 298/48/19 stats; layers diagram; tiny surprised-guy meme sticker only",
+      "alt": "Статистика ЦДЭ: 298 дел, 48 нотариальных, 19 отказов — слои проверки",
+      "labels": [
+        "298 дел ЦДЭ",
+        "48 нотариальных",
+        "19 исков отказ",
+        "удостоверяет сделку",
+        "не гарантия объекта",
+        "слои проверки"
+      ]
+    }
+  }
+}
