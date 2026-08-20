@@ -62,6 +62,7 @@ needed_decision_or_secret:
 
 - Следующий agent run получает более точный контракт до ошибки.
 - Ошибка ловится ранним gate/script вместо позднего ручного исправления.
+- **Cover pixel FAIL:** Fixer запускает `scripts/excalibur_blog_cover_fixer.py` (paper Wordstat overlay → cover panel regen) и re-QA PNG bytes; PASS только после `cover_qa.json` + md5 match.
 - Retry/fallback описан идемпотентно: без дублей image jobs, publish calls, ledger rows.
 - Fix не раскрывает secrets и не зависит от абсолютных путей конкретной машины.
 

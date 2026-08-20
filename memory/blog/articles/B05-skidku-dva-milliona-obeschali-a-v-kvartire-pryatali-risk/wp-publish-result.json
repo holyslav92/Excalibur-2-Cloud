@@ -1,0 +1,36 @@
+{
+  "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+  "topic_id": "B05",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B05-skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 833447,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=8886 slug=skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk\nOK categories=31,54\nOK featured_image=8930\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 0,
+    "expected_inline": 0,
+    "errors": []
+  },
+  "verdict": "fail",
+  "live_page": {
+    "gate": "live-page",
+    "status": "BLOCK",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/",
+    "errors": [
+      "article image unavailable: http://cover/inline-01.png",
+      "article image unavailable: http://cover/inline-02.png",
+      "article image unavailable: http://cover/inline-03.png",
+      "article image unavailable: http://cover/inline-04.png",
+      "article image unavailable: http://cover/inline-05.png",
+      "article image unavailable: http://cover/inline-06.png",
+      "article image unavailable: http://cover/inline-07.png",
+      "featured image has empty/missing alt"
+    ]
+  }
+}

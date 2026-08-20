@@ -83,9 +83,13 @@ Cover slot → solo i2i; inline → utility t2i. Derouter primary, Kie посл�
 ```bash
 ARTICLE="memory/blog/articles/<topic_id>-<slug>"
 python3 scripts/excalibur_blog_cover_qa_gate.py --article-dir "$ARTICLE"
+# или Fixer loop (overlay/regen → re-QA bytes):
+python3 scripts/excalibur_blog_cover_fixer.py --article-dir "$ARTICLE"
 ```
 
-Только `OK cover QA stamp` → Indexer.
+Gate читает **PNG bytes** (`cover_qa_pixels.py`), пишет `cover_qa.json` с `pixel_qa=true` и `cover_md5`. Publish блокируется без PASS + md5 match.
+
+Только `OK cover QA stamp` → Indexer/Publish.
 
 ## Blockers
 

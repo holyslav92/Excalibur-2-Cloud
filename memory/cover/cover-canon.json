@@ -98,10 +98,31 @@
   },
   "wordstat_stickers": {
     "required": true,
-    "count": "1–3 readable designer stickers per cover",
+    "count": "1–4 readable designer paper stickers per cover (PIL overlay default)",
     "source": "live Wordstat top + similar queries for topic",
     "geo": "memory/cover/wordstat-geo.json",
-    "not": ["random words", "spam wall", "SEO tail dump"]
+    "style": "paper_sticker_v2 — tape, rounded paper, slight rotation, shadow; NOT opaque horizontal bars",
+    "overlay_script": "scripts/excalibur_blog_cover_wordstat_overlay.py",
+    "sacred_zones": ["title left-top", "meme top-right", "phone bottom band"],
+    "not": ["random words", "spam wall", "SEO tail dump", "opaque gold strips", "truncated phrases at edge"]
+  },
+  "pixel_qa_gate": {
+    "required_before_indexer_publish": true,
+    "script": "scripts/excalibur_blog_cover_qa_pixels.py",
+    "gate": "scripts/excalibur_blog_cover_qa_gate.py",
+    "fixer": "scripts/excalibur_blog_cover_fixer.py",
+    "reads": "cover/cover.png bytes only — never trust manifest/prompt alone",
+    "stamp": "cover/cover_qa.json with pixel_qa=true + cover_md5",
+    "publish_block": "scripts/excalibur_blog_wp_publish.py blocks unless pixel PASS + md5 match",
+    "fail_if": [
+      "opaque Wordstat bars/strips instead of paper stickers",
+      "stickers overlap title or meme zones",
+      "sticker text truncated at right edge",
+      "host distant small full-body (face_h_frac < 0.18)",
+      "manifest outfit lie vs pixels (warm outfit + dark blazer torso)",
+      "cover_qa describes prompt not PNG"
+    ],
+    "fixer_loop": "Fixer → paper sticker overlay in safe margins OR cover panel regen → re-read PNG bytes"
   },
   "identity_lock": {
     "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
