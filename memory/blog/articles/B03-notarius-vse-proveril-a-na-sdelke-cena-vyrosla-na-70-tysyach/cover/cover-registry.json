@@ -1,0 +1,86 @@
+{
+  "topic_id": "B03",
+  "slug": "notarius-vse-proveril-a-na-sdelke-cena-vyrosla-na-70-tysyach",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Нотариус проверил, но +70 тысяч сверху — звоните риэлтору в Тюмени",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-20T05:41:47+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Нотариус проверил, но +70 тысяч сверху — звоните риэлтору в Тюмени",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Таблица: что нотариус проверяет и что не входит в удостоверение",
+      "h2_anchor": "Что на самом деле означает «нотариус проверил»",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Чеклист рисков вне реестров: маткапитал, баня, ЖКХ, мошенники, история",
+      "h2_anchor": "Печать нотариуса не закрывает риски, которых нет в реестрах",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Процесс: брак, участок, постройки, согласие супруга — итог +70 000 ₽",
+      "h2_anchor": "Почему на загороде сумма может вырасти уже у стола нотариуса",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Таблица тарифов Тюменской области: региональный, федеральный, доля, допдействия",
+      "h2_anchor": "Из чего складывается нотариальный тариф в Тюменской области",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Чеклист: когда нотариус обязателен (доля, дарение, опека) и когда выбор",
+      "h2_anchor": "Когда нотариус обязателен, а когда это выбор сторон",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Чеклист до аванса: ЕГРН, история, супруг, маткапитал, участок, ГПЗУ",
+      "h2_anchor": "Что проверить до аванса, если договор уже «готов»",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Статистика ЦДЭ: 298 дел, 48 нотариальных, 19 отказов — слои проверки",
+      "h2_anchor": "Что нотариус не может гарантировать за покупателя",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

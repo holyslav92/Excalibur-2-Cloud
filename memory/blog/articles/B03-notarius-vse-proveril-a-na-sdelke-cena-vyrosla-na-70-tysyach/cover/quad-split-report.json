@@ -1,0 +1,300 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B03-notarius-vse-proveril-a-na-sdelke-cena-vyrosla-na-70-tysyach/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 569,
+              "end": 618
+            },
+            "v_gutter_px": {
+              "start": 1016,
+              "end": 1033
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 17.5,
+              "v_center_offset_px": 0.5,
+              "max_aspect_crop_loss": 0.0659,
+              "per_panel_crop_loss": {
+                "top_left": 0.0,
+                "top_right": 0.0,
+                "bottom_left": 0.0659,
+                "bottom_right": 0.065
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Нотариус проверил, но +70 тысяч сверху — звоните риэлтору в Тюмени",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица: что нотариус проверяет и что не входит в удостоверение",
+            "h2_anchor": "Что на самом деле означает «нотариус проверил»"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чеклист рисков вне реестров: маткапитал, баня, ЖКХ, мошенники, история",
+            "h2_anchor": "Печать нотариуса не закрывает риски, которых нет в реестрах"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Процесс: брак, участок, постройки, согласие супруга — итог +70 000 ₽",
+            "h2_anchor": "Почему на загороде сумма может вырасти уже у стола нотариуса"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B03-notarius-vse-proveril-a-na-sdelke-cena-vyrosla-na-70-tysyach/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 556,
+              "end": 586
+            },
+            "v_gutter_px": {
+              "start": 999,
+              "end": 1030
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 5.0,
+              "v_center_offset_px": 9.5,
+              "max_aspect_crop_loss": 0.0295,
+              "per_panel_crop_loss": {
+                "top_left": 0.011,
+                "top_right": 0.0295,
+                "bottom_left": 0.0071,
+                "bottom_right": 0.0118
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица тарифов Тюменской области: региональный, федеральный, доля, допдействия",
+            "h2_anchor": "Из чего складывается нотариальный тариф в Тюменской области"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чеклист: когда нотариус обязателен (доля, дарение, опека) и когда выбор",
+            "h2_anchor": "Когда нотариус обязателен, а когда это выбор сторон"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чеклист до аванса: ЕГРН, история, супруг, маткапитал, участок, ГПЗУ",
+            "h2_anchor": "Что проверить до аванса, если договор уже «готов»"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Статистика ЦДЭ: 298 дел, 48 нотариальных, 19 отказов — слои проверки",
+            "h2_anchor": "Что нотариус не может гарантировать за покупателя"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Что на самом деле означает «нотариус проверил»",
+    "skip inline_2: already correct under H2 — Печать нотариуса не закрывает риски, которых нет в реестрах",
+    "skip inline_3: already correct under H2 — Почему на загороде сумма может вырасти уже у стола нотариуса",
+    "skip inline_4: already correct under H2 — Из чего складывается нотариальный тариф в Тюменской области",
+    "skip inline_5: already correct under H2 — Когда нотариус обязателен, а когда это выбор сторон",
+    "skip inline_6: already correct under H2 — Что проверить до аванса, если договор уже «готов»",
+    "skip inline_7: already correct under H2 — Что нотариус не может гарантировать за покупателя"
+  ]
+}
