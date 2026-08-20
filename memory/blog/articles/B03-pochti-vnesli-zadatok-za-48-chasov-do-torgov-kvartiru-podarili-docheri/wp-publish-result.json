@@ -1,0 +1,27 @@
+{
+  "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+  "topic_id": "B03",
+  "permalink": "{{SITE_BASE}}/blog/bez-rubriki/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B03-pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1043125,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=8813 slug=pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri\nOK featured_image=8814\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=8815 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri-inline-01.png\nOK inline_alt=8815\nOK inline_caption=8815\nOK inline_description=8815\nOK inline_image_upload=8816 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri-inline-02.png\nOK inline_alt=8816\nOK inline_caption=8816\nOK inline_description=8816\nOK inline_image_upload=8817 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri-inline-03.png\nOK inline_alt=8817\nOK inline_caption=8817\nOK inline_description=8817\nOK inline_image_upload=8818 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri-inline-04.png\nOK inline_alt=8818\nOK inline_caption=8818\nOK inline_description=8818\nOK inline_image_upload=8819 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri-inline-05.png\nOK inline_alt=8819\nOK inline_caption=8819\nOK inline_description=8819\nOK inline_image_upload=8820 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri-inline-06.png\nOK inline_alt=8820\nOK inline_caption=8820\nOK inline_description=8820\nOK inline_image_upload=8821 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri-inline-07.png\nOK inline_alt=8821\nOK inline_caption=8821\nOK inline_description=8821\npermalink={{SITE_BASE}}/blog/bez-rubriki/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/bez-rubriki/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/",
+    "errors": []
+  }
+}
