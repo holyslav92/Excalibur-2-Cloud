@@ -275,6 +275,9 @@ def call_derouter_chat(
     model: str,
     timeout: int,
     max_retries: int,
+    article_dir: Path | None = None,
+    role: str = "",
+    root: Path | None = None,
 ) -> tuple[str, dict[str, Any], str]:
     api_key = os.environ.get(DEFAULT_API_KEY_ENV, "").strip()
     if not api_key:
@@ -291,25 +294,51 @@ def call_derouter_chat(
     endpoints = [PRIMARY_ENDPOINT, FALLBACK_ENDPOINT]
     last_error: Exception | None = None
 
+    if article_dir is not None and root is not None:
+        from excalibur_blog_budget_guard import (
+            BudgetBlocker,
+            check_not_blocked,
+            ensure_run_started,
+            max_chat_attempts,
+            record_chat_call,
+            refresh_soft_wall_note,
+        )
+
+        ensure_run_started(article_dir, root)
+        check_not_blocked(article_dir)
+        refresh_soft_wall_note(article_dir, root)
+        max_attempts = max_chat_attempts(root)
+    else:
+        max_attempts = max_retries + 1
+
+    attempts_used = 0
     for endpoint in endpoints:
-        attempts = max_retries + 1
-        for attempt in range(attempts):
-            try:
-                response = http_chat_post(endpoint, api_key, payload, timeout=timeout)
-                text = extract_assistant_text(response)
-                return text, response, endpoint
-            except DerouterChatRetryable as exc:
-                last_error = exc
-                if attempt < attempts - 1:
-                    time.sleep(DEFAULT_RETRY_WAIT_SECONDS)
-                    continue
-                break
-            except DerouterChatError as exc:
-                last_error = exc
-                break
+        if attempts_used >= max_attempts:
+            break
+        try:
+            response = http_chat_post(endpoint, api_key, payload, timeout=timeout)
+            text = extract_assistant_text(response)
+            if article_dir is not None and root is not None:
+                record_chat_call(
+                    article_dir,
+                    root,
+                    role=role or "unknown",
+                    meta={"model": model, "endpoint": endpoint},
+                )
+            return text, response, endpoint
+        except DerouterChatRetryable as exc:
+            last_error = exc
+            attempts_used += 1
+            if attempts_used < max_attempts:
+                time.sleep(DEFAULT_RETRY_WAIT_SECONDS)
+                continue
+            break
+        except DerouterChatError as exc:
+            last_error = exc
+            break
 
     raise DerouterChatError(
-        f"Derouter chat API unavailable after retry; last error: {last_error}"
+        f"Derouter chat API unavailable after {attempts_used} attempt(s); last error: {last_error}"
     )
 
 
@@ -321,6 +350,9 @@ def call_derouter_with_aliases(
     model: str,
     timeout: int,
     max_retries: int,
+    article_dir: Path | None = None,
+    role: str = "",
+    root: Path | None = None,
 ) -> tuple[str, dict[str, Any], str, str]:
     aliases = model_aliases_for_tier(tier, model)
     last_error: Exception | None = None
@@ -332,6 +364,9 @@ def call_derouter_with_aliases(
                 model=candidate,
                 timeout=timeout,
                 max_retries=max_retries,
+                article_dir=article_dir,
+                role=role,
+                root=root,
             )
             if candidate != model:
                 print(f"NOTE model alias accepted: {candidate} (configured {model})")
@@ -522,7 +557,19 @@ def run_chat(args: argparse.Namespace) -> int:
         inline=args.user_prompt, path=args.user_file, label="user-prompt"
     )
 
+    article_path: Path | None = None
+    if args.article_dir:
+        article_path = Path(args.article_dir)
+        if not article_path.is_absolute():
+            article_path = root / article_path
+
     try:
+        if article_path is not None:
+            from excalibur_blog_budget_guard import BudgetBlocker, check_not_blocked, ensure_run_started
+
+            ensure_run_started(article_path, root)
+            check_not_blocked(article_path)
+
         text, response, endpoint, resolved_model = call_derouter_with_aliases(
             system_prompt=system_prompt,
             user_prompt=user_prompt,
@@ -530,7 +577,17 @@ def run_chat(args: argparse.Namespace) -> int:
             model=model,
             timeout=timeout,
             max_retries=DEFAULT_MAX_RETRIES,
+            article_dir=article_path,
+            role=role,
+            root=root,
         )
+    except BudgetBlocker as exc:
+        from excalibur_blog_budget_guard import handle_budget_blocker
+
+        if article_path is not None:
+            return handle_budget_blocker(article_path, root, exc)
+        print_blocker(role, str(exc))
+        return 2
     except DerouterChatError as exc:
         print_blocker(role, str(exc))
         return 2
