@@ -1,0 +1,179 @@
+{
+  "topic_id": "B06",
+  "slug": "sdelku-s-kvartiroi-osporili-cherez-god-pokupatel-proveril-vse-i-poteryal",
+  "pipeline": "inline_only_repair_preserve_wp_cover",
+  "layout": "2x2",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": ["cover", "inline_1", "inline_2", "inline_3"],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": ["inline_4", "inline_5", "inline_6", "inline_7"],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_light_high_key",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "ПРОВЕРИЛ ВСЁ — И ПОТЕРЯЛ",
+  "cover_hook_highlight": "ПОТЕРЯЛ",
+  "cover_emotion": "concerned solemn gravity — furrowed brow, tight lips, eyes on torn contract; NOT studio smile, NOT side-eye",
+  "cover_phone_cta": "+7 922 001 65 05",
+  "wordstat_stickers": [
+    "купить квартиру в тюмени",
+    "оспорить сделку купить квартиру",
+    "добросовестный приобретатель"
+  ],
+  "wordstat_sticker_positions": [
+    [0.74, 0.1],
+    [0.72, 0.45],
+    [0.7, 0.82]
+  ],
+  "cover_motifs": {
+    "composition": "host_center_three_quarter_torn_contract_flying_papers_sunset_penthouse",
+    "location": "luxury_tyumen_penthouse_sunset_skyline_floor_windows",
+    "meme": "none_on_live_wp_cover_preserved",
+    "prop_set": "torn_dkp_contract_folder_keys_flying_court_decision_papers",
+    "sticker_set": "court_decision_1_year_later_paper_labels_phone_cta",
+    "joke": "sticky_1_god_spustya_calendar_sheet",
+    "outfit": "black blazer over black crew-neck shirt",
+    "emotion": "concerned_solemn_torn_contract_gravity",
+    "pose_framing": "host_center_three_quarter_full_torso",
+    "action": "holds_torn_contract_in_right_hand_folder_keys_in_left"
+  },
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Проверил все документы — через год сделку оспорили, покупатель потерял квартиру",
+      "cover_emotion": "concerned solemn gravity — furrowed brow on torn contract; NO smile",
+      "scene_hint": "concerned host center in sunset penthouse; torn ДКП contract; flying court papers «РЕШЕНИЕ СУДА» «1 ГОД СПУСТЯ»; phone +7 922 001 65 05; WP cover preserved",
+      "meme_caption_ru": "",
+      "sticky": "1 год спустя"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Как выглядит эта история изнутри",
+      "visual_type": "process_flow",
+      "meme_sticker": true,
+      "meme_id": "this_is_fine_dog",
+      "scene_hint": "Numbered timeline on white taped board; pins+string link steps; red X at year-later dispute; Mys two-room anchor",
+      "alt": "Таймлайн кейса: двушка на Мысу, продавец 68 лет, аккредитив, спор через год",
+      "labels": [
+        "двушка на Мысу",
+        "продавец 68 лет",
+        "«сотрудники ЦБ»",
+        "аккредитив",
+        "год после регистрации",
+        "спор в суде"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Почему «все документы чистые» перестало быть гарантией",
+      "visual_type": "comparison_table",
+      "scene_hint": "Two columns: МИФ «документы чистые» vs ФАКТ ВС 2026; gold tape headers; добросовестный приобретатель row",
+      "alt": "Сравнение: чистые документы не равны нулевому риску — позиция ВС июль 2026",
+      "labels": [
+        "чистые документы",
+        "≠ риск ноль",
+        "ВС июль 2026",
+        "добросовестный покупатель",
+        "заблуждение продавца",
+        "оценка суда"
+      ]
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что суд считает признаками неосмотрительности",
+      "visual_type": "comparison_table",
+      "scene_hint": "Table rows: признак неосмотрительности | что проверить; red flags left column; pins on headers",
+      "alt": "Таблица признаков неосмотрительности покупателя по практике судов",
+      "labels": [
+        "цена ниже рынка",
+        "наличные без следа",
+        "сделка за 1 день",
+        "ЕГРН не проверили",
+        "без встречи с продавцом",
+        "скрытые аресты"
+      ]
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Тюменская специфика: два запрета и одна ловушка",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Flow blocks: запрет без личного участия → доверенность блок | ловушка лично в МФЦ под давлением; 22 010 stat callout",
+      "alt": "Схема: два запрета Росреестра Тюмени и ловушка личного визита в МФЦ",
+      "labels": [
+        "22 010 запретов",
+        "Q1 2026 Тюмень",
+        "доверенность не спасёт",
+        "лично в МФЦ",
+        "под влиянием мошенников",
+        "+114% к 2025"
+      ]
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Порядок действий: что проверить до подписания",
+      "visual_type": "labeled_checklist",
+      "meme_sticker": true,
+      "meme_id": "roll_safe",
+      "scene_hint": "Numbered checklist board 1-6; green checkmarks on correct path; string links related steps",
+      "alt": "Чеклист проверок покупателя до сделки: ЕГРН, продавец, аккредитив, цена",
+      "labels": [
+        "выписка ЕГРН",
+        "проверка продавца",
+        "аккредитив в банке",
+        "цена vs рынок",
+        "сопровождение юриста",
+        "фиксация переписки"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Миф: «деньги продавец просто вернёт»",
+      "visual_type": "comparison_table",
+      "scene_hint": "МИФ vs РЕАЛЬНОСТЬ two columns; red myth left; green reality right; реституция footnote",
+      "alt": "Миф о возврате денег продавцом против реальности двусторонней реституции",
+      "labels": [
+        "миф: вернёт сразу",
+        "реальность: годы суда",
+        "реституция двусторонняя",
+        "квартиру отберут",
+        "деньги — исполнение",
+        "нет гарантии"
+      ]
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Сколько стоит сопровождение и что в него входит",
+      "visual_type": "comparison_table",
+      "meme_sticker": true,
+      "meme_id": "smudge_cat",
+      "scene_hint": "Price table: 60 000–150 000 ₽ range; rows что входит; footnote «не гарантия» gold tape",
+      "alt": "Таблица стоимости сопровождения сделки: от 60 до 150 тысяч рублей и состав услуг",
+      "labels": [
+        "от 60 000 ₽",
+        "до 150 000 ₽",
+        "проверка документов",
+        "участие в сделке",
+        "общение с банком",
+        "не «гарантия»"
+      ]
+    }
+  }
+}
