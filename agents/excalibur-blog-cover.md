@@ -33,7 +33,7 @@ Cover генерирует **2×** quad-холста 2×2 (**Derouter REST** + `
 1. **Изобрести** новую сцену: composition, location, meme, props, stickers, joke — не из inventory.
 2. Заполнить `cover_motifs` в `quad-manifest.json` и пройти motif gate.
 3. **Light & bright:** sun flare, light leak, glow, airy #FFFFFF — no dark cinematic.
-4. **Мемы:** meme cat + meme people sticker cutouts; host Святослав LARGE left.
+4. **Мемы:** meme cat + catalog people-meme **small stickers** on cover; host Святослав LARGE left = **only** large human. Inline = infographic; no co-host/stock man.
 5. **1–3 Wordstat stickers** — live high-frequency RU queries (Тюмень/область), из research/handoff.
 6. **Identity:** i2i `face-studio-2026-06-23.jpg` only (WHO); **NEW expression** per hook (`cover_emotion` + scene_hint); never copy reference smile/pose.
 

@@ -1,12 +1,19 @@
 {
   "agent": "excalibur-blog-cover-qa",
   "status": "PASS",
-  "checked_at": "2026-08-19",
+  "checked_at": "2026-08-20",
   "topic_id": "B02",
-  "regeneration": "owner_expression_invention_bewildered_hook_v2",
+  "regeneration": "owner_inline_no_co_host_human_lock_v3",
   "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
   "cover_emotion_requested": "bewildered shock «где деньги?» — eyebrows raised, mouth open in disbelief, side-eye at empty receipt; NO studio smile",
   "cover_md5": "f1e90915d45c1929b0a28eabb78d0e30",
+  "inline_md5": {
+    "inline-03": "dfa1931a706203826d0c85a3edc34d7d",
+    "inline-04": "4b41d0557694b1aafc1fa105c796bc53",
+    "inline-05": "038be308f6665c13e16e36d91c92aca9",
+    "inline-06": "9a019a589239265428905d8eab9ef017",
+    "inline-07": "9b08a2f7b5315fda8ba16aa5a9fd3d2f"
+  },
   "checks": {
     "identity_face_28yo": true,
     "identity_body_medium_slim": true,
@@ -22,10 +29,13 @@
     "wordstat_stickers_1_3": true,
     "identity_real_files": true,
     "inline_utility_all_7": true,
-    "inline_no_host_face": true
+    "inline_no_host_face": true,
+    "inline_no_co_host_human": true,
+    "inline_meme_sticker_scale": true,
+    "meme_people_real_catalog": true
   },
-  "identity_note": "Same person as face-studio; NEW bewildered/side-eye expression with open mouth — NOT polite studio closed-mouth smile. Kie i2i regen v2.",
-  "expression_note": "Host holds receipt, furrowed brow, disbelief «где деньги?» — matches hook.",
-  "phone_note": "Cover tape strip +7 922 001 65 05 readable.",
-  "notes": "Canvas-1 regen cover only; inline-01..03 preserved. No live publish."
+  "identity_note": "Same person as face-studio; NEW bewildered/side-eye expression — NOT polite studio smile.",
+  "inline_note": "inline-03..07 verified: pure infographics + small cat stickers only; NO stock man co-host (owner FAIL on live inline-04..07 with generated man).",
+  "meme_catalog": "memory/cover/meme-top100.json",
+  "notes": "Visual law lock v3. canvas-quad-01 restitched from clean splits. Live media-refresh for inline-03..07."
 }

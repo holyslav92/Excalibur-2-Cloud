@@ -61,7 +61,13 @@ I2I_EXPRESSION_LOCK = (
 )
 COVER_PHONE_CTA = "+7 922 001 65 05"
 BOARD_STATIONERY = "tape/pins/strings/paper scraps; high-key #FFF/gold; not noir"
-INLINE_BAN_EXTRA = "icon slogans; empty cells; desk scene; cover copy; celebrity memes"
+INLINE_BAN_EXTRA = (
+    "icon slogans; empty cells; desk scene; cover copy; celebrity memes; "
+    "stock model man; handsome realtor co-host; generated stranger presenter; "
+    "large human on inline; meme person >15% frame; invented meme face"
+)
+MEME_CATALOG_REL = "memory/cover/meme-top100.json"
+MEME_STICKER_INLINE_MAX_SHARE = 0.15
 MAX_MCP_PROMPT_CHARS = 3500
 # Compact limits leave headroom under 3500 after style boilerplate (INC-20260721-0837).
 # Cover raw ≈80–140 (from blog-hero lock); inline ≈100–220. Long MUST/face essays
@@ -127,7 +133,10 @@ def inline_panel_prompt(slot: dict, types_catalog: dict) -> str:
         exact = " | ".join(labels)
         base += f" TXT:{exact}."
     if slot.get("meme_sticker"):
-        base += " +meme sticker."
+        base += (
+            f" +tiny meme sticker only (≤{int(MEME_STICKER_INLINE_MAX_SHARE * 100)}% frame, "
+            f"corner accent from {MEME_CATALOG_REL}; NO co-host human; NO presenter)."
+        )
     return base
 
 
@@ -435,16 +444,22 @@ def build_prompt(
 
     ban_line = (
         "Ban: dark/low-key; inventory props; celebrity memes; EXCALIBUR stamp; chubby host; "
+        f"stock/generated man co-host on inline; large meme person on inline; "
         f"{INLINE_BAN_EXTRA}."
     )
     reference_line = (
         f"Cover TL only: i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}; invent scene; no AI hero-ref."
         if has_cover
-        else "Inlines: no host face; meme stickers OK on flagged panels."
+        else (
+            "Inlines: NO host face; NO stock/generated man; NO large human co-host/presenter; "
+            f"people-memes only as tiny stickers (≤{int(MEME_STICKER_INLINE_MAX_SHARE * 100)}% frame, corner) "
+            f"from real templates in {MEME_CATALOG_REL}; infographic is hero."
+        )
     )
     inline_suffix = (
         f"Inline all: #FFF collage, gold/black Cyrillic labels, {BOARD_STATIONERY}; "
-        "dense facts/numbers; exact TXT per panel; meme only if +meme; no icon soup; zero typos."
+        "dense facts/numbers; exact TXT per panel; meme only if +meme AND sticker-scale; "
+        "no human hero on inline; no icon soup; zero typos."
     )
 
     lines = [
