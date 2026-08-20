@@ -86,6 +86,23 @@
         "pose_framing": "three_quarter_body_host_right_entrance_steps_not_left_bust",
         "action": "left_hand_holds_egrn_folder_right_palm_stop_gesture_at_discount_tag"
       }
+    },
+    {
+      "date": "2026-08-20",
+      "topic_id": "B06",
+      "slug": "",
+      "motifs": {
+        "composition": "host_center_three_quarter_torn_contract_flying_papers_sunset_penthouse",
+        "location": "luxury_tyumen_penthouse_sunset_skyline_floor_windows",
+        "meme": "none_on_live_wp_cover_preserved",
+        "prop_set": "torn_dkp_contract_folder_keys_flying_court_decision_papers",
+        "sticker_set": "court_decision_1_year_later_paper_labels_phone_cta",
+        "joke": "sticky_1_god_spustya_calendar_sheet",
+        "outfit": "black blazer over black crew-neck shirt",
+        "emotion": "concerned_solemn_torn_contract_gravity",
+        "pose_framing": "host_center_three_quarter_full_torso",
+        "action": "holds_torn_contract_in_right_hand_folder_keys_in_left"
+      }
     }
   ]
 }

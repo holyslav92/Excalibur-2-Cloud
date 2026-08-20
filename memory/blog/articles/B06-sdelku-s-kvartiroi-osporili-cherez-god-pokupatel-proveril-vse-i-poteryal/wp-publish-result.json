@@ -1,0 +1,29 @@
+{
+  "slug": "2026-08-15t080218-396z",
+  "topic_id": "B06",
+  "permalink": "https://example.com/blog/vtorichka-i-riski/2026-08-15t080218-396z/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B06-sdelku-s-kvartiroi-osporili-cherez-god-pokupatel-proveril-vse-i-poteryal/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 2887355,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=8665 slug=2026-08-15t080218-396z\nOK categories=31\nOK featured_image=8909\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=8910 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/2026-08-15t080218-396z-inline-01.png\nOK inline_alt=8910\nOK inline_caption=8910\nOK inline_description=8910\nOK inline_image_upload=8911 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/2026-08-15t080218-396z-inline-02-scaled.png\nOK inline_alt=8911\nOK inline_caption=8911\nOK inline_description=8911\nOK inline_image_upload=8912 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/2026-08-15t080218-396z-inline-03.png\nOK inline_alt=8912\nOK inline_caption=8912\nOK inline_description=8912\nOK inline_image_upload=8913 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/2026-08-15t080218-396z-inline-04.png\nOK inline_alt=8913\nOK inline_caption=8913\nOK inline_description=8913\nOK inline_image_upload=8914 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/2026-08-15t080218-396z-inline-05.png\nOK inline_alt=8914\nOK inline_caption=8914\nOK inline_description=8914\nOK inline_image_upload=8915 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/2026-08-15t080218-396z-inline-06.png\nOK inline_alt=8915\nOK inline_caption=8915\nOK inline_description=8915\nOK inline_image_upload=8916 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/2026-08-15t080218-396z-inline-07.png\nOK inline_alt=8916\nOK inline_caption=8916\nOK inline_description=8916\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/2026-08-15t080218-396z/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "fail",
+  "live_page": {
+    "gate": "live-page",
+    "status": "BLOCK",
+    "permalink": "https://example.com/blog/vtorichka-i-riski/2026-08-15t080218-396z/",
+    "errors": [
+      "live FAQPage question/answer pairs differ from visible thematic FAQ"
+    ]
+  }
+}

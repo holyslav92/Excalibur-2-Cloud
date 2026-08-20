@@ -1,0 +1,9 @@
+{
+  "gate": "live-page",
+  "status": "BLOCK",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/2026-08-15t080218-396z/",
+  "errors": [
+    "live FAQPage question/answer pairs differ from visible thematic FAQ"
+  ],
+  "note": "Post content live and complete; BLOCK likely theme footer h3 counted as FAQ"
+}

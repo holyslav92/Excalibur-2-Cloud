@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B06",
+  "slug": "2026-08-15t080218-396z",
+  "candidates_count": 7,
+  "outbound_found": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net"
+    },
+    {
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "title": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero"
+    },
+    {
+      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "title": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
