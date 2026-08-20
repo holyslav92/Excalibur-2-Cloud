@@ -77,7 +77,7 @@
 
 ### Тарифы и сервисы (ориентиры 2026, уточнять в банке письменно)
 
-14. **Сбербанк:** комиссия **0,3%** от суммы, **мин. 15 000 ₽** при покупке жилья до 20 млн ₽ собственными средствами; свыше 20 млн — договорной тариф ([sberbank.ru](https://www.sberbank.ru/ru/legal/bankingservice/loc)).
+14. **Сбербанк (физлица, купля-продажа недвижимости):** фиксированная комиссия **3 400 ₽** за открытие и сопровождение аккредитива ([тарифы для физлиц](https://www.sberbank.ru/ru/person/payments/special_acc/accreditive)). Тариф **0,3% / мин. 15 000 ₽** — для **юрлиц** ([legal/loc](https://www.sberbank.ru/ru/legal/bankingservice/loc)), не путать с бытовой сделкой физлиц.
 15. Обзоры рынка дают вилку **2 000–15 000 ₽** или **0,2–0,7%** в зависимости от банка; при ипотеке в том же банке аккредитив иногда **бесплатно** (ГрадБейс, МИР КВАРТИР).
 16. **Сервис безопасных расчётов (СБР)** — электронный аналог аккредитива (ВТБ и др.); в Wordstat Тюмень: «втб сервис безопасных расчетов» — 1 показ (partial).
 17. **Депозит нотариуса:** **0,5%** от суммы, **мин. 1 000 ₽, макс. 20 000 ₽** (ст. 22.1 Основ законодательства о нотариате) — деньги у нотариуса до регистрации, затем перечисление продавцу.
@@ -126,13 +126,22 @@
 
 ---
 
+## official_verifications
+
+| claim | audience | value | official_url | accessed_at | verified |
+|-------|----------|-------|--------------|-------------|----------|
+| Сбер: комиссия за аккредитив при купле-продаже недвижимости | физлица | 3 400 ₽ | https://www.sberbank.ru/ru/person/payments/special_acc/accreditive | 2026-08-20 | yes |
+| Сбер: аккредитив для юрлиц | юрлица | 0,3% / мин. 15 000 ₽ | https://www.sberbank.ru/ru/legal/bankingservice/loc | 2026-08-20 | yes (не для бытовой сделки физлиц) |
+
+---
+
 ## source_table
 
 | id | title | url | type | accessed_at | used_for |
 |----|-------|-----|------|-------------|----------|
 | S1 | Клышин: расписку написали, денег нет | https://t.me/klyshin_A | community | 2026-08-18 | Hook, порядок расчётов, депозит нотариуса vs нотариальная сделка |
 | S2 | МИР КВАРТИР: аккредитив 2026 | https://www.mirkvartir.ru/journal/assistant/2026/08/11/akkreditiv-zachem-on/ | media | 2026-08-18 | Механизм, виды, ошибки срока, ЕГРН |
-| S3 | Сбербанк: аккредитивы в недвижимости | https://www.sberbank.ru/ru/legal/bankingservice/loc | official | 2026-08-18 | Тарифы, этапы, условия |
+| S3 | Сбербанк: аккредитивы для физлиц | https://www.sberbank.ru/ru/person/payments/special_acc/accreditive | official | 2026-08-20 | Физлица: 3 400 ₽ фикс; юрлица — отдельный тариф loc |
 | S4 | ГрадБейс: расчёты при покупке квартиры | https://gradbase.ru/guide/raschety-pri-pokupke-kvartiry | expert | 2026-08-18 | Сравнение способов, ст. 488, 555 ГК, сроки регистрации |
 | S5 | ГрадБейс: аккредитив при покупке | https://gradbase.ru/guide/akkreditiv-pri-pokupke-kvartiry | expert | 2026-08-18 | ст. 867–873 ГК, 762-П, условия раскрытия |
 | S6 | ГАРАНТ: ВС РФ о мошенничестве и реституции | https://www.garant.ru/news/2066968/ | media | 2026-08-18 | Риск оспаривания сделки, возврат квартиры |
@@ -147,7 +156,7 @@
 
 - https://t.me/klyshin_A
 - https://www.mirkvartir.ru/journal/assistant/2026/08/11/akkreditiv-zachem-on/
-- https://www.sberbank.ru/ru/legal/bankingservice/loc
+- https://www.sberbank.ru/ru/person/payments/special_acc/accreditive
 - https://gradbase.ru/guide/raschety-pri-pokupke-kvartiry
 - https://gradbase.ru/guide/akkreditiv-pri-pokupke-kvartiry
 - https://www.garant.ru/news/2066968/

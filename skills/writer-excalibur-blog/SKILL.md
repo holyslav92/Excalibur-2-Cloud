@@ -38,6 +38,8 @@ description: Write meaning draft drafts/writer.html; Sol applies tenant SOUL sty
 ## Правила смысла
 
 - Все факты только из research; не выдумывай.
+- **Тарифы/комиссии банков** — только из `research-notes.md` →
+  `## official_verifications` + `practical_facts` с пометкой official; не из обзоров.
 - Структура: открытие → несколько H2 с мыслями → практика/ограничения → CTA.
 - Без research-даты / Wordstat в открытии (Sol всё равно вычистит, но не засоряй).
 - CTA: `tenant-config.cta_links` + MAX по `cta_channels.max` (обязательно при `cta_required=true`).

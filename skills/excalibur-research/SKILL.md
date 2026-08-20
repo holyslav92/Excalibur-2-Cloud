@@ -29,6 +29,25 @@ description: Current-date facts from live sources; no invented series continuati
 Без свежего community/news сигнала → `research-agent-report.json` **BLOCK**
 с причиной `STALE_OR_INVENTED_SIGNAL`.
 
+## Официальные источники (тарифы, комиссии, условия компаний)
+
+Контракт: `shared/research-official-source-contract.md`.
+
+Если пишешь про **банк / застройщика / госорган** и называешь **цифру, %,
+комиссию, тариф, срок, лимит**:
+
+1. Иди на **официальный сайт** компании (не только обзоры и не только
+   `/legal/` для бытовой статьи про физлиц).
+2. Разделяй **физлица / юрлица / ипотека** — разные страницы тарифов.
+3. Заполни `## official_verifications` в `research-notes.md`.
+4. В `source_table` — строка `type: official` с тем же URL.
+5. В `research-agent-report.json` — блок `official_source_audit` со статусом PASS.
+
+Обзоры (МИР КВАРТИР, ГрадБейс, медиа) — контекст и вилка, **не** единственный
+источник точной цифры банка.
+
+Гейт: `scripts/excalibur_blog_research_official_gate.py` (BLOCK без official).
+
 ## Содержание notes
 
 - `reader_problem` / `reader_outcome` — **одна** бытовая боль, не список

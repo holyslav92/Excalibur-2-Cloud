@@ -1,9 +1,29 @@
 {
   "source": "memory/blog/articles/B02-raspisku-na-kvartiru-napisali-deneg-na-schete-net/article.html",
-  "total_links": 1,
+  "total_links": 3,
   "failed_count": 0,
   "verdict": "pass",
   "links": [
+    {
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/rosfinmonitoring-sdelka-nedvizhimost-cheklis-tyumen-2026/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/rosfinmonitoring-sdelka-nedvizhimost-cheklis-tyumen-2026/"
+    },
+    {
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/bank-otkazal-po-domu-cheklist-starogo-fonda-v-tyumeni/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/bank-otkazal-po-domu-cheklist-starogo-fonda-v-tyumeni/"
+    },
     {
       "url": "https://t.me/Tyumen_Rieltor",
       "status": 200,

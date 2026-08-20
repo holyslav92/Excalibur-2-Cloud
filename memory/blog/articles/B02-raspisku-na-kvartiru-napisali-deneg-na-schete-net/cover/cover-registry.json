@@ -8,7 +8,7 @@
   "alt": "Расписка написана, денег нет — звоните риэлтору в Тюмени",
   "aspect_ratio": "16:9",
   "canvas_source": "cover/canvas-quad-01.png",
-  "generated_at": "2026-08-19T18:23:29+00:00",
+  "generated_at": "2026-08-20T04:46:16+00:00",
   "assets": [
     {
       "role": "cover",
@@ -68,7 +68,7 @@
       "role": "inline",
       "slot": "inline_6",
       "file": "cover/inline-06.png",
-      "alt": "Таблица тарифов: Сбер 0,3%, депозит нотариуса 0,5%, СБР ВТБ",
+      "alt": "Таблица тарифов: Сбер 3 400 ₽, депозит нотариуса 0,5%, СБР ВТБ",
       "h2_anchor": "Тарифы и альтернативы: Сбер, СБР, вилка по рынку",
       "visual_type": "comparison_table",
       "aspect_ratio": "16:9"

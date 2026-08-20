@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "forbid_uncategorized": true,
+  "uncategorized_wp_id": 1,
+  "default_primary_slug": "vtorichka-i-riski",
+  "categories": {
+    "vtorichka-i-riski": {
+      "wp_id": 31,
+      "name": "Вторичка и риски"
+    },
+    "dokumenty-i-oformlenie": {
+      "wp_id": 54,
+      "name": "Документы и оформление"
+    },
+    "proverka-pered-pokupkoj": {
+      "wp_id": 34,
+      "name": "Проверка перед покупкой"
+    },
+    "pokupka-kvartiry": {
+      "wp_id": 36,
+      "name": "Покупка квартиры"
+    },
+    "ipoteka": {
+      "wp_id": 32,
+      "name": "Ипотека"
+    },
+    "matkapital-i-sdelki": {
+      "wp_id": 48,
+      "name": "Маткапитал и сделки"
+    },
+    "riski-sdelki": {
+      "wp_id": 58,
+      "name": "Риски сделки"
+    }
+  },
+  "topic_defaults": {
+    "B01": ["proverka-pered-pokupkoj", "vtorichka-i-riski"],
+    "B02": ["vtorichka-i-riski", "dokumenty-i-oformlenie"]
+  }
+}

@@ -30,6 +30,7 @@ from excalibur_blog_pipeline_canon import (
     description_clones_opening,
     validate_article_canon,
 )
+from excalibur_blog_wp_categories import category_gate_errors, resolve_category_ids
 
 def project_root() -> Path:
     return Path(__file__).resolve().parents[1]
@@ -506,6 +507,7 @@ def load_article(article_dir: Path, *, public_base: str = "") -> dict:
         or meta_ab.get("description_aeo")
         or ""
     )
+    category_ids, category_slugs = resolve_category_ids(project_root(), article_dir)
     return {
         "slug": meta["slug"],
         "post_id": int(wp_post_id) if wp_post_id else 0,
@@ -525,6 +527,8 @@ def load_article(article_dir: Path, *, public_base: str = "") -> dict:
         "schema_jsonld": schema_raw,
         "topic_id": meta.get("topic_id", ""),
         "inline_images": inline_images,
+        "category_ids": category_ids,
+        "category_slugs": category_slugs,
         "site_base_expanded": bool(public_base) and SITE_BASE_PLACEHOLDER not in schema_raw,
     }
 
@@ -611,6 +615,14 @@ if (is_wp_error($post_id)) {{
     exit(1);
 }}
 echo 'OK post=' . $post_id . ' slug=' . $slug . PHP_EOL;
+
+if (!empty($p['category_ids']) && is_array($p['category_ids'])) {{
+    $cats = array_values(array_filter(array_map('intval', $p['category_ids'])));
+    if ($cats) {{
+        wp_set_post_categories($post_id, $cats, false);
+        echo 'OK categories=' . implode(',', $cats) . PHP_EOL;
+    }}
+}}
 
 if (!empty($p['cover_b64'])) {{
     $bin = base64_decode($p['cover_b64']);
@@ -853,8 +865,8 @@ def trigger_bootstrap_http(url: str, root: Path) -> str:
         raise RuntimeError("Cloud WebFetch Fallback timed out after 120 seconds. Please trigger manually.")
 
 
-def publish_via_sftp(env: dict[str, str], php: str, public_base: str) -> str:
-    remote = "excalibur-blog-publish-once.php"
+def publish_via_sftp(env: dict[str, str], php: str, public_base: str, *, bootstrap_name: str = "excalibur-blog-publish-once.php") -> str:
+    remote = bootstrap_name
     data = php.encode("utf-8")
     url = public_base.rstrip("/") + "/" + remote
     root = project_root()
@@ -1088,6 +1100,16 @@ def check_publish_prerequisites(
         if not isinstance(theme_blocks, dict) or theme_blocks.get(key) != "skip":
             blockers.append(f"article.meta.json theme_blocks.{key}=skip required")
     blockers.extend(validate_article_canon(article_dir, project_root()))
+    blockers.extend(category_gate_errors(project_root(), article_dir))
+
+    interlink_gate = article_dir / "interlink-gate.json"
+    if interlink_gate.is_file():
+        try:
+            interlink_report = json.loads(interlink_gate.read_text(encoding="utf-8"))
+            if str(interlink_report.get("status") or "").upper() == "BLOCK":
+                blockers.append("interlink-gate.json status=BLOCK")
+        except json.JSONDecodeError:
+            blockers.append("interlink-gate.json invalid")
 
     if require_freshness_gate and (article_dir / "freshness-report.json").is_file():
         freshness = _gate_json_status(article_dir / "freshness-report.json")
@@ -1432,6 +1454,24 @@ def main() -> int:
         print(json.dumps({"llms_deploy": deploy_report}, ensure_ascii=False))
         if deploy_report.get("status") != "PASS":
             return 1
+
+    tenant = json.loads((root / "shared/tenant-config.json").read_text(encoding="utf-8"))
+    auto_interlink = bool((tenant.get("publish_options") or {}).get("auto_interlink_after_publish"))
+    if auto_interlink and tenant.get("interlink_old_articles"):
+        import subprocess
+
+        interlink_proc = subprocess.run(
+            [
+                sys.executable,
+                str(root / "scripts/excalibur_blog_post_publish_interlink.py"),
+                "--article-dir",
+                str(article_dir.relative_to(root)),
+            ],
+            cwd=str(root),
+            check=False,
+        )
+        if interlink_proc.returncode != 0:
+            print("WARN post-publish interlink failed", file=sys.stderr)
     return 0
 
 

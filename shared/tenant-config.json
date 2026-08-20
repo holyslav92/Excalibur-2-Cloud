@@ -45,9 +45,11 @@
     "whatsapp": "https://wa.me/79220016505",
     "guides": "{{SITE_BASE}}/gajdy/"
   },
+  "wp_categories_required": true,
   "publish_options": {
     "deploy_llms_after_publish": true,
-    "derouter_image_quality": "high"
+    "derouter_image_quality": "high",
+    "auto_interlink_after_publish": true
   },
   "cover_mode": "host_reference",
   "dzen_rf_pack": true,

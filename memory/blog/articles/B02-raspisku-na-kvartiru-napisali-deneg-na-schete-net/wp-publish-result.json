@@ -1,15 +1,16 @@
 {
   "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
   "topic_id": "B02",
-  "post_id": 8720,
-  "permalink": "{{SITE_BASE}}/blog/bez-rubriki/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
   "publish_method": "sftp",
-  "publish_date": "2026-08-18",
   "cover_evidence": {
     "path": "memory/blog/articles/B02-raspisku-na-kvartiru-napisali-deneg-na-schete-net/cover/cover.png",
-    "md5": "57c54809f221824110b2bf4b66afab8d",
-    "source": "owner_approved_v3"
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1061453,
+    "detected_format": "png"
   },
+  "raw_output": "OK post=8720 slug=raspisku-na-kvartiru-napisali-deneg-na-schete-net\nOK categories=31,54\nOK featured_image=8791\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=8792 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/raspisku-na-kvartiru-napisali-deneg-na-schete-net-inline-01-3.png\nOK inline_alt=8792\nOK inline_caption=8792\nOK inline_description=8792\nOK inline_image_upload=8793 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/raspisku-na-kvartiru-napisali-deneg-na-schete-net-inline-02-3.png\nOK inline_alt=8793\nOK inline_caption=8793\nOK inline_description=8793\nOK inline_image_upload=8794 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/raspisku-na-kvartiru-napisali-deneg-na-schete-net-inline-03-3.png\nOK inline_alt=8794\nOK inline_caption=8794\nOK inline_description=8794\nOK inline_image_upload=8795 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/raspisku-na-kvartiru-napisali-deneg-na-schete-net-inline-04-3.png\nOK inline_alt=8795\nOK inline_caption=8795\nOK inline_description=8795\nOK inline_image_upload=8796 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/raspisku-na-kvartiru-napisali-deneg-na-schete-net-inline-05-3.png\nOK inline_alt=8796\nOK inline_caption=8796\nOK inline_description=8796\nOK inline_image_upload=8797 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/raspisku-na-kvartiru-napisali-deneg-na-schete-net-inline-06-3.png\nOK inline_alt=8797\nOK inline_caption=8797\nOK inline_description=8797\nOK inline_image_upload=8798 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/raspisku-na-kvartiru-napisali-deneg-na-schete-net-inline-07-3.png\nOK inline_alt=8798\nOK inline_caption=8798\nOK inline_description=8798\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/\n",
   "media_check": {
     "featured_ok": true,
     "inline_ok": 7,
@@ -20,8 +21,7 @@
   "live_page": {
     "gate": "live-page",
     "status": "PASS",
-    "permalink": "{{SITE_BASE}}/blog/bez-rubriki/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
     "errors": []
-  },
-  "notes": "Test publish owner-approved B02. Theme tymenrieltor-light patched for schema+live-gate; WP Rocket cache purged post-publish."
+  }
 }

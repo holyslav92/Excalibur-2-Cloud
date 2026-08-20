@@ -49,6 +49,10 @@ python3 scripts/excalibur_blog_wp_publish.py \
    - **не** используй blanket `--skip-gates` (INC-20260723-1235);
    - алиас только freshness: `--allow-stale-freshness`
 3. `wp_insert_post` / `wp_update_post` — title, slug, content, excerpt
+   - **Рубрики (обязательно):** `wp_set_post_categories` из `article.meta.json`
+     `wp_category_slugs` или `shared/wp-blog-categories.json` → `topic_defaults`.
+     Без рубрики (`bez-rubriki`) publish **BLOCKER**, если
+     `tenant-config.wp_categories_required=true`.
    - **HARD (Dzen/RSS):** `post_excerpt` must **not** be a truncated copy of
      the opening paragraphs. RSS emits excerpt as `<description>` and the
      body as `<content:encoded>`; Dzen/RSSLint often shows both → duplicate

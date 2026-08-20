@@ -1,0 +1,79 @@
+{
+  "topic_id": "B02",
+  "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+  "title": "В Тюмени расписку за квартиру написали — денег на счёте нет",
+  "outbound_required_min": 1,
+  "outbound_found": [
+    {
+      "slug": "rosfinmonitoring-sdelka-nedvizhimost-cheklis-tyumen-2026",
+      "title": "Росфинмониторинг и сделка с недвижимостью: чеклист для Тюмени",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8487,
+      "source": "siblings"
+    },
+    {
+      "slug": "bank-otkazal-po-domu-cheklist-starogo-fonda-v-tyumeni",
+      "title": "Банк отказал по дому? Чеклист старого фонда в Тюмени",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8456,
+      "source": "siblings"
+    }
+  ],
+  "outbound_missing_suggestions": [
+    {
+      "slug": "na-matkapital-kupili-detskie-doli-proverte",
+      "title": "На маткапитал купили — детских долей в выписке нет",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8730,
+      "source": "siblings"
+    }
+  ],
+  "inbound_targets": [
+    {
+      "slug": "bank-otkazal-po-domu-cheklist-starogo-fonda-v-tyumeni",
+      "title": "Банк отказал по дому? Чеклист старого фонда в Тюмени",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8456,
+      "source": "siblings"
+    },
+    {
+      "slug": "na-matkapital-kupili-detskie-doli-proverte",
+      "title": "На маткапитал купили — детских долей в выписке нет",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8730,
+      "source": "siblings"
+    },
+    {
+      "slug": "rosfinmonitoring-sdelka-nedvizhimost-cheklis-tyumen-2026",
+      "title": "Росфинмониторинг и сделка с недвижимостью: чеклист для Тюмени",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8487,
+      "source": "siblings"
+    }
+  ],
+  "inbound_updates": [
+    {
+      "post_id": 8456,
+      "marker": "data-excalibur-interlink-from=\"raspisku-na-kvartiru-napisali-deneg-na-schete-net\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"raspisku-na-kvartiru-napisali-deneg-na-schete-net\"><b>Читайте также:</b> <a href=\"https://tymenrieltor.ru/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/\">В Тюмени расписку за квартиру написали — денег на счёте нет</a></p>"
+    },
+    {
+      "post_id": 8730,
+      "marker": "data-excalibur-interlink-from=\"raspisku-na-kvartiru-napisali-deneg-na-schete-net\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"raspisku-na-kvartiru-napisali-deneg-na-schete-net\"><b>Читайте также:</b> <a href=\"https://tymenrieltor.ru/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/\">В Тюмени расписку за квартиру написали — денег на счёте нет</a></p>"
+    },
+    {
+      "post_id": 8487,
+      "marker": "data-excalibur-interlink-from=\"raspisku-na-kvartiru-napisali-deneg-na-schete-net\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"raspisku-na-kvartiru-napisali-deneg-na-schete-net\"><b>Читайте также:</b> <a href=\"https://tymenrieltor.ru/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/\">В Тюмени расписку за квартиру написали — денег на счёте нет</a></p>"
+    }
+  ],
+  "new_url": "https://tymenrieltor.ru/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+  "dry_run": false
+}
