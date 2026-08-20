@@ -1,0 +1,306 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-20",
+    "today_ru": "20.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "четверг"
+  },
+  "topic": {
+    "topic_id": "B03",
+    "title": "Почти внесли задаток — за 48 часов до торгов квартиру подарили дочери",
+    "h1": "Почти внесли задаток — за 48 часов до торгов квартиру подарили дочери",
+    "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+    "primary_query": "Почти внесли задаток — за 48 часов до торгов квартиру подарили дочери",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "Почти внесли задаток — за 48 часов до торгов квартиру подарили дочери 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Верховный суд разъяснил, как вернуть задаток при покупке квартиры",
+          "url": "https://ria.ru/20260817/vs-2111303839.html",
+          "snippet": ""
+        },
+        {
+          "title": "ВС разъяснил, когда можно вернуть задаток по предварительному договору ...",
+          "url": "https://rapsinews.ru/judicial_news/20260817/312110363.html",
+          "snippet": "МОСКВА, 17 авг - РИА Новости. Верховный суд разъяснил, что вернуть задаток при покупке квартиры можно, если в ..."
+        },
+        {
+          "title": "Россиянам раскрыли способ вернуть задаток при покупке квартиры",
+          "url": "https://lenta.ru/news/2026/08/17/rossiyanam-raskryli-sposob-vernut-zadatok-pri-pokupke-kvartiry/",
+          "snippet": "МОСКВА, 17 авг — РАПСИ. Отказ банка выдать будущим покупателям недвижимости ипотеку не свидетельствуют о наличии объективной невозможности исполнения возникших ..."
+        },
+        {
+          "title": "ВС разъяснил порядок возврата задатка при несостоявшейся сделке с ...",
+          "url": "https://www.mirkvartir.ru/journal/news/2026/08/17/vs-razyasnil-poryadok-vozvrata/",
+          "snippet": "В некоторых случаях россияне имеют право вернуть задаток при покупке квартиры. Способы это сделать ..."
+        },
+        {
+          "title": "Верховный суд о возврате задатка за квартиру: условия предварительного ...",
+          "url": "https://finance.mail.ru/article/verhovnyj-sud-razyasnil-kogda-mozhno-vernut-zadatok-pri-pokupke-kvartiry-69223068/",
+          "snippet": "Также читайте: Ипотечный горизонт в 2026: высокие ставки и трансформация госпрограмм Купить квартиру в столичной новостройке в 2026 году: ипотека или рассрочка?"
+        },
+        {
+          "title": "Верховный суд разъяснил, когда можно потерять задаток за квартиру",
+          "url": "https://news.ru/society/verhovnyj-sud-razyasnil-kogda-mozhno-poteryat-zadatok-za-kvartiru",
+          "snippet": "Верховный суд разъяснил, в каких случаях покупатель жилья вправе требовать возврата задатка при срыве сделки. Подробности дела и позиция ВС РФ."
+        }
+      ],
+      "searched_at": "2026-08-20"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "Почти внесли задаток — за 48 часов до торгов квартиру подарили дочери 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Верховный суд разъяснил, как вернуть задаток при покупке квартиры",
+          "url": "https://ria.ru/20260817/vs-2111303839.html",
+          "snippet": ""
+        },
+        {
+          "title": "ВС разъяснил, когда можно вернуть задаток по предварительному договору ...",
+          "url": "https://rapsinews.ru/judicial_news/20260817/312110363.html",
+          "snippet": "МОСКВА, 17 авг - РИА Новости. Верховный суд разъяснил, что вернуть задаток при покупке квартиры можно, если в ..."
+        },
+        {
+          "title": "Россиянам раскрыли способ вернуть задаток при покупке квартиры",
+          "url": "https://lenta.ru/news/2026/08/17/rossiyanam-raskryli-sposob-vernut-zadatok-pri-pokupke-kvartiry/",
+          "snippet": "МОСКВА, 17 авг — РАПСИ. Отказ банка выдать будущим покупателям недвижимости ипотеку не свидетельствуют о наличии объективной невозможности исполнения возникших ..."
+        },
+        {
+          "title": "ВС разъяснил порядок возврата задатка при несостоявшейся сделке с ...",
+          "url": "https://www.mirkvartir.ru/journal/news/2026/08/17/vs-razyasnil-poryadok-vozvrata/",
+          "snippet": "В некоторых случаях россияне имеют право вернуть задаток при покупке квартиры. Способы это сделать ..."
+        },
+        {
+          "title": "ВС разъяснил, можно ли вернуть задаток при несостоявшейся сделке с ...",
+          "url": "https://realty.rbc.ru/news/6a82f1b89a7947b8eb0dd993",
+          "snippet": "Также читайте: Ипотечный горизонт в 2026: высокие ставки и трансформация госпрограмм Купить квартиру в столичной новостройке в 2026 году: ипотека или рассрочка?"
+        },
+        {
+          "title": "Верховный суд о возврате задатка за квартиру: условия предварительного ...",
+          "url": "https://finance.mail.ru/article/verhovnyj-sud-razyasnil-kogda-mozhno-vernut-zadatok-pri-pokupke-kvartiry-69223068/",
+          "snippet": "ВС разъяснил, можно ли вернуть задаток при несостоявшейся сделке с жильем Чтобы вернуть задаток, несостоявшийся покупатель жилья должен доказать, что сделка сорвалась не по его вине."
+        }
+      ],
+      "searched_at": "2026-08-20"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "Почти внесли задаток — за 48 часов до торгов квартиру подарили дочери official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "ВС разъяснил, когда можно вернуть задаток по предварительному договору ...",
+          "url": "https://rapsinews.ru/judicial_news/20260817/312110363.html",
+          "snippet": ""
+        },
+        {
+          "title": "ВС разъяснил порядок возврата задатка при несостоявшейся сделке с ...",
+          "url": "https://www.mirkvartir.ru/journal/news/2026/08/17/vs-razyasnil-poryadok-vozvrata/",
+          "snippet": "МОСКВА, 17 авг — РАПСИ. Отказ банка выдать будущим покупателям недвижимости ипотеку не свидетельствуют о наличии объективной невозможности исполнения возникших ..."
+        },
+        {
+          "title": "Верховный суд разъяснил, как вернуть задаток при покупке квартиры",
+          "url": "https://ria.ru/20260817/vs-2111303839.html",
+          "snippet": "Также читайте: Ипотечный горизонт в 2026: высокие ставки и трансформация госпрограмм Купить квартиру в столичной новостройке в 2026 году: ипотека или рассрочка?"
+        },
+        {
+          "title": "Верховный суд разъяснил, когда можно потерять задаток за квартиру",
+          "url": "https://news.ru/society/verhovnyj-sud-razyasnil-kogda-mozhno-poteryat-zadatok-za-kvartiru",
+          "snippet": "МОСКВА, 17 авг - РИА Новости. Верховный суд разъяснил, что вернуть задаток при покупке квартиры можно, если в ..."
+        },
+        {
+          "title": "Верховный суд о возврате задатка за квартиру: условия предварительного ...",
+          "url": "https://finance.mail.ru/article/verhovnyj-sud-razyasnil-kogda-mozhno-vernut-zadatok-pri-pokupke-kvartiry-69223068/",
+          "snippet": "Верховный суд России разъяснил, что отказ банка в ипотеке сам по себе не дает покупателю права потребовать возврата задатка за квартиру."
+        },
+        {
+          "title": "ВС разъяснил условия возврата задатка при отказе в ипотеке",
+          "url": "https://pravo.ru/news/265308/",
+          "snippet": "Верховный суд разъяснил, в каких случаях покупатель жилья вправе требовать возврата задатка при срыве сделки. Подробности дела и позиция ВС РФ."
+        }
+      ],
+      "searched_at": "2026-08-20"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com Почти внесли задаток — за 48 часов до торгов квартиру подарили дочери 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "codeforces.com/A. Почти счастливое число.py at master · ters81 ...",
+          "url": "https://github.com/ters81/codeforces.com/blob/master/A.%20%D0%9F%D0%BE%D1%87%D1%82%D0%B8%20%D1%81%D1%87%D0%B0%D1%81%D1%82%D0%BB%D0%B8%D0%B2%D0%BE%D0%B5%20%D1%87%D0%B8%D1%81%D0%BB%D0%BE.py",
+          "snippet": ""
+        },
+        {
+          "title": "coursera-ddp-shiny/corpora/ru_50k.txt at master - GitHub",
+          "url": "https://github.com/spujadas/coursera-ddp-shiny/blob/master/corpora/ru_50k.txt",
+          "snippet": "# В единственной строке выведите «YES», если число n — почти счастливое, и «NO» в противном случае (без кавычек)."
+        },
+        {
+          "title": "GitHub - woxov/SteamHoursBoost",
+          "url": "https://github.com/woxov/SteamHoursBoost",
+          "snippet": "Coursera Developing Data Products Week 4 Peer-graded Assignment: Shiny - spujadas/coursera-ddp-shiny"
+        },
+        {
+          "title": "[Проблема] не грузятся сборки curseforge и инсталлер osu",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/issues/5955",
+          "snippet": "Простой и эффективный скрипт для автоматического фарма часов в любой игре Steam. Поддерживает 2FA аутентификацию и работает на Windows, macOS и Linux. Запустите скрипт: Введите при запросе: ⚠️ Важно: Убедитесь, что у вас включена двухфакторная аутентификация, если требуется Steam Guard код."
+        },
+        {
+          "title": "STD-MAE/results/ijcai24-Poster-STD-MAE.png at main · Jimmy-7664/STD-MAE",
+          "url": "https://github.com/Jimmy-7664/STD-MAE/blob/main/results/ijcai24-Poster-STD-MAE.png",
+          "snippet": "Запустите service.bat и выберите пункт Run Diagnostics, чтобы проверить на конфликтующие сервисы. Если у вас проблемы с запуском Discord, то в конце согласитесь на очистку кэша. Если не работает / перестала работать стратегия, то попробуйте другие."
+        },
+        {
+          "title": "не активируется месяц подписки Dota Plus подаренные другим игроком",
+          "url": "https://github.com/ValveSoftware/Dota2-Gameplay/issues/21240",
+          "snippet": "[IJCAI-24] Spatial-Temporal-Decoupled Masked Pre-training for Spatiotemporal Forecasting - Jimmy-7664/STD-MAE"
+        }
+      ],
+      "searched_at": "2026-08-20"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "Почти внесли задаток — за 48 часов до торгов квартиру подарили дочери forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "КЕЙС: КАК МЫ СПАСЛИ СДЕЛКУ ЗА 48 ЧАСОВ ДО ПОДПИСАНИЯ Договорённость ...",
+          "url": "https://vk.com/wall-236590361_34",
+          "snippet": ""
+        },
+        {
+          "title": "ВС разъяснил порядок возврата задатка при несостоявшейся сделке с ...",
+          "url": "https://www.mirkvartir.ru/journal/news/2026/08/17/vs-razyasnil-poryadok-vozvrata/",
+          "snippet": "Покупатель нёс задаток. Продавец заказывал шампанское. Оставалось 48 часов до сделки. И тут мы начали финальную проверку. И нашли. В квартире был прописан несовершеннолетний ребёнок."
+        },
+        {
+          "title": "Мы уже почти внесли задаток | Юрист Клышин Алексей | Дзен",
+          "url": "https://dzen.ru/a/amtoWouqdlfayyWO",
+          "snippet": "Также читайте: Ипотечный горизонт в 2026: высокие ставки и трансформация госпрограмм Купить квартиру в столичной новостройке в 2026 году: ипотека или рассрочка?"
+        },
+        {
+          "title": "Россиянам раскрыли способ вернуть задаток при покупке квартиры",
+          "url": "https://lenta.ru/news/2026/08/17/rossiyanam-raskryli-sposob-vernut-zadatok-pri-pokupke-kvartiry/",
+          "snippet": "Статья автора «Юрист Клышин Алексей» в Дзене : И за 48 часов до торгов квартира… исчезла. Подбираем клиенту квартиру на торгах. Не одну — ведём параллельно 4 лота. Смотрим динамику."
+        },
+        {
+          "title": "Верховный суд разъяснил, как вернуть задаток при покупке квартиры",
+          "url": "https://ria.ru/20260817/vs-2111303839.html",
+          "snippet": "В некоторых случаях россияне имеют право вернуть задаток при покупке квартиры. Способы это сделать ..."
+        },
+        {
+          "title": "ВС разъяснил, когда можно вернуть задаток по предварительному договору ...",
+          "url": "https://rapsinews.ru/judicial_news/20260817/312110363.html",
+          "snippet": "МОСКВА, 17 авг - РИА Новости. Верховный суд разъяснил, что вернуть задаток при покупке квартиры можно, если в ..."
+        }
+      ],
+      "searched_at": "2026-08-20"
+    }
+  ],
+    {
+      "query_id": "research_auction_risks",
+      "query": "купить квартиру на торгах банкротство риски задаток ЕГРН 2026",
+      "purpose": "риски торгов и ЕГРН",
+      "result_count": 5,
+      "results": [
+        {
+          "title": "Как купить квартиру с торгов в 2026 году: скидки и риски",
+          "url": "https://www.gazeta.ru/twz/dengi/kak-kupit-kvartiru-s-torgov.htm",
+          "snippet": "Задаток 5–20%; ипотека на торгах почти невозможна"
+        },
+        {
+          "title": "Покупка квартиры на торгах по банкротству: риски и проверки",
+          "url": "https://investtorgi.ru/blog/kak-kupit-kvartiru-na-torgah-po-bankrotstvu-chto-proverit-do-podachi-zayavki/",
+          "snippet": "Выписка ЕГРН до подачи заявки; задаток 10–20%"
+        },
+        {
+          "title": "Покупка квартиры через закрытый сервис: торги по банкротству",
+          "url": "https://harant.ru/blog/nedvizhimost/pokupka-kvartiry-cherez-zakrytyj-servis-kak-kupit-zhilyo-na-elektronnyh-torgah-po-bankrotstvu/",
+          "snippet": "ст. 110 ФЗ-127: возврат задатка проигравшим за 5 раб. дней"
+        },
+        {
+          "title": "Как купить квартиру на торгах по банкротству в 2026",
+          "url": "https://urindustria.ru/kak-kupit-kvartiru-na-torgah-po-bankrotstvu-v-2026-godu-posagovaa-instrukcia-i-skrytye-riski",
+          "snippet": "Свежая выписка ЕГРН; риск проживающих и оспаривания сделок"
+        },
+        {
+          "title": "Как купить квартиру на торгах по банкротству — КП",
+          "url": "https://www.kp.ru/money/lichnye-finansy/kak-kupit-kvartiru-na-torgakh-po-bankrotstvu/",
+          "snippet": "ЕФРСБ bankrot.fedresurs.ru; только электронные торги"
+        }
+      ],
+      "searched_at": "2026-08-20"
+    },
+    {
+      "query_id": "research_gift_bankruptcy",
+      "query": "дарение квартиры родственнику банкротство оспорить 2026",
+      "purpose": "оспаривание дарения",
+      "result_count": 4,
+      "results": [
+        {
+          "title": "Можно ли оспорить дарение квартиры родственнику при банкротстве?",
+          "url": "https://vc.ru/legal/3029008-mozhno-li-osporit-darenie-kvartiry-rodstvenniku-pri-bankrotstve",
+          "snippet": "Обзор ВС № 12/2026 п.13 — дарение признано недействительным"
+        },
+        {
+          "title": "ст. 61.2 127-ФЗ — КонсультантПлюс",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_39331/05ccb2acde4b3196880ca82e2d7f4c1dfd5ea0b5/",
+          "snippet": "Подозрительные сделки: 3 года, презумпция вреда при дарении заинтересованному лицу"
+        },
+        {
+          "title": "Приостановка торгов в банкротстве",
+          "url": "https://yustihab.ru/journal/priostanovlenie-torgov-pri-bankrotstve",
+          "snippet": "Основания приостановки: споры, жалобы, оспаривание"
+        },
+        {
+          "title": "Оспаривание сделок должника за 3 года",
+          "url": "https://favorit-consult.ru/article/osparivanie-sdelok-dolzhnika-pri-bankrotstve/",
+          "snippet": "Дарение — типичная подозрительная сделка"
+        }
+      ],
+      "searched_at": "2026-08-20"
+    },
+    {
+      "query_id": "research_tyumen_lots",
+      "query": "торги банкротство квартира Тюмень 2026",
+      "purpose": "локализация Тюмень",
+      "result_count": 3,
+      "results": [
+        {
+          "title": "Квартира Червишевский тракт 45 — лот банкротство",
+          "url": "https://xn----etbpba5admdlad.xn--p1ai/lot/6821399",
+          "snippet": "Тюмень, старт 6 546 500 ₽, проживает супруг должника"
+        },
+        {
+          "title": "Квартира Тихий проезд 2 — Альфалот",
+          "url": "https://xn----etbpba5admdlad.xn--p1ai/landing_buyLot/6556630",
+          "snippet": "Тюмень, приём заявок до 25.08.2026, задаток 20%"
+        },
+        {
+          "title": "Квартира Широтная 69 — Сбербанк-АСТ",
+          "url": "https://xn----etbpba5admdlad.xn--p1ai/landing_buyLot/6827975",
+          "snippet": "Тюмень, 3 580 000 ₽, банкротство должника"
+        }
+      ],
+      "searched_at": "2026-08-20"
+    }
+  ],
+  "errors": []
+}

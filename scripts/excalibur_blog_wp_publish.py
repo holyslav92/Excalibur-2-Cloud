@@ -1174,6 +1174,25 @@ def check_publish_prerequisites(
                 f"(need {'PASS or STALE' if allow_stale_freshness else 'PASS'})"
             )
 
+    cover_qa_gate = _gate_json_status(article_dir / "cover" / "cover_qa.json")
+    if cover_qa_gate != "PASS":
+        blockers.append(f"cover/cover_qa.json status={cover_qa_gate or 'missing'} (need PASS)")
+
+    if not (article_dir / "description-brief.json").is_file():
+        blockers.append("description-brief.json missing")
+
+    quality_path = article_dir / "quality-bar-9.json"
+    if not quality_path.is_file():
+        blockers.append("quality-bar-9.json missing (run excalibur_blog_quality_bar_9_gate.py)")
+    else:
+        try:
+            quality = json.loads(quality_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            blockers.append("quality-bar-9.json invalid")
+        else:
+            if str(quality.get("status") or "").upper() != "PASS" or not quality.get("all_pass"):
+                blockers.append("quality-bar-9.json status!=PASS or all_pass!=true")
+
     return blockers
 
 

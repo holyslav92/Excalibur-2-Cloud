@@ -1,0 +1,108 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "sameAs": [
+        "{{SITE_BASE}}/",
+        "{{SITE_BASE}}/rieltor-tyumen/",
+        "{{SITE_BASE}}/kontakty/",
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://t.me/holyslav92",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/"
+      },
+      "url": "{{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "headline": "Квартиру продавали по доверенности. Хозяин был на СВО",
+      "description": "Квартиру продавали по доверенности. Хозяин был на СВО",
+      "datePublished": "2026-08-20",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "{{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Выписку ЕГРН я заказывал две недели назад. Этого хватит?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Ранее заказанная выписка не показывает переход права, зарегистрированный после её получения. В открытом кейсе дарение дочери было оформлено примерно неделей ранее — и увидела его только выписка, полученная за два дня до задатка."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Если квартиру подарили дочери, сделку точно отменят?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Точно — нет. Дарение родственнику создаёт существенный риск оспаривания: трёхлетний период по пункту 2 статьи 61.2 закона № 127-ФЗ, презумпция по родству, пункт 13 позиции Верховного суда от 12.2026, вопрос согласия финансового управляющего по статье 213.25. Результат в рассматриваемом случае — приостановка торгов и начало оспаривания, а не готовое решение."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Финансовый управляющий не принял обеспечительные меры — это хороший знак?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Это нейтральный факт, который нужно оценивать отдельно. Само по себе отсутствие обеспечительных мер не устраняет риск оспаривания и приостановки торгов."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Когда вернут задаток, если я проиграл торги?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Проигравшему участнику задаток возвращают в течение пяти рабочих дней по статье 110 закона № 127-ФЗ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "А если торги приостановят после того, как я внёс задаток?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Деньги могут оказаться заморожены на месяцы. В рассматриваемом кейсе как ориентир указывали возможность ждать до года — срок непредсказуем. Именно поэтому в открытом кейсе задаток по проблемному объекту не внесли."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно взять ипотеку на квартиру с банкротных торгов?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Практически нет: ипотечных программ для покупки имущества на банкротных торгах почти не существует. При этом победителю даётся пять дней на заключение договора и до 30 дней на оплату."
+          }
+        }
+      ]
+    }
+  ]
+}

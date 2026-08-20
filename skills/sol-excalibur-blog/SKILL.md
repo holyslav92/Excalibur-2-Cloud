@@ -64,6 +64,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
    - `drafts/variant-a.html` — копия финала
    - не затирай `drafts/writer.html`
 5. Сверка с `bad-outputs.md` перед сдачей.
+6. **Quality bar 9/10:** `shared/quality-bar-9.md` — 2000–2600 слов, brand+phone+socials+dual CTA в теле; после Sol запусти `excalibur_blog_quality_bar_9_gate.py` → `quality-bar-9.json` all_pass.
 
 ## Запреты
 

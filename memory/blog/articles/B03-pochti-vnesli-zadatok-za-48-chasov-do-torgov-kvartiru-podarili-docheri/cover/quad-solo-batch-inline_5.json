@@ -1,0 +1,16 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "inline_5",
+  "output_canvas": "cover/inline-05.png",
+  "jobs": [
+    {
+      "slot": "inline_5",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 editorial infographic panel, high-key #FFF, gold/black Cyrillic.\nсравнительная таблица с колонками; «Задаток на ЭТП и обычная сделка»; 2-column table LEFT=ТОРГИ ПО БАНКРОТСТВУ RIGHT=ОБЫЧНАЯ СДЕЛКА; rows MUST differ: left «возврат 5 дней ст.110» vs right «смотрят договор»; left «ипотека почти нет» vs right «ВС 17.…. TXT:проиграл: 5 дней | победитель 30 дней | не оплатил — штраф | ипотека почти нет | заморозка месяцы | свои правила торгов. +tiny meme sticker only (≤15% frame, corner accent from memory/cover/meme-top100.json; NO co-host human; NO presenter).\nNEGATIVE: tiny meme sticker ≤15% frame corner only from meme-top100.json. icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face. tape/pins/strings/paper scraps; high-key #FFF/gold; not noir.\nTEXT LANGUAGE LOCK: Russian Cyrillic only.\n",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}

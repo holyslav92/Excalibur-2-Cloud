@@ -28,6 +28,7 @@ Longform (7 inline): **3 части на первом проходе** — не 
 Финал слога делает **Sol** (`excalibur-blog-sol`) по SOUL + examples.
 
 Выход: **`drafts/writer.html`** (чистый HTML-фрагмент без `<h1>`).  
+**Quality bar:** ориентир `shared/quality-bar-9.md` — 2000–2600 слов после Sol, brand+phone в теле, таблицы с разными колонками, лоты только из research или «как пример».
 Можно положить ту же копию во временный `article.html`, но канон —
 `drafts/writer.html`. Sol перепишет `article.html`.
 
@@ -48,8 +49,6 @@ Longform (7 inline): **3 части на первом проходе** — не 
 ## Правила смысла
 
 - Все факты только из research; не выдумывай.
-- **Тарифы/комиссии банков** — только из `research-notes.md` →
-  `## official_verifications` + `practical_facts` с пометкой official; не из обзоров.
 - Структура: открытие → несколько H2 с мыслями → практика/ограничения → CTA.
 - Без research-даты / Wordstat в открытии (Sol всё равно вычистит, но не засоряй).
 - CTA: `tenant-config.cta_links` + MAX по `cta_channels.max` (обязательно при `cta_required=true`).

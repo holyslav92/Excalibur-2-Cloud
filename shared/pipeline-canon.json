@@ -130,5 +130,13 @@
     "max_len": 70,
     "style": "shared/article-style.md",
     "soul": "shared/SOUL.md"
+  },
+  "quality_bar_9": {
+    "contract": "shared/quality-bar-9.md",
+    "gate": "scripts/excalibur_blog_quality_bar_9_gate.py",
+    "output": "quality-bar-9.json",
+    "word_count_min": 2000,
+    "word_count_max": 2600,
+    "required_before_publish": true
   }
 }

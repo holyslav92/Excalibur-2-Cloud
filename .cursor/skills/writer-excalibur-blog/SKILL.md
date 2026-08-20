@@ -28,6 +28,7 @@ Longform (7 inline): **3 части на первом проходе** — не 
 Финал слога делает **Sol** (`excalibur-blog-sol`) по SOUL + examples.
 
 Выход: **`drafts/writer.html`** (чистый HTML-фрагмент без `<h1>`).  
+**Quality bar:** ориентир `shared/quality-bar-9.md` — 2000–2600 слов после Sol, brand+phone в теле, таблицы с разными колонками, лоты только из research или «как пример».
 Можно положить ту же копию во временный `article.html`, но канон —
 `drafts/writer.html`. Sol перепишет `article.html`.
 

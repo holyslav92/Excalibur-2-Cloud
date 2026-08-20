@@ -203,6 +203,22 @@ def main() -> int:
     opening = _load_json(article_dir / "opening-meta-gate.json")
     record("opening_meta", opening_rc == 0 and _hard_ok(opening), f"exit={opening_rc}")
 
+    quality_rc = run_cmd(
+        root,
+        [
+            py,
+            str(scripts / "excalibur_blog_quality_bar_9_gate.py"),
+            "--article-dir",
+            str(article_dir),
+        ],
+    )
+    quality = _load_json(article_dir / "quality-bar-9.json")
+    record(
+        "quality_bar_9",
+        quality_rc == 0 and _hard_ok(quality) and bool((quality or {}).get("all_pass")),
+        f"exit={quality_rc}",
+    )
+
     failed = [check["name"] for check in checks if not check["ok"]]
     report = {
         "gate": "structure",

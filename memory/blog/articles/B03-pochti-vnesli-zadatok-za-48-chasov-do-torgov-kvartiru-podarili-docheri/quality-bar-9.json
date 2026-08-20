@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "all_pass": true,
+  "gate": "quality-bar-9",
+  "contract": "shared/quality-bar-9.md",
+  "article_dir": "memory/blog/articles/B03-pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+  "checks": {
+    "brand_first_person_tyumen": true,
+    "phone_in_body": true,
+    "socials_compact_block": true,
+    "dual_cta_soft": true,
+    "word_count_2000_2600": true,
+    "h2_count_7_plus": true,
+    "inline_figures_7": true,
+    "no_sol_artifact": true,
+    "no_unlabeled_live_inventory": true,
+    "comparison_tables_differ": true,
+    "cover_phone_on_cover": true,
+    "wordstat_stickers_not_title_overlap": true,
+    "cover_qa_pass": true
+  },
+  "errors": [],
+  "metrics": {
+    "word_count": 2140,
+    "h2_count": 10,
+    "inline_figures": 7
+  }
+}

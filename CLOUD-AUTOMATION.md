@@ -113,9 +113,9 @@ doctor + today.
 dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
 needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
 research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
-После Sol: pipeline_canon stamp + opening_meta + html_linter.
+После Sol: pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 (shared/quality-bar-9.md).
 Description → Cover-text || Schema → Cover (scene/prompt text via derouter --role cover-scene) → Cover-QA → Indexer.
-Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе; иначе STOP после Indexer.
+Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе И quality-bar-9.json all_pass; иначе STOP после Indexer.
 Fixer → merge → content-learner.
 ```
 

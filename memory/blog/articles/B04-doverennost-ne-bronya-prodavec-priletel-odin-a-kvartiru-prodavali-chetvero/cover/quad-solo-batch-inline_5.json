@@ -1,0 +1,16 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "inline_5",
+  "output_canvas": "cover/inline-05.png",
+  "jobs": [
+    {
+      "slot": "inline_5",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 editorial infographic panel, high-key #FFF, gold/black Cyrillic.\nсравнительная таблица с колонками; «Красные флаги, на которых я останавливаю сделку»; 2-column table LEFT=СИГНАЛ RIGHT=ЧТО ЭТО ЗНАЧИТ; rows MUST differ: «не видели собственника» vs «воля не подтверждена»; «доверенность до отъезда» vs «согласие не проверено»; «скидк…. TXT:не видели хозяина | старая доверенность | скидка без причины | деньги представителю | отказ от видео | передоверие. +tiny meme sticker only (≤15% frame, corner accent from memory/cover/meme-top100.json; NO co-host human; NO presenter).\nNEGATIVE: tiny meme sticker ≤15% frame corner only from meme-top100.json. icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face. tape/pins/strings/paper scraps; high-key #FFF/gold; not noir.\nTEXT LANGUAGE LOCK: Russian Cyrillic only.\n",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}

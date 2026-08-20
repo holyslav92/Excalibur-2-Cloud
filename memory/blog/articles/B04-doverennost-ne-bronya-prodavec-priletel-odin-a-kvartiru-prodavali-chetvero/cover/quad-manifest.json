@@ -1,0 +1,103 @@
+{
+  "topic_id": "B04",
+  "cover_phone_cta": "+7 922 001 65 05",
+  "wordstat_stickers": [
+    "доверенность на продажу квартиры",
+    "егрн выписка на квартиру",
+    "купить квартиру в тюмени"
+  ],
+  "wordstat_sticker_positions": [
+    [
+      0.74,
+      0.05
+    ],
+    [
+      0.72,
+      0.4
+    ],
+    [
+      0.7,
+      0.76
+    ]
+  ],
+  "slots": {
+    "inline_1": {
+      "visual_type": "labeled_checklist",
+      "labels": [
+        "а",
+        "б",
+        "в",
+        "г",
+        "д"
+      ]
+    },
+    "inline_2": {
+      "visual_type": "labeled_checklist",
+      "labels": [
+        "а",
+        "б",
+        "в",
+        "г",
+        "д",
+        "е"
+      ]
+    },
+    "inline_3": {
+      "visual_type": "labeled_checklist",
+      "labels": [
+        "а",
+        "б",
+        "в",
+        "г"
+      ]
+    },
+    "inline_4": {
+      "visual_type": "labeled_checklist",
+      "labels": [
+        "а",
+        "б",
+        "в",
+        "г",
+        "д"
+      ]
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Красные флаги, на которых я останавливаю сделку",
+      "visual_type": "comparison_table",
+      "meme_sticker": true,
+      "scene_hint": "2-column table LEFT=СИГНАЛ RIGHT=ЧТО ЭТО ЗНАЧИТ; rows MUST differ: «не видели собственника» vs «воля не подтверждена»; «доверенность до отъезда» vs «согласие не проверено»; «скидка без причины» vs «риск переложен на вас»; «деньги представителю» vs «спор между ними, платили вы»; NO column titled Воля на СВО in both columns; small cat meme sticker corner",
+      "alt": "Красные флаги сделки по доверенности — сигнал и смысл",
+      "labels": [
+        "а",
+        "б",
+        "в",
+        "г",
+        "д",
+        "е"
+      ]
+    },
+    "inline_6": {
+      "visual_type": "labeled_checklist",
+      "labels": [
+        "а",
+        "б",
+        "в",
+        "г"
+      ]
+    },
+    "inline_7": {
+      "visual_type": "labeled_checklist",
+      "labels": [
+        "а",
+        "б",
+        "в",
+        "г",
+        "д"
+      ]
+    },
+    "cover": {
+      "role": "cover_editorial_hero"
+    }
+  }
+}

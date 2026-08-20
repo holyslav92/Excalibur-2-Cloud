@@ -1,0 +1,50 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B03",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-20",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/klyshin_A/3142",
+        "type": "community",
+        "note": "Scout signal: дарение дочери за 48 ч до задатка на торгах, ЕГРН, приостановка"
+      },
+      {
+        "url": "https://rapsinews.ru/judicial_news/20260817/312110363.html",
+        "type": "news",
+        "note": "ВС 17.08.2026 — разъяснения по задатку при срыве сделки с жильём"
+      },
+      {
+        "url": "https://lenta.ru/news/2026/08/17/rossiyanam-raskryli-sposob-vernut-zadatok-pri-pokupke-kvartiry/",
+        "type": "news",
+        "note": "Новость 17.08.2026, пересказ позиции ВС по задатку"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 23066,
+    "sticker_phrase": "банкротство продавца квартиры",
+    "sticker_volume": 30,
+    "auction_phrase": "торги по банкротству квартира",
+    "auction_volume": 23,
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "anti_dup_notes": "не B01 ЕГРН/аванс, не B02 расписка, не нотариус +70к"
+  },
+  "key_facts_count": 22,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}

@@ -12,6 +12,8 @@ description: "Cover-QA: visual gate after Cover, before Indexer/Publish; stamp c
 
 FAIL → **вернуть Cover** (не Indexer/Publish).
 
+**Quality bar 9/10:** `shared/quality-bar-9.md` — phone on cover, Wordstat stickers не на title, inline utility, comparison columns differ. После PASS + `quality-bar-9.json` → Publish.
+
 **Panel-only regen (default):** не перегенерировать оба canvas целиком. Только failed slots:
 
 ```bash

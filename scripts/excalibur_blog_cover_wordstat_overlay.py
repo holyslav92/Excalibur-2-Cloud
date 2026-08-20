@@ -36,6 +36,7 @@ def stamp_wordstat_stickers(
     phrases: list[str],
     *,
     force: bool = False,
+    sticker_positions: list[Any] | None = None,
 ) -> dict[str, Any]:
     """Наложить 1–3 стикера Wordstat на cover.png. Возвращает отчёт."""
     try:
@@ -62,12 +63,19 @@ def stamp_wordstat_stickers(
         font = ImageFont.load_default()
         font_sm = font
 
-    # Позиции: правый верх / правый центр / нижний правый — не перекрывают host слева.
-    positions = [
-        (int(w * 0.58), int(h * 0.08)),
-        (int(w * 0.55), int(h * 0.38)),
-        (int(w * 0.52), int(h * 0.72)),
-    ]
+    # Позиции: правый край — не перекрывают заголовок на cover.
+    if isinstance(sticker_positions, list) and sticker_positions:
+        positions = [
+            (int(float(p[0]) * w), int(float(p[1]) * h))
+            for p in sticker_positions[:3]
+            if isinstance(p, (list, tuple)) and len(p) >= 2
+        ]
+    else:
+        positions = [
+            (int(w * 0.72), int(h * 0.06)),
+            (int(w * 0.70), int(h * 0.42)),
+            (int(w * 0.68), int(h * 0.78)),
+        ]
     gold = (220, 197, 161, 235)
     ink = (20, 24, 33, 255)
     pad_x, pad_y = 14, 8
@@ -121,7 +129,12 @@ def main() -> int:
         return 0
 
     phrases = manifest.get("wordstat_stickers") or []
-    report = stamp_wordstat_stickers(cover_path, phrases, force=args.force)
+    report = stamp_wordstat_stickers(
+        cover_path,
+        phrases,
+        force=args.force,
+        sticker_positions=manifest.get("wordstat_sticker_positions"),
+    )
     if report["status"] == "OK":
         manifest["wordstat_stickers_pil_applied"] = True
         manifest_path.write_text(
