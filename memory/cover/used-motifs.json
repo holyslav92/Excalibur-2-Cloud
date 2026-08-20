@@ -73,18 +73,17 @@
     {
       "date": "2026-08-20",
       "topic_id": "B05",
-      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "slug": "",
       "motifs": {
-        "composition": "host_three_quarter_right_stop_gesture_headline_left_white_board_sun_flare",
-        "location": "bright_sunny_tyumen_apartment_entrance_white_stone_steps_glass_door",
-        "meme": "thinking_cat_sticker_small_top_right_corner",
-        "prop_set": "egrn_folder_fold_minus_2mln_price_tag_red_circle_bankruptcy_stamp_phone_cta",
+        "composition": "host_kneeling_center_left_magnifying_glass_egrn_price_board_sun_flare",
+        "location": "bright_sunny_tyumen_outdoor_courtyard_chalk_price_board_pavement",
+        "meme": "this_is_fine_cat_sticker_tiny_top_right_corner",
         "sticker_set": "wordstat_tyumen_bankrotstvo_vtorichka_gold_tape_right_edge_only",
-        "joke": "sticky_zadatok_segodnya_yellow_note_pinned",
-        "outfit": "terracotta merino sweater + light grey unbuttoned overcoat + dark jeans",
-        "emotion": "alert_wary_focused_frown_narrowed_eyes",
-        "pose_framing": "three_quarter_body_host_right_entrance_steps_not_left_bust",
-        "action": "left_hand_holds_egrn_folder_right_palm_stop_gesture_at_discount_tag"
+        "joke": "sticky_zadatok_segodnya_yellow_note_crossed_red_x",
+        "outfit": "mustard yellow puffer jacket + navy knit beanie + olive cargo pants + brown boots",
+        "emotion": "determined_squint_direct_gaze_brows_knit",
+        "pose_framing": "full_body_kneeling_center_left_low_angle_not_left_bust",
+        "action": "kneeling_holds_magnifying_glass_over_egrn_page_pointing_minus_2mln_tag"
       }
     }
   ]
