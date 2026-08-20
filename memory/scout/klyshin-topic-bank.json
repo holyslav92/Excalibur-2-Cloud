@@ -2,8 +2,8 @@
   "bank_id": "klyshin_topic_bank_v1",
   "source_channel": "https://t.me/klyshin_A",
   "source_label": "Алексей Клышин — юрист по недвижимости",
-  "updated_at": "2026-08-18",
-  "accessed_at": "2026-08-18",
+  "updated_at": "2026-08-20",
+  "accessed_at": "2026-08-20",
   "algorithm": "klyshin_hook → wordstat_probe → rework_for_demand → final_P0_or_skip_after_rework",
   "wordstat_gate": {
     "provider": "mcp-kv",
@@ -80,7 +80,10 @@
       "klyshin_signal": "Нотариальный договор подписан, расписки есть, денег нет; аккредитив vs «подпишем — в банке разберёмся»",
       "wordstat_probes": ["безопасный расчет при покупке квартиры", "аккредитив при покупке квартиры", "купить квартиру в тюмени"],
       "tyumen_localize": true,
-      "status": "seed"
+      "status": "used",
+      "last_seen": "2026-08-20",
+      "wordstat_rework_log": "проверка квартиры 9 → доверенность 99 → егрн 172 → P0 купить квартиру в тюмени 23066",
+      "final_p0": "купить квартиру в тюмени 23066"
     },
     {
       "id": "cian_autoprice_minus_million",
@@ -170,6 +173,11 @@
       "topic_id": "B01",
       "hook_ids": ["pre_advance_check"],
       "note": "ЕГРН / аванс — rework: егрн cluster → final P0 «купить квартиру в тюмени» 23060"
+    },
+    {
+      "topic_id": "B03",
+      "hook_ids": ["power_of_attorney_svo"],
+      "note": "Доверенность не броня / СВО — rework → P0 «купить квартиру в тюмени» 23066"
     }
   ]
 }

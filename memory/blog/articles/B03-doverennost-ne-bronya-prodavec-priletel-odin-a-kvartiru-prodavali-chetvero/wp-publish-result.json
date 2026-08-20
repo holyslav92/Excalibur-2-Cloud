@@ -1,0 +1,27 @@
+{
+  "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+  "topic_id": "B03",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B03-doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 889708,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=8823 slug=doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero\nOK categories=31,54\nOK featured_image=8824\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=8825 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero-inline-01.png\nOK inline_alt=8825\nOK inline_caption=8825\nOK inline_description=8825\nOK inline_image_upload=8826 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero-inline-02.png\nOK inline_alt=8826\nOK inline_caption=8826\nOK inline_description=8826\nOK inline_image_upload=8827 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero-inline-03.png\nOK inline_alt=8827\nOK inline_caption=8827\nOK inline_description=8827\nOK inline_image_upload=8828 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero-inline-04.png\nOK inline_alt=8828\nOK inline_caption=8828\nOK inline_description=8828\nOK inline_image_upload=8829 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero-inline-05.png\nOK inline_alt=8829\nOK inline_caption=8829\nOK inline_description=8829\nOK inline_image_upload=8830 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero-inline-06.png\nOK inline_alt=8830\nOK inline_caption=8830\nOK inline_description=8830\nOK inline_image_upload=8831 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero-inline-07.png\nOK inline_alt=8831\nOK inline_caption=8831\nOK inline_description=8831\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+    "errors": []
+  }
+}
