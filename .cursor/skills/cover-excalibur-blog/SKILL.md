@@ -41,7 +41,7 @@ PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`, api-dir
 1. **Invent from scratch** — no inventory lock; no default keys/hologram/desk/balcony.
 2. **Anti-repeat 14д** — `used-motifs.json` + `excalibur_blog_cover_motif_gate.py`.
 3. **Light & bright** — high-key, sun flare, light leak, glow; **no dark cinematic**.
-4. **Memes required** — meme cats + meme people stickers; host Святослав; 8-set includes people.
+4. **Memes required** — meme cats + catalog people-memes as **small stickers** on cover; host Святослав = only large human. Inline: infographic hero; meme sticker ≤15% frame from `memory/cover/meme-top100.json` — never co-host/stock man.
 5. **Wordstat stickers** — 1–3 readable labels from live Wordstat (Тюмень regions 55+11176).
 6. **Identity + body lock** — `face-studio-2026-06-23.jpg` i2i (WHO only); medium slim; NOT chubby.
 7. **Expression invention (HARD)** — эмоция/мимика/поза **новые каждый раз** под hook; `scene_hint` + `cover_emotion` называют эмоцию (шок, side-eye, гримаса, недоумение…). i2i: «same person, NEW expression, do not copy reference smile/pose». Копия студийной улыбки 1:1 = FAIL.
@@ -53,9 +53,11 @@ PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`, api-dir
 
 1. **Стиль** = одобренная обложка B02: #FFFFFF high-key, gold/black, torn paper, tape, sun flare, collage.
 2. **NO host face** on inline — host только на cover.
-3. **Тест пользы (FAIL):** без абзаца читатель выносит факт/порядок/число/сравнение по H2; ряд иконок+3 слова = FAIL.
-4. **Типы:** comparison_table → process_flow → bar_timeline_chart → structure_diagram → labeled_checklist.
-5. **Labels** = факты из статьи. Cover-QA: `inline_utility_all_7` + `inline_no_host_face`.
+3. **NO co-host human** on inline — stock model, handsome realtor, generated man, large meme person = FAIL.
+4. **Meme stickers** — cats or catalog people-memes only; ≤15% frame; corner accent; real templates from `meme-top100.json`.
+5. **Тест пользы (FAIL):** без абзаца читатель выносит факт/порядок/число/сравнение по H2; ряд иконок+3 слова = FAIL.
+6. **Типы:** comparison_table → process_flow → bar_timeline_chart → structure_diagram → labeled_checklist.
+7. **Labels** = факты из статьи. Cover-QA: `inline_utility_all_7` + `inline_no_host_face` + `inline_no_co_host_human` + `inline_meme_sticker_scale`.
 
 ## Runbook
 
@@ -96,7 +98,7 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 - [ ] `cover_motifs` filled + motif gate PASS
 - [ ] light/bright language in scene_hint (no dark cinematic)
 - [ ] Wordstat stickers tied to topic demand
-- [ ] meme cat and/or meme people planned
+- [ ] meme cat and/or catalog people-meme planned (cover stickers; inline tiny only)
 - [ ] `jobs.length === 1` per canvas batch; `input_urls` on canvas 1
 - [ ] `prompt_chars <= 3500`
 

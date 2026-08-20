@@ -27,6 +27,7 @@ FAIL → **вернуть Cover**, не пускать Indexer/Publish.
 - `identity-real` файлы отсутствуют
 - **inline utility:** любой из 7 inline не проходит тест пользы (ряд иконок+3 слова, нет факта/порядка/числа по H2) → FAIL
 - **host face на inline** → FAIL
+- **inline co-host / stock man / large meme person** → FAIL
 
 ## PASS
 

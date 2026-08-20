@@ -36,13 +36,24 @@
   },
   "meme_system": {
     "required": true,
-    "people": "Святослав host on cover; meme-people cutouts allowed on cover/inline stickers",
-    "cats": "meme-cat sticker cutouts — often enough across weekly posts; not every frame",
+    "catalog": "memory/cover/meme-top100.json",
+    "host_human_rule": "ONLY Святослав (face-studio-2026-06-23.jpg) may be LARGE / hero of any frame — COVER ONLY. No second human hero anywhere.",
+    "people": "Cover: host = only large human. Inline: NO large human; people-memes = SMALL stickers (≤12–15% frame) from meme-top100.json only — never co-host, never presenter pointing at table.",
+    "cats": "meme-cat sticker cutouts — small accent (≤12–15% frame); often enough across weekly posts; not every frame",
     "per_article_8_set": {
       "must_include_people": true,
-      "people_source": "cover host counts; optional meme-people stickers on 1–2 inline",
+      "people_source": "cover host ONLY counts as the person in the 8-set; inline people-memes are tiny stickers on 1–2 panels max, never a second hero",
+      "inline_people_meme_max_panels": 2,
+      "inline_people_meme_max_frame_share": 0.15,
       "cats_frequency": "at least one cat motif per article OR ensure weekly cadence has cats",
-      "forbidden": ["empty office only-documents cover", "sterile host+text without stickers"]
+      "forbidden": [
+        "empty office only-documents cover",
+        "sterile host+text without stickers",
+        "stock/generated handsome man as co-host on inline",
+        "invented photogenic stranger called a meme",
+        "meme person in left portrait / talking-head / presenter slot on inline",
+        "meme person >15% of inline frame area"
+      ]
     }
   },
   "wordstat_stickers": {
@@ -135,6 +146,10 @@
     "utility_test": "Reader without paragraph extracts fact/order/number/comparison for H2; icon row + 3-word captions = FAIL",
     "style_match_cover": "B02-approved: #FFFFFF high-key, gold/black, torn paper, tape, sun flare, collage",
     "no_host_face": true,
+    "no_co_host_human": true,
+    "no_stock_model": true,
+    "meme_sticker_max_frame_share": 0.15,
+    "meme_people_catalog": "memory/cover/meme-top100.json",
     "preferred_types": [
       "comparison_table",
       "process_flow",
@@ -145,6 +160,10 @@
     ],
     "forbidden": [
       "host face on inline",
+      "stock model / handsome realtor / generated man as co-host",
+      "large human (non-host) occupying hero slot on inline",
+      "meme person >15% frame or in presenter/portrait slot",
+      "invented face called meme — use meme-top100.json real templates only",
       "icon row with mood captions",
       "duplicate labels across cards",
       "decorative realtor desk scene",
@@ -153,14 +172,21 @@
       "Salt Bae Drake celebrity",
       "не эскроу as process step"
     ],
-    "cover_qa_checks": ["inline_utility_all_7", "inline_no_host_face", "identity_expression_invented"]
+    "cover_qa_checks": [
+      "inline_utility_all_7",
+      "inline_no_host_face",
+      "inline_no_co_host_human",
+      "inline_meme_sticker_scale",
+      "meme_people_real_catalog",
+      "identity_expression_invented"
+    ]
   },
   "owner_visual_polish": {
     "cover_phone_required": "+7 922 001 65 05",
     "cover_body": "medium-slim vs face-studio-2026-06-23; FAIL if chubby/puffy or wrong person",
     "cover_expression": "FAIL if host copies studio polite closed-mouth smile 1:1; PASS if NEW hook-matched emotion",
     "board_stationery": "light tape/pins/strings on white investigation board — high-key, not noir",
-    "meme_density": "cover: 1–2 memes required; inlines: meme on 2–3 of 7 only",
+    "meme_density": "cover: 1–2 memes required (host counts as person); inlines: small meme sticker on 2–3 of 7 max — cats and/or catalog people-memes at sticker scale only",
     "typography": "handsome condensed black Cyrillic + gold accent; zero spelling errors; no Latin garbage",
     "inline_density": "more informational labels per panel; utility test still required; no empty cells"
   }

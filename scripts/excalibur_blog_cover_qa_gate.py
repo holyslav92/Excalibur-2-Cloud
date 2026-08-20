@@ -25,6 +25,9 @@ REQUIRED_CHECKS = (
     "identity_real_files",
     "inline_utility_all_7",
     "inline_no_host_face",
+    "inline_no_co_host_human",
+    "inline_meme_sticker_scale",
+    "meme_people_real_catalog",
 )
 
 REQUIRED_IMAGES = (
@@ -81,6 +84,9 @@ def validate_cover_qa(article_dir: Path, root: Path) -> dict:
             errors.append(f"cover_qa check failed or missing: {key}")
 
     manifest_path = article_dir / "cover" / "quad-manifest.json"
+    meme_catalog = root / "memory" / "cover" / "meme-top100.json"
+    if not meme_catalog.is_file():
+        errors.append("memory/cover/meme-top100.json missing — meme catalog required")
     if manifest_path.is_file():
         try:
             manifest = load_json(manifest_path)

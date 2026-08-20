@@ -33,7 +33,7 @@ Cover генерирует **2×** quad-холста 2×2 (**Derouter REST** + `
 1. **Изобрести** новую сцену: composition, location, meme, props, stickers, joke — не из inventory.
 2. Заполнить `cover_motifs` в `quad-manifest.json` и пройти motif gate.
 3. **Light & bright:** sun flare, light leak, glow, airy #FFFFFF — no dark cinematic.
-4. **Мемы:** meme cat + meme people sticker cutouts; host Святослав LARGE left.
+4. **Мемы:** meme cat + catalog people-meme **small stickers** on cover; host Святослав LARGE left = **only** large human. Inline = infographic; no co-host/stock man.
 5. **1–3 Wordstat stickers** — live high-frequency RU queries (Тюмень/область), из research/handoff.
 6. **Identity:** i2i `face-studio-2026-06-23.jpg` only (WHO); **NEW expression** per hook (`cover_emotion` + scene_hint); never copy reference smile/pose.
 
@@ -90,8 +90,10 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 - Канон: `memory/cover/inline-visual-types.json`
 - **Тест пользы:** каждый inline учит факт/порядок/число/сравнение по H2 — FAIL если ряд иконок+3 слова
 - **NO host face** на inline; стиль = одобренная B02 обложка (high-key collage)
+- **NO co-host human** на inline — stock model, generated man, large meme person → FAIL
+- **Meme stickers** на inline: ≤15% кадра, угол; `memory/cover/meme-top100.json`
 - Cover-text labels = **факты** из статьи, не слоганы
-- Cover-QA checks: `inline_utility_all_7`, `inline_no_host_face`
+- Cover-QA checks: `inline_utility_all_7`, `inline_no_host_face`, `inline_no_co_host_human`, `inline_meme_sticker_scale`, `meme_people_real_catalog`
 
 ## Blockers
 
