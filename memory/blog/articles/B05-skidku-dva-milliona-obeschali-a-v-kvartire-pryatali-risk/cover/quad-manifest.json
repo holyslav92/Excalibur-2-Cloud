@@ -29,23 +29,23 @@
     ]
   ],
   "cover_motifs": {
-    "composition": "host_full_body_right_park_table_egrn_spread_title_left_clear_sun_flare",
-    "location": "bright_sunny_tyumen_riverside_park_bench_apartment_towers",
-    "meme": "thinking_cat_sticker_tiny_top_right_corner_only",
-    "prop_set": "blank_dark_folder_no_letters_no_price_tag",
-    "sticker_set": "pil_wordstat_rail_right_only",
-    "joke": "sticky_via_pil_not_model",
-    "outfit": "white oxford shirt rolled sleeves + camel tan chinos + brown belt + loafers",
-    "emotion": "calm_explaining_concerned_brow",
-    "pose_framing": "full_body_center_right_far_right_empty_for_pil_rail",
-    "action": "holds blank dark folder at sunny entrance"
+    "composition": "host_large_left_bust_torn_paper_title_center_right_wordstat_rail",
+    "location": "bright_high_key_collage_board_not_outdoor_stock",
+    "meme": "thinking_cat_sticker_tiny_top_right_with_optional_caption",
+    "prop_set": "egrn_folder_minus_2_tag_torn_paper_title_tape_phone_strip",
+    "sticker_set": "wordstat_gold_tape_right_x68_not_on_title",
+    "joke": "sticky_zadatok_segodnya_pinned_near_title",
+    "outfit": "terracotta rust merino sweater + light grey overcoat unbuttoned",
+    "emotion": "light_skeptical_irony_discount_is_risk",
+    "pose_framing": "host_large_left_bust_three_quarter_not_center_crop",
+    "action": "holds_egrn_folder_points_at_minus_2_tag_side_glance"
   },
   "slots": {
     "cover": {
       "role": "cover_editorial_hero",
       "alt": "Скидка два миллиона — риски до задатка",
-      "cover_emotion": "calm direct explanatory gaze; NOT squint NOT fist",
-      "scene_hint": "FULL BODY center-right at sunny entrance; white oxford camel chinos; blank folder; empty far right wall",
+      "cover_emotion": "light skeptical irony — brows up, side glance at -2 tag, NOT polite studio smile",
+      "scene_hint": "side-eye at EGRN -2 tag; terracotta sweater grey overcoat; torn paper title; meme cat corner",
       "meme_caption_ru": "",
       "sticky": "задаток сегодня",
       "meme_sticker": true,
@@ -191,5 +191,5 @@
     "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
   },
   "wordstat_stickers_pil_applied": true,
-  "cover_typography": "pil_only"
+  "cover_typography": "derouter_collage_whole"
 }

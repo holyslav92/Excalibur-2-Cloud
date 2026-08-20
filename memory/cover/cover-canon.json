@@ -64,7 +64,7 @@
   },
   "title_zone_sacred": {
     "rule": "Wordstat stickers/tape MUST NOT overlap main headline on cover",
-    "pil_overlay": "scripts/excalibur_blog_cover_typography.py — единственный слой текста: title left, Wordstat+phone правый рейл 72–98%",
+    "pil_overlay": "scripts/excalibur_blog_cover_wordstat_overlay.py — stickers x≥0.68 (right edge only)",
     "phone_required": "+7 922 001 65 05",
     "forbidden_on_title": ["wordstat tape over hook", "sticker occluding H1", "meme over headline text"]
   },

@@ -55,77 +55,6 @@ def sanitize_cover_scene_hint(scene: str, highlight: str) -> str:
     return _PINK_WORD_IN_SCENE.sub(_repl, scene)
 
 
-def strip_cover_letter_directives(scene: str) -> str:
-    """Убрать из scene_hint просьбы нарисовать буквы/стикеры/телефон."""
-    text = scene or ""
-    banned = (
-        r"title\s+CLEAR[^.]*",
-        r"title\s+zone[^.]*",
-        r"wordstat[^.]*",
-        r"sticker[s]?[^.]*",
-        r"cyrillic[^.]*",
-        r"phone[^.]*",
-        r"\+7[^.]*",
-        r"«[^»]+»",
-        r"\"[^\"]{2,40}\"",
-        r"TXT[^.]*",
-        r"price tag[^.]*",
-        r"minus_?2[^.]*",
-        r"-2\s*млн[^.]*",
-    )
-    for pat in banned:
-        text = re.sub(pat, " ", text, flags=re.IGNORECASE)
-    return compact(re.sub(r"\s+", " ", text).strip(), COVER_SCENE_HINT_COMPACT)
-
-
-def cover_photo_prompt_errors(prompt: str) -> list[str]:
-    errors: list[str] = []
-    low = prompt or ""
-    for token in COVER_PROMPT_FORBIDDEN:
-        if token in low:
-            errors.append(f"cover prompt still asks model to paint text: {token!r}")
-    if "PHOTO ONLY" not in low and "ONE single 16:9 photograph" not in low:
-        errors.append("cover prompt missing PHOTO ONLY lock")
-    return errors
-
-
-def build_cover_photo_prompt(manifest: dict, *, solo: bool = False) -> str:
-    """16:9 фото без букв. Типографика только PIL после генерации."""
-    slots = manifest.get("slots") or {}
-    cover = slots.get("cover") or {}
-    motifs = manifest.get("cover_motifs") or {}
-    cover_emotion = compact(
-        str(cover.get("cover_emotion") or manifest.get("cover_emotion") or ""), 120
-    )
-    cover_scene = strip_cover_letter_directives(str(cover.get("scene_hint") or ""))
-    outfit = compact(str(motifs.get("outfit") or ""), 120)
-    pose = compact(str(motifs.get("pose_framing") or "full/mid body host CENTER-RIGHT, far right empty"), 100)
-    action = compact(str(motifs.get("action") or "holds a blank dark folder"), 100)
-    action = re.sub(r"(?i)minus.?2|price.?tag|-2|млн|phone|sticker|tag", "blank folder", action)
-    emotion_clause = (
-        f"Expression: {cover_emotion}. {I2I_EXPRESSION_LOCK}."
-        if cover_emotion
-        else f"{I2I_EXPRESSION_LOCK}."
-    )
-    frame = (
-        "ONE single 16:9 photograph, NOT a 2x2 grid, NOT four panels, NOT infographic collage."
-        if solo
-        else "PHOTO ONLY cover TL panel (other panels are inlines)."
-    )
-    return (
-        f"{frame} {PHOTO_COVER_PREFIX} "
-        f"ZERO letters: no Cyrillic, no Latin, no digits, no phone, no street address, "
-        f"no building signs, no stickers, no tape labels, no price tags, no headlines. "
-        f"Blank folder/papers without writing. Empty LEFT 35% (sky/wall) for later PIL title. "
-        f"Empty FAR RIGHT 28% (sky/wall) for later PIL stickers — host must NOT occupy x>0.70. "
-        f"Host i2i CENTER-RIGHT action pose, body between 38% and 68% of frame width ({BODY_LOCK}). {emotion_clause} "
-        f"OUTFIT: {outfit or 'invented non-black-blazer clothes'}. POSE: {pose}. ACTION: {action}. "
-        f"Scene: {cover_scene or 'sunny Tyumen entrance, glass, sun flare'}. "
-        f"tiny meme top-right corner only (never on face, never bottom-left). FORBIDDEN: black blazer, left bust, side-eye, 2x2 grid, "
-        f"any readable letters on walls/clothes/folder."
-    )
-
-
 BODY_LOCK = "face-studio identity: jaw/stubble/hairline/eyes; medium-slim; NOT chubby/puffy"
 I2I_EXPRESSION_LOCK = (
     "same person as reference, NEW expression for the hook, "
@@ -134,21 +63,6 @@ I2I_EXPRESSION_LOCK = (
 )
 COVER_PHONE_CTA = "+7 922 001 65 05"
 BOARD_STATIONERY = "tape/pins/strings/paper scraps; high-key #FFF/gold; not noir"
-PHOTO_COVER_PREFIX = (
-    "High-key bright PHOTO, airy #FFFFFF, sun flare/light leak/soft glow. "
-    "Cover is a real outdoor photograph, not a collage. Host i2i CENTER-RIGHT, full/mid body, "
-    "medium slim (NOT chubby). Tiny meme cat corner OK. No dark cinematic, no inventory props."
-)
-# Модель не должна получать кириллицу/телефон — иначе снова рисует стикеры на человеке.
-COVER_PROMPT_FORBIDDEN = (
-    "COVER TXT",
-    "Host LARGE left",
-    "Wordstat stickers EXACT",
-    "+7 922",
-    "phone EXACT",
-    "huge readable Cyrillic",
-    "paint ONLY the highlight",
-)
 INLINE_BAN_EXTRA = (
     "icon slogans; empty cells; desk scene; cover copy; celebrity memes; "
     "stock model man; handsome realtor co-host; generated stranger presenter; "
@@ -499,14 +413,48 @@ def build_prompt(
             "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic ink, "
             "gold #dcc5a1 one accent only. Torn paper, gold tape/sticky, informative UI cards."
         )
-    if has_cover:
-        style_prefix = PHOTO_COVER_PREFIX + " Inlines: gold/black Cyrillic labels on #FFF collage."
 
     quadrant_labels = ("Top-left", "Top-right", "Bottom-left", "Bottom-right")
     panel_lines: list[str] = []
 
     if has_cover and "cover" in canvas_slots:
-        panel_lines.append(build_cover_photo_prompt(manifest, solo=False))
+        cover = slot("cover")
+        highlight = compact(manifest.get("cover_hook_highlight", ""), 24)
+        highlight_rule = (
+            f'paint ONLY the highlight word "{highlight}" in gold #dcc5a1'
+            if highlight
+            else "paint at most ONE punch word in gold #dcc5a1"
+        )
+        cover_emotion = compact(
+            str(cover.get("cover_emotion") or manifest.get("cover_emotion") or ""), 120
+        )
+        cover_scene = sanitize_cover_scene_hint(str(cover.get("scene_hint") or ""), highlight)
+        cover_hook_text = compact(manifest.get("cover_hook", ""), 120)
+        cover_sticky = compact(str(cover.get("sticky") or ""), 48)
+        sticky_lock = (
+            f" Small gold sticky with EXACTLY «{cover_sticky}» in Cyrillic."
+            if cover_sticky
+            else ""
+        )
+        emotion_clause = (
+            f"Expression: {cover_emotion}. {I2I_EXPRESSION_LOCK}."
+            if cover_emotion
+            else f"{I2I_EXPRESSION_LOCK}."
+        )
+        wordstat = manifest.get("wordstat_stickers") or []
+        wordstat_line = ""
+        if wordstat:
+            phrases = " | ".join(compact(str(x), 36) for x in wordstat[:3])
+            wordstat_line = (
+                f" Wordstat stickers EXACT Cyrillic: «{phrases}» readable gold tape labels."
+            )
+        panel_lines.append(
+            f"TL COVER TXT «{cover_hook_text}» bold Cyrillic black, {highlight_rule}.{sticky_lock} "
+            f"Phone EXACT «{COVER_PHONE_CTA}» readable CTA sticker. "
+            f"Host i2i left ({BODY_LOCK}); {emotion_clause} sun flare; "
+            f"{compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; "
+            f"1-2 meme stickers; {BOARD_STATIONERY};{wordstat_line} #FFF; perfect Cyrillic"
+        )
         inline_keys = [k for k in canvas_slots if k != "cover"]
         for label, key in zip(quadrant_labels[1:], inline_keys[:3]):
             panel_lines.append(
@@ -546,12 +494,7 @@ def build_prompt(
         "Canvas 2048x1152 exact 2x2; four 16:9 panels (1024x576); thin white gutters; no bleed.",
         "",
         ban_line,
-        (
-            "TEXT LANGUAGE LOCK: INLINES only — Russian Cyrillic exact labels. "
-            "COVER: PHOTO ONLY, zero letters (PIL typography after split)."
-            if has_cover
-            else "TEXT LANGUAGE LOCK: all visible text is RUSSIAN Cyrillic only; exact LABELS per panel only."
-        ),
+        "TEXT LANGUAGE LOCK: all visible text is RUSSIAN Cyrillic only; exact LABELS per panel only.",
         "",
         reference_line,
         "",
@@ -562,6 +505,73 @@ def build_prompt(
     if fact_locks:
         lines.extend(["", *fact_locks])
     return "\n".join(line for line in lines if line)
+
+
+def build_solo_cover_collage_prompt(
+    manifest: dict,
+    style: dict,
+    design_code: dict,
+) -> str:
+    """Одна цельная 16:9 editorial collage — как B02/B04: модель рисует текст, мемы, стикеры."""
+    slots = manifest.get("slots") or {}
+    cover = slots.get("cover") or {}
+    highlight = compact(manifest.get("cover_hook_highlight", ""), 24)
+    highlight_rule = (
+        f'paint ONLY the highlight word "{highlight}" in gold #dcc5a1'
+        if highlight
+        else "paint at most ONE punch word in gold #dcc5a1"
+    )
+    cover_emotion = compact(
+        str(cover.get("cover_emotion") or manifest.get("cover_emotion") or ""), 120
+    )
+    cover_scene = sanitize_cover_scene_hint(str(cover.get("scene_hint") or ""), highlight)
+    cover_hook_text = compact(manifest.get("cover_hook", ""), 120)
+    cover_sticky = compact(str(cover.get("sticky") or ""), 48)
+    sticky_lock = (
+        f" Small gold sticky pinned with EXACTLY «{cover_sticky}» in Cyrillic."
+        if cover_sticky
+        else ""
+    )
+    emotion_clause = (
+        f"Expression: {cover_emotion}. {I2I_EXPRESSION_LOCK}."
+        if cover_emotion
+        else f"{I2I_EXPRESSION_LOCK}."
+    )
+    wordstat = manifest.get("wordstat_stickers") or []
+    wordstat_line = ""
+    if wordstat:
+        phrases = " | ".join(compact(str(x), 36) for x in wordstat[:3])
+        wordstat_line = (
+            f" Wordstat gold tape stickers EXACT Cyrillic RIGHT side only (x≥0.68, never on headline or face): "
+            f"«{phrases}»."
+        )
+    style_prefix = compact(
+        style.get("global_prompt_prefix")
+        or design_code.get("cover_panel_prompt_block")
+        or "",
+        380,
+    )
+    ban = (
+        "Ban: dark/low-key; inventory props; celebrity memes; EXCALIBUR stamp; chubby host; "
+        "Wordstat on title zone; stickers on host face; PIL-style flat white boxes; "
+        "outdoor stock photo without collage layers."
+    )
+    return (
+        "ONE single 16:9 high-key RU editorial collage cover image — cohesive artwork, "
+        "NOT a 2x2 grid, NOT four panels, NOT photo+separate text overlay.\n"
+        f"{style_prefix}\n"
+        f"{ban}\n"
+        "TEXT LANGUAGE LOCK: all visible text is RUSSIAN Cyrillic only; exact strings below.\n"
+        "Cover: i2i face-studio-2026-06-23 ONLY (WHO); invent NEW outfit/action/emotion (HOW).\n"
+        f"TL COVER TXT on torn paper/card center-right: «{cover_hook_text}» bold Cyrillic black, "
+        f"{highlight_rule}.{sticky_lock}\n"
+        f"Phone EXACT «{COVER_PHONE_CTA}» on white tape strip bottom area, readable.\n"
+        f"Host i2i LARGE LEFT bust ({BODY_LOCK}); {emotion_clause} sun flare; "
+        f"{compact(cover_scene, COVER_SCENE_HINT_COMPACT)};\n"
+        f"1-2 meme cat/people sticker cutouts (≤12% frame, corner accent from {MEME_CATALOG_REL}); "
+        f"{BOARD_STATIONERY};{wordstat_line}\n"
+        "#FFFFFF high-key; perfect Cyrillic; single unified collage like approved B02/B04 covers."
+    )
 
 
 def main() -> int:
@@ -682,14 +692,6 @@ def main() -> int:
             canvas_slots=canvas_slots,
             has_cover=has_cover,
         )
-        if has_cover:
-            photo_errors = cover_photo_prompt_errors(prompt)
-            if photo_errors:
-                print(
-                    "❌ COVER PHOTO BLOCKER: " + "; ".join(photo_errors),
-                    file=sys.stderr,
-                )
-                return 1
         if not validate_prompt_budget(prompt):
             return 1
         prompt_path = article_dir / "cover" / Path(str(spec["prompt_file"])).name

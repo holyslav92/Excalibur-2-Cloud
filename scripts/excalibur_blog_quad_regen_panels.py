@@ -71,16 +71,7 @@ def build_panel_prompt(manifest: dict[str, Any], slot_key: str, root: Path) -> s
     hero = load_json(hero_path) if hero_path.is_file() else {}
 
     if slot_key == "cover":
-        from excalibur_blog_cover_quad_prompt import (
-            build_cover_photo_prompt,
-            cover_photo_prompt_errors,
-        )
-
-        prompt = build_cover_photo_prompt(manifest, solo=True)
-        errors = cover_photo_prompt_errors(prompt)
-        if errors:
-            raise SystemExit("❌ COVER PHOTO BLOCKER: " + "; ".join(errors))
-        return prompt
+        return build_solo_cover_collage_prompt(manifest, style, design_code)
 
     neg = slot_negatives(slot_key, slot)
     base = inline_panel_prompt(slot, types_catalog)
@@ -113,9 +104,7 @@ def write_solo_batch(
     batch = {
         "pipeline": "quad_solo_panel_regen",
         "slot": slot_key,
-        "output_canvas": (
-            "cover/cover-raw.png" if slot_key == "cover" else f"cover/{INLINE_FILES.get(slot_key, slot_key + '.png')}"
-        ),
+        "output_canvas": f"cover/{INLINE_FILES.get(slot_key, slot_key + '.png')}",
         "jobs": [{"slot": slot_key, "tool": "derouter-rest", "mcp_args": api_input}],
     }
     if slot_key == "cover":
@@ -126,7 +115,14 @@ def write_solo_batch(
     return batch_path
 
 
-def run_image_api(root: Path, article_dir: Path, batch_path: Path, result_path: Path) -> int:
+def run_image_api(
+    root: Path,
+    article_dir: Path,
+    batch_path: Path,
+    result_path: Path,
+    *,
+    derouter_only: bool = False,
+) -> int:
     derouter = root / "scripts/excalibur_blog_derouter_gpt_image2_api.py"
     cmd = [
         sys.executable,
@@ -137,8 +133,11 @@ def run_image_api(root: Path, article_dir: Path, batch_path: Path, result_path: 
         str(batch_path.relative_to(article_dir)),
         "--result",
         str(result_path.relative_to(article_dir)),
-        "--fallback-kie",
+        "--timeout",
+        "600",
     ]
+    if not derouter_only:
+        cmd.append("--fallback-kie")
     return subprocess.call(cmd, cwd=str(root))
 
 
@@ -158,7 +157,7 @@ def apply_solo_result(
     local_rel = (data.get("local_path") or "").strip()
     cover_dir = article_dir / "cover"
     if slot_key == "cover":
-        out = cover_dir / "cover-raw.png"
+        out = cover_dir / "cover.png"
     else:
         out = cover_dir / INLINE_FILES.get(slot_key, f"{slot_key}.png")
 
@@ -168,8 +167,6 @@ def apply_solo_result(
             local = article_dir / local
         if local.is_file():
             out.write_bytes(local.read_bytes())
-            if slot_key == "cover":
-                (cover_dir / "cover.png").write_bytes(out.read_bytes())
             print(f"OK solo regen {slot_key} → {out.name}")
             return 0
 
@@ -178,8 +175,6 @@ def apply_solo_result(
         return 1
     img_bytes, _ = download_url_bytes(url)
     out.write_bytes(img_bytes)
-    if slot_key == "cover":
-        (cover_dir / "cover.png").write_bytes(img_bytes)
     print(f"OK solo regen {slot_key} → {out.name}")
     return 0
 
@@ -225,22 +220,18 @@ def main() -> int:
             article_dir, slot_key, prompt, with_i2i=with_i2i, ref_url=ref_url
         )
         result_path = article_dir / "cover" / f"quad-solo-result-{slot_key}.json"
-        rc = run_image_api(root, article_dir, batch_path, result_path)
+        rc = run_image_api(
+            root,
+            article_dir,
+            batch_path,
+            result_path,
+            derouter_only=(slot_key == "cover"),
+        )
         if rc != 0:
             print(f"❌ PANEL REGEN BLOCKER: {slot_key} image API exit={rc}", file=sys.stderr)
             return rc
         rc = apply_solo_result(article_dir, slot_key, result_path, root)
         if rc != 0:
-            return rc
-
-    if "cover" in slot_keys:
-        overlay = root / "scripts/excalibur_blog_cover_typography.py"
-        rc = subprocess.call(
-            [sys.executable, str(overlay), "--article-dir", str(article_dir)],
-            cwd=str(root),
-        )
-        if rc != 0:
-            print("❌ COVER TYPOGRAPHY BLOCKER after solo cover regen", file=sys.stderr)
             return rc
 
     if args.inject_html:

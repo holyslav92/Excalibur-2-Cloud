@@ -69,54 +69,33 @@ class CoverTextTest(unittest.TestCase):
         )
         self.assertEqual(verdict["status"], "BLOCK")
 
-    def test_prompt_cover_is_photo_only_inlines_keep_labels(self) -> None:
+    def test_prompt_has_text_lock_and_russian_hook(self) -> None:
         import sys
         sys.path.insert(0, str(ROOT / "scripts"))
-        from excalibur_blog_cover_quad_prompt import (
-            build_cover_photo_prompt,
-            build_prompt,
-            cover_photo_prompt_errors,
-        )
+        from excalibur_blog_cover_quad_prompt import build_solo_cover_collage_prompt
 
         manifest = {
             "cover_hook": "Cursor стал дешевле на треть",
             "cover_hook_highlight": "дешевле",
-            "cover_motifs": {
-                "outfit": "olive overshirt",
-                "pose_framing": "host RIGHT",
-                "action": "holds blank folder",
-            },
+            "wordstat_stickers": ["купить квартиру в тюмени"],
             "slots": {
-                "cover": {"scene_hint": "Host face LARGE left half", "sticky": "новой модели нет"},
-                "inline_1": {
-                    "visual_type": "infographic_card",
-                    "h2_anchor": "Цифры",
-                    "scene_hint": "fact card",
-                    "labels": ["минус 20–30%", "заявление вендора"],
+                "cover": {
+                    "scene_hint": "side-eye at receipt",
+                    "sticky": "новой модели нет",
+                    "cover_emotion": "bewildered shock",
                 },
-                "inline_2": {"visual_type": "comparison_table_ui", "h2_anchor": "Сравнение", "scene_hint": "two columns"},
-                "inline_3": {"visual_type": "workflow_diagram", "h2_anchor": "Схема", "scene_hint": "arrows"},
             },
         }
-        prompt = build_prompt(manifest, {}, {}, {}, {})
+        style = {
+            "global_prompt_prefix": "Host LARGE left = same 28yo man i2i face-studio-2026-06-23"
+        }
+        prompt = build_solo_cover_collage_prompt(manifest, style, {})
         self.assertIn("TEXT LANGUAGE LOCK", prompt)
-        self.assertIn("PHOTO ONLY", prompt)
-        self.assertIn("минус 20–30%", prompt)
-        self.assertNotIn("COVER TXT", prompt)
-        self.assertNotIn("Host LARGE left", prompt)
-        self.assertNotIn("«Cursor стал дешевле на треть»", prompt)
-        self.assertNotIn("«новой модели нет»", prompt)
-        self.assertEqual(cover_photo_prompt_errors(prompt), [])
-        solo = build_cover_photo_prompt(manifest, solo=True)
-        self.assertIn("ONE single 16:9 photograph", solo)
-        self.assertEqual(cover_photo_prompt_errors(solo), [])
-        self.assertNotIn("+7 922", solo)
-
-    def test_style_files_do_not_force_left_bust_wordstat(self) -> None:
-        style = (ROOT / "memory/cover/quad-style-the-rieltor.json").read_text(encoding="utf-8")
-        design = (ROOT / "memory/cover/cover-design-code.json").read_text(encoding="utf-8")
-        self.assertNotIn("Host LARGE left", style)
-        self.assertNotIn("Host LARGE left", design)
+        self.assertIn("«Cursor стал дешевле на треть»", prompt)
+        self.assertIn("Host i2i LARGE LEFT", prompt)
+        self.assertIn("«новой модели нет»", prompt)
+        self.assertIn("NOT a 2x2 grid", prompt)
+        self.assertNotIn("PHOTO ONLY", prompt)
 
     def test_overlay_script_removed(self) -> None:
         self.assertFalse(

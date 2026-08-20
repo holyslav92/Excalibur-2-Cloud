@@ -103,14 +103,13 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 ## Visual longform (8 изображений)
 
-1. **Cover** — solo 16:9 PHOTO ONLY (без букв) → `cover-raw.png` → `excalibur_blog_cover_typography.py` (PIL: заголовок слева, Wordstat+телефон справа).
-2. **Canvas 1** (Derouter REST 2K): inline_1…3 (+ optional cover TL never published as-is)
-3. **Canvas 2** (Derouter REST 2K): inline_4…7
-4. Итого: `cover.png` 1200×675 + `inline-01…07.png`, inject `figure.inline-quad` data-slot=inline_1…7
+1. **Canvas 1** (Derouter REST 2K i2i): cover + inline_1…3 → split 2×2
+2. **Canvas 2** (Derouter REST 2K): inline_4…7 → split 2×2
+3. Итого: `cover.png` 1200×675 + `inline-01…07.png`, inject `figure.inline-quad` data-slot=inline_1…7
 
 Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 28 лет, **новая выдуманная сцена** каждый раз. AI `scene-composition-only/hero-ref-*` — не для лица.
 
-**Cover canon v2:** `memory/cover/cover-canon.json` — light/bright, мемы, Wordstat-стикеры, anti-repeat 14д (outfit/emotion/pose/action + composition/location/meme). **Variety lock:** FACE i2i = face-studio only; каждый cover INVENTS outfit/action/emotion/pose — FAIL на «black blazer + left bust + side-eye» streak. **Title zone sacred:** модель **не пишет** буквы. PIL `cover_typography.py` — единственный слой текста. Cover-QA FAIL без `cover_typography=pil_only`.
+**Cover canon v2:** `memory/cover/cover-canon.json` — light/bright, мемы, Wordstat-стикеры, anti-repeat 14д (outfit/emotion/pose/action + composition/location/meme). **Variety lock:** FACE i2i = face-studio only; каждый cover INVENTS outfit/action/emotion/pose — FAIL на «black blazer + left bust + side-eye» streak. **Title zone sacred:** Wordstat stickers x≥0.68, не на заголовке; wordstat overlay если модель накрыла текст. **Запрещена** daypart-формула (desk/street/close talk/night split).
 
 **Inline visual law (HARD):** крупный человек = только Святослав на cover (`face-studio-2026-06-23.jpg`). Inline = инфографика (таблицы, схемы, графики) — **без** stock model / generated man / co-host. People-memes = маленькие стикеры (≤15% кадра) из `memory/cover/meme-top100.json`. Cover-QA FAIL на co-host human или meme person > sticker scale.
 
