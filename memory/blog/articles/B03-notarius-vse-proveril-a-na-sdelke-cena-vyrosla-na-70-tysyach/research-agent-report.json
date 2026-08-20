@@ -1,0 +1,60 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B03",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-20",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://vz.ru/information/2026/8/15/1441315.html",
+        "type": "news",
+        "note": "15.08.2026: онлайн-сделка с биометрией; когда нотариус всё равно нужен"
+      },
+      {
+        "url": "https://tvgram.ru/klyshin_A/3157",
+        "type": "community",
+        "note": "Клышин: нотариус не броня; post_age lt3d на 20.08.2026"
+      },
+      {
+        "url": "https://www.vedomosti.ru/realty/articles/2026/07/01/1210171-notariusi-zaschischayut-ot-moshennikov-huzhe-bankov-i-rieltorov",
+        "type": "media",
+        "note": "01.07.2026: ЦДЭ 40% нотариальных сделок с мошенниками устояли в суде"
+      }
+    ]
+  },
+  "scout_handoff": {
+    "hook": "notary_not_shield_70k",
+    "original_klyshin_hook": "«нотариус всё проверил» — нет, не броня",
+    "final_p0": {
+      "phrase": "купить квартиру в тюмени",
+      "volume_55_11176": 23150
+    },
+    "stickers": {
+      "нотариус при покупке квартиры": 21,
+      "юридическая проверка квартиры при покупке": 5
+    }
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume_55_11176": 23150,
+    "notary_phrase": "нотариус при покупке квартиры",
+    "notary_volume_225": 2656,
+    "legal_check_phrase": "юридическая проверка квартиры при покупке",
+    "legal_check_volume_225": 179
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "key_facts_count": 22,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}
