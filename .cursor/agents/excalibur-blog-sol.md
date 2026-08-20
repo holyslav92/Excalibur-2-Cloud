@@ -49,6 +49,9 @@ Skill: `skills/sol-excalibur-blog/SKILL.md`
 - `drafts/variant-a.html` — копия
 - `drafts/writer.html` — не трогать
 
+**HTML whitelist (HARD):** только `<b>` не `<strong>`, `<i>` не `<em>`; теги тела — как в
+`scripts/excalibur_blog_html_linter.py`. После Sol директор запускает `html_linter --fix`.
+
 ```text
 === EXCALIBUR BLOG SOL ===
 rewrote_from: drafts/writer.html

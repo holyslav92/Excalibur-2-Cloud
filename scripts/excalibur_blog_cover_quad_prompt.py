@@ -17,6 +17,8 @@ from excalibur_blog_quad_slots import (
     active_inline_keys,
     canvas_specs_for_inline_count,
     inline_count_from_manifest,
+    slot_allows_meme_sticker,
+    slot_forbids_meme_cat_person,
 )
 from excalibur_blog_site_base import (
     REDACTED_LITERAL,
@@ -121,7 +123,7 @@ def compact(value: object, limit: int) -> str:
     return text[: limit - 1].rstrip() + "…"
 
 
-def inline_panel_prompt(slot: dict, types_catalog: dict) -> str:
+def inline_panel_prompt(slot: dict, types_catalog: dict, *, slot_key: str = "") -> str:
     type_id = slot.get("visual_type") or "fact_card"
     type_def = (types_catalog.get("types") or {}).get(type_id) or {}
     label = type_def.get("label_ru", type_id)
@@ -132,11 +134,22 @@ def inline_panel_prompt(slot: dict, types_catalog: dict) -> str:
     if labels:
         exact = " | ".join(labels)
         base += f" TXT:{exact}."
-    if slot.get("meme_sticker"):
+    negatives: list[str] = []
+    if slot.get("no_host_face"):
+        negatives.append("NO host face / БЕЗ лица ведущего")
+    if slot.get("no_meme") or slot.get("no_cat"):
+        negatives.append("NO meme NO cat / БЕЗ мема БЕЗ кота")
+    if slot.get("no_person"):
+        negatives.append("NO person co-host / БЕЗ человека")
+    if negatives:
+        base += f" LOCK: {'; '.join(negatives)}."
+    if slot.get("meme_sticker") or slot_allows_meme_sticker(slot_key):
         base += (
             f" +tiny meme sticker only (≤{int(MEME_STICKER_INLINE_MAX_SHARE * 100)}% frame, "
             f"corner accent from {MEME_CATALOG_REL}; NO co-host human; NO presenter)."
         )
+    elif slot_forbids_meme_cat_person(slot_key):
+        base += " ZERO meme ZERO cat ZERO person / НОЛЬ мемов котов людей."
     return base
 
 
@@ -428,19 +441,30 @@ def build_prompt(
             if cover_emotion
             else f"{I2I_EXPRESSION_LOCK}."
         )
+        wordstat = manifest.get("wordstat_stickers") or []
+        wordstat_line = ""
+        if wordstat:
+            phrases = " | ".join(compact(str(x), 36) for x in wordstat[:3])
+            wordstat_line = (
+                f" Wordstat stickers EXACT Cyrillic: «{phrases}» readable gold tape labels."
+            )
         panel_lines.append(
             f"TL COVER TXT «{cover_hook_text}» bold Cyrillic black, {highlight_rule}.{sticky_lock} "
             f"Phone EXACT «{COVER_PHONE_CTA}» readable CTA sticker. "
             f"Host i2i left ({BODY_LOCK}); {emotion_clause} sun flare; "
             f"{compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; "
-            f"1-2 meme stickers; {BOARD_STATIONERY}; Wordstat/Tyumen; #FFF; perfect Cyrillic"
+            f"1-2 meme stickers; {BOARD_STATIONERY};{wordstat_line} #FFF; perfect Cyrillic"
         )
         inline_keys = [k for k in canvas_slots if k != "cover"]
         for label, key in zip(quadrant_labels[1:], inline_keys[:3]):
-            panel_lines.append(f"{label} inline: {inline_panel_prompt(slot(key), types_catalog)}")
+            panel_lines.append(
+                f"{label} inline: {inline_panel_prompt(slot(key), types_catalog, slot_key=key)}"
+            )
     else:
         for label, key in zip(quadrant_labels, list(canvas_slots)[:4]):
-            panel_lines.append(f"{label} inline: {inline_panel_prompt(slot(key), types_catalog)}")
+            panel_lines.append(
+                f"{label} inline: {inline_panel_prompt(slot(key), types_catalog, slot_key=key)}"
+            )
 
     ban_line = (
         "Ban: dark/low-key; inventory props; celebrity memes; EXCALIBUR stamp; chubby host; "
@@ -448,12 +472,15 @@ def build_prompt(
         f"{INLINE_BAN_EXTRA}."
     )
     reference_line = (
-        f"Cover TL only: i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}; invent scene; no AI hero-ref."
+        f"Cover TL only: i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}; invent scene; no AI hero-ref. "
+        "Canvas 1: meme sticker ONLY on cover TL + inline_1 TR; inline_2 BL and inline_3 BR: "
+        "ZERO meme ZERO cat ZERO person / БЕЗ мема БЕЗ кота БЕЗ человека."
         if has_cover
         else (
-            "Inlines: NO host face; NO stock/generated man; NO large human co-host/presenter; "
-            f"people-memes only as tiny stickers (≤{int(MEME_STICKER_INLINE_MAX_SHARE * 100)}% frame, corner) "
-            f"from real templates in {MEME_CATALOG_REL}; infographic is hero."
+            "Canvas 2 inlines: ZERO host face / НОЛЬ лица ведущего на всех 4 панелях; "
+            "meme stickers ONLY on inline_5 and inline_7 (tiny ≤15%); "
+            "inline_4 and inline_6: NO meme NO cat NO person / БЕЗ мема БЕЗ кота БЕЗ человека. "
+            f"People-memes only as tiny stickers from {MEME_CATALOG_REL}; infographic is hero."
         )
     )
     inline_suffix = (
@@ -524,6 +551,40 @@ def main() -> int:
         if not canvas_specs:
             print(f"❌ PROMPT BLOCKER: unknown canvas-index={args.canvas_index}", file=sys.stderr)
             return 1
+
+    if args.write_batch:
+        import subprocess as _sp
+
+        preflight = _sp.run(
+            [
+                sys.executable,
+                str(root / "scripts/excalibur_blog_quad_manifest_preflight.py"),
+                "--article-dir",
+                str(
+                    article_dir.relative_to(root)
+                    if article_dir.is_relative_to(root)
+                    else article_dir
+                ),
+                "--manifest",
+                str(
+                    manifest_path.relative_to(article_dir)
+                    if manifest_path.is_relative_to(article_dir)
+                    else manifest_path
+                ),
+            ],
+            cwd=str(root),
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if preflight.returncode != 0:
+            if preflight.stdout.strip():
+                print(preflight.stdout.strip(), file=sys.stderr)
+            if preflight.stderr.strip():
+                print(preflight.stderr.strip(), file=sys.stderr)
+            return 1
+        if preflight.stdout.strip():
+            print(preflight.stdout.strip())
 
     for spec in canvas_specs:
         has_cover = bool(spec.get("has_cover"))

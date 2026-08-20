@@ -28,6 +28,7 @@
   `shared/published-articles.md` (контекстно, не спам)
 - По-русски (или language тенанта) ясно, без SEO-хвостов и без research-даты в лиде
 - Не обязан копировать финальный слог — Sol сделает
+- **HTML whitelist:** `<b>` не `<strong>`, `<i>` не `<em>`; только теги из `excalibur_blog_html_linter.ALLOWED_TAGS`
 
 ## Запрещено
 

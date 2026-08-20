@@ -84,6 +84,9 @@ python3 scripts/excalibur_blog_hero_reference_url.py
 python3 scripts/excalibur_blog_cover_text_gate.py --article-dir "$ARTICLE"
 python3 scripts/excalibur_blog_quad_manifest.py --article-dir "$ARTICLE" --merge
 
+# HARD canon + preflight BEFORE image API (fail cheap)
+python3 scripts/excalibur_blog_quad_manifest_preflight.py --article-dir "$ARTICLE" --apply-canon
+
 # Agent fills scene_hint, cover_motifs, wordstat_stickers in quad-manifest.json
 python3 scripts/excalibur_blog_cover_motif_gate.py check --topic-id <id> \
   --composition "..." --location "..." --meme "..." --sticker-set "..."
@@ -96,6 +99,9 @@ python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICL
 
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 1 --inject-html
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 2 --inject-html
+
+# Wordstat PIL overlay (default if model omitted stickers on cover)
+python3 scripts/excalibur_blog_cover_wordstat_overlay.py --article-dir "$ARTICLE"
 
 python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --composition "..." ...
 ```

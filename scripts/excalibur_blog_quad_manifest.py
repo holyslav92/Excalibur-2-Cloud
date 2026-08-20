@@ -21,6 +21,7 @@ from typing import Any
 from excalibur_blog_quad_slots import (
     CANVAS_1_SLOTS,
     active_inline_keys,
+    apply_quad_canon_to_manifest,
     canvas_specs_for_inline_count,
     inline_count_from_tenant,
 )
@@ -157,6 +158,12 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
         or str((preserve or {}).get("cover_hook_highlight") or "").strip()
     )
 
+    wordstat_stickers = list((preserve or {}).get("wordstat_stickers") or [])
+    if not wordstat_stickers and cover_text.get("wordstat_stickers"):
+        wordstat_stickers = [
+            str(x).strip() for x in cover_text["wordstat_stickers"] if str(x).strip()
+        ]
+
     canvas_specs = canvas_specs_for_inline_count(inline_count)
     pipeline = (
         "quad_canvas_2x_image_api_longform"
@@ -167,7 +174,7 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
         (preserve or {}).get("style_file")
         or "memory/cover/quad-style-the-rieltor.json"
     )
-    return {
+    manifest: dict[str, Any] = {
         "topic_id": topic_id,
         "canvas_file": canvas_specs[0]["canvas_file"],
         "layout": "2x2",
@@ -199,7 +206,10 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
         ),
         "slots": slots,
         "cover_keys_ru": list((preserve or {}).get("cover_keys_ru") or []),
+        "wordstat_stickers": wordstat_stickers[:3],
+        "cover_phone_cta": str((preserve or {}).get("cover_phone_cta") or "+7 922 001 65 05"),
     }
+    return apply_quad_canon_to_manifest(manifest)
 
 
 def main() -> int:

@@ -92,8 +92,8 @@ class CoverTextTest(unittest.TestCase):
         prompt = build_prompt(manifest, {}, {}, {}, {})
         self.assertIn("TEXT LANGUAGE LOCK", prompt)
         self.assertIn("«Cursor стал дешевле на треть»", prompt)
-        self.assertIn("ONLY these exact Russian strings", prompt)
-        self.assertIn("«минус 20–30%»", prompt)
+        self.assertIn("exact LABELS per panel", prompt)
+        self.assertIn("минус 20–30%", prompt)
         self.assertIn("«новой модели нет»", prompt)
 
     def test_overlay_script_removed(self) -> None:

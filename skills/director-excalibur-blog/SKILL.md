@@ -80,7 +80,7 @@ python3 scripts/excalibur_blog_research_start.py --topic-id <ID> --title "<short
 ### 4 Stamp + structural checks (shell, не LLM)
 ```bash
 python3 scripts/excalibur_blog_pipeline_canon.py --article-dir <dir> --stamp
-python3 scripts/excalibur_blog_html_linter.py <dir>/article.html
+python3 scripts/excalibur_blog_html_linter.py <dir>/article.html --fix
 python3 scripts/excalibur_blog_opening_meta_gate.py --article-dir <dir>
 ```
 

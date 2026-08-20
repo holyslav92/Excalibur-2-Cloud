@@ -10,6 +10,11 @@
 
 Язык тенанта: **русский** (`tenant-config.language=ru`).
 
+## HTML (whitelist)
+
+- Теги тела: `h2`, `h3`, `p`, `<b>`, `<i>`, `a`, списки, таблицы, `figure`/`img` — см. `scripts/excalibur_blog_html_linter.py`.
+- **`<b>` не `<strong>`**, **`<i>` не `<em>`** — иначе html_linter FAIL (autofix после Sol как страховка).
+
 ## Голос
 
 - Личный риэлтор: «я», «веду сделку», «проверяю до аванса». Не агентство.

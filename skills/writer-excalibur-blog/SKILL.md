@@ -10,13 +10,14 @@ description: Write meaning draft drafts/writer.html; Sol applies tenant SOUL sty
 **Не пиши прозу моделью Cursor.** Собери `--user-file` из research/title-brief и вызови Derouter powerful tier (claude-opus-5):
 
 ```bash
-python3 scripts/excalibur_blog_derouter_opus_chat.py \
-  --role writer \
+python3 scripts/excalibur_blog_writer_chunk.py \
   --system-file skills/writer-excalibur-blog/SKILL.md \
   --user-file <assembled-writer-inputs.md> \
   --output drafts/writer.html \
   --article-dir <article_dir>
 ```
+
+Longform (7 inline): **3 части на первом проходе** — не ждать HTTP 524. `--single-shot` только для коротких статей.
 
 Контракт: `shared/derouter-opus-brain-contract.md`.
 `DEROUTER WRITER BLOCKER` → стоп. Запрещён тихий fallback на Composer/Auto.

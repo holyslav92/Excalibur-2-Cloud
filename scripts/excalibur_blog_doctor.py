@@ -127,6 +127,10 @@ def main() -> int:
         "skills/cover-qa-excalibur-blog/SKILL.md",
         "scripts/excalibur_blog_description_gate.py",
         "scripts/excalibur_blog_cover_qa_gate.py",
+        "scripts/excalibur_blog_quad_manifest_preflight.py",
+        "scripts/excalibur_blog_cover_wordstat_overlay.py",
+        "scripts/excalibur_blog_quad_regen_panels.py",
+        "scripts/excalibur_blog_writer_chunk.py",
         "shared/derouter-opus-brain-contract.md",
         "skills/setup-voice-excalibur-blog/SKILL.md",
         "skills/setup-visual-excalibur-blog/SKILL.md",
@@ -338,6 +342,7 @@ def main() -> int:
             [sys.executable, str(root / "scripts/excalibur_blog_cover_motif_gate.py"), "doctor"],
             [sys.executable, str(root / "scripts/excalibur_blog_wordstat_gate.py"), "doctor"],
             [sys.executable, str(root / "scripts/excalibur_blog_cover_qa_gate.py"), "--doctor"],
+            [sys.executable, str(root / "scripts/excalibur_blog_quad_manifest_preflight.py"), "--doctor"],
             [sys.executable, str(root / "scripts/excalibur_blog_description_gate.py"), "--doctor"],
         ):
             proc = subprocess.run(gate_cmd, cwd=root, capture_output=True, text=True, check=False)
