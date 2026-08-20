@@ -66,7 +66,8 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 4. `sticky` — до 5 слов, короткая фраза-реакция.
 5. `wordstat_stickers` — **1–3** фразы из live Wordstat (Тюмень).
 6. `inline_labels.*` — **3–6 фактов на панель** (цифры, порядок, инструменты из `article.html`). Не слоганы настроения, не «типичные ошибки» без конкретики.
-7. Labels — короткие (1–4 слова), но несут **пользу**: срок, %, шаг, сравнение.
+7. **Cover phone CTA:** `+7 922 001 65 05` на обложке (канон quality-bar-9 / tenant-config `phone_display`).
+8. Labels — короткие (1–4 слова), но несут **пользу**: срок, %, шаг, сравнение.
    брендов (Cursor, Make, MCP, AI, OpenAI…).
 
 ## Gate (обязательно до Kie)
