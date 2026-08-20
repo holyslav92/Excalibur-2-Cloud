@@ -6,3 +6,4 @@ Publish / Indexer обновляют по мере выхода.
 | topic_id | slug | status | permalink |
 |----------|------|--------|-----------|
 | B02 | raspisku-na-kvartiru-napisali-deneg-na-schete-net | published | /blog/bez-rubriki/raspisku-na-kvartiru-napisali-deneg-na-schete-net/ |
+| B03 | notarius-vse-proveril-a-na-sdelke-cena-vyrosla-na-70-tysyach | published | /blog/bez-rubriki/notarius-vse-proveril-a-na-sdelke-cena-vyrosla-na-70-tysyach/ |

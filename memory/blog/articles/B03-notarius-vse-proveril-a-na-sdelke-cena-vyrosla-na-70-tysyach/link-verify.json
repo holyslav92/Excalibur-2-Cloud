@@ -1,0 +1,17 @@
+{
+  "source": "memory/blog/articles/B03-notarius-vse-proveril-a-na-sdelke-cena-vyrosla-na-70-tysyach/article.html",
+  "total_links": 1,
+  "failed_count": 0,
+  "verdict": "pass",
+  "links": [
+    {
+      "url": "https://t.me/Tyumen_Rieltor",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    }
+  ]
+}

@@ -9,3 +9,4 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 
 | topic_id | slug | title | status |
 |----------|------|-------|--------|
+| B03 | notarius-vse-proveril-a-na-sdelke-cena-vyrosla-na-70-tysyach | «Нотариус всё проверил» — а на сделке цена выросла на 70 тысяч | published |
