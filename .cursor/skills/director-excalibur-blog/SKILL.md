@@ -60,11 +60,7 @@ Scout? → research_start → Research → Title → Writer
 python3 scripts/excalibur_blog_doctor.py
 python3 scripts/excalibur_blog_today.py
 python3 scripts/excalibur_blog_research_start.py --topic-id <ID> --title "<short title>"
-# research_start → budget-stamp.json init (spend caps; NO wall-clock kill)
-python3 scripts/excalibur_blog_budget_guard.py check --article-dir memory/blog/articles/<topic_id>-<slug>
 ```
-
-**Circuit breaker (HARD):** caps in `shared/tenant-config.json` → `run_budget`. Every Derouter chat/image call checks `budget-stamp.json`. On `BUDGET BLOCKER` → **STOP** (no Publish, no Task retry storm); append `memory/pipeline-fix-queue.md`; artifacts stay in repo. Waiting/SFTP/polls do **not** count toward caps.
 
 ## Шаги
 

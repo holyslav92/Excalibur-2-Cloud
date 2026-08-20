@@ -24,8 +24,6 @@ python3 scripts/excalibur_blog_quad_regen_panels.py \
 Cover slot → solo i2i; inline → utility t2i. Derouter primary, Kie после 524/quota.
 Сохранить approved cover: `quad_preserve_cover.py` если regen canvas-1 inlines.
 
-**Budget:** max **2** cover image rounds (`initial` + one `panel_regen`). Third QA cycle → `BUDGET BLOCKER | cover_qa_rounds` — STOP even if QA still FAIL. Max **3** Derouter image jobs/run.
-
 ## Что проверяешь (визуально + артефакты)
 
 1. **Лицо + телосложение хоста** — тот же человек что `face-studio-2026-06-23.jpg` (кости, hairline, глаза, щетина, 28 лет); **medium slim**. FAIL: chubby, другой человек.

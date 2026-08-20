@@ -293,23 +293,7 @@ def call_derouter_chat(
 
     endpoints = [PRIMARY_ENDPOINT, FALLBACK_ENDPOINT]
     last_error: Exception | None = None
-
-    if article_dir is not None and root is not None:
-        from excalibur_blog_budget_guard import (
-            BudgetBlocker,
-            check_not_blocked,
-            ensure_run_started,
-            max_chat_attempts,
-            record_chat_call,
-            refresh_soft_wall_note,
-        )
-
-        ensure_run_started(article_dir, root)
-        check_not_blocked(article_dir)
-        refresh_soft_wall_note(article_dir, root)
-        max_attempts = max_chat_attempts(root)
-    else:
-        max_attempts = max_retries + 1
+    max_attempts = max_retries + 1
 
     attempts_used = 0
     for endpoint in endpoints:
@@ -318,13 +302,6 @@ def call_derouter_chat(
         try:
             response = http_chat_post(endpoint, api_key, payload, timeout=timeout)
             text = extract_assistant_text(response)
-            if article_dir is not None and root is not None:
-                record_chat_call(
-                    article_dir,
-                    root,
-                    role=role or "unknown",
-                    meta={"model": model, "endpoint": endpoint},
-                )
             return text, response, endpoint
         except DerouterChatRetryable as exc:
             last_error = exc
@@ -564,12 +541,6 @@ def run_chat(args: argparse.Namespace) -> int:
             article_path = root / article_path
 
     try:
-        if article_path is not None:
-            from excalibur_blog_budget_guard import BudgetBlocker, check_not_blocked, ensure_run_started
-
-            ensure_run_started(article_path, root)
-            check_not_blocked(article_path)
-
         text, response, endpoint, resolved_model = call_derouter_with_aliases(
             system_prompt=system_prompt,
             user_prompt=user_prompt,
@@ -581,13 +552,6 @@ def run_chat(args: argparse.Namespace) -> int:
             role=role,
             root=root,
         )
-    except BudgetBlocker as exc:
-        from excalibur_blog_budget_guard import handle_budget_blocker
-
-        if article_path is not None:
-            return handle_budget_blocker(article_path, root, exc)
-        print_blocker(role, str(exc))
-        return 2
     except DerouterChatError as exc:
         print_blocker(role, str(exc))
         return 2

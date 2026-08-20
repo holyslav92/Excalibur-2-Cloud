@@ -80,14 +80,6 @@
     }
   },
   "interlink_old_articles": true,
-  "run_budget": {
-    "wall_clock_soft_note_minutes": 60,
-    "cover_qa_image_attempts_max": 2,
-    "derouter_image_jobs_max": 3,
-    "derouter_chat_retries_per_call_max": 1,
-    "kie_image_fallback_max": 1,
-    "comment": "Hard caps on billed Derouter/Kie work per article run. NO wall-clock kill — soft note only after wall_clock_soft_note_minutes. cover_qa_image_attempts_max=2: initial canvases + one panel regen; third QA cycle forbidden. derouter_image_jobs_max=3: e.g. 2 quad canvases + 1 panel fix. derouter_chat_retries_per_call_max=1: one HTTP 524/5xx retry per script invocation (Writer chunk parts are separate invocations). kie_image_fallback_max=1: one Kie fallback per run then STOP."
-  },
   "style_files": {
     "soul": "shared/SOUL.md",
     "article_style": "shared/article-style.md",

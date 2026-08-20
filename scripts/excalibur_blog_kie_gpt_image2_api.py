@@ -673,22 +673,6 @@ def main() -> int:
     result_path = resolve_path(root, args.article_dir, args.result)
     task_record_path = resolve_path(root, args.article_dir, args.task_record)
 
-    from excalibur_blog_budget_guard import (
-        BudgetBlocker,
-        check_not_blocked,
-        ensure_run_started,
-        handle_budget_blocker,
-    )
-
-    ensure_run_started(article_dir, root)
-    try:
-        check_not_blocked(article_dir)
-    except BudgetBlocker as exc:
-        return handle_budget_blocker(article_dir, root, exc)
-    # Under run budget: one Kie session — no createTask retry storm.
-    if (article_dir / "budget-stamp.json").is_file():
-        args.max_create_retries = 0
-
     try:
         image_input = batch_mcp_args(batch_path)
         create_payload = {

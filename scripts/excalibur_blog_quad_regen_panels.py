@@ -202,27 +202,6 @@ def main() -> int:
     hero = load_json(hero_path) if hero_path.is_file() else {}
     ref_url = str(hero.get("reference_url_hosted") or "").strip()
 
-    from excalibur_blog_budget_guard import (
-        BudgetBlocker,
-        assert_cover_image_round_allowed,
-        check_not_blocked,
-        ensure_run_started,
-        handle_budget_blocker,
-        load_stamp,
-        record_cover_image_round,
-    )
-
-    ensure_run_started(article_dir, root)
-    try:
-        check_not_blocked(article_dir)
-        stamp = load_stamp(article_dir)
-        rounds = list((stamp.get("counters") or {}).get("cover_image_rounds") or [])
-        if "panel_regen" not in rounds:
-            assert_cover_image_round_allowed(article_dir, root, "panel_regen")
-            record_cover_image_round(article_dir, root, "panel_regen")
-    except BudgetBlocker as exc:
-        return handle_budget_blocker(article_dir, root, exc)
-
     slot_keys = [s.strip() for s in args.slots.split(",") if s.strip()]
     if not slot_keys:
         print("❌ PANEL REGEN BLOCKER: empty --slots", file=sys.stderr)

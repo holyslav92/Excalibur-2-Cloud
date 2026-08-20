@@ -116,25 +116,10 @@ research_start → Research → Title → Writer → Sol — каждый шаг
 После Sol: pipeline_canon stamp + opening_meta + html_linter.
 Description → Cover-text || Schema → Cover (scene/prompt text via derouter --role cover-scene) → Cover-QA → Indexer.
 Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе; иначе STOP после Indexer.
-**BUDGET BLOCKER** (caps в tenant-config run_budget) → STOP без Publish; `memory/pipeline-fix-queue.md`; exit 0 с loud stderr. NO wall-clock kill — waiting/SFTP OK.
 Fixer → merge → content-learner.
 ```
 
 Секреты только из Cloud Secrets (`PUBLIC_SITE_URL`, SFTP, image API, Wordstat MCP). Allow flag — **runtime only**, не в git.
-
-## Spend circuit breaker (`run_budget` in tenant-config)
-
-Hard caps on **billed** Derouter/Kie work per article (`budget-stamp.json`). **No wall-clock kill** — runs may wait for Derouter/SFTP; soft note only after 60 minutes.
-
-| Cap | Value | Blocker |
-|-----|-------|---------|
-| `cover_qa_image_attempts_max` | **2** | `cover_qa_rounds` — initial canvases + one panel regen; third QA cycle forbidden |
-| `derouter_image_jobs_max` | **3** | `derouter_image_jobs` — e.g. 2 quads + 1 panel fix |
-| `derouter_chat_retries_per_call_max` | **1** | `DEROUTER <ROLE> BLOCKER` after 524/5xx (Writer chunk = separate calls) |
-| `kie_image_fallback_max` | **1** | `kie_image_fallback` — one Kie try per run then STOP |
-| `wall_clock_soft_note_minutes` | **60** | note in stamp only, **not** a blocker |
-
-On `BUDGET BLOCKER`: no Publish, append `memory/pipeline-fix-queue.md`, exit 0 with loud stderr.
 
 ## Отдельный поток Daily (не этот automation)
 

@@ -441,19 +441,6 @@ def generate_image(
 
 
 def run_kie_fallback(*, root: Path, article_dir: Path, batch: str, result: str) -> int:
-    from excalibur_blog_budget_guard import (
-        BudgetBlocker,
-        assert_kie_fallback_allowed,
-        handle_budget_blocker,
-        record_kie_fallback,
-    )
-
-    try:
-        assert_kie_fallback_allowed(article_dir, root)
-        record_kie_fallback(article_dir, root, meta={"batch": batch})
-    except BudgetBlocker as exc:
-        return handle_budget_blocker(article_dir, root, exc)
-
     kie_script = root / "scripts" / "excalibur_blog_kie_gpt_image2_api.py"
     cmd = [
         sys.executable,
@@ -467,20 +454,6 @@ def run_kie_fallback(*, root: Path, article_dir: Path, batch: str, result: str) 
     ]
     print("Derouter exhausted; falling back to Kie script", flush=True)
     proc = subprocess.run(cmd, cwd=str(root))
-    if proc.returncode != 0:
-        from excalibur_blog_budget_guard import BudgetBlocker, handle_budget_blocker, set_blocked
-
-        set_blocked(
-            article_dir,
-            root,
-            "kie_image_fallback",
-            f"Kie fallback failed exit={proc.returncode}",
-        )
-        return handle_budget_blocker(
-            article_dir,
-            root,
-            BudgetBlocker("kie_image_fallback", f"exit={proc.returncode}"),
-        )
     return proc.returncode
 
 
@@ -513,42 +486,8 @@ def main() -> int:
     result_path = resolve_path(root, args.article_dir, args.result)
 
     try:
-        from excalibur_blog_budget_guard import (
-            BudgetBlocker,
-            assert_cover_image_round_allowed,
-            assert_image_job_allowed,
-            check_not_blocked,
-            ensure_run_started,
-            handle_budget_blocker,
-            record_cover_image_round,
-            record_image_job,
-        )
-
-        ensure_run_started(article_dir, root)
-        check_not_blocked(article_dir)
-
         image_input = batch_mcp_args(batch_path)
         batch_meta = load_json(batch_path)
-        pipeline = str(batch_meta.get("pipeline") or "")
-        is_panel_regen = "solo_panel" in pipeline or "quad_solo" in pipeline
-        stamp_path = article_dir / "budget-stamp.json"
-        stamp = load_json(stamp_path) if stamp_path.is_file() else {}
-        rounds = list((stamp.get("counters") or {}).get("cover_image_rounds") or [])
-        if is_panel_regen:
-            if "panel_regen" not in rounds:
-                try:
-                    assert_cover_image_round_allowed(article_dir, root, "panel_regen")
-                    record_cover_image_round(article_dir, root, "panel_regen")
-                except BudgetBlocker as exc:
-                    return handle_budget_blocker(article_dir, root, exc)
-        elif "initial" not in rounds:
-            try:
-                assert_cover_image_round_allowed(article_dir, root, "initial")
-                record_cover_image_round(article_dir, root, "initial")
-            except BudgetBlocker as exc:
-                return handle_budget_blocker(article_dir, root, exc)
-
-        assert_image_job_allowed(article_dir, root)
         model = default_model()
         size = default_size()
         quality = default_quality()
@@ -593,7 +532,7 @@ def main() -> int:
             timeout=max(MIN_TIMEOUT_SECONDS, int(args.timeout)),
             primary_base=args.primary_base,
             fallback_base=args.fallback_base,
-            max_retries=0 if (article_dir / "budget-stamp.json").is_file() else max(0, int(args.max_retries)),
+            max_retries=max(0, int(args.max_retries)),
             retry_wait=max(0, int(args.retry_wait)),
         )
 
@@ -617,16 +556,9 @@ def main() -> int:
             **meta,
         }
         save_json(result_path, record)
-        record_image_job(
-            article_dir,
-            root,
-            meta={"batch": str(batch_path.name), "mode": mode},
-        )
         print(f"OK local_path={rel_canvas} bytes={len(image_bytes)} mode={mode}")
         print(f"OK result={result_path}")
         return 0
-    except BudgetBlocker as exc:
-        return handle_budget_blocker(article_dir, root, exc)
     except DerouterRetryable as exc:
         if args.fallback_kie and os.environ.get("KIE_API_KEY", "").strip():
             return run_kie_fallback(

@@ -283,21 +283,6 @@ def run_research_start(
     out_dir = output_dir or article_dir(root, topic)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    if not dry_run:
-        import subprocess as _sp
-
-        _sp.run(
-            [
-                sys.executable,
-                str(root / "scripts/excalibur_blog_budget_guard.py"),
-                "init",
-                "--article-dir",
-                str(out_dir.relative_to(root) if out_dir.is_relative_to(root) else out_dir),
-            ],
-            cwd=str(root),
-            check=False,
-        )
-
     serp_runs: list[dict[str, Any]] = []
     errors: list[str] = []
     if not dry_run:
