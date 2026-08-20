@@ -1,5 +1,5 @@
 {
-  "pipeline": "quad_solo_cover_regen_v3",
+  "pipeline": "quad_solo_cover_regen_v4",
   "slot": "cover",
   "identity_reference_local": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
   "prefer_local_reference": true,
@@ -10,7 +10,7 @@
       "slot": "cover",
       "tool": "derouter-rest",
       "mcp_args": {
-        "prompt": "ONE single 16:9 image only — NOT a 2x2 grid, NOT four panels, NOT quad layout, NOT infographic collage grid.\nEditorial photo cover: high-key #FFFFFF sun flare, gold #dcc5a1 accent.\nSame 28yo man i2i face from reference (jaw/stubble/hairline medium-slim). FORBIDDEN outfit from reference: NO black blazer, NO black t-shirt, NO studio bust pose, NO clenched fist.\nWEAR: cobalt blue rain shell jacket + burnt orange fleece zip + dark jeans + white sneakers.\nFULL BODY standing RIGHT side of frame at sunny park bench, leaning over table, open palms on spread EGRN papers explaining — NOT left chest portrait, NOT talking-head crop.\nFace: calm direct teaching gaze at camera — NOT squint fight, NOT side-eye.\nHeadline upper-left CLEAR zone: bold «-2 МЛН уценили», gold word «уценили» only; empty white margin around title — zero overlap.\nWordstat tape labels ONLY far right past 70% width: купить квартиру в тюмени | банкротство продавца | вторичка тюмень.\nPhone sticker «+7 922 001 65 05» readable lower-right.\nTiny thinking-cat meme ≤10% top-right corner.\nSmall sticky «задаток сегодня» away from headline.\nSunny Tyumen riverside park, apartment towers background. Perfect Cyrillic.",
+        "prompt": "ONE single 16:9 photo cover, NOT a 2x2 grid, NOT four panels, NOT infographic collage.\nHigh-key sunny outdoor photo, airy #FFFFFF, gold #dcc5a1 accent, clean layout.\nSame 28yo man i2i from face reference (jaw, hairline, stubble, medium-slim). FORBIDDEN: black blazer, black t-shirt, studio bust, clenched fist, left talking-head crop, side-eye.\nOUTFIT: white oxford shirt sleeves rolled + camel tan chinos + brown leather belt + loafers. NO jacket. NO blazer. NO puffer. NO blue hoodie.\nPOSE: three-quarter FULL BODY on the RIGHT half of frame, standing at a bright apartment entrance, holding open EGRN folder in left hand, right hand pointing at a small red price tag «-2 МЛН» on the folder — action, not portrait bust.\nFACE: calm explaining look at camera, slight concerned brow, closed mouth.\nTITLE ZONE left 40% completely empty of stickers: huge readable Cyrillic «-2 МЛН уценили», word «уценили» gold. White sky/wall behind title. Nothing overlaps title.\nNO wordstat search bars. NO gold tape labels. NO stacked UI cards. Phone number «+7 922 001 65 05» as one small gold sticker bottom-right only.\nTiny thinking-cat sticker top-right corner under 8% of frame.\nSmall yellow sticky «задаток сегодня» on the folder, not on the title.\nSunny Tyumen entrance, glass door, sun flare. Perfect Cyrillic.",
         "aspect_ratio": "16:9",
         "resolution": "2K",
         "input_urls": [

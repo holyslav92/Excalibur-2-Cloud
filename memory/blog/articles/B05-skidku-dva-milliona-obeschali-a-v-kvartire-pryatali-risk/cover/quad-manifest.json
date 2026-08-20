@@ -10,22 +10,22 @@
   "cover_emotion": "determined squint; NOT side-eye",
   "cover_phone_cta": "+7 922 001 65 05",
   "wordstat_stickers": [
-    "купить квартиру в тюмени",
-    "банкротство продавца",
-    "вторичка тюмень"
+    "купить квартиру",
+    "банкротство",
+    "вторичка"
   ],
   "wordstat_sticker_positions": [
     [
-      0.74,
+      0.7,
       0.08
     ],
     [
-      0.72,
-      0.46
+      0.7,
+      0.4
     ],
     [
       0.7,
-      0.84
+      0.72
     ]
   ],
   "cover_motifs": {
@@ -35,10 +35,10 @@
     "prop_set": "egrn_papers_spread_on_outdoor_table_minus_2mln_tag_phone_cta",
     "sticker_set": "wordstat_gold_tape_FAR_RIGHT_only_x68_no_title_overlap",
     "joke": "sticky_zadatok_segodnya_small_bottom_not_on_title",
-    "outfit": "cobalt blue rain shell jacket + burnt orange zip fleece + dark jeans + white sneakers",
-    "emotion": "calm_direct_explanatory_open_hands",
-    "pose_framing": "full_body_standing_right_two_thirds_not_left_bust",
-    "action": "leaning_over_outdoor_table_spreading_egrn_papers_open_palms_explaining"
+    "outfit": "white oxford shirt rolled sleeves + camel tan chinos + brown belt + loafers",
+    "emotion": "calm_explaining_concerned_brow",
+    "pose_framing": "three_quarter_full_body_host_RIGHT_entrance_not_left_bust",
+    "action": "holds_open_egrn_folder_points_at_minus_2mln_price_tag"
   },
   "slots": {
     "cover": {
