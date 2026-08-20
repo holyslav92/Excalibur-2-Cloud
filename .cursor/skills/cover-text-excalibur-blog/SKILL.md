@@ -5,7 +5,7 @@ description: "Cover-text: exact Russian inscriptions in cover-text.json, gate PA
 
 # Cover-text Agent — надписи, понятные русскому человеку
 
-## Thin conductor + Derouter Opus (HARD)
+## Thin conductor + Derouter utility (HARD)
 
 **Не пиши надписи моделью Cursor:**
 

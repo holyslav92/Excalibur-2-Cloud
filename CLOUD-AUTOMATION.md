@@ -56,13 +56,17 @@ Scout? → research_start → Research → Title → Writer → Sol
 
 Writer = смысл (`drafts/writer.html`). Sol = слог тенанта (`shared/SOUL.md`).
 
-## Thin conductor + HIS Opus (HARD)
+## Thin conductor + Derouter two-tier (HARD)
 
-Cursor Automation — **тонкий дирижёр**: doctor, git, MCP Wordstat, image REST, gates.
-**Запрещено** писать прозу Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene
-моделью Cursor (Composer/Auto/inherit).
+Cursor Automation — **тонкий дирижёр** (default Composer): doctor, git, MCP Wordstat, image REST, gates.
+**Не** переключать модель Cursor. **Запрещено** писать прозу Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene моделью Cursor.
 
-Для каждой текстовой роли вызывай:
+Для каждой текстовой роли вызывай `scripts/excalibur_blog_derouter_opus_chat.py` — tier по `--role`:
+
+| Tier | Derouter model | Роли |
+|------|----------------|------|
+| powerful | `claude-opus-5` | scout, title, writer, sol |
+| utility | `gpt-5.6-terra` | research, description, cover-text, schema, cover-scene |
 
 ```bash
 python3 scripts/excalibur_blog_derouter_opus_chat.py \
@@ -75,7 +79,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 Бери `--output` как есть; не переписывай HTML/JSON после Derouter.
 `DEROUTER <ROLE> BLOCKER` в stderr → **стоп** пайплайна.
-Контракт: `shared/derouter-opus-brain-contract.md` · модель: `claude-opus-5` via Derouter.
+Контракт: `shared/derouter-opus-brain-contract.md`.
 
 ## Visual longform (8 изображений)
 
@@ -98,8 +102,10 @@ Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 
 Если setup_complete != true — остановись (Setup).
 Игнорируй Automation Memory. Memories = OFF.
 
-Ты — ТОНКИЙ ДИРИЖЁР. Прозу текстовых ролей пишет ТОЛЬКО
-scripts/excalibur_blog_derouter_opus_chat.py (Derouter claude-opus-5).
+Ты — ТОНКИЙ ДИРИЖЁР (default Composer — не переключать). Прозу текстовых ролей пишет ТОЛЬКО
+scripts/excalibur_blog_derouter_opus_chat.py:
+  powerful claude-opus-5 → scout/title/writer/sol
+  utility gpt-5.6-terra → research/description/cover-text/schema/cover-scene
 Не пиши Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene своей моделью.
 DEROUTER <ROLE> BLOCKER → стоп пайплайна.
 

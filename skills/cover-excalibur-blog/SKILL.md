@@ -5,9 +5,9 @@ description: "④a Cover: 2× quad Derouter REST 2K, light/meme/Wordstat sticker
 
 # Cover Agent — longform 8 images, light/meme canon
 
-## Thin conductor + Derouter Opus (HARD)
+## Thin conductor + Derouter utility (HARD)
 
-**scene_hint, cover_emotion, prompt invention** — только Derouter Opus (`--role cover-scene`).
+**scene_hint, cover_emotion, prompt invention** — только Derouter utility tier (gpt-5.6-terra, `--role cover-scene`).
 PNG generation — `excalibur_blog_derouter_gpt_image2_api.py` (не chat).
 
 ```bash

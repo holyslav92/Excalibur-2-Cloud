@@ -7,7 +7,7 @@ description: Write meaning draft drafts/writer.html; Sol applies tenant SOUL sty
 
 ## Модель (HARD) — thin conductor
 
-**Не пиши прозу моделью Cursor.** Собери `--user-file` из research/title-brief и вызови Derouter Opus:
+**Не пиши прозу моделью Cursor.** Собери `--user-file` из research/title-brief и вызови Derouter powerful tier (claude-opus-5):
 
 ```bash
 python3 scripts/excalibur_blog_derouter_opus_chat.py \

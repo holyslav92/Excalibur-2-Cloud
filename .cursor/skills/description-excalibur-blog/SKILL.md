@@ -5,7 +5,7 @@ description: "Description: Dzen card teaser after Sol; Klyshin rhythm; not title
 
 # Description — Dzen card teaser
 
-## Thin conductor + Derouter Opus (HARD)
+## Thin conductor + Derouter utility (HARD)
 
 **Не пиши description моделью Cursor:**
 

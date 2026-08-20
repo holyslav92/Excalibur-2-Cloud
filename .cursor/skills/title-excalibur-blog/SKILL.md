@@ -5,7 +5,7 @@ description: Invent one catchy human H1 with clear subject. No SEO tails, no lab
 
 # Title Agent — цепкий заголовок с понятной темой
 
-## Thin conductor + Derouter Opus (HARD)
+## Thin conductor + Derouter powerful (HARD)
 
 **Не пиши H1 моделью Cursor.** Собери `--user-file` из research + Scout handoff:
 

@@ -29,6 +29,14 @@ class SetupTenantTests(unittest.TestCase):
         self.assertTrue((tenant.get("publish_options") or {}).get("deploy_llms_after_publish"))
         self.assertTrue((tenant.get("publish_options") or {}).get("auto_interlink_after_publish"))
         self.assertTrue(tenant.get("dzen_rf_pack"))
+        writing = tenant.get("writing_model") or {}
+        powerful = writing.get("powerful") or {}
+        utility = writing.get("utility") or {}
+        self.assertEqual(powerful.get("model"), "claude-opus-5")
+        self.assertEqual(utility.get("model"), "gpt-5.6-terra")
+        self.assertIn("writer", powerful.get("roles") or [])
+        self.assertIn("research", utility.get("roles") or [])
+        self.assertTrue(writing.get("fail_loud_if_unavailable"))
 
     def test_setup_agents_present(self) -> None:
         for rel in (

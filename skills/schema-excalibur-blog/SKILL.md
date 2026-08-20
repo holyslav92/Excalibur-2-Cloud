@@ -5,7 +5,7 @@ description: Excalibur BLOG Schema — BlogPosting + optional FAQPage, author re
 
 # Excalibur BLOG — Schema
 
-## Thin conductor + Derouter Opus (HARD)
+## Thin conductor + Derouter utility (HARD)
 
 **Не пиши schema.jsonld моделью Cursor:**
 

@@ -35,11 +35,11 @@ Scout? → research_start → Research → Title → Writer(смысл)
 
 `memory/topics/` запрещена. Scout → handoff + `signal_urls` + **dual gate: Klyshin hooks (`memory/scout/klyshin-topic-bank.*`) × MCP-KV Wordstat** (Tyumen 55+11176, compare RU 225). Klyshin = angle/hook; Wordstat = **evaluate + rework for demand** (не binary skip: слабый объём → локализация/переформулировка до buyer P0; skip только если после rework нет честного buyer-intent кластера). В handoff логировать **original Klyshin hook** + **final P0 phrase+volume**. Cover canon: `memory/cover/cover-canon.json`.
 
-**Factory brain (все текстовые роли):** Cursor — **тонкий дирижёр**; прозу пишет только
-`scripts/excalibur_blog_derouter_opus_chat.py` → Derouter REST (`DEROUTER_API_KEY`) +
-`claude-opus-5`. Роли: Scout, Research synthesis, Title, Writer, Sol, Description,
-Cover-text, Schema, Cover-scene. При недоступности → `DEROUTER <ROLE> BLOCKER`, без
-тихого fallback на Composer/Auto. См. `shared/derouter-opus-brain-contract.md`.
+**Factory brain (двухуровневый split):** Cursor — **тонкий дирижёр** (default Composer; не переключать модель Cursor).
+Прозу пишет только `scripts/excalibur_blog_derouter_opus_chat.py` → Derouter REST (`DEROUTER_API_KEY`):
+- **powerful** `claude-opus-5` (`DEROUTER_OPUS_MODEL`): Scout, Title, Writer, Sol
+- **utility** `gpt-5.6-terra` (`DEROUTER_TERRA_MODEL`): Research synthesis, Description, Cover-text, Schema, Cover-scene
+При недоступности → `DEROUTER <ROLE> BLOCKER`, без тихого fallback на Composer. См. `shared/derouter-opus-brain-contract.md`.
 **Cover PNG:** Derouter REST image API — `shared/derouter-gpt-image-api-contract.md`.
 **Wordstat:** MCP-KV. **Cover-QA:** Python gates, не «глаз» агента.
 

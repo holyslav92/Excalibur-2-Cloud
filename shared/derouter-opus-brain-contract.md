@@ -1,17 +1,29 @@
-# Factory brain — Derouter Opus REST (все текстовые роли)
+# Factory brain — Derouter REST (двухуровневый split)
 
 **Тенант:** The Риэлтор  
-**Провайдер:** Derouter REST API (PRIMARY для **всей прозы** фабрики)  
+**Провайдер:** Derouter REST API  
 **Скрипт:** `scripts/excalibur_blog_derouter_opus_chat.py`  
 **Endpoint:** `POST https://api.derouter.ai/openai/v1/chat/completions`  
-**Fallback endpoint:** `https://api.apikey.cloud/openai/v1/chat/completions` (если primary down)  
-**Модель:** `claude-opus-5` (или `DEROUTER_TEXT_MODEL` в Cloud Secrets — семейство Claude Opus 5)  
+**Fallback endpoint:** `https://api.apikey.cloud/openai/v1/chat/completions`  
 **Auth:** `DEROUTER_API_KEY` только из Cloud Secrets
+
+Источник истины по ролям: `shared/tenant-config.json` → `writing_model`.
+
+## Два tier (HARD)
+
+| Tier | Model id (Derouter) | Env override | Роли |
+|------|---------------------|--------------|------|
+| **powerful** | `claude-opus-5` | `DEROUTER_OPUS_MODEL` | scout, title, writer, sol |
+| **utility** | `gpt-5.6-terra` | `DEROUTER_TERRA_MODEL` | research, description, cover-text, schema, cover-scene |
+
+`resolve_model` выбирает tier по `--role`. **Не** используй глобальный `DEROUTER_TEXT_MODEL` как override всех ролей — если задан, он не переводит powerful-роли на non-Opus.
+
+При 404 model id скрипт пробует алиасы (`gpt-5.6-terra`, `openai/gpt-5.6-terra` для utility; `claude-opus-5`, `anthropic/claude-opus-5` для powerful) и при smoke может зафиксировать рабочий id в tenant-config.
 
 ## Thin Cursor conductor (HARD)
 
-Cursor Cloud Agent — **тонкий дирижёр**: git, shell, MCP Wordstat, image REST, gates.  
-**Запрещено** писать прозу Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene своей моделью (Composer/Auto/inherit).
+Cursor Cloud Agent — **тонкий дирижёр**: git, shell, MCP Wordstat, image REST, Python gates.  
+**Запрещено** писать прозу Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene моделью Cursor (Composer/Auto/inherit). **Не** переключать модель Cursor — conductor остаётся default Composer.
 
 Для каждой текстовой роли:
 
@@ -27,43 +39,28 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 1. Cursor **собирает** `--user-file` из входов (research, handoff, article.html…).
 2. Cursor **вызывает** скрипт; берёт `--output` **как есть**.
 3. Cursor **не переписывает** HTML/JSON/надписи после Derouter.
-4. Stamp `derouter-opus-stamp-<role>.json` — доказательство вызова HIS Opus.
+4. Stamp `derouter-opus-stamp-<role>.json` — tier + фактический model id (opus vs terra).
 
-## Роли на Derouter Opus (обязательно)
+## Не Derouter chat (остаётся Cursor / Python / MCP)
 
-| Роль | Выход | Wordstat / прочее |
-|------|-------|-------------------|
-| Scout | handoff prose (topic, rework log) | live MCP-KV Wordstat — отдельно |
-| Research | `research-notes.md` synthesis | live sources + MCP-KV |
-| Title | `title-brief.json` | demand spine из Scout handoff |
-| Writer | `drafts/writer.html` | — |
-| Sol | `article.html` | — |
-| Description | `description-brief.json` | — |
-| Cover-text | `cover/cover-text.json` | stickers из live Wordstat |
-| Schema | `schema.jsonld` text | — |
-| Cover scene | `scene_hint`, `cover_emotion`, prompt fields в manifest | PNG — image REST |
-
-## Не Derouter (остаётся Cursor / Python / MCP)
-
-- **Director** — оркестрация, Task, git, merge
+- **Director** — оркестрация, Task, git, merge (Composer conductor, без article prose)
 - **Wordstat** — MCP-KV (`wordstat_get_*`), не выдумывать частоты
-- **Cover PNG** — Derouter image REST (`shared/derouter-gpt-image-api-contract.md`)
-- **Cover-QA** — `scripts/excalibur_blog_cover_qa_gate.py` (pixel/gates, не «глаз» агента)
+- **Cover PNG** — Derouter image REST (см. `shared/derouter-gpt-image-api-contract.md`)
+- **Cover-QA** — `scripts/excalibur_blog_cover_qa_gate.py` (pixel/gates)
 - **Indexer / Publish / Fixer** — shell, WP, SFTP
 
-## Fail loud (весь brain)
+## Fail loud (по роли)
 
-`tenant-config.json` → `writing_model.fail_loud_if_unavailable: true` для **всех** ролей выше.
+`tenant-config.json` → `writing_model.fail_loud_if_unavailable: true`.
 
 Если `DEROUTER_API_KEY` не задан или chat API недоступен после retry:
 
 ```text
 DEROUTER <ROLE> BLOCKER
-reason: DEROUTER_API_KEY missing or Derouter chat API unavailable; claude-opus-5 not invoked
+reason: DEROUTER_API_KEY missing or Derouter chat API unavailable; <tier> model not invoked
 ```
 
-Директор **останавливает** пайплайн и пишет blocker в handoff / `memory/pipeline-fix-queue.md`.  
-**Запрещено:** молча переключиться на Cursor Composer/Auto для article text.
+Директор **останавливает** пайплайн. **Запрещено:** молча переключиться на Cursor Composer для article text.
 
 ## Smoke
 
@@ -71,14 +68,16 @@ reason: DEROUTER_API_KEY missing or Derouter chat API unavailable; claude-opus-5
 python3 scripts/excalibur_blog_derouter_opus_chat.py --role smoke --smoke
 ```
 
-Stamp: `memory/setup/derouter-opus-stamp.json` (без article-dir).
+- Terra ping (utility, cheaper) → `memory/setup/derouter-smoke-terra-stamp.json`
+- Opus Writer one-liner → `memory/setup/derouter-smoke-opus-stamp.json`
 
 ## Запрещено
 
-- `mcp-derouter/start-mcp.sh` (stdio MCP сломан) — только REST
+- `mcp-derouter/start-mcp.sh` — только REST
 - Cursor-authored prose для любой роли из таблицы
-- Тихий fallback на weaker model
+- Тихий fallback на weaker model или Composer
+- Документировать `model: claude-opus-5` / `gpt-5.6-terra` для Cursor Cloud Agent — эти id только для Derouter REST
 
 ## Legacy alias
 
-`shared/writer-model-contract.md` — ссылка на этот контракт (Writer/Sol были первыми).
+`shared/writer-model-contract.md` — Writer/Sol subset powerful tier.

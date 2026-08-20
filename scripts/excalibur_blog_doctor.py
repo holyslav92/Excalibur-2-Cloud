@@ -144,7 +144,9 @@ def main() -> int:
         "scripts/excalibur_blog_writer_ready_gate.py",
         "scripts/excalibur_blog_cover_text_gate.py",
         "scripts/excalibur_blog_derouter_opus_chat.py",
-        "scripts/excalibur_blog_derouter_gpt_image2_api.py",
+        "scripts/excalibur_blog_interlink_lib.py",
+        "scripts/excalibur_blog_interlinker.py",
+        "scripts/excalibur_blog_post_publish_interlink.py",
         "scripts/excalibur_blog_kie_gpt_image2_api.py",
         "scripts/excalibur_blog_wp_publish.py",
         "scripts/excalibur_blog_merge_to_main.py",
@@ -227,7 +229,6 @@ def main() -> int:
         "agents/excalibur-blog-reader-sim.md",
         "skills/excalibur/SKILL.md",
         "skills/excalibur-wp-publish/SKILL.md",
-        "scripts/excalibur_blog_interlinker.py",
         "scripts/excalibur_blog_draft_meta_upsert.py",
         "scripts/excalibur_blog_editorial_swarm_gate.py",
         "scripts/excalibur_blog_visual_qa_gate.py",
@@ -439,13 +440,36 @@ def main() -> int:
         warnings,
         warn=True,
     )
-    derouter_text_model = (os.environ.get("DEROUTER_TEXT_MODEL") or "claude-opus-5").strip()
+    derouter_text_model = os.environ.get("DEROUTER_TEXT_MODEL", "").strip()
+    if derouter_text_model and "opus" not in derouter_text_model.lower():
+        check(
+            True,
+            f"DEROUTER_TEXT_MODEL ignored for powerful roles (legacy non-Opus: set); tier map is source of truth",
+            errors,
+            warnings,
+            warn=True,
+        )
+    derouter_opus_env = os.environ.get("DEROUTER_OPUS_MODEL", "").strip()
+    powerful_cfg = (tenant.get("writing_model") or {}).get("powerful") or {}
+    powerful_model = str(powerful_cfg.get("model") or "claude-opus-5")
+    opus_check = derouter_opus_env or powerful_model
     check(
-        bool(derouter_text_model) and "opus" in derouter_text_model.lower(),
-        f"DEROUTER_TEXT_MODEL Opus family ({derouter_text_model or 'unset'}; script default claude-opus-5)",
+        bool(opus_check) and "opus" in opus_check.lower(),
+        f"powerful tier Opus family ({opus_check})",
         errors,
         warnings,
-        warn=True,
+        warn=not derouter_key,
+    )
+    utility_cfg = (tenant.get("writing_model") or {}).get("utility") or {}
+    utility_model = str(utility_cfg.get("model") or "gpt-5.6-terra")
+    terra_env = os.environ.get("DEROUTER_TERRA_MODEL", "").strip()
+    terra_check = terra_env or utility_model
+    check(
+        bool(terra_check) and "terra" in terra_check.lower(),
+        f"utility tier terra id ({terra_check})",
+        errors,
+        warnings,
+        warn=not derouter_key,
     )
     derouter_image_model = os.environ.get("DEROUTER_IMAGE_MODEL", "").strip()
     check(
@@ -471,6 +495,20 @@ def main() -> int:
     check(
         brain.get("fail_loud_if_unavailable") is True,
         "tenant writing_model.fail_loud_if_unavailable=true",
+        errors,
+        warnings,
+    )
+    powerful_roles = set((brain.get("powerful") or {}).get("roles") or [])
+    utility_roles = set((brain.get("utility") or {}).get("roles") or [])
+    check(
+        {"writer", "sol", "title", "scout"}.issubset(powerful_roles),
+        "tenant writing_model.powerful.roles includes writer/sol/title/scout",
+        errors,
+        warnings,
+    )
+    check(
+        {"research", "description", "cover-text", "schema", "cover-scene"}.issubset(utility_roles),
+        "tenant writing_model.utility.roles includes research/description/cover-text/schema/cover-scene",
         errors,
         warnings,
     )

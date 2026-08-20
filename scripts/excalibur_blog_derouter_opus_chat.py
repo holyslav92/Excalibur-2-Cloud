@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Derouter REST chat/completions — единственный «мозг» текстовых ролей фабрики.
+"""Derouter REST chat/completions — двухуровневый «мозг» текстовых ролей фабрики.
 
 POST https://api.derouter.ai/openai/v1/chat/completions
 Fallback: https://api.apikey.cloud/openai/v1/chat/completions
 
-Auth: DEROUTER_API_KEY (Cloud Secrets only). Model: claude-opus-5 or DEROUTER_TEXT_MODEL.
-Forbidden: mcp-derouter/start-mcp.sh, Cursor Composer/Auto fallback for role prose.
+Auth: DEROUTER_API_KEY (Cloud Secrets only).
+Модели по роли из shared/tenant-config.json → writing_model (powerful vs utility).
+Forbidden: mcp-derouter/start-mcp.sh, Cursor Composer fallback for role prose.
 
-На успех пишет stamp JSON (model, endpoint, request id, usage) рядом со статьёй
+На успех пишет stamp JSON (tier, model, endpoint, request id, usage) рядом со статьёй
 или в memory/setup/ для smoke.
 """
 
@@ -22,17 +23,29 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 DEFAULT_API_KEY_ENV = "DEROUTER_API_KEY"
-DEFAULT_MODEL_ENV = "DEROUTER_TEXT_MODEL"
-DEFAULT_MODEL = "claude-opus-5"
 PRIMARY_ENDPOINT = "https://api.derouter.ai/openai/v1/chat/completions"
 FALLBACK_ENDPOINT = "https://api.apikey.cloud/openai/v1/chat/completions"
 DEFAULT_TIMEOUT_SECONDS = 300
 MIN_TIMEOUT_SECONDS = 60
 DEFAULT_MAX_RETRIES = 1
 DEFAULT_RETRY_WAIT_SECONDS = 5
+
+DEFAULT_OPUS_MODEL = "claude-opus-5"
+DEFAULT_TERRA_MODEL = "gpt-5.6-terra"
+DEFAULT_OPUS_MODEL_ENV = "DEROUTER_OPUS_MODEL"
+DEFAULT_TERRA_MODEL_ENV = "DEROUTER_TERRA_MODEL"
+
+OPUS_MODEL_ALIASES = (
+    "claude-opus-5",
+    "anthropic/claude-opus-5",
+)
+TERRA_MODEL_ALIASES = (
+    "gpt-5.6-terra",
+    "openai/gpt-5.6-terra",
+)
 
 VALID_ROLES = frozenset(
     {
@@ -49,17 +62,20 @@ VALID_ROLES = frozenset(
     }
 )
 
+POWERFUL_ROLES = frozenset({"scout", "title", "writer", "sol"})
+UTILITY_ROLES = frozenset({"research", "description", "cover-text", "schema", "cover-scene"})
+
 
 class DerouterChatError(RuntimeError):
     """Fatal API or configuration error."""
 
-
-class DerouterChatRetryable(DerouterChatError):
-    """Retryable HTTP/network failure."""
-
     def __init__(self, message: str, *, status: int | None = None) -> None:
         self.status = status
         super().__init__(message)
+
+
+class DerouterChatRetryable(DerouterChatError):
+    """Retryable HTTP/network failure."""
 
 
 def project_root() -> Path:
@@ -67,6 +83,118 @@ def project_root() -> Path:
     if env_root:
         return Path(env_root)
     return Path(__file__).resolve().parents[1]
+
+
+def load_writing_model_config(root: Path) -> dict[str, Any]:
+    tenant_path = root / "shared/tenant-config.json"
+    if not tenant_path.is_file():
+        return {}
+    try:
+        tenant = json.loads(tenant_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise DerouterChatError(f"tenant-config JSON invalid: {exc}") from exc
+    writing = tenant.get("writing_model")
+    if not isinstance(writing, dict):
+        return {}
+    return writing
+
+
+def tier_for_role(role: str, writing: dict[str, Any]) -> str:
+    powerful_roles = set(writing.get("powerful", {}).get("roles") or POWERFUL_ROLES)
+    utility_roles = set(writing.get("utility", {}).get("roles") or UTILITY_ROLES)
+    if role == "smoke":
+        return "utility"
+    if role in powerful_roles:
+        return "powerful"
+    if role in utility_roles:
+        return "utility"
+    raise DerouterChatError(f"Role {role!r} not mapped in tenant writing_model tiers")
+
+
+def tier_config(writing: dict[str, Any], tier: str) -> dict[str, Any]:
+    block = writing.get(tier)
+    if isinstance(block, dict):
+        return block
+    if tier == "powerful":
+        return {
+            "model": DEFAULT_OPUS_MODEL,
+            "model_env": DEFAULT_OPUS_MODEL_ENV,
+            "family": DEFAULT_OPUS_MODEL,
+            "roles": sorted(POWERFUL_ROLES),
+        }
+    return {
+        "model": DEFAULT_TERRA_MODEL,
+        "model_env": DEFAULT_TERRA_MODEL_ENV,
+        "roles": sorted(UTILITY_ROLES),
+    }
+
+
+def model_aliases_for_tier(tier: str, base_model: str) -> list[str]:
+    defaults = OPUS_MODEL_ALIASES if tier == "powerful" else TERRA_MODEL_ALIASES
+    ordered: list[str] = []
+    for candidate in (base_model, *defaults):
+        if candidate and candidate not in ordered:
+            ordered.append(candidate)
+    return ordered
+
+
+def is_opus_family(model: str) -> bool:
+    return "opus" in model.lower()
+
+
+def is_model_not_found_error(exc: Exception) -> bool:
+    if isinstance(exc, DerouterChatError):
+        if exc.status == 404:
+            return True
+        lower = str(exc).lower()
+        if "model" in lower and any(token in lower for token in ("not found", "unknown", "invalid", "404")):
+            return True
+    return False
+
+
+def resolve_model(role: str, override: str | None, root: Path) -> tuple[str, str]:
+    """Возвращает (model_id, tier). Источник истины — tenant-config role map."""
+    writing = load_writing_model_config(root)
+    tier = tier_for_role(role, writing)
+    tier_block = tier_config(writing, tier)
+    config_model = str(tier_block.get("model") or "").strip()
+    model_env = str(tier_block.get("model_env") or "").strip()
+    env_model = os.environ.get(model_env, "").strip() if model_env else ""
+
+    if override and override.strip():
+        model = override.strip()
+    elif env_model:
+        model = env_model
+    elif config_model:
+        model = config_model
+    else:
+        model = DEFAULT_OPUS_MODEL if tier == "powerful" else DEFAULT_TERRA_MODEL
+
+    # DEROUTER_TEXT_MODEL — legacy; не даём переключить powerful-роли на non-Opus.
+    legacy_text = os.environ.get("DEROUTER_TEXT_MODEL", "").strip()
+    if legacy_text and not override:
+        if tier == "powerful":
+            if is_opus_family(legacy_text):
+                model = legacy_text
+            elif not is_opus_family(model):
+                model = DEFAULT_OPUS_MODEL
+        elif tier == "utility" and not env_model and not config_model:
+            if "terra" in legacy_text.lower() or legacy_text == DEFAULT_TERRA_MODEL:
+                model = legacy_text
+
+    if tier == "powerful" and not is_opus_family(model):
+        raise DerouterChatError(
+            f"Role {role!r} requires Claude Opus family; got {model!r}. "
+            f"Set {tier_block.get('model_env') or DEFAULT_OPUS_MODEL_ENV}=claude-opus-5"
+        )
+
+    if tier == "utility" and "terra" not in model.lower():
+        raise DerouterChatError(
+            f"Role {role!r} requires utility terra model; got {model!r}. "
+            f"Set {tier_block.get('model_env') or DEFAULT_TERRA_MODEL_ENV}=gpt-5.6-terra"
+        )
+
+    return model, tier
 
 
 def load_text_arg(*, inline: str | None, path: str | None, label: str) -> str:
@@ -78,21 +206,6 @@ def load_text_arg(*, inline: str | None, path: str | None, label: str) -> str:
     if inline is not None:
         return inline
     raise DerouterChatError(f"Provide --{label.replace(' ', '-')} or --{label.replace(' ', '-')}-file")
-
-
-def resolve_model(override: str | None = None) -> str:
-    if override and override.strip():
-        model = override.strip()
-    else:
-        model = (os.environ.get(DEFAULT_MODEL_ENV) or DEFAULT_MODEL).strip()
-    if not model:
-        raise DerouterChatError(f"{DEFAULT_MODEL_ENV} empty; must stay Claude Opus 5 family")
-    lower = model.lower()
-    if "opus" not in lower:
-        raise DerouterChatError(
-            f"Model {model!r} is not Claude Opus family; set {DEFAULT_MODEL_ENV}=claude-opus-5"
-        )
-    return model
 
 
 def is_retryable_http(status: int) -> bool:
@@ -126,7 +239,7 @@ def http_chat_post(
             raise DerouterChatRetryable(
                 f"Derouter HTTP {exc.code}: {body[:500]}", status=exc.code
             ) from exc
-        raise DerouterChatError(f"Derouter HTTP {exc.code}: {body[:500]}") from exc
+        raise DerouterChatError(f"Derouter HTTP {exc.code}: {body[:500]}", status=exc.code) from exc
     except urllib.error.URLError as exc:
         raise DerouterChatRetryable(f"Derouter network error: {exc.reason}") from exc
 
@@ -200,6 +313,40 @@ def call_derouter_chat(
     )
 
 
+def call_derouter_with_aliases(
+    *,
+    system_prompt: str,
+    user_prompt: str,
+    tier: str,
+    model: str,
+    timeout: int,
+    max_retries: int,
+) -> tuple[str, dict[str, Any], str, str]:
+    aliases = model_aliases_for_tier(tier, model)
+    last_error: Exception | None = None
+    for candidate in aliases:
+        try:
+            text, response, endpoint = call_derouter_chat(
+                system_prompt=system_prompt,
+                user_prompt=user_prompt,
+                model=candidate,
+                timeout=timeout,
+                max_retries=max_retries,
+            )
+            if candidate != model:
+                print(f"NOTE model alias accepted: {candidate} (configured {model})")
+            return text, response, endpoint, candidate
+        except DerouterChatError as exc:
+            last_error = exc
+            if is_model_not_found_error(exc):
+                print(f"WARN model {candidate!r} not accepted: {exc}", file=sys.stderr)
+                continue
+            raise
+    raise DerouterChatError(
+        f"No working model id for tier {tier}; tried {aliases}; last error: {last_error}"
+    )
+
+
 def role_blocker_label(role: str) -> str:
     mapping = {
         "scout": "SCOUT",
@@ -226,6 +373,7 @@ def write_stamp(
     *,
     stamp_path: Path,
     role: str,
+    tier: str,
     model: str,
     endpoint: str,
     response: dict[str, Any],
@@ -235,6 +383,7 @@ def write_stamp(
     stamp: dict[str, Any] = {
         "script": "scripts/excalibur_blog_derouter_opus_chat.py",
         "role": role,
+        "tier": tier,
         "model": model,
         "endpoint": endpoint,
         "request_id": response.get("id"),
@@ -254,7 +403,74 @@ def resolve_stamp_path(*, article_dir: str | None, role: str, root: Path) -> Pat
         if not ad.is_absolute():
             ad = root / ad
         return ad / f"derouter-opus-stamp-{role}.json"
+    if role == "smoke":
+        return root / "memory/setup/derouter-smoke-terra-stamp.json"
     return root / "memory/setup/derouter-opus-stamp.json"
+
+
+def run_smoke_ping(
+    *,
+    root: Path,
+    timeout: int,
+    stamp_suffix: str,
+    role_for_tier: str,
+    system_prompt: str,
+    user_prompt: str,
+    pass_check: Callable[[str], bool],
+) -> tuple[bool, str | None]:
+    model, tier = resolve_model(role_for_tier, None, root)
+    try:
+        text, response, endpoint, resolved_model = call_derouter_with_aliases(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            tier=tier,
+            model=model,
+            timeout=timeout,
+            max_retries=DEFAULT_MAX_RETRIES,
+        )
+    except DerouterChatError as exc:
+        print_blocker("smoke", str(exc))
+        return False, None
+
+    stamp_path = root / f"memory/setup/derouter-smoke-{stamp_suffix}-stamp.json"
+    write_stamp(
+        stamp_path=stamp_path,
+        role="smoke",
+        tier=tier,
+        model=resolved_model,
+        endpoint=endpoint,
+        response=response,
+        user_prompt_preview=user_prompt,
+    )
+    rel = stamp_path.relative_to(root) if stamp_path.is_relative_to(root) else stamp_path
+    print(f"STAMP {rel}")
+    ok = pass_check(text)
+    print(f"SMOKE {stamp_suffix} {'PASS' if ok else 'FAIL'}: {text.strip()[:80]}")
+    return ok, resolved_model
+
+
+def maybe_lock_model_in_tenant(root: Path, tier: str, resolved_model: str) -> None:
+    tenant_path = root / "shared/tenant-config.json"
+    if not tenant_path.is_file() or not resolved_model:
+        return
+    try:
+        tenant = json.loads(tenant_path.read_text(encoding="utf-8"))
+        writing = tenant.get("writing_model")
+        if not isinstance(writing, dict):
+            return
+        tier_block = writing.get(tier)
+        if not isinstance(tier_block, dict):
+            return
+        current = str(tier_block.get("model") or "").strip()
+        if current == resolved_model:
+            return
+        tier_block["model"] = resolved_model
+        writing[tier] = tier_block
+        tenant["writing_model"] = writing
+        tenant_path.write_text(json.dumps(tenant, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"LOCK tenant-config writing_model.{tier}.model → {resolved_model}")
+    except (json.JSONDecodeError, OSError) as exc:
+        print(f"WARN could not lock model in tenant-config: {exc}", file=sys.stderr)
 
 
 def run_chat(args: argparse.Namespace) -> int:
@@ -263,25 +479,54 @@ def run_chat(args: argparse.Namespace) -> int:
         raise DerouterChatError(f"Invalid role {role!r}; expected one of {sorted(VALID_ROLES)}")
 
     root = project_root()
-    model = resolve_model(args.model)
     timeout = max(MIN_TIMEOUT_SECONDS, int(args.timeout))
 
     if role == "smoke" or args.smoke:
-        system_prompt = "You are a connectivity test. Reply with exactly: pong"
-        user_prompt = "ping"
-        role = "smoke"
-    else:
-        system_prompt = load_text_arg(
-            inline=args.system_prompt, path=args.system_file, label="system-prompt"
+        terra_ok, terra_model = run_smoke_ping(
+            root=root,
+            timeout=timeout,
+            stamp_suffix="terra",
+            role_for_tier="research",
+            system_prompt="You are a connectivity test. Reply with exactly: pong",
+            user_prompt="ping",
+            pass_check=lambda text: "pong" in text.lower(),
         )
-        user_prompt = load_text_arg(
-            inline=args.user_prompt, path=args.user_file, label="user-prompt"
+        opus_ok, opus_model = run_smoke_ping(
+            root=root,
+            timeout=timeout,
+            stamp_suffix="opus",
+            role_for_tier="writer",
+            system_prompt="You are a connectivity test for Writer tier. Reply with exactly one Russian word: готово",
+            user_prompt="smoke writer",
+            pass_check=lambda text: "готово" in text.lower(),
         )
+        if terra_model:
+            maybe_lock_model_in_tenant(root, "utility", terra_model)
+        if opus_model:
+            maybe_lock_model_in_tenant(root, "powerful", opus_model)
+        if terra_ok and opus_ok:
+            print("SMOKE ALL PASS (terra + opus)")
+            return 0
+        if terra_ok:
+            print("SMOKE PARTIAL: terra PASS, opus FAIL or skipped")
+            return 1
+        print("SMOKE FAIL")
+        return 1
+
+    model, tier = resolve_model(role, args.model, root)
+
+    system_prompt = load_text_arg(
+        inline=args.system_prompt, path=args.system_file, label="system-prompt"
+    )
+    user_prompt = load_text_arg(
+        inline=args.user_prompt, path=args.user_file, label="user-prompt"
+    )
 
     try:
-        text, response, endpoint = call_derouter_chat(
+        text, response, endpoint, resolved_model = call_derouter_with_aliases(
             system_prompt=system_prompt,
             user_prompt=user_prompt,
+            tier=tier,
             model=model,
             timeout=timeout,
             max_retries=DEFAULT_MAX_RETRIES,
@@ -306,26 +551,22 @@ def run_chat(args: argparse.Namespace) -> int:
     write_stamp(
         stamp_path=stamp_path,
         role=role,
-        model=model,
+        tier=tier,
+        model=resolved_model,
         endpoint=endpoint,
         response=response,
         user_prompt_preview=user_prompt[:200],
     )
     print(f"STAMP {stamp_path.relative_to(root) if stamp_path.is_relative_to(root) else stamp_path}")
 
-    if role == "smoke":
-        ok = "pong" in text.lower()
-        print(f"SMOKE {'PASS' if ok else 'FAIL'}: {text.strip()[:80]}")
-        return 0 if ok else 1
-
     preview = text.strip().replace("\n", " ")[:120]
-    print(f"OK role={role} model={model} chars={len(text)} preview={preview!r}")
+    print(f"OK role={role} tier={tier} model={resolved_model} chars={len(text)} preview={preview!r}")
     return 0
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Derouter Opus chat — единственный автор прозы текстовых ролей Excalibur BLOG"
+        description="Derouter chat — двухуровневый мозг Excalibur BLOG (Opus powerful / Terra utility)"
     )
     parser.add_argument(
         "--role",
@@ -347,11 +588,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--smoke",
         action="store_true",
-        help="Alias: --role smoke ping→pong connectivity test",
+        help="Alias: --role smoke (terra ping + opus writer one-liner)",
     )
     parser.add_argument(
         "--model",
-        help="Override model id (default: DEROUTER_TEXT_MODEL or claude-opus-5)",
+        help="Override model id (must match role tier from tenant-config)",
     )
     return parser
 

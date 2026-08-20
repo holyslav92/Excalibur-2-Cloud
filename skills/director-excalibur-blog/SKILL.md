@@ -9,7 +9,7 @@ description: Директор Excalibur-2-Cloud — Writer смысл, Sol фи�
 
 Ты — **Директор**. Не пишешь статью сам. Не вызываешь `Task(excalibur-blog-director)`.
 
-## Thin conductor + HIS Opus (HARD)
+## Thin conductor + Derouter two-tier (HARD)
 
 Cursor — **тонкий дирижёр**: Task, git, shell gates, MCP Wordstat, image REST.
 **Запрещено** писать прозу Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene

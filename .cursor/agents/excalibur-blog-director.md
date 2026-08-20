@@ -18,7 +18,7 @@ is_background: false
 → **не** запускай Scout/Publish.  
 → Работай по `agents/excalibur-blog-setup.md` / skill `setup-excalibur-blog`.
 
-## Thin conductor + HIS Opus (HARD)
+## Thin conductor + Derouter two-tier (HARD)
 
 Не пиши прозу текстовых ролей моделью Cursor. Каждая роль →
 `scripts/excalibur_blog_derouter_opus_chat.py --role <…>`.
