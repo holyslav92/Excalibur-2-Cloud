@@ -1,0 +1,220 @@
+{
+  "topic_id": "B03",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Доверенность не броня",
+  "cover_hook_highlight": "доверенность",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: Derouter REST (DEROUTER_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "cover_emotion": "shocked side-eye at crumpled power-of-attorney paper — eyebrows HIGH, mouth slightly open, NO studio smile; FORBIDDEN closed-mouth polite smile from reference",
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_motifs": {
+    "composition": "host_slim_left_sunlit_investigation_board_doverennost_docs_phone_cta",
+    "location": "bright_white_board_tyumen_tape_pins_strings_sun_flare",
+    "meme": "roll_safe_tiny_sticker_plus_cat_corner_no_co_host",
+    "prop_set": "notarial_doverennost_scraps_fnp_registry_printout_masking_tape",
+    "sticker_set": "wordstat_tyumen_doverennost_egRN_gold_tape_phone",
+    "joke": "sticky_доверенность_есть_arrow_кто_продаёт"
+  },
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Доверенность на продажу — хозяин на СВО",
+      "cover_emotion": "shocked side-eye; NO reference smile",
+      "scene_hint": "side-eye at POA; phone CTA; meme; flare",
+      "meme_caption_ru": "",
+      "sticky": "Кто продаёт?",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Доверенность — это не право собственности. Это разрешение, которое можно забрать",
+      "visual_type": "comparison_table",
+      "scene_hint": "FNP registry table on white board; tape pins; gold Cyrillic labels; sun flare",
+      "alt": "Проверка доверенности: реестр ФНП",
+      "labels": [
+        "реестр ФНП",
+        "ст. 188",
+        "проверка ×2",
+        "день сделки"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Проверять надо два раза: в день подписания и перед подачей в Росреестр",
+      "visual_type": "process_flow",
+      "scene_hint": "Two-step process flow: signing day check then Rosreestr filing; tiny cat sticker",
+      "alt": "Двойная проверка доверенности",
+      "labels": [
+        "видеозвонок",
+        "адрес+цена",
+        "имя представителя",
+        "нет связи=стоп"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Собственник на СВО: доверенность старая, а воля нужна сегодняшняя",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Checklist: sell vs receive money powers; red X missing item",
+      "alt": "Чеклист полномочий доверенности",
+      "labels": [
+        "продать≠деньги",
+        "получать средства",
+        "подписать ДКП",
+        "без передовerия"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "«Продать» и «получить деньги» — это два разных пункта доверенности",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Military POA vs empty FNP registry box; flow blocks",
+      "alt": "Доверенность командира не в ФНП",
+      "labels": [
+        "командир части",
+        "нет в ФНП",
+        "подлинник",
+        "смерть=стоп"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Красные флаги, на которых я останавливаю сделку",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Red flags checklist; tiny meme corner sticker",
+      "alt": "Красные флаги по доверенности",
+      "labels": [
+        "не видели",
+        "скидка",
+        "деньги представителю",
+        "нет видео"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Тюменская вторичка: половина сделки живёт не в Тюмени",
+      "visual_type": "comparison_table",
+      "scene_hint": "Interregional deal table: one flyer vs POA others; Tyumen labels",
+      "alt": "Межрегиональная сделка в Тюмени",
+      "labels": [
+        "не в городе",
+        "СВО",
+        "один прилетел",
+        "по бумаге"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что делать покупателю: порядок без импровизаций",
+      "visual_type": "process_flow",
+      "scene_hint": "4-step flow: registry video powers payment to owner",
+      "alt": "Порядок проверки и расчёта",
+      "labels": [
+        "реестр → видео",
+        "полномочия → расчёт",
+        "отмена между днями",
+        "счёт собственника"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени",
+    "доверенность",
+    "егрн"
+  ],
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "wordstat_stickers_pil_applied": true
+}

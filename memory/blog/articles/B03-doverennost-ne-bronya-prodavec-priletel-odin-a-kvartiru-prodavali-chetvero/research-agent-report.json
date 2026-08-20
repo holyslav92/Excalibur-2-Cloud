@@ -1,0 +1,56 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B03",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-20",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/07/27/76552633/",
+        "type": "media",
+        "note": "Кейс 27.07.2026: пенсионерка, доверенность на настоятельницу, скидка, продажа за 2 дня"
+      },
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "5 схем: доверенности СВО, «один прилетит остальные по доверенности»"
+      },
+      {
+        "url": "https://tass.ru/obschestvo/25160209",
+        "type": "media",
+        "note": "Нотариусы о рисках сделок по доверенности"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 23066,
+    "angle_phrase": "доверенность на продажу квартиры",
+    "angle_volume": 99,
+    "rework_from": "проверка квартиры перед покупкой (9)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": false,
+    "status": "PASS",
+    "verified_claims": 0,
+    "entities_checked": [],
+    "errors": [],
+    "lesson": "Legal norms GK RF + FNP registry — no bank tariff claims"
+  },
+  "key_facts_count": 22,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}

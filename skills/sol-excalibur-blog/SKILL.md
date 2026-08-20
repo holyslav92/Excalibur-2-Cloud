@@ -7,16 +7,19 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 
 ## Модель (HARD) — thin conductor
 
-**Не пиши прозу моделью Cursor.** Собери `--user-file` из `drafts/writer.html` + SOUL/examples и вызови Derouter powerful tier (claude-opus-5):
+**Не пиши прозу моделью Cursor.** Собери `--user-file` из `drafts/writer.html` + SOUL/examples и вызови Derouter powerful tier (claude-opus-5).
+
+Longform (7 inline): **3 части на первом проходе** — не ждать HTTP 524:
 
 ```bash
-python3 scripts/excalibur_blog_derouter_opus_chat.py \
-  --role sol \
+python3 scripts/excalibur_blog_sol_chunk.py \
   --system-file skills/sol-excalibur-blog/SKILL.md \
   --user-file <assembled-sol-inputs.md> \
   --output article.html \
   --article-dir <article_dir>
 ```
+
+`--single-shot` только для коротких статей (3 inline). При 524 на single-shot — повтор через chunk script, не ручной merge в Cursor.
 
 Копию финала положи в `drafts/variant-a.html` (shell cp, не рерайт Cursor).
 Контракт: `shared/derouter-opus-brain-contract.md`.
