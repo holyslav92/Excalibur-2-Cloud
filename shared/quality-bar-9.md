@@ -54,9 +54,12 @@ Dual CTA (мягко): «напишите на консультацию» **ил
 
 ## COVER
 
-- Identity `face-studio-2026-06-23`, **новая эмоция**, medium-slim, **телефон на cover**.
-- Wordstat-стикеры **1–3**, **не перекрывают** главный заголовок на обложке.
-- Мемы TOP-100 — **маленькие**, не hero.
+- Identity `face-studio-2026-06-23` — **FACE i2i only** (кости, hairline, eyes, stubble, 28yo, medium-slim). **Не** копировать одежду/позу/студийный bust референса.
+- **Variety lock (HARD):** каждый cover **INVENTS** outfit, location, action, emotion, pose/framing. Не default «black blazer + left talking-head bust + side-eye»; FAIL если последние 2–3 обложки повторяют эту связку.
+- **Телефон на cover:** `+7 922 001 65 05`.
+- Wordstat-стикеры **1–3**, **не перекрывают** главный заголовок (positions x≥0.68; PIL overlay если модель накрыла title).
+- Мемы TOP-100 — **маленькие**, не hero; host = единственный крупный человек.
+- Cover-QA checks: `title_not_occluded`, `outfit_invented`, `action_invented`, `emotion_not_copied_from_recent_covers`.
 
 ## INLINES
 

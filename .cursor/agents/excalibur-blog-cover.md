@@ -90,10 +90,8 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 - Канон: `memory/cover/inline-visual-types.json`
 - **Тест пользы:** каждый inline учит факт/порядок/число/сравнение по H2 — FAIL если ряд иконок+3 слова
 - **NO host face** на inline; стиль = одобренная B02 обложка (high-key collage)
-- **NO co-host human** на inline — stock model, generated man, large meme person → FAIL
-- **Meme stickers** на inline: ≤15% кадра, угол; `memory/cover/meme-top100.json`
 - Cover-text labels = **факты** из статьи, не слоганы
-- Cover-QA checks: `inline_utility_all_7`, `inline_no_host_face`, `inline_no_co_host_human`, `inline_meme_sticker_scale`, `meme_people_real_catalog`
+- Cover-QA checks: `inline_utility_all_7`, `inline_no_host_face`
 
 ## Blockers
 

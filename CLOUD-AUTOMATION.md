@@ -109,7 +109,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 28 лет, **новая выдуманная сцена** каждый раз. AI `scene-composition-only/hero-ref-*` — не для лица.
 
-**Cover canon v2:** `memory/cover/cover-canon.json` — light/bright, мемы, Wordstat-стикеры, anti-repeat 14д. **Запрещена** daypart-формула (desk/street/close talk/night split).
+**Cover canon v2:** `memory/cover/cover-canon.json` — light/bright, мемы, Wordstat-стикеры, anti-repeat 14д (outfit/emotion/pose/action + composition/location/meme). **Variety lock:** FACE i2i = face-studio only; каждый cover INVENTS outfit/action/emotion/pose — FAIL на «black blazer + left bust + side-eye» streak. **Title zone sacred:** Wordstat stickers x≥0.68, не на заголовке; PIL overlay если модель накрыла текст. **Запрещена** daypart-формула (desk/street/close talk/night split).
 
 **Inline visual law (HARD):** крупный человек = только Святослав на cover (`face-studio-2026-06-23.jpg`). Inline = инфографика (таблицы, схемы, графики) — **без** stock model / generated man / co-host. People-memes = маленькие стикеры (≤15% кадра) из `memory/cover/meme-top100.json`. Cover-QA FAIL на co-host human или meme person > sticker scale.
 
@@ -144,7 +144,7 @@ Conversion (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
   Interlink 2–4 sibling из shared/published-articles.md (status=published)
 
 После Sol: pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → quality-bar-9.json all_pass.
-Description → Cover-text || Schema → Cover (cover-scene via derouter) → Cover-QA (phone on cover, inline utility) → Indexer.
+Description → Cover-text || Schema → Cover (cover-scene via derouter; variety lock: invent outfit/action/emotion/pose; stickers NOT on title) → Cover-QA (phone, title_not_occluded, outfit/action/emotion variety) → Indexer.
 
 Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе И quality-bar-9.json all_pass; иначе STOP после Indexer.
 Live = SFTP replace (не жди merge article в main для сайта). Код/канон — в main.

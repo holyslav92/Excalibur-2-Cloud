@@ -13,6 +13,10 @@ REQUIRED_CHECKS = (
     "identity_face_28yo",
     "identity_body_medium_slim",
     "identity_expression_invented",
+    "title_not_occluded",
+    "outfit_invented",
+    "action_invented",
+    "emotion_not_copied_from_recent_covers",
     "cover_phone_readable",
     "board_stationery_ok",
     "typography_cyrillic_clean",
@@ -28,6 +32,25 @@ REQUIRED_CHECKS = (
     "inline_no_co_host_human",
     "inline_meme_sticker_scale",
     "meme_people_real_catalog",
+)
+
+BANNED_OUTFIT_TOKENS = (
+    "black blazer",
+    "charcoal blazer",
+    "чёрный пиджак",
+    "black t shirt combo",
+)
+BANNED_POSE_TOKENS = (
+    "left bust",
+    "talking head",
+    "host large left",
+    "large left bust",
+    "бюст слева",
+)
+BANNED_EMOTION_TOKENS = (
+    "side-eye",
+    "side eye",
+    "боковой взгляд",
 )
 
 REQUIRED_IMAGES = (
@@ -48,6 +71,85 @@ def project_root() -> Path:
 
 def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def normalize_token(value: str) -> str:
+    return " ".join(str(value or "").casefold().split())
+
+
+def field_has_banned_tokens(value: str, tokens: tuple[str, ...]) -> bool:
+    norm = normalize_token(value)
+    return any(normalize_token(token) in norm for token in tokens)
+
+
+def validate_title_not_occluded(manifest: dict) -> bool:
+    positions = manifest.get("wordstat_sticker_positions")
+    if not isinstance(positions, list) or not positions:
+        return True
+    for pos in positions:
+        if isinstance(pos, (list, tuple)) and len(pos) >= 2:
+            if float(pos[0]) < 0.68:
+                return False
+    return True
+
+
+def validate_outfit_invented(manifest: dict) -> bool:
+    motifs = manifest.get("cover_motifs") or {}
+    outfit = str(motifs.get("outfit") or "").strip()
+    if not outfit:
+        return False
+    if field_has_banned_tokens(outfit, BANNED_OUTFIT_TOKENS):
+        pose = str(motifs.get("pose_framing") or "")
+        emotion = str(motifs.get("emotion") or "")
+        if field_has_banned_tokens(pose, BANNED_POSE_TOKENS) and field_has_banned_tokens(
+            emotion, BANNED_EMOTION_TOKENS
+        ):
+            return False
+    return True
+
+
+def validate_action_invented(manifest: dict) -> bool:
+    motifs = manifest.get("cover_motifs") or {}
+    action = str(motifs.get("action") or "").strip()
+    return len(action) >= 8
+
+
+def validate_emotion_not_recent_copy(manifest: dict, root: Path) -> bool:
+    motifs = manifest.get("cover_motifs") or {}
+    emotion = normalize_token(str(motifs.get("emotion") or ""))
+    pose = normalize_token(str(motifs.get("pose_framing") or ""))
+    if not emotion:
+        return False
+    log_path = root / "memory/cover/used-motifs.json"
+    if not log_path.is_file():
+        return True
+    try:
+        data = load_json(log_path)
+    except json.JSONDecodeError:
+        return True
+    topic_id = normalize_token(str(manifest.get("topic_id") or ""))
+    recent = list(data.get("entries") or [])[-3:]
+    same_emotion = 0
+    same_pose = 0
+    for entry in recent:
+        if normalize_token(str(entry.get("topic_id") or "")) == topic_id:
+            continue
+        prior = entry.get("motifs") or {}
+        if normalize_token(str(prior.get("emotion") or "")) == emotion:
+            same_emotion += 1
+        if pose and normalize_token(str(prior.get("pose_framing") or "")) == pose:
+            same_pose += 1
+    if same_emotion >= 2:
+        return False
+    if same_pose >= 2 and field_has_banned_tokens(pose, BANNED_POSE_TOKENS):
+        return False
+    if field_has_banned_tokens(emotion, BANNED_EMOTION_TOKENS) and field_has_banned_tokens(
+        pose, BANNED_POSE_TOKENS
+    ):
+        outfit = str(motifs.get("outfit") or "")
+        if field_has_banned_tokens(outfit, BANNED_OUTFIT_TOKENS):
+            return False
+    return True
 
 
 def validate_cover_qa(article_dir: Path, root: Path) -> dict:
@@ -120,6 +222,25 @@ def validate_cover_qa(article_dir: Path, root: Path) -> dict:
                 labels = slot.get("labels") or []
                 if not (2 <= len(labels) <= 6):
                     errors.append(f"{key}.labels count {len(labels)}, need 2-6")
+            motifs = manifest.get("cover_motifs") or {}
+            if not motifs.get("outfit"):
+                errors.append("cover_motifs.outfit missing — variety lock requires invented outfit")
+            if not motifs.get("action"):
+                errors.append("cover_motifs.action missing — variety lock requires invented action")
+            if not motifs.get("emotion"):
+                errors.append("cover_motifs.emotion missing — variety lock requires hook emotion")
+            if not motifs.get("pose_framing"):
+                errors.append("cover_motifs.pose_framing missing — variety lock requires pose/framing")
+            if not validate_title_not_occluded(manifest):
+                errors.append("wordstat_sticker_positions overlap title zone (x must be ≥0.68)")
+            if not validate_outfit_invented(manifest):
+                errors.append("outfit_invented FAIL: black-blazer+left-bust+side-eye combo or empty outfit")
+            if not validate_action_invented(manifest):
+                errors.append("action_invented FAIL: cover_motifs.action too short or missing")
+            if not validate_emotion_not_recent_copy(manifest, root):
+                errors.append(
+                    "emotion_not_copied_from_recent_covers FAIL: emotion/pose repeats last covers"
+                )
         except json.JSONDecodeError:
             errors.append("quad-manifest.json invalid JSON")
 

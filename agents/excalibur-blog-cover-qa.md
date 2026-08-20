@@ -18,7 +18,9 @@ FAIL → **вернуть Cover**, не пускать Indexer/Publish.
 ## FAIL если
 
 - лицо не тот же человек что `face-studio-2026-06-23.jpg` (пластик / AI / чужой)
-- **эмоция скопирована с референса** — вежливая студийная closed-mouth smile / та же поза 1:1 → FAIL (нужна живая мимика под hook)
+- **эмоция скопирована с референса или последних 2–3 covers** — side-eye + left bust + black blazer combo → FAIL
+- **outfit/action не изобретены** — пустые cover_motifs.outfit/action или default black blazer bust → FAIL
+- **Wordstat stickers на заголовке** — title_not_occluded FAIL → PIL overlay x≥0.68
 - **телосложение толще референсов** — chubby, puffy cheeks, double chin, thick neck, wide torso в tight blazer → FAIL
 - dark cinematic / не high-key light
 - motif collision 14д (`used-motifs.json`)

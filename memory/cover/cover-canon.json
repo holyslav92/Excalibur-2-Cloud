@@ -23,10 +23,50 @@
       "meme",
       "prop_set",
       "sticker_set",
-      "joke"
+      "joke",
+      "outfit",
+      "emotion",
+      "pose_framing",
+      "action"
     ],
     "preflight_script": "scripts/excalibur_blog_cover_motif_gate.py",
-    "after_14_days_motif_may_return": true
+    "after_14_days_motif_may_return": true,
+    "variety_combo_fail": {
+      "description": "FAIL если новая обложка или последние N (≥2) повторяют связку «чёрный пиджак + бюст слева + боковой взгляд»",
+      "lookback_covers": 3,
+      "outfit_tokens": ["black blazer", "charcoal blazer", "чёрный пиджак", "black t-shirt combo"],
+      "pose_tokens": ["left bust", "talking head", "host large left", "large left bust", "бюст слева"],
+      "emotion_tokens": ["side-eye", "side eye", "боковой взгляд", "skeptical side glance"]
+    }
+  },
+  "variety_lock": {
+    "face_i2i_only": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+    "face_locks": ["bone structure", "hairline", "eye shape", "stubble", "28yo", "medium-slim build"],
+    "invent_every_cover": ["outfit", "location", "action", "emotion", "pose_framing"],
+    "forbidden_defaults": [
+      "black blazer + black t-shirt every run",
+      "left talking-head bust every run",
+      "same side-eye / open-mouth shock as last 2–3 covers"
+    ],
+    "cover_motifs_required": [
+      "composition",
+      "location",
+      "meme",
+      "prop_set",
+      "sticker_set",
+      "joke",
+      "outfit",
+      "emotion",
+      "pose_framing",
+      "action"
+    ],
+    "note": "FACE = WHO (i2i). Outfit/action/emotion/pose = HOW — новые каждый раз под hook."
+  },
+  "title_zone_sacred": {
+    "rule": "Wordstat stickers/tape MUST NOT overlap main headline on cover",
+    "pil_overlay": "scripts/excalibur_blog_cover_wordstat_overlay.py — stickers x≥0.68 (right edge only)",
+    "phone_required": "+7 922 001 65 05",
+    "forbidden_on_title": ["wordstat tape over hook", "sticker occluding H1", "meme over headline text"]
   },
   "light_bright": {
     "required": true,
@@ -178,7 +218,11 @@
       "inline_no_co_host_human",
       "inline_meme_sticker_scale",
       "meme_people_real_catalog",
-      "identity_expression_invented"
+      "identity_expression_invented",
+      "title_not_occluded",
+      "outfit_invented",
+      "action_invented",
+      "emotion_not_copied_from_recent_covers"
     ]
   },
   "owner_visual_polish": {

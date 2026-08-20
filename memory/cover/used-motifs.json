@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "window_days": 14,
   "entries": [
     {
@@ -12,7 +12,11 @@
         "meme": "distracted_boyfriend_sticker_plus_thinking_cat_cutout",
         "prop_set": "egrn_pdf_fold_red_marker_tiny_apartment_icon",
         "sticker_set": "wordstat_paper_stickers_meme_people_reaction_cutout",
-        "joke": "sticky_аванс_сегодня_crossed_red_x"
+        "joke": "sticky_аванс_сегодня_crossed_red_x",
+        "outfit": "navy unstructured blazer over dark tee",
+        "emotion": "calm_confidence_pointing",
+        "pose_framing": "host_large_left_three_quarter",
+        "action": "points_at_egrn_tablet_with_marker"
       }
     },
     {
@@ -25,7 +29,62 @@
         "meme": "this_is_fine_cat_sticker_plus_surprised_guy_reaction_cutout",
         "prop_set": "handwritten_receipt_fold_tiny_accreditiv_card_red_zero_balance",
         "sticker_set": "wordstat_kupit_kvartiru_tyuymeni_akkreditiv_paper_stickers",
-        "joke": "sticky_бумага_есть_arrow_to_empty_счёт_пуст"
+        "joke": "sticky_бумага_есть_arrow_to_empty_счёт_пуст",
+        "outfit": "charcoal blazer over black crew neck",
+        "emotion": "bewildered_empty_balance",
+        "pose_framing": "host_large_left_bust",
+        "action": "holds_receipt_toward_zero_balance_card"
+      }
+    },
+    {
+      "date": "2026-08-20",
+      "topic_id": "B03",
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "motifs": {
+        "composition": "host_slim_left_jaw_drop_points_egrn_gift_line_string_web_sun_flare",
+        "location": "bright_white_corkboard_investigation_tyumen_glass_atrium",
+        "meme": "woman_yelling_cat_sticker_plus_surprised_wojak_cutout",
+        "prop_set": "efrsb_lot_card_egrn_fold_gift_deed_red_circle_daughter_icon_phone_cta",
+        "sticker_set": "wordstat_bankrotstvo_torgi_tyumen_gold_tape_phone_number",
+        "joke": "sticky_карточка_чистая_green_check_fake_crossed_red_x",
+        "outfit": "black blazer over black t-shirt",
+        "emotion": "jaw_drop_shock_open_mouth",
+        "pose_framing": "host_large_left_bust_talking_head",
+        "action": "points_at_egrn_gift_deed_line"
+      }
+    },
+    {
+      "date": "2026-08-20",
+      "topic_id": "B04",
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "motifs": {
+        "composition": "host_large_left_side_eye_power_of_attorney_board",
+        "location": "bright_white_investigation_board_tyumen",
+        "meme": "serious_cat_sticker_seriozno",
+        "prop_set": "power_of_attorney_fold_yellow_sticky_kto_prodaet_phone_cta",
+        "sticker_set": "wordstat_doverennost_egrn_kupit_kvartiru_tyumen",
+        "joke": "sticky_kto_prodaet_yellow_note",
+        "outfit": "black blazer over black t-shirt",
+        "emotion": "side_eye_skeptical_glance",
+        "pose_framing": "host_large_left_bust_talking_head",
+        "action": "side_glance_at_power_of_attorney_paper"
+      }
+    },
+    {
+      "date": "2026-08-20",
+      "topic_id": "B05",
+      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "motifs": {
+        "composition": "host_three_quarter_right_stop_gesture_headline_left_white_board_sun_flare",
+        "location": "bright_sunny_tyumen_apartment_entrance_white_stone_steps_glass_door",
+        "meme": "thinking_cat_sticker_small_top_right_corner",
+        "prop_set": "egrn_folder_fold_minus_2mln_price_tag_red_circle_bankruptcy_stamp_phone_cta",
+        "sticker_set": "wordstat_tyumen_bankrotstvo_vtorichka_gold_tape_right_edge_only",
+        "joke": "sticky_zadatok_segodnya_yellow_note_pinned",
+        "outfit": "terracotta merino sweater + light grey unbuttoned overcoat + dark jeans",
+        "emotion": "alert_wary_focused_frown_narrowed_eyes",
+        "pose_framing": "three_quarter_body_host_right_entrance_steps_not_left_bust",
+        "action": "left_hand_holds_egrn_folder_right_palm_stop_gesture_at_discount_tag"
       }
     }
   ]

@@ -53,13 +53,86 @@ def prune_entries(entries: list[dict], *, window_days: int, today: date) -> list
 
 
 def motif_payload_from_args(args: argparse.Namespace) -> dict[str, str]:
-    fields = ("composition", "location", "meme", "prop_set", "sticker_set", "joke")
+    fields = (
+        "composition",
+        "location",
+        "meme",
+        "prop_set",
+        "sticker_set",
+        "joke",
+        "outfit",
+        "emotion",
+        "pose_framing",
+        "action",
+    )
     payload: dict[str, str] = {}
     for field in fields:
-        value = normalize_token(getattr(args, field, "") or "")
+        value = normalize_token(getattr(args, field.replace("-", "_"), "") or getattr(args, field, "") or "")
         if value:
             payload[field] = value
     return payload
+
+
+def _field_matches_tokens(value: str, tokens: list[str]) -> bool:
+    norm = normalize_token(value)
+    if not norm:
+        return False
+    for token in tokens:
+        if normalize_token(token) in norm:
+            return True
+    return False
+
+
+def load_variety_combo_config(root: Path) -> dict:
+    canon_path = root / "memory/cover/cover-canon.json"
+    if not canon_path.is_file():
+        return {}
+    canon = load_json(canon_path)
+    return (canon.get("anti_repeat") or {}).get("variety_combo_fail") or {}
+
+
+def matches_variety_combo(motifs: dict[str, str], combo_cfg: dict) -> bool:
+    """True when outfit + pose + emotion all hit banned repeat tokens."""
+    if not combo_cfg:
+        return False
+    outfit_ok = _field_matches_tokens(
+        motifs.get("outfit", ""), list(combo_cfg.get("outfit_tokens") or [])
+    )
+    pose_ok = _field_matches_tokens(
+        motifs.get("pose_framing", ""), list(combo_cfg.get("pose_tokens") or [])
+    )
+    emotion_ok = _field_matches_tokens(
+        motifs.get("emotion", ""), list(combo_cfg.get("emotion_tokens") or [])
+    )
+    return outfit_ok and pose_ok and emotion_ok
+
+
+def variety_combo_failures(
+    motifs: dict[str, str],
+    entries: list[dict],
+    *,
+    combo_cfg: dict,
+) -> list[str]:
+    """FAIL if proposed cover matches banned combo OR recent lookback streak."""
+    errors: list[str] = []
+    lookback = int(combo_cfg.get("lookback_covers") or 3)
+
+    if matches_variety_combo(motifs, combo_cfg):
+        errors.append(
+            "proposed cover matches banned combo: black-blazer + left-bust + side-eye"
+        )
+
+    recent_hits = 0
+    for entry in entries[-lookback:]:
+        prior = entry.get("motifs") or {}
+        if matches_variety_combo(prior, combo_cfg):
+            recent_hits += 1
+    if recent_hits >= 2 and matches_variety_combo(motifs, combo_cfg):
+        errors.append(
+            f"variety streak: {recent_hits} of last {lookback} covers already used "
+            "black-blazer + left-bust + side-eye; invent new outfit/pose/emotion"
+        )
+    return errors
 
 
 def find_collisions(
@@ -115,6 +188,14 @@ def cmd_check(root: Path, args: argparse.Namespace) -> int:
                 f"  - {hit['field']}={hit['value']!r} repeats {hit['prior_topic_id']} ({hit['prior_date']})",
                 file=sys.stderr,
             )
+        return 1
+
+    combo_cfg = load_variety_combo_config(root)
+    variety_errors = variety_combo_failures(motifs, entries, combo_cfg=combo_cfg)
+    if variety_errors:
+        print("FAIL COVER VARIETY COMBO:", file=sys.stderr)
+        for err in variety_errors:
+            print(f"  - {err}", file=sys.stderr)
         return 1
 
     print(f"OK motif gate topic_id={args.topic_id} fields={','.join(motifs)} window={window_days}d")
@@ -182,6 +263,10 @@ def main() -> int:
     common.add_argument("--prop-set", dest="prop_set", default="")
     common.add_argument("--sticker-set", dest="sticker_set", default="")
     common.add_argument("--joke", default="")
+    common.add_argument("--outfit", default="")
+    common.add_argument("--emotion", default="")
+    common.add_argument("--pose-framing", dest="pose_framing", default="")
+    common.add_argument("--action", default="")
 
     sub.add_parser("check", parents=[common], help="Reject collisions before generate")
     sub.add_parser("record", parents=[common], help="Append motifs after successful cover")

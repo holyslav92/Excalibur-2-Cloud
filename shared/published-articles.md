@@ -8,3 +8,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-08-20 | B02 | raspisku-na-kvartiru-napisali-deneg-na-schete-net | /blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/ | published |
 | 2026-08-20 | B03 | pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri | /blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/ | published |
 | 2026-08-20 | B04 | doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero | /blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/ | published |
+| 2026-08-20 | B05 | skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk | /blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/ | published |
