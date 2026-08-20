@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-20",
+    "today_ru": "20.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "четверг"
+  },
+  "topic": {
+    "topic_id": "B03",
+    "title": "Скидку два миллиона обещали — а в квартире прятали риск",
+    "h1": "Скидку два миллиона обещали — а в квартире прятали риск",
+    "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+    "primary_query": "Скидку два миллиона обещали — а в квартире прятали риск",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "Скидку два миллиона обещали — а в квартире прятали риск 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Россиян предупредили о заметном сокращении скидок на вторичные квартиры",
+          "url": "https://www.gazeta.ru/business/news/2026/08/12/29090929.shtml",
+          "snippet": ""
+        },
+        {
+          "title": "Почему застройщики распродают квартиры в начале 2026 года",
+          "url": "https://smarent.com/blog_spb/tpost/8fpjn3ffs1-pochemu-zastroischiki-rasprodayut-kvarti",
+          "snippet": "В Москве доля квартир на вторичке, которые продаются со скидкой, снизилась с 83% до 61%, а средний дисконт в 2026 ..."
+        },
+        {
+          "title": "Почему застройщики распродают квартиры в начале 2026 года",
+          "url": "https://dzen.ru/a/aZRHqZ4SYmilyj39",
+          "snippet": "Есть риск, что когда покупатели увидят не глянцевые рендеры в красивом офисе на набережной, а реальные входные группы и места общего пользования, они разочаруются и уйдут к конкурентам."
+        },
+        {
+          "title": "Щедрость отчаяния: как не купить долгострой под видом квартиры с ...",
+          "url": "https://moscowrise.ru/shhedrost-otchayaniya-kak-ne-kupit-dolgostroj-pod-vidom-kvartiry-s-superskidkoj-v-2026-godu/",
+          "snippet": "Начало 2026 года преподнесло сюрприз: застройщики, которые еще в конце 2025 года агрессивно поднимали цены и прогнозировали дальнейший рост, с января-февраля начали массово предлагать скидки."
+        },
+        {
+          "title": "Разоблачение года: как застройщики «дарят» миллионы, а вы ...",
+          "url": "https://moscowrise.ru/razoblachenie-goda-kak-zastrojshhiki-daryat-milliony-a-vy-pereplachivaete-gid-po-realnym-akcziyam-2026/",
+          "snippet": "Узнайте, какие скидки на недвижимость в 2026 году реальны, а какие скрывают риски. Анализ демпинга застройщиков, сравнение дисконта и субсидированной ставки. Читайте обзор."
+        },
+        {
+          "title": "Цены на квартиры до конца 2026 года: что происходит с рынком жилья",
+          "url": "https://bankiros.ru/news/ceny-na-kvartiry-do-konca-2026-goda-prognozy-riski-rassrochek-i-gde-zhile-podesheveet-22171",
+          "snippet": "Узнайте, как отличить реальные скидки на квартиры от маркетинговых уловок застройщиков в 2026 году. Советы эксперта по анализу цен и акций. Читайте наш обзор."
+        }
+      ],
+      "searched_at": "2026-08-20"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "Скидку два миллиона обещали — а в квартире прятали риск 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Россиян предупредили о заметном сокращении скидок на вторичные квартиры",
+          "url": "https://www.gazeta.ru/business/news/2026/08/12/29090929.shtml",
+          "snippet": ""
+        },
+        {
+          "title": "Почему застройщики распродают квартиры в начале 2026 года",
+          "url": "https://smarent.com/blog_spb/tpost/8fpjn3ffs1-pochemu-zastroischiki-rasprodayut-kvarti",
+          "snippet": "В Москве доля квартир на вторичке, которые продаются со скидкой, снизилась с 83% до 61%, а средний дисконт в 2026 ..."
+        },
+        {
+          "title": "Почему застройщики распродают квартиры в начале 2026 года",
+          "url": "https://dzen.ru/a/aZRHqZ4SYmilyj39",
+          "snippet": "Есть риск, что когда покупатели увидят не глянцевые рендеры в красивом офисе на набережной, а реальные входные группы и места общего пользования, они разочаруются и уйдут к конкурентам."
+        },
+        {
+          "title": "Щедрость отчаяния: как не купить долгострой под видом квартиры с ...",
+          "url": "https://moscowrise.ru/shhedrost-otchayaniya-kak-ne-kupit-dolgostroj-pod-vidom-kvartiry-s-superskidkoj-v-2026-godu/",
+          "snippet": "Начало 2026 года преподнесло сюрприз: застройщики, которые еще в конце 2025 года агрессивно поднимали цены и прогнозировали дальнейший рост, с января-февраля начали массово предлагать скидки."
+        },
+        {
+          "title": "Разоблачение года: как застройщики «дарят» миллионы, а вы ...",
+          "url": "https://moscowrise.ru/razoblachenie-goda-kak-zastrojshhiki-daryat-milliony-a-vy-pereplachivaete-gid-po-realnym-akcziyam-2026/",
+          "snippet": "Узнайте, какие скидки на недвижимость в 2026 году реальны, а какие скрывают риски. Анализ демпинга застройщиков, сравнение дисконта и субсидированной ставки. Читайте обзор."
+        },
+        {
+          "title": "Цены на квартиры до конца 2026 года: что происходит с рынком жилья",
+          "url": "https://bankiros.ru/news/ceny-na-kvartiry-do-konca-2026-goda-prognozy-riski-rassrochek-i-gde-zhile-podesheveet-22171",
+          "snippet": "Узнайте, как отличить реальные скидки на квартиры от маркетинговых уловок застройщиков в 2026 году. Советы эксперта по анализу цен и акций. Читайте наш обзор."
+        }
+      ],
+      "searched_at": "2026-08-20"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "Скидку два миллиона обещали — а в квартире прятали риск official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Три миллиона в никуда: как мелкий шрифт в договоре уничтожит мечты ...",
+          "url": "https://ruinformer.com/page/tri-milliona-v-nikuda-kak-melkij-shrift-v-dogovore-unichtozhit-mechty-rossijan-o-kvartire",
+          "snippet": ""
+        },
+        {
+          "title": "Щедрость отчаяния: как не купить долгострой под видом квартиры с ...",
+          "url": "https://moscowrise.ru/shhedrost-otchayaniya-kak-ne-kupit-dolgostroj-pod-vidom-kvartiry-s-superskidkoj-v-2026-godu/",
+          "snippet": "Три реальные истории 2026 года показывают, как невнимательность к деталям договора стоила дольщикам миллионов рублей и разрушила планы на собственное жильё. Первая ловушка связана с переходом от рассрочки к ипотеке."
+        },
+        {
+          "title": "Какие скрытые условия ждут покупателей жилья в 2026 году",
+          "url": "https://companies.rbc.ru/news/ybaBaET3Po/kakie-skryityie-usloviya-zhdut-pokupatelej-zhilya-v-2026-godu/",
+          "snippet": "Узнайте, какие скидки на недвижимость в 2026 году реальны, а какие скрывают риски. Анализ демпинга застройщиков, сравнение дисконта и субсидированной ставки. Читайте обзор."
+        },
+        {
+          "title": "Скидки на новостройки: Правда, ловушки и расчет выгоды | Гид АН «Владис»",
+          "url": "https://vladis.ru/blog/skidki-ot-zastroyshchikov-vsya-pravda-gid",
+          "snippet": "Рынок недвижимости в 2026 году переживает очередной виток трансформации. На фоне изменяющихся процентных ставок и ужесточения банковских требований покупателям все чаще предлагают альтернативу классической ипотеке — рассрочку от застройщика."
+        },
+        {
+          "title": "Цены на квартиры до конца 2026 года: что происходит с рынком жилья",
+          "url": "https://bankiros.ru/news/ceny-na-kvartiry-do-konca-2026-goda-prognozy-riski-rassrochek-i-gde-zhile-podesheveet-22171",
+          "snippet": "Мы проанализировали самые частые вопросы, которые задают нам клиенты, выбирающие квартиру в новостройке в 2026 году, и подготовили на них краткие и честные ответы."
+        },
+        {
+          "title": "В Ярославле и Калуге появились новые обманутые дольщики",
+          "url": "https://rg.ru/2026/06/18/reg-cfo/do-kliuchej-ne-doshlo.html",
+          "snippet": "Рынок недвижимости в 2026 году переживает трансформацию: дешевая ипотека ушла в прошлое, застройщики массово предлагают скидки и рассрочки, а покупатели гадают - ждать ли падения цен или брать сейчас."
+        }
+      ],
+      "searched_at": "2026-08-20"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com Скидку два миллиона обещали — а в квартире прятали риск 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "coursera-ddp-shiny/corpora/ru_50k.txt at master - GitHub",
+          "url": "https://github.com/spujadas/coursera-ddp-shiny/blob/master/corpora/ru_50k.txt",
+          "snippet": ""
+        },
+        {
+          "title": "GitHub - sxemixa/Apatrments-for-sell: В вашем распоряжении данные ...",
+          "url": "https://github.com/sxemixa/Apatrments-for-sell",
+          "snippet": "Coursera Developing Data Products Week 4 Peer-graded Assignment: Shiny - spujadas/coursera-ddp-shiny"
+        },
+        {
+          "title": "Тест 6 ответы.md · GitHub",
+          "url": "https://gist.github.com/itc1205/2ba338dc829dec92f8eb907ecc46cbab",
+          "snippet": "В вашем распоряжении данные сервиса Яндекс.Недвижимость — архив объявлений о продаже квартир в Санкт-Петербурге и соседних населённых пунктах за несколько лет."
+        },
+        {
+          "title": "valley-of-ai/apps/2026/03/24/charades-chaos-deck/thumbnail.svg ... - GitHub",
+          "url": "https://github.com/jeffholst/valley-of-ai/blob/main/apps/2026/03/24/charades-chaos-deck/thumbnail.svg",
+          "snippet": "Уровень риска определяется: Выберите один ответ: a. тем, какую долю финансовых средств организация может потратить на покрытие рисковых событий."
+        },
+        {
+          "title": "Admin/src/logo.svg at main · sameer2-sketch/Admin · GitHub",
+          "url": "https://github.com/sameer2-sketch/Admin/blob/main/src/logo.svg",
+          "snippet": "Showcase of AI generated apps. Contribute to jeffholst/valley-of-ai development by creating an account on GitHub."
+        },
+        {
+          "title": "unsupervised_topic_modeling/topics/ru/17/100/50/topics at ... - GitHub",
+          "url": "https://github.com/annontopicmodel/unsupervised_topic_modeling/blob/master/topics/ru/17/100/50/topics",
+          "snippet": "Contribute to sameer2-sketch/Admin development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-08-20"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "Скидку два миллиона обещали — а в квартире прятали риск forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Как себя обезопасить при покупке квартиры во вторичке: истории - 28 мая ...",
+          "url": "https://www.nn.ru/text/realty/2026/05/28/76445030/",
+          "snippet": ""
+        },
+        {
+          "title": "Как себя обезопасить при покупке квартиры во вторичке: истории - 28 мая ...",
+          "url": "https://www.e1.ru/text/realty/2026/05/28/76445021/",
+          "snippet": "NGS.RU собрал истории людей, которые столкнулись с проблемами после покупки вторички, и узнал у экспертов, как обезопасить себя. Три года назад Дарья купила трехкомнатную квартиру за 5,4 миллиона рублей в комплексе, состоящем из трех кирпичных домов."
+        },
+        {
+          "title": "Россиян предупредили о заметном сокращении скидок на вторичные квартиры",
+          "url": "https://www.gazeta.ru/business/news/2026/08/12/29090929.shtml",
+          "snippet": "NGS.RU собрал истории людей, которые столкнулись с проблемами после покупки вторички, и узнал у экспертов, как обезопасить себя. Три года назад Дарья купила трехкомнатную квартиру за 5,4 миллиона рублей в комплексе, состоящем из трех кирпичных домов."
+        },
+        {
+          "title": "Как себя обезопасить при покупке квартиры во вторичке: истории - 28 мая ...",
+          "url": "https://29.ru/text/realty/2026/05/28/76445017/",
+          "snippet": "В Москве доля квартир на вторичке, которые продаются со скидкой, снизилась с 83% до 61%, а средний дисконт в 2026 ..."
+        },
+        {
+          "title": "Вы купили квартиру, а суд ее забрал: почему в 2026 году «скидка» при ...",
+          "url": "http://moscowaxis.ru/vy-kupili-kvartiru-a-sud-ee-zabral-pochemu-v-2026-godu-skidka-pri-pokupke-stala-prigovorom-razbor-novoj-sudebnoj-praktiki/",
+          "snippet": "NGS.RU собрал истории людей, которые столкнулись с проблемами после покупки вторички, и узнал у экспертов, как обезопасить себя. Три года назад Дарья купила трехкомнатную квартиру за 5,4 миллиона рублей в комплексе, состоящем из трех кирпичных домов."
+        },
+        {
+          "title": "Вы купили слишком дешево»: почему суды в 2026 году будут отбирать ...",
+          "url": "https://moscowaxis.ru/vy-kupili-slishkom-deshevo-pochemu-sudy-v-2026-godu-budut-otbirat-kvartiry-za-skidku-v-20-razbor-praktiki/",
+          "snippet": "Сегодняшние реалии рынка недвижимости диктуют жесткие условия: если вы купили квартиру на вторичке, а продавец в течение трех лет (а иногда и дольше) подал на банкротство, вы автоматически ..."
+        }
+      ],
+      "searched_at": "2026-08-20"
+    }
+  ],
+  "errors": []
+}

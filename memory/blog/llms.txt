@@ -3,5 +3,6 @@
 
 ## Blog Articles
 
-- [В Тюмени расписку за квартиру написали — денег на счёте нет]({{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/): В Тюмени расписку за квартиру написали — денег на счёте нет
 - [В выписке ЕГРН есть строка, после которой аванс вносить нельзя]({{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/): В выписке ЕГРН есть строка, после которой аванс вносить нельзя
+- [В Тюмени расписку за квартиру написали — денег на счёте нет]({{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/): В Тюмени расписку за квартиру написали — денег на счёте нет
+- [Квартиру уценили на два миллиона и просят задаток сегодня]({{SITE_BASE}}/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/): Квартиру уценили на два миллиона и просят задаток сегодня

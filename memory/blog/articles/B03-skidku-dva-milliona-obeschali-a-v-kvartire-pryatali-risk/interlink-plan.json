@@ -1,0 +1,82 @@
+{
+  "topic_id": "B03",
+  "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+  "title": "Квартиру уценили на два миллиона и просят задаток сегодня",
+  "outbound_required_min": 1,
+  "outbound_found": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "permalink": "/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+      "topic_id": "B02",
+      "post_id": null,
+      "source": "ledger"
+    }
+  ],
+  "outbound_missing_suggestions": [
+    {
+      "slug": "rosfinmonitoring-sdelka-nedvizhimost-cheklis-tyumen-2026",
+      "title": "Росфинмониторинг и сделка с недвижимостью: чеклист для Тюмени",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8487,
+      "source": "siblings"
+    },
+    {
+      "slug": "bank-otkazal-po-domu-cheklist-starogo-fonda-v-tyumeni",
+      "title": "Банк отказал по дому? Чеклист старого фонда в Тюмени",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8456,
+      "source": "siblings"
+    },
+    {
+      "slug": "na-matkapital-kupili-detskie-doli-proverte",
+      "title": "На маткапитал купили — детских долей в выписке нет",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8730,
+      "source": "siblings"
+    }
+  ],
+  "inbound_targets": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "permalink": "/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+      "topic_id": "B02",
+      "post_id": null,
+      "source": "ledger"
+    },
+    {
+      "slug": "bank-otkazal-po-domu-cheklist-starogo-fonda-v-tyumeni",
+      "title": "Банк отказал по дому? Чеклист старого фонда в Тюмени",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8456,
+      "source": "siblings"
+    },
+    {
+      "slug": "na-matkapital-kupili-detskie-doli-proverte",
+      "title": "На маткапитал купили — детских долей в выписке нет",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8730,
+      "source": "siblings"
+    }
+  ],
+  "inbound_updates": [
+    {
+      "post_id": 8456,
+      "marker": "data-excalibur-interlink-from=\"skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk\"><b>Читайте также:</b> <a href=\"{{SITE_BASE}}/blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/\">Квартиру уценили на два миллиона и просят задаток сегодня</a></p>"
+    },
+    {
+      "post_id": 8730,
+      "marker": "data-excalibur-interlink-from=\"skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk\"><b>Читайте также:</b> <a href=\"{{SITE_BASE}}/blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/\">Квартиру уценили на два миллиона и просят задаток сегодня</a></p>"
+    }
+  ],
+  "new_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/",
+  "dry_run": false
+}

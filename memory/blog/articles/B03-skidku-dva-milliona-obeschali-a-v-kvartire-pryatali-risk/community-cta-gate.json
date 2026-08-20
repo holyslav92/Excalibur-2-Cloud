@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "article_dir": "memory/blog/articles/B03-skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+  "cta_required": true,
+  "required": [
+    "https://t.me/Tyumen_Rieltor",
+    "tel:+79220016505"
+  ],
+  "present": {
+    "https://t.me/Tyumen_Rieltor": true,
+    "tel:+79220016505": true,
+    "cta_channels.max": true
+  },
+  "errors": []
+}

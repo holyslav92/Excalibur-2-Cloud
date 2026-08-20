@@ -1,0 +1,210 @@
+{
+  "topic_id": "B03",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "−2 млн",
+  "cover_hook_highlight": "уценили",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: Derouter REST (DEROUTER_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав с недоверчивым шоком смотрит на большой ценник со скидкой два миллиона рублей.",
+      "scene_hint": "Side-eye −2M; board; phone",
+      "meme_caption_ru": "",
+      "sticky": "Задаток сегодня",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "visual_type": "cover_collage",
+      "labels": [
+        "−2 000 000 ₽",
+        "купить квартиру в тюмени",
+        "вторичка тюмень"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Скидка — это цена риска, которую вам предлагают взять на себя",
+      "visual_type": "comparison_table",
+      "scene_hint": "Comparison table: honest discount vs marketing; go",
+      "alt": "Таблица сравнивает реальные причины снижения стоимости кварт",
+      "labels": [
+        "Срочная продажа",
+        "Торг после оценки"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что было в той квартире за минус два миллиона",
+      "visual_type": "process_flow",
+      "scene_hint": "4-step price check flow; taped cards; no people",
+      "alt": "Схема из четырёх шагов для проверки скидки в объявлении о пр",
+      "labels": [
+        "1. Сохранить цену",
+        "2. Проверить историю"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "За что реально дают скидку (и это нормально)",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Checklist: price/m², exposure, docs; tiny grumpy c",
+      "alt": "Чек-лист параметров, которые нужно проверить помимо сниженно",
+      "labels": [
+        "Цена за м²",
+        "Срок экспозиции"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За что скидку дают, а платить будете вы",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Price timeline bars: start, pause, cut, final; no ",
+      "alt": "Временная шкала показывает типичный путь цены квартиры от пу",
+      "labels": [
+        "Стартовая цена",
+        "Нет звонков"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Четыре вопроса, после которых скидка объясняется сама",
+      "visual_type": "structure_diagram",
+      "scene_hint": "4-question diagram around 'good discount'; tiny me",
+      "alt": "Диаграмма показывает четыре условия, при которых скидка на к",
+      "labels": [
+        "Ниже рынка",
+        "Чистые документы"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что я проверяю до задатка",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Seller question cards before deposit; no people",
+      "alt": "Список вопросов продавцу квартиры после заметного снижения ц",
+      "labels": [
+        "Когда меняли цену?",
+        "Почему продаёте?"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Если хочется быстро",
+      "visual_type": "process_flow",
+      "scene_hint": "Risk vs walk-away scales; This Is Fine tiny sticke",
+      "alt": "Схема помогает принять решение: торговаться за квартиру или ",
+      "labels": [
+        "Сравнить с рынком",
+        "Проверить документы"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени",
+    "вторичка тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "side-eye shock: Святослав косится на огромный «−2 000 000 ₽» с недоверием, приподнятая бровь, приоткрытый рот, без студийной улыбки",
+  "cover_motifs": {
+    "composition": "Святослав крупно справа у светлого щита объявлений, слева — гигантский красно-золотой ценник «−2 000 000 ₽» с разорванным краем; вокруг коллаж из карточки квартиры, калькулятора и бумажных стрелок цены",
+    "location": "яркая белая фотостудия в стиле газетного коллажа, высокий ключ, солнечный блик, золотой скотч и рваная бумага",
+    "meme": "Grumpy Cat, маленький стикер в нижнем левом углу",
+    "prop_set": "светлый щит объявлений, гигантский ценник «−2 000 000 ₽», карточка квартиры с зачёркнутой старой ценой, калькулятор, бумажные стрелки цены, золотой скотч",
+    "sticker_set": "купить квартиру в тюмени, вторичка тюмень, −2 000 000 ₽, Grumpy Cat",
+    "joke": "Кот с недовольным лицом смотрит на скидку так, будто знает: сначала цену могли поднять."
+  },
+  "wordstat_stickers_pil_applied": true
+}

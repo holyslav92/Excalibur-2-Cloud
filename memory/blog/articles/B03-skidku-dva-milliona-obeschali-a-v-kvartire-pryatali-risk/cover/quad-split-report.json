@@ -1,0 +1,300 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B03-skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_too_far_from_center",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 583,
+              "end": 611
+            },
+            "v_gutter_px": {
+              "start": 1075,
+              "end": 1101
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 21.0,
+              "v_center_offset_px": 64.0,
+              "max_aspect_crop_loss": 0.1051,
+              "per_panel_crop_loss": {
+                "top_left": 0.0363,
+                "top_right": 0.0858,
+                "bottom_left": 0.1051,
+                "bottom_right": 0.0148
+              },
+              "reject_reason": "gutter_too_far_from_center"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Святослав с недоверчивым шоком смотрит на большой ценник со скидкой два миллиона рублей.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица сравнивает реальные причины снижения стоимости кварт",
+            "h2_anchor": "Скидка — это цена риска, которую вам предлагают взять на себя"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема из четырёх шагов для проверки скидки в объявлении о пр",
+            "h2_anchor": "Что было в той квартире за минус два миллиона"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чек-лист параметров, которые нужно проверить помимо сниженно",
+            "h2_anchor": "За что реально дают скидку (и это нормально)"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B03-skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 570,
+              "end": 611
+            },
+            "v_gutter_px": {
+              "start": 1014,
+              "end": 1029
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 14.5,
+              "v_center_offset_px": 2.5,
+              "max_aspect_crop_loss": 0.0559,
+              "per_panel_crop_loss": {
+                "top_left": 0.0,
+                "top_right": 0.0,
+                "bottom_left": 0.0513,
+                "bottom_right": 0.0559
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Временная шкала показывает типичный путь цены квартиры от пу",
+            "h2_anchor": "За что скидку дают, а платить будете вы"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Диаграмма показывает четыре условия, при которых скидка на к",
+            "h2_anchor": "Четыре вопроса, после которых скидка объясняется сама"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Список вопросов продавцу квартиры после заметного снижения ц",
+            "h2_anchor": "Что я проверяю до задатка"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема помогает принять решение: торговаться за квартиру или ",
+            "h2_anchor": "Если хочется быстро"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Скидка — это цена риска, которую вам предлагают взять на себя",
+    "skip inline_2: already correct under H2 — Что было в той квартире за минус два миллиона",
+    "skip inline_3: already correct under H2 — За что реально дают скидку (и это нормально)",
+    "injected inline_4 after H2 — За что скидку дают, а платить будете вы",
+    "injected inline_5 after H2 — Четыре вопроса, после которых скидка объясняется сама",
+    "injected inline_6 after H2 — Что я проверяю до задатка",
+    "injected inline_7 after H2 — Если хочется быстро"
+  ]
+}

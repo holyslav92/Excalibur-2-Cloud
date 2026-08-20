@@ -27,6 +27,18 @@
         "sticker_set": "wordstat_kupit_kvartiru_tyuymeni_akkreditiv_paper_stickers",
         "joke": "sticky_бумага_есть_arrow_to_empty_счёт_пуст"
       }
+    },
+    {
+      "date": "2026-08-20",
+      "topic_id": "B03",
+      "slug": "",
+      "motifs": {
+        "composition": "host_sideeye_discount_board_phone",
+        "location": "bright_tyumen_white_board_tape",
+        "meme": "grumpy_cat_sticker",
+        "sticker_set": "wordstat_tyumen_secondichka",
+        "joke": "minus_2m_sticker"
+      }
     }
   ]
 }

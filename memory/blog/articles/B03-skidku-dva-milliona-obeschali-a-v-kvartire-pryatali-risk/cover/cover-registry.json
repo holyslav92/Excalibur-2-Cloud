@@ -1,0 +1,86 @@
+{
+  "topic_id": "B03",
+  "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Святослав с недоверчивым шоком смотрит на большой ценник со скидкой два миллиона рублей.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-20T12:26:35+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Святослав с недоверчивым шоком смотрит на большой ценник со скидкой два миллиона рублей.",
+      "h2_anchor": null,
+      "visual_type": "cover_collage",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Таблица сравнивает реальные причины снижения стоимости кварт",
+      "h2_anchor": "Скидка — это цена риска, которую вам предлагают взять на себя",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Схема из четырёх шагов для проверки скидки в объявлении о пр",
+      "h2_anchor": "Что было в той квартире за минус два миллиона",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Чек-лист параметров, которые нужно проверить помимо сниженно",
+      "h2_anchor": "За что реально дают скидку (и это нормально)",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Временная шкала показывает типичный путь цены квартиры от пу",
+      "h2_anchor": "За что скидку дают, а платить будете вы",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Диаграмма показывает четыре условия, при которых скидка на к",
+      "h2_anchor": "Четыре вопроса, после которых скидка объясняется сама",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Список вопросов продавцу квартиры после заметного снижения ц",
+      "h2_anchor": "Что я проверяю до задатка",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Схема помогает принять решение: торговаться за квартиру или ",
+      "h2_anchor": "Если хочется быстро",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}
