@@ -33,17 +33,22 @@
   "cta_required": true,
   "cta_links": [
     "https://t.me/Tyumen_Rieltor",
+    "https://max.ru/id561413315447_biz",
     "tel:+79220016505"
   ],
   "cta_channels": {
+    "site": "/",
     "telegram_lead": "https://t.me/Tyumen_Rieltor",
     "telegram_personal": "https://t.me/holyslav92",
     "phone": "+79220016505",
     "phone_display": "+7 922 001 65 05",
-    "max": "phone:+79220016505",
+    "max": "https://max.ru/id561413315447_biz",
+    "dzen": "https://dzen.ru/holyslav",
     "vk": "https://vk.ru/tymenrieltor",
     "whatsapp": "https://wa.me/79220016505",
-    "guides": "{{SITE_BASE}}/gajdy/"
+    "guides": "/gajdy/",
+    "about": "/rieltor-tyumen/",
+    "contacts": "/kontakty/"
   },
   "wp_categories_required": true,
   "publish_options": {

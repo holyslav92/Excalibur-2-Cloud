@@ -7,7 +7,10 @@
   "checks": {
     "brand_first_person_tyumen": true,
     "phone_in_body": true,
-    "socials_compact_block": true,
+    "early_cta_tg_max_only": true,
+    "mid_cta_tg_max_nudge": true,
+    "end_cta_full_channels": true,
+    "interlink_siblings_2_4": true,
     "dual_cta_soft": true,
     "word_count_2000_2600": true,
     "h2_count_7_plus": true,
@@ -21,8 +24,9 @@
   },
   "errors": [],
   "metrics": {
-    "word_count": 2140,
+    "word_count": 2143,
     "h2_count": 10,
-    "inline_figures": 7
+    "inline_figures": 7,
+    "sibling_interlinks": 2
   }
 }

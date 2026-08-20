@@ -21,11 +21,19 @@ WORD_MIN = 2000
 WORD_MAX = 2600
 H2_MIN = 7
 INLINE_MIN = 7
+INTERLINK_MIN = 2
+INTERLINK_MAX = 4
+
+TG_URL = "https://t.me/Tyumen_Rieltor"
+MAX_URL = "https://max.ru/id561413315447_biz"
 
 REQUIRED_CHECKS = (
     "brand_first_person_tyumen",
     "phone_in_body",
-    "socials_compact_block",
+    "early_cta_tg_max_only",
+    "mid_cta_tg_max_nudge",
+    "end_cta_full_channels",
+    "interlink_siblings_2_4",
     "dual_cta_soft",
     "word_count_2000_2600",
     "h2_count_7_plus",
@@ -77,6 +85,9 @@ def url_present(html: str, url: str) -> bool:
         return False
     if url == "/":
         return bool(re.search(r"""href=["']/["']""", html or ""))
+    if url.startswith("/"):
+        path = url.rstrip("/")
+        return bool(re.search(rf"""href=["']{re.escape(path)}/?["']""", html or "", re.I))
     if url.lower().startswith("tel:"):
         return has_phone(html)
     parsed = urlparse(url)
@@ -95,18 +106,112 @@ def check_brand(html: str) -> bool:
     return has_name and has_tyumen and has_first and has_rieltor
 
 
-def check_socials(html: str) -> bool:
+def first_screen_html(html: str) -> str:
+    """Content before first H2 — hook + TL;DR + early CTA zone."""
+    m = re.search(r"<h2\b", html or "", flags=re.I)
+    if m:
+        return (html or "")[: m.start()]
+    return html or ""
+
+
+def check_early_cta(html: str) -> bool:
+    early = first_screen_html(html).lower()
+    if not url_present(html[: len(first_screen_html(html))], TG_URL):
+        return False
+    if not url_present(html[: len(first_screen_html(html))], MAX_URL):
+        return False
+    banned_early = (
+        "vk.ru/tymenrieltor",
+        "dzen.ru/holyslav",
+        "wa.me/79220016505",
+        "t.me/holyslav92",
+        "/gajdy/",
+    )
+    return not any(b in early for b in banned_early)
+
+
+def check_mid_cta(html: str) -> bool:
+    if 'class="excalibur-cta-mid"' in (html or "") or "excalibur-cta-mid" in (html or ""):
+        block_m = re.search(
+            r'<div[^>]*class="[^"]*excalibur-cta-mid[^"]*"[^>]*>.*?</div>',
+            html or "",
+            flags=re.I | re.S,
+        )
+        if block_m:
+            block = block_m.group(0)
+            return url_present(block, TG_URL) and url_present(block, MAX_URL)
+    return False
+
+
+def check_end_cta(html: str) -> bool:
+    end_m = re.search(
+        r'<div[^>]*class="[^"]*excalibur-cta-end[^"]*"[^>]*>.*?</div>\s*(?:<p[^>]*>Материал проверен|$)',
+        html or "",
+        flags=re.I | re.S,
+    )
+    tail = end_m.group(0) if end_m else (html or "")[-3500:]
     required = (
-        "https://t.me/Tyumen_Rieltor",
-        "https://t.me/holyslav92",
-        "https://wa.me/79220016505",
-        "https://vk.ru/tymenrieltor",
+        TG_URL,
+        MAX_URL,
         "https://dzen.ru/holyslav",
+        "https://vk.ru/tymenrieltor",
     )
-    site_ok = url_present(html, "/")
-    return all(url_present(html, u) for u in required) and site_ok and bool(
-        re.search(r"\bMAX\b", html or "", re.I)
-    )
+    if not all(url_present(tail, u) for u in required):
+        return False
+    if not url_present(tail, "/gajdy/"):
+        return False
+    if not url_present(tail, "/"):
+        return False
+    return has_phone(tail)
+
+
+def load_published_sibling_paths(root: Path, article_dir: Path) -> list[str]:
+    ledger = root / "shared/published-articles.md"
+    if not ledger.is_file():
+        return []
+    slug = article_dir.name.split("-", 1)[-1] if "-" in article_dir.name else article_dir.name
+    paths: list[str] = []
+    for line in ledger.read_text(encoding="utf-8").splitlines():
+        if "| published |" not in line.lower():
+            continue
+        parts = [p.strip() for p in line.split("|")]
+        if len(parts) < 6:
+            continue
+        url_path = parts[4]
+        row_slug = parts[3]
+        if row_slug and row_slug in article_dir.name:
+            continue
+        if url_path.startswith("/"):
+            paths.append(url_path.rstrip("/") + "/")
+    return paths
+
+
+def count_sibling_interlinks(html: str, sibling_paths: list[str]) -> int:
+    found: set[str] = set()
+    for path in sibling_paths:
+        core = path.strip("/")
+        if core and core in (html or ""):
+            found.add(path)
+    return len(found)
+
+
+def check_interlinks(html: str, root: Path, article_dir: Path) -> tuple[bool, int]:
+    tenant_path = root / "shared/tenant-config.json"
+    if tenant_path.is_file():
+        tenant = load_json(tenant_path)
+        if not tenant.get("interlink_old_articles"):
+            return True, 0
+    siblings = load_published_sibling_paths(root, article_dir)
+    if not siblings:
+        return True, 0
+    count = count_sibling_interlinks(html, siblings)
+    ok = INTERLINK_MIN <= count <= INTERLINK_MAX
+    return ok, count
+
+
+def check_socials(html: str) -> bool:
+    """Legacy alias — end block channels."""
+    return check_end_cta(html)
 
 
 def check_dual_cta(html: str) -> bool:
@@ -283,7 +388,11 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
 
     checks["brand_first_person_tyumen"] = check_brand(html)
     checks["phone_in_body"] = has_phone(html)
-    checks["socials_compact_block"] = check_socials(html)
+    checks["early_cta_tg_max_only"] = check_early_cta(html)
+    checks["mid_cta_tg_max_nudge"] = check_mid_cta(html)
+    checks["end_cta_full_channels"] = check_end_cta(html)
+    interlink_ok, interlink_count = check_interlinks(html, root, article_dir)
+    checks["interlink_siblings_2_4"] = interlink_ok
     checks["dual_cta_soft"] = check_dual_cta(html)
     checks["word_count_2000_2600"] = WORD_MIN <= wc <= WORD_MAX
     checks["h2_count_7_plus"] = h2c >= H2_MIN
@@ -310,6 +419,10 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
                 errors.append(f"h2 count {h2c} < {H2_MIN}")
             elif key == "inline_figures_7":
                 errors.append(f"inline figures {inlines} < {INLINE_MIN}")
+            elif key == "interlink_siblings_2_4":
+                errors.append(
+                    f"sibling interlinks {interlink_count} outside {INTERLINK_MIN}-{INTERLINK_MAX}"
+                )
             else:
                 errors.append(f"check failed: {key}")
 
@@ -323,7 +436,12 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
         "article_dir": str(article_dir.relative_to(root)).replace("\\", "/"),
         "checks": checks,
         "errors": errors,
-        "metrics": {"word_count": wc, "h2_count": h2c, "inline_figures": inlines},
+        "metrics": {
+            "word_count": wc,
+            "h2_count": h2c,
+            "inline_figures": inlines,
+            "sibling_interlinks": interlink_count,
+        },
     }
 
 

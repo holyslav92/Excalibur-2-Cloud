@@ -58,6 +58,10 @@ def check_max_channel(html: str, max_cfg: str, phone: str) -> tuple[bool, str]:
     cfg = (max_cfg or "").strip()
     if not cfg:
         return True, ""
+    if cfg.startswith("http://") or cfg.startswith("https://"):
+        if url_patterns(cfg).search(html or ""):
+            return True, ""
+        return False, f"missing MAX URL {cfg}"
     if not cfg.startswith("phone:"):
         return True, ""
     if not re.search(r"\bMAX\b", html or "", re.I):
