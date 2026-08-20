@@ -1,17 +1,18 @@
 {
   "topic_id": "B05",
-  "pipeline": "quad_solo_cover_regen",
+  "inline_count": 7,
+  "pipeline": "quad_full_regen_v9",
   "style_file": "memory/cover/quad-style-the-rieltor.json",
   "blog_hero": "memory/cover/blog-hero.json",
   "inline_types_catalog": "memory/cover/inline-visual-types.json",
   "cover_hook": "-2 МЛН уценили",
   "cover_hook_highlight": "уценили",
-  "cover_emotion": "alert wary focus — narrowed eyes, slight frown, lips pressed; NOT side-eye, NOT open-mouth shock, NOT reference smile",
+  "cover_emotion": "determined squint; NOT side-eye",
   "cover_phone_cta": "+7 922 001 65 05",
   "wordstat_stickers": [
     "купить квартиру в тюмени",
-    "банкротство продавца квартиры",
-    "купить квартиру в тюмени вторичка"
+    "банкротство продавца",
+    "вторичка тюмень"
   ],
   "wordstat_sticker_positions": [
     [
@@ -28,103 +29,166 @@
     ]
   ],
   "cover_motifs": {
-    "composition": "host_three_quarter_right_stop_gesture_headline_left_white_board_sun_flare",
-    "location": "bright_sunny_tyumen_apartment_entrance_white_stone_steps_glass_door",
-    "meme": "thinking_cat_sticker_small_top_right_corner",
-    "prop_set": "egrn_folder_fold_minus_2mln_price_tag_red_circle_bankruptcy_stamp_phone_cta",
-    "sticker_set": "wordstat_tyumen_bankrotstvo_vtorichka_gold_tape_RIGHT_edge_only",
-    "joke": "sticky_zadatok_segodnya_yellow_note_pinned",
-    "outfit": "terracotta merino sweater + light grey unbuttoned overcoat + dark jeans",
-    "emotion": "alert_wary_focused_frown_narrowed_eyes",
-    "pose_framing": "three_quarter_body_host_RIGHT_entrance_steps_not_left_bust",
-    "action": "left_hand_holds_egrn_folder_right_palm_stop_gesture_at_discount_tag"
+    "composition": "host_full_body_right_park_table_egrn_spread_title_left_clear_sun_flare",
+    "location": "bright_sunny_tyumen_riverside_park_bench_apartment_towers",
+    "meme": "thinking_cat_sticker_tiny_top_right_corner_only",
+    "prop_set": "egrn_papers_spread_on_outdoor_table_minus_2mln_tag_phone_cta",
+    "sticker_set": "wordstat_gold_tape_FAR_RIGHT_only_x68_no_title_overlap",
+    "joke": "sticky_zadatok_segodnya_small_bottom_not_on_title",
+    "outfit": "cobalt blue rain shell jacket + burnt orange zip fleece + dark jeans + white sneakers",
+    "emotion": "calm_direct_explanatory_open_hands",
+    "pose_framing": "full_body_standing_right_two_thirds_not_left_bust",
+    "action": "leaning_over_outdoor_table_spreading_egrn_papers_open_palms_explaining"
   },
   "slots": {
     "cover": {
       "role": "cover_editorial_hero",
-      "alt": "Скидка два миллиона на квартиру в Тюмени — проверка рисков до задатка",
-      "cover_emotion": "alert wary focus — narrowed eyes, slight frown; NOT side-eye",
-      "scene_hint": "alert wary host THREE-QUARTER RIGHT on sunny apartment entrance steps; terracotta sweater+grey overcoat; LEFT palm STOP at «-2 МЛН уценили» board; EGRN folder in left hand; headline CLEAR center-left; Wordstat stickers FAR RIGHT only; thinking-cat sticker tiny; phone +7 922 001 65 05; sun flare; #FFF high-key",
+      "alt": "Скидка два миллиона — риски до задатка",
+      "cover_emotion": "calm direct explanatory gaze; NOT squint NOT fist",
+      "scene_hint": "FULL BODY RIGHT park bench; cobalt shell+orange fleece; EGRN on table; title CLEAR left",
       "meme_caption_ru": "",
-      "sticky": "задаток сегодня"
+      "sticky": "задаток сегодня",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false
     },
     "inline_1": {
+      "h2_anchor": "Скидка — это цена риска, которую вам предлагают взять на себя",
       "visual_type": "comparison_table",
+      "scene_hint": "table видно vs скрыто",
+      "alt": "Объяснимая и скрытая скидка",
       "labels": [
-        "а",
-        "б",
-        "в",
-        "г",
-        "д",
-        "е"
-      ]
+        "ремонт под снос",
+        "скидка без причины",
+        "показывает пальцем",
+        "срочно и тихо"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
     },
     "inline_2": {
+      "h2_anchor": "Что было в той квартире за минус два миллиона",
       "visual_type": "process_flow",
+      "scene_hint": "flow 5 шагов кейса",
+      "alt": "Скидка до банкротного риска",
       "labels": [
-        "а",
-        "б",
-        "в",
-        "г",
-        "д",
-        "е"
-      ]
+        "звонок вечер",
+        "-2 млн скидка",
+        "задаток сегодня",
+        "банкротство ЕГРН"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
     },
     "inline_3": {
+      "h2_anchor": "За что реально дают скидку — и это нормально",
       "visual_type": "labeled_checklist",
+      "scene_hint": "checklist причины скидки",
+      "alt": "Нормальные причины скидки",
       "labels": [
-        "а",
-        "б",
-        "в",
-        "г",
-        "д",
-        "е"
-      ]
+        "убитый ремонт",
+        "первый этаж",
+        "плохая планировка",
+        "срок продажи"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
     },
     "inline_4": {
-      "visual_type": "bar_timeline_chart",
+      "h2_anchor": "За что скидку дают, а платить будете вы",
+      "visual_type": "comparison_table",
+      "scene_hint": "table объяснение vs риск",
+      "alt": "Скрытые риски скидки",
       "labels": [
-        "а",
-        "б",
-        "в",
-        "г",
-        "д",
-        "е"
-      ]
+        "торги 48 часов",
+        "дарение дочери",
+        "доверенность",
+        "счёт пустой"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
     },
     "inline_5": {
+      "h2_anchor": "Четыре вопроса, после которых скидка объясняется сама",
       "visual_type": "structure_diagram",
+      "scene_hint": "4 вопроса diamond",
+      "alt": "Четыре вопроса продавцу",
       "labels": [
-        "а",
-        "б",
-        "в",
-        "г",
-        "д",
-        "е"
-      ]
+        "почему срочно",
+        "кому задаток",
+        "что в ЕГРН",
+        "полная сумма"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
     },
     "inline_6": {
+      "h2_anchor": "Что я проверяю до задатка",
       "visual_type": "labeled_checklist",
+      "scene_hint": "checklist до задатка",
+      "alt": "Чеклист до задатка",
       "labels": [
-        "а",
-        "б",
-        "в",
-        "г",
-        "д",
-        "е"
-      ]
+        "выписка ЕГРН",
+        "банкротство",
+        "торги ЕФРСБ",
+        "безнал расчёт"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
     },
     "inline_7": {
-      "visual_type": "structure_diagram",
+      "h2_anchor": "Если торопят с задатком — как не купить риск по скидке",
+      "visual_type": "process_flow",
+      "scene_hint": "flow без задатка сегодня",
+      "alt": "Не внести задаток под давлением",
       "labels": [
-        "а",
-        "б",
-        "в",
-        "г",
-        "д",
-        "е"
-      ]
+        "не в день просмотра",
+        "3-5 дней",
+        "письменный документ",
+        "аккредитив"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
     }
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
   },
   "wordstat_stickers_pil_applied": true
 }

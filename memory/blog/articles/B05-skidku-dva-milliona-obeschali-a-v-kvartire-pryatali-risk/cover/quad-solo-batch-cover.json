@@ -1,0 +1,22 @@
+{
+  "pipeline": "quad_solo_cover_regen_v3",
+  "slot": "cover",
+  "identity_reference_local": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+  "prefer_local_reference": true,
+  "local_reference": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+  "output_canvas": "cover/cover.png",
+  "jobs": [
+    {
+      "slot": "cover",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "ONE single 16:9 image only — NOT a 2x2 grid, NOT four panels, NOT quad layout, NOT infographic collage grid.\nEditorial photo cover: high-key #FFFFFF sun flare, gold #dcc5a1 accent.\nSame 28yo man i2i face from reference (jaw/stubble/hairline medium-slim). FORBIDDEN outfit from reference: NO black blazer, NO black t-shirt, NO studio bust pose, NO clenched fist.\nWEAR: cobalt blue rain shell jacket + burnt orange fleece zip + dark jeans + white sneakers.\nFULL BODY standing RIGHT side of frame at sunny park bench, leaning over table, open palms on spread EGRN papers explaining — NOT left chest portrait, NOT talking-head crop.\nFace: calm direct teaching gaze at camera — NOT squint fight, NOT side-eye.\nHeadline upper-left CLEAR zone: bold «-2 МЛН уценили», gold word «уценили» only; empty white margin around title — zero overlap.\nWordstat tape labels ONLY far right past 70% width: купить квартиру в тюмени | банкротство продавца | вторичка тюмень.\nPhone sticker «+7 922 001 65 05» readable lower-right.\nTiny thinking-cat meme ≤10% top-right corner.\nSmall sticky «задаток сегодня» away from headline.\nSunny Tyumen riverside park, apartment towers background. Perfect Cyrillic.",
+        "aspect_ratio": "16:9",
+        "resolution": "2K",
+        "input_urls": [
+          "{{SITE_BASE}}/wp-content/uploads/2026/06/2026-06-23-15.57.42.jpg"
+        ]
+      }
+    }
+  ]
+}

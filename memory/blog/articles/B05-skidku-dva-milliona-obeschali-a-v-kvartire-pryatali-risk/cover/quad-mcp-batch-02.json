@@ -1,0 +1,39 @@
+{
+  "pipeline": "quad_full_regen_v9",
+  "canvas_index": 2,
+  "identity_reference_local": "",
+  "identity_reference_id": "",
+  "reference_url_hosted": "",
+  "output_canvas": "cover/canvas-quad-02.png",
+  "result_path": "cover/quad-mcp-result-02.json",
+  "slots": [
+    "inline_4",
+    "inline_5",
+    "inline_6",
+    "inline_7"
+  ],
+  "preferred_image_flow": {
+    "provider": "derouter-rest",
+    "script": "scripts/excalibur_blog_derouter_gpt_image2_api.py",
+    "resolution": "2K",
+    "note": "PRIMARY: Derouter REST image API (api-direct, 2K 16:9). Fallback: excalibur_blog_kie_gpt_image2_api.py when DEROUTER auth/5xx. FORBIDDEN: flux2-pro-*, Seedream, nano_banana*, z-image, mcp-derouter/start-mcp.sh.",
+    "apply_script": "python3 scripts/excalibur_blog_quad_apply.py --article-dir <article_dir> --canvas-index 2 --inject-html"
+  },
+  "jobs": [
+    {
+      "slot": "canvas_quad",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "High-key bright RU editorial collage, airy #FFFFFF, sun flare/light leak/soft glow, BLACK #141821 Cyrillic, gold #dcc5a1 accent. Host LARGE left = same 28yo man i2i face-studio-2026-06-23 (jaw/stubble/hairline lock), medium slim (NOT chubby). 1-3 Wordstat stickers (Тюмень). Meme cat/people cutouts. No dark cinematic, no inventory props.\nCanvas 2048x1152 exact 2x2; four 16:9 panels (1024x576); thin white gutters; no bleed.\nBan: dark/low-key; inventory props; celebrity memes; EXCALIBUR stamp; chubby host; stock/generated man co-host on inline; large meme person on inline; icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face.\nTEXT LANGUAGE LOCK: all visible text is RUSSIAN Cyrillic only; exact LABELS per panel only.\nCanvas 2 inlines: ZERO host face / НОЛЬ лица ведущего на всех 4 панелях; meme stickers ONLY on inline_5 and inline_7 (tiny ≤15%); inline_4 and inline_6: NO meme NO cat NO person / БЕЗ мема БЕЗ кота БЕЗ человека. People-memes only as tiny stickers from memory/cover/meme-top100.json; infographic is hero.\nTop-left inline: сравнительная таблица с колонками; «Скрытые риски скидки»; table объяснение vs риск. TXT:торги 48 часов | дарение дочери | доверенность | счёт пустой. LOCK: NO host face / БЕЗ лица ведущего; NO meme NO cat / БЕЗ мема БЕЗ кота; NO person co-host / БЕЗ человека. ZERO meme ZERO cat ZERO person / НОЛЬ мемов котов людей.\nTop-right inline: схема устройства механизма; «Четыре вопроса»; 4 вопроса diamond. TXT:почему срочно | кому задаток | что в ЕГРН | полная сумма. LOCK: NO host face / БЕЗ лица ведущего. +tiny meme sticker only (≤15% frame, corner accent from memory/cover/meme-top100.json; NO co-host human; NO presenter).\nBottom-left inline: чеклист ошибок vs правильный путь; «Проверка до задатка»; checklist до задатка. TXT:выписка ЕГРН | банкротство | торги ЕФРСБ | безнал расчёт. LOCK: NO host face / БЕЗ лица ведущего; NO meme NO cat / БЕЗ мема БЕЗ кота; NO person co-host / БЕЗ человека. ZERO meme ZERO cat ZERO person / НОЛЬ мемов котов людей.\nBottom-right inline: нумерованный процесс / таймлайн; «Если торопят»; flow без задатка сегодня. TXT:не в день просмотра | 3-5 дней | письменный документ | аккредитив. LOCK: NO host face / БЕЗ лица ведущего. +tiny meme sticker only (≤15% frame, corner accent from memory/cover/meme-top100.json; NO co-host human; NO presenter).\nInline all: #FFF collage, gold/black Cyrillic labels, tape/pins/strings/paper scraps; high-key #FFF/gold; not noir; dense facts/numbers; exact TXT per panel; meme only if +meme AND sticker-scale; no human hero on inline; no icon soup; zero typos.",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ],
+  "validation": {
+    "prompt_chars": 2723,
+    "max_prompt_chars": 3500,
+    "required_reference_host": "",
+    "resolution": "2K"
+  }
+}

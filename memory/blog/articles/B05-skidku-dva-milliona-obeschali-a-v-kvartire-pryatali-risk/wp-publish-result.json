@@ -1,0 +1,27 @@
+{
+  "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+  "topic_id": "B05",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B05-skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1157600,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=8886 slug=skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk\nOK categories=31,54\nOK featured_image=8899\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=8900 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk-inline-01-1.png\nOK inline_alt=8900\nOK inline_caption=8900\nOK inline_description=8900\nOK inline_image_upload=8901 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk-inline-02-1.png\nOK inline_alt=8901\nOK inline_caption=8901\nOK inline_description=8901\nOK inline_image_upload=8902 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk-inline-03-1.png\nOK inline_alt=8902\nOK inline_caption=8902\nOK inline_description=8902\nOK inline_image_upload=8903 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk-inline-04-1.png\nOK inline_alt=8903\nOK inline_caption=8903\nOK inline_description=8903\nOK inline_image_upload=8904 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk-inline-05-1.png\nOK inline_alt=8904\nOK inline_caption=8904\nOK inline_description=8904\nOK inline_image_upload=8905 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk-inline-06-1.png\nOK inline_alt=8905\nOK inline_caption=8905\nOK inline_description=8905\nOK inline_image_upload=8906 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk-inline-07-1.png\nOK inline_alt=8906\nOK inline_caption=8906\nOK inline_description=8906\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/",
+    "errors": []
+  }
+}

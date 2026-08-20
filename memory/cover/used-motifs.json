@@ -73,18 +73,17 @@
     {
       "date": "2026-08-20",
       "topic_id": "B05",
-      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "slug": "",
       "motifs": {
-        "composition": "host_three_quarter_right_stop_gesture_headline_left_white_board_sun_flare",
-        "location": "bright_sunny_tyumen_apartment_entrance_white_stone_steps_glass_door",
-        "meme": "thinking_cat_sticker_small_top_right_corner",
-        "prop_set": "egrn_folder_fold_minus_2mln_price_tag_red_circle_bankruptcy_stamp_phone_cta",
-        "sticker_set": "wordstat_tyumen_bankrotstvo_vtorichka_gold_tape_right_edge_only",
-        "joke": "sticky_zadatok_segodnya_yellow_note_pinned",
-        "outfit": "terracotta merino sweater + light grey unbuttoned overcoat + dark jeans",
-        "emotion": "alert_wary_focused_frown_narrowed_eyes",
-        "pose_framing": "three_quarter_body_host_right_entrance_steps_not_left_bust",
-        "action": "left_hand_holds_egrn_folder_right_palm_stop_gesture_at_discount_tag"
+        "composition": "host_full_body_right_park_table_egrn_spread_title_left_clear_sun_flare",
+        "location": "bright_sunny_tyumen_riverside_park_bench_apartment_towers",
+        "meme": "thinking_cat_sticker_tiny_top_right_corner_only",
+        "sticker_set": "wordstat_gold_tape_far_right_only_x68_no_title_overlap",
+        "joke": "sticky_zadatok_segodnya_small_bottom_not_on_title",
+        "outfit": "cobalt blue rain shell jacket + burnt orange zip fleece + dark jeans + white sneakers",
+        "emotion": "calm_direct_explanatory_open_hands",
+        "pose_framing": "full_body_standing_right_two_thirds_not_left_bust",
+        "action": "leaning_over_outdoor_table_spreading_egrn_papers_open_palms_explaining"
       }
     }
   ]
