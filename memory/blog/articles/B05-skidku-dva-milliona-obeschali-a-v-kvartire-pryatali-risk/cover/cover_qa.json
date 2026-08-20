@@ -3,7 +3,7 @@
   "status": "PASS",
   "checked_at": "2026-08-20",
   "topic_id": "B05",
-  "cover_md5": "f671c00d2e3535274eb659d9bb60be96",
+  "cover_md5": "f1df505a1f91b9d970b3d5c5576636c4",
   "pixel_qa": true,
   "pixel_description": "1200x675; mean_lum=193; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.58",
   "checks": {
@@ -14,6 +14,8 @@
     "pixel_wordstat_not_edge_truncated": true,
     "pixel_title_zone_clear": true,
     "pixel_meme_zone_clear": true,
+    "pixel_wordstat_not_on_host_chest": true,
+    "pixel_meme_not_occluded_by_wordstat": true,
     "pixel_wordstat_phrases_not_truncated": true,
     "pixel_phone_readable": true,
     "pixel_manifest_outfit_matches": true,
@@ -47,11 +49,11 @@
       1200,
       675
     ],
-    "mean_luminance": 193.3,
+    "mean_luminance": 193.1,
     "gold_bands": [],
-    "host_dark_ratio": 0.168
+    "host_dark_ratio": 0.166
   },
-  "notes": "Pixel QA on cover.png md5=f671c00d2e3535274eb659d9bb60be96; 1200x675; mean_lum=193; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.58",
+  "notes": "Pixel QA on cover.png md5=f1df505a1f91b9d970b3d5c5576636c4; 1200x675; mean_lum=193; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.58",
   "gate_status": "PASS",
   "gate_errors": []
 }

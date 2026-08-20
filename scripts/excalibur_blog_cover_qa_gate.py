@@ -48,6 +48,8 @@ REQUIRED_CHECKS = (
     "pixel_wordstat_not_opaque_bars",
     "pixel_title_zone_clear",
     "pixel_meme_zone_clear",
+    "pixel_wordstat_not_on_host_chest",
+    "pixel_meme_not_occluded_by_wordstat",
 )
 
 PIXEL_REQUIRED = (
@@ -58,6 +60,8 @@ PIXEL_REQUIRED = (
     "pixel_wordstat_not_edge_truncated",
     "pixel_title_zone_clear",
     "pixel_meme_zone_clear",
+    "pixel_wordstat_not_on_host_chest",
+    "pixel_meme_not_occluded_by_wordstat",
     "pixel_wordstat_phrases_not_truncated",
     "pixel_phone_readable",
     "pixel_light_high_key",

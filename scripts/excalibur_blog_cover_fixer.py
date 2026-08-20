@@ -17,6 +17,7 @@ from excalibur_blog_cover_qa_pixels import (
     analyze_cover_pixels,
     load_json,
     md5_file,
+    peel_chest_wordstat_stickers,
     stamp_cover_qa_json,
 )
 
@@ -43,7 +44,14 @@ def needs_wordstat_fix(result: Any) -> bool:
         and checks.get("pixel_title_zone_clear")
         and checks.get("pixel_meme_zone_clear")
         and checks.get("pixel_wordstat_phrases_not_truncated")
+        and checks.get("pixel_wordstat_not_on_host_chest")
+        and checks.get("pixel_meme_not_occluded_by_wordstat")
     )
+
+
+def peel_chest_stickers(article_dir: Path) -> dict[str, Any]:
+    cover = article_dir / "cover" / "cover.png"
+    return peel_chest_wordstat_stickers(cover)
 
 
 def needs_host_fix(result: Any) -> bool:
@@ -124,6 +132,23 @@ def run_fixer(
         host_fail = needs_host_fix(last_result)
 
         if wordstat_fail:
+            if not last_result.checks.get("pixel_wordstat_not_on_host_chest") or not last_result.checks.get(
+                "pixel_meme_not_occluded_by_wordstat"
+            ):
+                log.append(f"round {round_idx}: peel chest/meme Wordstat stickers")
+                peel_report = peel_chest_stickers(article_dir)
+                log.append(f"round {round_idx}: peel → {peel_report.get('status')}")
+                last_result = pixel_qa(article_dir, root, manifest)
+                if last_result.status == "PASS":
+                    stamp_cover_qa_json(article_dir, last_result, topic_id=topic_id)
+                    return {
+                        "status": "PASS",
+                        "rounds": round_idx,
+                        "cover_md5": md5_file(article_dir / "cover" / "cover.png"),
+                        "log": log,
+                        "pixel_description": last_result.evidence.get("pixel_description"),
+                    }
+
             log.append(f"round {round_idx}: fix wordstat paper stickers")
             fix_wordstat_stickers(article_dir, root)
             last_result = pixel_qa(article_dir, root, manifest)

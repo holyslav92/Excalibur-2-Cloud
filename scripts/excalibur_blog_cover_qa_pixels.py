@@ -18,7 +18,15 @@ from typing import Any
 
 # Зоны без стикеров (нормализованные 0..1)
 TITLE_ZONE = (0.0, 0.0, 0.62, 0.38)  # x0,y0,x1,y1 — левый верх, заголовок
-MEME_ZONE = (0.82, 0.0, 1.0, 0.18)  # правый верх — meme sticker
+MEME_ZONE = (0.82, 0.0, 1.0, 0.18)  # правый верх — meme sticker (bars)
+MEME_GUARD_ZONE = (0.68, 0.0, 1.0, 0.42)  # legacy — верхний правый угол
+MEME_OCCLUSION_ZONE = (0.62, 0.58, 0.98, 0.90)  # cat + chest stickers overlap
+TOPLEFT_WORDSTAT_SAFE = (0.0, 0.0, 0.44, 0.32)  # taped Wordstat on board — allowed
+CHEST_PEEL_ZONE = (0.48, 0.28, 0.96, 0.74)  # host chest — legacy QA bbox
+CHEST_WORDSTAT_ZONE = (0.50, 0.44, 0.96, 0.88)  # жилет ниже лица — Wordstat forbidden
+CHEST_PEEL_ACTIVE = (0.50, 0.44, 0.98, 0.92)  # нижняя часть жилета + мем — только здесь peel
+FACE_EXCLUDE_ZONE = (0.30, 0.04, 0.78, 0.50)  # лицо/лоб — не трогать при peel
+BOTTOM_DUP_PEEL_ZONE = (0.56, 0.76, 0.94, 0.96)  # duplicate PIL wordstat bottom-right
 HOST_ZONE = (0.22, 0.08, 0.92, 0.98)  # где ожидаем крупное лицо
 WORDSTAT_ZONE = (0.62, 0.0, 1.0, 1.0)  # правая полоса для Wordstat
 
@@ -93,6 +101,251 @@ def _is_skin(r: int, g: int, b: int) -> bool:
 def _is_gold_sticker(r: int, g: int, b: int, *, tol: int = 38) -> bool:
     gr, gg, gb = GOLD_STICKER_RGB
     return abs(r - gr) <= tol and abs(g - gg) <= tol and abs(b - gb) <= tol
+
+
+def _is_pure_white_paper(r: int, g: int, b: int) -> bool:
+    """Белая/off-white бумага мем-стикера (не Wordstat tan label)."""
+    if r >= 246 and g >= 244 and b >= 238:
+        return True
+    # cat meme cutout border — почти нейтральный off-white
+    return r >= 238 and g >= 236 and b >= 230 and max(r, g, b) - min(r, g, b) <= 20
+
+
+def _is_paper_wordstat_pixel(r: int, g: int, b: int) -> bool:
+    """Tan/cream Wordstat paper sticker (PIL или model), не белый meme cutout."""
+    if _is_pure_white_paper(r, g, b):
+        return False
+    if _is_skin(r, g, b):
+        return False
+    # рыжая шерсть cat meme — не Wordstat label
+    if r >= 195 and g <= 178 and r - g >= 28:
+        return False
+    if _is_gold_sticker(r, g, b, tol=32):
+        return True
+    lum = _luminance(r, g, b)
+    if lum < 105 or lum > 248:
+        return False
+    # cream paper (PIL v2)
+    if r >= 245 and g >= 238 and b >= 225 and r + g + b > 700:
+        return True
+    # tan model labels on vest — узкий диапазон, не кожа/шерсть
+    if r >= 198 and g >= 168 and b >= 138 and r - b >= 28 and g - b >= 12 and r - g <= 38:
+        return True
+    return False
+
+
+def _paper_frac_in_zone(
+    img,
+    zone: tuple[float, float, float, float],
+    *,
+    exclude_zone: tuple[float, float, float, float] | None = None,
+    exclude_zones: tuple[tuple[float, float, float, float], ...] | None = None,
+) -> float:
+    w, h = img.size
+    rgb = img.convert("RGB")
+    x0 = int(zone[0] * w)
+    y0 = int(zone[1] * h)
+    x1 = max(x0 + 1, int(zone[2] * w))
+    y1 = max(y0 + 1, int(zone[3] * h))
+    excludes = list(exclude_zones or ())
+    if exclude_zone:
+        excludes.append(exclude_zone)
+    total = 0
+    paper = 0
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            xf, yf = x / w, y / h
+            if any(z[0] <= xf <= z[2] and z[1] <= yf <= z[3] for z in excludes):
+                continue
+            total += 1
+            if _is_paper_wordstat_pixel(*rgb.getpixel((x, y))):
+                paper += 1
+    return paper / max(total, 1)
+
+
+def _in_norm_zone(xf: float, yf: float, zone: tuple[float, float, float, float]) -> bool:
+    return zone[0] <= xf <= zone[2] and zone[1] <= yf <= zone[3]
+
+
+def _peel_active_zone(xf: float, yf: float) -> bool:
+    """Где можно снимать Wordstat: нижняя грудь/мем, не top-left board и не лицо."""
+    if _in_norm_zone(xf, yf, TOPLEFT_WORDSTAT_SAFE):
+        return False
+    if _in_norm_zone(xf, yf, FACE_EXCLUDE_ZONE):
+        return False
+    return any(
+        _in_norm_zone(xf, yf, z)
+        for z in (CHEST_PEEL_ACTIVE, MEME_GUARD_ZONE, BOTTOM_DUP_PEEL_ZONE)
+    )
+
+
+def _build_peel_mask(img, w: int, h: int) -> tuple[Any, int]:
+    """Маска tan paper + ink на стикерах в активной peel-зоне."""
+    ip = img.load()
+    mask = [[False] * w for _ in range(h)]
+    peeled = 0
+
+    for y in range(h):
+        for x in range(w):
+            xf, yf = x / w, y / h
+            if not _peel_active_zone(xf, yf):
+                continue
+            if _is_paper_wordstat_pixel(*ip[x, y]):
+                mask[y][x] = True
+                peeled += 1
+
+    for y in range(1, h - 1):
+        for x in range(1, w - 1):
+            if mask[y][x]:
+                continue
+            xf, yf = x / w, y / h
+            if not _peel_active_zone(xf, yf):
+                continue
+            r, g, b = ip[x, y]
+            if _luminance(r, g, b) > 105:
+                continue
+            if any(mask[ny][nx] for nx, ny in ((x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1))):
+                mask[y][x] = True
+                peeled += 1
+
+    return mask, peeled
+
+
+def _sample_vest_rgb(img, w: int, h: int) -> tuple[int, int, int]:
+    """Navy жилет — референс с чистого участка без стикеров."""
+    ip = img.load()
+    samples: list[tuple[int, int, int]] = []
+    for y in range(int(h * 0.48), int(h * 0.58)):
+        for x in range(int(w * 0.54), int(w * 0.62)):
+            r, g, b = ip[x, y]
+            if _is_paper_wordstat_pixel(r, g, b):
+                continue
+            lum = _luminance(r, g, b)
+            if lum > 95 or r > 110:
+                continue
+            samples.append((r, g, b))
+    if not samples:
+        return (32, 42, 78)
+    return (
+        sum(c[0] for c in samples) // len(samples),
+        sum(c[1] for c in samples) // len(samples),
+        sum(c[2] for c in samples) // len(samples),
+    )
+
+
+def _scrub_remaining_paper(work, w: int, h: int, vest_rgb: tuple[int, int, int]) -> int:
+    """Последний проход: cream fringe → navy жилет."""
+    op = work.load()
+    scrubbed = 0
+    for y in range(h):
+        for x in range(w):
+            xf, yf = x / w, y / h
+            if not _peel_active_zone(xf, yf):
+                continue
+            r, g, b = op[x, y]
+            if not _is_paper_wordstat_pixel(r, g, b):
+                continue
+            jitter = ((x * 5 + y * 11) % 7) - 3
+            op[x, y] = (
+                max(0, min(255, vest_rgb[0] + jitter)),
+                max(0, min(255, vest_rgb[1] + jitter)),
+                max(0, min(255, vest_rgb[2] + jitter)),
+            )
+            scrubbed += 1
+    return scrubbed
+
+
+def _inpaint_from_neighbors(src, mask, w: int, h: int, *, max_radius: int = 14) -> Any:
+    """Заполнить маску медианой ближайших немаскированных пикселей оригинала."""
+    from PIL import Image
+
+    sip = src.load()
+    out = src.copy()
+    op = out.load()
+
+    for y in range(h):
+        for x in range(w):
+            if not mask[y][x]:
+                continue
+            picked: list[tuple[int, int, int]] = []
+            for radius in range(1, max_radius + 1):
+                for dy in range(-radius, radius + 1):
+                    for dx in range(-radius, radius + 1):
+                        if max(abs(dx), abs(dy)) != radius:
+                            continue
+                        nx, ny = x + dx, y + dy
+                        if nx < 0 or ny < 0 or nx >= w or ny >= h:
+                            continue
+                        if mask[ny][nx]:
+                            continue
+                        picked.append(sip[nx, ny])
+                if len(picked) >= 6:
+                    break
+            if not picked:
+                continue
+            rs = sorted(c[0] for c in picked)
+            gs = sorted(c[1] for c in picked)
+            bs = sorted(c[2] for c in picked)
+            mid = len(picked) // 2
+            op[x, y] = (rs[mid], gs[mid], bs[mid])
+    return out
+
+
+def peel_chest_wordstat_stickers(cover_path: Path, *, max_passes: int = 4) -> dict[str, Any]:
+    """Удалить Wordstat paper stickers с груди/мема; сохранить top-left board labels."""
+    from PIL import Image, ImageFilter
+
+    if not cover_path.is_file():
+        return {"status": "SKIP", "reason": f"{cover_path} missing"}
+
+    original = Image.open(cover_path).convert("RGB")
+    w, h = original.size
+    total_peeled = 0
+    passes = 0
+
+    work = original.copy()
+    for _ in range(max_passes):
+        mask_grid, peeled = _build_peel_mask(work, w, h)
+        if peeled < 40:
+            break
+        passes += 1
+        total_peeled += peeled
+        work = _inpaint_from_neighbors(work, mask_grid, w, h)
+        # Лёгкое сглаживание только на месте стикеров
+        mask_img = Image.new("L", (w, h), 0)
+        mp = mask_img.load()
+        for y in range(h):
+            for x in range(w):
+                if mask_grid[y][x]:
+                    mp[x, y] = 255
+        if mp[0, 0] or any(mp[x, y] for y in range(h) for x in range(w)):
+            blurred = work.filter(ImageFilter.GaussianBlur(radius=1))
+            work = Image.composite(blurred, work, mask_img.filter(ImageFilter.MaxFilter(3)))
+
+        chest = _paper_frac_in_zone(
+            work, CHEST_WORDSTAT_ZONE, exclude_zones=(TOPLEFT_WORDSTAT_SAFE, FACE_EXCLUDE_ZONE)
+        )
+        meme = _paper_frac_in_zone(
+            work, MEME_OCCLUSION_ZONE, exclude_zones=(TOPLEFT_WORDSTAT_SAFE, FACE_EXCLUDE_ZONE)
+        )
+        if chest < 0.012 and meme < 0.015:
+            break
+
+    if total_peeled < 40:
+        return {"status": "SKIP", "reason": f"only {total_peeled} peel pixels", "peeled_pixels": total_peeled}
+
+    vest_rgb = _sample_vest_rgb(original, w, h)
+    scrubbed = _scrub_remaining_paper(work, w, h, vest_rgb)
+
+    work.save(cover_path, format="PNG")
+    return {
+        "status": "OK",
+        "peeled_pixels": total_peeled,
+        "scrubbed_pixels": scrubbed,
+        "passes": passes,
+        "vest_rgb": list(vest_rgb),
+        "file": cover_path.name,
+    }
 
 
 def _is_dark_garment(r: int, g: int, b: int) -> bool:
@@ -452,6 +705,27 @@ def analyze_cover_pixels(
     if not checks["pixel_meme_zone_clear"]:
         errors.append(f"pixel_meme_zone_clear FAIL: {len(meme_bands)} bar band(s) on meme")
 
+    # --- paper Wordstat on chest / over meme cat (not just bars) ---
+    qa_excludes = (TOPLEFT_WORDSTAT_SAFE, FACE_EXCLUDE_ZONE)
+    chest_paper = _paper_frac_in_zone(
+        img, CHEST_WORDSTAT_ZONE, exclude_zones=qa_excludes
+    )
+    meme_paper = _paper_frac_in_zone(
+        img, MEME_OCCLUSION_ZONE, exclude_zones=qa_excludes
+    )
+    evidence["chest_wordstat_paper_frac"] = round(chest_paper, 4)
+    evidence["meme_guard_wordstat_paper_frac"] = round(meme_paper, 4)
+    checks["pixel_wordstat_not_on_host_chest"] = chest_paper < 0.012
+    checks["pixel_meme_not_occluded_by_wordstat"] = meme_paper < 0.015
+    if not checks["pixel_wordstat_not_on_host_chest"]:
+        errors.append(
+            f"pixel_wordstat_not_on_host_chest FAIL: paper_frac={chest_paper:.3f} on vest"
+        )
+    if not checks["pixel_meme_not_occluded_by_wordstat"]:
+        errors.append(
+            f"pixel_meme_not_occluded_by_wordstat FAIL: paper_frac={meme_paper:.3f} on meme zone"
+        )
+
     # --- truncated phrase heuristics (partial words at strip edge) ---
     phrase_list = phrases or (manifest or {}).get("wordstat_stickers") or []
     truncated_phrase = False
@@ -513,7 +787,11 @@ def stamp_cover_qa_json(
         "identity_face_28yo": checks.get("pixel_host_close_up", False),
         "identity_body_medium_slim": checks.get("pixel_host_not_distant_fullbody", False),
         "identity_expression_invented": True,
-        "title_not_occluded": checks.get("pixel_title_zone_clear", False),
+        "title_not_occluded": (
+            checks.get("pixel_title_zone_clear", False)
+            and checks.get("pixel_wordstat_not_on_host_chest", False)
+            and checks.get("pixel_meme_not_occluded_by_wordstat", False)
+        ),
         "outfit_invented": checks.get("pixel_manifest_outfit_matches", False),
         "action_invented": True,
         "emotion_not_copied_from_recent_covers": True,
@@ -568,6 +846,7 @@ def main() -> int:
     ap.add_argument("--article-dir", type=Path, help="Article dir (uses cover/cover.png + manifest)")
     ap.add_argument("--stamp", action="store_true", help="Write cover/cover_qa.json from pixel results")
     ap.add_argument("--describe", action="store_true", help="Print pixel description only")
+    ap.add_argument("--peel-chest", action="store_true", help="Remove chest/meme Wordstat stickers in-place")
     args = ap.parse_args()
     root = project_root()
 
@@ -599,6 +878,11 @@ def main() -> int:
         print(describe_cover_pixels(cover_path))
         print(f"md5={md5_file(cover_path)}")
         return 0
+
+    if args.peel_chest:
+        report = peel_chest_wordstat_stickers(cover_path)
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 0 if report.get("status") == "OK" else 1
 
     result = analyze_cover_pixels(cover_path, manifest=manifest)
     print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
