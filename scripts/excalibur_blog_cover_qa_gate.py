@@ -74,6 +74,11 @@ PIXEL_REQUIRED = (
     "pixel_phone_readable",
     "pixel_light_high_key",
     "pixel_manifest_outfit_matches",
+    "pixel_hook_title_present",
+    "pixel_meme_present",
+    "pixel_wordstat_stickers_not_overlapping",
+    "pixel_layout_not_collapsed",
+    "pixel_designed_thumbnail",
 )
 
 BANNED_OUTFIT_TOKENS = (

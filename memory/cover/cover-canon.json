@@ -114,7 +114,22 @@
     "reads": "cover/cover.png bytes only — never trust manifest/prompt alone",
     "stamp": "cover/cover_qa.json with pixel_qa=true + cover_md5",
     "publish_block": "scripts/excalibur_blog_wp_publish.py blocks unless pixel PASS + md5 match",
+    "designed_thumbnail": {
+      "rule": "Cover = designed 1200×675 thumbnail, NOT face screenshot. Sacred zones: large hook H1; host close-up face+shoulders with room for type; 2–4 spaced Wordstat paper stickers; phone +7 922 001 65 05; one small meme.",
+      "zones": {
+        "hook_title": "right 52–96% × 14–40% (ink outside face bbox)",
+        "wordstat_stack": "narrow top-left 12–32% × 5–24%",
+        "phone": "bottom-right 55–98% × 70–96%",
+        "meme": "bottom-right 72–96% × 62–88%"
+      }
+    },
     "fail_if": [
+      "no large hook title (pixel_hook_title_present)",
+      "hook title occluded / only face features mistaken for title",
+      "no phone +7 922 001 65 05 in bottom-right (pixel_phone_readable)",
+      "no meme sticker in corner (pixel_meme_present)",
+      "Wordstat stickers cramped dump / stacked overlap in narrow column (pixel_wordstat_stickers_not_overlapping)",
+      "layout collapse: face-only crop, labels dumped in corner (pixel_layout_not_collapsed)",
       "opaque Wordstat bars/strips instead of paper stickers",
       "stickers overlap title or meme zones",
       "sticker text truncated at right edge",
@@ -122,7 +137,7 @@
       "manifest outfit lie vs pixels (warm outfit + dark blazer torso)",
       "cover_qa describes prompt not PNG"
     ],
-    "fixer_loop": "Fixer → paper sticker overlay in safe margins OR cover panel regen → re-read PNG bytes"
+    "fixer_loop": "Fixer → regen cover panel if layout/hook/phone/meme FAIL; PIL Wordstat overlay only in free top-left zone (never peel/inpaint person) → re-read PNG bytes"
   },
   "identity_lock": {
     "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",

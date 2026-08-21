@@ -99,6 +99,17 @@ def regen_cover_panel(article_dir: Path, root: Path) -> bool:
     return rc == 0
 
 
+def needs_layout_fix(result: Any) -> bool:
+    checks = result.checks
+    return not (
+        checks.get("pixel_hook_title_present")
+        and checks.get("pixel_phone_readable")
+        and checks.get("pixel_meme_present")
+        and checks.get("pixel_layout_not_collapsed")
+        and checks.get("pixel_designed_thumbnail")
+    )
+
+
 def run_fixer(
     article_dir: Path,
     root: Path,
@@ -136,12 +147,12 @@ def run_fixer(
         artifact_fail = needs_artifact_fix(last_result)
         wordstat_fail = needs_wordstat_fix(last_result)
         host_fail = needs_host_fix(last_result)
+        layout_fail = needs_layout_fix(last_result)
 
-        if artifact_fail or host_fail:
+        if layout_fail or artifact_fail or host_fail:
             if allow_regen:
-                log.append(
-                    f"round {round_idx}: inpaint/text/host FAIL → regen cover panel (no peel/inpaint person)"
-                )
+                reason = "layout/hook/phone/meme FAIL" if layout_fail else "inpaint/text/host FAIL"
+                log.append(f"round {round_idx}: {reason} → regen cover panel (no peel/inpaint person)")
                 if regen_cover_panel(article_dir, root):
                     if manifest_path.is_file():
                         manifest = load_json(manifest_path)

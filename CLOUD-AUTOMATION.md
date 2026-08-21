@@ -46,7 +46,7 @@ Scout? → research_start → Research → Title → Writer → Sol
 ```
 
 - **Scout?** — по handoff / needs_scout; иначе research_start с заданным `topic_id`.
-- **Cover-QA** — обязательный финиш визуала (cover + 7 inline); **pixel gate** на `cover.png` bytes через `scripts/excalibur_blog_cover_qa_pixels.py` + `cover_qa.json` (`pixel_qa=true`, `cover_md5`). Без PASS дальше не идём. **Fixer** (`scripts/excalibur_blog_cover_fixer.py`) — paper-sticker overlay или panel regen → re-QA bytes.
+- **Cover-QA** — обязательный финиш визуала (cover + 7 inline); **pixel gate** на `cover.png` bytes через `scripts/excalibur_blog_cover_qa_pixels.py` + `cover_qa.json` (`pixel_qa=true`, `cover_md5`). Без PASS дальше не идём. **Designed thumbnail gate:** hook H1 (справа, вне лица), телефон +7 922 001 65 05 (низ-право), мем-стикер (угол), 2–4 Wordstat paper stickers без cramped dump в top-left, не face-only collapse. **Fixer** (`scripts/excalibur_blog_cover_fixer.py`) — regen cover panel при layout FAIL; PIL Wordstat только в свободной top-left зоне (никогда peel/inpaint по человеку) → re-QA bytes.
 - **Indexer** — `llms.txt` / `llms-full.txt` (без правок `article.html`).
 - **Publish** — **только если одновременно**:
   1. в Cloud Secrets уже есть SFTP: `FTP_HOST`, `FTP_USER`, `FTP_PASS`, `FTP_ROOT` (и `PUBLIC_SITE_URL`);
@@ -109,7 +109,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 28 лет, **новая выдуманная сцена** каждый раз. AI `scene-composition-only/hero-ref-*` — не для лица.
 
-**Cover canon v2:** `memory/cover/cover-canon.json` — light/bright, мемы, Wordstat-стикеры, anti-repeat 14д (outfit/emotion/pose/action + composition/location/meme). **Variety lock:** FACE i2i = face-studio only; каждый cover INVENTS outfit/action/emotion/pose — FAIL на «black blazer + left bust + side-eye» streak. **Title zone sacred:** Wordstat stickers x≥0.68, не на заголовке; PIL overlay если модель накрыла текст. **Запрещена** daypart-формула (desk/street/close talk/night split).
+**Cover canon v2:** `memory/cover/cover-canon.json` — light/bright, мемы, Wordstat-стикеры, anti-repeat 14д (outfit/emotion/pose/action + composition/location/meme). **Variety lock:** FACE i2i = face-studio only; каждый cover INVENTS outfit/action/emotion/pose — FAIL на «black blazer + left bust + side-eye» streak. **Designed thumbnail (pixel gate):** hook H1 справа (ink вне face bbox), телефон +7 922 001 65 05 низ-право, мем-стикер в углу, 2–4 Wordstat paper stickers spaced в top-left (не cramped dump/overlap). FAIL: face-only collapse без title/phone/meme. Wordstat PIL overlay только в свободной top-left зоне — не на title/лицо. **Запрещена** daypart-формула (desk/street/close talk/night split).
 
 **Inline visual law (HARD):** крупный человек = только Святослав на cover (`face-studio-2026-06-23.jpg`). Inline = инфографика (таблицы, схемы, графики) — **без** stock model / generated man / co-host. People-memes = маленькие стикеры (≤15% кадра) из `memory/cover/meme-top100.json`. Cover-QA FAIL на co-host human или meme person > sticker scale.
 
@@ -144,7 +144,7 @@ Conversion (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
   Interlink 2–4 sibling из shared/published-articles.md (status=published)
 
 После Sol: pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → quality-bar-9.json all_pass.
-Description → Cover-text || Schema → Cover (cover-scene via derouter; variety lock: invent outfit/action/emotion/pose; stickers NOT on title) → Cover-QA pixel gate (`cover_qa_gate.py` + `cover_qa_pixels.py`; Fixer on FAIL) → Indexer.
+Description → Cover-text || Schema → Cover (cover-scene via derouter; variety lock: invent outfit/action/emotion/pose; hook H1 + phone + meme + spaced Wordstat stickers — designed thumbnail, NOT face-only crop) → Cover-QA pixel gate (`cover_qa_gate.py` + `cover_qa_pixels.py`: pixel_hook_title_present, pixel_phone_readable, pixel_meme_present, pixel_layout_not_collapsed, pixel_wordstat_stickers_not_overlapping; Fixer regen cover panel on layout FAIL, PIL Wordstat only top-left free zone) → Indexer.
 
 Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе И quality-bar-9.json all_pass (или `--media-refresh --featured-only` для cover-only: pixel Cover-QA PASS + wp_post_id); иначе STOP после Indexer.
 Live = SFTP replace (не жди merge article в main для сайта). Код/канон — в main.

@@ -36,6 +36,25 @@ FACE_EXCLUDE_ZONE = (0.30, 0.04, 0.78, 0.50)  # лицо/лоб — не тро�
 BOTTOM_DUP_PEEL_ZONE = (0.56, 0.76, 0.94, 0.96)  # duplicate PIL wordstat bottom-right
 HOST_ZONE = (0.22, 0.08, 0.92, 0.98)  # где ожидаем крупное лицо
 WORDSTAT_ZONE = (0.62, 0.0, 1.0, 1.0)  # правая полоса для Wordstat
+# Священные зоны designed thumbnail (1200×675)
+HOOK_TITLE_ZONE = (0.52, 0.14, 0.96, 0.40)  # крупный hook H1 справа
+PHONE_STICKER_ZONE = (0.55, 0.70, 0.98, 0.96)  # телефон +7 922 001 65 05
+MEME_CORNER_ZONE = (0.72, 0.62, 0.96, 0.88)  # маленький мем-стикер (без лица)
+WORDSTAT_STACK_ZONE = (0.02, 0.04, 0.40, 0.30)  # 2–4 paper Wordstat без overlap
+WORDSTAT_NARROW_STACK_ZONE = (0.12, 0.05, 0.32, 0.24)  # узкая колонка — cramped dump
+
+# Пороги калиброваны на FAIL B07 (md5 23051a01…) vs PASS B06
+HOOK_TITLE_ROW_INK_FRAC = 0.17
+HOOK_TITLE_MIN_ROW_INK_PX = 34
+HOOK_TITLE_MIN_BAND_ROWS = 12
+HOOK_TITLE_BAND_MAX_GAP_PX = 10
+HOOK_TITLE_MIN_INK_OUTSIDE_FACE = 600
+PHONE_ZONE_MIN_INK = 220
+MEME_CORNER_MIN_SIGNAL = 75
+STICKER_OVERLAP_IOU = 0.35
+STICKER_MIN_GAP_PX = 10
+WORDSTAT_CROWDED_STACK_MIN_COMPS = 3
+WORDSTAT_CROWDED_MAX_SPAN_FRAC = 0.21
 
 GOLD_STICKER_RGB = (220, 197, 161)
 PHONE_REQUIRED = "+7 922 001 65 05"
@@ -233,35 +252,279 @@ def _ghost_wordstat_paper_frac_in_zone(
     return paper / max(total, 1)
 
 
-def cover_composition_ok(img) -> bool:
-    """Полноценная обложка: заголовок, подбородок, кот, телефон — не случайный crop."""
+def _is_headline_ink_pixel(r: int, g: int, b: int) -> bool:
+    """Типографика hook H1: тёмные буквы или gold accent, не кожа/бумага."""
+    if _is_skin(r, g, b):
+        return False
+    if _is_paper_wordstat_pixel(r, g, b):
+        return False
+    lum = _luminance(r, g, b)
+    if lum < 72:
+        return True
+    return _is_gold_sticker(r, g, b, tol=44)
+
+
+def _hook_title_ink_outside_face(img) -> int:
+    """Пиксели типографики hook title вне зоны лица (не черты лица/волос)."""
     w, h = img.size
     rgb = img.convert("RGB")
-    title_upper = title_lower = 0
-    for y in range(int(h * 0.08), int(h * 0.28)):
-        for x in range(int(w * 0.02), int(w * 0.58)):
-            if _luminance(*rgb.getpixel((x, y))) < 60:
-                title_upper += 1
-    for y in range(int(h * 0.24), int(h * 0.52)):
-        for x in range(int(w * 0.02), int(w * 0.58)):
+    x0 = int(HOOK_TITLE_ZONE[0] * w)
+    y0 = int(HOOK_TITLE_ZONE[1] * h)
+    x1 = int(HOOK_TITLE_ZONE[2] * w)
+    y1 = int(HOOK_TITLE_ZONE[3] * h)
+    ink = 0
+    for y in range(y0, y1):
+        for x in range(x0, x1):
             r, g, b = rgb.getpixel((x, y))
-            if _luminance(r, g, b) < 70 or _is_gold_sticker(r, g, b, tol=36):
-                title_lower += 1
-    chin_skin = cat_orange = phone_dark = 0
-    for y in range(int(h * 0.38), int(h * 0.68)):
-        for x in range(int(w * 0.32), int(w * 0.78)):
-            if _is_skin(*rgb.getpixel((x, y))):
-                chin_skin += 1
-    for y in range(int(h * 0.58), int(h * 0.95)):
-        for x in range(int(w * 0.68), int(w * 0.98)):
+            if _is_skin(r, g, b):
+                continue
+            xf, yf = x / w, y / h
+            if _in_norm_zone(xf, yf, FACE_EXCLUDE_ZONE):
+                continue
+            if _is_headline_ink_pixel(r, g, b):
+                ink += 1
+    return ink
+
+
+def _hook_title_metrics(img) -> dict[str, Any]:
+    """Крупный читаемый hook title в sacred zone (не мелкие Wordstat strips / черты лица)."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    x0 = int(HOOK_TITLE_ZONE[0] * w)
+    y0 = int(HOOK_TITLE_ZONE[1] * h)
+    x1 = int(HOOK_TITLE_ZONE[2] * w)
+    y1 = int(HOOK_TITLE_ZONE[3] * h)
+    zone_w = max(x1 - x0, 1)
+    bands: list[dict[str, Any]] = []
+    qualifying_rows: list[int] = []
+    for y in range(y0, y1):
+        ink = 0
+        for x in range(x0, x1):
             r, g, b = rgb.getpixel((x, y))
-            if r >= 175 and g <= 168 and r - g >= 22:
-                cat_orange += 1
-    for y in range(int(h * 0.72), int(h * 0.96)):
-        for x in range(int(w * 0.02), int(w * 0.42)):
-            if _luminance(*rgb.getpixel((x, y))) < 70:
-                phone_dark += 1
-    return title_upper >= 350 and title_lower >= 350 and chin_skin >= 450 and cat_orange >= 80 and phone_dark >= 120
+            xf, yf = x / w, y / h
+            if _in_norm_zone(xf, yf, FACE_EXCLUDE_ZONE):
+                continue
+            if _is_skin(r, g, b):
+                continue
+            if _is_headline_ink_pixel(r, g, b):
+                ink += 1
+        frac = ink / zone_w
+        row_ok = ink >= HOOK_TITLE_MIN_ROW_INK_PX or frac >= HOOK_TITLE_ROW_INK_FRAC
+        if row_ok:
+            qualifying_rows.append(y)
+
+    if qualifying_rows:
+        band_y0 = qualifying_rows[0]
+        prev_y = qualifying_rows[0]
+        band_count = 1
+        for y in qualifying_rows[1:]:
+            if y - prev_y <= HOOK_TITLE_BAND_MAX_GAP_PX:
+                band_count += 1
+                prev_y = y
+            else:
+                if band_count >= HOOK_TITLE_MIN_BAND_ROWS:
+                    bands.append({"y0": band_y0, "y1": prev_y, "rows": band_count})
+                band_y0 = y
+                prev_y = y
+                band_count = 1
+        if band_count >= HOOK_TITLE_MIN_BAND_ROWS:
+            bands.append({"y0": band_y0, "y1": prev_y, "rows": band_count})
+
+    ink_outside = _hook_title_ink_outside_face(img)
+    present = bool(bands) and ink_outside >= HOOK_TITLE_MIN_INK_OUTSIDE_FACE
+    return {
+        "present": present,
+        "bands": bands,
+        "ink_outside_face": ink_outside,
+        "min_band_rows": HOOK_TITLE_MIN_BAND_ROWS,
+    }
+
+
+def _phone_zone_ink_count(img) -> int:
+    """Тёмные цифры/иконка телефона в нижнем правом углу."""
+    w, h = img.size
+    gray = img.convert("L")
+    x0 = int(PHONE_STICKER_ZONE[0] * w)
+    y0 = int(PHONE_STICKER_ZONE[1] * h)
+    x1 = int(PHONE_STICKER_ZONE[2] * w)
+    y1 = int(PHONE_STICKER_ZONE[3] * h)
+    ink = 0
+    for y in range(y0, y1, 2):
+        for x in range(x0, x1, 2):
+            if gray.getpixel((x, y)) < 88:
+                ink += 1
+    return ink
+
+
+def _meme_corner_signal(img) -> int:
+    """Насыщенный мем-стикер (кот/каталог) в правом нижнем углу — не кожа/фон."""
+    w, h = img.size
+    x0 = int(MEME_CORNER_ZONE[0] * w)
+    y0 = int(MEME_CORNER_ZONE[1] * h)
+    x1 = int(MEME_CORNER_ZONE[2] * w)
+    y1 = int(MEME_CORNER_ZONE[3] * h)
+    signal = 0
+    for y in range(y0, y1, 3):
+        for x in range(x0, x1, 3):
+            r, g, b = img.convert("RGB").getpixel((x, y))
+            if _is_skin(r, g, b):
+                continue
+            if _is_pure_white_paper(r, g, b):
+                continue
+            lum = _luminance(r, g, b)
+            if lum > 235:
+                continue
+            # оранжевая шерсть кота
+            if r >= 178 and g <= 155 and r - g >= 30:
+                signal += 3
+                continue
+            if max(r, g, b) - min(r, g, b) > 42 and lum < 215:
+                signal += 1
+    return signal
+
+
+def _paper_sticker_components(
+    img,
+    zone: tuple[float, float, float, float],
+    *,
+    min_pixels: int = 180,
+) -> list[dict[str, Any]]:
+    """Связные компоненты Wordstat paper в зоне."""
+    from collections import deque
+
+    w, h = img.size
+    rgb = img.convert("RGB")
+    x0 = int(zone[0] * w)
+    y0 = int(zone[1] * h)
+    x1 = int(zone[2] * w)
+    y1 = int(zone[3] * h)
+    zw, zh = max(x1 - x0, 1), max(y1 - y0, 1)
+    visited = [[False] * zw for _ in range(zh)]
+    comps: list[dict[str, Any]] = []
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            lx, ly = x - x0, y - y0
+            if visited[ly][lx]:
+                continue
+            if not _is_paper_wordstat_pixel(*rgb.getpixel((x, y))):
+                continue
+            q: deque[tuple[int, int]] = deque([(lx, ly)])
+            visited[ly][lx] = True
+            pixels = 0
+            minx = maxx = lx
+            miny = maxy = ly
+            while q:
+                cx, cy = q.popleft()
+                pixels += 1
+                minx = min(minx, cx)
+                maxx = max(maxx, cx)
+                miny = min(miny, cy)
+                maxy = max(maxy, cy)
+                for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                    nx, ny = cx + dx, cy + dy
+                    if nx < 0 or ny < 0 or nx >= zw or ny >= zh or visited[ny][nx]:
+                        continue
+                    if _is_paper_wordstat_pixel(*rgb.getpixel((x0 + nx, y0 + ny))):
+                        visited[ny][nx] = True
+                        q.append((nx, ny))
+            if pixels >= min_pixels:
+                comps.append(
+                    {
+                        "pixels": pixels,
+                        "bbox": (x0 + minx, y0 + miny, x0 + maxx, y0 + maxy),
+                    }
+                )
+    return comps
+
+
+def _bbox_iou(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> float:
+    ax0, ay0, ax1, ay1 = a
+    bx0, by0, bx1, by1 = b
+    ix0, iy0 = max(ax0, bx0), max(ay0, by0)
+    ix1, iy1 = min(ax1, bx1), min(ay1, by1)
+    if ix1 <= ix0 or iy1 <= iy0:
+        return 0.0
+    inter = (ix1 - ix0) * (iy1 - iy0)
+    area_a = max((ax1 - ax0) * (ay1 - ay0), 1)
+    area_b = max((bx1 - bx0) * (by1 - by0), 1)
+    return inter / (area_a + area_b - inter)
+
+
+def _wordstat_sticker_overlap_metrics(img, *, hook_present: bool = False) -> dict[str, Any]:
+    """Paper stickers в узкой top-left колонке: без 2D overlap и без cramped dump."""
+    narrow = _paper_sticker_components(img, WORDSTAT_NARROW_STACK_ZONE, min_pixels=300)
+    overlaps: list[dict[str, Any]] = []
+    for i in range(len(narrow)):
+        for j in range(i + 1, len(narrow)):
+            bi = narrow[i]["bbox"]
+            bj = narrow[j]["bbox"]
+            iou = _bbox_iou(bi, bj)
+            horiz_overlap = not (bi[2] < bj[0] or bj[2] < bi[0])
+            vert_overlap = not (bi[3] < bj[1] or bj[3] < bi[1])
+            if iou >= STICKER_OVERLAP_IOU:
+                overlaps.append({"pair": (i, j), "iou": round(iou, 3), "kind": "2d_overlap"})
+            elif horiz_overlap and vert_overlap:
+                overlaps.append({"pair": (i, j), "kind": "stacked_overlap"})
+
+    crowded = False
+    if len(narrow) >= WORDSTAT_CROWDED_STACK_MIN_COMPS and not hook_present:
+        ys = [c["bbox"][1] for c in narrow] + [c["bbox"][3] for c in narrow]
+        span_frac = (max(ys) - min(ys)) / max(img.size[1], 1)
+        if span_frac <= WORDSTAT_CROWDED_MAX_SPAN_FRAC:
+            crowded = True
+            overlaps.append(
+                {
+                    "kind": "crowded_corner_dump",
+                    "narrow_components": len(narrow),
+                    "span_frac": round(span_frac, 3),
+                }
+            )
+
+    return {
+        "components": len(narrow),
+        "narrow_components": len(narrow),
+        "overlaps": overlaps,
+        "crowded_stack": crowded,
+        "ok": len(overlaps) == 0,
+    }
+
+
+def _layout_collapse_metrics(img, *, hook_present: bool) -> dict[str, Any]:
+    """Face-only crop без designed layout: лицо съело кадр, нет hook title."""
+    face = _face_skin_metrics(img)
+    face_h = float(face.get("face_h_frac") or 0.0)
+    face_w = float(face.get("face_w_frac") or 0.0)
+    ink_outside = _hook_title_ink_outside_face(img)
+    collapsed = (not hook_present) and face_h >= 0.30 and face_w >= 0.36
+    dumped = (
+        ink_outside < HOOK_TITLE_MIN_INK_OUTSIDE_FACE
+        and face_h >= 0.30
+        and _phone_zone_ink_count(img) < PHONE_ZONE_MIN_INK
+    )
+    return {
+        "collapsed": collapsed or dumped,
+        "face_h_frac": face_h,
+        "face_w_frac": face_w,
+        "hook_present": hook_present,
+        "ink_outside_face": ink_outside,
+        "dumped_wordstat_corner": dumped,
+    }
+
+
+def cover_composition_ok(img) -> bool:
+    """Полноценная designed обложка: hook title, телефон, мем, без layout collapse."""
+    hook = _hook_title_metrics(img)
+    phone_ink = _phone_zone_ink_count(img)
+    meme_sig = _meme_corner_signal(img)
+    overlap = _wordstat_sticker_overlap_metrics(img, hook_present=bool(hook.get("present")))
+    layout = _layout_collapse_metrics(img, hook_present=bool(hook.get("present")))
+    return (
+        bool(hook.get("present"))
+        and phone_ink >= PHONE_ZONE_MIN_INK
+        and meme_sig >= MEME_CORNER_MIN_SIGNAL
+        and overlap.get("ok", False)
+        and not layout.get("collapsed", False)
+    )
 
 
 def _in_norm_zone(xf: float, yf: float, zone: tuple[float, float, float, float]) -> bool:
@@ -834,24 +1097,8 @@ def _manifest_expects_warm_outfit(manifest: dict[str, Any] | None) -> bool:
 
 
 def _phone_digits_present(img) -> bool:
-    """Грубая проверка: в нижней половине есть контрастные цифры (телефон)."""
-    w, h = img.size
-    rgb = img.convert("L")
-    # ищем горизонтальные цепочки тёмных символов в нижних 35%
-    y0 = int(h * 0.62)
-    dark_rows = 0
-    for y in range(y0, h, 4):
-        dark_run = 0
-        max_run = 0
-        for x in range(int(w * 0.45), w - 8):
-            if rgb.getpixel((x, y)) < 95:
-                dark_run += 1
-                max_run = max(max_run, dark_run)
-            else:
-                dark_run = 0
-        if max_run >= 6:
-            dark_rows += 1
-    return dark_rows >= 2
+    """Телефон +7 922 001 65 05 — только нижний правый sacred zone (не Wordstat strips)."""
+    return _phone_zone_ink_count(img) >= PHONE_ZONE_MIN_INK
 
 
 def describe_cover_pixels(cover_path: Path) -> str:
@@ -1075,10 +1322,52 @@ def analyze_cover_pixels(
     if truncated_phrase:
         errors.append("pixel_wordstat_phrases_not_truncated FAIL: manifest/history partial phrases")
 
-    # --- phone ---
-    checks["pixel_phone_readable"] = _phone_digits_present(img)
+    # --- designed thumbnail: hook title, phone, meme, sticker spacing, no layout collapse ---
+    hook_metrics = _hook_title_metrics(img)
+    phone_ink = _phone_zone_ink_count(img)
+    meme_signal = _meme_corner_signal(img)
+    sticker_overlap = _wordstat_sticker_overlap_metrics(
+        img, hook_present=bool(hook_metrics.get("present"))
+    )
+    layout_metrics = _layout_collapse_metrics(img, hook_present=bool(hook_metrics.get("present")))
+    evidence["hook_title"] = hook_metrics
+    evidence["phone_zone_ink"] = phone_ink
+    evidence["meme_corner_signal"] = meme_signal
+    evidence["wordstat_sticker_overlap"] = sticker_overlap
+    evidence["layout_collapse"] = layout_metrics
+
+    checks["pixel_hook_title_present"] = bool(hook_metrics.get("present"))
+    checks["pixel_phone_readable"] = phone_ink >= PHONE_ZONE_MIN_INK
+    checks["pixel_meme_present"] = meme_signal >= MEME_CORNER_MIN_SIGNAL
+    checks["pixel_wordstat_stickers_not_overlapping"] = bool(sticker_overlap.get("ok"))
+    checks["pixel_layout_not_collapsed"] = not bool(layout_metrics.get("collapsed"))
+    checks["pixel_designed_thumbnail"] = cover_composition_ok(img)
+
+    if not checks["pixel_hook_title_present"]:
+        errors.append(
+            "pixel_hook_title_present FAIL: no large readable hook title in sacred zone "
+            f"(bands={hook_metrics.get('bands')})"
+        )
     if not checks["pixel_phone_readable"]:
-        errors.append("pixel_phone_readable FAIL: no digit-like phone block detected")
+        errors.append(
+            f"pixel_phone_readable FAIL: phone_zone_ink={phone_ink} < {PHONE_ZONE_MIN_INK}"
+        )
+    if not checks["pixel_meme_present"]:
+        errors.append(
+            f"pixel_meme_present FAIL: meme_corner_signal={meme_signal} < {MEME_CORNER_MIN_SIGNAL}"
+        )
+    if not checks["pixel_wordstat_stickers_not_overlapping"]:
+        errors.append(
+            "pixel_wordstat_stickers_not_overlapping FAIL: "
+            f"{len(sticker_overlap.get('overlaps') or [])} overlapping/tight Wordstat stickers"
+        )
+    if not checks["pixel_layout_not_collapsed"]:
+        errors.append(
+            "pixel_layout_not_collapsed FAIL: face-only crop with no hook title "
+            f"(face_h={layout_metrics.get('face_h_frac')}, face_w={layout_metrics.get('face_w_frac')})"
+        )
+    if not checks["pixel_designed_thumbnail"]:
+        errors.append("pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail")
 
     # --- manifest lie: outfit vs pixels ---
     dark_ratio = _host_dark_ratio(img)
@@ -1126,6 +1415,9 @@ def stamp_cover_qa_json(
             and checks.get("pixel_meme_not_occluded_by_wordstat", False)
             and checks.get("pixel_no_text_on_clothing", False)
             and checks.get("pixel_meme_clearance_80px", False)
+            and checks.get("pixel_hook_title_present", False)
+            and checks.get("pixel_wordstat_stickers_not_overlapping", False)
+            and checks.get("pixel_layout_not_collapsed", False)
         ),
         "outfit_invented": checks.get("pixel_manifest_outfit_matches", False),
         "action_invented": True,
