@@ -3,7 +3,7 @@
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
 ## INC-20260821-0615-content-learner-metrika-credentials
-status: open
+status: needs-human
 run_date: 2026-08-21
 role: excalibur-blog-content-learner
 topic_id: B06, B07
@@ -31,6 +31,14 @@ category: env
 
 ### Secrets
 - none recorded (credentials absent)
+
+### Fixer resolution
+status: needs-human
+fixed_at: 2026-08-21
+reason:
+- Missing Yandex Metrika OAuth token and counter id in Cloud Secrets — not fixable in repo code.
+needed_decision_or_secret:
+- Cloud Secrets: `YANDEX_METRIKA_OAUTH_TOKEN`, `YANDEX_METRIKA_COUNTER_ID`
 
 ## INC-20260821-0614-quality-bar-wordstat-pil-b06
 status: fixed
@@ -140,15 +148,20 @@ category: script
 ### Fixer resolution
 fixed_at: 2026-08-21
 fix_summary:
-- `resolve_output_path()` in derouter script: bare filename + `--article-dir` → article_dir/filename.
-- Content-learner B07 lesson LESSON-20260821-1109-B07-schema-output-article-dir-resolve recorded applied.
+- `resolve_output_path()`: bare `--output` + `--article-dir` → `<article-dir>/<file>`; `memory/...` paths still root-relative.
+- Schema skill documents bare output contract (INC-20260821-1040).
 files_changed:
 - `scripts/excalibur_blog_derouter_opus_chat.py`
+- `skills/schema-excalibur-blog/SKILL.md`
+- `.cursor/skills/schema-excalibur-blog/SKILL.md`
+- `tests/test_derouter_resolve_model.py`
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_derouter_opus_chat.py`
+- `python3 -m unittest tests.test_derouter_resolve_model` → OK
+commit: pending-parent-commit
 
 ## INC-20260821-1100-publish-notariat-linkverify
-status: open
+status: fixed
 run_date: 2026-08-21
 role: excalibur-blog-publish
 topic_id: B07
@@ -177,4 +190,27 @@ category: script
 
 ### Secrets
 - none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-21
+fix_summary:
+- `RF_OFFICIAL_SOFT_EXTERNAL_HOSTS` includes `notariat.ru` (404/timeout soft-pass); unit tests added.
+- `upsert_publish_ledger` writes 6th column `post_id`; parses from `OK post=`; persists `wp_post_id` in article.meta.json.
+- `parse_ledger` reads post_id; ledger backfilled B02–B07 from wp-publish-log/meta.
+- `interlink-contract.md` documents post_id requirement for inbound bootstrap.
+- Theme SFTP root mismatch → **needs-human**: set `FTP_ROOT` in Cloud Secrets to WP docroot (not `.`).
+files_changed:
+- `scripts/excalibur_blog_wp_publish.py`
+- `scripts/excalibur_blog_interlink_lib.py`
+- `shared/published-articles.md`
+- `shared/interlink-contract.md`
+- `skills/publish-excalibur-blog/SKILL.md`
+- `.cursor/skills/publish-excalibur-blog/SKILL.md`
+- `tests/test_link_verify_soft_pass.py`
+- `tests/test_interlink_ledger_post_id.py`
+- `tests/test_wp_categories_interlink.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_wp_publish.py scripts/excalibur_blog_interlink_lib.py`
+- `python3 -m unittest tests.test_link_verify_soft_pass tests.test_interlink_ledger_post_id tests.test_wp_categories_interlink.WpCategoriesInterlinkTests.test_ledger_upsert_dedupes_legacy_row` → OK
+commit: pending-parent-commit
 

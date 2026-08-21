@@ -135,6 +135,7 @@ def main() -> int:
         "scripts/excalibur_blog_quality_bar_9_gate.py",
         "scripts/excalibur_blog_quad_regen_panels.py",
         "scripts/excalibur_blog_writer_chunk.py",
+        "scripts/excalibur_blog_sol_chunk.py",
         "shared/derouter-opus-brain-contract.md",
         "skills/setup-voice-excalibur-blog/SKILL.md",
         "skills/setup-visual-excalibur-blog/SKILL.md",

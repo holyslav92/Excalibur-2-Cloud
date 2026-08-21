@@ -67,6 +67,27 @@ class DerouterResolveModelTests(unittest.TestCase):
                 self.assertEqual(tier, "powerful")
                 self.assertIn("opus", model.lower())
 
+    def test_resolve_output_path_bare_filename_under_article_dir(self) -> None:
+        from scripts.excalibur_blog_derouter_opus_chat import resolve_output_path
+
+        root = Path("/workspace")
+        article_dir = root / "memory/blog/articles/B07-fixture"
+        out = resolve_output_path(
+            output="schema.jsonld",
+            article_dir=article_dir,
+            root=root,
+        )
+        self.assertEqual(out, article_dir / "schema.jsonld")
+
+    def test_resolve_output_path_memory_prefix_from_root(self) -> None:
+        from scripts.excalibur_blog_derouter_opus_chat import resolve_output_path
+
+        root = Path("/workspace")
+        article_dir = root / "memory/blog/articles/B07-fixture"
+        rel = "memory/blog/articles/B07-fixture/schema.jsonld"
+        out = resolve_output_path(output=rel, article_dir=article_dir, root=root)
+        self.assertEqual(out, root / rel)
+
 
 if __name__ == "__main__":
     unittest.main()

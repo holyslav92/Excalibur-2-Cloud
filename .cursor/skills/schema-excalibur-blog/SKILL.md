@@ -18,6 +18,9 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
   --article-dir <article_dir>
 ```
 
+**Выход:** bare `--output schema.jsonld` + `--article-dir` пишет в каталог статьи
+(скрипт резолвит относительно `--article-dir`, не корень репо; INC-20260821-1040).
+
 `DEROUTER SCHEMA BLOCKER` → стоп. Контракт: `shared/derouter-opus-brain-contract.md`.
 
 ## Вход
