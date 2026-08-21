@@ -30,9 +30,11 @@ MAX_URL = "https://max.ru/id561413315447_biz"
 REQUIRED_CHECKS = (
     "brand_first_person_tyumen",
     "phone_in_body",
+    "early_cta_before_first_h2",
     "early_cta_tg_max_only",
     "mid_cta_tg_max_nudge",
     "end_cta_full_channels",
+    "no_site_base_placeholder_in_article",
     "interlink_siblings_2_4",
     "dual_cta_soft",
     "word_count_2000_2600",
@@ -112,6 +114,23 @@ def first_screen_html(html: str) -> str:
     if m:
         return (html or "")[: m.start()]
     return html or ""
+
+
+def check_early_cta_before_first_h2(html: str) -> bool:
+    """excalibur-cta-early must sit in the hook/TL;DR zone before the first H2 (B07)."""
+    blob = html or ""
+    m_early = re.search(r'excalibur-cta-early', blob, flags=re.I)
+    if not m_early:
+        return False
+    m_h2 = re.search(r"<h2\b", blob, flags=re.I)
+    if m_h2 and m_early.start() > m_h2.start():
+        return False
+    return True
+
+
+def check_no_site_base_placeholder(html: str) -> bool:
+    """article.html uses relative /paths; {{SITE_BASE}} is for schema/llms only (B07 Sol)."""
+    return "{{SITE_BASE}}" not in (html or "")
 
 
 def check_early_cta(html: str) -> bool:
@@ -396,9 +415,11 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
 
     checks["brand_first_person_tyumen"] = check_brand(html)
     checks["phone_in_body"] = has_phone(html)
+    checks["early_cta_before_first_h2"] = check_early_cta_before_first_h2(html)
     checks["early_cta_tg_max_only"] = check_early_cta(html)
     checks["mid_cta_tg_max_nudge"] = check_mid_cta(html)
     checks["end_cta_full_channels"] = check_end_cta(html)
+    checks["no_site_base_placeholder_in_article"] = check_no_site_base_placeholder(html)
     interlink_ok, interlink_count = check_interlinks(html, root, article_dir)
     checks["interlink_siblings_2_4"] = interlink_ok
     checks["dual_cta_soft"] = check_dual_cta(html)
