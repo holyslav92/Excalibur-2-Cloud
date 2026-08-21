@@ -1,0 +1,55 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B06",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-21",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/s/klyshin_A",
+        "type": "community",
+        "note": "Август 2026: «Автооценка квартиры сейчас может стоить вам 1–2 миллиона» — 18 vs 20 млн, очередь просмотров/авансов, снятие объявления и подъём цены"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Свежие посты август 2026: контекст вторички Тюмени, скидка 2 млн и проверка до аванса (канал Святослава Шакина)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 23066,
+    "stickers": {
+      "вторичка в тюмени": 5799,
+      "купить квартиру в тюмени вторичка": 3943
+    },
+    "hook_phrase": "оценка квартиры тюмень",
+    "hook_volume": 73,
+    "partial": ["автооценка квартиры — totalCount only (1)"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "B05 — скидка/задаток; B06 — автооценка vs живой спрос"
+  },
+  "official_source_audit": {
+    "required": false,
+    "status": "PASS",
+    "verified_claims": 2,
+    "entities_checked": ["cian", "domclick"],
+    "errors": [],
+    "note": "Product claims only; no bank tariffs. CIAN promo official; Domclick via RIA product release description."
+  },
+  "key_facts_count": 22,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}

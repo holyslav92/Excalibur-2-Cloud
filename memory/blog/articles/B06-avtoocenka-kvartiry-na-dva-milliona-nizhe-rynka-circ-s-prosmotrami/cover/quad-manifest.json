@@ -1,0 +1,240 @@
+{
+  "topic_id": "B06",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Квартира подорожала после оценки",
+  "cover_hook_highlight": "подорожала",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: Derouter REST (DEROUTER_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав в яркой рубашке удивлённо показывает, как квартира после автооценки выросла с 18 до 20 миллионов рублей.",
+      "scene_hint": "lemon shirt NO blazer; stunned 18→20; pink подорожала",
+      "meme_caption_ru": "",
+      "sticky": "Цена оказалась ниже спроса",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "stunned raised brows"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Коротко: что нужно понять про автооценку",
+      "visual_type": "comparison_table",
+      "scene_hint": "2-col table 4 rows; tiny cat",
+      "alt": "Таблица сравнивает ориентир сервиса и реальный спрос: очередь не видна, звонки важнее оценки, нужно проверить три цены.",
+      "labels": [
+        "Ориентир не сделка",
+        "Очередь не видна",
+        "Звонки до аванса",
+        "Три варианта цены"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Дёшево в сервисе» и «можно купить за эту сумму» — разные утверждения",
+      "visual_type": "process_flow",
+      "scene_hint": "Dual flow 4 steps; NO memes",
+      "alt": "Схема показывает путь от похожих объявлений к реальному покупателю и объясняет, почему низкая цифра не гарантирует сделку.",
+      "labels": [
+        "Похожие квартиры",
+        "Эту квартиру купят",
+        "Очередь не учтена",
+        "Цифра не гарантия"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что именно считают ЦИАН.Оценка и модель Домклик",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Checklist 5 rows; NO memes",
+      "alt": "Чек-лист сравнивает методы ЦИАН и Домклика: похожие объекты, три месяца истории, отсутствие проверки документов и очереди.",
+      "labels": [
+        "ЦИАН ищет похожие",
+        "Домклик: три месяца",
+        "Очередь не видна",
+        "Документы не проверяет",
+        "Мало дорогих аналогов"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Кейс: восемнадцать в отчёте, двадцать на живом спросе",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow 18→20→2000 views→10 shows→7 avans; gold arrow; big nums; NO memes",
+      "alt": "Визуальная цепочка кейса показывает рост с 18 до 20 миллионов, 2000 просмотров, 10 записей и 7 авансов.",
+      "labels": [
+        "18 против 20 миллионов",
+        "Разница 2 миллиона",
+        "2000 просмотров в сутки",
+        "10 записей на показ",
+        "7 авансов",
+        "Седьмой в очереди"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Три версии, почему цена выглядит подозрительно низкой",
+      "visual_type": "structure_diagram",
+      "scene_hint": "3-branch diagram: спрос/риск/модель; tiny stonks sticker corner",
+      "alt": "Диаграмма раскрывает три причины низкой оценки: спрос выше, скидка за риск, устаревшая модель или плохие аналоги.",
+      "labels": [
+        "Спрос выше оценки",
+        "Скидка за риск",
+        "Модель отстала",
+        "Плохие аналоги",
+        "Три разных действия"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Очередь на просмотр: это про цену, а не про качество",
+      "visual_type": "comparison_table",
+      "scene_hint": "2-col СИГНАЛ vs НЕ СДЕЛКА; queue/shows/check/avans rows; NO memes",
+      "alt": "Таблица объясняет, что очередь у квартиры означает высокий интерес, но показы не равны сделке и аванс нельзя вносить сразу.",
+      "labels": [
+        "Очередь значит дешевле",
+        "Показы не сделка",
+        "Сначала проверка",
+        "Не вносите сразу"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Как собрать аналоги на вторичке Тюмени и что вытащить звонком",
+      "visual_type": "fact_card",
+      "scene_hint": "Fact card 5 steps 5–7 analogs phone icon; tiny roll-safe corner",
+      "alt": "Карточка советует изучить 5–7 аналогов, историю цены, позвонить продавцам и выяснить условия до аванса.",
+      "labels": [
+        "5–7 похожих квартир",
+        "История цены важнее",
+        "Звонки всем продавцам",
+        "Кто подписывает сделку",
+        "До аванса спросите"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "вторичка в тюмени",
+    "купить квартиру в тюмени"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "stunned raised brows",
+  "cover_motifs": {
+    "composition": "host_medium_right_price_jump_18_to_20_headline_left_sacred_sun_flare",
+    "location": "bright_sunny_tyumen_apartment_panoramic_window_white_walls",
+    "meme": "wide_eyes_cat_sticker_plus_confused_math_lady_corner",
+    "prop_set": "phone_price_chart_tablet_18mln_card_20mln_up_arrow_viewing_badges",
+    "sticker_set": "PIL_wordstat_right_edge_only_NO_canvas_wordstat",
+    "joke": "calculator_18mln_buyers_push_tag_to_20mln",
+    "outfit": "lemon_yellow_linen_shirt_white_tee_glasses_on_head_FORBIDDEN_black_blazer",
+    "emotion": "stunned_open_mouth_raised_brows_NOT_side_glance",
+    "pose_framing": "host_large_left_waist_up_forward_gaze_NOT_side_eye",
+    "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
+  },
+  "wordstat_pil_only": true,
+  "wordstat_overlay_style": "paper_sticker_v2",
+  "wordstat_stickers_pil_applied": true,
+  "wordstat_sticker_positions": [
+    [
+      0.128,
+      0.12
+    ],
+    [
+      0.128,
+      0.219
+    ]
+  ]
+}

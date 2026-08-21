@@ -345,10 +345,18 @@ def check_wordstat_overlap(article_dir: Path) -> bool:
         return False
     positions = manifest.get("wordstat_sticker_positions")
     if isinstance(positions, list) and positions:
-        for pos in positions:
-            if isinstance(pos, (list, tuple)) and len(pos) >= 2:
-                if float(pos[0]) < 0.68:
-                    return False
+        if manifest.get("wordstat_pil_only"):
+            # Синхронно с cover_qa_gate.validate_title_not_occluded: PIL — top-left sacred zone.
+            for pos in positions:
+                if isinstance(pos, (list, tuple)) and len(pos) >= 2:
+                    x, y = float(pos[0]), float(pos[1])
+                    if x > 0.42 or y > 0.36:
+                        return False
+        else:
+            for pos in positions:
+                if isinstance(pos, (list, tuple)) and len(pos) >= 2:
+                    if float(pos[0]) < 0.68:
+                        return False
     return True
 
 

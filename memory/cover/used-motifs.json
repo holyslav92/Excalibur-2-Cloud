@@ -86,6 +86,23 @@
         "pose_framing": "three_quarter_body_host_right_entrance_steps_not_left_bust",
         "action": "left_hand_holds_egrn_folder_right_palm_stop_gesture_at_discount_tag"
       }
+    },
+    {
+      "date": "2026-08-21",
+      "topic_id": "B06",
+      "slug": "",
+      "motifs": {
+        "composition": "host_medium_right_price_jump_18_to_20_headline_left_sacred_sun_flare",
+        "location": "bright_sunny_tyumen_apartment_panoramic_window_white_walls",
+        "meme": "wide_eyes_cat_sticker_plus_confused_math_lady_corner",
+        "prop_set": "phone_price_chart_tablet_18mln_card_20mln_up_arrow_viewing_badges",
+        "sticker_set": "pil_wordstat_right_edge_only_no_canvas_wordstat",
+        "joke": "calculator_18mln_buyers_push_tag_to_20mln",
+        "outfit": "lemon_yellow_linen_shirt_white_tee_glasses_on_head_no_blazer",
+        "emotion": "stunned_half_smile_raised_brows_market_caught_up",
+        "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
+        "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
+      }
     }
   ]
 }

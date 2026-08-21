@@ -2,7 +2,8 @@
 """Excalibur BLOG HTML Tag Linter & Sanitizer.
 
 Enforces strict whitelist of HTML tags, prevents unclosed tags, and checks for malformed markup.
-Allowed tags: h2, h3, p, b, i, a, ul, ol, li, blockquote, table, thead, tbody, tr, th, td
+Allowed tags: h2, h3, p, b, i, a, ul, ol, li, blockquote, table, thead, tbody, tr, th, td, figure, img, br
+Plus class-whitelisted <div> for conversion CTA blocks (shared/quality-bar-9.md).
 """
 from __future__ import annotations
 
@@ -38,6 +39,16 @@ ALLOWED_TAGS: set[str] = {
     "br",
 }
 
+# quality-bar-9 conversion zones: Sol wraps early/mid/end CTA in <div class="excalibur-cta-*">.
+ALLOWED_DIV_CLASSES: frozenset[str] = frozenset(
+    {
+        "excalibur-cta-early",
+        "excalibur-cta-mid",
+        "excalibur-cta-end",
+        "excalibur-social-cta",
+    }
+)
+
 # Теги-алиасы, которые autofix заменяет на whitelist ДО lint (Sol/Writer часто шлют <strong>).
 TAG_ALIAS_FIXES: tuple[tuple[str, str], ...] = (
     ("strong", "b"),
@@ -47,7 +58,19 @@ TAG_ALIAS_FIXES: tuple[tuple[str, str], ...] = (
 HTML_WHITELIST_PROMPT_LINE = (
     "HTML whitelist: use <b> not <strong>, <i> not <em>; allowed body tags: "
     + ", ".join(sorted(ALLOWED_TAGS))
+    + "; <div> only with class excalibur-cta-early|mid|end|excalibur-social-cta"
 )
+
+
+def parse_class_attr(attrs: list[tuple[str, str | None]]) -> set[str]:
+    for name, value in attrs:
+        if name and name.lower() == "class" and value:
+            return {c for c in re.split(r"\s+", value.strip()) if c}
+    return set()
+
+
+def is_allowed_div(attrs: list[tuple[str, str | None]]) -> bool:
+    return bool(parse_class_attr(attrs) & ALLOWED_DIV_CLASSES)
 
 
 def detect_anchor_toc(html: str) -> list[str]:
@@ -233,9 +256,18 @@ class HTMLTagLinter(HTMLParser):
         tag_lower = tag.lower()
         line, col = self.getpos()
 
-        # Check whitelist
-        if tag_lower not in self.whitelist:
+        # Check whitelist (<div> only with excalibur-cta-* / excalibur-social-cta classes).
+        if tag_lower == "div":
+            if not is_allowed_div(attrs):
+                classes = " ".join(sorted(parse_class_attr(attrs))) or "(no class)"
+                self.errors.append(
+                    f"Line {line}, Col {col}: Forbidden <div> — need class "
+                    f"excalibur-cta-early|mid|end or excalibur-social-cta (got: {classes})."
+                )
+                return
+        elif tag_lower not in self.whitelist:
             self.errors.append(f"Line {line}, Col {col}: Forbidden HTML tag <{tag}> used.")
+            return
 
         # Check nested structure
         # Self-closing tags in HTML5 parser like <img> don't need closing, but we stack block elements

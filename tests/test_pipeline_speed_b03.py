@@ -28,6 +28,35 @@ class HtmlAutofixTest(unittest.TestCase):
         path.unlink(missing_ok=True)
         self.assertEqual(report["verdict"], "pass")
 
+    def test_excalibur_cta_div_allowed(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_html_linter import lint_html_file, ALLOWED_TAGS
+
+        html = (
+            '<div class="excalibur-cta-early"><p><a href="https://t.me/Tyumen_Rieltor">TG</a></p></div>'
+            '<div class="excalibur-cta-mid"><p><a href="https://max.ru/id561413315447_biz">MAX</a></p></div>'
+            '<div class="excalibur-cta-end excalibur-social-cta"><p>fin</p></div>'
+        )
+        with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False, encoding="utf-8") as f:
+            f.write(html)
+            path = Path(f.name)
+        report = lint_html_file(path, ALLOWED_TAGS)
+        path.unlink(missing_ok=True)
+        self.assertEqual(report["verdict"], "pass", report.get("errors"))
+
+    def test_plain_div_forbidden(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_html_linter import lint_html_file, ALLOWED_TAGS
+
+        html = '<div class="article-page__footer"><p>x</p></div>'
+        with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False, encoding="utf-8") as f:
+            f.write(html)
+            path = Path(f.name)
+        report = lint_html_file(path, ALLOWED_TAGS)
+        path.unlink(missing_ok=True)
+        self.assertEqual(report["verdict"], "fail")
+        self.assertTrue(any("Forbidden <div>" in e for e in report["errors"]))
+
 
 class QuadManifestCanonTest(unittest.TestCase):
     def test_apply_canon_meme_pattern(self) -> None:
