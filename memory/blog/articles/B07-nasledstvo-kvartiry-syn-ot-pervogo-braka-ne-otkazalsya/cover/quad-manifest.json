@@ -47,7 +47,7 @@
       "quadrant": "top_left",
       "role": "cover_editorial_hero",
       "alt": "Святослав в кремовом henley проверяет семейное дерево и документы о наследнике квартиры; телефон с номером +7 922 001 65 05 внизу слева.",
-      "scene_hint": "bright board; LARGE hook title RIGHT; host LEFT waist-up; phone bottom-RIGHT; cat meme corner; NO canvas Wordstat",
+      "scene_hint": "bright high-key board; host LEFT light blue shirt skeptical side-glance; hook title RIGHT; yellow sticky center-left; phone bottom-RIGHT; cat meme; top-left wall CLEAN — zero query bars",
       "meme_caption_ru": "",
       "sticky": "Обещаний продавца мало",
       "meme_sticker": true,
@@ -214,28 +214,13 @@
     "location": "bright_white_investigation_board_high_key_sun_flare",
     "meme": "small_thinking_cat_sticker_bottom_right_only",
     "prop_set": "phone_cta_torn_paper_bottom_right_family_tree_bg",
-    "sticker_set": "PIL_top_left_paper_stickers_spaced_NO_canvas_wordstat",
+    "sticker_set": "yellow_hook_sticky_only_top_left_clean_NO_wordstat_NO_query_bars",
     "joke": "cat_sticker_side_eye_at_missing_heir_branch",
     "outfit": "soft_blue_oxford_shirt_open_collar_NO_blazer_NO_black_jacket",
-    "emotion": "concerned_frown_one_raised_brow_NO_studio_smile",
+    "emotion": "skeptical_side_glance_one_raised_brow_NO_studio_smile",
     "pose_framing": "waist_up_left_third_face_large_but_NOT_full_bleed_room_for_title_right",
     "action": "holds_inheritance_folder_glances_at_viewer"
   },
-  "wordstat_pil_only": true,
-  "wordstat_overlay_style": "paper_sticker_v2",
-  "wordstat_stickers_pil_applied": true,
-  "wordstat_sticker_positions": [
-    [
-      0.12,
-      0.099
-    ],
-    [
-      0.128,
-      0.2
-    ],
-    [
-      0.12,
-      0.28
-    ]
-  ]
+  "wordstat_pil_only": false,
+  "wordstat_stickers_pil_applied": false
 }

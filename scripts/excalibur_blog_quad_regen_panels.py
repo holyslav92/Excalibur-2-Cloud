@@ -71,21 +71,9 @@ def build_panel_prompt(manifest: dict[str, Any], slot_key: str, root: Path) -> s
     hero = load_json(hero_path) if hero_path.is_file() else {}
 
     if slot_key == "cover":
-        if manifest.get("wordstat_pil_only"):
-            design_path = root / "memory/cover/cover-design-code.json"
-            design_code = load_json(design_path) if design_path.is_file() else {}
-            from excalibur_blog_cover_quad_prompt import build_solo_cover_prompt
+        from excalibur_blog_cover_quad_prompt import build_solo_cover_prompt
 
-            return build_solo_cover_prompt(manifest, style, hero, design_code)
-        return build_prompt(
-            manifest,
-            style,
-            hero,
-            types_catalog,
-            design_code,
-            canvas_slots=("cover",),
-            has_cover=True,
-        )
+        return build_solo_cover_prompt(manifest, style, hero, design_code)
 
     neg = slot_negatives(slot_key, slot)
     base = inline_panel_prompt(slot, types_catalog)
@@ -219,24 +207,16 @@ def apply_solo_result(
                 raw_backup = cover_dir / "cover-quad-raw.png"
                 im.convert("RGB").save(raw_backup, format="PNG")
                 rgb = im.convert("RGB")
-                probe = (
-                    rgb
-                    if rgb.size == (1200, 675)
-                    else rgb.resize((1200, 675), Image.Resampling.LANCZOS)
-                )
+                # Solo 16:9 regen from image API — always resize; never quad-split wide 16:9 frames.
+                if rgb.size != (1200, 675):
+                    rgb = rgb.resize((1200, 675), Image.Resampling.LANCZOS)
+                rgb.save(out, format="PNG")
+                probe = rgb
                 if cover_composition_ok(probe):
-                    if rgb.size != (1200, 675):
-                        probe.save(out, format="PNG")
                     print(f"OK solo regen {slot_key} → single 16:9 resize → {out.name}")
-                    return 0
-                w, h = im.size
-                if w > h * 1.4:
-                    panel = _pick_best_cover_panel(im)
-                    panel.save(out, format="PNG")
-                    print(f"OK solo regen {slot_key} → best face panel → {out.name}")
-                    return 0
-                if im.size != (1200, 675):
-                    im.convert("RGB").resize((1200, 675), Image.Resampling.LANCZOS).save(out, format="PNG")
+                else:
+                    print(f"OK solo regen {slot_key} → single 16:9 resize (pixel follow-up QA) → {out.name}")
+                return 0
         except Exception as exc:
             print(f"WARN cover resize/crop: {exc}", file=sys.stderr)
     print(f"OK solo regen {slot_key} → {out.name}")
