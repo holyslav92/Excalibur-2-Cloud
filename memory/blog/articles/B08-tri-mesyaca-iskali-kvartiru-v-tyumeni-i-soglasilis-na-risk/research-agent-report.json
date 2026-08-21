@@ -1,0 +1,60 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B08",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-21",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/s/klyshin_A",
+        "type": "community",
+        "note": "Август 2026: «Клиенты все чаще готовы купить плохую квартиру» — усталость 3–4 мес., негативные заключения ~3–5%→10% (практика автора)"
+      },
+      {
+        "url": "https://dzen.ru/a/anQQLIuqdlfazBgP",
+        "type": "community_mirror",
+        "note": "Зеркало поста Klyshin, 6 августа 2026"
+      },
+      {
+        "url": "https://ura.news/news/1053117309",
+        "type": "news",
+        "note": "URA.RU 11 августа 2026 — спрос вторички/новостройки Тюмень"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 22990,
+    "stickers": {
+      "вторичка в тюмени": 5813,
+      "новостройки тюмень": 4684,
+      "купить квартиру в тюмени вторичка": 3965
+    },
+    "hook_phrase": "проверка квартиры перед покупкой",
+    "hook_volume": 9,
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "Distinct from B07 inheritance+son; B06 autoocenka angle"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 2,
+    "entities_checked": ["sberbank"],
+    "errors": []
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}

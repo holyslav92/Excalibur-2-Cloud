@@ -1,0 +1,19 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "cover",
+  "output_canvas": "cover/cover.png",
+  "jobs": [
+    {
+      "slot": "cover",
+      "tool": "kie-api",
+      "mcp_args": {
+        "prompt": "High-key bright RU editorial cover 1200x675 single frame, white #FFFFFF sun flare.\nHost same 28yo man i2i face-studio LEFT 0-42% width, waist-up close-up face ~33% frame height, cream white henley shirt NO blue overshirt NO cyan halos, wary tired expression, holds EGRN folder left hand, stop gesture left side only, NO hand bottom-right.\nRIGHT 52-96%: Headline EXACT «Четвёртый месяц — проверьте квартиру» bold black, «проверьте» gold per-letter brush NOT full-width gold bar.\nPhone EXACT «+7 922 001 65 05» black on WHITE torn paper bottom-right — NO gold bar.\nYellow sticky «Усталость не повод рисковать» at LEFT middle 8-32% x 30-44% y NOT top-left corner under 22% height.\nLARGE orange tabby thinking-cat meme sticker 140px bottom-right 74-94% x 64-86% y, saturated orange, paw on chin, clear of phone.\nZERO Wordstat strips/bars. NO blue inpaint outlines on face or shirt. Perfect Cyrillic.",
+        "aspect_ratio": "16:9",
+        "resolution": "2K",
+        "input_urls": [
+          "{{SITE_BASE}}/wp-content/uploads/2026/06/2026-06-23-15.57.42.jpg"
+        ]
+      }
+    }
+  ]
+}

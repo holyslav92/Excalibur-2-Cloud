@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B08",
+  "slug": "tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk",
+  "candidates_count": 9,
+  "outbound_found": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net"
+    },
+    {
+      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "title": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk"
+    },
+    {
+      "slug": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "title": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami"
+    },
+    {
+      "slug": "nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya",
+      "title": "nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

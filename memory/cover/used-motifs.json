@@ -103,6 +103,23 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-21",
+      "topic_id": "B08",
+      "slug": "",
+      "motifs": {
+        "composition": "host_large_left_waist_up_egrn_stop_headline_right_sacred_sun_flare",
+        "location": "bright_white_apartment_entryway_sunlit_tyumen",
+        "meme": "tired_cat_sticker_small_top_right_plus_roll_safe_corner",
+        "prop_set": "egrn_folder_red_avans_stamp_keys_on_tape",
+        "sticker_set": "pink_sticky_only_no_wordstat_bars",
+        "joke": "egrn_folder_blocks_keys_before_tired_buyer_signs",
+        "outfit": "azure_overshirt_white_tee_no_blazer_no_black_suit",
+        "emotion": "wary_fatigue_raised_brow_stop_not_side_eye",
+        "pose_framing": "host_large_left_waist_up_forward_gaze_not_fullbody_center",
+        "action": "left_hand_egrn_folder_right_palm_stop_before_avans"
+      }
     }
   ]
 }
