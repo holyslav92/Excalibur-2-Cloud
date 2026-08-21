@@ -69,6 +69,10 @@ python3 scripts/excalibur_blog_research_start.py --topic-id <ID> --title "<short
 ### 3 Writer (смысл)
 `Task(excalibur-blog-writer)` → `drafts/writer.html`.
 
+**Longform B-mode (7 inline):** Writer/Sol только **3-part chunk** на первом проходе
+(`excalibur_blog_writer_chunk.py` / Sol chunk) — не single-shot Derouter (HTTP 524;
+validated B06+B07).
+
 ### 3b Sol (финальный слог)
 `Task(excalibur-blog-sol)` → `article.html` + `drafts/variant-a.html`  
 из смысла Writer + SOUL/examples. Не выдумывает факты.

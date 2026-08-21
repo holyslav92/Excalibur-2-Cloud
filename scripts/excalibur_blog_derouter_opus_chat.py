@@ -420,6 +420,23 @@ def resolve_stamp_path(*, article_dir: str | None, role: str, root: Path) -> Pat
     return root / "memory/setup/derouter-opus-stamp.json"
 
 
+def resolve_output_path(*, output: str, article_dir: Path | None, root: Path) -> Path:
+    """Resolve --output relative to --article-dir for bare filenames (INC-20260821-1040).
+
+    ``schema.jsonld`` + ``--article-dir`` must land in the article dir, not repo root.
+    Full repo-relative paths (``memory/blog/...``) still resolve from project root.
+    """
+    out = Path(output)
+    if out.is_absolute():
+        return out
+    normalized = output.replace("\\", "/")
+    if normalized.startswith("memory/"):
+        return root / out
+    if article_dir is not None:
+        return article_dir / out
+    return root / out
+
+
 def run_smoke_ping(
     *,
     root: Path,
@@ -557,9 +574,11 @@ def run_chat(args: argparse.Namespace) -> int:
         return 2
 
     if args.output:
-        out = Path(args.output)
-        if not out.is_absolute():
-            out = root / out
+        out = resolve_output_path(
+            output=args.output,
+            article_dir=article_path,
+            root=root,
+        )
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(text if text.endswith("\n") else text + "\n", encoding="utf-8")
         print(f"WROTE {out.relative_to(root) if out.is_relative_to(root) else out}")

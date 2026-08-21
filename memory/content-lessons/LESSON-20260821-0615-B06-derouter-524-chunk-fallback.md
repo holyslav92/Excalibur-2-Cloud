@@ -1,5 +1,5 @@
 ## LESSON-20260821-0615-B06-derouter-524-chunk-fallback
-status: proposed
+status: validated
 topic_id: B06
 category: other
 confidence: medium
@@ -31,9 +31,11 @@ confidence: medium
 - После второго run с тем же паттерном — durable gate в research_start или director checklist.
 
 ### Durable applied
-- none (writer skill уже документирует; первый именованный run B06)
+- `.cursor/skills/writer-excalibur-blog/SKILL.md` — 3-part chunk first (already documented)
+- `.cursor/skills/director-excalibur-blog/SKILL.md` — preflight B-mode longform → chunk-only Writer/Sol (validated B06+B07)
 
 ### Resolution
-status: recorded
+status: validated
 article_dir: memory/blog/articles/B06-avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami
 wp_post_id: 8984
+confirmed_by: B07 (derouter-opus-stamp-sol.json merge 3-part 524 recovery, wp_post_id 8994)

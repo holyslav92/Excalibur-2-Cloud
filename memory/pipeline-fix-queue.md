@@ -6,22 +6,24 @@ Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`
 status: open
 run_date: 2026-08-21
 role: excalibur-blog-content-learner
-topic_id: B06
-article_dir: memory/blog/articles/B06-avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami
+topic_id: B06, B07
+article_dir: memory/blog/articles/B06-avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami; memory/blog/articles/B07-nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal
 severity: blocker
 category: env
 
 ### What went wrong
 - `excalibur_blog_metrika_fetch.py --days 30 --ingest` → METRIKA CREDENTIALS BLOCKER
 - Missing `YANDEX_METRIKA_OAUTH_TOKEN` and `YANDEX_METRIKA_COUNTER_ID` in Cloud Secrets/env
+- B07 content-learner (2026-08-21 11:09 UTC): same blocker on wp_post_id 8994
 
 ### How the agent recovered this run
-- Content-learner записал pipeline lessons из run evidence (Derouter 524 chunk, quality-bar PIL sync, html_linter CTA div).
+- B06: Content-learner записал pipeline lessons из run evidence (Derouter 524 chunk, quality-bar PIL sync, html_linter CTA div).
+- B07: Content-learner записал B07 lessons (524 validates B06, cover Kie fallback, schema output path); Metrika cohort skipped.
 - Metrika cohort analysis пропущен; lessons marked low/medium confidence без behavioral signals.
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06 для post-publish behavioral baseline.
+- Повторить ingest после publish B06/B07 для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -111,7 +113,7 @@ checks_run:
 commit: 35ab34b
 
 ## INC-20260821-1040-schema-output-root
-status: open
+status: fixed
 run_date: 2026-08-21
 role: excalibur-blog-schema
 topic_id: B07
@@ -134,6 +136,16 @@ category: script
 
 ### Secrets
 - none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-21
+fix_summary:
+- `resolve_output_path()` in derouter script: bare filename + `--article-dir` → article_dir/filename.
+- Content-learner B07 lesson LESSON-20260821-1109-B07-schema-output-article-dir-resolve recorded applied.
+files_changed:
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_derouter_opus_chat.py`
 
 ## INC-20260821-1100-publish-notariat-linkverify
 status: open
