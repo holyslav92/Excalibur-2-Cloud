@@ -1,0 +1,9 @@
+{
+  "topic_id": "B07",
+  "description": "Выписка спокойная: собственник один. Но сын от первого брака отказ не оформлял — почему в Тюмени такая квартира способна превратить аванс в долгий спор.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
