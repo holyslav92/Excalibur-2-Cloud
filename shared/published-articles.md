@@ -10,3 +10,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-08-20 | B04 | doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero | /blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/ | published |
 | 2026-08-20 | B05 | skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk | /blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/ | published |
 | 2026-08-21 | B06 | avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami | /blog/vtorichka-i-riski/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/ | published |
+| 2026-08-21 | B07 | nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya | /blog/vtorichka-i-riski/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya/ | published |
