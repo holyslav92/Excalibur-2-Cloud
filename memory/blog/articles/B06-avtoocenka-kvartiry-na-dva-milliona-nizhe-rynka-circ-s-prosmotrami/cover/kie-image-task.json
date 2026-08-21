@@ -1,0 +1,9 @@
+{
+  "task_id": "0546162b86518433d9e729cd6c549972",
+  "source": "kie-api",
+  "model": "kie-gpt-image2",
+  "state": "success",
+  "create_attempts": 1,
+  "result_path": "memory/blog/articles/B06-avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/cover/quad-mcp-result-01.json",
+  "updated_at_epoch": 1787292143
+}
