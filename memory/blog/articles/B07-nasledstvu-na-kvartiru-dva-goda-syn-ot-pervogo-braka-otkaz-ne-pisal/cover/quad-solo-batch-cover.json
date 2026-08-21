@@ -1,0 +1,19 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "cover",
+  "output_canvas": "cover/cover.png",
+  "jobs": [
+    {
+      "slot": "cover",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "High-key bright RU editorial collage, airy #FFFFFF, sun flare/light leak/soft glow, BLACK #141821 Cyrillic, gold #dcc5a1 accent. Host LARGE left = same 28yo man i2i face-studio-2026-06-23 (jaw/stubble/hairline lock), medium slim (NOT chubby). NO Wordstat on canvas (PIL top-left after). Meme cat/people cutouts. No dark cinematic,…\nONE SINGLE 16:9 cover frame 1200x675 — NOT a 2x2 grid, NOT four panels, NOT quad canvas, NOT split collage.\nBAN HARD: ANY Cyrillic/latin text on clothes/jacket/vest/chest/torso; Wordstat/tape labels on host body; gold horizontal bars on person; blue/cyan outline halos on hair/face; smeared ghost text; black blazer; mustard+navy vest repeat; dark cinematic; chubby host; polite studio smile copy; text on skin.\nTEXT LOCK: Russian Cyrillic only. Allowed on-canvas text: headline hook, phone CTA, one small sticky — NOTHING else.\nHeadline EXACT «Проверь наследников до аванса» bold black left sacred zone, paint ONLY the word \"Проверь\" in gold #dcc5a1 brush accent.\nPhone EXACT «+7 922 001 65 05» white torn paper bottom-left.\n Yellow sticky EXACT «Выписки мало» pinned left.\nHost i2i face-studio-2026-06-23 (face-studio identity: jaw/stubble/hairline/eyes; medium-slim; NOT chubby/puffy); same person as reference, NEW expression for the hook, do NOT copy reference closed-mouth smile/pose/head angle; FORBIDDEN polite studio smile. Outfit INVENTED: Светло-бирюзовая overshirt поверх молочной футболки, песочные брюки, аккуратные белые кеды; не чёрн…. Expression: alert bewildered direct gaze.\nteal overshirt; empty refusal envelope; NO Wordstat. EXTREME CLOSE-UP face+shoulders large center-right. Tiny thinking-cat meme sticker bottom-right corner ONLY — ≥80px clear margin from any other element. ZERO Wordstat labels on canvas — PIL adds 2-3 paper stickers top-left after render. Sun flare, tape/pins aesthetic on board only, perfect Cyrillic, #FFF bright.",
+        "aspect_ratio": "16:9",
+        "resolution": "2K",
+        "input_urls": [
+          "{{SITE_BASE}}/wp-content/uploads/2026/06/2026-06-23-15.57.42.jpg"
+        ]
+      }
+    }
+  ]
+}

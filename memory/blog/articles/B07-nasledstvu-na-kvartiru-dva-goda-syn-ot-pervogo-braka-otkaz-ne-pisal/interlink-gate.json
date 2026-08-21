@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B07",
+  "slug": "nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal",
+  "candidates_count": 8,
+  "outbound_found": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net"
+    },
+    {
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "title": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
