@@ -37,7 +37,7 @@ files_changed:
 checks_run:
 - `python3 scripts/excalibur_blog_topic_focus.py --text "Наследству два года…"` → PASS
 - `tests/test_fixer_b07.py`
-commit: pending
+commit: 559e218
 
 ## INC-20260821-0836-b07-early-cta-tldr-h2
 status: fixed
@@ -79,7 +79,7 @@ files_changed:
 - `.cursor/skills/writer-excalibur-blog/SKILL.md`
 checks_run:
 - `tests/test_fixer_b07.py`
-commit: pending
+commit: 2a20eb7
 
 ## INC-20260821-0836-b07-site-base-end-cta
 status: fixed
@@ -118,7 +118,7 @@ files_changed:
 - `.cursor/skills/sol-excalibur-blog/SKILL.md`
 checks_run:
 - `tests/test_fixer_b07.py`
-commit: pending
+commit: 2a20eb7
 
 ## INC-20260821-0836-b07-cover-qa-gold-band
 status: fixed
@@ -153,7 +153,7 @@ files_changed:
 - `.cursor/skills/cover-excalibur-blog/SKILL.md`
 checks_run:
 - manual run evidence (cover_qa PASS after retry)
-commit: pending
+commit: 2a20eb7
 
 ## INC-20260821-0836-b07-link-verify-reestr-nasled
 status: fixed
@@ -193,7 +193,7 @@ files_changed:
 - `.cursor/skills/sol-excalibur-blog/SKILL.md`
 checks_run:
 - `tests/test_fixer_b07.py`
-commit: pending
+commit: 2a20eb7
 
 ## INC-20260821-0836-b07-theme-deploy-ftp-root
 status: fixed
@@ -229,7 +229,7 @@ files_changed:
 - `scripts/excalibur_blog_doctor.py`
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_theme_contract_deploy.py`
-commit: pending
+commit: 2a20eb7
 
 ## INC-20260821-0615-content-learner-metrika-credentials
 status: open
