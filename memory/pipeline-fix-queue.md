@@ -110,3 +110,28 @@ checks_run:
 - `python3 -m unittest tests.test_pipeline_speed_b03.HtmlAutofixTest` → OK
 commit: 35ab34b
 
+## INC-20260821-1040-schema-output-root
+status: open
+run_date: 2026-08-21
+role: excalibur-blog-schema
+topic_id: B07
+article_dir: memory/blog/articles/B07-nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal
+severity: low
+category: script
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --output schema.jsonld --article-dir memory/blog/articles/B07-…` записал JSON-LD в `/workspace/schema.jsonld` (корень репо), а не в `--article-dir`.
+
+### How the agent recovered this run
+- Переместил `schema.jsonld` в каталог статьи; `schema_gate.py` → PASS.
+
+### Durable fix needed before next run
+- Резолвить `--output` относительно `--article-dir`, если задан только basename; или обновить skill/agent prompt на полный repo-relative путь выхода.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+- `.cursor/skills/schema-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+

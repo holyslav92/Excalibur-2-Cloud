@@ -103,6 +103,23 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-21",
+      "topic_id": "B07",
+      "slug": "",
+      "motifs": {
+        "composition": "host_center_diagonal_overshirt_envelope_no_refusal_sun_flare",
+        "location": "bright_sunny_living_room_glass_coffee_table_white_gold_flare",
+        "meme": "detective_cat_sticker_plus_surprised_woman_catalog_corner",
+        "prop_set": "egrn_folder_unsealed_envelope_no_refusal_family_tree_card_magnifier_key",
+        "sticker_set": "inheritance_warning_gold_tape_cat_people_meme_edges_phone_cta_no_canvas_wordstat_pil_later",
+        "joke": "sticky_otkaz_ne_nayden_envelope_cat_peeking_folder",
+        "outfit": "light_teal_overshirt_cream_tee_sand_trousers_white_sneakers_no_blazer",
+        "emotion": "alert_bewildered_direct_gaze_opening_envelope_not_side_eye",
+        "pose_framing": "medium_three_quarter_diagonal_lean_over_table_not_left_bust",
+        "action": "holds_egrn_folder_opens_envelope_finds_missing_notarial_refusal"
+      }
     }
   ]
 }

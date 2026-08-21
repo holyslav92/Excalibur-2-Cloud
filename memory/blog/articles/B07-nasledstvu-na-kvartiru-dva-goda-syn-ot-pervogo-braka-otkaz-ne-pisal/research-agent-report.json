@@ -1,0 +1,63 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B07",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-21",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/s/klyshin_A",
+        "type": "community",
+        "note": "Август 2026: предавансовая проверка — сын от первого брака без отказа, «покупайте так», отчёт 2 900 ₽"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "2026-08-21: «Наследству на квартиру два года. Сын от первого брака отказ не писал» — локальный кейс тенанта"
+      },
+      {
+        "url": "https://notariat.ru/ru-ru/help/probate-cases/",
+        "type": "official_news",
+        "note": "ФНП 12–21.08.2026: свежие материалы о наследниках/мошенничестве + реестр наследственных дел"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "наследство квартира",
+    "p0_volume": 942,
+    "p0_volume_ru225": 105443,
+    "stickers": {
+      "отказ от наследства": 285,
+      "наследственное дело": 1647,
+      "наследственное дело тюмень": 90
+    },
+    "hook_phrase": "сын от первого брака наследство",
+    "hook_volume": 1,
+    "partial": ["сын от первого брака наследство — totalCount 1 (WORDSTAT PARTIAL)"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "B05 — скидка/задаток; B06 — автооценка; B07 — наследник без отказа, 2 года, предаванс"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["gk_rf", "fnp", "rosreestr"],
+    "errors": [],
+    "note": "Наследственные нормы ГК РФ (ст. 1142, 1154, 1155) и материалы ФНП; банковские тарифы не используются"
+  },
+  "key_facts_count": 26,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}

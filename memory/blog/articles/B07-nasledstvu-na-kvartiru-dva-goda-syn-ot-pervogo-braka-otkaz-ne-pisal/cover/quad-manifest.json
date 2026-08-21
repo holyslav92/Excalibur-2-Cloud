@@ -1,0 +1,236 @@
+{
+  "topic_id": "B07",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Проверь наследников до аванса",
+  "cover_hook_highlight": "Проверь",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: Derouter REST (DEROUTER_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Риэлтор обнаруживает отсутствие нотариального отказа наследника перед авансом",
+      "scene_hint": "teal overshirt; empty refusal envelope; NO Wordstat",
+      "meme_caption_ru": "",
+      "sticky": "Выписки мало",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "alert bewildered direct gaze"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Коротко: что нужно понять про наследство и «одного собственника»",
+      "visual_type": "comparison_table",
+      "scene_hint": "4-row compare table; tiny cat",
+      "alt": "Сравнение ключевых фактов о наследстве: ЕГРН, наследники первой очереди, срок принятия и отказ",
+      "labels": [
+        "Один в ЕГРН",
+        "Дети первой очереди",
+        "Шесть месяцев принятия",
+        "Отказ потом невозможен"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Почему выписка ЕГРН и свидетельство не отвечают на вопрос «все ли наследники учтены»",
+      "visual_type": "structure_diagram",
+      "scene_hint": "EGRN vs hidden heirs; NO memes",
+      "alt": "Схема показывает, почему ЕГРН и свидетельство о наследстве не раскрывают весь круг наследников",
+      "labels": [
+        "ЕГРН сегодня",
+        "Круг наследников скрыт",
+        "Свидетельство заявителя",
+        "Проверь до аванса"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Сын от первого брака: это не семейная драма, а первая очередь по закону",
+      "visual_type": "process_flow",
+      "scene_hint": "heir queue flow; NO memes",
+      "alt": "Схема наследования показывает право сына от первого брака как наследника первой очереди",
+      "labels": [
+        "Дети первой очереди",
+        "Брак не важен",
+        "Статус без отказа",
+        "Не семейная драма"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Шесть месяцев прошло — а риск остался на месте",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "6mo timeline checklist; NO memes",
+      "alt": "Чек-лист показывает, почему истечение шести месяцев не закрывает наследственный риск",
+      "labels": [
+        "Шесть месяцев принятия",
+        "Восстановление через суд",
+        "Согласие без срока",
+        "Меньше трёх лет"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Реестр наследственных дел ФНП: что он покажет и где закончится",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "FNP registry panel; tiny cat",
+      "alt": "Чек-лист проверки реестра наследственных дел ФНП по ФИО с ограничениями результата",
+      "labels": [
+        "Поиск по ФИО",
+        "Номер дела",
+        "Отказы не видны",
+        "Не даёт гарантий"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Пример из практики: два года, отказа нет, «потом разберёмся»",
+      "visual_type": "process_flow",
+      "scene_hint": "2yr case flow; NO memes",
+      "alt": "Пример показывает риск сделки через два года, если сын не оформил нотариальный отказ",
+      "labels": [
+        "Два года спустя",
+        "Сын без отказа",
+        "Разговор не документ",
+        "От сделки отказались"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что собрать до аванса — и как эти бумаги сверить между собой",
+      "visual_type": "fact_card",
+      "scene_hint": "5-doc checklist; tiny cat",
+      "alt": "Список документов и проверок, которые нужно собрать до передачи аванса за наследственную квартиру",
+      "labels": [
+        "ЕГРН и переходы",
+        "Свидетельство наследства",
+        "Реестр по ФИО",
+        "Все дети первой очереди",
+        "Отказы у нотариуса"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "реестр наследственных дел",
+    "вступление в наследство"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "alert bewildered direct gaze",
+  "cover_motifs": {
+    "composition": "Светлый коллаж: заголовок в верхней левой зоне, Святослав в нижнем центре, справа свободное поле под наклейки; телефон и розовое выделение слова «Проверь»",
+    "location": "Солнечная светлая гостиная перед сделкой, стеклянный журнальный столик, мягкий белый фон, золотистый световой блик",
+    "meme": "Маленький мем-кот с лупой и мини-стикер с удивлённой женщиной из каталога мемов, только как угловые акценты",
+    "prop_set": "Запечатанный конверт без нотариального отказа, папка с выпиской ЕГРН, схема родства на карточке, лупа, ключ от квартиры",
+    "sticker_set": "inheritance_warning_gold_tape_cat_people_meme_edges_phone_cta_NO_canvas_wordstat_pil_later",
+    "joke": "На конверте крупная наклейка «Отказ не найден», а кот-детектив заглядывает в папку с видом: «А наследник где?»",
+    "outfit": "Светло-бирюзовая overshirt поверх молочной футболки, песочные брюки, аккуратные белые кеды; не чёрный пиджак",
+    "emotion": "Ошеломлённая настороженность: приподнятые брови, напряжённые губы, взгляд прямо на незапечатанный конверт",
+    "pose_framing": "Средний план в три четверти, Святослав стоит и слегка наклоняется над столиком, корпус по диагонали, не бюст слева и не боковой взгляд",
+    "action": "Одной рукой удерживает папку ЕГРН, другой раскрывает конверт и обнаруживает отсутствие нотариального отказа"
+  },
+  "wordstat_pil_only": true,
+  "wordstat_overlay_style": "paper_sticker_v2",
+  "wordstat_stickers_pil_applied": true,
+  "wordstat_sticker_positions": [
+    [
+      0.12,
+      0.099
+    ],
+    [
+      0.128,
+      0.2
+    ]
+  ]
+}

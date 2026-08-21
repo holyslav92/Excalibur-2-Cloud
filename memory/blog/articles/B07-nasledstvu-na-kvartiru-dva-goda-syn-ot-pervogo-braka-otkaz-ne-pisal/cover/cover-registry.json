@@ -1,0 +1,86 @@
+{
+  "topic_id": "B07",
+  "slug": "nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Риэлтор обнаруживает отсутствие нотариального отказа наследника перед авансом",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-21T10:50:55+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Риэлтор обнаруживает отсутствие нотариального отказа наследника перед авансом",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Сравнение ключевых фактов о наследстве: ЕГРН, наследники первой очереди, срок принятия и отказ",
+      "h2_anchor": "Наследство: один в ЕГРН",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Схема показывает, почему ЕГРН и свидетельство о наследстве не раскрывают весь круг наследников",
+      "h2_anchor": "ЕГРН vs наследники",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Схема наследования показывает право сына от первого брака как наследника первой очереди",
+      "h2_anchor": "Сын первого брака",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Чек-лист показывает, почему истечение шести месяцев не закрывает наследственный риск",
+      "h2_anchor": "Шесть месяцев прошло — а риск остался на месте",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Чек-лист проверки реестра наследственных дел ФНП по ФИО с ограничениями результата",
+      "h2_anchor": "Реестр наследственных дел ФНП: что он покажет и где закончится",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Пример показывает риск сделки через два года, если сын не оформил нотариальный отказ",
+      "h2_anchor": "Пример из практики: два года, отказа нет, «потом разберёмся»",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Список документов и проверок, которые нужно собрать до передачи аванса за наследственную квартиру",
+      "h2_anchor": "Что собрать до аванса — и как эти бумаги сверить между собой",
+      "visual_type": "fact_card",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

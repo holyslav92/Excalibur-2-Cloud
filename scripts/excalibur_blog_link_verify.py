@@ -135,6 +135,8 @@ def classify_link(href: str, site_base: str | None) -> str:
 # code is a hard FAIL — Writer must use apps.make.com / help.make.com
 # (INC-20260715-0821). Soft path only covers errors without HTTP status.
 SOFT_EXTERNAL_HOSTS = frozenset({"t.me", "telegram.me", "wa.me", "vk.com", "max.ru", "www.max.ru"})
+# RF official sites that flake under Cloud egress: TLS timeout or bot 404 (INC-20260821-1055).
+RF_OFFICIAL_SOFT_EXTERNAL_HOSTS = frozenset({"notariat.ru"})
 SOFT_EXTERNAL_ERROR_TOKENS = (
     "timed out",
     "timeout",
@@ -268,6 +270,14 @@ def is_soft_external_failure(href: str, result: dict[str, Any]) -> bool:
     host = _href_host(href)
     if host.startswith("www."):
         host = host[4:]
+    if host in RF_OFFICIAL_SOFT_EXTERNAL_HOSTS:
+        status = result.get("status")
+        if status == 404:
+            return True
+        if status is None:
+            error = str(result.get("error") or "").lower()
+            return any(token in error for token in SOFT_EXTERNAL_ERROR_TOKENS)
+        return False
     if host not in SOFT_EXTERNAL_HOSTS:
         return False
     if result.get("status") is not None:
