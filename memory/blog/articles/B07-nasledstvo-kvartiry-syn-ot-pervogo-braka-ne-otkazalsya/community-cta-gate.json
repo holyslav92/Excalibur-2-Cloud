@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "article_dir": "memory/blog/articles/B07-nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya",
+  "cta_required": true,
+  "required": [
+    "https://t.me/Tyumen_Rieltor",
+    "https://max.ru/id561413315447_biz",
+    "tel:+79220016505"
+  ],
+  "present": {
+    "https://t.me/Tyumen_Rieltor": true,
+    "https://max.ru/id561413315447_biz": true,
+    "tel:+79220016505": true,
+    "cta_channels.max": true
+  },
+  "errors": []
+}

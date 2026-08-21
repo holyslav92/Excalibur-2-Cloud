@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import os
 import posixpath
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -141,13 +142,20 @@ def deploy() -> None:
     base = ""
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
     try:
-        for root in roots:
+        for index, root in enumerate(roots):
             candidate = posixpath.normpath(
                 posixpath.join(root, "wp-content/themes/kov4eg-mcp-theme")
             )
             try:
                 sftp.stat(candidate)
                 base = candidate
+                if index > 0:
+                    print(
+                        "WARN SFTP theme root fallback: configured SSH_ROOT/FTP_ROOT "
+                        "was not found; used login cwd '.'. Update SSH_ROOT/FTP_ROOT "
+                        "to '.' in Cloud Secrets if this is the intended SFTP cwd.",
+                        file=sys.stderr,
+                    )
                 break
             except OSError:
                 continue

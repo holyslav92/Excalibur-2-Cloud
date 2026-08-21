@@ -1,0 +1,58 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B07",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-21",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Кейс предавансовой проверки: сын от первого брака без отказа, «покупайте так», после наследства <3 лет; отец умер ~2 года назад, сын на СВО"
+      },
+      {
+        "url": "https://news-kursk.ru/society/2026/08/15/202881.html",
+        "type": "media",
+        "note": "15.08.2026: риски скрытых наследников, нотариальный отказ vs устный, рекомендация 3 года"
+      },
+      {
+        "url": "https://t.me/s/klyshin_A",
+        "type": "community",
+        "note": "Контекст недели: межрегиональная наследственная сделка, негативные заключения ~10%, проверка до аванса"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "наследство квартиры",
+    "p0_volume": 968,
+    "angle_phrase": "отказ от наследства",
+    "angle_volume": 301,
+    "rework_from": "наследники квартира (215), проверка квартиры при наследстве (empty)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "notes": "B01/B04/B05/B06 — другие hooks; B07 держит наследственную цепочку и срок 3 года"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["gk_rf", "fns"],
+    "errors": [],
+    "note": "ГК 1142/1154/1155/1157 + ФНС 3 года; банковские тарифы не используются"
+  },
+  "key_facts_count": 21,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_input": "assembled-research-input.md"
+  },
+  "incident_report": "none"
+}

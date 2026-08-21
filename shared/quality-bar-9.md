@@ -9,7 +9,7 @@
 Канонические URL — `shared/tenant-config.json` → `cta_channels` / `cta_links` (PUBLIC_SITE_URL = tymenrieltor.ru):
 - Telegram (PRIMARY): https://t.me/Tyumen_Rieltor
 - MAX (PRIMARY): https://max.ru/id561413315447_biz
-- Сайт / guides / about: `{{SITE_BASE}}`, `{{SITE_BASE}}/gajdy/`, `{{SITE_BASE}}/rieltor-tyumen/`
+- Сайт / guides / about: в **`article.html`** — только относительные пути `/`, `/gajdy/`, `/rieltor-tyumen/` (не `{{SITE_BASE}}`; плейсхолдер — для schema/llms/git)
 - Дзен: https://dzen.ru/holyslav
 - VK: https://vk.ru/tymenrieltor
 - Телефон: `+7 922 001 65 05` / `tel:+79220016505` — на cover + **один раз** в теле
@@ -20,9 +20,11 @@
 
 Короткий brand beat: **Святослав Шакин, The Риэлтор, Тюмень** + одна строка curiosity, которую статья ещё не закрыла («полный разбор кейсов и как я это ловлю до аванса — в Telegram и MAX»).
 
+**TL;DR — не `<h2>`.** Сводка в `<p><b>Коротко…</b></p>` + `<ul>` **до** первого контентного H2. Иначе `excalibur-cta-early` окажется после первого H2 и gate `early_cta_before_first_h2` / `early_cta_tg_max_only` упадёт.
+
 **Только две кнопки/ссылки:** Telegram + MAX. Без дампа шести сетей в лиде. Без пустого «подпишись».
 
-Класс разметки: `excalibur-cta-early`.
+Класс разметки: `excalibur-cta-early` — **строго до первого `<h2>`**.
 
 ### 2. Mid — после главного чеклиста
 

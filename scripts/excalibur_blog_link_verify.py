@@ -249,12 +249,29 @@ def known_bad_cursor_dashboard_href_reason(href: str) -> str | None:
     return None
 
 
+def known_bad_registry_plain_text_reason(href: str) -> str | None:
+    """Registry hosts that fail Cloud DNS — cite plain text, not href (B07)."""
+    parsed = urlparse(href.strip())
+    if parsed.scheme not in ("http", "https"):
+        return None
+    host = (parsed.netloc or "").lower().split(":", 1)[0]
+    if host.startswith("www."):
+        host = host[4:]
+    if host == "reestr-nasled.ru":
+        return (
+            "reestr-nasled.ru often fails DNS from Cloud link_verify; "
+            "cite plain text «reestr-nasled.ru», not <a href>"
+        )
+    return None
+
+
 def known_bad_external_href_reason(href: str) -> str | None:
     """Aggregate early denylist reasons for known-bad external article hrefs."""
     return (
         known_bad_make_href_reason(href)
         or known_bad_cursor_automations_href_reason(href)
         or known_bad_cursor_dashboard_href_reason(href)
+        or known_bad_registry_plain_text_reason(href)
     )
 
 

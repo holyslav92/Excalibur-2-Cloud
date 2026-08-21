@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-21",
+    "today_ru": "21.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "пятница"
+  },
+  "topic": {
+    "topic_id": "B07",
+    "title": "Наследство квартиры: сын от первого брака не отказался",
+    "h1": "Наследство квартиры: сын от первого брака не отказался",
+    "slug": "nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya",
+    "primary_query": "Наследство квартиры: сын от первого брака не отказался",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "Наследство квартиры: сын от первого брака не отказался 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Наследство по закону 2026: очереди наследников, сроки, доли",
+          "url": "https://verixlaw.ru/blog/nasledstvo-po-zakonu/",
+          "snippet": ""
+        },
+        {
+          "title": "Как оформить наследство на сына: ответ юриста, разъяснения",
+          "url": "https://advokat-malov.ru/faq/nasledstvo/oformlenie-nasledstva-na-syna.html",
+          "snippet": "Кратко: Кто наследует по закону без завещания, как делятся доли между супругом, детьми и родителями, какие сроки нужно соблюсти и что делать при наличии иждивенцев в 2026 году."
+        },
+        {
+          "title": "Наследство и дети от первого брака⚡| Юристы по наследству",
+          "url": "https://www.dvitex.ru/poleznoe/nasledstvo/nasledstvo-notarius/nasledstvo-i-deti-ot-pervogo-braka/",
+          "snippet": "У меня есть взрослый сын от первого брака и нынешняя супруга (тоже пенсионерка). Я хочу, чтобы после моей смерти квартира досталась целиком и полностью только сыну. Жена вроде бы не претендует, но я боюсь, что потом могут возникнуть споры."
+        },
+        {
+          "title": "Как распределяется наследство между родственниками в 2026 году",
+          "url": "https://www.banki.ru/news/daytheme/?id=11014354",
+          "snippet": "Исключить наследование имущества детьми от первого брака можно, составив завещание, а также заключив брачный договор, который изменит режим собственности, установленный законом."
+        },
+        {
+          "title": "Право на наследство квартиры по закону 2026: ключевые моменты и нюансы",
+          "url": "https://amulex.ru/daily/nasledstvo/pravo-na-nasledstvo-kvartiry-poryadok-i-osobennosti-ne21fb0v/",
+          "snippet": "Порядок наследования имущества без завещания: кто относится к наследникам первой очереди, какие документы нужны для оформления, размер госпошлины."
+        },
+        {
+          "title": "Наследство квартиры: как оформить без споров в 2026",
+          "url": "https://pleada.shop/blog/nasledstvo-kvartiry-kak-oformit-2026/",
+          "snippet": "Узнайте, как наследуется квартира согласно законодательству РФ в 2026, какие документы ..."
+        }
+      ],
+      "searched_at": "2026-08-21"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "Наследство квартиры: сын от первого брака не отказался 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Наследство по закону 2026: очереди наследников, сроки, доли",
+          "url": "https://verixlaw.ru/blog/nasledstvo-po-zakonu/",
+          "snippet": ""
+        },
+        {
+          "title": "Наследование квартиры: права сына мужа от первого брака, если ...",
+          "url": "https://harant.ru/questions/q-190865/",
+          "snippet": "Кратко: Кто наследует по закону без завещания, как делятся доли между супругом, детьми и родителями, какие сроки нужно соблюсти и что делать при наличии иждивенцев в 2026 году."
+        },
+        {
+          "title": "Наследство квартиры 2026: процесс, сроки, налоги и скрытые риски",
+          "url": "https://realeo.ru/guide/nasledstvo-kvartiry-2026",
+          "snippet": "Сын мужа от первого брака в случае смерти мужа вправе претендовать на наследство, включающее супружескую долю мужа в квартире. Это возможно, если квартира является совместной собственностью супругов, несмотря на то, что она приобретена на деньги жены и оформлена только на неё."
+        },
+        {
+          "title": "Наследство и дети от первого брака⚡| Юристы по наследству",
+          "url": "https://www.dvitex.ru/poleznoe/nasledstvo/nasledstvo-notarius/nasledstvo-i-deti-ot-pervogo-braka/",
+          "snippet": "Этот гайд равно полезен двум аудиториям: наследникам — что делать пошагово, и покупателям наследованных квартир — как защититься от исков «исчезнувших» родственников."
+        },
+        {
+          "title": "Как оформить наследство на сына: ответ юриста, разъяснения",
+          "url": "https://advokat-malov.ru/faq/nasledstvo/oformlenie-nasledstva-na-syna.html",
+          "snippet": "Исключить наследование имущества детьми от первого брака можно, составив завещание, а также заключив брачный договор, который изменит режим собственности, установленный законом."
+        },
+        {
+          "title": "Наследование квартиры в 2026: сроки, оформление и налог",
+          "url": "https://smartagent.ru/stati/zakony-i-ipoteka/nasledovanie-kvartiry-2026",
+          "snippet": "У меня есть взрослый сын от первого брака и нынешняя супруга (тоже пенсионерка). Я хочу, чтобы после моей смерти квартира досталась целиком и полностью только сыну. Жена вроде бы не претендует, но я боюсь, что потом могут возникнуть споры."
+        }
+      ],
+      "searched_at": "2026-08-21"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "Наследство квартиры: сын от первого брака не отказался official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Наследование квартиры: права сына мужа от первого брака, если ...",
+          "url": "https://harant.ru/questions/q-190865/",
+          "snippet": ""
+        },
+        {
+          "title": "Наследство квартиры 2026: процесс, сроки, налоги и скрытые риски",
+          "url": "https://realeo.ru/guide/nasledstvo-kvartiry-2026",
+          "snippet": "Сын мужа от первого брака в случае смерти мужа вправе претендовать на наследство, включающее супружескую долю мужа в квартире. Это возможно, если квартира является совместной собственностью супругов, несмотря на то, что она приобретена на деньги жены и оформлена только на неё."
+        },
+        {
+          "title": "Наследство по закону 2026: очереди наследников, сроки, доли",
+          "url": "https://verixlaw.ru/blog/nasledstvo-po-zakonu/",
+          "snippet": "Полный гайд по наследованию квартиры: завещание vs наследование по закону, 8 очередей, обязательная доля, сроки 6 мес, документы. Налогов нет, но есть подводные камни."
+        },
+        {
+          "title": "Наследование квартиры купленной до брака \\ 2026-2025-2024 год \\ Акты ...",
+          "url": "https://www.consultant.ru/law/podborki/nasledovanie_kvartiry_kuplennoj_do_braka/",
+          "snippet": "Кратко: Кто наследует по закону без завещания, как делятся доли между супругом, детьми и родителями, какие сроки нужно соблюсти и что делать при наличии иждивенцев в 2026 году."
+        },
+        {
+          "title": "Имеет ли официальный муж право на наследство или только сын от первого ...",
+          "url": "https://pravoved.ru/question/4802602/",
+          "snippet": "Сыну от первого брака он собирался подарить свою квартиру, детям от второго - купить квартиру. Со своей новой семьей клиент собирался жить в третьей квартире, оформленной на него. С точки зрения этики это правильно и справедливо."
+        },
+        {
+          "title": "Наследство после гибели сына на СВО: кто получит долю в квартире от ...",
+          "url": "https://harant.ru/questions/q-146922/",
+          "snippet": "Если коротко, то имущество приобретённое в браке по наследству-ваше личное имущество (статья 36 СК РФ) и квартира не совместная собственность, но это можно изменить."
+        }
+      ],
+      "searched_at": "2026-08-21"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com Наследство квартиры: сын от первого брака не отказался 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "coursera-ddp-shiny/corpora/ru_50k.txt at master - GitHub",
+          "url": "https://github.com/spujadas/coursera-ddp-shiny/blob/master/corpora/ru_50k.txt",
+          "snippet": ""
+        },
+        {
+          "title": "LiveTVCollector/Movies/Worldwide/Movies.m3u at main - GitHub",
+          "url": "https://github.com/bugsfreeweb/LiveTVCollector/blob/main/Movies/Worldwide/Movies.m3u",
+          "snippet": "Coursera Developing Data Products Week 4 Peer-graded Assignment: Shiny - spujadas/coursera-ddp-shiny"
+        },
+        {
+          "title": "unsupervised_topic_modeling/topics/ru/11/100/100/topics at ... - GitHub",
+          "url": "https://github.com/annontopicmodel/unsupervised_topic_modeling/blob/master/topics/ru/11/100/100/topics",
+          "snippet": "LiveTVCollector / Movies / Worldwide / Movies.m3u actions-user Movies-Worldwide Update files - 2026-08-20 00:52:07 UTC 7e24bc8 · yesterday History 12771 lines (12771 loc) · 1.44 MB"
+        },
+        {
+          "title": "lexical-model-ru/dotland.ru.russian/source/wordlist.tsv at main ...",
+          "url": "https://github.com/dotland/lexical-model-ru/blob/main/dotland.ru.russian/source/wordlist.tsv",
+          "snippet": "Contribute to annontopicmodel/unsupervised_topic_modeling development by creating an account on GitHub."
+        },
+        {
+          "title": "cant connect to Clone Drone in danger zone #2248 - GitHub",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/issues/2248",
+          "snippet": "We can't make this file beautiful and searchable because it's too large. и 164910."
+        },
+        {
+          "title": "wordpiece-tokenizer-cpp/tokenizer.json at main · ansharyan03 ... - GitHub",
+          "url": "https://github.com/ansharyan03/wordpiece-tokenizer-cpp/blob/main/tokenizer.json",
+          "snippet": "не может второй раз подключить к серверу игры, выдает отключение. Подскажите нужные адреса, чтобы добавить их в iplist, потому что такая ошибка только на Ростелекоме, с впн или на мобильной сети ошибок нет."
+        }
+      ],
+      "searched_at": "2026-08-21"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "Наследство квартиры: сын от первого брака не отказался forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Наследство и дети от первого брака⚡| Юристы по наследству",
+          "url": "https://www.dvitex.ru/poleznoe/nasledstvo/nasledstvo-notarius/nasledstvo-i-deti-ot-pervogo-braka/",
+          "snippet": ""
+        },
+        {
+          "title": "Права сына от первого брака на наследство — Все нотариусы Москвы",
+          "url": "https://www.notariusmoscow.ru/prava-syna-ot-pervogo-braka-na-nasledstvo-2/",
+          "snippet": "Юридическая фирма \"Двитекс\" с 2010 года помогает наследникам оформить свои права на наследство. С нашей практикой по наследственным делам и спорам вы можете ознакомиться в разделе \"Наш опыт\"."
+        },
+        {
+          "title": "Может ли сын от первого брака претендовать на долю в наследстве отца ...",
+          "url": "https://harant.ru/questions/q-98155/",
+          "snippet": "Ситуация, когда сын от первого брака претендует на наследство мужа, требует внимательного изучения законодательства и учета всех нюансов. Эта статья посвящена рассмотрению прав и обязанностей сторон, а также возможных путей разрешения возникающих конфликтов."
+        },
+        {
+          "title": "Наследование имущества супруга детьми от первого брака",
+          "url": "https://pravo.rg.ru/rubrics/question/51275/",
+          "snippet": "Если наследник первой очереди (старший сын вашего свекра) им является, не заявил о себе в течении 6 месяцев, имеет право через суд восстановить пропущенный срок принятия наследства либо в досудебном порядке с согласия остальных наследников."
+        },
+        {
+          "title": "Имеют ли право на наследство дети от первого брака в 2026 году",
+          "url": "https://t-j.ru/ask/syn-ot-pervogo-braka/",
+          "snippet": "Могут ли дети супруга от первого брака претендовать на квартиру, приобретенную в новом браке, после смерти их отца, разъясняет юрист."
+        },
+        {
+          "title": "Может ли сын от первого брака претендовать на наследство?",
+          "url": "https://pravoved.ru/question/1123172/",
+          "snippet": "Значит, сын от первого брака станет собственником 1/9 доли квартиры. Если есть еще какое-то имущество, он также может получить его в наследство наравне с остальными наследниками первой очереди. Тут есть нюанс: сын должен заявить о вступлении в наследство в течение 6 месяцев с момента смерти отца."
+        }
+      ],
+      "searched_at": "2026-08-21"
+    }
+  ],
+  "errors": []
+}

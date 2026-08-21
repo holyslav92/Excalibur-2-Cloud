@@ -169,6 +169,10 @@ REAL_ESTATE_ALLOW_PATTERNS: tuple[str, ...] = (
     r"оценк\w*\s+квартир",
     r"приемк\w*\s+квартир",
     r"чек[\s-]?лист",
+    # Inheritance / heirs buyer cluster (B07: title without «квартир» still on-focus)
+    r"наследств",
+    r"наследник",
+    r"отказ\w*\s+от\s+наследств",
 )
 
 

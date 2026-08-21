@@ -435,6 +435,20 @@ def main() -> int:
         check(bool(env.get("FTP_HOST")), "SFTP host configured", errors, warnings, warn=not args.publish)
         check(bool(env.get("FTP_USER")), "SFTP user configured", errors, warnings, warn=not args.publish)
         check(bool(env.get("FTP_PASS")), "SFTP password configured", errors, warnings, warn=not args.publish)
+        ftp_root = (env.get("FTP_ROOT") or env.get("SSH_ROOT") or ".").strip()
+        if ftp_root in {"", "/"}:
+            ftp_root = "."
+        if ftp_root not in {".", "./"}:
+            check(
+                True,
+                (
+                    f"FTP_ROOT/SSH_ROOT={ftp_root!r} — prefer '.' (SFTP login cwd); "
+                    "publish/theme deploy retry at '.' on ENOENT"
+                ),
+                errors,
+                warnings,
+                warn=True,
+            )
     else:
         print("NOTE skip publish secret checks until setup complete (use --publish to force)")
     if args.publish:

@@ -65,6 +65,9 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
    - не затирай `drafts/writer.html`
 5. Сверка с `bad-outputs.md` перед сдачей.
 6. **Quality bar 9/10:** `shared/quality-bar-9.md` — conversion early/mid/end CTA, 2–4 interlink, 2000–2600 слов; после Sol запусти `excalibur_blog_quality_bar_9_gate.py` → `quality-bar-9.json` all_pass.
+7. **`article.html` href:** только относительные пути (`/`, `/gajdy/`, `/rieltor-tyumen/`, `/blog/...`) — **не** `{{SITE_BASE}}` (плейсхолдер только для schema/llms).
+8. **TL;DR:** сводка в `<p><b>Коротко…</b></p>` + список — **не** `<h2>`; `excalibur-cta-early` строго **до** первого `<h2>`.
+9. **Реестры (reestr-nasled.ru и т.п.):** в prose — plain text, без `<a href>` (Cloud link_verify/DNS).
 
 ## Запреты
 

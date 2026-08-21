@@ -58,12 +58,13 @@ PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`, api-dir
 2. **Anti-repeat 14д** — `used-motifs.json` + `excalibur_blog_cover_motif_gate.py`. **Обязательные поля:** outfit, emotion, pose_framing, action — не только meme/location. FAIL на связку «чёрный пиджак + бюст слева + боковой взгляд» если повтор в последних 2–3 обложках.
 3. **Variety lock (HARD)** — FACE i2i = `face-studio-2026-06-23.jpg` (кости/hairline/eyes/stubble/28yo). **Каждый cover INVENTS:** outfit (не default black blazer), location, action (документ/ключи/телефон/доска…), emotion под hook, pose/framing (не always left talking-head bust).
 4. **Title zone sacred** — Wordstat stickers/tape **не перекрывают** главный заголовок. PIL overlay `excalibur_blog_cover_wordstat_overlay.py` — x≥0.68 (правый край). Телефон +7 922 001 65 05 обязателен.
-5. **Light & bright** — high-key, sun flare, light leak, glow; **no dark cinematic**.
-6. **Memes required** — meme cats + catalog people-memes as **small stickers** on cover; host Святослав = only large human. Inline: infographic hero; meme sticker ≤15% frame from `memory/cover/meme-top100.json` — never co-host/stock man.
-7. **Wordstat stickers** — 1–3 readable labels from live Wordstat (Тюмень regions 55+11176).
-8. **Identity + body lock** — `face-studio-2026-06-23.jpg` i2i (WHO only); medium slim; NOT chubby.
-9. **Expression invention (HARD)** — эмоция/мимика/поза **новые каждый run** под hook; `scene_hint` + `cover_emotion` + `cover_motifs.emotion/action/outfit/pose_framing`. i2i: «same person, NEW outfit+action+expression, do not copy reference clothes/pose/smile». Копия студийной улыбки 1:1 = FAIL.
-10. **REJECTED daypart formula** — never morning desk / day street / evening close / night split.
+5. **Gold highlight (B07):** подсветка слова — **золотые буквы** (`#dcc5a1`), без горизонтальной золотой полосы/brush band под текстом; иначе `cover_qa` pixel FAIL.
+6. **Light & bright** — high-key, sun flare, light leak, glow; **no dark cinematic**.
+7. **Memes required** — meme cats + catalog people-memes as **small stickers** on cover; host Святослав = only large human. Inline: infographic hero; meme sticker ≤15% frame from `memory/cover/meme-top100.json` — never co-host/stock man.
+8. **Wordstat stickers** — 1–3 readable labels from live Wordstat (Тюмень regions 55+11176).
+9. **Identity + body lock** — `face-studio-2026-06-23.jpg` i2i (WHO only); medium slim; NOT chubby.
+10. **Expression invention (HARD)** — эмоция/мимика/поза **новые каждый run** под hook; `scene_hint` + `cover_emotion` + `cover_motifs.emotion/action/outfit/pose_framing`. i2i: «same person, NEW outfit+action+expression, do not copy reference clothes/pose/smile». Копия студийной улыбки 1:1 = FAIL.
+11. **REJECTED daypart formula** — never morning desk / day street / evening close / night split.
 
 ## Inline canon (v3 utility-first)
 
