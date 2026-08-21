@@ -13,6 +13,7 @@
 ## HTML (whitelist)
 
 - Теги тела: `h2`, `h3`, `p`, `<b>`, `<i>`, `a`, списки, таблицы, `figure`/`img` — см. `scripts/excalibur_blog_html_linter.py`.
+- **CTA-обёртки:** `<div class="excalibur-cta-early|mid|end">` (опц. `excalibur-social-cta` на end) — единственный разрешённый `<div>` в теле; см. `shared/quality-bar-9.md`.
 - **`<b>` не `<strong>`**, **`<i>` не `<em>`** — иначе html_linter FAIL (autofix после Sol как страховка).
 
 ## Голос
