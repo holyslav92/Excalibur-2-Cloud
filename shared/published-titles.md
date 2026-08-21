@@ -13,3 +13,5 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 | B03 | pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri | Почти внесли задаток на торгах — квартиру подарили дочери | published |
 | B04 | doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero | Квартиру продавали по доверенности. Хозяин был на СВО | published |
 | B05 | skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk | Квартиру уценили на два миллиона и просят задаток сегодня | published |
+| B06 | avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami | Автооценка занизила цену — и квартира подорожала за сутки | published |
+| B07 | nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal | Квартиру унаследовал один. Сын от первого брака отказ не писал | published |

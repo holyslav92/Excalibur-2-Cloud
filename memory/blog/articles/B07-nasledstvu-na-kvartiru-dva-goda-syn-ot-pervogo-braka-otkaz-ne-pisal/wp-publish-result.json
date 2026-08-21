@@ -1,0 +1,27 @@
+{
+  "slug": "nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal",
+  "topic_id": "B07",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B07-nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1039748,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=8994 slug=nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9019\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9020 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal-inline-01.png\nOK inline_alt=9020\nOK inline_caption=9020\nOK inline_description=9020\nOK inline_image_upload=9021 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal-inline-02.png\nOK inline_alt=9021\nOK inline_caption=9021\nOK inline_description=9021\nOK inline_image_upload=9022 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal-inline-03.png\nOK inline_alt=9022\nOK inline_caption=9022\nOK inline_description=9022\nOK inline_image_upload=9023 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal-inline-04.png\nOK inline_alt=9023\nOK inline_caption=9023\nOK inline_description=9023\nOK inline_image_upload=9024 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal-inline-05.png\nOK inline_alt=9024\nOK inline_caption=9024\nOK inline_description=9024\nOK inline_image_upload=9025 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal-inline-06.png\nOK inline_alt=9025\nOK inline_caption=9025\nOK inline_description=9025\nOK inline_image_upload=9026 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal-inline-07.png\nOK inline_alt=9026\nOK inline_caption=9026\nOK inline_description=9026\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/nasledstvu-na-kvartiru-dva-goda-syn-ot-pervogo-braka-otkaz-ne-pisal/",
+    "errors": []
+  }
+}
