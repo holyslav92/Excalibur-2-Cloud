@@ -19,7 +19,7 @@
 **Профиль тенанта:** `shared/tenant-config.json` → `topic_focus_profile`.
 По умолчанию — Cursor/AI ядро ниже. Для `real_estate` (The Риэлтор) —
 маркеры buyer demand: ЕГРН, квартира, ипотека, сделка, аванс, ДДУ,
-эскроу, новостройка, аренда, риэлтор, Тюмень и т.п. (см.
+эскроу, новостройка, аренда, риэлтор, **наследство/наследники**, Тюмень и т.п. (см.
 `REAL_ESTATE_ALLOW_PATTERNS` в `scripts/excalibur_blog_topic_focus.py`).
 
 ### Cursor / AI (default profile)

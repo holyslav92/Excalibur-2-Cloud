@@ -49,11 +49,12 @@ Longform (7 inline): **3 части на первом проходе** — не 
 ## Правила смысла
 
 - Все факты только из research; не выдумывай.
-- Структура: открытие + TL;DR → **early CTA (TG+MAX only)** → H2 с мыслями → главный чеклист → **mid CTA** → практика → **end CTA** (dual + полный набор каналов).
+- Структура: открытие + TL;DR (`<p><b>Коротко…</b></p>` + список, **не** `<h2>`) → **early CTA (TG+MAX only, до первого H2)** → H2 с мыслями → главный чеклист → **mid CTA** → практика → **end CTA** (dual + полный набор каналов; внутренние ссылки `/blog/...`, `/gajdy/`, `/` — без `{{SITE_BASE}}`).
 - Без research-даты / Wordstat в открытии (Sol всё равно вычистит, но не засоряй).
 - CTA conversion: early/mid/end по `shared/quality-bar-9.md`; PRIMARY — Telegram + MAX URL из `cta_channels`; телефон один раз в теле.
 - **Interlink (если `interlink_old_articles=true`):** **2–4** контекстные `<a href="/blog/...">` на
   опубликованные sibling из ledger; якорь по смыслу H2, не «читайте также» в каждом абзаце.
+- **Реестры (reestr-nasled.ru):** plain text в prose, не `<a href>` — link_verify падает на DNS из Cloud.
 - Не читай чужие article.html / live-сайт / уже опубликованные статьи сайта / topics.
 
 ## Handoff

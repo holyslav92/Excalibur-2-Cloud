@@ -2,6 +2,235 @@
 
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
+## INC-20260821-0836-b07-topic-focus-inheritance
+status: fixed
+run_date: 2026-08-21
+role: excalibur-blog-fixer
+topic_id: B07
+article_dir: memory/blog/articles/B07-nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya
+severity: blocker
+category: script
+
+### What went wrong
+- `research_start` TOPIC FOCUS BLOCKER: title «Наследству два года…» без «квартир» — `REAL_ESTATE_ALLOW_PATTERNS` не содержал наследство/наследники.
+
+### How the agent recovered this run
+- Title patched with «квартиру» / «квартиры» before `research_start` retry.
+
+### Durable fix needed before next run
+- Добавить `наследств` / `наследник` в real-estate ALLOW patterns.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_topic_focus.py`
+- `shared/topic-focus-contract.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-21
+fix_summary:
+- `REAL_ESTATE_ALLOW_PATTERNS` += наследств/наследник/отказ от наследства.
+files_changed:
+- `scripts/excalibur_blog_topic_focus.py`
+- `shared/topic-focus-contract.md`
+checks_run:
+- `python3 scripts/excalibur_blog_topic_focus.py --text "Наследству два года…"` → PASS
+- `tests/test_fixer_b07.py`
+commit: pending
+
+## INC-20260821-0836-b07-early-cta-tldr-h2
+status: fixed
+run_date: 2026-08-21
+role: excalibur-blog-fixer
+topic_id: B07
+article_dir: memory/blog/articles/B07-nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya
+severity: medium
+category: script
+
+### What went wrong
+- `quality-bar-9` `early_cta_tg_max_only` FAIL: Sol поставил TL;DR первым `<h2>`, early CTA оказался после первого H2.
+
+### How the agent recovered this run
+- Sol patch: TL;DR в `<p><b>`, early CTA перед первым H2.
+
+### Durable fix needed before next run
+- Gate `early_cta_before_first_h2` + Writer/Sol contract: TL;DR не H2.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `shared/quality-bar-9.md`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `skills/writer-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-21
+fix_summary:
+- New gate checks `early_cta_before_first_h2`; quality-bar-9 + Writer/Sol skills document TL;DR zone.
+files_changed:
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `shared/quality-bar-9.md`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `skills/writer-excalibur-blog/SKILL.md`
+- `.cursor/skills/sol-excalibur-blog/SKILL.md`
+- `.cursor/skills/writer-excalibur-blog/SKILL.md`
+checks_run:
+- `tests/test_fixer_b07.py`
+commit: pending
+
+## INC-20260821-0836-b07-site-base-end-cta
+status: fixed
+run_date: 2026-08-21
+role: excalibur-blog-fixer
+topic_id: B07
+article_dir: memory/blog/articles/B07-nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya
+severity: medium
+category: prompt
+
+### What went wrong
+- `end_cta_full_channels` FAIL: Sol оставил `{{SITE_BASE}}` в href end CTA; gate ожидает `/`, `/gajdy/`.
+
+### How the agent recovered this run
+- Sol patch: relative paths `/`, `/gajdy/`, `/rieltor-tyumen/`.
+
+### Durable fix needed before next run
+- Gate `no_site_base_placeholder_in_article` + Sol skill ban `{{SITE_BASE}}` in article.html.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `shared/quality-bar-9.md`
+- `skills/sol-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-21
+fix_summary:
+- `check_no_site_base_placeholder`; quality-bar-9 + Sol: article.html uses `/path` only.
+files_changed:
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `shared/quality-bar-9.md`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `.cursor/skills/sol-excalibur-blog/SKILL.md`
+checks_run:
+- `tests/test_fixer_b07.py`
+commit: pending
+
+## INC-20260821-0836-b07-cover-qa-gold-band
+status: fixed
+run_date: 2026-08-21
+role: excalibur-blog-fixer
+topic_id: B07
+article_dir: memory/blog/articles/B07-nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya
+severity: medium
+category: docs
+
+### What went wrong
+- `cover_qa` pixel FAIL: gold horizontal band under highlight + blazer default outfit.
+
+### How the agent recovered this run
+- Cover retry (cream henley, gold letters only) → cover_qa PASS.
+
+### Durable fix needed before next run
+- Cover skill: gold letters only, no brush band; variety lock reminder.
+
+### Suggested files to inspect/change
+- `skills/cover-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-21
+fix_summary:
+- Cover skill §Gold highlight (B07): letters only, no horizontal band.
+files_changed:
+- `skills/cover-excalibur-blog/SKILL.md`
+- `.cursor/skills/cover-excalibur-blog/SKILL.md`
+checks_run:
+- manual run evidence (cover_qa PASS after retry)
+commit: pending
+
+## INC-20260821-0836-b07-link-verify-reestr-nasled
+status: fixed
+run_date: 2026-08-21
+role: excalibur-blog-fixer
+topic_id: B07
+article_dir: memory/blog/articles/B07-nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya
+severity: medium
+category: script
+
+### What went wrong
+- `link_verify` FAIL: `<a href="https://reestr-nasled.ru">` DNS error from Cloud egress.
+
+### How the agent recovered this run
+- Removed href; plain text `reestr-nasled.ru` in article.html.
+
+### Durable fix needed before next run
+- Early denylist in link_verify + Writer/Sol plain-text rule for registry hosts.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_link_verify.py`
+- `skills/writer-excalibur-blog/SKILL.md`
+- `skills/sol-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-21
+fix_summary:
+- `known_bad_registry_plain_text_reason` for reestr-nasled.ru; Writer/Sol cite plain text.
+files_changed:
+- `scripts/excalibur_blog_link_verify.py`
+- `skills/writer-excalibur-blog/SKILL.md`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `.cursor/skills/writer-excalibur-blog/SKILL.md`
+- `.cursor/skills/sol-excalibur-blog/SKILL.md`
+checks_run:
+- `tests/test_fixer_b07.py`
+commit: pending
+
+## INC-20260821-0836-b07-theme-deploy-ftp-root
+status: fixed
+run_date: 2026-08-21
+role: excalibur-blog-fixer
+topic_id: B07
+article_dir: memory/blog/articles/B07-nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya
+severity: medium
+category: env
+
+### What went wrong
+- `theme_contract_deploy` SFTP ENOENT on configured `FTP_ROOT` before publish (fallback `.` worked).
+
+### How the agent recovered this run
+- Publish continued with root fallback `.`; wp-publish-log recommends `FTP_ROOT=.`.
+
+### Durable fix needed before next run
+- WARN on theme deploy fallback; doctor WARN when FTP_ROOT ≠ `.`.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_theme_contract_deploy.py`
+- `scripts/excalibur_blog_doctor.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-21
+fix_summary:
+- theme_contract_deploy logs WARN on root fallback; doctor warns non-dot FTP_ROOT/SSH_ROOT.
+files_changed:
+- `scripts/excalibur_blog_theme_contract_deploy.py`
+- `scripts/excalibur_blog_doctor.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_theme_contract_deploy.py`
+commit: pending
+
 ## INC-20260821-0615-content-learner-metrika-credentials
 status: open
 run_date: 2026-08-21
