@@ -1,0 +1,27 @@
+{
+  "slug": "nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya",
+  "topic_id": "B07",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B07-nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 968696,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=8994 slug=nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=8995\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=8996 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya-inline-01.png\nOK inline_alt=8996\nOK inline_caption=8996\nOK inline_description=8996\nOK inline_image_upload=8997 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya-inline-02.png\nOK inline_alt=8997\nOK inline_caption=8997\nOK inline_description=8997\nOK inline_image_upload=8998 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya-inline-03.png\nOK inline_alt=8998\nOK inline_caption=8998\nOK inline_description=8998\nOK inline_image_upload=8999 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya-inline-04.png\nOK inline_alt=8999\nOK inline_caption=8999\nOK inline_description=8999\nOK inline_image_upload=9000 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya-inline-05.png\nOK inline_alt=9000\nOK inline_caption=9000\nOK inline_description=9000\nOK inline_image_upload=9001 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya-inline-06.png\nOK inline_alt=9001\nOK inline_caption=9001\nOK inline_description=9001\nOK inline_image_upload=9002 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya-inline-07.png\nOK inline_alt=9002\nOK inline_caption=9002\nOK inline_description=9002\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya/",
+    "errors": []
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "topic_id": "B07",
+  "slug": "nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya",
+  "title": "Наследству на квартиру два года. Сын от первого брака отказ не писал",
+  "outbound_required_min": 1,
+  "outbound_found": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "permalink": "/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+      "topic_id": "B02",
+      "post_id": null,
+      "source": "ledger"
+    },
+    {
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "title": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "permalink": "/blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/",
+      "topic_id": "B03",
+      "post_id": null,
+      "source": "ledger"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "permalink": "/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "topic_id": "B04",
+      "post_id": null,
+      "source": "ledger"
+    },
+    {
+      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "title": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "permalink": "/blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/",
+      "topic_id": "B05",
+      "post_id": null,
+      "source": "ledger"
+    }
+  ],
+  "outbound_missing_suggestions": [
+    {
+      "slug": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "title": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "permalink": "/blog/vtorichka-i-riski/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/",
+      "topic_id": "B06",
+      "post_id": null,
+      "source": "ledger"
+    },
+    {
+      "slug": "rosfinmonitoring-sdelka-nedvizhimost-cheklis-tyumen-2026",
+      "title": "Росфинмониторинг и сделка с недвижимостью: чеклист для Тюмени",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8487,
+      "source": "siblings"
+    },
+    {
+      "slug": "bank-otkazal-po-domu-cheklist-starogo-fonda-v-tyumeni",
+      "title": "Банк отказал по дому? Чеклист старого фонда в Тюмени",
+      "permalink": "",
+      "topic_id": "",
+      "post_id": 8456,
+      "source": "siblings"
+    }
+  ],
+  "inbound_targets": [
+    {
+      "slug": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "title": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "permalink": "/blog/vtorichka-i-riski/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/",
+      "topic_id": "B06",
+      "post_id": null,
+      "source": "ledger"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "permalink": "/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "topic_id": "B04",
+      "post_id": null,
+      "source": "ledger"
+    },
+    {
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "title": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "permalink": "/blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/",
+      "topic_id": "B03",
+      "post_id": null,
+      "source": "ledger"
+    }
+  ],
+  "inbound_updates": [],
+  "new_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya/",
+  "dry_run": false
+}
