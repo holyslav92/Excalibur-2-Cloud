@@ -1,0 +1,17 @@
+{
+  "script": "scripts/excalibur_blog_derouter_opus_chat.py",
+  "role": "sol",
+  "tier": "powerful",
+  "model": "claude-opus-5",
+  "endpoint": "https://api.derouter.ai/openai/v1/chat/completions",
+  "provider": "derouter-rest",
+  "merge": "3-part chunk (524 recovery)",
+  "parts": [
+    "derouter-opus-stamp-sol-part1.json",
+    "derouter-opus-stamp-sol-part2.json",
+    "derouter-opus-stamp-sol-part3.json"
+  ],
+  "created_at": "2026-08-21T10:30:00+00:00",
+  "contract": "shared/derouter-opus-brain-contract.md",
+  "note": "Single-shot timed out HTTP 524; merged sol-part1..3.html → article.html"
+}
