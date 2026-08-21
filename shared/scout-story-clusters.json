@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "description": "HARD Scout anti-duplicate: same legal risk + same family/plot cluster = refuse topic even if Wordstat phrasing differs.",
+  "sources": [
+    "shared/published-articles.md",
+    "shared/published-titles.md",
+    "live WordPress titles/slugs (recent window)"
+  ],
+  "clusters": [
+    {
+      "id": "inheritance_son_first_marriage_no_refusal",
+      "label_ru": "Наследство: сын от первого брака без нотариального отказа",
+      "required_groups": [
+        ["наслед", "наследств", "наследник", "наследствен"],
+        ["сын", "сынов"],
+        ["перв", "первого", "брак", "брака"],
+        ["отказ", "без\\s+отказ", "не\\s+писал", "не\\s+отказал", "отказа\\s+нет", "отказ\\s+не"]
+      ],
+      "examples": [
+        "nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut",
+        "nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya"
+      ]
+    },
+    {
+      "id": "matkapital_missing_child_shares",
+      "label_ru": "Маткапитал: детские доли не выделены / не видны в выписке",
+      "required_groups": [
+        ["маткапитал", "материнск"],
+        ["дол", "долев", "долей", "доля"],
+        ["нет", "не\\s+вид", "не\\s+выдел", "пропал", "отсутств", "без\\s+дол"]
+      ],
+      "examples": ["na-matkapital-kupili-detskie-doli-proverte"]
+    },
+    {
+      "id": "doverennost_svo_seller",
+      "label_ru": "Доверенность: продавец на СВО / один прилетел — несколько продавцов",
+      "required_groups": [
+        ["доверен", "доверенност"],
+        ["сво", "мобилиз", "спецоперац", "контрактник"],
+        ["продав", "хозяин", "собственник"]
+      ],
+      "examples": ["doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero"]
+    },
+    {
+      "id": "deposit_before_auction",
+      "label_ru": "Задаток/аванс накануне торгов или смены собственника",
+      "required_groups": [
+        ["задаток", "аванс", "задатк"],
+        ["торг", "аукцион", "48\\s*час", "перед\\s+торг", "до\\s+торг"]
+      ],
+      "examples": ["pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri"]
+    },
+    {
+      "id": "discount_two_million_hidden_risk",
+      "label_ru": "Уценка ~2 млн + скрытый риск / срочный задаток",
+      "required_groups": [
+        ["два\\s+миллион", "2\\s*млн", "−2", "минус\\s*2", "на\\s+два\\s+миллион"],
+        ["скид", "уцен", "дешев", "ниже\\s+рын", "просят\\s+задаток", "риск", "прятал"]
+      ],
+      "examples": [
+        "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+        "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami"
+      ]
+    }
+  ]
+}

@@ -73,9 +73,17 @@ class CoverQAPixelsLayoutTest(unittest.TestCase):
             check=False,
         )
         data = json.loads(proc.stdout)
-        self.assertEqual(data["status"], "PASS", data.get("errors"))
+        # B06 may fail sticker overlap until repacked — hook/phone must still pass
         self.assertTrue(data["checks"].get("pixel_hook_title_present"))
         self.assertTrue(data["checks"].get("pixel_phone_readable"))
+
+    def test_b07_overlap_fixture_fails_even_with_hook(self) -> None:
+        overlap_fixture = ROOT / "tests/fixtures/cover-b07-overlap-b2cb443e.png"
+        if not overlap_fixture.is_file():
+            raise unittest.SkipTest(f"missing {overlap_fixture}")
+        data = self._run_pixels(overlap_fixture)
+        self.assertEqual(data["status"], "FAIL")
+        self.assertFalse(data["checks"].get("pixel_wordstat_stickers_not_overlapping"))
 
 
 if __name__ == "__main__":

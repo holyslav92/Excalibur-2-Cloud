@@ -47,6 +47,7 @@ def needs_wordstat_fix(result: Any) -> bool:
         and checks.get("pixel_meme_not_occluded_by_wordstat")
         and checks.get("pixel_wordstat_only_top_left")
         and checks.get("pixel_meme_clearance_80px")
+        and checks.get("pixel_wordstat_stickers_not_overlapping")
     )
 
 
@@ -65,20 +66,21 @@ def needs_host_fix(result: Any) -> bool:
     )
 
 
-def fix_wordstat_stickers(article_dir: Path, root: Path) -> bool:
+def fix_wordstat_stickers(article_dir: Path, root: Path, *, repack_only: bool = False) -> bool:
     overlay = root / "scripts" / "excalibur_blog_cover_wordstat_overlay.py"
     rel = article_dir.relative_to(root)
-    rc = run_cmd(
-        root,
-        [
-            str(overlay),
-            "--article-dir",
-            str(rel),
-            "--restore-base",
-            "--force",
-            "--top-left-only",
-        ],
-    )
+    cmd = [
+        str(overlay),
+        "--article-dir",
+        str(rel),
+        "--force",
+        "--top-left-only",
+    ]
+    if repack_only:
+        cmd.append("--repack-only")
+    else:
+        cmd.extend(["--restore-base"])
+    rc = run_cmd(root, cmd)
     return rc == 0
 
 
@@ -171,8 +173,12 @@ def run_fixer(
             continue
 
         if wordstat_fail:
-            log.append(f"round {round_idx}: fix wordstat — top-left PIL overlay only")
-            fix_wordstat_stickers(article_dir, root)
+            overlap_fail = not last_result.checks.get("pixel_wordstat_stickers_not_overlapping", True)
+            log.append(
+                f"round {round_idx}: fix wordstat — "
+                f"{'repack top-left PIL only' if overlap_fail else 'top-left PIL overlay only'}"
+            )
+            fix_wordstat_stickers(article_dir, root, repack_only=overlap_fail)
             last_result = pixel_qa(article_dir, root, manifest)
             if last_result.status == "PASS":
                 stamp_cover_qa_json(article_dir, last_result, topic_id=topic_id)

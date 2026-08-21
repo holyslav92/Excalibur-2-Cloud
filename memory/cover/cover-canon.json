@@ -128,7 +128,7 @@
       "hook title occluded / only face features mistaken for title",
       "no phone +7 922 001 65 05 in bottom-right (pixel_phone_readable)",
       "no meme sticker in corner (pixel_meme_present)",
-      "Wordstat stickers cramped dump / stacked overlap in narrow column (pixel_wordstat_stickers_not_overlapping)",
+      "Wordstat stickers overlap each other in top-left stack — ALWAYS FAIL even when hook title present (pixel_wordstat_stickers_not_overlapping)",
       "layout collapse: face-only crop, labels dumped in corner (pixel_layout_not_collapsed)",
       "opaque Wordstat bars/strips instead of paper stickers",
       "stickers overlap title or meme zones",
@@ -137,7 +137,7 @@
       "manifest outfit lie vs pixels (warm outfit + dark blazer torso)",
       "cover_qa describes prompt not PNG"
     ],
-    "fixer_loop": "Fixer → regen cover panel if layout/hook/phone/meme FAIL; PIL Wordstat overlay only in free top-left zone (never peel/inpaint person) → re-read PNG bytes"
+    "fixer_loop": "Fixer → regen cover panel if layout/hook/phone/meme FAIL; on sticker overlap FAIL → repack top-left PIL only (erase paper strips + redraw spaced, never peel/inpaint person) → re-read PNG bytes"
   },
   "identity_lock": {
     "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",

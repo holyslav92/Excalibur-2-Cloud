@@ -434,6 +434,12 @@ def main() -> int:
         default=None,
         help="HARD topic-focus gate: h1 + primary_query + slug (shared/topic-focus-contract.md)",
     )
+    ap.add_argument(
+        "--check-story",
+        type=str,
+        default=None,
+        help="HARD story-duplicate gate: title + hook + slug vs published siblings (scout-story-clusters.json)",
+    )
     args = ap.parse_args()
     
     # Reconfigure stdout for utf-8 on Windows
@@ -454,6 +460,34 @@ def main() -> int:
     # Prefer article.meta.json primaries over slug-derived ledger rows.
     comparable = existing + meta_primaries + published_topics + live_topics
     
+    if args.check_story is not None:
+        from excalibur_blog_scout_story_dup import (
+            build_published_story_sources,
+            check_story_duplicate,
+            detect_story_clusters,
+            load_story_clusters,
+        )
+
+        print("=== EXCALIBUR SCOUT STORY DUPLICATE ===")
+        clusters = load_story_clusters(root)
+        sources = build_published_story_sources(root, live_limit=live_limit)
+        candidate_ids = detect_story_clusters(args.check_story, clusters)
+        if candidate_ids:
+            print(f"candidate_clusters={','.join(candidate_ids)}")
+        warnings = check_story_duplicate(args.check_story, sources, clusters)
+        if warnings:
+            print("❌ STORY DUPLICATE BLOCKER:")
+            for w in warnings:
+                print(f"  [{w['severity']}] {w['cluster_id']} | {w['topic_id']} ({w['source']})")
+                print(f"  {w['message']}")
+            print(
+                "BLOCKER: SCOUT STORY DUPLICATE — same legal risk + plot as published sibling. "
+                "Wordstat may refine phrasing but must NOT recycle the story."
+            )
+            return 1
+        print("✅ STORY DUP PASS")
+        return 0
+
     if args.check_focus is not None:
         print("=== EXCALIBUR TOPIC FOCUS ===")
         verdict = focus_check(args.check_focus)
@@ -552,6 +586,26 @@ def main() -> int:
                 "Banned: PageSpeed, Metrika/GA4/Webvisor/UTM, Webmaster/GSC, Direct, indexing."
             )
             return 1
+        from excalibur_blog_scout_story_dup import (
+            build_published_story_sources,
+            check_story_duplicate,
+            load_story_clusters,
+        )
+
+        clusters = load_story_clusters(root)
+        story_sources = build_published_story_sources(root, live_limit=live_limit)
+        story_warnings = check_story_duplicate(args.check_query, story_sources, clusters)
+        if story_warnings:
+            print("❌ STORY DUPLICATE BLOCKER:")
+            for w in story_warnings:
+                print(f"  [{w['severity']}] {w['cluster_id']} | {w['topic_id']} ({w['source']})")
+                print(f"  {w['message']}")
+            print(
+                "BLOCKER: SCOUT STORY DUPLICATE — pick distinct legal risk + plot "
+                "(shared/scout-story-clusters.json). Wordstat rework ≠ same story."
+            )
+            return 1
+
         warnings = check_overlap(args.check_query, comparable, reserved)
         if warnings:
             print("❌ OVERLAP DETECTED:")

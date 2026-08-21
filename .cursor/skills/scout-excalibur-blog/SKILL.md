@@ -109,7 +109,23 @@ python3 scripts/excalibur_blog_wordstat_gate.py handoff
 
 1. **klyshin_A** + ≥1 другой URL из `scout_signal_urls` (сегодня)
 2. Wordstat final P0 buyer volume после rework-цикла
-3. `published-titles-only.md` — anti-dup only
+3. `published-titles-only.md` + **`shared/published-articles.md` + live WP titles** — anti-dup title AND **HARD story-duplicate** (same legal risk + plot)
+
+## HARD story-duplicate (не только title)
+
+**Wordstat may refine phrasing — must NOT recycle the same story.**
+
+Перед handoff прогони:
+
+```bash
+python3 scripts/excalibur_blog_scout_helper.py --check-query "<title draft + hook + slug>"
+# или явно:
+python3 scripts/excalibur_blog_scout_story_dup.py --text "<title + hook + slug>"
+```
+
+Кластеры: `shared/scout-story-clusters.json` — наследство+сын первого брака без отказа, маткапитал без долей, доверенность+СВО, задатok/торги, −2 млн и т.д.
+
+**BLOCKER `SCOUT STORY DUPLICATE`** если hook/title попадает в тот же cluster, что уже опубликованный sibling (ledger **или** live WP). Skip hook — другой legal risk + другой family-plot, не перефраз.
 
 ## Выход
 
@@ -123,4 +139,5 @@ python3 scripts/excalibur_blog_wordstat_gate.py handoff
 4. `wordstat_get_top_requests` на hook + probes (55+11176; compare 225)
 5. Слабый объём → rework (локализация + buyer jargon + similar queries) — **не** мгновенный skip
 6. Final P0 + title angle; лог original hook + final phrase+volume
-7. handoff + `wordstat_gate.py handoff` → стоп
+7. **`scout_helper.py --check-query`** (focus + story-dup + slug overlap) → BLOCKER если duplicate
+8. handoff + `wordstat_gate.py handoff` → стоп

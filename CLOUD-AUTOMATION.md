@@ -134,6 +134,7 @@ DEROUTER <ROLE> BLOCKER → стоп пайплайна. Нет run_budget / cir
 doctor + today.
 dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
 needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
+Scout HARD gates перед handoff: MCP-KV Wordstat + `scout_helper.py --check-query` (topic focus + **story-duplicate** `shared/scout-story-clusters.json` vs ledger/live WP — Wordstat rework ≠ same legal risk+plot).
 research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
 
 Conversion (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
@@ -144,7 +145,7 @@ Conversion (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
   Interlink 2–4 sibling из shared/published-articles.md (status=published)
 
 После Sol: pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → quality-bar-9.json all_pass.
-Description → Cover-text || Schema → Cover (cover-scene via derouter; variety lock: invent outfit/action/emotion/pose; hook H1 + phone + meme + spaced Wordstat stickers — designed thumbnail, NOT face-only crop) → Cover-QA pixel gate (`cover_qa_gate.py` + `cover_qa_pixels.py`: pixel_hook_title_present, pixel_phone_readable, pixel_meme_present, pixel_layout_not_collapsed, pixel_wordstat_stickers_not_overlapping; Fixer regen cover panel on layout FAIL, PIL Wordstat only top-left free zone) → Indexer.
+Description → Cover-text || Schema → Cover (cover-scene via derouter; variety lock: invent outfit/action/emotion/pose; hook H1 + phone + meme + spaced Wordstat stickers — designed thumbnail, NOT face-only crop) → Cover-QA pixel gate (`cover_qa_gate.py` + `cover_qa_pixels.py`: pixel_hook_title_present, pixel_phone_readable, pixel_meme_present, pixel_layout_not_collapsed, **pixel_wordstat_stickers_not_overlapping ALWAYS** even when hook title present; Fixer: repack top-left PIL on overlap FAIL, regen cover panel on layout FAIL) → Indexer.
 
 Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе И quality-bar-9.json all_pass (или `--media-refresh --featured-only` для cover-only: pixel Cover-QA PASS + wp_post_id); иначе STOP после Indexer.
 Live = SFTP replace (не жди merge article в main для сайта). Код/канон — в main.

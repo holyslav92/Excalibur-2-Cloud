@@ -450,39 +450,121 @@ def _bbox_iou(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> flo
     return inter / (area_a + area_b - inter)
 
 
+def _bbox_x_overlap_frac(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> float:
+    ax0, _, ax1, _ = a
+    bx0, _, bx1, _ = b
+    overlap = max(0, min(ax1, bx1) - max(ax0, bx0))
+    if overlap <= 0:
+        return 0.0
+    min_w = max(min(ax1 - ax0, bx1 - bx0), 1)
+    return overlap / min_w
+
+
+def _bbox_vertical_gap(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> int:
+    """Positive gap if boxes do not overlap vertically; 0 or negative if overlap."""
+    _, ay0, _, ay1 = a
+    _, by0, _, by1 = b
+    if ay1 <= by0:
+        return by0 - ay1
+    if by1 <= ay0:
+        return ay0 - by1
+    return min(ay1, by1) - max(ay0, by0)
+
+
+def _bbox_x_center_distance(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> int:
+    acx = (a[0] + a[2]) // 2
+    bcx = (b[0] + b[2]) // 2
+    return abs(acx - bcx)
+
+
+def _filter_wordstat_strip_components(
+    comps: list[dict[str, Any]],
+    *,
+    img_size: tuple[int, int] | None = None,
+) -> list[dict[str, Any]]:
+    """Оставить только полноценные Wordstat paper strips в top-left sacred zone."""
+    w, h = img_size or (1200, 675)
+    filtered: list[dict[str, Any]] = []
+    for comp in comps:
+        x0, y0, x1, y1 = comp["bbox"]
+        bw = max(x1 - x0, 1)
+        bh = max(y1 - y0, 1)
+        if bw < 70 or bh < 10:
+            continue
+        if comp.get("pixels", 0) < 350:
+            continue
+        cx = (x0 + x1) / 2.0 / w
+        cy = (y0 + y1) / 2.0 / h
+        if not (
+            TOPLEFT_WORDSTAT_ALLOWED[0] <= cx <= TOPLEFT_WORDSTAT_ALLOWED[2]
+            and TOPLEFT_WORDSTAT_ALLOWED[1] <= cy <= TOPLEFT_WORDSTAT_ALLOWED[3]
+        ):
+            continue
+        filtered.append(comp)
+    return filtered
+
+
 def _wordstat_sticker_overlap_metrics(img, *, hook_present: bool = False) -> dict[str, Any]:
-    """Paper stickers в узкой top-left колонке: без 2D overlap и без cramped dump."""
-    narrow = _paper_sticker_components(img, WORDSTAT_NARROW_STACK_ZONE, min_pixels=300)
+    """Paper Wordstat stickers в top-left: без 2D overlap, без cramped stack — всегда, даже с hook title."""
+    _ = hook_present  # legacy param; overlap gate no longer bypassed when title exists
+    w, h = img.size
+    raw = _paper_sticker_components(img, WORDSTAT_STACK_ZONE, min_pixels=250)
+    strips = _filter_wordstat_strip_components(raw, img_size=(w, h))
     overlaps: list[dict[str, Any]] = []
-    for i in range(len(narrow)):
-        for j in range(i + 1, len(narrow)):
-            bi = narrow[i]["bbox"]
-            bj = narrow[j]["bbox"]
+
+    for i in range(len(strips)):
+        for j in range(i + 1, len(strips)):
+            bi = strips[i]["bbox"]
+            bj = strips[j]["bbox"]
             iou = _bbox_iou(bi, bj)
+            x_overlap = _bbox_x_overlap_frac(bi, bj)
+            vert_gap = _bbox_vertical_gap(bi, bj)
+            x_center_dist = _bbox_x_center_distance(bi, bj)
             horiz_overlap = not (bi[2] < bj[0] or bj[2] < bi[0])
             vert_overlap = not (bi[3] < bj[1] or bj[3] < bi[1])
+
             if iou >= STICKER_OVERLAP_IOU:
                 overlaps.append({"pair": (i, j), "iou": round(iou, 3), "kind": "2d_overlap"})
-            elif horiz_overlap and vert_overlap:
+                continue
+
+            if horiz_overlap and vert_overlap:
                 overlaps.append({"pair": (i, j), "kind": "stacked_overlap"})
+                continue
+
+            # Top-left Wordstat column: overlapping Y ranges always FAIL (rotated strips clip below)
+            if vert_overlap:
+                overlaps.append({"pair": (i, j), "kind": "vertical_y_overlap"})
+                continue
+
+            same_column = x_center_dist <= 100 or x_overlap >= 0.15
+            if same_column and vert_gap <= STICKER_MIN_GAP_PX:
+                overlaps.append(
+                    {
+                        "pair": (i, j),
+                        "kind": "column_stack_tight",
+                        "x_center_dist": x_center_dist,
+                        "vert_gap": vert_gap,
+                    }
+                )
 
     crowded = False
-    if len(narrow) >= WORDSTAT_CROWDED_STACK_MIN_COMPS and not hook_present:
-        ys = [c["bbox"][1] for c in narrow] + [c["bbox"][3] for c in narrow]
+    if len(strips) >= WORDSTAT_CROWDED_STACK_MIN_COMPS:
+        ys = [c["bbox"][1] for c in strips] + [c["bbox"][3] for c in strips]
         span_frac = (max(ys) - min(ys)) / max(img.size[1], 1)
         if span_frac <= WORDSTAT_CROWDED_MAX_SPAN_FRAC:
             crowded = True
             overlaps.append(
                 {
                     "kind": "crowded_corner_dump",
-                    "narrow_components": len(narrow),
+                    "narrow_components": len(strips),
                     "span_frac": round(span_frac, 3),
                 }
             )
 
     return {
-        "components": len(narrow),
-        "narrow_components": len(narrow),
+        "components": len(raw),
+        "strip_components": len(strips),
+        "narrow_components": len(strips),
         "overlaps": overlaps,
         "crowded_stack": crowded,
         "ok": len(overlaps) == 0,

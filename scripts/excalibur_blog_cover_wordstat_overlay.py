@@ -23,10 +23,10 @@ TOPLEFT_WORDSTAT_ZONE = (0.02, 0.04, 0.40, 0.36)
 
 # Wordstat stickers — только top-left sacred free zone (не title, не meme, не phone)
 DEFAULT_POSITIONS = (
-    (0.12, 0.10),
-    (0.14, 0.20),
-    (0.16, 0.28),
-    (0.18, 0.34),
+    (0.10, 0.06),
+    (0.12, 0.17),
+    (0.14, 0.28),
+    (0.16, 0.38),
 )
 
 
@@ -172,6 +172,108 @@ def _draw_paper_sticker(
     return overlay, meta
 
 
+def _is_paper_pixel(r: int, g: int, b: int) -> bool:
+    lum = (r + g + b) / 3.0
+    if lum < 210:
+        return False
+    if max(r, g, b) - min(r, g, b) > 48:
+        return False
+    return r > 228 and g > 222 and b > 205
+
+
+def _erase_paper_stickers_in_zone(base_rgba, zone: tuple[float, float, float, float]) -> int:
+    """Стереть только paper Wordstat strips в зоне; не трогать лицо/title/phone/meme."""
+    from collections import deque
+
+    w, h = base_rgba.size
+    rgb = base_rgba.convert("RGB")
+    x0 = int(zone[0] * w)
+    y0 = int(zone[1] * h)
+    x1 = int(zone[2] * w)
+    y1 = int(zone[3] * h)
+    board_samples: list[tuple[int, int, int]] = []
+    for y in range(y0, min(y1 + 20, h)):
+        for x in range(x0, min(x1 + 30, w)):
+            r, g, b = rgb.getpixel((x, y))
+            if not _is_paper_pixel(r, g, b):
+                board_samples.append((r, g, b))
+    if board_samples:
+        fill = (
+            sum(c[0] for c in board_samples) // len(board_samples),
+            sum(c[1] for c in board_samples) // len(board_samples),
+            sum(c[2] for c in board_samples) // len(board_samples),
+        )
+    else:
+        fill = (248, 246, 240)
+
+    visited = [[False] * (x1 - x0) for _ in range(y1 - y0)]
+    erased = 0
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            lx, ly = x - x0, y - y0
+            if visited[ly][lx]:
+                continue
+            r, g, b = rgb.getpixel((x, y))
+            if not _is_paper_pixel(r, g, b):
+                continue
+            q: deque[tuple[int, int]] = deque([(lx, ly)])
+            visited[ly][lx] = True
+            pixels = 0
+            minx = maxx = lx
+            miny = maxy = ly
+            while q:
+                cx, cy = q.popleft()
+                pixels += 1
+                minx, maxx = min(minx, cx), max(maxx, cx)
+                miny, maxy = min(miny, cy), max(maxy, cy)
+                for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                    nx, ny = cx + dx, cy + dy
+                    if nx < 0 or ny < 0 or nx >= x1 - x0 or ny >= y1 - y0 or visited[ny][nx]:
+                        continue
+                    px, py = x0 + nx, y0 + ny
+                    pr, pg, pb = rgb.getpixel((px, py))
+                    if _is_paper_pixel(pr, pg, pb):
+                        visited[ny][nx] = True
+                        q.append((nx, ny))
+            bw, bh = maxx - minx + 1, maxy - miny + 1
+            if pixels < 280 or bw < 60 or bh < 8:
+                continue
+            pad = 6
+            ex0 = max(0, x0 + minx - pad)
+            ey0 = max(0, y0 + miny - pad)
+            ex1 = min(w, x0 + maxx + pad + 1)
+            ey1 = min(h, y0 + maxy + pad + 1)
+            for ey in range(ey0, ey1):
+                for ex in range(ex0, ex1):
+                    rgb.putpixel((ex, ey), fill)
+            erased += 1
+    base_rgba.paste(rgb)
+    return erased
+
+
+def repack_wordstat_stickers(cover_path: Path, phrases: list[str]) -> dict[str, Any]:
+    """PIL-only: erase top-left paper strips on current cover, redraw spaced stickers."""
+    try:
+        from PIL import Image
+    except ImportError:
+        return {"status": "SKIP", "reason": "Pillow not installed"}
+    if not cover_path.is_file():
+        return {"status": "SKIP", "reason": f"{cover_path} missing"}
+    img = Image.open(cover_path).convert("RGBA")
+    erased = _erase_paper_stickers_in_zone(img, TOPLEFT_WORDSTAT_ZONE)
+    img.convert("RGB").save(cover_path, format="PNG")
+    report = stamp_wordstat_stickers(
+        cover_path,
+        phrases,
+        force=True,
+        sticker_positions=None,
+        style="paper",
+    )
+    report["erased_components"] = erased
+    report["mode"] = "repack_only"
+    return report
+
+
 def stamp_wordstat_stickers(
     cover_path: Path,
     phrases: list[str],
@@ -224,6 +326,8 @@ def stamp_wordstat_stickers(
         # clamp to top-left only
         xf = max(TOPLEFT_WORDSTAT_ZONE[0], min(xf, TOPLEFT_WORDSTAT_ZONE[2] - 0.08))
         yf = max(TOPLEFT_WORDSTAT_ZONE[1], min(yf, TOPLEFT_WORDSTAT_ZONE[3] - 0.06))
+        # Вертикальный шаг ≥11% canvas — без overlap после repack
+        yf = max(yf, TOPLEFT_WORDSTAT_ZONE[1] + idx * 0.11)
         ax = max(margin, min(int(xf * w), int(w * TOPLEFT_WORDSTAT_ZONE[2]) - max_sticker_w - margin))
         ay = max(margin, min(int(yf * h), int(h * TOPLEFT_WORDSTAT_ZONE[3]) - int(h * 0.08)))
         safe_anchors.append((ax, ay))
@@ -294,6 +398,11 @@ def main() -> int:
         action="store_true",
         help="Force Wordstat anchors in top-left sacred zone only",
     )
+    ap.add_argument(
+        "--repack-only",
+        action="store_true",
+        help="Erase top-left paper Wordstat strips on current cover.png and redraw spaced (no restore-base)",
+    )
     args = ap.parse_args()
 
     root = project_root()
@@ -321,14 +430,17 @@ def main() -> int:
         return 0
 
     phrases = manifest.get("wordstat_stickers") or []
-    positions = None if args.top_left_only else manifest.get("wordstat_sticker_positions")
-    report = stamp_wordstat_stickers(
-        cover_path,
-        phrases,
-        force=args.force or args.top_left_only,
-        sticker_positions=positions,
-        style="paper",
-    )
+    if args.repack_only:
+        report = repack_wordstat_stickers(cover_path, phrases)
+    else:
+        positions = None if args.top_left_only else manifest.get("wordstat_sticker_positions")
+        report = stamp_wordstat_stickers(
+            cover_path,
+            phrases,
+            force=args.force or args.top_left_only,
+            sticker_positions=positions,
+            style="paper",
+        )
     if report["status"] == "OK":
         manifest["wordstat_stickers_pil_applied"] = True
         manifest["wordstat_overlay_style"] = "paper_sticker_v2"
