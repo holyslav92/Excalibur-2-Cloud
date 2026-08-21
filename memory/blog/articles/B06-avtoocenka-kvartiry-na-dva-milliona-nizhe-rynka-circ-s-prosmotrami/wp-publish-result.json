@@ -1,0 +1,27 @@
+{
+  "slug": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+  "topic_id": "B06",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B06-avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 985415,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=8984 slug=avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=8985\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=8986 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami-inline-01.png\nOK inline_alt=8986\nOK inline_caption=8986\nOK inline_description=8986\nOK inline_image_upload=8987 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami-inline-02.png\nOK inline_alt=8987\nOK inline_caption=8987\nOK inline_description=8987\nOK inline_image_upload=8988 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami-inline-03.png\nOK inline_alt=8988\nOK inline_caption=8988\nOK inline_description=8988\nOK inline_image_upload=8989 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami-inline-04.png\nOK inline_alt=8989\nOK inline_caption=8989\nOK inline_description=8989\nOK inline_image_upload=8990 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami-inline-05.png\nOK inline_alt=8990\nOK inline_caption=8990\nOK inline_description=8990\nOK inline_image_upload=8991 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami-inline-06.png\nOK inline_alt=8991\nOK inline_caption=8991\nOK inline_description=8991\nOK inline_image_upload=8992 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami-inline-07.png\nOK inline_alt=8992\nOK inline_caption=8992\nOK inline_description=8992\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/",
+    "errors": []
+  }
+}
