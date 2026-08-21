@@ -6,22 +6,24 @@ Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`
 status: open
 run_date: 2026-08-21
 role: excalibur-blog-content-learner
-topic_id: B06
-article_dir: memory/blog/articles/B06-avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami
+topic_id: B06,B07
+article_dir: memory/blog/articles/B06-avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami; memory/blog/articles/B07-nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya
 severity: blocker
 category: env
 
 ### What went wrong
 - `excalibur_blog_metrika_fetch.py --days 30 --ingest` → METRIKA CREDENTIALS BLOCKER
 - Missing `YANDEX_METRIKA_OAUTH_TOKEN` and `YANDEX_METRIKA_COUNTER_ID` in Cloud Secrets/env
+- Reproduced on B07 content-learner (2026-08-21 08:36 UTC) — post_id 8994
 
 ### How the agent recovered this run
-- Content-learner записал pipeline lessons из run evidence (Derouter 524 chunk, quality-bar PIL sync, html_linter CTA div).
-- Metrika cohort analysis пропущен; lessons marked low/medium confidence без behavioral signals.
+- Content-learner B06: pipeline lessons из run evidence (Derouter 524 chunk, quality-bar PIL sync, html_linter CTA div).
+- Content-learner B07: 3 named lessons из pipeline evidence (topic focus marker, early CTA position, reestr-nasled DNS); Metrika cohort skipped.
+- Lessons marked high confidence on pipeline artifacts; behavioral signals absent.
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06 для post-publish behavioral baseline.
+- Повторить ingest после publish B06/B07 для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -29,6 +31,32 @@ category: env
 
 ### Secrets
 - none recorded (credentials absent)
+
+## INC-20260821-0836-reestr-nasled-cloud-dns-b07
+status: open
+run_date: 2026-08-21
+role: excalibur-blog-content-learner
+topic_id: B07
+article_dir: memory/blog/articles/B07-nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya
+severity: medium
+category: env
+
+### What went wrong
+- `curl https://reestr-nasled.ru/` from Cloud → `Could not resolve host` (DNS, no HTTP status).
+- Writer draft variant-a with `<a href="https://reestr-nasled.ru">` would FAIL link_verify; final article.html uses plain text only.
+
+### How the agent recovered this run
+- Sol/final article keeps plain-text `reestr-nasled.ru`; link-verify PASS; publish PASS post_id 8994.
+
+### Durable fix needed before next run
+- Document plain-text policy for FNP registry in research/writer guidance OR add reestr-nasled.ru to DNS-soft path in link_verify (mirror SOFT_EXTERNAL_HOSTS pattern).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_link_verify.py`
+- `shared/excalibur-research/SKILL.md` or research skill notes
+
+### Secrets
+- none recorded
 
 ## INC-20260821-0614-quality-bar-wordstat-pil-b06
 status: fixed
