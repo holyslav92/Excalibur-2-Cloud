@@ -1,0 +1,86 @@
+{
+  "topic_id": "B06",
+  "slug": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Святослав в яркой рубашке удивлённо показывает, как квартира после автооценки выросла с 18 до 20 миллионов рублей.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-21T06:04:01+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Святослав в яркой рубашке удивлённо показывает, как квартира после автооценки выросла с 18 до 20 миллионов рублей.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Таблица сравнивает ориентир сервиса и реальный спрос: очередь не видна, звонки важнее оценки, нужно проверить три цены.",
+      "h2_anchor": "Коротко: что нужно понять про автооценку",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Схема показывает путь от похожих объявлений к реальному покупателю и объясняет, почему низкая цифра не гарантирует сделку.",
+      "h2_anchor": "«Дёшево в сервисе» и «можно купить за эту сумму» — разные утверждения",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Чек-лист сравнивает методы ЦИАН и Домклика: похожие объекты, три месяца истории, отсутствие проверки документов и очереди.",
+      "h2_anchor": "Что именно считают ЦИАН.Оценка и модель Домклик",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Визуальная цепочка кейса показывает рост с 18 до 20 миллионов, 2000 просмотров, 10 записей и 7 авансов.",
+      "h2_anchor": "Кейс: восемнадцать в отчёте, двадцать на живом спросе",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Диаграмма раскрывает три причины низкой оценки: спрос выше, скидка за риск, устаревшая модель или плохие аналоги.",
+      "h2_anchor": "Три версии, почему цена выглядит подозрительно низкой",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Таблица объясняет, что очередь у квартиры означает высокий интерес, но показы не равны сделке и аванс нельзя вносить сразу.",
+      "h2_anchor": "Очередь на просмотр: это про цену, а не про качество",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Карточка советует изучить 5–7 аналогов, историю цены, позвонить продавцам и выяснить условия до аванса.",
+      "h2_anchor": "Как собрать аналоги на вторичке Тюмени и что вытащить звонком",
+      "visual_type": "fact_card",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}
