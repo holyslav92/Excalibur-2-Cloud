@@ -110,3 +110,32 @@ checks_run:
 - `python3 -m unittest tests.test_pipeline_speed_b03.HtmlAutofixTest` → OK
 commit: 35ab34b
 
+## INC-20260821-1223-derouter-budget-b08-sol
+status: open
+run_date: 2026-08-21
+role: excalibur-blog-sol
+topic_id: B08
+article_dir: memory/blog/articles/B08-tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk
+severity: blocker
+category: env
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --role sol` → DEROUTER SOL BLOCKER
+- Derouter HTTP 402: `budget_exceeded` — API key budget exhausted (primary + fallback endpoints)
+- Smoke test also fails with same 402
+
+### How the agent recovered this run
+- Собран `assembled-sol-inputs.md` (trim 2000–2600, 7 inline slots, 4 interlinks, 3 CTA zones).
+- `article.html` **не** создан — запрещён Composer fallback для Sol prose.
+
+### Durable fix needed before next run
+- Пополнить бюджет `DEROUTER_API_KEY` или поднять лимит ключа в Derouter / apikey.cloud.
+- Повторить: `python3 scripts/excalibur_blog_derouter_opus_chat.py --role sol --system-file agents/excalibur-blog-sol.md --user-file .../assembled-sol-inputs.md --output article.html --article-dir .../B08-...`
+
+### Suggested files to inspect/change
+- Cloud Secrets: `DEROUTER_API_KEY`
+- `shared/derouter-opus-brain-contract.md`
+
+### Secrets
+- none recorded (budget issue, not missing key)
+
