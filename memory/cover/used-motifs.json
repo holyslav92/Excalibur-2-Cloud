@@ -103,6 +103,23 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-21",
+      "topic_id": "B07",
+      "slug": "",
+      "motifs": {
+        "composition": "host_center_three_quarter_full_height_inheritance_folder_headline_left_sun_flare",
+        "location": "bright_white_sunlit_apartment_hallway_open_door_high_key_not_street_formula",
+        "meme": "peeking_cat_sticker_plus_surprised_guy_catalog_cutout_small",
+        "prop_set": "inheritance_folder_magnifying_glass_keys_crossed_otkaza_ne_budet_note_phone_cta",
+        "sticker_set": "post_gen_pil_paper_stickers_right_margin_x068_inheritance_cluster",
+        "joke": "cat_peeks_from_folder_upside_down_otkaza_ne_budet_note",
+        "outfit": "cobalt_blue_knit_vest_white_shirt_beige_trousers_white_sneakers_no_blazer",
+        "emotion": "wary_bewildered_raised_brows_direct_gaze_not_side_eye",
+        "pose_framing": "dynamic_three_quarter_almost_full_body_forward_step_not_left_bust",
+        "action": "opens_inheritance_folder_magnifying_glass_at_hidden_heir_line"
+      }
     }
   ]
 }

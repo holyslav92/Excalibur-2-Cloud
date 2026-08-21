@@ -1,0 +1,19 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "cover",
+  "output_canvas": "cover/cover.png",
+  "jobs": [
+    {
+      "slot": "cover",
+      "tool": "derouter-rest",
+      "mcp_args": {
+        "prompt": "High-key bright RU editorial #FFFFFF sun flare. ONE 16:9 cover 1200x675 NOT grid.\nBAN: horizontal gold bars/strips/bands; text on clothes; black blazer; blue fabric; chubby; studio smile copy.\nHeadline left zone EXACT «У квартиры может быть наследник» black Cyrillic; word «наследник» gold #dcc5a1 LETTERS only small brush smear NOT wide band.\nPhone EXACT «+7 922 001 65 05» small white torn paper bottom-left vertical.\nSmall yellow sticky «Обещаний продавца мало» pinned left NOT horizontal strip.\nHost i2i face-studio-2026-06-23 medium-slim 28yo; NEW wary frown expression NOT reference smile.\nOutfit: cream henley shirt only NO blazer NO blue; terracotta optional scarf.\nScene: bright notary room family tree board; points at hidden heir branch.\nTiny thinking cat sticker bottom-right corner only. ZERO Wordstat on canvas.\nPerfect Cyrillic. #FFF bright.",
+        "aspect_ratio": "16:9",
+        "resolution": "2K",
+        "input_urls": [
+          "{{SITE_BASE}}/wp-content/uploads/2026/06/2026-06-23-15.57.42.jpg"
+        ]
+      }
+    }
+  ]
+}
