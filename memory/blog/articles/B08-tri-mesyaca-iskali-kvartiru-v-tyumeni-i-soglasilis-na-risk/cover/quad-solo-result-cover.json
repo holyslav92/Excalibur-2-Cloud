@@ -1,0 +1,13 @@
+{
+  "url": "https://tempfile.aiquickdraw.com/a2/f38f7cd78fe7de2fedd9f323f1287bec_1787342875993.png",
+  "urls": [
+    "https://tempfile.aiquickdraw.com/a2/f38f7cd78fe7de2fedd9f323f1287bec_1787342875993.png"
+  ],
+  "task_id": "f38f7cd78fe7de2fedd9f323f1287bec",
+  "source": "kie-api",
+  "model": "kie-gpt-image-i2i",
+  "state": "success",
+  "costTime": 73,
+  "completeTime": 1787342876530,
+  "createTime": 1787342803139
+}

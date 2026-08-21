@@ -1,0 +1,27 @@
+{
+  "slug": "tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk",
+  "topic_id": "B08",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B08-tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 981676,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9033 slug=tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9034\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9035 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk-inline-01.png\nOK inline_alt=9035\nOK inline_caption=9035\nOK inline_description=9035\nOK inline_image_upload=9036 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk-inline-02.png\nOK inline_alt=9036\nOK inline_caption=9036\nOK inline_description=9036\nOK inline_image_upload=9037 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk-inline-03.png\nOK inline_alt=9037\nOK inline_caption=9037\nOK inline_description=9037\nOK inline_image_upload=9038 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk-inline-04.png\nOK inline_alt=9038\nOK inline_caption=9038\nOK inline_description=9038\nOK inline_image_upload=9039 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk-inline-05.png\nOK inline_alt=9039\nOK inline_caption=9039\nOK inline_description=9039\nOK inline_image_upload=9040 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk-inline-06.png\nOK inline_alt=9040\nOK inline_caption=9040\nOK inline_description=9040\nOK inline_image_upload=9041 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk-inline-07.png\nOK inline_alt=9041\nOK inline_caption=9041\nOK inline_description=9041\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk/",
+    "errors": []
+  }
+}

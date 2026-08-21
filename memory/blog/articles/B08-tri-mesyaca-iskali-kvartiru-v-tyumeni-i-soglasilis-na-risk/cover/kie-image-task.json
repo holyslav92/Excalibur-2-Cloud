@@ -1,0 +1,9 @@
+{
+  "task_id": "f38f7cd78fe7de2fedd9f323f1287bec",
+  "source": "kie-api",
+  "model": "kie-gpt-image-i2i",
+  "state": "success",
+  "create_attempts": 1,
+  "result_path": "memory/blog/articles/B08-tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk/cover/quad-solo-result-cover.json",
+  "updated_at_epoch": 1787342878
+}
