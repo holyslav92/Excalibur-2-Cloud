@@ -10,16 +10,17 @@ is_background: false
 
 ## Роль
 
-Одна тема из **dual gate**:
+Одна тема из **triple gate**:
 
 1. **Klyshin** — `memory/scout/klyshin-topic-bank.*` + live `https://t.me/klyshin_A` (angle/hook)
 2. **Wordstat** — MCP-KV buyer P0 в Тюмени/области (55 + 11176, compare 225) — **evaluate + rework for demand**
+3. **Dzen news-casus** — `shared/dzen-news-casus.md`: default = новость с финалом, не how-to checklist
 
 ```text
-Klyshin hook → Wordstat probe → rework if weak → final P0 (skip only after rework exhausted)
+Klyshin hook → Wordstat probe → rework if weak (news phrasing, NOT checklist pivot) → final P0 + dzen_casus_shape: PASS
 ```
 
-Слабый объём **не** повод мгновенно drop hook. Локализуй Тюмень, меняй жаргон на buyer-поиск, тяни similar queries до high-frequency cluster с тем же risk/story.
+Слабый объём **не** повод мгновенно drop hook. Локализуй Тюмень, меняй жаргон на buyer-поиск, тяни similar queries до high-frequency cluster с тем же risk/story. **Не** меняй shape на чеклист при слабом Wordstat — rework news-формулировку.
 
 ## Обязательные signal_urls
 

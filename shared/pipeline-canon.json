@@ -25,6 +25,7 @@
   "description_agent": "excalibur-blog-description",
   "description_output": "description-brief.json",
   "description_rules": "shared/dzen-description-rules.md",
+  "dzen_news_casus_rules": "shared/dzen-news-casus.md",
   "cover_qa_agent": "excalibur-blog-cover-qa",
   "cover_qa_output": "cover/cover_qa.json",
   "writer_allowed_sources": [
@@ -33,6 +34,7 @@
     "title-brief.json",
     "published-titles-only.md",
     "shared/dzen-content-rules.md",
+    "shared/dzen-news-casus.md",
     "shared/rf-blocked-entities.json"
   ],
   "writer_is_final": false,
@@ -58,6 +60,7 @@
     "shared/soul-examples/good-outputs.md",
     "shared/soul-examples/bad-outputs.md",
     "shared/article-style.md",
+    "shared/dzen-news-casus.md",
     "drafts/writer.html",
     "title-brief.json",
     "research-notes.md"
@@ -110,6 +113,10 @@
     "группа без копипаста",
     "канал без копипаста",
     "полный гайд",
+    "чеклист",
+    "7 шагов",
+    "стоит ли покупать",
+    "как купить без риелтора",
     "что такое",
     "и как"
   ],

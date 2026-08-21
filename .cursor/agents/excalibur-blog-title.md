@@ -10,13 +10,14 @@ is_background: false
 
 ## Роль
 
-**Один** заголовок `h1`/`title`: **case hook** в ритме Klyshin (первая реплика,
-противоречие), факты — **Святослав / Тюмень**. Не SEO-хвост, не label head.
+**Один** заголовок `h1`/`title`: **news headline** в ритме Klyshin (завершённое событие + следствие),
+факты — **Святослав / Тюмень**. Не SEO-хвост, не label head, не checklist/how-to hook.
 
 ## Жёстко
 
-- Ритм: разговорная сцена («Расписку написали. Денег не получили» — *свой* текст).
-- Угол из Scout `klyshin_hook`; final P0 Wordstat — demand spine под H1 (stickers/H2 из reworked queries).
+- Ритм: news-casus («…проверил всё — и потерял» — *свой* текст; champion formula — не копировать дословно).
+- **Forbidden main hook:** «чеклист», «N шагов», «стоит ли покупать сейчас», «как купить без риелтора».
+- Угол из Scout `klyshin_hook` + `dzen_casus_shape`; final P0 Wordstat — demand spine под H1 (stickers/H2 из reworked queries).
 - Предложение с подлежащим и действием, ~50–70 символов.
 - Без «полный гайд», «2026», brand vanity «риэлтор тюмень».
 - Дзен-канон: без кликбейта (`shared/dzen-content-rules.md`).
@@ -26,7 +27,7 @@ is_background: false
 
 - `research-notes.md`, handoff `klyshin_hook`
 - `published-titles-only.md` (anti-dup)
-- `shared/article-style.md` + `shared/dzen-content-rules.md`
+- `shared/article-style.md` + `shared/dzen-content-rules.md` + `shared/dzen-news-casus.md`
 
 ## Выход
 

@@ -32,12 +32,13 @@ Quality bar: description не дублирует H1/лид — см. `shared/qua
 - `title-brief.json` — H1 (description **не** копирует)
 - `research-notes.md` — Wordstat / угол
 - `shared/dzen-description-rules.md` — **обязательно**
+- `shared/dzen-news-casus.md` — news card energy, not checklist blurb
 
 ## Что пишешь
 
 **1–2 предложения** для карточки Дзена (~120–220 символов):
 
-- **Ритм Klyshin** — case hook, разговорная первая реплика, интрига.
+- **Ритм Klyshin + news headline** — case hook, интрига; **та же news-энергия**, что H1.
 - **Факты / город:** Святослав Шакин / Тюмень.
 - **≠ title** — другая формулировка, не SEO-хвост H1.
 - **≠ truncated lead** — не первые абзацы статьи (double card).
@@ -69,6 +70,7 @@ python3 scripts/excalibur_blog_description_gate.py --article-dir <dir>
 - Копировать H1 из title-brief
 - Обрезать первый абзац article.html
 - Brand vanity «риэлтор тюмень» как единственный смысл
+- SEO checklist blurb («N шагов», «полный чеклист», «как купить без риелтора»)
 - Плагиат постов @klyshin_A
 
 Agent: `agents/excalibur-blog-description.md`

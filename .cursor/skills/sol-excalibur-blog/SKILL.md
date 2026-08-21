@@ -37,10 +37,11 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 4. `shared/soul-examples/good-outputs.md` — живые посты + Calibration
 5. `shared/soul-examples/bad-outputs.md`
 6. `shared/article-style.md` — язык / Дзен (без мата)
-7. `drafts/writer.html` — смысл от Writer (**обязателен**)
-8. `title-brief.json` — H1 не ломай в SEO
-9. `research-notes.md` — только сверка фактов (не копируй research в лид)
-10. `shared/published-articles.md` — если interlink включён: **сохрани** outbound-ссылки Writer
+7. `shared/dzen-news-casus.md` — **сохранить news-casus arc** (история → финал → практика после)
+8. `drafts/writer.html` — смысл от Writer (**обязателен**)
+9. `title-brief.json` — H1 не ломай в SEO
+10. `research-notes.md` — только сверка фактов (не копируй research в лид)
+11. `shared/published-articles.md` — если interlink включён: **сохрани** outbound-ссылки Writer
 
 ## Не читаешь
 
@@ -54,7 +55,9 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 3. Перепиши **целиком** в слог тенанта:
    - слова/ходы из good-outputs тенанта;
    - несколько битов под H2;
-   - лид без research-даты и термин-дампа;
+   - **лид = news-casus**, не how-to checklist; без research-даты и термин-дампа;
+   - **финал casus** (суд/отмена/деньги) — явный H2 до практики; не обрывай на «расписку написали» без развязки;
+   - практика («что проверить») — **после** финала, как aftermath, не сухой список вместо истории;
    - имя автора корпуса в тексте **не** писать;
    - Дзен: **без мата**.
    - **Interlink:** не удаляй outbound-ссылки на sibling из `drafts/writer.html`;
@@ -69,7 +72,8 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 ## Запреты
 
 - Новые факты, цифры, URL, которых нет у Writer/research
-- Вернуть SEO-робота / пресс-релиз / глоссарий в лид
+- Вернуть SEO-робота / пресс-релиз / глоссарий / **how-to checklist** в лид вместо casus
+- Убрать или размыть **финал** (суд, отмена, потеря денег) — обязателен по `dzen-news-casus.md`
 - Чужой голос («короче братан»)
 - Вложенные Task
 

@@ -40,6 +40,7 @@ Longform (7 inline): **3 части на первом проходе** — не 
 4. `published-titles-only.md`
 5. `shared/published-articles.md` — **только** `status=published` для outbound interlink
 6. `shared/dzen-content-rules.md` + RF (не герой Meta/…) — кратко
+7. `shared/dzen-news-casus.md` — **default news-casus shape** (история → финал → практика после)
 
 ## Не обязан читать (это зона Sol)
 
@@ -49,11 +50,14 @@ Longform (7 inline): **3 части на первом проходе** — не 
 ## Правила смысла
 
 - Все факты только из research; не выдумывай.
-- Структура: открытие + TL;DR → **early CTA (TG+MAX only)** → H2 с мыслями → главный чеклист → **mid CTA** → практика → **end CTA** (dual + полный набор каналов).
+- **Default shape = новость-казус** (`shared/dzen-news-casus.md`): лид — завершённое событие; середина — хронология; **финал обязателен** (суд, отмена, деньги не вернули). Без финала — FAIL (урок «Расписку написали»).
+- **Практика после истории**, не вместо неё: «что проверить теперь» — разбор последствий casus, не сухой how-to в лиде.
+- Структура: **лид-новость + TL;DR** → **early CTA (TG+MAX only)** → H2 развитие casus → H2 **финал** → H2 практика (ol/таблица — aftermath, не главный hook) → **mid CTA** → доп. практика при необходимости → **end CTA** (dual + полный набор каналов).
+- **Запрещено как каркас:** открытие «чеклист / N шагов / как купить без риелтора» без завершённого события.
 - Без research-даты / Wordstat в открытии (Sol всё равно вычистит, но не засоряй).
 - CTA conversion: early/mid/end по `shared/quality-bar-9.md`; PRIMARY — Telegram + MAX URL из `cta_channels`; телефон один раз в теле.
 - **Interlink (если `interlink_old_articles=true`):** **2–4** контекстные `<a href="/blog/...">` на
-  опубликованные sibling из ledger; якорь по смыслу H2 (доверенность ↔ расписка/ЕГРН/аванс), не «читайте также» в каждом абзаце.
+  опубликованные sibling из ledger; якорь по смыслу H2, не «читайте также» в каждом абзаце.
 - Не читай чужие article.html / live-сайт / уже опубликованные статьи сайта / topics.
 
 ## Handoff

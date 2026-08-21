@@ -114,9 +114,11 @@
 | Роль | Обязанность |
 |------|-------------|
 | **Директор** | Preflight: doctor + today + **прочитать этот файл** + rf-blocked; только потом Scout |
-| **Scout** | Не выбирать DENY-сущности; focus gate; Дзен+РФ до handoff |
-| **Title** | Дзен-заголовки; без Meta/IG/… в H1 |
-| **Writer** | Текст по Дзену; без продвижения запрещённых площадок |
+| **Scout** | Не выбирать DENY-сущности; focus gate; **Klyshin×Wordstat×news-casus** (`shared/dzen-news-casus.md`); Дзен+РФ до handoff |
+| **Title** | **News headline** H1; без checklist/how-to hooks; без Meta/IG/… в H1 |
+| **Writer** | News-casus arc → финал → практика после; без продвижения запрещённых площадок |
+| **Sol** | Сохранить casus + финал; не превращать в dry checklist |
+| **Description** | News card energy; ≠ SEO checklist blurb |
 | **Cover** | Без логотипов/символики запрещённых сущностей |
 | **Publish** | Не выкладывать, если focus/RF gate FAIL |
 

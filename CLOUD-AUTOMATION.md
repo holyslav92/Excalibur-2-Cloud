@@ -94,7 +94,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 | Зона | Когда | Что |
 |------|-------|-----|
 | **Early** | после hook + TL;DR, первый экран | brand beat (Святослав, The Риэлтор, Тюмень) + curiosity + **только TG + MAX** |
-| **Mid** | после главного чеклиста | лёгкий nudge TG + MAX (`excalibur-cta-mid`) |
+| **Mid** | после практического блока (aftermath casus) | лёгкий nudge TG + MAX (`excalibur-cta-mid`) |
 | **End** | финал | dual CTA «консультация» / «сразу в сделку» + полный набор (TG, MAX, site, Дзен, VK, guides, about) |
 
 - Телефон `+7 922 001 65 05` — на **cover** + **один раз** в теле.
@@ -120,7 +120,7 @@ Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 
 Скопируй блок ниже в **Instructions** каждого из 4 Cursor Automations (09/12/15/17 YEKT):
 
 ```text
-Прочитай AGENTS.md + shared/pipeline-canon.json + shared/tenant-config.json + shared/quality-bar-9.md + CLOUD-AUTOMATION.md.
+Прочитай AGENTS.md + shared/pipeline-canon.json + shared/tenant-config.json + shared/quality-bar-9.md + shared/dzen-news-casus.md + CLOUD-AUTOMATION.md.
 Если setup_complete != true — остановись (Setup).
 Игнорируй Automation Memory. Memories = OFF.
 
@@ -134,12 +134,14 @@ DEROUTER <ROLE> BLOCKER → стоп пайплайна. Нет run_budget / cir
 doctor + today.
 dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
 needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
-Scout HARD gates перед handoff: MCP-KV Wordstat + `scout_helper.py --check-query` (topic focus + **story-duplicate** `shared/scout-story-clusters.json` vs ledger/live WP — Wordstat rework ≠ same legal risk+plot).
+Scout HARD gates перед handoff: MCP-KV Wordstat + shared/dzen-news-casus.md (default news-casus shape, forbidden checklist hooks; слабый Wordstat → rework news phrasing, NOT drop casus) + `scout_helper.py --check-query` (topic focus + **story-duplicate** `shared/scout-story-clusters.json` vs ledger/live WP — Wordstat rework ≠ same legal risk+plot).
 research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
+Title/Writer/Sol: news headline + casus arc (событие → финал → практика после); H1 forbidden: «чеклист», «N шагов», «стоит ли покупать»; body 2000–2600, useful part AFTER story.
+Description: news card energy (shared/dzen-description-rules.md), not SEO checklist blurb.
 
 Conversion (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
   Early после hook+TL;DR: brand beat + curiosity + ТОЛЬКО Telegram https://t.me/Tyumen_Rieltor и MAX https://max.ru/id561413315447_biz
-  Mid после главного чеклиста: лёгкий TG+MAX (excalibur-cta-mid)
+  Mid после практического блока (aftermath casus): лёгкий TG+MAX (excalibur-cta-mid)
   End: dual CTA консультация / сразу в сделку + полный набор (site, guides, Dzen, VK, about)
   Телефон +7 922 001 65 05 на cover + один раз в теле
   Interlink 2–4 sibling из shared/published-articles.md (status=published)

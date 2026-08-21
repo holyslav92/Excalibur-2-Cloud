@@ -26,17 +26,20 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 - `published-titles-only.md` — только чтобы не повторить угол, не образец
 - `shared/SOUL.md` + `shared/article-style.md` — голос H1 (коротко, с глаголом)
 - `shared/dzen-content-rules.md` — **полный** канон (rules.html + news + РФ DENY)
+- `shared/dzen-news-casus.md` — **default news-casus shape** (champion formula, forbidden checklist hooks)
 - `shared/rf-blocked-entities.json` — H1 не про Meta/Instagram/…
 
 ## Что такое хороший заголовок
 
-Заголовок — **цепкая первая реплика / кейс** в ритме Klyshin (юрист-сторителлинг),
+Заголовок — **новостной headline** в ритме Klyshin (Дзен «любит новости»),
 но факты и город — **Святослав Шакин / Тюмень**. Не копипаст канала Клышина.
 
-- **Case hook:** сцена, противоречие, разговорная первая строка («Расписку написали. Денег не получили» — *свой* вариант, не плагиат).
+- **News-casus hook:** завершённое событие + противоречие + следствие («…проверил всё — и потерял» — *свой* вариант).
+- **Champion energy:** «Сделку с квартирой оспорили через год: покупатель проверил всё — и потерял» — формула, не копировать дословно.
 - **Тема (subject) обязательна** — покупатель понимает риск/объект сделки.
 - **Сильный глагол**, активный залог. Не label head («Проверка ЕГРН») и не SEO-хвост.
 - **Коротко**, ~50–70 символов. Без «полный гайд», «2026», двоеточие+ключ.
+- **Временная метка** в H1 когда усиливает: «через год», «за 48 часов», «на сделке».
 - Энергия примеров (не копировать): «Моего образования хватит»; «В квартире живёт бабушка. Только бабушки нет»; «Автооценка может стоить миллион».
 
 Угол из Scout: `klyshin_hook` в handoff + final P0 Wordstat как **demand spine** (не вставлять в H1; stickers/H2 — из reworked live queries).
@@ -45,11 +48,11 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 Из Scout handoff (`wordstat_rework` + `wordstat:` с **mcp_kv live** частотами):
 
-- Final P0 buyer-фразы (не brand «риэлтор тюмень») → demand spine под case-hook H1
+- Final P0 buyer-фразы (не brand «риэлтор тюмень») → demand spine под news-casus H1
 - 1–2 живые формулировки для lead / H2 candidates (из reworked cluster)
 - Cover-text возьмёт топ для `wordstat_stickers` (1–3 high-frequency из того же pull)
 
-**Не** вставляй сырую SEO-фразу в title. H1 = Klyshin rhythm; Wordstat = spine под ним.
+**Не** вставляй сырую SEO-фразу в title. H1 = news headline + Klyshin rhythm; Wordstat = spine под ним.
 
 ## Выход
 
@@ -70,6 +73,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 ## Запрещено
 
+- **Главный hook:** «чеклист», «N шагов», «7 шагов», «стоит ли покупать сейчас», «как купить без риелтора»; how-to без casus-финала.
 - SEO-хвосты: «без копипаста», «за вечер», «полный гайд», «2026»,
   двоеточие с ключом.
 - Label heads и голые существительные без действия.
