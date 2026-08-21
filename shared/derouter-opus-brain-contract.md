@@ -13,8 +13,8 @@
 
 | Tier | Model id (Derouter) | Env override | Роли |
 |------|---------------------|--------------|------|
-| **powerful** | `claude-opus-5` | `DEROUTER_OPUS_MODEL` | scout, title, writer, sol |
-| **utility** | `gpt-5.6-terra` | `DEROUTER_TERRA_MODEL` | research, description, cover-text, schema, cover-scene |
+| **powerful** | `claude-opus-5` | `DEROUTER_OPUS_MODEL` | writer, sol |
+| **utility** | `gpt-5.6-terra` | `DEROUTER_TERRA_MODEL` | scout, title, research, description, cover-text, schema, cover-scene |
 
 `resolve_model` выбирает tier по `--role`. **Не** используй глобальный `DEROUTER_TEXT_MODEL` как override всех ролей — если задан, он не переводит powerful-роли на non-Opus.
 

@@ -510,14 +510,14 @@ def main() -> int:
     powerful_roles = set((brain.get("powerful") or {}).get("roles") or [])
     utility_roles = set((brain.get("utility") or {}).get("roles") or [])
     check(
-        {"writer", "sol", "title", "scout"}.issubset(powerful_roles),
-        "tenant writing_model.powerful.roles includes writer/sol/title/scout",
+        {"writer", "sol"}.issubset(powerful_roles),
+        "tenant writing_model.powerful.roles includes writer/sol",
         errors,
         warnings,
     )
     check(
-        {"research", "description", "cover-text", "schema", "cover-scene"}.issubset(utility_roles),
-        "tenant writing_model.utility.roles includes research/description/cover-text/schema/cover-scene",
+        {"scout", "title", "research", "description", "cover-text", "schema", "cover-scene"}.issubset(utility_roles),
+        "tenant writing_model.utility.roles includes scout/title/research/description/cover-text/schema/cover-scene",
         errors,
         warnings,
     )

@@ -62,8 +62,8 @@ VALID_ROLES = frozenset(
     }
 )
 
-POWERFUL_ROLES = frozenset({"scout", "title", "writer", "sol"})
-UTILITY_ROLES = frozenset({"research", "description", "cover-text", "schema", "cover-scene"})
+POWERFUL_ROLES = frozenset({"writer", "sol"})
+UTILITY_ROLES = frozenset({"scout", "title", "research", "description", "cover-text", "schema", "cover-scene"})
 
 
 class DerouterChatError(RuntimeError):

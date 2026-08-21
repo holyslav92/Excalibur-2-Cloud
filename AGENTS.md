@@ -37,8 +37,8 @@ Scout? → research_start → Research → Title → Writer(смысл)
 
 **Factory brain (двухуровневый split):** Cursor — **тонкий дирижёр** (default Composer; не переключать модель Cursor).
 Прозу пишет только `scripts/excalibur_blog_derouter_opus_chat.py` → Derouter REST (`DEROUTER_API_KEY`):
-- **powerful** `claude-opus-5` (`DEROUTER_OPUS_MODEL`): Scout, Title, Writer, Sol
-- **utility** `gpt-5.6-terra` (`DEROUTER_TERRA_MODEL`): Research synthesis, Description, Cover-text, Schema, Cover-scene
+- **powerful** `claude-opus-5` (`DEROUTER_OPUS_MODEL`): Writer, Sol (article prose only)
+- **utility** `gpt-5.6-terra` (`DEROUTER_TERRA_MODEL`): Scout, Title, Research synthesis, Description, Cover-text, Schema, Cover-scene
 При недоступности → `DEROUTER <ROLE> BLOCKER`, без тихого fallback на Composer. См. `shared/derouter-opus-brain-contract.md`.
 **Cover PNG:** Derouter REST image API — `shared/derouter-gpt-image-api-contract.md`.
 **Wordstat:** MCP-KV. **Cover-QA:** Python gates, не «глаз» агента.

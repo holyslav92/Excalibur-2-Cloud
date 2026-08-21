@@ -5,9 +5,9 @@ description: Invent one catchy human H1 with clear subject. No SEO tails, no lab
 
 # Title Agent — цепкий заголовок с понятной темой
 
-## Thin conductor + Derouter powerful (HARD)
+## Thin conductor + Derouter utility (HARD)
 
-**Не пиши H1 моделью Cursor.** Собери `--user-file` из research + Scout handoff:
+**Не пиши H1 моделью Cursor.** Собери `--user-file` из research + Scout handoff; Derouter utility tier (gpt-5.6-terra):
 
 ```bash
 python3 scripts/excalibur_blog_derouter_opus_chat.py \
