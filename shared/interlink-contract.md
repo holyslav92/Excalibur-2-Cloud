@@ -16,6 +16,7 @@
 - Не более **3 inbound** правок за один publish-run.
 - Не трогать посты со `status != published` в ledger.
 - URL только path из ledger или `{{SITE_BASE}}/slug/` после expand.
+- Inbound bootstrap требует `post_id` в ledger (6-й столбец) или `interlink-siblings.json`.
 - Не переписывать тело статьи — только append блока, если ссылки ещё нет.
 - Live publish только при `EXCALIBUR_BLOG_ALLOW_PUBLISH=yes` (env, не git).
 

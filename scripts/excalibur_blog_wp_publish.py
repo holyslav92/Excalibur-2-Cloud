@@ -960,7 +960,13 @@ def ledger_url_for_commit(permalink: str, slug: str = "") -> str:
     return value
 
 
-def upsert_publish_ledger(root: Path, payload: dict[str, Any], permalink: str) -> None:
+def upsert_publish_ledger(
+    root: Path,
+    payload: dict[str, Any],
+    permalink: str,
+    *,
+    post_id: int = 0,
+) -> None:
     if not permalink:
         return
     ledger_path = root / "shared" / "published-articles.md"
@@ -968,8 +974,8 @@ def upsert_publish_ledger(root: Path, payload: dict[str, Any], permalink: str) -
     if not ledger_path.is_file():
         ledger_path.write_text(
             "# Excalibur BLOG — журнал опубликованных статей\n\n"
-            "| date | topic_id | slug | url | status |\n"
-            "|------|----------|------|-----|--------|\n",
+            "| date | topic_id | slug | url | status | post_id |\n"
+            "|------|----------|------|-----|--------|--------|\n",
             encoding="utf-8",
         )
 
@@ -978,11 +984,26 @@ def upsert_publish_ledger(root: Path, payload: dict[str, Any], permalink: str) -
     topic_id = str(payload.get("topic_id") or "").upper()
     slug = str(payload.get("slug") or "")
     ledger_url = ledger_url_for_commit(permalink, slug)
-    row = f"| {date.today().isoformat()} | {topic_id} | {slug} | {ledger_url} | published |"
+    post_cell = str(int(post_id)) if post_id else ""
+    row = (
+        f"| {date.today().isoformat()} | {topic_id} | {slug} | {ledger_url} "
+        f"| published | {post_cell} |"
+    )
     lines = ledger_path.read_text(encoding="utf-8").splitlines()
     kept: list[str] = []
     replaced = False
+    header_upgraded = False
     for line in lines:
+        if line.startswith("| date |") and "post_id" not in line:
+            kept.append(
+                "| date | topic_id | slug | url | status | post_id |"
+            )
+            header_upgraded = True
+            continue
+        if line.startswith("|------|") and header_upgraded:
+            kept.append("|------|----------|------|-----|--------|--------|")
+            header_upgraded = False
+            continue
         if not line.startswith("|"):
             kept.append(line)
             continue
@@ -993,6 +1014,11 @@ def upsert_publish_ledger(root: Path, payload: dict[str, Any], permalink: str) -
             if not replaced:
                 kept.append(row)
                 replaced = True
+            continue
+        if len(cells) == 5 and cells[0][:4].isdigit():
+            kept.append(
+                f"| {cells[0]} | {cells[1]} | {cells[2]} | {cells[3]} | {cells[4]} | |"
+            )
             continue
         kept.append(line)
     if not replaced:
@@ -1279,6 +1305,38 @@ def check_publish_prerequisites(
     return blockers
 
 
+def parse_publish_post_id(out: str) -> int:
+    """Extract WP post id from bootstrap ``OK post=123`` line."""
+    for line in (out or "").splitlines():
+        stripped = line.strip()
+        if not stripped.startswith("OK post="):
+            continue
+        tail = stripped.split("=", 1)[1].strip()
+        digits = tail.split()[0] if tail else ""
+        if digits.isdigit():
+            return int(digits)
+    return 0
+
+
+def persist_wp_post_id(article_dir: Path, post_id: int) -> None:
+    """Write wp_post_id into article.meta.json after successful publish."""
+    if post_id <= 0:
+        return
+    meta_path = article_dir / "article.meta.json"
+    if not meta_path.is_file():
+        return
+    try:
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return
+    if not isinstance(meta, dict):
+        return
+    if meta.get("wp_post_id") == post_id or meta.get("post_id") == post_id:
+        return
+    meta["wp_post_id"] = post_id
+    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def evaluate_publish_output(out: str, payload: dict[str, Any]) -> dict[str, Any]:
     """Fail publish when post OK but cover/inline media WARN or incomplete."""
     lines = [line.strip() for line in (out or "").splitlines() if line.strip()]
@@ -1527,9 +1585,14 @@ def main() -> int:
     media = evaluate_publish_output(out, payload)
     result_path = article_dir / "wp-publish-result.json"
     permalink = ""
+    wp_post_id = 0
     for line in out.splitlines():
         if line.startswith("permalink="):
             permalink = line.split("=", 1)[1].strip()
+        if line.startswith("OK post=") and not wp_post_id:
+            wp_post_id = parse_publish_post_id(line)
+    if not wp_post_id:
+        wp_post_id = parse_publish_post_id(out)
     # Commit-safe artifact: redact live PUBLIC_SITE_URL → {{SITE_BASE}} (never [REDACTED]).
     safe_permalink = redact_site_base(permalink, public)
     safe_raw = redact_site_base(out, public)
@@ -1538,6 +1601,7 @@ def main() -> int:
         "slug": payload["slug"],
         "topic_id": payload["topic_id"],
         "permalink": safe_permalink,
+        "post_id": wp_post_id or None,
         "publish_method": "sftp",
         "cover_evidence": redact_structure(payload.get("cover_evidence", {}), public),
         "raw_output": safe_raw,
@@ -1614,7 +1678,8 @@ def main() -> int:
         json.dumps(result, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    upsert_publish_ledger(root, payload, permalink or safe_permalink)
+    persist_wp_post_id(article_dir, wp_post_id)
+    upsert_publish_ledger(root, payload, permalink or safe_permalink, post_id=wp_post_id)
     deploy_llms = bool(args.deploy_llms or tenant_deploy_llms_default(root))
     if deploy_llms:
         from excalibur_blog_llms_deploy import deploy_llms_files

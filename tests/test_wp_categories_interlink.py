@@ -94,10 +94,12 @@ class WpCategoriesInterlinkTests(unittest.TestCase):
                 ROOT,
                 {"topic_id": "B02", "slug": "new-slug"},
                 "https://example.com/blog/vtorichka-i-riski/new-slug/",
+                post_id=1234,
             )
             text = ledger_path.read_text(encoding="utf-8")
             self.assertEqual(text.count("B02"), 1)
             self.assertIn("/blog/vtorichka-i-riski/new-slug/", text)
+            self.assertIn("| 1234 |", text)
             self.assertNotIn("bez-rubriki", text)
         finally:
             ledger_path.write_text(backup, encoding="utf-8")

@@ -197,7 +197,7 @@ Dry-run: **агент читает** `cover_media` / `inline_media` — все �
 |------|----------|
 | `wp-publish-result.json` | создаёт скрипт (verdict pass/fail) |
 | `memory/blog/wp-publish-log.md` | допиши секцию с post_id, permalink, inline ids |
-| `shared/published-articles.md` | если есть строка topic_id со status=in_progress — обнови date/url/status=published; иначе добавь строку |
+| `shared/published-articles.md` | если есть строка topic_id со status=in_progress — обнови date/url/status=published/**post_id**; иначе добавь строку (скрипт пишет post_id автоматически) |
 | `memory/pipeline-fix-queue.md` | если дописал incident — **закоммить** вместе с ledger/publish artifacts; канон только `pipeline-fix-queue.md` (не `pipeline-incident-queue.md`) |
 | handoff | блок `=== EXCALIBUR BLOG PUBLISH ===` + permalink в `PIPELINE DONE` |
 

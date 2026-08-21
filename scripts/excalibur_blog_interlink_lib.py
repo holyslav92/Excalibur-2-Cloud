@@ -34,17 +34,20 @@ def parse_ledger(path: Path) -> list[dict[str, str]]:
             continue
         if len(cells) >= 5 and cells[0][:4].isdigit():
             topic_id, slug, permalink, status = cells[1], cells[2], cells[3], cells[4]
+            post_id_raw = cells[5] if len(cells) >= 6 else ""
         else:
             topic_id, slug, status, permalink = cells[0], cells[1], cells[2], cells[3]
+            post_id_raw = ""
         if status.lower() != "published":
             continue
-        rows.append(
-            {
-                "topic_id": topic_id,
-                "slug": slug,
-                "permalink": permalink,
-            }
-        )
+        row: dict[str, Any] = {
+            "topic_id": topic_id,
+            "slug": slug,
+            "permalink": permalink,
+        }
+        if str(post_id_raw or "").strip().isdigit():
+            row["post_id"] = int(str(post_id_raw).strip())
+        rows.append(row)
     return rows
 
 
