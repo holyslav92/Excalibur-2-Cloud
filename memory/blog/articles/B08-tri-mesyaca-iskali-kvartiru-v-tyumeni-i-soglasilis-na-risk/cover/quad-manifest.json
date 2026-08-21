@@ -38,7 +38,7 @@
   "style_file": "memory/cover/quad-style-the-rieltor.json",
   "blog_hero": "memory/cover/blog-hero.json",
   "inline_types_catalog": "memory/cover/inline-visual-types.json",
-  "cover_hook": "4-й месяц — проверьте",
+  "cover_hook": "Четвёртый месяц — проверьте квартиру",
   "cover_hook_highlight": "проверьте",
   "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
   "mcp_note": "PRIMARY: Derouter REST (DEROUTER_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
@@ -47,7 +47,7 @@
       "quadrant": "top_left",
       "role": "cover_editorial_hero",
       "alt": "Риэлтор в светлой квартире останавливает поспешный аванс папкой ЕГРН и жестом...",
-      "scene_hint": "bright entry; LARGE hook RIGHT; host LEFT waist-up; phone bottom-RIGHT; cat meme; NO canvas Wordstat",
+      "scene_hint": "bright entry; LARGE hook title RIGHT; host LEFT close-up waist-up; phone bottom-RIGHT; cat meme corner; NO canvas Wordstat",
       "meme_caption_ru": "",
       "sticky": "Усталость не повод рисковать",
       "meme_sticker": true,
@@ -202,15 +202,18 @@
   },
   "cover_emotion": "wary_fatigue_stop_not_studio_smile",
   "cover_motifs": {
-    "composition": "host_large_left_waist_up_egrn_stop_headline_right_sacred_sun_flare",
+    "composition": "host_left_third_headline_right_phone_bottom_right_designed_1200x675",
     "location": "bright_white_apartment_entryway_sunlit_tyumen",
-    "meme": "tired_cat_sticker_small_top_right_plus_roll_safe_corner",
+    "meme": "small_thinking_cat_sticker_bottom_right_only",
     "prop_set": "egrn_folder_red_avans_stamp_keys_on_tape",
-    "sticker_set": "pink_sticky_only_NO_wordstat_bars",
+    "sticker_set": "yellow_sticky_only_NO_wordstat_bars_NO_canvas_wordstat",
     "joke": "egrn_folder_blocks_keys_before_tired_buyer_signs",
     "outfit": "azure_overshirt_white_tee_no_blazer_no_black_suit",
     "emotion": "wary_fatigue_raised_brow_stop_not_side_eye",
-    "pose_framing": "host_large_left_waist_up_forward_gaze_NOT_fullbody_center",
+    "pose_framing": "waist_up_left_third_face_large_but_NOT_full_bleed_room_for_title_right",
     "action": "left_hand_egrn_folder_right_palm_stop_before_avans"
-  }
+  },
+  "wordstat_pil_only": true,
+  "wordstat_overlay_style": "paper_sticker_v2",
+  "wordstat_stickers_pil_applied": false
 }
