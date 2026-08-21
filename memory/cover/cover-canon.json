@@ -1,7 +1,7 @@
 {
-  "canon_id": "the_rieltor_light_meme_wordstat_v2",
+  "canon_id": "the_rieltor_light_meme_no_wordstat_v3",
   "status": "ok",
-  "label_ru": "The Риэлтор — изобретение с нуля, light/bright, мемы, Wordstat-стикеры, anti-repeat 14д",
+  "label_ru": "The Риэлтор — изобретение с нуля, light/bright, мемы, yellow sticky from hook, anti-repeat 14д; Wordstat strips FORBIDDEN on cover",
   "forbidden_daypart_formula": {
     "status": "REJECTED_BY_OWNER",
     "never_use": true,
@@ -63,10 +63,10 @@
     "note": "FACE = WHO (i2i). Outfit/action/emotion/pose = HOW — новые каждый раз под hook."
   },
   "title_zone_sacred": {
-    "rule": "Wordstat stickers/tape MUST NOT overlap main headline on cover",
-    "pil_overlay": "scripts/excalibur_blog_cover_wordstat_overlay.py — stickers x≥0.68 (right edge only)",
+    "rule": "Hook title + phone + meme sacred; NO Wordstat query strips/bars anywhere on cover",
+    "wordstat_on_cover": "FORBIDDEN_FOREVER",
     "phone_required": "+7 922 001 65 05",
-    "forbidden_on_title": ["wordstat tape over hook", "sticker occluding H1", "meme over headline text"]
+    "forbidden_on_title": ["wordstat tape over hook", "search query bars top-left", "sticker occluding H1", "meme over headline text"]
   },
   "light_bright": {
     "required": true,
@@ -97,14 +97,20 @@
     }
   },
   "wordstat_stickers": {
-    "required": true,
-    "count": "1–4 readable designer paper stickers per cover (PIL overlay default)",
-    "source": "live Wordstat top + similar queries for topic",
+    "required_on_cover": false,
+    "forbidden_on_cover": true,
+    "owner_ban": "Yandex Wordstat popular-query phrases as paper strips/bars/overlay — PIL/Photoshop/fixer must NOT add them",
+    "forbidden_examples": [
+      "наследство квартиры",
+      "вступление в наследство",
+      "купить квартиру в тюмени",
+      "банкротство продавца",
+      "вторичка тюмень"
+    ],
+    "scout_topic_only": "Scout still uses live MCP-KV Wordstat for TOPIC choice — never paint queries on cover.png",
+    "optional_on_cover": "one yellow sticky from article HOOK (cover-text.json), not from Wordstat queries",
     "geo": "memory/cover/wordstat-geo.json",
-    "style": "paper_sticker_v2 — tape, rounded paper, slight rotation, shadow; NOT opaque horizontal bars",
-    "overlay_script": "scripts/excalibur_blog_cover_wordstat_overlay.py",
-    "sacred_zones": ["title left-top", "meme top-right", "phone bottom band"],
-    "not": ["random words", "spam wall", "SEO tail dump", "opaque gold strips", "truncated phrases at edge"]
+    "not": ["random words", "spam wall", "SEO tail dump", "opaque gold strips", "beige query bars", "truncated phrases at edge"]
   },
   "pixel_qa_gate": {
     "required_before_indexer_publish": true,
@@ -115,10 +121,10 @@
     "stamp": "cover/cover_qa.json with pixel_qa=true + cover_md5",
     "publish_block": "scripts/excalibur_blog_wp_publish.py blocks unless pixel PASS + md5 match",
     "designed_thumbnail": {
-      "rule": "Cover = designed 1200×675 thumbnail, NOT face screenshot. Sacred zones: large hook H1; host close-up face+shoulders with room for type; 2–4 spaced Wordstat paper stickers; phone +7 922 001 65 05; one small meme.",
+      "rule": "Cover = designed 1200×675 thumbnail, NOT face screenshot. Sacred zones: large hook H1; host close-up face+shoulders with room for type; phone +7 922 001 65 05; one small meme; optional one yellow sticky from hook. NO Wordstat query strips.",
       "zones": {
         "hook_title": "right 52–96% × 14–40% (ink outside face bbox)",
-        "wordstat_stack": "narrow top-left 12–32% × 5–24%",
+        "yellow_sticky": "center-left optional — hook phrase only, not Wordstat",
         "phone": "bottom-right 55–98% × 70–96%",
         "meme": "bottom-right 72–96% × 62–88%"
       }
@@ -128,16 +134,15 @@
       "hook title occluded / only face features mistaken for title",
       "no phone +7 922 001 65 05 in bottom-right (pixel_phone_readable)",
       "no meme sticker in corner (pixel_meme_present)",
-      "Wordstat stickers overlap each other in top-left stack — ALWAYS FAIL even when hook title present (pixel_wordstat_stickers_not_overlapping)",
+      "Wordstat-like query strips/bars in top-left (pixel_no_wordstat_query_strips)",
       "layout collapse: face-only crop, labels dumped in corner (pixel_layout_not_collapsed)",
-      "opaque Wordstat bars/strips instead of paper stickers",
+      "opaque Wordstat bars/strips anywhere",
       "stickers overlap title or meme zones",
-      "sticker text truncated at right edge",
       "host distant small full-body (face_h_frac < 0.18)",
       "manifest outfit lie vs pixels (warm outfit + dark blazer torso)",
       "cover_qa describes prompt not PNG"
     ],
-    "fixer_loop": "Fixer → regen cover panel if layout/hook/phone/meme FAIL; on sticker overlap FAIL → repack top-left PIL only (erase paper strips + redraw spaced, never peel/inpaint person) → re-read PNG bytes"
+    "fixer_loop": "Fixer → regen cover panel if layout/hook/phone/meme/query-strip FAIL; never PIL Wordstat overlay/repack; never peel/inpaint person"
   },
   "identity_lock": {
     "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",

@@ -441,19 +441,10 @@ def build_prompt(
             if cover_emotion
             else f"{I2I_EXPRESSION_LOCK}."
         )
-        wordstat = manifest.get("wordstat_stickers") or []
-        wordstat_line = ""
-        pil_only = bool(manifest.get("wordstat_pil_only"))
-        if wordstat and not pil_only:
-            phrases = " | ".join(compact(str(x), 36) for x in wordstat[:3])
-            wordstat_line = (
-                f" Wordstat stickers EXACT Cyrillic: «{phrases}» readable gold tape labels."
-            )
-        elif pil_only:
-            wordstat_line = (
-                " ZERO Wordstat labels on canvas — NO text on clothes/chest; "
-                "PIL adds 2-4 paper stickers top-left only after render."
-            )
+        wordstat_line = (
+            " ZERO Wordstat/search-keyword strips on canvas — FORBIDDEN forever; "
+            "NO beige/gold query bars top-left; NO text on clothes/chest."
+        )
         panel_lines.append(
             f"TL COVER TXT «{cover_hook_text}» bold Cyrillic black, {highlight_rule}.{sticky_lock} "
             f"Phone EXACT «{COVER_PHONE_CTA}» readable CTA sticker. "
@@ -519,7 +510,7 @@ def build_solo_cover_prompt(
     hero: dict,
     design_code: dict,
 ) -> str:
-    """Solo 16:9 cover regen — без quad-canvas; Wordstat только PIL top-left после рендера."""
+    """Solo 16:9 cover regen — без quad-canvas; Wordstat query strips запрещены навсегда."""
     cover = (manifest.get("slots") or {}).get("cover") or {}
     motifs = manifest.get("cover_motifs") or {}
     hook = compact(manifest.get("cover_hook", ""), 120)
@@ -542,12 +533,12 @@ def build_solo_cover_prompt(
     if "Wordstat" in style_prefix:
         style_prefix = style_prefix.replace(
             "1-3 Wordstat stickers (Тюмень). ",
-            "NO Wordstat on canvas (PIL top-left after). ",
+            "NO Wordstat query strips on cover — Scout Wordstat is topic-only. ",
         )
 
     bans = (
-        "BAN HARD: ANY Cyrillic/latin text on clothes/jacket/vest/chest/torso; Wordstat/tape labels on host body; "
-        "gold horizontal bars on person; blue/cyan outline halos on hair/face; smeared ghost text; black blazer; "
+        "BAN HARD: ANY Cyrillic/latin text on clothes/jacket/vest/chest/torso; Wordstat/search-keyword strips/bars; "
+        "beige/gold query labels top-left; blue/cyan outline halos on hair/face; smeared ghost text; black blazer; "
         "mustard+navy vest repeat; dark cinematic; chubby host; polite studio smile copy; text on skin."
     )
 
@@ -565,7 +556,7 @@ def build_solo_cover_prompt(
         f"{compact(scene, COVER_SCENE_HINT_COMPACT)}. "
         "Close-up face+shoulders LEFT or center-left (~35% frame) — NOT full-bleed face crop, room for headline right. "
         "Tiny thinking-cat meme sticker bottom-right corner ONLY — ≥80px clear margin from phone/headline. "
-        "ZERO Wordstat labels on canvas — PIL adds 2–3 paper stickers top-left after render. "
+        "ZERO Wordstat/search-keyword strips — never paint query bars; optional one yellow sticky from hook only. "
         "Sun flare, tape/pins aesthetic on board only, perfect Cyrillic, #FFF bright."
     )
 

@@ -40,7 +40,8 @@ WORDSTAT_ZONE = (0.62, 0.0, 1.0, 1.0)  # правая полоса для Wordst
 HOOK_TITLE_ZONE = (0.52, 0.14, 0.96, 0.40)  # крупный hook H1 справа
 PHONE_STICKER_ZONE = (0.55, 0.70, 0.98, 0.96)  # телефон +7 922 001 65 05
 MEME_CORNER_ZONE = (0.72, 0.62, 0.96, 0.88)  # маленький мем-стикер (без лица)
-WORDSTAT_STACK_ZONE = (0.02, 0.04, 0.40, 0.30)  # 2–4 paper Wordstat без overlap
+WORDSTAT_STACK_ZONE = (0.02, 0.04, 0.40, 0.30)  # legacy — query strips FORBIDDEN
+TOPLEFT_QUERY_STRIP_FORBIDDEN = (0.0, 0.0, 0.42, 0.22)  # beige/gold Wordstat bars — owner ban
 WORDSTAT_NARROW_STACK_ZONE = (0.12, 0.05, 0.32, 0.24)  # узкая колонка — cramped dump
 
 # Пороги калиброваны на FAIL B07 (md5 23051a01…) vs PASS B06
@@ -571,6 +572,23 @@ def _wordstat_sticker_overlap_metrics(img, *, hook_present: bool = False) -> dic
     }
 
 
+def _wordstat_query_strip_metrics(img) -> dict[str, Any]:
+    """Owner ban: Yandex Wordstat query phrases as beige/gold paper strips top-left."""
+    w, h = img.size
+    raw = _paper_sticker_components(img, TOPLEFT_QUERY_STRIP_FORBIDDEN, min_pixels=250)
+    strips = _filter_wordstat_strip_components(raw, img_size=(w, h))
+    paper_frac = _paper_frac_in_zone(img, TOPLEFT_QUERY_STRIP_FORBIDDEN)
+    bar_like = [b for b in _detect_gold_bands(img) if b.get("bar_like")]
+    bars_in_zone = _bands_in_zone(bar_like, TOPLEFT_QUERY_STRIP_FORBIDDEN, (w, h))
+    has_strips = len(strips) >= 1 or len(bars_in_zone) >= 1 or paper_frac >= 0.012
+    return {
+        "strip_components": len(strips),
+        "bar_bands": len(bars_in_zone),
+        "paper_frac": round(paper_frac, 4),
+        "ok": not has_strips,
+    }
+
+
 def _layout_collapse_metrics(img, *, hook_present: bool) -> dict[str, Any]:
     """Face-only crop без designed layout: лицо съело кадр, нет hook title."""
     face = _face_skin_metrics(img)
@@ -594,17 +612,17 @@ def _layout_collapse_metrics(img, *, hook_present: bool) -> dict[str, Any]:
 
 
 def cover_composition_ok(img) -> bool:
-    """Полноценная designed обложка: hook title, телефон, мем, без layout collapse."""
+    """Полноценная designed обложка: hook title, телефон, мем, без layout collapse, без Wordstat strips."""
     hook = _hook_title_metrics(img)
     phone_ink = _phone_zone_ink_count(img)
     meme_sig = _meme_corner_signal(img)
-    overlap = _wordstat_sticker_overlap_metrics(img, hook_present=bool(hook.get("present")))
+    query_strips = _wordstat_query_strip_metrics(img)
     layout = _layout_collapse_metrics(img, hook_present=bool(hook.get("present")))
     return (
         bool(hook.get("present"))
         and phone_ink >= PHONE_ZONE_MIN_INK
         and meme_sig >= MEME_CORNER_MIN_SIGNAL
-        and overlap.get("ok", False)
+        and query_strips.get("ok", False)
         and not layout.get("collapsed", False)
     )
 
@@ -1411,17 +1429,20 @@ def analyze_cover_pixels(
     sticker_overlap = _wordstat_sticker_overlap_metrics(
         img, hook_present=bool(hook_metrics.get("present"))
     )
+    query_strips = _wordstat_query_strip_metrics(img)
     layout_metrics = _layout_collapse_metrics(img, hook_present=bool(hook_metrics.get("present")))
     evidence["hook_title"] = hook_metrics
     evidence["phone_zone_ink"] = phone_ink
     evidence["meme_corner_signal"] = meme_signal
     evidence["wordstat_sticker_overlap"] = sticker_overlap
+    evidence["wordstat_query_strips"] = query_strips
     evidence["layout_collapse"] = layout_metrics
 
     checks["pixel_hook_title_present"] = bool(hook_metrics.get("present"))
     checks["pixel_phone_readable"] = phone_ink >= PHONE_ZONE_MIN_INK
     checks["pixel_meme_present"] = meme_signal >= MEME_CORNER_MIN_SIGNAL
-    checks["pixel_wordstat_stickers_not_overlapping"] = bool(sticker_overlap.get("ok"))
+    checks["pixel_no_wordstat_query_strips"] = bool(query_strips.get("ok"))
+    checks["pixel_wordstat_stickers_not_overlapping"] = True  # legacy key; strips banned
     checks["pixel_layout_not_collapsed"] = not bool(layout_metrics.get("collapsed"))
     checks["pixel_designed_thumbnail"] = cover_composition_ok(img)
 
@@ -1438,10 +1459,12 @@ def analyze_cover_pixels(
         errors.append(
             f"pixel_meme_present FAIL: meme_corner_signal={meme_signal} < {MEME_CORNER_MIN_SIGNAL}"
         )
-    if not checks["pixel_wordstat_stickers_not_overlapping"]:
+    if not checks["pixel_no_wordstat_query_strips"]:
         errors.append(
-            "pixel_wordstat_stickers_not_overlapping FAIL: "
-            f"{len(sticker_overlap.get('overlaps') or [])} overlapping/tight Wordstat stickers"
+            "pixel_no_wordstat_query_strips FAIL: "
+            f"{query_strips.get('strip_components', 0)} Wordstat strip(s), "
+            f"{query_strips.get('bar_bands', 0)} bar band(s), "
+            f"paper_frac={query_strips.get('paper_frac')}"
         )
     if not checks["pixel_layout_not_collapsed"]:
         errors.append(
@@ -1498,7 +1521,7 @@ def stamp_cover_qa_json(
             and checks.get("pixel_no_text_on_clothing", False)
             and checks.get("pixel_meme_clearance_80px", False)
             and checks.get("pixel_hook_title_present", False)
-            and checks.get("pixel_wordstat_stickers_not_overlapping", False)
+            and checks.get("pixel_no_wordstat_query_strips", False)
             and checks.get("pixel_layout_not_collapsed", False)
         ),
         "outfit_invented": checks.get("pixel_manifest_outfit_matches", False),
@@ -1512,7 +1535,8 @@ def stamp_cover_qa_json(
         "motif_no_collision_14d": True,
         "people_in_8_set": True,
         "cats_cadence_ok": True,
-        "wordstat_stickers_1_3": True,
+        "wordstat_stickers_1_3": checks.get("pixel_no_wordstat_query_strips", False),
+        "no_wordstat_query_strips_on_cover": checks.get("pixel_no_wordstat_query_strips", False),
         "identity_real_files": True,
         "inline_utility_all_7": True,
         "inline_no_host_face": True,

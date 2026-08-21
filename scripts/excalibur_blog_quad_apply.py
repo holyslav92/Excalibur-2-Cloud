@@ -108,15 +108,7 @@ def main() -> int:
     if args.inject_html:
         cmd.append("--inject-html")
     proc = subprocess.run(cmd, cwd=str(root))
-    rc = proc.returncode
-    if rc == 0 and args.canvas_index == 1:
-        overlay = root / "scripts/excalibur_blog_cover_wordstat_overlay.py"
-        subprocess.run(
-            [sys.executable, str(overlay), "--article-dir", str(article_dir)],
-            cwd=str(root),
-            check=False,
-        )
-    return rc
+    return int(proc.returncode)
 
 
 if __name__ == "__main__":

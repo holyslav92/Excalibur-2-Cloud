@@ -36,7 +36,7 @@ REQUIRED_CHECKS = (
     "motif_no_collision_14d",
     "people_in_8_set",
     "cats_cadence_ok",
-    "wordstat_stickers_1_3",
+    "no_wordstat_query_strips_on_cover",
     "identity_real_files",
     "inline_utility_all_7",
     "inline_no_host_face",
@@ -66,17 +66,15 @@ PIXEL_REQUIRED = (
     "pixel_meme_zone_clear",
     "pixel_wordstat_not_on_host_chest",
     "pixel_meme_not_occluded_by_wordstat",
-    "pixel_wordstat_only_top_left",
     "pixel_no_text_on_clothing",
     "pixel_no_inpaint_artifacts",
     "pixel_meme_clearance_80px",
-    "pixel_wordstat_phrases_not_truncated",
     "pixel_phone_readable",
     "pixel_light_high_key",
     "pixel_manifest_outfit_matches",
     "pixel_hook_title_present",
     "pixel_meme_present",
-    "pixel_wordstat_stickers_not_overlapping",
+    "pixel_no_wordstat_query_strips",
     "pixel_layout_not_collapsed",
     "pixel_designed_thumbnail",
 )
@@ -241,9 +239,6 @@ def validate_cover_qa(article_dir: Path, root: Path, *, stamp: bool = True) -> d
         errors.append("memory/cover/meme-top100.json missing — meme catalog required")
 
     if manifest_path.is_file() and manifest:
-        stickers = manifest.get("wordstat_stickers") or []
-        if not (1 <= len(stickers) <= 4):
-            errors.append(f"wordstat_stickers count {len(stickers)}, need 1-4 in quad-manifest")
         phone = str(manifest.get("cover_phone_cta") or "").strip()
         if phone != "+7 922 001 65 05":
             errors.append("cover_phone_cta must be '+7 922 001 65 05' in quad-manifest")

@@ -253,7 +253,6 @@ def main() -> int:
     )
     ap.add_argument("--manifest", default="cover/quad-manifest.json")
     ap.add_argument("--inject-html", action="store_true")
-    ap.add_argument("--wordstat-overlay", action="store_true", help="Stamp Wordstat after cover regen")
     args = ap.parse_args()
 
     root = project_root()
@@ -302,13 +301,13 @@ def main() -> int:
                 pre.checks.get("pixel_host_close_up")
                 and pre.checks.get("pixel_phone_readable")
                 and pre.checks.get("pixel_no_text_on_clothing")
-                and pre.checks.get("pixel_wordstat_only_top_left")
+                and pre.checks.get("pixel_no_wordstat_query_strips")
                 and pre.checks.get("pixel_wordstat_not_on_host_chest")
                 and pre.checks.get("pixel_meme_not_occluded_by_wordstat")
                 and pre.checks.get("pixel_no_inpaint_artifacts")
             )
             if not model_dirty:
-                print(f"OK cover base clean before PIL overlay (attempt {attempt})")
+                print(f"OK cover base clean (attempt {attempt})")
                 break
             print(
                 f"WARN cover attempt {attempt}/{max_attempts} model artifacts: "
@@ -318,20 +317,6 @@ def main() -> int:
             if attempt >= max_attempts:
                 print("❌ PANEL REGEN BLOCKER: cover base still dirty after retries", file=sys.stderr)
                 return 1
-
-    if args.wordstat_overlay and "cover" in slot_keys:
-        overlay = root / "scripts/excalibur_blog_cover_wordstat_overlay.py"
-        subprocess.call(
-            [
-                sys.executable,
-                str(overlay),
-                "--article-dir",
-                str(article_dir.relative_to(root)),
-                "--force",
-                "--top-left-only",
-            ],
-            cwd=str(root),
-        )
 
     if args.inject_html:
         split_script = root / "scripts/excalibur_blog_cover_quad_split.py"

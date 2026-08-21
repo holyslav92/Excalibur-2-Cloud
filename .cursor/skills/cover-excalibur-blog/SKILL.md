@@ -1,6 +1,6 @@
 ---
 name: cover-excalibur-blog
-description: "④a Cover: 2× quad Derouter REST 2K, light/meme/Wordstat stickers, anti-repeat 14d."
+description: "④a Cover: 2× quad Derouter REST 2K, light/meme, NO Wordstat query strips, anti-repeat 14d."
 ---
 
 # Cover Agent — longform 8 images, light/meme canon
@@ -57,10 +57,10 @@ PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`, api-dir
 1. **Invent from scratch** — no inventory lock; no default keys/hologram/desk/balcony.
 2. **Anti-repeat 14д** — `used-motifs.json` + `excalibur_blog_cover_motif_gate.py`. **Обязательные поля:** outfit, emotion, pose_framing, action — не только meme/location. FAIL на связку «чёрный пиджак + бюст слева + боковой взгляд» если повтор в последних 2–3 обложках.
 3. **Variety lock (HARD)** — FACE i2i = `face-studio-2026-06-23.jpg` (кости/hairline/eyes/stubble/28yo). **Каждый cover INVENTS:** outfit (не default black blazer), location, action (документ/ключи/телефон/доска…), emotion под hook, pose/framing (не always left talking-head bust).
-4. **Title zone sacred** — Wordstat stickers/tape **не перекрывают** главный заголовок. PIL overlay `excalibur_blog_cover_wordstat_overlay.py` — x≥0.68 (правый край). Телефон +7 922 001 65 05 обязателен.
+4. **Title zone sacred** — hook title + phone + meme; **NO Wordstat query strips/bars** on cover (owner ban). Телефон +7 922 001 65 05 обязателен.
 5. **Light & bright** — high-key, sun flare, light leak, glow; **no dark cinematic**.
 6. **Memes required** — meme cats + catalog people-memes as **small stickers** on cover; host Святослав = only large human. Inline: infographic hero; meme sticker ≤15% frame from `memory/cover/meme-top100.json` — never co-host/stock man.
-7. **Wordstat stickers** — 1–3 readable labels from live Wordstat (Тюмень regions 55+11176).
+7. **Wordstat** — Scout/Research live Wordstat for **topic choice only**; **never** paint query phrases on cover.png. Optional one yellow sticky from hook.
 8. **Identity + body lock** — `face-studio-2026-06-23.jpg` i2i (WHO only); medium slim; NOT chubby.
 9. **Expression invention (HARD)** — эмоция/мимика/поза **новые каждый run** под hook; `scene_hint` + `cover_emotion` + `cover_motifs.emotion/action/outfit/pose_framing`. i2i: «same person, NEW outfit+action+expression, do not copy reference clothes/pose/smile». Копия студийной улыбки 1:1 = FAIL.
 10. **REJECTED daypart formula** — never morning desk / day street / evening close / night split.
@@ -102,8 +102,7 @@ python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICL
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 1 --inject-html
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 2 --inject-html
 
-# Wordstat PIL overlay (default if model omitted stickers on cover)
-python3 scripts/excalibur_blog_cover_wordstat_overlay.py --article-dir "$ARTICLE"
+# Wordstat overlay DISABLED — owner banned query strips on cover (canon v3)
 
 python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --composition "..." ...
 ```
@@ -114,7 +113,7 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 - `slots.cover.scene_hint` — bright invented scene (~80–140 chars) **+ named emotion**
 - `slots.cover.cover_emotion` — hook-matched face (shock, side-eye, grimace, bewildered…); never «same as reference»
 - `cover_motifs` — composition, location, meme, props, stickers, joke, **outfit, emotion, pose_framing, action**
-- `wordstat_stickers` — 1–3 phrases from Scout/Research Wordstat
+- `wordstat_stickers` — Scout topic research only (manifest log); **not painted on cover**
 - `slots.inline_1…7` — H2 anchors, `visual_type` (utility catalog), scene_hint, fact labels (3–6)
 
 ## Self-check before Derouter REST

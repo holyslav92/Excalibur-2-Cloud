@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""PIL overlay: 1–3 Wordstat phrases as paper investigation-board stickers.
+"""Legacy Wordstat overlay — DEPRECATED for pipeline.
 
-Pretty stickers (tape, rounded paper, slight rotation, shadow) — NOT opaque bars.
-Sacred zones: title left-top, meme top-right. Full phrase text, never truncated.
+Owner ban: Wordstat query strips must NOT appear on covers.
+Pipeline 4-slot path must NOT call stamp/repack.
+Emergency only: ``--strip-query-bars-only`` erases top-left query bars without redraw.
 """
 
 from __future__ import annotations
@@ -20,6 +21,7 @@ TITLE_ZONE = (0.0, 0.0, 0.62, 0.38)
 MEME_ZONE = (0.82, 0.0, 1.0, 0.20)
 PHONE_ZONE = (0.55, 0.72, 1.0, 1.0)
 TOPLEFT_WORDSTAT_ZONE = (0.02, 0.04, 0.40, 0.36)
+TOPLEFT_QUERY_STRIP_ZONE = (0.0, 0.0, 0.42, 0.22)  # erase-only zone — yellow sticky below
 
 # Wordstat stickers — только top-left sacred free zone (не title, не meme, не phone)
 DEFAULT_POSITIONS = (
@@ -251,6 +253,97 @@ def _erase_paper_stickers_in_zone(base_rgba, zone: tuple[float, float, float, fl
     return erased
 
 
+def _board_fill_from_clean_zone(base_rgba, sample_zone: tuple[float, float, float, float]) -> tuple[int, int, int]:
+    """Цвет доски из чистой зоны справа — не tan median от стикеров."""
+    w, h = base_rgba.size
+    rgb = base_rgba.convert("RGB")
+    x0 = int(sample_zone[0] * w)
+    y0 = int(sample_zone[1] * h)
+    x1 = int(sample_zone[2] * w)
+    y1 = int(sample_zone[3] * h)
+    samples: list[tuple[int, int, int]] = []
+    for y in range(y0, y1, 3):
+        for x in range(x0, x1, 3):
+            r, g, b = rgb.getpixel((x, y))
+            if _is_paper_pixel(r, g, b):
+                continue
+            lum = (r + g + b) / 3.0
+            if lum < 200 or lum > 252:
+                continue
+            samples.append((r, g, b))
+    if not samples:
+        return (248, 246, 240)
+    return (
+        sum(c[0] for c in samples) // len(samples),
+        sum(c[1] for c in samples) // len(samples),
+        sum(c[2] for c in samples) // len(samples),
+    )
+
+
+def strip_query_bars_only(cover_path: Path) -> dict[str, Any]:
+    """Стереть только top-left Wordstat query bars; не рисовать заново; не inpaint лицо."""
+    try:
+        from PIL import Image
+    except ImportError:
+        return {"status": "SKIP", "reason": "Pillow not installed"}
+    if not cover_path.is_file():
+        return {"status": "SKIP", "reason": f"{cover_path} missing"}
+    img = Image.open(cover_path).convert("RGBA")
+    fill = _board_fill_from_clean_zone(img, (0.48, 0.04, 0.58, 0.20))
+    w, h = img.size
+    rgb = img.convert("RGB")
+    x0 = int(TOPLEFT_QUERY_STRIP_ZONE[0] * w)
+    y0 = int(TOPLEFT_QUERY_STRIP_ZONE[1] * h)
+    x1 = int(TOPLEFT_QUERY_STRIP_ZONE[2] * w)
+    y1 = int(TOPLEFT_QUERY_STRIP_ZONE[3] * h)
+    from collections import deque
+
+    visited = [[False] * (x1 - x0) for _ in range(y1 - y0)]
+    erased = 0
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            lx, ly = x - x0, y - y0
+            if visited[ly][lx]:
+                continue
+            r, g, b = rgb.getpixel((x, y))
+            if not _is_paper_pixel(r, g, b):
+                continue
+            q: deque[tuple[int, int]] = deque([(lx, ly)])
+            visited[ly][lx] = True
+            pixels = 0
+            minx = maxx = lx
+            miny = maxy = ly
+            while q:
+                cx, cy = q.popleft()
+                pixels += 1
+                minx, maxx = min(minx, cx), max(maxx, cx)
+                miny, maxy = min(miny, cy), max(maxy, cy)
+                for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                    nx, ny = cx + dx, cy + dy
+                    if nx < 0 or ny < 0 or nx >= x1 - x0 or ny >= y1 - y0 or visited[ny][nx]:
+                        continue
+                    px, py = x0 + nx, y0 + ny
+                    pr, pg, pb = rgb.getpixel((px, py))
+                    if _is_paper_pixel(pr, pg, pb):
+                        visited[ny][nx] = True
+                        q.append((nx, ny))
+            bw, bh = maxx - minx + 1, maxy - miny + 1
+            if pixels < 280 or bw < 60 or bh < 8:
+                continue
+            pad = 4
+            ex0 = max(0, x0 + minx - pad)
+            ey0 = max(0, y0 + miny - pad)
+            ex1 = min(w, x0 + maxx + pad + 1)
+            ey1 = min(h, y0 + maxy + pad + 1)
+            for ey in range(ey0, ey1):
+                for ex in range(ex0, ex1):
+                    rgb.putpixel((ex, ey), fill)
+            erased += 1
+    img.paste(rgb)
+    img.convert("RGB").save(cover_path, format="PNG")
+    return {"status": "OK", "mode": "strip_query_bars_only", "erased_components": erased, "fill": fill}
+
+
 def repack_wordstat_stickers(cover_path: Path, phrases: list[str]) -> dict[str, Any]:
     """PIL-only: erase top-left paper strips on current cover, redraw spaced stickers."""
     try:
@@ -399,9 +492,14 @@ def main() -> int:
         help="Force Wordstat anchors in top-left sacred zone only",
     )
     ap.add_argument(
+        "--strip-query-bars-only",
+        action="store_true",
+        help="Erase top-left Wordstat query bars only — no redraw (owner override / live fix)",
+    )
+    ap.add_argument(
         "--repack-only",
         action="store_true",
-        help="Erase top-left paper Wordstat strips on current cover.png and redraw spaced (no restore-base)",
+        help="DEPRECATED — owner banned Wordstat overlay repack",
     )
     args = ap.parse_args()
 
@@ -414,49 +512,28 @@ def main() -> int:
         manifest_path = article_dir / manifest_path
 
     cover_path = article_dir / "cover" / "cover.png"
-    if args.restore_base:
-        if restore_cover_base(article_dir):
-            print("OK restored cover base from cover-quad-raw.png")
-        else:
-            print("WARN no cover-quad-raw.png to restore", file=sys.stderr)
+    if args.strip_query_bars_only:
+        report = strip_query_bars_only(cover_path)
+        if report.get("status") == "OK":
+            print(
+                f"OK strip query bars only: erased={report.get('erased_components')} fill={report.get('fill')}"
+            )
+            return 0
+        print(f"FAIL strip query bars: {report}", file=sys.stderr)
+        return 1
 
-    if not manifest_path.is_file():
-        print(f"WARN wordstat overlay: no manifest at {manifest_path}", file=sys.stderr)
-        return 0
-
-    manifest = load_json(manifest_path)
-    if args.skip_if_present and manifest.get("wordstat_stickers_pil_applied") and not args.force:
-        print("OK wordstat overlay skip (already applied)")
-        return 0
-
-    phrases = manifest.get("wordstat_stickers") or []
-    if args.repack_only:
-        report = repack_wordstat_stickers(cover_path, phrases)
-    else:
-        positions = None if args.top_left_only else manifest.get("wordstat_sticker_positions")
-        report = stamp_wordstat_stickers(
-            cover_path,
-            phrases,
-            force=args.force or args.top_left_only,
-            sticker_positions=positions,
-            style="paper",
+    if args.repack_only or args.force or args.restore_base or args.top_left_only or args.skip_if_present:
+        print(
+            "BLOCKER: Wordstat overlay stamp/repack disabled — owner banned query strips on cover; "
+            "use --strip-query-bars-only for emergency erase only",
+            file=sys.stderr,
         )
-    if report["status"] == "OK":
-        manifest["wordstat_stickers_pil_applied"] = True
-        manifest["wordstat_overlay_style"] = "paper_sticker_v2"
-        manifest["wordstat_sticker_positions"] = [
-            [round(m["anchor"][0] / 1200, 3), round(m["anchor"][1] / 675, 3)]
-            for m in report.get("stickers") or []
-        ]
-        manifest_path.write_text(
-            json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-        )
-        print(f"OK wordstat paper stickers: {', '.join(report['stamped'])}")
-        return 0
-    if report["status"] == "SKIP":
-        print(f"OK wordstat overlay skip: {report.get('reason')}")
-        return 0
-    print(f"FAIL wordstat overlay: {report}", file=sys.stderr)
+        return 1
+
+    print(
+        "BLOCKER: Wordstat overlay disabled in pipeline — use --strip-query-bars-only for emergency erase only",
+        file=sys.stderr,
+    )
     return 1
 
 

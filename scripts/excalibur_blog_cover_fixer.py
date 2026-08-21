@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Cover Fixer (Фиксик) — pixel FAIL → top-left Wordstat overlay / regen cover → re-QA bytes.
+"""Cover Fixer (Фиксик) — pixel FAIL → regen cover panel → re-QA bytes.
 
-Никогда не peel/inpaint по человеку. Только PIL stickers в sacred top-left или regen panel.
+Никогда не peel/inpaint по человеку. Wordstat query strips на обложке запрещены навсегда.
 """
 
 from __future__ import annotations
@@ -35,22 +35,6 @@ def pixel_qa(article_dir: Path, root: Path, manifest: dict[str, Any] | None) -> 
     return analyze_cover_pixels(cover, manifest=manifest)
 
 
-def needs_wordstat_fix(result: Any) -> bool:
-    checks = result.checks
-    return not (
-        checks.get("pixel_wordstat_not_opaque_bars")
-        and checks.get("pixel_wordstat_not_edge_truncated")
-        and checks.get("pixel_title_zone_clear")
-        and checks.get("pixel_meme_zone_clear")
-        and checks.get("pixel_wordstat_phrases_not_truncated")
-        and checks.get("pixel_wordstat_not_on_host_chest")
-        and checks.get("pixel_meme_not_occluded_by_wordstat")
-        and checks.get("pixel_wordstat_only_top_left")
-        and checks.get("pixel_meme_clearance_80px")
-        and checks.get("pixel_wordstat_stickers_not_overlapping")
-    )
-
-
 def needs_artifact_fix(result: Any) -> bool:
     checks = result.checks
     return not (
@@ -66,24 +50,6 @@ def needs_host_fix(result: Any) -> bool:
     )
 
 
-def fix_wordstat_stickers(article_dir: Path, root: Path, *, repack_only: bool = False) -> bool:
-    overlay = root / "scripts" / "excalibur_blog_cover_wordstat_overlay.py"
-    rel = article_dir.relative_to(root)
-    cmd = [
-        str(overlay),
-        "--article-dir",
-        str(rel),
-        "--force",
-        "--top-left-only",
-    ]
-    if repack_only:
-        cmd.append("--repack-only")
-    else:
-        cmd.extend(["--restore-base"])
-    rc = run_cmd(root, cmd)
-    return rc == 0
-
-
 def regen_cover_panel(article_dir: Path, root: Path) -> bool:
     regen = root / "scripts" / "excalibur_blog_quad_regen_panels.py"
     rel = article_dir.relative_to(root)
@@ -95,7 +61,6 @@ def regen_cover_panel(article_dir: Path, root: Path) -> bool:
             str(rel),
             "--slots",
             "cover",
-            "--wordstat-overlay",
         ],
     )
     return rc == 0
@@ -109,6 +74,7 @@ def needs_layout_fix(result: Any) -> bool:
         and checks.get("pixel_meme_present")
         and checks.get("pixel_layout_not_collapsed")
         and checks.get("pixel_designed_thumbnail")
+        and checks.get("pixel_no_wordstat_query_strips")
     )
 
 
@@ -147,13 +113,12 @@ def run_fixer(
             }
 
         artifact_fail = needs_artifact_fix(last_result)
-        wordstat_fail = needs_wordstat_fix(last_result)
         host_fail = needs_host_fix(last_result)
         layout_fail = needs_layout_fix(last_result)
 
         if layout_fail or artifact_fail or host_fail:
             if allow_regen:
-                reason = "layout/hook/phone/meme FAIL" if layout_fail else "inpaint/text/host FAIL"
+                reason = "layout/hook/phone/meme/wordstat-strip FAIL" if layout_fail else "inpaint/text/host FAIL"
                 log.append(f"round {round_idx}: {reason} → regen cover panel (no peel/inpaint person)")
                 if regen_cover_panel(article_dir, root):
                     if manifest_path.is_file():
@@ -171,39 +136,6 @@ def run_fixer(
                 else:
                     log.append(f"round {round_idx}: cover regen failed")
             continue
-
-        if wordstat_fail:
-            overlap_fail = not last_result.checks.get("pixel_wordstat_stickers_not_overlapping", True)
-            log.append(
-                f"round {round_idx}: fix wordstat — "
-                f"{'repack top-left PIL only' if overlap_fail else 'top-left PIL overlay only'}"
-            )
-            fix_wordstat_stickers(article_dir, root, repack_only=overlap_fail)
-            last_result = pixel_qa(article_dir, root, manifest)
-            if last_result.status == "PASS":
-                stamp_cover_qa_json(article_dir, last_result, topic_id=topic_id)
-                return {
-                    "status": "PASS",
-                    "rounds": round_idx,
-                    "cover_md5": md5_file(article_dir / "cover" / "cover.png"),
-                    "log": log,
-                    "pixel_description": last_result.evidence.get("pixel_description"),
-                }
-            if allow_regen and round_idx >= 1:
-                log.append(f"round {round_idx}: wordstat still FAIL → regen cover (clean canvas)")
-                if regen_cover_panel(article_dir, root):
-                    if manifest_path.is_file():
-                        manifest = load_json(manifest_path)
-                    last_result = pixel_qa(article_dir, root, manifest)
-                    if last_result.status == "PASS":
-                        stamp_cover_qa_json(article_dir, last_result, topic_id=topic_id)
-                        return {
-                            "status": "PASS",
-                            "rounds": round_idx,
-                            "cover_md5": md5_file(article_dir / "cover" / "cover.png"),
-                            "log": log,
-                            "pixel_description": last_result.evidence.get("pixel_description"),
-                        }
 
     stamp_cover_qa_json(article_dir, last_result, topic_id=topic_id) if last_result else None
     return {
