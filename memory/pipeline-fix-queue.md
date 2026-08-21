@@ -120,17 +120,34 @@ severity: blocker
 category: env
 
 ### What went wrong
-- `excalibur_blog_derouter_opus_chat.py --role sol` → DEROUTER SOL BLOCKER
+- `excalibur_blog_derouter_opus_chat.py --role sol` → DEROUTER SOL BLOCKER (parts 2–3)
 - Derouter HTTP 402: `budget_exceeded` — API key budget exhausted (primary + fallback endpoints)
-- Smoke test also fails with same 402
+- Smoke test also fails with same 402 (utility tier too)
 
 ### How the agent recovered this run
 - Собран `assembled-sol-inputs.md` (trim 2000–2600, 7 inline slots, 4 interlinks, 3 CTA zones).
+- 3-part chunk user files: `sol-part{1,2,3}-user.md`.
+- **Sol part 1/3 PASS** → `sol-part1.html` + `derouter-opus-stamp-sol-part1.json` (~8248 chars).
+- **Sol parts 2–3 BLOCKER** (402 immediately after part 1).
 - `article.html` **не** создан — запрещён Composer fallback для Sol prose.
 
 ### Durable fix needed before next run
 - Пополнить бюджет `DEROUTER_API_KEY` или поднять лимит ключа в Derouter / apikey.cloud.
-- Повторить: `python3 scripts/excalibur_blog_derouter_opus_chat.py --role sol --system-file agents/excalibur-blog-sol.md --user-file .../assembled-sol-inputs.md --output article.html --article-dir .../B08-...`
+- Resume Sol chunk (do NOT single-shot — 524 risk):
+```bash
+ART=memory/blog/articles/B08-tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk
+for p in 2 3; do
+  python3 scripts/excalibur_blog_derouter_opus_chat.py --role sol \
+    --system-file skills/sol-excalibur-blog/SKILL.md \
+    --user-file "$ART/sol-part${p}-user.md" \
+    --output "$ART/sol-part${p}.html" \
+    --article-dir "$ART" \
+    --stamp-path "$ART/derouter-opus-stamp-sol-part${p}.json"
+done
+cat "$ART/sol-part1.html" "$ART/sol-part2.html" "$ART/sol-part3.html" > "$ART/article.html"
+cp "$ART/article.html" "$ART/drafts/variant-a.html"
+# gates → Description → Cover-text || Schema → Cover → Cover-QA → Indexer → Publish
+```
 
 ### Suggested files to inspect/change
 - Cloud Secrets: `DEROUTER_API_KEY`
