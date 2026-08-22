@@ -111,6 +111,33 @@ def is_retryable_http(status: int) -> bool:
     return status in {401, 403, 408, 429, 500, 502, 503, 504, 524}
 
 
+def is_derouter_model_terminal_error(status: int, body: str) -> bool:
+    """HTTP 400 discontinued/invalid model — skip Derouter retries, fall through to Kie."""
+    if status != 400:
+        return False
+    low = (body or "").lower()
+    needles = (
+        "discontinued",
+        "deprecated",
+        "no longer supported",
+        "invalid model",
+        "model not found",
+        "model_not_found",
+        "does not exist",
+    )
+    return any(n in low for n in needles)
+
+
+def format_derouter_http_error(status: int, body: str) -> str:
+    snippet = (body or "")[:500]
+    if is_derouter_model_terminal_error(status, body):
+        return (
+            f"Derouter HTTP {status} (DEROUTER_IMAGE_MODEL discontinued or invalid — "
+            f"update Cloud Secrets; Kie fallback if --fallback-kie): {snippet}"
+        )
+    return f"Derouter HTTP {status}: {snippet}"
+
+
 def _guess_mime(path: Path) -> str:
     guessed, _ = mimetypes.guess_type(str(path))
     return guessed or "application/octet-stream"
@@ -217,8 +244,10 @@ def http_json_post(
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")
         if is_retryable_http(exc.code):
-            raise DerouterRetryable(f"Derouter HTTP {exc.code}: {body[:500]}", status=exc.code) from exc
-        raise DerouterApiError(f"Derouter HTTP {exc.code}: {body[:500]}") from exc
+            raise DerouterRetryable(
+                format_derouter_http_error(exc.code, body), status=exc.code
+            ) from exc
+        raise DerouterApiError(format_derouter_http_error(exc.code, body)) from exc
     except urllib.error.URLError as exc:
         raise DerouterRetryable(f"Derouter network error: {exc.reason}") from exc
 
@@ -282,9 +311,9 @@ def http_multipart_post(
         err_body = exc.read().decode("utf-8", errors="replace")
         if is_retryable_http(exc.code):
             raise DerouterRetryable(
-                f"Derouter edits HTTP {exc.code}: {err_body[:500]}", status=exc.code
+                format_derouter_http_error(exc.code, err_body), status=exc.code
             ) from exc
-        raise DerouterApiError(f"Derouter edits HTTP {exc.code}: {err_body[:500]}") from exc
+        raise DerouterApiError(format_derouter_http_error(exc.code, err_body)) from exc
     except urllib.error.URLError as exc:
         raise DerouterRetryable(f"Derouter edits network error: {exc.reason}") from exc
 

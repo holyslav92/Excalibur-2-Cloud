@@ -6,8 +6,9 @@ Primary Cloud path for Excalibur BLOG cover/inline quad canvas generation.
 
 ```text
 1. DEROUTER_API_KEY set → scripts/excalibur_blog_derouter_gpt_image2_api.py
-2. KIE_API_KEY set      → scripts/excalibur_blog_kie_gpt_image2_api.py (after Derouter auth/5xx + one retry)
+2. KIE_API_KEY set      → scripts/excalibur_blog_kie_gpt_image2_api.py (after Derouter auth/5xx/400 discontinued + one retry)
 3. neither              → BLOCKER (DEROUTER API KEY MISSING / KIE API BLOCKER)
+4. Fixer emergency only (both 1–2 fail): MCP-KV `z-image` for solo cover panel regen — see skills/fixer-excalibur-blog/SKILL.md
 ```
 
 **FORBIDDEN:** `flux2-pro-text-to-image`, `flux2-pro-image-to-image`, Seedream, `nano_banana*`, `z-image`, `mcp-derouter/start-mcp.sh` (broken stdio MCP).
@@ -91,6 +92,7 @@ python3 scripts/excalibur_blog_quad_apply.py --article-dir <dir> --canvas-index 
 - One retry per host on auth/5xx/524 (`--max-retries 1`)
 - Fallback host `api-direct.apikey.cloud` after primary exhausted
 - `--fallback-kie` when Derouter still fails and `KIE_API_KEY` set
+- **HTTP 400 discontinued/invalid model** (`DEROUTER_IMAGE_MODEL` stale): no Derouter retry loop — script falls through to Kie immediately with explicit log. Owner must update `DEROUTER_IMAGE_MODEL` in Cloud Secrets (GET `/v1/models`).
 
 ## Price / quality
 

@@ -62,7 +62,8 @@ needed_decision_or_secret:
 
 - Следующий agent run получает более точный контракт до ошибки.
 - Ошибка ловится ранним gate/script вместо позднего ручного исправления.
-- **Cover pixel FAIL:** Fixer запускает `scripts/excalibur_blog_cover_fixer.py` (paper Wordstat overlay → cover panel regen) и re-QA PNG bytes; PASS только после `cover_qa.json` + md5 match.
+- **Cover pixel FAIL:** Fixer запускает `scripts/excalibur_blog_cover_fixer.py` (solo cover panel regen → cover panel regen) и re-QA PNG bytes; PASS только после `cover_qa.json` + md5 match.
+- **Derouter image discontinued + Kie 402:** Fixer emergency — MCP-KV `z-image` для **solo cover panel** (`quad-solo-batch-cover.json` prompt из `build_solo_cover_prompt`), сохранить `cover/cover-zimage-raw.png`, resize 1200×675 → `cover.png`, re-QA. Запрещено для initial 2× quad canvas production path.
 - Retry/fallback описан идемпотентно: без дублей image jobs, publish calls, ledger rows.
 - Fix не раскрывает secrets и не зависит от абсолютных путей конкретной машины.
 

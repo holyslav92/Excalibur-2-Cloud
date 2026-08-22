@@ -71,21 +71,12 @@ def build_panel_prompt(manifest: dict[str, Any], slot_key: str, root: Path) -> s
     hero = load_json(hero_path) if hero_path.is_file() else {}
 
     if slot_key == "cover":
-        if manifest.get("wordstat_pil_only"):
-            design_path = root / "memory/cover/cover-design-code.json"
-            design_code = load_json(design_path) if design_path.is_file() else {}
-            from excalibur_blog_cover_quad_prompt import build_solo_cover_prompt
+        design_path = root / "memory/cover/cover-design-code.json"
+        design_code = load_json(design_path) if design_path.is_file() else {}
+        from excalibur_blog_cover_quad_prompt import build_solo_cover_prompt
 
-            return build_solo_cover_prompt(manifest, style, hero, design_code)
-        return build_prompt(
-            manifest,
-            style,
-            hero,
-            types_catalog,
-            design_code,
-            canvas_slots=("cover",),
-            has_cover=True,
-        )
+        # Solo 16:9 regen always — quad-canvas prompt reintroduces Wordstat strips (B08).
+        return build_solo_cover_prompt(manifest, style, hero, design_code)
 
     neg = slot_negatives(slot_key, slot)
     base = inline_panel_prompt(slot, types_catalog)

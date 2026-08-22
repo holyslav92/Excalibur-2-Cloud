@@ -148,4 +148,6 @@ def apply_quad_canon_to_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
         "canvas_2_no_host_face": True,
         "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
     }
+    # cover-canon v3: Wordstat strips forbidden on cover; PIL overlay path disabled.
+    manifest["wordstat_pil_only"] = True
     return manifest
