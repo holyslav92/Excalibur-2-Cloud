@@ -44,9 +44,7 @@ files_changed:
 checks_run:
 - `python3 -m py_compile` on changed scripts
 - `python3 -m unittest tests.test_fixer_b08` → OK
-commit: pending
-
-## INC-20260822-1110-derouter-image-discontinued-b08
+commit: c05047b
 status: fixed
 run_date: 2026-08-22
 role: excalibur-blog-cover
