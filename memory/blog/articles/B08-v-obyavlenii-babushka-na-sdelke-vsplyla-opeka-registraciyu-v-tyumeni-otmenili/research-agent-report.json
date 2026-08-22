@@ -1,0 +1,50 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B08",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-22",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Пост «В квартире живет бабушка. Только бабушки в квартире нет» — ПНД, старая доверенность, скидка 1→3 млн"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Канал Святослава Шакина — контекст рисков сделки август 2026"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 22880,
+    "hook_phrase": "доверенность на продажу квартиры",
+    "hook_volume": 97
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "Опека/ПНД — не duplicate B05 discount plot; не inheritance B07"
+  },
+  "official_source_audit": {
+    "required": false,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["gk_rf", "rosreestr_218fz"],
+    "errors": [],
+    "note": "Legal norms GK 37, 185; FZ-218 art 36; no bank tariffs"
+  },
+  "key_facts_count": 18,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}

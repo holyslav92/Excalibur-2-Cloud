@@ -1,0 +1,187 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-22",
+    "today_ru": "22.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "суббота"
+  },
+  "topic": {
+    "topic_id": "B08",
+    "title": "В объявлении бабушка — на сделке всплыла опека: регистрацию в Тюмени отменили",
+    "h1": "В объявлении бабушка — на сделке всплыла опека: регистрацию в Тюмени отменили",
+    "slug": "v-obyavlenii-babushka-na-sdelke-vsplyla-opeka-registraciyu-v-tyumeni-otmenili",
+    "primary_query": "В объявлении бабушка — на сделке всплыла опека: регистрацию в Тюмени отменили",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В объявлении бабушка — на сделке всплыла опека: регистрацию в Тюмени отменили 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени бабушка пинала приемного сына своей дочери, ребенка у мамы ...",
+          "url": "https://vk.com/wall-34905867_101135",
+          "snippet": ""
+        },
+        {
+          "title": "«На фоне стресса появился ещё один неврологический диагноз». Опека ...",
+          "url": "https://dzen.ru/a/akNgedv4lERlBl80",
+          "snippet": "А теперь мой сын снова в детском доме. Произошел единичный чудовищный срыв моей матери, о котором я немедленно узнала и с которой я немедленно разорвала все связи."
+        },
+        {
+          "title": "В Тюмени бабушка пинала приемного сына своей дочери, ребенка у мамы ...",
+          "url": "https://vk.com/wall-123848624_106319",
+          "snippet": "Жительнице Тюмени Виктории Ортман вернули приёмного сына Тимофея после инцидента с бабушкой, произошедшего 3 июня 2026 года. Напомним, камеры наблюдения в подъезде сняли, как пожилая женщина пнула внука несколько раз. Спустя пару дней, 5 июня, мальчика забрали из семьи сотрудники органов опеки."
+        },
+        {
+          "title": "Бабушка отпинала приемного ребенка. Избиение попало на видео, малыша ...",
+          "url": "https://v1.ru/text/incidents/2026/06/14/76475463/",
+          "snippet": "А теперь мой сын снова в детском доме. Произошел единичный чудовищный срыв моей матери, о котором я немедленно узнала и с которой я немедленно разорвала все связи."
+        },
+        {
+          "title": "Тюмень: опека изъяла пятилетнего Тимофея после видео с бабушкой‑пинает",
+          "url": "https://pulsfid.ru/news/tyumen-opeka-izyala-pyatiletnego-timofeya-posle-video-s-babushkoy-pinaet-191062524",
+          "snippet": "Это такая классическая бабушка. Но бабушке очень сложно, — признаёт Виктория. В день, когда случился инцидент, по словам женщины, ее мама сама предложила погулять с Иваном."
+        },
+        {
+          "title": "Опека и попечительство - судебная практика",
+          "url": "https://sudact.ru/practice/opeka-i-popechitelstvo2/",
+          "snippet": "В Тюмени ребёнка забрали из приёмной семьи после вирусного ролика, где бабушка бьёт мальчика. Опека проверяет условия, а мать ищет поддержку и возврат сына."
+        }
+      ],
+      "searched_at": "2026-08-22"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В объявлении бабушка — на сделке всплыла опека: регистрацию в Тюмени отменили 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени бабушка пинала приемного сына своей дочери, ребенка у мамы ...",
+          "url": "https://vk.com/wall-224615969_11254",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени бабушка избила внука — его забрали органы опеки у приемной ...",
+          "url": "https://72.ru/text/incidents/2026/06/07/76465895/",
+          "snippet": "А теперь мой сын снова в детском доме. Произошел единичный чудовищный срыв моей матери, о котором я немедленно узнала и с которой я немедленно разорвала все связи."
+        },
+        {
+          "title": "Тюмень: опека изъяла пятилетнего Тимофея после видео с бабушкой‑пинает",
+          "url": "https://pulsfid.ru/news/tyumen-opeka-izyala-pyatiletnego-timofeya-posle-video-s-babushkoy-pinaet-191062524",
+          "snippet": "Органы опеки в итоге забрали его у приемной мамы. Она пытается вернуть мальчика и осудила действия своей родительницы."
+        },
+        {
+          "title": "Бабушка отпинала приемного ребенка. Избиение попало на видео, малыша ...",
+          "url": "https://ngs.ru/text/incidents/2026/06/14/76475486/",
+          "snippet": "В Тюмени ребёнка забрали из приёмной семьи после вирусного ролика, где бабушка бьёт мальчика. Опека проверяет условия, а мать ищет поддержку и возврат сына."
+        },
+        {
+          "title": "В Тюмени бабушка избила внука в подъезде — опека забрала ребёнка у ...",
+          "url": "https://ural034.info/2026/06/07/v-tyumeni-babushka-izbila-vnuka-v-podezde-opeka-zabrala-rebenka-u-priemnoi-materi/",
+          "snippet": "Она взяла Ивана под опеку, когда ему было 5 месяцев. Того, что пережила за последнюю неделю жительница Тюмени Виктория Ортман, врагу не пожелаешь. У нее забрали малыша, которого она растит с пяти месяцев: двухлетнего Ивана увезли в дом малютки после видео, которое завирусилось в Сети."
+        },
+        {
+          "title": "В Тюмени бабушка избила внука — опека забрала мальчика у приёмной ...",
+          "url": "https://tyumen72.info/2026/06/07/v-tyumeni-babushka-izbila-vnuka-opeka-zabrala-malchika-u-priemnoi-materi/",
+          "snippet": "В подъезде Тюмени женщина избила мальчика, позже выяснилось, что это его бабушка. Органы опеки забрали ребёнка у приёмной матери; она требует наказать родственницу и вернуть ребёнка домой."
+        }
+      ],
+      "searched_at": "2026-08-22"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В объявлении бабушка — на сделке всплыла опека: регистрацию в Тюмени отменили official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-08-22"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В объявлении бабушка — на сделке всплыла опека: регистрацию в Тюмени отменили 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "nyro/docs/images/NYRO-logo.png at master · nyroway/nyro",
+          "url": "https://github.com/nyroway/nyro/blob/master/docs/images/NYRO-logo.png",
+          "snippet": ""
+        },
+        {
+          "title": "webosu/research.svg at master · 111116/webosu · GitHub",
+          "url": "https://github.com/111116/webosu/blob/master/research.svg",
+          "snippet": "Self-hosted AI Gateway — connect Claude Code, Codex, Gemini CLI and any SDK to any model provider with protocol translation. - nyroway/nyro"
+        },
+        {
+          "title": "agent_exploration/fig/level5_ecosystem.png at main · banyikun/agent ...",
+          "url": "https://github.com/banyikun/agent_exploration/blob/main/fig/level5_ecosystem.png",
+          "snippet": "⓵ web rhythm game (unofficial osu!) http://osugame.online/ - webosu/research.svg at master · 111116/webosu"
+        },
+        {
+          "title": "was-node-suite-comfyui/image/RGB_value_example.jpg at main ...",
+          "url": "https://github.com/RituCodeWeb/was-node-suite-comfyui/blob/main/image/RGB_value_example.jpg",
+          "snippet": "Agent Exploration Toward Artificial General Intelligence: A Survey - banyikun/agent_exploration"
+        },
+        {
+          "title": "PULSE/pics/example_interpretation_report.png at main · openmedlab/PULSE",
+          "url": "https://github.com/openmedlab/PULSE/blob/main/pics/example_interpretation_report.png",
+          "snippet": "Contribute to RituCodeWeb/was-node-suite-comfyui development by creating an account on GitHub."
+        },
+        {
+          "title": "oracle_mcp/oracle.svg at main · kklike32/oracle_mcp · GitHub",
+          "url": "https://github.com/kklike32/oracle_mcp/blob/main/oracle.svg",
+          "snippet": "PULSE: Pretrained and Unified Language Service Engine - PULSE/pics/example_interpretation_report.png at main · openmedlab/PULSE"
+        }
+      ],
+      "searched_at": "2026-08-22"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В объявлении бабушка — на сделке всплыла опека: регистрацию в Тюмени отменили forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Тюмень: опека изъяла пятилетнего Тимофея после видео с бабушкой‑пинает",
+          "url": "https://pulsfid.ru/news/tyumen-opeka-izyala-pyatiletnego-timofeya-posle-video-s-babushkoy-pinaet-191062524",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени бабушка избила внука в подъезде — опека забрала ребёнка у ...",
+          "url": "https://ural034.info/2026/06/07/v-tyumeni-babushka-izbila-vnuka-v-podezde-opeka-zabrala-rebenka-u-priemnoi-materi/",
+          "snippet": "В Тюмени ребёнка забрали из приёмной семьи после вирусного ролика, где бабушка бьёт мальчика. Опека проверяет условия, а мать ищет поддержку и возврат сына."
+        },
+        {
+          "title": "В Тюмени бабушка избила внука — опека забрала мальчика у приёмной ...",
+          "url": "https://tyumen72.info/2026/06/07/v-tyumeni-babushka-izbila-vnuka-opeka-zabrala-malchika-u-priemnoi-materi/",
+          "snippet": "В подъезде Тюмени женщина избила мальчика, позже выяснилось, что это его бабушка. Органы опеки забрали ребёнка у приёмной матери; она требует наказать родственницу и вернуть ребёнка домой."
+        },
+        {
+          "title": "«На фоне стресса появился ещё один неврологический диагноз». Опека ...",
+          "url": "https://dzen.ru/a/akNgedv4lERlBl80",
+          "snippet": "Нападавшая оказалась бабушкой мальчика — после инцидента органы опеки забрали ребёнка у приёмной матери, которая утверждает, что сын нейроотличный и требует вернуть его."
+        },
+        {
+          "title": "В Тюмени бабушка пинала приемного сына своей дочери, ребенка у мамы ...",
+          "url": "https://vk.com/wall-224615969_11254",
+          "snippet": "Жительнице Тюмени Виктории Ортман вернули приёмного сына Тимофея после инцидента с бабушкой, произошедшего 3 июня 2026 года. Напомним, камеры наблюдения в подъезде сняли, как пожилая женщина пнула внука несколько раз. Спустя пару дней, 5 июня, мальчика забрали из семьи сотрудники органов опеки."
+        },
+        {
+          "title": "Трёхлетнего тюменца, которого пинала бабушка в подъезде, органы опеки ...",
+          "url": "https://dzen.ru/a/ailPvbPDWWdXjzKb",
+          "snippet": "А теперь мой сын снова в детском доме. Произошел единичный чудовищный срыв моей матери, о котором я немедленно узнала и с которой я немедленно разорвала все связи."
+        }
+      ],
+      "searched_at": "2026-08-22"
+    }
+  ],
+  "errors": []
+}
