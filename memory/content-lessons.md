@@ -4,6 +4,9 @@
 
 | lesson_id | topic | status | category |
 |-----------|-------|--------|----------|
+| [LESSON-20260822-1109-B08-inheritance-sibling-cluster-anti-dup](content-lessons/LESSON-20260822-1109-B08-inheritance-sibling-cluster-anti-dup.md) | B08 | proposed | structure |
+| [LESSON-20260822-1109-B08-zags-period-vs-purchase-year-utility](content-lessons/LESSON-20260822-1109-B08-zags-period-vs-purchase-year-utility.md) | B08 | proposed | utility |
+| [LESSON-20260822-1109-B08-writer-sol-compression-gap](content-lessons/LESSON-20260822-1109-B08-writer-sol-compression-gap.md) | B08 | proposed | structure |
 | [LESSON-20260821-0615-B06-derouter-524-chunk-fallback](content-lessons/LESSON-20260821-0615-B06-derouter-524-chunk-fallback.md) | B06 | proposed | other |
 | [LESSON-20260821-0615-B06-quality-bar-wordstat-pil-sync](content-lessons/LESSON-20260821-0615-B06-quality-bar-wordstat-pil-sync.md) | B06 | applied | other |
 | [LESSON-20260821-0615-B06-html-linter-cta-div-whitelist](content-lessons/LESSON-20260821-0615-B06-html-linter-cta-div-whitelist.md) | B06 | applied | structure |
