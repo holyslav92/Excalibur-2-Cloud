@@ -11,6 +11,7 @@ import hashlib
 import json
 import re
 import sys
+from collections import deque
 from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
@@ -59,6 +60,43 @@ WORDSTAT_CROWDED_MAX_SPAN_FRAC = 0.21
 
 GOLD_STICKER_RGB = (220, 197, 161)
 PHONE_REQUIRED = "+7 922 001 65 05"
+TITLE_OCR_ZONE = (0.02, 0.04, 0.98, 0.48)
+TITLE_LEFT_LATIN_ZONE = (0.02, 0.04, 0.50, 0.45)
+TITLE_RIGHT_CYR_ZONE = (0.48, 0.10, 0.98, 0.46)
+SERVICES_HEADER_ZONE = (0.04, 0.03, 0.42, 0.16)
+SERVICES_LIST_ZONE = (0.05, 0.16, 0.55, 0.72)
+SERVICES_PAPER_ZONE = (0.05, 0.10, 0.75, 0.85)
+MEME_CAT_ZONE = (0.68, 0.58, 0.99, 0.95)
+HOST_FACE_BLOB_MIN_PIXELS = 10_000
+HOST_FACE_BLOB_MIN_H_FRAC = 0.42
+LATIN_GARBAGE_TOKENS = ("ZAGS", "EGRN", "EGRP")
+SERVICES_CHECKLIST_MARKERS = ("ПОМОГАЮ", "КАКЯПОМОГАЮ", "КАКЯПОМОГА")
+PHONE_DIGITS_NEEDLE = "9220016505"
+PHONE_SUFFIX_NEEDLE = "6505"
+# Текст с чужих обложек / B06-template mashup — FAIL если нет в cover_hook статьи.
+FOREIGN_LEAK_MARKERS = (
+    "ПОДОРОЖАЛ",
+    "ПОДОРОЖАЛА",
+    "ОДОРОЖАЛ",
+    "ОДОРОЖАЛА",
+    "ПОСЛЕОЦЕНК",
+    "ПОСЛЕОЦЕНКИ",
+    "КУПИТЬКВАРТИРУ",
+    "КВАРТИРУВТЮМЕН",
+    "КВАРТИРУВТЮМЕНИ",
+)
+WORDSTAT_OCR_MARKERS = (
+    "КУПИТЬКВАРТИРУ",
+    "КВАРТИРУВТЮМЕН",
+    "КВАРТИРУВТЮМЕНИ",
+    "ИПОТЕКАТЮМЕН",
+    "ИПОТЕКУТЮМЕН",
+    "НЕДВИЖИМОСТЬТЮМЕН",
+)
+PIL_ERASE_MASK_ZONE = (0.48, 0.08, 0.98, 0.44)
+SECOND_FACE_ZONE = (0.55, 0.52, 0.98, 0.92)
+SECOND_FACE_BLOB_MIN = 2500
+SECOND_FACE_BLOB_MAX = 14_000
 
 BANNED_OUTFIT_TOKENS = (
     "black blazer",
@@ -614,14 +652,22 @@ def _layout_collapse_metrics(img, *, hook_present: bool) -> dict[str, Any]:
 def cover_composition_ok(img) -> bool:
     """Полноценная designed обложка: hook title, телефон, мем, без layout collapse, без Wordstat strips."""
     hook = _hook_title_metrics(img)
-    phone_ink = _phone_zone_ink_count(img)
-    meme_sig = _meme_corner_signal(img)
+    title_cyr = _title_cyrillic_metrics(img)
+    host_ok, _ = _host_face_present(img)
+    services = _services_checklist_metrics(img)
+    phone = _phone_digits_metrics(img)
+    meme = _cat_meme_metrics(img, host_face=host_ok)
+    sticky = _blank_sticky_metrics(img)
     query_strips = _wordstat_query_strip_metrics(img)
     layout = _layout_collapse_metrics(img, hook_present=bool(hook.get("present")))
     return (
         bool(hook.get("present"))
-        and phone_ink >= PHONE_ZONE_MIN_INK
-        and meme_sig >= MEME_CORNER_MIN_SIGNAL
+        and bool(title_cyr.get("ok"))
+        and host_ok
+        and not bool(services.get("is_services_card"))
+        and bool(phone.get("ok"))
+        and bool(meme.get("ok"))
+        and bool(sticky.get("ok"))
         and query_strips.get("ok", False)
         and not layout.get("collapsed", False)
     )
@@ -1196,9 +1242,589 @@ def _manifest_expects_warm_outfit(manifest: dict[str, Any] | None) -> bool:
     return any(tok in outfit for tok in WARM_OUTFIT_TOKENS)
 
 
+def _ocr_image_zone(img, zone: tuple[float, float, float, float], *, lang: str = "rus+eng", psm: int = 6) -> str:
+    """OCR зоны обложки; пустая строка если tesseract недоступен."""
+    try:
+        import pytesseract
+        from PIL import ImageEnhance
+    except ImportError:
+        return ""
+    w, h = img.size
+    x0 = int(zone[0] * w)
+    y0 = int(zone[1] * h)
+    x1 = int(zone[2] * w)
+    y1 = int(zone[3] * h)
+    if x1 <= x0 or y1 <= y0:
+        return ""
+    crop = img.crop((x0, y0, x1, y1))
+    if crop.mode != "L":
+        crop = crop.convert("L")
+    crop = ImageEnhance.Contrast(crop).enhance(2.0)
+    # Ускорение + стабильность: даунскейл и timeout против зависших tesseract.
+    max_w = 900
+    if crop.width > max_w:
+        new_h = max(1, int(crop.height * max_w / crop.width))
+        crop = crop.resize((max_w, new_h))
+    try:
+        return pytesseract.image_to_string(crop, lang=lang, config=f"--psm {psm}", timeout=8)
+    except Exception:
+        return ""
+
+
+def _norm_ocr_text(text: str) -> str:
+    return re.sub(r"[^0-9A-ZА-ЯЁ]+", "", (text or "").upper().replace("Ё", "Е"))
+
+
+def _manifest_cover_hook(manifest: dict[str, Any] | None) -> str:
+    if not manifest:
+        return ""
+    hook = str(manifest.get("cover_hook") or "").strip()
+    if hook:
+        return hook
+    slots = manifest.get("slots") or {}
+    cover = slots.get("cover") or {}
+    return str(cover.get("alt") or "").strip()
+
+
+def _all_skin_blobs(img, *, min_pixels: int = 1200) -> list[dict[str, Any]]:
+    """Все связные skin-blob на кадре (для collage inset / второго лица)."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    pixels_rgb = rgb.load()
+    visited = [[False] * w for _ in range(h)]
+    blobs: list[dict[str, Any]] = []
+
+    for y in range(0, h, 2):
+        for x in range(0, w, 2):
+            if visited[y][x] or not _is_skin(*pixels_rgb[x, y]):
+                continue
+            q: deque[tuple[int, int]] = deque([(x, y)])
+            visited[y][x] = True
+            count = 0
+            minx = maxx = x
+            miny = maxy = y
+            while q:
+                cx, cy = q.popleft()
+                count += 1
+                minx = min(minx, cx)
+                maxx = max(maxx, cx)
+                miny = min(miny, cy)
+                maxy = max(maxy, cy)
+                for dx, dy in ((2, 0), (-2, 0), (0, 2), (0, -2)):
+                    nx, ny = cx + dx, cy + dy
+                    if 0 <= nx < w and 0 <= ny < h and not visited[ny][nx]:
+                        if _is_skin(*pixels_rgb[nx, ny]):
+                            visited[ny][nx] = True
+                            q.append((nx, ny))
+            if count < min_pixels:
+                continue
+            bw = maxx - minx + 2
+            bh = maxy - miny + 2
+            blobs.append(
+                {
+                    "pixels": count,
+                    "w_frac": round(bw / max(w, 1), 3),
+                    "h_frac": round(bh / max(h, 1), 3),
+                    "cx": round((minx + maxx) / 2 / max(w, 1), 3),
+                    "cy": round((miny + maxy) / 2 / max(h, 1), 3),
+                }
+            )
+    blobs.sort(key=lambda b: int(b.get("pixels") or 0), reverse=True)
+    return blobs
+
+
+def _foreign_article_leak_metrics(img, manifest: dict[str, Any] | None) -> dict[str, Any]:
+    """Чужой hook/Wordstat-текст с другой статьи (B06 mashup leak)."""
+    hook_norm = _norm_ocr_text(_manifest_cover_hook(manifest))
+    full_ocr = _ocr_image_zone(img, (0.0, 0.0, 1.0, 1.0), lang="rus+eng", psm=6)
+    ocr_norm = _norm_ocr_text(full_ocr)
+    leaks: list[str] = []
+    for marker in FOREIGN_LEAK_MARKERS:
+        if marker in ocr_norm and marker not in hook_norm:
+            leaks.append(marker)
+    return {"ok": not leaks, "leaks": leaks, "ocr_sample": " ".join(full_ocr.split())[:160]}
+
+
+def _hook_title_complete_metrics(img, manifest: dict[str, Any] | None) -> dict[str, Any]:
+    """Hook title не обрезан: значимые слова hook целиком в title zone (не префикс-обрезка)."""
+    hook = _manifest_cover_hook(manifest)
+    if not hook:
+        return {"ok": True, "skipped": "no_manifest_hook"}
+    words = [w for w in re.findall(r"[а-яА-ЯёЁ]+", hook) if len(w) >= 5]
+    if not words:
+        return {"ok": True, "skipped": "no_significant_words"}
+    title_ocr = _ocr_image_zone(img, HOOK_TITLE_ZONE, lang="rus+eng", psm=6)
+    title_norm = _norm_ocr_text(title_ocr)
+    missing: list[str] = []
+    partial: list[str] = []
+    for word in words:
+        wn = _norm_ocr_text(word)
+        if not wn:
+            continue
+        if wn in title_norm:
+            continue
+        prefix_hit = False
+        for plen in range(len(wn) - 1, 3, -1):
+            if wn[:plen] in title_norm:
+                partial.append(word)
+                prefix_hit = True
+                break
+        if not prefix_hit:
+            missing.append(word)
+    truncated = bool(partial)
+    ok = not truncated and len(missing) == 0
+    return {
+        "ok": ok,
+        "missing": missing,
+        "partial": partial,
+        "truncated": truncated,
+        "last_word": words[-1],
+        "ocr_sample": " ".join(title_ocr.split())[:160],
+    }
+
+
+def _wordstat_ocr_leak_metrics(img) -> dict[str, Any]:
+    """Wordstat buyer-query strips — OCR по запрещённым зонам и верхней полосе."""
+    zones = (
+        TOPLEFT_QUERY_STRIP_FORBIDDEN,
+        (0.0, 0.0, 0.45, 0.35),
+        (0.55, 0.18, 0.98, 0.42),
+        (0.0, 0.0, 1.0, 0.22),
+        (0.0, 0.18, 0.55, 0.45),
+    )
+    hits: list[str] = []
+    samples: list[str] = []
+    for zone in zones:
+        text = _ocr_image_zone(img, zone, lang="rus+eng", psm=6)
+        norm = _norm_ocr_text(text)
+        samples.append(" ".join(text.split())[:80])
+        for marker in WORDSTAT_OCR_MARKERS:
+            if marker in norm:
+                hits.append(marker)
+    hits = sorted(set(hits))
+    return {"ok": not hits, "hits": hits, "samples": samples}
+
+
+def _phone_zone_has_right_inset(img) -> bool:
+    """Мини-коллаж справа в phone zone (кот + стикер) — типичный PIL mashup."""
+    zone = PHONE_STICKER_ZONE
+    w, h = img.size
+    rz = (
+        zone[0] + (zone[2] - zone[0]) * 0.62,
+        zone[1],
+        zone[2],
+        zone[3],
+    )
+    x0, y0, x1, y1 = int(rz[0] * w), int(rz[1] * h), int(rz[2] * w), int(rz[3] * h)
+    rgb = img.crop((x0, y0, x1, y1)).convert("RGB")
+    colored = 0
+    total = 0
+    for y in range(0, rgb.height, 2):
+        for x in range(0, rgb.width, 2):
+            total += 1
+            r, g, b = rgb.getpixel((x, y))
+            if r >= 245 and g >= 245 and b >= 242:
+                continue
+            if abs(r - g) < 18 and abs(g - b) < 18:
+                continue
+            colored += 1
+    return colored / max(total, 1) >= 0.12
+
+
+def _phone_not_clipped_metrics(img) -> dict[str, Any]:
+    """Телефон в sacred zone: полная строка с хвостом 05, не обрезан справа.
+
+    Основной стикер — левая часть PHONE_STICKER_ZONE; inset-коллаж справа
+    (кот + мини-стикер с полным номером) не засчитывается.
+    """
+    zone = PHONE_STICKER_ZONE
+    inset_collage = _phone_zone_has_right_inset(img)
+    ocr_zone = (
+        (
+            zone[0],
+            zone[1],
+            zone[0] + (zone[2] - zone[0]) * 0.72,
+            zone[3],
+        )
+        if inset_collage
+        else zone
+    )
+    ink = _phone_zone_ink_count(img)
+    ocr_lines: list[str] = []
+    try:
+        import pytesseract
+        from PIL import ImageOps
+
+        w, h = img.size
+
+        def _ocr_phone_zone(subzone: tuple[float, float, float, float]) -> list[str]:
+            lines: list[str] = []
+            x0 = int(subzone[0] * w)
+            y0 = int(subzone[1] * h)
+            x1 = int(subzone[2] * w)
+            y1 = int(subzone[3] * h)
+            crop = img.crop((x0, y0, x1, y1)).convert("L")
+            crop = ImageOps.autocontrast(crop)
+            crop = crop.point(lambda p: 255 if p > 140 else 0)
+            if crop.width > 700:
+                crop = crop.resize((700, max(1, int(crop.height * 700 / crop.width))))
+            for psm in (7, 6, 11):
+                part = pytesseract.image_to_string(
+                    crop,
+                    lang="eng",
+                    config=f"--psm {psm} -c tessedit_char_whitelist=0123456789+ ",
+                    timeout=5,
+                )
+                for line in part.splitlines():
+                    line = line.strip()
+                    if line and any(ch.isdigit() for ch in line):
+                        lines.append(line)
+            return lines
+
+        ocr_lines = _ocr_phone_zone(ocr_zone)
+    except Exception:
+        pass
+
+    def _line_has_full_suffix(line: str) -> bool:
+        compact = line.replace(" ", "").replace("-", "")
+        digits = "".join(ch for ch in line if ch.isdigit())
+        return (
+            line.rstrip().endswith("05")
+            or "65 05" in line
+            or compact.endswith("6505")
+            or digits.endswith("6505")
+        )
+
+    def _line_looks_clipped(line: str) -> bool:
+        if not any(ch.isdigit() for ch in line):
+            return False
+        if "922" not in line and "7922" not in line:
+            return False
+        if _line_has_full_suffix(line):
+            return False
+        digits = "".join(ch for ch in line if ch.isdigit())
+        if digits.endswith("65") and not digits.endswith("6505"):
+            return True
+        if "001" in line and "65" in line and "05" not in line:
+            return True
+        return line.rstrip().endswith("65")
+
+    phone_lines = [ln for ln in ocr_lines if "922" in ln or "7922" in ln or "001" in ln]
+    best = max(phone_lines or ocr_lines, key=len) if (phone_lines or ocr_lines) else ""
+    joined = " | ".join(ocr_lines)
+    digits = "".join(ch for ch in best if ch.isdigit())
+    has_suffix = _line_has_full_suffix(best)
+    clipped = bool(phone_lines) and any(_line_looks_clipped(ln) for ln in phone_lines)
+    if not clipped and best and _line_looks_clipped(best):
+        clipped = True
+    if not has_suffix and bool(phone_lines or ocr_lines):
+        clipped = True
+    ok = ink >= PHONE_ZONE_MIN_INK // 2 and has_suffix and not clipped
+    return {
+        "ok": ok,
+        "ink": ink,
+        "digits": digits[:24],
+        "clipped": clipped,
+        "best_line": best[:80],
+        "ocr": joined[:120],
+        "zone": "left_primary" if inset_collage else "full",
+        "inset_collage": inset_collage,
+    }
+
+
+def _collage_inset_metrics(img) -> dict[str, Any]:
+    """PIL mashup: белые маски + второе лицо inset справа."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    x0, y0, x1, y1 = (
+        int(PIL_ERASE_MASK_ZONE[0] * w),
+        int(PIL_ERASE_MASK_ZONE[1] * h),
+        int(PIL_ERASE_MASK_ZONE[2] * w),
+        int(PIL_ERASE_MASK_ZONE[3] * h),
+    )
+    near_white = 0
+    total = 0
+    for y in range(y0, y1, 3):
+        for x in range(x0, x1, 3):
+            total += 1
+            r, g, b = rgb.getpixel((x, y))
+            if r >= 248 and g >= 248 and b >= 246:
+                near_white += 1
+    white_frac = near_white / max(total, 1)
+
+    blobs = _all_skin_blobs(img)
+    primary = blobs[0] if blobs else {}
+    inset_face = False
+    inset_blob: dict[str, Any] = {}
+    sx0, sy0, sx1, sy1 = (
+        int(SECOND_FACE_ZONE[0] * w),
+        int(SECOND_FACE_ZONE[1] * h),
+        int(SECOND_FACE_ZONE[2] * w),
+        int(SECOND_FACE_ZONE[3] * h),
+    )
+    for blob in blobs[1:]:
+        px = int(blob.get("pixels") or 0)
+        cx = float(blob.get("cx") or 0.0)
+        cy = float(blob.get("cy") or 0.0)
+        if px < SECOND_FACE_BLOB_MIN or px > SECOND_FACE_BLOB_MAX:
+            continue
+        bx = int(cx * w)
+        by = int(cy * h)
+        if sx0 <= bx <= sx1 and sy0 <= by <= sy1:
+            inset_face = True
+            inset_blob = blob
+            break
+
+    mashup = white_frac >= 0.22 or inset_face
+    return {
+        "ok": not mashup,
+        "white_frac": round(white_frac, 3),
+        "inset_face": inset_face,
+        "inset_blob": inset_blob,
+        "primary_blob": primary,
+        "blob_count": len(blobs),
+    }
+
+
+def _largest_skin_blob_metrics(img) -> dict[str, Any]:
+    """Крупнейший связный blob кожи — отличает лицо хоста от золотой бумаги."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    pixels_rgb = rgb.load()
+    visited = [[False] * w for _ in range(h)]
+    best: dict[str, Any] = {"pixels": 0, "w_frac": 0.0, "h_frac": 0.0, "cx": 0.0}
+
+    for y in range(0, h, 2):
+        for x in range(0, w, 2):
+            if visited[y][x]:
+                continue
+            if not _is_skin(*pixels_rgb[x, y]):
+                continue
+            q: deque[tuple[int, int]] = deque([(x, y)])
+            visited[y][x] = True
+            count = 0
+            minx = maxx = x
+            miny = maxy = y
+            while q:
+                cx, cy = q.popleft()
+                count += 1
+                minx = min(minx, cx)
+                maxx = max(maxx, cx)
+                miny = min(miny, cy)
+                maxy = max(maxy, cy)
+                for dx, dy in ((2, 0), (-2, 0), (0, 2), (0, -2)):
+                    nx, ny = cx + dx, cy + dy
+                    if 0 <= nx < w and 0 <= ny < h and not visited[ny][nx]:
+                        if _is_skin(*pixels_rgb[nx, ny]):
+                            visited[ny][nx] = True
+                            q.append((nx, ny))
+            if count > int(best["pixels"]):
+                bw = maxx - minx + 2
+                bh = maxy - miny + 2
+                best = {
+                    "pixels": count,
+                    "w_frac": round(bw / max(w, 1), 3),
+                    "h_frac": round(bh / max(h, 1), 3),
+                    "cx": round((minx + maxx) / 2 / max(w, 1), 3),
+                }
+    return best
+
+
+def _host_face_present(img) -> tuple[bool, dict[str, Any]]:
+    """Крупное лицо+плечи Святослава — compact skin blob, не золотой фон."""
+    blob = _largest_skin_blob_metrics(img)
+    ok = (
+        int(blob.get("pixels") or 0) >= HOST_FACE_BLOB_MIN_PIXELS
+        and float(blob.get("h_frac") or 0.0) >= HOST_FACE_BLOB_MIN_H_FRAC
+    )
+    return ok, blob
+
+
+def _services_checklist_metrics(img) -> dict[str, Any]:
+    """Карточка «как я помогаю» / checklist без крупного лица хоста."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    header_ink = 0
+    x0, y0, x1, y1 = (
+        int(SERVICES_HEADER_ZONE[0] * w),
+        int(SERVICES_HEADER_ZONE[1] * h),
+        int(SERVICES_HEADER_ZONE[2] * w),
+        int(SERVICES_HEADER_ZONE[3] * h),
+    )
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            if _luminance(*rgb.getpixel((x, y))) < 72:
+                header_ink += 1
+
+    gold_nums = 0
+    lx0, ly0, lx1, ly1 = (
+        int(SERVICES_LIST_ZONE[0] * w),
+        int(SERVICES_LIST_ZONE[1] * h),
+        int(SERVICES_LIST_ZONE[2] * w),
+        int(SERVICES_LIST_ZONE[3] * h),
+    )
+    for y in range(ly0, ly1):
+        for x in range(lx0, lx1):
+            r, g, b = rgb.getpixel((x, y))
+            if _is_gold_sticker(r, g, b, tol=55) and _luminance(r, g, b) < 200:
+                gold_nums += 1
+
+    white = total = 0
+    px0, py0, px1, py1 = (
+        int(SERVICES_PAPER_ZONE[0] * w),
+        int(SERVICES_PAPER_ZONE[1] * h),
+        int(SERVICES_PAPER_ZONE[2] * w),
+        int(SERVICES_PAPER_ZONE[3] * h),
+    )
+    for y in range(py0, py1, 2):
+        for x in range(px0, px1, 2):
+            total += 1
+            r, g, b = rgb.getpixel((x, y))
+            if r > 235 and g > 232 and b > 225:
+                white += 1
+
+    _, face_blob = _host_face_present(img)
+    face_h = float(face_blob.get("h_frac") or 0.0)
+    white_frac = white / max(total, 1)
+    title_text = _ocr_image_zone(img, TITLE_OCR_ZONE).upper().replace(" ", "")
+    services_phrase = any(marker in title_text for marker in SERVICES_CHECKLIST_MARKERS)
+    checklist_layout = (
+        header_ink >= 400
+        and gold_nums >= 400
+        and white_frac >= 0.55
+        and face_h < HOST_FACE_BLOB_MIN_H_FRAC
+    )
+    is_services_card = checklist_layout or services_phrase
+    return {
+        "header_ink": header_ink,
+        "gold_nums": gold_nums,
+        "white_frac": round(white_frac, 3),
+        "face_h_frac": face_h,
+        "services_phrase": services_phrase,
+        "is_services_card": is_services_card,
+    }
+
+
+def _title_cyrillic_metrics(img) -> dict[str, Any]:
+    """Крупный hook title на кириллице; Latin ZAGS/EGRN и percent-only = FAIL."""
+    latin_left = _ocr_image_zone(img, TITLE_LEFT_LATIN_ZONE, lang="eng", psm=6)
+    latin_norm = latin_left.upper().replace(" ", "")
+    right_text = _ocr_image_zone(img, TITLE_RIGHT_CYR_ZONE, lang="rus+eng", psm=6)
+    full_text = _ocr_image_zone(img, TITLE_OCR_ZONE, lang="rus+eng", psm=6)
+    norm_full = full_text.upper().replace(" ", "")
+
+    latin_garbage = any(tok in latin_norm for tok in LATIN_GARBAGE_TOKENS)
+    percent_only = bool(re.search(r"\d{1,3}\s*%", latin_left)) and not latin_garbage
+    services_phrase = any(marker in norm_full for marker in SERVICES_CHECKLIST_MARKERS) or (
+        "КАК" in norm_full and "ПОМ" in norm_full
+    )
+
+    right_cyr = sum(1 for c in right_text if "\u0400" <= c <= "\u04ff")
+    left_rus = _ocr_image_zone(img, TITLE_LEFT_LATIN_ZONE, lang="rus", psm=6)
+    left_cyr = sum(1 for c in left_rus if "\u0400" <= c <= "\u04ff")
+    letters = [c for c in right_text if c.isalpha()]
+    cyr_ratio = right_cyr / max(len(letters), 1)
+
+    cyrillic_hook = right_cyr >= 6 or left_cyr >= 14
+    ok = cyrillic_hook and not latin_garbage and not percent_only and not services_phrase
+    return {
+        "ok": ok,
+        "cyrillic_ratio": round(cyr_ratio, 3),
+        "right_cyrillic_chars": right_cyr,
+        "left_cyrillic_chars": left_cyr,
+        "latin_garbage": latin_garbage,
+        "latin_left_sample": " ".join(latin_left.split())[:80],
+        "percent_only": percent_only,
+        "services_phrase": services_phrase,
+        "ocr_sample": " ".join(right_text.split())[:160],
+    }
+
+
+def _is_warm_sticky_paper_pixel(r: int, g: int, b: int) -> bool:
+    lum = _luminance(r, g, b)
+    if lum < 130 or lum > 238:
+        return False
+    if _is_skin(r, g, b):
+        return False
+    return r >= 175 and g >= 140 and b <= 175 and r >= g >= b
+
+
+def _blank_sticky_metrics(img) -> dict[str, Any]:
+    """Пустые жёлтые стикеры без читаемой кириллицы внутри."""
+    title = _title_cyrillic_metrics(img)
+    if not title.get("latin_garbage") and not title.get("percent_only"):
+        return {"blank_count": 0, "ok": True, "skipped": "no_latin_garbage_title"}
+
+    w, h = img.size
+    rgb = img.convert("RGB")
+    visited = [[False] * w for _ in range(h)]
+    blank = 0
+    for y in range(0, h, 2):
+        for x in range(0, w, 2):
+            if visited[y][x] or not _is_warm_sticky_paper_pixel(*rgb.getpixel((x, y))):
+                continue
+            q: deque[tuple[int, int]] = deque([(x, y)])
+            visited[y][x] = True
+            minx = maxx = x
+            miny = maxy = y
+            while q:
+                cx, cy = q.popleft()
+                minx = min(minx, cx)
+                maxx = max(maxx, cx)
+                miny = min(miny, cy)
+                maxy = max(maxy, cy)
+                for dx, dy in ((2, 0), (-2, 0), (0, 2), (0, -2)):
+                    nx, ny = cx + dx, cy + dy
+                    if 0 <= nx < w and 0 <= ny < h and not visited[ny][nx]:
+                        if _is_warm_sticky_paper_pixel(*rgb.getpixel((nx, ny))):
+                            visited[ny][nx] = True
+                            q.append((nx, ny))
+            bw = maxx - minx + 2
+            bh = maxy - miny + 2
+            if bw < 95 or bh < 95 or bw > 160 or bh > 160:
+                continue
+            ar = max(bw, bh) / max(min(bw, bh), 1)
+            if ar > 1.75 or ar < 0.55:
+                continue
+            ink = 0
+            for cx in range(minx + bw // 5, maxx - bw // 5, 3):
+                for cy in range(miny + bh // 5, maxy - bh // 5, 3):
+                    if _luminance(*rgb.getpixel((cx, cy))) < 88:
+                        ink += 1
+            if ink < 3:
+                blank += 1
+    fail_blank = blank >= 1
+    return {"blank_count": blank, "ok": not fail_blank}
+
+
+def _phone_digits_metrics(img) -> dict[str, Any]:
+    """Телефон +7 922 001 65 05 в нижнем правом углу — только sacred zone, полный 6505."""
+    return _phone_not_clipped_metrics(img)
+
+
+def _cat_meme_metrics(img, *, host_face: bool) -> dict[str, Any]:
+    """Маленький мем-стикер (кот) — не золотая печать без лица хоста."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    x0 = int(MEME_CAT_ZONE[0] * w)
+    y0 = int(MEME_CAT_ZONE[1] * h)
+    x1 = int(MEME_CAT_ZONE[2] * w)
+    y1 = int(MEME_CAT_ZONE[3] * h)
+    orange_fur = 0
+    legacy = _meme_corner_signal(img)
+    for y in range(y0, y1, 2):
+        for x in range(x0, x1, 2):
+            r, g, b = rgb.getpixel((x, y))
+            if r >= 178 and g <= 155 and r - g >= 30:
+                orange_fur += 1
+    # Без лица хоста corner-signal часто = золотая печать checklist, не мем.
+    ok = host_face and (orange_fur >= 40 or legacy >= MEME_CORNER_MIN_SIGNAL)
+    return {"ok": ok, "orange_fur": orange_fur, "legacy_signal": legacy, "host_face": host_face}
+
+
 def _phone_digits_present(img) -> bool:
-    """Телефон +7 922 001 65 05 — только нижний правый sacred zone (не Wordstat strips)."""
-    return _phone_zone_ink_count(img) >= PHONE_ZONE_MIN_INK
+    """Телефон +7 922 001 65 05 — OCR + ink в sacred zone."""
+    return bool(_phone_digits_metrics(img).get("ok"))
 
 
 def describe_cover_pixels(cover_path: Path) -> str:
@@ -1288,8 +1914,16 @@ def analyze_cover_pixels(
     evidence["face_skin"] = face_metrics
     face_h_frac = float(face_metrics.get("face_h_frac") or 0.0)
     face_w_frac = float(face_metrics.get("face_w_frac") or 0.0)
-    checks["pixel_host_close_up"] = face_h_frac >= 0.18 and face_w_frac >= 0.08
-    checks["pixel_host_not_distant_fullbody"] = face_h_frac >= 0.14
+    host_face_ok, host_blob = _host_face_present(img)
+    evidence["host_face_blob"] = host_blob
+    checks["pixel_host_face_present"] = host_face_ok
+    checks["pixel_host_close_up"] = host_face_ok and face_h_frac >= 0.14
+    checks["pixel_host_not_distant_fullbody"] = host_face_ok or face_h_frac >= 0.14
+    if not checks["pixel_host_face_present"]:
+        errors.append(
+            "pixel_host_face_present FAIL: no compact host face blob "
+            f"(pixels={host_blob.get('pixels')} h_frac={host_blob.get('h_frac')})"
+        )
     if not checks["pixel_host_close_up"]:
         errors.append(
             f"pixel_host_close_up FAIL: face_h_frac={face_h_frac:.2f} w_frac={face_w_frac:.2f} (need close-up)"
@@ -1297,6 +1931,14 @@ def analyze_cover_pixels(
     if not checks["pixel_host_not_distant_fullbody"]:
         errors.append(
             f"pixel_host_not_distant_fullbody FAIL: distant tiny host face_h_frac={face_h_frac:.2f}"
+        )
+
+    services_metrics = _services_checklist_metrics(img)
+    evidence["services_checklist"] = services_metrics
+    checks["pixel_not_services_checklist"] = not bool(services_metrics.get("is_services_card"))
+    if not checks["pixel_not_services_checklist"]:
+        errors.append(
+            "pixel_not_services_checklist FAIL: cover looks like services checklist / «как я помогаю» card"
         )
 
     # --- Wordstat bars vs stickers ---
@@ -1424,40 +2066,123 @@ def analyze_cover_pixels(
 
     # --- designed thumbnail: hook title, phone, meme, sticker spacing, no layout collapse ---
     hook_metrics = _hook_title_metrics(img)
-    phone_ink = _phone_zone_ink_count(img)
-    meme_signal = _meme_corner_signal(img)
+    title_cyrillic = _title_cyrillic_metrics(img)
+    phone_metrics = _phone_digits_metrics(img)
+    meme_metrics = _cat_meme_metrics(img, host_face=host_face_ok)
+    sticky_metrics = _blank_sticky_metrics(img)
+    foreign_leak = _foreign_article_leak_metrics(img, manifest)
+    hook_complete = _hook_title_complete_metrics(img, manifest)
+    wordstat_ocr = _wordstat_ocr_leak_metrics(img)
+    collage_inset = _collage_inset_metrics(img)
     sticker_overlap = _wordstat_sticker_overlap_metrics(
         img, hook_present=bool(hook_metrics.get("present"))
     )
     query_strips = _wordstat_query_strip_metrics(img)
     layout_metrics = _layout_collapse_metrics(img, hook_present=bool(hook_metrics.get("present")))
     evidence["hook_title"] = hook_metrics
-    evidence["phone_zone_ink"] = phone_ink
-    evidence["meme_corner_signal"] = meme_signal
+    evidence["title_cyrillic"] = title_cyrillic
+    evidence["phone_digits"] = phone_metrics
+    evidence["cat_meme"] = meme_metrics
+    evidence["blank_stickies"] = sticky_metrics
+    evidence["foreign_article_leak"] = foreign_leak
+    evidence["hook_title_complete"] = hook_complete
+    evidence["wordstat_ocr_leak"] = wordstat_ocr
+    evidence["collage_inset"] = collage_inset
+    evidence["phone_zone_ink"] = phone_metrics.get("ink")
+    evidence["meme_corner_signal"] = meme_metrics.get("legacy_signal")
     evidence["wordstat_sticker_overlap"] = sticker_overlap
     evidence["wordstat_query_strips"] = query_strips
     evidence["layout_collapse"] = layout_metrics
 
     checks["pixel_hook_title_present"] = bool(hook_metrics.get("present"))
-    checks["pixel_phone_readable"] = phone_ink >= PHONE_ZONE_MIN_INK
-    checks["pixel_meme_present"] = meme_signal >= MEME_CORNER_MIN_SIGNAL
+    checks["pixel_hook_title_cyrillic"] = bool(title_cyrillic.get("ok"))
+    checks["pixel_phone_readable"] = bool(phone_metrics.get("ok"))
+    checks["pixel_phone_not_clipped"] = bool(phone_metrics.get("ok"))
+    checks["pixel_meme_present"] = bool(meme_metrics.get("ok"))
+    checks["pixel_no_blank_sticky_notes"] = bool(sticky_metrics.get("ok"))
+    checks["pixel_no_foreign_article_text"] = bool(foreign_leak.get("ok"))
+    checks["pixel_hook_title_not_truncated"] = bool(hook_complete.get("ok"))
+    checks["pixel_no_wordstat_ocr_strips"] = bool(wordstat_ocr.get("ok"))
+    checks["pixel_no_collage_inset"] = bool(collage_inset.get("ok"))
     checks["pixel_no_wordstat_query_strips"] = bool(query_strips.get("ok"))
     checks["pixel_wordstat_stickers_not_overlapping"] = True  # legacy key; strips banned
     checks["pixel_layout_not_collapsed"] = not bool(layout_metrics.get("collapsed"))
-    checks["pixel_designed_thumbnail"] = cover_composition_ok(img)
+    checks["pixel_designed_thumbnail"] = all(
+        (
+            checks["pixel_hook_title_present"],
+            checks["pixel_hook_title_cyrillic"],
+            checks["pixel_hook_title_not_truncated"],
+            checks["pixel_no_foreign_article_text"],
+            checks["pixel_host_face_present"],
+            checks["pixel_not_services_checklist"],
+            checks["pixel_phone_readable"],
+            checks["pixel_phone_not_clipped"],
+            checks["pixel_meme_present"],
+            checks["pixel_no_blank_sticky_notes"],
+            checks["pixel_no_wordstat_query_strips"],
+            checks["pixel_no_wordstat_ocr_strips"],
+            checks["pixel_no_collage_inset"],
+            checks["pixel_layout_not_collapsed"],
+        )
+    )
 
     if not checks["pixel_hook_title_present"]:
         errors.append(
             "pixel_hook_title_present FAIL: no large readable hook title in sacred zone "
             f"(bands={hook_metrics.get('bands')})"
         )
+    if not checks["pixel_hook_title_cyrillic"]:
+        errors.append(
+            "pixel_hook_title_cyrillic FAIL: "
+            f"latin_garbage={title_cyrillic.get('latin_garbage')} "
+            f"percent_only={title_cyrillic.get('percent_only')} "
+            f"services_phrase={title_cyrillic.get('services_phrase')} "
+            f"cyr_ratio={title_cyrillic.get('cyrillic_ratio')} "
+            f"ocr={title_cyrillic.get('ocr_sample')!r}"
+        )
     if not checks["pixel_phone_readable"]:
         errors.append(
-            f"pixel_phone_readable FAIL: phone_zone_ink={phone_ink} < {PHONE_ZONE_MIN_INK}"
+            "pixel_phone_readable FAIL: "
+            f"phone_digits={phone_metrics.get('digits')!r} ink={phone_metrics.get('ink')} "
+            f"clipped={phone_metrics.get('clipped')}"
+        )
+    if not checks["pixel_phone_not_clipped"]:
+        errors.append(
+            "pixel_phone_not_clipped FAIL: "
+            f"digits={phone_metrics.get('digits')!r} clipped={phone_metrics.get('clipped')} "
+            f"ocr={phone_metrics.get('ocr')!r}"
+        )
+    if not checks["pixel_no_foreign_article_text"]:
+        errors.append(
+            "pixel_no_foreign_article_text FAIL: "
+            f"leaks={foreign_leak.get('leaks')} ocr={foreign_leak.get('ocr_sample')!r}"
+        )
+    if not checks["pixel_hook_title_not_truncated"]:
+        errors.append(
+            "pixel_hook_title_not_truncated FAIL: "
+            f"truncated={hook_complete.get('truncated')} missing={hook_complete.get('missing')} "
+            f"last_word={hook_complete.get('last_word')!r} ocr={hook_complete.get('ocr_sample')!r}"
+        )
+    if not checks["pixel_no_wordstat_ocr_strips"]:
+        errors.append(
+            "pixel_no_wordstat_ocr_strips FAIL: "
+            f"hits={wordstat_ocr.get('hits')} samples={wordstat_ocr.get('samples')!r}"
+        )
+    if not checks["pixel_no_collage_inset"]:
+        errors.append(
+            "pixel_no_collage_inset FAIL: "
+            f"white_frac={collage_inset.get('white_frac')} inset_face={collage_inset.get('inset_face')} "
+            f"blob_count={collage_inset.get('blob_count')}"
         )
     if not checks["pixel_meme_present"]:
         errors.append(
-            f"pixel_meme_present FAIL: meme_corner_signal={meme_signal} < {MEME_CORNER_MIN_SIGNAL}"
+            "pixel_meme_present FAIL: "
+            f"orange_fur={meme_metrics.get('orange_fur')} legacy={meme_metrics.get('legacy_signal')} "
+            f"host_face={meme_metrics.get('host_face')}"
+        )
+    if not checks["pixel_no_blank_sticky_notes"]:
+        errors.append(
+            f"pixel_no_blank_sticky_notes FAIL: blank_stickies={sticky_metrics.get('blank_count')}"
         )
     if not checks["pixel_no_wordstat_query_strips"]:
         errors.append(
@@ -1521,8 +2246,14 @@ def stamp_cover_qa_json(
             and checks.get("pixel_no_text_on_clothing", False)
             and checks.get("pixel_meme_clearance_80px", False)
             and checks.get("pixel_hook_title_present", False)
+            and checks.get("pixel_hook_title_cyrillic", False)
+            and checks.get("pixel_hook_title_not_truncated", False)
+            and checks.get("pixel_no_foreign_article_text", False)
             and checks.get("pixel_no_wordstat_query_strips", False)
+            and checks.get("pixel_no_wordstat_ocr_strips", False)
+            and checks.get("pixel_no_collage_inset", False)
             and checks.get("pixel_layout_not_collapsed", False)
+            and checks.get("pixel_not_services_checklist", False)
         ),
         "outfit_invented": checks.get("pixel_manifest_outfit_matches", False),
         "action_invented": True,
@@ -1591,7 +2322,8 @@ def main() -> int:
         article_dir = args.article_dir
         if not article_dir.is_absolute():
             article_dir = root / article_dir
-        cover_path = article_dir / "cover" / "cover.png"
+        if cover_path is None:
+            cover_path = article_dir / "cover" / "cover.png"
         manifest_path = article_dir / "cover" / "quad-manifest.json"
         if manifest_path.is_file():
             manifest = load_json(manifest_path)
