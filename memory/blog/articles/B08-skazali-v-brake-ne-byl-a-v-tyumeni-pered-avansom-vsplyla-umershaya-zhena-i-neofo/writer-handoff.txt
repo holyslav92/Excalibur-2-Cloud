@@ -1,0 +1,8 @@
+drafts/writer.html
+=== EXCALIBUR BLOG WRITER ===
+draft: meaning
+next: Sol
+incident_report: none
+word_count_estimate: 3243 (above 2600 target — Sol should condense to 2000-2600)
+interlink_unique: 4 (B02, B03, B04, B07)
+interlink_total: 9
