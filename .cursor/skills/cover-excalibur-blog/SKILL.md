@@ -49,8 +49,9 @@ PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`, api-dir
 | | Seedream, nano_banana*, z-image |
 | | mcp-derouter/start-mcp.sh |
 | | Off-pipeline «demo» canvases |
+| | `excalibur_blog_cover_pil_compose.py` / PIL template mashup glue |
 
-**On Derouter auth/5xx:** one retry + fallback host → then Kie script — **never** Flux/Seedream/nano_banana/z-image.
+**PIL mashup ban (HARD):** если Derouter+Kie недоступны → `DEROUTER/KIE BLOCKER`, **не** заливать glue поверх B06/чужого cover. Pixel QA ловит: foreign hook, collage inset, clipped phone, Wordstat strips.
 
 ## Cover canon (v2)
 

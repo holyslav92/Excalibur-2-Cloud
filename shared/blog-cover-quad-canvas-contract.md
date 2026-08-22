@@ -88,6 +88,7 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 - нет reference / canvas 1 без `input_urls`
 - `COVER MOTIF BLOCKER` — collision в 14-дневном логе
 - `DEROUTER BLOCKER` / `KIE API BLOCKER` — нет URL после 2K gen
+- **PIL template mashup** — `excalibur_blog_cover_pil_compose.py` и любой glue поверх чужого cover (B06 template, erase masks, inset collage) **ЗАПРЕЩЕНЫ**. Derouter+Kie dead → STOP, не upload.
 - 8 отдельных image jobs вместо 2 canvas — запрещено
 - отсутствует любой из `inline-01…07.png` или inject `data-slot`
 - cover клонирует эталонный кадр или daypart formula
