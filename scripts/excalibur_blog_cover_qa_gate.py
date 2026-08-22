@@ -58,8 +58,12 @@ REQUIRED_CHECKS = (
 
 PIXEL_REQUIRED = (
     "pixel_qa_reads_png_not_prompt",
+    "pixel_host_face_present",
     "pixel_host_close_up",
     "pixel_host_not_distant_fullbody",
+    "pixel_not_services_checklist",
+    "pixel_hook_title_cyrillic",
+    "pixel_no_blank_sticky_notes",
     "pixel_wordstat_not_opaque_bars",
     "pixel_wordstat_not_edge_truncated",
     "pixel_title_zone_clear",
