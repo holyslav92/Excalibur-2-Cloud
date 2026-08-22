@@ -160,7 +160,7 @@ checks_run:
 - `python3 -m py_compile` on changed scripts
 - `python3 -m unittest tests.test_visual_type_aliases` → OK
 - `python3 scripts/excalibur_blog_cover_qa_gate.py --article-dir B08` → PASS
-commit: pending
+commit: d25f304
 
 ## INC-20260822-0744-cover-fixer-regen-b08
 status: fixed
@@ -233,5 +233,4 @@ files_changed:
 - `.cursor/skills/publish-excalibur-blog/SKILL.md`
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_theme_contract_deploy.py`
-commit: pending
-
+commit: d25f304
