@@ -1,6 +1,6 @@
 ---
 name: cover-excalibur-blog
-description: "④a Cover: 2× quad Derouter REST 2K, light/meme, NO Wordstat query strips, anti-repeat 14d."
+description: "④a Cover: 2× quad grsai grsai standard image model 2K, light/meme, NO Wordstat query strips, anti-repeat 14d."
 ---
 
 # Cover Agent — longform 8 images, light/meme canon
@@ -8,7 +8,7 @@ description: "④a Cover: 2× quad Derouter REST 2K, light/meme, NO Wordstat que
 ## Thin conductor + Derouter utility (HARD)
 
 **scene_hint, cover_emotion, prompt invention** — только Derouter utility tier (gpt-5.6-terra, `--role cover-scene`).
-PNG generation — `excalibur_blog_derouter_gpt_image2_api.py` (не chat).
+PNG generation — `excalibur_blog_grsai_gpt_image2_api.py` (не chat).
 
 ```bash
 python3 scripts/excalibur_blog_derouter_opus_chat.py \
@@ -32,26 +32,26 @@ Merge scene fields в `quad-manifest.json` без рерайта Cursor. `DEROUT
 ## Архитектура
 
 ```text
-identity-real i2i → 2× quad canvas 2048×1152 (Derouter REST 2K)
+identity-real i2i → 2× quad canvas 2048×1152 (grsai grsai standard image model 2K)
   canvas 1: cover + inline_1..3
   canvas 2: inline_4..7
 → split 2×2 → cover.png + inline-01..07.png → inject
 ```
 
-PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`, api-direct 2K). REST down → **DEROUTER MCP** (conductor). **Kie FORBIDDEN forever.**
+PRIMARY: **grsai grsai standard image model** (`GRSAI_API_KEY`, Global→China, 2K). Optional: Derouter image fallback (`EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1`). **Kie FORBIDDEN forever.**
 
 ## Image model lock (HARD)
 
 | Allowed | Forbidden |
 |---------|-----------|
-| `excalibur_blog_derouter_gpt_image2_api.py` (PRIMARY REST) | `excalibur_blog_kie_gpt_image2_api.py` / Kie |
-| DEROUTER MCP (conductor, if REST down) | flux2-pro-text-to-image |
-| | flux2-pro-image-to-image |
+| `excalibur_blog_grsai_gpt_image2_api.py` (PRIMARY REST) | `excalibur_blog_kie_gpt_image2_api.py` / Kie |
+| `excalibur_blog_grsai_solo_cover.py` (solo cover regen) | flux2-pro-text-to-image |
+| Derouter image REST (optional fallback only) | flux2-pro-image-to-image |
 | | Seedream, nano_banana*, z-image |
 | | `excalibur_blog_cover_pil_compose.py` / PIL mashup |
 | | Off-pipeline «demo» canvases |
 
-**On Derouter auth/5xx:** retry alternate api-direct host → DEROUTER MCP or BLOCKER. **Never** Kie / PIL mashup / Flux / Seedream / nano_banana / z-image.
+**On grsai auth/5xx:** retry alternate host (Global→China) → optional Derouter fallback or BLOCKER. **Never** Kie / PIL mashup / Flux / Seedream / nano_banana / z-image.
 
 ## Cover canon (v2)
 
@@ -95,9 +95,9 @@ python3 scripts/excalibur_blog_cover_motif_gate.py check --topic-id <id> \
   --composition "..." --location "..." --meme "..." --sticker-set "..."
 
 python3 scripts/excalibur_blog_cover_quad_prompt.py --article-dir "$ARTICLE" --write-batch
-python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICLE" \
+python3 scripts/excalibur_blog_grsai_gpt_image2_api.py --article-dir "$ARTICLE" \
   --batch cover/quad-mcp-batch-01.json --result cover/quad-mcp-result-01.json
-python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICLE" \
+python3 scripts/excalibur_blog_grsai_gpt_image2_api.py --article-dir "$ARTICLE" \
   --batch cover/quad-mcp-batch-02.json --result cover/quad-mcp-result-02.json
 
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 1 --inject-html

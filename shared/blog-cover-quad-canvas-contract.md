@@ -2,7 +2,7 @@
 
 > **TENANT:** The Риэлтор / tymenrieltor.ru — `memory/cover/*`, `shared/tenant-config.json`.
 
-# Excalibur BLOG — Quad Canvas (Derouter REST 2K)
+# Excalibur BLOG — Quad Canvas (grsai grsai standard image model 2K)
 
 Cover после `article.html` + Sol PASS.
 
@@ -17,16 +17,16 @@ Cover после `article.html` + Sol PASS.
 | 1 | `canvas-quad-01.png` | cover, inline_1…3 |
 | 2 | `canvas-quad-02.png` | inline_4…7 |
 
-PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`), `resolution: 2K`, 16:9. Kie — secondary fallback only.
+PRIMARY: **grsai grsai standard image model** (`GRSAI_API_KEY`), `resolution: 2K`, 16:9. Kie — FORBIDDEN forever.
 
 ## Image model lock (HARD — owner)
 
 **Order of preference:**
 
 ```text
-1. DEROUTER_API_KEY → scripts/excalibur_blog_derouter_gpt_image2_api.py (api-direct, 2K)
-2. REST exhausted     → DEROUTER MCP server (conductor)
-3. Derouter down      → DEROUTER IMAGE BLOCKER — STOP (no Kie, no PIL mashup)
+1. GRSAI_API_KEY → scripts/excalibur_blog_grsai_gpt_image2_api.py (Global → China, 2K)
+2. Optional: EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1 → Derouter image REST
+3. grsai down → GRSAI IMAGE BLOCKER — STOP (no Kie, no PIL mashup)
 ```
 
 **FORBIDDEN FOREVER:** Kie (`KIE_API_KEY`, `excalibur_blog_kie_gpt_image2_api.py`), PIL template mashup (`excalibur_blog_cover_pil_compose.py`), `flux2-pro-*`, Seedream, `nano_banana*`, `z-image`, broken stdio `mcp-derouter/start-mcp.sh`.
@@ -35,7 +35,7 @@ PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`), `resol
 
 **No off-pipeline demos:** one uncut prompt ≠ article. Full canon: Scout×Wordstat → … → Cover only.
 
-Contracts: `shared/derouter-gpt-image-api-contract.md`, `shared/kie-gpt-image-api-contract.md`
+Contracts: `shared/grsai-gpt-image-api-contract.md`, `shared/derouter-gpt-image-api-contract.md` (fallback), `shared/kie-gpt-image-api-contract.md`
 
 ## Cover canon (v2)
 
@@ -62,8 +62,8 @@ python3 scripts/excalibur_blog_cover_text_gate.py --article-dir <dir>
 python3 scripts/excalibur_blog_quad_manifest.py --article-dir <dir> --merge
 python3 scripts/excalibur_blog_cover_motif_gate.py check --topic-id <id> --composition "..." --location "..." ...
 python3 scripts/excalibur_blog_cover_quad_prompt.py --article-dir <dir> --write-batch
-# Derouter REST ×2 → quad-mcp-result-01.json, quad-mcp-result-02.json
-# python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir <dir> --batch cover/quad-mcp-batch-01.json --result cover/quad-mcp-result-01.json
+# grsai ×2 → quad-mcp-result-01.json, quad-mcp-result-02.json
+# python3 scripts/excalibur_blog_grsai_gpt_image2_api.py --article-dir <dir> --batch cover/quad-mcp-batch-01.json --result cover/quad-mcp-result-01.json
 python3 scripts/excalibur_blog_quad_apply.py --article-dir <dir> --canvas-index 1 --inject-html
 python3 scripts/excalibur_blog_quad_apply.py --article-dir <dir> --canvas-index 2 --inject-html
 python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --composition "..." ...

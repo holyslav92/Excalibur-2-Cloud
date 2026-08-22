@@ -23,8 +23,12 @@
     "note": "Longform Cursor Automation: 4 weekday slots YEKT (owner 9–17). NOT 20:00. Daily short posts on site — отдельный поток. Publish only when FTP secrets + EXCALIBUR_BLOG_ALLOW_PUBLISH=yes on process (never git)."
   },
   "image_generation": {
-    "provider": "derouter-rest",
-    "script": "scripts/excalibur_blog_derouter_gpt_image2_api.py",
+    "provider": "grsai-rest",
+    "script": "scripts/excalibur_blog_grsai_gpt_image2_api.py",
+    "contract": "shared/grsai-gpt-image-api-contract.md",
+    "model_env": "GRSAI_IMAGE_MODEL",
+    "fallback_script": "scripts/excalibur_blog_derouter_gpt_image2_api.py",
+    "fallback_env": "EXCALIBUR_IMAGE_FALLBACK_DEROUTER",
     "resolution": "2K",
     "canvases_per_article": 2,
     "panels_per_canvas": 4,

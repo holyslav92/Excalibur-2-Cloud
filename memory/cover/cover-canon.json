@@ -146,7 +146,7 @@
     "pil_mashup_ban": {
       "status": "FORBIDDEN_FOREVER",
       "script": "scripts/excalibur_blog_cover_pil_compose.py",
-      "rule": "One coherent generated 16:9 cover only (Derouter REST image API → Kie i2i). Never paste another article template. If both APIs fail → BLOCKER, no upload.",
+      "rule": "One coherent generated 16:9 cover only (grsai grsai standard image model REST). Never paste another article template. If grsai fails → GRSAI IMAGE BLOCKER, no upload.",
       "pixel_gates": [
         "pixel_no_foreign_article_text",
         "pixel_no_collage_inset",
@@ -211,7 +211,7 @@
     "forbidden_faces": ["reconstructed AI hero-ref", "plastic uncanny"]
   },
   "pipeline": {
-    "primary": "derouter-rest",
+    "primary": "grsai-rest",
     "resolution": "2K",
     "canvases": 2,
     "panels_per_canvas": 4,
@@ -220,8 +220,9 @@
   },
   "image_allowlist": {
     "allowed": [
-      "scripts/excalibur_blog_derouter_gpt_image2_api.py (Derouter REST image API, api-direct, 2K 16:9)",
-      "DEROUTER MCP server (conductor only, when REST exhausted)"
+      "scripts/excalibur_blog_grsai_gpt_image2_api.py (grsai grsai standard image model REST, Global→China, 2K 16:9)",
+      "scripts/excalibur_blog_grsai_solo_cover.py (solo 1200×675 cover regen)",
+      "scripts/excalibur_blog_derouter_gpt_image2_api.py (optional last resort when EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1)"
     ],
     "forbidden_forever": [
       "scripts/excalibur_blog_kie_gpt_image2_api.py",
@@ -239,7 +240,7 @@
       "off-pipeline demo canvases / lone prompts without Scout×Wordstat article",
       "PIL template mashup / B06 glue"
     ],
-    "timeout_rule": "Derouter auth/5xx → retry alternate api-direct host; then DEROUTER MCP or BLOCKER. NEVER Kie/Flux/Seedream/nano_banana/z-image/PIL mashup"
+    "timeout_rule": "grsai auth/5xx → retry alternate host (Global→China); optional Derouter fallback; NEVER Kie/Flux/Seedream/nano_banana/z-image/PIL mashup"
   },
   "inline_utility": {
     "catalog": "memory/cover/inline-visual-types.json",

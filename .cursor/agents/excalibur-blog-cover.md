@@ -35,7 +35,7 @@ Cover генерирует **2×** quad-холста 2×2 (**Derouter REST** + `
 3. **Light & bright:** sun flare, light leak, glow, airy #FFFFFF — no dark cinematic.
 4. **Мемы:** meme cat + catalog people-meme **small stickers** on cover; host Святослав LARGE left = **only** large human. Inline = infographic; no co-host/stock man.
 5. **1–3 Wordstat stickers** — live high-frequency RU queries (Тюмень/область), из research/handoff.
-6. **Identity:** i2i `face-studio-2026-06-23.jpg` only (WHO); **NEW expression** per hook (`cover_emotion` + scene_hint); never copy reference smile/pose.
+6. **Identity:** i2i `face-studio-2026-06-23.jpg` only (WHO — кости/hairline/eyes/stubble/28yo); **INVENT every run:** outfit, action, emotion, pose/framing (NOT default black blazer + left bust + side-eye). Never copy reference clothes/pose/smile.
 
 ## Пайплайн
 
@@ -51,9 +51,9 @@ python3 scripts/excalibur_blog_cover_motif_gate.py check \
   --topic-id <id> --composition "..." --location "..." --meme "..." ...
 
 python3 scripts/excalibur_blog_cover_quad_prompt.py --article-dir "$ARTICLE" --write-batch
-python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICLE" \
+python3 scripts/excalibur_blog_grsai_gpt_image2_api.py --article-dir "$ARTICLE" \
   --batch cover/quad-mcp-batch-01.json --result cover/quad-mcp-result-01.json
-python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICLE" \
+python3 scripts/excalibur_blog_grsai_gpt_image2_api.py --article-dir "$ARTICLE" \
   --batch cover/quad-mcp-batch-02.json --result cover/quad-mcp-result-02.json
 
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 1 --inject-html
@@ -72,7 +72,11 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
     "meme": "…",
     "prop_set": "…",
     "sticker_set": "…",
-    "joke": "…"
+    "joke": "…",
+    "outfit": "…",
+    "emotion": "…",
+    "pose_framing": "…",
+    "action": "…"
   },
   "wordstat_stickers": ["фраза из Wordstat 1", "фраза 2"]
 }

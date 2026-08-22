@@ -2,7 +2,7 @@
 """Regenerate ONLY failed quad panels — never full 2× canvas unless cover slot.
 
 Cover-QA FAIL → default path: regen listed slots as solo 16:9 PNGs.
-Derouter REST only (api-direct). Kie FORBIDDEN. DEROUTER MCP if REST down (conductor).
+grsai grsai standard image model REST (Global → China). Kie FORBIDDEN. Optional Derouter fallback via env.
 """
 
 from __future__ import annotations
@@ -107,7 +107,7 @@ def write_solo_batch(
         "pipeline": "quad_solo_panel_regen",
         "slot": slot_key,
         "output_canvas": f"cover/{INLINE_FILES.get(slot_key, slot_key + '.png')}",
-        "jobs": [{"slot": slot_key, "tool": "derouter-rest", "mcp_args": api_input}],
+        "jobs": [{"slot": slot_key, "tool": "grsai-rest", "mcp_args": api_input}],
     }
     if with_i2i:
         batch["prefer_local_reference"] = True
@@ -117,16 +117,19 @@ def write_solo_batch(
 
 
 def run_image_api(root: Path, article_dir: Path, batch_path: Path, result_path: Path) -> int:
-    derouter = root / "scripts/excalibur_blog_derouter_gpt_image2_api.py"
+    grsai = root / "scripts/excalibur_blog_grsai_gpt_image2_api.py"
+    size = "1200x675" if batch_path.name.startswith("quad-solo-batch-cover") else "2048x1152"
     cmd = [
         sys.executable,
-        str(derouter),
+        str(grsai),
         "--article-dir",
         str(article_dir),
         "--batch",
         str(batch_path.relative_to(article_dir)),
         "--result",
         str(result_path.relative_to(article_dir)),
+        "--size",
+        size,
     ]
     return subprocess.call(cmd, cwd=str(root))
 

@@ -1,17 +1,23 @@
-# Derouter image REST API Contract
+# grsai image API Contract (PRIMARY — images only)
 
-Primary Cloud path for Excalibur BLOG cover/inline quad canvas generation.
+> **OWNER OVERRIDE (2026-08-22):** Derouter **image** generation is discontinued.
+> Cover/inline images use **grsai grsai standard image model** via `excalibur_blog_grsai_gpt_image2_api.py`.
+> **Text** roles remain Derouter Opus/Terra.
+
+See: `shared/grsai-gpt-image-api-contract.md`
+
+## Historical note (Derouter images — optional fallback only)
+
+When `EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1` and `DEROUTER_API_KEY` present, script may fall back to Derouter image REST. This is **last resort**, not primary.
+
+Primary contract: `shared/grsai-gpt-image-api-contract.md`
 
 ## Order of preference (mandatory — owner override 2026-08-22, responses 2026-08-22)
 
 ```text
-1. DEROUTER_API_KEY → scripts/excalibur_blog_derouter_gpt_image2_api.py
-   a) POST /openai/v1/images/generations or /images/edits (4 hosts failover, 2K)
-   b) if discontinued on all hosts → POST /openai/v1/responses + tools image_generation
-      (model DEROUTER_RESPONSES_IMAGE_MODEL default gpt-5.4; i2i via input_image)
-2. Solo cover CLI: scripts/excalibur_blog_derouter_responses_image.py (same /responses path)
-3. REST + responses exhausted → DEROUTER MCP (conductor invokes when REST auth/5xx/timeout)
-4. Derouter down → DEROUTER IMAGE BLOCKER — diagnose/retry/fix; STOP
+1. GRSAI_API_KEY → scripts/excalibur_blog_grsai_gpt_image2_api.py (PRIMARY)
+2. Optional: EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1 → Derouter image REST
+3. grsai down → GRSAI IMAGE BLOCKER — diagnose/retry/fix; STOP
 ```
 
 **FORBIDDEN FOREVER:** Kie (`excalibur_blog_kie_gpt_image2_api.py`, `KIE_API_KEY` for images), PIL template mashup, `flux2-pro-*`, Seedream, `nano_banana*`, `z-image`, broken stdio `mcp-derouter/start-mcp.sh`.

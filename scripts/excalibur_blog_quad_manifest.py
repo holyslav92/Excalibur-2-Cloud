@@ -200,7 +200,7 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
         "cover_hook_highlight": highlight,
         "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
         "mcp_note": (
-            "PRIMARY: Derouter REST (DEROUTER_API_KEY) — 2K 16:9, one job per canvas "
+            "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas "
             f"({len(canvas_specs)}×). Cover agent invents cover_hook + scene_hint/alt "
             "before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie)."
         ),

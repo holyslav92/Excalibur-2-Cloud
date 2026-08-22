@@ -480,13 +480,34 @@ def main() -> int:
         warnings,
         warn=not derouter_key,
     )
-    derouter_image_model = os.environ.get("DEROUTER_IMAGE_MODEL", "").strip()
+    grsai_key = os.environ.get("GRSAI_API_KEY", "").strip() or os.environ.get("GRSAI_KEY", "").strip()
     check(
-        bool(derouter_image_model),
-        "DEROUTER_IMAGE_MODEL set (Cover image model id)",
+        bool(grsai_key),
+        "GRSAI_API_KEY set (Cover image provider)",
         errors,
         warnings,
         warn=True,
+    )
+    img_gen = tenant.get("image_generation") or {}
+    check(
+        img_gen.get("script") == "scripts/excalibur_blog_grsai_gpt_image2_api.py",
+        "tenant image_generation.script → excalibur_blog_grsai_gpt_image2_api.py",
+        errors,
+        warnings,
+    )
+    check(
+        img_gen.get("provider") == "grsai-rest",
+        "tenant image_generation.provider → grsai-rest",
+        errors,
+        warnings,
+    )
+    derouter_image_model = os.environ.get("DEROUTER_IMAGE_MODEL", "").strip()
+    check(
+        bool(derouter_image_model) or bool(grsai_key),
+        "GRSAI_API_KEY or DEROUTER_IMAGE_MODEL (optional Derouter image fallback)",
+        errors,
+        warnings,
+        warn=not grsai_key,
     )
     brain = tenant.get("writing_model") or {}
     check(

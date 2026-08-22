@@ -6,10 +6,9 @@
 ## Mandatory order (images only)
 
 ```text
-1. DEROUTER_API_KEY → scripts/excalibur_blog_derouter_gpt_image2_api.py
-   Host: https://api-direct.derouter.ai/openai/v1 (fallback: api-direct.apikey.cloud)
-2. REST exhausted     → DEROUTER MCP server (conductor invokes image tool)
-3. Derouter down      → DEROUTER IMAGE BLOCKER — diagnose/retry/fix; STOP
+1. GRSAI_API_KEY → scripts/excalibur_blog_grsai_gpt_image2_api.py
+2. Optional: EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1 → Derouter image REST
+3. grsai down → GRSAI IMAGE BLOCKER — diagnose/retry/fix; STOP
 ```
 
 **NEVER:** Kie, PIL template mashup (`excalibur_blog_cover_pil_compose.py`), Flux, Seedream, nano_banana*, z-image.
@@ -18,4 +17,4 @@
 
 This file documented the legacy Kie async path. It is retained only as a **forbidden** reference so agents do not reintroduce Kie fallbacks.
 
-See: `shared/derouter-gpt-image-api-contract.md`, `memory/cover/cover-canon.json` → `image_allowlist.forbidden_forever`.
+See: `shared/grsai-gpt-image-api-contract.md`, `shared/derouter-gpt-image-api-contract.md` (fallback), `memory/cover/cover-canon.json` → `image_allowlist.forbidden_forever`.

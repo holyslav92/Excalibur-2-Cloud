@@ -15,13 +15,17 @@ if str(SCRIPTS) not in sys.path:
 
 
 class ImageProviderBlockerTest(unittest.TestCase):
-    def _run_script(self, name: str) -> subprocess.CompletedProcess[str]:
+    def _run_script(self, name: str, *, extra_env: dict[str, str] | None = None) -> subprocess.CompletedProcess[str]:
+        env = os.environ.copy()
+        if extra_env:
+            env.update(extra_env)
         return subprocess.run(
             [sys.executable, str(ROOT / "scripts" / name)],
             cwd=ROOT,
             capture_output=True,
             text=True,
             check=False,
+            env=env,
         )
 
     def test_kie_script_blocked(self) -> None:
@@ -33,6 +37,56 @@ class ImageProviderBlockerTest(unittest.TestCase):
         proc = self._run_script("excalibur_blog_cover_pil_compose.py")
         self.assertEqual(proc.returncode, 1)
         self.assertIn("PIL MASHUP BLOCKER", proc.stderr)
+
+    def test_grsai_dry_run_without_key(self) -> None:
+        article = "memory/blog/articles/B02-raspisku-na-kvartiru-napisali-deneg-na-schete-net"
+        env = {k: v for k, v in os.environ.items() if k not in {"GRSAI_API_KEY", "GRSAI_KEY"}}
+        proc = subprocess.run(
+            [
+                sys.executable,
+                str(ROOT / "scripts" / "excalibur_blog_grsai_gpt_image2_api.py"),
+                "--article-dir",
+                article,
+                "--batch",
+                "cover/quad-mcp-batch-01.json",
+                "--dry-run",
+            ],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+            env=env,
+        )
+        self.assertEqual(proc.returncode, 0, msg=proc.stderr)
+        self.assertIn("grsaiapi.com", proc.stdout)
+
+    def test_resolve_grsai_hosts_default(self) -> None:
+        from excalibur_blog_grsai_gpt_image2_api import DEFAULT_HOSTS, resolve_hosts
+
+        with mock.patch.dict(os.environ, {}, clear=False):
+            os.environ.pop("GRSAI_API_BASE_URL", None)
+            self.assertEqual(resolve_hosts(), DEFAULT_HOSTS)
+
+    def test_resolve_grsai_hosts_env_override(self) -> None:
+        from excalibur_blog_grsai_gpt_image2_api import resolve_hosts
+
+        with mock.patch.dict(
+            os.environ,
+            {"GRSAI_API_BASE_URL": "https://api.example.com,https://cn.example.com"},
+        ):
+            self.assertEqual(
+                resolve_hosts(),
+                ["https://api.example.com", "https://cn.example.com"],
+            )
+
+    def test_default_grsai_model_not_vip(self) -> None:
+        from excalibur_blog_grsai_gpt_image2_api import default_model, grsai_vip_model_id
+
+        with mock.patch.dict(os.environ, {}, clear=False):
+            os.environ.pop("GRSAI_IMAGE_MODEL", None)
+            model = default_model()
+            self.assertTrue(model.startswith("gpt"))
+            self.assertNotEqual(model, grsai_vip_model_id())
 
     def test_resolve_image_base_urls_default_order(self) -> None:
         from excalibur_blog_derouter_gpt_image2_api import (
@@ -60,7 +114,7 @@ class ImageProviderBlockerTest(unittest.TestCase):
         )
 
     def test_parse_size_wh(self) -> None:
-        from excalibur_blog_derouter_gpt_image2_api import parse_size_wh
+        from excalibur_blog_grsai_gpt_image2_api import parse_size_wh
 
         self.assertEqual(parse_size_wh("2048x1152"), (2048, 1152))
         self.assertEqual(parse_size_wh("1200x675"), (1200, 675))

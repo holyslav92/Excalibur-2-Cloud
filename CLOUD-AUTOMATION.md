@@ -103,8 +103,8 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 ## Visual longform (8 изображений)
 
-1. **Canvas 1** (Derouter REST 2K i2i): cover + inline_1…3 → split 2×2
-2. **Canvas 2** (Derouter REST 2K): inline_4…7 → split 2×2
+1. **Canvas 1** (grsai grsai standard image model i2i): cover + inline_1…3 → split 2×2
+2. **Canvas 2** (grsai grsai standard image model t2i): inline_4…7 → split 2×2
 3. Итого: `cover.png` 1200×675 + `inline-01…07.png`, inject `figure.inline-quad` data-slot=inline_1…7
 
 Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 28 лет, **новая выдуманная сцена** каждый раз. AI `scene-composition-only/hero-ref-*` — не для лица.
@@ -115,19 +115,20 @@ Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 
 
 **Wordstat:** Scout hard gate via **MCP-KV** (`wordstat_get_*`). P0 buyer demand in Tyumen regions — **topic choice only**; never paint Wordstat queries on cover.png. Enable MCP-KV in Cloud Automation Tools (dashboard connector — never git).
 
-## Image providers (HARD — owner override 2026-08-22)
+## Image providers (HARD — owner override 2026-08-22, grsai 2026-08-22)
 
-Cover + inline PNG **only Derouter**:
+Cover + inline PNG **only grsai grsai standard image model** (Derouter image = optional last resort):
 
-1. `scripts/excalibur_blog_derouter_gpt_image2_api.py` — REST failover: `api.derouter.ai` → `api.apikey.cloud` → `api-direct.derouter.ai` → `api-direct.apikey.cloud` (env `DEROUTER_IMAGE_BASE_URL` override). **Auto-fallback:** when `/images/generations` discontinued on all hosts → `POST /openai/v1/responses` + `tools: [{type: image_generation}]` (`DEROUTER_RESPONSES_IMAGE_MODEL`, default `gpt-5.4`; i2i `input_image` for identity ref).
-2. Solo cover CLI: `scripts/excalibur_blog_derouter_responses_image.py` (same `/responses` path, 1200×675).
-3. Probe: `python3 scripts/excalibur_blog_derouter_image_probe.py` (probes generations, then responses).
-4. REST + responses exhausted → **DEROUTER MCP** (conductor invokes image tool).
-5. Derouter down → `DEROUTER IMAGE BLOCKER` — diagnose/retry; **STOP**
+1. `scripts/excalibur_blog_grsai_gpt_image2_api.py` — REST: `grsaiapi.com` (Global) → `grsai.dakka.com.cn` (China). Paths: `/v1/api/generate` (json → async poll) → `/v1/images/generations` → `/v1/draw/completions` + poll. Model **`grsai standard image model`** (NOT vip). Face i2i from `face-studio-2026-06-23.jpg`.
+2. Solo cover CLI: `scripts/excalibur_blog_grsai_solo_cover.py` (1200×675 + pixel QA stamp).
+3. Optional last resort: `EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1` → Derouter image REST (`excalibur_blog_derouter_gpt_image2_api.py`).
+4. grsai down → `GRSAI IMAGE BLOCKER` — diagnose/retry; **STOP**
+
+**Text roles unchanged:** Derouter Opus/Terra via `excalibur_blog_derouter_opus_chat.py`.
 
 **FORBIDDEN FOREVER:** Kie (`KIE_API_KEY`, `excalibur_blog_kie_gpt_image2_api.py`), PIL template mashup (`excalibur_blog_cover_pil_compose.py`). Never `--fallback-kie`. Never upload mashup when APIs fail.
 
-Контракты: `shared/derouter-gpt-image-api-contract.md`, `shared/kie-gpt-image-api-contract.md` (Kie = forbidden stub).
+Контракты: `shared/grsai-gpt-image-api-contract.md`, `shared/derouter-gpt-image-api-contract.md` (Derouter image fallback only), `shared/kie-gpt-image-api-contract.md` (Kie = forbidden stub).
 
 ## Automation prompt
 

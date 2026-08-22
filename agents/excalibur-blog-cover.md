@@ -51,9 +51,9 @@ python3 scripts/excalibur_blog_cover_motif_gate.py check \
   --topic-id <id> --composition "..." --location "..." --meme "..." ...
 
 python3 scripts/excalibur_blog_cover_quad_prompt.py --article-dir "$ARTICLE" --write-batch
-python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICLE" \
+python3 scripts/excalibur_blog_grsai_gpt_image2_api.py --article-dir "$ARTICLE" \
   --batch cover/quad-mcp-batch-01.json --result cover/quad-mcp-result-01.json
-python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICLE" \
+python3 scripts/excalibur_blog_grsai_gpt_image2_api.py --article-dir "$ARTICLE" \
   --batch cover/quad-mcp-batch-02.json --result cover/quad-mcp-result-02.json
 
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 1 --inject-html

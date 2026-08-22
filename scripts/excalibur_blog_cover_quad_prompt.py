@@ -93,7 +93,7 @@ _COVER_FACE_ESSAY = re.compile(
 # Prefer PUBLIC_SITE_URL hostname; fallback for offline validate when env empty.
 _LEGACY_REFERENCE_HOST_FALLBACK = ""  # no personal default host
 MCP_RESOLUTION = "2K"
-KIE_IMAGE_MODEL = "gpt-image-2-image-to-image"
+KIE_IMAGE_MODEL = "grsai standard image model-image-to-image"
 
 
 def required_reference_host_runtime() -> str:
@@ -728,12 +728,13 @@ def main() -> int:
             "result_path": spec["result_file"],
             "slots": list(canvas_slots),
             "preferred_image_flow": {
-                "provider": "derouter-rest",
-                "script": "scripts/excalibur_blog_derouter_gpt_image2_api.py",
+                "provider": "grsai-rest",
+                "script": "scripts/excalibur_blog_grsai_gpt_image2_api.py",
+                "contract": "shared/grsai-gpt-image-api-contract.md",
                 "resolution": MCP_RESOLUTION,
                 "note": (
-                    "PRIMARY: Derouter REST image API (api-direct, 2K 16:9). "
-                    "If REST down: DEROUTER MCP from conductor. "
+                    "PRIMARY: grsai grsai standard image model REST (Global → China, 2K 16:9). "
+                    "Optional last resort: Derouter image REST (EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1). "
                     "FORBIDDEN: Kie, flux2-pro-*, Seedream, nano_banana*, z-image, PIL mashup."
                 ),
                 "apply_script": (
@@ -744,7 +745,7 @@ def main() -> int:
             "jobs": [
                 {
                     "slot": "canvas_quad",
-                    "tool": "derouter-rest",
+                    "tool": "grsai-rest",
                     "mcp_args": api_input,
                 }
             ],
