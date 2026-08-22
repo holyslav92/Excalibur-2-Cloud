@@ -9,6 +9,7 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 
 | topic_id | slug | title | status |
 |----------|------|-------|--------|
+| B01 | v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya | В выписке ЕГРН есть строка, после которой аванс вносить нельзя | published |
 | B02 | raspisku-na-kvartiru-napisali-deneg-na-schete-net | В Тюмени расписку за квартиру написали — денег на счёте нет | published |
 | B03 | pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri | Почти внесли задаток на торгах — квартиру подарили дочери | published |
 | B04 | doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero | Квартиру продавали по доверенности. Хозяин был на СВО | published |
