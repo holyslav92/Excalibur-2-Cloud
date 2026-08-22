@@ -99,7 +99,7 @@ When `/images/*` discontinued on all hosts, `excalibur_blog_derouter_gpt_image2_
 ## Auth
 
 - `DEROUTER_API_KEY` or alias `DEROUTE_API_KEY` (Cursor Cloud Secrets). Missing → `DEROUTER API KEY MISSING`
-- `DEROUTER_IMAGE_MODEL` required for `/images/*` probe (id from GET `/v1/models`)
+- Image model id from Cloud Secrets (see `DEROUTER_IMAGE_MODEL` in doctor) required for `/images/*` probe
 - `DEROUTER_RESPONSES_IMAGE_MODEL` optional (default `gpt-5.4`) for `/responses` fallback
 - Optional: `DEROUTER_IMAGE_SIZE` (default `2048x1152`), `DEROUTER_IMAGE_QUALITY` (default `auto`)
 - Never commit, print, or copy keys into git/PR/logs
