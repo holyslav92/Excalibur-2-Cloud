@@ -1,0 +1,225 @@
+{
+  "topic_id": "B08",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Банк отказал: доля умершей жены",
+  "cover_hook_highlight": "отказал",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: Derouter REST (DEROUTER_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав в бирюзовой рубашке удивлённо показывает справку ЗАГС и банковский отказ в светлой переговорной; телефон указан на обложке",
+      "scene_hint": "host RIGHT ZAGS stamp; hook; phone; sticky; cat; NO Wordstat",
+      "meme_caption_ru": "",
+      "sticky": "Справка не спасла",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "stunned disbelief"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Коротко: справка была «чистой», а сделка — нет",
+      "visual_type": "process_flow",
+      "scene_hint": "flow 1998→2004 gap +cat",
+      "alt": "Схема из четырёх этапов показывает разрыв между ДКП 1998 года и справкой с 2004 года, из-за которого документ не подтвердил риск",
+      "labels": [
+        "ДКП 1998",
+        "справка 2004",
+        "6 лет",
+        "бесполезен"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«В браке не состояли»: что показала справка — и чего в ней не было",
+      "visual_type": "comparison_table",
+      "scene_hint": "table №15 vs 1998",
+      "alt": "Сравнительная таблица объясняет, что форма №15 отражала современный срез ЕГР ЗАГС и не содержала сведений о браке 1998 года",
+      "labels": [
+        "форма №15",
+        "срез сегодня",
+        "ЕГР 2018",
+        "1998 нет"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Умершая супруга и наследники: невыделенная доля всплыла перед авансом",
+      "visual_type": "process_flow",
+      "scene_hint": "flow брак→доля→наследники",
+      "alt": "Процесс-схема показывает, как брак на дату покупки привёл к невыделенной доле, нескольким наследникам и дополнительному наследственному риску",
+      "labels": [
+        "брак 1998",
+        "долю не выд",
+        "наследники",
+        "наследник умер"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Почему «в ЕГРН чисто» не закрыл риск супружеской и наследственной доли",
+      "visual_type": "structure_diagram",
+      "scene_hint": "diagram ЕГРН vs доля",
+      "alt": "Диаграмма показывает, почему чистая запись ЕГРН не исключает супружескую долю вне реестра и уже принятое наследство",
+      "labels": [
+        "ЕГРН записи",
+        "доля вне ЕГРН",
+        "ст.34 СК",
+        "наследство"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Финал: банк отказал в ипотеке, покупатель вышел до аванса",
+      "visual_type": "process_flow",
+      "scene_hint": "flow отказ→аванс +Harold",
+      "alt": "Схема финала сделки показывает отказ в ипотеке до передачи аванса, поэтому деньги покупателя не ушли",
+      "labels": [
+        "ипотека нет",
+        "до аванса",
+        "деньги OK",
+        "отказ банка"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что проверить до аванса: дата покупки квартиры и период в справке ЗАГС",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "checklist 5 до аванса",
+      "alt": "Чек-лист перечисляет пять проверок до аванса: дату покупки, период справки, брак на дату договора, наследников и финальный контроль",
+      "labels": [
+        "дата покупки",
+        "период ЗАГС",
+        "брак на ДКП",
+        "наследники",
+        "до аванса"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Супружеская доля и наследство: две разные линии права",
+      "visual_type": "comparison_table",
+      "scene_hint": "2 lines compare +wojak",
+      "alt": "Таблица сравнивает две линии права: супружескую долю и наследство, включая шестимесячный срок и невозвратный риск отказа",
+      "labels": [
+        "2 линии",
+        "совместное",
+        "½ супруге",
+        "6 мес",
+        "отказ"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени вторичка",
+    "наследство квартира продажа",
+    "согласие супруга на продажу квартиры"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "stunned disbelief",
+  "cover_motifs": {
+    "composition": "Святослав крупно справа в три четверти, свободная светлая зона слева под заголовок, диагональная бумажная композиция",
+    "location": "светлая нотариальная переговорная с белыми стенами, стеклянной перегородкой и солнечным бликом",
+    "meme": "маленькие стикеры кота с круглыми глазами и Hide the Pain Harold как реакция на неожиданный отказ",
+    "prop_set": "папка со справкой ЗАГС, копия ДКП 1998 года, прозрачная схема долей, красный штамп отказа, смартфон",
+    "sticker_set": "кот с круглыми глазами в верхнем углу и каталог-мем Hide the Pain Harold у папки, оба маленькие",
+    "joke": "справка торжественно сообщает «чисто», а рядом красный штамп банка отвечает «нет»",
+    "outfit": "teal shirt sand vest no blazer",
+    "emotion": "ошарашенное недоверие, поднятые брови, напряжённые губы и взгляд на красный отказ",
+    "pose_framing": "крупный поясной план справа, корпус развёрнут к документам, одна рука поднята в жесте «как так?»",
+    "action": "Святослав держит папку со справкой и указывает второй рукой на красный банковский штамп"
+  }
+}
