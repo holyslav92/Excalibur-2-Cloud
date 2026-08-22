@@ -1,0 +1,18 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json"
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json"
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "inline_1..7 injected under manifest h2_anchor"
+  ]
+}
