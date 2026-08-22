@@ -20,6 +20,14 @@ On timeout: retry `excalibur_blog_kie_gpt_image2_api.py` (`createTask` + poll). 
 
 Canvas 2 (inline-only): batch without `input_urls` → Kie t2i. Canvas 1: i2i + `identity-real`.
 
+## Credits exhausted (HTTP 402)
+
+When `createTask` or HTTP transport returns **402** / «insufficient credits»:
+
+- Script exits `KIE CREDITS BLOCKER` (not a silent retry).
+- Owner must top up Kie balance in dashboard.
+- **Fixer emergency only:** if Derouter also failed (e.g. discontinued model), Cover Fixer may regen solo cover via MCP-KV `z-image`, then re-run pixel QA — never for initial quad canvas production path.
+
 If `KIE_API_KEY` is present in Cloud Secrets/env, **do not** call sync MCP `gpt-image-2` first.
 Director/Task prompts must not force «ONE MCP gpt-image-2» as the primary path.
 

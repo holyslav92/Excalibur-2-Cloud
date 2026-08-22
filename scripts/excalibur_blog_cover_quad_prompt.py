@@ -78,6 +78,28 @@ MAX_MCP_PROMPT_CHARS = 3500
 # (B79 / INC-20260723-1626): keep one shared «Inline all» suffix (not ×3) and reclaim
 # from shared negatives first — never force agents to empty scene_hint.
 COVER_SCENE_HINT_COMPACT = 200
+
+# Owner ban (cover-canon v3): Wordstat query strips never painted on cover.png.
+_WORDSTAT_ON_COVER_REPLACEMENT = (
+    "NO Wordstat query strips on cover — Scout Wordstat is topic-only (manifest log). "
+)
+
+
+def strip_wordstat_from_style_prefix(style_prefix: str) -> str:
+    """Remove legacy Wordstat-on-cover phrasing from shared style boilerplate."""
+    sp = style_prefix or ""
+    for old in (
+        "1-3 Wordstat stickers (Тюмень). ",
+        "1-3 Wordstat sticker labels. ",
+        "1–3 designer stickers with LIVE Wordstat phrases (Тюмень/область) — readable, not spam",
+    ):
+        if old in sp:
+            sp = sp.replace(old, _WORDSTAT_ON_COVER_REPLACEMENT)
+    if "Wordstat stickers" in sp and "NO Wordstat" not in sp:
+        sp = sp.replace("Wordstat stickers", "hook-only sticky (no Wordstat strips)")
+    if "Wordstat sticker labels" in sp and "NO Wordstat" not in sp:
+        sp = sp.replace("Wordstat sticker labels", "hook-only sticky labels")
+    return sp
 INLINE_SCENE_HINT_COMPACT = 180
 COVER_SCENE_HINT_RAW_TARGET_MAX = 140
 INLINE_SCENE_HINT_RAW_TARGET_MAX = 220
@@ -413,6 +435,7 @@ def build_prompt(
             "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic ink, "
             "gold #dcc5a1 one accent only. Torn paper, gold tape/sticky, informative UI cards."
         )
+    style_prefix = strip_wordstat_from_style_prefix(style_prefix)
 
     quadrant_labels = ("Top-left", "Top-right", "Bottom-left", "Bottom-right")
     panel_lines: list[str] = []
@@ -526,15 +549,12 @@ def build_solo_cover_prompt(
     outfit = compact(str(motifs.get("outfit") or ""), 100)
     sticky_line = f' Yellow sticky EXACT «{sticky}» pinned left.' if sticky else ""
 
-    style_prefix = compact(
-        style.get("global_prompt_prefix") or design_code.get("cover_panel_prompt_block") or "",
-        320,
-    )
-    if "Wordstat" in style_prefix:
-        style_prefix = style_prefix.replace(
-            "1-3 Wordstat stickers (Тюмень). ",
-            "NO Wordstat query strips on cover — Scout Wordstat is topic-only. ",
+    style_prefix = strip_wordstat_from_style_prefix(
+        compact(
+            style.get("global_prompt_prefix") or design_code.get("cover_panel_prompt_block") or "",
+            320,
         )
+    )
 
     bans = (
         "BAN HARD: ANY Cyrillic/latin text on clothes/jacket/vest/chest/torso; Wordstat/search-keyword strips/bars; "

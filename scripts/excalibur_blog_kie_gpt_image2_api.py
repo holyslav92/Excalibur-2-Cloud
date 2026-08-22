@@ -58,6 +58,29 @@ class KieApiError(RuntimeError):
     """Raised for API or response-shape failures."""
 
 
+def is_kie_credits_exhausted(*, status: int | None = None, message: str = "") -> bool:
+    """True when Kie rejects the call for insufficient account credits (HTTP 402)."""
+    if status == 402:
+        return True
+    low = (message or "").lower()
+    return "insufficient" in low and ("credit" in low or "balance" in low or "quota" in low)
+
+
+def kie_blocker_message(exc: BaseException) -> str:
+    msg = str(exc)
+    status: int | None = None
+    if "HTTP 402" in msg:
+        status = 402
+    if is_kie_credits_exhausted(status=status, message=msg):
+        return (
+            "KIE CREDITS BLOCKER: Kie account has insufficient credits (HTTP 402). "
+            "Top up Kie balance in Cloud dashboard or use Fixer emergency MCP z-image "
+            "for cover panel regen only (see skills/fixer-excalibur-blog/SKILL.md). "
+            f"Detail: {msg}"
+        )
+    return f"KIE API BLOCKER: {msg}"
+
+
 class KieRetryableFail(KieApiError):
     """Terminal recordInfo fail that may warrant one new createTask (not re-poll)."""
 
@@ -900,7 +923,7 @@ def main() -> int:
         print(f"OK result={result_path}")
         return 0
     except KieApiError as exc:
-        print(f"❌ KIE API BLOCKER: {exc}", file=sys.stderr)
+        print(f"❌ {kie_blocker_message(exc)}", file=sys.stderr)
         return 1
 
 

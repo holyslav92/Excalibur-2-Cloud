@@ -103,6 +103,23 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-22",
+      "topic_id": "B08",
+      "slug": "",
+      "motifs": {
+        "composition": "host_right_three_quarter_headline_left_diagonal_paper_sun_flare",
+        "location": "bright_notary_meeting_room_white_glass_sun_flare_tyumen",
+        "meme": "wide_eyes_cat_sticker_plus_hide_pain_harold_small",
+        "prop_set": "zags_folder_dkp_1998_red_bank_stamp_phone_cta",
+        "sticker_set": "yellow_sticky_spravka_ne_spasla_no_wordstat_on_canvas",
+        "joke": "zags_says_clean_bank_stamp_says_no",
+        "outfit": "teal_shirt_rolled_sleeves_sand_vest_no_blazer",
+        "emotion": "stunned_disbelief_raised_brows_tense_lips",
+        "pose_framing": "large_waist_up_right_turned_to_docs_not_left_bust",
+        "action": "holds_zags_folder_points_at_red_bank_refusal_stamp"
+      }
     }
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "slug": "skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo",
+  "topic_id": "B08",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B08-skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 893607,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9073 slug=skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo\nOK categories=31,54\nOK yoast_social_image=1\nOK featured_image=9074\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9075 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo-inline-01.png\nOK inline_alt=9075\nOK inline_caption=9075\nOK inline_description=9075\nOK inline_image_upload=9076 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo-inline-02.png\nOK inline_alt=9076\nOK inline_caption=9076\nOK inline_description=9076\nOK inline_image_upload=9077 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo-inline-03.png\nOK inline_alt=9077\nOK inline_caption=9077\nOK inline_description=9077\nOK inline_image_upload=9078 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo-inline-04.png\nOK inline_alt=9078\nOK inline_caption=9078\nOK inline_description=9078\nOK inline_image_upload=9079 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo-inline-05.png\nOK inline_alt=9079\nOK inline_caption=9079\nOK inline_description=9079\nOK inline_image_upload=9080 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo-inline-06.png\nOK inline_alt=9080\nOK inline_caption=9080\nOK inline_description=9080\nOK inline_image_upload=9081 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo-inline-07.png\nOK inline_alt=9081\nOK inline_caption=9081\nOK inline_description=9081\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo/",
+    "errors": []
+  }
+}
