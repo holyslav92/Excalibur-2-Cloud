@@ -119,7 +119,7 @@ Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 
 
 Cover + inline PNG **only grsai grsai standard image model** (Derouter image = optional last resort):
 
-1. `scripts/excalibur_blog_grsai_gpt_image2_api.py` — REST: `grsaiapi.com` (Global) → `grsai.dakka.com.cn` (China). Paths: `/v1/api/generate` (json → async poll) → `/v1/images/generations` → `/v1/draw/completions` + poll. Model **`grsai standard image model`** (NOT vip). Face i2i from `face-studio-2026-06-23.jpg`.
+1. `scripts/excalibur_blog_grsai_gpt_image2_api.py` — REST: `grsaiapi.com` (Global) → `grsai.dakka.com.cn` (China). Paths: `/v1/api/generate` (json → async poll) → `/v1/images/generations` → `/v1/draw/completions` + poll. Model tier: **first** non-vip standard; **only on failure** auto-escalate to vip (~3×). Never vip first. Face i2i from `face-studio-2026-06-23.jpg`.
 2. Solo cover CLI: `scripts/excalibur_blog_grsai_solo_cover.py` (1200×675 + pixel QA stamp).
 3. Optional last resort: `EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1` → Derouter image REST (`excalibur_blog_derouter_gpt_image2_api.py`).
 4. grsai down → `GRSAI IMAGE BLOCKER` — diagnose/retry; **STOP**

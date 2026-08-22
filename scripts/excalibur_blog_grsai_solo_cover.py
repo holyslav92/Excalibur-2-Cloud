@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Solo cover regen via grsai grsai standard image model (face i2i from studio portrait).
+"""Solo cover regen via grsai standard image model (face i2i from studio portrait).
 
 Builds solo cover prompt from quad-manifest, generates 1200×675 PNG,
 stamps cover_qa.json. Kie and PIL mashup FORBIDDEN.
+
+Model tiers (owner rule): first call non-vip; on API fail or Cover-QA FAIL
+escalate to vip for the same attempt; next attempt starts non-vip again.
 """
 
 from __future__ import annotations
@@ -16,9 +19,10 @@ from typing import Any
 from excalibur_blog_grsai_gpt_image2_api import (
     DEFAULT_TIMEOUT_SECONDS,
     MIN_TIMEOUT_SECONDS,
-    default_model,
     default_quality,
     generate_image,
+    iter_model_tiers,
+    model_tier_standard,
     project_root,
     resolve_grsai_api_key,
     resolve_hosts,
@@ -80,7 +84,7 @@ def write_temp_batch(article_dir: Path, prompt: str, ref_path: Path) -> Path:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="Generate solo 1200×675 cover via grsai grsai standard image model")
+    ap = argparse.ArgumentParser(description="Generate solo 1200×675 cover via grsai standard image model")
     ap.add_argument("--article-dir", required=True)
     ap.add_argument("--ref", default=DEFAULT_REF)
     ap.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT_SECONDS)
@@ -98,7 +102,7 @@ def main() -> int:
         print("GRSAI API KEY MISSING", file=sys.stderr)
         return 1
 
-    model = default_model()
+    standard_model = model_tier_standard()
     quality = default_quality()
     prompt = build_prompt_for_article(article_dir, root)
     if args.prompt_suffix.strip():
@@ -119,9 +123,11 @@ def main() -> int:
 
     timeout = max(MIN_TIMEOUT_SECONDS, int(args.timeout))
     hosts = resolve_hosts()
+    model_tiers = iter_model_tiers()
 
     print(
-        f"prompt_chars={len(prompt)} ref={ref_path.name} model={model} hosts={hosts}",
+        f"prompt_chars={len(prompt)} ref={ref_path.name} "
+        f"model_tiers={[m for _, m in model_tiers]} hosts={hosts}",
         flush=True,
     )
 
@@ -137,38 +143,55 @@ def main() -> int:
             "aspect_ratio": "16:9",
             "resolution": "2K",
         }
-        try:
-            raw_bytes, gen_meta = generate_image(
-                root=root,
-                batch_path=batch_path,
-                image_input=image_input,
-                api_key=api_key,
-                model=model,
-                quality=quality,
-                target_size=SOLO_COVER_SIZE,
-                timeout=timeout,
-                hosts=hosts,
-                max_retries=1,
-                retry_wait=5,
+
+        attempt_passed = False
+        for tier_idx, (tier_name, model) in enumerate(model_tiers):
+            print(f"  tier={tier_name} model={model}", flush=True)
+            try:
+                raw_bytes, gen_meta = generate_image(
+                    root=root,
+                    batch_path=batch_path,
+                    image_input=image_input,
+                    api_key=api_key,
+                    model=model,
+                    quality=quality,
+                    target_size=SOLO_COVER_SIZE,
+                    timeout=timeout,
+                    hosts=hosts,
+                    max_retries=1,
+                    retry_wait=5,
+                )
+            except Exception as exc:  # noqa: BLE001
+                if tier_name == "standard" and len(model_tiers) > 1:
+                    print(f"WARN non-vip generation failed: {exc}", flush=True)
+                    continue
+                print(f"FAIL generation: {exc}", file=sys.stderr)
+                break
+
+            gen_meta["model_tier"] = tier_name
+            cover_path = article_dir / "cover" / "cover.png"
+            cover_path.parent.mkdir(parents=True, exist_ok=True)
+            cover_path.write_bytes(raw_bytes)
+            print(
+                f"OK cover.png bytes={len(raw_bytes)} tier={tier_name} model={model} "
+                f"host={gen_meta.get('host')} endpoint={gen_meta.get('endpoint')}",
             )
-        except Exception as exc:  # noqa: BLE001
-            print(f"FAIL generation: {exc}", file=sys.stderr)
-            return 1
 
-        cover_path = article_dir / "cover" / "cover.png"
-        cover_path.parent.mkdir(parents=True, exist_ok=True)
-        cover_path.write_bytes(raw_bytes)
-        print(
-            f"OK cover.png bytes={len(raw_bytes)} host={gen_meta.get('host')} "
-            f"endpoint={gen_meta.get('endpoint')}",
-        )
+            qa = stamp_qa(article_dir, root, topic_id)
+            if qa["status"] == "PASS":
+                print(f"OK cover_qa PASS md5={qa['md5']} tier={tier_name}")
+                return 0
 
-        qa = stamp_qa(article_dir, root, topic_id)
-        if qa["status"] == "PASS":
-            print(f"OK cover_qa PASS md5={qa['md5']}")
-            return 0
-        last_errors = list(qa["errors"])
-        print("WARN pixel QA fail:", "; ".join(last_errors), flush=True)
+            last_errors = list(qa["errors"])
+            print(f"WARN pixel QA fail ({tier_name}):", "; ".join(last_errors), flush=True)
+            if tier_name == "standard" and len(model_tiers) > 1:
+                print("  escalating to vip for same attempt", flush=True)
+                continue
+            attempt_passed = False
+            break
+
+        if attempt_passed:
+            break
 
     print("FAIL pixel QA:", "; ".join(last_errors), file=sys.stderr)
     return 1

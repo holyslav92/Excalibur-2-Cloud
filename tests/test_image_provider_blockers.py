@@ -80,13 +80,37 @@ class ImageProviderBlockerTest(unittest.TestCase):
             )
 
     def test_default_grsai_model_not_vip(self) -> None:
-        from excalibur_blog_grsai_gpt_image2_api import default_model, grsai_vip_model_id
+        from excalibur_blog_grsai_gpt_image2_api import (
+            default_model,
+            grsai_vip_model_id,
+            model_tier_standard,
+            model_tier_vip_fallback,
+            iter_model_tiers,
+        )
 
         with mock.patch.dict(os.environ, {}, clear=False):
             os.environ.pop("GRSAI_IMAGE_MODEL", None)
             model = default_model()
             self.assertTrue(model.startswith("gpt"))
             self.assertNotEqual(model, grsai_vip_model_id())
+            self.assertEqual(model, model_tier_standard())
+            self.assertEqual(model_tier_vip_fallback(model), grsai_vip_model_id())
+            tiers = iter_model_tiers()
+            self.assertEqual(tiers[0][0], "standard")
+            self.assertNotEqual(tiers[0][1], grsai_vip_model_id())
+            self.assertEqual(tiers[1][0], "vip")
+
+    def test_grsai_vip_env_still_starts_non_vip(self) -> None:
+        from excalibur_blog_grsai_gpt_image2_api import (
+            grsai_vip_model_id,
+            model_tier_standard,
+            iter_model_tiers,
+        )
+
+        with mock.patch.dict(os.environ, {"GRSAI_IMAGE_MODEL": grsai_vip_model_id()}):
+            standard = model_tier_standard()
+            self.assertNotEqual(standard, grsai_vip_model_id())
+            self.assertEqual(iter_model_tiers()[0][1], standard)
 
     def test_resolve_image_base_urls_default_order(self) -> None:
         from excalibur_blog_derouter_gpt_image2_api import (

@@ -32,9 +32,16 @@ Primary Cloud path for Excalibur BLOG cover/inline quad canvas generation (owner
 
 ## Model
 
-- **GRSAI_IMAGE_MODEL** non-vip tier only (NOT vip suffix)
-- Env override: `GRSAI_IMAGE_MODEL` (script default = non-vip standard tier)
+- **First attempt (mandatory):** non-vip standard tier (`GRSAI_IMAGE_MODEL` override allowed only if not vip)
+- **Second attempt (auto):** vip tier (~3× cost) **only** after one failed non-vip call:
+  - API error, empty result, timeout (all hosts/paths exhausted)
+  - Solo cover: Cover-QA FAIL on non-vip PNG → escalate vip before next attempt
+- **Never** vip on the first try — even if `GRSAI_IMAGE_MODEL` is set to vip tier, first call is non-vip
 - Quality: `GRSAI_IMAGE_QUALITY` (default `high`; `auto` if supported)
+
+Implementation: `model_tier_standard()` → `generate_image()`; on failure
+`model_tier_vip_fallback()` via `generate_image_with_model_tier_fallback()` or
+solo-cover per-attempt tier loop in `excalibur_blog_grsai_solo_cover.py`.
 
 ## Text → image (`/v1/api/generate`)
 
