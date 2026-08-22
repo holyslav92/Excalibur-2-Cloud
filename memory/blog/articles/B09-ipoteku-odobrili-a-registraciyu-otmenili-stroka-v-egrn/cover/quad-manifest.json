@@ -46,8 +46,8 @@
     "cover": {
       "quadrant": "top_left",
       "role": "cover_editorial_hero",
-      "alt": "Святослав в синей куртке останавливает жестом руку над выпиской ЕГРН с обременением; крупный hook справа; телефон +7 922 001 65 05; жёлтый стикер; кот-стикер.",
-      "scene_hint": "bright sunlit desk; LARGE Cyrillic hook RIGHT single-line sharp; host LEFT waist-up blue jacket shocked; yellow sticky on host lapel NOT top-left; phone bottom-RIGHT full; small cat meme; NO Wordstat bars",
+      "alt": "Святослав в ржаво-терракотовом свитере в шоке над выпиской ЕГРН; крупный hook справа; телефон +7 922 001 65 05; жёлтый стикер; кот-стикер.",
+      "scene_hint": "bright high-key; HUGE face close-up LEFT 45% frame height; rust terracotta crew sweater NOT blue jacket; shocked wide eyes; LARGE Cyrillic hook RIGHT sharp black text; highlight word gold TEXT only NO horizontal brush bars; yellow sticky on sweater; phone bottom-RIGHT fully inside frame; small cat meme; NO Wordstat bars",
       "meme_caption_ru": "",
       "sticky": "Строка в ЕГРН живая",
       "cover_emotion": "шок",
@@ -160,10 +160,10 @@
     "prop_set": "egrn_printout_red_highlight_obremenenie",
     "sticker_set": "one_yellow_sticky_hook_only_NO_wordstat",
     "joke": "cat_sticker_points_at_red_egrn_line",
-    "outfit": "soft_blue_jacket_white_tee_NO_blazer",
-    "emotion": "shocked_stop_hand_gesture_NO_smile",
-    "pose_framing": "waist_up_left_third_face_large_room_for_title_right",
-    "action": "stop_hand_over_egrn_obremenenie_line"
+    "outfit": "rust_terracotta_crew_sweater_white_tee_NO_jacket_NO_blazer",
+    "emotion": "shocked_wide_eyes_hand_on_egrn_NO_smile",
+    "pose_framing": "extreme_close_up_face_left_45pct_height_like_B08",
+    "action": "pointing_at_red_egrn_obremenenie_line"
   },
   "quad_canon": {
     "meme_allowed_slots": [
