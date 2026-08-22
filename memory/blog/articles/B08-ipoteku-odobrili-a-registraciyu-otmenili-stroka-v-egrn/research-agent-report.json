@@ -1,0 +1,54 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B08",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-22",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/s/klyshin_A",
+        "type": "community",
+        "note": "Август 2026: «Сначала проверка. Потом аванс.» — предавансовая проверка ЕГРН"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Август 2026: контекст рисков вторички Тюмени"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 22880,
+    "stickers": {
+      "егрн": 7543,
+      "выписка из егрн": 2648
+    },
+    "hook_phrase": "выписка егрн квартира",
+    "hook_volume": 246
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "Ипотека+регистрация — другой plot vs B01–B07 и daily ЕГРН-аванс"
+  },
+  "official_source_audit": {
+    "required": false,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["rosreestr", "rbc"],
+    "errors": [],
+    "note": "Rosreestr/RBC разъяснения приостановки; не банковские тарифы"
+  },
+  "key_facts_count": 18,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}
