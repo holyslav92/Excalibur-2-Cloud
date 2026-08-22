@@ -2,8 +2,8 @@
   "bank_id": "klyshin_topic_bank_v1",
   "source_channel": "https://t.me/klyshin_A",
   "source_label": "Алексей Клышин — юрист по недвижимости",
-  "updated_at": "2026-08-21",
-  "accessed_at": "2026-08-21",
+  "updated_at": "2026-08-22",
+  "accessed_at": "2026-08-22",
   "algorithm": "klyshin_hook → wordstat_probe → rework_for_demand → final_P0_or_skip_after_rework",
   "wordstat_gate": {
     "provider": "mcp-kv",
@@ -247,6 +247,36 @@
       "status": "seed"
     },
     {
+      "id": "zags_dead_wife_marital_share",
+      "hook_ru": "сказали «в браке не был» — всплыла умершая жена",
+      "angle": "справка ЗАГС не на ту дату; супружеская доля умершей; наследники без оформления доли",
+      "klyshin_signal": "Пост 2026-08: ДКП 1998, справка ЗАГС с 2004, муж был в браке, супруга умерла, дети от двух браков, наследство принято но доля не выделена, банк отказал",
+      "wordstat_probes": [
+        "брачная доля квартиры",
+        "согласие супруга на продажу квартиры",
+        "наследство квартира продажа",
+        "купить квартиру в тюмени"
+      ],
+      "wordstat_rework_log": [
+        "probe «брачная доля квартиры» 3",
+        "rework «согласие супруга на продажу квартиры» 49",
+        "rework «наследство квартира продажа» 157",
+        "final P0 «купить квартиру в тюмени» 22880 (RU225 40230)"
+      ],
+      "final_p0": {
+        "phrase": "купить квартиру в тюмени",
+        "volume": 22880,
+        "regions": [
+          "55",
+          "11176"
+        ],
+        "compare_ru": 40230
+      },
+      "last_seen": "2026-08-22",
+      "tyumen_localize": true,
+      "status": "B08"
+    },
+    {
       "id": "moscow_dubai_invest_drop",
       "hook_ru": "Москва / Дубай / инвест-аренда — не P0 для Тюмени",
       "angle": "DROP unless Tyumen Wordstat analog exists",
@@ -303,6 +333,21 @@
       ],
       "note": "автооценка минус 1–2 млн → final P0 «купить квартиру в тюмени» 23066",
       "wordstat_rework": "73 → 3943 → 5799 → 23066"
+    },
+    {
+      "topic_id": "B07",
+      "hook_ids": [
+        "heirs_first_marriage_3y"
+      ],
+      "note": "наследство / сын первого брака без отказа"
+    },
+    {
+      "topic_id": "B08",
+      "hook_ids": [
+        "zags_dead_wife_marital_share"
+      ],
+      "note": "справка ЗАГС не на дату / умершая жена / неоформленная доля",
+      "wordstat_rework": "3 → 49 → 157 → 22880"
     }
   ]
 }
