@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Preflight quad-manifest.json before Derouter/Kie image API — fail cheap."""
+"""Preflight quad-manifest.json before Derouter image API — fail cheap."""
 
 from __future__ import annotations
 

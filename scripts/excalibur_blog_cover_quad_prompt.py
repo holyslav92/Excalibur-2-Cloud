@@ -733,8 +733,8 @@ def main() -> int:
                 "resolution": MCP_RESOLUTION,
                 "note": (
                     "PRIMARY: Derouter REST image API (api-direct, 2K 16:9). "
-                    "Fallback: excalibur_blog_kie_gpt_image2_api.py when DEROUTER auth/5xx. "
-                    "FORBIDDEN: flux2-pro-*, Seedream, nano_banana*, z-image, mcp-derouter/start-mcp.sh."
+                    "If REST down: DEROUTER MCP from conductor. "
+                    "FORBIDDEN: Kie, flux2-pro-*, Seedream, nano_banana*, z-image, PIL mashup."
                 ),
                 "apply_script": (
                     "python3 scripts/excalibur_blog_quad_apply.py "

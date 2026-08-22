@@ -221,7 +221,12 @@
   "image_allowlist": {
     "allowed": [
       "scripts/excalibur_blog_derouter_gpt_image2_api.py (Derouter REST image API, api-direct, 2K 16:9)",
-      "scripts/excalibur_blog_kie_gpt_image2_api.py (Kie async image API — secondary after Derouter auth/5xx)"
+      "DEROUTER MCP server (conductor only, when REST exhausted)"
+    ],
+    "forbidden_forever": [
+      "scripts/excalibur_blog_kie_gpt_image2_api.py",
+      "scripts/excalibur_blog_cover_pil_compose.py",
+      "KIE_API_KEY for any cover/inline image"
     ],
     "forbidden": [
       "mcp-derouter/start-mcp.sh",
@@ -231,9 +236,10 @@
       "nano_banana",
       "nano_banana_2",
       "z-image",
-      "off-pipeline demo canvases / lone prompts without Scout×Wordstat article"
+      "off-pipeline demo canvases / lone prompts without Scout×Wordstat article",
+      "PIL template mashup / B06 glue"
     ],
-    "timeout_rule": "Derouter auth/5xx → one retry + fallback host; then Kie script. NEVER Flux/Seedream/nano_banana/z-image"
+    "timeout_rule": "Derouter auth/5xx → retry alternate api-direct host; then DEROUTER MCP or BLOCKER. NEVER Kie/Flux/Seedream/nano_banana/z-image/PIL mashup"
   },
   "inline_utility": {
     "catalog": "memory/cover/inline-visual-types.json",
