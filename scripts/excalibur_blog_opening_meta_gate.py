@@ -52,7 +52,7 @@ def _hits(text: str) -> list[str]:
     return found
 
 
-def check_article(article_dir: Path) -> dict[str, Any]:
+def check_article(article_dir: Path, root: Path | None = None) -> dict[str, Any]:
     errors: list[str] = []
     orphan_lead = article_dir / "lead.md"
     meta_path = article_dir / "article.meta.json"
@@ -95,11 +95,17 @@ def check_article(article_dir: Path) -> dict[str, Any]:
         errors.append("article.html missing")
 
     status = "PASS" if not errors else "BLOCK"
+    project_root = root or Path(__file__).resolve().parents[1]
+    rel_dir = (
+        str(article_dir.relative_to(project_root)).replace("\\", "/")
+        if project_root in article_dir.parents
+        else str(article_dir)
+    )
     return {
         "gate": "opening-meta",
         "status": status,
         "errors": errors,
-        "article_dir": str(article_dir),
+        "article_dir": rel_dir,
     }
 
 
@@ -113,7 +119,7 @@ def main() -> int:
     if not article_dir.is_dir():
         print(f"BLOCKER: article-dir not found: {article_dir}", file=sys.stderr)
         return 2
-    report = check_article(article_dir)
+    report = check_article(article_dir, root)
     out_name = Path(args.output).name
     out_path = article_dir / out_name
     out_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

@@ -31,6 +31,11 @@
       "utility": "Real columns/rows; numbers when Writer gave them; left vs right must differ",
       "keywords": ["сравн", "vs", "или", "порядок", "ошибк", "норма", "тариф", "альтернатив"]
     },
+    "comparison_table_ui": {
+      "label_ru": "таблица UI (legacy → comparison_table)",
+      "utility": "Alias only — scripts normalize to comparison_table before Cover-QA",
+      "keywords": []
+    },
     "process_flow": {
       "label_ru": "нумерованный процесс / таймлайн",
       "utility": "Numbered steps; one failure/success point highlighted; evidence as callout not extra step",

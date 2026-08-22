@@ -15,6 +15,8 @@ from excalibur_blog_quad_slots import (
     active_inline_keys,
     apply_quad_canon_to_manifest,
     inline_count_from_manifest,
+    is_allowed_inline_visual_type,
+    normalize_visual_type,
     slot_allows_meme_sticker,
 )
 
@@ -98,6 +100,16 @@ def validate_quad_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
             errors.append(f"{key}.scene_hint empty")
         if not str(slot.get("alt") or "").strip():
             errors.append(f"{key}.alt empty")
+        if key != "cover":
+            raw_type = str(slot.get("visual_type") or "").strip()
+            if not raw_type:
+                errors.append(f"{key}.visual_type missing")
+            elif not is_allowed_inline_visual_type(raw_type):
+                canon = normalize_visual_type(raw_type)
+                errors.append(
+                    f"{key}.visual_type invalid: {raw_type!r} "
+                    f"(use canonical {canon!r} from memory/cover/inline-visual-types.json)"
+                )
         if key != "cover" and slot_allows_meme_sticker(key) is False:
             neg = slot.get("prompt_negatives") or ""
             if "NO meme" not in neg and "БЕЗ мем" not in neg:

@@ -49,6 +49,39 @@ LEGACY_CANVAS_FILE = "cover/canvas-quad.png"
 LEGACY_BATCH_FILE = "cover/quad-mcp-batch.json"
 LEGACY_RESULT_FILE = "cover/quad-mcp-result.json"
 
+# Canonical inline visual types (memory/cover/inline-visual-types.json).
+CANONICAL_INLINE_VISUAL_TYPES: frozenset[str] = frozenset(
+    {
+        "comparison_table",
+        "process_flow",
+        "bar_timeline_chart",
+        "structure_diagram",
+        "labeled_checklist",
+        "fact_card",
+    }
+)
+
+# Legacy aliases emitted by older manifests / quad_manifest TYPE_PRIORITY (B08 fixer).
+VISUAL_TYPE_ALIASES: dict[str, str] = {
+    "comparison_table_ui": "comparison_table",
+    "workflow_diagram": "process_flow",
+    "checklist_board": "labeled_checklist",
+    "schema_faq_ui": "structure_diagram",
+    "tool_screenshot": "comparison_table",
+    "infographic_card": "bar_timeline_chart",
+}
+
+
+def normalize_visual_type(type_id: str) -> str:
+    raw = str(type_id or "").strip()
+    if not raw:
+        return raw
+    return VISUAL_TYPE_ALIASES.get(raw, raw)
+
+
+def is_allowed_inline_visual_type(type_id: str) -> bool:
+    return normalize_visual_type(type_id) in CANONICAL_INLINE_VISUAL_TYPES
+
 # Owner canon (B03 postmortem): memes on 2–3 of 7 inlines + cover-adjacent.
 # Fixed pattern: meme allowed on cover, inline_1, inline_5, inline_7 only.
 MEME_ALLOWED_SLOTS: frozenset[str] = frozenset({"cover", "inline_1", "inline_5", "inline_7"})
@@ -131,6 +164,10 @@ def apply_quad_canon_to_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
     slots = manifest.setdefault("slots", {})
     for slot_key in ("cover",) + tuple(active_inline_keys(inline_count)):
         slot = slots.setdefault(slot_key, {})
+        if slot_key != "cover":
+            raw_type = str(slot.get("visual_type") or "").strip()
+            if raw_type:
+                slot["visual_type"] = normalize_visual_type(raw_type)
         allows_meme = slot_allows_meme_sticker(slot_key)
         forbids = slot_forbids_meme_cat_person(slot_key)
         slot["meme_sticker"] = allows_meme
