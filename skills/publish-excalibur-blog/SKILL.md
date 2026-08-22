@@ -116,6 +116,8 @@ python3 scripts/excalibur_blog_theme_contract_deploy.py --deploy
 Скрипт делает backup и учит тему уважать future-only meta-флаги. Без этого
 live-page gate после upload заблокирует generic FAQ/quiz/stickers.
 
+`OK theme_contract=already_deployed` = успех (тема уже пропатчена), не warning.
+
 ### 1. Preflight publish
 
 ```bash

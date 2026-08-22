@@ -162,7 +162,7 @@ def deploy() -> None:
                 original = handle.read().decode("utf-8")
             patched = patcher(original)
             if patched == original:
-                print(f"OK unchanged={name}")
+                print(f"OK theme_contract=already_deployed file={name}")
                 continue
             backup = f"{remote}.bak-excalibur-{stamp}"
             with sftp.open(backup, "w") as handle:

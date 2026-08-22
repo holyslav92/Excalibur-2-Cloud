@@ -18,10 +18,11 @@ category: env
 ### How the agent recovered this run
 - Content-learner записал pipeline lessons из run evidence (Derouter 524 chunk, quality-bar PIL sync, html_linter CTA div).
 - Metrika cohort analysis пропущен; lessons marked low/medium confidence без behavioral signals.
+- **Recurrence B08 (2026-08-22):** тот же METRIKA CREDENTIALS BLOCKER при content-learner B08 (wp_post_id=9063); lessons recorded Metrika-only gap.
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06 для post-publish behavioral baseline.
+- Повторить ingest после publish B06/B08 для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -110,3 +111,126 @@ checks_run:
 - `python3 -m unittest tests.test_pipeline_speed_b03.HtmlAutofixTest` → OK
 commit: 35ab34b
 
+## INC-20260822-0744-cover-qa-visual-type-b08
+status: fixed
+run_date: 2026-08-22
+role: excalibur-blog-cover-qa
+topic_id: B08
+article_dir: memory/blog/articles/B08-ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn
+severity: high
+category: script
+
+### What went wrong
+- `quad_manifest.py` TYPE_PRIORITY used legacy `comparison_table_ui`, absent from `inline-visual-types.json` and `cover_qa_gate` allowed set.
+- Cover-QA FAIL: `inline_2.visual_type invalid: comparison_table_ui` after first cover.png generation.
+
+### How the agent recovered this run
+- Article-only: patched `quad-manifest.json` + `cover-registry.json` `comparison_table_ui` → `comparison_table`.
+- Ran cover_fixer regen cover panel; Cover-QA + quality-bar-9 PASS; publish continued.
+
+### Durable fix needed before next run
+- Single source of truth: normalize legacy visual_type aliases in `excalibur_blog_quad_slots.py`.
+- Early fail in `quad_manifest_preflight.py`; `quad_manifest.py` TYPE_PRIORITY uses canonical types only.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quad_slots.py`
+- `scripts/excalibur_blog_quad_manifest.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+- `scripts/excalibur_blog_quad_manifest_preflight.py`
+- `memory/cover/inline-visual-types.json`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-22
+fix_summary:
+- Added `VISUAL_TYPE_ALIASES` + `normalize_visual_type()` / `is_allowed_inline_visual_type()` in quad_slots; `apply_quad_canon_to_manifest` rewrites inline visual_type before image API.
+- `quad_manifest.py` TYPE_PRIORITY now canonical (`comparison_table`, not `comparison_table_ui`).
+- `cover_qa_gate` + `quad_manifest_preflight` share alias-aware validation.
+- Documented `comparison_table_ui` legacy alias in inline-visual-types catalog.
+files_changed:
+- `scripts/excalibur_blog_quad_slots.py`
+- `scripts/excalibur_blog_quad_manifest.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+- `scripts/excalibur_blog_quad_manifest_preflight.py`
+- `memory/cover/inline-visual-types.json`
+- `tests/test_visual_type_aliases.py`
+checks_run:
+- `python3 -m py_compile` on changed scripts
+- `python3 -m unittest tests.test_visual_type_aliases` → OK
+- `python3 scripts/excalibur_blog_cover_qa_gate.py --article-dir B08` → PASS
+commit: d25f304
+
+## INC-20260822-0744-cover-fixer-regen-b08
+status: fixed
+run_date: 2026-08-22
+role: excalibur-blog-cover-qa
+topic_id: B08
+article_dir: memory/blog/articles/B08-ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn
+severity: medium
+category: qa
+
+### What went wrong
+- First `cover.png` failed pixel/layout Cover-QA (before visual_type fix + panel regen).
+
+### How the agent recovered this run
+- Article-only: `excalibur_blog_cover_fixer.py` regen cover panel; new `cover.png` md5=a519f93f… PASS all pixel checks.
+
+### Durable fix needed before next run
+- No new repo change: cover_fixer + pixel gates already canonical; root cause was invalid visual_type blocking clean QA loop.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_fixer.py`
+- `memory/cover/cover-canon.json`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-22
+fix_summary:
+- Article-only recovery (cover.png regen). Durable prevention = visual_type alias fix (INC-20260822-0744-cover-qa-visual-type-b08).
+files_changed:
+- none (article artifact only in run)
+checks_run:
+- B08 `cover/cover_qa.json` PASS + md5 match verified post-run
+commit: b996aa0
+
+## INC-20260822-0751-theme-contract-deploy-warning-b08
+status: fixed
+run_date: 2026-08-22
+role: excalibur-blog-publish
+topic_id: B08
+article_dir: memory/blog/articles/B08-ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn
+severity: low
+category: docs
+
+### What went wrong
+- Publish step logged `OK unchanged=functions.php` / `single.php` from theme_contract_deploy — agents misread idempotent success as deploy warning.
+
+### How the agent recovered this run
+- Continued publish; live-page gate PASS (theme meta flags respected).
+
+### Durable fix needed before next run
+- Clear stdout: `OK theme_contract=already_deployed file=…`; publish skill notes this is success not warning.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_theme_contract_deploy.py`
+- `skills/publish-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-22
+fix_summary:
+- Renamed idempotent deploy stdout to `OK theme_contract=already_deployed file=…`.
+- Publish skill: explicit note that already_deployed is success, not warning.
+files_changed:
+- `scripts/excalibur_blog_theme_contract_deploy.py`
+- `skills/publish-excalibur-blog/SKILL.md`
+- `.cursor/skills/publish-excalibur-blog/SKILL.md`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_theme_contract_deploy.py`
+commit: d25f304

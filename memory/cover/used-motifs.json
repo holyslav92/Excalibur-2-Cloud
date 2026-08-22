@@ -103,6 +103,23 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-22",
+      "topic_id": "B08",
+      "slug": "",
+      "motifs": {
+        "composition": "host_full_body_right_mfc_counter_stop_stamp_sun_flare",
+        "location": "bright_sunny_tyumen_mfc_glass_lobby_white_walls",
+        "meme": "grumpy_cat_sticker_plus_facepalm_catalog_people_cutout",
+        "prop_set": "egrn_printout_red_stop_stamp_deal_folder_yellow_sticky",
+        "sticker_set": "grumpy_cat_facepalm_yellow_sticky_hook_only_no_wordstat",
+        "joke": "green_bank_check_vs_red_stop_stamp_on_egrn_line",
+        "outfit": "light_blue_rolled_sleeve_shirt_sand_trousers_suspenders_no_blazer",
+        "emotion": "stunned_disbelief_direct_gaze_open_mouth",
+        "pose_framing": "dynamic_full_body_right_center_not_left_bust_not_side_eye",
+        "action": "points_at_red_stop_stamp_holds_deal_folder"
+      }
     }
   ]
 }

@@ -1,0 +1,86 @@
+{
+  "topic_id": "B08",
+  "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Риэлтор в светлом холле МФЦ показывает выписку ЕГРН с красным штампом остановки регистрации; рядом стикеры кота и facepalm-мема.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-22T07:34:29+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Риэлтор в светлом холле МФЦ показывает выписку ЕГРН с красным штампом остановки регистрации; рядом стикеры кота и facepalm-мема.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Сравнительная таблица: ипотечное одобрение банка не отменяет действующее обременение и остановку регистрации.",
+      "h2_anchor": "Коротко: ипотеку одобрили — а регистрацию остановили",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Интерфейсная таблица показывает путь покупателя от одобрения ипотеки до остановки регистрации после отданного аванса.",
+      "h2_anchor": "Сцена: покупатель в Тюмени дошёл до Росреестра",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Структурная схема отделяет проверку заёмщика банком от проверки действующих записей об обременении в ЕГРН.",
+      "h2_anchor": "Что банк реально одобряет — и чего не видит в ЕГРН",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Схема объясняет, как строка о действующем обременении в выписке ЕГРН останавливает сделку до снятия записи.",
+      "h2_anchor": "Какая строка в выписке рвёт сделку",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Схема показывает, что ипотека продавца, арест и другие ограничения имеют разную природу, но все требуют проверки записи до аванса.",
+      "h2_anchor": "Ипотека продавца, арест, залог: записи разной природы",
+      "visual_type": "workflow_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Временная шкала показывает приостановку регистрации, срок до трёх месяцев на снятие обременения и последующий отказ.",
+      "h2_anchor": "Финал: приостановка, три месяца и отказ в регистрации",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Чек-лист проверки выписки ЕГРН до передачи аванса и перед подачей документов на регистрацию.",
+      "h2_anchor": "Что смотреть в ЕГРН до аванса — по шагам",
+      "visual_type": "checklist_board",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

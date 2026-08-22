@@ -1,0 +1,27 @@
+{
+  "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+  "topic_id": "B08",
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B08-ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 924191,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9063 slug=ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn\nOK categories=32,34\nOK yoast_social_image=1\nOK featured_image=9064\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9065 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn-inline-01.png\nOK inline_alt=9065\nOK inline_caption=9065\nOK inline_description=9065\nOK inline_image_upload=9066 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn-inline-02.png\nOK inline_alt=9066\nOK inline_caption=9066\nOK inline_description=9066\nOK inline_image_upload=9067 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn-inline-03.png\nOK inline_alt=9067\nOK inline_caption=9067\nOK inline_description=9067\nOK inline_image_upload=9068 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn-inline-04.png\nOK inline_alt=9068\nOK inline_caption=9068\nOK inline_description=9068\nOK inline_image_upload=9069 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn-inline-05.png\nOK inline_alt=9069\nOK inline_caption=9069\nOK inline_description=9069\nOK inline_image_upload=9070 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn-inline-06.png\nOK inline_alt=9070\nOK inline_caption=9070\nOK inline_description=9070\nOK inline_image_upload=9071 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn-inline-07.png\nOK inline_alt=9071\nOK inline_caption=9071\nOK inline_description=9071\npermalink={{SITE_BASE}}/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/",
+    "errors": []
+  }
+}
