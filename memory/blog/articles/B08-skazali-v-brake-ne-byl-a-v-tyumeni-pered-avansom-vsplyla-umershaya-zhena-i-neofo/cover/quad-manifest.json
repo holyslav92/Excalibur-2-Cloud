@@ -1,0 +1,224 @@
+{
+  "topic_id": "B08",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Справка ЗАГС чистая — банк отказал",
+  "cover_hook_highlight": "банк отказал",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: Derouter REST (DEROUTER_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Справка ЗАГС чистая — банк отказал",
+      "scene_hint": "bright office board; LARGE Cyrillic hook RIGHT; host LEFT close-up; phone bottom-RIGHT; cat meme corner; NO Wordstat strips",
+      "meme_caption_ru": "",
+      "sticky": "Период справки не тот",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "шок и недоверие к бумаге"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Один собственник в ЕГРН не отвечает на вопрос «кто ещё наследовал»",
+      "visual_type": "structure_diagram",
+      "scene_hint": "diagram EGRN 1 owner vs hidden heirs; tiny cat",
+      "alt": "Схема: один в ЕГРН не значит всех наследников.",
+      "labels": [
+        "ЕГРН на дату",
+        "Один не значит все",
+        "Свидетельство не обо всех",
+        "Принял без бумаг"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Сын от первого брака: почему он остаётся наследником, даже если его не видно",
+      "visual_type": "comparison_table",
+      "scene_hint": "table: 1st queue, kids equal, divorce ok, court",
+      "alt": "Таблица: сын от первого брака остаётся наследником.",
+      "labels": [
+        "Первая очередь",
+        "Дети равны",
+        "Развод не отменяет право",
+        "Срок вернёт суд"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "«Отказа не будет» и другие фразы продавца: что считается, а что нет",
+      "visual_type": "process_flow",
+      "scene_hint": "flow: notary refuse, words≠refuse, not accept, factual",
+      "alt": "Схема: слова продавца не заменяют нотариальный отказ.",
+      "labels": [
+        "Отказ у нотариуса",
+        "Слова не отказ",
+        "Не принял не отказ",
+        "Принял без бумаг"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Шесть месяцев, два года и три года: разные сроки — разный смысл",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "timeline bar 6mo 2yr 3yr death date",
+      "alt": "График сроков: 6 мес, 2 года, 3 года от смерти.",
+      "labels": [
+        "Шесть месяцев",
+        "Два года прошло",
+        "Три года не защита",
+        "Считать от смерти"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Что показывает реестр наследственных дел — и чего он не покажет",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "checklist registry search limits; tiny cat",
+      "alt": "Чек-лист реестра наследственных дел и его пределов.",
+      "labels": [
+        "Реестр наследственных дел",
+        "Поиск по умершему",
+        "Наследников не покажет",
+        "Это один шаг"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Кейс: приватизация, смерть отца, сын на службе без нотариального отказа",
+      "visual_type": "process_flow",
+      "scene_hint": "flow case: 2yr death no refuse no avans 2900₽",
+      "alt": "Кейс: смерть 2 года назад, отказа нет, аванс не внесли.",
+      "labels": [
+        "Смерть два года назад",
+        "Отказа нет",
+        "Аванс не внесли",
+        "Проверка 2900 рублей"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Вопросы продавцу и проверки до аванса",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "checklist 5 Qs avans; tiny meme",
+      "alt": "Вопросы продавцу до аванса: браки, дети, отказы.",
+      "labels": [
+        "Спросите о браках",
+        "Спросите о детях",
+        "Отказы у нотариуса",
+        "Сверьте дату смерти",
+        "Аванс после ответов"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "шок и недоверие к бумаге",
+  "cover_motifs": {
+    "composition": "host_left_third_headline_right_phone_bottom_right_designed_1200x675",
+    "location": "bright_white_investigation_board_high_key_sun_flare",
+    "meme": "small_thinking_cat_sticker_bottom_right_only",
+    "prop_set": "phone_cta_torn_paper_bottom_right_family_tree_bg",
+    "sticker_set": "one_yellow_sticky_from_hook_only_NO_wordstat",
+    "joke": "cat_sticker_side_eye_at_missing_heir_branch",
+    "outfit": "свитер терракотовый на молнии без пиджака",
+    "emotion": "шок и недоверие к бумаге",
+    "pose_framing": "крупный план слева держит справку ЗАГС",
+    "action": "смотрит на справку ЗАГС с недоверием"
+  },
+  "wordstat_pil_only": false,
+  "wordstat_overlay_style": "paper_sticker_v2",
+  "wordstat_stickers_pil_applied": false,
+  "wordstat_sticker_positions": []
+}

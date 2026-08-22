@@ -1,0 +1,13 @@
+{
+  "status": "BLOCK",
+  "errors": [
+    "inline_1: labels must be 2-6 short strings, got ['факт 1']",
+    "inline_2: labels must be 2-6 short strings, got ['факт 2']",
+    "inline_3: labels must be 2-6 short strings, got ['факт 3']",
+    "inline_4: labels must be 2-6 short strings, got ['факт 4']",
+    "inline_5: labels must be 2-6 short strings, got ['факт 5']",
+    "inline_6: labels must be 2-6 short strings, got ['факт 6']",
+    "inline_7: labels must be 2-6 short strings, got ['факт 7']"
+  ],
+  "error_fields": []
+}
