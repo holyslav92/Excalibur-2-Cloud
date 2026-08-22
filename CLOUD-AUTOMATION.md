@@ -119,10 +119,11 @@ Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 
 
 Cover + inline PNG **only Derouter**:
 
-1. `scripts/excalibur_blog_derouter_gpt_image2_api.py` — REST failover: `api.derouter.ai` → `api.apikey.cloud` → `api-direct.derouter.ai` → `api-direct.apikey.cloud` (env `DEROUTER_IMAGE_BASE_URL` override)
-2. Probe: `python3 scripts/excalibur_blog_derouter_image_probe.py`
-3. REST exhausted → **DEROUTER MCP** (conductor invokes image tool)
-4. Derouter down → `DEROUTER IMAGE BLOCKER` — diagnose/retry; **STOP**
+1. `scripts/excalibur_blog_derouter_gpt_image2_api.py` — REST failover: `api.derouter.ai` → `api.apikey.cloud` → `api-direct.derouter.ai` → `api-direct.apikey.cloud` (env `DEROUTER_IMAGE_BASE_URL` override). **Auto-fallback:** when `/images/generations` discontinued on all hosts → `POST /openai/v1/responses` + `tools: [{type: image_generation}]` (`DEROUTER_RESPONSES_IMAGE_MODEL`, default `gpt-5.4`; i2i `input_image` for identity ref).
+2. Solo cover CLI: `scripts/excalibur_blog_derouter_responses_image.py` (same `/responses` path, 1200×675).
+3. Probe: `python3 scripts/excalibur_blog_derouter_image_probe.py` (probes generations, then responses).
+4. REST + responses exhausted → **DEROUTER MCP** (conductor invokes image tool).
+5. Derouter down → `DEROUTER IMAGE BLOCKER` — diagnose/retry; **STOP**
 
 **FORBIDDEN FOREVER:** Kie (`KIE_API_KEY`, `excalibur_blog_kie_gpt_image2_api.py`), PIL template mashup (`excalibur_blog_cover_pil_compose.py`). Never `--fallback-kie`. Never upload mashup when APIs fail.
 

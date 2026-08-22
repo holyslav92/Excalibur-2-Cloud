@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Probe Derouter image base URLs with minimal /images/generations request.
+"""Probe Derouter image paths: /images/generations then /responses image_generation.
 
-Records HTTP status + body snippet per host/path. Optional cf-api balance check.
+Records HTTP status + body snippet per host. Optional cf-api balance check.
 Auth: DEROUTER_API_KEY or DEROUTE_API_KEY (Cloud Secrets). Never print the key.
 """
 
@@ -19,7 +19,9 @@ from typing import Any
 
 from excalibur_blog_derouter_gpt_image2_api import (
     DEFAULT_IMAGE_BASE_ENV,
+    RESPONSES_SUFFIX,
     default_model,
+    default_responses_model,
     resolve_derouter_api_key,
     resolve_image_base_urls,
     should_failover_to_next_host,
@@ -134,6 +136,76 @@ def probe_generations(
     return row
 
 
+def probe_responses(
+    base_url: str,
+    api_key: str,
+    model: str,
+    *,
+    timeout: int,
+    prompt: str,
+) -> dict[str, Any]:
+    """POST /openai/v1/responses + tools image_generation."""
+    import urllib.parse
+
+    path = f"/openai/v1{RESPONSES_SUFFIX}"
+    url = f"{base_url.rstrip('/')}{RESPONSES_SUFFIX}"
+    payload = {
+        "model": model,
+        "input": [{"role": "user", "content": [{"type": "input_text", "text": prompt}]}],
+        "tools": [{"type": "image_generation"}],
+    }
+    data = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=data,
+        headers={
+            "Accept": "application/json",
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    row: dict[str, Any] = {
+        "base_url": base_url,
+        "host": urllib.parse.urlparse(base_url).netloc,
+        "path": path,
+        "method": "POST",
+        "endpoint": "responses",
+        "tool": "image_generation",
+    }
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as response:
+            body = response.read().decode("utf-8")
+            row["http_status"] = response.status
+            parsed = json.loads(body)
+            b64 = ""
+            for item in parsed.get("output") or []:
+                if item.get("type") == "image_generation_call" and item.get("result"):
+                    b64 = str(item["result"])
+                    break
+            row["has_b64_json"] = bool(b64)
+            row["decoded_bytes"] = len(base64.b64decode(b64)) if b64 else 0
+            row["body_snippet"] = (
+                body[:240] if not b64 else f"OK image_generation_call b64 len={len(b64)}"
+            )
+            row["ok"] = (
+                parsed.get("status") == "completed"
+                and row["has_b64_json"]
+                and row["decoded_bytes"] > 0
+            )
+    except urllib.error.HTTPError as exc:
+        err_body = exc.read().decode("utf-8", errors="replace")
+        row["http_status"] = exc.code
+        row["body_snippet"] = err_body[:400]
+        row["failover_candidate"] = should_failover_to_next_host(exc.code, err_body)
+        row["ok"] = False
+    except Exception as exc:  # noqa: BLE001
+        row["http_status"] = None
+        row["body_snippet"] = f"{type(exc).__name__}: {exc}"
+        row["ok"] = False
+    return row
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Probe Derouter image REST base URLs")
     ap.add_argument("--timeout", type=int, default=120)
@@ -158,6 +230,7 @@ def main() -> int:
 
     bases = resolve_image_base_urls()
     env_override = os.environ.get(DEFAULT_IMAGE_BASE_ENV, "").strip()
+    responses_model = default_responses_model()
 
     balance = probe_balance(api_key)
     print(
@@ -171,6 +244,7 @@ def main() -> int:
 
     results: list[dict[str, Any]] = []
     first_ok: str | None = None
+    first_ok_path: str | None = None
     for base in bases:
         row = probe_generations(
             base,
@@ -187,13 +261,45 @@ def main() -> int:
         print(f"| {row['host']} | {row['path']} | {status} | {ok} | {snippet} |")
         if ok and not first_ok:
             first_ok = base
+            first_ok_path = row["path"]
+
+    responses_results: list[dict[str, Any]] = []
+    if not first_ok:
+        print()
+        print(
+            f"Probing /responses image_generation (model={responses_model}), "
+            f"timeout={args.timeout}s"
+        )
+        print("| host | path | HTTP | ok | snippet |")
+        print("|------|------|------|----|---------|")
+        for base in bases:
+            row = probe_responses(
+                base,
+                api_key,
+                responses_model,
+                timeout=max(30, int(args.timeout)),
+                prompt=args.prompt,
+            )
+            responses_results.append(row)
+            status = row.get("http_status")
+            snippet = str(row.get("body_snippet", ""))[:100]
+            ok = row.get("ok")
+            print(f"| {row['host']} | {row['path']} | {status} | {ok} | {snippet} |")
+            if ok and not first_ok:
+                first_ok = base
+                first_ok_path = row["path"]
 
     report = {
         "management_balance": balance,
         "env_image_base": env_override or None,
         "first_ok_base_url": first_ok,
+        "first_ok_path": first_ok_path,
         "image_generations_path": "/openai/v1/images/generations",
+        "responses_path": "/openai/v1/responses",
+        "responses_model": responses_model,
+        "image_model": model,
         "results": results,
+        "responses_results": responses_results,
     }
     if args.json_out:
         out_path = Path(args.json_out)
@@ -204,10 +310,13 @@ def main() -> int:
         print(f"\nJSON: {out_path}")
 
     if first_ok:
-        print(f"\nFIRST OK base_url: {first_ok}")
+        print(f"\nFIRST OK base_url: {first_ok} path={first_ok_path}")
         return 0
 
-    print("\n❌ DEROUTER IMAGE BLOCKER: no base URL returned a real image", file=sys.stderr)
+    print(
+        "\n❌ DEROUTER IMAGE BLOCKER: no /images/generations and no /responses image_generation PNG",
+        file=sys.stderr,
+    )
     return 1
 
 

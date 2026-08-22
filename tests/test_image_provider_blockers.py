@@ -59,6 +59,22 @@ class ImageProviderBlockerTest(unittest.TestCase):
             ],
         )
 
+    def test_parse_size_wh(self) -> None:
+        from excalibur_blog_derouter_gpt_image2_api import parse_size_wh
+
+        self.assertEqual(parse_size_wh("2048x1152"), (2048, 1152))
+        self.assertEqual(parse_size_wh("1200x675"), (1200, 675))
+
+    def test_default_responses_model(self) -> None:
+        from excalibur_blog_derouter_gpt_image2_api import (
+            DEFAULT_RESPONSES_MODEL,
+            default_responses_model,
+        )
+
+        with mock.patch.dict(os.environ, {}, clear=False):
+            os.environ.pop("DEROUTER_RESPONSES_IMAGE_MODEL", None)
+            self.assertEqual(default_responses_model(), DEFAULT_RESPONSES_MODEL)
+
 
 if __name__ == "__main__":
     unittest.main()

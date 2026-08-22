@@ -2,12 +2,15 @@
 """Run Derouter image model through REST API (OpenAI-compatible).
 
 Reads ``cover/quad-mcp-batch.json``, calls Derouter ``/images/generations`` (t2i)
-or ``/images/edits`` (i2i with local identity-real file), writes the same
-``cover/quad-mcp-result.json`` shape for ``excalibur_blog_quad_apply.py``.
+or ``/images/edits`` (i2i with local identity-real file). When ``/images/*`` is
+discontinued on all hosts, falls back to ``/openai/v1/responses`` with
+``tools: [{type: image_generation}]`` (i2i via input_image when identity ref present).
+
+Writes ``cover/quad-mcp-result.json`` for ``excalibur_blog_quad_apply.py``.
 
 Auth: ``DEROUTER_API_KEY`` only (Cloud Secrets). Never print the key.
 
-Provider order (Cover): Derouter REST api-direct → fallback host → DEROUTER MCP (conductor).
+Provider order (Cover): images REST (4 hosts) → responses image_generation → DEROUTER MCP.
 Forbidden forever: Kie, flux2-pro-*, Seedream, nano_banana*, z-image, PIL template mashup.
 """
 
@@ -56,6 +59,9 @@ MIN_TIMEOUT_SECONDS = 240
 DEFAULT_MAX_RETRIES = 1
 DEFAULT_RETRY_WAIT_SECONDS = 5
 DEFAULT_LOCAL_REFERENCE = "memory/cover/assets/blog-hero-reference.png"
+DEFAULT_RESPONSES_MODEL = "gpt-5.4"
+DEFAULT_RESPONSES_MODEL_ENV = "DEROUTER_RESPONSES_IMAGE_MODEL"
+RESPONSES_SUFFIX = "/responses"
 
 
 class DerouterApiError(RuntimeError):
@@ -134,6 +140,136 @@ def default_size() -> str:
 
 def default_quality() -> str:
     return (os.environ.get(DEFAULT_QUALITY_ENV) or DEFAULT_QUALITY).strip() or DEFAULT_QUALITY
+
+
+def default_responses_model() -> str:
+    return (
+        os.environ.get(DEFAULT_RESPONSES_MODEL_ENV, "").strip() or DEFAULT_RESPONSES_MODEL
+    )
+
+
+def parse_size_wh(size: str) -> tuple[int, int]:
+    """Размер из DEROUTER_IMAGE_SIZE, например 2048x1152."""
+    raw = (size or DEFAULT_SIZE_2K_16_9).strip().lower().replace("×", "x")
+    if "x" not in raw:
+        return 2048, 1152
+    left, right = raw.split("x", 1)
+    try:
+        return max(1, int(left)), max(1, int(right))
+    except ValueError:
+        return 2048, 1152
+
+
+def resize_png_bytes(png_bytes: bytes, width: int, height: int) -> bytes:
+    from io import BytesIO
+
+    from PIL import Image
+
+    img = Image.open(BytesIO(png_bytes)).convert("RGB")
+    if img.size == (width, height):
+        out = BytesIO()
+        img.save(out, format="PNG", optimize=True)
+        return out.getvalue()
+    fitted = img.resize((width, height), Image.Resampling.LANCZOS)
+    out = BytesIO()
+    fitted.save(out, format="PNG", optimize=True)
+    return out.getvalue()
+
+
+def call_responses_image_generation(
+    *,
+    base_url: str,
+    api_key: str,
+    model: str,
+    prompt: str,
+    image_paths: list[Path],
+    timeout: int,
+) -> bytes:
+    """POST /responses с tools image_generation; i2i через input_image data-URL."""
+    content: list[dict[str, Any]] = [{"type": "input_text", "text": prompt}]
+    for path in image_paths:
+        if path.is_file():
+            mime = _guess_mime(path)
+            ref_b64 = base64.b64encode(path.read_bytes()).decode()
+            content.append(
+                {
+                    "type": "input_image",
+                    "detail": "high",
+                    "image_url": f"data:{mime};base64,{ref_b64}",
+                }
+            )
+            break
+    payload = {
+        "model": model,
+        "input": [{"role": "user", "content": content}],
+        "tools": [{"type": "image_generation"}],
+    }
+    url = f"{base_url.rstrip('/')}{RESPONSES_SUFFIX}"
+    parsed = http_json_post(url, api_key, payload, timeout=timeout)
+    if parsed.get("status") != "completed":
+        raise DerouterApiError(
+            f"Derouter responses status={parsed.get('status')!r} (expected completed)"
+        )
+    for item in parsed.get("output") or []:
+        if item.get("type") == "image_generation_call" and item.get("result"):
+            try:
+                return base64.b64decode(str(item["result"]))
+            except Exception as exc:  # noqa: BLE001
+                raise DerouterApiError("Derouter responses b64 decode failed") from exc
+    raise DerouterApiError("Derouter responses missing image_generation_call.result")
+
+
+def generate_image_via_responses(
+    *,
+    prompt: str,
+    api_key: str,
+    responses_model: str,
+    size: str,
+    timeout: int,
+    base_urls: list[str],
+    image_paths: list[Path],
+) -> tuple[bytes, dict[str, Any]]:
+    """Fallback/primary path when /images/generations is discontinued."""
+    target_w, target_h = parse_size_wh(size)
+    last_error: BaseException | None = None
+    for base in base_urls or list(DEFAULT_IMAGE_BASE_URLS):
+        host = urllib.parse.urlparse(base).netloc
+        try:
+            raw = call_responses_image_generation(
+                base_url=base,
+                api_key=api_key,
+                model=responses_model,
+                prompt=prompt,
+                image_paths=image_paths,
+                timeout=timeout,
+            )
+            image_bytes = resize_png_bytes(raw, target_w, target_h)
+            meta = {
+                "source": "derouter-responses-api",
+                "model": responses_model,
+                "size": size,
+                "endpoint": "responses",
+                "tool": "image_generation",
+                "host": host,
+                "response_kind": "image_generation_call.result",
+                "resized_to": [target_w, target_h],
+            }
+            if image_paths:
+                meta["local_reference"] = image_paths[0].name
+            return image_bytes, meta
+        except DerouterRetryable as exc:
+            last_error = exc
+            print(f"Derouter responses retryable ({exc}); host={host}", flush=True)
+            continue
+        except DerouterHostFailed as exc:
+            last_error = exc
+            print(f"Derouter responses host failed ({exc}); host={host}", flush=True)
+            continue
+        except DerouterApiError as exc:
+            last_error = exc
+            print(f"Derouter responses error ({exc}); host={host}", flush=True)
+            continue
+    raise DerouterApiError(f"Derouter responses failed on all image base URLs: {last_error}")
 
 
 def is_retryable_http(status: int) -> bool:
@@ -540,7 +676,25 @@ def generate_image(
             continue
         # host failed — next base URL
         continue
-    raise DerouterApiError(f"Derouter failed on all image base URLs: {last_error}")
+
+    print(
+        "Derouter /images/* exhausted on all hosts — fallback to /responses image_generation",
+        flush=True,
+    )
+    try:
+        return generate_image_via_responses(
+            prompt=str(image_input["prompt"]),
+            api_key=api_key,
+            responses_model=default_responses_model(),
+            size=size,
+            timeout=timeout,
+            base_urls=bases,
+            image_paths=local_refs,
+        )
+    except DerouterApiError:
+        raise
+    except Exception as exc:  # noqa: BLE001
+        raise DerouterApiError(f"Derouter responses fallback failed: {exc}") from exc
 
 
 def main() -> int:
@@ -590,7 +744,8 @@ def main() -> int:
             "local_references": [
                 str(p.relative_to(root)) if p.is_relative_to(root) else str(p) for p in local_refs
             ],
-            "note": "images failover across DEROUTER_IMAGE_BASE_URL or 4 canonical hosts; b64_json only",
+            "responses_model": default_responses_model(),
+            "note": "images REST failover; then /responses image_generation if discontinued",
         }
         if args.dry_run:
             print(json.dumps(dry_payload, ensure_ascii=False, indent=2))
@@ -645,16 +800,16 @@ def main() -> int:
     except DerouterRetryable as exc:
         print(
             f"❌ DEROUTER IMAGE BLOCKER: {exc}\n"
-            "Retry api-direct hosts or invoke DEROUTER MCP from conductor. "
-            "Kie is FORBIDDEN. Do NOT use PIL mashup.",
+            "Retry hosts; /responses image_generation is auto-fallback when /images/* discontinued. "
+            "Then DEROUTER MCP. Kie FORBIDDEN. No PIL mashup.",
             file=sys.stderr,
         )
         return 1
     except DerouterApiError as exc:
         print(
             f"❌ DEROUTER IMAGE BLOCKER: {exc}\n"
-            "Retry api-direct hosts or invoke DEROUTER MCP from conductor. "
-            "Kie is FORBIDDEN. Do NOT use PIL mashup.",
+            "Retry hosts; /responses image_generation is auto-fallback when /images/* discontinued. "
+            "Then DEROUTER MCP. Kie FORBIDDEN. No PIL mashup.",
             file=sys.stderr,
         )
         return 1
