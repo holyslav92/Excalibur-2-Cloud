@@ -77,7 +77,7 @@
     "inline_2": {
       "quadrant": "bottom_left",
       "h2_anchor": "Сцена: покупатель в Тюмени дошёл до Росреестра",
-      "visual_type": "comparison_table_ui",
+      "visual_type": "comparison_table",
       "scene_hint": "UI path STOP; NO meme",
       "alt": "Интерфейсная таблица показывает путь покупателя от одобрения ипотеки до остановки регистрации после отданного аванса.",
       "labels": [
