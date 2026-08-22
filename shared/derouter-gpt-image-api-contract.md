@@ -2,15 +2,15 @@
 
 Primary Cloud path for Excalibur BLOG cover/inline quad canvas generation.
 
-## Order of preference (mandatory)
+## Order of preference (mandatory — owner override 2026-08-22)
 
 ```text
-1. DEROUTER_API_KEY set → scripts/excalibur_blog_derouter_gpt_image2_api.py
-2. KIE_API_KEY set      → scripts/excalibur_blog_kie_gpt_image2_api.py (after Derouter auth/5xx + one retry)
-3. neither              → BLOCKER (DEROUTER API KEY MISSING / KIE API BLOCKER)
+1. DEROUTER_API_KEY → scripts/excalibur_blog_derouter_gpt_image2_api.py (api-direct, 2K)
+2. REST exhausted     → DEROUTER MCP server (conductor invokes when REST auth/5xx/timeout)
+3. Derouter down      → DEROUTER IMAGE BLOCKER — diagnose/retry/fix; STOP
 ```
 
-**FORBIDDEN:** `flux2-pro-text-to-image`, `flux2-pro-image-to-image`, Seedream, `nano_banana*`, `z-image`, `mcp-derouter/start-mcp.sh` (broken stdio MCP).
+**FORBIDDEN FOREVER:** Kie (`excalibur_blog_kie_gpt_image2_api.py`, `KIE_API_KEY` for images), PIL template mashup, `flux2-pro-*`, Seedream, `nano_banana*`, `z-image`, broken stdio `mcp-derouter/start-mcp.sh`.
 
 ## Host (images — HARD)
 
@@ -37,7 +37,6 @@ Text (factory brain): `scripts/excalibur_blog_derouter_opus_chat.py` — powerfu
 
 - `size` / `quality` optional; omit → 2K medium tier
 - Explicit quad 16:9 2K = **`2048x1152`**
-- **No** `aspect_ratio` field (batch may carry it for Kie only; Derouter script ignores it)
 - Response: **`data[0].b64_json`** (PNG base64) — **not** a URL
 
 Script decodes b64 → `cover/canvas-quad-NN.png` (from batch `output_canvas`) and writes `quad-mcp-result-NN.json` with `local_path` for `quad_apply`.
@@ -75,28 +74,23 @@ Doctor: **WARN** when `DEROUTER_API_KEY` or `DEROUTER_IMAGE_MODEL` missing; Cove
 python3 scripts/excalibur_blog_derouter_gpt_image2_api.py \
   --article-dir memory/blog/articles/<topic_id>-<slug> \
   --batch cover/quad-mcp-batch-01.json \
-  --result cover/quad-mcp-result-01.json \
-  --fallback-kie
+  --result cover/quad-mcp-result-01.json
 ```
 
-Then:
+Solo panel regen:
 
 ```bash
-python3 scripts/excalibur_blog_quad_apply.py --article-dir <dir> --canvas-index 1 --inject-html
-python3 scripts/excalibur_blog_quad_apply.py --article-dir <dir> --canvas-index 2 --inject-html
+python3 scripts/excalibur_blog_quad_regen_panels.py \
+  --article-dir memory/blog/articles/<topic_id>-<slug> \
+  --slots cover
 ```
 
-## Retry
+## Retry / BLOCKER
 
-- One retry per host on auth/5xx/524 (`--max-retries 1`)
-- Fallback host `api-direct.apikey.cloud` after primary exhausted
-- `--fallback-kie` when Derouter still fails and `KIE_API_KEY` set
+- Auth/5xx/524: retry alternate api-direct host (script built-in)
+- Still failing: conductor may invoke **DEROUTER MCP** image tool with same prompt/refs
+- **Never** Kie, **never** PIL mashup — `DEROUTER IMAGE BLOCKER` + clear stderr
 
-## Price / quality
+## PIL mashup ban
 
-- 2K tier (`quality: auto`); do **not** request 4K unless owner asks
-
-## Related
-
-- Quad canvas: `shared/blog-cover-quad-canvas-contract.md`
-- Kie fallback: `shared/kie-gpt-image-api-contract.md`
+`excalibur_blog_cover_pil_compose.py` → BLOCKER. One coherent generated cover only.

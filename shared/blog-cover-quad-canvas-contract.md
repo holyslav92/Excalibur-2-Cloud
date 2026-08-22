@@ -25,11 +25,11 @@ PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`), `resol
 
 ```text
 1. DEROUTER_API_KEY → scripts/excalibur_blog_derouter_gpt_image2_api.py (api-direct, 2K)
-2. KIE_API_KEY      → scripts/excalibur_blog_kie_gpt_image2_api.py (after Derouter auth/5xx + retry)
-3. neither          → BLOCKER
+2. REST exhausted     → DEROUTER MCP server (conductor)
+3. Derouter down      → DEROUTER IMAGE BLOCKER — STOP (no Kie, no PIL mashup)
 ```
 
-**FORBIDDEN** (even after timeout): `flux2-pro-text-to-image`, `flux2-pro-image-to-image`, Seedream, `nano_banana*`, `z-image`, `mcp-derouter/start-mcp.sh`.
+**FORBIDDEN FOREVER:** Kie (`KIE_API_KEY`, `excalibur_blog_kie_gpt_image2_api.py`), PIL template mashup (`excalibur_blog_cover_pil_compose.py`), `flux2-pro-*`, Seedream, `nano_banana*`, `z-image`, broken stdio `mcp-derouter/start-mcp.sh`.
 
 **MCP-KV on Cloud:** Wordstat (`wordstat_*`) only for Scout/Cover stickers. Not a buffet of image models.
 
@@ -63,7 +63,7 @@ python3 scripts/excalibur_blog_quad_manifest.py --article-dir <dir> --merge
 python3 scripts/excalibur_blog_cover_motif_gate.py check --topic-id <id> --composition "..." --location "..." ...
 python3 scripts/excalibur_blog_cover_quad_prompt.py --article-dir <dir> --write-batch
 # Derouter REST ×2 → quad-mcp-result-01.json, quad-mcp-result-02.json
-# python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir <dir> --batch cover/quad-mcp-batch-01.json --result cover/quad-mcp-result-01.json --fallback-kie
+# python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir <dir> --batch cover/quad-mcp-batch-01.json --result cover/quad-mcp-result-01.json
 python3 scripts/excalibur_blog_quad_apply.py --article-dir <dir> --canvas-index 1 --inject-html
 python3 scripts/excalibur_blog_quad_apply.py --article-dir <dir> --canvas-index 2 --inject-html
 python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --composition "..." ...
@@ -87,7 +87,7 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 
 - нет reference / canvas 1 без `input_urls`
 - `COVER MOTIF BLOCKER` — collision в 14-дневном логе
-- `DEROUTER BLOCKER` / `KIE API BLOCKER` — нет URL после 2K gen
+- `DEROUTER BLOCKER` / `DEROUTER IMAGE BLOCKER` — нет URL после 2K gen; **не** Kie, **не** PIL mashup
 - **PIL template mashup** — `excalibur_blog_cover_pil_compose.py` и любой glue поверх чужого cover (B06 template, erase masks, inset collage) **ЗАПРЕЩЕНЫ**. Derouter+Kie dead → STOP, не upload.
 - 8 отдельных image jobs вместо 2 canvas — запрещено
 - отсутствует любой из `inline-01…07.png` или inject `data-slot`

@@ -7,8 +7,8 @@ or ``/images/edits`` (i2i with local identity-real file), writes the same
 
 Auth: ``DEROUTER_API_KEY`` only (Cloud Secrets). Never print the key.
 
-Provider order (Cover): Derouter REST → Kie script → BLOCKER.
-Forbidden: flux2-pro-*, Seedream, nano_banana*, z-image, mcp-derouter/start-mcp.sh.
+Provider order (Cover): Derouter REST api-direct → fallback host → DEROUTER MCP (conductor).
+Forbidden forever: Kie, flux2-pro-*, Seedream, nano_banana*, z-image, PIL template mashup.
 """
 
 from __future__ import annotations
@@ -18,7 +18,6 @@ import base64
 import json
 import mimetypes
 import os
-import subprocess
 import sys
 import time
 import urllib.error
@@ -65,7 +64,7 @@ def default_model() -> str:
 
 
 class DerouterRetryable(DerouterApiError):
-    """Auth/5xx — one retry + optional Kie fallback."""
+    """Auth/5xx — retry alternate api-direct host; then BLOCKER (no Kie)."""
 
     def __init__(self, message: str, *, status: int | None = None) -> None:
         self.status = status
@@ -440,23 +439,6 @@ def generate_image(
     raise DerouterApiError(f"Derouter failed after retries: {last_error}")
 
 
-def run_kie_fallback(*, root: Path, article_dir: Path, batch: str, result: str) -> int:
-    kie_script = root / "scripts" / "excalibur_blog_kie_gpt_image2_api.py"
-    cmd = [
-        sys.executable,
-        str(kie_script),
-        "--article-dir",
-        str(article_dir.relative_to(root) if article_dir.is_relative_to(root) else article_dir),
-        "--batch",
-        batch,
-        "--result",
-        result,
-    ]
-    print("Derouter exhausted; falling back to Kie script", flush=True)
-    proc = subprocess.run(cmd, cwd=str(root))
-    return proc.returncode
-
-
 def main() -> int:
     ap = argparse.ArgumentParser(
         description="Generate one quad canvas via Derouter REST image API"
@@ -470,11 +452,6 @@ def main() -> int:
     ap.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT_SECONDS)
     ap.add_argument("--max-retries", type=int, default=DEFAULT_MAX_RETRIES)
     ap.add_argument("--retry-wait", type=int, default=DEFAULT_RETRY_WAIT_SECONDS)
-    ap.add_argument(
-        "--fallback-kie",
-        action="store_true",
-        help="On Derouter auth/5xx after retries, run Kie script once",
-    )
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -560,24 +537,20 @@ def main() -> int:
         print(f"OK result={result_path}")
         return 0
     except DerouterRetryable as exc:
-        if args.fallback_kie and os.environ.get("KIE_API_KEY", "").strip():
-            return run_kie_fallback(
-                root=root,
-                article_dir=article_dir,
-                batch=args.batch,
-                result=args.result,
-            )
-        print(f"❌ DEROUTER BLOCKER: {exc}", file=sys.stderr)
+        print(
+            f"❌ DEROUTER IMAGE BLOCKER: {exc}\n"
+            "Retry api-direct hosts or invoke DEROUTER MCP from conductor. "
+            "Kie is FORBIDDEN. Do NOT use PIL mashup.",
+            file=sys.stderr,
+        )
         return 1
     except DerouterApiError as exc:
-        if args.fallback_kie and os.environ.get("KIE_API_KEY", "").strip():
-            return run_kie_fallback(
-                root=root,
-                article_dir=article_dir,
-                batch=args.batch,
-                result=args.result,
-            )
-        print(f"❌ DEROUTER BLOCKER: {exc}", file=sys.stderr)
+        print(
+            f"❌ DEROUTER IMAGE BLOCKER: {exc}\n"
+            "Retry api-direct hosts or invoke DEROUTER MCP from conductor. "
+            "Kie is FORBIDDEN. Do NOT use PIL mashup.",
+            file=sys.stderr,
+        )
         return 1
 
 

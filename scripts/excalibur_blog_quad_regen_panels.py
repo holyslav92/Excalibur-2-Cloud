@@ -2,7 +2,7 @@
 """Regenerate ONLY failed quad panels — never full 2× canvas unless cover slot.
 
 Cover-QA FAIL → default path: regen listed slots as solo 16:9 PNGs.
-Derouter REST primary; Kie fallback after 524/quota exhausted.
+Derouter REST only (api-direct). Kie FORBIDDEN. DEROUTER MCP if REST down (conductor).
 """
 
 from __future__ import annotations
@@ -136,7 +136,6 @@ def run_image_api(root: Path, article_dir: Path, batch_path: Path, result_path: 
         str(batch_path.relative_to(article_dir)),
         "--result",
         str(result_path.relative_to(article_dir)),
-        "--fallback-kie",
     ]
     return subprocess.call(cmd, cwd=str(root))
 

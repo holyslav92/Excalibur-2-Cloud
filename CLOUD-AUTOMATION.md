@@ -115,6 +115,18 @@ Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 
 
 **Wordstat:** Scout hard gate via **MCP-KV** (`wordstat_get_*`). P0 buyer demand in Tyumen regions — **topic choice only**; never paint Wordstat queries on cover.png. Enable MCP-KV in Cloud Automation Tools (dashboard connector — never git).
 
+## Image providers (HARD — owner override 2026-08-22)
+
+Cover + inline PNG **only Derouter**:
+
+1. `scripts/excalibur_blog_derouter_gpt_image2_api.py` — REST `api-direct.derouter.ai` (preferred)
+2. REST exhausted → **DEROUTER MCP** (conductor invokes image tool)
+3. Derouter down → `DEROUTER IMAGE BLOCKER` — diagnose/retry; **STOP**
+
+**FORBIDDEN FOREVER:** Kie (`KIE_API_KEY`, `excalibur_blog_kie_gpt_image2_api.py`), PIL template mashup (`excalibur_blog_cover_pil_compose.py`). Never `--fallback-kie`. Never upload mashup when APIs fail.
+
+Контракты: `shared/derouter-gpt-image-api-contract.md`, `shared/kie-gpt-image-api-contract.md` (Kie = forbidden stub).
+
 ## Automation prompt
 
 Скопируй блок ниже в **Instructions** каждого из 4 Cursor Automations (09/12/15/17 YEKT):

@@ -38,19 +38,20 @@ identity-real i2i → 2× quad canvas 2048×1152 (Derouter REST 2K)
 → split 2×2 → cover.png + inline-01..07.png → inject
 ```
 
-PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`, api-direct 2K). Kie — secondary after Derouter auth/5xx.
+PRIMARY: **Derouter REST** (`DEROUTER_API_KEY` + `DEROUTER_IMAGE_MODEL`, api-direct 2K). REST down → **DEROUTER MCP** (conductor). **Kie FORBIDDEN forever.**
 
 ## Image model lock (HARD)
 
 | Allowed | Forbidden |
 |---------|-----------|
-| `excalibur_blog_derouter_gpt_image2_api.py` (PRIMARY) | flux2-pro-text-to-image |
-| `excalibur_blog_kie_gpt_image2_api.py` (after Derouter fail) | flux2-pro-image-to-image |
+| `excalibur_blog_derouter_gpt_image2_api.py` (PRIMARY REST) | `excalibur_blog_kie_gpt_image2_api.py` / Kie |
+| DEROUTER MCP (conductor, if REST down) | flux2-pro-text-to-image |
+| | flux2-pro-image-to-image |
 | | Seedream, nano_banana*, z-image |
-| | mcp-derouter/start-mcp.sh |
+| | `excalibur_blog_cover_pil_compose.py` / PIL mashup |
 | | Off-pipeline «demo» canvases |
 
-**On Derouter auth/5xx:** one retry + fallback host → then Kie script — **never** Flux/Seedream/nano_banana/z-image.
+**On Derouter auth/5xx:** retry alternate api-direct host → DEROUTER MCP or BLOCKER. **Never** Kie / PIL mashup / Flux / Seedream / nano_banana / z-image.
 
 ## Cover canon (v2)
 
@@ -95,9 +96,9 @@ python3 scripts/excalibur_blog_cover_motif_gate.py check --topic-id <id> \
 
 python3 scripts/excalibur_blog_cover_quad_prompt.py --article-dir "$ARTICLE" --write-batch
 python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICLE" \
-  --batch cover/quad-mcp-batch-01.json --result cover/quad-mcp-result-01.json --fallback-kie
+  --batch cover/quad-mcp-batch-01.json --result cover/quad-mcp-result-01.json
 python3 scripts/excalibur_blog_derouter_gpt_image2_api.py --article-dir "$ARTICLE" \
-  --batch cover/quad-mcp-batch-02.json --result cover/quad-mcp-result-02.json --fallback-kie
+  --batch cover/quad-mcp-batch-02.json --result cover/quad-mcp-result-02.json
 
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 1 --inject-html
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 2 --inject-html
