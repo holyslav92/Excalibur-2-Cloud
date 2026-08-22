@@ -140,8 +140,21 @@
       "stickers overlap title or meme zones",
       "host distant small full-body (face_h_frac < 0.18)",
       "manifest outfit lie vs pixels (warm outfit + dark blazer torso)",
-      "cover_qa describes prompt not PNG"
+      "cover_qa describes prompt not PNG",
+      "PIL template mashup / B06 glue (pixel_no_foreign_article_text, pixel_no_collage_inset, pixel_phone_not_clipped)"
     ],
+    "pil_mashup_ban": {
+      "status": "FORBIDDEN_FOREVER",
+      "script": "scripts/excalibur_blog_cover_pil_compose.py",
+      "rule": "One coherent generated 16:9 cover only (Derouter REST image API → Kie i2i). Never paste another article template. If both APIs fail → BLOCKER, no upload.",
+      "pixel_gates": [
+        "pixel_no_foreign_article_text",
+        "pixel_no_collage_inset",
+        "pixel_phone_not_clipped",
+        "pixel_hook_title_not_truncated",
+        "pixel_no_wordstat_ocr_strips"
+      ]
+    },
     "fixer_loop": "Fixer → regen cover panel if layout/hook/phone/meme/query-strip FAIL; never PIL Wordstat overlay/repack; never peel/inpaint person"
   },
   "identity_lock": {
