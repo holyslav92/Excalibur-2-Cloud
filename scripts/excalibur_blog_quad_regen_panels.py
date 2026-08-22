@@ -71,21 +71,9 @@ def build_panel_prompt(manifest: dict[str, Any], slot_key: str, root: Path) -> s
     hero = load_json(hero_path) if hero_path.is_file() else {}
 
     if slot_key == "cover":
-        if manifest.get("wordstat_pil_only"):
-            design_path = root / "memory/cover/cover-design-code.json"
-            design_code = load_json(design_path) if design_path.is_file() else {}
-            from excalibur_blog_cover_quad_prompt import build_solo_cover_prompt
+        from excalibur_blog_cover_quad_prompt import build_solo_cover_prompt
 
-            return build_solo_cover_prompt(manifest, style, hero, design_code)
-        return build_prompt(
-            manifest,
-            style,
-            hero,
-            types_catalog,
-            design_code,
-            canvas_slots=("cover",),
-            has_cover=True,
-        )
+        return build_solo_cover_prompt(manifest, style, hero, design_code)
 
     neg = slot_negatives(slot_key, slot)
     base = inline_panel_prompt(slot, types_catalog)
@@ -121,6 +109,9 @@ def write_solo_batch(
         "output_canvas": f"cover/{INLINE_FILES.get(slot_key, slot_key + '.png')}",
         "jobs": [{"slot": slot_key, "tool": "derouter-rest", "mcp_args": api_input}],
     }
+    if with_i2i:
+        batch["prefer_local_reference"] = True
+        batch["local_reference"] = "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg"
     save_json(batch_path, batch)
     return batch_path
 

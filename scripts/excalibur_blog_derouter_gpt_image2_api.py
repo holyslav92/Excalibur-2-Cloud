@@ -36,12 +36,20 @@ DEFAULT_API_KEY_ENV = "DEROUTER_API_KEY"
 DEFAULT_MODEL_ENV = "DEROUTER_IMAGE_MODEL"
 DEFAULT_SIZE_ENV = "DEROUTER_IMAGE_SIZE"
 DEFAULT_QUALITY_ENV = "DEROUTER_IMAGE_QUALITY"
+DEFAULT_IMAGE_BASE_ENV = "DEROUTER_IMAGE_BASE_URL"
 # Quad canvas exact 2K 16:9 per Derouter Image tab (not aspect_ratio API field).
 DEFAULT_SIZE_2K_16_9 = "2048x1152"
 DEFAULT_QUALITY = "auto"
-# Images MUST use api-direct — api.derouter.ai hits Cloudflare ~100s → HTTP 524 on gen.
-PRIMARY_DIRECT_BASE = "https://api-direct.derouter.ai/openai/v1"
-FALLBACK_DIRECT_BASE = "https://api-direct.apikey.cloud/openai/v1"
+# Порядок failover для images REST (owner probe 2026-08-22).
+# api.derouter.ai может дать HTTP 524 на длинной gen — пробуем после api-direct.
+DEFAULT_IMAGE_BASE_URLS = [
+    "https://api.derouter.ai/openai/v1",
+    "https://api.apikey.cloud/openai/v1",
+    "https://api-direct.derouter.ai/openai/v1",
+    "https://api-direct.apikey.cloud/openai/v1",
+]
+PRIMARY_DIRECT_BASE = DEFAULT_IMAGE_BASE_URLS[0]
+FALLBACK_DIRECT_BASE = DEFAULT_IMAGE_BASE_URLS[1]
 DEFAULT_TIMEOUT_SECONDS = 600
 MIN_TIMEOUT_SECONDS = 240
 DEFAULT_MAX_RETRIES = 1
@@ -64,7 +72,15 @@ def default_model() -> str:
 
 
 class DerouterRetryable(DerouterApiError):
-    """Auth/5xx — retry alternate api-direct host; then BLOCKER (no Kie)."""
+    """Auth/5xx/524 — retry same host; then failover to next base URL."""
+
+    def __init__(self, message: str, *, status: int | None = None) -> None:
+        self.status = status
+        super().__init__(message)
+
+
+class DerouterHostFailed(DerouterApiError):
+    """Host cannot serve images (discontinued / model unavailable) — try next base URL."""
 
     def __init__(self, message: str, *, status: int | None = None) -> None:
         self.status = status
@@ -108,6 +124,60 @@ def default_quality() -> str:
 def is_retryable_http(status: int) -> bool:
     # 524 = Cloudflare timeout when hitting non-direct api.derouter.ai for images.
     return status in {401, 403, 408, 429, 500, 502, 503, 504, 524}
+
+
+def normalize_image_base_url(raw: str) -> str:
+    value = raw.strip().rstrip("/")
+    if not value:
+        return ""
+    if value.endswith("/openai/v1"):
+        return value
+    return f"{value}/openai/v1"
+
+
+def resolve_image_base_urls(
+    *,
+    primary_base: str | None = None,
+    fallback_base: str | None = None,
+) -> list[str]:
+    """Список base URL для images failover. Env DEROUTER_IMAGE_BASE_URL — override (comma-separated)."""
+    env_raw = os.environ.get(DEFAULT_IMAGE_BASE_ENV, "").strip()
+    if env_raw:
+        from_env = [
+            normalize_image_base_url(part)
+            for part in env_raw.split(",")
+            if part.strip()
+        ]
+        return list(dict.fromkeys(u for u in from_env if u))
+
+    ordered: list[str] = []
+    for candidate in (
+        primary_base,
+        fallback_base,
+        *DEFAULT_IMAGE_BASE_URLS,
+    ):
+        if not candidate:
+            continue
+        normalized = normalize_image_base_url(str(candidate))
+        if normalized and normalized not in ordered:
+            ordered.append(normalized)
+    return ordered
+
+
+def should_failover_to_next_host(status: int, body: str) -> bool:
+    if is_retryable_http(status):
+        return True
+    if status == 400:
+        lowered = body.lower()
+        markers = (
+            "discontinued",
+            "not available",
+            "not supported",
+            "must be '",
+            "must be \"",
+        )
+        return any(marker in lowered for marker in markers)
+    return False
 
 
 def _guess_mime(path: Path) -> str:
@@ -215,9 +285,14 @@ def http_json_post(
             body = response.read().decode("utf-8")
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")
-        if is_retryable_http(exc.code):
-            raise DerouterRetryable(f"Derouter HTTP {exc.code}: {body[:500]}", status=exc.code) from exc
-        raise DerouterApiError(f"Derouter HTTP {exc.code}: {body[:500]}") from exc
+        snippet = body[:500]
+        if should_failover_to_next_host(exc.code, body):
+            if exc.code == 400:
+                raise DerouterHostFailed(
+                    f"Derouter HTTP {exc.code}: {snippet}", status=exc.code
+                ) from exc
+            raise DerouterRetryable(f"Derouter HTTP {exc.code}: {snippet}", status=exc.code) from exc
+        raise DerouterApiError(f"Derouter HTTP {exc.code}: {snippet}") from exc
     except urllib.error.URLError as exc:
         raise DerouterRetryable(f"Derouter network error: {exc.reason}") from exc
 
@@ -279,11 +354,16 @@ def http_multipart_post(
             raw = response.read().decode("utf-8")
     except urllib.error.HTTPError as exc:
         err_body = exc.read().decode("utf-8", errors="replace")
-        if is_retryable_http(exc.code):
+        snippet = err_body[:500]
+        if should_failover_to_next_host(exc.code, err_body):
+            if exc.code == 400:
+                raise DerouterHostFailed(
+                    f"Derouter edits HTTP {exc.code}: {snippet}", status=exc.code
+                ) from exc
             raise DerouterRetryable(
-                f"Derouter edits HTTP {exc.code}: {err_body[:500]}", status=exc.code
+                f"Derouter edits HTTP {exc.code}: {snippet}", status=exc.code
             ) from exc
-        raise DerouterApiError(f"Derouter edits HTTP {exc.code}: {err_body[:500]}") from exc
+        raise DerouterApiError(f"Derouter edits HTTP {exc.code}: {snippet}") from exc
     except urllib.error.URLError as exc:
         raise DerouterRetryable(f"Derouter edits network error: {exc.reason}") from exc
 
@@ -368,20 +448,18 @@ def generate_image(
     size: str,
     quality: str,
     timeout: int,
-    primary_base: str,
-    fallback_base: str,
+    base_urls: list[str],
     max_retries: int,
     retry_wait: int,
 ) -> tuple[bytes, dict[str, Any]]:
     local_refs = resolve_local_reference_paths(root=root, batch_path=batch_path)
     use_edits = bool(local_refs)
-    bases = [primary_base]
-    if fallback_base and fallback_base != primary_base:
-        bases.append(fallback_base)
+    bases = base_urls or list(DEFAULT_IMAGE_BASE_URLS)
 
     last_error: BaseException | None = None
     attempts = 0
     for base in bases:
+        host = urllib.parse.urlparse(base).netloc
         for attempt in range(max_retries + 1):
             attempts += 1
             try:
@@ -424,10 +502,17 @@ def generate_image(
                     if len(ref_names) > 1:
                         meta["local_references"] = ref_names
                 return image_bytes, meta
+            except DerouterHostFailed as exc:
+                last_error = exc
+                print(
+                    f"Derouter host failed ({exc}); host={host} — failover to next base URL",
+                    flush=True,
+                )
+                break
             except DerouterRetryable as exc:
                 last_error = exc
                 print(
-                    f"Derouter retryable ({exc}); host={urllib.parse.urlparse(base).netloc} "
+                    f"Derouter retryable ({exc}); host={host} "
                     f"attempt={attempt + 1}/{max_retries + 1}",
                     flush=True,
                 )
@@ -436,7 +521,11 @@ def generate_image(
                 continue
             except DerouterApiError:
                 raise
-    raise DerouterApiError(f"Derouter failed after retries: {last_error}")
+        else:
+            continue
+        # host failed — next base URL
+        continue
+    raise DerouterApiError(f"Derouter failed on all image base URLs: {last_error}")
 
 
 def main() -> int:
@@ -471,19 +560,22 @@ def main() -> int:
         local_refs = resolve_local_reference_paths(root=root, batch_path=batch_path)
         mode = "edits" if local_refs else "generations"
 
+        base_urls = resolve_image_base_urls(
+            primary_base=args.primary_base,
+            fallback_base=args.fallback_base,
+        )
         dry_payload = {
             "mode": mode,
             "model": model,
             "size": size,
             "quality": quality,
-            "primary_base": args.primary_base,
-            "fallback_base": args.fallback_base,
+            "image_base_urls": base_urls,
             "timeout_seconds": max(MIN_TIMEOUT_SECONDS, int(args.timeout)),
             "prompt_chars": len(str(image_input.get("prompt") or "")),
             "local_references": [
                 str(p.relative_to(root)) if p.is_relative_to(root) else str(p) for p in local_refs
             ],
-            "note": "images always api-direct; no aspect_ratio field; response b64_json only",
+            "note": "images failover across DEROUTER_IMAGE_BASE_URL or 4 canonical hosts; b64_json only",
         }
         if args.dry_run:
             print(json.dumps(dry_payload, ensure_ascii=False, indent=2))
@@ -507,8 +599,7 @@ def main() -> int:
             size=size,
             quality=quality,
             timeout=max(MIN_TIMEOUT_SECONDS, int(args.timeout)),
-            primary_base=args.primary_base,
-            fallback_base=args.fallback_base,
+            base_urls=base_urls,
             max_retries=max(0, int(args.max_retries)),
             retry_wait=max(0, int(args.retry_wait)),
         )

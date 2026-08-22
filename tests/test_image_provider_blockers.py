@@ -1,12 +1,17 @@
 """Blocker stubs: Kie and PIL mashup must never run."""
 from __future__ import annotations
 
+import os
 import subprocess
 import sys
 import unittest
 from pathlib import Path
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
+SCRIPTS = ROOT / "scripts"
+if str(SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS))
 
 
 class ImageProviderBlockerTest(unittest.TestCase):
@@ -28,6 +33,31 @@ class ImageProviderBlockerTest(unittest.TestCase):
         proc = self._run_script("excalibur_blog_cover_pil_compose.py")
         self.assertEqual(proc.returncode, 1)
         self.assertIn("PIL MASHUP BLOCKER", proc.stderr)
+
+    def test_resolve_image_base_urls_default_order(self) -> None:
+        from excalibur_blog_derouter_gpt_image2_api import (
+            DEFAULT_IMAGE_BASE_URLS,
+            resolve_image_base_urls,
+        )
+
+        urls = resolve_image_base_urls()
+        self.assertEqual(urls[:4], DEFAULT_IMAGE_BASE_URLS)
+
+    def test_resolve_image_base_urls_env_override(self) -> None:
+        from excalibur_blog_derouter_gpt_image2_api import resolve_image_base_urls
+
+        with mock.patch.dict(
+            os.environ,
+            {"DEROUTER_IMAGE_BASE_URL": "https://api.example.com,https://api-direct.example.com"},
+        ):
+            urls = resolve_image_base_urls()
+        self.assertEqual(
+            urls,
+            [
+                "https://api.example.com/openai/v1",
+                "https://api-direct.example.com/openai/v1",
+            ],
+        )
 
 
 if __name__ == "__main__":

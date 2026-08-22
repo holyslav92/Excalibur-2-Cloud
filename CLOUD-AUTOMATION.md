@@ -119,9 +119,10 @@ Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 
 
 Cover + inline PNG **only Derouter**:
 
-1. `scripts/excalibur_blog_derouter_gpt_image2_api.py` — REST `api-direct.derouter.ai` (preferred)
-2. REST exhausted → **DEROUTER MCP** (conductor invokes image tool)
-3. Derouter down → `DEROUTER IMAGE BLOCKER` — diagnose/retry; **STOP**
+1. `scripts/excalibur_blog_derouter_gpt_image2_api.py` — REST failover: `api.derouter.ai` → `api.apikey.cloud` → `api-direct.derouter.ai` → `api-direct.apikey.cloud` (env `DEROUTER_IMAGE_BASE_URL` override)
+2. Probe: `python3 scripts/excalibur_blog_derouter_image_probe.py`
+3. REST exhausted → **DEROUTER MCP** (conductor invokes image tool)
+4. Derouter down → `DEROUTER IMAGE BLOCKER` — diagnose/retry; **STOP**
 
 **FORBIDDEN FOREVER:** Kie (`KIE_API_KEY`, `excalibur_blog_kie_gpt_image2_api.py`), PIL template mashup (`excalibur_blog_cover_pil_compose.py`). Never `--fallback-kie`. Never upload mashup when APIs fail.
 

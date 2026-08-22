@@ -12,15 +12,22 @@ Primary Cloud path for Excalibur BLOG cover/inline quad canvas generation.
 
 **FORBIDDEN FOREVER:** Kie (`excalibur_blog_kie_gpt_image2_api.py`, `KIE_API_KEY` for images), PIL template mashup, `flux2-pro-*`, Seedream, `nano_banana*`, `z-image`, broken stdio `mcp-derouter/start-mcp.sh`.
 
-## Host (images — HARD)
+## Host (images — failover 2026-08-22)
 
-**Always** `https://api-direct.derouter.ai/openai/v1` for image gen/edits.
+Пробуй **все** base URL до первого реального PNG (`data[0].b64_json`):
 
+| # | Base URL |
+|---|----------|
+| 1 | `https://api.derouter.ai/openai/v1` |
+| 2 | `https://api.apikey.cloud/openai/v1` |
+| 3 | `https://api-direct.derouter.ai/openai/v1` |
+| 4 | `https://api-direct.apikey.cloud/openai/v1` |
+
+- Env override: `DEROUTER_IMAGE_BASE_URL` — одна URL или comma-separated список (полный путь с `/openai/v1` или host root).
+- Probe: `python3 scripts/excalibur_blog_derouter_image_probe.py`
 - Timeout: **≥240s** client; default script **600s**
-- **Do not** use `https://api.derouter.ai` for images — Cloudflare ~100s → **HTTP 524** on long gen
-- Fallback alias: `https://api-direct.apikey.cloud/openai/v1`
-
-Text (factory brain): `scripts/excalibur_blog_derouter_opus_chat.py` — powerful `claude-opus-5` (writer, sol), utility `gpt-5.6-terra` (scout, title, research, description, cover-text, schema, cover-scene). См. `shared/derouter-opus-brain-contract.md`.
+- `api.derouter.ai` может дать HTTP **524** на длинной gen — script failover на следующий host
+- **Text chat** (Opus/Terra) остаётся на рабочем text endpoint — меняем только image base
 
 ## Text → image
 
@@ -87,7 +94,7 @@ python3 scripts/excalibur_blog_quad_regen_panels.py \
 
 ## Retry / BLOCKER
 
-- Auth/5xx/524: retry alternate api-direct host (script built-in)
+- Auth/5xx/524/400 discontinued: failover по списку base URL (`DEROUTER_IMAGE_BASE_URL` или 4 canonical hosts)
 - Still failing: conductor may invoke **DEROUTER MCP** image tool with same prompt/refs
 - **Never** Kie, **never** PIL mashup — `DEROUTER IMAGE BLOCKER` + clear stderr
 
