@@ -33,6 +33,7 @@ from excalibur_blog_site_base import (
 )
 
 DEFAULT_API_KEY_ENV = "DEROUTER_API_KEY"
+DEROUTER_API_KEY_ALIASES = ("DEROUTER_API_KEY", "DEROUTE_API_KEY")
 DEFAULT_MODEL_ENV = "DEROUTER_IMAGE_MODEL"
 DEFAULT_SIZE_ENV = "DEROUTER_IMAGE_SIZE"
 DEFAULT_QUALITY_ENV = "DEROUTER_IMAGE_QUALITY"
@@ -85,6 +86,20 @@ class DerouterHostFailed(DerouterApiError):
     def __init__(self, message: str, *, status: int | None = None) -> None:
         self.status = status
         super().__init__(message)
+
+
+def resolve_derouter_api_key(env_name: str = DEFAULT_API_KEY_ENV) -> str:
+    """DEROUTER_API_KEY или alias DEROUTE_API_KEY из Cloud Secrets."""
+    primary = os.environ.get(env_name, "").strip()
+    if primary:
+        return primary
+    for alias in DEROUTER_API_KEY_ALIASES:
+        if alias == env_name:
+            continue
+        value = os.environ.get(alias, "").strip()
+        if value:
+            return value
+    return ""
 
 
 def project_root() -> Path:
@@ -581,7 +596,7 @@ def main() -> int:
             print(json.dumps(dry_payload, ensure_ascii=False, indent=2))
             return 0
 
-        api_key = os.environ.get(args.api_key_env, "").strip()
+        api_key = resolve_derouter_api_key(args.api_key_env)
         if not api_key:
             print(
                 "❌ DEROUTER API KEY MISSING: set DEROUTER_API_KEY in Cloud Secrets/env; "

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Probe Derouter image base URLs with minimal /images/generations request.
 
-Records HTTP status + body snippet per host. Use before cover regen when image API fails.
-Auth: DEROUTER_API_KEY (Cloud Secrets). Never print the key.
+Records HTTP status + body snippet per host/path. Optional cf-api balance check.
+Auth: DEROUTER_API_KEY or DEROUTE_API_KEY (Cloud Secrets). Never print the key.
 """
 
 from __future__ import annotations
@@ -17,14 +17,24 @@ import urllib.request
 from pathlib import Path
 from typing import Any
 
-# Импорт канонического списка и env override из image API скрипта.
 from excalibur_blog_derouter_gpt_image2_api import (
     DEFAULT_IMAGE_BASE_ENV,
-    DEFAULT_MODEL_ENV,
     default_model,
+    resolve_derouter_api_key,
     resolve_image_base_urls,
     should_failover_to_next_host,
 )
+
+MANAGEMENT_API_BASE = "https://cf-api.derouter.ai"
+IMAGE_GENERATIONS_SUFFIX = "/images/generations"
+
+
+def image_api_url(base_url: str) -> tuple[str, str]:
+    """base_url уже с /openai/v1 → только /images/generations; иначе полный путь."""
+    base = base_url.rstrip("/")
+    if base.endswith("/openai/v1"):
+        return f"{base}/images/generations", "/openai/v1/images/generations"
+    return f"{base}/openai/v1/images/generations", "/openai/v1/images/generations"
 
 
 def project_root() -> Path:
@@ -34,7 +44,36 @@ def project_root() -> Path:
     return Path(__file__).resolve().parents[1]
 
 
-def probe_host(
+def probe_balance(api_key: str) -> dict[str, Any]:
+    url = f"{MANAGEMENT_API_BASE}/balance"
+    req = urllib.request.Request(
+        url,
+        headers={"Accept": "application/json", "Authorization": f"Bearer {api_key}"},
+        method="GET",
+    )
+    row: dict[str, Any] = {
+        "host": "cf-api.derouter.ai",
+        "path": "/balance",
+        "method": "GET",
+    }
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            body = resp.read().decode("utf-8")
+            row["http_status"] = resp.status
+            row["body_snippet"] = body[:200]
+            row["ok"] = resp.status == 200
+    except urllib.error.HTTPError as exc:
+        row["http_status"] = exc.code
+        row["body_snippet"] = exc.read().decode("utf-8", errors="replace")[:200]
+        row["ok"] = False
+    except Exception as exc:  # noqa: BLE001
+        row["http_status"] = None
+        row["body_snippet"] = f"{type(exc).__name__}: {exc}"
+        row["ok"] = False
+    return row
+
+
+def probe_generations(
     base_url: str,
     api_key: str,
     model: str,
@@ -43,7 +82,9 @@ def probe_host(
     prompt: str,
     size: str,
 ) -> dict[str, Any]:
-    url = f"{base_url.rstrip('/')}/images/generations"
+    path = IMAGE_GENERATIONS_SUFFIX
+    url, display_path = image_api_url(base_url)
+    row_path = display_path
     payload = {
         "model": model,
         "prompt": prompt,
@@ -64,11 +105,13 @@ def probe_host(
     row: dict[str, Any] = {
         "base_url": base_url,
         "host": urllib.parse.urlparse(base_url).netloc,
+        "path": row_path,
+        "method": "POST",
     }
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            body = resp.read().decode("utf-8")
-            row["http_status"] = resp.status
+        with urllib.request.urlopen(req, timeout=timeout) as response:
+            body = response.read().decode("utf-8")
+            row["http_status"] = response.status
             parsed = json.loads(body)
             data_list = parsed.get("data", [])
             b64 = ""
@@ -102,9 +145,9 @@ def main() -> int:
     ap.add_argument("--json-out", default="", help="Optional path to write probe JSON")
     args = ap.parse_args()
 
-    api_key = os.environ.get("DEROUTER_API_KEY", "").strip()
+    api_key = resolve_derouter_api_key()
     if not api_key:
-        print("❌ DEROUTER API KEY MISSING", file=sys.stderr)
+        print("❌ DEROUTER API KEY MISSING (DEROUTER_API_KEY / DEROUTE_API_KEY)", file=sys.stderr)
         return 1
 
     try:
@@ -116,13 +159,20 @@ def main() -> int:
     bases = resolve_image_base_urls()
     env_override = os.environ.get(DEFAULT_IMAGE_BASE_ENV, "").strip()
 
-    print(f"Probing {len(bases)} base URL(s), timeout={args.timeout}s")
+    balance = probe_balance(api_key)
+    print(
+        f"Management GET {balance['host']}{balance['path']} -> HTTP {balance.get('http_status')} "
+        f"ok={balance.get('ok')} {balance.get('body_snippet', '')[:120]}"
+    )
     print()
+    print(f"Probing {len(bases)} image base URL(s), timeout={args.timeout}s")
+    print("| host | path | HTTP | ok | snippet |")
+    print("|------|------|------|----|---------|")
 
     results: list[dict[str, Any]] = []
     first_ok: str | None = None
     for base in bases:
-        row = probe_host(
+        row = probe_generations(
             base,
             api_key,
             model,
@@ -132,15 +182,17 @@ def main() -> int:
         )
         results.append(row)
         status = row.get("http_status")
-        snippet = row.get("body_snippet", "")
+        snippet = str(row.get("body_snippet", ""))[:100]
         ok = row.get("ok")
-        print(f"| {row['host']} | HTTP {status} | ok={ok} | {snippet[:120]}")
+        print(f"| {row['host']} | {row['path']} | {status} | {ok} | {snippet} |")
         if ok and not first_ok:
             first_ok = base
 
     report = {
+        "management_balance": balance,
         "env_image_base": env_override or None,
         "first_ok_base_url": first_ok,
+        "image_generations_path": "/openai/v1/images/generations",
         "results": results,
     }
     if args.json_out:
@@ -152,7 +204,7 @@ def main() -> int:
         print(f"\nJSON: {out_path}")
 
     if first_ok:
-        print(f"\nFIRST OK: {first_ok}")
+        print(f"\nFIRST OK base_url: {first_ok}")
         return 0
 
     print("\n❌ DEROUTER IMAGE BLOCKER: no base URL returned a real image", file=sys.stderr)

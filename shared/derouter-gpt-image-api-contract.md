@@ -25,6 +25,7 @@ Primary Cloud path for Excalibur BLOG cover/inline quad canvas generation.
 
 - Env override: `DEROUTER_IMAGE_BASE_URL` — одна URL или comma-separated список (полный путь с `/openai/v1` или host root).
 - Probe: `python3 scripts/excalibur_blog_derouter_image_probe.py`
+- Management API (key check, not images): `GET https://cf-api.derouter.ai/balance` with same Bearer key
 - Timeout: **≥240s** client; default script **600s**
 - `api.derouter.ai` может дать HTTP **524** на длинной gen — script failover на следующий host
 - **Text chat** (Opus/Terra) остаётся на рабочем text endpoint — меняем только image base
@@ -68,7 +69,7 @@ Canvas 2: no local ref → `/images/generations` (t2i).
 
 ## Auth
 
-- `DEROUTER_API_KEY` only (Cursor Cloud Secrets). Missing → `DEROUTER API KEY MISSING`
+- `DEROUTER_API_KEY` or alias `DEROUTE_API_KEY` (Cursor Cloud Secrets). Missing → `DEROUTER API KEY MISSING`
 - `DEROUTER_IMAGE_MODEL` required (id from GET `/v1/models`)
 - Optional: `DEROUTER_IMAGE_SIZE` (default `2048x1152`), `DEROUTER_IMAGE_QUALITY` (default `auto`)
 - Never commit, print, or copy keys into git/PR/logs
