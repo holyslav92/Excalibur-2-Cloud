@@ -1,0 +1,8 @@
+{
+  "gate": "live-page",
+  "status": "BLOCK",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/",
+  "errors": [
+    "live FAQPage question/answer pairs differ from visible thematic FAQ"
+  ]
+}

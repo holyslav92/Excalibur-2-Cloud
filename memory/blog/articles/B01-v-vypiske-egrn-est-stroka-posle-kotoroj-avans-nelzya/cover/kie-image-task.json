@@ -1,16 +1,9 @@
 {
-  "task_id": "6f00c1a5a692f2adda62e0708282174c",
+  "task_id": "cc91b103ab8fe257e2cb74b7a9fd1778",
   "source": "kie-api",
+  "model": "kie-image-to-image",
   "state": "success",
   "create_attempts": 1,
-  "result_path": "memory/blog/articles/B01-v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/cover/quad-mcp-result-01.json",
-  "updated_at_epoch": 1787046121,
-  "file_upload_fallback": true,
-  "file_upload": {
-    "source": "prefer_local_reference",
-    "upload_path": "excalibur-blog/hero",
-    "local_name": "face-office-selfie.jpeg",
-    "download_host": "tempfile.redpandaai.co",
-    "cover_hero_mode": null
-  }
+  "result_path": "memory/blog/articles/B01-v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/cover/quad-solo-result-cover.json",
+  "updated_at_epoch": 1787376306
 }

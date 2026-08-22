@@ -44,26 +44,41 @@
   "mcp_note": "PRIMARY: mcp-derouter in Cursor Cloud — 2K i2i, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
   "cover_keys_ru": [],
   "wordstat_stickers": [
-    "ищу квартиру",
-    "вторичка без сюрпризов",
-    "сначала выписку"
+    "выписка егрн квартира",
+    "купить квартиру в тюмени"
   ],
+  "wordstat_pil_only": true,
+  "wordstat_sticker_positions": [
+    [0.128, 0.12],
+    [0.128, 0.219]
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
   "cover_motifs": {
-    "composition": "host_large_left_points_at_glowing_egrn_tablet_sun_flare",
-    "location": "bright_glass_registry_atrium_white_marble_tyumen",
-    "meme": "distracted_boyfriend_sticker_plus_thinking_cat_cutout",
-    "prop_set": "egrn_pdf_fold_red_marker_tiny_apartment_icon",
-    "sticker_set": "wordstat_paper_stickers_meme_people_reaction_cutout",
-    "joke": "sticky_аванс_сегодня_crossed_red_x"
+    "composition": "host_right_third_holds_egrn_print_red_circle_req4",
+    "location": "bright_modern_mfc_lobby_white_walls_sun_through_glass",
+    "meme": "surprised_pikachu_sticker_bottom_left",
+    "prop_set": "egrn_paper_fold_highlighter_phone_on_desk",
+    "sticker_set": "yellow_sticky_only_NO_wordstat_strips",
+    "joke": "sticky_выписку_уже_смотрели",
+    "outfit": "olive_green_linen_shirt_rolled_sleeves_no_blazer",
+    "emotion": "shocked_wide_eyes_pointing_at_red_line",
+    "action": "pointing_at_egrn_document_with_marker",
+    "pose_framing": "three_quarter_right_medium_close_not_left_bust"
   },
   "slots": {
     "cover": {
       "quadrant": "top_left",
       "role": "cover_editorial_hero",
       "alt": "Проверка выписки ЕГРН перед авансом — одна строка может остановить сделку",
-      "scene_hint": "Host LARGE left, navy blazer, wary; glowing EGRN tablet, red req.4 line; sun flare; meme cat + boyfriend sticker; Wordstat stickers; #FFF",
+      "scene_hint": "Host right third, olive linen shirt, shocked pointing at EGRN paper red req.4 circle; yellow sticky «выписку уже смотрели»; phone +7 922 001 65 05 bottom-right; meme pikachu sticker; NO Wordstat query strips; #FFF high-key sun flare",
+      "cover_emotion": "shocked wide eyes pointing at document",
       "meme_caption_ru": "",
-      "sticky": "выписку уже смотрели"
+      "sticky": "выписку уже смотрели",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false
     },
     "inline_1": {
       "quadrant": "top_right",
@@ -77,12 +92,17 @@
         "не справка",
         "свежая выписка",
         "перед авансом"
-      ]
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
     },
     "inline_2": {
       "quadrant": "bottom_left",
       "h2_anchor": "Что в реквизите 4 блокирует аванс",
-      "visual_type": "comparison_table_ui",
+      "visual_type": "comparison_table",
       "scene_hint": "Table: арест, запрет, рента, суд vs не зарегистрировано; stop/ok columns; bright panel; no faces; #FFF",
       "alt": "Строки в реквизите 4 ЕГРН, при которых аванс вносить нельзя",
       "labels": [
@@ -91,7 +111,12 @@
         "рента",
         "судебные права",
         "не зарегистрировано"
-      ]
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
     },
     "inline_3": {
       "quadrant": "bottom_right",
@@ -104,7 +129,12 @@
         "продавец забыл",
         "по доверенности нельзя",
         "снять лично"
-      ]
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
     },
     "inline_4": {
       "quadrant": "top_left",
@@ -117,7 +147,12 @@
         "доли детей",
         "согласие банка",
         "все подписи"
-      ]
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
     },
     "inline_5": {
       "quadrant": "top_right",
@@ -130,7 +165,12 @@
         "смена владельцев",
         "кадастровые данные",
         "состав собственников"
-      ]
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
     },
     "inline_6": {
       "quadrant": "bottom_left",
@@ -143,12 +183,17 @@
         "банкротство",
         "доверенность",
         "прописка"
-      ]
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
     },
     "inline_7": {
       "quadrant": "bottom_right",
       "h2_anchor": "Ограничения и честные оговорки",
-      "visual_type": "comparison_table_ui",
+      "visual_type": "comparison_table",
       "scene_hint": "Plan vs rush columns: аванс после проверки, новая выписка, до денег; green check path; meme sticker; #FFF",
       "alt": "Аванс только после проверки выписки — честные оговорки для Тюмени",
       "labels": [
@@ -156,7 +201,28 @@
         "новая выписка",
         "до денег",
         "Тюмень сделки"
-      ]
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
     }
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
   }
 }

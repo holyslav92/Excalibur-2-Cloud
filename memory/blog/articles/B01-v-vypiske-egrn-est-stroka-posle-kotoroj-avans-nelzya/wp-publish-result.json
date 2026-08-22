@@ -1,0 +1,29 @@
+{
+  "slug": "v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya",
+  "topic_id": "B01",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B01-v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 932262,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9043 slug=v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya\nOK categories=34,31\nOK yoast_social_image=1\nOK featured_image=9054\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9055 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya-inline-01-1.png\nOK inline_alt=9055\nOK inline_caption=9055\nOK inline_description=9055\nOK inline_image_upload=9056 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya-inline-02-1.png\nOK inline_alt=9056\nOK inline_caption=9056\nOK inline_description=9056\nOK inline_image_upload=9057 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya-inline-03-1.png\nOK inline_alt=9057\nOK inline_caption=9057\nOK inline_description=9057\nOK inline_image_upload=9058 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya-inline-04-1.png\nOK inline_alt=9058\nOK inline_caption=9058\nOK inline_description=9058\nOK inline_image_upload=9059 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya-inline-05-1.png\nOK inline_alt=9059\nOK inline_caption=9059\nOK inline_description=9059\nOK inline_image_upload=9060 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya-inline-06-1.png\nOK inline_alt=9060\nOK inline_caption=9060\nOK inline_description=9060\nOK inline_image_upload=9061 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya-inline-07-1.png\nOK inline_alt=9061\nOK inline_caption=9061\nOK inline_description=9061\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "fail",
+  "live_page": {
+    "gate": "live-page",
+    "status": "BLOCK",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/",
+    "errors": [
+      "live FAQPage question/answer pairs differ from visible thematic FAQ"
+    ]
+  }
+}

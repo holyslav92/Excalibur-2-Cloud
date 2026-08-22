@@ -1,0 +1,9 @@
+{
+  "topic_id": "B01",
+  "description": "В Тюмени аванс уже внесли, когда отметка «без личного участия» в ЕГРН привела к отказу. Святослав Шакин показывает, где эта строка прячется в выписке.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
