@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B08",
+  "slug": "skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo",
+  "candidates_count": 9,
+  "outbound_found": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net"
+    },
+    {
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "title": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero"
+    },
+    {
+      "slug": "nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya",
+      "title": "nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
