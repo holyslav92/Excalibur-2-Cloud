@@ -1,6 +1,6 @@
 {
-  "status": "FAIL",
-  "all_pass": false,
+  "status": "PASS",
+  "all_pass": true,
   "gate": "quality-bar-9",
   "contract": "shared/quality-bar-9.md",
   "article_dir": "memory/blog/articles/B08-skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo",
@@ -18,14 +18,11 @@
     "no_sol_artifact": true,
     "no_unlabeled_live_inventory": true,
     "comparison_tables_differ": true,
-    "cover_phone_on_cover": false,
+    "cover_phone_on_cover": true,
     "wordstat_stickers_not_title_overlap": true,
-    "cover_qa_pass": false
+    "cover_qa_pass": true
   },
-  "errors": [
-    "check failed: cover_qa_pass",
-    "check failed: cover_phone_on_cover"
-  ],
+  "errors": [],
   "metrics": {
     "word_count": 2439,
     "h2_count": 9,

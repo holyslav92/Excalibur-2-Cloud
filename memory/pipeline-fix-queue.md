@@ -81,7 +81,7 @@ files_changed:
 - `shared/derouter-gpt-image-api-contract.md`
 checks_run:
 - `python3 -m unittest tests.test_fixer_b08.DerouterDiscontinuedTest` → OK
-commit: pending
+commit: c05047b
 
 ## INC-20260822-1110-kie-credits-402-b08
 status: needs-human
