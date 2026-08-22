@@ -137,7 +137,21 @@ class ImageProviderBlockerTest(unittest.TestCase):
             ],
         )
 
-    def test_parse_size_wh(self) -> None:
+    def test_vip_aspect_uses_pixels_not_ratio(self) -> None:
+        from excalibur_blog_grsai_gpt_image2_api import (
+            aspect_ratio_for_grsai,
+            grsai_vip_model_id,
+            grsai_standard_model_id,
+        )
+
+        standard = grsai_standard_model_id()
+        vip = grsai_vip_model_id()
+        self.assertEqual(aspect_ratio_for_grsai("16:9", model=standard), "16:9")
+        self.assertEqual(aspect_ratio_for_grsai("16:9", model=vip), "1672x941")
+        self.assertEqual(
+            aspect_ratio_for_grsai("16:9", model=vip, resolution="2K"),
+            "2048x1152",
+        )
         from excalibur_blog_grsai_gpt_image2_api import parse_size_wh
 
         self.assertEqual(parse_size_wh("2048x1152"), (2048, 1152))

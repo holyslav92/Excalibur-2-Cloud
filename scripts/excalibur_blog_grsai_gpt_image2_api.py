@@ -533,8 +533,27 @@ def resolve_generate_response(
     raise GrsaiApiError(f"grsai {endpoint} unexpected response: {list(parsed.keys())}")
 
 
-def aspect_ratio_for_grsai(aspect_ratio: str, *, model: str) -> str:
+def is_vip_model(model: str) -> bool:
+    return str(model or "").strip().endswith("-vip")
+
+
+def aspect_ratio_for_grsai(
+    aspect_ratio: str,
+    *,
+    model: str,
+    resolution: str = "",
+) -> str:
+    """vip tier требует пиксельный size (1672x941 / 2048x1152), не строку 16:9."""
     raw = (aspect_ratio or DEFAULT_ASPECT_16_9).strip()
+    res = str(resolution or "").strip().upper()
+    if is_vip_model(model):
+        if raw in {"2048x1152"} or res == "2K":
+            return "2048x1152"
+        if raw in {"16:9", "1672x941"}:
+            return "1672x941"
+        if "x" in raw.lower().replace("×", "x"):
+            return raw
+        return "1672x941"
     if raw in {"16:9", "1672x941", "2048x1152"}:
         return raw if raw != "2048x1152" else "16:9"
     return raw
@@ -560,7 +579,11 @@ def generate_image(
         local_refs,
         input_urls if isinstance(input_urls, list) else None,
     )
-    aspect = aspect_ratio_for_grsai(str(image_input.get("aspect_ratio") or DEFAULT_ASPECT_16_9), model=model)
+    aspect = aspect_ratio_for_grsai(
+        str(image_input.get("aspect_ratio") or DEFAULT_ASPECT_16_9),
+        model=model,
+        resolution=str(image_input.get("resolution") or ""),
+    )
     target_w, target_h = parse_size_wh(target_size)
     mode = "i2i" if ref_images else "t2i"
 
@@ -824,7 +847,9 @@ def main() -> int:
             "model": standard_model,
             "model_tier_vip_fallback": vip_model,
             "aspect_ratio": aspect_ratio_for_grsai(
-                str(image_input.get("aspect_ratio") or DEFAULT_ASPECT_16_9), model=standard_model
+                str(image_input.get("aspect_ratio") or DEFAULT_ASPECT_16_9),
+                model=standard_model,
+                resolution=str(image_input.get("resolution") or ""),
             ),
             "quality": quality,
             "hosts": hosts,

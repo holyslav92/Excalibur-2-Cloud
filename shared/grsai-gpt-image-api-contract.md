@@ -58,7 +58,7 @@ solo-cover per-attempt tier loop in `excalibur_blog_grsai_solo_cover.py`.
 }
 ```
 
-- 16:9 cover: `aspectRatio` `"16:9"` or `"1672x941"` (non-vip)
+- vip tier: use pixel `aspectRatio` (`1672x941` or `2048x1152` for 2K) — **not** `"16:9"` string
 - Pipeline resizes/crops to **1200×675** for `cover.png` (quad canvas: **2048×1152**)
 - Response: `status=succeeded` → `results[0].url` (download within 2h)
 - Async: `replyType=async` → poll `GET /v1/api/result?id=<task_id>`
