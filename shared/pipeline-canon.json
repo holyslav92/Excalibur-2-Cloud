@@ -149,6 +149,8 @@
     "output": "quality-bar-9.json",
     "word_count_min": 2000,
     "word_count_max": 2600,
+    "dzen_engagement_goal": "likes_comments_subscriptions",
+    "comment_magnet_required": true,
     "required_before_publish": true
   }
 }

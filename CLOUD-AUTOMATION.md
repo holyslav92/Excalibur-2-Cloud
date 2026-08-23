@@ -152,17 +152,18 @@ DEROUTER <ROLE> BLOCKER → стоп пайплайна. Нет run_budget / cir
 doctor + today.
 dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
 needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
-Scout HARD gates перед handoff: MCP-KV Wordstat + shared/dzen-news-casus.md (default news-casus shape, forbidden checklist hooks; слабый Wordstat → rework news phrasing, NOT drop casus) + `scout_helper.py --check-query` (topic focus + **story-duplicate** `shared/scout-story-clusters.json` vs ledger/live WP — Wordstat rework ≠ same legal risk+plot).
+Scout HARD gates перед handoff: MCP-KV Wordstat + shared/dzen-news-casus.md (Dzen engagement goal; hot news-casus актуалочка; forbidden checklist/TL;DR; comment_magnet_angle в handoff; слабый Wordstat → rework news phrasing, NOT drop casus) + `scout_helper.py --check-query` (topic focus + **story-duplicate** `shared/scout-story-clusters.json` vs ledger/live WP — Wordstat rework ≠ same legal risk+plot).
 research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
-Title/Writer/Sol: news headline + casus arc (событие → финал → практика после); H1 forbidden: «чеклист», «N шагов», «стоит ли покупать»; body 2000–2600, useful part AFTER story.
+Title/Writer/Sol: цель = Dzen engagement (лайки, комментарии, подписки); news-casus актуалочка (событие → финал → практика после); прозаический лид → early TG+MAX; comment magnet — один острый вопрос; H1 forbidden: «чеклист», «N шагов», «стоит ли покупать»; body 2000–2600, useful part AFTER story.
 Description: news card energy (shared/dzen-description-rules.md), not SEO checklist blurb.
 
-Conversion (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
+Conversion + engagement (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
   Early после hook + прозаический лид (4–6 предложений, news-casus; НЕ TL;DR / «Быстрый инсайт» / bullet-dump): brand beat + curiosity + ТОЛЬКО Telegram https://t.me/Tyumen_Rieltor и MAX https://max.ru/id561413315447_biz
   Mid после практического блока (aftermath casus): лёгкий TG+MAX (excalibur-cta-mid)
   End: dual CTA консультация / сразу в сделку + полный набор (site, guides, Dzen, VK, about)
   Телефон +7 922 001 65 05 на cover + один раз в теле
   Interlink 2–4 sibling из shared/published-articles.md (status=published)
+  Comment magnet: один острый вопрос для комментариев (gate comment_magnet_question)
 
 После Sol: pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → quality-bar-9.json all_pass.
 Description → Cover-text || Schema → Cover (hook H1 + phone + meme + optional yellow sticky — **NO Wordstat query strips**) → Cover-QA pixel gate (`pixel_no_wordstat_query_strips`, `pixel_hook_title_present`, `pixel_phone_readable`, `pixel_meme_present`, `pixel_layout_not_collapsed`; Fixer: regen cover panel only, **max 2 rounds**) → Indexer.

@@ -46,6 +46,7 @@ REQUIRED_CHECKS = (
     "no_unlabeled_live_inventory",
     "comparison_tables_differ",
     "no_tldr_opening",
+    "comment_magnet_question",
     "cover_qa_pass",
     "cover_phone_on_cover",
     "wordstat_stickers_not_title_overlap",
@@ -125,6 +126,36 @@ def check_no_tldr_opening(html: str) -> tuple[bool, list[str]]:
     screen = first_screen_html(html)
     errors = opening_tldr_errors(screen)
     return (not errors, errors)
+
+
+FAQ_SKIP_RE = re.compile(
+    r"частые вопросы|faq|задаваемые вопросы|читайте также",
+    re.I,
+)
+DEBATE_QUESTION_RES = (
+    re.compile(r"«[^»]{8,200}\?»"),
+    re.compile(
+        r"(?:кто\s+прав|а\s+вы\s+как|что\s+бы\s+вы|спорят|прав\s+ли|верите\s+ли|"
+        r"по-вашему|по-моему|кто\s+виноват|на\s+чьей\s+стороне)[^.!?]{0,120}\?",
+        re.I,
+    ),
+)
+
+
+def check_comment_magnet(html: str) -> tuple[bool, list[str]]:
+    """At least one sharp reader-debate question (Dzen comment magnet)."""
+    if re.search(r"<h2[^>]*>\s*[^<]{8,140}\?\s*</h2>", html or "", flags=re.I):
+        return True, []
+    plain = strip_html(html)
+    for rx in DEBATE_QUESTION_RES:
+        if rx.search(plain):
+            return True, []
+    for m in re.finditer(r"[^.!?]{20,180}\?", plain):
+        chunk = m.group(0)
+        if FAQ_SKIP_RE.search(chunk):
+            continue
+        return True, []
+    return False, ["comment-magnet: need one sharp reader-debate question"]
 
 
 def check_early_cta(html: str) -> bool:
@@ -424,6 +455,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
     checks["comparison_tables_differ"] = tbl_ok
     tldr_ok, tldr_errors = check_no_tldr_opening(html)
     checks["no_tldr_opening"] = tldr_ok
+    magnet_ok, magnet_errors = check_comment_magnet(html)
+    checks["comment_magnet_question"] = magnet_ok
     checks["cover_phone_on_cover"] = check_cover_phone(article_dir)
     checks["wordstat_stickers_not_title_overlap"] = check_wordstat_overlap(article_dir)
 
@@ -448,6 +481,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
                 )
             elif key == "no_tldr_opening" and tldr_errors:
                 errors.extend(tldr_errors)
+            elif key == "comment_magnet_question" and magnet_errors:
+                errors.extend(magnet_errors)
             else:
                 errors.append(f"check failed: {key}")
 

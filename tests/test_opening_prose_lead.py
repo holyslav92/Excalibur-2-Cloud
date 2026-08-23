@@ -74,6 +74,18 @@ class OpeningProseLeadTest(unittest.TestCase):
         rules = canon["opening_rules"]
         self.assertTrue(rules.get("no_tldr_opening"))
         self.assertEqual(rules.get("prose_lead_sentences_min"), 4)
+        qb = canon["quality_bar_9"]
+        self.assertTrue(qb.get("comment_magnet_required"))
+        self.assertEqual(qb.get("dzen_engagement_goal"), "likes_comments_subscriptions")
+
+    def test_comment_magnet_gate(self) -> None:
+        from scripts.excalibur_blog_quality_bar_9_gate import check_comment_magnet
+
+        ok, _ = check_comment_magnet("<p>«Нам скинули справку — этого хватит?»</p>")
+        self.assertTrue(ok)
+        bad_ok, bad_err = check_comment_magnet("<p>Всё просто и понятно.</p>")
+        self.assertFalse(bad_ok)
+        self.assertIn("comment-magnet", bad_err[0])
 
 
 if __name__ == "__main__":
