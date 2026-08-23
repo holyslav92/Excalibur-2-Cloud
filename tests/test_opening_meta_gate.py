@@ -62,8 +62,10 @@ class OpeningMetaGateTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             d = Path(td)
             (d / "article.html").write_text(
-                "<p>Чат отвечает текстом, а кнопки на сайте жмёшь сам. "
-                "Hark выпустил Handoff — агент кликает сам. Пока очередь.</p>\n",
+                "<p>Чат отвечает текстом, а кнопки на сайте жмёшь сам.</p>"
+                "<p>Hark выпустил Handoff — агент кликает сам.</p>"
+                "<p>Пока очередь — это не готовый доступ сегодня.</p>"
+                "<p>Разберём, что проверить до внедрения.</p>\n",
                 encoding="utf-8",
             )
             (d / "article.meta.json").write_text(

@@ -94,10 +94,18 @@ def build_part_prompt(
         if part_index < total_parts
         else "оставшиеся H2 + практика/ограничения + CTA (без FAQ — Sol добавит)"
     )
+    opening_note = ""
+    if part_index == 1:
+        opening_note = (
+            "\nОткрытие: hook + прозаический лид 4–6 предложений (news-casus, часть истории). "
+            "ЗАПРЕЩЕНО: TL;DR, «Быстрый инсайт», bullet-списки <ul>/<ol> до первого H2. "
+            "После лида — excalibur-cta-early (TG+MAX only).\n"
+        )
     return (
         f"{user_text}\n\n"
         f"=== WRITER CHUNK {part_index}/{total_parts} ===\n"
         f"Напиши ТОЛЬКО фрагмент HTML для: {scope}.\n"
+        f"{opening_note}"
         f"H2 в этом чанке:\n{h2_block}\n"
         "Без <h1>. Чистый HTML-фрагмент. Не дублируй секции из других чанков.\n"
         "HTML whitelist: <b> не <strong>, <i> не <em>.\n"

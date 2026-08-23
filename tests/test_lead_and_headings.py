@@ -26,6 +26,8 @@ class WriterFinalTest(unittest.TestCase):
         self.assertIn("открытие", low)
         self.assertIn("drafts/writer.html", p)
         self.assertIn("Sol", p)
+        self.assertIn("tl;dr", low)
+        self.assertIn("прозаический лид", low)
 
     def test_removed_skills_and_agents_absent(self) -> None:
         for rel in GONE:

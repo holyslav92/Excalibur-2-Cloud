@@ -28,6 +28,7 @@ class WriterEditorialContractsTest(unittest.TestCase):
                 "title-brief.json",
                 "published-titles-only.md",
                 "shared/dzen-content-rules.md",
+                "shared/dzen-news-casus.md",
                 "shared/rf-blocked-entities.json",
             ],
         )
@@ -53,7 +54,7 @@ class WriterEditorialContractsTest(unittest.TestCase):
         self.assertIn("The Риэлтор", soul)
         self.assertIn("битов", post.lower())
         self.assertIn("seo-робот", bad.lower())
-        self.assertIn("чужой голос", bad.lower())
+        self.assertIn("чужой автор", bad.lower())
 
     def test_pipeline_canon_lists_sol_sources(self) -> None:
         canon = json.loads((ROOT / "shared/pipeline-canon.json").read_text(encoding="utf-8"))

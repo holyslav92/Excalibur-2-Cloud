@@ -47,6 +47,6 @@ Sol = финальный слог (`article.html`) по SOUL + soul-examples.
 5. **Cover-QA** → indexer → publish (только при quality-bar-9 all_pass + FTP + EXCALIBUR_BLOG_ALLOW_PUBLISH=yes)
 6. Fixer → merge code to main → content-learner
 
-Conversion canon: early TG+MAX после lead/TL;DR; mid после чеклиста; end dual CTA + полный набор каналов; interlink 2–4 sibling. CTA URLs — `tenant-config.cta_channels`.
+Conversion canon: early TG+MAX после hook + прозаический лид; mid после чеклиста; end dual CTA + полный набор каналов; interlink 2–4 sibling. CTA URLs — `tenant-config.cta_channels`.
 
 Skill: `skills/director-excalibur-blog/SKILL.md`

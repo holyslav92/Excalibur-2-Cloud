@@ -96,7 +96,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 | Зона | Когда | Что |
 |------|-------|-----|
-| **Early** | после hook + TL;DR, первый экран | brand beat (Святослав, The Риэлтор, Тюмень) + curiosity + **только TG + MAX** |
+| **Early** | после hook + прозаический лид (4–6 предложений), первый экран | brand beat (Святослав, The Риэлтор, Тюмень) + curiosity + **только TG + MAX** |
 | **Mid** | после практического блока (aftermath casus) | лёгкий nudge TG + MAX (`excalibur-cta-mid`) |
 | **End** | финал | dual CTA «консультация» / «сразу в сделку» + полный набор (TG, MAX, site, Дзен, VK, guides, about) |
 
@@ -158,7 +158,7 @@ Title/Writer/Sol: news headline + casus arc (событие → финал → �
 Description: news card energy (shared/dzen-description-rules.md), not SEO checklist blurb.
 
 Conversion (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
-  Early после hook+TL;DR: brand beat + curiosity + ТОЛЬКО Telegram https://t.me/Tyumen_Rieltor и MAX https://max.ru/id561413315447_biz
+  Early после hook + прозаический лид (4–6 предложений, news-casus; НЕ TL;DR / «Быстрый инсайт» / bullet-dump): brand beat + curiosity + ТОЛЬКО Telegram https://t.me/Tyumen_Rieltor и MAX https://max.ru/id561413315447_biz
   Mid после практического блока (aftermath casus): лёгкий TG+MAX (excalibur-cta-mid)
   End: dual CTA консультация / сразу в сделку + полный набор (site, guides, Dzen, VK, about)
   Телефон +7 922 001 65 05 на cover + один раз в теле
