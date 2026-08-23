@@ -1,0 +1,73 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B10",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-23",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Август 2026: «В квартире живет бабушка. Только бабушки в квартире нет» — сталинка, собственник 1/3, ПНД, старая доверенность без выписки, отказ до аванса"
+      },
+      {
+        "url": "https://29.ru/text/realty/2026/07/27/76552610/",
+        "type": "media",
+        "note": "27.07.2026: пенсионерка, доверенность на скит, риелтор не видела продавца, цена ниже рынка"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Тенант Шакин: ПНД-справка не закрывает риск; предавансовая проверка в Тюмени"
+      }
+    ]
+  },
+  "dzen_casus_shape": {
+    "status": "PASS",
+    "event": "на осмотре сталинки в Тюмени бабушки-собственника 1/3 не оказалось в квартире",
+    "risk": "ПНД, дееспособность, доверенность без полномочий на снятие с регистрации",
+    "time": "перед авансом, на осмотре",
+    "finale": "сделку остановили — иначе риск оспаривания и суда за долю пожилого собственника"
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 22753,
+    "angle_phrases": [
+      {"phrase": "доверенность на продажу квартиры", "volume": 72},
+      {"phrase": "опека при продаже квартиры", "volume": 28},
+      {"phrase": "выписка из егрн на квартиру", "volume": 124}
+    ],
+    "rework_from": "проверка квартиры у пожилого продавца (empty) → опека 28 → доверенность 72 → егрн 124 → P0"
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "anti_dup_note": "Angle differs from B05 (discount hook); not Serbsky-queue main hook"
+  },
+  "official_source_audit": {
+    "required": false,
+    "status": "PASS",
+    "verified_claims": 0,
+    "entities_checked": [],
+    "errors": [],
+    "note": "No bank tariff claims in research-notes; topic is legal/capacity/POA"
+  },
+  "derouter": {
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "key_facts_count": 15,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
