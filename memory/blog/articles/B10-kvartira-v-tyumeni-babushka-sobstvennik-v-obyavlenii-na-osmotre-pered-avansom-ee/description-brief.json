@@ -1,0 +1,9 @@
+{
+  "topic_id": "B10",
+  "description": "«Бабушка здесь живёт», — уверяли продавцы сталинки в Тюмени. Три кровати на осмотре выдали другое: доля шла по старой доверенности, и покупатель не отдал аванс.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
