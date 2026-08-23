@@ -16,6 +16,12 @@ import sys
 from pathlib import Path
 
 from excalibur_blog_quad_slots import INLINE_SLOT_KEYS, active_inline_keys, inline_count_from_tenant
+from excalibur_blog_cover_budget import (
+    SHORT_HOOK_MAX_CHARS,
+    SHORT_HOOK_MAX_WORDS,
+    SHORT_HOOK_MIN_WORDS,
+    validate_short_hook,
+)
 
 BRAND_WHITELIST = {
     "cursor", "make", "mcp", "ai", "openai", "google", "microsoft", "nvidia",
@@ -66,7 +72,20 @@ def validate_cover_text(data: dict, inline_count: int = 7) -> dict:
     error_fields: list[str] = []
 
     hook = str(data.get("hook") or "").strip()
-    _check_text(errors, error_fields, "hook", hook, min_words=2, max_words=8, max_chars=64)
+    _check_text(
+        errors,
+        error_fields,
+        "hook",
+        hook,
+        min_words=SHORT_HOOK_MIN_WORDS,
+        max_words=SHORT_HOOK_MAX_WORDS,
+        max_chars=SHORT_HOOK_MAX_CHARS,
+    )
+    short_verdict = validate_short_hook(hook)
+    for err in short_verdict.get("errors") or []:
+        if err not in errors:
+            errors.append(err)
+            error_fields.append("hook")
 
     highlight = str(data.get("highlight") or "").strip()
     if not highlight:

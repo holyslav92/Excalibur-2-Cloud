@@ -155,7 +155,24 @@
         "pixel_no_wordstat_ocr_strips"
       ]
     },
-    "fixer_loop": "Fixer → regen cover panel if layout/hook/phone/meme/query-strip FAIL; never PIL Wordstat overlay/repack; never peel/inpaint person"
+    "fixer_loop": "Fixer → regen cover panel if layout/hook/phone/meme/query-strip FAIL; never PIL Wordstat overlay/repack; never peel/inpaint person; max 2 fixer rounds",
+    "cover_budget": {
+      "default_max_attempts": 2,
+      "env_override": "EXCALIBUR_COVER_MAX_ATTEMPTS",
+      "script": "scripts/excalibur_blog_grsai_solo_cover.py",
+      "exhausted_report": "cover/cover-budget-result.json",
+      "conductor_timebox_minutes": "15-20"
+    },
+    "short_hook": {
+      "rule": "ONE line, 5-7 Cyrillic words (B08-style), prefer words ≥5 letters for OCR; em dash OK",
+      "forbidden": "novel-length multi-line hooks",
+      "gate": "scripts/excalibur_blog_cover_text_gate.py"
+    },
+    "ocr_false_positive_escape": {
+      "function": "apply_ocr_false_positive_escape",
+      "pattern": "B08/B09 live — host face + Cyrillic hook + phone; only OCR truncation/opaque flakes",
+      "forbidden_remediation": ["PIL mashup", "Kie"]
+    },
   },
   "identity_lock": {
     "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",

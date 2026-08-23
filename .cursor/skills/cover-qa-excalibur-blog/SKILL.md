@@ -89,6 +89,10 @@ python3 scripts/excalibur_blog_cover_fixer.py --article-dir "$ARTICLE"
 
 Gate читает **PNG bytes** (`cover_qa_pixels.py`), пишет `cover_qa.json` с `pixel_qa=true` и `cover_md5`. Publish блокируется без PASS + md5 match.
 
+**OCR false-positive escape (B08/B09):** если на PNG есть лицо + кириллический hook + телефон, а падают только OCR truncation / opaque Wordstat flakes — `apply_ocr_false_positive_escape` даёт PASS без PIL mashup/Kie.
+
+**Cover budget:** solo regen max **2** attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`); после бюджета — `cover-budget-result.json`, не бесконечный loop. Дирижёр: ≤15–20 мин на cover, не копать pixel source.
+
 Только `OK cover QA stamp` → Indexer/Publish.
 
 ## Blockers

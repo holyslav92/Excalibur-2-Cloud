@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
-from excalibur_blog_identity_real import pick_identity_reference
+from excalibur_blog_cover_budget import SHORT_HOOK_MAX_CHARS, short_hook_prompt_line
 from excalibur_blog_quad_slots import (
     CANVAS_1_SLOTS,
     active_inline_keys,
@@ -513,7 +513,7 @@ def build_solo_cover_prompt(
     """Solo 16:9 cover regen — без quad-canvas; Wordstat query strips запрещены навсегда."""
     cover = (manifest.get("slots") or {}).get("cover") or {}
     motifs = manifest.get("cover_motifs") or {}
-    hook = compact(manifest.get("cover_hook", ""), 120)
+    hook = compact(manifest.get("cover_hook", ""), SHORT_HOOK_MAX_CHARS)
     highlight = compact(manifest.get("cover_hook_highlight", ""), 24)
     highlight_rule = (
         f'paint ONLY the word "{highlight}" in gold #dcc5a1 brush accent'
@@ -547,6 +547,7 @@ def build_solo_cover_prompt(
         "ONE SINGLE 16:9 cover frame 1200x675 — NOT a 2x2 grid, NOT four panels, NOT quad canvas, NOT split collage.\n"
         f"{bans}\n"
         "TEXT LOCK: Russian Cyrillic only. Allowed on-canvas text: headline hook, phone CTA, one small sticky — NOTHING else.\n"
+        f"{short_hook_prompt_line()}\n"
         f"Headline EXACT «{hook}» bold black RIGHT sacred zone (52–96% width, 14–40% height), {highlight_rule}. "
         "Leave clear typography band — do NOT fill headline zone with face.\n"
         f"Phone EXACT «{COVER_PHONE_CTA}» white torn paper bottom-RIGHT corner (55–98% width, 70–96% height).\n"

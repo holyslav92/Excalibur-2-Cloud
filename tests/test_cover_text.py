@@ -15,8 +15,8 @@ class CoverTextTest(unittest.TestCase):
 
         verdict = validate_cover_text(
             {
-                "hook": "Cursor стал дешевле на треть",
-                "highlight": "дешевле",
+                "hook": "Ипотеку одобрили — регистрацию остановили",
+                "highlight": "остановили",
                 "sticky": "новой модели нет",
                 "inline_labels": {
                     "inline_1": ["заявление 3 августа", "минус 20–30%", "без новой модели"],
@@ -56,7 +56,7 @@ class CoverTextTest(unittest.TestCase):
 
         verdict = validate_cover_text(
             {
-                "hook": "Cursor стал дешевле на треть",
+                "hook": "Ипотеку одобрили — регистрацию остановили",
                 "highlight": "бюджет",
                 "sticky": "",
                 "inline_labels": {
