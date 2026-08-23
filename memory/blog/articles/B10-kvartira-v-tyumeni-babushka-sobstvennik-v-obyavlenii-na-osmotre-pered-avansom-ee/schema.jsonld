@@ -1,0 +1,51 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "{{SITE_BASE}}/",
+        "{{SITE_BASE}}/rieltor-tyumen/",
+        "{{SITE_BASE}}/kontakty/",
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://t.me/holyslav92",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/kvartira-v-tyumeni-babushka-sobstvennik-v-obyavlenii-na-osmotre-pered-avansom-ee/#blogposting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/kvartira-v-tyumeni-babushka-sobstvennik-v-obyavlenii-na-osmotre-pered-avansom-ee/"
+      },
+      "url": "{{SITE_BASE}}/kvartira-v-tyumeni-babushka-sobstvennik-v-obyavlenii-na-osmotre-pered-avansom-ee/",
+      "headline": "Бабушку-собственницу не нашли на осмотре — аванс остановили",
+      "description": "Бабушку-собственницу не нашли на осмотре — аванс остановили",
+      "datePublished": "2026-08-23",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}
