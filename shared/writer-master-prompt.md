@@ -14,13 +14,15 @@
 3. `title-brief.json` — H1
 4. `published-titles-only.md` / `shared/published-titles.md` — только anti-dup
 5. `shared/tenant-config.json` — CTA / язык / флаги
-6. При сомнении по Дзен/РФ (если `dzen_rf_pack`): `shared/dzen-content-rules.md`,
+6. `shared/dzen-news-casus.md` — news-casus shape (прозаический лид, не TL;DR)
+7. При сомнении по Дзен/РФ (если `dzen_rf_pack`): `shared/dzen-content-rules.md`,
    `shared/rf-blocked-entities.json`
 
 ## Что писать
 
 - Чистый HTML-фрагмент без `<h1>` → `drafts/writer.html`
-- Открытие + H2 с мыслями + практика/ограничения + CTA (если есть в tenant)
+- Открытие: hook + **прозаический лид 4–6 предложений** (news-casus, часть истории). **Не** TL;DR, **не** «Быстрый инсайт», **не** bullet-списки в первом экране.
+- H2 с мыслями + практика/ограничения + CTA (если есть в tenant)
 - Факты только из research
 - Ссылки CTA: **только** из `tenant-config.cta_links` + MAX по `cta_channels.max`
   (`cta_required=true` — Telegram + tel + слово MAX обязательны)
@@ -33,6 +35,7 @@
 ## Запрещено
 
 - Термин-дамп и research-брифинг в открытии
+- TL;DR / «Быстрый инсайт» / bullet-dump в первом экране (прозаический лид 4–6 предложений)
 - Уже опубликованные статьи сайта / live pages как образец
 - Чужие `article.html` / live-сайт как образец
 - `memory/topics/`, lessons, benchmarks

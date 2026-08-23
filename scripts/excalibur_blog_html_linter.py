@@ -88,7 +88,8 @@ def detect_anchor_toc(html: str) -> list[str]:
             errors.append(
                 "Forbidden in-body TOC: list with 3+ anchor links to headings "
                 f"(#{', #'.join(anchor_links[:5])}{'...' if len(anchor_links) > 5 else ''}). "
-                "Remove <ol>/<ul> navigation after TL;DR; see excalibur-article-writing-contract.md block 3."
+                "Remove <ol>/<ul> navigation in the opening prose lead; "
+                "see shared/article-style.md and shared/SOUL.md (no TL;DR bullet-dump)."
             )
     return errors
 

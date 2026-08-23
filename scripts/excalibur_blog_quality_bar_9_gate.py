@@ -16,6 +16,10 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
+_SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_DIR))
+
 
 WORD_MIN = 2000
 WORD_MAX = 2600
@@ -41,6 +45,7 @@ REQUIRED_CHECKS = (
     "no_sol_artifact",
     "no_unlabeled_live_inventory",
     "comparison_tables_differ",
+    "no_tldr_opening",
     "cover_qa_pass",
     "cover_phone_on_cover",
     "wordstat_stickers_not_title_overlap",
@@ -107,11 +112,19 @@ def check_brand(html: str) -> bool:
 
 
 def first_screen_html(html: str) -> str:
-    """Content before first H2 — hook + TL;DR + early CTA zone."""
+    """Content before first H2 — hook + prose lead + early CTA zone."""
     m = re.search(r"<h2\b", html or "", flags=re.I)
     if m:
         return (html or "")[: m.start()]
     return html or ""
+
+
+def check_no_tldr_opening(html: str) -> tuple[bool, list[str]]:
+    from excalibur_blog_opening_meta_gate import opening_tldr_errors
+
+    screen = first_screen_html(html)
+    errors = opening_tldr_errors(screen)
+    return (not errors, errors)
 
 
 def check_early_cta(html: str) -> bool:
@@ -409,6 +422,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
     checks["no_unlabeled_live_inventory"] = check_live_inventory(html)
     tbl_ok, tbl_errors = check_comparison_tables(html)
     checks["comparison_tables_differ"] = tbl_ok
+    tldr_ok, tldr_errors = check_no_tldr_opening(html)
+    checks["no_tldr_opening"] = tldr_ok
     checks["cover_phone_on_cover"] = check_cover_phone(article_dir)
     checks["wordstat_stickers_not_title_overlap"] = check_wordstat_overlap(article_dir)
 
@@ -431,6 +446,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
                 errors.append(
                     f"sibling interlinks {interlink_count} outside {INTERLINK_MIN}-{INTERLINK_MAX}"
                 )
+            elif key == "no_tldr_opening" and tldr_errors:
+                errors.extend(tldr_errors)
             else:
                 errors.append(f"check failed: {key}")
 

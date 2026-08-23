@@ -54,6 +54,7 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 
 - Второй автор / rewrite-loop **поверх Sol** (Sol — единственный стилевой рерайт)
 - Термин-дамп / research-брифинг в открытии финала
+- TL;DR / «Быстрый инсайт» / bullet-dump в первом экране (канон: прозаический лид 4–6 предложений)
 - topics / SEO-хвосты
 - Writer/Sol читают старые article.html / live-сайт как образец
 - Publish без pipeline_canon stamp
