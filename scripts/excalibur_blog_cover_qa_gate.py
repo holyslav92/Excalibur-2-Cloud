@@ -18,6 +18,7 @@ from excalibur_blog_cover_qa_pixels import (
     md5_file,
     stamp_cover_qa_json,
 )
+from excalibur_blog_meme_canon import load_meme_catalog, normalize_meme_picks, validate_meme_picks
 
 
 REQUIRED_CHECKS = (
@@ -43,6 +44,7 @@ REQUIRED_CHECKS = (
     "inline_no_co_host_human",
     "inline_meme_sticker_scale",
     "meme_people_real_catalog",
+    "meme_variety_not_cats_only",
     "pixel_qa_reads_png_not_prompt",
     "pixel_host_close_up",
     "pixel_wordstat_not_opaque_bars",
@@ -294,11 +296,22 @@ def validate_cover_qa(article_dir: Path, root: Path, *, stamp: bool = True) -> d
             errors.append(
                 "emotion_not_copied_from_recent_covers FAIL: emotion/pose repeats last covers"
             )
+        picks = normalize_meme_picks(manifest.get("meme_picks"))
+        if picks:
+            catalog = load_meme_catalog(root)
+            for err in validate_meme_picks(picks, catalog):
+                errors.append(err)
 
     status = "PASS" if not errors else "FAIL"
+    meme_variety_ok = not any("meme_variety" in e for e in errors)
 
     if stamp:
-        stamp_cover_qa_json(article_dir, pixel_result, topic_id=topic_id)
+        stamp_cover_qa_json(
+            article_dir,
+            pixel_result,
+            topic_id=topic_id,
+            merge_checks={"meme_variety_not_cats_only": meme_variety_ok},
+        )
         qa = load_json(qa_path)
         qa["gate_status"] = status
         qa["gate_errors"] = errors

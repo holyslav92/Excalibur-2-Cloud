@@ -15,13 +15,19 @@ import re
 import sys
 from pathlib import Path
 
-from excalibur_blog_quad_slots import INLINE_SLOT_KEYS, active_inline_keys, inline_count_from_tenant
 from excalibur_blog_cover_budget import (
     SHORT_HOOK_MAX_CHARS,
     SHORT_HOOK_MAX_WORDS,
     SHORT_HOOK_MIN_WORDS,
     validate_short_hook,
 )
+from excalibur_blog_quad_slots import (
+    INLINE_SLOT_KEYS,
+    MEME_ALLOWED_SLOTS,
+    active_inline_keys,
+    inline_count_from_tenant,
+)
+from excalibur_blog_meme_canon import load_meme_catalog, normalize_meme_picks, validate_meme_picks
 
 BRAND_WHITELIST = {
     "cursor", "make", "mcp", "ai", "openai", "google", "microsoft", "nvidia",
@@ -106,6 +112,14 @@ def validate_cover_text(data: dict, inline_count: int = 7) -> dict:
         for lbl in panel_labels:
             _check_text(errors, error_fields, f"{key}.label", str(lbl),
                         min_words=1, max_words=4, max_chars=28)
+
+    picks = normalize_meme_picks(data.get("meme_picks"))
+    if picks:
+        catalog = load_meme_catalog()
+        for err in validate_meme_picks(
+            picks, catalog, slot_allowed={k for k in MEME_ALLOWED_SLOTS}
+        ):
+            errors.append(err)
 
     return {
         "status": "PASS" if not errors else "BLOCK",
