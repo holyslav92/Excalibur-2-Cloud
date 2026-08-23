@@ -25,7 +25,9 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 1. **Алексей Клышин (angle bank)** — `memory/scout/klyshin-topic-bank.md` + `.json`, канал `https://t.me/klyshin_A`.
 2. **Wordstat (demand spine)** — MCP-KV buyer-спрос в Тюмени/области (55 + 11176), сравнение с RU **225**.
-3. **Dzen news-casus shape** — `shared/dzen-news-casus.md`: default = **новость-казус** с финалом, не how-to checklist.
+3. **Dzen news-casus shape** — `shared/dzen-news-casus.md`: default = **hot news-casus актуалочка** с финалом и **comment magnet**, не how-to checklist.
+
+**Цель каждой темы — вовлечение в Дзен** (лайки, комментарии, подписки): конкретные stakes в Тюмени, завершённое событие, финал. Scout намечает **угол спора** для comment magnet.
 
 Klyshin **не** заменяет частоты. Wordstat **не** binary skip gate. Слабый Wordstat **не** повод сменить shape на чеклист.
 
@@ -107,6 +109,7 @@ python3 scripts/excalibur_blog_wordstat_gate.py config
 
 ```text
 dzen_casus_shape: PASS | event: «…» | risk: «…» | time: «через год» | finale: «суд отменил регистрацию»
+comment_magnet_angle: «…?» — острый вопрос, с которым читатели спорят
 ```
 
 ### Handoff (обязательно)
@@ -115,6 +118,7 @@ dzen_casus_shape: PASS | event: «…» | risk: «…» | time: «через г�
 wordstat_preflight: mcp-kv wordstat_get_user_info OK
 klyshin_hook: <hook_id> | original: «…» | angle: <…> | signal: https://t.me/klyshin_A/…
 dzen_casus_shape: PASS | event: «…» | risk: «…» | time: «…» | finale: «…»
+comment_magnet_angle: «…?»
 wordstat_rework: probe «…» <freq> → … → final P0 «купить квартиру в тюмени» 23060 | clusters tried: …
 wordstat: mcp_kv live | regions 55,11176,compare225 | P0 «…» <freq> | …
 ```

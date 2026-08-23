@@ -97,9 +97,10 @@ def build_part_prompt(
     opening_note = ""
     if part_index == 1:
         opening_note = (
-            "\nОткрытие: hook + прозаический лид 4–6 предложений (news-casus, часть истории). "
+            "\nОткрытие: hook + прозаический лид 4–6 предложений (news-casus актуалочка, часть истории). "
             "ЗАПРЕЩЕНО: TL;DR, «Быстрый инсайт», bullet-списки <ul>/<ol> до первого H2. "
-            "После лида — excalibur-cta-early (TG+MAX only).\n"
+            "После лида — excalibur-cta-early (TG+MAX only). "
+            "В теле: один comment magnet — острый вопрос «…?» после финала или перед mid CTA.\n"
         )
     return (
         f"{user_text}\n\n"

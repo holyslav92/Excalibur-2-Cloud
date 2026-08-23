@@ -2,9 +2,12 @@
 
 Порог **9/10** для longform The Риэлтор. Статья **не публикуется**, пока не PASS все пункты ниже **и** `quality-bar-9.json` в каталоге статьи не содержит `"all_pass": true`.
 
-Контракт для Writer, Sol, Description, Cover-QA и Cloud Automation. Cursor — дирижёр; прозу пишет Derouter по `shared/derouter-opus-brain-contract.md`.
+Контракт для Writer, Sol, Scout, Title, Description, Cover-QA и Cloud Automation. Cursor — дирижёр; прозу пишет Derouter по `shared/derouter-opus-brain-contract.md`.
 
-**Главная задача статьи — conversion:** увести читателя в **Telegram** или **MAX** до того, как он уйдёт. Не оставлять единственный CTA в футере.
+**Главная задача каждого поста — вовлечение в Дзен:** лайки, комментарии, подписки.
+Форма = **hot news-casus актуалочка** (Тюмень, конкретные stakes, финал): прозаический лид в слоге Святослава → early TG+MAX → история → практика → CTAs. **Не** чеклист, **не** TL;DR, **не** robotic insider bullets.
+
+**Conversion (параллельная цель):** увести читателя в **Telegram** или **MAX** до ухода. Не оставлять единственный CTA в футере.
 
 Канонические URL — `shared/tenant-config.json` → `cta_channels` / `cta_links` (PUBLIC_SITE_URL = tymenrieltor.ru):
 - Telegram (PRIMARY): https://t.me/Tyumen_Rieltor
@@ -50,6 +53,7 @@ Dual CTA (мягко): «напишите на консультацию» **ил
 ## TEXT
 
 - **2000–2600 слов** (не 2900+). Короткие абзацы. Klyshin rhythm, Shakin facts. Тюмень — конкретика.
+- **Comment magnet (HARD):** один острый вопрос, с которым читатели спорят в комментариях Дзена — реплика «…?» или прямой вопрос с двумя полюсами; после финала casus или перед mid CTA. Gate: `comment_magnet_question`.
 - **Без выдуманных адресов/лотов/цен.** Таблица «живых лотов» только из research-notes с источником; иначе удалить или явно пометить **как пример**, не live inventory.
 - **Сравнительные таблицы:** левый столбец **отличается** от правого (запрещён copy-paste «ошибки» = «правильно»).
 - **7+ полезных H2**, каждый с inline `figure.inline-quad` где по канону.

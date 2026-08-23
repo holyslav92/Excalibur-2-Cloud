@@ -28,12 +28,14 @@ Scout? → research_start → Research → Title → Writer(смысл)
 
 **Title** → `title-brief.json`. **Description** → `description-brief.json` (Дзен-карточка, после Sol).
 
+**Цель каждого поста — вовлечение в Дзен** (лайки, комментарии, подписки): hot **news-casus актуалочка** (Тюмень, stakes, финал), прозаический лид → early TG+MAX → история → практика → CTAs + **comment magnet** (один острый вопрос). Не чеклист, не TL;DR, не robotic insider bullets. См. `shared/dzen-news-casus.md`, `shared/quality-bar-9.md`.
+
 **18 ролей** (см. `.cursor/agents/FOR-AGENTS.md`): 16 pipeline + `excalibur-blog-description` + `excalibur-blog-cover-qa`.
 
 Никто не читает уже опубликованные статьи сайта — только
 `published-titles-only.md` / `shared/published-titles.md` для anti-dup.
 
-`memory/topics/` запрещена. Scout → handoff + `signal_urls` + **triple gate: Klyshin hooks (`memory/scout/klyshin-topic-bank.*`) × MCP-KV Wordstat** (Tyumen 55+11176, compare RU 225) × **Dzen news-casus** (`shared/dzen-news-casus.md`). Klyshin = angle/hook; Wordstat = **evaluate + rework for demand** (не binary skip: слабый объём → локализация/переформулировка news angle до buyer P0; skip только если после rework нет честного buyer-intent кластера; **не** drop casus ради чеклиста). В handoff логировать **original Klyshin hook** + **final P0 phrase+volume** + **`dzen_casus_shape: PASS`**. Cover canon: `memory/cover/cover-canon.json`.
+`memory/topics/` запрещена. Scout → handoff + `signal_urls` + **triple gate: Klyshin hooks (`memory/scout/klyshin-topic-bank.*`) × MCP-KV Wordstat** (Tyumen 55+11176, compare RU 225) × **Dzen news-casus** (`shared/dzen-news-casus.md`). Klyshin = angle/hook; Wordstat = **evaluate + rework for demand** (не binary skip: слабый объём → локализация/переформулировка news angle до buyer P0; skip только если после rework нет честного buyer-intent кластера; **не** drop casus ради чеклиста). В handoff логировать **original Klyshin hook** + **final P0 phrase+volume** + **`dzen_casus_shape: PASS`** + **`comment_magnet_angle`**. Cover canon: `memory/cover/cover-canon.json`.
 
 **Factory brain (двухуровневый split):** Cursor — **тонкий дирижёр** (default Composer; не переключать модель Cursor).
 Прозу пишет только `scripts/excalibur_blog_derouter_opus_chat.py` → Derouter REST (`DEROUTER_API_KEY`):
@@ -55,6 +57,7 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - Второй автор / rewrite-loop **поверх Sol** (Sol — единственный стилевой рерайт)
 - Термин-дамп / research-брифинг в открытии финала
 - TL;DR / «Быстрый инсайт» / bullet-dump в первом экране (канон: прозаический лид 4–6 предложений)
+- Пост без **comment magnet** (острый вопрос для комментариев Дзена) или how-to checklist вместо news-casus
 - topics / SEO-хвосты
 - Writer/Sol читают старые article.html / live-сайт как образец
 - Publish без pipeline_canon stamp

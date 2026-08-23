@@ -14,7 +14,9 @@ is_background: false
 
 1. **Klyshin** — `memory/scout/klyshin-topic-bank.*` + live `https://t.me/klyshin_A` (angle/hook)
 2. **Wordstat** — MCP-KV buyer P0 в Тюмени/области (55 + 11176, compare 225) — **evaluate + rework for demand**
-3. **Dzen news-casus** — `shared/dzen-news-casus.md`: default = новость с финалом, не how-to checklist
+3. **Dzen news-casus** — `shared/dzen-news-casus.md`: hot **news-casus актуалочка** с финалом + **comment magnet**, не how-to checklist
+
+**Цель темы — вовлечение в Дзен** (лайки, комментарии, подписки). Handoff: `comment_magnet_angle`.
 
 ```text
 Klyshin hook → Wordstat probe → rework if weak (news phrasing, NOT checklist pivot) → final P0 + dzen_casus_shape: PASS
