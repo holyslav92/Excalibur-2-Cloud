@@ -1,0 +1,221 @@
+{
+  "topic_id": "B11",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Четыре месяца искали — юристы отказали",
+  "cover_hook_highlight": "отказали",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав с штампом отказа; hook справа; телефон",
+      "scene_hint": "bright board; hook RIGHT; host LEFT blue sweater; sticky; phone; cat; NO Wordstat",
+      "meme_caption_ru": "",
+      "sticky": "Документы после аванса",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Как из хорошего покупателя получается удобный",
+      "visual_type": "process_flow",
+      "scene_hint": "4-month fatigue timeline: азарт→удар→удар→риск",
+      "alt": "Таймлайн усталости покупателя 4 месяца",
+      "labels": [
+        "Месяц 1: азарт",
+        "Месяц 2: удар",
+        "Месяц 3: второй удар",
+        "Месяц 4: согласны"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что было в документах: четыре флага, которые сложились в один",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "4 red flags checklist: наследство, доверенность, дистанция, аванс",
+      "alt": "Четыре красных флага в документах",
+      "labels": [
+        "Право до 6 мес",
+        "Продажа по доверенности",
+        "Собственник в другом городе",
+        "Документы после аванса"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "«Согласны на риск» и «сделайте безопасно» — это два разных заказа",
+      "visual_type": "comparison_table",
+      "scene_hint": "risk emotion vs legal safety — incompatible",
+      "alt": "Риск vs безопасность — несовместимо",
+      "labels": [
+        "Согласны на риск",
+        "Сделайте безопасно",
+        "Без документов риск"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Финал: отрицательное заключение и остановка до аванса",
+      "visual_type": "process_flow",
+      "scene_hint": "отказ→нет аванса→сняли→3-я продажа",
+      "alt": "Отказ, остановка до аванса",
+      "labels": [
+        "Отрицательное заключение",
+        "Аванс не внесли",
+        "Сняли за 2 недели",
+        "3-я продажа за год"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Что проверять, если вы на четвёртом месяце поиска",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "4 questions checklist before advance",
+      "alt": "4 вопроса до аванса",
+      "labels": [
+        "Когда возникло право",
+        "Основание: документ",
+        "Кто подписывает",
+        "Кто зарегистрирован"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Рынок Тюмени: почему усталость усиливается сама собой",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "17,8 тыс / 113 дней / 6,28 млн / 3-5%→10%",
+      "alt": "Рынок Тюмени: цифры",
+      "labels": [
+        "17,8 тыс объявлений",
+        "113 дней продажа",
+        "6,28 млн двушка",
+        "3-5% до 10%"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что в итоге получила семья",
+      "visual_type": "fact_card",
+      "scene_hint": "6 недель, 0 потерь, чистые документы",
+      "alt": "Итог: другая двушка за 6 недель",
+      "labels": [
+        "6 недель до двушки",
+        "0 рублей потеряно",
+        "Документы до аванса",
+        "Собственник на сделке"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени",
+    "вторичка в тюмени",
+    "проверка квартиры перед покупкой"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_emotion": "усталое облегчение и тревога",
+  "cover_motifs": {
+    "composition": "host_left_waist_up_headline_right_red_stamp_refusal_board",
+    "location": "bright_white_investigation_board_tyumen_sun_flare_high_key",
+    "meme": "tired_cat_sticker_bottom_right_corner",
+    "prop_set": "four_red_flag_pins_legal_refusal_stamp_egrn_fold",
+    "sticker_set": "one_yellow_sticky_hook_only_NO_wordstat",
+    "joke": "cat_side_eye_at_docs_after_advance_sticky",
+    "outfit": "dusty_blue_cable_knit_sweater_NO_blazer_NO_black_jacket",
+    "emotion": "tired_relief_worried_brow_NO_studio_smile",
+    "pose_framing": "waist_up_left_third_holding_red_stamp_over_board",
+    "action": "presses_red_refusal_stamp_over_four_flag_board"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  }
+}

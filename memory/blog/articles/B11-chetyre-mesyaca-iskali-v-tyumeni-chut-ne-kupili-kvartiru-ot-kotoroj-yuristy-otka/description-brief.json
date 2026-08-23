@@ -1,0 +1,9 @@
+{
+  "topic_id": "B11",
+  "description": "Четыре месяца и двадцать пять просмотров — и семья настояла на квартире, от которой юристы отказали. В Тюмени усталость покупателя часто дороже, чем кажется.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

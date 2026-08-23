@@ -172,7 +172,7 @@
       "function": "apply_ocr_false_positive_escape",
       "pattern": "B08/B09 live — host face + Cyrillic hook + phone; only OCR truncation/opaque flakes",
       "forbidden_remediation": ["PIL mashup", "Kie"]
-    },
+    }
   },
   "identity_lock": {
     "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",

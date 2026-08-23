@@ -20,6 +20,7 @@ from excalibur_blog_quad_slots import (
     slot_allows_meme_sticker,
     slot_forbids_meme_cat_person,
 )
+from excalibur_blog_identity_real import pick_identity_reference
 from excalibur_blog_site_base import (
     REDACTED_LITERAL,
     SITE_BASE_PLACEHOLDER,

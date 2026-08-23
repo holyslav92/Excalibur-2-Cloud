@@ -103,6 +103,23 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-23",
+      "topic_id": "B11",
+      "slug": "",
+      "motifs": {
+        "composition": "host_left_waist_up_headline_right_red_stamp_refusal_board",
+        "location": "bright_white_investigation_board_tyumen_sun_flare_high_key",
+        "meme": "tired_cat_sticker_bottom_right_corner",
+        "prop_set": "four_red_flag_pins_legal_refusal_stamp_egrn_fold",
+        "sticker_set": "one_yellow_sticky_hook_only_no_wordstat",
+        "joke": "cat_side_eye_at_docs_after_advance_sticky",
+        "outfit": "dusty_blue_cable_knit_sweater_no_blazer_no_black_jacket",
+        "emotion": "tired_relief_worried_brow_no_studio_smile",
+        "pose_framing": "waist_up_left_third_holding_red_stamp_over_board",
+        "action": "presses_red_refusal_stamp_over_four_flag_board"
+      }
     }
   ]
 }
