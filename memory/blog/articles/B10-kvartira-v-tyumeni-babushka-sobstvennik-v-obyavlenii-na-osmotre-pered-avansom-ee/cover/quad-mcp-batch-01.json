@@ -1,0 +1,52 @@
+{
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "canvas_index": 1,
+  "identity_reference_local": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+  "identity_reference_id": "face_studio_2026",
+  "reference_url_hosted": "{{SITE_BASE}}/wp-content/uploads/2026/06/2026-06-23-15.57.42.jpg",
+  "output_canvas": "cover/canvas-quad-01.png",
+  "result_path": "cover/quad-mcp-result-01.json",
+  "slots": [
+    "cover",
+    "inline_1",
+    "inline_2",
+    "inline_3"
+  ],
+  "preferred_image_flow": {
+    "provider": "grsai-rest",
+    "script": "scripts/excalibur_blog_grsai_gpt_image2_api.py",
+    "contract": "shared/grsai-gpt-image-api-contract.md",
+    "resolution": "2K",
+    "note": "PRIMARY: grsai grsai standard image model REST (Global → China, 2K 16:9). Optional last resort: Derouter image REST (EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1). FORBIDDEN: Kie, flux2-pro-*, Seedream, nano_banana*, z-image, PIL mashup.",
+    "apply_script": "python3 scripts/excalibur_blog_quad_apply.py --article-dir <article_dir> --canvas-index 1 --inject-html"
+  },
+  "jobs": [
+    {
+      "slot": "canvas_quad",
+      "tool": "grsai-rest",
+      "mcp_args": {
+        "prompt": "High-key bright RU editorial collage, airy #FFFFFF, sun flare/light leak/soft glow, BLACK #141821 Cyrillic, gold #dcc5a1 accent. Host LARGE left = same 28yo man i2i face-studio-2026-06-23 (jaw/stubble/hairline lock), medium slim (NOT chubby). 1-3 Wordstat stickers (Тюмень). Meme cat/people cutouts. No dark cinematic, no inventory props.\nCanvas 2048x1152 exact 2x2; four 16:9 panels (1024x576); thin white gutters; no bleed.\nBan: dark/low-key; inventory props; celebrity memes; EXCALIBUR stamp; chubby host; stock/generated man co-host on inline; large meme person on inline; icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face.\nTEXT LANGUAGE LOCK: all visible text is RUSSIAN Cyrillic only; exact LABELS per panel only.\nCover TL only: i2i face-studio-2026-06-23 (face-studio identity: jaw/stubble/hairline/eyes; medium-slim; NOT chubby/puffy); same person as reference, NEW expression for the hook, do NOT copy reference closed-mouth smile/pose/head angle; FORBIDDEN polite studio smile; invent scene; no AI hero-ref. Canvas 1: meme sticker ONLY on cover TL + inline_1 TR; inline_2 BL and inline_3 BR: ZERO meme ZERO cat ZERO person / БЕЗ мема БЕЗ кота БЕЗ человека.\nTL COVER TXT «Бабушку не нашли аванс остановили» bold Cyrillic black, paint ONLY the highlight word \"остановили\" in gold #dcc5a1. Small gold sticky with EXACTLY «Сначала проверка документов» in Cyrillic. Phone EXACT «+7 922 001 65 05» readable CTA sticker. Host i2i left (face-studio identity: jaw/stubble/hairline/eyes; medium-slim; NOT chubby/puffy); Expression: puzzled squint NOT smile. same person as reference, NEW expression for the hook, do NOT copy reference closed-mouth smile/pose/head angle; FORBIDDEN polite studio smile. sun flare; stalinka; hook-R; host-L teal; phone; cat; 1-2 meme stickers; tape/pins/strings/paper scraps; high-key #FFF/gold; not noir; ZERO Wordstat/search-keyword strips on canvas — FORBIDDEN forever; NO beige/gold query bars top-left; NO text on clothes/chest. #FFF; perfect Cyrillic\nTop-right inline: карточка фактов; «Коротко: аванс не пошёл»; timeline 4 steps. TXT:Сталинка под ремонт | Аванс через неделю | Три вопроса открыты | Аванс не внесли. LOCK: NO host face / БЕЗ лица ведущего. +tiny meme sticker only (≤15% frame, corner accent from memory/cover/meme-top100.json; NO co-host human; NO presenter).\nBottom-left inline: карточка фактов; «Бабушки на осмотре не было»; 2-col facts. TXT:Две детские кровати | Нет лекарств и очков | Нет взрослой одежды | Рассказ не совпал. LOCK: NO host face / БЕЗ лица ведущего; NO meme NO cat / БЕЗ мема БЕЗ кота; NO person co-host / БЕЗ человека. ZERO meme ZERO cat ZERO person / НОЛЬ мемов котов людей.\nBottom-right inline: карточка фактов; «Доля, ПНД, доверенность — три вопроса»; 3 blocks diagram. TXT:Одна треть доли | Справка на дату | Продажа не выписка | Статус решает суд. LOCK: NO host face / БЕЗ лица ведущего; NO meme NO cat / БЕЗ мема БЕЗ кота; NO person co-host / БЕЗ человека. ZERO meme ZERO cat ZERO person / НОЛЬ мемов котов людей.\nInline all: #FFF collage, gold/black Cyrillic labels, tape/pins/strings/paper scraps; high-key #FFF/gold; not noir; dense facts/numbers; exact TXT per panel; meme only if +meme AND sticker-scale; no human hero on inline; no icon soup; zero typos.",
+        "aspect_ratio": "16:9",
+        "resolution": "2K",
+        "input_urls": [
+          "{{SITE_BASE}}/wp-content/uploads/2026/06/2026-06-23-15.57.42.jpg"
+        ]
+      }
+    }
+  ],
+  "validation": {
+    "prompt_chars": 3398,
+    "max_prompt_chars": 3500,
+    "required_reference_host": "{{SITE_HOST}}",
+    "resolution": "2K"
+  },
+  "image_generation": {
+    "model_tier": "standard",
+    "vip_fallback_used": false,
+    "host": "grsaiapi.com",
+    "mode": "i2i",
+    "generated_at": "2026-08-23T14:10:44+00:00",
+    "local_path": "cover/canvas-quad-01.png",
+    "bytes": 2257945
+  }
+}

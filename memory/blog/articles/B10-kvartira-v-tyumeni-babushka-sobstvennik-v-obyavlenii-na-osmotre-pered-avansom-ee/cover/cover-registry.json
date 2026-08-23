@@ -1,0 +1,86 @@
+{
+  "topic_id": "B10",
+  "slug": "kvartira-v-tyumeni-babushka-sobstvennik-v-obyavlenii-na-osmotre-pered-avansom-ee",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Святослав на осмотре сталинки указывает на пустое место бабушки; крупный hook «Бабушку не нашли аванс остановили»; телефон +7 922 001 65 05",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-23T14:11:10+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Святослав на осмотре сталинки указывает на пустое место бабушки; крупный hook «Бабушку не нашли аванс остановили»; телефон +7 922 001 65 05",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Таймлайн осмотра: сталинка, план аванса, три открытых вопроса, стоп до аванса",
+      "h2_anchor": "Коротко: что случилось на осмотре и почему аванс не пошёл",
+      "visual_type": "fact_card",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Сравнение: заявлено «бабушка живёт» против фактов осмотра — нет вещей и места",
+      "h2_anchor": "«Бабушка живёт в квартире» — а на просмотре её следов не было",
+      "visual_type": "fact_card",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Схема трёх разных вопросов: доля, ПНД, доверенность — не один документ",
+      "h2_anchor": "Треть доли, ПНД и старая доверенность: три разных вопроса",
+      "visual_type": "fact_card",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "График скидки: с 1 до 3 млн — юридический риск не изменился",
+      "h2_anchor": "Скидку подняли — риск не исчез",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Сравнение: остановка до аванса — без потери денег против риска после",
+      "h2_anchor": "Финал: сделку остановили до аванса",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Чеклист проверок до аванса: доли, отметки ЕГРН, контакт, доверенность, адрес замены",
+      "h2_anchor": "Что проверить, если пожилой собственник доли не появляется лично",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Схема трёх узлов: доверенность, регистрация, опека — где ломается сделка",
+      "h2_anchor": "Доверенность, регистрация и опека: где чаще всего ломается схема",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

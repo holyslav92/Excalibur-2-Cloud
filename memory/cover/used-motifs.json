@@ -103,6 +103,23 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-23",
+      "topic_id": "B10",
+      "slug": "",
+      "motifs": {
+        "composition": "host_waist_up_center_left_empty_bed_zone_headline_right_sacred_phone_bottom_right",
+        "location": "bright_stalinka_viewing_room_white_walls_sun_flare_high_key",
+        "meme": "woman_yelling_cat_tiny_sticker_bottom_right_corner_only",
+        "prop_set": "child_bed_sketch_empty_nightstand_power_of_attorney_fold_yellow_sticky",
+        "sticker_set": "one_yellow_sticky_hook_only_no_wordstat_no_query_bars",
+        "joke": "empty_granny_glasses_on_nightstand_with_question_mark",
+        "outfit": "dusty_teal_linen_overshirt_unbuttoned_cream_henley_no_blazer_no_black_jacket",
+        "emotion": "puzzled_squint_one_brow_cocked_scanning_empty_bedside",
+        "pose_framing": "waist_up_center_left_leaning_toward_bed_frame_not_left_bust_not_side_eye",
+        "action": "finger_traces_empty_nightstand_holds_folded_power_of_attorney"
+      }
     }
   ]
 }

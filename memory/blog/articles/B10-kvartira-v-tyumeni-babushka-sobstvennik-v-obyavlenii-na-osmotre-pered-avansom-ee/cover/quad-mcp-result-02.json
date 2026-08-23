@@ -1,0 +1,14 @@
+{
+  "local_path": "cover/canvas-quad-02.png",
+  "source": "grsai-api",
+  "model_tier": "standard",
+  "vip_fallback_used": false,
+  "bytes": 1919338,
+  "aspect_ratio": "16:9",
+  "quality": "high",
+  "endpoint": "/v1/api/generate",
+  "host": "grsaiapi.com",
+  "mode": "t2i",
+  "attempts": 1,
+  "resized_to": [2048, 1152]
+}
