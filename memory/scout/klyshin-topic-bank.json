@@ -2,8 +2,8 @@
   "bank_id": "klyshin_topic_bank_v1",
   "source_channel": "https://t.me/klyshin_A",
   "source_label": "Алексей Клышин — юрист по недвижимости",
-  "updated_at": "2026-08-21",
-  "accessed_at": "2026-08-21",
+  "updated_at": "2026-08-23",
+  "accessed_at": "2026-08-23",
   "algorithm": "klyshin_hook → wordstat_probe → rework_for_demand → final_P0_or_skip_after_rework",
   "wordstat_gate": {
     "provider": "mcp-kv",
@@ -76,7 +76,24 @@
         "купить квартиру в тюмени"
       ],
       "tyumen_localize": true,
-      "status": "seed"
+      "last_seen": "2026-08-23",
+      "wordstat_rework_log": [
+        "probe «проверка квартиры у пожилого продавца» empty",
+        "probe «опека при продаже квартиры» 28",
+        "probe «доверенность на продажу квартиры» 72",
+        "probe «выписка егрн на квартиру» 124 (cluster егрн 7509)",
+        "final P0 «купить квартиру в тюмени» 22753 (RU225 40097)"
+      ],
+      "final_p0": {
+        "phrase": "купить квартиру в тюмени",
+        "volume": 22753,
+        "regions": [
+          "55",
+          "11176"
+        ],
+        "compare_ru": 40097
+      },
+      "status": "B10"
     },
     {
       "id": "power_of_attorney_svo",
@@ -303,6 +320,14 @@
       ],
       "note": "автооценка минус 1–2 млн → final P0 «купить квартиру в тюмени» 23066",
       "wordstat_rework": "73 → 3943 → 5799 → 23066"
+    },
+    {
+      "topic_id": "B10",
+      "hook_ids": [
+        "elderly_pnd_serbsky"
+      ],
+      "note": "бабушка-собственник отсутствует в квартире, ПНД, старая доверенность — не скидка B05; final P0 «купить квартиру в тюмени» 22753",
+      "wordstat_rework": "опека 28 → доверенность 72 → егрн 124 → 22753"
     }
   ]
 }
