@@ -1,5 +1,15 @@
 # Quality bar 9/10 — hard gate before Publish
 
+## OWNER LOCK (permanent)
+
+Три столпа — **не ослаблять** без owner override. Полный JSON: `shared/pipeline-canon.json` → `owner_lock_permanent`.
+
+| Столп | HARD rules |
+|-------|------------|
+| **Engagement bomb** | Dzen engagement goal; news-casus актуалочка; прозаический лид **4–6 предложений**; early TG+MAX only; comment magnet; gates `no_tldr_opening`, `opening-meta-gate`, `comment_magnet_question`. **Forbidden:** TL;DR, «Быстрый инсайт», bullets до первого H2, checklist/how-to в лиде. |
+| **Meme canon v1** | `meme-top100.json` real ids only; people+cats (not cats-only); on-topic funny; ≤15% stickers; never hook/face/phone; anti-repeat 14д; `meme_variety_not_cats_only` when `meme_picks` present. |
+| **Cover fail-fast** | Max **2** full cover attempts; ≤15–20 min timebox; `cover-budget-result.json` → Indexer; Fixer max 2 rounds; short hook 5–7 words; OCR escape without PIL/Kie. |
+
 Порог **9/10** для longform The Риэлтор. Статья **не публикуется**, пока не PASS все пункты ниже **и** `quality-bar-9.json` в каталоге статьи не содержит `"all_pass": true`.
 
 Контракт для Writer, Sol, Scout, Title, Description, Cover-QA и Cloud Automation. Cursor — дирижёр; прозу пишет Derouter по `shared/derouter-opus-brain-contract.md`.

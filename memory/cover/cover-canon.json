@@ -1,6 +1,13 @@
 {
   "canon_id": "the_rieltor_light_meme_no_wordstat_v3",
   "status": "ok",
+  "owner_lock_permanent": {
+    "status": "LOCKED_ON_MAIN",
+    "pillars_ref": "shared/pipeline-canon.json → owner_lock_permanent",
+    "engagement_bomb": "Dzen engagement; news-casus; prose lead; no TL;DR/bullets; early TG+MAX; comment magnet — see quality-bar-9 + dzen-news-casus",
+    "meme_canon_v1": "meme-top100.json only; people+cats; on-topic funny; stickers ≤15%; sacred hook/face/phone; anti-repeat 14д",
+    "cover_fail_fast": "max 2 full attempts; 15-20 min timebox; cover-budget-result → Indexer; no infinite Cover-QA; no PIL/Kie"
+  },
   "label_ru": "The Риэлтор — изобретение с нуля, light/bright, мемы, yellow sticky from hook, anti-repeat 14д; Wordstat strips FORBIDDEN on cover",
   "forbidden_daypart_formula": {
     "status": "REJECTED_BY_OWNER",
@@ -190,6 +197,8 @@
     },
     "fixer_loop": "Fixer → regen cover panel if layout/hook/phone/meme/query-strip FAIL; never PIL Wordstat overlay/repack; never peel/inpaint person; max 2 fixer rounds",
     "cover_budget": {
+      "fail_fast": true,
+      "owner_lock_pillar": "cover_fail_fast — max attempts then Indexer, not infinite Cover-QA",
       "default_max_attempts": 2,
       "env_override": "EXCALIBUR_COVER_MAX_ATTEMPTS",
       "script": "scripts/excalibur_blog_grsai_solo_cover.py",

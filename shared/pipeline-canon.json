@@ -152,5 +152,45 @@
     "dzen_engagement_goal": "likes_comments_subscriptions",
     "comment_magnet_required": true,
     "required_before_publish": true
+  },
+  "owner_lock_permanent": {
+    "status": "LOCKED_ON_MAIN",
+    "note": "Owner mandate — permanent canon, not chat memory. Do not weaken without explicit owner override.",
+    "pillars": {
+      "engagement_bomb": {
+        "dzen_goal": "likes_comments_subscriptions",
+        "shape": "news_casus_aktualochka",
+        "opening": "prose_lead_4_6_sentences",
+        "forbidden_opening": ["TL;DR", "Быстрый инсайт", "opening_bullet_lists", "how_to_checklist_lead"],
+        "early_cta": "TG_and_MAX_only_after_prose_lead",
+        "comment_magnet": true,
+        "docs": ["shared/dzen-news-casus.md", "shared/SOUL.md", "shared/quality-bar-9.md"]
+      },
+      "meme_canon_v1": {
+        "catalog": "memory/cover/meme-top100.json",
+        "variety": "people_plus_cats_not_cats_only",
+        "on_topic_funny": true,
+        "sticker_max_frame_share": 0.15,
+        "sacred_never_cover": ["hook_title", "host_face", "phone_cta"],
+        "clearance_px": 80,
+        "anti_repeat_days": 14,
+        "anti_repeat_log": "memory/cover/used-motifs.json",
+        "manifest_field": "meme_picks",
+        "docs": ["memory/cover/cover-canon.json", "skills/cover-text-excalibur-blog/SKILL.md"]
+      },
+      "cover_fail_fast": {
+        "max_full_attempts": 2,
+        "env_override": "EXCALIBUR_COVER_MAX_ATTEMPTS",
+        "timebox_minutes": "15-20",
+        "exhausted_report": "cover/cover-budget-result.json",
+        "after_budget": "Indexer_not_infinite_cover_qa_loop",
+        "fixer_max_rounds": 2,
+        "short_hook_words": "5-7_cyrillic",
+        "ocr_escape": "apply_ocr_false_positive_escape_without_pil_kie",
+        "forbidden": ["Kie", "PIL_mashup", "infinite_cover_qa_loop"],
+        "script": "scripts/excalibur_blog_grsai_solo_cover.py",
+        "docs": ["memory/cover/cover-canon.json", "skills/cover-excalibur-blog/SKILL.md"]
+      }
+    }
   }
 }

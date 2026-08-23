@@ -2,6 +2,16 @@
 
 **Только после** `memory/setup/status.json` → `complete: true`.
 
+## OWNER LOCK (permanent — main)
+
+Зафиксировано в `shared/pipeline-canon.json` → `owner_lock_permanent`. Automation **всегда** соблюдает:
+
+1. **Engagement bomb** — Dzen likes/comments/subs; news-casus актуалочка; прозаический лид 4–6 предложений; early TG+MAX; comment magnet; **no** TL;DR / «Быстрый инсайт» / opening bullets.
+2. **Meme canon v1** — `meme-top100.json` only; people+cats; on-topic funny; stickers ≤15%; sacred hook/face/phone; anti-repeat 14д.
+3. **Cover fail-fast** — max 2 solo attempts; ≤15–20 min cover timebox; budget exhausted → Indexer; no infinite Cover-QA loop; no PIL/Kie escape.
+
+См. `AGENTS.md`, `shared/quality-bar-9.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills.
+
 Тенант: **The Риэлтор** / tymenrieltor.ru — longform ~2000–2600 слов, cover + 7 inline-quad.
 
 ## Расписание (owner: 9–17 YEKT)

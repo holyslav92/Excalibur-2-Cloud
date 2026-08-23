@@ -5,6 +5,14 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 
 # Sol — душа слога (финальная проза)
 
+## OWNER LOCK (permanent)
+
+1. **Engagement bomb** — сохранить news-casus arc и Dzen engagement. **Прозаический лид 4–6 предложений** (не TL;DR / не «Быстрый инсайт» / не bullets в первом экране). **Early TG+MAX** после лида. **Comment magnet** — один острый вопрос. Gates: `opening-meta-gate`, `no_tldr_opening`, `comment_magnet_question`.
+2. Meme/cover — не зона Sol.
+3. Cover fail-fast — не зона Sol.
+
+Канон: `shared/pipeline-canon.json` → `owner_lock_permanent`, `shared/SOUL.md`, `shared/dzen-news-casus.md`.
+
 ## Модель (HARD) — thin conductor
 
 **Не пиши прозу моделью Cursor.** Собери `--user-file` из `drafts/writer.html` + SOUL/examples и вызови Derouter powerful tier (claude-opus-5):

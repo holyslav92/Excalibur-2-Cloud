@@ -5,6 +5,14 @@ description: "④a Cover: 2× quad grsai grsai standard image model 2K, light/me
 
 # Cover Agent — longform 8 images, light/meme canon
 
+## OWNER LOCK (permanent)
+
+1. **Engagement bomb** — cover hook поддерживает news-casus (не checklist title); short hook **5–7** кириллических слов; телефон +7 922 001 65 05 на cover.
+2. **Meme canon v1 (HARD)** — only `memory/cover/meme-top100.json`; people+cats (NOT cats-only); on-topic funny; stickers ≤15%; never hook/face/phone (+80px); anti-repeat 14д; `meme_picks` cover-text → quad-manifest.
+3. **Cover fail-fast (HARD)** — `excalibur_blog_grsai_solo_cover.py`: max **2** full attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`); timebox **≤15–20 мин**; после бюджета → `cover/cover-budget-result.json` → **Indexer** (не бесконечный Cover-QA). Fixer max 2 rounds. OCR escape без PIL mashup/Kie.
+
+Канон: `memory/cover/cover-canon.json`, `shared/pipeline-canon.json` → `owner_lock_permanent`.
+
 ## Thin conductor + Derouter utility (HARD)
 
 **scene_hint, cover_emotion, prompt invention** — только Derouter utility tier (gpt-5.6-terra, `--role cover-scene`).

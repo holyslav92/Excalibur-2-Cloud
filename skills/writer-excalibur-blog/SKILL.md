@@ -5,6 +5,14 @@ description: Write meaning draft drafts/writer.html; Sol applies tenant SOUL sty
 
 # Writer Skill — смысл статьи (черновик)
 
+## OWNER LOCK (permanent)
+
+1. **Engagement bomb** — цель = Dzen likes/comments/subs. **News-casus актуалочка** (событие → финал → практика после). **Прозаический лид 4–6 предложений** → **early TG+MAX** → история → практика → CTAs + **comment magnet**. **Запрещено:** TL;DR, «Быстрый инсайт», bullets до первого H2, checklist/how-to в лиде.
+2. Meme/cover — не зона Writer; см. Cover skill + `meme_canon_v1`.
+3. Cover fail-fast — не зона Writer; Cover agent: max 2 attempts, ≤15–20 min.
+
+Канон: `shared/pipeline-canon.json` → `owner_lock_permanent`, `shared/quality-bar-9.md`, `shared/dzen-news-casus.md`.
+
 ## Модель (HARD) — thin conductor
 
 **Не пиши прозу моделью Cursor.** Собери `--user-file` из research/title-brief и вызови Derouter powerful tier (claude-opus-5):
