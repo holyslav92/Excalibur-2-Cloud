@@ -41,6 +41,9 @@ Scout? → research_start → Research → Title → Writer(смысл)
 - **utility** `gpt-5.6-terra` (`DEROUTER_TERRA_MODEL`): Scout, Title, Research synthesis, Description, Cover-text, Schema, Cover-scene
 При недоступности → `DEROUTER <ROLE> BLOCKER`, без тихого fallback на Composer. См. `shared/derouter-opus-brain-contract.md`.
 **Cover PNG:** grsai grsai standard image model REST (`shared/grsai-gpt-image-api-contract.md`). Optional Derouter image fallback only. **Kie FORBIDDEN forever.** PIL mashup FORBIDDEN.
+**Cover budget (HARD):** `excalibur_blog_grsai_solo_cover.py` — max **2** full attempts (standard→vip per attempt); override `EXCALIBUR_COVER_MAX_ATTEMPTS`. После исчерпания бюджета → `cover/cover-budget-result.json` + **Indexer** (не бесконечный Cover-QA loop). **≤15–20 мин** на cover; не копать `cover_qa_pixels.py` как дебаг-хобби.
+**Short hook:** ONE line, **5–7** кириллических слов (B08-style), prefer слова ≥5 букв; em dash OK; novel-length hooks запрещены (`cover-text` gate).
+**Cover-QA OCR escape:** если лицо + кириллический hook + телефон на PNG, а падают только OCR truncation / opaque-title flakes → `apply_ocr_false_positive_escape` (как B08/B09 live); без PIL mashup/Kie.
 **Wordstat:** MCP-KV. **Cover-QA:** Python gates, не «глаз» агента.
 
 ```bash
@@ -63,6 +66,8 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - Sol выдумывает факты, которых нет в `drafts/writer.html` / research
 - Cursor пишет Scout/Title/Writer/Sol/Description/Cover-text/Schema prose своей моделью вместо `excalibur_blog_derouter_opus_chat.py`
 - Запуск пайплайна до завершения Setup
+- Cover regen >2 full attempts или >15–20 мин на cover / deep-dive pixel OCR source вместо Indexer
+- Novel-length cover hook (>7 слов / многострочный) — ломает OCR
 
 ## Preflight
 

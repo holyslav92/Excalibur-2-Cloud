@@ -6,6 +6,9 @@ stamps cover_qa.json. Kie and PIL mashup FORBIDDEN.
 
 Model tiers (owner rule): first call non-vip; on API fail or Cover-QA FAIL
 escalate to vip for the same attempt; next attempt starts non-vip again.
+
+Hard budget: default max 2 full attempts (EXCALIBUR_COVER_MAX_ATTEMPTS override).
+After budget → clear FAIL with best candidate path; never infinite loop.
 """
 
 from __future__ import annotations
@@ -16,13 +19,13 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from excalibur_blog_cover_budget import resolve_cover_max_attempts
 from excalibur_blog_grsai_gpt_image2_api import (
     DEFAULT_TIMEOUT_SECONDS,
     MIN_TIMEOUT_SECONDS,
     default_quality,
     generate_image,
     iter_model_tiers,
-    model_tier_standard,
     project_root,
     resolve_grsai_api_key,
     resolve_hosts,
@@ -83,13 +86,43 @@ def write_temp_batch(article_dir: Path, prompt: str, ref_path: Path) -> Path:
     return batch_path
 
 
+def write_budget_exhausted_report(
+    article_dir: Path,
+    *,
+    max_attempts: int,
+    last_errors: list[str],
+    best_cover_path: Path,
+    attempts_log: list[dict[str, Any]],
+) -> Path:
+    report = {
+        "status": "FAIL",
+        "reason": "cover_budget_exhausted",
+        "max_attempts": max_attempts,
+        "best_candidate": str(best_cover_path),
+        "last_errors": last_errors,
+        "attempts": attempts_log,
+        "next_steps": [
+            "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+            "Never PIL mashup / Kie; regen only via grsai solo cover within budget",
+        ],
+    }
+    out = article_dir / "cover" / "cover-budget-result.json"
+    out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Generate solo 1200×675 cover via grsai standard image model")
     ap.add_argument("--article-dir", required=True)
     ap.add_argument("--ref", default=DEFAULT_REF)
     ap.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT_SECONDS)
     ap.add_argument("--prompt-suffix", default="", help="Extra prompt lines appended")
-    ap.add_argument("--max-attempts", type=int, default=6)
+    ap.add_argument(
+        "--max-attempts",
+        type=int,
+        default=None,
+        help="Full cover attempts (default 2 or EXCALIBUR_COVER_MAX_ATTEMPTS)",
+    )
     args = ap.parse_args()
 
     root = project_root()
@@ -97,12 +130,13 @@ def main() -> int:
     if not article_dir.is_absolute():
         article_dir = root / article_dir
 
+    max_attempts = resolve_cover_max_attempts(args.max_attempts)
+
     api_key = resolve_grsai_api_key()
     if not api_key:
         print("GRSAI API KEY MISSING", file=sys.stderr)
         return 1
 
-    standard_model = model_tier_standard()
     quality = default_quality()
     prompt = build_prompt_for_article(article_dir, root)
     if args.prompt_suffix.strip():
@@ -126,7 +160,7 @@ def main() -> int:
     model_tiers = iter_model_tiers()
 
     print(
-        f"prompt_chars={len(prompt)} ref={ref_path.name} "
+        f"prompt_chars={len(prompt)} ref={ref_path.name} max_attempts={max_attempts} "
         f"model_tiers={[m for _, m in model_tiers]} hosts={hosts}",
         flush=True,
     )
@@ -135,8 +169,11 @@ def main() -> int:
     topic_id = str(meta_json.get("topic_id") or "")
 
     last_errors: list[str] = []
-    for attempt in range(1, max(1, args.max_attempts) + 1):
-        print(f"attempt {attempt}/{args.max_attempts}", flush=True)
+    attempts_log: list[dict[str, Any]] = []
+    best_cover_path = article_dir / "cover" / "cover.png"
+
+    for attempt in range(1, max_attempts + 1):
+        print(f"attempt {attempt}/{max_attempts}", flush=True)
         batch_path = write_temp_batch(article_dir, prompt, ref_path)
         image_input = {
             "prompt": prompt,
@@ -144,9 +181,11 @@ def main() -> int:
             "resolution": "2K",
         }
 
-        attempt_passed = False
-        for tier_idx, (tier_name, model) in enumerate(model_tiers):
+        attempt_entry: dict[str, Any] = {"attempt": attempt, "tiers": []}
+
+        for tier_name, model in model_tiers:
             print(f"  tier={tier_name} model={model}", flush=True)
+            tier_entry: dict[str, Any] = {"tier": tier_name, "model": model}
             try:
                 raw_bytes, gen_meta = generate_image(
                     root=root,
@@ -160,8 +199,11 @@ def main() -> int:
                     hosts=hosts,
                     max_retries=1,
                     retry_wait=5,
+                    ref_path=ref_path,
                 )
             except Exception as exc:  # noqa: BLE001
+                tier_entry["error"] = str(exc)
+                attempt_entry["tiers"].append(tier_entry)
                 if tier_name == "standard" and len(model_tiers) > 1:
                     print(f"WARN non-vip generation failed: {exc}", flush=True)
                     continue
@@ -172,12 +214,19 @@ def main() -> int:
             cover_path = article_dir / "cover" / "cover.png"
             cover_path.parent.mkdir(parents=True, exist_ok=True)
             cover_path.write_bytes(raw_bytes)
+            best_cover_path = cover_path
+            tier_entry["bytes"] = len(raw_bytes)
+            tier_entry["host"] = gen_meta.get("host")
             print(
                 f"OK cover.png bytes={len(raw_bytes)} tier={tier_name} model={model} "
                 f"host={gen_meta.get('host')} endpoint={gen_meta.get('endpoint')}",
             )
 
             qa = stamp_qa(article_dir, root, topic_id)
+            tier_entry["qa_status"] = qa["status"]
+            tier_entry["qa_errors"] = list(qa["errors"])
+            attempt_entry["tiers"].append(tier_entry)
+
             if qa["status"] == "PASS":
                 print(f"OK cover_qa PASS md5={qa['md5']} tier={tier_name}")
                 return 0
@@ -187,12 +236,22 @@ def main() -> int:
             if tier_name == "standard" and len(model_tiers) > 1:
                 print("  escalating to vip for same attempt", flush=True)
                 continue
-            attempt_passed = False
             break
 
-        if attempt_passed:
-            break
+        attempts_log.append(attempt_entry)
 
+    report_path = write_budget_exhausted_report(
+        article_dir,
+        max_attempts=max_attempts,
+        last_errors=last_errors,
+        best_cover_path=best_cover_path,
+        attempts_log=attempts_log,
+    )
+    print(
+        f"FAIL COVER BUDGET EXHAUSTED after {max_attempts} attempt(s). "
+        f"best_candidate={best_cover_path} report={report_path}",
+        file=sys.stderr,
+    )
     print("FAIL pixel QA:", "; ".join(last_errors), file=sys.stderr)
     return 1
 

@@ -82,7 +82,7 @@ def run_fixer(
     article_dir: Path,
     root: Path,
     *,
-    max_rounds: int = 3,
+    max_rounds: int = 2,
     allow_regen: bool = True,
 ) -> dict[str, Any]:
     manifest_path = article_dir / "cover" / "quad-manifest.json"
@@ -151,7 +151,7 @@ def run_fixer(
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--article-dir", required=True)
-    ap.add_argument("--max-rounds", type=int, default=3)
+    ap.add_argument("--max-rounds", type=int, default=2)
     ap.add_argument("--no-regen", action="store_true")
     args = ap.parse_args()
     root = project_root()

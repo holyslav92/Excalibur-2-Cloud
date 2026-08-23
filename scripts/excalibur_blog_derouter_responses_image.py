@@ -15,6 +15,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from excalibur_blog_cover_budget import resolve_cover_max_attempts
 from excalibur_blog_derouter_gpt_image2_api import (
     DEFAULT_TIMEOUT_SECONDS,
     MIN_TIMEOUT_SECONDS,
@@ -67,13 +68,15 @@ def main() -> int:
     ap.add_argument("--primary-base", default=PRIMARY_DIRECT_BASE)
     ap.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT_SECONDS)
     ap.add_argument("--prompt-suffix", default="", help="Extra prompt lines appended")
-    ap.add_argument("--max-attempts", type=int, default=3)
+    ap.add_argument("--max-attempts", type=int, default=None)
     args = ap.parse_args()
 
     root = project_root()
     article_dir = Path(args.article_dir)
     if not article_dir.is_absolute():
         article_dir = root / article_dir
+
+    max_attempts = resolve_cover_max_attempts(args.max_attempts)
 
     api_key = resolve_derouter_api_key()
     if not api_key:
@@ -98,8 +101,8 @@ def main() -> int:
     topic_id = str(meta.get("topic_id") or "")
 
     last_errors: list[str] = []
-    for attempt in range(1, max(1, args.max_attempts) + 1):
-        print(f"attempt {attempt}/{args.max_attempts}", flush=True)
+    for attempt in range(1, max_attempts + 1):
+        print(f"attempt {attempt}/{max_attempts}", flush=True)
         try:
             raw_bytes, gen_meta = generate_image_via_responses(
                 prompt=prompt,

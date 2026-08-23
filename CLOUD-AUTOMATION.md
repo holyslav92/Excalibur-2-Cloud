@@ -47,6 +47,9 @@ Scout? → research_start → Research → Title → Writer → Sol
 
 - **Scout?** — по handoff / needs_scout; иначе research_start с заданным `topic_id`.
 - **Cover-QA** — обязательный финиш визуала (cover + 7 inline); **pixel gate** на `cover.png` bytes через `scripts/excalibur_blog_cover_qa_pixels.py` + `cover_qa.json` (`pixel_qa=true`, `cover_md5`). Без PASS дальше не идём. **Designed thumbnail gate:** hook H1 (справа, вне лица), телефон +7 922 001 65 05 (низ-право), мем-стикер (угол), optional yellow sticky from hook — **NO Wordstat query strips/bars** (`pixel_no_wordstat_query_strips`). FAIL: face-only collapse. **Fixer** — regen cover panel при layout FAIL; **never** PIL Wordstat overlay/repack → re-QA bytes.
+- **Cover budget (HARD):** `excalibur_blog_grsai_solo_cover.py` — default **2** full attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS` override). Каждая попытка = standard, при FAIL → vip. После бюджета → `cover/cover-budget-result.json` с `best_candidate` → **Indexer** (не бесконечный Cover-QA). Дирижёр: **≤15–20 мин** на cover; не grep pixel code часами.
+- **Short hook:** ONE line, **5–7** кириллических слов (B08-style), prefer ≥5 букв для OCR; em dash OK; gate в `excalibur_blog_cover_text_gate.py`.
+- **OCR escape hatch:** `apply_ocr_false_positive_escape` в `cover_qa_pixels.py` — лицо + hook + телефон на PNG, только OCR truncation/opaque flakes → PASS (как B08/B09 live); без PIL mashup/Kie.
 - **Indexer** — `llms.txt` / `llms-full.txt` (без правок `article.html`).
 - **Publish** — **только если одновременно**:
   1. в Cloud Secrets уже есть SFTP: `FTP_HOST`, `FTP_USER`, `FTP_PASS`, `FTP_ROOT` (и `PUBLIC_SITE_URL`);
@@ -120,7 +123,7 @@ Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 
 Cover + inline PNG **only grsai grsai standard image model** (Derouter image = optional last resort):
 
 1. `scripts/excalibur_blog_grsai_gpt_image2_api.py` — REST: `grsaiapi.com` (Global) → `grsai.dakka.com.cn` (China). Paths: `/v1/api/generate` (json → async poll) → `/v1/images/generations` → `/v1/draw/completions` + poll. Model tier: **first** non-vip standard; **only on failure** auto-escalate to vip (~3×). Never vip first. Face i2i from `face-studio-2026-06-23.jpg`.
-2. Solo cover CLI: `scripts/excalibur_blog_grsai_solo_cover.py` (1200×675 + pixel QA stamp).
+2. Solo cover CLI: `scripts/excalibur_blog_grsai_solo_cover.py` (1200×675 + pixel QA stamp; **max 2 attempts** default).
 3. Optional last resort: `EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1` → Derouter image REST (`excalibur_blog_derouter_gpt_image2_api.py`).
 4. grsai down → `GRSAI IMAGE BLOCKER` — diagnose/retry; **STOP**
 
@@ -162,7 +165,9 @@ Conversion (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
   Interlink 2–4 sibling из shared/published-articles.md (status=published)
 
 После Sol: pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → quality-bar-9.json all_pass.
-Description → Cover-text || Schema → Cover (hook H1 + phone + meme + optional yellow sticky — **NO Wordstat query strips**) → Cover-QA pixel gate (`pixel_no_wordstat_query_strips`, `pixel_hook_title_present`, `pixel_phone_readable`, `pixel_meme_present`, `pixel_layout_not_collapsed`; Fixer: regen cover panel only) → Indexer.
+Description → Cover-text || Schema → Cover (hook H1 + phone + meme + optional yellow sticky — **NO Wordstat query strips**) → Cover-QA pixel gate (`pixel_no_wordstat_query_strips`, `pixel_hook_title_present`, `pixel_phone_readable`, `pixel_meme_present`, `pixel_layout_not_collapsed`; Fixer: regen cover panel only, **max 2 rounds**) → Indexer.
+
+Cover timebox: ≤15–20 min total on cover regen+QA. Hard budget `EXCALIBUR_COVER_MAX_ATTEMPTS=2` (solo cover + panel regen). After budget exhausted → read `cover/cover-budget-result.json` → Indexer anyway if visual OK; NEVER infinite Cover-QA loop or deep-dive grep of `cover_qa_pixels.py`. Short hook 5–7 Cyrillic words (cover-text gate). OCR false-positive escape in pixel gate (B08/B09 pattern).
 
 Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе И quality-bar-9.json all_pass (или `--media-refresh --featured-only` для cover-only: pixel Cover-QA PASS + wp_post_id); иначе STOP после Indexer.
 Live = SFTP replace (не жди merge article в main для сайта). Код/канон — в main.

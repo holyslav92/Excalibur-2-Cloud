@@ -572,8 +572,13 @@ def generate_image(
     hosts: list[str],
     max_retries: int,
     retry_wait: int,
+    ref_path: Path | None = None,
 ) -> tuple[bytes, dict[str, Any]]:
-    local_refs = resolve_local_reference_paths(root=root, batch_path=batch_path)
+    local_refs = list(resolve_local_reference_paths(root=root, batch_path=batch_path))
+    if ref_path is not None and ref_path.is_file():
+        ref_resolved = ref_path if ref_path.is_absolute() else (root / ref_path)
+        if ref_resolved.is_file() and ref_resolved not in local_refs:
+            local_refs.insert(0, ref_resolved)
     input_urls = image_input.get("input_urls")
     ref_images = build_reference_images(
         local_refs,
@@ -719,6 +724,7 @@ def generate_image_with_model_tier_fallback(
     hosts: list[str],
     max_retries: int,
     retry_wait: int,
+    ref_path: Path | None = None,
 ) -> tuple[bytes, dict[str, Any]]:
     """Сначала non-vip; при API/empty/timeout провале — один retry на vip (~3× cost)."""
     standard = model_tier_standard()
@@ -735,6 +741,7 @@ def generate_image_with_model_tier_fallback(
             hosts=hosts,
             max_retries=max_retries,
             retry_wait=retry_wait,
+            ref_path=ref_path,
         )
         meta["model_tier"] = "standard"
         return image_bytes, meta
@@ -758,6 +765,7 @@ def generate_image_with_model_tier_fallback(
             hosts=hosts,
             max_retries=max_retries,
             retry_wait=retry_wait,
+            ref_path=ref_path,
         )
         meta["model_tier"] = "vip_fallback"
         meta["model_standard_attempt"] = standard
