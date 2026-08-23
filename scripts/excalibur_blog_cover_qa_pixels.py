@@ -2354,6 +2354,7 @@ def stamp_cover_qa_json(
         "inline_no_co_host_human": True,
         "inline_meme_sticker_scale": True,
         "meme_people_real_catalog": True,
+        "meme_variety_not_cats_only": True,
     }
     checks.update(legacy_map)
     all_true = all(checks.values()) and pixel_result.status == "PASS"

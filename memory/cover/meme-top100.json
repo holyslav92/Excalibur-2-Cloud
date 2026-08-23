@@ -9,8 +9,22 @@
     "Russian meme canon: sacrednik/priest, Жириновский, etc."
   ],
   "usage_rules": {
+    "canon": "meme_canon_v1 — locked on main with cover-canon.json",
+    "catalog_only": true,
+    "real_memes_only": true,
+    "top100": "Curated real internet meme templates (~48 catalogued; expand toward 100). NO invented faces.",
     "cover": "Host Святослав = only large human. Meme people/cats = small sticker cutouts (1–2 on cover).",
     "inline": "NO large human ever. Meme stickers only: max 15% frame area, corner/edge accent, never co-host/presenter slot.",
+    "variety": {
+      "people_and_cats": true,
+      "forbid_cats_only": "When using cat memes, also pick ≥1 people-meme from catalog (host does not count)",
+      "weekly_cadence": "Cats across weekly posts — not 3+ articles straight without cat motif"
+    },
+    "on_topic_funny": "Meme must match article hook/stakes with humor — skepticism, pain, WTF; not decorative wallpaper",
+    "sacred_zones_never_cover": ["hook_title", "host_face", "phone +7 922 001 65 05"],
+    "clearance_px": 80,
+    "anti_repeat_days": 14,
+    "anti_repeat_log": "memory/cover/used-motifs.json field meme",
     "forbidden": [
       "invented photogenic stranger",
       "AI-generated original face called meme",

@@ -466,6 +466,8 @@ def build_prompt(
     ban_line = (
         "Ban: dark/low-key; inventory props; celebrity memes; EXCALIBUR stamp; chubby host; "
         f"stock/generated man co-host on inline; large meme person on inline; "
+        f"meme_canon_v1: only {MEME_CATALOG_REL} real ids; people+cats not cats-only; "
+        "on-topic funny stickers ≤15% never on hook/face/phone; "
         f"{INLINE_BAN_EXTRA}."
     )
     reference_line = (

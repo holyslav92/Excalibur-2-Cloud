@@ -76,7 +76,40 @@
   },
   "meme_system": {
     "required": true,
+    "locked_canon": "meme_canon_v1",
     "catalog": "memory/cover/meme-top100.json",
+    "catalog_rule": "ONLY real internet meme templates from meme-top100.json — never invent faces, never stock co-host, never celebrity banned entries",
+    "variety": {
+      "people_plus_cats": true,
+      "forbid_cats_only_article": true,
+      "note": "Mix people-memes + cat-memes across cover+inlines; NOT cats-only sticker sets. Host Святослав ≠ people-meme — pick ≥1 catalog people-meme when cats are used."
+    },
+    "on_topic_funny": {
+      "required": true,
+      "rule": "Each meme sticker must be on-topic to article hook/stakes AND funny — reaction matches casus (skepticism, pain, WTF), not random cat wallpaper"
+    },
+    "sticker_placement": {
+      "max_frame_share": 0.15,
+      "recommended_share": 0.08,
+      "clearance_px_from_sacred": 80,
+      "sacred_never_cover": ["hook_title", "host_face", "phone_cta"],
+      "zones": {
+        "hook_title": "right 52–96% × 14–40% — meme must not overlap Cyrillic hook",
+        "host_face": "host close-up bbox — meme never on face",
+        "phone": "bottom-right 55–98% × 70–96% — meme never on +7 922 001 65 05"
+      }
+    },
+    "anti_repeat": {
+      "window_days": 14,
+      "log_file": "memory/cover/used-motifs.json",
+      "field": "meme",
+      "gate": "scripts/excalibur_blog_cover_motif_gate.py --meme <catalog_id_or_motif>",
+      "rule": "Same meme id/motif must not repeat within 14 days — pick fresh reaction from catalog"
+    },
+    "manifest_fields": {
+      "cover_text": "meme_picks — slot → catalog id(s) with optional topic_hook one-liner",
+      "quad_manifest": "meme_picks copied from cover-text; cover_motifs.meme logs chosen ids for anti-repeat"
+    },
     "host_human_rule": "ONLY Святослав (face-studio-2026-06-23.jpg) may be LARGE / hero of any frame — COVER ONLY. No second human hero anywhere.",
     "people": "Cover: host = only large human. Inline: NO large human; people-memes = SMALL stickers (≤12–15% frame) from meme-top100.json only — never co-host, never presenter pointing at table.",
     "cats": "meme-cat sticker cutouts — small accent (≤12–15% frame); often enough across weekly posts; not every frame",
@@ -172,7 +205,7 @@
       "function": "apply_ocr_false_positive_escape",
       "pattern": "B08/B09 live — host face + Cyrillic hook + phone; only OCR truncation/opaque flakes",
       "forbidden_remediation": ["PIL mashup", "Kie"]
-    },
+    }
   },
   "identity_lock": {
     "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",

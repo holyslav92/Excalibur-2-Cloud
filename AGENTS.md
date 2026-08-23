@@ -43,6 +43,7 @@ Scout? → research_start → Research → Title → Writer(смысл)
 - **utility** `gpt-5.6-terra` (`DEROUTER_TERRA_MODEL`): Scout, Title, Research synthesis, Description, Cover-text, Schema, Cover-scene
 При недоступности → `DEROUTER <ROLE> BLOCKER`, без тихого fallback на Composer. См. `shared/derouter-opus-brain-contract.md`.
 **Cover PNG:** grsai grsai standard image model REST (`shared/grsai-gpt-image-api-contract.md`). Optional Derouter image fallback only. **Kie FORBIDDEN forever.** PIL mashup FORBIDDEN.
+**Meme canon:** `memory/cover/meme-top100.json` + `cover-canon.json` → meme_canon_v1: real top memes, people+cats variety, on-topic funny stickers ≤15%, never on hook/face/phone, anti-repeat 14д.
 **Cover budget (HARD):** `excalibur_blog_grsai_solo_cover.py` — max **2** full attempts (standard→vip per attempt); override `EXCALIBUR_COVER_MAX_ATTEMPTS`. После исчерпания бюджета → `cover/cover-budget-result.json` + **Indexer** (не бесконечный Cover-QA loop). **≤15–20 мин** на cover; не копать `cover_qa_pixels.py` как дебаг-хобби.
 **Short hook:** ONE line, **5–7** кириллических слов (B08-style), prefer слова ≥5 букв; em dash OK; novel-length hooks запрещены (`cover-text` gate).
 **Cover-QA OCR escape:** если лицо + кириллический hook + телефон на PNG, а падают только OCR truncation / opaque-title flakes → `apply_ocr_false_positive_escape` (как B08/B09 live); без PIL mashup/Kie.

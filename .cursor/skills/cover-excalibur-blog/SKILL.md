@@ -60,7 +60,12 @@ PRIMARY: **grsai grsai standard image model** (`GRSAI_API_KEY`, Global→China, 
 3. **Variety lock (HARD)** — FACE i2i = `face-studio-2026-06-23.jpg` (кости/hairline/eyes/stubble/28yo). **Каждый cover INVENTS:** outfit (не default black blazer), location, action (документ/ключи/телефон/доска…), emotion под hook, pose/framing (не always left talking-head bust).
 4. **Title zone sacred** — hook title + phone + meme; **NO Wordstat query strips/bars** on cover (owner ban). Телефон +7 922 001 65 05 обязателен.
 5. **Light & bright** — high-key, sun flare, light leak, glow; **no dark cinematic**.
-6. **Memes required** — meme cats + catalog people-memes as **small stickers** on cover; host Святослав = only large human. Inline: infographic hero; meme sticker ≤15% frame from `memory/cover/meme-top100.json` — never co-host/stock man.
+6. **Memes (meme_canon_v1)** — **only** `memory/cover/meme-top100.json` real templates:
+   - **Variety:** people-memes + cat-memes — **NOT cats-only** across cover+inlines.
+   - **On-topic + funny** — reaction fits hook/stakes (skepticism, pain, WTF).
+   - **Small stickers** ≤15% frame; **never** cover hook title, host face, or phone +7 922 001 65 05 (≥80px clearance).
+   - **Anti-repeat 14д** — log `cover_motifs.meme` + `meme_picks` ids; motif gate before API.
+   - Copy `meme_picks` from `cover-text.json` into `quad-manifest.json`.
 7. **Wordstat** — Scout/Research live Wordstat for **topic choice only**; **never** paint query phrases on cover.png. Optional one yellow sticky from hook.
 8. **Identity + body lock** — `face-studio-2026-06-23.jpg` i2i (WHO only); medium slim; NOT chubby.
 9. **Expression invention (HARD)** — эмоция/мимика/поза **новые каждый run** под hook; `scene_hint` + `cover_emotion` + `cover_motifs.emotion/action/outfit/pose_framing`. i2i: «same person, NEW outfit+action+expression, do not copy reference clothes/pose/smile». Копия студийной улыбки 1:1 = FAIL.

@@ -31,16 +31,20 @@ Cover slot → solo i2i; inline → utility t2i. Derouter primary, Kie посл�
 1. **Лицо + телосложение хоста** — тот же человек что `face-studio-2026-06-23.jpg` (кости, hairline, глаза, щетина, 28 лет); **medium slim**. FAIL: chubby, другой человек.
 2. **Эмоция НЕ копия референса** — выражение под hook статьи (шок, side-eye, гримаса, недоумение «где деньги?»…). **FAIL** если вежливая студийная closed-mouth smile 1:1 как на reference. PASS если живая мимика под тему.
 3. **Light / high-key** — светлая картинка, sun flare/glow; **нет** dark cinematic / low-key / twilight.
-3. **Motif 14д** — нет коллизии с `memory/cover/used-motifs.json` (composition/location/meme…).
-4. **Люди в 8-set** — host на cover = единственный крупный человек; inline people-memes только как маленькие стикеры из `meme-top100.json`.
-5. **Коты** — meme-cat на cover/inline **или** недельная каденция не просела (не 3+ статей подряд без кота).
-6. **Wordstat stickers** — 1–3 читаемых стикера с live P0-фразами (из `quad-manifest.json` → `wordstat_stickers`).
-7. **identity-real** — 4 live-файла на месте.
-8. **Inline utility (все 7)** — каждый inline проходит тест пользы: факт/порядок/число/сравнение по H2; не ряд иконок+3 слова; не host face.
-9. **inline_no_host_face** — ни на одном inline нет лица Святослава / identity-real.
-10. **inline_no_co_host_human** — нет stock model / generated man / handsome realtor / large meme person как co-host или presenter на inline.
-11. **inline_meme_sticker_scale** — если мем-человек на inline, он ≤15% кадра, угол/край, не герой.
-12. **meme_people_real_catalog** — people-memes из `memory/cover/meme-top100.json`, не выдуманные лица.
+4. **Motif 14д** — нет коллизии с `memory/cover/used-motifs.json` (composition/location/meme…).
+5. **Люди в 8-set** — host на cover = единственный крупный человек; inline people-memes только как маленькие стикеры из `meme-top100.json`.
+6. **Meme canon (meme_canon_v1)** — только `memory/cover/meme-top100.json`: real top memes; people+cats variety (not cats-only); on-topic+funny; stickers ≤15% never on hook/face/phone; anti-repeat 14д в `used-motifs.json`.
+7. **Коты** — meme-cat на cover/inline **или** недельная каденция не просела (не 3+ статей подряд без кота).
+8. **Wordstat stickers** — 1–3 читаемых стикера с live P0-фразами (из `quad-manifest.json` → `wordstat_stickers`).
+9. **identity-real** — 4 live-файла на месте.
+10. **Inline utility (все 7)** — каждый inline проходит тест пользы: факт/порядок/число/сравнение по H2; не ряд иконок+3 слова; не host face.
+11. **inline_no_host_face** — ни на одном inline нет лица Святослава / identity-real.
+12. **inline_no_co_host_human** — нет stock model / generated man / handsome realtor / large meme person как co-host или presenter на inline.
+13. **inline_meme_sticker_scale** — если мем-человек на inline, он ≤15% кадра, угол/край, не герой.
+14. **meme_people_real_catalog** — people-memes из `memory/cover/meme-top100.json`, не выдуманные лица.
+15. **meme_variety_not_cats_only** — `meme_picks` содержит ≥1 people-meme когда есть cat-memes.
+16. **meme_on_topic** — `meme_picks` / `cover_motifs.meme` соответствуют hook (не random wallpaper).
+17. **meme_sacred_zones** — pixel: hook title, face, phone readable; meme не перекрывает (clearance 80px).
 
 Канон: `memory/cover/cover-canon.json`.
 
@@ -70,7 +74,8 @@ Cover slot → solo i2i; inline → utility t2i. Derouter primary, Kie посл�
     "inline_no_host_face": true,
     "inline_no_co_host_human": true,
     "inline_meme_sticker_scale": true,
-    "meme_people_real_catalog": true
+    "meme_people_real_catalog": true,
+    "meme_variety_not_cats_only": true
   },
   "notes": "кратко: что смотрел"
 }
@@ -88,6 +93,10 @@ python3 scripts/excalibur_blog_cover_fixer.py --article-dir "$ARTICLE"
 ```
 
 Gate читает **PNG bytes** (`cover_qa_pixels.py`), пишет `cover_qa.json` с `pixel_qa=true` и `cover_md5`. Publish блокируется без PASS + md5 match.
+
+**OCR false-positive escape (B08/B09):** если на PNG есть лицо + кириллический hook + телефон, а падают только OCR truncation / opaque Wordstat flakes — `apply_ocr_false_positive_escape` даёт PASS без PIL mashup/Kie.
+
+**Cover budget:** solo regen max **2** attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`); после бюджета — `cover-budget-result.json`, не бесконечный loop. Дирижёр: ≤15–20 мин на cover, не копать pixel source.
 
 Только `OK cover QA stamp` → Indexer/Publish.
 

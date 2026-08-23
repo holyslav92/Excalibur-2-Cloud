@@ -112,7 +112,9 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 28 лет, **новая выдуманная сцена** каждый раз. AI `scene-composition-only/hero-ref-*` — не для лица.
 
-**Cover canon v3:** `memory/cover/cover-canon.json` — light/bright, мемы, **Wordstat query strips FORBIDDEN on cover** (Scout Wordstat = topic only), optional yellow sticky from hook, anti-repeat 14д. **Designed thumbnail:** hook H1 справа, телефон +7 922 001 65 05 низ-право, мем-стикер, **pixel_no_wordstat_query_strips PASS**. FAIL: beige/gold search-query bars top-left, face-only collapse.
+**Cover canon v3:** `memory/cover/cover-canon.json` — light/bright, **meme_canon_v1** (top-100 real memes from `meme-top100.json`; people+cats variety not cats-only; on-topic+funny; small stickers never on hook/face/phone; anti-repeat 14д), **Wordstat query strips FORBIDDEN on cover** (Scout Wordstat = topic only), optional yellow sticky from hook, anti-repeat 14д. **Designed thumbnail:** hook H1 справа, телефон +7 922 001 65 05 низ-право, мем-стикер, **pixel_no_wordstat_query_strips PASS**. FAIL: beige/gold search-query bars top-left, face-only collapse.
+
+**Meme canon (HARD):** Covers + inlines — **only** `memory/cover/meme-top100.json` real templates. Variety: **people-memes + cat-memes** (NOT cats-only). On-topic + funny reaction to hook. Stickers ≤15% frame, **never** occlude hook title / host face / phone (+80px clearance). `meme_picks` in cover-text → quad-manifest; anti-repeat via `used-motifs.json` + motif gate 14д.
 
 **Inline visual law (HARD):** крупный человек = только Святослав на cover (`face-studio-2026-06-23.jpg`). Inline = инфографика (таблицы, схемы, графики) — **без** stock model / generated man / co-host. People-memes = маленькие стикеры (≤15% кадра) из `memory/cover/meme-top100.json`. Cover-QA FAIL на co-host human или meme person > sticker scale.
 
@@ -166,7 +168,7 @@ Conversion + engagement (shared/quality-bar-9.md + SOUL + tenant-config cta_chan
   Comment magnet: один острый вопрос для комментариев (gate comment_magnet_question)
 
 После Sol: pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → quality-bar-9.json all_pass.
-Description → Cover-text || Schema → Cover (hook H1 + phone + meme + optional yellow sticky — **NO Wordstat query strips**) → Cover-QA pixel gate (`pixel_no_wordstat_query_strips`, `pixel_hook_title_present`, `pixel_phone_readable`, `pixel_meme_present`, `pixel_layout_not_collapsed`; Fixer: regen cover panel only, **max 2 rounds**) → Indexer.
+Description → Cover-text || Schema → Cover (hook H1 + phone + meme picks from meme-top100.json — on-topic funny, people+cats, ≤15% sticker, never on hook/face/phone — **NO Wordstat query strips**) → Cover-QA pixel gate (`pixel_no_wordstat_query_strips`, `pixel_hook_title_present`, `pixel_phone_readable`, `pixel_meme_present`, `pixel_layout_not_collapsed`; meme_variety_not_cats_only when meme_picks present; Fixer: regen cover panel only, **max 2 rounds**) → Indexer.
 
 Cover timebox: ≤15–20 min total on cover regen+QA. Hard budget `EXCALIBUR_COVER_MAX_ATTEMPTS=2` (solo cover + panel regen). After budget exhausted → read `cover/cover-budget-result.json` → Indexer anyway if visual OK; NEVER infinite Cover-QA loop or deep-dive grep of `cover_qa_pixels.py`. Short hook 5–7 Cyrillic words (cover-text gate). OCR false-positive escape in pixel gate (B08/B09 pattern).
 

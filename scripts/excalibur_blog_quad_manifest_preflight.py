@@ -17,6 +17,7 @@ from excalibur_blog_quad_slots import (
     inline_count_from_manifest,
     slot_allows_meme_sticker,
 )
+from excalibur_blog_meme_canon import validate_manifest_meme_canon
 
 
 def project_root() -> Path:
@@ -32,8 +33,9 @@ def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def validate_quad_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
+def validate_quad_manifest(manifest: dict[str, Any], root: Path | None = None) -> dict[str, Any]:
     """Проверить meme_density, no_host_face, wordstat_stickers до image API."""
+    root = root or project_root()
     errors: list[str] = []
     warnings: list[str] = []
 
@@ -104,6 +106,10 @@ def validate_quad_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
                 warnings.append(f"{key}: prompt_negatives missing RU/EN no-meme clause")
 
     status = "PASS" if not errors else "FAIL"
+    meme_errors = validate_manifest_meme_canon(manifest, root)
+    if meme_errors:
+        errors.extend(meme_errors)
+        status = "FAIL"
     return {
         "status": status,
         "errors": errors,
@@ -160,7 +166,7 @@ def main() -> int:
             json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
 
-    result = validate_quad_manifest(manifest)
+    result = validate_quad_manifest(manifest, root)
     if args.output:
         out = Path(args.output)
         if not out.is_absolute():
