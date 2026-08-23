@@ -2,6 +2,18 @@
 
 Язык: русский (тенант может сменить в `shared/tenant-config.json`).
 
+## OWNER LOCK (permanent — main, не chat memory)
+
+Три столпа зафиксированы в `shared/pipeline-canon.json` → `owner_lock_permanent`. **Не ослаблять** без явного owner override.
+
+| # | Столп | Канон |
+|---|--------|--------|
+| 1 | **Engagement bomb** | Цель поста = **вовлечение в Дзен** (лайки, комментарии, подписки). Форма = hot **news-casus актуалочка** (Тюмень, stakes, финал). **Прозаический лид 4–6 предложений** → **early TG+MAX** → история → практика → CTAs + **comment magnet** (один острый вопрос). **Запрещено:** TL;DR, «Быстрый инсайт», bullet-dump в первом экране, how-to checklist вместо casus. |
+| 2 | **Meme canon v1** | Covers + inlines: **only** `memory/cover/meme-top100.json` real templates. **People + cats** (NOT cats-only). **On-topic + funny**. Stickers ≤15%, **never** hook title / host face / phone (+80px). Anti-repeat **14д** (`used-motifs.json`). `meme_picks` in cover-text → quad-manifest. |
+| 3 | **Cover fail-fast** | `excalibur_blog_grsai_solo_cover.py`: max **2** full attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`). Timebox **≤15–20 мин** на cover. После бюджета → `cover/cover-budget-result.json` → **Indexer** (не бесконечный Cover-QA). OCR escape без PIL mashup/Kie. Short hook **5–7** кириллических слов. |
+
+Доки: `shared/quality-bar-9.md`, `shared/dzen-news-casus.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills, `CLOUD-AUTOMATION.md`.
+
 ## Первый запуск
 
 Если `memory/setup/status.json` → `complete != true` **или**
