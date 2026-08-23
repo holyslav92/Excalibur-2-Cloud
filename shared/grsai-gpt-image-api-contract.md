@@ -10,7 +10,7 @@ Primary Cloud path for Excalibur BLOG cover/inline quad canvas generation (owner
    b) POST /v1/images/generations (OpenAI-compatible)
    c) POST /v1/draw/completions (webHook=-1) + poll /v1/draw/result
    Hosts: https://grsaiapi.com (Global) → https://grsai.dakka.com.cn (China)
-2. Solo cover CLI: scripts/excalibur_blog_grsai_solo_cover.py (1200×675, face i2i)
+2. Solo cover CLI: scripts/excalibur_blog_grsai_solo_cover.py (1200×675, face i2i; **max 2 full attempts** default, `EXCALIBUR_COVER_MAX_ATTEMPTS` override)
 3. Optional last resort: EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1 → Derouter image REST
 4. grsai down → GRSAI IMAGE BLOCKER — diagnose/retry; STOP
 ```
@@ -42,6 +42,8 @@ Primary Cloud path for Excalibur BLOG cover/inline quad canvas generation (owner
 Implementation: `model_tier_standard()` → `generate_image()`; on failure
 `model_tier_vip_fallback()` via `generate_image_with_model_tier_fallback()` or
 solo-cover per-attempt tier loop in `excalibur_blog_grsai_solo_cover.py`.
+
+**Cover budget:** default `EXCALIBUR_COVER_MAX_ATTEMPTS=2` full rounds (each = standard then vip-on-QA-fail). Exhausted → `cover/cover-budget-result.json` with `best_candidate`; conductor proceeds to Indexer (no infinite Cover-QA loop).
 
 ## Text → image (`/v1/api/generate`)
 

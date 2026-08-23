@@ -270,7 +270,9 @@ def main() -> int:
         return 1
 
     for slot_key in slot_keys:
-        max_attempts = 6 if slot_key == "cover" else 1
+        from excalibur_blog_cover_budget import resolve_cover_max_attempts
+
+        max_attempts = resolve_cover_max_attempts() if slot_key == "cover" else 1
         for attempt in range(1, max_attempts + 1):
             prompt = build_panel_prompt(manifest, slot_key, root)
             with_i2i = slot_key == "cover"
