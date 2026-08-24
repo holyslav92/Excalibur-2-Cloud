@@ -1,0 +1,79 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B10",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-24",
+  "derouter": {
+    "status": "PARTIAL",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "note": "Derouter returned synthesis embedded in refusal wrapper; notes normalized to skill format without changing facts"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "signal_week": "2026-08-24",
+    "sources": [
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Пост «Нотариус не спасает от мошенников» — 40% notary deals upheld in court sample"
+      },
+      {
+        "url": "https://tvgram.ru/klyshin_A/3157",
+        "type": "community",
+        "note": "Archive same post 2026-08-24"
+      },
+      {
+        "url": "https://dzen.ru/a/an6gk2PoIQQdSbs2",
+        "type": "community",
+        "note": "Gaidar institute 298 cases 2023–2026"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume_ru225": 39961,
+    "angle_phrases": {
+      "нотариус при покупке квартиры": 2636,
+      "оспорить сделку купли продажи квартиры": 388,
+      "телефонные мошенники квартира": 82
+    },
+    "partial": ["мошенники при покупке квартиры — 1"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": false,
+    "status": "PASS",
+    "verified_claims": 0,
+    "entities_checked": [],
+    "errors": [],
+    "reason": "No bank tariff or commission numeric claims"
+  },
+  "key_facts_count": 24,
+  "source_table_rows": 13,
+  "vs_rf_verified": {
+    "case": "84-КГ26-1-К3",
+    "date": "2026-03-10",
+    "verified": true,
+    "note": "Novgorod/Sberbank safe deal, not Tyumen, not notarial"
+  },
+  "tyumen_casus_verified": {
+    "subject": "Татьяна Назарова",
+    "court": "Ленинский районный суд Тюмени",
+    "decision_date": "2025-01-20",
+    "notary_confirmed": false,
+    "constraint": "72.ru does not state notarial certification for Nazarova DKP"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}
