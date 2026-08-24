@@ -30,6 +30,9 @@ category: env
 ### Secrets
 - none recorded (credentials absent)
 
+### Follow-up runs
+- B10 content-learner (2026-08-24): same METRIKA CREDENTIALS BLOCKER; behavioral cohort для B10 не собран.
+
 ## INC-20260821-0614-quality-bar-wordstat-pil-b06
 status: fixed
 run_date: 2026-08-21
