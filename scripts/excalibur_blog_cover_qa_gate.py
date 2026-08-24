@@ -354,7 +354,18 @@ def cmd_doctor(root: Path) -> int:
         if not path.is_file():
             print(f"FAIL missing {path.relative_to(root)}", file=sys.stderr)
             return 1
+    sys.path.insert(0, str(root / "scripts"))
+    try:
+        from excalibur_blog_doctor import tesseract_ready
+    except ImportError:
+        print("FAIL excalibur_blog_doctor.tesseract_ready import", file=sys.stderr)
+        return 1
+    ok, detail = tesseract_ready()
+    if not ok:
+        print(f"FAIL Cover-QA OCR dependency: {detail}", file=sys.stderr)
+        return 1
     print("OK cover-qa agent + skill + pixel/fix scripts present")
+    print(f"OK Cover-QA OCR ready ({detail})")
     return 0
 
 

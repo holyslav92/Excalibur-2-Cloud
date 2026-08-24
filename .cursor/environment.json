@@ -1,5 +1,5 @@
 {
-  "install": "python3 -m pip install --user -r requirements.txt && python3 scripts/excalibur_blog_doctor.py",
+  "install": "bash scripts/excalibur_blog_cloud_install_deps.sh",
   "start": "",
   "terminals": []
 }
