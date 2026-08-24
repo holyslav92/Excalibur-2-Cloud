@@ -13,3 +13,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-08-21 | B07 | nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya | /blog/vtorichka-i-riski/nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya/ | published |
 | 2026-08-22 | B08 | skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo | /blog/vtorichka-i-riski/skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo/ | published |
 | 2026-08-22 | B09 | ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn | /blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/ | published |
+| 2026-08-24 | B10 | v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca | /blog/vtorichka-i-riski/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca/ | published |

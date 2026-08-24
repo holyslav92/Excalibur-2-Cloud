@@ -13,3 +13,17 @@
 - **live_page_gate:** PASS
 - **llms_deploy:** PASS (llms.txt, llms-full.txt)
 - **interlink:** no inbound targets with post_id in ledger (outbound 4 siblings OK)
+
+## B10 — 2026-08-24
+
+- **topic_id:** B10
+- **slug:** v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca
+- **post_id:** 9141
+- **permalink:** /blog/vtorichka-i-riski/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca/
+- **featured_image:** 9142
+- **inline_images:** 9143–9149 (7)
+- **wp_category_slugs:** vtorichka-i-riski, dokumenty-i-oformlenie (category_ids=31,54)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 4 siblings OK)
