@@ -1,0 +1,237 @@
+{
+  "topic_id": "B10",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Чистая выписка — сделку оспорили позже",
+  "cover_hook_highlight": "оспорили",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав в оливковом жилете разводит руками над чистой выпиской ЕГРН с красным кругом «3 месяца»; крупный hook слева; телефон +7 922 001 65 05; жёлтый стикер; roll-safe и smudge-cat стикеры.",
+      "scene_hint": "sage vest; grim EGRN; hook L; phone BR",
+      "meme_caption_ru": "",
+      "sticky": "Выписка не гарантия",
+      "cover_emotion": "grim disbelief; NOT studio smile",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Выписка была чистой — а через полгода пришёл иск из арбитража",
+      "visual_type": "comparison_table_ui",
+      "scene_hint": "2-col ВЫПИСКА vs ПОТОМ; 4 rows; harold tiny",
+      "alt": "Сравнение: что показала чистая выписка и что пришло через полгода",
+      "labels": [
+        "ЕГРН чист",
+        "Иск полгода",
+        "Ст.61.2"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Три месяца владения: что покупатель увидел в переходе прав",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "Flow 4 steps; NO memes",
+      "alt": "Схема: короткий срок владения продавца в выписке о переходе прав",
+      "labels": [
+        "Февраль",
+        "Май",
+        "3 месяца"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Финал: финуправляющий оспорил сделку — и что из этого вышло",
+      "visual_type": "process_flow",
+      "scene_hint": "Process 4 blocks; NO memes",
+      "alt": "Процесс: оспаривание сделки финуправляющим и исход для покупателя",
+      "labels": [
+        "Ответчик",
+        "Аккредитив",
+        "Рыночная цена"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Что ЕГРН показывает — и чего там не будет",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Split ВИДНО/НЕ ВИДНО; NO memes",
+      "alt": "Диаграмма: границы выписки ЕГРН — что видно и чего нет",
+      "labels": [
+        "Снимок на дату",
+        "Долгов не видно",
+        "История неактуальна",
+        "Две выписки"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Банкротство продавца: статьи 61.2 и 61.3, которые решают судьбу вашей сделки",
+      "visual_type": "checklist_board",
+      "scene_hint": "Checklist 4 rows; grumpy-cat tiny",
+      "alt": "Чеклист статей 61.2 и 61.3 при банкротстве продавца",
+      "labels": [
+        "Период подозрительности",
+        "Неравноценность — 1 год",
+        "Вред кредиторам 3 года",
+        "Предпочтение платежа"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Суд 2026 года: дело А56-96799/2023, где покупателя спасли на последней инстанции",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bars 9,4 vs 5M; NO memes",
+      "alt": "График дела А56-96799/2023: сроки, цены и решение Верховного суда",
+      "labels": [
+        "Три месяца до банкротства",
+        "9,4 против 5 млн",
+        "Верховный суд отменил",
+        "Победа не спокойствие"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверять до аванса: шесть шагов, которые дешевле любого суда",
+      "visual_type": "schema_faq_ui",
+      "scene_hint": "6-step checklist; disappointed-guy tiny",
+      "alt": "Шесть шагов проверки продавца до аванса",
+      "labels": [
+        "Переход прав",
+        "Основание права",
+        "Реестр банкротства",
+        "Картотека арбитража",
+        "Цена против кадастра",
+        "Аккредитив на всю сумму"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени",
+    "банкротство продавца квартиры",
+    "вторичка тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_emotion": "grim disbelief; NOT studio smile",
+  "meme_picks": {
+    "cover": [
+      "roll_safe",
+      "smudge_cat"
+    ],
+    "inline_1": [
+      "hide_pain_harold"
+    ],
+    "inline_5": [
+      "grumpy_cat"
+    ],
+    "inline_7": [
+      "disappointed_black_guy"
+    ]
+  },
+  "cover_motifs": {
+    "composition": "host_center_right_spreading_egrn_headline_left_sacred_sun_flare",
+    "location": "bright_sunlit_notary_consultation_room_frosted_glass_white_marble",
+    "meme": "roll_safe_sticker_plus_smudge_cat_cutout_corner",
+    "prop_set": "egrn_extract_green_check_red_3month_circle_court_envelope_edge",
+    "sticker_set": "one_yellow_sticky_hook_only_NO_wordstat_on_canvas",
+    "joke": "roll_safe_temple_tap_at_clean_extract_that_failed_later",
+    "outfit": "sage_green_cable_knit_vest_cream_oxford_no_blazer_no_black_jacket",
+    "emotion": "grim_half_smile_disbelief_one_brow_up_NOT_studio_smile",
+    "pose_framing": "host_center_right_waist_up_leaning_forward_NOT_left_bust",
+    "action": "both_hands_spread_open_egrn_printout_red_circle_3_months"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  }
+}

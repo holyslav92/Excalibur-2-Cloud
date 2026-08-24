@@ -1,0 +1,86 @@
+{
+  "topic_id": "B10",
+  "slug": "v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Святослав в оливковом жилете разводит руками над чистой выпиской ЕГРН с красным кругом «3 месяца»; крупный hook слева; телефон +7 922 001 65 05; жёлтый стикер; roll-safe и smudge-cat стикеры.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-24T11:09:11+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Святослав в оливковом жилете разводит руками над чистой выпиской ЕГРН с красным кругом «3 месяца»; крупный hook слева; телефон +7 922 001 65 05; жёлтый стикер; roll-safe и smudge-cat стикеры.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Сравнение: что показала чистая выписка и что пришло через полгода",
+      "h2_anchor": "Выписка была чистой — а через полгода пришёл иск из арбитража",
+      "visual_type": "comparison_table_ui",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Схема: короткий срок владения продавца в выписке о переходе прав",
+      "h2_anchor": "Три месяца владения: что покупатель увидел в переходе прав",
+      "visual_type": "workflow_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Процесс: оспаривание сделки финуправляющим и исход для покупателя",
+      "h2_anchor": "Финал: финуправляющий оспорил сделку — и что из этого вышло",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Диаграмма: границы выписки ЕГРН — что видно и чего нет",
+      "h2_anchor": "Что ЕГРН показывает — и чего там не будет",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Чеклист статей 61.2 и 61.3 при банкротстве продавца",
+      "h2_anchor": "Банкротство продавца: статьи 61.2 и 61.3, которые решают судьбу вашей сделки",
+      "visual_type": "checklist_board",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "График дела А56-96799/2023: сроки, цены и решение Верховного суда",
+      "h2_anchor": "Суд 2026 года: дело А56-96799/2023, где покупателя спасли на последней инстанции",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Шесть шагов проверки продавца до аванса",
+      "h2_anchor": "Что проверять до аванса: шесть шагов, которые дешевле любого суда",
+      "visual_type": "schema_faq_ui",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}
