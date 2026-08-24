@@ -50,7 +50,7 @@ checks_run:
 - `python3 -m py_compile` changed scripts
 - `python3 -m unittest tests.test_cover_qa_pixels_layout tests.test_cover_budget tests.test_cover_text`
 - `python3 scripts/excalibur_blog_cover_qa_gate.py --article-dir B10...` → OK PASS
-commit: pending
+commit: 6d1ba33
 
 ## INC-20260824-0829-content-learner-metrika-credentials-b10
 status: open
