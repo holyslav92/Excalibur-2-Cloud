@@ -1,0 +1,86 @@
+{
+  "topic_id": "B10",
+  "slug": "avans-vnesli-registraciyu-priostanovili-po-povestke",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Растерянный покупатель в светлой квартире останавливает сделку после уведомления Росреестра; рядом документы и небольшие мем-стикеры.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-24T06:24:24+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Растерянный покупатель в светлой квартире останавливает сделку после уведомления Росреестра; рядом документы и небольшие мем-стикеры.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Сравнение чистой выписки и приостановления регистрации: отсутствие ареста не исключает паузу по данным военкомата.",
+      "h2_anchor": "Аванс внесли — и Росреестр поставил на паузу",
+      "visual_type": "comparison_table_ui",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Хронология сделки от чистой выписки и одобрения ипотеки до аванса, повестки продавцу и приостановления регистрации.",
+      "h2_anchor": "Хронология: от чистой выписки до приостановления",
+      "visual_type": "workflow_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Последствия приостановления: это не отказ, но сроки покупателя идут, а возврат аванса зависит от текста соглашения.",
+      "h2_anchor": "Финал: сделка зависла, аванс не вернули сам по себе",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Временная шкала двадцати календарных дней по повестке и разница между проверкой до подачи документов и фактической регистрацией.",
+      "h2_anchor": "Двадцать дней по повестке: что закон разрешает военкомату",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Схема разрыва между датой получения чистой выписки и моментом, когда Росреестр проверяет сведения при подаче.",
+      "h2_anchor": "«Чистая ЕГРН» и момент проверки Росреестра — разные даты",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Чек-лист проверки реестра повесток: покупатель не может заказать выписку за продавца, но может попросить её добровольно.",
+      "h2_anchor": "Выписка из реестра повесток: что могут попросить, что не могут",
+      "visual_type": "checklist_board",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Чек-лист распределения риска в соглашении об авансе: возврат денег, сроки устранения ограничения, ипотека и дата подачи.",
+      "h2_anchor": "Как распределить риск в соглашении об авансе до подписания",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

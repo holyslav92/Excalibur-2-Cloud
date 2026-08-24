@@ -1,0 +1,246 @@
+{
+  "topic_id": "B10",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Аванс внесли — сделка встала внезапно",
+  "cover_hook_highlight": "встала",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Растерянный покупатель в светлой квартире останавливает сделку после уведомления Росреестра; рядом документы и небольшие мем-стикеры.",
+      "scene_hint": "Светлая квартира, зелёная рубашка, папка и стоп-жест, растерянность; pink «встала», телефон CTA, roll_safe+smudge_cat.",
+      "meme_caption_ru": "",
+      "sticky": "Чистая выписка не спасла",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошарашенная растерянность с нервным стоп-жестом"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Аванс внесли — и Росреестр поставил на паузу",
+      "visual_type": "comparison_table_ui",
+      "scene_hint": "comparison_table: чистая выписка vs пауза регистрации, стрелка военкомат→Росреестр, hide_pain_harold угол.",
+      "alt": "Сравнение чистой выписки и приостановления регистрации: отсутствие ареста не исключает паузу по данным военкомата.",
+      "labels": [
+        "Выписка без ограничений",
+        "Не арест, не обременение",
+        "Военкомат → Росреестр",
+        "Пауза, не отказ",
+        "Проверка по дате"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Хронология: от чистой выписки до приостановления",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "workflow: выписка→ипотека→аванс→повестка→20 дней→пауза; без людей.",
+      "alt": "Хронология сделки от чистой выписки и одобрения ипотеки до аванса, повестки продавцу и приостановления регистрации.",
+      "labels": [
+        "Выписка чистая",
+        "Ипотека одобрена",
+        "Аванс передан",
+        "Повестка продавцу",
+        "20 дней без явки",
+        "Регистрация на паузе"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Финал: сделка зависла, аванс не вернули сам по себе",
+      "visual_type": "process_flow",
+      "scene_hint": "process_flow: пауза→сроки горят→аванс не сам→соглашение; Самара апрель 2026.",
+      "alt": "Последствия приостановления: это не отказ, но сроки покупателя идут, а возврат аванса зависит от текста соглашения.",
+      "labels": [
+        "Приостановление не отказ",
+        "Сроки покупателя горят",
+        "Аванс сам не вернётся",
+        "Только текст соглашения",
+        "Самара, апрель 2026"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Двадцать дней по повестке: что закон разрешает военкомату",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "bar_timeline: 20 дней ст.7.1 53-ФЗ, временная мера, без уведомления покупателя.",
+      "alt": "Временная шкала двадцати календарных дней по повестке и разница между проверкой до подачи документов и фактической регистрацией.",
+      "labels": [
+        "ст. 7.1 53-ФЗ",
+        "20 календарных дней",
+        "Мера не пожизненная",
+        "Без уведомления покупателя",
+        "До подачи как все"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Чистая ЕГРН» и момент проверки Росреестра — разные даты",
+      "visual_type": "structure_diagram",
+      "scene_hint": "structure_diagram: выписка-снимок vs проверка сейчас, зазор 1,5 мес, blinking_white_guy угол.",
+      "alt": "Схема разрыва между датой получения чистой выписки и моментом, когда Росреестр проверяет сведения при подаче.",
+      "labels": [
+        "Выписка — фото минуты",
+        "Росреестр смотрит сейчас",
+        "Зазор до 1,5 мес",
+        "Пауза после подачи",
+        "Заранее не видно"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Выписка из реестра повесток: что могут попросить, что не могут",
+      "visual_type": "checklist_board",
+      "scene_hint": "checklist_board реестр повесток: не заказать за продавца, добровольно, дата к подаче.",
+      "alt": "Чек-лист проверки реестра повесток: покупатель не может заказать выписку за продавца, но может попросить её добровольно.",
+      "labels": [
+        "Заказать за продавца нельзя",
+        "Только сам гражданин",
+        "Просить можно добровольно",
+        "Дата близко к подаче",
+        "Отказ — сократить сроки"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Как распределить риск в соглашении об авансе до подписания",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "labeled_checklist: возврат, срок устранения, ипотека, выписка, срок подачи; two_buttons угол.",
+      "alt": "Чек-лист распределения риска в соглашении об авансе: возврат денег, сроки устранения ограничения, ипотека и дата подачи.",
+      "labels": [
+        "Возврат до подписания",
+        "Срок устранения ограничения",
+        "Срок ипотеки — расторгнуть",
+        "Выписка в договоре",
+        "Короткий срок до подачи"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени",
+    "реестр повесток",
+    "выписка из реестра повесток"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_motifs": {
+    "composition": "Герой в правой трети по пояс, папка и документы в руках, слева свободная светлая зона под заголовок, небольшие мем-стикеры по углам",
+    "location": "Светлая современная квартира-новостройка с панорамным окном, мягким дневным светом и золотым солнечным бликом",
+    "meme": "roll_safe и smudge_cat как маленькие ироничные реакции на внезапную остановку сделки",
+    "prop_set": "Папка с договором, распечатка чистой выписки, смартфон с уведомлением о приостановлении, ручка и закрытая папка Росреестра",
+    "sticker_set": "roll_safe и smudge_cat, маленькие угловые стикеры до 15% кадра, с зазором не менее 80 px от лица, заголовка и телефона",
+    "joke": "Герой приготовился праздновать чистую выписку, но внезапно показывает ладонь: сделка остановилась из-за новости, которой не было видно заранее",
+    "outfit": "Свежая зелёная рубашка с закатанными рукавами, светлые брюки, без пиджака и без повторения прежних образов",
+    "emotion": "Ошарашенность, смешанная с болезненным недоверием и попыткой срочно остановить процесс",
+    "pose_framing": "Средний план в три четверти, герой стоит справа и слегка развёрнут к зрителю, одна рука поднята в стоп-жесте, другая держит папку",
+    "action": "Герой резко закрывает папку с документами и поднимает ладонь, заметив уведомление о приостановлении регистрации"
+  },
+  "meme_picks": {
+    "cover": [
+      "roll_safe",
+      "smudge_cat"
+    ],
+    "inline_1": [
+      "hide_pain_harold"
+    ],
+    "inline_5": [
+      "blinking_white_guy"
+    ],
+    "inline_7": [
+      "two_buttons"
+    ]
+  },
+  "cover_emotion": "растерянность с нервным стоп-жестом и недоверием"
+}
