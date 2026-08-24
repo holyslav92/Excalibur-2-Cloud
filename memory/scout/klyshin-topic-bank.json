@@ -2,8 +2,8 @@
   "bank_id": "klyshin_topic_bank_v1",
   "source_channel": "https://t.me/klyshin_A",
   "source_label": "Алексей Клышин — юрист по недвижимости",
-  "updated_at": "2026-08-21",
-  "accessed_at": "2026-08-21",
+  "updated_at": "2026-08-24",
+  "accessed_at": "2026-08-24",
   "algorithm": "klyshin_hook → wordstat_probe → rework_for_demand → final_P0_or_skip_after_rework",
   "wordstat_gate": {
     "provider": "mcp-kv",
@@ -220,16 +220,33 @@
       "id": "five_court_schemes",
       "hook_ru": "5 схем — квартиру забирают судом после покупки",
       "angle": "банкротство, флип, фиктивная сделка, маткапитал, доверенности СВО",
-      "klyshin_signal": "Видео-разбор 5 схем пост-покупки",
+      "sub_angle_b10": "быстрый переход права / flip — продавец владел ~3 месяца",
+      "klyshin_signal": "Видео-разбор 5 схем пост-покупки; схема №2 «купили недавно и уже продают»",
       "wordstat_probes": [
         "проверка квартиры перед покупкой",
         "купить квартиру в тюмени",
         "банкротство продавца квартира"
       ],
-      "last_seen": "2026-08-21",
+      "wordstat_rework_log": [
+        "probe «проверка квартиры перед покупкой» 8",
+        "probe «банкротство продавца квартиры» 28",
+        "rework «купить квартиру в тюмени вторичка» 3996",
+        "final P0 «купить квартиру в тюмени» 22660 (RU225 39961)"
+      ],
+      "final_p0": {
+        "phrase": "купить квартиру в тюмени",
+        "volume": 22660,
+        "regions": [
+          "55",
+          "11176"
+        ],
+        "compare_ru": 39961
+      },
+      "last_seen": "2026-08-24",
       "rejected_b06": "проверка 9, банкротство продавца 30; overlap B03/B04 + маткапитал на сайте",
+      "rejected_b10_candidates": "matkapital live_wp dup; summons/notary/phone_scammers overlap live WP 2026-08-24",
       "tyumen_localize": true,
-      "status": "seed"
+      "status": "B10"
     },
     {
       "id": "phone_scammers_notary",
@@ -303,6 +320,15 @@
       ],
       "note": "автооценка минус 1–2 млн → final P0 «купить квартиру в тюмени» 23066",
       "wordstat_rework": "73 → 3943 → 5799 → 23066"
+    },
+    {
+      "topic_id": "B10",
+      "hook_ids": [
+        "five_court_schemes"
+      ],
+      "note": "flip / быстрый переход права → final P0 «купить квартиру в тюмени» 22660",
+      "wordstat_rework": "8 → 28 → 3996 → 22660",
+      "sub_angle": "продавец владел ~3 месяца, финуправляющий оспорил"
     }
   ]
 }
