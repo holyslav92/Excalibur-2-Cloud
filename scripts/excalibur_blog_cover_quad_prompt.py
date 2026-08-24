@@ -12,6 +12,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from excalibur_blog_cover_budget import SHORT_HOOK_MAX_CHARS, short_hook_prompt_line
+from excalibur_blog_identity_real import pick_identity_reference
 from excalibur_blog_quad_slots import (
     CANVAS_1_SLOTS,
     active_inline_keys,
