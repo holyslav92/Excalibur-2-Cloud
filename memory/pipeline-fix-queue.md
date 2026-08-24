@@ -55,7 +55,7 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_doctor.py scripts/excalibur_blog_cover_qa_gate.py`
 - `python3 scripts/excalibur_blog_cover_qa_gate.py --doctor`
 - `tesseract --list-langs | grep rus`
-commit: pending-parent-commit
+commit: d5a7d27
 
 ## INC-20260821-0615-content-learner-metrika-credentials
 status: open
