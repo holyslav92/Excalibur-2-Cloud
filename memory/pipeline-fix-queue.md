@@ -18,10 +18,11 @@ category: env
 ### How the agent recovered this run
 - Content-learner записал pipeline lessons из run evidence (Derouter 524 chunk, quality-bar PIL sync, html_linter CTA div).
 - Metrika cohort analysis пропущен; lessons marked low/medium confidence без behavioral signals.
+- **B10 (2026-08-24):** тот же METRIKA CREDENTIALS BLOCKER; content-learner записал B10 lessons без behavioral cohort.
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06 для post-publish behavioral baseline.
+- Повторить ingest после publish B06/B10 для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
