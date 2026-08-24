@@ -25,7 +25,7 @@
       "file": "cover/inline-01.png",
       "alt": "Сравнение: что показала чистая выписка и что пришло через полгода",
       "h2_anchor": "Выписка была чистой — а через полгода пришёл иск из арбитража",
-      "visual_type": "comparison_table_ui",
+      "visual_type": "comparison_table",
       "aspect_ratio": "16:9"
     },
     {

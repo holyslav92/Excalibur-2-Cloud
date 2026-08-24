@@ -46,8 +46,8 @@
     "cover": {
       "quadrant": "top_left",
       "role": "cover_editorial_hero",
-      "alt": "Святослав в оливковом жилете разводит руками над чистой выпиской ЕГРН с красным кругом «3 месяца»; крупный hook слева; телефон +7 922 001 65 05; жёлтый стикер; roll-safe и smudge-cat стикеры.",
-      "scene_hint": "sage vest; grim EGRN; hook L; phone BR",
+      "alt": "Крупный close-up Святослава слева; справа большой кириллический hook; телефон +7 922 001 65 05 снизу-справа; мелкий smudge-cat в углу; без Wordstat strips.",
+      "scene_hint": "close-up face L; hook Cyrillic R; phone BR; NO strips",
       "meme_caption_ru": "",
       "sticky": "Выписка не гарантия",
       "cover_emotion": "grim disbelief; NOT studio smile",
@@ -60,7 +60,7 @@
     "inline_1": {
       "quadrant": "top_right",
       "h2_anchor": "Выписка была чистой — а через полгода пришёл иск из арбитража",
-      "visual_type": "comparison_table_ui",
+      "visual_type": "comparison_table",
       "scene_hint": "2-col ВЫПИСКА vs ПОТОМ; 4 rows; harold tiny",
       "alt": "Сравнение: что показала чистая выписка и что пришло через полгода",
       "labels": [
@@ -186,8 +186,7 @@
   "cover_keys_ru": [],
   "wordstat_stickers": [
     "купить квартиру в тюмени",
-    "банкротство продавца квартиры",
-    "вторичка тюмень"
+    "банкротство продавца квартиры"
   ],
   "cover_phone_cta": "+7 922 001 65 05",
   "cover_emotion": "grim disbelief; NOT studio smile",
@@ -207,16 +206,16 @@
     ]
   },
   "cover_motifs": {
-    "composition": "host_center_right_spreading_egrn_headline_left_sacred_sun_flare",
-    "location": "bright_sunlit_notary_consultation_room_frosted_glass_white_marble",
-    "meme": "roll_safe_sticker_plus_smudge_cat_cutout_corner",
-    "prop_set": "egrn_extract_green_check_red_3month_circle_court_envelope_edge",
-    "sticker_set": "one_yellow_sticky_hook_only_NO_wordstat_on_canvas",
-    "joke": "roll_safe_temple_tap_at_clean_extract_that_failed_later",
-    "outfit": "sage_green_cable_knit_vest_cream_oxford_no_blazer_no_black_jacket",
-    "emotion": "grim_half_smile_disbelief_one_brow_up_NOT_studio_smile",
-    "pose_framing": "host_center_right_waist_up_leaning_forward_NOT_left_bust",
-    "action": "both_hands_spread_open_egrn_printout_red_circle_3_months"
+    "composition": "host_close_up_left_40pct_face_height_hook_text_right_zone_phone_bottom_right_designed_thumbnail",
+    "location": "bright_white_studio_high_key_sun_flare_no_collage",
+    "meme": "smudge_cat_only_tiny_bottom_left_corner_15pct_max",
+    "prop_set": "single_egrn_page_edge_only_no_query_bars",
+    "sticker_set": "one_yellow_sticky_Выписка_не_гарантия_top_left_small_NO_wordstat",
+    "joke": "smudge_cat_skeptic_at_clean_extract",
+    "outfit": "terracotta_linen_shirt_open_collar_no_vest_no_blazer",
+    "emotion": "side_eye_skeptic_one_brow_raised_NOT_smile",
+    "pose_framing": "close_up_face_left_talking_head_40pct_frame_height",
+    "action": "finger_tap_egrn_edge_skeptical_glance"
   },
   "quad_canon": {
     "meme_allowed_slots": [
