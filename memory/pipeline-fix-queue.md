@@ -54,7 +54,7 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_cover_qa_pixels.py`
 - `python3 -m unittest tests.test_cover_budget.OcrEscapeHatchTest -v`
 - B10 `analyze_cover_pixels` → PASS + `ocr_false_positive_escape.applied`
-commit: pending
+commit: 474abd6
 
 ## INC-20260821-0615-content-learner-metrika-credentials
 status: open
