@@ -2,6 +2,34 @@
 
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
+## INC-20260824-0829-content-learner-metrika-credentials-b10
+status: open
+run_date: 2026-08-24
+role: excalibur-blog-content-learner
+topic_id: B10
+article_dir: memory/blog/articles/B10-v-tyumeni-notarius-udostoveril-sdelku-a-cherez-god-sud-otmenil-prodazhu-prodavca
+severity: blocker
+category: env
+
+### What went wrong
+- `excalibur_blog_metrika_fetch.py --days 30 --ingest` → METRIKA CREDENTIALS BLOCKER
+- Missing `YANDEX_METRIKA_OAUTH_TOKEN` and `YANDEX_METRIKA_COUNTER_ID` in Cloud Secrets/env
+
+### How the agent recovered this run
+- Content-learner записал 4 pipeline/editorial lessons из B10 run evidence (OCR empty, hook-bar false positives, budget exhaust flow, phone_scammers_notary angle).
+- Metrika cohort analysis пропущен; lessons marked medium confidence без behavioral signals.
+
+### Durable fix needed before next run
+- Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
+- Повторить ingest после publish B10 для post-publish behavioral baseline.
+
+### Suggested files to inspect/change
+- `shared/yandex-metrika-contract.md`
+- Cloud Secrets: `YANDEX_METRIKA_OAUTH_TOKEN`, `YANDEX_METRIKA_COUNTER_ID`
+
+### Secrets
+- none recorded (credentials absent)
+
 ## INC-20260821-0615-content-learner-metrika-credentials
 status: open
 run_date: 2026-08-21
