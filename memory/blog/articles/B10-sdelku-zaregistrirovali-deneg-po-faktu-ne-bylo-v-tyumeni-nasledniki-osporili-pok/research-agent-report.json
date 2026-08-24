@@ -1,0 +1,67 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B10",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-24",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Пост 14.08.2025 «5 схем», №3 «Квартира без денег» — фиктивная продажа без передачи денег, наследники оспаривают"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Свежая casus-лента тенанта: оспаривание, банкротство, проверка до аванса"
+      },
+      {
+        "url": "https://vsrf.ru/documents/all/36132/",
+        "type": "official",
+        "note": "Обзор ВС № 12/2026 от 01.07.2026 — мнимость, наследники, реституция"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 22660,
+    "angle_phrase": "оспорить сделку купли продажи",
+    "angle_volume": 8,
+    "support_phrase": "аккредитив при покупке квартиры",
+    "support_volume": 47,
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "Новый plot: зарегистрированная продажа без реального расчёта, наследники оспаривают как фиктивную"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["sberbank", "vsrf"],
+    "errors": [],
+    "lesson": "Sber person 3400 RUB; legal/loc for legal entities only; VS review 12/2026 primary for mnimaya/pritvornaya"
+  },
+  "key_facts_count": 20,
+  "court_cases_cited": [
+    {
+      "case": "2-467/2025",
+      "court": "Рыбинский городской суд",
+      "date": "2025-07-30",
+      "url": "https://www.zakonrf.info/gorsud/doc-1a10e12b-99e4-5755-8b9c-44a996b97b80/"
+    }
+  ],
+  "blockers": [],
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}
