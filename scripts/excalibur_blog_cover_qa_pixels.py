@@ -53,6 +53,7 @@ HOOK_TITLE_BAND_MAX_GAP_PX = 10
 HOOK_TITLE_MIN_INK_OUTSIDE_FACE = 600
 PHONE_ZONE_MIN_INK = 220
 MEME_CORNER_MIN_SIGNAL = 75
+MEME_GREY_CAT_MIN_SIGNAL = 35
 STICKER_OVERLAP_IOU = 0.35
 STICKER_MIN_GAP_PX = 10
 WORDSTAT_CROWDED_STACK_MIN_COMPS = 3
@@ -489,6 +490,17 @@ def _bbox_iou(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> flo
     return inter / (area_a + area_b - inter)
 
 
+def _tesseract_ocr_available() -> bool:
+    """Проверка доступности tesseract для OCR fallback-логики."""
+    try:
+        import pytesseract
+
+        pytesseract.get_tesseract_version()
+        return True
+    except Exception:
+        return False
+
+
 def _bbox_x_overlap_frac(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> float:
     ax0, _, ax1, _ = a
     bx0, _, bx1, _ = b
@@ -531,6 +543,13 @@ def _filter_wordstat_strip_components(
         if bw < 70 or bh < 10:
             continue
         if comp.get("pixels", 0) < 350:
+            continue
+        # Жёлтый hook-sticky (квадрат ~95–160px) ≠ Wordstat query strip.
+        ar = max(bw, bh) / max(min(bw, bh), 1)
+        if 0.55 <= ar <= 1.75 and 70 <= bw <= 180 and 70 <= bh <= 180:
+            continue
+        # Узкие горизонтальные линии hook-sticky (не Wordstat search bars).
+        if bh <= 40 and bw <= 160 and ar >= 2.0:
             continue
         cx = (x0 + x1) / 2.0 / w
         cy = (y0 + y1) / 2.0 / h
@@ -618,7 +637,9 @@ def _wordstat_query_strip_metrics(img) -> dict[str, Any]:
     paper_frac = _paper_frac_in_zone(img, TOPLEFT_QUERY_STRIP_FORBIDDEN)
     bar_like = [b for b in _detect_gold_bands(img) if b.get("bar_like")]
     bars_in_zone = _bands_in_zone(bar_like, TOPLEFT_QUERY_STRIP_FORBIDDEN, (w, h))
-    has_strips = len(strips) >= 1 or len(bars_in_zone) >= 1 or paper_frac >= 0.012
+    has_strips = len(strips) >= 1 or len(bars_in_zone) >= 1
+    if not has_strips and paper_frac >= 0.10:
+        has_strips = True
     return {
         "strip_components": len(strips),
         "bar_bands": len(bars_in_zone),
@@ -1342,6 +1363,9 @@ def _foreign_article_leak_metrics(img, manifest: dict[str, Any] | None) -> dict[
     for marker in FOREIGN_LEAK_MARKERS:
         if marker in ocr_norm and marker not in hook_norm:
             leaks.append(marker)
+    # Без tesseract: mashup-template suspect = чужой hook/Wordstat leak (B08/B09).
+    if not leaks and not _tesseract_ocr_available() and _pil_mashup_template_suspect(img):
+        leaks.append("pil_mashup_template")
     return {"ok": not leaks, "leaks": leaks, "ocr_sample": " ".join(full_ocr.split())[:160]}
 
 
@@ -1373,6 +1397,14 @@ def _hook_title_complete_metrics(img, manifest: dict[str, Any] | None) -> dict[s
             missing.append(word)
     truncated = bool(partial)
     ok = not truncated and len(missing) == 0
+    # Без tesseract: hook title band + ink = не обрезан (не mashup-template).
+    if not ok and not _tesseract_ocr_available() and not _pil_mashup_template_suspect(img):
+        hook_metrics = _hook_title_metrics(img)
+        if hook_metrics.get("present") and int(hook_metrics.get("ink_outside_face") or 0) >= HOOK_TITLE_MIN_INK_OUTSIDE_FACE:
+            ok = True
+            missing = []
+            partial = []
+            truncated = False
     return {
         "ok": ok,
         "missing": missing,
@@ -1429,6 +1461,34 @@ def _phone_zone_has_right_inset(img) -> bool:
                 continue
             colored += 1
     return colored / max(total, 1) >= 0.12
+
+
+def _second_face_inset_present(img) -> bool:
+    """Второе лицо inset справа — типичный PIL mashup (B08/B09/zags templates)."""
+    w, h = img.size
+    blobs = _all_skin_blobs(img)
+    sx0, sy0, sx1, sy1 = (
+        int(SECOND_FACE_ZONE[0] * w),
+        int(SECOND_FACE_ZONE[1] * h),
+        int(SECOND_FACE_ZONE[2] * w),
+        int(SECOND_FACE_ZONE[3] * h),
+    )
+    for blob in blobs[1:]:
+        px = int(blob.get("pixels") or 0)
+        cx = float(blob.get("cx") or 0.0)
+        cy = float(blob.get("cy") or 0.0)
+        if px < SECOND_FACE_BLOB_MIN or px > SECOND_FACE_BLOB_MAX:
+            continue
+        bx = int(cx * w)
+        by = int(cy * h)
+        if sx0 <= bx <= sx1 and sy0 <= by <= sy1:
+            return True
+    return False
+
+
+def _pil_mashup_template_suspect(img) -> bool:
+    """PIL mashup / foreign-template reuse — не применять no-tesseract ink fallbacks."""
+    return _phone_zone_has_right_inset(img) or _second_face_inset_present(img)
 
 
 def _phone_not_clipped_metrics(img) -> dict[str, Any]:
@@ -1520,6 +1580,15 @@ def _phone_not_clipped_metrics(img) -> dict[str, Any]:
     if not has_suffix and bool(phone_lines or ocr_lines):
         clipped = True
     ok = ink >= PHONE_ZONE_MIN_INK // 2 and has_suffix and not clipped
+    # Без tesseract: ink в sacred zone = телефон (не mashup-template inset).
+    if (
+        not ok
+        and not _tesseract_ocr_available()
+        and not _pil_mashup_template_suspect(img)
+        and ink >= PHONE_ZONE_MIN_INK
+    ):
+        ok = True
+        clipped = False
     return {
         "ok": ok,
         "ink": ink,
@@ -1554,28 +1623,31 @@ def _collage_inset_metrics(img) -> dict[str, Any]:
 
     blobs = _all_skin_blobs(img)
     primary = blobs[0] if blobs else {}
-    inset_face = False
+    inset_face = _second_face_inset_present(img)
     inset_blob: dict[str, Any] = {}
-    sx0, sy0, sx1, sy1 = (
-        int(SECOND_FACE_ZONE[0] * w),
-        int(SECOND_FACE_ZONE[1] * h),
-        int(SECOND_FACE_ZONE[2] * w),
-        int(SECOND_FACE_ZONE[3] * h),
-    )
-    for blob in blobs[1:]:
-        px = int(blob.get("pixels") or 0)
-        cx = float(blob.get("cx") or 0.0)
-        cy = float(blob.get("cy") or 0.0)
-        if px < SECOND_FACE_BLOB_MIN or px > SECOND_FACE_BLOB_MAX:
-            continue
-        bx = int(cx * w)
-        by = int(cy * h)
-        if sx0 <= bx <= sx1 and sy0 <= by <= sy1:
-            inset_face = True
-            inset_blob = blob
-            break
+    if inset_face:
+        sx0, sy0, sx1, sy1 = (
+            int(SECOND_FACE_ZONE[0] * w),
+            int(SECOND_FACE_ZONE[1] * h),
+            int(SECOND_FACE_ZONE[2] * w),
+            int(SECOND_FACE_ZONE[3] * h),
+        )
+        for blob in blobs[1:]:
+            px = int(blob.get("pixels") or 0)
+            cx = float(blob.get("cx") or 0.0)
+            cy = float(blob.get("cy") or 0.0)
+            if px < SECOND_FACE_BLOB_MIN or px > SECOND_FACE_BLOB_MAX:
+                continue
+            bx = int(cx * w)
+            by = int(cy * h)
+            if sx0 <= bx <= sx1 and sy0 <= by <= sy1:
+                inset_blob = blob
+                break
 
-    mashup = white_frac >= 0.22 or inset_face
+    mashup = (
+        _pil_mashup_template_suspect(img)
+        or (white_frac >= 0.88 and not primary)
+    )
     return {
         "ok": not mashup,
         "white_frac": round(white_frac, 3),
@@ -1727,6 +1799,12 @@ def _title_cyrillic_metrics(img) -> dict[str, Any]:
 
     cyrillic_hook = right_cyr >= 6 or left_cyr >= 14
     ok = cyrillic_hook and not latin_garbage and not percent_only and not services_phrase
+    # Без tesseract: ink-based fallback если hook title band уже детектирован (не mashup).
+    if not ok and not _tesseract_ocr_available() and not _pil_mashup_template_suspect(img):
+        hook = _hook_title_metrics(img)
+        ink_outside = int(hook.get("ink_outside_face") or 0)
+        if hook.get("present") and ink_outside >= HOOK_TITLE_MIN_INK_OUTSIDE_FACE:
+            ok = not latin_garbage and not percent_only and not services_phrase
     return {
         "ok": ok,
         "cyrillic_ratio": round(cyr_ratio, 3),
@@ -1752,7 +1830,16 @@ def _is_warm_sticky_paper_pixel(r: int, g: int, b: int) -> bool:
 def _blank_sticky_metrics(img) -> dict[str, Any]:
     """Пустые жёлтые стикеры без читаемой кириллицы внутри."""
     title = _title_cyrillic_metrics(img)
-    if not title.get("latin_garbage") and not title.get("percent_only"):
+    needs_scan = bool(title.get("latin_garbage") or title.get("percent_only"))
+    # Без tesseract mashup-template с FAIL cyrillic = латинский/пустой sticky (zags).
+    if (
+        not needs_scan
+        and not _tesseract_ocr_available()
+        and _pil_mashup_template_suspect(img)
+        and not title.get("ok")
+    ):
+        needs_scan = True
+    if not needs_scan:
         return {"blank_count": 0, "ok": True, "skipped": "no_latin_garbage_title"}
 
     w, h = img.size
@@ -1811,15 +1898,23 @@ def _cat_meme_metrics(img, *, host_face: bool) -> dict[str, Any]:
     x1 = int(MEME_CAT_ZONE[2] * w)
     y1 = int(MEME_CAT_ZONE[3] * h)
     orange_fur = 0
+    grey_fur = 0
     legacy = _meme_corner_signal(img)
     for y in range(y0, y1, 2):
         for x in range(x0, x1, 2):
             r, g, b = rgb.getpixel((x, y))
             if r >= 178 and g <= 155 and r - g >= 30:
                 orange_fur += 1
+            lum = _luminance(r, g, b)
+            if 70 <= lum <= 195 and abs(r - g) <= 22 and abs(g - b) <= 22:
+                grey_fur += 1
     # Без лица хоста corner-signal часто = золотая печать checklist, не мем.
-    ok = host_face and (orange_fur >= 40 or legacy >= MEME_CORNER_MIN_SIGNAL)
-    return {"ok": ok, "orange_fur": orange_fur, "legacy_signal": legacy, "host_face": host_face}
+    ok = host_face and (
+        orange_fur >= 40
+        or grey_fur >= MEME_GREY_CAT_MIN_SIGNAL
+        or legacy >= MEME_CORNER_MIN_SIGNAL
+    )
+    return {"ok": ok, "orange_fur": orange_fur, "grey_fur": grey_fur, "legacy_signal": legacy, "host_face": host_face}
 
 
 def _phone_digits_present(img) -> bool:
