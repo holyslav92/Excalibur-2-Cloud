@@ -46,7 +46,7 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_cover_qa_pixels.py`
 - `python3 -m unittest tests.test_cover_qa_pixels_layout` → OK (10 tests)
 - B10 cover.png pixel QA → PASS (no tesseract)
-commit: pending-parent-commit
+commit: c484cb0
 
 ## INC-20260824-0648-cover-quad-prompt-import-budget
 status: fixed
