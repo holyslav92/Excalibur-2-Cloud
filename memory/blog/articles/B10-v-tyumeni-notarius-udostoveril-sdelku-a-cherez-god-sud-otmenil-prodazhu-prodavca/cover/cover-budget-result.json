@@ -1,0 +1,65 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 1,
+  "best_candidate": "/workspace/memory/blog/articles/B10-v-tyumeni-notarius-udostoveril-sdelku-a-cherez-god-sud-otmenil-prodazhu-prodavca/cover/cover.png",
+  "last_errors": [
+    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0054 chest_blue=0.005 smear=0.000",
+    "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+    "pixel_phone_readable FAIL: phone_digits='' ink=2836 clipped=False",
+    "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Сделку', 'отменили', 'продавец', 'должна', 'вернуть', 'миллионы'] last_word='миллионы' ocr=''",
+    "pixel_no_collage_inset FAIL: white_frac=0.635 inset_face=False blob_count=3",
+    "pixel_meme_present FAIL: orange_fur=21 legacy=16 host_face=True",
+    "pixel_no_wordstat_query_strips FAIL: 3 Wordstat strip(s), 0 bar band(s), paper_frac=0.1107",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "tiers": [
+        {
+          "tier": "standard",
+          "model": "grsai-standard",
+          "bytes": 1142963,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+            "pixel_no_text_on_clothing FAIL: dark_ink_frac=0.047 on chest/clothes",
+            "pixel_no_inpaint_artifacts FAIL: face_blue=0.0146 chest_blue=0.064 smear=0.000",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=2346 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Сделку', 'отменили', 'продавец', 'должна', 'вернуть', 'миллионы'] last_word='миллионы' ocr=''",
+            "pixel_no_collage_inset FAIL: white_frac=0.621 inset_face=False blob_count=5",
+            "pixel_no_wordstat_query_strips FAIL: 4 Wordstat strip(s), 0 bar band(s), paper_frac=0.3552",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        },
+        {
+          "tier": "vip",
+          "model": "grsai-standard-vip",
+          "bytes": 1153213,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_no_inpaint_artifacts FAIL: face_blue=0.0054 chest_blue=0.005 smear=0.000",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=2836 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Сделку', 'отменили', 'продавец', 'должна', 'вернуть', 'миллионы'] last_word='миллионы' ocr=''",
+            "pixel_no_collage_inset FAIL: white_frac=0.635 inset_face=False blob_count=3",
+            "pixel_meme_present FAIL: orange_fur=21 legacy=16 host_face=True",
+            "pixel_no_wordstat_query_strips FAIL: 3 Wordstat strip(s), 0 bar band(s), paper_frac=0.1107",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        }
+      ]
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}
