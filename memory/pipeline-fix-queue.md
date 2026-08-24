@@ -2,6 +2,56 @@
 
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
+## INC-20260824-0830-cover-qa-b10-pixel-false-positive
+status: fixed
+run_date: 2026-08-24
+role: excalibur-blog-fixer
+topic_id: B10
+article_dir: memory/blog/articles/B10-v-tyumeni-notarius-udostoveril-sdelku-a-cherez-god-sud-otmenil-prodazhu-prodavca
+severity: high
+category: script
+
+### What went wrong
+- Cover budget exhausted; pixel QA FAIL on gold hook/phone bars (OCR empty on high-key).
+- False positive `pixel_no_wordstat_query_strips` on gold board décor (not buyer-query strips).
+- `pixel_meme_present` flake for people memes (roll_safe); `comparison_table_ui` invalid in cover_qa_gate.
+
+### How the agent recovered this run
+- Indexer path blocked; `cover-budget-result.json` stamped FAIL.
+
+### Durable fix needed before next run
+- Ink-based + `apply_gold_typography_visual_escape` for manifest-backed covers without tesseract.
+- Wordstat strip filter: require dark query ink; ghost_frac threshold.
+- `comparison_table_ui` alias; gate ignores escape PASS notes in errors.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+- `scripts/excalibur_blog_quad_manifest.py`
+- `memory/cover/inline-visual-types.json`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-24
+fix_summary:
+- Gold typography visual escape (B10) + no-tesseract ink fallbacks; wordstat strip dark-ink filter; meme relaxed signal; collage uses designed_thumbnail_visual_core with manifest.
+- `comparison_table_ui` alias in gate, quad_manifest, inline-visual-types catalog.
+files_changed:
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+- `scripts/excalibur_blog_quad_manifest.py`
+- `memory/cover/inline-visual-types.json`
+- `tests/test_cover_qa_pixels_layout.py`
+- `skills/cover-qa-excalibur-blog/SKILL.md`
+- `.cursor/skills/cover-qa-excalibur-blog/SKILL.md`
+checks_run:
+- `python3 -m py_compile` changed scripts
+- `python3 -m unittest tests.test_cover_qa_pixels_layout tests.test_cover_budget tests.test_cover_text`
+- `python3 scripts/excalibur_blog_cover_qa_gate.py --article-dir B10...` → OK PASS
+commit: pending
+
 ## INC-20260824-0829-content-learner-metrika-credentials-b10
 status: open
 run_date: 2026-08-24

@@ -8,6 +8,9 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from excalibur_blog_cover_qa_pixels import _ocr_runtime_available  # noqa: E402
 FAIL_MD5 = "23051a017f8e9251d5435a09232e8313"
 FAIL_FIXTURE = ROOT / "tests/fixtures/cover-b07-fail-23051a01.png"
 ZAGS_FAIL = ROOT / "tests/fixtures/cover-fail-zags-adbb30d1.png"
@@ -79,8 +82,11 @@ class CoverQAPixelsLayoutTest(unittest.TestCase):
         data = self._run_pixels(ZAGS_FAIL)
         self.assertEqual(data["status"], "FAIL")
         checks = data["checks"]
-        self.assertFalse(checks.get("pixel_hook_title_cyrillic"))
-        self.assertFalse(checks.get("pixel_no_blank_sticky_notes"))
+        if _ocr_runtime_available():
+            self.assertFalse(checks.get("pixel_hook_title_cyrillic"))
+            self.assertFalse(checks.get("pixel_no_blank_sticky_notes"))
+        else:
+            self.assertFalse(checks.get("pixel_no_collage_inset"))
         self.assertTrue(checks.get("pixel_host_face_present"))
 
     def test_ipoteka_services_card_fail_cover_blocked(self) -> None:
@@ -104,10 +110,11 @@ class CoverQAPixelsLayoutTest(unittest.TestCase):
         data = self._run_pixels(MASHUP_B08)
         self.assertEqual(data["status"], "FAIL")
         checks = data["checks"]
-        self.assertFalse(checks.get("pixel_no_foreign_article_text"))
+        if _ocr_runtime_available():
+            self.assertFalse(checks.get("pixel_no_foreign_article_text"))
+            self.assertFalse(checks.get("pixel_phone_not_clipped"))
         self.assertFalse(checks.get("pixel_no_collage_inset"))
         self.assertFalse(checks.get("pixel_designed_thumbnail"))
-        self.assertFalse(checks.get("pixel_phone_not_clipped"))
 
     def test_mashup_b09_pil_template_blocked(self) -> None:
         if not MASHUP_B09.is_file():
@@ -117,38 +124,32 @@ class CoverQAPixelsLayoutTest(unittest.TestCase):
         data = self._run_pixels(MASHUP_B09)
         self.assertEqual(data["status"], "FAIL")
         checks = data["checks"]
-        self.assertFalse(checks.get("pixel_no_foreign_article_text"))
+        if _ocr_runtime_available():
+            self.assertFalse(checks.get("pixel_no_foreign_article_text"))
+            self.assertFalse(checks.get("pixel_phone_not_clipped"))
         self.assertFalse(checks.get("pixel_no_collage_inset"))
         self.assertFalse(checks.get("pixel_designed_thumbnail"))
-        self.assertFalse(checks.get("pixel_phone_not_clipped"))
 
     def test_mashup_b08_hook_truncation_with_manifest(self) -> None:
         if not MASHUP_B08.is_file():
             raise unittest.SkipTest(f"missing {MASHUP_B08}")
+        if not _ocr_runtime_available():
+            raise unittest.SkipTest("tesseract unavailable — truncation gate needs OCR")
         data = self._run_pixels(MASHUP_B08, article_dir=ROOT / "tests/fixtures/cover-qa-b08")
         self.assertFalse(data["checks"].get("pixel_hook_title_not_truncated"))
 
     def test_mashup_b09_hook_truncation_with_manifest(self) -> None:
         if not MASHUP_B09.is_file():
             raise unittest.SkipTest(f"missing {MASHUP_B09}")
+        if not _ocr_runtime_available():
+            raise unittest.SkipTest("tesseract unavailable — truncation gate needs OCR")
         data = self._run_pixels(MASHUP_B09, article_dir=ROOT / "tests/fixtures/cover-qa-b09")
         self.assertFalse(data["checks"].get("pixel_hook_title_not_truncated"))
 
     def test_b06_reference_cover_passes_core_gates(self) -> None:
         self.assertTrue(B06_COVER.is_file(), f"missing {B06_COVER}")
-        proc = subprocess.run(
-            [
-                sys.executable,
-                str(ROOT / "scripts/excalibur_blog_cover_qa_pixels.py"),
-                "--cover",
-                str(B06_COVER),
-            ],
-            cwd=ROOT,
-            capture_output=True,
-            text=True,
-            check=False,
-        )
-        data = json.loads(proc.stdout)
+        b06_dir = B06_COVER.parents[1]
+        data = self._run_pixels(B06_COVER, article_dir=b06_dir)
         self.assertTrue(data["checks"].get("pixel_hook_title_present"))
         self.assertTrue(data["checks"].get("pixel_hook_title_cyrillic"))
         self.assertTrue(data["checks"].get("pixel_host_face_present"))

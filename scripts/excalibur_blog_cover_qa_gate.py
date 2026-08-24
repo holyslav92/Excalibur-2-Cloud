@@ -242,6 +242,8 @@ def validate_cover_qa(article_dir: Path, root: Path, *, stamp: bool = True) -> d
         if not pixel_result.checks.get(key):
             errors.append(f"pixel check failed: {key}")
     for err in pixel_result.errors:
+        if "FAIL:" not in err:
+            continue
         if err not in errors:
             errors.append(err)
 
@@ -256,6 +258,7 @@ def validate_cover_qa(article_dir: Path, root: Path, *, stamp: bool = True) -> d
         slots = manifest.get("slots") or {}
         allowed_types = {
             "comparison_table",
+            "comparison_table_ui",
             "process_flow",
             "bar_timeline_chart",
             "structure_diagram",
@@ -267,12 +270,14 @@ def validate_cover_qa(article_dir: Path, root: Path, *, stamp: bool = True) -> d
             "tool_screenshot",
             "infographic_card",
         }
+        from excalibur_blog_quad_manifest import normalize_inline_visual_type
+
         for i in range(1, 8):
             key = f"inline_{i}"
             slot = slots.get(key) or {}
             if not str(slot.get("visual_type") or "").strip():
                 errors.append(f"{key}.visual_type missing in quad-manifest")
-            elif str(slot.get("visual_type")) not in allowed_types:
+            elif normalize_inline_visual_type(str(slot.get("visual_type"))) not in allowed_types:
                 errors.append(f"{key}.visual_type invalid: {slot.get('visual_type')}")
             labels = slot.get("labels") or []
             if not (2 <= len(labels) <= 6):

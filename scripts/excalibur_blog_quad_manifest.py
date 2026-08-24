@@ -27,13 +27,29 @@ from excalibur_blog_quad_slots import (
 )
 
 TYPE_PRIORITY = [
+    "comparison_table",
     "comparison_table_ui",
+    "process_flow",
     "workflow_diagram",
     "checklist_board",
+    "labeled_checklist",
     "schema_faq_ui",
+    "structure_diagram",
     "tool_screenshot",
     "infographic_card",
+    "bar_timeline_chart",
+    "fact_card",
 ]
+
+INLINE_VISUAL_TYPE_ALIASES: dict[str, str] = {
+    "comparison_table_ui": "comparison_table",
+}
+
+
+def normalize_inline_visual_type(type_id: str) -> str:
+    """Canonical inline visual_type for gates and catalog scoring."""
+    t = str(type_id or "").strip()
+    return INLINE_VISUAL_TYPE_ALIASES.get(t, t)
 from excalibur_blog_quad_slots import DEFAULT_SLOT_MAP  # noqa: E402
 
 
@@ -135,8 +151,10 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
     for idx, slot_key in enumerate(inline_keys, start=1):
         h2 = h2s[idx - 1] if idx - 1 < len(h2s) else f"Секция {idx}"
         old = ((preserve or {}).get("slots") or {}).get(slot_key) or {}
-        visual_type = str(old.get("visual_type") or "").strip() or pick_visual_type(
-            h2, types_catalog, used
+        visual_type = normalize_inline_visual_type(
+            str(old.get("visual_type") or "").strip() or pick_visual_type(
+                h2, types_catalog, used
+            )
         )
         used.add(visual_type)
         labels = ct_labels.get(slot_key) or old.get("labels") or []
