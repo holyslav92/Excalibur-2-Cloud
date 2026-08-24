@@ -1,7 +1,7 @@
 {
   "hook": "Квартиру оформили, но деньги не дошли",
   "highlight": "деньги",
-  "sticky": "Регистрация не спасает",
+  "sticky": "",
   "phone_cta": "+7 922 001 65 05",
   "inline_labels": {
     "inline_1": [
@@ -50,8 +50,7 @@
   },
   "meme_picks": {
     "cover": [
-      "hide_pain_harold",
-      "grumpy_cat"
+      "hide_pain_harold"
     ],
     "inline_1": [
       "disappointed_black_guy"
