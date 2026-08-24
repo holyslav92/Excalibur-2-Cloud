@@ -60,7 +60,7 @@
     "inline_1": {
       "quadrant": "top_right",
       "h2_anchor": "Аванс внесли — и Росреестр поставил на паузу",
-      "visual_type": "comparison_table_ui",
+      "visual_type": "comparison_table",
       "scene_hint": "comparison_table: чистая выписка vs пауза регистрации, стрелка военкомат→Росреестр, hide_pain_harold угол.",
       "alt": "Сравнение чистой выписки и приостановления регистрации: отсутствие ареста не исключает паузу по данным военкомата.",
       "labels": [
