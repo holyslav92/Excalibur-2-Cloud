@@ -103,6 +103,23 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-24",
+      "topic_id": "B10",
+      "slug": "",
+      "motifs": {
+        "composition": "host_full_body_right_registration_counter_empty_envelope",
+        "location": "bright_glass_rosreestr_hall_white_sun_flare",
+        "meme": "hide_pain_harold_sticker_plus_grumpy_cat_cutout",
+        "prop_set": "egrn_folder_empty_payment_envelope_registration_stamp_phone_cta",
+        "sticker_set": "small_harold_grumpy_cat_corners_no_wordstat",
+        "joke": "registered_stamp_next_to_empty_envelope_harold_pain_grumpy_cat",
+        "outfit": "light_blue_shirt_sand_vest_burgundy_tie_no_blazer",
+        "emotion": "stunned_disbelief_restrained_grimace",
+        "pose_framing": "full_body_right_forward_lean_looking_at_empty_envelope",
+        "action": "opens_empty_envelope_beside_egrn_folder"
+      }
     }
   ]
 }
