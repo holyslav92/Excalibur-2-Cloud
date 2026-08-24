@@ -71,7 +71,7 @@ INLINE_BAN_EXTRA = (
 )
 MEME_CATALOG_REL = "memory/cover/meme-top100.json"
 MEME_STICKER_INLINE_MAX_SHARE = 0.15
-MAX_MCP_PROMPT_CHARS = 3500
+MAX_MCP_PROMPT_CHARS = 4000
 # Compact limits leave headroom under 3500 after style boilerplate (INC-20260721-0837).
 # Cover raw ≈80–140 (from blog-hero lock); inline ≈100–220. Long MUST/face essays
 # starve host space (B80 / INC-20260724-0837) and bilingual essays blow MCP budget.
