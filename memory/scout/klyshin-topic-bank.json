@@ -2,8 +2,8 @@
   "bank_id": "klyshin_topic_bank_v1",
   "source_channel": "https://t.me/klyshin_A",
   "source_label": "Алексей Клышин — юрист по недвижимости",
-  "updated_at": "2026-08-21",
-  "accessed_at": "2026-08-21",
+  "updated_at": "2026-08-24",
+  "accessed_at": "2026-08-24",
   "algorithm": "klyshin_hook → wordstat_probe → rework_for_demand → final_P0_or_skip_after_rework",
   "wordstat_gate": {
     "provider": "mcp-kv",
@@ -104,7 +104,8 @@
       "tyumen_localize": true,
       "status": "seed",
       "last_seen": "2026-08-21",
-      "rejected_b06": "anti-dup: опубликован пост «нотариус +70k» на сайте"
+      "rejected_b06": "anti-dup: опубликован пост «нотариус +70k» на сайте",
+      "rejected_b10": "54% overlap LIVE-NOTARIUS-VSE-PROVERIL (WP court case)"
     },
     {
       "id": "receipt_no_money",
@@ -173,7 +174,9 @@
         "купить квартиру в тюмени"
       ],
       "tyumen_localize": true,
-      "status": "seed"
+      "status": "seed",
+      "last_seen": "2026-08-24",
+      "rejected_b10": "SCOUT STORY DUPLICATE vs live WP na-matkapital-kupili-detskie-doli-proverte"
     },
     {
       "id": "urgent_discount_risk",
@@ -230,6 +233,34 @@
       "rejected_b06": "проверка 9, банкротство продавца 30; overlap B03/B04 + маткапитал на сайте",
       "tyumen_localize": true,
       "status": "seed"
+    },
+    {
+      "id": "fictitious_sale_no_money",
+      "hook_ru": "сделку зарегистрировали — денег по факту не было",
+      "angle": "фиктивная продажа без реального расчёта; наследники оспаривают после смерти продавца",
+      "klyshin_signal": "5 схем видео, scheme #3: по документам сделка была, денег не передавали; наследники идут в суд",
+      "wordstat_probes": [
+        "оспорить сделку купли продажи",
+        "аккредитив при покупке квартиры",
+        "купить квартиру в тюмени"
+      ],
+      "wordstat_rework_log": [
+        "probe «оспорить сделку купли продажи» 8",
+        "rework «аккредитив при покупке квартиры» 47 (RU225 3777)",
+        "final P0 «купить квартиру в тюмени» 22660 (RU225 39961)"
+      ],
+      "final_p0": {
+        "phrase": "купить квартиру в тюмени",
+        "volume": 22660,
+        "regions": [
+          "55",
+          "11176"
+        ],
+        "compare_ru": 39961
+      },
+      "last_seen": "2026-08-24",
+      "tyumen_localize": true,
+      "status": "B10"
     },
     {
       "id": "phone_scammers_notary",
@@ -303,6 +334,35 @@
       ],
       "note": "автооценка минус 1–2 млн → final P0 «купить квартиру в тюмени» 23066",
       "wordstat_rework": "73 → 3943 → 5799 → 23066"
+    },
+    {
+      "topic_id": "B07",
+      "hook_ids": [
+        "heirs_first_marriage_3y"
+      ],
+      "note": "наследство сын первого брака"
+    },
+    {
+      "topic_id": "B08",
+      "hook_ids": [
+        "heirs_first_marriage_3y"
+      ],
+      "note": "умершая жена / неофициальный брак"
+    },
+    {
+      "topic_id": "B09",
+      "hook_ids": [
+        "pre_advance_check"
+      ],
+      "note": "ипотека + строка ЕГРН"
+    },
+    {
+      "topic_id": "B10",
+      "hook_ids": [
+        "fictitious_sale_no_money"
+      ],
+      "note": "фиктивная сделка без денег → final P0 «купить квартиру в тюмени» 22660",
+      "wordstat_rework": "8 → 47 → 22660"
     }
   ]
 }

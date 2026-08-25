@@ -2,6 +2,61 @@
 
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
+## INC-20260824-1308-cover-qa-tesseract-missing-b10
+status: fixed
+run_date: 2026-08-24
+role: excalibur-blog-cover-qa
+topic_id: B10
+article_dir: memory/blog/articles/B10-sdelku-zaregistrirovali-deneg-po-faktu-ne-bylo-v-tyumeni-nasledniki-osporili-pok
+severity: blocker
+category: env
+
+### What went wrong
+- Cover-QA pixel gates failed because `tesseract` binary missing in Cloud VM (`pytesseract` installed but `FileNotFoundError`).
+- OCR returned empty string → `pixel_hook_title_cyrillic`, `pixel_phone_readable` and related OCR checks failed.
+- Cover budget exhausted (2 solo attempts); quad canvas cover restored visually OK.
+- `quality-bar-9` blocked on `cover_qa_pass` only.
+
+### How the agent recovered this run
+- Pipeline stopped before Publish (B10 not published).
+- Quad canvas cover.png kept as best candidate via `cover-budget-result.json`.
+
+### Durable fix needed before next run
+- Install `tesseract-ocr` + `tesseract-ocr-rus` in Cloud environment bootstrap.
+- Pin `pytesseract` in requirements; doctor preflight must fail loud if OCR deps missing.
+
+### Suggested files to inspect/change
+- `.cursor/environment.json`
+- `scripts/excalibur_blog_cloud_install_deps.sh`
+- `requirements.txt`
+- `scripts/excalibur_blog_doctor.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-24
+fix_summary:
+- Added idempotent `scripts/excalibur_blog_cloud_install_deps.sh` (apt tesseract-ocr + tesseract-ocr-rus, pip, doctor).
+- Wired `.cursor/environment.json` install to the script; pinned `pytesseract` in requirements.txt.
+- Doctor + cover_qa_gate `--doctor` now verify tesseract binary + rus lang pack before Cover-QA runs.
+- B10 intentionally not published; re-run Cover-QA pixel gate on next agent boot after env rebuild.
+files_changed:
+- `.cursor/environment.json`
+- `scripts/excalibur_blog_cloud_install_deps.sh`
+- `requirements.txt`
+- `scripts/excalibur_blog_doctor.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+- `CLOUD-FIRST-RUN.md`
+- `memory/pipeline-fix-queue.md`
+checks_run:
+- `bash scripts/excalibur_blog_cloud_install_deps.sh` (idempotent re-run)
+- `python3 -m py_compile scripts/excalibur_blog_doctor.py scripts/excalibur_blog_cover_qa_gate.py`
+- `python3 scripts/excalibur_blog_cover_qa_gate.py --doctor`
+- `tesseract --list-langs | grep rus`
+commit: d5a7d27
+
 ## INC-20260821-0615-content-learner-metrika-credentials
 status: open
 run_date: 2026-08-21
@@ -18,6 +73,7 @@ category: env
 ### How the agent recovered this run
 - Content-learner записал pipeline lessons из run evidence (Derouter 524 chunk, quality-bar PIL sync, html_linter CTA div).
 - Metrika cohort analysis пропущен; lessons marked low/medium confidence без behavioral signals.
+- B10 (2026-08-24): повторный METRIKA CREDENTIALS BLOCKER при content-learner post-Indexer.
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.

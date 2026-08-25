@@ -11,7 +11,7 @@
 
 1. Dashboard → Cloud Agents → Environments.
 2. Подключите этот репозиторий.
-3. ` .cursor/environment.json` уже задаёт `install` (pip + doctor).
+3. `.cursor/environment.json` задаёт `install` (`scripts/excalibur_blog_cloud_install_deps.sh`: apt `tesseract-ocr` + `tesseract-ocr-rus`, pip, doctor).
 4. Дождитесь успешного Build.
 
 ## 2. Secrets

@@ -12,6 +12,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from excalibur_blog_cover_budget import SHORT_HOOK_MAX_CHARS, short_hook_prompt_line
+from excalibur_blog_identity_real import pick_identity_reference
 from excalibur_blog_quad_slots import (
     CANVAS_1_SLOTS,
     active_inline_keys,
@@ -70,7 +71,7 @@ INLINE_BAN_EXTRA = (
 )
 MEME_CATALOG_REL = "memory/cover/meme-top100.json"
 MEME_STICKER_INLINE_MAX_SHARE = 0.15
-MAX_MCP_PROMPT_CHARS = 3500
+MAX_MCP_PROMPT_CHARS = 4000
 # Compact limits leave headroom under 3500 after style boilerplate (INC-20260721-0837).
 # Cover raw ≈80–140 (from blog-hero lock); inline ≈100–220. Long MUST/face essays
 # starve host space (B80 / INC-20260724-0837) and bilingual essays blow MCP budget.

@@ -7,3 +7,5 @@
 | [LESSON-20260821-0615-B06-derouter-524-chunk-fallback](content-lessons/LESSON-20260821-0615-B06-derouter-524-chunk-fallback.md) | B06 | proposed | other |
 | [LESSON-20260821-0615-B06-quality-bar-wordstat-pil-sync](content-lessons/LESSON-20260821-0615-B06-quality-bar-wordstat-pil-sync.md) | B06 | applied | other |
 | [LESSON-20260821-0615-B06-html-linter-cta-div-whitelist](content-lessons/LESSON-20260821-0615-B06-html-linter-cta-div-whitelist.md) | B06 | applied | structure |
+| [LESSON-20260824-1308-B10-tesseract-missing-cover-qa-blocked](content-lessons/LESSON-20260824-1308-B10-tesseract-missing-cover-qa-blocked.md) | B10 | proposed | other |
+| [LESSON-20260824-1308-B10-content-pipeline-pass-cover-env-gap](content-lessons/LESSON-20260824-1308-B10-content-pipeline-pass-cover-env-gap.md) | B10 | proposed | structure |

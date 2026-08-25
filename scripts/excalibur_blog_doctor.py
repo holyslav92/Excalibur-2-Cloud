@@ -6,6 +6,7 @@ import argparse
 import importlib.util
 import json
 import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -32,6 +33,24 @@ def check(condition: bool, label: str, errors: list[str], warnings: list[str], *
 
 def module_available(name: str) -> bool:
     return importlib.util.find_spec(name) is not None
+
+
+def tesseract_ready() -> tuple[bool, str]:
+    binary = shutil.which("tesseract")
+    if not binary:
+        return False, "tesseract binary missing (apt: tesseract-ocr tesseract-ocr-rus)"
+    if not module_available("pytesseract"):
+        return False, "pytesseract Python package missing (pip: pytesseract)"
+    proc = subprocess.run(
+        [binary, "--list-langs"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    langs = {line.strip() for line in (proc.stdout or "").splitlines() if line.strip()}
+    if "rus" not in langs:
+        return False, "tesseract rus language pack missing (apt: tesseract-ocr-rus)"
+    return True, binary
 
 
 def read_env_file(path: Path) -> dict[str, str]:
@@ -203,6 +222,13 @@ def main() -> int:
     )
     check(module_available("PIL"), "Pillow available", errors, warnings)
     check(module_available("numpy"), "numpy available", errors, warnings)
+    tess_ok, tess_detail = tesseract_ready()
+    check(
+        tess_ok,
+        f"Cover-QA OCR ready (tesseract + rus + pytesseract): {tess_detail}",
+        errors,
+        warnings,
+    )
 
     topics_dir = root / "memory/topics"
     check(

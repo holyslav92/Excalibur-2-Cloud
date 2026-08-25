@@ -1,0 +1,104 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B10-sdelku-zaregistrirovali-deneg-po-faktu-ne-bylo-v-tyumeni-nasledniki-osporili-pok/cover/cover.png",
+  "last_errors": [
+    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0000 chest_blue=0.016 smear=0.000",
+    "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+    "pixel_phone_readable FAIL: phone_digits='' ink=636 clipped=False",
+    "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Квартиру', 'оформили', 'деньги', 'дошли'] last_word='дошли' ocr=''",
+    "pixel_no_collage_inset FAIL: white_frac=0.657 inset_face=False blob_count=5",
+    "pixel_meme_present FAIL: orange_fur=6 legacy=0 host_face=True",
+    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.27",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "tiers": [
+        {
+          "tier": "standard",
+          "model": "grsai-image-standard",
+          "bytes": 990849,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_no_inpaint_artifacts FAIL: face_blue=0.0000 chest_blue=0.047 smear=0.000",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=866 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Квартиру', 'оформили', 'деньги', 'дошли'] last_word='дошли' ocr=''",
+            "pixel_no_collage_inset FAIL: white_frac=0.132 inset_face=True blob_count=4",
+            "pixel_no_wordstat_query_strips FAIL: 3 Wordstat strip(s), 0 bar band(s), paper_frac=0.2557",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        },
+        {
+          "tier": "vip",
+          "model": "grsai-image-vip",
+          "bytes": 1045154,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=1148 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Квартиру', 'оформили', 'деньги', 'дошли'] last_word='дошли' ocr=''",
+            "pixel_no_collage_inset FAIL: white_frac=0.776 inset_face=False blob_count=5",
+            "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0226",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "tiers": [
+        {
+          "tier": "standard",
+          "model": "grsai-image-standard",
+          "bytes": 1031481,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_host_face_present FAIL: no compact host face blob (pixels=8486 h_frac=0.498)",
+            "pixel_host_close_up FAIL: face_h_frac=0.15 w_frac=0.43 (need close-up)",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=3147 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Квартиру', 'оформили', 'деньги', 'дошли'] last_word='дошли' ocr=''",
+            "pixel_no_collage_inset FAIL: white_frac=0.696 inset_face=False blob_count=3",
+            "pixel_meme_present FAIL: orange_fur=141 legacy=207 host_face=False",
+            "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.1035",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        },
+        {
+          "tier": "vip",
+          "model": "grsai-image-vip",
+          "bytes": 966389,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_no_inpaint_artifacts FAIL: face_blue=0.0000 chest_blue=0.016 smear=0.000",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=636 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Квартиру', 'оформили', 'деньги', 'дошли'] last_word='дошли' ocr=''",
+            "pixel_no_collage_inset FAIL: white_frac=0.657 inset_face=False blob_count=5",
+            "pixel_meme_present FAIL: orange_fur=6 legacy=0 host_face=True",
+            "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.27",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        }
+      ]
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}
