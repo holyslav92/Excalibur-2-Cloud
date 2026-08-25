@@ -1,0 +1,208 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-25",
+    "today_ru": "25.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B10",
+    "title": "Сделку у нотариуса провели — суд отменил: мошенники по телефону",
+    "h1": "Сделку у нотариуса провели — суд отменил: мошенники по телефону",
+    "slug": "sdelku-u-notariusa-proveli-sud-otmenil-moshenniki-po-telefonu",
+    "primary_query": "Сделку у нотариуса провели — суд отменил: мошенники по телефону",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "Сделку у нотариуса провели — суд отменил: мошенники по телефону 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Мошенники убедили россиянку продать квартиру, но суд аннулировал сделку",
+          "url": "https://www.mk.ru/social/2026/08/07/moshenniki-ubedili-rossiyanku-prodat-kvartiru-no-sud-annuliroval-sdelku.html",
+          "snippet": ""
+        },
+        {
+          "title": "Мошенники звонят, суд отказывает: Верховный суд РФ пересмотрел правила ...",
+          "url": "https://dzen.ru/a/al25wwBCbB4pYC0n",
+          "snippet": "В Пермском крае суд признал недействительной сделку по продаже квартиры, которую местная жительница заключила под влиянием телефонных мошенников. Женщина обратилась в суд с требованием вернуть недвижимость, сообщили в Березниковском городском суде."
+        },
+        {
+          "title": "Мошенничество при продаже квартиры: как защитить себя покупателю в 2026 ...",
+          "url": "https://www.banki.ru/news/daytheme/?id=11023819",
+          "snippet": "Верховный суд РФ выпустил разъяснение, которое кардинально меняет практику по делам о возврате жилья. Если продавец перевел деньги аферистам, это еще не повод аннулировать договор. Судьи будут защищать не только жертв обмана, но и добросовестных покупателей."
+        },
+        {
+          "title": "Схему Долиной запретили - 1 июля 2026 | НГС.ру",
+          "url": "https://ngs.ru/text/realty/2026/07/01/76510149/",
+          "snippet": "Пожилая пенсионерка из Новгородской области стала жертвой мошенников: осенью 2023 года ей позвонили неизвестные и убедили продать жилье, чтобы «спасти» недвижимость. В итоге она продала свою однушку всего за 1,9 млн рублей директору агентства недвижимости."
+        },
+        {
+          "title": "В Туле суд отменил сделку по продаже квартиры, совершенную под влиянием ...",
+          "url": "https://myslo.ru/News/criminal/2025-11-27-v-tule-sud-otmenil-sdelku-po-prodazhe-kvartiry-sovershennuyu-pod-vliyaniem-moshennikov",
+          "snippet": "Верховный суд России постановил, что нижестоящие суды больше не смогут возвращать жилье продавцам, если продать недвижимость их заставили мошенники. О том, как теперь суды будут поступать с таким жильем, разбираемся в материале."
+        },
+        {
+          "title": "Как суды в России аннулируют сделки с квартирами: реальная угроза для ...",
+          "url": "https://harant.ru/blog/nedvizhimost/kak-v-rossii-cherez-sud-otmenyayut-uzhe-sostoyavshiesya-sdelki-s-kvartirami/",
+          "snippet": "Привокзальный районный суд признал недействительным договор купли-продажи жилья."
+        }
+      ],
+      "searched_at": "2026-08-25"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "Сделку у нотариуса провели — суд отменил: мошенники по телефону 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Мошенники убедили россиянку продать квартиру, но суд аннулировал сделку",
+          "url": "https://www.mk.ru/social/2026/08/07/moshenniki-ubedili-rossiyanku-prodat-kvartiru-no-sud-annuliroval-sdelku.html",
+          "snippet": ""
+        },
+        {
+          "title": "Верховный суд РФ разъяснил отмену сделок с недвижимостью",
+          "url": "https://mrandroid.ru/fraud-calls-court-rejects-real-estate-rules/",
+          "snippet": "В Пермском крае суд признал недействительной сделку по продаже квартиры, которую местная жительница заключила под влиянием телефонных мошенников. Женщина обратилась в суд с требованием вернуть недвижимость, сообщили в Березниковском городском суде."
+        },
+        {
+          "title": "Суд отменил сделку: мошенники заставили продавца продать квартиру ...",
+          "url": "https://domovka.ru/sud-otmenil-sdelku-moshenniki-zastavili-prodavtsa-prodat-kvartiru-rieltoru/",
+          "snippet": "Верховный суд РФ определил новые правила возврата жилья при продаже под влиянием мошенников. Вот как защитить сделку и не потерять квартиру."
+        },
+        {
+          "title": "Нотариусы: мошенники сместили фокус с дарения на сделки купли-продажи ...",
+          "url": "https://realty.ria.ru/20260817/moshenniki-2110869531.html",
+          "snippet": "В Березниках Пермского края суд отменил сделку с квартирой, которую женщина продала после звонков телефонных мошенников."
+        },
+        {
+          "title": "Ярославский суд отменил сделку по продаже квартиры по указанию мошенников",
+          "url": "https://www.kommersant.ru/doc/8229340",
+          "snippet": "Мошенники в сфере недвижимости в России переориентировались с дарения на сделки купли-продажи жилья. С начала 2025 года, когда стала обязательной нотариальная форма для договоров дарения,..."
+        },
+        {
+          "title": "Мошенники звонят, суд отказывает: Верховный суд РФ пересмотрел правила ...",
+          "url": "https://dzen.ru/a/al25wwBCbB4pYC0n",
+          "snippet": "Кировский районный суд Ярославля удовлетворил иск прокуратуры о признании недействительными договоров купли-продажи квартиры, совершенных в результате указаний телефонных мошенников. Решение..."
+        }
+      ],
+      "searched_at": "2026-08-25"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "Сделку у нотариуса провели — суд отменил: мошенники по телефону official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Мошенники убедили россиянку продать квартиру, но суд аннулировал сделку",
+          "url": "https://www.mk.ru/social/2026/08/07/moshenniki-ubedili-rossiyanku-prodat-kvartiru-no-sud-annuliroval-sdelku.html",
+          "snippet": ""
+        },
+        {
+          "title": "Нотариусы: мошенники сместили фокус с дарения на сделки купли-продажи ...",
+          "url": "https://realty.ria.ru/20260817/moshenniki-2110869531.html",
+          "snippet": "В Пермском крае суд признал недействительной сделку по продаже квартиры, которую местная жительница заключила под влиянием телефонных мошенников. Женщина обратилась в суд с требованием вернуть недвижимость, сообщили в Березниковском городском суде."
+        },
+        {
+          "title": "Суд отменил исполнительную надпись нотариуса по мошенническому кредиту",
+          "url": "https://notar.media/judicial/sud-otmenil-ispolnitelnuyu-nadpis-notariusa-po-moshennicheskomu-kreditu/",
+          "snippet": "Мошенники в сфере недвижимости в России переориентировались с дарения на сделки купли-продажи жилья, рассказали РИА Недвижимость в пресс-службе Федеральной нотариальной палаты (ФНП)."
+        },
+        {
+          "title": "Суд отменил сделку: мошенники заставили продавца продать квартиру ...",
+          "url": "https://domovka.ru/sud-otmenil-sdelku-moshenniki-zastavili-prodavtsa-prodat-kvartiru-rieltoru/",
+          "snippet": "Обратив внимание на это обстоятельство, суд удовлетворил иск женщины, признал недействительным кредитный договор и исполнительную надпись нотариуса."
+        },
+        {
+          "title": "Суд отменил взыскание с волгоградки по кредиту, который оформили мошенники",
+          "url": "https://news.mail.ru/incident/71283802/",
+          "snippet": "В Березниках Пермского края суд отменил сделку с квартирой, которую женщина продала после звонков телефонных мошенников."
+        },
+        {
+          "title": "Мошенничество - «Говорит Нотарь»",
+          "url": "http://notar.media/fraud/",
+          "snippet": "Жительница Волгоградской области Оксана М. попала в неприятную ситуацию: мошенники оформили на ее имя кредит, а банк попытался взыскать долг через нотариуса."
+        }
+      ],
+      "searched_at": "2026-08-25"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com Сделку у нотариуса провели — суд отменил: мошенники по телефону 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 4,
+      "results": [
+        {
+          "title": "was-node-suite-comfyui/image/menu_layer_mask.jpg at main · RituCodeWeb ...",
+          "url": "https://github.com/RituCodeWeb/was-node-suite-comfyui/blob/main/image/menu_layer_mask.jpg",
+          "snippet": ""
+        },
+        {
+          "title": "coursera-ddp-shiny/corpora/ru_50k.txt at master - GitHub",
+          "url": "https://github.com/spujadas/coursera-ddp-shiny/blob/master/corpora/ru_50k.txt",
+          "snippet": "Contribute to RituCodeWeb/was-node-suite-comfyui development by creating an account on GitHub."
+        },
+        {
+          "title": "mcp-god-mode/assets/flame-text.svg at main - GitHub",
+          "url": "https://github.com/CYBERAD7/mcp-god-mode/blob/main/assets/flame-text.svg",
+          "snippet": "Coursera Developing Data Products Week 4 Peer-graded Assignment: Shiny - spujadas/coursera-ddp-shiny"
+        },
+        {
+          "title": "hdd-recovery/docs/screenshot-disk-detail.svg at main - GitHub",
+          "url": "https://github.com/joanmarcriera/hdd-recovery/blob/main/docs/screenshot-disk-detail.svg",
+          "snippet": "Did you ever just want it to do everything? 148 POWERFUL Infosec/Admin tools on a single MCP server. - CYBERAD7/mcp-god-mode"
+        }
+      ],
+      "searched_at": "2026-08-25"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "Сделку у нотариуса провели — суд отменил: мошенники по телефону forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Суд отменил взыскание с волгоградки по кредиту, который оформили мошенники",
+          "url": "https://dzen.ru/news/by/story/5f28aea9-6264-5756-b314-42aed48cf5ce",
+          "snippet": ""
+        },
+        {
+          "title": "Суд отменил взыскание с волгоградки по кредиту, который оформили мошенники",
+          "url": "https://news.mail.ru/incident/71283802/",
+          "snippet": "Жительница Волгоградской области Оксана М. попала в неприятную ситуацию: мошенники оформили на ее имя кредит, а банк попытался взыскать долг через нотариуса."
+        },
+        {
+          "title": "Суд отменил исполнительную надпись нотариуса по мошенническому кредиту",
+          "url": "https://notar.media/judicial/sud-otmenil-ispolnitelnuyu-nadpis-notariusa-po-moshennicheskomu-kreditu/",
+          "snippet": "Жительница Волгоградской области Оксана М. попала в неприятную ситуацию: мошенники оформили на ее имя кредит, а банк попытался взыскать долг через нотариуса."
+        },
+        {
+          "title": "Суд отменил сделку: мошенники заставили продавца продать квартиру ...",
+          "url": "https://domovka.ru/sud-otmenil-sdelku-moshenniki-zastavili-prodavtsa-prodat-kvartiru-rieltoru/",
+          "snippet": "В роли кредитора выступил банк, а основанием стала исполнительная надпись нотариуса, которая постановила к взысканию задолженность в размере 135 тыс. рублей."
+        },
+        {
+          "title": "Как суды в России аннулируют сделки с квартирами: реальная угроза для ...",
+          "url": "https://harant.ru/blog/nedvizhimost/kak-v-rossii-cherez-sud-otmenyayut-uzhe-sostoyavshiesya-sdelki-s-kvartirami/",
+          "snippet": "В Березниках Пермского края суд отменил сделку с квартирой, которую женщина продала после звонков телефонных мошенников."
+        },
+        {
+          "title": "В Камышине суд отменил взыскание банка по кредиту, который оформили ...",
+          "url": "https://infokam.su/v-kamyshine-sud-otmenil-vzyskanie-banka-po-kreditu-kotoryj-oformili-moshenniki.html",
+          "snippet": "Покупка квартиры стала рискованной: сделку могут отменить через суд, оставив покупателя без жилья и денег. Узнайте, как защитить себя от мошенничества."
+        }
+      ],
+      "searched_at": "2026-08-25"
+    }
+  ],
+  "errors": []
+}

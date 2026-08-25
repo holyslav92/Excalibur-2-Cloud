@@ -1,0 +1,58 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B10-sdelku-u-notariusa-proveli-sud-otmenil-moshenniki-po-telefonu/cover/cover.png",
+  "last_errors": [
+    "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0010 chest_blue=0.123 smear=0.000",
+    "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+    "pixel_phone_readable FAIL: phone_digits='' ink=1625 clipped=False",
+    "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Нотариус', 'звонков'] last_word='звонков' ocr=''",
+    "pixel_no_collage_inset FAIL: white_frac=0.725 inset_face=False blob_count=5",
+    "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0352",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "bytes": 1013115,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0007 chest_blue=0.130 smear=0.000",
+        "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+        "pixel_phone_readable FAIL: phone_digits='' ink=549 clipped=False",
+        "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Нотариус', 'звонков'] last_word='звонков' ocr=''",
+        "pixel_no_collage_inset FAIL: white_frac=0.653 inset_face=False blob_count=7",
+        "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0586",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "bytes": 908523,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0010 chest_blue=0.123 smear=0.000",
+        "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+        "pixel_phone_readable FAIL: phone_digits='' ink=1625 clipped=False",
+        "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Нотариус', 'звонков'] last_word='звонков' ocr=''",
+        "pixel_no_collage_inset FAIL: white_frac=0.725 inset_face=False blob_count=5",
+        "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0352",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}
