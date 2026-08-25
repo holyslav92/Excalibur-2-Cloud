@@ -187,7 +187,8 @@
         "fixer_max_rounds": 2,
         "short_hook_words": "5-7_cyrillic",
         "ocr_escape": "apply_ocr_false_positive_escape_without_pil_kie",
-        "forbidden": ["Kie", "PIL_mashup", "infinite_cover_qa_loop"],
+        "forbidden": ["Kie", "PIL_mashup", "infinite_cover_qa_loop", "image_model_vip_tier"],
+        "model": "grsai_standard_only",
         "script": "scripts/excalibur_blog_grsai_solo_cover.py",
         "docs": ["memory/cover/cover-canon.json", "skills/cover-excalibur-blog/SKILL.md"]
       }

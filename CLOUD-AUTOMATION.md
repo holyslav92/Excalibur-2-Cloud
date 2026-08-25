@@ -57,7 +57,7 @@ Scout? → research_start → Research → Title → Writer → Sol
 
 - **Scout?** — по handoff / needs_scout; иначе research_start с заданным `topic_id`.
 - **Cover-QA** — обязательный финиш визуала (cover + 7 inline); **pixel gate** на `cover.png` bytes через `scripts/excalibur_blog_cover_qa_pixels.py` + `cover_qa.json` (`pixel_qa=true`, `cover_md5`). Без PASS дальше не идём. **Designed thumbnail gate:** hook H1 (справа, вне лица), телефон +7 922 001 65 05 (низ-право), мем-стикер (угол), optional yellow sticky from hook — **NO Wordstat query strips/bars** (`pixel_no_wordstat_query_strips`). FAIL: face-only collapse. **Fixer** — regen cover panel при layout FAIL; **never** PIL Wordstat overlay/repack → re-QA bytes.
-- **Cover budget (HARD):** `excalibur_blog_grsai_solo_cover.py` — default **2** full attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS` override). Каждая попытка = standard, при FAIL → vip. После бюджета → `cover/cover-budget-result.json` с `best_candidate` → **Indexer** (не бесконечный Cover-QA). Дирижёр: **≤15–20 мин** на cover; не grep pixel code часами.
+- **Cover budget (HARD):** `excalibur_blog_grsai_solo_cover.py` — default **2** full attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS` override). Каждая попытка = **standard only** (VIP tier отключён). После бюджета → `cover/cover-budget-result.json` с `best_candidate` → **Indexer** (не бесконечный Cover-QA). Дирижёр: **≤15–20 мин** на cover; не grep pixel code часами.
 - **Short hook:** ONE line, **5–7** кириллических слов (B08-style), prefer ≥5 букв для OCR; em dash OK; gate в `excalibur_blog_cover_text_gate.py`.
 - **OCR escape hatch:** `apply_ocr_false_positive_escape` в `cover_qa_pixels.py` — лицо + hook + телефон на PNG, только OCR truncation/opaque flakes → PASS (как B08/B09 live); без PIL mashup/Kie.
 - **Indexer** — `llms.txt` / `llms-full.txt` (без правок `article.html`).
@@ -134,7 +134,7 @@ Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 
 
 Cover + inline PNG **only grsai grsai standard image model** (Derouter image = optional last resort):
 
-1. `scripts/excalibur_blog_grsai_gpt_image2_api.py` — REST: `grsaiapi.com` (Global) → `grsai.dakka.com.cn` (China). Paths: `/v1/api/generate` (json → async poll) → `/v1/images/generations` → `/v1/draw/completions` + poll. Model tier: **first** non-vip standard; **only on failure** auto-escalate to vip (~3×). Never vip first. Face i2i from `face-studio-2026-06-23.jpg`.
+1. `scripts/excalibur_blog_grsai_gpt_image2_api.py` — REST: `grsaiapi.com` (Global) → `grsai.dakka.com.cn` (China). Paths: `/v1/api/generate` (json → async poll) → `/v1/images/generations` → `/v1/draw/completions` + poll. Model: **standard only**; **VIP tier disabled** (owner 2026-08-25). Face i2i from `face-studio-2026-06-23.jpg`.
 2. Solo cover CLI: `scripts/excalibur_blog_grsai_solo_cover.py` (1200×675 + pixel QA stamp; **max 2 attempts** default).
 3. Optional last resort: `EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1` → Derouter image REST (`excalibur_blog_derouter_gpt_image2_api.py`).
 4. grsai down → `GRSAI IMAGE BLOCKER` — diagnose/retry; **STOP**

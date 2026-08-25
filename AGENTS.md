@@ -10,7 +10,7 @@
 |---|--------|--------|
 | 1 | **Engagement bomb** | Цель поста = **вовлечение в Дзен** (лайки, комментарии, подписки). Форма = hot **news-casus актуалочка** (Тюмень, stakes, финал). **Прозаический лид 4–6 предложений** → **early TG+MAX** → история → практика → CTAs + **comment magnet** (один острый вопрос). **Запрещено:** TL;DR, «Быстрый инсайт», bullet-dump в первом экране, how-to checklist вместо casus. |
 | 2 | **Meme canon v1** | Covers + inlines: **only** `memory/cover/meme-top100.json` real templates. **People + cats** (NOT cats-only). **On-topic + funny**. Stickers ≤15%, **never** hook title / host face / phone (+80px). Anti-repeat **14д** (`used-motifs.json`). `meme_picks` in cover-text → quad-manifest. |
-| 3 | **Cover fail-fast** | `excalibur_blog_grsai_solo_cover.py`: max **2** full attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`). Timebox **≤15–20 мин** на cover. После бюджета → `cover/cover-budget-result.json` → **Indexer** (не бесконечный Cover-QA). OCR escape без PIL mashup/Kie. Short hook **5–7** кириллических слов. |
+| 3 | **Cover fail-fast** | `excalibur_blog_grsai_solo_cover.py`: max **2** full attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`). **grsai standard only** — VIP tier отключён. Timebox **≤15–20 мин** на cover. После бюджета → `cover/cover-budget-result.json` → **Indexer** (не бесконечный Cover-QA). OCR escape без PIL mashup/Kie. Short hook **5–7** кириллических слов. |
 
 Доки: `shared/quality-bar-9.md`, `shared/dzen-news-casus.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills, `CLOUD-AUTOMATION.md`.
 
@@ -56,7 +56,7 @@ Scout? → research_start → Research → Title → Writer(смысл)
 При недоступности → `DEROUTER <ROLE> BLOCKER`, без тихого fallback на Composer. См. `shared/derouter-opus-brain-contract.md`.
 **Cover PNG:** grsai grsai standard image model REST (`shared/grsai-gpt-image-api-contract.md`). Optional Derouter image fallback only. **Kie FORBIDDEN forever.** PIL mashup FORBIDDEN.
 **Meme canon:** `memory/cover/meme-top100.json` + `cover-canon.json` → meme_canon_v1: real top memes, people+cats variety, on-topic funny stickers ≤15%, never on hook/face/phone, anti-repeat 14д.
-**Cover budget (HARD):** `excalibur_blog_grsai_solo_cover.py` — max **2** full attempts (standard→vip per attempt); override `EXCALIBUR_COVER_MAX_ATTEMPTS`. После исчерпания бюджета → `cover/cover-budget-result.json` + **Indexer** (не бесконечный Cover-QA loop). **≤15–20 мин** на cover; не копать `cover_qa_pixels.py` как дебаг-хобби.
+**Cover budget (HARD):** `excalibur_blog_grsai_solo_cover.py` — max **2** full attempts (standard only; **VIP tier disabled**); override `EXCALIBUR_COVER_MAX_ATTEMPTS`. После исчерпания бюджета → `cover/cover-budget-result.json` + **Indexer** (не бесконечный Cover-QA loop). **≤15–20 мин** на cover; не копать `cover_qa_pixels.py` как дебаг-хобби.
 **Short hook:** ONE line, **5–7** кириллических слов (B08-style), prefer слова ≥5 букв; em dash OK; novel-length hooks запрещены (`cover-text` gate).
 **Cover-QA OCR escape:** если лицо + кириллический hook + телефон на PNG, а падают только OCR truncation / opaque-title flakes → `apply_ocr_false_positive_escape` (как B08/B09 live); без PIL mashup/Kie.
 **Wordstat:** MCP-KV. **Cover-QA:** Python gates, не «глаз» агента.

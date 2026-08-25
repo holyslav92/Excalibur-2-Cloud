@@ -32,18 +32,16 @@ Primary Cloud path for Excalibur BLOG cover/inline quad canvas generation (owner
 
 ## Model
 
-- **First attempt (mandatory):** non-vip standard tier (`GRSAI_IMAGE_MODEL` override allowed only if not vip)
-- **Second attempt (auto):** vip tier (~3× cost) **only** after one failed non-vip call:
-  - API error, empty result, timeout (all hosts/paths exhausted)
-  - Solo cover: Cover-QA FAIL on non-vip PNG → escalate vip before next attempt
-- **Never** vip on the first try — even if `GRSAI_IMAGE_MODEL` is set to vip tier, first call is non-vip
+- **Standard only (owner 2026-08-25):** grsai standard image model — **VIP tier DISABLED forever**
+- `GRSAI_IMAGE_MODEL` override allowed only if **not** VIP suffix; env VIP model id → forced to standard
 - Quality: `GRSAI_IMAGE_QUALITY` (default `high`; `auto` if supported)
+- On API fail: retry standard on alternate hosts/paths — **never** escalate to vip
 
-Implementation: `model_tier_standard()` → `generate_image()`; on failure
-`model_tier_vip_fallback()` via `generate_image_with_model_tier_fallback()` or
-solo-cover per-attempt tier loop in `excalibur_blog_grsai_solo_cover.py`.
+Implementation: `model_tier_standard()` → `generate_image()` only. Solo cover:
+`excalibur_blog_grsai_solo_cover.py` — each attempt standard; next attempt on QA fail, not vip.
 
-**Cover budget:** default `EXCALIBUR_COVER_MAX_ATTEMPTS=2` full rounds (each = standard then vip-on-QA-fail). Exhausted → `cover/cover-budget-result.json` with `best_candidate`; conductor proceeds to Indexer (no infinite Cover-QA loop).
+**Cover budget:** default `EXCALIBUR_COVER_MAX_ATTEMPTS=2` full standard attempts. Exhausted →
+`cover/cover-budget-result.json` with `best_candidate`; conductor proceeds to Indexer (no infinite Cover-QA loop).
 
 ## Text → image (`/v1/api/generate`)
 
@@ -60,7 +58,7 @@ solo-cover per-attempt tier loop in `excalibur_blog_grsai_solo_cover.py`.
 }
 ```
 
-- vip tier: use pixel `aspectRatio` (`1672x941` or `2048x1152` for 2K) — **not** `"16:9"` string
+- Standard tier: `aspectRatio` `16:9`, pixel `1672x941`, or `2048x1152` for 2K (no vip required)
 - Pipeline resizes/crops to **1200×675** for `cover.png` (quad canvas: **2048×1152**)
 - Response: `status=succeeded` → `results[0].url` (download within 2h)
 - Async: `replyType=async` → poll `GET /v1/api/result?id=<task_id>`
