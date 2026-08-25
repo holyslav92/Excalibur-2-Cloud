@@ -158,5 +158,5 @@ checks_run:
 - `python3 -m py_compile` on changed scripts
 - `python3 scripts/excalibur_blog_doctor.py` → errors=0
 - `python3 scripts/excalibur_blog_quality_bar_9_gate.py` B10 → cover_qa_pass only blocker
-commit: pending
+commit: b924c58
 
