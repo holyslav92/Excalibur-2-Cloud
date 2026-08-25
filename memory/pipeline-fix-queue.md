@@ -110,3 +110,53 @@ checks_run:
 - `python3 -m unittest tests.test_pipeline_speed_b03.HtmlAutofixTest` → OK
 commit: 35ab34b
 
+## INC-20260825-1200-b10-cover-qa-tesseract
+status: fixed
+run_date: 2026-08-25
+role: excalibur-blog-fixer
+topic_id: B10
+article_dir: memory/blog/articles/B10-sdelku-u-notariusa-proveli-sud-otmenil-moshenniki-po-telefonu
+severity: blocker
+category: env+script
+
+### What went wrong
+- Cloud VM без `tesseract-ocr` → Cover-QA OCR пустой (`cyr_ratio=0`, `phone_digits=''`) → ложный FAIL hook/phone даже при читаемом PNG.
+- `quality-bar-9` `wordstat_stickers_not_title_overlap` FAIL при `wordstat_stickers: []` — конфликт с owner ban «NO Wordstat strips on cover» (B08/B09).
+- B10 solo cover regen: grsai не стабильно проходит `pixel_no_collage_inset` / `pixel_no_wordstat_query_strips` / inpaint после 2 attempts; Publish STOP.
+
+### How the agent recovered this run
+- Установлен tesseract + rus/eng; solo regen cover (phone+hook OCR PASS на лучшем candidate до peel).
+- `check_wordstat_overlap`: empty stickers → PASS.
+- `doctor` + `environment.json`: apt install tesseract.
+- Indexer выполнен; Publish STOP (cover_qa_gate FAIL).
+
+### Durable fix needed before next run
+- Preinstall tesseract в Cloud environment (merged).
+- Cover: улучшить solo prompt / regen pick для collage inset + paper_frac < 0.012 без peel mashup.
+
+### Suggested files to inspect/change
+- `.cursor/environment.json`
+- `scripts/excalibur_blog_doctor.py`
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `scripts/excalibur_blog_cover_quad_prompt.py` (pick_identity_reference import)
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-25
+fix_summary:
+- tesseract в environment install + doctor gate.
+- quality-bar empty wordstat_stickers PASS when strips banned on cover.
+- cover_quad_prompt import fix for identity reference.
+files_changed:
+- `.cursor/environment.json`
+- `scripts/excalibur_blog_doctor.py`
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `scripts/excalibur_blog_cover_quad_prompt.py`
+checks_run:
+- `python3 -m py_compile` on changed scripts
+- `python3 scripts/excalibur_blog_doctor.py` → errors=0
+- `python3 scripts/excalibur_blog_quality_bar_9_gate.py` B10 → cover_qa_pass only blocker
+commit: b924c58
+

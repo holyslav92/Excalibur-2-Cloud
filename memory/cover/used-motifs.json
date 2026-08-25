@@ -103,6 +103,23 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-25",
+      "topic_id": "B10",
+      "slug": "",
+      "motifs": {
+        "composition": "динамичный поясной портрет справа ведущий отдёргивает смартфон",
+        "location": "солнечный вход нотариальная контора тюмени стеклянная дверь",
+        "meme": "roll_safe smudge_cat small stickers",
+        "prop_set": "смартфон папка сделки ручка нотариуса печать",
+        "sticker_set": "roll_safe bottom-left smudge_cat top-right",
+        "joke": "нотариальная печать но звонок мошенника прорывается",
+        "outfit": "песочно-голубая рубашка кремовая жилетка без пиджака",
+        "emotion": "ошарашенное недоверие раздражённое",
+        "pose_framing": "поясной динамичный ракурс справа корпус к телефону",
+        "action": "отводит звонящий телефон от уха защищает папку сделки"
+      }
     }
   ]
 }
