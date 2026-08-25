@@ -103,6 +103,20 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-25",
+      "topic_id": "B10",
+      "slug": "skidka-skryla-pnd-sdelku-s-kvartiroy-v-tyumeni-ostanovili",
+      "motifs": {
+        "composition": "хост слева, hook справа",
+        "location": "двор сталинки тюмень",
+        "meme": "roll_safe,smudge_cat",
+        "outfit": "светлая рубашка, тренч",
+        "emotion": "side-eye шок",
+        "pose_framing": "поясной портрет",
+        "action": "папка с документами"
+      }
     }
   ]
 }

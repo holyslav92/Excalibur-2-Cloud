@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/skidka-skryla-pnd-sdelku-s-kvartiroy-v-tyumeni-ostanovili/#blogposting",
+      "url": "{{SITE_BASE}}/skidka-skryla-pnd-sdelku-s-kvartiroy-v-tyumeni-ostanovili/",
+      "headline": "Скидка в 3 млн скрыла ПНД: сделку с квартирой в Тюмени остановили",
+      "datePublished": "2026-08-25",
+      "author": {
+        "@type": "Person",
+        "name": "Святослав Шакин",
+        "sameAs": []
+      }
+    }
+  ]
+}
