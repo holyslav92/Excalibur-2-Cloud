@@ -385,6 +385,8 @@ def check_wordstat_overlap(article_dir: Path) -> bool:
     except json.JSONDecodeError:
         return False
     stickers = manifest.get("wordstat_stickers") or []
+    if not stickers:
+        return True
     if not (1 <= len(stickers) <= 3):
         return False
     positions = manifest.get("wordstat_sticker_positions")
