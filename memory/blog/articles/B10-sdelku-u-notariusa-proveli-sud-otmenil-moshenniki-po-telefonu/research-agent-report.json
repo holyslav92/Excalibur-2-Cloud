@@ -1,0 +1,63 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B10",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-25",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Пост 16.08.2026: нотариальные сделки при телефонных мошенниках — 40% устояли до суда; комплексная защита"
+      },
+      {
+        "url": "https://harant.ru/blog/nedvizhimost/pomozhet-li-notarius-zashhititsya-ot-moshennikov/",
+        "type": "research",
+        "note": "ЦДЭ Гайдара: 298 дел 2023–2026, телефонные мошенники, 10.07.2026"
+      },
+      {
+        "url": "https://spb.mk.ru/social/2026/08/11/peterburzhcev-predupredili-o-krazhe-dannykh-cherez-falshivykh-notariusov.html",
+        "type": "news",
+        "note": "FNP: фальшивые звонки от имени нотариусов, 11.08.2026"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume_tyumen": 22652,
+    "p0_volume_ru225": 39858,
+    "secondary_phrase": "проверка квартиры перед покупкой",
+    "secondary_volume": 1872,
+    "sticker_phrase": "юридическая проверка квартиры",
+    "sticker_volume": 962,
+    "scam_phrase": "мошенники при покупке квартиры",
+    "scam_volume": 404,
+    "partial": ["totalCount-only"]
+  },
+  "official_source_audit": {
+    "required": false,
+    "status": "PASS",
+    "verified_claims": 0,
+    "entities_checked": [],
+    "errors": [],
+    "note": "Нет тарифных/комиссионных claims банков; official_verifications N/A в research-notes"
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "anti_dup_notes": "не B05 скидка/задаток; не B02 расписка; не B09 ЕГРН обременение; scout story_dup PASS vs WP notarius"
+  },
+  "source_count": 11,
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
