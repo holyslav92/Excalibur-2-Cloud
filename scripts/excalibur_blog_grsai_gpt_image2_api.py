@@ -45,9 +45,6 @@ def grsai_standard_model_id() -> str:
     return "gpt" + "-image-" + "2"
 
 
-def grsai_vip_model_id() -> str:
-    return grsai_standard_model_id() + "-vip"
-
 DEFAULT_QUALITY = "high"
 DEFAULT_ASPECT_16_9 = "16:9"
 DEFAULT_SIZE_2K_16_9 = "2048x1152"
@@ -106,34 +103,32 @@ def resolve_grsai_api_key(env_name: str = DEFAULT_API_KEY_ENV) -> str:
 
 
 def default_model() -> str:
-    """Первый tier: non-vip (owner rule — vip только после провала standard)."""
+    """Модель grsai: только standard tier (non-vip)."""
     return model_tier_standard()
 
 
+def normalize_grsai_model(model: str) -> str:
+    """VIP tier отключён owner 2026-08-25 — всегда standard, даже из env."""
+    raw = str(model or "").strip()
+    if not raw:
+        return grsai_standard_model_id()
+    if raw.endswith("-vip"):
+        return grsai_standard_model_id()
+    return raw
+
+
 def model_tier_standard() -> str:
-    """Модель первой попытки: всегда non-vip, даже если GRSAI_IMAGE_MODEL=vip."""
+    """Модель генерации: standard only; GRSAI_IMAGE_MODEL=vip → принудительно standard."""
     explicit = os.environ.get(DEFAULT_MODEL_ENV, "").strip()
-    if explicit and explicit != grsai_vip_model_id():
-        return explicit
+    if explicit:
+        return normalize_grsai_model(explicit)
     return grsai_standard_model_id()
 
 
-def model_tier_vip_fallback(standard_model: str | None = None) -> str:
-    """Модель второй попытки после провала standard (API/empty/timeout/QA regen)."""
-    base = (standard_model or model_tier_standard()).strip()
-    if base.endswith("-vip"):
-        return base
-    return grsai_vip_model_id()
-
-
 def iter_model_tiers() -> list[tuple[str, str]]:
-    """Пары (tier_name, model_id): standard → vip fallback."""
+    """Один tier: standard only (vip отключён)."""
     standard = model_tier_standard()
-    vip = model_tier_vip_fallback(standard)
-    tiers: list[tuple[str, str]] = [("standard", standard)]
-    if vip != standard:
-        tiers.append(("vip", vip))
-    return tiers
+    return [("standard", standard)]
 
 
 def default_quality() -> str:
@@ -533,30 +528,22 @@ def resolve_generate_response(
     raise GrsaiApiError(f"grsai {endpoint} unexpected response: {list(parsed.keys())}")
 
 
-def is_vip_model(model: str) -> bool:
-    return str(model or "").strip().endswith("-vip")
-
-
 def aspect_ratio_for_grsai(
     aspect_ratio: str,
     *,
     model: str,
     resolution: str = "",
 ) -> str:
-    """vip tier требует пиксельный size (1672x941 / 2048x1152), не строку 16:9."""
+    """16:9 / 1672x941 / 2048x1152 на standard tier (2K без vip)."""
     raw = (aspect_ratio or DEFAULT_ASPECT_16_9).strip()
     res = str(resolution or "").strip().upper()
-    if is_vip_model(model):
-        if raw in {"2048x1152"} or res == "2K":
-            return "2048x1152"
-        if raw in {"16:9", "1672x941"}:
-            return "1672x941"
-        if "x" in raw.lower().replace("×", "x"):
-            return raw
+    if raw in {"2048x1152"} or res == "2K":
+        return "2048x1152"
+    if raw in {"16:9", "1672x941"}:
         return "1672x941"
-    if raw in {"16:9", "1672x941", "2048x1152"}:
-        return raw if raw != "2048x1152" else "16:9"
-    return raw
+    if "x" in raw.lower().replace("×", "x"):
+        return raw
+    return DEFAULT_ASPECT_16_9
 
 
 def generate_image(
@@ -712,66 +699,6 @@ def generate_image(
     raise GrsaiApiError(f"grsai failed on all hosts/paths: {last_error}")
 
 
-def generate_image_with_model_tier_fallback(
-    *,
-    root: Path,
-    batch_path: Path,
-    image_input: dict[str, Any],
-    api_key: str,
-    quality: str,
-    target_size: str,
-    timeout: int,
-    hosts: list[str],
-    max_retries: int,
-    retry_wait: int,
-    ref_path: Path | None = None,
-) -> tuple[bytes, dict[str, Any]]:
-    """Сначала non-vip; при API/empty/timeout провале — один retry на vip (~3× cost)."""
-    standard = model_tier_standard()
-    try:
-        image_bytes, meta = generate_image(
-            root=root,
-            batch_path=batch_path,
-            image_input=image_input,
-            api_key=api_key,
-            model=standard,
-            quality=quality,
-            target_size=target_size,
-            timeout=timeout,
-            hosts=hosts,
-            max_retries=max_retries,
-            retry_wait=retry_wait,
-            ref_path=ref_path,
-        )
-        meta["model_tier"] = "standard"
-        return image_bytes, meta
-    except GrsaiApiError as exc:
-        vip = model_tier_vip_fallback(standard)
-        if vip == standard:
-            raise
-        print(
-            f"grsai non-vip model={standard} failed ({exc}); escalating to vip model={vip}",
-            flush=True,
-        )
-        image_bytes, meta = generate_image(
-            root=root,
-            batch_path=batch_path,
-            image_input=image_input,
-            api_key=api_key,
-            model=vip,
-            quality=quality,
-            target_size=target_size,
-            timeout=timeout,
-            hosts=hosts,
-            max_retries=max_retries,
-            retry_wait=retry_wait,
-            ref_path=ref_path,
-        )
-        meta["model_tier"] = "vip_fallback"
-        meta["model_standard_attempt"] = standard
-        return image_bytes, meta
-
-
 def fallback_derouter_enabled() -> bool:
     return os.environ.get("EXCALIBUR_IMAGE_FALLBACK_DEROUTER", "").strip().lower() in {
         "1",
@@ -843,7 +770,6 @@ def main() -> int:
         image_input = batch_mcp_args(batch_path)
         batch_meta = load_json(batch_path)
         standard_model = model_tier_standard()
-        vip_model = model_tier_vip_fallback(standard_model)
         quality = default_quality()
         local_refs = resolve_local_reference_paths(root=root, batch_path=batch_path)
         mode = "i2i" if local_refs else "t2i"
@@ -853,7 +779,8 @@ def main() -> int:
         dry_payload = {
             "mode": mode,
             "model": standard_model,
-            "model_tier_vip_fallback": vip_model,
+            "model_tier": "standard_only",
+            "vip_disabled": True,
             "aspect_ratio": aspect_ratio_for_grsai(
                 str(image_input.get("aspect_ratio") or DEFAULT_ASPECT_16_9),
                 model=standard_model,
@@ -885,11 +812,12 @@ def main() -> int:
 
         timeout = max(MIN_TIMEOUT_SECONDS, int(args.timeout))
         try:
-            image_bytes, meta = generate_image_with_model_tier_fallback(
+            image_bytes, meta = generate_image(
                 root=root,
                 batch_path=batch_path,
                 image_input=image_input,
                 api_key=api_key,
+                model=standard_model,
                 quality=quality,
                 target_size=target_size,
                 timeout=timeout,
@@ -897,6 +825,7 @@ def main() -> int:
                 max_retries=max(0, int(args.max_retries)),
                 retry_wait=max(0, int(args.retry_wait)),
             )
+            meta["model_tier"] = "standard"
         except GrsaiApiError:
             fb = try_derouter_fallback(
                 root=root,

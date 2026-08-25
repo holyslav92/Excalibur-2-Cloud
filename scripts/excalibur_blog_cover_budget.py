@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Cover regen budget + short-hook canon helpers.
 
-Hard cap on grsai solo cover attempts (default 2 full rounds: standard → vip).
+Hard cap on grsai solo cover attempts (default 2 full rounds, standard tier only).
 Override: EXCALIBUR_COVER_MAX_ATTEMPTS env or CLI --max-attempts.
 """
 
@@ -23,7 +23,7 @@ CYRILLIC_WORD_RE = re.compile(r"[а-яА-ЯёЁ]+")
 
 
 def resolve_cover_max_attempts(cli_value: int | None = None) -> int:
-    """Бюджет полных попыток cover (каждая = standard, при FAIL → vip)."""
+    """Бюджет полных попыток cover (каждая = standard tier only, без vip)."""
     if cli_value is not None and int(cli_value) > 0:
         return int(cli_value)
     env = os.environ.get("EXCALIBUR_COVER_MAX_ATTEMPTS", "").strip()

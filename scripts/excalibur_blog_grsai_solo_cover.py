@@ -4,8 +4,7 @@
 Builds solo cover prompt from quad-manifest, generates 1200×675 PNG,
 stamps cover_qa.json. Kie and PIL mashup FORBIDDEN.
 
-Model tiers (owner rule): first call non-vip; on API fail or Cover-QA FAIL
-escalate to vip for the same attempt; next attempt starts non-vip again.
+VIP image tier disabled owner 2026-08-25 — standard grsai model only.
 
 Hard budget: default max 2 full attempts (EXCALIBUR_COVER_MAX_ATTEMPTS override).
 After budget → clear FAIL with best candidate path; never infinite loop.
@@ -25,7 +24,7 @@ from excalibur_blog_grsai_gpt_image2_api import (
     MIN_TIMEOUT_SECONDS,
     default_quality,
     generate_image,
-    iter_model_tiers,
+    model_tier_standard,
     project_root,
     resolve_grsai_api_key,
     resolve_hosts,
@@ -157,11 +156,11 @@ def main() -> int:
 
     timeout = max(MIN_TIMEOUT_SECONDS, int(args.timeout))
     hosts = resolve_hosts()
-    model_tiers = iter_model_tiers()
+    model = model_tier_standard()
 
     print(
         f"prompt_chars={len(prompt)} ref={ref_path.name} max_attempts={max_attempts} "
-        f"model_tiers={[m for _, m in model_tiers]} hosts={hosts}",
+        f"model={model} hosts={hosts}",
         flush=True,
     )
 
@@ -172,73 +171,63 @@ def main() -> int:
     attempts_log: list[dict[str, Any]] = []
     best_cover_path = article_dir / "cover" / "cover.png"
 
+    image_input = {
+        "prompt": prompt,
+        "aspect_ratio": "16:9",
+        "resolution": "2K",
+    }
+
     for attempt in range(1, max_attempts + 1):
-        print(f"attempt {attempt}/{max_attempts}", flush=True)
+        print(f"attempt {attempt}/{max_attempts} model={model}", flush=True)
         batch_path = write_temp_batch(article_dir, prompt, ref_path)
-        image_input = {
-            "prompt": prompt,
-            "aspect_ratio": "16:9",
-            "resolution": "2K",
-        }
 
-        attempt_entry: dict[str, Any] = {"attempt": attempt, "tiers": []}
+        attempt_entry: dict[str, Any] = {"attempt": attempt, "model": model}
 
-        for tier_name, model in model_tiers:
-            print(f"  tier={tier_name} model={model}", flush=True)
-            tier_entry: dict[str, Any] = {"tier": tier_name, "model": model}
-            try:
-                raw_bytes, gen_meta = generate_image(
-                    root=root,
-                    batch_path=batch_path,
-                    image_input=image_input,
-                    api_key=api_key,
-                    model=model,
-                    quality=quality,
-                    target_size=SOLO_COVER_SIZE,
-                    timeout=timeout,
-                    hosts=hosts,
-                    max_retries=1,
-                    retry_wait=5,
-                    ref_path=ref_path,
-                )
-            except Exception as exc:  # noqa: BLE001
-                tier_entry["error"] = str(exc)
-                attempt_entry["tiers"].append(tier_entry)
-                if tier_name == "standard" and len(model_tiers) > 1:
-                    print(f"WARN non-vip generation failed: {exc}", flush=True)
-                    continue
-                print(f"FAIL generation: {exc}", file=sys.stderr)
-                break
-
-            gen_meta["model_tier"] = tier_name
-            cover_path = article_dir / "cover" / "cover.png"
-            cover_path.parent.mkdir(parents=True, exist_ok=True)
-            cover_path.write_bytes(raw_bytes)
-            best_cover_path = cover_path
-            tier_entry["bytes"] = len(raw_bytes)
-            tier_entry["host"] = gen_meta.get("host")
-            print(
-                f"OK cover.png bytes={len(raw_bytes)} tier={tier_name} model={model} "
-                f"host={gen_meta.get('host')} endpoint={gen_meta.get('endpoint')}",
+        try:
+            raw_bytes, gen_meta = generate_image(
+                root=root,
+                batch_path=batch_path,
+                image_input=image_input,
+                api_key=api_key,
+                model=model,
+                quality=quality,
+                target_size=SOLO_COVER_SIZE,
+                timeout=timeout,
+                hosts=hosts,
+                max_retries=1,
+                retry_wait=5,
+                ref_path=ref_path,
             )
+        except Exception as exc:  # noqa: BLE001
+            attempt_entry["error"] = str(exc)
+            attempts_log.append(attempt_entry)
+            print(f"FAIL generation: {exc}", file=sys.stderr)
+            continue
 
-            qa = stamp_qa(article_dir, root, topic_id)
-            tier_entry["qa_status"] = qa["status"]
-            tier_entry["qa_errors"] = list(qa["errors"])
-            attempt_entry["tiers"].append(tier_entry)
+        gen_meta["model_tier"] = "standard"
+        cover_path = article_dir / "cover" / "cover.png"
+        cover_path.parent.mkdir(parents=True, exist_ok=True)
+        cover_path.write_bytes(raw_bytes)
+        best_cover_path = cover_path
+        attempt_entry["bytes"] = len(raw_bytes)
+        attempt_entry["host"] = gen_meta.get("host")
+        print(
+            f"OK cover.png bytes={len(raw_bytes)} model={model} "
+            f"host={gen_meta.get('host')} endpoint={gen_meta.get('endpoint')}",
+        )
 
-            if qa["status"] == "PASS":
-                print(f"OK cover_qa PASS md5={qa['md5']} tier={tier_name}")
-                return 0
+        qa = stamp_qa(article_dir, root, topic_id)
+        attempt_entry["qa_status"] = qa["status"]
+        attempt_entry["qa_errors"] = list(qa["errors"])
 
-            last_errors = list(qa["errors"])
-            print(f"WARN pixel QA fail ({tier_name}):", "; ".join(last_errors), flush=True)
-            if tier_name == "standard" and len(model_tiers) > 1:
-                print("  escalating to vip for same attempt", flush=True)
-                continue
-            break
+        if qa["status"] == "PASS":
+            print(f"OK cover_qa PASS md5={qa['md5']}")
+            return 0
 
+        last_errors = list(qa["errors"])
+        attempt_entry["qa_fail"] = True
         attempts_log.append(attempt_entry)
+        print(f"WARN pixel QA fail: {'; '.join(last_errors)}", flush=True)
 
     report_path = write_budget_exhausted_report(
         article_dir,
