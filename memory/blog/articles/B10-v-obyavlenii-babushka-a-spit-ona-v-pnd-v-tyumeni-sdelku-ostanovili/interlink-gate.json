@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B10",
+  "slug": "skidka-skryla-pnd-sdelku-s-kvartiroy-v-tyumeni-ostanovili",
+  "candidates_count": 11,
+  "outbound_found": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero"
+    },
+    {
+      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "title": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

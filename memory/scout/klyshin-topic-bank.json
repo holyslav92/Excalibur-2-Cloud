@@ -76,7 +76,9 @@
         "купить квартиру в тюмени"
       ],
       "tyumen_localize": true,
-      "status": "seed"
+      "status": "used",
+      "topic_id": "B10",
+      "used_at": "2026-08-25"
     },
     {
       "id": "power_of_attorney_svo",
@@ -295,6 +297,13 @@
         "elderly_pnd_serbsky"
       ],
       "note": "скидка 2 млн / бабушка"
+    },
+    {
+      "topic_id": "B10",
+      "hook_ids": [
+        "elderly_pnd_serbsky"
+      ],
+      "note": "ПНД / скидка 3 млн / бабушки нет"
     },
     {
       "topic_id": "B06",

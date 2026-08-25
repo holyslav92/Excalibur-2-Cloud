@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "research_date": "2026-08-25",
+  "fresh_signal": {
+    "source": "https://t.me/s/klyshin_A",
+    "accessed_at": "2026-08-25",
+    "note": "Пост о бабушке-собственнике, ПНД, старой доверенности"
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "note": "Нет банковских тарифов; юридические нормы ГК РФ + нотариальная палата + РБК"
+  },
+  "wordstat": {
+    "provider": "mcp-kv",
+    "accessed_at": "2026-08-25",
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 22652
+  }
+}

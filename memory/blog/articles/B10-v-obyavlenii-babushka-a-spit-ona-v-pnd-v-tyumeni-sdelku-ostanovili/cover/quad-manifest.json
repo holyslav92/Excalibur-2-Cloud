@@ -1,0 +1,223 @@
+{
+  "topic_id": "B10",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Квартиру отдают дешевле — хозяйка на учёте",
+  "cover_hook_highlight": "дешевле",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин с документами у сталинского дома в Тюмени — скидка и ПНД",
+      "scene_hint": "Двор сталинки, Тюмень: Святослав с папкой, side-eye.",
+      "meme_caption_ru": "",
+      "sticky": "Сделку остановили",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённый боковой взгляд с недоверчивой гримасой"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Скидка в три миллиона — это уже не торг, это признание",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица скидка vs риск",
+      "alt": "Скидка и риск",
+      "labels": [
+        "скидка 3 млн",
+        "ниже рынка",
+        "красный флаг"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "На просмотре был сын, а собственница — в видеозвонке",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "Схема: сын вместо бабушки",
+      "alt": "Сын на сделке",
+      "labels": [
+        "сын на сделке",
+        "бабушки нет",
+        "доверенность"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Справка из ПНД, которую принесли «для галочки»",
+      "visual_type": "checklist_board",
+      "scene_hint": "Чеклист ПНД",
+      "alt": "Справка ПНД",
+      "labels": [
+        "справка ПНД",
+        "наблюдение",
+        "ст. 177 ГК"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Почему «дееспособна по документам» не спасает покупателя",
+      "visual_type": "schema_faq_ui",
+      "scene_hint": "FAQ ст.177 ГК",
+      "alt": "Дееспособность vs риск",
+      "labels": [
+        "дееспособен",
+        "но риск",
+        "освидетельствование"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Финал: сделку остановили за день до подачи документов",
+      "visual_type": "comparison_table",
+      "scene_hint": "Стоп сделки до подписания",
+      "alt": "Финал: сделку остановили",
+      "labels": [
+        "сделку стоп",
+        "до подписания",
+        "аванс не ушёл"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что проверять теперь: пять действий, которые заняли бы один день",
+      "visual_type": "tool_screenshot",
+      "scene_hint": "5 шагов проверки",
+      "alt": "Проверка до аванса",
+      "labels": [
+        "проверка продавца",
+        "Тюмень",
+        "до аванса"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "У честной скидки есть биография",
+      "visual_type": "infographic_card",
+      "scene_hint": "Дисконт >20% сигнал",
+      "alt": "Честная скидка",
+      "labels": [
+        "дисконт >20%",
+        "сигнал бежать",
+        "не торг"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "meme_picks": {
+    "cover": [
+      "roll_safe",
+      "smudge_cat"
+    ],
+    "inline_1": [
+      "hide_pain_harold"
+    ],
+    "inline_5": [
+      "grumpy_cat"
+    ],
+    "inline_7": [
+      "confused_math_lady"
+    ]
+  },
+  "cover_motifs": {
+    "composition": "хост справа с документами, фасад сталинки слева, зона под hook",
+    "location": "солнечный двор сталинки, Тюмень",
+    "meme": "Side Eyeing Chloe",
+    "outfit": "светлая рубашка, тренч",
+    "emotion": "side-eye шок",
+    "pose_framing": "поясной портрет три четверти",
+    "action": "папка с документами"
+  }
+}

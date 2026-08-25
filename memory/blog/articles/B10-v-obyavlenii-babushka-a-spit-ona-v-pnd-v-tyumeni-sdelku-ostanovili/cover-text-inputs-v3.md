@@ -1,0 +1,26 @@
+OUTPUT ONLY JSON. Derouter cover-text. NO markdown.
+
+{
+  "hook": "Скидка три миллиона — бабушка в ПНД",
+  "highlight": "ПНД",
+  "sticky": "Сделку остановили",
+  "phone_cta": "+7 922 001 65 05",
+  "wordstat_stickers": [],
+  "inline_labels": {
+    "inline_1": ["скидка 3 млн", "ниже рынка", "красный флаг"],
+    "inline_2": ["сын на сделке", "бабушки нет", "доверенность"],
+    "inline_3": ["справка ПНД", "наблюдение", "ст. 177 ГК"],
+    "inline_4": ["дееспособен", "но риск", "освидетельствование"],
+    "inline_5": ["сделку стоп", "до подписания", "аванс не ушёл"],
+    "inline_6": ["проверка продавца", "Тюмень", "до аванса"],
+    "inline_7": ["дисконт >20%", "сигнал бежать", "не торг"]
+  },
+  "meme_picks": {
+    "cover": ["roll_safe", "smudge_cat"],
+    "inline_1": ["hide_pain_harold"],
+    "inline_5": ["grumpy_cat"],
+    "inline_7": ["confused_math_lady"]
+  }
+}
+
+hook must be 5-7 Cyrillic words. Keep wordstat_stickers empty.

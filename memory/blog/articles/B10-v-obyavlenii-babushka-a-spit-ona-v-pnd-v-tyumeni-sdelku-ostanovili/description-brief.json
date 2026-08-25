@@ -1,0 +1,9 @@
+{
+  "topic_id": "B10",
+  "description": "В Тюмени покупатель почти поверил в цену ниже рынка. Святослав Шакин заметил в документах деталь, после которой торг превратился в паузу.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

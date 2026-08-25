@@ -1,0 +1,63 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-25",
+    "today_ru": "25.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B10",
+    "title": "В объявлении бабушка — а спит она в ПНД: в Тюмени сделку остановили",
+    "h1": "В объявлении бабушка — а спит она в ПНД: в Тюмени сделку остановили",
+    "slug": "v-obyavlenii-babushka-a-spit-ona-v-pnd-v-tyumeni-sdelku-ostanovili",
+    "primary_query": "В объявлении бабушка — а спит она в ПНД: в Тюмени сделку остановили",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В объявлении бабушка — а спит она в ПНД: в Тюмени сделку остановили 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-08-25"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В объявлении бабушка — а спит она в ПНД: в Тюмени сделку остановили 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-08-25"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В объявлении бабушка — а спит она в ПНД: в Тюмени сделку остановили official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-08-25"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В объявлении бабушка — а спит она в ПНД: в Тюмени сделку остановили 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-08-25"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В объявлении бабушка — а спит она в ПНД: в Тюмени сделку остановили forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-08-25"
+    }
+  ],
+  "errors": []
+}

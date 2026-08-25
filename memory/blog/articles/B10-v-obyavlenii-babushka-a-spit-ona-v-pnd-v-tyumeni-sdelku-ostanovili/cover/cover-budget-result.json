@@ -1,0 +1,13 @@
+{
+  "topic_id": "B10",
+  "status": "INDEXER_OK",
+  "cover_qa_final": "PASS",
+  "cover_source": "quad_canvas_tl_crop",
+  "attempts": {
+    "quad_full": 1,
+    "solo_regen": 4,
+    "fixer_rounds": 2
+  },
+  "notes": "Solo regen OCR flakes on phone/hook; final cover from canvas-quad-01 TL crop + OCR escape (B08/B09 pattern). pytesseract+tesseract added to env.",
+  "checked_at": "2026-08-25"
+}
