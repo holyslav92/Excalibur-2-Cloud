@@ -1,0 +1,105 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B10-dogovor-podpisali-a-deneg-ne-bylo-v-tyumeni-nasledniki-zabrali-kvartiru/cover/cover.png",
+  "last_errors": [
+    "pixel_wordstat_not_on_host_chest FAIL: paper_frac=0.014 on vest",
+    "pixel_wordstat_only_top_left FAIL: paper_frac=0.010 outside top-left zone",
+    "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+    "pixel_phone_readable FAIL: phone_digits='' ink=1777 clipped=False",
+    "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Договор', 'денег', 'наследники', 'забрали'] last_word='забрали' ocr=''",
+    "pixel_no_collage_inset FAIL: white_frac=0.833 inset_face=False blob_count=2",
+    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.2586",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "tiers": [
+        {
+          "tier": "standard",
+          "model": "grsai-standard-image-model",
+          "bytes": 948116,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_no_text_on_clothing FAIL: dark_ink_frac=0.091 on chest/clothes",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=1695 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Договор', 'денег', 'наследники', 'забрали'] last_word='забрали' ocr=''",
+            "pixel_no_collage_inset FAIL: white_frac=0.69 inset_face=False blob_count=2",
+            "pixel_meme_present FAIL: orange_fur=25 legacy=2 host_face=True",
+            "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.1603",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        },
+        {
+          "tier": "vip",
+          "model": "grsai-standard-image-model-vip",
+          "bytes": 1009145,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+            "pixel_no_inpaint_artifacts FAIL: face_blue=0.0000 chest_blue=0.013 smear=0.000",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=7797 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Договор', 'денег', 'наследники', 'забрали'] last_word='забрали' ocr=''",
+            "pixel_no_collage_inset FAIL: white_frac=0.728 inset_face=False blob_count=1",
+            "pixel_no_wordstat_query_strips FAIL: 3 Wordstat strip(s), 0 bar band(s), paper_frac=0.1128",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "tiers": [
+        {
+          "tier": "standard",
+          "model": "grsai-standard-image-model",
+          "bytes": 1000718,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_no_text_on_clothing FAIL: dark_ink_frac=0.131 on chest/clothes",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=2788 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Договор', 'денег', 'наследники', 'забрали'] last_word='забрали' ocr=''",
+            "pixel_no_collage_inset FAIL: white_frac=0.396 inset_face=False blob_count=1",
+            "pixel_meme_present FAIL: orange_fur=16 legacy=4 host_face=True",
+            "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0171",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        },
+        {
+          "tier": "vip",
+          "model": "grsai-standard-image-model-vip",
+          "bytes": 1019849,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_wordstat_not_on_host_chest FAIL: paper_frac=0.014 on vest",
+            "pixel_wordstat_only_top_left FAIL: paper_frac=0.010 outside top-left zone",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=1777 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Договор', 'денег', 'наследники', 'забрали'] last_word='забрали' ocr=''",
+            "pixel_no_collage_inset FAIL: white_frac=0.833 inset_face=False blob_count=2",
+            "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.2586",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        }
+      ]
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}
