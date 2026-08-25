@@ -59,6 +59,7 @@ class ImageProviderBlockerTest(unittest.TestCase):
         )
         self.assertEqual(proc.returncode, 0, msg=proc.stderr)
         self.assertIn("grsaiapi.com", proc.stdout)
+        self.assertIn("vip_disabled", proc.stdout)
 
     def test_resolve_grsai_hosts_default(self) -> None:
         from excalibur_blog_grsai_gpt_image2_api import DEFAULT_HOSTS, resolve_hosts
@@ -79,38 +80,40 @@ class ImageProviderBlockerTest(unittest.TestCase):
                 ["https://api.example.com", "https://cn.example.com"],
             )
 
-    def test_default_grsai_model_not_vip(self) -> None:
+    def test_default_grsai_model_standard_only(self) -> None:
         from excalibur_blog_grsai_gpt_image2_api import (
             default_model,
-            grsai_vip_model_id,
-            model_tier_standard,
-            model_tier_vip_fallback,
+            grsai_standard_model_id,
             iter_model_tiers,
+            model_tier_standard,
         )
 
         with mock.patch.dict(os.environ, {}, clear=False):
             os.environ.pop("GRSAI_IMAGE_MODEL", None)
             model = default_model()
             self.assertTrue(model.startswith("gpt"))
-            self.assertNotEqual(model, grsai_vip_model_id())
+            self.assertEqual(model, grsai_standard_model_id())
             self.assertEqual(model, model_tier_standard())
-            self.assertEqual(model_tier_vip_fallback(model), grsai_vip_model_id())
             tiers = iter_model_tiers()
+            self.assertEqual(len(tiers), 1)
             self.assertEqual(tiers[0][0], "standard")
-            self.assertNotEqual(tiers[0][1], grsai_vip_model_id())
-            self.assertEqual(tiers[1][0], "vip")
+            self.assertEqual(tiers[0][1], grsai_standard_model_id())
+            self.assertNotIn("vip", tiers[0][1])
 
-    def test_grsai_vip_env_still_starts_non_vip(self) -> None:
+    def test_grsai_vip_env_forced_to_standard(self) -> None:
         from excalibur_blog_grsai_gpt_image2_api import (
-            grsai_vip_model_id,
+            grsai_standard_model_id,
             model_tier_standard,
+            normalize_grsai_model,
             iter_model_tiers,
         )
 
-        with mock.patch.dict(os.environ, {"GRSAI_IMAGE_MODEL": grsai_vip_model_id()}):
+        vip_id = grsai_standard_model_id() + "-vip"
+        with mock.patch.dict(os.environ, {"GRSAI_IMAGE_MODEL": vip_id}):
             standard = model_tier_standard()
-            self.assertNotEqual(standard, grsai_vip_model_id())
-            self.assertEqual(iter_model_tiers()[0][1], standard)
+            self.assertEqual(standard, grsai_standard_model_id())
+            self.assertEqual(normalize_grsai_model(vip_id), grsai_standard_model_id())
+            self.assertEqual(iter_model_tiers(), [("standard", grsai_standard_model_id())])
 
     def test_resolve_image_base_urls_default_order(self) -> None:
         from excalibur_blog_derouter_gpt_image2_api import (
@@ -137,25 +140,39 @@ class ImageProviderBlockerTest(unittest.TestCase):
             ],
         )
 
-    def test_vip_aspect_uses_pixels_not_ratio(self) -> None:
+    def test_standard_aspect_supports_2k_pixels(self) -> None:
         from excalibur_blog_grsai_gpt_image2_api import (
             aspect_ratio_for_grsai,
-            grsai_vip_model_id,
             grsai_standard_model_id,
+            parse_size_wh,
         )
 
         standard = grsai_standard_model_id()
-        vip = grsai_vip_model_id()
-        self.assertEqual(aspect_ratio_for_grsai("16:9", model=standard), "16:9")
-        self.assertEqual(aspect_ratio_for_grsai("16:9", model=vip), "1672x941")
+        self.assertEqual(aspect_ratio_for_grsai("16:9", model=standard), "1672x941")
         self.assertEqual(
-            aspect_ratio_for_grsai("16:9", model=vip, resolution="2K"),
+            aspect_ratio_for_grsai("16:9", model=standard, resolution="2K"),
             "2048x1152",
         )
-        from excalibur_blog_grsai_gpt_image2_api import parse_size_wh
-
+        self.assertEqual(aspect_ratio_for_grsai("2048x1152", model=standard), "2048x1152")
         self.assertEqual(parse_size_wh("2048x1152"), (2048, 1152))
         self.assertEqual(parse_size_wh("1200x675"), (1200, 675))
+
+    def test_vip_model_unreachable_from_generate_image(self) -> None:
+        import inspect
+
+        from excalibur_blog_grsai_gpt_image2_api import (
+            generate_image,
+            grsai_standard_model_id,
+        )
+
+        source = inspect.getsource(generate_image)
+        self.assertNotIn("-vip", source)
+        vip_id = grsai_standard_model_id() + "-vip"
+        module_path = ROOT / "scripts" / "excalibur_blog_grsai_gpt_image2_api.py"
+        module_text = module_path.read_text(encoding="utf-8")
+        self.assertNotIn("model_tier_vip_fallback", module_text)
+        self.assertNotIn("generate_image_with_model_tier_fallback", module_text)
+        self.assertNotIn(f"model={vip_id}", module_text)
 
     def test_default_responses_model(self) -> None:
         from excalibur_blog_derouter_gpt_image2_api import (
