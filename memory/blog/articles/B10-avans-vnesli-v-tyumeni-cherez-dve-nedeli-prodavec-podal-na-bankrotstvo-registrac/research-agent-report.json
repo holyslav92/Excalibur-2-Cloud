@@ -1,0 +1,26 @@
+{
+  "agent": "excalibur-blog-research",
+  "status": "PASS",
+  "research_date": "2026-08-25",
+  "topic_id": "B10",
+  "fresh_signal": {
+    "status": "PASS",
+    "sources": [
+      "https://t.me/klyshin_A",
+      "https://dzen.ru/holyslav",
+      "https://t.me/holyslav92"
+    ],
+    "note": "Community signals accessed 2026-08-25; normative sources 127-ФЗ/218-ФЗ verified"
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "verified": [
+      "127-ФЗ о банкротстве",
+      "218-ФЗ о регистрации недвижимости",
+      "fedresurs.ru",
+      "fssp.gov.ru"
+    ],
+    "note": "Bank tariffs not cited; no invented commission figures"
+  },
+  "blockers": []
+}

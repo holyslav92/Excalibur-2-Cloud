@@ -1,0 +1,201 @@
+{
+  "topic_id": "B10",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Аванс внесли — банкрот остановил регистрацию",
+  "cover_hook_highlight": "банкрот",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав в светлой квартире смотрит на телефон и договор после новости о банкротстве продавца",
+      "scene_hint": "Святослав в песочном overshirt, шок на телефон, светлая квартира, hook-зона справа, телефон снизу.",
+      "meme_caption_ru": "",
+      "sticky": "Регистрацию стоп",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Две недели, которые всё решили",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: аванс vs задаток vs обеспечительный платёж, белый фон, золото-чёрные акценты.",
+      "alt": "Сравнительная таблица отличий аванса, задатка и обеспечительного платежа",
+      "labels": [
+        "аванс внесён",
+        "продавец банкрот",
+        "регистрация стоп"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Выписка ЕГРН была чистой — и это ничего не доказывало",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема: деньги → проверка → банкротство → пауза сделки, стрелки, без людей.",
+      "alt": "Порядок действий покупателя после обнаружения риска банкротства продавца",
+      "labels": [
+        "проверьте продавца",
+        "до аванса",
+        "Федресурс"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Где эта информация лежала всё это время",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Таймлайн: аванс, публикации, суд, сроки, золотая линия.",
+      "alt": "Временная шкала событий от аванса до возможного оспаривания сделки",
+      "labels": [
+        "договор",
+        "расписка",
+        "юрист"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Финал: регистрацию приостановили, а деньги переехали в реестр требований",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Диаграмма: продавец, покупатель, кредиторы, управляющий, суд.",
+      "alt": "Схема участников и рисков при банкротстве продавца квартиры",
+      "labels": [
+        "ЕГРН не всё",
+        "долги продавца",
+        "ФССП"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Пять источников, которые закрывают вопрос за один вечер",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Чеклист документов: ЕГРН, паспорт, Федресурс, ФССП.",
+      "alt": "Список документов для проверки продавца перед передачей аванса",
+      "labels": [
+        "аккредитив",
+        "ячейка",
+        "безопасный расчёт"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Как передавать деньги, чтобы их потом можно было вернуть",
+      "visual_type": "comparison_table",
+      "scene_hint": "Матрица рисков: долги, банкротство, уровни цветом.",
+      "alt": "Сравнение уровня риска сделки на разных стадиях финансовых проблем продавца",
+      "labels": [
+        "приостановка",
+        "уведомление",
+        "Росреестр"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что делать, если аванс уже внесён, а регистрация приостановлена",
+      "visual_type": "process_flow",
+      "scene_hint": "Дорожная карта: документы → претензия → юрист.",
+      "alt": "Краткий план защиты покупателя, если квартира зависла из-за банкротства продавца",
+      "labels": [
+        "что делать",
+        "сохранить документы",
+        "суд"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "банкротство продавца",
+    "проверка перед авансом"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  }
+}
