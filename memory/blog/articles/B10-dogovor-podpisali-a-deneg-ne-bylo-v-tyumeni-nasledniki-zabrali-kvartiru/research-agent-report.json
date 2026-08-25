@@ -1,0 +1,18 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B10",
+  "research_date": "2026-08-25",
+  "status": "PASS",
+  "fresh_signal": true,
+  "community_signal": "https://t.me/klyshin_A (5 schemes, Aug 2026)",
+  "wordstat_status": "PARTIAL",
+  "official_source_audit": {
+    "status": "PASS",
+    "verified": [
+      "ГК РФ ст.170 consultant.ru",
+      "ГК РФ ст.302 consultant.ru",
+      "ВС РФ 15А/2026 vsrf.ru"
+    ]
+  },
+  "notes": "research-notes.md via Derouter utility tier"
+}

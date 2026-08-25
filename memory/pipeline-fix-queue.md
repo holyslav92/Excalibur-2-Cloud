@@ -2,6 +2,70 @@
 
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
+## INC-20260825-0500-quad-prompt-budget-b10
+status: fixed
+run_date: 2026-08-25
+role: excalibur-blog-fixer
+topic_id: B10
+article_dir: memory/blog/articles/B10-dogovor-podpisali-a-deneg-ne-bylo-v-tyumeni-nasledniki-zabrali-kvartiru
+severity: blocker
+category: script
+
+### What went wrong
+- `excalibur_blog_cover_quad_prompt.py --write-batch` → MCP prompt 3564 chars > 3500.
+- Quad canvas batches never created; 7 inline PNG missing.
+
+### How the agent recovered this run
+- Compacted shared ban_line, reference_line, wordstat_line in build_prompt (~250 chars reclaimed).
+- B10 canvas 1 prompt 3317 chars; canvas 2 2782 — batch JSON written.
+
+### Durable fix needed before next run
+- Keep shared lock text compact; scene_hint targets unchanged.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_quad_prompt.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-25
+fix_summary:
+- Reclaimed chars from shared ban/reference/wordstat locks; pick_identity_reference import already present.
+files_changed:
+- `scripts/excalibur_blog_cover_quad_prompt.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_cover_quad_prompt.py`
+- `excalibur_blog_cover_quad_prompt.py --write-batch --canvas-index 1/2` → PASS ≤3500
+commit: 16557d2
+
+## INC-20260825-0500-cover-solo-ocr-b10
+status: needs-human
+run_date: 2026-08-25
+role: excalibur-blog-cover
+topic_id: B10
+article_dir: memory/blog/articles/B10-dogovor-podpisali-a-deneg-ne-bylo-v-tyumeni-nasledniki-zabrali-kvartiru
+severity: blocker
+category: cover
+
+### What went wrong
+- grsai solo cover budget exhausted (2 attempts); OCR cannot read Cyrillic hook or phone on best_candidate PNG.
+- cover_qa FAIL → quality-bar-9 cover_qa_pass false → publish blocked.
+
+### How the agent recovered this run
+- Per canon: proceed Indexer after budget exhaustion; draft status in article.meta.json.
+
+### Durable fix needed before next run
+- Regenerate cover via quad canvas (now unblocked) or tighten solo cover TEXT LOCK for OCR-readable hook+phone.
+- Manual cover regen or `--media-refresh --featured-only` after PASS.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_grsai_solo_cover.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+
+### Secrets
+- none recorded
+
 ## INC-20260821-0615-content-learner-metrika-credentials
 status: open
 run_date: 2026-08-21

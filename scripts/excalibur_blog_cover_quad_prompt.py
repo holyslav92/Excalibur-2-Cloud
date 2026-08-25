@@ -12,6 +12,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from excalibur_blog_cover_budget import SHORT_HOOK_MAX_CHARS, short_hook_prompt_line
+from excalibur_blog_identity_real import pick_identity_reference
 from excalibur_blog_quad_slots import (
     CANVAS_1_SLOTS,
     active_inline_keys,
@@ -441,10 +442,7 @@ def build_prompt(
             if cover_emotion
             else f"{I2I_EXPRESSION_LOCK}."
         )
-        wordstat_line = (
-            " ZERO Wordstat/search-keyword strips on canvas — FORBIDDEN forever; "
-            "NO beige/gold query bars top-left; NO text on clothes/chest."
-        )
+        wordstat_line = " NO Wordstat strips/query bars; NO text on clothes."
         panel_lines.append(
             f"TL COVER TXT «{cover_hook_text}» bold Cyrillic black, {highlight_rule}.{sticky_lock} "
             f"Phone EXACT «{COVER_PHONE_CTA}» readable CTA sticker. "
@@ -465,21 +463,18 @@ def build_prompt(
 
     ban_line = (
         "Ban: dark/low-key; inventory props; celebrity memes; EXCALIBUR stamp; chubby host; "
-        f"stock/generated man co-host on inline; large meme person on inline; "
-        f"meme_canon_v1: only {MEME_CATALOG_REL} real ids; people+cats not cats-only; "
-        "on-topic funny stickers ≤15% never on hook/face/phone; "
+        f"stock co-host on inline; large meme person; meme_canon_v1 from {MEME_CATALOG_REL}; "
+        "stickers ≤15% never on hook/face/phone; "
         f"{INLINE_BAN_EXTRA}."
     )
     reference_line = (
-        f"Cover TL only: i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}; invent scene; no AI hero-ref. "
-        "Canvas 1: meme sticker ONLY on cover TL + inline_1 TR; inline_2 BL and inline_3 BR: "
-        "ZERO meme ZERO cat ZERO person / БЕЗ мема БЕЗ кота БЕЗ человека."
+        f"Cover TL: i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}; invent scene. "
+        "Canvas 1: meme on cover TL + inline_1 only; inline_2/3: NO meme/cat/person."
         if has_cover
         else (
-            "Canvas 2 inlines: ZERO host face / НОЛЬ лица ведущего на всех 4 панелях; "
-            "meme stickers ONLY on inline_5 and inline_7 (tiny ≤15%); "
-            "inline_4 and inline_6: NO meme NO cat NO person / БЕЗ мема БЕЗ кота БЕЗ человека. "
-            f"People-memes only as tiny stickers from {MEME_CATALOG_REL}; infographic is hero."
+            "Canvas 2: NO host face; meme stickers ONLY inline_5/7 (≤15%); "
+            "inline_4/6: NO meme/cat/person. "
+            f"Tiny stickers from {MEME_CATALOG_REL}; infographic hero."
         )
     )
     inline_suffix = (
