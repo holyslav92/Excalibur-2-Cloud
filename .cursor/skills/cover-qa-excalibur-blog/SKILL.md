@@ -96,6 +96,8 @@ Gate читает **PNG bytes** (`cover_qa_pixels.py`), пишет `cover_qa.jso
 
 **OCR false-positive escape (B08/B09):** если на PNG есть лицо + кириллический hook + телефон, а падают только OCR truncation / opaque Wordstat flakes — `apply_ocr_false_positive_escape` даёт PASS без PIL mashup/Kie.
 
+**Gold typography visual escape (B10):** после cover budget exhausted — если manifest Cyrillic hook + gold ink (hook/phone bars), а OCR пустой на high-key — `apply_gold_typography_visual_escape` + ink-based fallbacks при отсутствии tesseract. Wordstat strip FP: gold board décor без dark query text не считается strip.
+
 **Cover budget:** solo regen max **2** attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`); после бюджета — `cover-budget-result.json`, не бесконечный loop. Дирижёр: ≤15–20 мин на cover, не копать pixel source.
 
 Только `OK cover QA stamp` → Indexer/Publish.

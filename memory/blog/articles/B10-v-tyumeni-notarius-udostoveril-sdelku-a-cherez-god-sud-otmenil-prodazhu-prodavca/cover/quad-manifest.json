@@ -1,0 +1,252 @@
+{
+  "topic_id": "B10",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Сделку отменили — продавец должна вернуть миллионы",
+  "cover_hook_highlight": "миллионы",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Ведущий с ключами и пустым кошельком на фоне светлой тюменской новостройки; обложка о возврате 4,3 млн после отмены сделки.",
+      "scene_hint": "bright courtyard; host center-R teal vest keys+empty wallet horrified; hook RIGHT gold «миллионы»; phone bottom-R; roll_safe+crying_cat tiny",
+      "meme_caption_ru": "",
+      "sticky": "Денег уже нет",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "horrified disbelief"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Как в Тюмени продали квартиру пенсионерки, которую вели по телефону",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison table Лето 2023→2025 Tyumen pensioner 70 phone scam 12mln; hide_pain_harold tiny corner",
+      "alt": "Инфографика показывает хронологию телефонного обмана пенсионерки и продажи квартиры в Тюмени; маленький стикер hide_pain_harold в углу.",
+      "labels": [
+        "Лето 2023",
+        "Тюмень",
+        "Пенсионерка 70 лет",
+        "12 млн мошенникам",
+        "Звонки о безопасности",
+        "Смотрите на телефон"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Суд отменил продажу — и продавец должна вернуть 4,3 млн",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "workflow 5 steps: 3 expertises Sersky 20 Jan 2025 restitution both ways; NO memes",
+      "alt": "Схема движения дела от экспертиз и решения суда к двусторонней реституции и проблеме отсутствующих 4,3 млн.",
+      "labels": [
+        "Три экспертизы",
+        "Институт Сербского",
+        "20 января 2025",
+        "Полтора года",
+        "Реституция в обе стороны",
+        "Денег нет"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Нотариус не видит звонок: контрастные дела и позиция Верховного суда",
+      "visual_type": "checklist_board",
+      "scene_hint": "checklist Krasnoufimsk vs Tyumen 48 cases 19 upheld ~40%; NO memes",
+      "alt": "Чек-лист сравнивает дела, где сделки устояли или были отменены, и показывает роль экспертизы и позиции Верховного суда.",
+      "labels": [
+        "Красноуфимск: сделка устояла",
+        "Тюмень: возврат денег",
+        "48 дел",
+        "19 устояли",
+        "Около 40 процентов",
+        "Две развязки"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Что проверить покупателю, если продавец пожилой и телефон не отпускает",
+      "visual_type": "schema_faq_ui",
+      "scene_hint": "FAQ schema buyer checks: phone reaction money route sole home low price title history; NO memes",
+      "alt": "FAQ-инфографика перечисляет проверки перед покупкой квартиры у пожилого продавца, включая телефонные звонки и движение денег.",
+      "labels": [
+        "Реакция на звонок",
+        "Куда пойдут деньги",
+        "Единственное жильё",
+        "Цена ниже рынка",
+        "История права",
+        "Не скрывайте сделку"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Таблица: когда сделку оспорят и кто останется с долгом",
+      "visual_type": "process_flow",
+      "scene_hint": "process flow 3 outcomes Tyumen 4.3mln debt VS 1.9mln VS Krasnoufimsk no debt; grumpy_cat tiny",
+      "alt": "Схема показывает, когда после отмены сделки возникает долг и почему судебная реституция не равна реальным деньгам; стикер grumpy_cat в углу.",
+      "labels": [
+        "Тюмень: долг 4,3 млн",
+        "Верховный суд: 1,9 млн",
+        "Красноуфимск: без долга",
+        "40 процентов устояли",
+        "Суд смотрит экспертизу",
+        "Долг не деньги"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Двусторонняя реституция: почему суд не создаёт деньги",
+      "visual_type": "tool_screenshot",
+      "scene_hint": "restitution diagram court order writ zero balance sole home 1.5yr risk; NO memes",
+      "alt": "Диаграмма объясняет, почему суд возвращает права и обязанности, но не создаёт деньги на счёте продавца.",
+      "labels": [
+        "Суд не печатает деньги",
+        "Исполнительный лист",
+        "На счёте ноль",
+        "Единственное жильё",
+        "Занижение против покупателя",
+        "Полтора года риска"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Напишите до аванса — или сразу к делу",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison before avans vs after court docs check Tyumen TG MAX; disappointed_black_guy tiny",
+      "alt": "Таблица призывает проверить документы до аванса и показывает сопровождение сделки с риэлтором в Тюмени; стикер disappointed_black_guy в углу.",
+      "labels": [
+        "Проверка до аванса",
+        "Не после суда",
+        "Документы на разбор",
+        "Подключусь в сделку",
+        "Тюмень: вторичка",
+        "Телеграм и МАКС"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "нотариус при покупке квартиры",
+    "купить квартиру в тюмени",
+    "оспорить сделку купли продажи квартиры"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "horrified disbelief",
+  "cover_motifs": {
+    "composition": "host_center_right_keys_empty_wallet_headline_left_sacred_sun_flare",
+    "location": "bright_tyumen_newbuild_courtyard_white_facade_sun_flare",
+    "meme": "roll_safe_sticker_plus_crying_cat_cutout_corners",
+    "prop_set": "keys_empty_wallet_phone_incoming_call_court_folder",
+    "sticker_set": "roll_safe_crying_cat_tiny_NO_wordstat",
+    "joke": "keys_remain_money_gone_safe_plan_broken",
+    "outfit": "teal_knit_vest_white_shirt_navy_trousers_light_sneakers",
+    "emotion": "horrified_disbelief_anxious_grimace_NO_side_eye",
+    "pose_framing": "medium_full_body_center_right_both_hands_forward_gaze_NOT_left_bust",
+    "action": "shows_empty_wallet_and_keys_pulls_phone_from_ear"
+  },
+  "meme_picks": {
+    "cover": [
+      "roll_safe",
+      "crying_cat"
+    ],
+    "inline_1": [
+      "hide_pain_harold"
+    ],
+    "inline_5": [
+      "grumpy_cat"
+    ],
+    "inline_7": [
+      "disappointed_black_guy"
+    ]
+  }
+}

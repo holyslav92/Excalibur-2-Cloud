@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-24",
+    "today_ru": "24.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "понедельник"
+  },
+  "topic": {
+    "topic_id": "B10",
+    "title": "В Тюмени нотариус удостоверил сделку — а через год суд отменил продажу: продавца вели по телефону",
+    "h1": "В Тюмени нотариус удостоверил сделку — а через год суд отменил продажу: продавца вели по телефону",
+    "slug": "v-tyumeni-notarius-udostoveril-sdelku-a-cherez-god-sud-otmenil-prodazhu-prodavca",
+    "primary_query": "В Тюмени нотариус удостоверил сделку — а через год суд отменил продажу: продавца вели по телефону",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени нотариус удостоверил сделку — а через год суд отменил продажу: продавца вели по телефону 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Купили квартиру, а через год суд отменил сделку. Все из-за «странного ...",
+          "url": "https://realt.onliner.by/2026/07/24/kak-ne-popast-na-strannogo-prodavca",
+          "snippet": ""
+        },
+        {
+          "title": "Суд отменил сделку о продаже квартиры обманутой мошенниками пенсионерки ...",
+          "url": "https://72.ru/text/gorod/2025/01/21/75006587/",
+          "snippet": "Молодому человеку требовалось дать согласие на продажу своей доли в квартире. Во время первого визита обратили на себя внимание странности в речи у парня."
+        },
+        {
+          "title": "Нотариус заверил, а суд отменил: почему нотариальная сделка — не ...",
+          "url": "https://dzen.ru/a/aclQyNBWh0QPmaRv",
+          "snippet": "Тюменский суд аннулировал сделку купли-продажи квартиры пенсионерки Татьяны Назаровой, которая рассталась со своим жильем под давлением мошенников."
+        },
+        {
+          "title": "Расторжение нотариального договора купли продажи",
+          "url": "https://alexeydemidov.ru/blog/rastorzhenie-notarialnogo-dogovora-kupli-prodazhi/",
+          "snippet": "Он оспорил сделку в суде, ссылаясь на то, что его права нарушены. Суд признал договор недействительным — и семья осталась без квартиры и с долгами. Почему так вышло?"
+        },
+        {
+          "title": "Кто возместит покупателю ущерб за мошенническую сделку, удостоверенную ...",
+          "url": "https://urisconsult74.ru/kto-vozmestit-ushherb-pokupatelyu/",
+          "snippet": "В этой статье вы получите исчерпывающий практический и юридический разбор всех возможных сценариев расторжения нотариального договора купли-продажи: от досудебного урегулирования ..."
+        },
+        {
+          "title": "Бабушки-оборотни в ипотеке: как не потерять квартиру даже по решению суда",
+          "url": "https://polis.online/blog/nedvizhimost/babushki-oborotni-v-ipoteke-kak-zaschititsya-ot-otmeny-sdelki-i-poteri-zhilya/",
+          "snippet": "Житель Приморья решил купить квартиру. Он нашел объект, а сделку с продавцом удостоверил у нотариуса. Однако через полгода выяснилось, что настоящий собственник квартиры умер три года назад. А мнимый продавец вклеила свою фотографию в паспорт умершей и предъявила его нотариусу."
+        }
+      ],
+      "searched_at": "2026-08-24"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени нотариус удостоверил сделку — а через год суд отменил продажу: продавца вели по телефону 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Сделку с квартирой оспорили через год: покупатель проверил всё — и ...",
+          "url": "https://dzen.ru/a/aoAdHa3UpQP2PxbO",
+          "snippet": ""
+        },
+        {
+          "title": "Нотариус заверил, а суд отменил: почему нотариальная сделка — не ...",
+          "url": "https://dzen.ru/a/aclQyNBWh0QPmaRv",
+          "snippet": "Оспаривание сделки с квартирой возможно и через год после регистрации права собственности, если продавец заявляет, что действовал под влиянием обмана или заблуждения. Верховный суд РФ в июле 2026 года разъяснил ..."
+        },
+        {
+          "title": "Кто возместит покупателю ущерб за мошенническую сделку, удостоверенную ...",
+          "url": "https://urisconsult74.ru/kto-vozmestit-ushherb-pokupatelyu/",
+          "snippet": "Он оспорил сделку в суде, ссылаясь на то, что его права нарушены. Суд признал договор недействительным — и семья осталась без квартиры и с долгами. Почему так вышло?"
+        },
+        {
+          "title": "Нотариус удостоверил незаконную сделку по продаже квартиры: что решил ...",
+          "url": "https://vk.com/wall-193227572_20791",
+          "snippet": "Житель Приморья решил купить квартиру. Он нашел объект, а сделку с продавцом удостоверил у нотариуса. Однако через полгода выяснилось, что настоящий собственник квартиры умер три года назад. А мнимый продавец вклеила свою фотографию в паспорт умершей и предъявила его нотариусу."
+        },
+        {
+          "title": "Судебная практика по признанию договора купли продажи недействительным ...",
+          "url": "https://alexeydemidov.ru/blog/sudebnaya-praktika-po-priznaniyu-dogovora-kupli-prodazhi-nedeystvitelnym/",
+          "snippet": "А в 2021 г. решением суда было установлено, что продавец этой квартиры скончалась еще в 2017 г., а от ее имени сделку заключил неизвестный, по поддельному паспорту."
+        },
+        {
+          "title": "Судебные и нормативные акты РФ :: Крупнейшая в сети база судебных и ...",
+          "url": "https://sudact.ru/",
+          "snippet": "В этой статье вы получите систематизированный анализ реальных судебных решений, чёткую пошаговую стратегию оспаривания сделки, а также узнаете, какие ошибки чаще всего приводят к поражению в суде."
+        }
+      ],
+      "searched_at": "2026-08-24"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени нотариус удостоверил сделку — а через год суд отменил продажу: продавца вели по телефону official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Сделку с квартирой оспорили через год: покупатель проверил всё — и ...",
+          "url": "https://dzen.ru/a/aoAdHa3UpQP2PxbO",
+          "snippet": ""
+        },
+        {
+          "title": "Нотариус заверил, а суд отменил: почему нотариальная сделка — не ...",
+          "url": "https://dzen.ru/a/aclQyNBWh0QPmaRv",
+          "snippet": "Оспаривание сделки с квартирой возможно и через год после регистрации права собственности, если продавец заявляет, что действовал под влиянием обмана или заблуждения. Верховный суд РФ в июле 2026 года разъяснил ..."
+        },
+        {
+          "title": "Нотариус удостоверил сделку, а покупатель остался без квартиры и ...",
+          "url": "https://vk.com/wall7765137_317",
+          "snippet": "Он оспорил сделку в суде, ссылаясь на то, что его права нарушены. Суд признал договор недействительным — и семья осталась без квартиры и с долгами. Почему так вышло?"
+        },
+        {
+          "title": "Судебные и нормативные акты РФ :: Крупнейшая в сети база судебных и ...",
+          "url": "https://sudact.ru/",
+          "snippet": "Эта история - страшный сон любого покупателя недвижимости! Мошенники подделали документы, нотариус удостоверил сделку, а добросовестный приобретатель остался без жилья и без денег!"
+        },
+        {
+          "title": "Нотариус удостоверил незаконную сделку по продаже квартиры: что решил ...",
+          "url": "https://vk.com/wall-193227572_20791",
+          "snippet": "Судебные и нормативные акты РФ Интернет-ресурс Судебные и нормативные акты РФ (СудАкт) - крупнейшая в сети база судебных актов, судебных решений и нормативных документов."
+        },
+        {
+          "title": "Судебная практика по признанию договора купли продажи недействительным ...",
+          "url": "https://alexeydemidov.ru/blog/sudebnaya-praktika-po-priznaniyu-dogovora-kupli-prodazhi-nedeystvitelnym/",
+          "snippet": "В апелляции и кассации согласились, что нотариус должен ответить за то, что удостоверил незаконную сделку, не установив личность продавца."
+        }
+      ],
+      "searched_at": "2026-08-24"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени нотариус удостоверил сделку — а через год суд отменил продажу: продавца вели по телефону 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "valley-of-ai/apps/2026/03/07/road-rage/thumbnail.svg at main ... - GitHub",
+          "url": "https://github.com/jeffholst/valley-of-ai/blob/main/apps/2026/03/07/road-rage/thumbnail.svg",
+          "snippet": ""
+        },
+        {
+          "title": "RoadScene/crop_HR_visible/FLIR_05164.jpg at master · hanna-xu/RoadScene",
+          "url": "https://github.com/hanna-xu/RoadScene/blob/master/crop_HR_visible/FLIR_05164.jpg",
+          "snippet": "Contribute to jeffholst/valley-of-ai development by creating an account on GitHub."
+        },
+        {
+          "title": "Instella-T2I/assets/teaser.jpg at main · AMD-AGI/Instella-T2I",
+          "url": "https://github.com/AMD-AGI/Instella-T2I/blob/main/assets/teaser.jpg",
+          "snippet": "Datasets: road-scene-infrared-visible-images, for feature matching, image registration, and image fusion - hanna-xu/RoadScene"
+        },
+        {
+          "title": "esphome_vdmot/logo-text-on-light.svg at main - GitHub",
+          "url": "https://github.com/mhetzi/esphome_vdmot/blob/main/logo-text-on-light.svg",
+          "snippet": "Instella-T2I: Pushing the Limits of 1D Discrete Latent Space Image Generation - AMD-AGI/Instella-T2I"
+        },
+        {
+          "title": "FastBlog/client/public/favicon.svg at main - GitHub",
+          "url": "https://github.com/Abhitkumar89/FastBlog/blob/main/client/public/favicon.svg",
+          "snippet": "Contribute to mhetzi/esphome_vdmot development by creating an account on GitHub."
+        },
+        {
+          "title": "fabric-toolbox/monitoring/fabric-platform-monitoring/Images/14 - Report ...",
+          "url": "https://github.com/microsoft/fabric-toolbox/blob/main/monitoring/fabric-platform-monitoring/Images/14%20-%20Report%20Jobs.png",
+          "snippet": "Contribute to Abhitkumar89/FastBlog development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-08-24"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени нотариус удостоверил сделку — а через год суд отменил продажу: продавца вели по телефону forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Купили квартиру, а через год суд отменил сделку. Все из-за «странного ...",
+          "url": "https://realt.onliner.by/2026/07/24/kak-ne-popast-na-strannogo-prodavca",
+          "snippet": ""
+        },
+        {
+          "title": "Нотариус заверил, а суд отменил: почему нотариальная сделка — не ...",
+          "url": "https://dzen.ru/a/aclQyNBWh0QPmaRv",
+          "snippet": "Молодому человеку требовалось дать согласие на продажу своей доли в квартире. Во время первого визита обратили на себя внимание странности в речи у парня."
+        },
+        {
+          "title": "Расторжение нотариального договора купли продажи",
+          "url": "https://alexeydemidov.ru/blog/rastorzhenie-notarialnogo-dogovora-kupli-prodazhi/",
+          "snippet": "Он оспорил сделку в суде, ссылаясь на то, что его права нарушены. Суд признал договор недействительным — и семья осталась без квартиры и с долгами. Почему так вышло?"
+        },
+        {
+          "title": "Кто возместит покупателю ущерб за мошенническую сделку, удостоверенную ...",
+          "url": "https://urisconsult74.ru/kto-vozmestit-ushherb-pokupatelyu/",
+          "snippet": "В 2025 году Московский городской суд рассмотрел дело, где мать продала долю ребёнка без разрешения органов опеки, но с нотариальным удостоверением (нотариус не проверил наличие разрешения)."
+        },
+        {
+          "title": "Может ли нотариус удостоверить сделку и какое решение вынесет суд ...",
+          "url": "https://pravoved.ru/question/2413616/",
+          "snippet": "Житель Приморья решил купить квартиру. Он нашел объект, а сделку с продавцом удостоверил у нотариуса. Однако через полгода выяснилось, что настоящий собственник квартиры умер три года назад. А мнимый продавец вклеила свою фотографию в паспорт умершей и предъявила его нотариусу."
+        },
+        {
+          "title": "Ответственность нотариуса за ошибки при оформлении",
+          "url": "https://suvorov.legal/otvetstvennost-notariusa-za-oshibki-pri-oformlenii/",
+          "snippet": "Нотариус по просьбе лица, которому отказано в совершении нотариального действия, должен изложить причины отказа в письменной форме и разъяснить порядок его обжалования."
+        }
+      ],
+      "searched_at": "2026-08-24"
+    }
+  ],
+  "errors": []
+}

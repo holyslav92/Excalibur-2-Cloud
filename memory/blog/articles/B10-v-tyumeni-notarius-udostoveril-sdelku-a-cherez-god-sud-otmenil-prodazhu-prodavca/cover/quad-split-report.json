@@ -1,0 +1,300 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B10-v-tyumeni-notarius-udostoveril-sdelku-a-cherez-god-sud-otmenil-prodazhu-prodavca/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 587,
+              "end": 620
+            },
+            "v_gutter_px": {
+              "start": 1011,
+              "end": 1036
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 27.5,
+              "v_center_offset_px": 0.5,
+              "max_aspect_crop_loss": 0.0652,
+              "per_panel_crop_loss": {
+                "top_left": 0.0307,
+                "top_right": 0.0307,
+                "bottom_left": 0.0643,
+                "bottom_right": 0.0652
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Ведущий с ключами и пустым кошельком на фоне светлой тюменской новостройки; обложка о возврате 4,3 млн после отмены сделки.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Инфографика показывает хронологию телефонного обмана пенсионерки и продажи квартиры в Тюмени; маленький стикер hide_pain_harold в углу.",
+            "h2_anchor": "Как в Тюмени продали квартиру пенсионерки, которую вели по телефону"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема движения дела от экспертиз и решения суда к двусторонней реституции и проблеме отсутствующих 4,3 млн.",
+            "h2_anchor": "Суд отменил продажу — и продавец должна вернуть 4,3 млн"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чек-лист сравнивает дела, где сделки устояли или были отменены, и показывает роль экспертизы и позиции Верховного суда.",
+            "h2_anchor": "Нотариус не видит звонок: контрастные дела и позиция Верховного суда"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B10-v-tyumeni-notarius-udostoveril-sdelku-a-cherez-god-sud-otmenil-prodazhu-prodavca/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 568,
+              "end": 603
+            },
+            "v_gutter_px": {
+              "start": 1018,
+              "end": 1031
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 9.5,
+              "v_center_offset_px": 0.5,
+              "max_aspect_crop_loss": 0.0413,
+              "per_panel_crop_loss": {
+                "top_left": 0.0079,
+                "top_right": 0.0069,
+                "bottom_left": 0.0413,
+                "bottom_right": 0.0403
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "FAQ-инфографика перечисляет проверки перед покупкой квартиры у пожилого продавца, включая телефонные звонки и движение денег.",
+            "h2_anchor": "Что проверить покупателю, если продавец пожилой и телефон не отпускает"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема показывает, когда после отмены сделки возникает долг и почему судебная реституция не равна реальным деньгам; стикер grumpy_cat в углу.",
+            "h2_anchor": "Таблица: когда сделку оспорят и кто останется с долгом"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Диаграмма объясняет, почему суд возвращает права и обязанности, но не создаёт деньги на счёте продавца.",
+            "h2_anchor": "Двусторонняя реституция: почему суд не создаёт деньги"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица призывает проверить документы до аванса и показывает сопровождение сделки с риэлтором в Тюмени; стикер disappointed_black_guy в углу.",
+            "h2_anchor": "Напишите до аванса — или сразу к делу"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Как в Тюмени продали квартиру пенсионерки, которую вели по телефону",
+    "skip inline_2: already correct under H2 — Суд отменил продажу — и продавец должна вернуть 4,3 млн",
+    "skip inline_3: already correct under H2 — Нотариус не видит звонок: контрастные дела и позиция Верховного суда",
+    "moved inline_4 → H2 — Что проверить покупателю, если продавец пожилой и телефон не отпускает (was under [что проверить покупателю, если продавец пожилой и телефон не отпускает]; removed=1)",
+    "moved inline_5 → H2 — Таблица: когда сделку оспорят и кто останется с долгом (was under [таблица: когда сделку оспорят и кто останется с долгом]; removed=1)",
+    "moved inline_6 → H2 — Двусторонняя реституция: почему суд не создаёт деньги (was under [двусторонняя реституция: почему суд не создаёт деньги]; removed=1)",
+    "moved inline_7 → H2 — Напишите до аванса — или сразу к делу (was under [напишите до аванса — или сразу к делу]; removed=1)"
+  ]
+}
