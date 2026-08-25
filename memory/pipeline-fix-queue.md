@@ -37,7 +37,7 @@ files_changed:
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_cover_quad_prompt.py`
 - `excalibur_blog_cover_quad_prompt.py --write-batch --canvas-index 1/2` → PASS ≤3500
-commit: pending
+commit: 16557d2
 
 ## INC-20260825-0500-cover-solo-ocr-b10
 status: needs-human
