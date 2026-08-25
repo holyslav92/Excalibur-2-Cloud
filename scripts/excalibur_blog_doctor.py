@@ -543,6 +543,15 @@ def main() -> int:
         warnings,
     )
 
+    import shutil
+
+    check(
+        shutil.which("tesseract") is not None,
+        "tesseract-ocr installed (Cover-QA Cyrillic/phone OCR; missing → false FAIL on hook/phone)",
+        errors,
+        warnings,
+    )
+
     # Dzen + RF canon must be readable before Scout (when pack enabled)
     if tenant.get("dzen_rf_pack", True):
         rf_path = root / "shared/rf-blocked-entities.json"
