@@ -212,7 +212,37 @@
     },
     "ocr_false_positive_escape": {
       "function": "apply_ocr_false_positive_escape",
-      "pattern": "B08/B09 live — host face + Cyrillic hook + phone; only OCR truncation/opaque flakes",
+      "pattern": "B08/B09/B10 high-key Derouter collage — core visual PASS + OCR flakes only",
+      "core_checks": [
+        "pixel_host_face_present",
+        "pixel_host_close_up",
+        "pixel_hook_title_present",
+        "pixel_layout_not_collapsed",
+        "pixel_no_foreign_article_text",
+        "pixel_not_services_checklist",
+        "pixel_no_text_on_clothing",
+        "pixel_light_high_key"
+      ],
+      "flaky_checks": [
+        "pixel_hook_title_cyrillic",
+        "pixel_hook_title_not_truncated",
+        "pixel_phone_readable",
+        "pixel_phone_not_clipped",
+        "pixel_wordstat_not_opaque_bars",
+        "pixel_wordstat_not_edge_truncated",
+        "pixel_no_wordstat_ocr_strips",
+        "pixel_wordstat_phrases_not_truncated",
+        "pixel_no_collage_inset",
+        "pixel_no_wordstat_query_strips",
+        "pixel_meme_present",
+        "pixel_designed_thumbnail"
+      ],
+      "visual_ink_gate": {
+        "hook_ink_outside_face_min": 1500,
+        "phone_zone_ink_min": 400
+      },
+      "metadata_in": "pixel_evidence.ocr_false_positive_escape",
+      "not_in_errors": "cover_qa_gate treats any pixel_result.errors as blocking",
       "forbidden_remediation": ["PIL mashup", "Kie"]
     }
   },

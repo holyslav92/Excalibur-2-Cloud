@@ -1,0 +1,71 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B10",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-24",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://tvgram.ru/klyshin_A/3156",
+        "type": "community",
+        "note": "Август 2026: 5 схем законной потери квартиры — банкротство продавца (3 года) и быстрый переход права / flip"
+      },
+      {
+        "url": "https://pravo.ru/news/263296/",
+        "type": "media/court",
+        "note": "ВС 16.04.2026: делo А56-96799/2023 — банкрот через 3 месяца после продажи, отмена аннулирования сделки"
+      },
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Scout signal_urls — контекст проверки до аванса"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 22660,
+    "angle_phrase": "банкротство продавца квартиры",
+    "angle_volume": 28,
+    "secondary_phrase": "купить квартиру в тюмени вторичка",
+    "secondary_volume": 3996,
+    "rework_from": "проверка квартиры перед покупкой (8)",
+    "ru225_compare": 39961,
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "Короткий срок владения + финуправляющий — не дублирует B02–B09"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["127-fz-bankruptcy", "rosreestr-egrn"],
+    "errors": [],
+    "lesson": "Legal norms via consultant.ru: ст. 61.2, 213.32, приказ П/0149; no bank tariff claims"
+  },
+  "invented_case_guard": {
+    "status": "PASS",
+    "note": "Тюменский casus — composite pattern; реальное дело А56-96799/2023 cited separately with public ФИО"
+  },
+  "key_facts_count": 24,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "derouter": {
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}

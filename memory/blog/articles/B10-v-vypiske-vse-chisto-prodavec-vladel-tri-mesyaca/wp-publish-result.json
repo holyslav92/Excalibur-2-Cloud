@@ -1,0 +1,27 @@
+{
+  "slug": "v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca",
+  "topic_id": "B10",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B10-v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1016846,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9141 slug=v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca\nOK categories=31,54\nOK yoast_social_image=1\nOK featured_image=9142\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9143 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca-inline-01.png\nOK inline_alt=9143\nOK inline_caption=9143\nOK inline_description=9143\nOK inline_image_upload=9144 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca-inline-02.png\nOK inline_alt=9144\nOK inline_caption=9144\nOK inline_description=9144\nOK inline_image_upload=9145 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca-inline-03.png\nOK inline_alt=9145\nOK inline_caption=9145\nOK inline_description=9145\nOK inline_image_upload=9146 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca-inline-04.png\nOK inline_alt=9146\nOK inline_caption=9146\nOK inline_description=9146\nOK inline_image_upload=9147 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca-inline-05.png\nOK inline_alt=9147\nOK inline_caption=9147\nOK inline_description=9147\nOK inline_image_upload=9148 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca-inline-06.png\nOK inline_alt=9148\nOK inline_caption=9148\nOK inline_description=9148\nOK inline_image_upload=9149 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca-inline-07.png\nOK inline_alt=9149\nOK inline_caption=9149\nOK inline_description=9149\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca/",
+    "errors": []
+  }
+}
