@@ -1,0 +1,9 @@
+{
+  "topic_id": "B10",
+  "description": "В Тюмени покупатель уже готовился к регистрации, когда чужая неявка по повестке изменила судьбу сделки. Чистая ЕГРН не подсказала, где застрял аванс.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

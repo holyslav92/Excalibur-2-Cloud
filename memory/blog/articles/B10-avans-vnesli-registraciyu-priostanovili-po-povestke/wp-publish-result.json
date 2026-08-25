@@ -1,0 +1,27 @@
+{
+  "slug": "avans-vnesli-registraciyu-priostanovili-po-povestke",
+  "topic_id": "B10",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/avans-vnesli-registraciyu-priostanovili-po-povestke/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B10-avans-vnesli-registraciyu-priostanovili-po-povestke/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1013665,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9121 slug=avans-vnesli-registraciyu-priostanovili-po-povestke\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9122\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9123 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avans-vnesli-registraciyu-priostanovili-po-povestke-inline-01.png\nOK inline_alt=9123\nOK inline_caption=9123\nOK inline_description=9123\nOK inline_image_upload=9124 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avans-vnesli-registraciyu-priostanovili-po-povestke-inline-02.png\nOK inline_alt=9124\nOK inline_caption=9124\nOK inline_description=9124\nOK inline_image_upload=9125 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avans-vnesli-registraciyu-priostanovili-po-povestke-inline-03.png\nOK inline_alt=9125\nOK inline_caption=9125\nOK inline_description=9125\nOK inline_image_upload=9126 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avans-vnesli-registraciyu-priostanovili-po-povestke-inline-04.png\nOK inline_alt=9126\nOK inline_caption=9126\nOK inline_description=9126\nOK inline_image_upload=9127 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avans-vnesli-registraciyu-priostanovili-po-povestke-inline-05.png\nOK inline_alt=9127\nOK inline_caption=9127\nOK inline_description=9127\nOK inline_image_upload=9128 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avans-vnesli-registraciyu-priostanovili-po-povestke-inline-06.png\nOK inline_alt=9128\nOK inline_caption=9128\nOK inline_description=9128\nOK inline_image_upload=9129 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/avans-vnesli-registraciyu-priostanovili-po-povestke-inline-07.png\nOK inline_alt=9129\nOK inline_caption=9129\nOK inline_description=9129\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/avans-vnesli-registraciyu-priostanovili-po-povestke/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/avans-vnesli-registraciyu-priostanovili-po-povestke/",
+    "errors": []
+  }
+}

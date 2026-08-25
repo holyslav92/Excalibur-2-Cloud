@@ -103,6 +103,23 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-24",
+      "topic_id": "B10",
+      "slug": "avans-vnesli-registraciyu-priostanovili-po-povestke",
+      "motifs": {
+        "composition": "host_right_third_stop_gesture_folder_pause_notification",
+        "location": "bright_new_build_panoramic_window_golden_sunflare",
+        "meme": "roll_safe_smudge_cat_small_corner_stickers",
+        "prop_set": "contract_folder_clean_extract_phone_pause_notice_rosreestr",
+        "sticker_set": "roll_safe_smudge_cat_80px_clearance_no_wordstat",
+        "joke": "celebrating_clean_extract_then_stop_gesture_pause_news",
+        "outfit": "fresh_green_shirt_rolled_sleeves_light_pants_no_blazer",
+        "emotion": "bewildered_nervous_stop_distrust",
+        "pose_framing": "medium_three_quarter_host_right_stop_hand_folder",
+        "action": "closes_folder_raises_palm_pause_notification"
+      }
     }
   ]
 }

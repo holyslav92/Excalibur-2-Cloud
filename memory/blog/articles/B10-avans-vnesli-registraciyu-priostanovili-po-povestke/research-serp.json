@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-24",
+    "today_ru": "24.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "понедельник"
+  },
+  "topic": {
+    "topic_id": "B10",
+    "title": "Аванс внесли — регистрацию приостановили по повестке",
+    "h1": "Аванс внесли — регистрацию приостановили по повестке",
+    "slug": "avans-vnesli-registraciyu-priostanovili-po-povestke",
+    "primary_query": "Аванс внесли — регистрацию приостановили по повестке",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "Аванс внесли — регистрацию приостановили по повестке 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Авансовый счет‑фактура по НДС: новые правила 2026 (425‑ФЗ)",
+          "url": "https://aktbuh.ru/pravo/avansovye-scheta-faktury-po-nds-poriadok-2026-i-kliuchevye-rekvizity",
+          "snippet": ""
+        },
+        {
+          "title": "Изменения в порядке авансирования в госзакупках с апреля 2026: практика ...",
+          "url": "https://fz44.org/articles/avansirovanie-goskontraktov-2026/",
+          "snippet": "Авансовый счет‑фактура с 2026 года: требования 425‑ФЗ — реквизиты аванса в отгрузочном СФ, графы 11а и 7а, НДС 22%, изменения для ИП (ОГРНИП)."
+        },
+        {
+          "title": "Вычет НДС с авансов выданных в 2026: инструкция с проводками | Журнал ...",
+          "url": "https://otchetmaster.ru/info/nalogi-i-otchetnost/nds/vychet-nds-s-avansov-vydannyh-2026/",
+          "snippet": "Изменения 44-ФЗ с 2026 года ограничили аванс до 50% при казначейском сопровождении. В статье разбирается практика ФАС и алгоритм действий для России в 2026 году. Озна..."
+        },
+        {
+          "title": "Возврат аванса по госконтракту через КС 2026 — порядок",
+          "url": "https://kazna-gov.ru/blog/vozvrat-avansa-po-goskontraktu-kaznacheystvo",
+          "snippet": "Полное руководство по вычету НДС с авансов выданных в 2026. Ставка 22%, переходный период, новые реквизиты счетов-фактур, бухгалтерские проводки и восстановление НДС."
+        },
+        {
+          "title": "Аванс по 44-ФЗ в 2026 году: размеры, правила выплаты, исключения и ...",
+          "url": "https://www.pro-ability.ru/tpost/5kvb9pbo91-avans-po-44-fz-v-2026-godu-razmeri-pravi",
+          "snippet": "Возврат аванса по госконтракту — это перечисление подрядчиком неосвоенных целевых средств обратно заказчику или в бюджет. Обязанность возникает в нескольких ситуациях."
+        },
+        {
+          "title": "Пересчет авансов по НДС 2026: как применить ставку 22% к предоплатам ...",
+          "url": "https://otchetmaster.ru/info/pereschet-avansov-nds-2026-perekhodnyy-period/",
+          "snippet": "В 2026 году правила авансирования по 44-ФЗ претерпели существенные изменения, которые необходимо учитывать как заказчикам, так и поставщикам."
+        }
+      ],
+      "searched_at": "2026-08-24"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "Аванс внесли — регистрацию приостановили по повестке 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "НДС-2026: разбираем самые сложные кейсы с авансами и новую форму счета ...",
+          "url": "https://vc.ru/id5699354/2740561-nds-v-2026-novye-pravila-po-avansam-i-schetam-fakturam",
+          "snippet": ""
+        },
+        {
+          "title": "Авансовый счет‑фактура по НДС: новые правила 2026 (425‑ФЗ)",
+          "url": "https://aktbuh.ru/pravo/avansovye-scheta-faktury-po-nds-poriadok-2026-i-kliuchevye-rekvizity",
+          "snippet": "Уже с 1 апреля налоговая будет проверять счета-фактуры по-новому. Если не заполнить строку 5б, вычетов не видать. А с авансами, которые перешли с 2025 года, вообще путаница — кто кому должен доплатить 2%? Разбираемся по шагам, чтобы вы спали спокойно. Нужно ли начислять НДС с предоплаты в 2026 году."
+        },
+        {
+          "title": "Изменения в порядке авансирования в госзакупках с апреля 2026: практика ...",
+          "url": "https://fz44.org/articles/avansirovanie-goskontraktov-2026/",
+          "snippet": "Авансовый счет‑фактура с 2026 года: требования 425‑ФЗ — реквизиты аванса в отгрузочном СФ, графы 11а и 7а, НДС 22%, изменения для ИП (ОГРНИП)."
+        },
+        {
+          "title": "Вычет НДС с авансов выданных в 2026: инструкция с проводками | Журнал ...",
+          "url": "https://otchetmaster.ru/info/nalogi-i-otchetnost/nds/vychet-nds-s-avansov-vydannyh-2026/",
+          "snippet": "Изменения 44-ФЗ с 2026 года ограничили аванс до 50% при казначейском сопровождении. В статье разбирается практика ФАС и алгоритм действий для России в 2026 году. Озна..."
+        },
+        {
+          "title": "Пересчет авансов по НДС 2026: как применить ставку 22% к предоплатам ...",
+          "url": "https://otchetmaster.ru/info/pereschet-avansov-nds-2026-perekhodnyy-period/",
+          "snippet": "Полное руководство по вычету НДС с авансов выданных в 2026. Ставка 22%, переходный период, новые реквизиты счетов-фактур, бухгалтерские проводки и восстановление НДС."
+        },
+        {
+          "title": "Авансы на стыке 2025-2026: где бизнес теряет 2% НДС и как не получить ...",
+          "url": "https://dzen.ru/a/aVJIGbKXRRwL-HBm",
+          "snippet": "Актуально на 15 февраля 2026 года — С 1 января 2026 года в России действует повышенная ставка НДС — 22%. Это создало сложную переходную ситуацию для тысяч компаний и предпринимателей, получивших авансы в 2025 году."
+        }
+      ],
+      "searched_at": "2026-08-24"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "Аванс внесли — регистрацию приостановили по повестке official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Росреестр впервые приостановил регистрацию недвижимости из‑за неявки по ...",
+          "url": "http://samara63.info/2026/04/18/rosreestr-vpervye-priostanovil-registratsiyu-nedvizhimosti-iz-za-neyavki-po-elektronnoi-povestke/",
+          "snippet": ""
+        },
+        {
+          "title": "Росреестр впервые приостановил регистрацию недвижимости из‑за неявки по ...",
+          "url": "http://rostovnadonu61.info/2026/04/18/rosreestr-vpervye-priostanovil-registratsiyu-nedvizhimosti-iz-za-neyavki-po-elektronnoi-povestke/",
+          "snippet": "Спустя 20 дней военкомат вынес решение о применении к нему временных ограничений. В апреле 2026 года мужчина подал документы на государственную регистрацию прав на недвижимое имущество."
+        },
+        {
+          "title": "Росреестр впервые приостановил регистрацию недвижимости из‑за неявки по ...",
+          "url": "https://yaroslavl76.info/2026/04/18/rosreestr-vpervye-priostanovil-registratsiyu-nedvizhimosti-iz-za-neyavki-po-elektronnoi-povestke/",
+          "snippet": "В уведомлении от 14 апреля 2026 года Росреестр сообщил, что в книге учета арестов имеется запись о запрете на регистрацию, внесенная на основании решения военкомата от 27 ноября 2025 года."
+        },
+        {
+          "title": "Росреестр впервые заблокировал регистрацию прав на недвижимость по ...",
+          "url": "https://zona.media/news/2026/04/18/antilopy",
+          "snippet": "В уведомлении от 14 апреля 2026 года Росреестр указал, что в книге учета арестов имеется запись о запрете на регистрацию, внесённая на основании решения военкомата от 27 ноября 2025 года."
+        },
+        {
+          "title": "Введение ограничений по электронным повесткам: россиян массово лишают ...",
+          "url": "https://pnz.ru/laws/vvedenie-ogranichenij-po-elektronnym-povestkam-rossiyan-massovo-lishayut-prav/",
+          "snippet": "Федеральная служба государственной регистрации (Росреестр) впервые приостановила регистрацию прав на недвижимость на основании решения военкомата о временных ограничительных мерах за неявку по электронной повестке. Об этом «Медиазоне» рассказали в пресс-службе Движения сознательных отказчиков (ДСО)."
+        },
+        {
+          "title": "В России впервые ограничили призывника через реестр повесток",
+          "url": "https://doxa.team/news/2026-03-04-reestr-prizivnik",
+          "snippet": "Как работает система ограничений за неявку по электронной повестке в 2026 году. Лишение прав, запрет на выезд и блокировка сделок с недвижимостью — реальные примеры и нормы закона."
+        }
+      ],
+      "searched_at": "2026-08-24"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com Аванс внесли — регистрацию приостановили по повестке 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub",
+          "url": "https://github.com/",
+          "snippet": ""
+        },
+        {
+          "title": "GitHub - Dunks1980/inline.svg: A simple plugin that inlines a SVG file ...",
+          "url": "https://github.com/Dunks1980/inline.svg",
+          "snippet": "From your first line of code to final deployment, GitHub provides AI and automation tools to help you build and ship better software faster. A Copilot chat window with the 'Ask' mode enabled."
+        },
+        {
+          "title": "mchv230vac1.5kw-33ak128mc106-acim-foc-pll/images ... - GitHub",
+          "url": "https://github.com/microchip-pic-avr-solutions/mchv230vac1.5kw-33ak128mc106-acim-foc-pll/blob/main/images/projectpropertiessettings.png",
+          "snippet": "A simple way to render a SVG file into a HTML document so styling and js can be applied to it. New in version 1.2.0 - better for caching and wrapping with an anchor: New in version 1.3.0 - You can use any type of file extension as long as the contents are valid HTML, this can be used to inline HTML elements including script tags and not just SVG's:"
+        },
+        {
+          "title": "luci-app-easymesh/images/1740359643565.png at main · torguardvpn/luci ...",
+          "url": "https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/1740359643565.png",
+          "snippet": "You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another"
+        },
+        {
+          "title": "sphaira/assets/screenshots/themezer.jpg at master · NaGaa95/sphaira",
+          "url": "https://github.com/NaGaa95/sphaira/blob/master/assets/screenshots/themezer.jpg",
+          "snippet": "A lightweight OpenWRT LuCI app for quickly deploying and managing a Batman-adv mesh WiFi network with support for WireGuard and advanced mesh configurations ..."
+        },
+        {
+          "title": "remax/assets/virustotal_av_ipa.png at main · kimono381/remax",
+          "url": "https://github.com/kimono381/remax/blob/main/assets/virustotal_av_ipa.png",
+          "snippet": "Contribute to NaGaa95/sphaira development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-08-24"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "Аванс внесли — регистрацию приостановили по повестке forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Росреестр впервые приостановил регистрацию недвижимости из‑за неявки по ...",
+          "url": "https://rostovnadonu61.info/2026/04/18/rosreestr-vpervye-priostanovil-registratsiyu-nedvizhimosti-iz-za-neyavki-po-elektronnoi-povestke/",
+          "snippet": ""
+        },
+        {
+          "title": "Впервые приостановлена регистрация недвижимости из‑за неявки по ...",
+          "url": "https://povestka24.info/2026/04/18/vpervye-priostanovlena-registratsiya-nedvizhimosti-iz-za-neyavki-po-elektronnoi-povestke-voenkomata/",
+          "snippet": "В уведомлении от 14 апреля 2026 года Росреестр сообщил, что в книге учета арестов имеется запись о запрете на регистрацию, внесенная на основании решения военкомата от 27 ноября 2025 года."
+        },
+        {
+          "title": "Росреестр впервые приостановил регистрацию прав на недвижимость из‑за ...",
+          "url": "https://norilsk24.info/2026/04/18/rosreestr-vpervye-priostanovil-registratsiyu-prav-na-nedvizhimost-iz-za-neyavki-po-elektronnoi-povestke-v-voenkomat/",
+          "snippet": "В апреле 2026 года мужчина подал документы на государственную регистрацию сделки с недвижимостью. В уведомлении от 14 апреля 2026 года ему сообщили, что в книге учета арестов имеется запись о запрете на регистрационные действия, внесенная на основании решения военкомата от 27 ноября 2025 года."
+        },
+        {
+          "title": "Росреестр впервые заблокировал регистрацию прав на недвижимость по ...",
+          "url": "https://zona.media/news/2026/04/18/antilopy",
+          "snippet": "Федеральная служба государственной регистрации, кадастра и картографии (Росреестр) впервые приостановила регистрацию прав на недвижимость, опираясь на решение военкомата о введении временных ограничительных мер из‑за неявки по электронной повестке."
+        },
+        {
+          "title": "Росреестр впервые ограничил регистрацию недвижимости из‑за неявки по ...",
+          "url": "https://komi11.info/2026/04/18/rosreestr-vpervye-ogranichil-registratsiyu-nedvizhimosti-iz-za-neyavki-po-elektronnoi-povestke/",
+          "snippet": "Федеральная служба государственной регистрации (Росреестр) впервые приостановила регистрацию прав на недвижимость на основании решения военкомата о временных ограничительных мерах за неявку по электронной повестке. Об этом «Медиазоне» рассказали в пресс-службе Движения сознательных отказчиков (ДСО)."
+        },
+        {
+          "title": "Росреестр впервые заблокировал регистрацию недвижимости из‑за неявки по ...",
+          "url": "http://astrakhan30.info/2026/04/18/rosreestr-vpervye-zablokiroval-registratsiyu-nedvizhimosti-iz-za-neyavki-po-elektronnoi-povestke/",
+          "snippet": "Федеральная служба госрегистрации впервые приостановила регистрацию прав на недвижимость по решению военкомата о временных ограничениях за неявку по электронной повестке. Эксперты ожидают распространения подобной практики на другие ведомства и советуют обжаловать такие меры."
+        }
+      ],
+      "searched_at": "2026-08-24"
+    }
+  ],
+  "errors": []
+}

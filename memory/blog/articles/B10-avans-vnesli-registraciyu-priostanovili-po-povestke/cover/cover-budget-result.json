@@ -1,0 +1,104 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B10-avans-vnesli-registraciyu-priostanovili-po-povestke/cover/cover.png",
+  "last_errors": [
+    "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+    "pixel_phone_readable FAIL: phone_digits='' ink=4933 clipped=False",
+    "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Аванс', 'внесли', 'сделка', 'встала', 'внезапно'] last_word='внезапно' ocr=''",
+    "pixel_no_collage_inset FAIL: white_frac=0.724 inset_face=False blob_count=3",
+    "pixel_meme_present FAIL: orange_fur=0 legacy=25 host_face=True",
+    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.0544",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "tiers": [
+        {
+          "tier": "standard",
+          "model": "grsai-standard",
+          "bytes": 925448,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_host_face_present FAIL: no compact host face blob (pixels=7324 h_frac=0.501)",
+            "pixel_host_close_up FAIL: face_h_frac=0.17 w_frac=0.52 (need close-up)",
+            "pixel_hook_title_present FAIL: no large readable hook title in sacred zone (bands=[])",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=2449 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Аванс', 'внесли', 'сделка', 'встала', 'внезапно'] last_word='внезапно' ocr=''",
+            "pixel_no_collage_inset FAIL: white_frac=0.856 inset_face=False blob_count=4",
+            "pixel_meme_present FAIL: orange_fur=43 legacy=64 host_face=False",
+            "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.0261",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        },
+        {
+          "tier": "vip",
+          "model": "grsai-vip",
+          "bytes": 1080581,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+            "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=1307 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Аванс', 'внесли', 'сделка', 'встала', 'внезапно'] last_word='внезапно' ocr=''",
+            "pixel_meme_present FAIL: orange_fur=0 legacy=11 host_face=True",
+            "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.1053",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "tiers": [
+        {
+          "tier": "standard",
+          "model": "grsai-standard",
+          "bytes": 1003691,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+            "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=568 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Аванс', 'внесли', 'сделка', 'встала', 'внезапно'] last_word='внезапно' ocr=''",
+            "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0687",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        },
+        {
+          "tier": "vip",
+          "model": "grsai-vip",
+          "bytes": 1013665,
+          "host": "grsaiapi.com",
+          "qa_status": "FAIL",
+          "qa_errors": [
+            "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+            "pixel_phone_readable FAIL: phone_digits='' ink=4933 clipped=False",
+            "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+            "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Аванс', 'внесли', 'сделка', 'встала', 'внезапно'] last_word='внезапно' ocr=''",
+            "pixel_no_collage_inset FAIL: white_frac=0.724 inset_face=False blob_count=3",
+            "pixel_meme_present FAIL: orange_fur=0 legacy=25 host_face=True",
+            "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.0544",
+            "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+          ]
+        }
+      ]
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}
