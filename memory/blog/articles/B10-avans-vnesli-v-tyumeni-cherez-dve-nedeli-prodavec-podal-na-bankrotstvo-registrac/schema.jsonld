@@ -1,0 +1,70 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": { "@id": "{{SITE_BASE}}/#organization" },
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "sameAs": [
+        "{{SITE_BASE}}/",
+        "{{SITE_BASE}}/rieltor-tyumen/",
+        "{{SITE_BASE}}/kontakty/",
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://t.me/holyslav92",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/blog/vtorichka-i-riski/avans-bankrotstvo-prodavtsa-ostanovilo-registratsiyu-tyumen/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/blog/vtorichka-i-riski/avans-bankrotstvo-prodavtsa-ostanovilo-registratsiyu-tyumen/"
+      },
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/avans-bankrotstvo-prodavtsa-ostanovilo-registratsiyu-tyumen/",
+      "headline": "Аванс в Тюмени внесли — банкротство продавца остановило регистрацию",
+      "description": "Аванс уже у продавца, документы — в Росреестре. Но банкротство всплыло раньше регистрации: тюменский случай, где сделка зависла.",
+      "datePublished": "2026-08-25",
+      "inLanguage": "ru-RU",
+      "author": { "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin" },
+      "publisher": { "@id": "{{SITE_BASE}}/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "{{SITE_BASE}}/blog/vtorichka-i-riski/avans-bankrotstvo-prodavtsa-ostanovilo-registratsiyu-tyumen/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Остановит ли банкротство продавца регистрацию после аванса?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Если в отношении продавца возбуждено дело о банкротстве до регистрации перехода права, Росреестр может приостановить регистрацию. Аванс сам по себе не даёт права собственности."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Достаточно ли чистой выписки ЕГРН перед авансом?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Выписка показывает обременения на квартиру, но не долги продавца. Нужны Федресурс, ФССП и проверка финансового состояния до передачи денег."
+          }
+        }
+      ]
+    }
+  ]
+}

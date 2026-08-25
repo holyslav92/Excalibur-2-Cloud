@@ -30,6 +30,36 @@ category: env
 ### Secrets
 - none recorded (credentials absent)
 
+## INC-20260825-1010-cover-qa-hook-phone-ocr-b10
+status: open
+run_date: 2026-08-25
+role: excalibur-blog-cover
+topic_id: B10
+article_dir: memory/blog/articles/B10-avans-vnesli-v-tyumeni-cherez-dve-nedeli-prodavec-podal-na-bankrotstvo-registrac
+severity: blocker
+category: cover
+
+### What went wrong
+- `grsai_solo_cover` 2 attempts + cover_fixer regen: OCR не читает hook H1 и телефон на PNG
+- `pixel_no_wordstat_query_strips` / `pixel_layout_not_collapsed` / `pixel_designed_thumbnail` FAIL
+- Inline canvases не сгенерированы (quad prompt >3500 chars blocker до fix import)
+
+### How the agent recovered this run
+- Indexer + llms.txt обновлены; Publish STOP (quality-bar cover_qa_pass)
+- Fix: `pick_identity_reference` import в `excalibur_blog_cover_quad_prompt.py`
+
+### Durable fix needed before next run
+- Усилить solo cover prompt: mandatory readable Cyrillic hook + phone overlay instructions
+- Рассмотреть OCR escape hatch B08/B09 pattern если лицо+hook+phone визуально OK
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_quad_prompt.py`
+- `scripts/excalibur_blog_grsai_solo_cover.py`
+- `memory/cover/cover-canon.json`
+
+### Secrets
+- none
+
 ## INC-20260821-0614-quality-bar-wordstat-pil-b06
 status: fixed
 run_date: 2026-08-21
