@@ -1,7 +1,7 @@
 # Klyshin topic bank (rolling)
 
 **Источник:** [@klyshin_A](https://t.me/klyshin_A) — Алексей Клышин, юрист по недвижимости  
-**Обновлено:** 2026-08-21 (live read `https://t.me/s/klyshin_A`, Scout B06)  
+**Обновлено:** 2026-08-26 (live read `https://t.me/s/klyshin_A`, Scout B10)  
 **Парный gate:** MCP-KV Wordstat, regions **55** (Тюмень) + **11176** (область), compare **225** (Россия)
 
 Scout **всегда** читает этот банк **вместе** с live Wordstat. Klyshin даёт **угол/хук**; Wordstat **оценивает и перерабатывает** тему до buyer P0 — **не** binary skip.
@@ -65,6 +65,7 @@ Scout **всегда** читает этот банк **вместе** с live W
 
 | Дата | Действие |
 |------|----------|
+| 2026-08-26 | Scout B10 = phone_scammers_notary; rework 1→3→22→6068; отклонены notary_70k (LIVE pool), summons (WP povestka), tired_buyer (WP 4 мес) |
 | 2026-08-21 | Scout B06 = cian_autoprice_minus_million; rework 73→3943→5799→23066; отклонены tired_buyer, five_court, phone_scammers, notary_70k (anti-dup) |
 | 2026-08-18 | Seed из live @klyshin_A; B01 = pre_advance_check + ЕГРН |
 | 2026-08-18 | Канон: evaluate + rework for demand (не skip-if-weak) |
