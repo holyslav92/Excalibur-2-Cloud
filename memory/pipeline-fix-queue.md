@@ -68,6 +68,122 @@ checks_run:
 - `python3 scripts/excalibur_blog_quality_bar_9_gate.py --article-dir memory/blog/articles/B06-...` → all_pass
 commit: 493ea27
 
+## INC-20260826-0830-sol-derouter-524-b10
+status: fixed
+run_date: 2026-08-26
+role: excalibur-blog-sol
+topic_id: B10
+article_dir: memory/blog/articles/B10-v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v
+severity: high
+category: api
+
+### What went wrong
+- Sol single-shot `excalibur_blog_derouter_opus_chat.py --role sol` → HTTP 524 (Cloudflare timeout) на полном longform HTML.
+
+### How the agent recovered this run
+- 3-chunk Sol merge (part1–part3 Derouter calls) → merged `article.html` + stamps `derouter-opus-stamp-sol-part*.json`.
+
+### Durable fix needed before next run
+- `excalibur_blog_sol_chunk.py` — mirror `writer_chunk.py`; Sol skill/agent default longform path.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_sol_chunk.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `agents/excalibur-blog-sol.md`
+- `shared/derouter-opus-brain-contract.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-26
+fix_summary:
+- Added `excalibur_blog_sol_chunk.py` — 3-part Sol on longform (inline≥7), merge article.html + variant-a.html.
+- Sol skill/agent + derouter contract updated; doctor lists script.
+files_changed:
+- `scripts/excalibur_blog_sol_chunk.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `agents/excalibur-blog-sol.md`
+- `.cursor/skills/sol-excalibur-blog/SKILL.md`
+- `.cursor/agents/excalibur-blog-sol.md`
+- `shared/derouter-opus-brain-contract.md`
+- `scripts/excalibur_blog_doctor.py`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_sol_chunk.py`
+- `python3 -m unittest tests.test_pipeline_speed_b03.SolChunkTest`
+commit: pending
+
+## INC-20260826-0831-cover-ocr-false-positive-b10
+status: fixed
+run_date: 2026-08-26
+role: excalibur-blog-cover-qa
+topic_id: B10
+article_dir: memory/blog/articles/B10-v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v
+severity: medium
+category: qa
+
+### What went wrong
+- Pixel QA FAIL on OCR truncation / opaque flakes while visual core OK (face + Cyrillic hook + phone on PNG) — B08/B09 pattern.
+
+### How the agent recovered this run
+- `apply_ocr_false_positive_escape` + manual visual PASS stamp in `cover_qa.json` (`ocr_false_positive_escape: true`).
+
+### Durable fix needed before next run
+- Escape already in `cover_qa_pixels.py` + cover-qa skill; no code change — document B10 as live proof.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `skills/cover-qa-excalibur-blog/SKILL.md`
+- `tests/test_cover_budget.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-26
+fix_summary:
+- Confirmed durable `apply_ocr_false_positive_escape` path; B10 `cover_qa.json` stamped PASS with escape flag (no new code).
+files_changed:
+- none (contract already canonical)
+checks_run:
+- `python3 -m unittest tests.test_cover_budget` (OCR escape test)
+commit: pending
+
+## INC-20260826-0832-cover-fixer-host-closeup-b10
+status: fixed
+run_date: 2026-08-26
+role: excalibur-blog-fixer
+topic_id: B10
+article_dir: memory/blog/articles/B10-v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v
+severity: medium
+category: script
+
+### What went wrong
+- Cover fixer regen left distant host (`face_h_frac=0.12`) — `pixel_host_close_up` FAIL despite layout OK.
+
+### How the agent recovered this run
+- grsai solo regen with close-up prompt → `face_h_frac=0.58`, visual PASS.
+
+### Durable fix needed before next run
+- `cover_fixer.py`: host-only FAIL → `grsai_solo_cover` with `HOST_CROP_LOCK` prompt suffix (not quad panel regen).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_fixer.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-26
+fix_summary:
+- `regen_cover_host_closeup()` calls `excalibur_blog_grsai_solo_cover.py --prompt-suffix HOST_CROP_LOCK` when host_fail without layout/artifact fail.
+files_changed:
+- `scripts/excalibur_blog_cover_fixer.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_cover_fixer.py`
+commit: pending
+
 ## INC-20260821-0614-html-linter-cta-div-b06
 status: fixed
 run_date: 2026-08-21

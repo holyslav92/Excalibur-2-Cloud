@@ -18,15 +18,16 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 **Не пиши прозу моделью Cursor.** Собери `--user-file` из `drafts/writer.html` + SOUL/examples и вызови Derouter powerful tier (claude-opus-5):
 
 ```bash
-python3 scripts/excalibur_blog_derouter_opus_chat.py \
-  --role sol \
+python3 scripts/excalibur_blog_sol_chunk.py \
   --system-file skills/sol-excalibur-blog/SKILL.md \
   --user-file <assembled-sol-inputs.md> \
   --output article.html \
   --article-dir <article_dir>
 ```
 
-Копию финала положи в `drafts/variant-a.html` (shell cp, не рерайт Cursor).
+Longform (7 inline): **3 части на первом проходе** — не ждать HTTP 524 на single-shot Sol. `--single-shot` только для коротких статей.
+
+Копию финала: shell `cp article.html drafts/variant-a.html` (sol_chunk делает это автоматически при chunk merge).
 Контракт: `shared/derouter-opus-brain-contract.md`.
 `DEROUTER SOL BLOCKER` → стоп. Без тихого fallback.
 
