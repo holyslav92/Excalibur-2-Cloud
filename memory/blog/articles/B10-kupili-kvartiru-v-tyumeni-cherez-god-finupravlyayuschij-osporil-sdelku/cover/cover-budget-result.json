@@ -4,25 +4,29 @@
   "max_attempts": 2,
   "best_candidate": "/workspace/memory/blog/articles/B10-kupili-kvartiru-v-tyumeni-cherez-god-finupravlyayuschij-osporil-sdelku/cover/cover.png",
   "last_errors": [
-    "pixel_phone_readable FAIL: phone_digits='79392001' ink=1505 clipped=True",
-    "pixel_phone_not_clipped FAIL: digits='79392001' clipped=True ocr='+79392001 | +79392001 | +79392001'",
-    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['через', 'после', 'покупки'] last_word='покупки' ocr='д забрал квартиру'",
-    "pixel_no_collage_inset FAIL: white_frac=0.245 inset_face=False blob_count=3",
+    "pixel_phone_readable FAIL: phone_digits='792200165' ink=1158 clipped=True",
+    "pixel_phone_not_clipped FAIL: digits='792200165' clipped=True ocr='+792200165 | +792200165'",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['квартиру', 'после', 'покупки'] last_word='покупки' ocr='М забрал ем артиру через'",
+    "pixel_no_collage_inset FAIL: white_frac=0.164 inset_face=True blob_count=4",
+    "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.0629",
     "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
   ],
   "attempts": [
     {
       "attempt": 1,
       "model": "grsai-standard",
-      "bytes": 945775,
+      "bytes": 969103,
       "host": "grsaiapi.com",
       "qa_status": "FAIL",
       "qa_errors": [
-        "pixel_phone_readable FAIL: phone_digits='79220016' ink=952 clipped=True",
-        "pixel_phone_not_clipped FAIL: digits='79220016' clipped=True ocr='+79220016 | +79220016 | +79220016'",
-        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['квартиру', 'после', 'покупки'] last_word='покупки' ocr='‚уд забрал (ваптипу через гол'",
-        "pixel_no_collage_inset FAIL: white_frac=0.231 inset_face=False blob_count=5",
-        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.1053",
+        "pixel_hook_title_present FAIL: no large readable hook title in sacred zone (bands=[])",
+        "pixel_phone_readable FAIL: phone_digits='79220016505' ink=1761 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='79220016505' clipped=True ocr='+792200165 | +79220016505 | +79220016505'",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['квартиру', 'через', 'после', 'покупки'] last_word='покупки' ocr='Суд забрал'",
+        "pixel_no_collage_inset FAIL: white_frac=0.65 inset_face=False blob_count=2",
+        "pixel_meme_present FAIL: orange_fur=14 legacy=11 host_face=True",
+        "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0391",
+        "pixel_layout_not_collapsed FAIL: face-only crop with no hook title (face_h=0.48, face_w=0.517)",
         "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
       ],
       "qa_fail": true
@@ -30,14 +34,15 @@
     {
       "attempt": 2,
       "model": "grsai-standard",
-      "bytes": 917609,
+      "bytes": 1018814,
       "host": "grsaiapi.com",
       "qa_status": "FAIL",
       "qa_errors": [
-        "pixel_phone_readable FAIL: phone_digits='79392001' ink=1505 clipped=True",
-        "pixel_phone_not_clipped FAIL: digits='79392001' clipped=True ocr='+79392001 | +79392001 | +79392001'",
-        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['через', 'после', 'покупки'] last_word='покупки' ocr='д забрал квартиру'",
-        "pixel_no_collage_inset FAIL: white_frac=0.245 inset_face=False blob_count=3",
+        "pixel_phone_readable FAIL: phone_digits='792200165' ink=1158 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='792200165' clipped=True ocr='+792200165 | +792200165'",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['квартиру', 'после', 'покупки'] last_word='покупки' ocr='М забрал ем артиру через'",
+        "pixel_no_collage_inset FAIL: white_frac=0.164 inset_face=True blob_count=4",
+        "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.0629",
         "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
       ],
       "qa_fail": true
