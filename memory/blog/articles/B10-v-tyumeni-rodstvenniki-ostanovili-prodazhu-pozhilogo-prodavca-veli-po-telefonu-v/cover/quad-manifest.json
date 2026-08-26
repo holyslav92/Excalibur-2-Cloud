@@ -1,0 +1,229 @@
+{
+  "topic_id": "B10",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Телефон решал за продавца — сделку остановили",
+  "cover_hook_highlight": "остановили",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав в кардигане смотрит на телефон продавца; hook; CTA; стикер.",
+      "scene_hint": "bright apartment viewing; host LEFT sage cardigan wary glance at phone; hook RIGHT; sticky; phone; Harold+smudge; NO Wordstat",
+      "meme_caption_ru": "",
+      "sticky": "Хорошо, что не внесли аванс",
+      "cover_emotion": "насторожённость",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "meme_picks": [
+        "hide_pain_harold",
+        "smudge_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Цена согласована — и внезапно телефон не отпускали",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison_table Норма vs Осмотр; labels facts; torn paper gold tape; tiny chloe sticker corner",
+      "alt": "Таблица норма vs осмотр: цена, аванс, пауза, «как сказали».",
+      "labels": [
+        "Цена согласована",
+        "«Как сказали»",
+        "Кто решает"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "side_eye_chloe"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "За два дня до нотариуса: что увидели на повторном осмотре",
+      "visual_type": "process_flow",
+      "scene_hint": "process_flow 5 numbered steps arrows; labels facts; high-key NO human",
+      "alt": "Процесс за 2 дня: телефон, короткие ответы, доклад, давление сроком.",
+      "labels": [
+        "За 2 дня",
+        "Телефон не отпускает",
+        "Давление сроком"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Финал: сделку остановили до первого аванса",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison_table До аванса vs Стоп; red STOP badge; labels facts; NO human",
+      "alt": "Стоп до аванса: родственники согласились, покупатели ушли, без денег.",
+      "labels": [
+        "Покупатели ушли",
+        "Без денег",
+        "Стоп до аванса"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Почему нотариус на осмотре не появляется — и что это значит",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "labeled_checklist нотариус vs осмотр lanes; pins gold tape; NO human",
+      "alt": "Чеклист: нотариус позже, телефон на осмотре, кто отвечает.",
+      "labels": [
+        "Нотариус в кабинете",
+        "Телефон — процесс",
+        "Осмотр без звонков"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Как ФНП описывает сдвиг схем на куплю-продажу",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "bar_chart FNP Aug 2026; 46% дарение 32% продажа bars; tiny grumpy cat sticker",
+      "alt": "График ФНП: 46% дарение, 32% продажа, нотариальные 8,5%.",
+      "labels": [
+        "ФНП 17.08.2026",
+        "46% дарение",
+        "32% продажа"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "grumpy_cat"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Маркеры телефонного управления, которые видит риелтор",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison_table marker rows phone pause report; NO human face",
+      "alt": "Маркеры: телефон, «как сказали», пауза, доклад до денег.",
+      "labels": [
+        "Телефон не выпускается",
+        "«Как мне сказали»",
+        "Маркеры до денег"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить до аванса: покупателю и родственникам",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "labeled_checklist 5 checks before advance; gold pins; tiny two_buttons sticker",
+      "alt": "Чеклист до аванса: 15 мин без звонков, пауза 2–3 дня, стоп.",
+      "labels": [
+        "15 мин без звонков",
+        "Пауза 2–3 дня",
+        "Стоп до аванса"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "two_buttons"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени",
+    "вторичка в тюмени",
+    "нотариус при покупке квартиры"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_emotion": "насторожённость",
+  "cover_motifs": {
+    "composition": "host_large_left_watching_elderly_phone_hook_right_sacred_zone",
+    "location": "bright_sunlit_tyumen_apartment_viewing_white_walls_window",
+    "meme": "hide_pain_harold_sticker_plus_smudge_cat_cutout",
+    "prop_set": "elderly_seller_smartphone_clutch_viewing_calendar_nota_date",
+    "sticker_set": "one_yellow_sticky_hook_only_NO_wordstat_bars",
+    "joke": "sticky_horosho_ne_vnesli_avans",
+    "outfit": "sage_olive_cardigan_cream_tee_NO_blazer_NO_terracotta",
+    "emotion": "wary_side_glance_narrowed_brows_not_smile",
+    "pose_framing": "host_large_left_close_up_not_right_bust_not_side_eye_formula",
+    "action": "watches_elderly_seller_clutch_phone_during_viewing"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  }
+}

@@ -103,6 +103,23 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-26",
+      "topic_id": "B10",
+      "slug": "",
+      "motifs": {
+        "composition": "host_large_left_watching_elderly_phone_hook_right_sacred_zone",
+        "location": "bright_sunlit_tyumen_apartment_viewing_white_walls_window",
+        "meme": "hide_pain_harold_sticker_plus_smudge_cat_cutout",
+        "prop_set": "elderly_seller_smartphone_clutch_viewing_calendar_nota_date",
+        "sticker_set": "one_yellow_sticky_hook_only_no_wordstat_bars",
+        "joke": "sticky_horosho_ne_vnesli_avans",
+        "outfit": "sage_olive_cardigan_cream_tee_no_blazer_no_terracotta",
+        "emotion": "wary_side_glance_narrowed_brows_not_smile",
+        "pose_framing": "host_large_left_close_up_not_right_bust_not_side_eye_formula",
+        "action": "watches_elderly_seller_clutch_phone_during_viewing"
+      }
     }
   ]
 }
