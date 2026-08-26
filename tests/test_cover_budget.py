@@ -82,6 +82,26 @@ class CoverBudgetTest(unittest.TestCase):
         self.assertIn("NOT clipped", prompt)
         self.assertNotIn("Wordstat sticker labels", prompt)
 
+    def test_sync_manifest_hook_from_cover_text(self) -> None:
+        import json
+        import tempfile
+        from excalibur_blog_cover_budget import sync_manifest_hook_from_cover_text
+
+        with tempfile.TemporaryDirectory() as tmp:
+            article_dir = Path(tmp)
+            (article_dir / "cover").mkdir()
+            (article_dir / "cover" / "cover-text.json").write_text(
+                json.dumps(
+                    {"hook": "Короткий hook для OCR", "highlight": "OCR"},
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            manifest = {"cover_hook": "Старый длинный hook из manifest", "cover_hook_highlight": "старый"}
+            synced = sync_manifest_hook_from_cover_text(manifest, article_dir)
+            self.assertEqual(synced["cover_hook"], "Короткий hook для OCR")
+            self.assertEqual(synced["cover_hook_highlight"], "OCR")
+
     def test_generate_image_accepts_ref_path_kwarg(self) -> None:
         from excalibur_blog_grsai_gpt_image2_api import generate_image
         import inspect

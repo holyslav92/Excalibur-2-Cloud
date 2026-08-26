@@ -50,7 +50,9 @@ def slot_negatives(slot_key: str, slot: dict[str, Any]) -> str:
     return "; ".join(parts)
 
 
-def build_panel_prompt(manifest: dict[str, Any], slot_key: str, root: Path) -> str:
+def build_panel_prompt(
+    manifest: dict[str, Any], slot_key: str, root: Path, *, article_dir: Path | None = None
+) -> str:
     from excalibur_blog_cover_quad_prompt import (
         BOARD_STATIONERY,
         INLINE_BAN_EXTRA,
@@ -71,8 +73,11 @@ def build_panel_prompt(manifest: dict[str, Any], slot_key: str, root: Path) -> s
     hero = load_json(hero_path) if hero_path.is_file() else {}
 
     if slot_key == "cover":
+        from excalibur_blog_cover_budget import sync_manifest_hook_from_cover_text
         from excalibur_blog_cover_quad_prompt import build_solo_cover_prompt
 
+        if article_dir is not None:
+            manifest = sync_manifest_hook_from_cover_text(manifest, article_dir)
         return build_solo_cover_prompt(manifest, style, hero, design_code)
 
     neg = slot_negatives(slot_key, slot)
@@ -274,7 +279,7 @@ def main() -> int:
 
         max_attempts = resolve_cover_max_attempts() if slot_key == "cover" else 1
         for attempt in range(1, max_attempts + 1):
-            prompt = build_panel_prompt(manifest, slot_key, root)
+            prompt = build_panel_prompt(manifest, slot_key, root, article_dir=article_dir)
             with_i2i = slot_key == "cover"
             batch_path = write_solo_batch(
                 article_dir, slot_key, prompt, with_i2i=with_i2i, ref_url=ref_url

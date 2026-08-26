@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import os
 import re
+from pathlib import Path
 from typing import Any
 
 DEFAULT_COVER_MAX_ATTEMPTS = 2
@@ -108,3 +109,25 @@ def collage_inset_ban_prompt_block() -> str:
         "BAN HARD collage inset: NO polaroid frame, NO white rectangular paste-in, NO second human face blob "
         "in right 35% of frame, NO erase-mask white patches — single unified bright #FFF background only."
     )
+
+
+def sync_manifest_hook_from_cover_text(manifest: dict[str, Any], article_dir: Path) -> dict[str, Any]:
+    """Prefer cover-text.json hook over stale manifest edits (pixel OCR / gate drift)."""
+    import json
+
+    ct_path = article_dir / "cover" / "cover-text.json"
+    if not ct_path.is_file():
+        return manifest
+    try:
+        ct = json.loads(ct_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return manifest
+    hook = str(ct.get("hook") or "").strip()
+    highlight = str(ct.get("highlight") or "").strip()
+    if hook:
+        manifest = dict(manifest)
+        manifest["cover_hook"] = hook
+    if highlight:
+        manifest = dict(manifest)
+        manifest["cover_hook_highlight"] = highlight
+    return manifest
