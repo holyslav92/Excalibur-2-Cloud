@@ -9,3 +9,4 @@
 | [LESSON-20260821-0615-B06-html-linter-cta-div-whitelist](content-lessons/LESSON-20260821-0615-B06-html-linter-cta-div-whitelist.md) | B06 | applied | structure |
 | [LESSON-20260826-0834-B10-cover-budget-ocr-escape](content-lessons/LESSON-20260826-0834-B10-cover-budget-ocr-escape.md) | B10 | proposed | structure |
 | [LESSON-20260826-0834-B10-elderly-phone-casus-risk-cluster](content-lessons/LESSON-20260826-0834-B10-elderly-phone-casus-risk-cluster.md) | B10 | proposed | structure |
+| [LESSON-20260826-1306-B11-matkapital-egrn-false-comfort-cluster](content-lessons/LESSON-20260826-1306-B11-matkapital-egrn-false-comfort-cluster.md) | B11 | proposed | structure |

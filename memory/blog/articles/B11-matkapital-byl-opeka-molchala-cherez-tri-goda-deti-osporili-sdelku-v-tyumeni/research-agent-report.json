@@ -1,0 +1,75 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B11",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-26",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/video/watch/6a7f12502bc81f5f3197f689",
+        "type": "community",
+        "note": "Klyshin «5 схем» 2026 — п.4 маткапитал и невыделенные детские доли"
+      },
+      {
+        "url": "https://tumentoday.ru/2026/08/22/tyumenskaya_oblast_uzhe_shest_let_ostayetsya_odnim_iz_nemnogikh_regionov_rossii/",
+        "type": "news",
+        "note": "Региональный маткапитал Тюмени — 22.08.2026"
+      },
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Scout signal_urls — hook matkapital_child_shares"
+      },
+      {
+        "url": "https://riadagestan.ru/news/incidents/v_dagestane_prokuratura_cherez_sud_vzyskala_svyshe_4_4_mln_rubley_s_fiktivno_obnalichivshikh_matkapital_roditeley",
+        "type": "news",
+        "note": "Прокуратура vs фиктивный маткапитал — 20.08.2026"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "вторичка в тюмени",
+    "p0_volume": 6068,
+    "buyer_spine_phrase": "купить квартиру в тюмени",
+    "buyer_spine_volume": 22833,
+    "angle_phrase": "детские доли в квартире",
+    "angle_volume": 35,
+    "rework_from": "маткапитал при покупке квартиры (19)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "Отделён от live WP cluster «доли не видели в выписке»; plot: опека молчала → дети оспорили через 3 года"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 2,
+    "entities_checked": ["domrf", "256-fz"],
+    "errors": [],
+    "note": "Тарифные claims отсутствуют; правовые claims верифицированы по ДОМ.РФ и ст. 10 ФЗ № 256-ФЗ"
+  },
+  "casus_verification": {
+    "status": "LIMITED",
+    "reason": "Handoff задаёт сюжетный механизм без номера дела; в notes сохранён как casus shape, без выдуманной конкретики"
+  },
+  "derouter": {
+    "status": "PASS",
+    "stamp": "derouter-opus-stamp-research.json",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra"
+  },
+  "key_facts_count": 22,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}

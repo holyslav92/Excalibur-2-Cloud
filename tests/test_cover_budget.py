@@ -102,6 +102,31 @@ class OcrEscapeHatchTest(unittest.TestCase):
         self.assertFalse(new_checks["pixel_host_face_present"])
         self.assertNotIn("ocr_false_positive_escape", new_evidence)
 
+    def test_visual_proxy_b11_style_ocr_empty(self) -> None:
+        from excalibur_blog_cover_qa_pixels import analyze_cover_pixels, load_json
+        from pathlib import Path
+
+        article = Path(
+            "memory/blog/articles/"
+            "B11-matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni"
+        )
+        if not (article / "cover/cover.png").is_file():
+            self.skipTest("B11 cover.png missing")
+        manifest = load_json(article / "cover/quad-manifest.json")
+        result = analyze_cover_pixels(article / "cover/cover.png", manifest=manifest)
+        proxy = result.evidence.get("visual_ocr_proxy") or {}
+        self.assertTrue(proxy.get("applied"), msg=result.errors)
+        self.assertEqual(result.status, "PASS", msg=result.errors)
+        hard = (
+            "pixel_no_wordstat_query_strips",
+            "pixel_hook_title_present",
+            "pixel_phone_readable",
+            "pixel_meme_present",
+            "pixel_layout_not_collapsed",
+        )
+        for key in hard:
+            self.assertTrue(result.checks.get(key), f"{key} should PASS after visual proxy")
+
 
 if __name__ == "__main__":
     unittest.main()

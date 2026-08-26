@@ -1,0 +1,86 @@
+{
+  "topic_id": "B11",
+  "slug": "matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Святослав в голубой рубашке смотрит на штамп «отмена» в выписке; hook справа; CTA; мем-стикеры.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-26T12:46:03+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Святослав в голубой рубашке смотрит на штамп «отмена» в выписке; hook справа; CTA; мем-стикеры.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Таблица: чистая выписка сегодня против отмены регистрации через три года.",
+      "h2_anchor": "Тихая выписка — и сделка, которую через три года отменили",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Сравнение: маткапитал в сделке и невыделенные детские доли.",
+      "h2_anchor": "Как семья купила квартиру с маткапиталом — и где «потерялись» дети",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Процесс: маткапитал, доли не выделены, дети не в ЕГРН, опека не подключилась.",
+      "h2_anchor": "Почему опека молчала, пока родители продавали",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Процесс: дети заявили права, суд отменил регистрацию, реституция.",
+      "h2_anchor": "Финал: дети оспорили сделку — суд отменил регистрацию",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Чеклист парадокса: взрослые собственники, детей не видно, сигнал — маткапитал.",
+      "h2_anchor": "Парадокс чистой выписки: когда отсутствие детей — не спокойствие",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Схема: выписка показывает сегодня, справка СФР — историю маткапитала.",
+      "h2_anchor": "Маткапитал в ЕГРН не видно: что это значит для покупателя на вторичке",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Чеклист до аванса: справка СФР, вопрос про маткапитал, стоп до аванса.",
+      "h2_anchor": "Что проверить до аванса, если слышите «доли уже оформили»",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

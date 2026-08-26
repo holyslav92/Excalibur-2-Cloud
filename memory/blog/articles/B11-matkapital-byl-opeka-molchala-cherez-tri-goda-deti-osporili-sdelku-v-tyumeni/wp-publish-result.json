@@ -1,0 +1,27 @@
+{
+  "slug": "matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni",
+  "topic_id": "B11",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B11-matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1116145,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9181 slug=matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni\nOK categories=31,48\nOK yoast_social_image=1\nOK featured_image=9182\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9183 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni-inline-01.png\nOK inline_alt=9183\nOK inline_caption=9183\nOK inline_description=9183\nOK inline_image_upload=9184 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni-inline-02.png\nOK inline_alt=9184\nOK inline_caption=9184\nOK inline_description=9184\nOK inline_image_upload=9185 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni-inline-03.png\nOK inline_alt=9185\nOK inline_caption=9185\nOK inline_description=9185\nOK inline_image_upload=9186 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni-inline-04.png\nOK inline_alt=9186\nOK inline_caption=9186\nOK inline_description=9186\nOK inline_image_upload=9187 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni-inline-05.png\nOK inline_alt=9187\nOK inline_caption=9187\nOK inline_description=9187\nOK inline_image_upload=9188 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni-inline-06.png\nOK inline_alt=9188\nOK inline_caption=9188\nOK inline_description=9188\nOK inline_image_upload=9189 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni-inline-07.png\nOK inline_alt=9189\nOK inline_caption=9189\nOK inline_description=9189\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni/",
+    "errors": []
+  }
+}
