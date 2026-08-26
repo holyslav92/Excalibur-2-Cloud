@@ -1,5 +1,5 @@
 ## LESSON-20260826-0834-B10-cover-budget-ocr-escape
-status: proposed
+status: validated
 topic_id: B10
 category: structure
 confidence: medium
@@ -38,9 +38,9 @@ confidence: medium
 - После второго content-learner run с тем же exhaust+escape без regen improvement → checklist item «phone-in-hand close-up» в cover-scene default.
 
 ### Durable applied
-- none (canon уже в cover-canon.json; первый именованный learner run B10)
+- none (canon уже в cover-canon.json; первый именованный learner run B10; **B11 repeat → applied in LESSON-20260826-1116-B11-cover-budget-ocr-escape-repeat**)
 
 ### Resolution
-status: recorded
+status: validated
 article_dir: memory/blog/articles/B10-v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v
 wp_post_id: 9161
