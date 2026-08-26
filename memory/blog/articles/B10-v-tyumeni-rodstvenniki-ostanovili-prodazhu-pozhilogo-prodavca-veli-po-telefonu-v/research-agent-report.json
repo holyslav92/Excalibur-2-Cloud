@@ -1,0 +1,63 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B10",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-26",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://www.dp.ru/a/2026/08/17/notariusi-predupredili-o-novoj",
+        "type": "news",
+        "note": "ФНП 17.08.2026: мошенники сместились на куплю-продажу после обязательного нотариального дарения"
+      },
+      {
+        "url": "https://vecherka-spb.ru/2026/08/21/pozhilaya-peterburzhenka-prodala-kvartiru-i-otdala-moshennikam-pochti-9-millionov-rublei",
+        "type": "news",
+        "note": "Свежий параллельный casus 21.08.2026 — продажа под телефонным давлением"
+      },
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Klyshin hook phone_scammers_notary — телефонное управление пожилым владельцем"
+      },
+      {
+        "url": "https://vladis.ru/blog/moshennichestvo-s-kvartirami",
+        "type": "industry",
+        "note": "Маркеры поведения на осмотре: телефон, куратор, стоп переговоров"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "вторичка в тюмени",
+    "p0_volume": 6068,
+    "buyer_spine_phrase": "купить квартиру в тюмени",
+    "buyer_spine_volume": 22833,
+    "angle_phrase": "нотариус при покупке квартиры",
+    "angle_volume": 22,
+    "rework_from": "мошенники при покупке квартиры (1)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 0,
+    "entities_checked": [],
+    "errors": [],
+    "note": "Тарифные claims отсутствуют; official_verifications N/A"
+  },
+  "key_facts_count": 22,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}
