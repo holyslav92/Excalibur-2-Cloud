@@ -120,6 +120,23 @@
         "pose_framing": "host_large_left_close_up_not_right_bust_not_side_eye_formula",
         "action": "watches_elderly_seller_clutch_phone_during_viewing"
       }
+    },
+    {
+      "date": "2026-08-26",
+      "topic_id": "B11",
+      "slug": "",
+      "motifs": {
+        "composition": "host_medium_right_holds_egrn_green_check_red_bankruptcy_hook_left_sacred",
+        "location": "bright_white_notary_atrium_tyumen_glass_sun_flare",
+        "meme": "roll_safe_sticker_plus_grumpy_cat_cutout",
+        "prop_set": "egrn_extract_fold_green_check_red_bankruptcy_stamp_yellow_sticky",
+        "sticker_set": "yellow_sticky_proveryayte_prodavca_pinned_corner_only",
+        "joke": "sticky_proveryayte_prodavca_yellow_note",
+        "outfit": "burgundy_cable_knit_sweater_cream_oxford_no_blazer_no_cardigan",
+        "emotion": "stunned_disbelief_raised_brows_half_open_mouth_not_smile",
+        "pose_framing": "host_medium_right_three_quarter_close_up_not_left_bust",
+        "action": "holds_egrn_fold_showing_green_check_and_red_bankruptcy_overlay"
+      }
     }
   ]
 }

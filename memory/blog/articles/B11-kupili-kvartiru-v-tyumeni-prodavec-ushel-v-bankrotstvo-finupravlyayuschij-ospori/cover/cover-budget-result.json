@@ -1,0 +1,63 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B11-kupili-kvartiru-v-tyumeni-prodavec-ushel-v-bankrotstvo-finupravlyayuschij-ospori/cover/cover.png",
+  "last_errors": [
+    "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+    "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+    "pixel_no_text_on_clothing FAIL: dark_ink_frac=0.147 on chest/clothes",
+    "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+    "pixel_phone_readable FAIL: phone_digits='' ink=3990 clipped=False",
+    "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Чистая', 'выписка', 'квартиру', 'спасла'] last_word='спасла' ocr=''",
+    "pixel_no_collage_inset FAIL: white_frac=0.546 inset_face=False blob_count=2",
+    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.1092",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model": "grsai-standard",
+      "bytes": 1039967,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+        "pixel_no_text_on_clothing FAIL: dark_ink_frac=0.143 on chest/clothes",
+        "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+        "pixel_phone_readable FAIL: phone_digits='' ink=2746 clipped=False",
+        "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Чистая', 'выписка', 'квартиру', 'спасла'] last_word='спасла' ocr=''",
+        "pixel_no_collage_inset FAIL: white_frac=0.602 inset_face=False blob_count=3",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.0775",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model": "grsai-standard",
+      "bytes": 1088004,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+        "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+        "pixel_no_text_on_clothing FAIL: dark_ink_frac=0.147 on chest/clothes",
+        "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+        "pixel_phone_readable FAIL: phone_digits='' ink=3990 clipped=False",
+        "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Чистая', 'выписка', 'квартиру', 'спасла'] last_word='спасла' ocr=''",
+        "pixel_no_collage_inset FAIL: white_frac=0.546 inset_face=False blob_count=2",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.1092",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}
