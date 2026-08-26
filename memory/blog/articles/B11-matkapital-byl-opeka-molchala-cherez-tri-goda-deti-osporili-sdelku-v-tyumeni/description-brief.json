@@ -1,0 +1,9 @@
+{
+  "topic_id": "B11",
+  "description": "В тюменской вторичке чистый ЕГРН успокоил покупателя: маткапитал был, а детских долей не оказалось. Через три года дети через суд забрали квартиру.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
