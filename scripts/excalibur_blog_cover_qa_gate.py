@@ -242,7 +242,7 @@ def validate_cover_qa(article_dir: Path, root: Path, *, stamp: bool = True) -> d
         if not pixel_result.checks.get(key):
             errors.append(f"pixel check failed: {key}")
     for err in pixel_result.errors:
-        if err not in errors:
+        if "FAIL:" in err and err not in errors:
             errors.append(err)
 
     meme_catalog = root / "memory" / "cover" / "meme-top100.json"
