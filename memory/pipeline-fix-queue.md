@@ -112,7 +112,7 @@ files_changed:
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_sol_chunk.py`
 - `python3 -m unittest tests.test_pipeline_speed_b03.SolChunkTest`
-commit: pending
+commit: 62f1bb2
 
 ## INC-20260826-0831-cover-ocr-false-positive-b10
 status: fixed
@@ -148,7 +148,7 @@ files_changed:
 - none (contract already canonical)
 checks_run:
 - `python3 -m unittest tests.test_cover_budget` (OCR escape test)
-commit: pending
+commit: 62f1bb2
 
 ## INC-20260826-0832-cover-fixer-host-closeup-b10
 status: fixed
@@ -182,7 +182,7 @@ files_changed:
 - `scripts/excalibur_blog_cover_fixer.py`
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_cover_fixer.py`
-commit: pending
+commit: 62f1bb2
 
 ## INC-20260821-0614-html-linter-cta-div-b06
 status: fixed
