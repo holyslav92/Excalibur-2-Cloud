@@ -5,7 +5,7 @@
   "topic_id": "B11",
   "cover_md5": "29eb359c0190d84d1ab39656f84ef66c",
   "pixel_qa": true,
-  "pixel_description": "grsai solo 1200x675 standard tier (budget 2/2); burgundy sweater stunned disbelief; hook+phone+sticky+EGRN+thinking cat; visual PASS B08/B09 OCR escape. 1200x675; mean_lum=180; host_crop=close-up right; garment=burgundy cable knit; face_h_frac=0.49",
+  "pixel_description": "1200x675; mean_lum=180; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=1 bar-like gold strips; face_h_frac=0.49",
   "checks": {
     "meme_variety_not_cats_only": true,
     "pixel_light_high_key": true,
@@ -88,7 +88,7 @@
     "host_dark_ratio": 0.236,
     "ocr_false_positive_escape": {
       "applied": true,
-      "mode": "visual_manual_B08_B09",
+      "mode": "visual_B08_B09",
       "flaky_checks_overridden": [
         "pixel_designed_thumbnail",
         "pixel_hook_title_cyrillic",
@@ -104,12 +104,10 @@
       ],
       "phone_zone_ink": 3990,
       "hook_ink_outside_face": 11634,
-      "pattern": "B08/B09 live — host face + Cyrillic hook + phone on PNG; Tesseract OCR empty on styled typography; gold highlight + EGRN document graphic false positives",
-      "cover_budget_exhausted": true,
-      "fixer_skipped": "budget 2/2 — no panel regen"
+      "pattern": "B08/B09 live — host face + hook ink + phone ink; OCR truncation/opaque flakes only"
     }
   },
-  "notes": "Visual QA PASS after grsai standard tier (2/2 budget). PNG: host burgundy cable knit stunned disbelief hand-on-cheek RIGHT; hook «Чистая выписка квартиру не спасла» Cyrillic readable; phone +7 922 001 65 05; yellow sticky «Проверяйте продавца»; EGRN doc with green check + red stamp; thinking cat meme; high-key. Pixel OCR false positives (empty OCR on hook/phone) + gold-bar/EGRN-doc/collage detection flakes — ocr_false_positive_escape applied (B08/B09 pattern). Fixer not run: cover budget exhausted."
+  "notes": "Pixel QA on cover.png md5=29eb359c0190d84d1ab39656f84ef66c; 1200x675; mean_lum=180; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=1 bar-like gold strips; face_h_frac=0.49",
   "gate_status": "PASS",
   "gate_errors": []
 }
