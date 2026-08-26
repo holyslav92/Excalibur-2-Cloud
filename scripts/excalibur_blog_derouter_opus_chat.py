@@ -25,6 +25,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
+from excalibur_repo_paths import resolve_article_output
+
 DEFAULT_API_KEY_ENV = "DEROUTER_API_KEY"
 PRIMARY_ENDPOINT = "https://api.derouter.ai/openai/v1/chat/completions"
 FALLBACK_ENDPOINT = "https://api.apikey.cloud/openai/v1/chat/completions"
@@ -557,9 +559,17 @@ def run_chat(args: argparse.Namespace) -> int:
         return 2
 
     if args.output:
-        out = Path(args.output)
-        if not out.is_absolute():
-            out = root / out
+        if article_path is not None:
+            out = resolve_article_output(
+                args.output,
+                article_dir=article_path,
+                root=root,
+                default_name="derouter-output.txt",
+            )
+        else:
+            out = Path(args.output)
+            if not out.is_absolute():
+                out = root / out
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(text if text.endswith("\n") else text + "\n", encoding="utf-8")
         print(f"WROTE {out.relative_to(root) if out.is_relative_to(root) else out}")

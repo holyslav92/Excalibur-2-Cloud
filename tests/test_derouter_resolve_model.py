@@ -93,5 +93,47 @@ class DerouterResolveModelTests(unittest.TestCase):
                 self.assertIn("opus", model.lower())
 
 
+class DerouterOutputPathTests(unittest.TestCase):
+    def test_bare_output_resolves_under_article_dir(self) -> None:
+        from excalibur_repo_paths import resolve_article_output
+
+        root = Path("/workspace")
+        article_dir = root / "memory/blog/articles/B11-slug"
+        out = resolve_article_output(
+            "title-brief.json",
+            article_dir=article_dir,
+            root=root,
+            default_name="title-brief.json",
+        )
+        self.assertEqual(out, article_dir / "title-brief.json")
+
+    def test_cover_subpath_resolves_under_article_dir(self) -> None:
+        from excalibur_repo_paths import resolve_article_output
+
+        root = Path("/workspace")
+        article_dir = root / "memory/blog/articles/B11-slug"
+        out = resolve_article_output(
+            "cover/cover-text.json",
+            article_dir=article_dir,
+            root=root,
+            default_name="cover-text.json",
+        )
+        self.assertEqual(out, article_dir / "cover" / "cover-text.json")
+
+    def test_repo_relative_output_not_double_nested(self) -> None:
+        from excalibur_repo_paths import resolve_article_output
+
+        root = Path("/workspace")
+        article_dir = root / "memory/blog/articles/B11-slug"
+        rel = "memory/blog/articles/B11-slug/description-brief.json"
+        out = resolve_article_output(
+            rel,
+            article_dir=article_dir,
+            root=root,
+            default_name="description-brief.json",
+        )
+        self.assertEqual(out, root / rel)
+
+
 if __name__ == "__main__":
     unittest.main()

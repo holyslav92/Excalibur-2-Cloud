@@ -37,7 +37,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 ```
 
 1. Cursor **собирает** `--user-file` из входов (research, handoff, article.html…).
-2. Cursor **вызывает** скрипт; берёт `--output` **как есть**.
+2. Cursor **вызывает** скрипт; `--output` с `--article-dir` — bare filename (`title-brief.json`) или subpath (`cover/cover-text.json`) пишется **в article_dir** (см. `resolve_article_output` в `excalibur_repo_paths.py`; INC B11).
 3. Cursor **не переписывает** HTML/JSON/надписи после Derouter.
 4. Stamp `derouter-opus-stamp-<role>.json` — tier + фактический model id (opus vs terra).
 
