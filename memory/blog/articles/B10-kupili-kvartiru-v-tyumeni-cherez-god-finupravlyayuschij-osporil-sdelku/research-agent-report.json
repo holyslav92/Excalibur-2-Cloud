@@ -1,0 +1,63 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B10",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-26",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "16.08.2026: «5 схем законной потери квартиры» — схема №1 банкротство продавца, финуправляющий оспаривает сделки за 3 года"
+      },
+      {
+        "url": "https://tvgram.ru/klyshin_A/3156",
+        "type": "community",
+        "note": "Зеркало поста 16.08.2026 с датой и текстом схемы банкротства"
+      },
+      {
+        "url": "https://vsrf.ru/documents/all/36132/",
+        "type": "official",
+        "note": "Обзор ВС № 12/2026 от 01.07.2026 — оспаривание сделок с жильём, банкротство, осмотрительность покупателя"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "compare_region": "225",
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 22652,
+    "angle_phrases": {
+      "купить квартиру в тюмени вторичка": 3968,
+      "банкротство продавца квартиры": 2075,
+      "имущество банкротов": 14715,
+      "банкротство продавца квартиры после продажи": 193
+    },
+    "rework_from": "банкротство продавца квартиры (27 Tyumen probe) → buyer spine P0",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "Не пересекается с B01 (ЕГРН-строка), B07 (наследство), B09 (ипотека/обременение)"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["127-fz-bankruptcy", "vsrf"],
+    "errors": [],
+    "note": "Сроки 1 год / 3 года — ст. 61.2 127-ФЗ via consultant.ru; обзор ВС №12/2026 via vsrf.ru; нет банковских тарифов"
+  },
+  "key_facts_count": 16,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}
