@@ -1,5 +1,19 @@
 # Excalibur BLOG — WP publish log
 
+## B11 — 2026-08-26
+
+- **topic_id:** B11
+- **slug:** matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni
+- **post_id:** 9181
+- **permalink:** /blog/vtorichka-i-riski/matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni/
+- **featured_image:** 9182
+- **inline_images:** 9183–9189 (7)
+- **wp_category_slugs:** vtorichka-i-riski, matkapital-i-sdelki (category_ids=31,48)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** outbound 4 siblings OK; inbound 0 (no post_id in ledger for targets B06/B04/B09)
+
 ## B10 — 2026-08-26
 
 - **topic_id:** B10
