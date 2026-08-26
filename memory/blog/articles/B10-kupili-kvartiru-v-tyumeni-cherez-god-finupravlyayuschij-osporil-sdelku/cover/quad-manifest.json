@@ -1,0 +1,229 @@
+{
+  "topic_id": "B10",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Суд забрал квартиру через год после покупки",
+  "cover_hook_highlight": "забрал",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Покупатель с ключами и отменённой картой квартиры после суда.",
+      "scene_hint": "bright high-key HUGE face close-up LEFT 45% mint shirt stunned; hook RIGHT black Cyrillic gold «забрал» text only NO bars; phone bottom-R BLACK on white torn inside frame; harold+cat tiny; NO Wordstat",
+      "sticky": "",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "stunned grimace"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Чистая выписка ЕГРН в день сделки — что она реально показывает",
+      "visual_type": "process_flow",
+      "scene_hint": "EGRN flow labels brian",
+      "alt": "Выписка ЕГРН: арест виден, долги и банкротство — нет.",
+      "labels": [
+        "Выписка",
+        "Арест виден",
+        "Долги скрыты",
+        "Банкротства нет",
+        "Ищем долги"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Кейс в Тюмени: зарегистрировали право, въехали — и год жили спокойно",
+      "visual_type": "comparison_table",
+      "scene_hint": "compare buy vs year",
+      "alt": "Кейс: вторичка, наличные, год жизни, банкрот продавца.",
+      "labels": [
+        "Двушка",
+        "Цена ниже",
+        "Наличные",
+        "Год жили",
+        "Банкрот"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Почему финуправляющий смотрит сделки за один год и за три года",
+      "visual_type": "comparison_table",
+      "scene_hint": "timeline 1yr 3yr",
+      "alt": "Сроки оспаривания: 1 год и 3 года от заявления.",
+      "labels": [
+        "1 год",
+        "До 3 лет",
+        "От заявления",
+        "Неравноценно",
+        "Вред кредиторам"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Что суд оценивает: цена, расчёт и осмотрительность покупателя",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "workflow price context Avito cell cash trail; NO people",
+      "alt": "Суд оценивает цену в контексте сделки и расчёта.",
+      "labels": [
+        "Не цена",
+        "Контекст",
+        "Авито",
+        "Ячейка",
+        "Нал без следа"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Финал: суд отменил регистрацию и вернул квартиру в конкурсную массу",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "bar chart void contract mass queue EGRN cancel; crying_cat corner",
+      "alt": "Итог: договор недействителен, квартира в массу.",
+      "labels": [
+        "Недействителен",
+        "В массу",
+        "Очередь",
+        "ЕГРН отмена",
+        "Обзор ВС"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что проверить до аванса на вторичке в Тюмени",
+      "visual_type": "checklist_board",
+      "scene_hint": "checklist Fedresurs FSSP price docs; NO people",
+      "alt": "Чек-лист проверок до аванса на вторичке.",
+      "labels": [
+        "Федресурс",
+        "ФССП",
+        "Цена",
+        "Расчёт",
+        "Заверения"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Федресурс, арбитраж и ФССП: где искать банкротство продавца",
+      "visual_type": "structure_diagram",
+      "scene_hint": "diagram EGRN arbitr FSSP branches; cash warn; roll_safe corner",
+      "alt": "Проверка продавца: ЕГРН, арбитраж, ФССП.",
+      "labels": [
+        "ЕГРН",
+        "Арбитраж",
+        "ФССП",
+        "Дважды",
+        "Нал худший"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени",
+    "купить квартиру в тюмени вторичка",
+    "банкротство продавца квартиры"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "stunned grimace",
+  "cover_motifs": {
+    "composition": "host_right_headline_left_phone_bottom_right_sun_flare",
+    "location": "bright_white_tyumen_apartment_window_high_key",
+    "meme": "hide_pain_harold_plus_smudge_cat_small_stickers",
+    "prop_set": "keys_contract_folder_red_cancel_stamp_cash_envelope",
+    "sticker_set": "harold_top_left_cat_mid_right_NO_overlap_hook_face_phone",
+    "joke": "keys_in_hand_but_red_cancel_on_flat_card",
+    "outfit": "mint_blue_rolled_sleeve_shirt_cream_pants_mustard_watch_NO_blazer",
+    "emotion": "stunned_bewildered_nervous_grimace_NOT_studio_smile",
+    "pose_framing": "three_quarter_host_right_medium_NOT_left_bust",
+    "action": "holds_keys_open_palm_at_cancelled_apartment_card"
+  }
+}

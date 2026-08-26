@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from excalibur_blog_cover_budget import resolve_cover_max_attempts
+from excalibur_blog_cover_budget import resolve_cover_max_attempts, sync_manifest_hook_from_cover_text
 from excalibur_blog_grsai_gpt_image2_api import (
     DEFAULT_TIMEOUT_SECONDS,
     MIN_TIMEOUT_SECONDS,
@@ -40,6 +40,7 @@ def build_prompt_for_article(article_dir: Path, root: Path) -> str:
 
     manifest_path = article_dir / "cover" / "quad-manifest.json"
     manifest = load_json(manifest_path)
+    manifest = sync_manifest_hook_from_cover_text(manifest, article_dir)
     style = load_json(root / manifest.get("style_file", "memory/cover/quad-style-the-rieltor.json"))
     hero = load_json(root / manifest.get("blog_hero", "memory/cover/blog-hero.json"))
     design = load_json(root / "memory/cover/cover-design-code.json")

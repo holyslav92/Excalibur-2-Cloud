@@ -48,6 +48,60 @@ class CoverBudgetTest(unittest.TestCase):
         verdict = validate_short_hook("первая строка\nвторая строка")
         self.assertEqual(verdict["status"], "BLOCK")
 
+    def test_designed_thumbnail_prompt_blocks(self) -> None:
+        from excalibur_blog_cover_budget import (
+            collage_inset_ban_prompt_block,
+            designed_thumbnail_prompt_block,
+            phone_full_frame_prompt_block,
+        )
+
+        thumb = designed_thumbnail_prompt_block()
+        phone = phone_full_frame_prompt_block()
+        inset = collage_inset_ban_prompt_block()
+        self.assertIn("polaroid inset", thumb.lower())
+        self.assertIn("+7 922 001 65 05", phone)
+        self.assertIn("NOT clipped", phone)
+        self.assertIn("collage inset", inset.lower())
+
+    def test_solo_cover_prompt_includes_pixel_contract(self) -> None:
+        from excalibur_blog_cover_quad_prompt import build_solo_cover_prompt, load_json
+
+        root = ROOT
+        manifest = {
+            "cover_hook": "Суд забрал квартиру через год",
+            "cover_hook_highlight": "забрал",
+            "cover_motifs": {"outfit": "mint shirt"},
+            "slots": {"cover": {"cover_emotion": "stunned", "scene_hint": "bright high-key face left"}},
+        }
+        style = load_json(root / "memory/cover/quad-style-the-rieltor.json")
+        hero = load_json(root / "memory/cover/blog-hero.json")
+        design = load_json(root / "memory/cover/cover-design-code.json")
+        prompt = build_solo_cover_prompt(manifest, style, hero, design)
+        self.assertIn("DESIGNED THUMBNAIL", prompt)
+        self.assertIn("polaroid inset", prompt.lower())
+        self.assertIn("NOT clipped", prompt)
+        self.assertNotIn("Wordstat sticker labels", prompt)
+
+    def test_sync_manifest_hook_from_cover_text(self) -> None:
+        import json
+        import tempfile
+        from excalibur_blog_cover_budget import sync_manifest_hook_from_cover_text
+
+        with tempfile.TemporaryDirectory() as tmp:
+            article_dir = Path(tmp)
+            (article_dir / "cover").mkdir()
+            (article_dir / "cover" / "cover-text.json").write_text(
+                json.dumps(
+                    {"hook": "Короткий hook для OCR", "highlight": "OCR"},
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            manifest = {"cover_hook": "Старый длинный hook из manifest", "cover_hook_highlight": "старый"}
+            synced = sync_manifest_hook_from_cover_text(manifest, article_dir)
+            self.assertEqual(synced["cover_hook"], "Короткий hook для OCR")
+            self.assertEqual(synced["cover_hook_highlight"], "OCR")
+
     def test_generate_image_accepts_ref_path_kwarg(self) -> None:
         from excalibur_blog_grsai_gpt_image2_api import generate_image
         import inspect

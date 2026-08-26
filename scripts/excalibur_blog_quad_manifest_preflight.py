@@ -33,7 +33,9 @@ def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def validate_quad_manifest(manifest: dict[str, Any], root: Path | None = None) -> dict[str, Any]:
+def validate_quad_manifest(
+    manifest: dict[str, Any], root: Path | None = None, *, article_dir: Path | None = None
+) -> dict[str, Any]:
     """Проверить meme_density, no_host_face, wordstat_stickers до image API."""
     root = root or project_root()
     errors: list[str] = []
@@ -47,10 +49,35 @@ def validate_quad_manifest(manifest: dict[str, Any], root: Path | None = None) -
         errors.append("wordstat_stickers must be a list")
         stickers = []
     sticker_phrases = [str(x).strip() for x in stickers if str(x).strip()]
-    if not (1 <= len(sticker_phrases) <= 3):
+    # Topic research log only — owner ban: never paint Wordstat query strips on cover.png
+    if len(sticker_phrases) > 3:
         errors.append(
-            f"wordstat_stickers count {len(sticker_phrases)}; need 1–3 readable phrases"
+            f"wordstat_stickers count {len(sticker_phrases)}; max 3 topic-log phrases"
         )
+    cover_slot = slots.get("cover") or {}
+    scene_hint = str(cover_slot.get("scene_hint") or "").lower()
+    if sticker_phrases and any(p.casefold() in scene_hint for p in sticker_phrases):
+        errors.append(
+            "cover.scene_hint must NOT echo wordstat_stickers — topic log only, never paint on cover"
+        )
+    if "wordstat sticker" in scene_hint or "query bar" in scene_hint or "query strip" in scene_hint:
+        warnings.append(
+            "cover.scene_hint mentions Wordstat/query strips — remove before image API (owner ban)"
+        )
+
+    if article_dir is not None:
+        ct_path = article_dir / "cover" / "cover-text.json"
+        if ct_path.is_file():
+            try:
+                ct = load_json(ct_path)
+                ct_hook = str(ct.get("hook") or "").strip()
+                mf_hook = str(manifest.get("cover_hook") or "").strip()
+                if ct_hook and mf_hook and ct_hook.casefold() != mf_hook.casefold():
+                    warnings.append(
+                        "cover_hook differs from cover-text.json — run quad_manifest --merge or regen uses stale hook"
+                    )
+            except json.JSONDecodeError:
+                warnings.append("cover-text.json invalid JSON — hook sync may fail")
 
     phone = str(manifest.get("cover_phone_cta") or "").strip()
     if phone and phone != "+7 922 001 65 05":
@@ -166,7 +193,7 @@ def main() -> int:
             json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
 
-    result = validate_quad_manifest(manifest, root)
+    result = validate_quad_manifest(manifest, root, article_dir=article_dir)
     if args.output:
         out = Path(args.output)
         if not out.is_absolute():

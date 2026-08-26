@@ -2,8 +2,8 @@
   "bank_id": "klyshin_topic_bank_v1",
   "source_channel": "https://t.me/klyshin_A",
   "source_label": "Алексей Клышин — юрист по недвижимости",
-  "updated_at": "2026-08-21",
-  "accessed_at": "2026-08-21",
+  "updated_at": "2026-08-26",
+  "accessed_at": "2026-08-26",
   "algorithm": "klyshin_hook → wordstat_probe → rework_for_demand → final_P0_or_skip_after_rework",
   "wordstat_gate": {
     "provider": "mcp-kv",
@@ -228,8 +228,22 @@
       ],
       "last_seen": "2026-08-21",
       "rejected_b06": "проверка 9, банкротство продавца 30; overlap B03/B04 + маткапитал на сайте",
+      "rejected_b03_note": "B03 = торги/дарение за 48ч; post-sale bankruptcy — отдельный plot для B10",
+      "wordstat_rework_log": [
+        "probe «банкротство продавца квартиры» 27",
+        "rework «имущество банкротов» 143",
+        "rework «купить квартиру в тюмени вторичка» 3968",
+        "final P0 «купить квартиру в тюмени» 22652 (RU225 39858)"
+      ],
+      "final_p0": {
+        "phrase": "купить квартиру в тюмени",
+        "volume": 22652,
+        "regions": ["55", "11176"],
+        "compare_ru": 39858
+      },
+      "last_seen_b10": "2026-08-26",
       "tyumen_localize": true,
-      "status": "seed"
+      "status": "B10"
     },
     {
       "id": "phone_scammers_notary",
@@ -303,6 +317,14 @@
       ],
       "note": "автооценка минус 1–2 млн → final P0 «купить квартиру в тюмени» 23066",
       "wordstat_rework": "73 → 3943 → 5799 → 23066"
+    },
+    {
+      "topic_id": "B10",
+      "hook_ids": [
+        "five_court_schemes"
+      ],
+      "note": "схема №1 post-sale bankruptcy; final P0 «купить квартиру в тюмени» 22652",
+      "wordstat_rework": "27 → 143 → 3968 → 22652"
     }
   ]
 }

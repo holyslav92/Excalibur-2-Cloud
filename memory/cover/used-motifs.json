@@ -103,6 +103,21 @@
         "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
         "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
       }
+    },
+    {
+      "date": "2026-08-26",
+      "topic_id": "B10",
+      "slug": "",
+      "motifs": {
+        "composition": "host_right_headline_left_phone_bottom_right_sun_flare",
+        "location": "bright_white_tyumen_apartment_window_high_key",
+        "meme": "hide_pain_harold_plus_smudge_cat_small_stickers",
+        "sticker_set": "harold_bottom_left_cat_bottom_right",
+        "outfit": "mint_blue_rolled_sleeve_shirt_cream_pants_mustard_watch_no_blazer",
+        "emotion": "stunned_bewildered_nervous_grimace_not_studio_smile",
+        "pose_framing": "three_quarter_host_right_medium_not_left_bust",
+        "action": "holds_keys_open_palm_at_cancelled_apartment_card"
+      }
     }
   ]
 }
