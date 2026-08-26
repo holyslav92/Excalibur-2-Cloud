@@ -4,9 +4,10 @@
 ## Blog Articles
 
 - [В выписке ЕГРН есть строка, после которой аванс вносить нельзя]({{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/): В выписке ЕГРН есть строка, после которой аванс вносить нельзя
-- [Автооценка занизила цену — и квартира подорожала за сутки]({{SITE_BASE}}/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/): Автооценка занизила цену — и квартира подорожала за сутки
-- [Квартиру продавали по доверенности. Хозяин был на СВО]({{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/): Доверенность на продажу квартиры: как проверить волю собственника на СВО до аванса
-- [Почти внесли задаток на торгах — квартиру подарили дочери]({{SITE_BASE}}/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/): За 48 часов до задатка на торгах квартиру подарили дочери — что показала свежая ЕГРН
 - [В Тюмени расписку за квартиру написали — денег на счёте нет]({{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/): В Тюмени расписку за квартиру написали — денег на счёте нет
+- [Почти внесли задаток на торгах — квартиру подарили дочери]({{SITE_BASE}}/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/): За 48 часов до задатка на торгах квартиру подарили дочери — что показала свежая ЕГРН
+- [Квартиру продавали по доверенности. Хозяин был на СВО]({{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/): Доверенность на продажу квартиры: как проверить волю собственника на СВО до аванса
 - [Квартиру уценили на два миллиона и просят задаток сегодня]({{SITE_BASE}}/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/): «Скидка только до вечера», — торопит продавец. Святослав Шакин в Тюмени объясняет: важнее не сумма в объявлении, а кто и зачем требует задаток сейчас.
+- [Автооценка занизила цену — и квартира подорожала за сутки]({{SITE_BASE}}/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/): Автооценка занизила цену — и квартира подорожала за сутки
 - [Пожилого продавца вели по телефону — родственники сорвали сделку]({{SITE_BASE}}/v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/): Пожилого продавца вели по телефону — родственники сорвали сделку
+- [Продавец обанкротился — через год суд забрал купленную квартиру]({{SITE_BASE}}/kupili-kvartiru-v-tyumeni-prodavec-ushel-v-bankrotstvo-finupravlyayuschij-ospori/): Продавец обанкротился — через год суд забрал купленную квартиру

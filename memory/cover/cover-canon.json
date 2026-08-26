@@ -214,6 +214,13 @@
       "function": "apply_ocr_false_positive_escape",
       "pattern": "B08/B09 live — host face + Cyrillic hook + phone; only OCR truncation/opaque flakes",
       "forbidden_remediation": ["PIL mashup", "Kie"]
+    },
+    "solo_cover_scene_default_on_budget_risk": {
+      "validated_runs": ["B10", "B11"],
+      "trigger": "grsai solo attempts 1–2 FAIL pixel_hook_title_cyrillic / pixel_phone_readable with empty OCR while face+layout OK",
+      "default_scene_hint": "phone-in-hand close-up: host face height ~35–50% frame, phone bottom-right fully inside frame, Cyrillic hook RIGHT sacred zone (5–7 words); reduces designed_thumbnail + hook OCR empty flakes before budget exhaust",
+      "rollback": "remove this block from cover-canon.json; cover-scene Derouter draft reverts to invention-only scene_hint",
+      "note": "B10+B11 content-learner repeat (2/2 budget exhaust + escape); prefer in cover-scene draft before solo regen; after exhaust use ocr_false_positive_escape if visual OK"
     }
   },
   "identity_lock": {

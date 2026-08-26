@@ -1,0 +1,236 @@
+{
+  "topic_id": "B11",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Чистая выписка квартиру не спасла",
+  "cover_hook_highlight": "Чистая",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав с выпиской ЕГРН: зелёная галочка, красный штамп банкротства; hook; CTA.",
+      "scene_hint": "host RIGHT burgundy EGRN check+stamp; hook; sticky; phone; memes",
+      "meme_caption_ru": "",
+      "sticky": "Проверяйте продавца",
+      "cover_emotion": "ошеломлённое недоверие",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "meme_picks": [
+        "roll_safe",
+        "grumpy_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Регистрация прошла — и квартира казалась их",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "bar timeline EGRN vs bankruptcy; disaster_girl tiny",
+      "alt": "Шкала: регистрация vs банкротство личности.",
+      "labels": [
+        "Регистрация завершена",
+        "ЕГРН про объект",
+        "Банкротство про личность",
+        "Регистрация не защита"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disaster_girl"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Примерно через год: продавец в банкротстве, финуправляющий оспаривает сделку",
+      "visual_type": "process_flow",
+      "scene_hint": "process 4 steps dispute; NO human",
+      "alt": "Процесс: год, оспаривание, вывод актива.",
+      "labels": [
+        "Прошёл примерно год",
+        "Финуправляющий оспаривает",
+        "Вывод актива",
+        "Пункт 7 статьи 213.9"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Финал: суд отменил регистрацию, квартиру вернули в конкурсную массу",
+      "visual_type": "comparison_table",
+      "scene_hint": "compare buyer vs mass; NO human",
+      "alt": "Суд отменил регистрацию, квартиру в массу.",
+      "labels": [
+        "Суд отменил регистрацию",
+        "Квартиру вернули",
+        "Конкурсная масса",
+        "Дело А22-1776/2013"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Другой тюменский кейс: через полгода оспорили — но сделку сохранили",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison_table Оспорили vs Сохранили; accreditiv green; labels; NO human",
+      "alt": "Два кейса: оспорили через полгода, аккредитив, рыночная цена — сделку сохранили.",
+      "labels": [
+        "Оспорили через полгода",
+        "Расчёт через аккредитив",
+        "Цена рыночная",
+        "Сделку сохранили"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Почему «чистая» выписка ЕГРН не показывает долги продавца",
+      "visual_type": "structure_diagram",
+      "scene_hint": "structure_diagram ЕГРН vs долги hidden; labels; tiny blinking_white_guy",
+      "alt": "Схема: выписка чистая, долгов нет, кредитор не в Росреестре — реестр молчит.",
+      "labels": [
+        "Выписка чистая",
+        "Долгов там нет",
+        "Кредитор не в Росреестре",
+        "Реестр молчит"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "blinking_white_guy"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Статьи 61.2 и 61.3: один год, три года и сделки с предпочтением",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "bar_timeline 1yr vs 3yr vs preference; st.213.32; labels; NO human",
+      "alt": "Шкала сроков: один год, три года, предпочтение кредитору, срок от заявления, ст.213.32.",
+      "labels": [
+        "Один год",
+        "Три года",
+        "Предпочтение кредитору",
+        "Срок от заявления",
+        "Статья 213.32"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить до аванса: Федресурс, ФССП, суды и фиксация",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "labeled_checklist ЕФРСБ ФССП КАД checks; gold pins; tiny bad_luck_brian",
+      "alt": "Чеклист до аванса: ЕФРСБ, ФССП, КАД, переход прав, зафиксируйте дату.",
+      "labels": [
+        "ЕФРСБ по ФИО",
+        "ФССП — взыскания",
+        "КАД — арбитраж",
+        "Переход прав",
+        "Зафиксируйте дату"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "bad_luck_brian"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "банкротство продавца квартиры"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_emotion": "ошеломлённое недоверие",
+  "cover_motifs": {
+    "composition": "host_medium_right_holds_egrn_green_check_red_bankruptcy_hook_left_sacred",
+    "location": "bright_white_notary_atrium_tyumen_glass_sun_flare",
+    "meme": "roll_safe_sticker_plus_grumpy_cat_cutout",
+    "prop_set": "egrn_extract_fold_green_check_red_bankruptcy_stamp_yellow_sticky",
+    "sticker_set": "yellow_sticky_proveryayte_prodavca_pinned_corner_only",
+    "joke": "sticky_proveryayte_prodavca_yellow_note",
+    "outfit": "burgundy_cable_knit_sweater_cream_oxford_NO_blazer_NO_cardigan",
+    "emotion": "stunned_disbelief_raised_brows_half_open_mouth_not_smile",
+    "pose_framing": "host_medium_right_three_quarter_close_up_not_left_bust",
+    "action": "holds_egrn_fold_showing_green_check_and_red_bankruptcy_overlay"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  }
+}

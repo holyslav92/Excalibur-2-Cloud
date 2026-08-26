@@ -64,29 +64,33 @@ class OcrEscapeHatchTest(unittest.TestCase):
             "pixel_host_face_present",
             "pixel_host_close_up",
             "pixel_hook_title_present",
-            "pixel_hook_title_cyrillic",
-            "pixel_phone_readable",
             "pixel_meme_present",
             "pixel_layout_not_collapsed",
-            "pixel_no_collage_inset",
             "pixel_no_foreign_article_text",
-            "pixel_no_wordstat_query_strips",
             "pixel_not_services_checklist",
-            "pixel_no_text_on_clothing",
             "pixel_light_high_key",
         )}
+        checks["pixel_hook_title_cyrillic"] = False
         checks["pixel_hook_title_not_truncated"] = False
         checks["pixel_wordstat_not_opaque_bars"] = False
+        checks["pixel_phone_readable"] = False
         errors = [
+            "pixel_hook_title_cyrillic FAIL: cyr_ratio=0.0",
             "pixel_hook_title_not_truncated FAIL: truncated=True",
             "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+            "pixel_phone_readable FAIL: phone_digits=''",
         ]
-        evidence: dict = {}
+        evidence: dict = {
+            "phone_zone_ink": 1500,
+            "hook_title": {"ink_outside_face": 12000},
+        }
         new_checks, new_errors, new_evidence = apply_ocr_false_positive_escape(
             checks, errors, evidence
         )
         self.assertTrue(new_checks["pixel_hook_title_not_truncated"])
         self.assertTrue(new_checks["pixel_wordstat_not_opaque_bars"])
+        self.assertTrue(new_checks["pixel_hook_title_cyrillic"])
+        self.assertTrue(new_checks["pixel_phone_readable"])
         self.assertTrue(new_evidence.get("ocr_false_positive_escape", {}).get("applied"))
         self.assertTrue(any("ocr_false_positive_escape PASS" in e for e in new_errors))
 

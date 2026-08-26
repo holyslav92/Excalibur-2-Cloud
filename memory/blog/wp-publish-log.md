@@ -1,5 +1,19 @@
 # Excalibur BLOG — WP publish log
 
+## B11 — 2026-08-26
+
+- **topic_id:** B11
+- **slug:** kupili-kvartiru-v-tyumeni-prodavec-ushel-v-bankrotstvo-finupravlyayuschij-ospori
+- **post_id:** 9171
+- **permalink:** /blog/vtorichka-i-riski/kupili-kvartiru-v-tyumeni-prodavec-ushel-v-bankrotstvo-finupravlyayuschij-ospori/
+- **featured_image:** 9172
+- **inline_images:** 9173–9179 (7)
+- **wp_category_slugs:** vtorichka-i-riski, riski-sdelki (category_ids=31,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 4 siblings OK)
+
 ## B10 — 2026-08-26
 
 - **topic_id:** B10

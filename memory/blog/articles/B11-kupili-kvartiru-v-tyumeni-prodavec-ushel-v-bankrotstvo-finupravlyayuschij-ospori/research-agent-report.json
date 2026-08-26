@@ -1,0 +1,87 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B11",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-26",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Август 2026: видео «5 схем — квартиру забирают судом»; схема 1 банкротство продавца; вебинар 05.08.2026 «Сначала проверка. Потом аванс.»"
+      },
+      {
+        "url": "https://dzen.ru/a/aowsTa3UpQP2kBhW",
+        "type": "community",
+        "note": "Святослав Шакин, Тюмень: чистая выписка, спор финуправляющего через 6 мес по ст.61.2"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Локальный канал автора, свежий материал на дату доступа"
+      },
+      {
+        "url": "https://proverka-kvartiry.ru/blog/bankrotstvo-prodavca-posle-sdelki-zaberut-kvartiru/",
+        "type": "industry",
+        "note": "26.06.2026 — механика ст.61.2, сроки, чек-лист проверок"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 22833,
+    "buyer_spine_phrase": "купить квартиру в тюмени вторичка",
+    "buyer_spine_volume": 4071,
+    "angle_phrase": "банкротство продавца квартиры",
+    "angle_volume": 26,
+    "rework_from": "купил квартиру а продавец подал на банкротство (2)",
+    "partial": []
+  },
+  "dzen_casus_shape": {
+    "status": "PASS",
+    "event": "семья купила вторичку в Тюмени, регистрация прошла",
+    "risk": "продавец ушёл в банкротство, финуправляющий назвал продажу выводом актива",
+    "time": "через год после регистрации",
+    "finale": "суд отменил регистрацию, квартиру вернули в конкурсную массу; покупатель без жилья и с иском о возврате денег"
+  },
+  "comment_magnet_angle": "Выписка была чистая, аванс внесли — значит банкротство продавца вас не касается? Или вы бы проверяли долги и суды до аванса?",
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 11,
+    "entities_checked": [
+      "fz-127",
+      "fedresurs",
+      "fssp",
+      "kad_arbitr",
+      "rosreestr",
+      "gosuslugi"
+    ],
+    "errors": [],
+    "note": "Статьи 61.2, 61.3, 61.6, 213.9, 213.32 ФЗ-127 + официальные реестры; тарифных claims банков нет"
+  },
+  "derouter": {
+    "status": "PASS",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "chars": 20497
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}

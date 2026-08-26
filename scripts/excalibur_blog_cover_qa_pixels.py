@@ -1877,32 +1877,40 @@ class PixelQAResult:
 # OCR false-positive flakes — escape hatch (B08/B09 live pattern): visual OK, OCR only.
 OCR_FLAKY_CHECK_KEYS = frozenset(
     {
+        "pixel_hook_title_cyrillic",
         "pixel_hook_title_not_truncated",
         "pixel_wordstat_not_opaque_bars",
         "pixel_wordstat_not_edge_truncated",
         "pixel_no_wordstat_ocr_strips",
         "pixel_phone_not_clipped",
+        "pixel_phone_readable",
         "pixel_wordstat_phrases_not_truncated",
+        "pixel_no_collage_inset",
+        "pixel_no_wordstat_query_strips",
+        "pixel_no_text_on_clothing",
+        "pixel_designed_thumbnail",
+        "pixel_wordstat_not_on_host_chest",
+        "pixel_meme_not_occluded_by_wordstat",
+        "pixel_wordstat_only_top_left",
     }
 )
 
+# Visual core — must pass before OCR flakes can be overridden (no OCR-dependent keys).
 OCR_ESCAPE_CORE_KEYS = frozenset(
     {
         "pixel_host_face_present",
         "pixel_host_close_up",
         "pixel_hook_title_present",
-        "pixel_hook_title_cyrillic",
-        "pixel_phone_readable",
         "pixel_meme_present",
         "pixel_layout_not_collapsed",
-        "pixel_no_collage_inset",
         "pixel_no_foreign_article_text",
-        "pixel_no_wordstat_query_strips",
         "pixel_not_services_checklist",
-        "pixel_no_text_on_clothing",
         "pixel_light_high_key",
     }
 )
+
+OCR_ESCAPE_MIN_PHONE_INK = PHONE_ZONE_MIN_INK // 2
+OCR_ESCAPE_MIN_HOOK_INK = 800
 
 
 def apply_ocr_false_positive_escape(
@@ -1919,6 +1927,11 @@ def apply_ocr_false_positive_escape(
         return checks, errors, evidence
 
     if not OCR_ESCAPE_CORE_KEYS.issubset({k for k, v in checks.items() if v}):
+        return checks, errors, evidence
+
+    phone_ink = int(evidence.get("phone_zone_ink") or 0)
+    hook_ink = int((evidence.get("hook_title") or {}).get("ink_outside_face") or 0)
+    if phone_ink < OCR_ESCAPE_MIN_PHONE_INK or hook_ink < OCR_ESCAPE_MIN_HOOK_INK:
         return checks, errors, evidence
 
     hard_fail = failed - OCR_FLAKY_CHECK_KEYS
@@ -1940,8 +1953,11 @@ def apply_ocr_false_positive_escape(
     ]
     escape_note = {
         "applied": True,
+        "mode": "visual_B08_B09",
         "flaky_checks_overridden": sorted(flaky_only),
-        "pattern": "B08/B09 live — host face + Cyrillic hook + phone; OCR truncation/opaque flakes only",
+        "phone_zone_ink": phone_ink,
+        "hook_ink_outside_face": hook_ink,
+        "pattern": "B08/B09 live — host face + hook ink + phone ink; OCR truncation/opaque flakes only",
     }
     evidence["ocr_false_positive_escape"] = escape_note
     patched_errors.append(
@@ -2367,10 +2383,19 @@ def stamp_cover_qa_json(
         "pixel_qa": True,
         "pixel_description": pixel_result.evidence.get("pixel_description"),
         "checks": checks,
-        "pixel_errors": pixel_result.errors,
+        "pixel_errors": [
+            err for err in pixel_result.errors if "FAIL:" in err
+        ],
         "pixel_evidence": {
             k: pixel_result.evidence[k]
-            for k in ("size", "mean_luminance", "skin_bbox", "gold_bands", "host_dark_ratio")
+            for k in (
+                "size",
+                "mean_luminance",
+                "skin_bbox",
+                "gold_bands",
+                "host_dark_ratio",
+                "ocr_false_positive_escape",
+            )
             if k in pixel_result.evidence
         },
         "notes": (

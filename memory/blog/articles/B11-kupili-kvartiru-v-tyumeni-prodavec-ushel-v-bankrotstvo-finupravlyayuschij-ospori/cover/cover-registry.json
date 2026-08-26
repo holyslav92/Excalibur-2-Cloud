@@ -1,0 +1,86 @@
+{
+  "topic_id": "B11",
+  "slug": "kupili-kvartiru-v-tyumeni-prodavec-ushel-v-bankrotstvo-finupravlyayuschij-ospori",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Святослав с выпиской ЕГРН: зелёная галочка, красный штамп банкротства; hook; CTA.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-26T10:46:17+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Святослав с выпиской ЕГРН: зелёная галочка, красный штамп банкротства; hook; CTA.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Шкала: регистрация vs банкротство личности.",
+      "h2_anchor": "Регистрация прошла — и квартира казалась их",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Процесс: год, оспаривание, вывод актива.",
+      "h2_anchor": "Примерно через год: продавец в банкротстве, финуправляющий оспаривает сделку",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Суд отменил регистрацию, квартиру в массу.",
+      "h2_anchor": "Финал: суд отменил регистрацию, квартиру вернули в конкурсную массу",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Два кейса: оспорили через полгода, аккредитив, рыночная цена — сделку сохранили.",
+      "h2_anchor": "Другой тюменский кейс: через полгода оспорили — но сделку сохранили",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Схема: выписка чистая, долгов нет, кредитор не в Росреестре — реестр молчит.",
+      "h2_anchor": "Почему «чистая» выписка ЕГРН не показывает долги продавца",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Шкала сроков: один год, три года, предпочтение кредитору, срок от заявления, ст.213.32.",
+      "h2_anchor": "Статьи 61.2 и 61.3: один год, три года и сделки с предпочтением",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Чеклист до аванса: ЕФРСБ, ФССП, КАД, переход прав, зафиксируйте дату.",
+      "h2_anchor": "Что проверить до аванса: Федресурс, ФССП, суды и фиксация",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}
