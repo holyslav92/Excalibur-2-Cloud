@@ -2,7 +2,7 @@
 status: proposed
 topic_id: B10
 category: structure
-confidence: medium
+confidence: medium-high
 
 ### Evidence
 - artifact: cover/cover-budget-result.json
@@ -11,6 +11,8 @@ confidence: medium
   finding: fixer regen cover → visual PASS with `ocr_false_positive_escape: true` (face + Cyrillic hook + phone readable on PNG; B08/B09 pattern). `gate_status: PASS`, all pixel checks true after escape.
 - artifact: quality-bar-9.json
   finding: `cover_qa_pass: true`, `cover_phone_on_cover: true` — publish path unblocked after escape stamp.
+- artifact: cover/cover-budget-result.json (B11, 2026-08-26)
+  finding: повтор exhaust+escape — 2 grsai attempts FAIL (mean_lum 163, OCR empty on hook/phone, wordstat gold false positive); Cover-QA PASS с `visual_ocr_proxy` на post 9181. Четвёртый live proof (B08/B09/B10/B11).
 - artifact: none (skipped under human-first-v2) — content-evidence-report.json отсутствует
 - metrika_signal: none — METRIKA CREDENTIALS BLOCKER (нет ingest; behavioral baseline для post 9161 недоступен)
 
@@ -34,8 +36,8 @@ confidence: medium
 - PIL mashup / Kie при OCR flakes — только escape или bounded grsai regen.
 
 ### Proposed apply
-- Director runbook: budget exhaust + visual OK → Cover-QA escape path (уже в `memory/cover/cover-canon.json`); B10 — третий live proof (B08/B09/B10).
-- После второго content-learner run с тем же exhaust+escape без regen improvement → checklist item «phone-in-hand close-up» в cover-scene default.
+- Director runbook: budget exhaust + visual OK → Cover-QA escape path (уже в `memory/cover/cover-canon.json`); B11 — четвёртый live proof (B08/B09/B10/B11).
+- **B11 = второй content-learner run** с exhaust+escape без regen improvement → checklist item «phone-in-hand close-up» в cover-scene default (needs-human review перед durable apply).
 
 ### Durable applied
 - none (canon уже в cover-canon.json; первый именованный learner run B10)
