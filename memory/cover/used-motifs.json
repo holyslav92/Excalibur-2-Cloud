@@ -120,6 +120,23 @@
         "pose_framing": "host_large_left_close_up_not_right_bust_not_side_eye_formula",
         "action": "watches_elderly_seller_clutch_phone_during_viewing"
       }
+    },
+    {
+      "date": "2026-08-26",
+      "topic_id": "B11",
+      "slug": "",
+      "motifs": {
+        "composition": "host_medium_right_jaw_drop_red_cancel_stamp_hook_right_sacred_zone",
+        "location": "bright_white_sfr_waiting_room_tyumen_sun_flare_glass",
+        "meme": "roll_safe_sticker_plus_surprised_tom_cutout_corner",
+        "prop_set": "egrn_folder_red_cancelled_stamp_matkapital_certificate_icon",
+        "sticker_set": "matkapital_cancel_yellow_sticky_gold_tape_bottom_left",
+        "joke": "sticky_chistaya_vypiska_ne_spasla",
+        "outfit": "dusty_blue_chambray_rolled_sleeves_tan_chinos_no_blazer_no_cardigan",
+        "emotion": "jaw_drop_disbelief_wide_eyes_not_side_eye",
+        "pose_framing": "host_medium_right_three_quarter_not_left_bust_not_close_up",
+        "action": "holds_egrn_folder_points_at_red_cancel_registration_stamp"
+      }
     }
   ]
 }

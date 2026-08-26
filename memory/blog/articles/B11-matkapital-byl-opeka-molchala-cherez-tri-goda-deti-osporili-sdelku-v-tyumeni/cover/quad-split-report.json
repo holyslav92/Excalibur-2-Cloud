@@ -1,0 +1,295 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B11-matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 572,
+              "end": 585
+            },
+            "v_gutter_px": {
+              "start": 1018,
+              "end": 1056
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 2.5,
+              "v_center_offset_px": 13.0,
+              "max_aspect_crop_loss": 0.0245,
+              "per_panel_crop_loss": {
+                "top_left": 0.0,
+                "top_right": 0.0245,
+                "bottom_left": 0.0098,
+                "bottom_right": 0.0159
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Святослав в голубой рубашке смотрит на штамп «отмена» в выписке; hook справа; CTA; мем-стикеры.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица: чистая выписка сегодня против отмены регистрации через три года.",
+            "h2_anchor": "Тихая выписка — и сделка, которую через три года отменили"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Сравнение: маткапитал в сделке и невыделенные детские доли.",
+            "h2_anchor": "Как семья купила квартиру с маткапиталом — и где «потерялись» дети"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Процесс: маткапитал, доли не выделены, дети не в ЕГРН, опека не подключилась.",
+            "h2_anchor": "Почему опека молчала, пока родители продавали"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B11-matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1020,
+          572
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 572,
+            "end": 584
+          },
+          "v_gutter_px": {
+            "start": 1020,
+            "end": 1028
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 2.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0098,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0098,
+              "bottom_right": 0.0098
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1020,
+              "bottom": 572
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1020,
+              "bottom": 572
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Процесс: дети заявили права, суд отменил регистрацию, реституция.",
+            "h2_anchor": "Финал: дети оспорили сделку — суд отменил регистрацию"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1028,
+              "top": 0,
+              "right": 2048,
+              "bottom": 572
+            },
+            "raw_box_px": {
+              "left": 1028,
+              "top": 0,
+              "right": 2048,
+              "bottom": 572
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чеклист парадокса: взрослые собственники, детей не видно, сигнал — маткапитал.",
+            "h2_anchor": "Парадокс чистой выписки: когда отсутствие детей — не спокойствие"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 5,
+              "top": 584,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 584,
+              "right": 1020,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема: выписка показывает сегодня, справка СФР — историю маткапитала.",
+            "h2_anchor": "Маткапитал в ЕГРН не видно: что это значит для покупателя на вторичке"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1033,
+              "top": 584,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1028,
+              "top": 584,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чеклист до аванса: справка СФР, вопрос про маткапитал, стоп до аванса.",
+            "h2_anchor": "Что проверить до аванса, если слышите «доли уже оформили»"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Тихая выписка — и сделка, которую через три года отменили",
+    "skip inline_2: already correct under H2 — Как семья купила квартиру с маткапиталом — и где «потерялись» дети",
+    "skip inline_3: already correct under H2 — Почему опека молчала, пока родители продавали",
+    "moved inline_4 → H2 — Финал: дети оспорили сделку — суд отменил регистрацию (was under [финал: дети оспорили сделку — суд отменил регистрацию]; removed=1)",
+    "moved inline_5 → H2 — Парадокс чистой выписки: когда отсутствие детей — не спокойствие (was under [парадокс чистой выписки: когда отсутствие детей — не спокойствие]; removed=1)",
+    "moved inline_6 → H2 — Маткапитал в ЕГРН не видно: что это значит для покупателя на вторичке (was under [маткапитал в егрн не видно: что это значит для покупателя на вторичке]; removed=1)",
+    "moved inline_7 → H2 — Что проверить до аванса, если слышите «доли уже оформили» (was under [что проверить до аванса, если слышите «доли уже оформили»]; removed=1)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "attempts_used": 2,
+  "best_candidate": "memory/blog/articles/B11-matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni/cover/cover.png",
+  "last_errors": [
+    "pixel_light_high_key FAIL: mean_lum=163 < 165",
+    "pixel_hook_title_cyrillic FAIL: ocr empty (visual hook present)",
+    "pixel_phone_readable FAIL: ocr empty (visual phone present)",
+    "pixel_no_wordstat_query_strips FAIL: false positive on gold highlight",
+    "pixel_designed_thumbnail FAIL"
+  ],
+  "pipeline": {
+    "canvases": 2,
+    "solo_cover_attempts": 2,
+    "inlines": 7,
+    "model": "grsai_standard_2K",
+    "kie": false,
+    "pil_mashup": false
+  },
+  "next_steps": [
+    "Proceed to Cover-QA with OCR escape if applicable",
+    "Never PIL mashup / Kie"
+  ]
+}

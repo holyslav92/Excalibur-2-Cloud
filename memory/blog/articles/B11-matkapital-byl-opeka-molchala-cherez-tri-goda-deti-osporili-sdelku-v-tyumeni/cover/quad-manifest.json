@@ -1,0 +1,229 @@
+{
+  "topic_id": "B11",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Маткапитал: сделку отменили через три года",
+  "cover_hook_highlight": "отменили",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai standard 2K 16:9. Solo cover regen after canvas split. NO Wordstat strips.",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав в голубой рубашке смотрит на штамп «отмена» в выписке; hook справа; CTA; мем-стикеры.",
+      "scene_hint": "SFR room; host RIGHT chambray; red CANCEL EGRN; hook RIGHT; phone; memes",
+      "meme_caption_ru": "",
+      "sticky": "Чистая выписка не спасла",
+      "cover_emotion": "шок и недоверие",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "meme_picks": [
+        "roll_safe",
+        "surprised_tom"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Тихая выписка — и сделка, которую через три года отменили",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison Выписка vs Риск; disaster_girl; NO human",
+      "alt": "Таблица: чистая выписка сегодня против отмены регистрации через три года.",
+      "labels": [
+        "Выписка чистая",
+        "Детей в ней нет",
+        "Маткапитала не видно"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disaster_girl"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Как семья купила квартиру с маткапиталом — и где «потерялись» дети",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison Маткапитал vs Доли; NO human",
+      "alt": "Сравнение: маткапитал в сделке и невыделенные детские доли.",
+      "labels": [
+        "Часть суммы — маткапитал",
+        "Доли детям не выделили",
+        "Шесть месяцев на доли"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Почему опека молчала, пока родители продавали",
+      "visual_type": "process_flow",
+      "scene_hint": "process_flow 4 steps маткапитал→доли→ЕГРН→опека; arrows; NO human",
+      "alt": "Процесс: маткапитал, доли не выделены, дети не в ЕГРН, опека не подключилась.",
+      "labels": [
+        "Ребёнок не в ЕГРН",
+        "Опека молчит формально",
+        "27 916 семей"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Финал: дети оспорили сделку — суд отменил регистрацию",
+      "visual_type": "process_flow",
+      "scene_hint": "process_flow court cancel 5 steps; red CANCEL; NO human",
+      "alt": "Процесс: дети заявили права, суд отменил регистрацию, реституция.",
+      "labels": [
+        "Дети заявили права",
+        "Суд отменил регистрацию",
+        "Статьи 168 и 173.1"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Парадокс чистой выписки: когда отсутствие детей — не спокойствие",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "labeled_checklist paradox rows; crying_cat tiny; NO human",
+      "alt": "Чеклист парадокса: взрослые собственники, детей не видно, сигнал — маткапитал.",
+      "labels": [
+        "Двое взрослых собственников",
+        "Опека не индикатор",
+        "Сигнал — маткапитал"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "crying_cat"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Маткапитал в ЕГРН не видно: что это значит для покупателя на вторичке",
+      "visual_type": "structure_diagram",
+      "scene_hint": "structure_diagram EGRN vs SFR history; arrows; NO human",
+      "alt": "Схема: выписка показывает сегодня, справка СФР — историю маткапитала.",
+      "labels": [
+        "Выписка — кто сегодня",
+        "Справка СФР",
+        "Шесть месяцев на доли"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить до аванса, если слышите «доли уже оформили»",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "labeled_checklist 5 checks; STOP badge; disappointed_guy tiny",
+      "alt": "Чеклист до аванса: справка СФР, вопрос про маткапитал, стоп до аванса.",
+      "labels": [
+        "Вопрос про маткапитал",
+        "Справка СФР",
+        "Стоп до аванса"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disappointed_black_guy"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени",
+    "маткапитал при покупке квартиры",
+    "детские доли в квартире"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_emotion": "шок и недоверие",
+  "cover_motifs": {
+    "composition": "host_medium_right_jaw_drop_red_cancel_stamp_hook_right_sacred_zone",
+    "location": "bright_white_sfr_waiting_room_tyumen_sun_flare_glass",
+    "meme": "roll_safe_sticker_plus_surprised_tom_cutout_corner",
+    "prop_set": "egrn_folder_red_cancelled_stamp_matkapital_certificate_icon",
+    "sticker_set": "matkapital_cancel_yellow_sticky_gold_tape_bottom_left",
+    "joke": "sticky_chistaya_vypiska_ne_spasla",
+    "outfit": "dusty_blue_chambray_rolled_sleeves_tan_chinos_NO_blazer_NO_cardigan",
+    "emotion": "jaw_drop_disbelief_wide_eyes_NOT_side_eye",
+    "pose_framing": "host_medium_right_three_quarter_NOT_left_bust_NOT_close_up",
+    "action": "holds_egrn_folder_points_at_red_cancel_registration_stamp"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  }
+}
