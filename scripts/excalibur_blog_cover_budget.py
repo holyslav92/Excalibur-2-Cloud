@@ -83,3 +83,28 @@ def short_hook_prompt_line() -> str:
         f"(min {SHORT_HOOK_MIN_WORDS}, ≤{SHORT_HOOK_MAX_CHARS} chars), prefer words ≥5 letters for OCR; em dash OK; "
         "FORBIDDEN novel-length multi-line hooks."
     )
+
+
+def designed_thumbnail_prompt_block() -> str:
+    """Pixel QA designed-thumbnail + no-collage-inset contract for solo/quad cover prompts."""
+    return (
+        "DESIGNED THUMBNAIL 1200×675: ONE coherent editorial frame — NOT polaroid inset, NOT white erase-mask "
+        "collage, NOT pasted second face/photo inset on right, NOT PIL/B06 template mashup, NOT split panels. "
+        "Sacred zones: hook H1 right; host close-up left; phone bottom-right; tiny meme corner."
+    )
+
+
+def phone_full_frame_prompt_block(phone: str = "+7 922 001 65 05") -> str:
+    """Phone pixel_phone_readable / pixel_phone_not_clipped contract."""
+    return (
+        f"Phone CTA EXACT «{phone}» FULL STRING inside bottom-right zone (55–98% width, 70–96% height): "
+        "all digits readable on torn-paper sticker, NOT clipped at frame edge, NOT partial OCR, NOT tiny."
+    )
+
+
+def collage_inset_ban_prompt_block() -> str:
+    """Explicit ban for pixel_no_collage_inset failures (polaroid / erase-mask mashup)."""
+    return (
+        "BAN HARD collage inset: NO polaroid frame, NO white rectangular paste-in, NO second human face blob "
+        "in right 35% of frame, NO erase-mask white patches — single unified bright #FFF background only."
+    )

@@ -86,7 +86,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 2. `hook` — **ONE line**, **5–7 слов** (B08-style short headline): кто + что случилось + зачем мне. Prefer слова **≥5 букв** (лучше OCR). Em dash (—) OK. **Запрещены** романы/многострочные заголовки и >7 слов.
 3. `highlight` — одно слово ИЗ hook (пишется розовым).
 4. `sticky` — до 5 слов, короткая фраза-реакция.
-5. `wordstat_stickers` — **1–3** фразы из live Wordstat (Тюмень).
+5. `wordstat_stickers` — **1–3** фразы из live Wordstat (Тюмень) для **topic log / manifest only** — **НЕ рисовать на cover.png** (owner ban). Scout topic research only.
 6. **Meme picks (HARD)** — `meme_picks` из `memory/cover/meme-top100.json`: real ids only; people+cats variety (not cats-only); on-topic funny reaction to hook; slots cover + inline_1/05/07; anti-repeat 14д; small stickers never on hook/face/phone.
 7. `inline_labels.*` — **3–6 фактов на панель** (цифры, порядок, инструменты из `article.html`). Не слоганы настроения, не «типичные ошибки» без конкретики.
 8. **Cover phone CTA:** `+7 922 001 65 05` на обложке (канон quality-bar-9 / tenant-config `phone_display`).

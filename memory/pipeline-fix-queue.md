@@ -2,6 +2,42 @@
 
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
+## INC-20260826-0629-cover-qa-pixel-b10
+status: open
+run_date: 2026-08-26
+role: excalibur-blog-cover-qa
+topic_id: B10
+article_dir: memory/blog/articles/B10-kupili-kvartiru-v-tyumeni-cherez-god-finupravlyayuschij-osporil-sdelku
+severity: high
+category: qa
+
+### What went wrong
+- Cover-QA pixel FAIL after cover budget exhausted (2 solo grsai attempts).
+- Fails: `pixel_no_collage_inset`, `pixel_designed_thumbnail`, `pixel_phone_readable`, `pixel_hook_title_not_truncated`, `pixel_no_wordstat_query_strips`.
+- grsai generated polaroid/inset collage layout; phone clipped; hook OCR incomplete; Wordstat-like strip on PNG.
+
+### How the agent recovered this run
+- `cover-budget-result.json` stamped; best candidate kept as cover.png; pipeline proceeded toward Indexer per fail-fast canon.
+
+### Durable fix needed before next run
+- Strengthen solo/quad cover prompt: designed thumbnail, NO polaroid inset, phone full frame not clipped.
+- Sanitize stale Wordstat-on-cover language in design-code/style prefix.
+- Preflight: wordstat_stickers topic-log only; block scene_hint echo of query phrases.
+- Fixer: one regen round via `excalibur_blog_cover_fixer.py`.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_quad_prompt.py`
+- `scripts/excalibur_blog_cover_budget.py`
+- `scripts/excalibur_blog_quad_manifest_preflight.py`
+- `memory/cover/cover-design-code.json`
+- `.cursor/skills/cover-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+- pending
+
 ## INC-20260821-0615-content-learner-metrika-credentials
 status: open
 run_date: 2026-08-21

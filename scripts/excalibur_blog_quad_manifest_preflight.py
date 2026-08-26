@@ -47,9 +47,20 @@ def validate_quad_manifest(manifest: dict[str, Any], root: Path | None = None) -
         errors.append("wordstat_stickers must be a list")
         stickers = []
     sticker_phrases = [str(x).strip() for x in stickers if str(x).strip()]
-    if not (1 <= len(sticker_phrases) <= 3):
+    # Topic research log only — owner ban: never paint Wordstat query strips on cover.png
+    if len(sticker_phrases) > 3:
         errors.append(
-            f"wordstat_stickers count {len(sticker_phrases)}; need 1–3 readable phrases"
+            f"wordstat_stickers count {len(sticker_phrases)}; max 3 topic-log phrases"
+        )
+    cover_slot = slots.get("cover") or {}
+    scene_hint = str(cover_slot.get("scene_hint") or "").lower()
+    if sticker_phrases and any(p.casefold() in scene_hint for p in sticker_phrases):
+        errors.append(
+            "cover.scene_hint must NOT echo wordstat_stickers — topic log only, never paint on cover"
+        )
+    if "wordstat sticker" in scene_hint or "query bar" in scene_hint or "query strip" in scene_hint:
+        warnings.append(
+            "cover.scene_hint mentions Wordstat/query strips — remove before image API (owner ban)"
         )
 
     phone = str(manifest.get("cover_phone_cta") or "").strip()

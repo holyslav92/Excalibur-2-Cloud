@@ -45,7 +45,7 @@ Contracts: `shared/grsai-gpt-image-api-contract.md`, `shared/derouter-gpt-image-
 2. **Anti-repeat 14д** — `memory/cover/used-motifs.json` + `excalibur_blog_cover_motif_gate.py check` перед `--write-batch`.
 3. **Light & bright** — high-key, sun flare, light leak, glow; dark cinematic запрещён.
 4. **Мемы** — meme cats + meme people stickers; host Святослав на cover; 8-set включает людей; коты регулярно по неделе.
-5. **Wordstat stickers** — 1–3 readable stickers с live Wordstat фразами (Тюмень/область, regions 55+11176).
+5. **Wordstat stickers** — Scout/Research live Wordstat for **topic choice only**; **never** paint query phrases on cover.png. Optional one yellow sticky from hook.
 6. **Identity** — `identity-real/*` only; no scene clone; no AI faces.
 7. **REJECTED daypart formula** — never: morning desk+document / day street / evening close talk / night split.
 
@@ -72,7 +72,7 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 ## Visual locks (The Риэлтор)
 
 - Панели `#FFFFFF` high-key; ink `#141821`; gold `#dcc5a1` один accent; sun flare/glow OK
-- **Cover:** host LARGE left, smart-casual blazer, invented bright scene, Wordstat stickers, meme stickers
+- **Cover:** host LARGE left, smart-casual blazer, invented bright scene, meme stickers; **NO Wordstat query strips**
 - **Inline (7 шт.) — UTILITY-FIRST** (канон: `memory/cover/inline-visual-types.json`):
   - Стиль = одобренная обложка B02: белый high-key, золото/чёрный, скотч, рваная бумага, солнце, коллаж
   - **Без лица host / identity-real** — host только на cover

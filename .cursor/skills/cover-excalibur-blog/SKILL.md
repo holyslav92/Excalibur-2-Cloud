@@ -75,9 +75,10 @@ PRIMARY: **grsai grsai standard image model** (`GRSAI_API_KEY`, Global→China, 
    - **Anti-repeat 14д** — log `cover_motifs.meme` + `meme_picks` ids; motif gate before API.
    - Copy `meme_picks` from `cover-text.json` into `quad-manifest.json`.
 7. **Wordstat** — Scout/Research live Wordstat for **topic choice only**; **never** paint query phrases on cover.png. Optional one yellow sticky from hook.
-8. **Identity + body lock** — `face-studio-2026-06-23.jpg` i2i (WHO only); medium slim; NOT chubby.
-9. **Expression invention (HARD)** — эмоция/мимика/поза **новые каждый run** под hook; `scene_hint` + `cover_emotion` + `cover_motifs.emotion/action/outfit/pose_framing`. i2i: «same person, NEW outfit+action+expression, do not copy reference clothes/pose/smile». Копия студийной улыбки 1:1 = FAIL.
-10. **REJECTED daypart formula** — never morning desk / day street / evening close / night split.
+8. **Designed thumbnail (pixel QA)** — ONE coherent 1200×675 frame: NO polaroid inset, NO white erase-mask collage, NO pasted second face on right. Phone «+7 922 001 65 05» FULL string in bottom-right zone, not clipped. Prompt blocks: `designed_thumbnail_prompt_block()`, `phone_full_frame_prompt_block()`, `collage_inset_ban_prompt_block()` in `excalibur_blog_cover_budget.py`.
+9. **Identity + body lock** — `face-studio-2026-06-23.jpg` i2i (WHO only); medium slim; NOT chubby.
+10. **Expression invention (HARD)** — эмоция/мимика/поза **новые каждый run** под hook; `scene_hint` + `cover_emotion` + `cover_motifs.emotion/action/outfit/pose_framing`. i2i: «same person, NEW outfit+action+expression, do not copy reference clothes/pose/smile». Копия студийной улыбки 1:1 = FAIL.
+11. **REJECTED daypart formula** — never morning desk / day street / evening close / night split.
 
 ## Inline canon (v3 utility-first)
 

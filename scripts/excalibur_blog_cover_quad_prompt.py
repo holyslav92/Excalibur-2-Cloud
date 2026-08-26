@@ -11,7 +11,13 @@ import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
-from excalibur_blog_cover_budget import SHORT_HOOK_MAX_CHARS, short_hook_prompt_line
+from excalibur_blog_cover_budget import (
+    SHORT_HOOK_MAX_CHARS,
+    collage_inset_ban_prompt_block,
+    designed_thumbnail_prompt_block,
+    phone_full_frame_prompt_block,
+    short_hook_prompt_line,
+)
 from excalibur_blog_quad_slots import (
     CANVAS_1_SLOTS,
     active_inline_keys,
@@ -54,6 +60,25 @@ def sanitize_cover_scene_hint(scene: str, highlight: str) -> str:
         return f"{match.group(1)}{hl}{match.group(3)}"
 
     return _PINK_WORD_IN_SCENE.sub(_repl, scene)
+
+
+def sanitize_cover_style_prefix(style_prefix: str) -> str:
+    """Strip stale Wordstat-on-cover language from style boilerplate (owner ban v3)."""
+    text = str(style_prefix or "").strip()
+    if not text:
+        return text
+    replacements = (
+        ("1-3 Wordstat stickers (Тюмень). ", "NO Wordstat query strips on cover — Scout Wordstat is topic-only. "),
+        ("1-3 Wordstat sticker labels. ", "NO Wordstat query strips on cover — Scout Wordstat is topic-only. "),
+        ("1–3 Wordstat sticker labels. ", "NO Wordstat query strips on cover — Scout Wordstat is topic-only. "),
+        ("1-3 designer stickers with LIVE Wordstat phrases (Тюмень/область) — readable, not spam", "NO Wordstat query strips on cover — topic research only"),
+        ("Wordstat-стикер с живым запросом", "yellow sticky from hook only — NOT Wordstat query"),
+    )
+    for old, new in replacements:
+        text = text.replace(old, new)
+    if "Wordstat" in text and "topic-only" not in text and "FORBIDDEN" not in text:
+        text = text.replace("Wordstat", "Wordstat-topic-log-only-NOT-on-cover")
+    return text
 
 
 BODY_LOCK = "face-studio identity: jaw/stubble/hairline/eyes; medium-slim; NOT chubby/puffy"
@@ -409,6 +434,7 @@ def build_prompt(
         or "",
         380,
     )
+    style_prefix = sanitize_cover_style_prefix(style_prefix)
     if not style_prefix:
         style_prefix = (
             "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic ink, "
@@ -448,10 +474,11 @@ def build_prompt(
         )
         panel_lines.append(
             f"TL COVER TXT «{cover_hook_text}» bold Cyrillic black, {highlight_rule}.{sticky_lock} "
-            f"Phone EXACT «{COVER_PHONE_CTA}» readable CTA sticker. "
+            f"{phone_full_frame_prompt_block(COVER_PHONE_CTA)} "
             f"Host i2i left ({BODY_LOCK}); {emotion_clause} sun flare; "
             f"{compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; "
-            f"1-2 meme stickers; {BOARD_STATIONERY};{wordstat_line} #FFF; perfect Cyrillic"
+            f"1-2 meme stickers; {BOARD_STATIONERY};{wordstat_line} "
+            f"{designed_thumbnail_prompt_block()} {collage_inset_ban_prompt_block()}; #FFF; perfect Cyrillic"
         )
         inline_keys = [k for k in canvas_slots if k != "cover"]
         for label, key in zip(quadrant_labels[1:], inline_keys[:3]):
@@ -533,27 +560,26 @@ def build_solo_cover_prompt(
         style.get("global_prompt_prefix") or design_code.get("cover_panel_prompt_block") or "",
         320,
     )
-    if "Wordstat" in style_prefix:
-        style_prefix = style_prefix.replace(
-            "1-3 Wordstat stickers (Тюмень). ",
-            "NO Wordstat query strips on cover — Scout Wordstat is topic-only. ",
-        )
+    style_prefix = sanitize_cover_style_prefix(style_prefix)
 
     bans = (
         "BAN HARD: ANY Cyrillic/latin text on clothes/jacket/vest/chest/torso; Wordstat/search-keyword strips/bars; "
         "beige/gold query labels top-left; blue/cyan outline halos on hair/face; smeared ghost text; black blazer; "
-        "mustard+navy vest repeat; dark cinematic; chubby host; polite studio smile copy; text on skin."
+        "mustard+navy vest repeat; dark cinematic; chubby host; polite studio smile copy; text on skin; "
+        "polaroid inset; white erase-mask collage; pasted second face inset."
     )
 
     return (
         f"{style_prefix}\n"
+        f"{designed_thumbnail_prompt_block()}\n"
+        f"{collage_inset_ban_prompt_block()}\n"
         "ONE SINGLE 16:9 cover frame 1200x675 — NOT a 2x2 grid, NOT four panels, NOT quad canvas, NOT split collage.\n"
         f"{bans}\n"
         "TEXT LOCK: Russian Cyrillic only. Allowed on-canvas text: headline hook, phone CTA, one small sticky — NOTHING else.\n"
         f"{short_hook_prompt_line()}\n"
         f"Headline EXACT «{hook}» bold black RIGHT sacred zone (52–96% width, 14–40% height), {highlight_rule}. "
         "Leave clear typography band — do NOT fill headline zone with face.\n"
-        f"Phone EXACT «{COVER_PHONE_CTA}» white torn paper bottom-RIGHT corner (55–98% width, 70–96% height).\n"
+        f"{phone_full_frame_prompt_block(COVER_PHONE_CTA)}\n"
         f"{sticky_line}\n"
         f"Host i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}. "
         f"Outfit INVENTED: {outfit}. Expression: {emotion}.\n"
