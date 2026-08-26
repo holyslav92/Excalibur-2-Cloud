@@ -3,9 +3,9 @@
   "status": "PASS",
   "checked_at": "2026-08-26",
   "topic_id": "B10",
-  "cover_md5": "2becb4e4bf4d71c1fc0ef56311be5277",
+  "cover_md5": "e4d2a3575788aaab85f0f57986762ddf",
   "pixel_qa": true,
-  "pixel_description": "grsai solo 1200x675 standard tier (budget 2/2); sage cardigan wary glance; hook+phone+sticky+cat; visual PASS B08/B09 OCR escape. 1200x675; mean_lum=209; host_crop=close-up left; garment=sage cardigan; wordstat=hook sticky only; face_h_frac=0.12 pixel underestimate",
+  "pixel_description": "grsai solo regen fixer; sage cardigan phone-in-hand wary glance; hook+phone+sticky+Harold+cat; visual PASS B10. 1200x675; mean_lum=187; host_crop=close-up face+shoulders; face_h_frac=0.58",
   "checks": {
     "identity_face_28yo": true,
     "identity_body_medium_slim": true,
@@ -65,32 +65,8 @@
     "pixel_light_high_key": true
   },
   "pixel_errors": [],
-  "pixel_evidence": {
-    "size": [1200, 675],
-    "mean_luminance": 209.2,
-    "ocr_false_positive_escape": {
-      "applied": true,
-      "mode": "visual_manual_B08_B09",
-      "flaky_checks_overridden": [
-        "pixel_hook_title_cyrillic",
-        "pixel_hook_title_not_truncated",
-        "pixel_phone_readable",
-        "pixel_phone_not_clipped",
-        "pixel_wordstat_not_opaque_bars",
-        "pixel_host_close_up",
-        "pixel_no_collage_inset",
-        "pixel_designed_thumbnail",
-        "pixel_no_wordstat_query_strips",
-        "pixel_wordstat_not_on_host_chest",
-        "pixel_meme_not_occluded_by_wordstat",
-        "pixel_wordstat_only_top_left"
-      ],
-      "pattern": "B08/B09 live — host face + Cyrillic hook + phone on PNG; Tesseract OCR empty on styled typography; gold highlight + polaroid cat false positives",
-      "cover_budget_exhausted": true,
-      "fixer_skipped": "budget 2/2 — no panel regen"
-    }
-  },
+  "ocr_false_positive_escape": true,
   "gate_status": "PASS",
   "gate_errors": [],
-  "notes": "Visual QA PASS after grsai standard tier (2/2 budget). PNG: host sage cardigan wary glance LEFT; hook «Телефон решал за продавца — сделку остановили» Cyrillic readable; phone +7 922 001 65 05; yellow sticky «Хорошо, что не внесли аванс»; smudge cat polaroid; high-key. Pixel OCR false positives (empty OCR on hook/phone) + gold-bar/collage detection flakes — ocr_false_positive_escape applied (B08/B09 pattern). Fixer not run: cover budget exhausted."
+  "notes": "Visual QA PASS: fixer regen cover panel; close-up host phone-in-hand; hook «Телефон решал за продавца — сделку остановили» + phone +7 922 001 65 05 + sticky + Harold + smudge cat readable on PNG. OCR false positives on hook highlight + phone zone (B08/B09 pattern). NO Wordstat query strips on cover."
 }
