@@ -1,0 +1,310 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "BLOCK",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B10-v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_too_far_from_center",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 576,
+              "end": 647
+            },
+            "v_gutter_px": {
+              "start": 1013,
+              "end": 1104
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 35.5,
+              "v_center_offset_px": 34.5,
+              "max_aspect_crop_loss": 0.1135,
+              "per_panel_crop_loss": {
+                "top_left": 0.0104,
+                "top_right": 0.0781,
+                "bottom_left": 0.1135,
+                "bottom_right": 0.0487
+              },
+              "reject_reason": "gutter_too_far_from_center"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Святослав в кардигане смотрит на телефон продавца; hook; CTA; стикер.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица норма vs осмотр: цена, аванс, пауза, «как сказали».",
+            "h2_anchor": "Цена согласована — и внезапно телефон не отпускали"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Процесс за 2 дня: телефон, короткие ответы, доклад, давление сроком.",
+            "h2_anchor": "За два дня до нотариуса: что увидели на повторном осмотре"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Стоп до аванса: родственники согласились, покупатели ушли, без денег.",
+            "h2_anchor": "Финал: сделку остановили до первого аванса"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B10-v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 566,
+              "end": 626
+            },
+            "v_gutter_px": {
+              "start": 995,
+              "end": 1059
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 20.0,
+              "v_center_offset_px": 3.0,
+              "max_aspect_crop_loss": 0.0603,
+              "per_panel_crop_loss": {
+                "top_left": 0.0106,
+                "top_right": 0.0177,
+                "bottom_left": 0.0603,
+                "bottom_right": 0.0546
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чеклист: нотариус позже, телефон на осмотре, кто отвечает.",
+            "h2_anchor": "Почему нотариус на осмотре не появляется — и что это значит"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "График ФНП: 46% дарение, 32% продажа, нотариальные 8,5%.",
+            "h2_anchor": "Как ФНП описывает сдвиг схем на куплю-продажу"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Маркеры: телефон, «как сказали», пауза, доклад до денег.",
+            "h2_anchor": "Маркеры телефонного управления, которые видит риелтор"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чеклист до аванса: 15 мин без звонков, пауза 2–3 дня, стоп.",
+            "h2_anchor": "Что проверить до аванса: покупателю и родственникам"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Цена согласована — и внезапно телефон не отпускали",
+    "skip inline_2: already correct under H2 — За два дня до нотариуса: что увидели на повторном осмотре",
+    "skip inline_3: already correct under H2 — Финал: сделку остановили до первого аванса",
+    "injected inline_4 after H2 — Почему нотариус на осмотре не появляется — и что это значит",
+    "injected inline_5 after H2 — Как ФНП описывает сдвиг схем на куплю-продажу",
+    "injected inline_6 after H2 — Маркеры телефонного управления, которые видит риелтор",
+    "injected inline_7 after H2 — Что проверить до аванса: покупателю и родственникам"
+  ],
+  "errors": [
+    "skip inline_4: H2 not found — Нотариус не на осмотре",
+    "skip inline_5: H2 not found — ФНП сдвиг схем",
+    "skip inline_6: H2 not found — Маркеры управления",
+    "skip inline_7: H2 not found — Проверка до аванса",
+    "inline_4 figure count after inject=0 (need exactly 1)",
+    "inline_5 figure count after inject=0 (need exactly 1)",
+    "inline_6 figure count after inject=0 (need exactly 1)",
+    "inline_7 figure count after inject=0 (need exactly 1)"
+  ]
+}

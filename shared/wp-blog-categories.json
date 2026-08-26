@@ -35,6 +35,7 @@
   },
   "topic_defaults": {
     "B01": ["proverka-pered-pokupkoj", "vtorichka-i-riski"],
-    "B02": ["vtorichka-i-riski", "dokumenty-i-oformlenie"]
+    "B02": ["vtorichka-i-riski", "dokumenty-i-oformlenie"],
+    "B10": ["vtorichka-i-riski", "riski-sdelki"]
   }
 }

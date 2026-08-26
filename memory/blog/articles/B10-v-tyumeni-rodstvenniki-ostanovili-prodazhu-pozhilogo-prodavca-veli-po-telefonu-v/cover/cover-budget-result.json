@@ -1,0 +1,59 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B10-v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/cover/cover.png",
+  "last_errors": [
+    "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+    "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+    "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+    "pixel_phone_readable FAIL: phone_digits='' ink=6132 clipped=False",
+    "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Телефон', 'решал', 'продавца', 'сделку', 'остановили'] last_word='остановили' ocr=''",
+    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.1646",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model_tier": "standard",
+      "bytes": 1014686,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 3 horizontal opaque bar(s)",
+        "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0068 chest_blue=0.002 smear=0.000",
+        "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+        "pixel_phone_readable FAIL: phone_digits='' ink=1709 clipped=False",
+        "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Телефон', 'решал', 'продавца', 'сделку', 'остановили'] last_word='остановили' ocr=''",
+        "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0168",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model_tier": "standard",
+      "bytes": 1061213,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+        "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+        "pixel_hook_title_cyrillic FAIL: latin_garbage=False percent_only=False services_phrase=False cyr_ratio=0.0 ocr=''",
+        "pixel_phone_readable FAIL: phone_digits='' ink=6132 clipped=False",
+        "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Телефон', 'решал', 'продавца', 'сделку', 'остановили'] last_word='остановили' ocr=''",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.1646",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}

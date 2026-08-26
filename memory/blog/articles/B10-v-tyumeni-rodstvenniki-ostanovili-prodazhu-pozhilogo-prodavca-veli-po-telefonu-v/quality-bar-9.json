@@ -1,0 +1,38 @@
+{
+  "status": "FAIL",
+  "all_pass": false,
+  "gate": "quality-bar-9",
+  "contract": "shared/quality-bar-9.md",
+  "article_dir": "memory/blog/articles/B10-v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v",
+  "checks": {
+    "brand_first_person_tyumen": true,
+    "phone_in_body": true,
+    "early_cta_tg_max_only": true,
+    "mid_cta_tg_max_nudge": true,
+    "end_cta_full_channels": true,
+    "interlink_siblings_2_4": true,
+    "dual_cta_soft": true,
+    "word_count_2000_2600": false,
+    "h2_count_7_plus": true,
+    "inline_figures_7": true,
+    "no_sol_artifact": true,
+    "no_unlabeled_live_inventory": true,
+    "comparison_tables_differ": true,
+    "no_tldr_opening": true,
+    "comment_magnet_question": true,
+    "cover_phone_on_cover": false,
+    "wordstat_stickers_not_title_overlap": true,
+    "cover_qa_pass": false
+  },
+  "errors": [
+    "word_count 2620 outside 2000-2600",
+    "check failed: cover_qa_pass",
+    "check failed: cover_phone_on_cover"
+  ],
+  "metrics": {
+    "word_count": 2620,
+    "h2_count": 8,
+    "inline_figures": 7,
+    "sibling_interlinks": 3
+  }
+}

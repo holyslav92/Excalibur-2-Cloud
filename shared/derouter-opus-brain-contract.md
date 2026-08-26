@@ -41,6 +41,17 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 3. Cursor **не переписывает** HTML/JSON/надписи после Derouter.
 4. Stamp `derouter-opus-stamp-<role>.json` — tier + фактический model id (opus vs terra).
 
+## Longform chunking (HTTP 524 avoidance)
+
+Для **writer** и **sol** на longform (7 inline) не вызывай single-shot Derouter на полный HTML — предсказуемый HTTP 524:
+
+```bash
+python3 scripts/excalibur_blog_writer_chunk.py --system-file ... --user-file ... --article-dir ...
+python3 scripts/excalibur_blog_sol_chunk.py --system-file ... --user-file ... --article-dir ...
+```
+
+По умолчанию 3 части по H2 outline; merge → `drafts/writer.html` / `article.html`. `--single-shot` только для коротких статей.
+
 ## Не Derouter chat (остаётся Cursor / Python / MCP)
 
 - **Director** — оркестрация, Task, git, merge (Composer conductor, без article prose)

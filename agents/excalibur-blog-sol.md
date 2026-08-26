@@ -16,15 +16,15 @@ is_background: false
 **Не пиши article.html моделью Cursor.** Вызови:
 
 ```bash
-python3 scripts/excalibur_blog_derouter_opus_chat.py \
-  --role sol \
+python3 scripts/excalibur_blog_sol_chunk.py \
   --system-file agents/excalibur-blog-sol.md \
   --user-file <assembled-sol-inputs.md> \
   --output article.html \
   --article-dir <article_dir>
 ```
 
-`cp article.html drafts/variant-a.html` — shell, не рерайт Cursor.
+Longform (7 inline): **3 части на первом проходе** — не ждать HTTP 524. `--single-shot` только для коротких статей.
+`cp article.html drafts/variant-a.html` — sol_chunk делает при chunk merge; shell cp после single-shot.
 Контракт: `shared/derouter-opus-brain-contract.md`. `DEROUTER SOL BLOCKER` → стоп.
 
 Skill: `skills/sol-excalibur-blog/SKILL.md`  

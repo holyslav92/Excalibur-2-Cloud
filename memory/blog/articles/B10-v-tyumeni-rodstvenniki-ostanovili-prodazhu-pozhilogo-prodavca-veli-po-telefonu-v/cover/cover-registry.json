@@ -1,0 +1,86 @@
+{
+  "topic_id": "B10",
+  "slug": "v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Святослав в кардигане смотрит на телефон продавца; hook; CTA; стикер.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-26T08:15:13+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Святослав в кардигане смотрит на телефон продавца; hook; CTA; стикер.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Таблица норма vs осмотр: цена, аванс, пауза, «как сказали».",
+      "h2_anchor": "Цена согласована — и внезапно телефон не отпускали",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Процесс за 2 дня: телефон, короткие ответы, доклад, давление сроком.",
+      "h2_anchor": "За два дня до нотариуса: что увидели на повторном осмотре",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Стоп до аванса: родственники согласились, покупатели ушли, без денег.",
+      "h2_anchor": "Финал: сделку остановили до первого аванса",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Чеклист: нотариус позже, телефон на осмотре, кто отвечает.",
+      "h2_anchor": "Почему нотариус на осмотре не появляется — и что это значит",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "График ФНП: 46% дарение, 32% продажа, нотариальные 8,5%.",
+      "h2_anchor": "Как ФНП описывает сдвиг схем на куплю-продажу",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Маркеры: телефон, «как сказали», пауза, доклад до денег.",
+      "h2_anchor": "Маркеры телефонного управления, которые видит риелтор",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Чеклист до аванса: 15 мин без звонков, пауза 2–3 дня, стоп.",
+      "h2_anchor": "Что проверить до аванса: покупателю и родственникам",
+      "visual_type": "labeled_checklist",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

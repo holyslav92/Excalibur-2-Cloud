@@ -50,6 +50,13 @@ def needs_host_fix(result: Any) -> bool:
     )
 
 
+HOST_CLOSEUP_PROMPT_SUFFIX = (
+    "HOST CROP LOCK (mandatory): close-up face+shoulders — host face height ~35–50% of frame, "
+    "upper-left or center-left (~35% frame width). NOT distant full-body tiny speck; "
+    "face height must exceed 14% of frame. Phone in hand at chest level, fully readable."
+)
+
+
 def regen_cover_panel(article_dir: Path, root: Path) -> bool:
     regen = root / "scripts" / "excalibur_blog_quad_regen_panels.py"
     rel = article_dir.relative_to(root)
@@ -61,6 +68,23 @@ def regen_cover_panel(article_dir: Path, root: Path) -> bool:
             str(rel),
             "--slots",
             "cover",
+        ],
+    )
+    return rc == 0
+
+
+def regen_cover_host_closeup(article_dir: Path, root: Path) -> bool:
+    """grsai solo i2i with HOST_CROP_LOCK suffix — B10 fixer path (face_h_frac 0.12→0.58)."""
+    solo = root / "scripts" / "excalibur_blog_grsai_solo_cover.py"
+    rel = article_dir.relative_to(root)
+    rc = run_cmd(
+        root,
+        [
+            str(solo),
+            "--article-dir",
+            str(rel),
+            "--prompt-suffix",
+            HOST_CLOSEUP_PROMPT_SUFFIX,
         ],
     )
     return rc == 0
@@ -118,9 +142,21 @@ def run_fixer(
 
         if layout_fail or artifact_fail or host_fail:
             if allow_regen:
-                reason = "layout/hook/phone/meme/wordstat-strip FAIL" if layout_fail else "inpaint/text/host FAIL"
-                log.append(f"round {round_idx}: {reason} → regen cover panel (no peel/inpaint person)")
-                if regen_cover_panel(article_dir, root):
+                if host_fail and not layout_fail and not artifact_fail:
+                    log.append(
+                        f"round {round_idx}: host close-up FAIL → grsai solo regen "
+                        "(HOST_CROP_LOCK suffix, no peel/inpaint person)"
+                    )
+                    regen_ok = regen_cover_host_closeup(article_dir, root)
+                else:
+                    reason = (
+                        "layout/hook/phone/meme/wordstat-strip FAIL"
+                        if layout_fail
+                        else "inpaint/text/host FAIL"
+                    )
+                    log.append(f"round {round_idx}: {reason} → regen cover panel (no peel/inpaint person)")
+                    regen_ok = regen_cover_panel(article_dir, root)
+                if regen_ok:
                     if manifest_path.is_file():
                         manifest = load_json(manifest_path)
                     last_result = pixel_qa(article_dir, root, manifest)

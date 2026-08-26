@@ -109,6 +109,25 @@ class WriterChunkTest(unittest.TestCase):
         self.assertEqual(len(groups), 3)
 
 
+class SolChunkTest(unittest.TestCase):
+    def test_split_h2_groups_shared(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_sol_chunk import split_h2_groups
+
+        h2s = [f"H{i}" for i in range(1, 8)]
+        groups = split_h2_groups(h2s, 3)
+        self.assertEqual(sum(len(g) for g in groups), 7)
+
+    def test_merge_sol_fragments_strips_fences(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_sol_chunk import merge_sol_fragments
+
+        merged = merge_sol_fragments(["```html\n<p>a</p>\n```", "<p>b</p>"])
+        self.assertIn("<p>a</p>", merged)
+        self.assertIn("<p>b</p>", merged)
+        self.assertNotIn("```", merged)
+
+
 class WordstatOverlayTest(unittest.TestCase):
     def test_overlay_script_import(self) -> None:
         sys.path.insert(0, str(ROOT / "scripts"))

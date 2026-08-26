@@ -16,7 +16,7 @@ confidence: medium
 - METRIKA_CREDENTIALS_MISSING
 
 ### Keep
-- Longform Writer/Sol: **3 части на первом проходе** (skill writer-excalibur-blog) — не ждать 524 на single-shot.
+- Longform Writer/Sol: **3 части на первом проходе** (`excalibur_blog_writer_chunk.py` / `excalibur_blog_sol_chunk.py`) — не ждать 524 на single-shot.
 - Chunk fallback идемпотентен: stamps per-part, merge в drafts/writer.html → article.html.
 
 ### Change
