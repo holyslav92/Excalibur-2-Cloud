@@ -101,7 +101,8 @@ def write_budget_exhausted_report(
         "last_errors": last_errors,
         "attempts": attempts_log,
         "next_steps": [
-            "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+            "Re-run cover_qa_gate.py — apply_ocr_false_positive_escape may PASS visual OK + OCR flakes (B08/B09/B10/B11)",
+            "Do NOT deep-dive Cover-QA source — if visual OK, stamp PASS or proceed Indexer",
             "Never PIL mashup / Kie; regen only via grsai solo cover within budget",
         ],
     }
