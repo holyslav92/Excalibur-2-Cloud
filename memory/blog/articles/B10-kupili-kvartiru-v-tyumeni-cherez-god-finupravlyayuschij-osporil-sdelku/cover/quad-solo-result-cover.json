@@ -1,0 +1,23 @@
+{
+  "local_path": "cover/cover.png",
+  "source": "grsai-api",
+  "model": "grsai-standard",
+  "bytes": 970948,
+  "aspect_ratio": "2048x1152",
+  "quality": "high",
+  "endpoint": "/v1/api/generate",
+  "path_strategy": "api_generate_json",
+  "host": "grsaiapi.com",
+  "mode": "i2i",
+  "response_kind": "url",
+  "attempts": 1,
+  "resized_to": [
+    1200,
+    675
+  ],
+  "result_url_host": "file8.aitohumanize.com",
+  "task_id": "13-f2780c56-1ca7-4076-90c0-6f4e62bbe583",
+  "poll": false,
+  "local_reference": "face-studio-2026-06-23.jpg",
+  "model_tier": "standard"
+}
