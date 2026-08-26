@@ -262,9 +262,7 @@ files_changed:
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_derouter_opus_chat.py`
 - `python3 -m unittest tests.test_derouter_resolve_model.DerouterOutputPathTests`
-commit: pending
-
-## INC-20260826-1117-derouter-cover-text-wrong-path-b11
+commit: efd01f5
 status: fixed
 run_date: 2026-08-26
 role: excalibur-blog-cover-text
@@ -297,7 +295,7 @@ files_changed:
 - `scripts/excalibur_blog_derouter_opus_chat.py`
 checks_run:
 - `python3 -m unittest tests.test_derouter_resolve_model.DerouterOutputPathTests`
-commit: pending
+commit: efd01f5
 
 ## INC-20260826-1118-cover-budget-ocr-escape-b11
 status: fixed
@@ -332,9 +330,7 @@ files_changed:
 - `scripts/excalibur_blog_grsai_solo_cover.py`
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_grsai_solo_cover.py`
-commit: pending
-
-## INC-20260821-0614-html-linter-cta-div-b06
+commit: e958441
 status: fixed
 run_date: 2026-08-21
 role: excalibur-blog-fixer
