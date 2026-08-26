@@ -1,7 +1,7 @@
 # Klyshin topic bank (rolling)
 
 **Источник:** [@klyshin_A](https://t.me/klyshin_A) — Алексей Клышин, юрист по недвижимости  
-**Обновлено:** 2026-08-26 (live read `https://t.me/s/klyshin_A`, Scout B10)  
+**Обновлено:** 2026-08-26 (live read `https://t.me/s/klyshin_A`, Scout B11)  
 **Парный gate:** MCP-KV Wordstat, regions **55** (Тюмень) + **11176** (область), compare **225** (Россия)
 
 Scout **всегда** читает этот банк **вместе** с live Wordstat. Klyshin даёт **угол/хук**; Wordstat **оценивает и перерабатывает** тему до buyer P0 — **не** binary skip.
