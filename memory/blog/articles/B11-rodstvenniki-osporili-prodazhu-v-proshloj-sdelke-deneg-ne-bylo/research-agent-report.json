@@ -1,0 +1,63 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B11",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-27",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://tvgram.ru/klyshin_A/3156",
+        "type": "community",
+        "note": "Klyshin 16.08.2026 — схема №3 «квартира без денег»"
+      },
+      {
+        "url": "https://1prime.ru/20260827/rusyaev-872585460.html",
+        "type": "news",
+        "note": "PRIME 27.08.2026 — Русяев о сделках между родственниками и ст. 170 ГК"
+      },
+      {
+        "url": "https://ria.ru/20260827/sdelki-2113404495.html",
+        "type": "news",
+        "note": "РИА 27.08.2026 — зеркало комментария Русяева"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 17699,
+    "buyer_spine_phrase": "проверка недвижимости",
+    "buyer_spine_volume": 122,
+    "angle_phrase": "росреестр проверка недвижимости",
+    "angle_volume": 22,
+    "rework_from": "handoff P0 22722 (55+11176)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 0,
+    "entities_checked": [],
+    "errors": [],
+    "note": "Тарифные claims отсутствуют; GK/VS norms cited via consultant/pravo/delo-press"
+  },
+  "key_facts_count": 24,
+  "derouter": {
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}
