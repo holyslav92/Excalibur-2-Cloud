@@ -4,9 +4,9 @@
 
 | Файл | Назначение |
 |------|------------|
-| `klyshin-topic-bank.md` | Человекочитаемый банк хуков Алексея Клышина |
+| `klyshin-topic-bank.md` | Человекочитаемый банк хуков Алексея Клышина (optional) |
 | `klyshin-topic-bank.json` | Машиночитаемый банк для Scout / gates |
+| `used-clusters.json` | Закрытые story-clusters (30д anti-repeat) |
+| `next-cluster-guidance.md` | Открытые углы для следующих weekday-слотов |
 
-**Алгоритм (канон):** Klyshin hook → Wordstat `top_requests` (Тюмень 55 + область 11176, compare RU 225) → **evaluate + rework for demand** (слабый объём → локализация/переформулировка до buyer P0; skip только после исчерпания rework). Логировать **original hook** + **final P0 phrase+volume**.
-
-Wordstat — demand spine. Klyshin — angle/hook bank, не замена частот.
+**Алгоритм (канон):** live blog ~20 + ledger → `--sync-used-clusters` → Wordstat `top_requests` (Тюмень 55 + область 11176) → **evaluate + rework** → **новый** cluster (30д). Klyshin optional (только свежий). Логировать **final P0 phrase+volume** + **story_dup_check: PASS**.

@@ -425,8 +425,8 @@ def main() -> int:
     ap.add_argument(
         "--live-limit",
         type=int,
-        default=40,
-        help="How many recent live WP posts to fetch for slug/drift checks (default 40)",
+        default=20,
+        help="How many recent live WP posts to fetch for slug/drift checks (default 20)",
     )
     ap.add_argument(
         "--check-focus",
@@ -474,7 +474,7 @@ def main() -> int:
         candidate_ids = detect_story_clusters(args.check_story, clusters)
         if candidate_ids:
             print(f"candidate_clusters={','.join(candidate_ids)}")
-        warnings = check_story_duplicate(args.check_story, sources, clusters)
+        warnings = check_story_duplicate(args.check_story, sources, clusters, root=root)
         if warnings:
             print("❌ STORY DUPLICATE BLOCKER:")
             for w in warnings:
@@ -594,7 +594,7 @@ def main() -> int:
 
         clusters = load_story_clusters(root)
         story_sources = build_published_story_sources(root, live_limit=live_limit)
-        story_warnings = check_story_duplicate(args.check_query, story_sources, clusters)
+        story_warnings = check_story_duplicate(args.check_query, story_sources, clusters, root=root)
         if story_warnings:
             print("❌ STORY DUPLICATE BLOCKER:")
             for w in story_warnings:

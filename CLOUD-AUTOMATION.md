@@ -164,7 +164,7 @@ DEROUTER <ROLE> BLOCKER → стоп пайплайна. Нет run_budget / cir
 doctor + today.
 dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
 needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
-Scout HARD gates перед handoff: MCP-KV Wordstat + shared/dzen-news-casus.md (Dzen engagement goal; hot news-casus актуалочка; forbidden checklist/TL;DR; comment_magnet_angle в handoff; слабый Wordstat → rework news phrasing, NOT drop casus) + `scout_helper.py --check-query` (topic focus + **story-duplicate** `shared/scout-story-clusters.json` vs ledger/live WP — Wordstat rework ≠ same legal risk+plot).
+Scout HARD gates перед handoff: live blog ~20 + ledger + `--sync-used-clusters` + MCP-KV Wordstat + shared/dzen-news-casus.md (Dzen engagement; hot news-casus; comment_magnet_angle; слабый Wordstat → rework, NOT drop casus) + `scout_helper.py --check-query` (**30d story-duplicate** `shared/scout-story-clusters.json` + `memory/scout/used-clusters.json` — same legal risk+plot = FAIL even if title differs; Klyshin optional, fresh only).
 research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
 Title/Writer/Sol: цель = Dzen engagement (лайки, комментарии, подписки); news-casus актуалочка (событие → финал → практика после); прозаический лид → early TG+MAX; comment magnet — один острый вопрос; H1 forbidden: «чеклист», «N шагов», «стоит ли покупать»; body 2000–2600, useful part AFTER story.
 Description: news card energy (shared/dzen-description-rules.md), not SEO checklist blurb.

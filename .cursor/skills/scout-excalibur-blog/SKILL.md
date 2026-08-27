@@ -1,9 +1,9 @@
 ---
 name: scout-excalibur-blog
-description: Pick P0 topic from Klyshin hooks × MCP-KV Wordstat — evaluate and rework for Tyumen demand.
+description: Pick P0 Tyumen news-casus topic — Wordstat demand + 30d story-cluster anti-repeat; Klyshin optional.
 ---
 
-# Scout — Klyshin hooks × Wordstat (evaluate + rework)
+# Scout — Wordstat demand + 30d story-cluster anti-repeat
 
 ## Thin conductor + Derouter utility (HARD)
 
@@ -21,145 +21,101 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 `DEROUTER SCOUT BLOCKER` → стоп. Контракт: `shared/derouter-opus-brain-contract.md`.
 
-Тему выбираешь из **трёх обязательных источников** (все три — HARD):
+## Источники темы
 
-1. **Алексей Клышин (angle bank)** — `memory/scout/klyshin-topic-bank.md` + `.json`, канал `https://t.me/klyshin_A`.
-2. **Wordstat (demand spine)** — MCP-KV buyer-спрос в Тюмени/области (55 + 11176), сравнение с RU **225**.
-3. **Dzen news-casus shape** — `shared/dzen-news-casus.md`: default = **hot news-casus актуалочка** с финалом и **comment magnet**, не how-to checklist.
+**Обязательно (HARD):**
 
-**Цель каждой темы — вовлечение в Дзен** (лайки, комментарии, подписки): конкретные stakes в Тюмени, завершённое событие, финал. Scout намечает **угол спора** для comment magnet.
+1. **Wordstat (demand spine)** — MCP-KV buyer-спрос в Тюмени/области (55 + 11176), сравнение с RU **225**.
+2. **Dzen news-casus shape** — `shared/dzen-news-casus.md`: hot **news-casus актуалочка** с финалом и **comment magnet**, не how-to checklist.
+3. **Anti-repeat 30д** — live blog (~20) + ledger + `memory/scout/used-clusters.json` (same story/cluster = FAIL даже при новом title).
+
+**Опционально:**
+
+- **Klyshin** — `memory/scout/klyshin-topic-bank.*` + **только свежий** `https://t.me/klyshin_A` или **свежий** YouTube. Старые посты **не** брать, если кластер закрыт. Новый hot Tyumen casus **без** Klyshin — OK и **предпочтителен**, когда Klyshin дублировал бы закрытый plot.
+
+**Цель каждой темы — вовлечение в Дзен** (лайки, комментарии, подписки): stakes в Тюмени, завершённое событие, финал. Scout намечает **угол спора** для comment magnet.
 
 Klyshin **не** заменяет частоты. Wordstat **не** binary skip gate. Слабый Wordstat **не** повод сменить shape на чеклист.
+
+## Перед topic lock (HARD)
+
+```text
+1. Fetch live PUBLIC_SITE_URL/blog/ — последние ~20 заголовков (не тела)
+2. Прочитать shared/published-articles.md + shared/published-titles.md (+ published-titles-only.md)
+3. python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters
+4. Прочитать memory/scout/used-clusters.json + memory/scout/next-cluster-guidance.md
+5. Выбрать кластер, которого НЕТ в closed list (30д)
+```
+
+Каждый weekday-слот (09/12/15/17 YEKT) = **другой** story-cluster равного engagement-качества.
 
 ## Алгоритм (канон)
 
 ```text
-1. Прочитать shared/dzen-news-casus.md (champion formula + forbidden hooks)
-2. Klyshin hook/angle (bank + live @klyshin_A) → news-casus angle (событие + риск + метка времени + финал)
-3. wordstat_get_top_requests: hook phrase + tyumen analogs (regions 55, 11176; compare 225)
-4. Слабый объём → НЕ drop casus. Rework:
-   - локализовать на Тюмень
-   - переформулировать **новостной** angle (не «чеклист / N шагов»)
-   - заменить жаргон на buyer-поиск (егрн, наследство, ипотека, аванс, доверенность…)
-   - wordstat_get_top_requests по similar queries
-   - выбрать ближайший high-frequency cluster с тем же risk/story + casus shape
-5. Title draft — news headline в ритме Klyshin. P0 Wordstat — demand spine под H1; stickers/H2 из reworked live queries
-6. Skip ТОЛЬКО если после rework нет честного buyer-intent **или** нельзя casus с финалом
-7. Лог: original Klyshin hook + final Wordstat P0 phrase+volume + dzen_casus_shape: PASS (+ rework steps)
+1. shared/dzen-news-casus.md (champion formula + forbidden hooks)
+2. Live blog + ledger + used-clusters → список закрытых кластеров
+3. Свежий Tyumen casus angle (Klyshin optional) → news-casus (событие + риск + время + финал)
+4. wordstat_get_top_requests: hook phrase + tyumen analogs (55, 11176; compare 225)
+5. Слабый объём → rework news angle (локализация, buyer-жаргон), НЕ drop casus
+6. Title draft — news headline. P0 Wordstat — demand spine под H1
+7. scout_helper.py --check-query → BLOCKER если duplicate cluster
+8. Лог: klyshin_hook (optional) + final P0 + dzen_casus_shape: PASS + comment_magnet_angle
 ```
 
-## Klyshin — ALWAYS joint with Wordstat
+## Klyshin — OPTIONAL (если используешь)
 
-- Читай `memory/scout/klyshin-topic-bank.md` + свежий `https://t.me/s/klyshin_A`
+- Только **свежий** пост @klyshin_A или **свежий** YouTube — не архив, если plot уже в `used-clusters.json`
 - После Scout **обнови** банк: `last_seen`, `wordstat_rework_log`, `final_p0`, `used_in_articles`
-- **Не копируй** Москву/Дубай/МКАД как P0 — локализуй на Тюмень или rework до Tyumen cluster
+- **Не копируй** Москву/Дубай как P0 — локализуй на Тюмень
 - Факты в статье: **Святослав Шакин / Тюмень**, не копипаст канала
 
-`scout_signal_urls` (tenant-config): **klyshin_A** + dzen holyslav + site blog + t.me/holyslav92
+`scout_signal_urls` (tenant-config): site blog + dzen holyslav + t.me/holyslav92 (+ klyshin_A optional)
 
 ## Wordstat — HARD GATE (MCP-KV)
 
-**Частоты не выдумывать.** Если `CallMcpTool` на MCP-KV Wordstat недоступен → **SCOUT BLOCK**.
+**Частоты не выдумывать.** Если MCP-KV Wordstat недоступен → **SCOUT BLOCK**.
 
 ```bash
 python3 scripts/excalibur_blog_wordstat_gate.py config
 ```
 
-### Preflight (обязательно, первый solo CallMcpTool)
-
-`MCP-KV` → `wordstat_get_user_info`  
-Если ошибка / tool missing → **WORDSTAT MCP BLOCKER**, handoff не пишем.
-
-### Регионы (lookup, не гадать)
-
-1. `wordstat_get_regions_tree` — если `memory/cover/wordstat-geo.json` устарел
-2. Канон после lookup: **Тюмень=55**, **Тюменская область=11176**, **Россия=225**
-
-### Rework vocabulary (buyer search spine)
-
-При слабом объёме на «юридическом» hook — пробуй живые кластеры:
-
-- егрн / выписка егрн / проверка егрн
-- наследство / наследники / отказ от наследства
-- ипотека / новостройка / вторичка
-- аванс / задаток / безопасный расчёт / аккредитив
-- пенсионер / пожилой продавец / опека
-- доверенность / банкротство / торги
-- маткапитал / детская доля
-
-Для каждого rework-раунда — **отдельный** `top_requests` по probe; сохраняй частоты.
-
-**Сравнение:** тот же `phrase` с `regions: ["225"]` когда нужен national контекст.
-
-**Optional:** `wordstat_get_dynamics` на выбранный final P0.
-
-### НЕ P0 (brand vanity — только справка)
-
-«риэлтор тюмень», «услуги риэлтора тюмень» — низкий объём. Не строить тему только из них.
-
-### Dzen news-casus gate (обязательно)
-
-Перед handoff проверь shape по `shared/dzen-news-casus.md`:
-
-- **PASS:** завершённое событие + именованный риск + временная метка + «думал, что безопасно» + финал (суд/отмена/деньги).
-- **FAIL shape:** главный hook = «чеклист», «N шагов», «стоит ли покупать», «как купить без риелтора» без casus.
-- **Слабый Wordstat:** rework **news-формулировки**, не меняй default на how-to.
-
-В handoff строка:
-
-```text
-dzen_casus_shape: PASS | event: «…» | risk: «…» | time: «через год» | finale: «суд отменил регистрацию»
-comment_magnet_angle: «…?» — острый вопрос, с которым читатели спорят
-```
+Preflight: `wordstat_get_user_info` → OK. Регионы: **Тюмень=55**, **область=11176**, **RU=225**.
 
 ### Handoff (обязательно)
 
 ```text
 wordstat_preflight: mcp-kv wordstat_get_user_info OK
-klyshin_hook: <hook_id> | original: «…» | angle: <…> | signal: https://t.me/klyshin_A/…
+klyshin_hook: optional | <hook_id> | original: «…» | signal: https://t.me/klyshin_A/… (или none)
+anti_repeat_preflight: live_blog_20 + ledger + used-clusters sync OK | closed_clusters: <ids>
 dzen_casus_shape: PASS | event: «…» | risk: «…» | time: «…» | finale: «…»
 comment_magnet_angle: «…?»
-wordstat_rework: probe «…» <freq> → … → final P0 «купить квартиру в тюмени» 23060 | clusters tried: …
-wordstat: mcp_kv live | regions 55,11176,compare225 | P0 «…» <freq> | …
+wordstat_rework: probe «…» <freq> → … → final P0 «…» <freq>
+wordstat: mcp_kv live | regions 55,11176,compare225 | P0 «…» <freq>
+story_dup_check: PASS | cluster_id: <новый уникальный>
 ```
 
-```bash
-python3 scripts/excalibur_blog_wordstat_gate.py handoff
-```
+## HARD story-duplicate (30 дней, не только title)
 
-## Внешний сигнал
-
-1. **klyshin_A** + ≥1 другой URL из `scout_signal_urls` (сегодня)
-2. Wordstat final P0 buyer volume после rework-цикла
-3. `published-titles-only.md` + **`shared/published-articles.md` + live WP titles** — anti-dup title AND **HARD story-duplicate** (same legal risk + plot)
-
-## HARD story-duplicate (не только title)
-
-**Wordstat may refine phrasing — must NOT recycle the same story.**
-
-Перед handoff прогони:
+**Wordstat may refine phrasing — must NOT recycle the same story/cluster.**
 
 ```bash
+python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters
 python3 scripts/excalibur_blog_scout_helper.py --check-query "<title draft + hook + slug>"
-# или явно:
+# или:
 python3 scripts/excalibur_blog_scout_story_dup.py --text "<title + hook + slug>"
 ```
 
-Кластеры: `shared/scout-story-clusters.json` — наследство+сын первого брака без отказа, маткапитал без долей, доверенность+СВО, задаток/торги, −2 млн и т.д.
+Кластеры: `shared/scout-story-clusters.json` (owner lock 9 + legacy).
+Закрытые: `memory/scout/used-clusters.json` — **30д**, same cluster = FAIL even if title differs.
 
-**BLOCKER `SCOUT STORY DUPLICATE`** если hook/title попадает в тот же cluster, что уже опубликованный sibling (ledger **или** live WP, напр. `/bez-rubriki/nasledstvo-ne-proshlo-tri-goda-avans-uzhe-nesut/` vs B07). Skip hook — другой legal risk + другой family-plot, не перефраз.
-
-## Выход
-
-`.cursor/excalibur-blog-handoff.md` — topic_id, title draft (Klyshin rhythm), external_signal, signal_urls, klyshin_hook + wordstat_rework + wordstat lines.
+**BLOCKER `SCOUT STORY DUPLICATE`** — pick distinct legal risk + plot. См. `memory/scout/next-cluster-guidance.md`.
 
 ## Чеклист
 
-1. `wordstat_get_user_info` → OK
-2. Fetch klyshin_A + holyslav/dzen signals
-3. Pick hook from bank or fresh post → update bank
-4. `wordstat_get_top_requests` на hook + probes (55+11176; compare 225)
-5. Слабый объём → rework (локализация + buyer jargon + similar queries) — **не** мгновенный skip
-6. Final P0 + title angle (news headline, не checklist hook); лог original hook + final phrase+volume + `dzen_casus_shape`
-7. **`scout_helper.py --check-query`** (focus + story-dup + slug overlap) → BLOCKER если duplicate
-8. handoff + `wordstat_gate.py handoff` → стоп
+1. Live blog ~20 + ledger + published-titles
+2. `--sync-used-clusters` + read closed clusters
+3. `wordstat_get_user_info` → OK
+4. Pick **новый** cluster (не в used-clusters 30д)
+5. Wordstat probes + rework if weak
+6. `scout_helper.py --check-query` → PASS
+7. handoff + `wordstat_gate.py handoff` → стоп

@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "anti_repeat_days": 30,
+  "description": "Closed story clusters — Scout must not reuse until locked_until. Sync via: python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters",
+  "last_sync": "2026-08-27",
+  "clusters": [
+    {
+      "cluster_id": "marital_share_heirs_notary_checked",
+      "first_seen": "2026-08-27",
+      "locked_until": "2026-09-26",
+      "source": "live_wp",
+      "slug": "notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya",
+      "topic_id": "LIVE-NOTARIUS-18-LET-NAZAD-VS",
+      "title": "Нотариус не выделил супружескую долю — аванс остановили"
+    },
+    {
+      "cluster_id": "court_took_apartment_relatives_contested",
+      "first_seen": "2026-08-27",
+      "locked_until": "2026-09-26",
+      "source": "live_wp",
+      "slug": "rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo",
+      "topic_id": "LIVE-RODSTVENNIKI-OSPORILI-PR",
+      "title": "Купил вторичку в Тюмени — через два года суд забрал квартиру"
+    },
+    {
+      "cluster_id": "matkapital_opieka_kids_cancel_3y",
+      "first_seen": "2026-08-26",
+      "locked_until": "2026-09-25",
+      "source": "live_wp",
+      "slug": "matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni",
+      "topic_id": "LIVE-MATKAPITAL-BYL-OPEKA-MOL",
+      "title": "Маткапитал был, опека промолчала: дети через три года отменили сделку"
+    },
+    {
+      "cluster_id": "elderly_seller_led_by_phone",
+      "first_seen": "2026-08-26",
+      "locked_until": "2026-09-25",
+      "source": "live_wp",
+      "slug": "v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v",
+      "topic_id": "LIVE-V-TYUMENI-RODSTVENNIKI-O",
+      "title": "Пожилого продавца вели по телефону — родственники сорвали сделку"
+    },
+    {
+      "cluster_id": "seller_bankruptcy_finmanager_clean_egrn",
+      "first_seen": "2026-08-26",
+      "locked_until": "2026-09-25",
+      "source": "live_wp",
+      "slug": "kupili-kvartiru-v-tyumeni-prodavec-ushel-v-bankrotstvo-finupravlyayuschij-ospori",
+      "topic_id": "LIVE-KUPILI-KVARTIRU-V-TYUMEN",
+      "title": "Продавец обанкротился — через год суд забрал купленную квартиру"
+    },
+    {
+      "cluster_id": "pnd_3mln_discount",
+      "first_seen": "2026-08-25",
+      "locked_until": "2026-09-24",
+      "source": "live_wp",
+      "slug": "skidka-skryla-pnd-sdelku-s-kvartiroy-v-tyumeni-ostanovili",
+      "topic_id": "LIVE-SKIDKA-SKRYLA-PND-SDELKU",
+      "title": "Скидка в 3 млн скрыла ПНД: сделку с квартирой в Тюмени остановили"
+    },
+    {
+      "cluster_id": "military_summons_stopped_registration",
+      "first_seen": "2026-08-24",
+      "locked_until": "2026-09-23",
+      "source": "live_wp",
+      "slug": "avans-vnesli-registraciyu-priostanovili-po-povestke",
+      "topic_id": "LIVE-AVANS-VNESLI-REGISTRACIY",
+      "title": "В Тюмени аванс внесли — неявка по повестке остановила сделку"
+    },
+    {
+      "cluster_id": "four_months_search_yellow_opinion_lawyers_refused",
+      "first_seen": "2026-08-23",
+      "locked_until": "2026-09-22",
+      "source": "live_wp",
+      "slug": "chetyre-mesyaca-iskali-v-tyumeni-chut-ne-kupili-kvartiru-ot-kotoroj-yuristy-otka",
+      "topic_id": "LIVE-CHETYRE-MESYACA-ISKALI-V",
+      "title": "Четыре месяца искали в Тюмени — и чуть не купили квартиру, от которой юристы отказали"
+    },
+    {
+      "cluster_id": "grandma_owner_missing_viewing_old_poa",
+      "first_seen": "2026-08-23",
+      "locked_until": "2026-09-22",
+      "source": "live_wp",
+      "slug": "kvartira-v-tyumeni-babushka-sobstvennik-v-obyavlenii-na-osmotre-pered-avansom-ee",
+      "topic_id": "LIVE-KVARTIRA-V-TYUMENI-BABUS",
+      "title": "Бабушку-собственницу не нашли на осмотре — аванс остановили"
+    },
+    {
+      "cluster_id": "egrn_line_blocks_advance",
+      "first_seen": "2026-08-22",
+      "locked_until": "2026-09-21",
+      "source": "live_wp",
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "topic_id": "LIVE-IPOTEKU-ODOBRILI-A-REGIS",
+      "title": "Ипотеку одобрили, но обременение в ЕГРН сорвало регистрацию"
+    },
+    {
+      "cluster_id": "deceased_spouse_share_surprise",
+      "first_seen": "2026-08-22",
+      "locked_until": "2026-09-21",
+      "source": "live_wp",
+      "slug": "skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo",
+      "topic_id": "LIVE-SKAZALI-V-BRAKE-NE-BYL-A",
+      "title": "Справка ЗАГС была чистой — банк отказал из-за доли умершей жены"
+    },
+    {
+      "cluster_id": "inheritance_son_first_marriage_no_refusal",
+      "first_seen": "2026-08-21",
+      "locked_until": "2026-09-20",
+      "source": "live_wp",
+      "slug": "nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya",
+      "topic_id": "LIVE-NASLEDSTVO-KVARTIRY-SYN-",
+      "title": "Наследству на квартиру два года. Сын от первого брака отказ не писал"
+    },
+    {
+      "cluster_id": "discount_two_million_hidden_risk",
+      "first_seen": "2026-08-20",
+      "locked_until": "2026-09-19",
+      "source": "live_wp",
+      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "topic_id": "LIVE-SKIDKU-DVA-MILLIONA-OBES",
+      "title": "Квартиру уценили на два миллиона и просят задаток сегодня"
+    },
+    {
+      "cluster_id": "doverennost_svo_seller",
+      "first_seen": "2026-08-20",
+      "locked_until": "2026-09-19",
+      "source": "live_wp",
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "topic_id": "LIVE-DOVERENNOST-NE-BRONYA-PR",
+      "title": "Квартиру продавали по доверенности. Хозяин был на СВО"
+    },
+    {
+      "cluster_id": "deposit_before_auction",
+      "first_seen": "2026-08-20",
+      "locked_until": "2026-09-19",
+      "source": "ledger",
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "topic_id": "B03",
+      "title": "pochti vnesli zadatok za 48 chasov do torgov kvartiru podarili docheri"
+    }
+  ]
+}
