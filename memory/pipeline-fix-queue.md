@@ -270,7 +270,7 @@ files_changed:
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_cover_qa_pixels.py`
 - `python3 -m unittest tests.test_cover_qa_pixels_layout tests.test_cover_budget`
-commit: pending-parent-commit
+commit: 4e5bbc5
 
 ## INC-20260827-1321-cover-qa-pixel-fallback-regression-b11
 status: fixed
@@ -307,5 +307,5 @@ files_changed:
 - `tests/test_cover_qa_pixels_layout.py`
 checks_run:
 - `python3 -m unittest tests.test_cover_qa_pixels_layout tests.test_cover_budget`
-commit: pending-parent-commit
+commit: 4e5bbc5
 
