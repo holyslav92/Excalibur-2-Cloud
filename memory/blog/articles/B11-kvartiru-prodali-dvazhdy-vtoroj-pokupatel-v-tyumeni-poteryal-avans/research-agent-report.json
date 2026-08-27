@@ -1,0 +1,74 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B11",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-27",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Свежие посты 26–27.08.2026: чистая выписка ЕГРН не гарантирует безопасность до аванса"
+      },
+      {
+        "url": "https://tvgram.ru/klyshin_A/3156",
+        "type": "community",
+        "note": "Klyshin 16.08.2026: 5 схем потери квартиры после покупки; проверка до аванса"
+      },
+      {
+        "url": "https://tvgram.ru/klyshin_A/3113",
+        "type": "community",
+        "note": "Klyshin: онлайн-выписка ЕГРН не показывает полную историю; давление «у нас другой покупатель»"
+      },
+      {
+        "url": "https://ura.news/news/1053102901",
+        "type": "news",
+        "note": "URA.RU 22.06.2026: Ялуторовск — риелтор продала квартиру двум покупателям, Тюменская область"
+      }
+    ]
+  },
+  "regional_casus": {
+    "status": "PARTIALLY_CONFIRMED",
+    "note": "Документирован параллель в Ялуторовске (двойная продажа через риелтора). Точный судебный эпизод из заголовка B11 в открытых материалах не найден — Writer строит casus с явной маркировкой."
+  },
+  "federal_legal_analogy": {
+    "case_number": "8-КГ21-16-К4",
+    "region": "Краснодарский край",
+    "url": "https://pravo.ru/story/232787/",
+    "rule": "Приоритет фактической передачи во владение (п. 61 Пленума ВС/ВАС №10/22); иным покупателям — убытки от продавца"
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 22722,
+    "buyer_spine_phrase": "вторичка в тюмени",
+    "buyer_spine_volume": 6037,
+    "angle_phrase": "двойные продажи квартир",
+    "angle_volume": 281,
+    "angle_region": "225",
+    "rework_from": "двойная продажа квартиры (empty in 55+11176)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 0,
+    "entities_checked": [],
+    "errors": [],
+    "note": "Тарифные claims отсутствуют; official_verifications N/A"
+  },
+  "key_facts_count": 24,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}
