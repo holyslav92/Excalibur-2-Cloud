@@ -275,7 +275,7 @@ files_changed:
 checks_run:
 - `python3 -m py_compile` on changed publish/interlink scripts
 - `python3 -m unittest tests.test_interlink_post_id`
-commit: pending-parent-commit
+commit: 54ae9af
 
 ## INC-20260827-1128-cover-qa-paper-collage-hook-b11
 status: fixed
@@ -311,7 +311,7 @@ files_changed:
 - `tests/test_cover_budget.py`
 checks_run:
 - `python3 -m unittest tests.test_cover_budget.OcrEscapeHatchTest`
-commit: pending-parent-commit
+commit: 54ae9af
 
 ## INC-20260827-1129-inline-visual-type-alias-b11
 status: fixed
@@ -353,5 +353,4 @@ files_changed:
 checks_run:
 - `python3 -m py_compile` on quad/cover scripts
 - `python3 -m unittest tests.test_interlink_post_id.InterlinkPostIdTest.test_normalize_visual_type_maps_legacy_alias`
-commit: pending-parent-commit
-
+commit: bf80be6
