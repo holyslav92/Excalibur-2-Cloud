@@ -1,0 +1,17 @@
+{
+  "script": "scripts/excalibur_blog_derouter_opus_chat.py",
+  "role": "title",
+  "tier": "utility",
+  "model": "gpt-5.6-terra",
+  "endpoint": "https://api.derouter.ai/openai/v1/chat/completions",
+  "request_id": "chatcmpl-83c2507ef83f4153b2067a47",
+  "usage": {
+    "prompt_tokens": 2847,
+    "completion_tokens": 1019,
+    "total_tokens": 3866
+  },
+  "created_at": "2026-08-27T05:18:47.397374+00:00",
+  "provider": "derouter-rest",
+  "user_prompt_chars": 200,
+  "contract": "shared/derouter-opus-brain-contract.md"
+}
