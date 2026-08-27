@@ -1,0 +1,71 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B11",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-27",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://tvgram.ru/klyshin_A/3149",
+        "type": "community",
+        "note": "Klyshin 06.08.2026: уставший покупатель 3–4 мес., риск третьего наследника, ~10% негативных заключений"
+      },
+      {
+        "url": "https://t.me/klyshin_A",
+        "type": "community",
+        "note": "Исходный канал external_signal"
+      },
+      {
+        "url": "https://vsrf.ru/documents/all/36132/",
+        "type": "official",
+        "note": "Обзор ВС РФ № 12/2026 (01.07.2026): наследник продолжает спор спустя годы"
+      },
+      {
+        "url": "https://harant.ru/blog/nedvizhimost/dogovor-kupli-prodazhi-kvartiry-mogut-otmenit-nasledniki-prodavcza/",
+        "type": "legal_analysis",
+        "note": "Разбор п. 6 обзора ВС для покупателей вторички (24.07.2026)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 22833,
+    "buyer_spine_phrase": "купить квартиру в тюмени",
+    "buyer_spine_volume": 22833,
+    "sticker_phrase": "вторичка в тюмени",
+    "sticker_volume": 6068,
+    "angle_phrase": "риски при покупке квартиры",
+    "angle_volume": 17,
+    "rework_from": "проверка квартиры перед покупкой (3)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "Отделён от B07 (сын первого брака) и от превентивной истории «4 месяца — стоп до аванса»"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 1,
+    "entities_checked": ["vsrf"],
+    "errors": [],
+    "note": "Тарифные claims отсутствуют; official_verifications: обзор ВС № 12/2026"
+  },
+  "casus_honesty": {
+    "status": "PASS_WITH_LIMITATION",
+    "note": "Нет единого опубликованного судебного акта со всеми деталями scout casus; Writer не выдумывает реквизиты дела"
+  },
+  "key_facts_count": 24,
+  "source_count": 15,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}

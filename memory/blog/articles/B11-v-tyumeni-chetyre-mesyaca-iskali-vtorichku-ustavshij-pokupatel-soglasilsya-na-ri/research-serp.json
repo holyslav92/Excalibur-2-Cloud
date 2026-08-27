@@ -1,0 +1,94 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-27",
+    "today_ru": "27.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "четверг"
+  },
+  "topic": {
+    "topic_id": "B11",
+    "title": "В Тюмени четыре месяца искали вторичку — уставший покупатель согласился на риск, через два года суд оспорил сделку",
+    "h1": "В Тюмени четыре месяца искали вторичку — уставший покупатель согласился на риск, через два года суд оспорил сделку",
+    "slug": "v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri",
+    "primary_query": "В Тюмени четыре месяца искали вторичку — уставший покупатель согласился на риск, через два года суд оспорил сделку",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени четыре месяца искали вторичку — уставший покупатель согласился на риск, через два года суд оспорил сделку 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-08-27"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени четыре месяца искали вторичку — уставший покупатель согласился на риск, через два года суд оспорил сделку 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-08-27"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени четыре месяца искали вторичку — уставший покупатель согласился на риск, через два года суд оспорил сделку official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-08-27"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени четыре месяца искали вторичку — уставший покупатель согласился на риск, через два года суд оспорил сделку 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "[GUIDE] Обход блокировки Twitter (X), Grok / Instagram / Facebook ...",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/discussions/8778",
+          "snippet": ""
+        },
+        {
+          "title": "new-soil/icon.svg at main · avvakhnin/new-soil · GitHub",
+          "url": "https://github.com/avvakhnin/new-soil/blob/main/icon.svg",
+          "snippet": "Где будут постепенно появляться инструкции для обхода блокировок тех или иных сервисов для Виндовс, Линукс и Android устройств. Там всё с картинками и нормальной сортировкой. Вот ссылочка, клик"
+        },
+        {
+          "title": "Страница с задачами Яндекс Академии · GitHub",
+          "url": "https://gist.github.com/Trias-byte/c19b22a00a0477df3890388800b2ca52",
+          "snippet": "Contribute to avvakhnin/new-soil development by creating an account on GitHub."
+        },
+        {
+          "title": "Тест 6 ответы.md · GitHub",
+          "url": "https://gist.github.com/itc1205/2ba338dc829dec92f8eb907ecc46cbab",
+          "snippet": "Напишите программу, которая выводит на первой строчке «Привет, Яндекс!», а на второй - «Приятно познакомиться.»"
+        },
+        {
+          "title": "was-node-suite-comfyui/image/menu_layer_color.jpg at main · RituCodeWeb ...",
+          "url": "https://github.com/RituCodeWeb/was-node-suite-comfyui/blob/main/image/menu_layer_color.jpg",
+          "snippet": "Уровень риска определяется: Выберите один ответ: a. тем, какую долю финансовых средств организация может потратить на покрытие рисковых событий."
+        },
+        {
+          "title": "openCrawl/dash-redmode.svg at main · hainesnoids/openCrawl",
+          "url": "https://github.com/hainesnoids/openCrawl/blob/main/dash-redmode.svg",
+          "snippet": "Contribute to RituCodeWeb/was-node-suite-comfyui development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-08-27"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени четыре месяца искали вторичку — уставший покупатель согласился на риск, через два года суд оспорил сделку forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-08-27"
+    }
+  ],
+  "errors": []
+}
