@@ -1,0 +1,86 @@
+{
+  "topic_id": "B11",
+  "slug": "notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Риэлтор в синей рубашке с папкой о пае и карточкой остановки.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-27T13:10:53+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Риэлтор в синей рубашке с папкой о пае и карточкой остановки.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Таблица справки о пае и старого нотариального штампа.",
+      "h2_anchor": "Справка о выплаченном пае — и нотариальный штамп 18 лет назад",
+      "visual_type": "comparison_table_ui",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Схема доплаты пая в браке и супружеской доли.",
+      "h2_anchor": "Кооператив, пай и брак: где прячется супружеская доля",
+      "visual_type": "workflow_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Чек-лист отказа нотариуса и переоформления за несколько дней.",
+      "h2_anchor": "Нотариус отказала отвечать — и через 15 минут согласилась переоформить",
+      "visual_type": "checklist_board",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Таблица причин остановки аванса до выяснения наследников и статуса доли.",
+      "h2_anchor": "Финал: аванс остановили, пока не разобрались с наследниками",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Структурная схема, объясняющая, почему нотариальная проверка не закрывает всю цепочку документов.",
+      "h2_anchor": "Почему «нотариус всё проверил» не закрывает цепочку",
+      "visual_type": "schema_faq_ui",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Временная шкала срока давности с акцентом на момент, когда человек узнал о нарушении.",
+      "h2_anchor": "Срок давности: три года — но не всегда «с 18-летней давности»",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Чек-лист проверки пая, супружеской доли, наследников и документов до передачи аванса.",
+      "h2_anchor": "Что проверить до аванса: доля, наследство и документы",
+      "visual_type": "tool_screenshot",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

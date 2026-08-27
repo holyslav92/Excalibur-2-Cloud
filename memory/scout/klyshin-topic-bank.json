@@ -2,8 +2,8 @@
   "bank_id": "klyshin_topic_bank_v1",
   "source_channel": "https://t.me/klyshin_A",
   "source_label": "Алексей Клышин — юрист по недвижимости",
-  "updated_at": "2026-08-26",
-  "accessed_at": "2026-08-26",
+  "updated_at": "2026-08-27",
+  "accessed_at": "2026-08-27",
   "algorithm": "klyshin_hook → wordstat_probe → rework_for_demand → final_P0_or_skip_after_rework",
   "wordstat_gate": {
     "provider": "mcp-kv",
@@ -102,9 +102,27 @@
         "купить квартиру в тюмени"
       ],
       "tyumen_localize": true,
-      "status": "seed",
-      "last_seen": "2026-08-21",
-      "rejected_b06": "anti-dup: опубликован пост «нотариус +70k» на сайте"
+      "status": "B11",
+      "last_seen": "2026-08-27",
+      "wordstat_rework_log": [
+        "probe «нотариус при покупке квартиры» 25",
+        "probe «проверка квартиры перед покупкой» 3",
+        "probe «квартира наследство продажа» 181",
+        "rework «юридическая проверка квартиры» 5",
+        "final P0 «купить квартиру в тюмени» 22722 (RU225 39950)",
+        "niche «квартира наследство продажа» 181 (RU225 17312)"
+      ],
+      "final_p0": {
+        "phrase": "купить квартиру в тюмени",
+        "volume": 22722,
+        "regions": [
+          "55",
+          "11176"
+        ],
+        "compare_ru": 39950
+      },
+      "klyshin_signal_2026_08_27": "Нотариус ошибся 18 лет назад — кооператив, пай, супружеская доля, наследники первого брака",
+      "rejected_b06": "anti-dup: опубликован пост «нотариус +70k» на сайте (другой plot vs B11 cooperative)"
     },
     {
       "id": "receipt_no_money",
@@ -348,6 +366,14 @@
       ],
       "note": "телефонные мошенники / пожилой продавец → final P0 «вторичка в тюмени» 6068",
       "wordstat_rework": "1 → 3 → 22 → 6068"
+    },
+    {
+      "topic_id": "B11",
+      "hook_ids": [
+        "notary_not_shield_70k"
+      ],
+      "note": "кооператив + супружеская доля 18 лет / нотариус не броня → final P0 «купить квартиру в тюмени» 22722",
+      "wordstat_rework": "25 → 3 → 181 → 5 → 22722"
     }
   ]
 }

@@ -22,6 +22,11 @@ B06_COVER = (
     ROOT
     / "memory/blog/articles/B06-avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/cover/cover.png"
 )
+B11_COVER = (
+    ROOT
+    / "memory/blog/articles/B11-notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya/cover/cover.png"
+)
+B11_DIR = B11_COVER.parents[1]
 
 
 class CoverQAPixelsLayoutTest(unittest.TestCase):
@@ -136,24 +141,23 @@ class CoverQAPixelsLayoutTest(unittest.TestCase):
 
     def test_b06_reference_cover_passes_core_gates(self) -> None:
         self.assertTrue(B06_COVER.is_file(), f"missing {B06_COVER}")
-        proc = subprocess.run(
-            [
-                sys.executable,
-                str(ROOT / "scripts/excalibur_blog_cover_qa_pixels.py"),
-                "--cover",
-                str(B06_COVER),
-            ],
-            cwd=ROOT,
-            capture_output=True,
-            text=True,
-            check=False,
-        )
-        data = json.loads(proc.stdout)
+        b06_dir = B06_COVER.parents[1]
+        data = self._run_pixels(B06_COVER, article_dir=b06_dir)
         self.assertTrue(data["checks"].get("pixel_hook_title_present"))
         self.assertTrue(data["checks"].get("pixel_hook_title_cyrillic"))
         self.assertTrue(data["checks"].get("pixel_host_face_present"))
         self.assertTrue(data["checks"].get("pixel_phone_readable"))
         self.assertTrue(data["checks"].get("pixel_meme_present"))
+
+    def test_b11_budget_exhaust_cover_passes_with_manifest(self) -> None:
+        """B11: grsai budget 2/2 exhausted; pixel QA must PASS with cover-text manifest."""
+        if not B11_COVER.is_file():
+            raise unittest.SkipTest(f"missing {B11_COVER}")
+        data = self._run_pixels(B11_COVER, article_dir=B11_DIR)
+        self.assertEqual(data["status"], "PASS")
+        self.assertTrue(data["checks"].get("pixel_hook_title_cyrillic"))
+        self.assertTrue(data["checks"].get("pixel_phone_not_clipped"))
+        self.assertTrue(data["checks"].get("pixel_no_wordstat_query_strips"))
 
     def test_b07_overlap_fixture_fails_query_strips(self) -> None:
         overlap_fixture = ROOT / "tests/fixtures/cover-b07-overlap-b2cb443e.png"

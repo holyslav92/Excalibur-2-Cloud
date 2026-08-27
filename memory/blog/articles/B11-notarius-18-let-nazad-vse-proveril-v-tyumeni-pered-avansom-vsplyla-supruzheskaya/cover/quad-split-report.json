@@ -1,0 +1,300 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B11-notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 567,
+              "end": 624
+            },
+            "v_gutter_px": {
+              "start": 1013,
+              "end": 1061
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 19.5,
+              "v_center_offset_px": 13.0,
+              "max_aspect_crop_loss": 0.0731,
+              "per_panel_crop_loss": {
+                "top_left": 0.0,
+                "top_right": 0.0212,
+                "bottom_left": 0.0731,
+                "bottom_right": 0.0486
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Риэлтор в синей рубашке с папкой о пае и карточкой остановки.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица справки о пае и старого нотариального штампа.",
+            "h2_anchor": "Справка о выплаченном пае — и нотариальный штамп 18 лет назад"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема доплаты пая в браке и супружеской доли.",
+            "h2_anchor": "Кооператив, пай и брак: где прячется супружеская доля"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чек-лист отказа нотариуса и переоформления за несколько дней.",
+            "h2_anchor": "Нотариус отказала отвечать — и через 15 минут согласилась переоформить"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B11-notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 539,
+              "end": 619
+            },
+            "v_gutter_px": {
+              "start": 984,
+              "end": 1078
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 3.0,
+              "v_center_offset_px": 7.0,
+              "max_aspect_crop_loss": 0.0366,
+              "per_panel_crop_loss": {
+                "top_left": 0.0264,
+                "top_right": 0.0124,
+                "bottom_left": 0.0366,
+                "bottom_right": 0.0227
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица причин остановки аванса до выяснения наследников и статуса доли.",
+            "h2_anchor": "Финал: аванс остановили, пока не разобрались с наследниками"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Структурная схема, объясняющая, почему нотариальная проверка не закрывает всю цепочку документов.",
+            "h2_anchor": "Почему «нотариус всё проверил» не закрывает цепочку"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Временная шкала срока давности с акцентом на момент, когда человек узнал о нарушении.",
+            "h2_anchor": "Срок давности: три года — но не всегда «с 18-летней давности»"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чек-лист проверки пая, супружеской доли, наследников и документов до передачи аванса.",
+            "h2_anchor": "Что проверить до аванса: доля, наследство и документы"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Справка о выплаченном пае — и нотариальный штамп 18 лет назад",
+    "skip inline_2: already correct under H2 — Кооператив, пай и брак: где прячется супружеская доля",
+    "skip inline_3: already correct under H2 — Нотариус отказала отвечать — и через 15 минут согласилась переоформить",
+    "moved inline_4 → H2 — Финал: аванс остановили, пока не разобрались с наследниками (was under [финал: аванс остановили, пока не разобрались с наследниками]; removed=1)",
+    "moved inline_5 → H2 — Почему «нотариус всё проверил» не закрывает цепочку (was under [почему «нотариус всё проверил» не закрывает цепочку]; removed=1)",
+    "moved inline_6 → H2 — Срок давности: три года — но не всегда «с 18-летней давности» (was under [срок давности: три года — но не всегда «с 18-летней давности»]; removed=1)",
+    "moved inline_7 → H2 — Что проверить до аванса: доля, наследство и документы (was under [что проверить до аванса: доля, наследство и документы]; removed=1)"
+  ]
+}
