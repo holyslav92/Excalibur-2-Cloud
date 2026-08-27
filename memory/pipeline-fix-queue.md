@@ -2,7 +2,37 @@
 
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
-## INC-20260821-0615-content-learner-metrika-credentials
+## INC-20260827-0705-cover-ocr-missing-text-b11
+status: open
+run_date: 2026-08-27
+role: excalibur-blog-cover
+topic_id: B11
+article_dir: memory/blog/articles/B11-kvartiru-prodali-dvazhdy-vtoroj-pokupatel-v-tyumeni-poteryal-avans
+severity: blocker
+category: qa
+
+### What went wrong
+- grsai solo cover 2/2 attempts: OCR empty on hook + phone (`pixel_hook_title_cyrillic`, `pixel_phone_readable` FAIL).
+- Model painted Wordstat-like strips + collage inset despite cover-text `wordstat_stickers: []`.
+- Cover fixer regen (~6 min) did not recover Cyrillic hook/phone OCR.
+- `quality-bar-9.json` all_pass=false → Publish blocked despite EXCALIBUR_BLOG_ALLOW_PUBLISH=yes.
+
+### How the agent recovered this run
+- Fail-fast: `cover-budget-result.json` stamped; Indexer completed (llms.txt updated).
+- Text pipeline PASS (Sol 2197 words, description/cover-text/schema gates PASS).
+
+### Durable fix needed before next run
+- Cover-text: shorter hook (5 words max, ≥5 letters each) for OCR; explicit NO query strips in cover-scene prompt.
+- cover_fixer: when OCR empty after budget, do NOT regen if budget exhausted — document manual review path.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_grsai_solo_cover.py` cover-scene prompt suffix
+- `skills/cover-text-excalibur-blog/SKILL.md` hook OCR examples
+- `memory/cover/cover-canon.json`
+
+### Secrets
+- none recorded
+
 status: open
 run_date: 2026-08-21
 role: excalibur-blog-content-learner
@@ -19,6 +49,7 @@ category: env
 - Content-learner записал pipeline lessons из run evidence (Derouter 524 chunk, quality-bar PIL sync, html_linter CTA div).
 - Metrika cohort analysis пропущен; lessons marked low/medium confidence без behavioral signals.
 - **2026-08-26 B10 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9161 ingest skipped; B10 lessons recorded without behavioral signals.
+- **2026-08-27 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; B11 publish stopped (cover OCR) — no post id; B11 lessons recorded without behavioral signals.
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
