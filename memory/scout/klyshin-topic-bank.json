@@ -2,8 +2,8 @@
   "bank_id": "klyshin_topic_bank_v1",
   "source_channel": "https://t.me/klyshin_A",
   "source_label": "Алексей Клышин — юрист по недвижимости",
-  "updated_at": "2026-08-26",
-  "accessed_at": "2026-08-26",
+  "updated_at": "2026-08-27",
+  "accessed_at": "2026-08-27",
   "algorithm": "klyshin_hook → wordstat_probe → rework_for_demand → final_P0_or_skip_after_rework",
   "wordstat_gate": {
     "provider": "mcp-kv",
@@ -228,8 +228,24 @@
       ],
       "last_seen": "2026-08-21",
       "rejected_b06": "проверка 9, банкротство продавца 30; overlap B03/B04 + маткапитал на сайте",
+      "wordstat_rework_log": [
+        "probe «фиктивная сделка» 18",
+        "probe «оспаривание сделки купли продажи квартиры» 1",
+        "rework «проверка недвижимости» 149 (RU225 16663)",
+        "final P0 «купить квартиру в тюмени» 22722 (RU225 39950)"
+      ],
+      "final_p0": {
+        "phrase": "купить квартиру в тюмени",
+        "volume": 22722,
+        "regions": [
+          "55",
+          "11176"
+        ],
+        "compare_ru": 39950
+      },
+      "last_seen_b11": "2026-08-27",
       "tyumen_localize": true,
-      "status": "seed"
+      "status": "B11"
     },
     {
       "id": "phone_scammers_notary",
@@ -348,6 +364,14 @@
       ],
       "note": "телефонные мошенники / пожилой продавец → final P0 «вторичка в тюмени» 6068",
       "wordstat_rework": "1 → 3 → 22 → 6068"
+    },
+    {
+      "topic_id": "B11",
+      "hook_ids": [
+        "five_court_schemes"
+      ],
+      "note": "фиктивная прошлая сделка без денег в цепочке → final P0 «купить квартиру в тюмени» 22722",
+      "wordstat_rework": "18 → 1 → 149 → 22722"
     }
   ]
 }

@@ -4,13 +4,13 @@
   "tier": "utility",
   "model": "gpt-5.6-terra",
   "endpoint": "https://api.derouter.ai/openai/v1/chat/completions",
-  "request_id": "chatcmpl-34b84e84f5204376af37d67c",
+  "request_id": "chatcmpl-802c00845b554062b6c117d4",
   "usage": {
-    "prompt_tokens": 819,
-    "completion_tokens": 911,
-    "total_tokens": 1730
+    "prompt_tokens": 3234,
+    "completion_tokens": 891,
+    "total_tokens": 4125
   },
-  "created_at": "2026-08-26T07:10:50.697186+00:00",
+  "created_at": "2026-08-27T10:09:23.473277+00:00",
   "provider": "derouter-rest",
   "user_prompt_chars": 200,
   "contract": "shared/derouter-opus-brain-contract.md"
