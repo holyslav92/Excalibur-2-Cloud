@@ -83,13 +83,15 @@ Klyshin hook × Wordstat Tyumen demand × Dzen news-casus shape
 
 ---
 
-## Anti-dupe (HARD, без изменений)
+## Anti-dupe (HARD, 30 дней)
 
-Новый casus = **другой legal plot**, не перефраз того же кластера за 14 дней / ledger / live WP.
+Новый casus = **другой legal plot**, не перефраз того же кластера за **30 дней** / ledger / live WP / `memory/scout/used-clusters.json`.
 
-Кластеры: `shared/scout-story-clusters.json` (сын/отказ, маткапитал, доверенность СВО, задаток/торги, −2 млн…).
+Перед topic lock Scout читает live `PUBLIC_SITE_URL/blog/` (~20) + `shared/published-articles.md` + `shared/published-titles.md`, затем `--sync-used-clusters`.
 
-Wordstat rework **≠** permission to recycle plot.
+Кластеры: `shared/scout-story-clusters.json` (owner lock 9 + legacy). Закрытые: `memory/scout/used-clusters.json`.
+
+Wordstat rework **≠** permission to recycle plot. **Same cluster = FAIL even if title differs.**
 
 ---
 
@@ -133,7 +135,7 @@ Wordstat rework **≠** permission to recycle plot.
 
 ### FAIL (duplicate)
 
-**«Наследство не прошло: сын от первого брака так и не отказался — аванс уже внесли»** — если cluster `inheritance_son_first_marriage_no_refusal` уже в ledger за 14 дней.
+**«Наследство не прошло: сын от первого брака так и не отказался — аванс уже внесли»** — если cluster `inheritance_son_first_marriage_no_refusal` уже в ledger/used-clusters за **30 дней**.
 
 ---
 

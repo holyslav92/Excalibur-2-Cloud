@@ -143,6 +143,21 @@
     "style": "shared/article-style.md",
     "soul": "shared/SOUL.md"
   },
+  "scout_anti_repeat": {
+    "anti_repeat_days": 30,
+    "clusters": "shared/scout-story-clusters.json",
+    "used_clusters_log": "memory/scout/used-clusters.json",
+    "pre_lock_sources": [
+      "PUBLIC_SITE_URL/blog/ (last ~20)",
+      "shared/published-articles.md",
+      "shared/published-titles.md"
+    ],
+    "klyshin_optional": true,
+    "klyshin_fresh_only": ["https://t.me/klyshin_A", "YouTube fresh"],
+    "gate_script": "scripts/excalibur_blog_scout_story_dup.py",
+    "weekday_slots_different_cluster": true,
+    "guidance": "memory/scout/next-cluster-guidance.md"
+  },
   "quality_bar_9": {
     "contract": "shared/quality-bar-9.md",
     "gate": "scripts/excalibur_blog_quality_bar_9_gate.py",

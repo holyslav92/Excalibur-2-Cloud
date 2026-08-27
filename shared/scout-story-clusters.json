@@ -1,12 +1,123 @@
 {
-  "version": 1,
-  "description": "HARD Scout anti-duplicate: same legal risk + same family/plot cluster = refuse topic even if Wordstat phrasing differs.",
+  "version": 2,
+  "description": "HARD Scout anti-duplicate: same legal risk + same family/plot cluster = refuse topic even if title differs. Rolling window anti_repeat_days.",
+  "anti_repeat_days": 30,
+  "used_clusters_log": "memory/scout/used-clusters.json",
+  "pre_lock_sources": [
+    "PUBLIC_SITE_URL/blog/ (last ~20 live titles)",
+    "shared/published-articles.md",
+    "shared/published-titles.md",
+    "published-titles-only.md"
+  ],
   "sources": [
     "shared/published-articles.md",
     "shared/published-titles.md",
+    "memory/scout/used-clusters.json",
     "live WordPress titles/slugs (recent window)"
   ],
   "clusters": [
+    {
+      "id": "marital_share_heirs_notary_checked",
+      "label_ru": "Супружеская доля / наследники: нотариус «всё проверил», аванс остановили",
+      "required_groups": [
+        ["супруж", "супруг", "брачн", "пай", "кооператив"],
+        ["наслед", "наследств", "наследник", "дол", "долев"],
+        ["нотари", "вс[её]\\s+провер", "выдел", "не\\s+выдел", "останов", "аванс"]
+      ],
+      "examples": [
+        "notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya"
+      ]
+    },
+    {
+      "id": "court_took_apartment_relatives_contested",
+      "label_ru": "Суд забрал квартиру ~2 года спустя: родственники оспорили прошлую сделку",
+      "required_groups": [
+        ["суд", "оспор", "отмен", "забрал", "забрали"],
+        ["два\\s+год", "2\\s*год", "через\\s+год", "через\\s+полгод", "спустя"],
+        ["родствен", "наслед", "продаж", "сделк", "квартир"]
+      ],
+      "examples": [
+        "rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo",
+        "v-tyumeni-notarius-udostoveril-sdelku-a-cherez-god-sud-otmenil-prodazhu-prodavca"
+      ]
+    },
+    {
+      "id": "four_months_search_yellow_opinion_lawyers_refused",
+      "label_ru": "4 месяца поиска: жёлтое юрзаключение, юристы отказались",
+      "required_groups": [
+        ["четыр", "4\\s*мес", "четыре\\s+мес", "искал", "искали", "поиск"],
+        ["юрист", "юрид", "заключен", "жёлт", "желт", "отказал", "отказались"],
+        ["вторич", "квартир", "устав", "риск", "согласил"]
+      ],
+      "examples": [
+        "v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri",
+        "chetyre-mesyaca-iskali-v-tyumeni-chut-ne-kupili-kvartiru-ot-kotoroj-yuristy-otka",
+        "tri-mesyaca-iskali-kvartiru-v-tyumeni-i-soglasilis-na-risk"
+      ]
+    },
+    {
+      "id": "matkapital_opieka_kids_cancel_3y",
+      "label_ru": "Маткапитал + опека молчала: дети отменили сделку через ~3 года",
+      "required_groups": [
+        ["маткапитал", "материнск"],
+        ["опек", "попечит", "орган\\s+опек"],
+        ["дет", "ребен", "ребён", "несовершенн"],
+        ["три\\s+год", "3\\s*год", "отмен", "оспор", "суд"]
+      ],
+      "examples": ["matkapital-byl-opeka-molchala-cherez-tri-goda-deti-osporili-sdelku-v-tyumeni"]
+    },
+    {
+      "id": "seller_bankruptcy_finmanager_clean_egrn",
+      "label_ru": "Банкротство продавца / финуправляющий: чистая ЕГРН не спасла, короткое владение",
+      "required_groups": [
+        ["банкрот", "финуправ", "фин\\s*управ", "конкурсн"],
+        ["егрн", "выписк", "чист", "обременен", "обремен", "три\\s*мес", "3\\s*мес", "полгод", "владел", "собствен", "суд", "оспор", "забрал"]
+      ],
+      "examples": [
+        "kupili-kvartiru-v-tyumeni-prodavec-ushel-v-bankrotstvo-finupravlyayuschij-ospori",
+        "v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca"
+      ]
+    },
+    {
+      "id": "elderly_seller_led_by_phone",
+      "label_ru": "Пожилого продавца вели по телефону — родственники сорвали сделку",
+      "required_groups": [
+        ["пожил", "пенсион", "старик", "бабуш", "дедуш"],
+        ["телефон", "звон", "вели", "удален", "по\\s+тел"],
+        ["родствен", "останов", "сорвал", "сорвали", "продаж"]
+      ],
+      "examples": ["v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v"]
+    },
+    {
+      "id": "pnd_3mln_discount",
+      "label_ru": "ПНД + скидка ~3 млн скрыла риск",
+      "required_groups": [
+        ["пнд", "психиатр", "диспансер"],
+        ["скид", "уцен", "млн", "миллион", "3\\s*млн", "три\\s+млн"],
+        ["скрыл", "скрыла", "риск", "останов", "сделк"]
+      ],
+      "examples": ["skidka-skryla-pnd-sdelku-s-kvartiroy-v-tyumeni-ostanovili"]
+    },
+    {
+      "id": "military_summons_stopped_registration",
+      "label_ru": "Повестка / военкомат остановил регистрацию после аванса",
+      "required_groups": [
+        ["повест", "военком", "мобилиз", "призыв", "сво"],
+        ["регистрац", "росреестр", "приостанов", "останов", "сделк"],
+        ["аванс", "задаток", "внесл"]
+      ],
+      "examples": ["avans-vnesli-registraciyu-priostanovili-po-povestke"]
+    },
+    {
+      "id": "grandma_owner_missing_viewing_old_poa",
+      "label_ru": "Бабушка-собственник не на осмотре / старая доверенность",
+      "required_groups": [
+        ["бабуш", "бабк", "собственниц", "хозяйк"],
+        ["осмотр", "показ", "не\\s+нашл", "не\\s+пришл", "отсутств"],
+        ["доверен", "аванс", "останов", "продав"]
+      ],
+      "examples": ["kvartira-v-tyumeni-babushka-sobstvennik-v-obyavlenii-na-osmotre-pered-avansom-ee"]
+    },
     {
       "id": "inheritance_son_first_marriage_no_refusal",
       "label_ru": "Наследство: сын от первого брака без нотариального отказа",
@@ -45,8 +156,8 @@
       "id": "deposit_before_auction",
       "label_ru": "Задаток/аванс накануне торгов или смены собственника",
       "required_groups": [
-        ["задаток", "аванс", "задатк"],
-        ["торг", "аукцион", "48\\s*час", "перед\\s+торг", "до\\s+торг"]
+        ["задаток", "аванс", "задатк", "zadatok"],
+        ["торг", "аукцион", "48\\s*час", "перед\\s+торг", "до\\s+торг", "torg"]
       ],
       "examples": ["pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri"]
     },
@@ -61,6 +172,28 @@
         "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
         "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami"
       ]
+    },
+    {
+      "id": "egrn_line_blocks_advance",
+      "label_ru": "Строка в ЕГРН / обременение сорвало регистрацию или аванс",
+      "required_groups": [
+        ["егрн", "выписк", "обремен", "строк"],
+        ["аванс", "регистрац", "отмен", "нельзя", "сорвал", "блок"]
+      ],
+      "examples": [
+        "v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya",
+        "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn"
+      ]
+    },
+    {
+      "id": "deceased_spouse_share_surprise",
+      "label_ru": "Умерший супруг / скрытая доля всплыла перед авансом",
+      "required_groups": [
+        ["умерш", "умер", "покойн", "скончал"],
+        ["жена", "муж", "супруг", "брак", "загс"],
+        ["дол", "долев", "аванс", "банк", "отказ"]
+      ],
+      "examples": ["skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo"]
     }
   ]
 }
