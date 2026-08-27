@@ -1,5 +1,19 @@
 # Excalibur BLOG — WP publish log
 
+## B11 — 2026-08-27
+
+- **topic_id:** B11
+- **slug:** rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo
+- **post_id:** 9201
+- **permalink:** /blog/vtorichka-i-riski/rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo/
+- **featured_image:** 9202
+- **inline_images:** 9203–9209 (7)
+- **wp_category_slugs:** vtorichka-i-riski, dokumenty-i-oformlenie (category_ids=31,54)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink inbound:** 8984 (B06), 8823 (B04), 9063 (B09) — manual post_id resolve via WP REST (ledger lacks post_id)
+
 ## B10 — 2026-08-26
 
 - **topic_id:** B10

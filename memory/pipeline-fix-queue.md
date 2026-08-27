@@ -227,3 +227,30 @@ checks_run:
 - `python3 -m unittest tests.test_pipeline_speed_b03.HtmlAutofixTest` → OK
 commit: 35ab34b
 
+## INC-20260827-1125-publish-theme-interlink-postid
+status: open
+run_date: 2026-08-27
+role: excalibur-blog-publish
+topic_id: B11
+article_dir: memory/blog/articles/B11-rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo
+severity: workaround
+category: publish
+
+### What went wrong
+- `excalibur_blog_theme_contract_deploy.py` hardcoded `kov4eg-mcp-theme`; live tenant uses `tymenrieltor-light` → deploy RuntimeError.
+- Auto inbound interlink skipped: `shared/published-articles.md` has no `post_id` columns → `build_inbound_updates` empty.
+
+### How the agent recovered this run
+- Patched theme deploy to try `tymenrieltor-light` first and skip missing kov4eg anchors.
+- Resolved inbound target post_ids via WP REST `?slug=` and applied interlink bootstrap manually (8984, 8823, 9063).
+
+### Durable fix needed before next run
+- Store `wp_post_id` in ledger on publish; teach `excalibur_blog_interlink_lib` to resolve slug→post_id via REST when ledger row lacks id.
+- Set Cloud Secret `FTP_ROOT=.` (configured root ENOENT; fallback `.` works).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_theme_contract_deploy.py` (done this run)
+- `scripts/excalibur_blog_interlink_lib.py`
+- `shared/published-articles.md` schema / publish ledger writer
+- Cloud Secrets: `FTP_ROOT=.`
+

@@ -1,0 +1,27 @@
+{
+  "slug": "rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo",
+  "topic_id": "B11",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B11-rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 847060,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9201 slug=rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo\nOK categories=31,54\nOK yoast_social_image=1\nOK featured_image=9202\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9203 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo-inline-01.png\nOK inline_alt=9203\nOK inline_caption=9203\nOK inline_description=9203\nOK inline_image_upload=9204 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo-inline-02.png\nOK inline_alt=9204\nOK inline_caption=9204\nOK inline_description=9204\nOK inline_image_upload=9205 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo-inline-03.png\nOK inline_alt=9205\nOK inline_caption=9205\nOK inline_description=9205\nOK inline_image_upload=9206 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo-inline-04.png\nOK inline_alt=9206\nOK inline_caption=9206\nOK inline_description=9206\nOK inline_image_upload=9207 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo-inline-05.png\nOK inline_alt=9207\nOK inline_caption=9207\nOK inline_description=9207\nOK inline_image_upload=9208 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo-inline-06.png\nOK inline_alt=9208\nOK inline_caption=9208\nOK inline_description=9208\nOK inline_image_upload=9209 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo-inline-07.png\nOK inline_alt=9209\nOK inline_caption=9209\nOK inline_description=9209\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo/",
+    "errors": []
+  }
+}
