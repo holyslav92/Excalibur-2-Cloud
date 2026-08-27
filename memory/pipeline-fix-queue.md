@@ -19,10 +19,11 @@ category: env
 - Content-learner записал pipeline lessons из run evidence (Derouter 524 chunk, quality-bar PIL sync, html_linter CTA div).
 - Metrika cohort analysis пропущен; lessons marked low/medium confidence без behavioral signals.
 - **2026-08-26 B10 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9161 ingest skipped; B10 lessons recorded without behavioral signals.
+- **2026-08-27 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9191 ingest skipped; B11 lessons recorded without behavioral signals.
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06 и B10 (post 9161) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161) и B11 (post 9191) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -226,4 +227,59 @@ checks_run:
 - `python3 scripts/excalibur_blog_structure_gate.py --article-dir B06` → PASS
 - `python3 -m unittest tests.test_pipeline_speed_b03.HtmlAutofixTest` → OK
 commit: 35ab34b
+
+## INC-20260827-0610-quality-bar-cover-qa-stamp-b11
+status: fixed
+run_date: 2026-08-27
+role: excalibur-blog-fixer
+topic_id: B11
+article_dir: memory/blog/articles/B11-v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri
+severity: medium
+category: script
+
+### What went wrong
+- Cover-QA visual PASS + manual `ocr_false_positive_escape` (B08/B09) на B11, но `quality-bar-9` gate `cover_qa_pass` FAIL.
+- `run_cover_qa` вызывал `cover_qa_gate` без `--no-stamp` → subprocess перезаписывал `cover_qa.json` и терял escape stamp.
+- Tesseract в VM установлен, но `pytesseract` не в `requirements.txt`; OCR на styled typography часто пустой → flaky pixel checks.
+
+### How the agent recovered this run
+- Patch `excalibur_blog_quality_bar_9_gate.py`: `--no-stamp` + `_stamped_cover_qa_visual_pass` fallback.
+- Fixer: stamp preservation в `stamp_cover_qa_json`, tesseract в environment install, doctor WARN, unit tests.
+
+### Durable fix needed before next run
+- quality-bar не должен затирать escape stamp; accept stamped visual PASS при md5 match.
+- Cloud env: tesseract-ocr + tesseract-ocr-rus + pytesseract.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `.cursor/environment.json`
+- `requirements.txt`
+- `scripts/excalibur_blog_doctor.py`
+- `tests/test_quality_bar_9_gate.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-27
+fix_summary:
+- `run_cover_qa` uses `--no-stamp`; on FAIL accepts stamped `cover_qa.json` with `ocr_false_positive_escape.applied` + matching `cover_md5`.
+- `stamp_cover_qa_json` preserves PASS+escape when pixel re-run FAIL on same md5 (no wipe B08/B09/B11 manual stamp).
+- `environment.json` installs tesseract-ocr + tesseract-ocr-rus; `requirements.txt` adds pytesseract; doctor WARN if missing.
+files_changed:
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `scripts/excalibur_blog_doctor.py`
+- `.cursor/environment.json`
+- `requirements.txt`
+- `shared/quality-bar-9.md`
+- `tests/test_quality_bar_9_gate.py`
+- `memory/content-lessons/LESSON-20260827-0610-B11-quality-bar-ocr-escape-stamp.md`
+- `memory/content-lessons.md`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_quality_bar_9_gate.py scripts/excalibur_blog_cover_qa_pixels.py scripts/excalibur_blog_doctor.py`
+- `python3 -m unittest tests.test_quality_bar_9_gate tests.test_cover_budget`
+- `python3 scripts/excalibur_blog_quality_bar_9_gate.py --article-dir memory/blog/articles/B11-...` → all_pass
+commit: 6c807e2
 

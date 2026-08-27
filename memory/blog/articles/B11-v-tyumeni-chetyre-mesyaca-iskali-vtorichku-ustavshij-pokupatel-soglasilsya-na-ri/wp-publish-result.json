@@ -1,0 +1,27 @@
+{
+  "slug": "v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri",
+  "topic_id": "B11",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B11-v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 934666,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9191 slug=v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri\nOK categories=31,58\nOK yoast_social_image=1\nOK featured_image=9192\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9193 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri-inline-01.png\nOK inline_alt=9193\nOK inline_caption=9193\nOK inline_description=9193\nOK inline_image_upload=9194 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri-inline-02.png\nOK inline_alt=9194\nOK inline_caption=9194\nOK inline_description=9194\nOK inline_image_upload=9195 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri-inline-03.png\nOK inline_alt=9195\nOK inline_caption=9195\nOK inline_description=9195\nOK inline_image_upload=9196 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri-inline-04.png\nOK inline_alt=9196\nOK inline_caption=9196\nOK inline_description=9196\nOK inline_image_upload=9197 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri-inline-05.png\nOK inline_alt=9197\nOK inline_caption=9197\nOK inline_description=9197\nOK inline_image_upload=9198 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri-inline-06.png\nOK inline_alt=9198\nOK inline_caption=9198\nOK inline_description=9198\nOK inline_image_upload=9199 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri-inline-07.png\nOK inline_alt=9199\nOK inline_caption=9199\nOK inline_description=9199\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri/",
+    "errors": []
+  }
+}

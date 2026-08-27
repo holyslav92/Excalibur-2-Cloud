@@ -120,6 +120,23 @@
         "pose_framing": "host_large_left_close_up_not_right_bust_not_side_eye_formula",
         "action": "watches_elderly_seller_clutch_phone_during_viewing"
       }
+    },
+    {
+      "date": "2026-08-27",
+      "topic_id": "B11",
+      "slug": "",
+      "motifs": {
+        "composition": "host_center_right_exhausted_temple_rub_yellow_report_hook_left_sacred",
+        "location": "bright_tyumen_notary_waiting_hall_white_marble_skylight",
+        "meme": "roll_safe_sticker_plus_crying_cat_cutout",
+        "prop_set": "yellow_legal_report_folder_calendar_4_months_red_court_stamp",
+        "sticker_set": "yellow_sticky_zhyoltoe_zaklyuchenie_corner_pin_only",
+        "joke": "sticky_zhyoltoe_zaklyuchenie_question_mark",
+        "outfit": "cobalt_quilted_vest_white_oxford_rolled_sleeves_no_blazer_no_cardigan",
+        "emotion": "exhausted_disbelief_rubbing_temple_not_side_eye",
+        "pose_framing": "host_center_right_three_quarter_close_up_not_left_bust",
+        "action": "holds_yellow_report_rubs_temple_at_notary_bench"
+      }
     }
   ]
 }

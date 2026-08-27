@@ -1,5 +1,19 @@
 # Excalibur BLOG — WP publish log
 
+## B11 — 2026-08-27
+
+- **topic_id:** B11
+- **slug:** v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri
+- **post_id:** 9191
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri/
+- **featured_image:** 9192
+- **inline_images:** 9193–9199 (7)
+- **wp_category_slugs:** vtorichka-i-riski, riski-sdelki (category_ids=31,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 4 siblings OK)
+
 ## B10 — 2026-08-26
 
 - **topic_id:** B10
