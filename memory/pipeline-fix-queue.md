@@ -281,5 +281,5 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_quality_bar_9_gate.py scripts/excalibur_blog_cover_qa_pixels.py scripts/excalibur_blog_doctor.py`
 - `python3 -m unittest tests.test_quality_bar_9_gate tests.test_cover_budget`
 - `python3 scripts/excalibur_blog_quality_bar_9_gate.py --article-dir memory/blog/articles/B11-...` → all_pass
-commit: pending
+commit: 6c807e2
 
