@@ -64,7 +64,7 @@
     "inline_1": {
       "quadrant": "top_right",
       "h2_anchor": "Справка о выплаченном пае — и нотариальный штамп 18 лет назад",
-      "visual_type": "comparison_table_ui",
+      "visual_type": "comparison_table",
       "scene_hint": "table share vs stamp; disappointed_black_guy tiny",
       "alt": "Таблица справки о пае и старого нотариального штампа.",
       "labels": [
