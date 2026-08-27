@@ -1,0 +1,27 @@
+{
+  "slug": "notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya",
+  "topic_id": "B11",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B11-notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 932813,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9214 slug=notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya\nOK categories=31,54\nOK yoast_social_image=1\nOK featured_image=9215\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9216 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya-inline-01.png\nOK inline_alt=9216\nOK inline_caption=9216\nOK inline_description=9216\nOK inline_image_upload=9217 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya-inline-02.png\nOK inline_alt=9217\nOK inline_caption=9217\nOK inline_description=9217\nOK inline_image_upload=9218 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya-inline-03.png\nOK inline_alt=9218\nOK inline_caption=9218\nOK inline_description=9218\nOK inline_image_upload=9219 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya-inline-04.png\nOK inline_alt=9219\nOK inline_caption=9219\nOK inline_description=9219\nOK inline_image_upload=9220 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya-inline-05.png\nOK inline_alt=9220\nOK inline_caption=9220\nOK inline_description=9220\nOK inline_image_upload=9221 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya-inline-06.png\nOK inline_alt=9221\nOK inline_caption=9221\nOK inline_description=9221\nOK inline_image_upload=9222 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya-inline-07.png\nOK inline_alt=9222\nOK inline_caption=9222\nOK inline_description=9222\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya/",
+    "errors": []
+  }
+}

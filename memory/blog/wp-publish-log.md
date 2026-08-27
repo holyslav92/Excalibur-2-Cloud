@@ -1,5 +1,19 @@
 # Excalibur BLOG — WP publish log
 
+## B11 — 2026-08-27
+
+- **topic_id:** B11
+- **slug:** notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya
+- **post_id:** 9214
+- **permalink:** /blog/vtorichka-i-riski/notarius-18-let-nazad-vse-proveril-v-tyumeni-pered-avansom-vsplyla-supruzheskaya/
+- **featured_image:** 9215
+- **inline_images:** 9216–9222 (7)
+- **wp_category_slugs:** vtorichka-i-riski, dokumenty-i-oformlenie (category_ids=31,54)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 4 siblings OK)
+
 ## B10 — 2026-08-26
 
 - **topic_id:** B10
