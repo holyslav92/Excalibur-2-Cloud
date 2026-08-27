@@ -203,7 +203,14 @@
       "env_override": "EXCALIBUR_COVER_MAX_ATTEMPTS",
       "script": "scripts/excalibur_blog_grsai_solo_cover.py",
       "exhausted_report": "cover/cover-budget-result.json",
-      "conductor_timebox_minutes": "15-20"
+      "conductor_timebox_minutes": "15-20",
+      "budget_exhaust_recovery": {
+        "learner_runs": ["B10", "B11"],
+        "pattern": "2 grsai attempts exhausted + OCR hook/phone flakes while visual core OK",
+        "regen_hint": "phone-in-hand close-up HOST_CROP_LOCK before attempt 1 on inheritance/notary hooks",
+        "escape_path": "apply_ocr_false_positive_escape then Cover-QA PASS — no PIL/Kie",
+        "rollback": "remove budget_exhaust_recovery key from cover-canon.json"
+      }
     },
     "short_hook": {
       "rule": "ONE line, 5-7 Cyrillic words (B08-style), prefer words ≥5 letters for OCR; em dash OK",
