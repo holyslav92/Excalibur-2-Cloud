@@ -120,6 +120,23 @@
         "pose_framing": "host_large_left_close_up_not_right_bust_not_side_eye_formula",
         "action": "watches_elderly_seller_clutch_phone_during_viewing"
       }
+    },
+    {
+      "date": "2026-08-27",
+      "topic_id": "B11",
+      "slug": "",
+      "motifs": {
+        "composition": "host_center_waist_up_share_folder_pause_card_hook_zone_left",
+        "location": "bright_cooperative_lobby_window_white_walls_sun_flare",
+        "meme": "blinking_white_guy_sticker_plus_polite_cat_cutout",
+        "prop_set": "share_certificate_folder_red_pause_card_heirs_diagram",
+        "sticker_set": "tiny_corner_memes_only_no_wordstat_bars",
+        "joke": "memes_blink_at_pause_card_notary_stamp_fails",
+        "outfit": "cobalt_blue_rolled_sleeve_shirt_light_trousers_no_blazer",
+        "emotion": "bewildered_raised_brows_disbelief_not_side_eye",
+        "pose_framing": "waist_up_frontal_center_not_left_bust",
+        "action": "holds_share_folder_points_red_pause_card"
+      }
     }
   ]
 }
