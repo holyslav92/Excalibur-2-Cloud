@@ -149,3 +149,22 @@ def apply_quad_canon_to_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
         "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
     }
     return manifest
+
+
+# Legacy Derouter/Cover-text aliases → canonical ids in inline-visual-types.json
+VISUAL_TYPE_ALIASES: dict[str, str] = {
+    "comparison_table_ui": "comparison_table",
+    "workflow_diagram": "process_flow",
+    "checklist_board": "labeled_checklist",
+    "schema_faq_ui": "structure_diagram",
+    "tool_screenshot": "comparison_table",
+    "infographic_card": "bar_timeline_chart",
+}
+
+
+def normalize_visual_type(type_id: str) -> str:
+    """Map legacy inline visual_type ids to canonical catalog keys."""
+    cleaned = str(type_id or "").strip()
+    if not cleaned:
+        return cleaned
+    return VISUAL_TYPE_ALIASES.get(cleaned, cleaned)

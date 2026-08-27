@@ -229,7 +229,7 @@ checks_run:
 commit: 35ab34b
 
 ## INC-20260827-1125-publish-theme-interlink-postid
-status: open
+status: fixed
 run_date: 2026-08-27
 role: excalibur-blog-publish
 topic_id: B11
@@ -254,4 +254,104 @@ category: publish
 - `scripts/excalibur_blog_interlink_lib.py`
 - `shared/published-articles.md` schema / publish ledger writer
 - Cloud Secrets: `FTP_ROOT=.`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-27
+fix_summary:
+- Theme deploy: `_theme_candidates()` prefers `WP_THEME_SLUG` / `tymenrieltor-light` before legacy `kov4eg-mcp-theme`; skips missing anchors.
+- Ledger: optional `wp_post_id` column; `upsert_publish_ledger` + `parse_publish_post_id` stamp id after publish.
+- Interlink: `enrich_candidates_post_ids` + `fetch_wp_post_id_by_slug` via WP REST when ledger lacks post_id.
+files_changed:
+- `scripts/excalibur_blog_theme_contract_deploy.py`
+- `scripts/excalibur_blog_interlink_lib.py`
+- `scripts/excalibur_blog_post_publish_interlink.py`
+- `scripts/excalibur_blog_wp_publish.py`
+- `shared/published-articles.md`
+- `shared/interlink-contract.md`
+- `tests/test_interlink_post_id.py`
+checks_run:
+- `python3 -m py_compile` on changed publish/interlink scripts
+- `python3 -m unittest tests.test_interlink_post_id`
+commit: pending-parent-commit
+
+## INC-20260827-1128-cover-qa-paper-collage-hook-b11
+status: fixed
+run_date: 2026-08-27
+role: excalibur-blog-cover-qa
+topic_id: B11
+article_dir: memory/blog/articles/B11-rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo
+severity: medium
+category: qa
+
+### What went wrong
+- `pixel_hook_title_present` false negative on paper collage covers (hook bands on torn paper overlapping face zone); B08/B09 OCR escape could not apply because hook_present is a core key.
+
+### How the agent recovered this run
+- Manual visual PASS + `ocr_false_positive_escape` stamp after cover budget 2/2 exhausted.
+
+### Durable fix needed before next run
+- `apply_paper_collage_hook_escape` before OCR escape when host+phone+bands OK but ink_outside_face low.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `tests/test_cover_budget.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-27
+fix_summary:
+- Added `apply_paper_collage_hook_escape` — host+phone+band rows with low ink_outside_face → PASS hook_present/cyrillic without PIL/Kie.
+files_changed:
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `tests/test_cover_budget.py`
+checks_run:
+- `python3 -m unittest tests.test_cover_budget.OcrEscapeHatchTest`
+commit: pending-parent-commit
+
+## INC-20260827-1129-inline-visual-type-alias-b11
+status: fixed
+run_date: 2026-08-27
+role: excalibur-blog-cover-qa
+topic_id: B11
+article_dir: memory/blog/articles/B11-rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo
+severity: medium
+category: script
+
+### What went wrong
+- `inline_2.visual_type=comparison_table_ui` invalid in cover_qa_gate (canonical catalog uses `comparison_table`).
+
+### How the agent recovered this run
+- Patched quad-manifest slot to `comparison_table` for publish path.
+
+### Durable fix needed before next run
+- Normalize legacy visual_type aliases in quad_manifest, cover_qa_gate, quad prompt builder.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quad_slots.py`
+- `scripts/excalibur_blog_quad_manifest.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+- `scripts/excalibur_blog_cover_quad_prompt.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-27
+fix_summary:
+- `normalize_visual_type()` maps `comparison_table_ui` → `comparison_table` (+ other legacy aliases); applied in manifest/gate/prompt; TYPE_PRIORITY uses canonical ids.
+files_changed:
+- `scripts/excalibur_blog_quad_slots.py`
+- `scripts/excalibur_blog_quad_manifest.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+- `scripts/excalibur_blog_cover_quad_prompt.py`
+- `tests/test_interlink_post_id.py` (normalize_visual_type test)
+checks_run:
+- `python3 -m py_compile` on quad/cover scripts
+- `python3 -m unittest tests.test_interlink_post_id.InterlinkPostIdTest.test_normalize_visual_type_maps_legacy_alias`
+commit: pending-parent-commit
 

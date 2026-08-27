@@ -17,6 +17,7 @@ from excalibur_blog_quad_slots import (
     active_inline_keys,
     canvas_specs_for_inline_count,
     inline_count_from_manifest,
+    normalize_visual_type,
     slot_allows_meme_sticker,
     slot_forbids_meme_cat_person,
 )
@@ -125,7 +126,7 @@ def compact(value: object, limit: int) -> str:
 
 
 def inline_panel_prompt(slot: dict, types_catalog: dict, *, slot_key: str = "") -> str:
-    type_id = slot.get("visual_type") or "fact_card"
+    type_id = normalize_visual_type(str(slot.get("visual_type") or "fact_card"))
     type_def = (types_catalog.get("types") or {}).get(type_id) or {}
     label = type_def.get("label_ru", type_id)
     h2 = compact(slot.get("h2_anchor", ""), 72)
