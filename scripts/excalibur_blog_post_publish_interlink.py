@@ -13,6 +13,7 @@ from excalibur_blog_interlink_lib import (
     all_interlink_candidates,
     build_inbound_updates,
     build_interlink_bootstrap_php,
+    enrich_candidates_post_ids,
     load_tenant,
     outbound_links_in_html,
     pick_inbound_targets,
@@ -48,13 +49,14 @@ def main() -> int:
         return 2
 
     candidates = all_interlink_candidates(root, exclude_topic_id=topic_id)
+    public = os.environ.get("PUBLIC_SITE_URL", "").strip()
+    candidates = enrich_candidates_post_ids(candidates, public_site_url=public)
     html_path = article_dir / "article.html"
     html = html_path.read_text(encoding="utf-8") if html_path.is_file() else ""
     outbound_found = outbound_links_in_html(html, candidates)
     outbound_missing = [row for row in candidates if row not in outbound_found]
     inbound_targets = pick_inbound_targets(candidates, new_slug=slug, max_inbound=args.max_inbound)
 
-    public = os.environ.get("PUBLIC_SITE_URL", "").strip()
     new_path = f"/blog/vtorichka-i-riski/{slug}/"
     if public:
         new_url = expand_site_base(f"{SITE_BASE_PLACEHOLDER}{new_path}", public)

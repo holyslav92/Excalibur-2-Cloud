@@ -1,0 +1,300 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B11-rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_too_far_from_center",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 600,
+              "end": 634
+            },
+            "v_gutter_px": {
+              "start": 988,
+              "end": 1014
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 41.0,
+              "v_center_offset_px": 23.0,
+              "max_aspect_crop_loss": 0.1093,
+              "per_panel_crop_loss": {
+                "top_left": 0.0733,
+                "top_right": 0.03,
+                "bottom_left": 0.0678,
+                "bottom_right": 0.1093
+              },
+              "reject_reason": "gutter_too_far_from_center"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Святослав в голубой рубашке с недоверием показывает разрыв в цепочке прошлых собственников на светлом бело-золотом коллаже.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема показывает, что внешне чистая покупка квартиры не отвечает на главный вопрос о движении денег в старой сделке.",
+            "h2_anchor": "В Тюмени всё выглядело чисто — пока не всплыла старая сделка"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица цепочки собственников выделяет сделку между родственниками без передачи денег как слабое звено.",
+            "h2_anchor": "Цепочка собственников: где спряталось слабое звено"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Временная схема показывает, как наследники оспорили старую сделку спустя два года после смерти владельца.",
+            "h2_anchor": "Через два года после смерти прежнего владельца"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B11-rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 563,
+              "end": 606
+            },
+            "v_gutter_px": {
+              "start": 1016,
+              "end": 1066
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 8.5,
+              "v_center_offset_px": 17.0,
+              "max_aspect_crop_loss": 0.0443,
+              "per_panel_crop_loss": {
+                "top_left": 0.0148,
+                "top_right": 0.0195,
+                "bottom_left": 0.0443,
+                "bottom_right": 0.0112
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чек-лист перечисляет основания, по которым суд отменил право покупателя.",
+            "h2_anchor": "Финал: суд признал прошлый договор фиктивным и отменил право покупателя"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Структурная схема объясняет, что выписка ЕГРН фиксирует сделку, но не подтверждает передачу денег.",
+            "h2_anchor": "Почему ЕГРН не доказывает, что в старой сделке были деньги"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Карточки красных флагов помогают проверить подозрительную историю квартиры до аванса.",
+            "h2_anchor": "Красные флаги: родственники, цена и кто реально жил в квартире"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Экранный чек-лист документов и сведений, которые нужно запросить до внесения аванса.",
+            "h2_anchor": "Что запросить до аванса: документы по прошлому расчёту"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — В Тюмени всё выглядело чисто — пока не всплыла старая сделка",
+    "skip inline_2: already correct under H2 — Цепочка собственников: где спряталось слабое звено",
+    "skip inline_3: already correct under H2 — Через два года после смерти прежнего владельца",
+    "moved inline_4 → H2 — Финал: суд признал прошлый договор фиктивным и отменил право покупателя (was under [финал: суд признал прошлый договор фиктивным и отменил право покупателя]; removed=1)",
+    "moved inline_5 → H2 — Почему ЕГРН не доказывает, что в старой сделке были деньги (was under [почему егрн не доказывает, что в старой сделке были деньги]; removed=1)",
+    "moved inline_6 → H2 — Красные флаги: родственники, цена и кто реально жил в квартире (was under [красные флаги: родственники, цена и кто реально жил в квартире]; removed=1)",
+    "moved inline_7 → H2 — Что запросить до аванса: документы по прошлому расчёту (was under [что запросить до аванса: документы по прошлому расчёту]; removed=1)"
+  ]
+}

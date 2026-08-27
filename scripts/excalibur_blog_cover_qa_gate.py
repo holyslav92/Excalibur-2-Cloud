@@ -250,6 +250,8 @@ def validate_cover_qa(article_dir: Path, root: Path, *, stamp: bool = True) -> d
         errors.append("memory/cover/meme-top100.json missing — meme catalog required")
 
     if manifest_path.is_file() and manifest:
+        from excalibur_blog_quad_slots import normalize_visual_type
+
         phone = str(manifest.get("cover_phone_cta") or "").strip()
         if phone != "+7 922 001 65 05":
             errors.append("cover_phone_cta must be '+7 922 001 65 05' in quad-manifest")
@@ -270,9 +272,10 @@ def validate_cover_qa(article_dir: Path, root: Path, *, stamp: bool = True) -> d
         for i in range(1, 8):
             key = f"inline_{i}"
             slot = slots.get(key) or {}
-            if not str(slot.get("visual_type") or "").strip():
+            visual_type = normalize_visual_type(str(slot.get("visual_type") or "").strip())
+            if not visual_type:
                 errors.append(f"{key}.visual_type missing in quad-manifest")
-            elif str(slot.get("visual_type")) not in allowed_types:
+            elif visual_type not in allowed_types:
                 errors.append(f"{key}.visual_type invalid: {slot.get('visual_type')}")
             labels = slot.get("labels") or []
             if not (2 <= len(labels) <= 6):

@@ -102,6 +102,32 @@ class OcrEscapeHatchTest(unittest.TestCase):
         self.assertFalse(new_checks["pixel_host_face_present"])
         self.assertNotIn("ocr_false_positive_escape", new_evidence)
 
+    def test_paper_collage_hook_escape_overrides_present_when_bands_ok(self) -> None:
+        from excalibur_blog_cover_qa_pixels import apply_paper_collage_hook_escape
+
+        checks = {
+            "pixel_host_face_present": True,
+            "pixel_host_close_up": True,
+            "pixel_phone_readable": True,
+            "pixel_layout_not_collapsed": True,
+            "pixel_hook_title_present": False,
+            "pixel_hook_title_cyrillic": False,
+        }
+        evidence = {
+            "hook_title": {
+                "bands": [{"rows": 14}],
+                "ink_outside_face": 120,
+            },
+            "title_cyrillic": {"cyrillic_ratio": 0.42},
+        }
+        errors = ["pixel_hook_title_present FAIL: no large readable hook title"]
+        new_checks, new_errors, new_evidence = apply_paper_collage_hook_escape(
+            checks, errors, evidence
+        )
+        self.assertTrue(new_checks["pixel_hook_title_present"])
+        self.assertTrue(new_checks["pixel_hook_title_cyrillic"])
+        self.assertTrue(new_evidence.get("paper_collage_hook_escape", {}).get("applied"))
+
 
 if __name__ == "__main__":
     unittest.main()

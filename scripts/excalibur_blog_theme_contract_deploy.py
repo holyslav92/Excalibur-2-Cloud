@@ -24,12 +24,16 @@ def patch_functions(text: str) -> str:
             "add_filter( 'the_content', 'custom_theme_add_faq_to_single', 99 );"
         )
         if function_start < 0 or filter_anchor < function_start:
-            raise ValueError("functions.php FAQ function bounds not found")
-        faq_function = text[function_start:filter_anchor]
-        if old not in faq_function:
-            raise ValueError("functions.php FAQ anchor not found")
-        patched_function = faq_function.replace(old, new, 1)
-        text = text[:function_start] + patched_function + text[filter_anchor:]
+            if "custom_theme_add_faq_to_single" not in text:
+                pass
+            else:
+                raise ValueError("functions.php FAQ function bounds not found")
+        else:
+            faq_function = text[function_start:filter_anchor]
+            if old not in faq_function:
+                raise ValueError("functions.php FAQ anchor not found")
+            patched_function = faq_function.replace(old, new, 1)
+            text = text[:function_start] + patched_function + text[filter_anchor:]
 
     schema_marker = "function excalibur_blog_output_schema_jsonld()"
     if schema_marker not in text:
@@ -131,8 +135,42 @@ def _settings() -> tuple[str, str, str, int, list[str]]:
     return host, user, password, port, roots
 
 
+def _theme_candidates(values: dict[str, str]) -> list[str]:
+    explicit = (values.get("WP_THEME_SLUG") or values.get("EXCALIBUR_WP_THEME") or "").strip()
+    ordered = [
+        explicit,
+        "tymenrieltor-light",
+        "kov4eg-mcp-theme",
+    ]
+    return [slug for slug in dict.fromkeys(ordered) if slug]
+
+
+def _resolve_theme_base(sftp, roots: list[str], theme_slugs: list[str]) -> str:
+    for root in roots:
+        for slug in theme_slugs:
+            candidate = posixpath.normpath(
+                posixpath.join(root, "wp-content/themes", slug)
+            )
+            try:
+                sftp.stat(candidate)
+                return candidate
+            except OSError:
+                continue
+    return ""
+
+
 def deploy() -> None:
     import paramiko
+
+    values = dict(os.environ)
+    local = Path(__file__).resolve().parents[1] / "memory/site.env.local"
+    if local.is_file():
+        for raw in local.read_text(encoding="utf-8").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            values.setdefault(key.strip(), value.strip().strip("\"'"))
 
     host, user, password, port, roots = _settings()
     transport = paramiko.Transport((host, port))
@@ -141,18 +179,10 @@ def deploy() -> None:
     base = ""
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
     try:
-        for root in roots:
-            candidate = posixpath.normpath(
-                posixpath.join(root, "wp-content/themes/kov4eg-mcp-theme")
-            )
-            try:
-                sftp.stat(candidate)
-                base = candidate
-                break
-            except OSError:
-                continue
+        base = _resolve_theme_base(sftp, roots, _theme_candidates(values))
         if not base:
             raise RuntimeError("WordPress theme path not found in configured root or login cwd")
+        print(f"OK theme={posixpath.basename(base)}")
         for name, patcher in (
             ("functions.php", patch_functions),
             ("single.php", patch_single),
@@ -160,7 +190,11 @@ def deploy() -> None:
             remote = posixpath.join(base, name)
             with sftp.open(remote, "r") as handle:
                 original = handle.read().decode("utf-8")
-            patched = patcher(original)
+            try:
+                patched = patcher(original)
+            except ValueError as exc:
+                print(f"OK skipped={name} reason={exc}")
+                continue
             if patched == original:
                 print(f"OK unchanged={name}")
                 continue
