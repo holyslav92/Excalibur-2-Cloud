@@ -1,0 +1,9 @@
+{
+  "topic_id": "B11",
+  "description": "Жёлтое заключение не запрещает сделку — оно просит остановиться. В Тюмени этот сигнал проигнорировали, а через два года в суд пришёл третий наследник.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
