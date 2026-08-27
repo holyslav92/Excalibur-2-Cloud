@@ -16,6 +16,9 @@
 - Не более **3 inbound** правок за один publish-run.
 - Не трогать посты со `status != published` в ledger.
 - URL только path из ledger или `{{SITE_BASE}}/slug/` после expand.
+- Ledger (`shared/published-articles.md`) хранит опциональный `wp_post_id`; Publish
+  дописывает его после `OK post=`. Если в ledger нет id — inbound interlink
+  резолвит slug через WP REST `wp-json/wp/v2/posts?slug=`.
 - Не переписывать тело статьи — только append блока, если ссылки ещё нет.
 - Live publish только при `EXCALIBUR_BLOG_ALLOW_PUBLISH=yes` (env, не git).
 

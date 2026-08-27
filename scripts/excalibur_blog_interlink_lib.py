@@ -4,9 +4,11 @@
 from __future__ import annotations
 
 import json
+import urllib.error
+import urllib.request
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import quote, urljoin, urlparse
 
 INTERLINK_MARKER_PREFIX = 'data-excalibur-interlink-from="'
 
@@ -32,20 +34,67 @@ def parse_ledger(path: Path) -> list[dict[str, str]]:
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
         if len(cells) < 4:
             continue
+        post_id = ""
         if len(cells) >= 5 and cells[0][:4].isdigit():
             topic_id, slug, permalink, status = cells[1], cells[2], cells[3], cells[4]
+            if len(cells) >= 6:
+                post_id = cells[5]
         else:
             topic_id, slug, status, permalink = cells[0], cells[1], cells[2], cells[3]
+            if len(cells) >= 5 and cells[4].isdigit():
+                post_id = cells[4]
         if status.lower() != "published":
             continue
-        rows.append(
-            {
-                "topic_id": topic_id,
-                "slug": slug,
-                "permalink": permalink,
-            }
-        )
+        row: dict[str, str] = {
+            "topic_id": topic_id,
+            "slug": slug,
+            "permalink": permalink,
+        }
+        if post_id.isdigit():
+            row["post_id"] = post_id
+        rows.append(row)
     return rows
+
+
+def fetch_wp_post_id_by_slug(slug: str, public_site_url: str, *, timeout: float = 15.0) -> int | None:
+    """Resolve WordPress post_id via public REST API when ledger row lacks it."""
+    slug = slug.strip().strip("/")
+    base = (public_site_url or "").strip().rstrip("/")
+    if not slug or not base or "://" not in base:
+        return None
+    url = urljoin(base + "/", f"wp-json/wp/v2/posts?slug={quote(slug)}&_fields=id")
+    request = urllib.request.Request(url, headers={"User-Agent": "Excalibur-BLOG-interlink/1.0"})
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except (urllib.error.URLError, json.JSONDecodeError, TimeoutError, ValueError):
+        return None
+    if not isinstance(payload, list) or not payload:
+        return None
+    post_id = payload[0].get("id") if isinstance(payload[0], dict) else None
+    return int(post_id) if post_id else None
+
+
+def enrich_candidates_post_ids(
+    candidates: list[dict[str, Any]],
+    *,
+    public_site_url: str = "",
+) -> list[dict[str, Any]]:
+    """Fill missing post_id from WP REST slug lookup (B11 inbound interlink fix)."""
+    enriched: list[dict[str, Any]] = []
+    for row in candidates:
+        copy = dict(row)
+        if copy.get("post_id"):
+            enriched.append(copy)
+            continue
+        slug = str(copy.get("slug") or "").strip()
+        if slug and public_site_url:
+            resolved = fetch_wp_post_id_by_slug(slug, public_site_url)
+            if resolved:
+                copy["post_id"] = resolved
+                copy["post_id_source"] = "wp_rest"
+        enriched.append(copy)
+    return enriched
 
 
 def load_siblings(root: Path) -> list[dict[str, Any]]:

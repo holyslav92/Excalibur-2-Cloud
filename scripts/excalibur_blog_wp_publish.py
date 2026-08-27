@@ -941,6 +941,42 @@ def publish_via_sftp(env: dict[str, str], php: str, public_base: str, *, bootstr
     return out
 
 
+def parse_publish_post_id(out: str) -> int | None:
+    """Extract WordPress post id from bootstrap output line ``OK post=123``."""
+    for line in (out or "").splitlines():
+        stripped = line.strip()
+        if not stripped.startswith("OK post="):
+            continue
+        token = stripped.split("=", 1)[1].strip().split()[0]
+        if token.isdigit():
+            return int(token)
+    return None
+
+
+def persist_publish_post_id(article_dir: Path, post_id: int) -> None:
+    """Stamp wp_post_id into article.meta.json and wp-publish-result.json."""
+    if post_id <= 0:
+        return
+    meta_path = article_dir / "article.meta.json"
+    if meta_path.is_file():
+        try:
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            meta = {}
+        if isinstance(meta, dict):
+            meta["wp_post_id"] = post_id
+            meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    result_path = article_dir / "wp-publish-result.json"
+    if result_path.is_file():
+        try:
+            result = json.loads(result_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            result = {}
+        if isinstance(result, dict):
+            result["post_id"] = post_id
+            result_path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def ledger_url_for_commit(permalink: str, slug: str = "") -> str:
     """Store path-only URL in git ledger to avoid secret-scan on PUBLIC_SITE_URL host."""
     value = (permalink or "").strip()
@@ -965,11 +1001,12 @@ def upsert_publish_ledger(root: Path, payload: dict[str, Any], permalink: str) -
         return
     ledger_path = root / "shared" / "published-articles.md"
     ledger_path.parent.mkdir(parents=True, exist_ok=True)
+    header = "| date | topic_id | slug | url | status | wp_post_id |"
+    separator = "|------|----------|------|-----|--------|------------|"
     if not ledger_path.is_file():
         ledger_path.write_text(
             "# Excalibur BLOG — журнал опубликованных статей\n\n"
-            "| date | topic_id | slug | url | status |\n"
-            "|------|----------|------|-----|--------|\n",
+            f"{header}\n{separator}\n",
             encoding="utf-8",
         )
 
@@ -978,8 +1015,19 @@ def upsert_publish_ledger(root: Path, payload: dict[str, Any], permalink: str) -
     topic_id = str(payload.get("topic_id") or "").upper()
     slug = str(payload.get("slug") or "")
     ledger_url = ledger_url_for_commit(permalink, slug)
-    row = f"| {date.today().isoformat()} | {topic_id} | {slug} | {ledger_url} | published |"
+    post_id = payload.get("wp_post_id") or payload.get("post_id")
+    post_cell = str(int(post_id)) if post_id else ""
+    row = f"| {date.today().isoformat()} | {topic_id} | {slug} | {ledger_url} | published | {post_cell} |"
     lines = ledger_path.read_text(encoding="utf-8").splitlines()
+    if header not in lines:
+        upgraded: list[str] = []
+        for line in lines:
+            if line.startswith("| date |") and "wp_post_id" not in line:
+                upgraded.append(header)
+                upgraded.append(separator)
+                continue
+            upgraded.append(line)
+        lines = upgraded
     kept: list[str] = []
     replaced = False
     for line in lines:
@@ -1525,6 +1573,7 @@ def main() -> int:
     print(out)
 
     media = evaluate_publish_output(out, payload)
+    wp_post_id = parse_publish_post_id(out)
     result_path = article_dir / "wp-publish-result.json"
     permalink = ""
     for line in out.splitlines():
@@ -1549,6 +1598,8 @@ def main() -> int:
         },
         "verdict": verdict,
     }
+    if wp_post_id:
+        result["post_id"] = wp_post_id
     if verdict != "pass":
         result_path.write_text(
             json.dumps(result, ensure_ascii=False, indent=2) + "\n",
@@ -1614,7 +1665,13 @@ def main() -> int:
         json.dumps(result, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    upsert_publish_ledger(root, payload, permalink or safe_permalink)
+    upsert_publish_ledger(
+        root,
+        {**payload, "wp_post_id": wp_post_id} if wp_post_id else payload,
+        permalink or safe_permalink,
+    )
+    if wp_post_id:
+        persist_publish_post_id(article_dir, wp_post_id)
     deploy_llms = bool(args.deploy_llms or tenant_deploy_llms_default(root))
     if deploy_llms:
         from excalibur_blog_llms_deploy import deploy_llms_files
