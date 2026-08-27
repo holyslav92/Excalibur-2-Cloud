@@ -84,7 +84,7 @@
     "inline_2": {
       "quadrant": "bottom_left",
       "h2_anchor": "Цепочка собственников: где спряталось слабое звено",
-      "visual_type": "comparison_table_ui",
+      "visual_type": "comparison_table",
       "scene_hint": "comparison_table 3 links relative mid gold; NO human",
       "alt": "Таблица цепочки собственников выделяет сделку между родственниками без передачи денег как слабое звено.",
       "labels": [
