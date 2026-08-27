@@ -14,3 +14,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-08-22 | B08 | skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo | /blog/vtorichka-i-riski/skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo/ | published |
 | 2026-08-22 | B09 | ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn | /blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/ | published |
 | 2026-08-26 | B10 | v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v | /blog/vtorichka-i-riski/v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/ | published |
+| 2026-08-27 | B11 | v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri | /blog/vtorichka-i-riski/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri/ | published |
