@@ -1354,6 +1354,14 @@ def _all_skin_blobs(img, *, min_pixels: int = 1200) -> list[dict[str, Any]]:
 
 def _foreign_article_leak_metrics(img, manifest: dict[str, Any] | None) -> dict[str, Any]:
     """Чужой hook/Wordstat-текст с другой статьи (B06 mashup leak)."""
+    collage = _collage_inset_metrics(img)
+    if not collage.get("ok"):
+        return {
+            "ok": False,
+            "leaks": ["collage_mashup_proxy"],
+            "ocr_sample": "",
+            "collage_inset_fail": True,
+        }
     hook_norm = _norm_ocr_text(_manifest_cover_hook(manifest))
     full_ocr = _ocr_image_zone(img, (0.0, 0.0, 1.0, 1.0), lang="rus+eng", psm=6)
     ocr_norm = _norm_ocr_text(full_ocr)
@@ -1393,8 +1401,10 @@ def _hook_title_complete_metrics(img, manifest: dict[str, Any] | None) -> dict[s
     truncated = bool(partial)
     ok = not truncated and len(missing) == 0
     hook_vis = _hook_title_metrics(img)
+    collage_ok = _collage_inset_metrics(img).get("ok")
     if (
         not ok
+        and collage_ok
         and hook_vis.get("present")
         and sum(1 for c in hook if "\u0400" <= c <= "\u04ff") >= 10
         and not title_norm.strip()
@@ -1548,21 +1558,31 @@ def _phone_not_clipped_metrics(img) -> dict[str, Any]:
         clipped = True
     ok = ink >= PHONE_ZONE_MIN_INK // 2 and has_suffix and not clipped
     if not ok and ink >= 700 and not clipped:
-        w, h = img.size
-        x0 = int(PHONE_STICKER_ZONE[0] * w)
-        y0 = int(PHONE_STICKER_ZONE[1] * h)
-        x1 = int(PHONE_STICKER_ZONE[2] * w)
-        y1 = int(PHONE_STICKER_ZONE[3] * h)
-        rgb = img.convert("RGB")
-        light_on_dark = 0
-        for y in range(y0, y1, 2):
-            for x in range(x0, x1, 2):
-                r, g, b = rgb.getpixel((x, y))
-                if _luminance(r, g, b) > 175:
-                    light_on_dark += 1
-        if light_on_dark >= 40:
-            ok = True
-            has_suffix = True
+        host_ok, _ = _host_face_present(img)
+        hook_vis = _hook_title_metrics(img)
+        services = _services_checklist_metrics(img)
+        collage_ok = _collage_inset_metrics(img).get("ok")
+        if (
+            (not inset_collage or collage_ok)
+            and host_ok
+            and hook_vis.get("present")
+            and not services.get("is_services_card")
+        ):
+            w, h = img.size
+            x0 = int(PHONE_STICKER_ZONE[0] * w)
+            y0 = int(PHONE_STICKER_ZONE[1] * h)
+            x1 = int(PHONE_STICKER_ZONE[2] * w)
+            y1 = int(PHONE_STICKER_ZONE[3] * h)
+            rgb = img.convert("RGB")
+            light_on_dark = 0
+            for y in range(y0, y1, 2):
+                for x in range(x0, x1, 2):
+                    r, g, b = rgb.getpixel((x, y))
+                    if _luminance(r, g, b) > 175:
+                        light_on_dark += 1
+            if light_on_dark >= 40:
+                ok = True
+                has_suffix = True
     return {
         "ok": ok,
         "ink": ink,
@@ -1812,10 +1832,6 @@ def _is_warm_sticky_paper_pixel(r: int, g: int, b: int) -> bool:
 
 def _blank_sticky_metrics(img) -> dict[str, Any]:
     """Пустые жёлтые стикеры без читаемой кириллицы внутри."""
-    title = _title_cyrillic_metrics(img)
-    if not title.get("latin_garbage") and not title.get("percent_only"):
-        return {"blank_count": 0, "ok": True, "skipped": "no_latin_garbage_title"}
-
     w, h = img.size
     rgb = img.convert("RGB")
     visited = [[False] * w for _ in range(h)]
