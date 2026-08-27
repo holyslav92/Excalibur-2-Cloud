@@ -94,6 +94,6 @@ python3 scripts/excalibur_blog_quality_bar_9_gate.py --article-dir memory/blog/a
 
 ## Связанные гейты
 
-- `scripts/excalibur_blog_cover_qa_gate.py` — визуал (включая phone, stickers, inline utility)
+- `scripts/excalibur_blog_cover_qa_gate.py` — визуал (включая phone, stickers, inline utility). **quality-bar-9** вызывает его с `--no-stamp` и при FAIL читает уже stamped `cover_qa.json` с `ocr_false_positive_escape.applied` + совпадающим `cover_md5` (B08/B09/B11 — Tesseract пустой на styled typography).
 - `scripts/excalibur_blog_community_cta_gate.py` — обязательные CTA из tenant-config
 - `scripts/excalibur_blog_structure_gate.py` — вызывает quality-bar-9 перед Publish

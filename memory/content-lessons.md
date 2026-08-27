@@ -9,6 +9,7 @@
 | [LESSON-20260821-0615-B06-html-linter-cta-div-whitelist](content-lessons/LESSON-20260821-0615-B06-html-linter-cta-div-whitelist.md) | B06 | applied | structure |
 | [LESSON-20260826-0834-B10-cover-budget-ocr-escape](content-lessons/LESSON-20260826-0834-B10-cover-budget-ocr-escape.md) | B10 | proposed | structure |
 | [LESSON-20260826-0834-B10-elderly-phone-casus-risk-cluster](content-lessons/LESSON-20260826-0834-B10-elderly-phone-casus-risk-cluster.md) | B10 | proposed | structure |
+| [LESSON-20260827-0610-B11-quality-bar-ocr-escape-stamp](content-lessons/LESSON-20260827-0610-B11-quality-bar-ocr-escape-stamp.md) | B11 | applied | structure |
 | [LESSON-20260827-0609-B11-scout-tired-buyer-wordstat-rework](content-lessons/LESSON-20260827-0609-B11-scout-tired-buyer-wordstat-rework.md) | B11 | proposed | structure |
 | [LESSON-20260827-0609-B11-cover-budget-ocr-escape-no-fixer](content-lessons/LESSON-20260827-0609-B11-cover-budget-ocr-escape-no-fixer.md) | B11 | proposed | structure |
 | [LESSON-20260827-0609-B11-cover-text-hook-gate-fix](content-lessons/LESSON-20260827-0609-B11-cover-text-hook-gate-fix.md) | B11 | proposed | structure |
