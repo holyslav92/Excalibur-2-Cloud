@@ -1,0 +1,229 @@
+{
+  "topic_id": "B11",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Четыре месяца искали — суд оспорил сделку",
+  "cover_hook_highlight": "оспорил",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав в жилете с жёлтым заключением; hook; CTA; мемы.",
+      "scene_hint": "notary hall; host RIGHT vest temple rub yellow report; hook LEFT; phone; memes; NO Wordstat",
+      "meme_caption_ru": "",
+      "sticky": "Жёлтое заключение?",
+      "cover_emotion": "усталое недоверие",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "meme_picks": [
+        "roll_safe",
+        "crying_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Четыре месяца поиска — и «хотя бы эта»",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison_table 4 мес vs усталость; gold tape; tiny brian sticker",
+      "alt": "Таблица: 4 месяца поиска, «хотя бы эта», усталость давит.",
+      "labels": [
+        "4 месяца поиска",
+        "«Хотя бы эта»",
+        "Усталость давит"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "bad_luck_brian"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Жёлтое заключение и риск третьего наследника",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "checklist yellow warning наследник; pins; NO human",
+      "alt": "Чеклист: жёлтое заключение, третий наследник, риск не снят.",
+      "labels": [
+        "Жёлтое заключение",
+        "Третий наследник",
+        "Риск не снят"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Продавец не показал документы — сделку всё равно закрыли",
+      "visual_type": "process_flow",
+      "scene_hint": "process_flow docs refused→deal closed; arrows; NO human",
+      "alt": "Процесс: документы не показали, сделку закрыли, отказ — сигнал.",
+      "labels": [
+        "Документы не показали",
+        "Сделку закрыли",
+        "Отказ — сигнал"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Финал: примерно через два года суд оспорил сделку",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "timeline 0→2 года суд; red stamp; NO human",
+      "alt": "Таймлайн: через два года суд оспорил, регистрация не финал.",
+      "labels": [
+        "Через два года",
+        "Суд оспорил",
+        "Регистрация не финал"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Что на самом деле значит «жёлтое» заключение",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison_table ЕГРН vs наследство; yellow badge; tiny pikachu",
+      "alt": "Таблица: ЕГРН не закрывает наследство, жёлтое — статус.",
+      "labels": [
+        "ЕГРН не закрывает",
+        "Риск наследства",
+        "Жёлтое — статус"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "surprised_pikachu"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Верховный суд: наследник может вернуться спустя годы",
+      "visual_type": "structure_diagram",
+      "scene_hint": "diagram ВС 2026 наследник; pins strings; NO human",
+      "alt": "Схема: обзор ВС 2026, статья 1155, наследник вернулся.",
+      "labels": [
+        "Обзор ВС 2026",
+        "Статья 1155",
+        "Наследник вернулся"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Какие документы запросить до аванса",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "checklist docs before advance; gold tape; tiny brain sticker",
+      "alt": "Чеклист до аванса: ФНП, нотариальные отказы, состав семьи.",
+      "labels": [
+        "ФНП реестр",
+        "Нотариальные отказы",
+        "Состав семьи"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "expanding_brain"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени",
+    "вторичка тюмень",
+    "проверка квартиры перед покупкой"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_emotion": "усталое недоверие",
+  "cover_motifs": {
+    "composition": "host_center_right_exhausted_temple_rub_yellow_report_hook_left_sacred",
+    "location": "bright_tyumen_notary_waiting_hall_white_marble_skylight",
+    "meme": "roll_safe_sticker_plus_crying_cat_cutout",
+    "prop_set": "yellow_legal_report_folder_calendar_4_months_red_court_stamp",
+    "sticker_set": "yellow_sticky_zhyoltoe_zaklyuchenie_corner_pin_only",
+    "joke": "sticky_zhyoltoe_zaklyuchenie_question_mark",
+    "outfit": "cobalt_quilted_vest_white_oxford_rolled_sleeves_NO_blazer_NO_cardigan",
+    "emotion": "exhausted_disbelief_rubbing_temple_not_side_eye",
+    "pose_framing": "host_center_right_three_quarter_close_up_NOT_left_bust",
+    "action": "holds_yellow_report_rubs_temple_at_notary_bench"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B11-v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1009,
+          562
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 562,
+            "end": 590
+          },
+          "v_gutter_px": {
+            "start": 1009,
+            "end": 1039
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0099,
+            "per_panel_crop_loss": {
+              "top_left": 0.0099,
+              "top_right": 0.0099,
+              "bottom_left": 0.0099,
+              "bottom_right": 0.0099
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 5,
+              "top": 0,
+              "right": 1004,
+              "bottom": 562
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1009,
+              "bottom": 562
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таймлайн: через два года суд оспорил, регистрация не финал.",
+            "h2_anchor": "Финал: примерно через два года суд оспорил сделку"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1044,
+              "top": 0,
+              "right": 2043,
+              "bottom": 562
+            },
+            "raw_box_px": {
+              "left": 1039,
+              "top": 0,
+              "right": 2048,
+              "bottom": 562
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица: ЕГРН не закрывает наследство, жёлтое — статус.",
+            "h2_anchor": "Что на самом деле значит «жёлтое» заключение"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 5,
+              "top": 590,
+              "right": 1004,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 590,
+              "right": 1009,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема: обзор ВС 2026, статья 1155, наследник вернулся.",
+            "h2_anchor": "Верховный суд: наследник может вернуться спустя годы"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1044,
+              "top": 590,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1039,
+              "top": 590,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чеклист до аванса: ФНП, нотариальные отказы, состав семьи.",
+            "h2_anchor": "Какие документы запросить до аванса"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B11-v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_too_far_from_center",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 573,
+              "end": 639
+            },
+            "v_gutter_px": {
+              "start": 1018,
+              "end": 1031
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 30.0,
+              "v_center_offset_px": 0.5,
+              "max_aspect_crop_loss": 0.1041,
+              "per_panel_crop_loss": {
+                "top_left": 0.0,
+                "top_right": 0.0,
+                "bottom_left": 0.1041,
+                "bottom_right": 0.1032
+              },
+              "reject_reason": "gutter_too_far_from_center"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Святослав в жилете с жёлтым заключением; hook; CTA; мемы.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица: 4 месяца поиска, «хотя бы эта», усталость давит.",
+            "h2_anchor": "Четыре месяца поиска — и «хотя бы эта»"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чеклист: жёлтое заключение, третий наследник, риск не снят.",
+            "h2_anchor": "Жёлтое заключение и риск третьего наследника"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Процесс: документы не показали, сделку закрыли, отказ — сигнал.",
+            "h2_anchor": "Продавец не показал документы — сделку всё равно закрыли"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Четыре месяца поиска — и «хотя бы эта»",
+    "skip inline_2: already correct under H2 — Жёлтое заключение и риск третьего наследника",
+    "skip inline_3: already correct under H2 — Продавец не показал документы — сделку всё равно закрыли",
+    "moved inline_4 → H2 — Финал: примерно через два года суд оспорил сделку (was under [финал: примерно через два года суд оспорил сделку]; removed=1)",
+    "moved inline_5 → H2 — Что на самом деле значит «жёлтое» заключение (was under [что на самом деле значит «жёлтое» заключение]; removed=1)",
+    "moved inline_6 → H2 — Верховный суд: наследник может вернуться спустя годы (was under [верховный суд: наследник может вернуться спустя годы]; removed=1)",
+    "moved inline_7 → H2 — Какие документы запросить до аванса (was under [какие документы запросить до аванса]; removed=1)"
+  ]
+}
