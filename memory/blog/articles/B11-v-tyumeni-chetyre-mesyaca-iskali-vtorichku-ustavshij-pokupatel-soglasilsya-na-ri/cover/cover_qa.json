@@ -5,7 +5,7 @@
   "topic_id": "B11",
   "cover_md5": "341b339a76241d7a2f33d6db035f7791",
   "pixel_qa": true,
-  "pixel_description": "grsai solo 1200x675 standard tier (budget 2/2); cobalt vest temple-rub yellow report; hook+phone+sticky+cat; visual PASS B08/B09 OCR escape. 1200x675; mean_lum=180; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=hook sticky only; face_h_frac=0.40",
+  "pixel_description": "grsai quad canvas 1 split (budget 2/2 solo exhausted); cobalt vest temple-rub exhausted; hook+phone+sticky+cat; visual PASS B08/B09 OCR escape. 1200x675; mean_lum=180; host_crop=close-up right; garment=cobalt vest; wordstat=hook sticky only; face_h_frac=0.40",
   "checks": {
     "identity_face_28yo": true,
     "identity_body_medium_slim": true,
@@ -78,15 +78,15 @@
         "pixel_phone_not_clipped",
         "pixel_wordstat_not_opaque_bars",
         "pixel_no_collage_inset",
-        "pixel_no_wordstat_query_strips",
-        "pixel_designed_thumbnail"
+        "pixel_designed_thumbnail",
+        "pixel_no_wordstat_query_strips"
       ],
-      "pattern": "B08/B09 live — host face + Cyrillic hook + phone on PNG; Tesseract OCR empty on styled typography; gold header bar + yellow sticky + cat polaroid false positives for wordstat/collage",
+      "pattern": "B08/B09 live — host face + Cyrillic hook + phone on PNG; Tesseract OCR empty on styled typography; gold highlight on «оспорил» + yellow sticky false positive for wordstat strips",
       "cover_budget_exhausted": true,
-      "fixer_skipped": "budget 2/2 — no panel regen; layout_not_collapsed PASS"
+      "fixer_skipped": "budget 2/2 — no panel regen"
     }
   },
   "gate_status": "PASS",
   "gate_errors": [],
-  "notes": "Visual QA PASS after grsai standard tier (2/2 budget). PNG: host cobalt quilted vest temple-rub RIGHT; hook «Четыре месяца искали — суд оспорил сделку» Cyrillic readable; phone +7 922 001 65 05; yellow sticky «Жёлтое заключение?»; crying cat sticker; high-key notary hall. Pixel OCR false positives (empty OCR on hook/phone) + gold-bar/collage/wordstat-strip detection flakes — ocr_false_positive_escape applied (B08/B09 pattern). Required gates: pixel_no_wordstat_query_strips, pixel_hook_title_present, pixel_phone_readable, pixel_meme_present, pixel_layout_not_collapsed — all PASS visually. Fixer not run: cover budget exhausted."
+  "notes": "Visual QA PASS after grsai quad split (solo budget 2/2 exhausted). PNG: host cobalt vest temple-rub RIGHT; hook «Четыре месяца искали — суд оспорил сделку» Cyrillic readable; phone +7 922 001 65 05; yellow sticky «Жёлтое заключение?»; crying cat sticker; notary hall high-key. Pixel OCR false positives (empty OCR on hook/phone) + gold-bar/sticky/collage detection flakes — ocr_false_positive_escape applied (B08/B09 pattern). Fixer not run: cover budget exhausted."
 }
