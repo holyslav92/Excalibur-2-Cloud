@@ -15,3 +15,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-08-22 | B09 | ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn | /blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/ | published |
 | 2026-08-26 | B10 | v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v | /blog/vtorichka-i-riski/v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/ | published |
 | 2026-08-28 | B11 | v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii | /blog/vtorichka-i-riski/v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii/ | published |
+| 2026-08-28 | B12 | v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit | /blog/vtorichka-i-riski/v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit/ | published |

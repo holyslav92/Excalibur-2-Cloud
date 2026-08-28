@@ -1,0 +1,68 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B12",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-28",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://pobeda26.ru/news/kriminal/2026-08-12/sud-otpravil-v-koloniyu-zhenschinu-prodavshuyu-dom-srazu-dvum-pokupatelyam-367991",
+        "type": "media",
+        "note": "12.08.2026 — приговор за двойную продажу дома (Ставропольский край), отдельный кейс"
+      },
+      {
+        "url": "https://ura.news/news/1053121613",
+        "type": "media",
+        "note": "26.08.2026 — свежий региональный контекст спроса на вторичку"
+      },
+      {
+        "url": "https://vk.com/wall-46013226_419410",
+        "type": "community",
+        "note": "Региональная републикация ялуторовского casus (ТопТюмень)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "проверка егрн",
+    "p0_volume": 28,
+    "angle_phrase": "аккредитив при покупке квартиры",
+    "angle_volume": 45,
+    "compare_phrase": "двойные продажи квартир",
+    "compare_volume": 281,
+    "rework_from": "двойная продажа → аккредитив/егрн buyer spine (scout handoff)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "cluster double_sale_two_buyers_rieltor_poa distinct from B04 doverennost/SVO"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 1,
+    "entities_checked": ["sberbank"],
+    "errors": [],
+    "lesson": "person 3400 RUB for individuals; legal/loc 0.3%/min 15000 for legal entities only"
+  },
+  "primary_casus": {
+    "url": "https://ura.news/news/1053102901",
+    "publication_date": "2026-06-22",
+    "verified_today": "2026-08-28",
+    "attribution": "URA.RU / lawyer Roman Matveev quotes"
+  },
+  "key_facts_count": 32,
+  "blockers": [],
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}

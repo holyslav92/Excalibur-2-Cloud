@@ -1,5 +1,19 @@
 # Excalibur BLOG — WP publish log
 
+## B12 — 2026-08-28
+
+- **topic_id:** B12
+- **slug:** v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit
+- **post_id:** 9240
+- **permalink:** /blog/vtorichka-i-riski/v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit/
+- **featured_image:** 9241
+- **inline_images:** 9242–9248 (7)
+- **wp_category_slugs:** vtorichka-i-riski, riski-sdelki (category_ids=31,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 4 siblings OK)
+
 ## B10 — 2026-08-26
 
 - **topic_id:** B10

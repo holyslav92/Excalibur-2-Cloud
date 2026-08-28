@@ -960,6 +960,31 @@ def ledger_url_for_commit(permalink: str, slug: str = "") -> str:
     return value
 
 
+def parse_published_post_id(out: str) -> int | None:
+    for line in (out or "").splitlines():
+        if line.startswith("OK post="):
+            token = line.split("=", 1)[1].strip().split()[0]
+            try:
+                return int(token)
+            except (IndexError, ValueError):
+                return None
+    return None
+
+
+def persist_wp_post_id_meta(article_dir: Path, post_id: int) -> None:
+    meta_path = article_dir / "article.meta.json"
+    if not meta_path.is_file():
+        return
+    try:
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return
+    if int(meta.get("wp_post_id") or meta.get("post_id") or 0) == post_id:
+        return
+    meta["wp_post_id"] = post_id
+    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def upsert_publish_ledger(root: Path, payload: dict[str, Any], permalink: str) -> None:
     if not permalink:
         return
@@ -1614,6 +1639,14 @@ def main() -> int:
         json.dumps(result, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    published_post_id = parse_published_post_id(out)
+    if published_post_id:
+        persist_wp_post_id_meta(article_dir, published_post_id)
+        result["post_id"] = published_post_id
+        result_path.write_text(
+            json.dumps(result, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
     upsert_publish_ledger(root, payload, permalink or safe_permalink)
     deploy_llms = bool(args.deploy_llms or tenant_deploy_llms_default(root))
     if deploy_llms:

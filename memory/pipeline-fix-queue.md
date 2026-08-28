@@ -2,7 +2,130 @@
 
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
-## INC-20260821-0615-content-learner-metrika-credentials
+## INC-20260828-0815-cover-text-invalid-meme-ids-b12
+status: fixed
+run_date: 2026-08-28
+role: excalibur-blog-cover-text
+topic_id: B12
+article_dir: memory/blog/articles/B12-v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit
+severity: medium
+category: prompt
+
+### What went wrong
+- Derouter cover-text returned invented meme ids (`business_cat` etc.) not in `meme-top100.json`; gate BLOCK until manual fix.
+
+### How the agent recovered this run
+- Manual rewrite of `cover/cover-text.json` meme_picks to real catalog ids (`two_buttons`, `crying_cat`, …).
+
+### Durable fix needed before next run
+- Inject full catalog id roster into Derouter user prompt; gate errors list valid ids; alias resolve for catalog aliases.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_meme_canon.py`
+- `scripts/excalibur_blog_cover_text_inputs.py`
+- `skills/cover-text-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-28
+fix_summary:
+- Added `excalibur_blog_cover_text_inputs.py` (roster + anti-repeat in assembled prompt).
+- `meme_canon`: alias resolve + gate error hints with valid id sample.
+- Cover-text skill: run inputs script before Derouter.
+files_changed:
+- `scripts/excalibur_blog_meme_canon.py`
+- `scripts/excalibur_blog_cover_text_inputs.py`
+- `scripts/excalibur_blog_cover_text_gate.py`
+- `skills/cover-text-excalibur-blog/SKILL.md`
+- `.cursor/skills/cover-text-excalibur-blog/SKILL.md`
+- `tests/test_meme_canon.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_meme_canon.py scripts/excalibur_blog_cover_text_inputs.py`
+- `python3 -m unittest tests.test_meme_canon`
+commit: 5dc04b5
+status: fixed
+run_date: 2026-08-28
+role: excalibur-blog-cover-qa
+topic_id: B12
+article_dir: memory/blog/articles/B12-v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit
+severity: medium
+category: script
+
+### What went wrong
+- `inline_2.visual_type` = legacy `comparison_table_ui`; cover_qa_gate rejected (not in allowed set). Manual fix in quad-manifest → `comparison_table`.
+
+### How the agent recovered this run
+- Patched `cover/quad-manifest.json` inline_2 visual_type to `comparison_table`.
+
+### Durable fix needed before next run
+- Normalize legacy visual_type aliases; stop quad_manifest TYPE_PRIORITY from emitting `comparison_table_ui`.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_visual_types.py`
+- `scripts/excalibur_blog_quad_manifest.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-28
+fix_summary:
+- New `excalibur_blog_visual_types.py` with `comparison_table_ui` → `comparison_table`.
+- quad_manifest TYPE_PRIORITY uses canonical ids + normalize on merge.
+- cover_qa_gate accepts normalized legacy aliases.
+files_changed:
+- `scripts/excalibur_blog_visual_types.py`
+- `scripts/excalibur_blog_quad_manifest.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+- `tests/test_meme_canon.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_visual_types.py scripts/excalibur_blog_quad_manifest.py scripts/excalibur_blog_cover_qa_gate.py`
+- `python3 -m unittest tests.test_meme_canon`
+commit: e33937d
+
+## INC-20260828-0817-publish-inbound-interlink-no-post-id-b12
+status: fixed
+run_date: 2026-08-28
+role: excalibur-blog-publish
+topic_id: B12
+article_dir: memory/blog/articles/B12-v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit
+severity: medium
+category: publish
+
+### What went wrong
+- Post-publish inbound interlink skipped: `all_interlink_candidates` had `post_id: null` for ledger siblings (ledger rows lack post_id; only 3 checklist posts in interlink-siblings.json).
+
+### How the agent recovered this run
+- Publish completed; outbound interlink OK; inbound skipped with `OK interlink: no inbound targets with post_id`.
+
+### Durable fix needed before next run
+- Resolve sibling post_id from `memory/blog/articles/*/article.meta.json`; persist wp_post_id on publish.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_interlink_lib.py`
+- `scripts/excalibur_blog_wp_publish.py`
+- `tests/test_wp_categories_interlink.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-28
+fix_summary:
+- `load_article_post_ids()` merges wp_post_id from article.meta.json into interlink candidates.
+- `wp_publish` persists post_id to article.meta.json after OK post=.
+files_changed:
+- `scripts/excalibur_blog_interlink_lib.py`
+- `scripts/excalibur_blog_wp_publish.py`
+- `tests/test_wp_categories_interlink.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_interlink_lib.py scripts/excalibur_blog_wp_publish.py`
+- `python3 -m unittest tests.test_wp_categories_interlink`
+- interlink candidates dry-check: 11/13 siblings with post_id
+commit: f674def
 status: open
 run_date: 2026-08-21
 role: excalibur-blog-content-learner
@@ -20,10 +143,11 @@ category: env
 - Metrika cohort analysis пропущен; lessons marked low/medium confidence без behavioral signals.
 - **2026-08-26 B10 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9161 ingest skipped; B10 lessons recorded without behavioral signals.
 - **2026-08-28 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9230 ingest skipped; B11 lessons recorded without behavioral signals.
+- **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9240 ingest skipped; B12 lessons recorded without behavioral signals (3 named lessons).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161) и B11 (post 9230) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230) и B12 (post 9240) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`

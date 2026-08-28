@@ -74,6 +74,27 @@ class WpCategoriesInterlinkTests(unittest.TestCase):
         self.assertEqual(report["status"], "PASS")
         self.assertGreaterEqual(len(report["outbound_found"]), 1)
 
+    def test_interlink_candidates_resolve_post_id_from_article_meta(self) -> None:
+        import sys
+
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_interlink_lib import all_interlink_candidates
+
+        sibling_dir = ROOT / "memory/blog/articles/B02-raspisku-na-kvartiru-napisali-deneg-na-schete-net"
+        meta_path = sibling_dir / "article.meta.json"
+        if not meta_path.is_file():
+            self.skipTest("B02 article meta missing")
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        slug = meta.get("slug")
+        expected_post_id = meta.get("wp_post_id")
+        if not slug or not expected_post_id:
+            self.skipTest("B02 slug/wp_post_id missing")
+
+        candidates = all_interlink_candidates(ROOT, exclude_topic_id="B12")
+        match = next((row for row in candidates if row.get("slug") == slug), None)
+        self.assertIsNotNone(match)
+        self.assertEqual(match["post_id"], expected_post_id)
+
     def test_ledger_upsert_dedupes_legacy_row(self) -> None:
         import sys
 
