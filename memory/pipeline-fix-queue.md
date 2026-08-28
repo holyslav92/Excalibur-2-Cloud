@@ -44,9 +44,7 @@ files_changed:
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_meme_canon.py scripts/excalibur_blog_cover_text_inputs.py`
 - `python3 -m unittest tests.test_meme_canon`
-commit: pending
-
-## INC-20260828-0816-cover-qa-visual-type-alias-b12
+commit: 5dc04b5
 status: fixed
 run_date: 2026-08-28
 role: excalibur-blog-cover-qa
@@ -86,7 +84,7 @@ files_changed:
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_visual_types.py scripts/excalibur_blog_quad_manifest.py scripts/excalibur_blog_cover_qa_gate.py`
 - `python3 -m unittest tests.test_meme_canon`
-commit: pending
+commit: e33937d
 
 ## INC-20260828-0817-publish-inbound-interlink-no-post-id-b12
 status: fixed
@@ -127,9 +125,7 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_interlink_lib.py scripts/excalibur_blog_wp_publish.py`
 - `python3 -m unittest tests.test_wp_categories_interlink`
 - interlink candidates dry-check: 11/13 siblings with post_id
-commit: pending
-
-## INC-20260821-0615-content-learner-metrika-credentials
+commit: f674def
 status: open
 run_date: 2026-08-21
 role: excalibur-blog-content-learner
