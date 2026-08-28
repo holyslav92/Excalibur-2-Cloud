@@ -6,6 +6,7 @@ import argparse
 import importlib.util
 import json
 import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -204,6 +205,18 @@ def main() -> int:
     )
     check(module_available("PIL"), "Pillow available", errors, warnings)
     check(module_available("numpy"), "numpy available", errors, warnings)
+    check(module_available("pytesseract"), "pytesseract available", errors, warnings, warn=True)
+    tesseract_bin = shutil.which("tesseract")
+    check(tesseract_bin is not None, "tesseract binary on PATH", errors, warnings, warn=True)
+    if tesseract_bin:
+        proc = subprocess.run(
+            [tesseract_bin, "--list-langs"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        langs = proc.stdout or proc.stderr or ""
+        check("rus" in langs, "tesseract rus language data", errors, warnings, warn=True)
 
     topics_dir = root / "memory/topics"
     check(
