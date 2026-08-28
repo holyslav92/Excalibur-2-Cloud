@@ -1,0 +1,198 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-28",
+    "today_ru": "28.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "пятница"
+  },
+  "topic": {
+    "topic_id": "B11",
+    "title": "В Тюмени купили квартиру с открытой кухней — Росреестр отказал в регистрации",
+    "h1": "В Тюмени купили квартиру с открытой кухней — Росреестр отказал в регистрации",
+    "slug": "v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii",
+    "primary_query": "В Тюмени купили квартиру с открытой кухней — Росреестр отказал в регистрации",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени купили квартиру с открытой кухней — Росреестр отказал в регистрации 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Росреестр отказал — что делать? Алгоритм действий и судебная практика",
+          "url": "https://zakon.ru/blog/2026/05/21/rosreestr_otkazal_-_chto_delat_algoritm_dejstvij_i_sudebnaya_praktika",
+          "snippet": ""
+        },
+        {
+          "title": "Росреестр отказал в регистрации права собственности: что делать",
+          "url": "https://ppt.ru/art/pravo-sobstvennosti/rosreestr-otkazal-v-registratsii-prava-sobstvennosti-chto-delat",
+          "snippet": "Росреестр отказал в регистрации потому что « в представленных документах отсутствует описание характеристик заявленного в государственной регистрации земельного участка»."
+        },
+        {
+          "title": "ВС: собственник вправе заблокировать регистрацию продажи своего жилья",
+          "url": "https://rapsinews.ru/judicial_news/20260701/311997083.html",
+          "snippet": "По каким основаниям Росреестр может оказать в регистрации. Как узнать причину отказа в регистрации права собственности. Как исправить ошибки и возобновить регистрацию в Росреестре."
+        },
+        {
+          "title": "Росреестр отказал в регистрации права: когда идти в арбитражный суд",
+          "url": "https://grajdanstvo.ru/otkaz-rosreestra-v-registraczii-osparivanie-otkaza-rosreestra-registracziya-prava-cherez-sud/",
+          "snippet": "При новом рассмотрении суд первой инстанции требования собственника удовлетворил и признал незаконным решение Росреестра о регистрации перехода права собственности на квартиру."
+        },
+        {
+          "title": "Если Росреестр отказал в регистрации права. Как обжаловать?",
+          "url": "https://advokat-trandin.ru/kak-pravilno-obzhalovat-otkaz-rosreestra-v-registratsii-prava/",
+          "snippet": "В этой статье разбирается, когда действительно стоит обращаться в арбитражный суд, какие стратегии работают и как выстроить процесс так, чтобы не терять время и деньги."
+        },
+        {
+          "title": "Отказы Росреестра в регистрации - как их оспорить",
+          "url": "https://alrf.ru/articles/otkazy-rosreestra-v-registratsii-kak-ikh-osporit/",
+          "snippet": "На новую квартиру в ЖСК или земельный участок в связи с отсутствие правоустанавливающего документа? Что делать в таких ситуациях рассмотрим в данной статье."
+        }
+      ],
+      "searched_at": "2026-08-28"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени купили квартиру с открытой кухней — Росреестр отказал в регистрации 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Росреестр отказал — что делать? Алгоритм действий и судебная практика",
+          "url": "https://zakon.ru/blog/2026/05/21/rosreestr_otkazal_-_chto_delat_algoritm_dejstvij_i_sudebnaya_praktika",
+          "snippet": ""
+        },
+        {
+          "title": "Росреестр отказал в регистрации права собственности: что делать",
+          "url": "https://ppt.ru/art/pravo-sobstvennosti/rosreestr-otkazal-v-registratsii-prava-sobstvennosti-chto-delat",
+          "snippet": "Росреестр отказал в регистрации потому что « в представленных документах отсутствует описание характеристик заявленного в государственной регистрации земельного участка»."
+        },
+        {
+          "title": "ВС: собственник вправе заблокировать регистрацию продажи своего жилья",
+          "url": "https://rapsinews.ru/judicial_news/20260701/311997083.html",
+          "snippet": "По каким основаниям Росреестр может оказать в регистрации. Как узнать причину отказа в регистрации права собственности. Как исправить ошибки и возобновить регистрацию в Росреестре."
+        },
+        {
+          "title": "Росреестр отказал в регистрации права: когда идти в арбитражный суд",
+          "url": "https://grajdanstvo.ru/otkaz-rosreestra-v-registraczii-osparivanie-otkaza-rosreestra-registracziya-prava-cherez-sud/",
+          "snippet": "При новом рассмотрении суд первой инстанции требования собственника удовлетворил и признал незаконным решение Росреестра о регистрации перехода права собственности на квартиру."
+        },
+        {
+          "title": "Если Росреестр отказал в регистрации права. Как обжаловать?",
+          "url": "https://advokat-trandin.ru/kak-pravilno-obzhalovat-otkaz-rosreestra-v-registratsii-prava/",
+          "snippet": "В этой статье разбирается, когда действительно стоит обращаться в арбитражный суд, какие стратегии работают и как выстроить процесс так, чтобы не терять время и деньги."
+        },
+        {
+          "title": "Отказы Росреестра в регистрации - как их оспорить",
+          "url": "https://alrf.ru/articles/otkazy-rosreestra-v-registratsii-kak-ikh-osporit/",
+          "snippet": "На новую квартиру в ЖСК или земельный участок в связи с отсутствие правоустанавливающего документа? Что делать в таких ситуациях рассмотрим в данной статье."
+        }
+      ],
+      "searched_at": "2026-08-28"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени купили квартиру с открытой кухней — Росреестр отказал в регистрации official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Росреестр отказал — что делать? Алгоритм действий и судебная практика",
+          "url": "https://zakon.ru/blog/2026/05/21/rosreestr_otkazal_-_chto_delat_algoritm_dejstvij_i_sudebnaya_praktika",
+          "snippet": ""
+        },
+        {
+          "title": "Росреестр отказал в регистрации права собственности: что делать",
+          "url": "https://ppt.ru/art/pravo-sobstvennosti/rosreestr-otkazal-v-registratsii-prava-sobstvennosti-chto-delat",
+          "snippet": "Росреестр отказал в регистрации потому что « в представленных документах отсутствует описание характеристик заявленного в государственной регистрации земельного участка»."
+        },
+        {
+          "title": "Если Росреестр отказал в регистрации права. Как обжаловать?",
+          "url": "https://advokat-trandin.ru/kak-pravilno-obzhalovat-otkaz-rosreestra-v-registratsii-prava/",
+          "snippet": "По каким основаниям Росреестр может оказать в регистрации. Как узнать причину отказа в регистрации права собственности. Как исправить ошибки и возобновить регистрацию в Росреестре."
+        },
+        {
+          "title": "Росреестр отказал в регистрации права: когда идти в арбитражный суд",
+          "url": "https://grajdanstvo.ru/otkaz-rosreestra-v-registraczii-osparivanie-otkaza-rosreestra-registracziya-prava-cherez-sud/",
+          "snippet": "На новую квартиру в ЖСК или земельный участок в связи с отсутствие правоустанавливающего документа? Что делать в таких ситуациях рассмотрим в данной статье."
+        },
+        {
+          "title": "Жалоба на отказ росреестра в регистрации права собственности",
+          "url": "https://yuridicheski-centr-podderzhki.ru/zhaloba-na-otkaz-rosreestra-v-registraczii-prava-sobstvennosti.html",
+          "snippet": "В этой статье разбирается, когда действительно стоит обращаться в арбитражный суд, какие стратегии работают и как выстроить процесс так, чтобы не терять время и деньги."
+        },
+        {
+          "title": "Отказы Росреестра в регистрации - как их оспорить",
+          "url": "https://alrf.ru/articles/otkazy-rosreestra-v-registratsii-kak-ikh-osporit/",
+          "snippet": "Купили землю, квартиру или дом, подали документы в Росреестр, а в ответ получили уведомление о приостановлении или отказе в государственной регистрации права собственности?"
+        }
+      ],
+      "searched_at": "2026-08-28"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени купили квартиру с открытой кухней — Росреестр отказал в регистрации 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 2,
+      "results": [
+        {
+          "title": "QGIS Rosreestr NSPD search plugin - GitHub",
+          "url": "https://github.com/matmatamat/rosreestr-search-qgis-plugin",
+          "snippet": ""
+        },
+        {
+          "title": "trendradar/_image/github-pages.png at master · pillar/trendradar",
+          "url": "https://github.com/pillar/trendradar/blob/master/_image/github-pages.png",
+          "snippet": "Contribute to matmatamat/rosreestr-search-qgis-plugin development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-08-28"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени купили квартиру с открытой кухней — Росреестр отказал в регистрации forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Росреестр отказал — что делать? Алгоритм действий и судебная практика",
+          "url": "https://zakon.ru/blog/2026/05/21/rosreestr_otkazal_-_chto_delat_algoritm_dejstvij_i_sudebnaya_praktika",
+          "snippet": ""
+        },
+        {
+          "title": "Росреестр отказал в регистрации права собственности: что делать",
+          "url": "https://ppt.ru/art/pravo-sobstvennosti/rosreestr-otkazal-v-registratsii-prava-sobstvennosti-chto-delat",
+          "snippet": "В данной статье, основываясь на практическом опыте Правового центра «Два М», разберем типичные причины отказов в регистрации прав на недвижимость и (или) постановки объектов на ..."
+        },
+        {
+          "title": "Если Росреестр отказал в регистрации права. Как обжаловать?",
+          "url": "https://advokat-trandin.ru/kak-pravilno-obzhalovat-otkaz-rosreestra-v-registratsii-prava/",
+          "snippet": "Право собственности на объекты недвижимости подлежит обязательной государственной регистрации. Осуществляют ее органы Росреестра. Иногда заявитель получает отказ в регистрации перехода права собственности. Разберем, в каких случаях Росреестр вправе отказать в регистрации и что делать."
+        },
+        {
+          "title": "Отказы Росреестра в регистрации - как их оспорить",
+          "url": "https://alrf.ru/articles/otkazy-rosreestra-v-registratsii-kak-ikh-osporit/",
+          "snippet": "На новую квартиру в ЖСК или земельный участок в связи с отсутствие правоустанавливающего документа? Что делать в таких ситуациях рассмотрим в данной статье."
+        },
+        {
+          "title": "Росреестр отказал в регистрации права: когда идти в арбитражный суд",
+          "url": "https://grajdanstvo.ru/otkaz-rosreestra-v-registraczii-osparivanie-otkaza-rosreestra-registracziya-prava-cherez-sud/",
+          "snippet": "Росреестр отказывает в регистрации права собственности. Как оспорить решение. Только подписать договор купли-продажи объекта недвижимости недостаточно. Чтобы стать владельцем официально, нужно обратиться в Росреестр и зарегистрировать переход права собственности."
+        },
+        {
+          "title": "Признание права собственности на квартиру (жилое помещение)",
+          "url": "https://advokat-gurin.ru/uslugi/nedvizhimost/zhilishchnye-spory/priznanie-prava-sobstvennosti-na-kvartiru",
+          "snippet": "В этой статье разбирается, когда действительно стоит обращаться в арбитражный суд, какие стратегии работают и как выстроить процесс так, чтобы не терять время и деньги."
+        }
+      ],
+      "searched_at": "2026-08-28"
+    }
+  ],
+  "errors": []
+}
