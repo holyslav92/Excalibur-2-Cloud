@@ -1,0 +1,69 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B12",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-28",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t-l.ru/406507.html",
+        "type": "news",
+        "note": "Свежий региональный сигнал 21.08.2026 — эскроу в ИЖС Тюменской области"
+      },
+      {
+        "url": "https://harant.ru/blog/nedvizhimost/vzyskanie-neustojki-po-ddu-polnoe-rukovodstvo-na-2026-god/",
+        "type": "community",
+        "note": "Свежий правовой разбор 13.08.2026 — мораторий, убытки vs неустойка"
+      },
+      {
+        "url": "https://harant.ru/blog/nedvizhimost/otmena-moratoriya-na-vzyskanie-neustoek-s-zastrojshhikov-za-narushenie-srokov-peredachi-zhilya/",
+        "type": "legal",
+        "note": "Отмена моратория с 01.01.2026, ПП № 2227 / № 326"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant signal channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4717,
+    "secondary_phrase": "эскроу счет",
+    "secondary_volume": 811,
+    "legal_phrase": "неустойка с застройщика",
+    "legal_volume": 50,
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "escrow_unlocked_keys_not_delivered_ddu"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["214fz", "pp326", "pp2227"],
+    "errors": [],
+    "note": "Эскроу в конкретном деле Клевер Строй публично не подтверждён — constraint в notes"
+  },
+  "signal_audit": {
+    "primary_case_source": "https://tumentoday.ru/2025/02/03/v_tyumeni_sud_vzyskal_s_zastroyshchika_100_tysyach_rubley_za_zaderzhku_sdachi_doma/",
+    "escrow_in_case": "NOT_CONFIRMED",
+    "moratorium_lifted_2026_01_01": "CONFIRMED"
+  },
+  "key_facts_count": 32,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}
