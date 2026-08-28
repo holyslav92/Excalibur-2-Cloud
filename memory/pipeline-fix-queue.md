@@ -271,7 +271,7 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_cover_qa_pixels.py scripts/excalibur_blog_cover_qa_gate.py`
 - `python3 -m unittest tests.test_cover_budget.OcrEscapeHatchTest`
 - `python3 scripts/excalibur_blog_cover_qa_gate.py --article-dir memory/blog/articles/B11-v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii` → PASS
-commit: 7396eb6, 7a73c41
+commit: 7396eb6, 7a73c41, main 897f300
 status: fixed
 run_date: 2026-08-28
 role: excalibur-blog-fixer
@@ -319,4 +319,4 @@ files_changed:
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_quality_bar_9_gate.py scripts/excalibur_blog_cover_qa_pixels.py scripts/excalibur_blog_doctor.py`
 - `python3 -m unittest tests.test_quality_bar_9_gate tests.test_cover_budget`
-commit: 7a73c41
+commit: 7a73c41, main 897f300
