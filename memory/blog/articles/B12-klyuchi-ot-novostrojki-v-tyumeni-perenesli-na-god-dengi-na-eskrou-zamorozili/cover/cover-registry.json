@@ -34,7 +34,7 @@
       "file": "cover/inline-02.png",
       "alt": "Таблица: эскроу держит деньги, но письмо не даёт свободный выход.",
       "h2_anchor": "Деньги на эскроу: защита есть, свободного выхода нет",
-      "visual_type": "comparison_table_ui",
+      "visual_type": "comparison_table",
       "aspect_ratio": "16:9"
     },
     {
