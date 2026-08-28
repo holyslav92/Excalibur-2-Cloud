@@ -2,8 +2,17 @@
   "version": 1,
   "anti_repeat_days": 30,
   "description": "Closed story clusters — Scout must not reuse until locked_until. Sync via: python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters",
-  "last_sync": "2026-08-27",
+  "last_sync": "2026-08-28",
   "clusters": [
+    {
+      "cluster_id": "illegal_renovation_rosreestr_blocks_registration",
+      "first_seen": "2026-08-28",
+      "locked_until": "2026-09-27",
+      "source": "ledger",
+      "slug": "v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii",
+      "topic_id": "B11",
+      "title": "В Тюмени открытая кухня остановила регистрацию квартиры"
+    },
     {
       "cluster_id": "marital_share_heirs_notary_checked",
       "first_seen": "2026-08-27",

@@ -1,0 +1,63 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B11",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-28",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://allestate.pro/news/20.08.2026/kvartira-s-syurprizom-chem-grozit-pokupka-zhilya-s-neuzakonennoy-pereplanirovkoy-v-2026-godu",
+        "type": "news",
+        "note": "Свежий отраслевый обзор 20.08.2026 — риски покупки с неузаконенной перепланировкой"
+      },
+      {
+        "url": "https://harant.ru/blog/nedvizhimost/v-rossii-nachali-massovo-priostanavlivat-registracziyu-nedvizhimosti/",
+        "type": "community",
+        "note": "Community Q&A: аванс внесён, незаконная перепланировка выявлена на оценке"
+      },
+      {
+        "url": "https://amulex.ru/daily/nedvizhimost/s-1-yanvarya-2026-priostanovku-registratsii-nedvizhimosti-mozhno-obzhalovat-vo-vnesudebnom-poryadke-169-n8ngt/",
+        "type": "news",
+        "note": "Новые правила внесудебного обжалования приостановки регистрации с 01.01.2026"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant signal channel — Tyumen realtor casus spine"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "покупка квартиры с неузаконенной перепланировкой",
+    "p0_volume": 192,
+    "localized_phrase": "квартира с неузаконенной перепланировкой",
+    "localized_volume": 17,
+    "buyer_spine_phrase": "перепланировка квартиры тюмень",
+    "buyer_spine_volume": 86,
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["rosreestr_218fz", "zhk_rf", "koap_rf", "tyumen_municipal_40pk"],
+    "errors": [],
+    "note": "Тарифные claims банков отсутствуют; KoAP 7.21, 218-ФЗ ст.26-27, ЖК РФ ст.26 verified in official_verifications"
+  },
+  "key_facts_count": 45,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}

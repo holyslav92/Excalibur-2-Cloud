@@ -1,0 +1,86 @@
+{
+  "topic_id": "B11",
+  "slug": "v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Кухня: сверка плана с проёмом; скидка; sticky; телефон.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-08-28T06:16:53+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Кухня: сверка плана с проёмом; скидка; sticky; телефон.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Таблица: скидка, аванс, несверенный план.",
+      "h2_anchor": "Скидка за «красивую» кухню — и аванс уже ушёл",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Таймлайн МФЦ 9–14 дней; право не ваше.",
+      "h2_anchor": "Документы в МФЦ — ждали ключи через 9–14 дней",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "Схема: ст.26 пауза при несовпадении плана.",
+      "h2_anchor": "Финал: Росреестр приостановил регистрацию перехода права",
+      "visual_type": "workflow_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Чеклист: открытая кухня не всегда нарушение.",
+      "h2_anchor": "Открытая кухня сама по себе не приговор",
+      "visual_type": "checklist_board",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Три слоя: ЕГРН, техплан, факт.",
+      "h2_anchor": "Что сравнивают: ЕГРН, техдокументы и фактическая планировка",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "FAQ: ст.26 пауза vs ст.27 отказ.",
+      "h2_anchor": "Приостановление по ст. 26 и отказ по ст. 27 — в чём разница",
+      "visual_type": "schema_faq_ui",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Маршрут согласования перепланировки в Тюмени.",
+      "h2_anchor": "Согласование перепланировки в Тюмени: куда идти и сколько ждать",
+      "visual_type": "tool_screenshot",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}
