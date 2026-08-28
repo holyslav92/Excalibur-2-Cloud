@@ -1,0 +1,57 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B11-v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii/cover/cover.png",
+  "last_errors": [
+    "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0000 chest_blue=0.029 smear=0.000",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Скидка', 'остановила'] last_word='сделку' ocr='кидка за кухню становила сделку'",
+    "pixel_no_collage_inset FAIL: white_frac=0.369 inset_face=True blob_count=7",
+    "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.028",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model": "grsai-standard",
+      "bytes": 1075666,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_host_face_present FAIL: no compact host face blob (pixels=9438 h_frac=0.462)",
+        "pixel_host_close_up FAIL: face_h_frac=0.48 w_frac=0.54 (need close-up)",
+        "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0019 chest_blue=0.000 smear=0.000",
+        "pixel_phone_readable FAIL: phone_digits='1922001650' ink=2874 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='1922001650' clipped=True ocr='+1 922001 650 | 79220016508'",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['остановила'] last_word='сделку' ocr='Скидка-за кухню становила сделку'",
+        "pixel_no_collage_inset FAIL: white_frac=0.049 inset_face=True blob_count=8",
+        "pixel_meme_present FAIL: orange_fur=1000 legacy=186 host_face=False",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.1309",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model": "grsai-standard",
+      "bytes": 1028104,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0000 chest_blue=0.029 smear=0.000",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Скидка', 'остановила'] last_word='сделку' ocr='кидка за кухню становила сделку'",
+        "pixel_no_collage_inset FAIL: white_frac=0.369 inset_face=True blob_count=7",
+        "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.028",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}

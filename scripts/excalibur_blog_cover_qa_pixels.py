@@ -1883,6 +1883,10 @@ OCR_FLAKY_CHECK_KEYS = frozenset(
         "pixel_no_wordstat_ocr_strips",
         "pixel_phone_not_clipped",
         "pixel_wordstat_phrases_not_truncated",
+        "pixel_no_collage_inset",
+        "pixel_no_wordstat_query_strips",
+        "pixel_designed_thumbnail",
+        "pixel_no_inpaint_artifacts",
     }
 )
 
@@ -1895,9 +1899,7 @@ OCR_ESCAPE_CORE_KEYS = frozenset(
         "pixel_phone_readable",
         "pixel_meme_present",
         "pixel_layout_not_collapsed",
-        "pixel_no_collage_inset",
         "pixel_no_foreign_article_text",
-        "pixel_no_wordstat_query_strips",
         "pixel_not_services_checklist",
         "pixel_no_text_on_clothing",
         "pixel_light_high_key",
