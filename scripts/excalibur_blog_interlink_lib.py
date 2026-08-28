@@ -22,6 +22,27 @@ def load_tenant(root: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_article_post_ids(root: Path) -> dict[str, int]:
+    """slug → wp_post_id from published article.meta.json artifacts."""
+    out: dict[str, int] = {}
+    articles_root = root / "memory" / "blog" / "articles"
+    if not articles_root.is_dir():
+        return out
+    for meta_path in articles_root.glob("*/article.meta.json"):
+        try:
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        slug = str(meta.get("slug") or "").strip()
+        post_id = meta.get("wp_post_id") or meta.get("post_id")
+        if slug and post_id:
+            try:
+                out[slug] = int(post_id)
+            except (TypeError, ValueError):
+                continue
+    return out
+
+
 def parse_ledger(path: Path) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
     if not path.is_file():
@@ -60,6 +81,7 @@ def load_siblings(root: Path) -> list[dict[str, Any]]:
 def all_interlink_candidates(root: Path, *, exclude_topic_id: str = "") -> list[dict[str, Any]]:
     ledger = parse_ledger(root / "shared/published-articles.md")
     siblings = load_siblings(root)
+    post_ids = load_article_post_ids(root)
     merged: dict[str, dict[str, Any]] = {}
     for row in ledger:
         slug = str(row.get("slug") or "").strip()
@@ -72,7 +94,7 @@ def all_interlink_candidates(root: Path, *, exclude_topic_id: str = "") -> list[
             "title": row.get("title") or slug,
             "permalink": row.get("permalink") or "",
             "topic_id": row.get("topic_id") or "",
-            "post_id": row.get("post_id"),
+            "post_id": post_ids.get(slug),
             "source": "ledger",
         }
     for row in siblings:
@@ -93,6 +115,9 @@ def all_interlink_candidates(root: Path, *, exclude_topic_id: str = "") -> list[
                 merged[slug]["post_id"] = row.get("post_id")
             if row.get("title"):
                 merged[slug]["title"] = row.get("title")
+    for slug, post_id in post_ids.items():
+        if slug in merged and not merged[slug].get("post_id"):
+            merged[slug]["post_id"] = post_id
     return list(merged.values())
 
 
