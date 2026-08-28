@@ -1,0 +1,27 @@
+{
+  "slug": "v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit",
+  "topic_id": "B12",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B12-v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 843141,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9240 slug=v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit\nOK categories=31,58\nOK yoast_social_image=1\nOK featured_image=9241\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9242 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit-inline-01.png\nOK inline_alt=9242\nOK inline_caption=9242\nOK inline_description=9242\nOK inline_image_upload=9243 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit-inline-02.png\nOK inline_alt=9243\nOK inline_caption=9243\nOK inline_description=9243\nOK inline_image_upload=9244 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit-inline-03.png\nOK inline_alt=9244\nOK inline_caption=9244\nOK inline_description=9244\nOK inline_image_upload=9245 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit-inline-04.png\nOK inline_alt=9245\nOK inline_caption=9245\nOK inline_description=9245\nOK inline_image_upload=9246 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit-inline-05.png\nOK inline_alt=9246\nOK inline_caption=9246\nOK inline_description=9246\nOK inline_image_upload=9247 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit-inline-06.png\nOK inline_alt=9247\nOK inline_caption=9247\nOK inline_description=9247\nOK inline_image_upload=9248 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit-inline-07.png\nOK inline_alt=9248\nOK inline_caption=9248\nOK inline_description=9248\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-yalutorovske-kvartiru-prodali-dvum-pokupatelyam-pervuyu-pytayutsya-vyselit/",
+    "errors": []
+  }
+}
