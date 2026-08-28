@@ -42,7 +42,14 @@ HOOK_TITLE_ZONE = (0.52, 0.14, 0.96, 0.40)  # крупный hook H1 справ�
 PHONE_STICKER_ZONE = (0.55, 0.70, 0.98, 0.96)  # телефон +7 922 001 65 05
 MEME_CORNER_ZONE = (0.72, 0.62, 0.96, 0.88)  # маленький мем-стикер (без лица)
 WORDSTAT_STACK_ZONE = (0.02, 0.04, 0.40, 0.30)  # legacy — query strips FORBIDDEN
-TOPLEFT_QUERY_STRIP_FORBIDDEN = (0.0, 0.0, 0.42, 0.22)  # beige/gold Wordstat bars — owner ban
+TOPLEFT_QUERY_STRIP_FORBIDDEN = (0.0, 0.0, 0.35, 0.415)  # owner crop 420×280 @1200×675
+TOPLEFT_QUERY_STRIP_UPPER = (0.0, 0.0, 0.35, 0.38)  # stacked query bars (exclude yellow sticky below)
+TOPLEFT_QUERY_STACK_COLUMN = (0.02, 0.04, 0.22, 0.34)  # узкая колонка Wordstat pills (far-left wall)
+TOPLEFT_BEIGE_SMEAR_ZONE = (0.08, 0.0, 0.42, 0.18)  # failed erase tan block on forehead
+QUERY_STRIP_MIN_COMPONENTS = 1
+QUERY_STRIP_MIN_LABEL_ROWS = 2
+QUERY_STRIP_PAPER_FRAC_FAIL = 0.045
+BEIGE_SMEAR_FRAC_FAIL = 0.018
 WORDSTAT_NARROW_STACK_ZONE = (0.12, 0.05, 0.32, 0.24)  # узкая колонка — cramped dump
 
 # Пороги калиброваны на FAIL B07 (md5 23051a01…) vs PASS B06
@@ -220,6 +227,84 @@ def _is_paper_wordstat_pixel(r: int, g: int, b: int) -> bool:
     return False
 
 
+def _is_offwhite_query_bar_pixel(r: int, g: int, b: int) -> bool:
+    """Off-white rounded search-suggestion bars (model Wordstat strips)."""
+    if _is_skin(r, g, b) or _is_warm_garment_pixel(r, g, b):
+        return False
+    lum = _luminance(r, g, b)
+    if lum < 190 or lum > 253:
+        return False
+    if max(r, g, b) - min(r, g, b) > 42:
+        return False
+    return r >= 232 and g >= 228 and b >= 218
+
+
+def _is_erase_beige_smear_pixel(r: int, g: int, b: int) -> bool:
+    """Uniform tan/beige fill from failed strip erase (not natural board)."""
+    if _is_skin(r, g, b):
+        return False
+    lum = _luminance(r, g, b)
+    if lum < 228 or lum > 252:
+        return False
+    if max(r, g, b) - min(r, g, b) > 22:
+        return False
+    return 242 <= r <= 252 and 238 <= g <= 250 and 228 <= b <= 246
+
+
+def _is_yellow_sticky_pixel(r: int, g: int, b: int) -> bool:
+    """Жёлтый hook-sticky — разрешён, не Wordstat bar."""
+    return r >= 205 and g >= 175 and b <= 155 and r - b >= 35 and g - b >= 15
+
+
+def _is_query_strip_surface_pixel(r: int, g: int, b: int) -> bool:
+    if _is_yellow_sticky_pixel(r, g, b):
+        return False
+    return _is_paper_wordstat_pixel(r, g, b) or _is_offwhite_query_bar_pixel(r, g, b)
+
+
+def _query_strip_paper_frac_in_zone(
+    img,
+    zone: tuple[float, float, float, float],
+) -> float:
+    return _frac_predicate_in_zone(img, zone, _is_query_strip_surface_pixel)
+
+
+def _query_label_row_bands(img, zone: tuple[float, float, float, float]) -> list[dict[str, Any]]:
+    """Горизонтальные полосы тёмного текста на светлом фоне — stacked query labels."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    x0 = int(zone[0] * w)
+    y0 = int(zone[1] * h)
+    x1 = int(zone[2] * w)
+    y1 = int(zone[3] * h)
+    row_h = max(6, int(0.028 * h))
+    bands: list[dict[str, Any]] = []
+    y = y0
+    while y + row_h <= y1:
+        light = 0
+        ink = 0
+        total = 0
+        for yy in range(y, y + row_h):
+            for x in range(x0, x1):
+                xf, yf = x / w, yy / h
+                if _in_norm_zone(xf, yf, FACE_EXCLUDE_ZONE):
+                    continue
+                r, g, b = rgb.getpixel((x, yy))
+                total += 1
+                if _is_query_strip_surface_pixel(r, g, b) or _is_offwhite_query_bar_pixel(r, g, b):
+                    light += 1
+                if _is_dark_ink_pixel(r, g, b):
+                    ink += 1
+        if total and light / total >= 0.22 and ink / total >= 0.012:
+            bands.append({"y0": y, "y1": y + row_h, "ink_frac": round(ink / total, 4)})
+        y += max(4, row_h // 2)
+    return bands
+
+
+def _beige_smear_frac(img, zone: tuple[float, float, float, float]) -> float:
+    return _frac_predicate_in_zone(img, zone, _is_erase_beige_smear_pixel)
+
+
 def _paper_frac_in_zone(
     img,
     zone: tuple[float, float, float, float],
@@ -395,17 +480,18 @@ def _phone_zone_ink_count(img) -> int:
     return ink
 
 
-def _meme_corner_signal(img) -> int:
-    """Насыщенный мем-стикер (кот/каталог) в правом нижнем углу — не кожа/фон."""
+def _meme_sticker_signal_in_zone(img, zone: tuple[float, float, float, float]) -> int:
+    """Насыщенный мем-стикер (кот/каталог) в зоне — не кожа/фон."""
     w, h = img.size
-    x0 = int(MEME_CORNER_ZONE[0] * w)
-    y0 = int(MEME_CORNER_ZONE[1] * h)
-    x1 = int(MEME_CORNER_ZONE[2] * w)
-    y1 = int(MEME_CORNER_ZONE[3] * h)
+    x0 = int(zone[0] * w)
+    y0 = int(zone[1] * h)
+    x1 = int(zone[2] * w)
+    y1 = int(zone[3] * h)
     signal = 0
-    for y in range(y0, y1, 3):
-        for x in range(x0, x1, 3):
-            r, g, b = img.convert("RGB").getpixel((x, y))
+    rgb = img.convert("RGB")
+    for y in range(y0, y1, 2):
+        for x in range(x0, x1, 2):
+            r, g, b = rgb.getpixel((x, y))
             if _is_skin(r, g, b):
                 continue
             if _is_pure_white_paper(r, g, b):
@@ -413,13 +499,36 @@ def _meme_corner_signal(img) -> int:
             lum = _luminance(r, g, b)
             if lum > 235:
                 continue
-            # оранжевая шерсть кота
+            # оранжевая / tabby шерсть кота (thinking-cat meme sticker)
             if r >= 178 and g <= 155 and r - g >= 30:
                 signal += 3
+                continue
+            if r >= 118 and g >= 88 and b <= 118 and r - b >= 22:
+                signal += 2
+                continue
+            if g >= 118 and g > r + 8 and b <= 105:
+                signal += 2
+                continue
+            if (
+                lum < 95
+                and 35 <= r <= 130
+                and 25 <= g <= 110
+                and b <= 95
+                and max(r, g, b) - min(r, g, b) < 35
+            ):
+                signal += 1
                 continue
             if max(r, g, b) - min(r, g, b) > 42 and lum < 215:
                 signal += 1
     return signal
+
+
+def _meme_corner_signal(img) -> int:
+    """Мем-стикер в правом нижнем углу (corner + cat core)."""
+    return max(
+        _meme_sticker_signal_in_zone(img, MEME_CORNER_ZONE),
+        _meme_sticker_signal_in_zone(img, CAT_MEME_CORE),
+    )
 
 
 def _paper_sticker_components(
@@ -611,18 +720,75 @@ def _wordstat_sticker_overlap_metrics(img, *, hook_present: bool = False) -> dic
 
 
 def _wordstat_query_strip_metrics(img) -> dict[str, Any]:
-    """Owner ban: Yandex Wordstat query phrases as beige/gold paper strips top-left."""
+    """Owner ban: Yandex Wordstat query phrases as off-white/beige bars top-left."""
+    from collections import deque
+
     w, h = img.size
-    raw = _paper_sticker_components(img, TOPLEFT_QUERY_STRIP_FORBIDDEN, min_pixels=250)
-    strips = _filter_wordstat_strip_components(raw, img_size=(w, h))
-    paper_frac = _paper_frac_in_zone(img, TOPLEFT_QUERY_STRIP_FORBIDDEN)
+    zone = TOPLEFT_QUERY_STACK_COLUMN
+    rgb = img.convert("RGB")
+    x0 = int(zone[0] * w)
+    y0 = int(zone[1] * h)
+    x1 = int(zone[2] * w)
+    y1 = int(zone[3] * h)
+    zw, zh = max(x1 - x0, 1), max(y1 - y0, 1)
+    visited = [[False] * zw for _ in range(zh)]
+    bar_comps: list[dict[str, Any]] = []
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            lx, ly = x - x0, y - y0
+            if visited[ly][lx]:
+                continue
+            if not _is_query_strip_surface_pixel(*rgb.getpixel((x, y))):
+                continue
+            q: deque[tuple[int, int]] = deque([(lx, ly)])
+            visited[ly][lx] = True
+            pixels = 0
+            minx = maxx = lx
+            miny = maxy = ly
+            while q:
+                cx, cy = q.popleft()
+                pixels += 1
+                minx = min(minx, cx)
+                maxx = max(maxx, cx)
+                miny = min(miny, cy)
+                maxy = max(maxy, cy)
+                for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                    nx, ny = cx + dx, cy + dy
+                    if nx < 0 or ny < 0 or nx >= zw or ny >= zh or visited[ny][nx]:
+                        continue
+                    if _is_query_strip_surface_pixel(*rgb.getpixel((x0 + nx, y0 + ny))):
+                        visited[ny][nx] = True
+                        q.append((nx, ny))
+            bw, bh = maxx - minx + 1, maxy - miny + 1
+            if pixels >= 200 and bw >= 50 and bh >= 8 and bw / max(bh, 1) >= 2.0:
+                bar_comps.append(
+                    {"pixels": pixels, "bbox": (x0 + minx, y0 + miny, x0 + maxx, y0 + maxy)}
+                )
+
+    strips = _filter_wordstat_strip_components(bar_comps, img_size=(w, h))
+    paper_frac = _query_strip_paper_frac_in_zone(img, TOPLEFT_QUERY_STRIP_FORBIDDEN)
+    label_rows = _query_label_row_bands(img, TOPLEFT_QUERY_STACK_COLUMN)
+    beige_smear = _beige_smear_frac(img, TOPLEFT_BEIGE_SMEAR_ZONE)
     bar_like = [b for b in _detect_gold_bands(img) if b.get("bar_like")]
-    bars_in_zone = _bands_in_zone(bar_like, TOPLEFT_QUERY_STRIP_FORBIDDEN, (w, h))
-    has_strips = len(strips) >= 1 or len(bars_in_zone) >= 1 or paper_frac >= 0.012
+    bars_in_zone = _bands_in_zone(bar_like, TOPLEFT_QUERY_STRIP_UPPER, (w, h))
+    beige_smear_fail = beige_smear >= 0.085 or (
+        beige_smear >= BEIGE_SMEAR_FRAC_FAIL
+        and (len(strips) >= 1 or len(label_rows) >= 1)
+    )
+    has_strips = (
+        (len(strips) >= 1 and len(label_rows) >= 1)
+        or len(label_rows) >= QUERY_STRIP_MIN_LABEL_ROWS
+        or len(strips) >= 2
+        or len(bars_in_zone) >= 1
+        or paper_frac >= QUERY_STRIP_PAPER_FRAC_FAIL and len(label_rows) >= 1
+        or beige_smear_fail
+    )
     return {
         "strip_components": len(strips),
         "bar_bands": len(bars_in_zone),
+        "label_rows": len(label_rows),
         "paper_frac": round(paper_frac, 4),
+        "beige_smear_frac": round(beige_smear, 4),
         "ok": not has_strips,
     }
 
@@ -2266,9 +2432,11 @@ def analyze_cover_pixels(
     if not checks["pixel_no_wordstat_query_strips"]:
         errors.append(
             "pixel_no_wordstat_query_strips FAIL: "
-            f"{query_strips.get('strip_components', 0)} Wordstat strip(s), "
+            f"{query_strips.get('strip_components', 0)} strip(s), "
             f"{query_strips.get('bar_bands', 0)} bar band(s), "
-            f"paper_frac={query_strips.get('paper_frac')}"
+            f"label_rows={query_strips.get('label_rows', 0)}, "
+            f"paper_frac={query_strips.get('paper_frac')}, "
+            f"beige_smear={query_strips.get('beige_smear_frac')}"
         )
     if not checks["pixel_layout_not_collapsed"]:
         errors.append(
