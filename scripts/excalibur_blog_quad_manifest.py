@@ -24,17 +24,18 @@ from excalibur_blog_quad_slots import (
     apply_quad_canon_to_manifest,
     canvas_specs_for_inline_count,
     inline_count_from_tenant,
+    DEFAULT_SLOT_MAP,
 )
+from excalibur_blog_visual_types import normalize_visual_type
 
 TYPE_PRIORITY = [
-    "comparison_table_ui",
-    "workflow_diagram",
-    "checklist_board",
-    "schema_faq_ui",
-    "tool_screenshot",
-    "infographic_card",
+    "comparison_table",
+    "process_flow",
+    "structure_diagram",
+    "labeled_checklist",
+    "bar_timeline_chart",
+    "fact_card",
 ]
-from excalibur_blog_quad_slots import DEFAULT_SLOT_MAP  # noqa: E402
 
 
 def project_root() -> Path:
@@ -135,8 +136,8 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
     for idx, slot_key in enumerate(inline_keys, start=1):
         h2 = h2s[idx - 1] if idx - 1 < len(h2s) else f"Секция {idx}"
         old = ((preserve or {}).get("slots") or {}).get(slot_key) or {}
-        visual_type = str(old.get("visual_type") or "").strip() or pick_visual_type(
-            h2, types_catalog, used
+        visual_type = normalize_visual_type(
+            str(old.get("visual_type") or "").strip() or pick_visual_type(h2, types_catalog, used)
         )
         used.add(visual_type)
         labels = ct_labels.get(slot_key) or old.get("labels") or []
