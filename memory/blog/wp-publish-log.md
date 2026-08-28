@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B12 — 2026-08-28
+
+- **topic_id:** B12
+- **slug:** klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili
+- **post_id:** 9250
+- **permalink:** /blog/vtorichka-i-riski/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/
+- **featured_image:** 9251
+- **inline_images:** 9252–9258 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31, default_primary_slug)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 3 siblings OK)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B10 — 2026-08-26
 
 - **topic_id:** B10

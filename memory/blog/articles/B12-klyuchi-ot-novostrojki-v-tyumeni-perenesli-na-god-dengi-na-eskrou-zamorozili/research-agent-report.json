@@ -1,0 +1,77 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B12",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-28",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://kvobzor.ru/news/i52485",
+        "type": "news",
+        "note": "27.08.2026 — перенос сроков арендного дома Тюмень, декларация 26.08.2026, ключи 31.12.2026"
+      },
+      {
+        "url": "https://t-l.ru/406847.html",
+        "type": "news",
+        "note": "27.08.2026 — Тюменская линия, тот же региональный сигнал задержки ключей"
+      },
+      {
+        "url": "https://tumen.mk.ru/economics/2026/08/27/klyuchi-ot-kvartir-v-arendnom-dome-tyumeni-vydadut-31-dekabrya-sroki-sdvinuli.html",
+        "type": "news",
+        "note": "27.08.2026 — МК Тюмень, перенос сроков ввода/ключей"
+      },
+      {
+        "url": "https://nashgorod.ru/news/2026-08-27/deneg-na-dolgi-ne-hvatit-tyumenskie-zastroyschiki-popali-v-opasnye-finansovye-vily-5668907",
+        "type": "news",
+        "note": "27.08.2026 — аналитика по эскроу и долгам тюменских застройщиков (медиа)"
+      },
+      {
+        "url": "https://harant.ru/blog/nedvizhimost/vzyskanie-neustojki-po-ddu-polnoe-rukovodstvo-na-2026-god/",
+        "type": "community",
+        "note": "Legal community — неустойка и моратории 2026"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant signal channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4717,
+    "secondary_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 830, "regions": ["55", "11176"]},
+      {"phrase": "ипотека новостройка тюмень", "volume": 214, "regions": ["55", "11176"]},
+      {"phrase": "эскроу счет новостройка", "volume": 344, "regions": ["225"]},
+      {"phrase": "купить квартиру по дду", "volume": 1845, "regions": ["225"]},
+      {"phrase": "неустойка за просрочку застройщика", "volume": 14, "regions": ["55", "11176"]}
+    ],
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["214_fz", "pp_rf_2227", "rshb_escrow_typical"],
+    "errors": [],
+    "note": "Банковские ипотечные тарифы не используются; 214-ФЗ, ПП №2227 и типовые условия эскроу РСХБ verified in official_verifications"
+  },
+  "key_facts_count": 52,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

@@ -19,6 +19,7 @@ from excalibur_blog_cover_qa_pixels import (
     stamp_cover_qa_json,
 )
 from excalibur_blog_meme_canon import load_meme_catalog, normalize_meme_picks, validate_meme_picks
+from excalibur_blog_quad_slots import CANONICAL_INLINE_VISUAL_TYPES, normalize_visual_type
 
 
 REQUIRED_CHECKS = (
@@ -256,25 +257,15 @@ def validate_cover_qa(article_dir: Path, root: Path, *, stamp: bool = True) -> d
         if phone != "+7 922 001 65 05":
             errors.append("cover_phone_cta must be '+7 922 001 65 05' in quad-manifest")
         slots = manifest.get("slots") or {}
-        allowed_types = {
-            "comparison_table",
-            "process_flow",
-            "bar_timeline_chart",
-            "structure_diagram",
-            "labeled_checklist",
-            "fact_card",
-            "workflow_diagram",
-            "checklist_board",
-            "schema_faq_ui",
-            "tool_screenshot",
-            "infographic_card",
-        }
+        allowed_types = CANONICAL_INLINE_VISUAL_TYPES
         for i in range(1, 8):
             key = f"inline_{i}"
             slot = slots.get(key) or {}
-            if not str(slot.get("visual_type") or "").strip():
+            vt_raw = str(slot.get("visual_type") or "").strip()
+            vt = normalize_visual_type(vt_raw)
+            if not vt:
                 errors.append(f"{key}.visual_type missing in quad-manifest")
-            elif str(slot.get("visual_type")) not in allowed_types:
+            elif vt not in allowed_types:
                 errors.append(f"{key}.visual_type invalid: {slot.get('visual_type')}")
             labels = slot.get("labels") or []
             if not (2 <= len(labels) <= 6):

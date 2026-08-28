@@ -29,7 +29,8 @@
     "comparison_table": {
       "label_ru": "сравнительная таблица с колонками",
       "utility": "Real columns/rows; numbers when Writer gave them; left vs right must differ",
-      "keywords": ["сравн", "vs", "или", "порядок", "ошибк", "норма", "тариф", "альтернатив"]
+      "keywords": ["сравн", "vs", "или", "порядок", "ошибк", "норма", "тариф", "альтернатив"],
+      "reject_aliases": ["comparison_table_ui"]
     },
     "process_flow": {
       "label_ru": "нумерованный процесс / таймлайн",
