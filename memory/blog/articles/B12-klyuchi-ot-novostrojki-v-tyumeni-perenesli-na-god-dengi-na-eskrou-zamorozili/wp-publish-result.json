@@ -1,0 +1,27 @@
+{
+  "slug": "klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili",
+  "topic_id": "B12",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B12-klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 985607,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9250 slug=klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9251\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9252 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili-inline-01.png\nOK inline_alt=9252\nOK inline_caption=9252\nOK inline_description=9252\nOK inline_image_upload=9253 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili-inline-02.png\nOK inline_alt=9253\nOK inline_caption=9253\nOK inline_description=9253\nOK inline_image_upload=9254 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili-inline-03.png\nOK inline_alt=9254\nOK inline_caption=9254\nOK inline_description=9254\nOK inline_image_upload=9255 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili-inline-04.png\nOK inline_alt=9255\nOK inline_caption=9255\nOK inline_description=9255\nOK inline_image_upload=9256 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili-inline-05.png\nOK inline_alt=9256\nOK inline_caption=9256\nOK inline_description=9256\nOK inline_image_upload=9257 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili-inline-06.png\nOK inline_alt=9257\nOK inline_caption=9257\nOK inline_description=9257\nOK inline_image_upload=9258 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili-inline-07.png\nOK inline_alt=9258\nOK inline_caption=9258\nOK inline_description=9258\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/",
+    "errors": []
+  }
+}
