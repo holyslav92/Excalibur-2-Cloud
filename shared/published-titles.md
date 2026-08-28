@@ -18,3 +18,4 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 | B08 | skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo | Справка ЗАГС была чистой — банк отказал из-за доли умершей жены | published |
 | B09 | ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn | Ипотеку одобрили, но обременение в ЕГРН сорвало регистрацию | published |
 | B10 | v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v | Пожилого продавца вели по телефону — родственники сорвали сделку | published |
+| B11 | v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii | В Тюмени открытая кухня остановила регистрацию квартиры | published |

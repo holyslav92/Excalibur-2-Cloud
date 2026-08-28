@@ -7,6 +7,7 @@
   "pixel_qa": true,
   "pixel_description": "1200x675; mean_lum=185; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=1 bar-like gold strips; face_h_frac=0.46",
   "checks": {
+    "meme_variety_not_cats_only": true,
     "pixel_light_high_key": true,
     "pixel_host_face_present": true,
     "pixel_host_close_up": true,
@@ -61,8 +62,7 @@
     "inline_no_host_face": true,
     "inline_no_co_host_human": true,
     "inline_meme_sticker_scale": true,
-    "meme_people_real_catalog": true,
-    "meme_variety_not_cats_only": true
+    "meme_people_real_catalog": true
   },
   "pixel_errors": [
     "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
@@ -130,5 +130,20 @@
     ],
     "host_dark_ratio": 0.234
   },
-  "notes": "Pixel QA on cover.png md5=0da115f6d1941074103f7e1de384f859; 1200x675; mean_lum=185; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=1 bar-like gold strips; face_h_frac=0.46"
+  "notes": "Pixel QA on cover.png md5=0da115f6d1941074103f7e1de384f859; 1200x675; mean_lum=185; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=1 bar-like gold strips; face_h_frac=0.46",
+  "gate_status": "FAIL",
+  "gate_errors": [
+    "pixel check failed: pixel_hook_title_not_truncated",
+    "pixel check failed: pixel_wordstat_not_opaque_bars",
+    "pixel check failed: pixel_meme_clearance_80px",
+    "pixel check failed: pixel_no_wordstat_query_strips",
+    "pixel check failed: pixel_no_collage_inset",
+    "pixel check failed: pixel_designed_thumbnail",
+    "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+    "pixel_meme_clearance_80px FAIL: paper_frac=0.025 within 80px of cat",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Ключи', 'задержали', 'после', 'оплаты', 'квартиры'] last_word='квартиры' ocr='ТД | осле полной'",
+    "pixel_no_collage_inset FAIL: white_frac=0.616 inset_face=False blob_count=4",
+    "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0271",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ]
 }
