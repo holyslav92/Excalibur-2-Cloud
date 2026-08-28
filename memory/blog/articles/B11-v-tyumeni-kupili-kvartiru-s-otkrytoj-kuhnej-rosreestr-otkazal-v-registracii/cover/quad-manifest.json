@@ -1,0 +1,245 @@
+{
+  "topic_id": "B11",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Скидка за кухню остановила сделку",
+  "cover_hook_highlight": "Скидка",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Кухня: сверка плана с проёмом; скидка; sticky; телефон.",
+      "scene_hint": "Bright kitchen: teal vest, plan vs open wall; gold Скидка; sticky; phone; memes tiny.",
+      "meme_caption_ru": "",
+      "sticky": "Сначала сверка, потом аванс",
+      "cover_emotion": "растерянность, жест стоп",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "meme_picks": [
+        "roll_safe",
+        "grumpy_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Скидка за «красивую» кухню — и аванс уже ушёл",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison_table: скидка/аванс/план; roll_safe corner.",
+      "alt": "Таблица: скидка, аванс, несверенный план.",
+      "labels": [
+        "Скидка за кухню",
+        "Аванс до сверки",
+        "План не сверили",
+        "До аванса — сверка"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "roll_safe"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Документы в МФЦ — ждали ключи через 9–14 дней",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "bar_timeline_chart: МФЦ→9–14 дней→право не ваше→деньги в игре; NO human.",
+      "alt": "Таймлайн МФЦ 9–14 дней; право не ваше.",
+      "labels": [
+        "МФЦ принял пакет",
+        "Ждали 9–14 дней",
+        "Право ещё не ваше",
+        "Деньги уже в игре"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Финал: Росреестр приостановил регистрацию перехода права",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "workflow: ст.26→план≠факт→не собственник→спор стены.",
+      "alt": "Схема: ст.26 пауза при несовпадении плана.",
+      "labels": [
+        "Статья 26 — пауза",
+        "План не совпал",
+        "Собственником не стали",
+        "Спор про стену"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Открытая кухня сама по себе не приговор",
+      "visual_type": "checklist_board",
+      "scene_hint": "checklist_board: не всегда нарушение; ненесущую согласуют; штраф 2–2,5 тыс.; инженер.",
+      "alt": "Чеклист: открытая кухня не всегда нарушение.",
+      "labels": [
+        "Не всегда нарушение",
+        "Ненесущую согласуют",
+        "Штраф 2–2,5 тыс.",
+        "Инженер, не фото"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Что сравнивают: ЕГРН, техдокументы и фактическая планировка",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison_table: ЕГРН|техплан|факт осмотра; «До аванса — инженер»; grumpy_cat corner.",
+      "alt": "Три слоя: ЕГРН, техплан, факт.",
+      "labels": [
+        "Выписка ЕГРН",
+        "Техпаспорт и план",
+        "Факт на осмотре",
+        "Три слоя сверки",
+        "До аванса — инженер"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "grumpy_cat"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Приостановление по ст. 26 и отказ по ст. 27 — в чём разница",
+      "visual_type": "schema_faq_ui",
+      "scene_hint": "schema_faq_ui: ст.26 vs ст.27; 207-ФЗ; NO human.",
+      "alt": "FAQ: ст.26 пауза vs ст.27 отказ.",
+      "labels": [
+        "Ст. 26 — пауза",
+        "До 3 месяцев",
+        "Ст. 27 — отказ",
+        "Не собственник",
+        "207-ФЗ с 2026"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Согласование перепланировки в Тюмени: куда идти и сколько ждать",
+      "visual_type": "tool_screenshot",
+      "scene_hint": "tool_screenshot: управы; проект; 45 дней; ЕГРН; roll_safe corner.",
+      "alt": "Маршрут согласования перепланировки в Тюмени.",
+      "labels": [
+        "Не Госжилинспекция",
+        "Управы четырёх округов",
+        "Проект в управу",
+        "До 45 дней",
+        "В ЕГРН — финал"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "roll_safe"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "перепланировка квартиры тюмень",
+    "квартира с неузаконенной перепланировкой",
+    "риски покупки квартиры с неузаконенной перепланировкой"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_emotion": "растерянность с недоверием",
+  "meme_picks": {
+    "cover": ["roll_safe", "grumpy_cat"],
+    "inline_1": ["roll_safe"],
+    "inline_5": ["grumpy_cat"],
+    "inline_7": ["roll_safe"]
+  },
+  "cover_motifs": {
+    "composition": "host_medium_right_open_kitchen_floor_plan_hook_left_sacred_zone_sun_flare",
+    "location": "bright_modern_open_kitchen_living_tyumen_secondary_white_cabinets_wall_gap",
+    "meme": "roll_safe_sticker_plus_grumpy_cat_cutout_corner",
+    "prop_set": "bti_floor_plan_fold_egrn_folder_keys_phone_yellow_sticky_warning",
+    "sticker_set": "yellow_sticky_sverka_avans_gold_tape_corner_no_query_bars",
+    "joke": "sticky_snachala_sverka_potom_avans",
+    "outfit": "teal_utility_vest_light_shirt_beige_chinos_NO_blazer",
+    "emotion": "bewildered_distrust_raised_brow_stop_gesture_not_smile",
+    "pose_framing": "host_medium_right_diagonal_not_left_bust_not_side_eye",
+    "action": "compares_bti_plan_to_open_kitchen_gap_one_hand_stop_keys"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  }
+}

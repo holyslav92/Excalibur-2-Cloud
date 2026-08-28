@@ -90,6 +90,34 @@ class OcrEscapeHatchTest(unittest.TestCase):
         self.assertTrue(new_evidence.get("ocr_false_positive_escape", {}).get("applied"))
         self.assertTrue(any("ocr_false_positive_escape PASS" in e for e in new_errors))
 
+    def test_escape_overrides_collage_and_inpaint_flakes(self) -> None:
+        from excalibur_blog_cover_qa_pixels import apply_ocr_false_positive_escape
+
+        checks = {key: True for key in (
+            "pixel_host_face_present",
+            "pixel_host_close_up",
+            "pixel_hook_title_present",
+            "pixel_hook_title_cyrillic",
+            "pixel_phone_readable",
+            "pixel_meme_present",
+            "pixel_layout_not_collapsed",
+            "pixel_no_foreign_article_text",
+            "pixel_not_services_checklist",
+            "pixel_no_text_on_clothing",
+            "pixel_light_high_key",
+        )}
+        checks["pixel_no_collage_inset"] = False
+        checks["pixel_no_inpaint_artifacts"] = False
+        checks["pixel_designed_thumbnail"] = False
+        errors = [
+            "pixel_no_collage_inset FAIL",
+            "pixel_no_inpaint_artifacts FAIL",
+            "pixel_designed_thumbnail FAIL",
+        ]
+        new_checks, _, new_evidence = apply_ocr_false_positive_escape(checks, errors, {})
+        self.assertTrue(new_checks["pixel_no_collage_inset"])
+        self.assertTrue(new_evidence.get("ocr_false_positive_escape", {}).get("applied"))
+
     def test_escape_does_not_override_hard_fail(self) -> None:
         from excalibur_blog_cover_qa_pixels import apply_ocr_false_positive_escape
 

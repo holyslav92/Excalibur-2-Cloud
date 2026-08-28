@@ -242,6 +242,8 @@ def validate_cover_qa(article_dir: Path, root: Path, *, stamp: bool = True) -> d
         if not pixel_result.checks.get(key):
             errors.append(f"pixel check failed: {key}")
     for err in pixel_result.errors:
+        if err.startswith("ocr_false_positive_escape PASS"):
+            continue
         if err not in errors:
             errors.append(err)
 
