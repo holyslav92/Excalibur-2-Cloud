@@ -355,6 +355,17 @@ def split_canvas(
         outputs: dict[str, Any] = {}
         slots = manifest.get("slots") or {}
 
+        from excalibur_blog_image_caption_builder import (
+            load_hero_name,
+            load_visual_type_labels,
+            resolve_slot_alt,
+        )
+
+        meta_path = cover_dir.parent / "article.meta.json"
+        meta = load_json(meta_path) if meta_path.is_file() else {}
+        host_name = load_hero_name(project_root())
+        labels_map = load_visual_type_labels(project_root())
+
         for slot_key in slot_keys:
             slot = slots.get(slot_key) or {}
             quadrant = resolve_quadrant(slot, slot_key)
@@ -368,6 +379,14 @@ def split_canvas(
             out_name = "cover.png" if slot_key == "cover" else INLINE_FILES[slot_key]
             out_path = cover_dir / out_name
             crop.save(out_path, format="PNG", optimize=True)
+            resolved_alt = resolve_slot_alt(
+                slot_key,
+                slot,
+                manifest,
+                meta,
+                host_name=host_name,
+                labels_map=labels_map,
+            )
             outputs[slot_key] = {
                 "file": f"cover/{out_name}",
                 "quadrant": quadrant,
@@ -375,7 +394,7 @@ def split_canvas(
                 "raw_box_px": {"left": raw_box[0], "top": raw_box[1], "right": raw_box[2], "bottom": raw_box[3]},
                 "size_px": list(crop.size),
                 "aspect_ratio": "16:9",
-                "alt": slot.get("alt") or "",
+                "alt": resolved_alt,
                 "h2_anchor": slot.get("h2_anchor"),
             }
 
@@ -632,6 +651,17 @@ def main() -> int:
         return 1
 
     manifest = load_json(manifest_path)
+
+    from excalibur_blog_image_caption_builder import apply_article_captions
+
+    try:
+        caption_result = apply_article_captions(article_dir, root, dry_run=args.dry_run)
+        manifest = load_json(manifest_path)
+        if caption_result.get("changes"):
+            print("OK image_captions_applied=" + str(len(caption_result["changes"])))
+    except FileNotFoundError:
+        pass
+
     inline_count = inline_count_from_manifest(manifest)
     inline_keys = active_inline_keys(inline_count)
     canvas_specs = canvas_specs_for_inline_count(inline_count)

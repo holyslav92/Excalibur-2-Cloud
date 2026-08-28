@@ -59,6 +59,7 @@ Scout? → research_start → Research → Title → Writer(смысл)
 **Cover budget (HARD):** `excalibur_blog_grsai_solo_cover.py` — max **2** full attempts (standard only; **VIP tier disabled**); override `EXCALIBUR_COVER_MAX_ATTEMPTS`. После исчерпания бюджета → `cover/cover-budget-result.json` + **Indexer** (не бесконечный Cover-QA loop). **≤15–20 мин** на cover; не копать `cover_qa_pixels.py` как дебаг-хобби.
 **Short hook:** ONE line, **5–7** кириллических слов (B08-style), prefer слова ≥5 букв; em dash OK; novel-length hooks запрещены (`cover-text` gate).
 **Cover-QA OCR escape:** если лицо + кириллический hook + телефон на PNG, а падают только OCR truncation / opaque-title flakes → `apply_ocr_false_positive_escape` (как B08/B09 live); без PIL mashup/Kie.
+**Image alt/caption (HARD):** `scene_hint` / prompt / meme-manifest **никогда** не попадают в `alt`, figcaption, WP Media. Builder: `scripts/excalibur_blog_image_caption_builder.py --apply` (после Cover, до Indexer/Publish). Gate `image_alt_human` в quality-bar-9 — FAIL на hook|CTA|мемы|semicolon prompt list.
 **Wordstat:** MCP-KV. **Cover-QA:** Python gates, не «глаз» агента.
 
 ```bash
@@ -83,6 +84,7 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - Scout/тема про RF-blocked heroes без Дзен-канона (если `dzen_rf_pack`)
 - Sol выдумывает факты, которых нет в `drafts/writer.html` / research
 - Cursor пишет Scout/Title/Writer/Sol/Description/Cover-text/Schema prose своей моделью вместо `excalibur_blog_derouter_opus_chat.py`
+- `alt` / caption / WP Media с production-токенами (hook, CTA, memes, scene_hint, semicolon prompt list)
 - Запуск пайплайна до завершения Setup
 - Cover regen >2 full attempts или >15–20 мин на cover / deep-dive pixel OCR source вместо Indexer
 - Novel-length cover hook (>7 слов / многострочный) — ломает OCR

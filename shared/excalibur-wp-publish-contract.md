@@ -60,8 +60,8 @@ python3 scripts/excalibur_blog_wp_publish.py \
      description clones the opening, fall back to H1/title. Meta description
      for SEO may still exist, but excerpt for WP/RSS stays distinct.
 4. Featured image из `cover/cover.png` + **Media Library meta**:
-   - **Атрибут alt** ← `cover-registry.json` `alt` / `cover_alt_text` / asset `alt`
-   - **Подпись (caption)** ← осмысленный alt → `post_excerpt`; deprecated `meme_caption_ru` игнорировать (он обязан быть пуст)
+   - **Атрибут alt** ← human Russian from `excalibur_blog_image_caption_builder.py` / `cover-registry.json` / `<img alt>` — **never** `scene_hint`, prompt, or semicolon production lists
+   - **Подпись (caption)** ← тот же human alt → `post_excerpt`; deprecated `meme_caption_ru` игнорировать (он обязан быть пуст)
    - **Описание (description)** ← alt → `post_content`
    - **Заголовок** ← укороченный alt → `post_title`
 5. **Inline images** — все локальные `<img src="cover/...">` загружаются в Media Library:

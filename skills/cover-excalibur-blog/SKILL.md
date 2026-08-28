@@ -128,7 +128,8 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 - `slots.cover.cover_emotion` — hook-matched face (shock, side-eye, grimace, bewildered…); never «same as reference»
 - `cover_motifs` — composition, location, meme, props, stickers, joke, **outfit, emotion, pose_framing, action**
 - `wordstat_stickers` — Scout topic research only (manifest log); **not painted on cover**
-- `slots.inline_1…7` — H2 anchors, `visual_type` (utility catalog), scene_hint, fact labels (3–6)
+- `slots.inline_1…7` — H2 anchors, `visual_type` (utility catalog), scene_hint (image API only), fact labels (3–6)
+- **`alt` / caption** — human Russian via `excalibur_blog_image_caption_builder.py --apply`; never hook/CTA/memes/scene_hint in alt
 
 ## Self-check before Derouter REST
 

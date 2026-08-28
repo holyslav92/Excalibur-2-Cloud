@@ -61,6 +61,7 @@ Scout? → research_start → Research → Title → Writer → Sol
 - **Short hook:** ONE line, **5–7** кириллических слов (B08-style), prefer ≥5 букв для OCR; em dash OK; gate в `excalibur_blog_cover_text_gate.py`.
 - **OCR escape hatch:** `apply_ocr_false_positive_escape` в `cover_qa_pixels.py` — лицо + hook + телефон на PNG, только OCR truncation/opaque flakes → PASS (как B08/B09 live); без PIL mashup/Kie.
 - **Indexer** — `llms.txt` / `llms-full.txt` (без правок `article.html`).
+- **Image alt/caption** — после Cover-QA, до Indexer: `python3 scripts/excalibur_blog_image_caption_builder.py --article-dir <dir> --apply` → человеческий русский `alt` (cover: кто на кадре + смысл кейса; inline: что показывает схема). `scene_hint` остаётся только для image API. Gate `image_alt_human` в quality-bar-9; Publish блокирует prompt-leak.
 - **Publish** — **только если одновременно**:
   1. в Cloud Secrets уже есть SFTP: `FTP_HOST`, `FTP_USER`, `FTP_PASS`, `FTP_ROOT` (и `PUBLIC_SITE_URL`);
   2. на **этот процесс** выставлен `EXCALIBUR_BLOG_ALLOW_PUBLISH=yes` (env / Runtime Secret, **не git**);
