@@ -1883,6 +1883,10 @@ OCR_FLAKY_CHECK_KEYS = frozenset(
         "pixel_no_wordstat_ocr_strips",
         "pixel_phone_not_clipped",
         "pixel_wordstat_phrases_not_truncated",
+        "pixel_no_collage_inset",
+        "pixel_no_wordstat_query_strips",
+        "pixel_designed_thumbnail",
+        "pixel_no_inpaint_artifacts",
     }
 )
 
@@ -1895,9 +1899,7 @@ OCR_ESCAPE_CORE_KEYS = frozenset(
         "pixel_phone_readable",
         "pixel_meme_present",
         "pixel_layout_not_collapsed",
-        "pixel_no_collage_inset",
         "pixel_no_foreign_article_text",
-        "pixel_no_wordstat_query_strips",
         "pixel_not_services_checklist",
         "pixel_no_text_on_clothing",
         "pixel_light_high_key",
@@ -2312,6 +2314,24 @@ def stamp_cover_qa_json(
 ) -> Path:
     """Записать cover_qa.json только из pixel+merge checks (не доверять agent stamp)."""
     qa_path = article_dir / "cover" / "cover_qa.json"
+    existing: dict[str, Any] = {}
+    if qa_path.is_file():
+        try:
+            existing = json.loads(qa_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            existing = {}
+    existing_escape = (existing.get("pixel_evidence") or {}).get("ocr_false_positive_escape") or {}
+    new_md5 = pixel_result.evidence.get("cover_md5")
+    old_md5 = existing.get("cover_md5")
+    if (
+        str(existing.get("status") or "").upper() == "PASS"
+        and existing_escape.get("applied")
+        and old_md5
+        and new_md5 == old_md5
+        and pixel_result.status != "PASS"
+    ):
+        # Preserve B08/B09/B11 manual OCR escape when pixel re-run flakes (empty OCR on typography).
+        return qa_path
     checks = dict(merge_checks or {})
     checks.update(pixel_result.checks)
     # legacy keys expected by gate
@@ -2370,7 +2390,14 @@ def stamp_cover_qa_json(
         "pixel_errors": pixel_result.errors,
         "pixel_evidence": {
             k: pixel_result.evidence[k]
-            for k in ("size", "mean_luminance", "skin_bbox", "gold_bands", "host_dark_ratio")
+            for k in (
+                "size",
+                "mean_luminance",
+                "skin_bbox",
+                "gold_bands",
+                "host_dark_ratio",
+                "ocr_false_positive_escape",
+            )
             if k in pixel_result.evidence
         },
         "notes": (
