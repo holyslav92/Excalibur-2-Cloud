@@ -343,7 +343,27 @@
       "outfit_invented",
       "action_invented",
       "emotion_not_copied_from_recent_covers"
-    ]
+    ],
+    "image_alt_caption": {
+      "builder": "scripts/excalibur_blog_image_caption_builder.py",
+      "gate": "image_alt_human",
+      "human_ru": "1 short sentence: who/what on frame + article meaning (cover) or diagram content (inline)",
+      "forbidden_forever": [
+        "hook",
+        "CTA",
+        "memes",
+        "scene_hint",
+        "sticky",
+        "prompt",
+        "i2i",
+        "cover slot",
+        "quad",
+        "inline_N",
+        "semicolon prompt lists",
+        "мемы as production tag"
+      ],
+      "never_use_as_alt": ["scene_hint", "cover prompt", "meme-manifest", "quad-manifest production fields"]
+    }
   },
   "owner_visual_polish": {
     "cover_phone_required": "+7 922 001 65 05",

@@ -50,6 +50,7 @@ REQUIRED_CHECKS = (
     "cover_qa_pass",
     "cover_phone_on_cover",
     "wordstat_stickers_not_title_overlap",
+    "image_alt_human",
 )
 
 
@@ -431,6 +432,27 @@ def _stamped_cover_qa_visual_pass(article_dir: Path) -> bool:
     return bool(escape.get("applied"))
 
 
+def check_image_alt_human(article_dir: Path, root: Path) -> tuple[bool, list[str]]:
+    from excalibur_blog_image_caption_builder import apply_article_captions, collect_article_alts
+
+    try:
+        apply_article_captions(article_dir, root)
+    except FileNotFoundError:
+        return False, ["cover/quad-manifest.json missing for image alt gate"]
+    gate = collect_article_alts(article_dir, root)
+    errors: list[str] = []
+    for slot_key, item in (gate.get("slots") or {}).items():
+        if not item.get("pass"):
+            errors.append(f"{slot_key}: {'; '.join(item.get('errors') or [])}")
+    for item in gate.get("html_alts") or []:
+        if not item.get("pass"):
+            errors.append(f"html {item.get('src')}: {'; '.join(item.get('errors') or [])}")
+    for item in gate.get("registry_alts") or []:
+        if not item.get("pass"):
+            errors.append(f"registry {item.get('file')}: {'; '.join(item.get('errors') or [])}")
+    return bool(gate.get("all_pass")), errors
+
+
 def run_cover_qa(article_dir: Path, root: Path) -> bool:
     rc = subprocess.run(
         [
@@ -489,6 +511,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
     checks["comment_magnet_question"] = magnet_ok
     checks["cover_phone_on_cover"] = check_cover_phone(article_dir)
     checks["wordstat_stickers_not_title_overlap"] = check_wordstat_overlap(article_dir)
+    alt_ok, alt_errors = check_image_alt_human(article_dir, root)
+    checks["image_alt_human"] = alt_ok
 
     if skip_cover_qa:
         checks["cover_qa_pass"] = (article_dir / "cover" / "cover_qa.json").is_file()
@@ -513,6 +537,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
                 errors.extend(tldr_errors)
             elif key == "comment_magnet_question" and magnet_errors:
                 errors.extend(magnet_errors)
+            elif key == "image_alt_human" and alt_errors:
+                errors.extend(alt_errors)
             else:
                 errors.append(f"check failed: {key}")
 

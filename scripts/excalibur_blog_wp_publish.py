@@ -296,6 +296,8 @@ def resolve_cover_media_fields(
     registry: dict[str, Any] | None,
     *,
     quad_manifest: dict[str, Any] | None = None,
+    article_dir: Path | None = None,
+    root: Path | None = None,
 ) -> dict[str, str]:
     reg = registry if isinstance(registry, dict) else {}
     assets = registry_asset_index(reg)
@@ -322,6 +324,16 @@ def resolve_cover_media_fields(
         or cover_asset.get("alt")
         or ""
     )
+    if isinstance(quad_manifest, dict) and article_dir is not None and root is not None:
+        from excalibur_blog_image_caption_builder import ensure_human_alt
+
+        alt = ensure_human_alt(
+            str(alt),
+            slot_key="cover",
+            manifest=quad_manifest,
+            meta=meta,
+            root=root,
+        )
     return build_attachment_fields(
         alt=str(alt),
         caption=str(alt),
@@ -336,6 +348,9 @@ def resolve_inline_media_fields(
     html_alt: str,
     assets: dict[str, dict[str, Any]],
     title_fallback: str,
+    quad_manifest: dict[str, Any] | None = None,
+    meta: dict[str, Any] | None = None,
+    root: Path | None = None,
 ) -> dict[str, str]:
     norm = src.replace("\\", "/").lstrip("./")
     asset = assets.get(norm) or assets.get(Path(norm).name) or {}
@@ -343,6 +358,21 @@ def resolve_inline_media_fields(
     caption = str(asset.get("caption") or "")
     description = str(asset.get("description") or "")
     h2 = str(asset.get("h2_anchor") or "")
+    slot_key = str(asset.get("slot") or "")
+    if isinstance(quad_manifest, dict) and slot_key and root is not None:
+        from excalibur_blog_image_caption_builder import ensure_human_alt
+
+        alt = ensure_human_alt(
+            alt,
+            slot_key=slot_key,
+            manifest=quad_manifest,
+            meta=meta or {},
+            root=root,
+        )
+        if not caption or caption == str(asset.get("alt") or ""):
+            caption = alt
+        if not description:
+            description = alt
     return build_attachment_fields(
         alt=alt,
         caption=caption,
@@ -459,6 +489,14 @@ def load_article(article_dir: Path, *, public_base: str = "") -> dict:
     html_path = article_dir / "article.html"
     if not meta_path.is_file() or not html_path.is_file():
         raise FileNotFoundError("article.meta.json and article.html required")
+
+    from excalibur_blog_image_caption_builder import apply_article_captions
+
+    try:
+        apply_article_captions(article_dir, project_root())
+    except FileNotFoundError:
+        pass
+
     meta = json.loads(meta_path.read_text(encoding="utf-8"))
     meta_ab = meta.get("meta_ab") or {}
     content = html_path.read_text(encoding="utf-8").strip()
@@ -503,7 +541,13 @@ def load_article(article_dir: Path, *, public_base: str = "") -> dict:
                 quad_manifest = loaded_quad
         except json.JSONDecodeError:
             quad_manifest = None
-    cover_media = resolve_cover_media_fields(meta, registry, quad_manifest=quad_manifest)
+    cover_media = resolve_cover_media_fields(
+        meta,
+        registry,
+        quad_manifest=quad_manifest,
+        article_dir=article_dir,
+        root=project_root(),
+    )
     assets = registry_asset_index(registry)
 
     inline_images = []
@@ -517,6 +561,9 @@ def load_article(article_dir: Path, *, public_base: str = "") -> dict:
             html_alt=img.get("alt") or "",
             assets=assets,
             title_fallback=local_path.stem,
+            quad_manifest=quad_manifest,
+            meta=meta,
+            root=project_root(),
         )
         inline_images.append(
             {
@@ -1263,6 +1310,18 @@ def check_publish_prerequisites(
 
     if not (article_dir / "description-brief.json").is_file():
         blockers.append("description-brief.json missing")
+
+    from excalibur_blog_image_caption_builder import collect_article_alts
+
+    alt_gate = collect_article_alts(article_dir, project_root())
+    if not alt_gate.get("all_pass"):
+        bad_slots = [k for k, v in (alt_gate.get("slots") or {}).items() if not v.get("pass")]
+        bad_html = [x.get("src") for x in (alt_gate.get("html_alts") or []) if not x.get("pass")]
+        blockers.append(
+            "image alt/caption human gate FAIL "
+            f"(slots={bad_slots or '—'}, html={bad_html or '—'}; "
+            "run excalibur_blog_image_caption_builder.py --apply)"
+        )
 
     quality_path = article_dir / "quality-bar-9.json"
     if not quality_path.is_file():

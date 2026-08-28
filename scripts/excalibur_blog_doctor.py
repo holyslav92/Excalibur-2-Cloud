@@ -134,6 +134,7 @@ def main() -> int:
         "scripts/excalibur_blog_quad_manifest_preflight.py",
         "scripts/excalibur_blog_cover_wordstat_overlay.py",
         "scripts/excalibur_blog_quality_bar_9_gate.py",
+        "scripts/excalibur_blog_image_caption_builder.py",
         "scripts/excalibur_blog_quad_regen_panels.py",
         "scripts/excalibur_blog_writer_chunk.py",
         "scripts/excalibur_blog_sol_chunk.py",

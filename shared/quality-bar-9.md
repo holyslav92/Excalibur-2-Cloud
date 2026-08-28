@@ -90,11 +90,13 @@ Dual CTA (мягко): «напишите на консультацию» **ил
 - Wordstat-стикеры **1–3**, **не перекрывают** главный заголовок (positions x≥0.68; PIL overlay если модель накрыла title).
 - Мемы TOP-100 — **маленькие**, не hero; host = единственный крупный человек.
 - Cover-QA checks: `title_not_occluded`, `outfit_invented`, `action_invented`, `emotion_not_copied_from_recent_covers`.
+- **Alt/caption (HARD):** короткая русская фраза — кто/что на кадре + смысл кейса (cover) или что показывает инфографика (inline). **Запрещено навсегда:** hook, CTA, memes, scene_hint, sticky, prompt, i2i, quad, inline_N, «мемы» как тег, списки через `;`. Builder: `scripts/excalibur_blog_image_caption_builder.py`. Gate: `image_alt_human`.
 
 ## INLINES
 
 - Только инфографика. **Без** другого человека как co-host. Мемы маленькие, 2–3 из 7.
 - **Utility test:** картинка одна учит факт/порядок/цифру. FAIL: идентичные двухколоночные таблицы, пустые ячейки.
+- **Alt:** что показывает таблица/схема (цифры, шаги), не scene_hint и не prompt.
 
 ## Self-score gate
 
@@ -109,5 +111,6 @@ python3 scripts/excalibur_blog_quality_bar_9_gate.py --article-dir memory/blog/a
 ## Связанные гейты
 
 - `scripts/excalibur_blog_cover_qa_gate.py` — визуал (включая phone, stickers, inline utility)
+- `scripts/excalibur_blog_image_caption_builder.py` — human alt/caption (не prompt-leak)
 - `scripts/excalibur_blog_community_cta_gate.py` — обязательные CTA из tenant-config
 - `scripts/excalibur_blog_structure_gate.py` — вызывает quality-bar-9 перед Publish
