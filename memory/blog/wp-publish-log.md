@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B11 — 2026-08-28
+
+- **topic_id:** B11
+- **slug:** v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii
+- **post_id:** 9230
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii/
+- **featured_image:** 9231
+- **inline_images:** 9232–9238 (7)
+- **wp_category_slugs:** vtorichka-i-riski, dokumenty-i-oformlenie (category_ids=31,54)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 4 siblings OK)
+- **notes:** theme_contract_deploy skipped (theme path ENOENT on configured SFTP root; publish used `.` fallback)
+
 ## B10 — 2026-08-26
 
 - **topic_id:** B10
