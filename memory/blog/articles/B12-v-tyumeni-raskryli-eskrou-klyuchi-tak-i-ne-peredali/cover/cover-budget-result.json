@@ -1,0 +1,57 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B12-v-tyumeni-raskryli-eskrou-klyuchi-tak-i-ne-peredali/cover/cover.png",
+  "best_candidate_source": "quad_canvas_1_split",
+  "best_candidate_md5": "0da115f6d1941074103f7e1de384f859",
+  "last_errors": [
+    "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0438 chest_blue=0.017 smear=0.000",
+    "pixel_hook_title_present FAIL: no large readable hook title in sacred zone (bands=[])",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Ключи', 'задержали', 'после', 'полной', 'оплаты', 'квартиры'] last_word='квартиры' ocr='дгвадержали: ACNA плА’АНОАМ'",
+    "pixel_no_collage_inset FAIL: white_frac=0.288 inset_face=False blob_count=3",
+    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.1473",
+    "pixel_layout_not_collapsed FAIL: face-only crop with no hook title (face_h=0.493, face_w=0.539)",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "bytes": 1059339,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_no_text_on_clothing FAIL: dark_ink_frac=0.046 on chest/clothes",
+        "pixel_phone_readable FAIL: phone_digits='79220018508' ink=3957 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='79220018508' clipped=True ocr='200018505 | 9220016505 | 7922 0018508'",
+        "pixel_hook_title_not_truncated FAIL: truncated=True missing=['Ключи', 'задержали', 'после', 'оплаты', 'квартиры'] last_word='квартиры' ocr='ЮЧИ sane осле полнои и 9 be | ИРАПТИОБЬ'",
+        "pixel_no_collage_inset FAIL: white_frac=0.476 inset_face=False blob_count=3",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.1017",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "bytes": 983593,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0438 chest_blue=0.017 smear=0.000",
+        "pixel_hook_title_present FAIL: no large readable hook title in sacred zone (bands=[])",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Ключи', 'задержали', 'после', 'полной', 'оплаты', 'квартиры'] last_word='квартиры' ocr='дгвадержали: ACNA плА’АНОАМ'",
+        "pixel_no_collage_inset FAIL: white_frac=0.288 inset_face=False blob_count=3",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.1473",
+        "pixel_layout_not_collapsed FAIL: face-only crop with no hook title (face_h=0.493, face_w=0.539)",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}
