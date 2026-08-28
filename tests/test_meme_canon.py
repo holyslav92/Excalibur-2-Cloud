@@ -5,10 +5,13 @@ import unittest
 from pathlib import Path
 
 from scripts.excalibur_blog_meme_canon import (
+    catalog_meme_id_roster,
     load_meme_catalog,
+    resolve_meme_id,
     validate_meme_picks,
     validate_manifest_meme_canon,
 )
+from scripts.excalibur_blog_visual_types import normalize_visual_type, is_valid_visual_type
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -35,6 +38,23 @@ class MemeCanonTest(unittest.TestCase):
         picks = {"cover": ["fake_meme_id"]}
         errs = validate_meme_picks(picks, catalog)
         self.assertTrue(any("not in meme-top100" in e for e in errs))
+        self.assertTrue(any("valid ids include" in e for e in errs))
+
+    def test_resolve_alias_to_catalog_id(self) -> None:
+        catalog = load_meme_catalog(ROOT)
+        self.assertEqual(resolve_meme_id("harold", catalog), "hide_pain_harold")
+        self.assertEqual(resolve_meme_id("two_buttons", catalog), "two_buttons")
+        self.assertIsNone(resolve_meme_id("business_cat", catalog))
+
+    def test_catalog_roster_non_empty(self) -> None:
+        catalog = load_meme_catalog(ROOT)
+        roster = catalog_meme_id_roster(catalog)
+        self.assertIn("roll_safe", roster)
+        self.assertGreater(len(roster), 20)
+
+    def test_visual_type_alias_normalizes(self) -> None:
+        self.assertEqual(normalize_visual_type("comparison_table_ui"), "comparison_table")
+        self.assertTrue(is_valid_visual_type("comparison_table_ui"))
 
     def test_cover_canon_meme_system(self) -> None:
         import json

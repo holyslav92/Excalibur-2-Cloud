@@ -7,7 +7,13 @@ description: "Cover-text: exact Russian inscriptions in cover-text.json, gate PA
 
 ## Thin conductor + Derouter utility (HARD)
 
-**Не пиши надписи моделью Cursor:**
+**Не пиши надписи моделью Cursor.** Сначала собери user-prompt с **полным roster** catalog ids:
+
+```bash
+python3 scripts/excalibur_blog_cover_text_inputs.py --article-dir <article_dir>
+```
+
+Затем Derouter:
 
 ```bash
 python3 scripts/excalibur_blog_derouter_opus_chat.py \

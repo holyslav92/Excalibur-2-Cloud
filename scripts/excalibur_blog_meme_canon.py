@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -41,6 +42,55 @@ def valid_meme_ids(catalog: dict[str, Any]) -> set[str]:
     return ids
 
 
+def _meme_lookup_key(raw: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", str(raw or "").strip().lower()).strip("_")
+
+
+def build_meme_id_index(catalog: dict[str, Any]) -> dict[str, str]:
+    """Map normalized id/alias keys → canonical catalog id."""
+    index: dict[str, str] = {}
+    for entry in catalog_entries(catalog):
+        canonical = str(entry.get("id") or "").strip()
+        if not canonical:
+            continue
+        index[_meme_lookup_key(canonical)] = canonical
+        for alias in entry.get("aliases") or []:
+            key = _meme_lookup_key(str(alias))
+            if key:
+                index[key] = canonical
+    return index
+
+
+def resolve_meme_id(raw: str, catalog: dict[str, Any]) -> str | None:
+    """Resolve raw Derouter id via exact id or catalog alias; None if unknown."""
+    value = str(raw or "").strip()
+    if not value or not catalog:
+        return None
+    allowed = valid_meme_ids(catalog)
+    if value in allowed:
+        return value
+    index = build_meme_id_index(catalog)
+    return index.get(_meme_lookup_key(value))
+
+
+def catalog_meme_id_roster(
+    catalog: dict[str, Any],
+    *,
+    allowed_on: str | None = None,
+) -> list[str]:
+    """Sorted canonical ids for Derouter prompts / gate error hints."""
+    roster: list[str] = []
+    for entry in catalog_entries(catalog):
+        canonical = str(entry.get("id") or "").strip()
+        if not canonical:
+            continue
+        zones = entry.get("allowed_on") or []
+        if allowed_on and allowed_on not in zones:
+            continue
+        roster.append(canonical)
+    return sorted(set(roster))
+
+
 def meme_category(catalog: dict[str, Any], meme_id: str) -> str:
     for entry in catalog_entries(catalog):
         if str(entry.get("id")) == meme_id:
@@ -48,10 +98,15 @@ def meme_category(catalog: dict[str, Any], meme_id: str) -> str:
     return ""
 
 
-def normalize_meme_picks(raw: Any) -> dict[str, list[str]]:
+def normalize_meme_picks(
+    raw: Any,
+    catalog: dict[str, Any] | None = None,
+) -> dict[str, list[str]]:
     """Normalize cover-text / manifest meme_picks to slot → list of catalog ids."""
     if not isinstance(raw, dict):
         return {}
+    if catalog is None:
+        catalog = load_meme_catalog()
     out: dict[str, list[str]] = {}
     for slot, val in raw.items():
         ids: list[str] = []
@@ -65,8 +120,15 @@ def normalize_meme_picks(raw: Any) -> dict[str, list[str]]:
             ids.append(str(val["id"]).strip())
         elif isinstance(val, str) and val.strip():
             ids.append(val.strip())
-        if ids:
-            out[str(slot)] = ids
+        resolved: list[str] = []
+        for mid in ids:
+            canonical = resolve_meme_id(mid, catalog) if catalog else mid
+            if canonical:
+                resolved.append(canonical)
+            else:
+                resolved.append(mid)
+        if resolved:
+            out[str(slot)] = resolved
     return out
 
 
@@ -92,7 +154,14 @@ def validate_meme_picks(
             errors.append(f"meme_picks slot {slot} not allowed for meme stickers")
         for mid in ids:
             if mid not in allowed_ids:
-                errors.append(f"meme_pick {mid!r} not in meme-top100.json (real catalog only)")
+                roster = catalog_meme_id_roster(catalog)
+                hint = ", ".join(roster[:12])
+                if len(roster) > 12:
+                    hint += ", …"
+                errors.append(
+                    f"meme_pick {mid!r} not in meme-top100.json (real catalog only); "
+                    f"valid ids include: {hint}"
+                )
             cat = meme_category(catalog, mid)
             if cat == "people":
                 people += 1
