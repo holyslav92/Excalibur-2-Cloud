@@ -320,3 +320,121 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_quality_bar_9_gate.py scripts/excalibur_blog_cover_qa_pixels.py scripts/excalibur_blog_doctor.py`
 - `python3 -m unittest tests.test_quality_bar_9_gate tests.test_cover_budget`
 commit: 7a73c41, main 897f300
+
+## INC-20260828-1300-cover-qa-fixer-regen-b12
+status: fixed
+run_date: 2026-08-28
+role: excalibur-blog-fixer
+topic_id: B12
+article_dir: memory/blog/articles/B12-klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili
+severity: medium
+category: qa
+
+### What went wrong
+- Initial cover PNG FAIL: collage inset + Wordstat query strips (`pixel_no_collage_inset`, `pixel_no_wordstat_query_strips`).
+- Cover-QA needed 1 Fixer round (panel regen) before OCR escape PASS.
+
+### How the agent recovered this run
+- `excalibur_blog_cover_fixer.py` round 1 → `quad_regen_panels.py --slots cover` → re-QA PASS with `ocr_false_positive_escape` on residual flakes.
+
+### Durable fix needed before next run
+- None — B11 OCR escape + B10 cover_fixer layout/wordstat-strip regen path already canonical on main (897f300).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_fixer.py`
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-28
+fix_summary:
+- Confirmed existing cover_fixer regen + B11 OCR escape handled B12 without new code.
+files_changed:
+- none (contract already canonical)
+checks_run:
+- B12 `cover/cover_qa.json` PASS after 1 fixer round
+commit: n/a
+
+## INC-20260828-1301-visual-type-comparison-table-ui-b12
+status: fixed
+run_date: 2026-08-28
+role: excalibur-blog-fixer
+topic_id: B12
+article_dir: memory/blog/articles/B12-klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili
+severity: medium
+category: script
+
+### What went wrong
+- Derouter cover-scene emitted `inline_2.visual_type: comparison_table_ui` (not in catalog).
+- cover-qa gate rejects invalid visual_type; manual fix `comparison_table_ui` → `comparison_table` before publish.
+
+### How the agent recovered this run
+- Fixer patched `quad-manifest.json` + `cover-registry.json` inline_2 visual_type to `comparison_table`.
+
+### Durable fix needed before next run
+- Auto-normalize legacy alias `comparison_table_ui` → `comparison_table` in quad canon + preflight FAIL before image API.
+- Remove `comparison_table_ui` from `TYPE_PRIORITY` in quad_manifest scaffold.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quad_slots.py`
+- `scripts/excalibur_blog_quad_manifest.py`
+- `scripts/excalibur_blog_quad_manifest_preflight.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+- `memory/cover/inline-visual-types.json`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-28
+fix_summary:
+- Added `VISUAL_TYPE_ALIASES` + `normalize_visual_type()`; `apply_quad_canon_to_manifest` rewrites inline types.
+- Preflight + cover-qa gate share `CANONICAL_INLINE_VISUAL_TYPES`; TYPE_PRIORITY uses catalog ids only.
+files_changed:
+- `scripts/excalibur_blog_quad_slots.py`
+- `scripts/excalibur_blog_quad_manifest.py`
+- `scripts/excalibur_blog_quad_manifest_preflight.py`
+- `scripts/excalibur_blog_cover_qa_gate.py`
+- `memory/cover/inline-visual-types.json`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m py_compile` on changed scripts
+- `python3 -m unittest tests.test_pipeline_speed_b03.QuadManifestCanonTest`
+commit: a1bb898
+
+## INC-20260828-1302-writer-word-count-sol-tighten-b12
+status: fixed
+run_date: 2026-08-28
+role: excalibur-blog-sol
+topic_id: B12
+article_dir: memory/blog/articles/B12-klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili
+severity: low
+category: prompt
+
+### What went wrong
+- Writer draft ~2904 words; Sol tightened final to 2558 for quality-bar 2000–2600 gate.
+
+### How the agent recovered this run
+- Sol chunk merge per contract; `quality-bar-9.json` word_count_2000_2600 PASS at 2558.
+
+### Durable fix needed before next run
+- None — Writer drafts long, Sol tightens by design (`shared/quality-bar-9.md`, assembled-sol-inputs already instructs «ужать без потери фактов»).
+
+### Suggested files to inspect/change
+- `skills/sol-excalibur-blog/SKILL.md`
+- `shared/quality-bar-9.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-28
+fix_summary:
+- No code change — expected Writer→Sol word-count contract; B12 PASS confirms pipeline behavior.
+files_changed:
+- none
+checks_run:
+- B12 `quality-bar-9.json` word_count=2558 PASS
+commit: n/a

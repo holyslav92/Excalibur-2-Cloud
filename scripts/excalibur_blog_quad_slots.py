@@ -46,6 +46,36 @@ CANVAS_SPECS: tuple[dict[str, Any], ...] = (
 
 LEGACY_INLINE_SLOT_KEYS: tuple[str, ...] = ("inline_1", "inline_2", "inline_3")
 LEGACY_CANVAS_FILE = "cover/canvas-quad.png"
+
+# Derouter / old manifests sometimes emit legacy ids — map to catalog canon before gates.
+VISUAL_TYPE_ALIASES: dict[str, str] = {
+    "comparison_table_ui": "comparison_table",
+}
+
+CANONICAL_INLINE_VISUAL_TYPES: frozenset[str] = frozenset(
+    {
+        "comparison_table",
+        "process_flow",
+        "bar_timeline_chart",
+        "structure_diagram",
+        "labeled_checklist",
+        "fact_card",
+        # Legacy catalog ids (still valid; prompts map to canon rules)
+        "workflow_diagram",
+        "checklist_board",
+        "schema_faq_ui",
+        "tool_screenshot",
+        "infographic_card",
+    }
+)
+
+
+def normalize_visual_type(type_id: str) -> str:
+    """Map legacy Derouter/manifest visual_type to catalog id."""
+    raw = str(type_id or "").strip()
+    if not raw:
+        return raw
+    return VISUAL_TYPE_ALIASES.get(raw, raw)
 LEGACY_BATCH_FILE = "cover/quad-mcp-batch.json"
 LEGACY_RESULT_FILE = "cover/quad-mcp-result.json"
 
@@ -131,6 +161,10 @@ def apply_quad_canon_to_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
     slots = manifest.setdefault("slots", {})
     for slot_key in ("cover",) + tuple(active_inline_keys(inline_count)):
         slot = slots.setdefault(slot_key, {})
+        if slot_key != "cover":
+            vt = normalize_visual_type(str(slot.get("visual_type") or ""))
+            if vt:
+                slot["visual_type"] = vt
         allows_meme = slot_allows_meme_sticker(slot_key)
         forbids = slot_forbids_meme_cat_person(slot_key)
         slot["meme_sticker"] = allows_meme

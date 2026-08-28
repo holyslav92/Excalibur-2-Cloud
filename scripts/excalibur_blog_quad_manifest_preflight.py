@@ -10,11 +10,13 @@ from pathlib import Path
 from typing import Any
 
 from excalibur_blog_quad_slots import (
+    CANONICAL_INLINE_VISUAL_TYPES,
     MEME_ALLOWED_SLOTS,
     NO_MEME_NO_CAT_SLOTS,
     active_inline_keys,
     apply_quad_canon_to_manifest,
     inline_count_from_manifest,
+    normalize_visual_type,
     slot_allows_meme_sticker,
 )
 from excalibur_blog_meme_canon import validate_manifest_meme_canon
@@ -100,6 +102,12 @@ def validate_quad_manifest(manifest: dict[str, Any], root: Path | None = None) -
             errors.append(f"{key}.scene_hint empty")
         if not str(slot.get("alt") or "").strip():
             errors.append(f"{key}.alt empty")
+        if key != "cover":
+            vt = normalize_visual_type(str(slot.get("visual_type") or ""))
+            if not vt:
+                errors.append(f"{key}.visual_type missing")
+            elif vt not in CANONICAL_INLINE_VISUAL_TYPES:
+                errors.append(f"{key}.visual_type invalid: {slot.get('visual_type')}")
         if key != "cover" and slot_allows_meme_sticker(key) is False:
             neg = slot.get("prompt_negatives") or ""
             if "NO meme" not in neg and "БЕЗ мем" not in neg:

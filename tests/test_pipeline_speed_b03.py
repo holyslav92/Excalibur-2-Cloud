@@ -71,7 +71,11 @@ class QuadManifestCanonTest(unittest.TestCase):
             "slots": {
                 "cover": {"scene_hint": "x", "alt": "y"},
                 **{
-                    f"inline_{i}": {"scene_hint": "s", "alt": "a"}
+                    f"inline_{i}": {
+                        "scene_hint": "s",
+                        "alt": "a",
+                        "visual_type": "comparison_table",
+                    }
                     for i in range(1, 8)
                 },
             },
@@ -82,6 +86,25 @@ class QuadManifestCanonTest(unittest.TestCase):
         self.assertTrue(manifest["slots"]["inline_4"]["no_host_face"])
         result = validate_quad_manifest(manifest)
         self.assertEqual(result["status"], "PASS")
+
+    def test_apply_canon_normalizes_legacy_visual_type(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_quad_slots import apply_quad_canon_to_manifest, normalize_visual_type
+
+        self.assertEqual(normalize_visual_type("comparison_table_ui"), "comparison_table")
+        manifest = {
+            "inline_count": 7,
+            "slots": {
+                "cover": {"scene_hint": "x", "alt": "y"},
+                "inline_2": {
+                    "visual_type": "comparison_table_ui",
+                    "scene_hint": "s",
+                    "alt": "a",
+                },
+            },
+        }
+        manifest = apply_quad_canon_to_manifest(manifest)
+        self.assertEqual(manifest["slots"]["inline_2"]["visual_type"], "comparison_table")
 
     def test_preflight_doctor(self) -> None:
         proc = subprocess.run(
