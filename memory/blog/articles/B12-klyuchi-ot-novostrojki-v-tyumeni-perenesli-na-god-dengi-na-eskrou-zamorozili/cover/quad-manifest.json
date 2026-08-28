@@ -1,0 +1,258 @@
+{
+  "topic_id": "B12",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Застройщик перенёс ключи — платёж идёт",
+  "cover_hook_highlight": "перенёс",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Светлый шоурум: письмо о переносе, календарь +12 мес, платёж идёт; телефон риэлтора.",
+      "scene_hint": "Showroom: letter+pay; stunned; gold перенёс; sticky; phone; memes.",
+      "meme_caption_ru": "",
+      "sticky": "Год без квартиры",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие",
+      "meme_picks": [
+        "roll_safe",
+        "crying_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Три недели до ключей — и срок отодвигают на год",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "timeline 3w→+12m; letter; addendum; DDU; bad_luck_brian.",
+      "alt": "Шкала: перенос с 3 недель на 12 месяцев при старой дате в ДДУ.",
+      "labels": [
+        "За 3 недели",
+        "Перенос 12 мес",
+        "Письмо вежливое",
+        "Допсоглашение",
+        "ДДУ старая дата"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "bad_luck_brian"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Деньги на эскроу: защита есть, свободного выхода нет",
+      "visual_type": "comparison_table_ui",
+      "scene_hint": "table escrow vs exit; no withdraw; return terminate.",
+      "alt": "Таблица: эскроу держит деньги, но письмо не даёт свободный выход.",
+      "labels": [
+        "Деньги на эскроу",
+        "Снять нельзя",
+        "Возврат после расторжения",
+        "Уведомление не основание",
+        "Кнопки «верните» нет"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Ипотека не ждёт: платёж идёт, квартиры ещё нет",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "flow pay→no flat→rent+mortgage; year sum; double load.",
+      "alt": "Схема: ипотека без квартиры даёт двойную нагрузку с арендой.",
+      "labels": [
+        "Платёж каждый месяц",
+        "Квартиры нет",
+        "Двойная нагрузка",
+        "Аренда+ипотека",
+        "Год — сумма"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Финал: претензия, расторжение и возврат цены ДДУ",
+      "visual_type": "checklist_board",
+      "scene_hint": "checklist claim; terminate; EGRN; no record=no escrow.",
+      "alt": "Чек-лист: претензия → расторжение → ЕГРН → возврат эскроу.",
+      "labels": [
+        "Письменная претензия",
+        "Расторжение по соглашению",
+        "Прекращение ДДУ в ЕГРН",
+        "Без записи в ЕГРН",
+        "Эскроу не двигается"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Срок ввода дома и срок передачи квартиры — не одно и то же",
+      "visual_type": "schema_faq_ui",
+      "scene_hint": "schema Q3≠keys; decl vs DDU; blinking_white_guy.",
+      "alt": "Срок ввода дома и передачи ключей — разные даты.",
+      "labels": [
+        "Ввод третий квартал 2026",
+        "Ключи до 31 декабря",
+        "Две строки в декларации",
+        "Срок из вашего ДДУ",
+        "Декларация не меняет ДДУ"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "blinking_white_guy"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Когда письмо о переносе ещё не даёт односторонний отказ",
+      "visual_type": "tool_screenshot",
+      "scene_hint": "UI >2m?; no right; early notice; negotiate.",
+      "alt": "Схема: письмо о переносе ещё не даёт односторонний отказ.",
+      "labels": [
+        "Просрочка больше 2 месяцев",
+        "До даты отказа нет",
+        "Уведомление раньше права",
+        "Переговоры или ждать",
+        "Допсоглашение не спешите"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Неустойка в 2026: мораторий закончился, отсрочка — отдельная история",
+      "visual_type": "infographic_card",
+      "scene_hint": "2026 moratorium→rate→x2; DDU; bank no pay; disappointed.",
+      "alt": "Неустойка 2026: ставка, двойной размер, банк-эскроу не платит.",
+      "labels": [
+        "Мораторий до 31.12.2025",
+        "С 2026 по ставке",
+        "Двойной размер гражданину",
+        "От даты в ДДУ",
+        "Банк-эскроу не платит"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disappointed_black_guy"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "эскроу счет новостройка",
+    "ипотека новостройка тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "ошеломлённое недоверие",
+  "cover_motifs": {
+    "composition": "host_waist_right_letter_payment_hook_left",
+    "location": "bright_showroom_white_sun_flare",
+    "meme": "roll_safe_sticker_plus_crying_cat_cutout",
+    "prop_set": "delay_letter_calendar_mortgage_card",
+    "sticker_set": "sticky_god_bez_kvartiry_no_query_bars",
+    "joke": "calendar_plus_12m_payment_now",
+    "outfit": "light_blue_shirt_sand_chinos",
+    "emotion": "stunned_disbelief_raised_brows",
+    "pose_framing": "waist_three_quarter_right",
+    "action": "letter_in_hand_points_payment"
+  },
+  "meme_picks": {
+    "cover": [
+      "roll_safe",
+      "crying_cat"
+    ],
+    "inline_1": [
+      "bad_luck_brian"
+    ],
+    "inline_5": [
+      "blinking_white_guy"
+    ],
+    "inline_7": [
+      "disappointed_black_guy"
+    ]
+  }
+}

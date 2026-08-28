@@ -120,6 +120,23 @@
         "pose_framing": "host_large_left_close_up_not_right_bust_not_side_eye_formula",
         "action": "watches_elderly_seller_clutch_phone_during_viewing"
       }
+    },
+    {
+      "date": "2026-08-28",
+      "topic_id": "B12",
+      "slug": "",
+      "motifs": {
+        "composition": "host_waist_right_letter_payment_hook_left",
+        "location": "bright_showroom_white_sun_flare",
+        "meme": "roll_safe_sticker_plus_crying_cat_cutout",
+        "prop_set": "delay_letter_calendar_mortgage_card",
+        "sticker_set": "sticky_god_bez_kvartiry_no_query_bars",
+        "joke": "calendar_plus_12m_payment_now",
+        "outfit": "light_blue_shirt_sand_chinos",
+        "emotion": "stunned_disbelief_raised_brows",
+        "pose_framing": "waist_three_quarter_right",
+        "action": "letter_in_hand_points_payment"
+      }
     }
   ]
 }
