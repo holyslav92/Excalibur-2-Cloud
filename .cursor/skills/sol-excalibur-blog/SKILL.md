@@ -7,7 +7,7 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 
 ## OWNER LOCK (permanent)
 
-1. **Engagement bomb** — сохранить news-casus arc и Dzen engagement. **Прозаический лид 4–6 предложений** (не TL;DR / не «Быстрый инсайт» / не bullets в первом экране). **Early TG+MAX** после лида. **Comment magnet** — один острый вопрос. Gates: `opening-meta-gate`, `no_tldr_opening`, `comment_magnet_question`.
+1. **Engagement bomb** — сохранить news-casus arc и Dzen engagement. **Прозаический лид 4–6 предложений** (не TL;DR / не «Быстрый инсайт» / не bullets в первом экране). **Early TG+MAX** после лида. **Comment magnet** — один острый вопрос. **Ending landing:** heat casus не ослаблять; последние 1–2 абзаца = **agency, not panic** (ручка до аванса). Gates: `opening-meta-gate`, `no_tldr_opening`, `comment_magnet_question`.
 2. Meme/cover — не зона Sol.
 3. Cover fail-fast — не зона Sol.
 
@@ -69,6 +69,7 @@ Longform (7 inline): **3 части на первом проходе** — не 
    - **финал casus** (суд/отмена/деньги) — явный H2 до практики; не обрывай на «расписку написали» без развязки;
    - практика («что проверить») — **после** финала, как aftermath, не сухой список вместо истории;
    - **comment magnet:** один острый вопрос «…?» — после финала или перед mid CTA; читатели спорят, не FAQ-шаблон;
+   - **ending landing (owner lock):** casus горячий (stakes, финал) — **не** размывать; последние 1–2 абзаца **до** end CTA = воздух + agency: остановились до аванса / проверка спасла / вторичка OK если смотреть до денег; CTA «подключусь до аванса», не «бегите»; **не** «все риэлторы плохие» / «вторичка — мина» / «риски везде — как покупать»; редко — жёсткая потеря только с вилкой «если бы X до аванса»; **ban:** sugar happy ending; чеклист как эмоциональный финал; pure dread без действия;
    - имя автора корпуса в тексте **не** писать;
    - Дзен: **без мата**.
    - **Interlink:** не удаляй outbound-ссылки на sibling из `drafts/writer.html`;
@@ -87,6 +88,7 @@ Longform (7 inline): **3 части на первом проходе** — не 
 - TL;DR / «Быстрый инсайт» / bullet-dump в открытии (прозаический лид 4–6 предложений)
 - Пропустить comment magnet или вставить риторический «подписывайтесь» вместо острого вопроса
 - Убрать или размыть **финал** (суд, отмена, потеря денег) — обязателен по `dzen-news-casus.md`
+- **Ending landing FAIL:** pure dread без действия; «риски везде — как покупать»; «все риэлторы плохие» / «вторичка — мина»; sugar happy ending; чеклист N шагов как последний эмоциональный beat
 - Чужой голос («короче братан»)
 - Вложенные Task
 

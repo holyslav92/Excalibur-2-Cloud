@@ -6,7 +6,7 @@
 
 | Столп | HARD rules |
 |-------|------------|
-| **Engagement bomb** | Dzen engagement goal; news-casus актуалочка; прозаический лид **4–6 предложений**; early TG+MAX only; comment magnet; gates `no_tldr_opening`, `opening-meta-gate`, `comment_magnet_question`. **Forbidden:** TL;DR, «Быстрый инсайт», bullets до первого H2, checklist/how-to в лиде. |
+| **Engagement bomb** | Dzen engagement goal; news-casus актуалочка; прозаический лид **4–6 предложений**; early TG+MAX only; comment magnet; **ending landing = agency, not panic** (heat сохраняем, меняем посадку); gates `no_tldr_opening`, `opening-meta-gate`, `comment_magnet_question`. **Forbidden:** TL;DR, «Быстрый инсайт», bullets до первого H2, checklist/how-to в лиде; sugar-happy ending; checklist как эмоциональный финал; «риски везде — как покупать». |
 | **Meme canon v1** | `meme-top100.json` real ids only; people+cats (not cats-only); on-topic funny; ≤15% stickers; never hook/face/phone; anti-repeat 14д; `meme_variety_not_cats_only` when `meme_picks` present. |
 | **Cover fail-fast** | Max **2** full cover attempts; ≤15–20 min timebox; `cover-budget-result.json` → Indexer; Fixer max 2 rounds; short hook 5–7 words; OCR escape without PIL/Kie. |
 
@@ -45,7 +45,21 @@
 
 Класс: `excalibur-cta-mid`.
 
-### 3. End — финал
+### 3. End — финал + landing (agency, not panic)
+
+**Owner lock 2026-08-28:** casus остаётся **горячим** (stakes, финал, потери где есть). Меняется **посадка** — последние 1–2 абзаца **до** end CTA: читатель уходит с **ручкой**, не с паникой.
+
+**Default landing (большинство постов):**
+- Остановились **до аванса** / проверка **спасла сделку** / вторичку покупают каждый день, **если смотреть до денег**.
+- Воздух + agency: «подключусь до аванса», «разберём до внесения», «напишите — разложу по шагам». **Не** «бегите» / «вторичка — мина» / «все риэлторы плохие».
+- End CTA (dual + полный набор) — тот же набор каналов, **мягче тон**: консультация / «сразу в сделку до аванса».
+
+**Exception (редко):** жёсткая потеря допустима, только если **вилка очевидна**: «если бы сделали X до аванса — не потеряли». Никогда не заканчивать чистым dread без действия.
+
+**Ban (эмоциональный финал):**
+- Sugar happy ending, убивающий casus.
+- Чеклист из 6 шагов как **последний удар** (практика в H2 — ок; **последний beat** = story + agency).
+- Takeaway «риски везде, как вообще покупать».
 
 Dual CTA (мягко): «напишите на консультацию» **или** «сразу к делу / подключусь в сделку». Плюс **полный набор:** TG, MAX, сайт, Дзен, VK, гайды. Дзен + TG — как «смотреть разборы», не корпоративная выдумка. About/contact — только реальные URL из repo (`/rieltor-tyumen/`, `/kontakty/`).
 

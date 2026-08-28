@@ -8,7 +8,7 @@
 
 | # | Столп | Канон |
 |---|--------|--------|
-| 1 | **Engagement bomb** | Цель поста = **вовлечение в Дзен** (лайки, комментарии, подписки). Форма = hot **news-casus актуалочка** (Тюмень, stakes, финал). **Прозаический лид 4–6 предложений** → **early TG+MAX** → история → практика → CTAs + **comment magnet** (один острый вопрос). **Запрещено:** TL;DR, «Быстрый инсайт», bullet-dump в первом экране, how-to checklist вместо casus. |
+| 1 | **Engagement bomb** | Цель поста = **вовлечение в Дзен** (лайки, комментарии, подписки). Форма = hot **news-casus актуалочка** (Тюмень, stakes, финал). **Прозаический лид 4–6 предложений** → **early TG+MAX** → история → практика → **ending landing (agency, not panic)** → CTAs + **comment magnet** (один острый вопрос). Heat casus сохраняем; посадка = ручка до аванса, не «бегите». **Запрещено:** TL;DR, «Быстрый инсайт», bullet-dump в первом экране, how-to checklist вместо casus; sugar-happy ending; checklist как эмоциональный финал; «риски везде — как покупать». |
 | 2 | **Meme canon v1** | Covers + inlines: **only** `memory/cover/meme-top100.json` real templates. **People + cats** (NOT cats-only). **On-topic + funny**. Stickers ≤15%, **never** hook title / host face / phone (+80px). Anti-repeat **14д** (`used-motifs.json`). `meme_picks` in cover-text → quad-manifest. |
 | 3 | **Cover fail-fast** | `excalibur_blog_grsai_solo_cover.py`: max **2** full attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`). **grsai standard only** — VIP tier отключён. Timebox **≤15–20 мин** на cover. После бюджета → `cover/cover-budget-result.json` → **Indexer** (не бесконечный Cover-QA). OCR escape без PIL mashup/Kie. Short hook **5–7** кириллических слов. |
 
@@ -40,7 +40,7 @@ Scout? → research_start → Research → Title → Writer(смысл)
 
 **Title** → `title-brief.json`. **Description** → `description-brief.json` (Дзен-карточка, после Sol).
 
-**Цель каждого поста — вовлечение в Дзен** (лайки, комментарии, подписки): hot **news-casus актуалочка** (Тюмень, stakes, финал), прозаический лид → early TG+MAX → история → практика → CTAs + **comment magnet** (один острый вопрос). Не чеклист, не TL;DR, не robotic insider bullets. См. `shared/dzen-news-casus.md`, `shared/quality-bar-9.md`.
+**Цель каждого поста — вовлечение в Дзен** (лайки, комментарии, подписки): hot **news-casus актуалочка** (Тюмень, stakes, финал), прозаический лид → early TG+MAX → история → практика → **ending landing (agency, not panic)** → CTAs + **comment magnet** (один острый вопрос). Не чеклист, не TL;DR, не robotic insider bullets. Последние 1–2 абзаца — ручка до аванса, не «риски везде — никогда не покупать». См. `shared/dzen-news-casus.md`, `shared/quality-bar-9.md`.
 
 **18 ролей** (см. `.cursor/agents/FOR-AGENTS.md`): 16 pipeline + `excalibur-blog-description` + `excalibur-blog-cover-qa`.
 
@@ -71,6 +71,7 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - Термин-дамп / research-брифинг в открытии финала
 - TL;DR / «Быстрый инсайт» / bullet-dump в первом экране (канон: прозаический лид 4–6 предложений)
 - Пост без **comment magnet** (острый вопрос для комментариев Дзена) или how-to checklist вместо news-casus
+- **Ending landing FAIL:** pure dread без действия; takeaway «риски везде — как покупать»; «все риэлторы плохие» / «вторичка — мина»; sugar happy ending; чеклист N шагов как эмоциональный финал (практика в H2 — ок, последний beat = story+agency)
 - topics / SEO-хвосты
 - Writer/Sol читают старые article.html / live-сайт как образец
 - Publish без pipeline_canon stamp

@@ -179,6 +179,23 @@
         "forbidden_opening": ["TL;DR", "Быстрый инсайт", "opening_bullet_lists", "how_to_checklist_lead"],
         "early_cta": "TG_and_MAX_only_after_prose_lead",
         "comment_magnet": true,
+        "ending_landing": {
+          "default": "agency_not_panic",
+          "keep_heat": true,
+          "change_landing_not_casus": true,
+          "last_paragraphs": "air_and_agency_1_2_before_end_cta",
+          "reader_leaves_with": ["stopped_before_avans", "check_saved_deal", "secondary_ok_if_look_before_money"],
+          "cta_tone": "connect_before_avans_not_run_away",
+          "exception_rare": "hard_loss_ok_if_obvious_fork_before_avans",
+          "forbidden_landing": [
+            "sugar_happy_ending_that_kills_casus",
+            "closing_checklist_as_emotional_landing",
+            "pure_dread_no_action",
+            "all_realtors_bad_secondary_minefield",
+            "risks_everywhere_never_buy_takeaway"
+          ],
+          "docs": ["shared/dzen-news-casus.md", "shared/quality-bar-9.md"]
+        },
         "docs": ["shared/dzen-news-casus.md", "shared/SOUL.md", "shared/quality-bar-9.md"]
       },
       "meme_canon_v1": {

@@ -6,7 +6,7 @@
 
 Зафиксировано в `shared/pipeline-canon.json` → `owner_lock_permanent`. Automation **всегда** соблюдает:
 
-1. **Engagement bomb** — Dzen likes/comments/subs; news-casus актуалочка; прозаический лид 4–6 предложений; early TG+MAX; comment magnet; **no** TL;DR / «Быстрый инсайт» / opening bullets.
+1. **Engagement bomb** — Dzen likes/comments/subs; news-casus актуалочка; прозаический лид 4–6 предложений; early TG+MAX; comment magnet; **ending landing = agency, not panic** (heat сохраняем); **no** TL;DR / «Быстрый инсайт» / opening bullets; **no** sugar-happy ending / checklist-as-finale / «risks everywhere never buy» takeaway.
 2. **Meme canon v1** — `meme-top100.json` only; people+cats; on-topic funny; stickers ≤15%; sacred hook/face/phone; anti-repeat 14д.
 3. **Cover fail-fast** — max 2 solo attempts; ≤15–20 min cover timebox; budget exhausted → Indexer; no infinite Cover-QA loop; no PIL/Kie escape.
 
@@ -108,7 +108,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 |------|-------|-----|
 | **Early** | после hook + прозаический лид (4–6 предложений), первый экран | brand beat (Святослав, The Риэлтор, Тюмень) + curiosity + **только TG + MAX** |
 | **Mid** | после практического блока (aftermath casus) | лёгкий nudge TG + MAX (`excalibur-cta-mid`) |
-| **End** | финал | dual CTA «консультация» / «сразу в сделку» + полный набор (TG, MAX, site, Дзен, VK, guides, about) |
+| **End** | после ending landing (1–2 абзаца agency) | dual CTA «консультация / подключусь до аванса» + полный набор (TG, MAX, site, Дзен, VK, guides, about); тон не «бегите» |
 
 - Телефон `+7 922 001 65 05` — на **cover** + **один раз** в теле.
 - **Interlink:** 2–4 контекстные ссылки на sibling из `shared/published-articles.md` (`status=published`).
@@ -166,13 +166,13 @@ dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
 needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
 Scout HARD gates перед handoff: live blog ~20 + ledger + `--sync-used-clusters` + MCP-KV Wordstat + shared/dzen-news-casus.md (Dzen engagement; hot news-casus; comment_magnet_angle; слабый Wordstat → rework, NOT drop casus) + `scout_helper.py --check-query` (**30d story-duplicate** `shared/scout-story-clusters.json` + `memory/scout/used-clusters.json` — same legal risk+plot = FAIL even if title differs; Klyshin optional, fresh only).
 research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
-Title/Writer/Sol: цель = Dzen engagement (лайки, комментарии, подписки); news-casus актуалочка (событие → финал → практика после); прозаический лид → early TG+MAX; comment magnet — один острый вопрос; H1 forbidden: «чеклист», «N шагов», «стоит ли покупать»; body 2000–2600, useful part AFTER story.
+Title/Writer/Sol: цель = Dzen engagement (лайки, комментарии, подписки); news-casus актуалочка (событие → финал → практика после); прозаический лид → early TG+MAX; comment magnet — один острый вопрос; ending landing — agency not panic (heat сохраняем, последние 1–2 абзаца = ручка до аванса; ban: sugar happy ending, checklist-as-finale, «риски везде — как покупать»); H1 forbidden: «чеклист», «N шагов», «стоит ли покупать»; body 2000–2600, useful part AFTER story.
 Description: news card energy (shared/dzen-description-rules.md), not SEO checklist blurb.
 
 Conversion + engagement (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
   Early после hook + прозаический лид (4–6 предложений, news-casus; НЕ TL;DR / «Быстрый инсайт» / bullet-dump): brand beat + curiosity + ТОЛЬКО Telegram https://t.me/Tyumen_Rieltor и MAX https://max.ru/id561413315447_biz
   Mid после практического блока (aftermath casus): лёгкий TG+MAX (excalibur-cta-mid)
-  End: dual CTA консультация / сразу в сделку + полный набор (site, guides, Dzen, VK, about)
+  End: dual CTA консультация / подключусь до аванса + полный набор (site, guides, Dzen, VK, about); ending landing 1–2 абзаца agency-not-panic перед end CTA; ban sugar happy ending, checklist-as-finale, «риски везде — как покупать»
   Телефон +7 922 001 65 05 на cover + один раз в теле
   Interlink 2–4 sibling из shared/published-articles.md (status=published)
   Comment magnet: один острый вопрос для комментариев (gate comment_magnet_question)
