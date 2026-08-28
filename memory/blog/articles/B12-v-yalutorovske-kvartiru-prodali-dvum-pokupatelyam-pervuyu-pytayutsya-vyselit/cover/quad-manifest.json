@@ -85,7 +85,7 @@
     "inline_2": {
       "quadrant": "bottom_left",
       "h2_anchor": "Через год: у той же квартиры появился второй покупатель",
-      "visual_type": "comparison_table_ui",
+      "visual_type": "comparison_table",
       "scene_hint": "comparison_table: 1-я vs 2-й; год спустя; два договора; больше денег; откат.",
       "alt": "Таблица сопоставляет первую сделку и появившегося через год второго покупателя.",
       "labels": [
