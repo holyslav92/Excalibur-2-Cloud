@@ -20,10 +20,11 @@ category: env
 - Metrika cohort analysis пропущен; lessons marked low/medium confidence без behavioral signals.
 - **2026-08-26 B10 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9161 ingest skipped; B10 lessons recorded without behavioral signals.
 - **2026-08-28 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9230 ingest skipped; B11 lessons recorded without behavioral signals.
+- **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9240 ingest skipped; B12 lessons recorded without behavioral signals (3 named lessons).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161) и B11 (post 9230) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230) и B12 (post 9240) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
