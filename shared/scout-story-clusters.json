@@ -206,6 +206,18 @@
       "examples": [
         "v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii"
       ]
+    },
+    {
+      "id": "storage_room_promised_not_in_egrn",
+      "label_ru": "Кладовка «в подарок» обещана, но нет в ЕГРН / нет отдельного права",
+      "required_groups": [
+        ["кладов", "келлер", "подвал", "кладовк"],
+        ["подар", "бонус", "в\\s+подарок", "обещал", "обещали"],
+        ["егрн", "выписк", "кадастр", "реестр", "не\\s+оказал", "не\\s+было", "нет\\s+в"]
+      ],
+      "examples": [
+        "v-tyumeni-obeshchali-kladovku-v-podarok-v-vypiske-egrn-ee-ne-okazalos"
+      ]
     }
   ]
 }

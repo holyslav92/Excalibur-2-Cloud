@@ -1,0 +1,13 @@
+{
+  "gate": "live-page",
+  "status": "BLOCK",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-obeshchali-kladovku-v-podarok-v-vypiske-egrn-ee-ne-okazalos/",
+  "errors": [
+    "canonical URL does not exactly match published permalink",
+    "live BlogPosting JSON-LD URL does not exactly match permalink",
+    "live <title> does not contain expected article title",
+    "article-content container missing",
+    "featured image container missing",
+    "live FAQPage question/answer pairs differ from visible thematic FAQ"
+  ]
+}
