@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-08-29",
+    "today_ru": "29.08.2026",
+    "year": 2026,
+    "month": 8,
+    "month_name_ru": "август",
+    "weekday_ru": "суббота"
+  },
+  "topic": {
+    "topic_id": "B13",
+    "title": "В Тюмени приставы наложили арест за два дня до регистрации — аванс ещё не вносили",
+    "h1": "В Тюмени приставы наложили арест за два дня до регистрации — аванс ещё не вносили",
+    "slug": "v-tyumeni-pristavy-nalozhili-arest-za-dva-dnya-do-registracii-avans-esche-ne-vno",
+    "primary_query": "В Тюмени приставы наложили арест за два дня до регистрации — аванс ещё не вносили",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени приставы наложили арест за два дня до регистрации — аванс ещё не вносили 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "У тюменцев забрали дома и квартиры за долги - 12 августа 2026 | 72.ру",
+          "url": "https://72.ru/text/house/2026/08/12/76584267/",
+          "snippet": ""
+        },
+        {
+          "title": "Уловки приставов: как УФССП выманивает деньги у должников",
+          "url": "https://fedpress.ru/article/3397107",
+          "snippet": "Об этом сообщили в пресс-службе АО «УСТЭК». Под арест попали автомобили Subaru Forester и Subaru Impreza. В первом случае сумма долга за тепловую энергию составляла около 10,5 тысячи рублей."
+        },
+        {
+          "title": "Как оказалось на машину наложили арест на предыдущего хозяина, но ...",
+          "url": "https://pravoved.ru/question/4560091/",
+          "snippet": "Довольно часто приставы накладывают арест на автомобили должников. Так случилось с несколькими автовладельцами Тюмени этим летом. Например, супруга должника ездила на его «Кио Рио», а он в..."
+        },
+        {
+          "title": "Что делать если арестовали автомобиль в 2026 | fcbg",
+          "url": "https://fcbg.ru/arest-avtomobilya",
+          "snippet": "Итог: Арест, наложенный на машину через 7 лет после продажи — незаконен. Пристав обязан снять его по вашему заявлению. Если не снимают — жалоба в ФССП + суд по КАС РФ. Это работает."
+        },
+        {
+          "title": "Как узнать за что наложили арест судебные приставы",
+          "url": "https://dadanews.ru/obschestvo/kak-uznat-za-chto-nalozhili-arest-sudebnye-pristavy-2/",
+          "snippet": "Если автовладелец в суде признан должником, и не предпринимает никаких шагов для выплаты задолженности, это будет являться основанием для ареста его транспортного средства."
+        },
+        {
+          "title": "Проверка Авто На Арест По Гос Номеру И Vin Коду Онлайн | Узнать Наложен ...",
+          "url": "https://vin.drom.ru/proverka/arest/",
+          "snippet": "Эта статья поможет вам быстро и точно определить, за что именно наложили арест, какие шаги предпринять для проверки информации, как обжаловать неправомерные действия и восстановить ..."
+        }
+      ],
+      "searched_at": "2026-08-29"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени приставы наложили арест за два дня до регистрации — аванс ещё не вносили 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "‼️ В Тюмени арестован автомобиль за долги по штрафам Судебные приставы ...",
+          "url": "https://vk.com/wall-233559466_616",
+          "snippet": ""
+        },
+        {
+          "title": "У тюменцев забрали дома и квартиры за долги - 12 августа 2026 | 72.ру",
+          "url": "https://72.ru/text/house/2026/08/12/76584267/",
+          "snippet": "Судебные приставы Тюмени наложили арест на автомобиль марки Changan. Причиной послужила задолженность владелицы по административным штрафам, превышающая 82 тысячи рублей."
+        },
+        {
+          "title": "Уловки приставов: как УФССП выманивает деньги у должников",
+          "url": "https://fedpress.ru/article/3397107",
+          "snippet": "Об этом сообщили в пресс-службе АО «УСТЭК». Под арест попали автомобили Subaru Forester и Subaru Impreza. В первом случае сумма долга за тепловую энергию составляла около 10,5 тысячи рублей."
+        },
+        {
+          "title": "Как оказалось на машину наложили арест на предыдущего хозяина, но ...",
+          "url": "https://pravoved.ru/question/4560091/",
+          "snippet": "Довольно часто приставы накладывают арест на автомобили должников. Так случилось с несколькими автовладельцами Тюмени этим летом. Например, супруга должника ездила на его «Кио Рио», а он в..."
+        },
+        {
+          "title": "Проверка Авто На Арест По Гос Номеру И Vin Коду Онлайн | Узнать Наложен ...",
+          "url": "https://vin.drom.ru/proverka/arest/",
+          "snippet": "Итог: Арест, наложенный на машину через 7 лет после продажи — незаконен. Пристав обязан снять его по вашему заявлению. Если не снимают — жалоба в ФССП + суд по КАС РФ. Это работает."
+        },
+        {
+          "title": "У тюменца, который задолжал 49 тыс. рублей за штрафы, забрали ...",
+          "url": "https://t-l.ru/403744.html",
+          "snippet": "Проверить авто на залог можно на сайтах ФССП и ГИБДД, но для этого надо знать данные продавца (ФИО, дату рождения, прописку) и автомобиля (VIN номер и номер кузова/шасси)."
+        }
+      ],
+      "searched_at": "2026-08-29"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени приставы наложили арест за два дня до регистрации — аванс ещё не вносили official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Все новости Тюмени и Тюменской области приставы",
+          "url": "https://tumentoday.ru/tag/%D0%BF%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%B2%D1%8B",
+          "snippet": ""
+        },
+        {
+          "title": "Как узнать за что судебные приставы наложили арест на автомобиль",
+          "url": "https://dadanews.ru/obschestvo/kak-uznat-za-chto-sudebnye-pristavy-nalozhili-arest-na-avtomobil/",
+          "snippet": "В Тобольске судебные приставы арестовали автомобиль из-за долга в миллион рублей 02 июня 2026, 09:40"
+        },
+        {
+          "title": "Судебные приставы изъяли девять автомобилей у должников в Тюмени",
+          "url": "https://t-l.ru/402559.html",
+          "snippet": "Эта статья даст вам полную картину: от юридических оснований до конкретной пошаговой инструкции, как узнать, за что судебные приставы наложили арест на автомобиль."
+        },
+        {
+          "title": "Уловки приставов: как УФССП выманивает деньги у должников",
+          "url": "https://fedpress.ru/article/3397107",
+          "snippet": "Семь водителей прямо на месте оплатили долги на общую сумму 760 тыс. рублей и поехали дальше. Остальные девять автомобилей приставы арестовали и отправили на спецстоянку на эвакуаторах."
+        },
+        {
+          "title": "Купил автомобиль, на который наложен арест: что делать?",
+          "url": "https://auto.ru/mag/article/chto-delat-esli-kuplennyy-avtomobil-v-areste/",
+          "snippet": "Довольно часто приставы накладывают арест на автомобили должников. Так случилось с несколькими автовладельцами Тюмени этим летом. Например, супруга должника ездила на его «Кио Рио», а он в..."
+        },
+        {
+          "title": "Проверка Авто На Арест По Гос Номеру И Vin Коду Онлайн | Узнать Наложен ...",
+          "url": "https://vin.drom.ru/proverka/arest/",
+          "snippet": "Однако у нового владельца возникнут сложности: оформить машину на себя, получить новые документы и официально зарегистрировать её в ГАИ до снятия запрета он не сможет."
+        }
+      ],
+      "searched_at": "2026-08-29"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени приставы наложили арест за два дня до регистрации — аванс ещё не вносили 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "PTO-ISA-260417/docs/figures/isa/TNOT.svg at master - GitHub",
+          "url": "https://github.com/wany16/PTO-ISA-260417/blob/master/docs/figures/isa/TNOT.svg",
+          "snippet": ""
+        },
+        {
+          "title": "AiDex/docs/aidex-demo.png at master · CSCSoftware/AiDex",
+          "url": "https://github.com/CSCSoftware/AiDex/blob/master/docs/aidex-demo.png",
+          "snippet": "Contribute to wany16/PTO-ISA-260417 development by creating an account on GitHub."
+        },
+        {
+          "title": "example-webapp/doc/example-webapp.png at main · devel0/example-webapp",
+          "url": "https://github.com/devel0/example-webapp/blob/main/doc/example-webapp.png",
+          "snippet": "MCP Server for persistent code indexing. Gives AI assistants (Claude, Gemini, Copilot, Cursor) instant access to your codebase. 50x less context than grep. - AiDex/docs/aidex-demo.png at master · CSCSoftware/AiDex."
+        },
+        {
+          "title": "web3j-docs/docs/img/web3j_transaction.png at main · LFDT-web3j/web3j ...",
+          "url": "https://github.com/LFDT-web3j/web3j-docs/blob/main/docs/img/web3j_transaction.png",
+          "snippet": "example of webapp with aspnet core and react. Contribute to devel0/example-webapp development by creating an account on GitHub."
+        },
+        {
+          "title": "Вылет после запуска. · Issue #6613 · FTBTeam/FTB-Modpack-Issues",
+          "url": "https://github.com/FTBTeam/FTB-Modpack-Issues/issues/6613",
+          "snippet": "Web3j documentation repository. Contribute to LFDT-web3j/web3j-docs development by creating an account on GitHub."
+        },
+        {
+          "title": "zepto-react-native/packages/react-native/ReactCommon/react/renderer ...",
+          "url": "https://github.com/zeptonow/zepto-react-native/blob/main/packages/react-native/ReactCommon/react/renderer/core/__docs__/passChildrenWhenCloning.excalidraw.svg",
+          "snippet": "Запускается игра. Сначала появляется небольшое окно игры, которое как бы \"Не отвечает\", потом оно открывается во весь экран, полностью черное. После чего игра сворачивается. Я пытался изменить размер окна в настройках ftb лаунчера, я удалял файл с настройками, это ничего не изменило. Ошибка появилась сама по себе."
+        }
+      ],
+      "searched_at": "2026-08-29"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени приставы наложили арест за два дня до регистрации — аванс ещё не вносили forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Все новости Тюмени и Тюменской области приставы",
+          "url": "https://tumentoday.ru/tag/%D0%BF%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%B2%D1%8B",
+          "snippet": ""
+        },
+        {
+          "title": "Уловки приставов: как УФССП выманивает деньги у должников",
+          "url": "https://fedpress.ru/article/3397107",
+          "snippet": "Тюменские приставы заставили должника выплатить свыше 1 млн рублей по алиментам 06 февраля 2026, 20:09"
+        },
+        {
+          "title": "Жительница Тюмени фиктивно поставила на учет в своей квартире 14 мигрантов",
+          "url": "https://nashgorod.ru/news/2026-08-24/tyumenka-poteryala-dengi-iz-za-migrantov-radi-instrantsev-ona-poshla-na-prestuplenie-5665862",
+          "snippet": "Довольно часто приставы накладывают арест на автомобили должников. Так случилось с несколькими автовладельцами Тюмени этим летом. Например, супруга должника ездила на его «Кио Рио», а он в..."
+        },
+        {
+          "title": "Как узнать за что наложили арест приставы - Да-Да Новости",
+          "url": "https://dadanews.ru/obschestvo/kak-uznat-za-chto-nalozhili-arest-pristavy/",
+          "snippet": "В Тюмени местная жительница поставила на учет в своей квартире 14 нелегальных мигрантов. Ей назначили штраф."
+        },
+        {
+          "title": "Судебные приставы изъяли девять автомобилей у должников в Тюмени",
+          "url": "https://t-l.ru/402559.html",
+          "snippet": "В этой статье вы узнаете, как оперативно и безопасно выяснить, за что наложили арест приставы, какие официальные каналы связи существуют, как проверить задолженность без ошибок и как ..."
+        },
+        {
+          "title": "Как узнать, за что судебные приставы взыскали деньги",
+          "url": "https://fpa.ru/info/kak-uznat-za-chto-sudebnye-pristavy-vzyskali-dengi/",
+          "snippet": "Семь водителей прямо на месте оплатили долги на общую сумму 760 тыс. рублей и поехали дальше. Остальные девять автомобилей приставы арестовали и отправили на спецстоянку на эвакуаторах."
+        }
+      ],
+      "searched_at": "2026-08-29"
+    }
+  ],
+  "errors": []
+}
