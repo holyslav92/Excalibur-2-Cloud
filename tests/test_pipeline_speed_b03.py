@@ -74,7 +74,17 @@ class QuadManifestCanonTest(unittest.TestCase):
                     f"inline_{i}": {
                         "scene_hint": "s",
                         "alt": "a",
-                        "visual_type": "comparison_table",
+                        "visual_type": (
+                            "realistic_photo"
+                            if i in (1, 3, 5)
+                            else "comparison_table"
+                        ),
+                        "h2_anchor": f"H{i}",
+                        **(
+                            {"placement_group": "pair"}
+                            if i in (1, 2)
+                            else {}
+                        ),
                     }
                     for i in range(1, 8)
                 },

@@ -13,6 +13,9 @@ from excalibur_blog_quad_slots import (
     CANONICAL_INLINE_VISUAL_TYPES,
     MEME_ALLOWED_SLOTS,
     NO_MEME_NO_CAT_SLOTS,
+    REALISTIC_INLINE_MAX,
+    REALISTIC_INLINE_MIN,
+    REALISTIC_INLINE_VISUAL_TYPE,
     active_inline_keys,
     apply_quad_canon_to_manifest,
     inline_count_from_manifest,
@@ -59,6 +62,34 @@ def validate_quad_manifest(manifest: dict[str, Any], root: Path | None = None) -
         errors.append(f"cover_phone_cta must be '+7 922 001 65 05', got {phone!r}")
 
     if inline_count == 7:
+        realistic_n = 0
+        pair_groups = 0
+        h2_anchors: list[str] = []
+        for key in active_inline_keys(inline_count):
+            slot = slots.get(key) or {}
+            vt = normalize_visual_type(str(slot.get("visual_type") or ""))
+            if vt == REALISTIC_INLINE_VISUAL_TYPE:
+                realistic_n += 1
+            if slot.get("placement_group") == "pair":
+                pair_groups += 1
+            anchor = str(slot.get("h2_anchor") or "").strip()
+            if anchor:
+                h2_anchors.append(anchor)
+
+        if realistic_n < REALISTIC_INLINE_MIN or realistic_n > REALISTIC_INLINE_MAX:
+            errors.append(
+                f"inline_realistic_mix: {realistic_n} realistic_photo slots; "
+                f"need {REALISTIC_INLINE_MIN}-{REALISTIC_INLINE_MAX}"
+            )
+        if pair_groups < 1:
+            warnings.append(
+                "image_placement: no placement_group=pair slot; canon recommends one photo+diagram pair"
+            )
+        if len(h2_anchors) != len(set(h2_anchors)):
+            warnings.append(
+                "image_placement: duplicate h2_anchor across slots (OK for intentional pairs)"
+            )
+
         meme_on: list[str] = []
         for key in active_inline_keys(inline_count):
             slot = slots.get(key) or {}

@@ -12,7 +12,7 @@
 
 См. `AGENTS.md`, `shared/quality-bar-9.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills.
 
-Тенант: **The Риэлтор** / tymenrieltor.ru — longform ~2000–2600 слов, cover + 7 inline-quad.
+Тенант: **The Риэлтор** / tymenrieltor.ru — longform **~1800–2200 слов** (≈8–10 мин), cover + 7 inline-quad (гибкое размещение в HTML: 0/1/пара на H2).
 
 ## Расписание (owner: 9–17 YEKT)
 
@@ -119,7 +119,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 1. **Canvas 1** (grsai grsai standard image model i2i): cover + inline_1…3 → split 2×2
 2. **Canvas 2** (grsai grsai standard image model t2i): inline_4…7 → split 2×2
-3. Итого: `cover.png` 1200×675 + `inline-01…07.png`, inject `figure.inline-quad` data-slot=inline_1…7
+3. Итого: `cover.png` 1200×675 + `inline-01…07.png`, inject `figure.inline-quad` data-slot=inline_1…7 — **гибко**: не 1:1 под каждым H2; допустима **пара подряд** (реалистичный кадр + диаграмма); **2–4** realistic + остальное informational (manifest `inline_realistic_mix_2_4`).
 
 Hero lock: `memory/cover/assets/identity-real/*` (4 live фото) — лицо 28 лет, **новая выдуманная сцена** каждый раз. AI `scene-composition-only/hero-ref-*` — не для лица.
 
@@ -167,7 +167,7 @@ dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
 needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
 Scout HARD gates перед handoff: live blog ~20 + ledger + `--sync-used-clusters` + MCP-KV Wordstat + shared/dzen-news-casus.md (Dzen engagement; hot news-casus; comment_magnet_angle; слабый Wordstat → rework, NOT drop casus) + `scout_helper.py --check-query` (**30d story-duplicate** `shared/scout-story-clusters.json` + `memory/scout/used-clusters.json` — same legal risk+plot = FAIL even if title differs; Klyshin optional, fresh only).
 research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
-Title/Writer/Sol: цель = Dzen engagement (лайки, комментарии, подписки); news-casus актуалочка (событие → финал → практика после); прозаический лид → early TG+MAX; comment magnet — один острый вопрос; ending landing — agency not panic (heat сохраняем, последние 1–2 абзаца = ручка до аванса; ban: sugar happy ending, checklist-as-finale, «риски везде — как покупать»); H1 forbidden: «чеклист», «N шагов», «стоит ли покупать»; body 2000–2600, useful part AFTER story.
+Title/Writer/Sol: цель = Dzen engagement (лайки, комментарии, подписки); news-casus актуалочка (событие → финал → практика **один раз**); **spine once** — не пересказывать casus в лиде+середине+итоге; прозаический лид → early TG+MAX; comment magnet; ending landing — agency not panic; H1 forbidden: «чеклист», «N шагов»; body **~1800–2200** (hard FAIL > ~2400 / 14+ мин Дзен), useful part AFTER story.
 Description: news card energy (shared/dzen-description-rules.md), not SEO checklist blurb.
 
 Conversion + engagement (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):

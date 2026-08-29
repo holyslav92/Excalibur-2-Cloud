@@ -21,12 +21,31 @@ if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
 
-WORD_MIN = 2000
-WORD_MAX = 2600
-H2_MIN = 7
+WORD_TARGET_MIN = 1800
+WORD_TARGET_MAX = 2200
+WORD_HARD_MAX = 2400
+DZEN_WORDS_PER_MINUTE = 200
+DZEN_READING_MINUTES_MAX = 12
+H2_MIN = 5
 INLINE_MIN = 7
+REALISTIC_INLINE_MIN = 2
+REALISTIC_INLINE_MAX = 4
 INTERLINK_MIN = 2
 INTERLINK_MAX = 4
+
+RECAP_BANNED_PHRASES = (
+    "коротко если некогда",
+    "коротко, если некогда",
+    "если некогда",
+    "в двух словах",
+    "подведём итог",
+    "подведем итог",
+    "резюмируя",
+    "главное — запомните",
+    "главное - запомните",
+    "итого:",
+    "итог:",
+)
 
 TG_URL = "https://t.me/Tyumen_Rieltor"
 MAX_URL = "https://max.ru/id561413315447_biz"
@@ -39,9 +58,14 @@ REQUIRED_CHECKS = (
     "end_cta_full_channels",
     "interlink_siblings_2_4",
     "dual_cta_soft",
-    "word_count_2000_2600",
-    "h2_count_7_plus",
+    "word_count_1800_2200",
+    "word_count_hard_max_2400",
+    "dzen_reading_time_ok",
+    "spine_once_no_recap",
+    "h2_count_5_plus",
     "inline_figures_7",
+    "inline_placement_flexible",
+    "inline_realistic_mix_2_4",
     "no_sol_artifact",
     "no_unlabeled_live_inventory",
     "comparison_tables_differ",
@@ -77,6 +101,102 @@ def count_h2(html: str) -> int:
 
 def count_inline_figures(html: str) -> int:
     return len(re.findall(r'<figure[^>]*class="[^"]*inline-quad', html or "", flags=re.I))
+
+
+def estimate_dzen_reading_minutes(word_count_value: int) -> int:
+    if word_count_value <= 0:
+        return 0
+    return (word_count_value + DZEN_WORDS_PER_MINUTE - 1) // DZEN_WORDS_PER_MINUTE
+
+
+def h2_titles_from_html(html: str) -> list[str]:
+    titles: list[str] = []
+    for match in re.finditer(r"<h2[^>]*>(.*?)</h2>", html or "", flags=re.I | re.S):
+        title = re.sub(r"<[^>]+>", "", match.group(1))
+        title = re.sub(r"\s+", " ", title).strip()
+        if not title:
+            continue
+        if title.lower() in {"частые вопросы", "faq"}:
+            break
+        titles.append(title)
+    return titles
+
+
+def count_figures_per_h2(html: str) -> dict[str, int]:
+    """Map normalized H2 text → inline figure count immediately under that section."""
+    counts: dict[str, int] = {t: 0 for t in h2_titles_from_html(html)}
+    if not counts:
+        return counts
+    pattern = re.compile(
+        r"<h2[^>]*>(.*?)</h2>(.*?)(?=<h2\b|$)",
+        flags=re.I | re.S,
+    )
+    for match in pattern.finditer(html or ""):
+        title = re.sub(r"<[^>]+>", "", match.group(1))
+        title = re.sub(r"\s+", " ", title).strip()
+        if title.lower() in {"частые вопросы", "faq"}:
+            break
+        body = match.group(2) or ""
+        fig_n = len(re.findall(r'<figure[^>]*class="[^"]*inline-quad', body, flags=re.I))
+        if title in counts:
+            counts[title] = fig_n
+    return counts
+
+
+def check_spine_once_no_recap(html: str) -> tuple[bool, list[str]]:
+    plain = strip_html(html).lower()
+    errors: list[str] = []
+    for phrase in RECAP_BANNED_PHRASES:
+        if phrase in plain:
+            errors.append(f"spine_once: banned recap phrase {phrase!r}")
+    return (not errors, errors)
+
+
+def check_inline_placement_flexible(html: str) -> tuple[bool, list[str]]:
+    """PASS when placement is not rigid 1:1 first-N H2s — allow 0, pair, or skip."""
+    per_h2 = count_figures_per_h2(html)
+    if not per_h2:
+        return True, []
+    values = list(per_h2.values())
+    has_zero = any(v == 0 for v in values)
+    has_pair = any(v >= 2 for v in values)
+    # Rigid legacy: first len(values) H2s each have exactly 1 figure and none skipped/paired.
+    first_n = min(len(values), INLINE_MIN)
+    rigid = all(values[i] == 1 for i in range(first_n)) and not has_zero and not has_pair
+    if rigid and len(values) >= INLINE_MIN:
+        return False, ["inline_placement: rigid 1:1 under first H2s — use 0/1/pair mix"]
+    if not (has_zero or has_pair):
+        return False, ["inline_placement: need at least one H2 with 0 images or a pair (2+)"]
+    return True, []
+
+
+def check_inline_realistic_mix(manifest_path: Path) -> tuple[bool, list[str]]:
+    if not manifest_path.is_file():
+        return False, ["cover/quad-manifest.json missing for realistic mix gate"]
+    try:
+        manifest = load_json(manifest_path)
+    except json.JSONDecodeError:
+        return False, ["cover/quad-manifest.json invalid JSON"]
+    inline_count = int(manifest.get("inline_count") or 7)
+    slots = manifest.get("slots") or {}
+    realistic = 0
+    for key in (f"inline_{i}" for i in range(1, inline_count + 1)):
+        slot = slots.get(key) or {}
+        vt = normalize_visual_type(str(slot.get("visual_type") or ""))
+        if vt == "realistic_photo":
+            realistic += 1
+    if realistic < REALISTIC_INLINE_MIN or realistic > REALISTIC_INLINE_MAX:
+        return False, [
+            f"inline_realistic_mix: {realistic} realistic_photo slots; "
+            f"need {REALISTIC_INLINE_MIN}-{REALISTIC_INLINE_MAX}"
+        ]
+    return True, []
+
+
+def normalize_visual_type(type_id: str) -> str:
+    aliases = {"comparison_table_ui": "comparison_table", "photo_scene": "realistic_photo"}
+    raw = str(type_id or "").strip()
+    return aliases.get(raw, raw)
 
 
 def has_phone(html: str) -> bool:
@@ -498,9 +618,18 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
     interlink_ok, interlink_count = check_interlinks(html, root, article_dir)
     checks["interlink_siblings_2_4"] = interlink_ok
     checks["dual_cta_soft"] = check_dual_cta(html)
-    checks["word_count_2000_2600"] = WORD_MIN <= wc <= WORD_MAX
-    checks["h2_count_7_plus"] = h2c >= H2_MIN
+    checks["word_count_1800_2200"] = WORD_TARGET_MIN <= wc <= WORD_TARGET_MAX
+    checks["word_count_hard_max_2400"] = wc <= WORD_HARD_MAX
+    reading_min = estimate_dzen_reading_minutes(wc)
+    checks["dzen_reading_time_ok"] = reading_min < DZEN_READING_MINUTES_MAX + 2  # <14 min
+    spine_ok, spine_errors = check_spine_once_no_recap(html)
+    checks["spine_once_no_recap"] = spine_ok
+    checks["h2_count_5_plus"] = h2c >= H2_MIN
     checks["inline_figures_7"] = inlines >= INLINE_MIN
+    placement_ok, placement_errors = check_inline_placement_flexible(html)
+    checks["inline_placement_flexible"] = placement_ok
+    realistic_ok, realistic_errors = check_inline_realistic_mix(article_dir / "cover" / "quad-manifest.json")
+    checks["inline_realistic_mix_2_4"] = realistic_ok
     checks["no_sol_artifact"] = check_no_sol_artifact(html)
     checks["no_unlabeled_live_inventory"] = check_live_inventory(html)
     tbl_ok, tbl_errors = check_comparison_tables(html)
@@ -523,12 +652,25 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
         if not checks.get(key):
             if key == "comparison_tables_differ" and tbl_errors:
                 errors.extend(tbl_errors)
-            elif key == "word_count_2000_2600":
-                errors.append(f"word_count {wc} outside {WORD_MIN}-{WORD_MAX}")
-            elif key == "h2_count_7_plus":
+            elif key == "word_count_1800_2200":
+                errors.append(f"word_count {wc} outside target {WORD_TARGET_MIN}-{WORD_TARGET_MAX}")
+            elif key == "word_count_hard_max_2400":
+                errors.append(f"word_count {wc} exceeds hard max {WORD_HARD_MAX}")
+            elif key == "dzen_reading_time_ok":
+                errors.append(
+                    f"dzen_reading_minutes ~{reading_min} (words/{DZEN_WORDS_PER_MINUTE}); "
+                    f"need < {DZEN_READING_MINUTES_MAX + 2}"
+                )
+            elif key == "spine_once_no_recap" and spine_errors:
+                errors.extend(spine_errors)
+            elif key == "h2_count_5_plus":
                 errors.append(f"h2 count {h2c} < {H2_MIN}")
             elif key == "inline_figures_7":
                 errors.append(f"inline figures {inlines} < {INLINE_MIN}")
+            elif key == "inline_placement_flexible" and placement_errors:
+                errors.extend(placement_errors)
+            elif key == "inline_realistic_mix_2_4" and realistic_errors:
+                errors.extend(realistic_errors)
             elif key == "interlink_siblings_2_4":
                 errors.append(
                     f"sibling interlinks {interlink_count} outside {INTERLINK_MIN}-{INTERLINK_MAX}"
@@ -554,6 +696,9 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
         "errors": errors,
         "metrics": {
             "word_count": wc,
+            "word_count_target": f"{WORD_TARGET_MIN}-{WORD_TARGET_MAX}",
+            "word_count_hard_max": WORD_HARD_MAX,
+            "dzen_reading_minutes_est": reading_min,
             "h2_count": h2c,
             "inline_figures": inlines,
             "sibling_interlinks": interlink_count,

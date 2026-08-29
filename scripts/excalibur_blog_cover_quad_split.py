@@ -497,6 +497,28 @@ def _remove_slot_figures(html: str, slot_key: str) -> tuple[str, int, list[str]]
     return "".join(parts), count, preceding
 
 
+def _figure_insert_pos(html: str, h2: str) -> int | None:
+    """Byte offset where the next inline figure for ``h2`` should be inserted."""
+    pattern = re.compile(rf"<h2[^>]*>\s*{re.escape(h2)}\s*</h2>", re.I | re.S)
+    match = pattern.search(html)
+    if not match:
+        return None
+    section_start = match.end()
+    next_h2 = re.search(r"<h2\b", html[section_start:], flags=re.I)
+    section_end = section_start + next_h2.start() if next_h2 else len(html)
+    section = html[section_start:section_end]
+    fig_iter = list(
+        re.finditer(
+            r'<figure[^>]*class="[^"]*inline-quad[^"]*"[^>]*>[\s\S]*?</figure>\s*',
+            section,
+            flags=re.I,
+        )
+    )
+    if fig_iter:
+        return section_start + fig_iter[-1].end()
+    return section_start
+
+
 def inject_figures(
     article_html: Path,
     split_outputs: dict[str, Any],
@@ -545,21 +567,23 @@ def inject_figures(
                 continue
             html, removed, prev_list = _remove_slot_figures(html, slot_key)
             prev_note = ", ".join(prev_list) if prev_list else "(no H2)"
-            if not pattern.search(html):
+            insert_pos = _figure_insert_pos(html, h2)
+            if insert_pos is None:
                 changes.append(
                     f"removed {slot_key} from wrong H2 [{prev_note}] but target H2 not found — {h2}"
                 )
                 continue
-            html = pattern.sub(r"\1" + figure, html, count=1)
+            html = html[:insert_pos] + figure + html[insert_pos:]
             changes.append(
                 f"moved {slot_key} → H2 — {h2} (was under [{prev_note}]; removed={removed})"
             )
             continue
 
-        if not pattern.search(html):
+        insert_pos = _figure_insert_pos(html, h2)
+        if insert_pos is None:
             changes.append(f"skip {slot_key}: H2 not found — {h2}")
             continue
-        html = pattern.sub(r"\1" + figure, html, count=1)
+        html = html[:insert_pos] + figure + html[insert_pos:]
         changes.append(f"injected {slot_key} after H2 — {h2}")
 
     if not dry_run and any(not c.startswith("skip ") for c in changes):
