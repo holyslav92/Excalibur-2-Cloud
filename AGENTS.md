@@ -84,10 +84,13 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - Scout **drop hook** при слабом Wordstat без цикла rework (локализация Тюмень, buyer-жаргон: егрн, наследство, ипотека, аванс…)
 - Scout/тема про RF-blocked heroes без Дзен-канона (если `dzen_rf_pack`)
 - Sol выдумывает факты, которых нет в `drafts/writer.html` / research
+- **Spine once FAIL:** пересказ одной сцены в лиде + середине + «итоге»; recap («коротко если некогда»); повтор одних цифр/флагов трижды; lecture-хвост после финала casus
+- **Length FAIL:** > ~2400 слов или Дзен 14+ мин; раздутый текст «как раньше» 2600+
 - Cursor пишет Scout/Title/Writer/Sol/Description/Cover-text/Schema prose своей моделью вместо `excalibur_blog_derouter_opus_chat.py`
 - `alt` / caption / WP Media с production-токенами (hook, CTA, memes, scene_hint, semicolon prompt list)
 - Запуск пайплайна до завершения Setup
 - Cover regen >2 full attempts или >15–20 мин на cover / deep-dive pixel OCR source вместо Indexer
+- **Inline placement FAIL:** обязательная схема «1 PNG под каждым H2»; <2 или >4 realistic inline; stock-man hero на inline
 - Novel-length cover hook (>7 слов / многострочный) — ломает OCR
 
 ## Preflight

@@ -304,6 +304,19 @@
   "inline_utility": {
     "catalog": "memory/cover/inline-visual-types.json",
     "utility_test": "Reader without paragraph extracts fact/order/number/comparison for H2; icon row + 3-word captions = FAIL",
+    "placement_v2": {
+      "not_one_per_h2": true,
+      "allow_per_h2": [0, 1, 2],
+      "pair_pattern": "realistic_photo + informational diagram on same H2 when beat needs both",
+      "total_inline_png": 7
+    },
+    "realistic_mix": {
+      "count_min": 2,
+      "count_max": 4,
+      "subjects": ["apartment_interior", "building_entrance", "mfc_office", "document_closeup", "tyumen_street"],
+      "no_host_face": true,
+      "no_stock_man_hero": true
+    },
     "style_match_cover": "B02-approved: #FFFFFF high-key, gold/black, torn paper, tape, sun flare, collage",
     "no_host_face": true,
     "no_co_host_human": true,
@@ -334,6 +347,8 @@
     ],
     "cover_qa_checks": [
       "inline_utility_all_7",
+      "inline_realistic_mix_2_4",
+      "inline_placement_flexible",
       "inline_no_host_face",
       "inline_no_co_host_human",
       "inline_meme_sticker_scale",

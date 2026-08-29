@@ -67,7 +67,7 @@ Longform (7 inline): **3 части на первом проходе** — не 
    - **лид = news-casus**, проза 4–6 предложений; не how-to checklist; без research-даты и термин-дампа;
    - **запрещено в первом экране:** TL;DR, «Быстрый инсайт», bullet-списки до первого H2;
    - **финал casus** (суд/отмена/деньги) — явный H2 до практики; не обрывай на «расписку написали» без развязки;
-   - практика («что проверить») — **после** финала, как aftermath, не сухой список вместо истории;
+   - **spine once:** не пересказывать casus в лиде + середине + итоге; практика — **один** блок после финала; вырезать recap и lecture-хвосты;
    - **comment magnet:** один острый вопрос «…?» — после финала или перед mid CTA; читатели спорят, не FAQ-шаблон;
    - **ending landing (owner lock):** casus горячий (stakes, финал) — **не** размывать; последние 1–2 абзаца **до** end CTA = воздух + agency: остановились до аванса / проверка спасла / вторичка OK если смотреть до денег; CTA «подключусь до аванса», не «бегите»; **не** «все риэлторы плохие» / «вторичка — мина» / «риски везде — как покупать»; редко — жёсткая потеря только с вилкой «если бы X до аванса»; **ban:** sugar happy ending; чеклист как эмоциональный финал; pure dread без действия;
    - имя автора корпуса в тексте **не** писать;
@@ -79,7 +79,7 @@ Longform (7 inline): **3 части на первом проходе** — не 
    - `drafts/variant-a.html` — копия финала
    - не затирай `drafts/writer.html`
 5. Сверка с `bad-outputs.md` перед сдачей.
-6. **Quality bar 9/10:** `shared/quality-bar-9.md` — conversion early/mid/end CTA, 2–4 interlink, 2000–2600 слов; после Sol запусти `excalibur_blog_quality_bar_9_gate.py` → `quality-bar-9.json` all_pass.
+6. **Quality bar 9/10:** `shared/quality-bar-9.md` — conversion early/mid/end CTA, 2–4 interlink, **~1800–2200 слов** (hard FAIL > ~2400), **spine once**; после Sol запусти `excalibur_blog_quality_bar_9_gate.py` → `quality-bar-9.json` all_pass.
 
 ## Запреты
 

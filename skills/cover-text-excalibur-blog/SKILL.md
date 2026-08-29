@@ -88,10 +88,10 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 4. `sticky` — до 5 слов, короткая фраза-реакция.
 5. `wordstat_stickers` — **1–3** фразы из live Wordstat (Тюмень).
 6. **Meme picks (HARD)** — `meme_picks` из `memory/cover/meme-top100.json`: real ids only; people+cats variety (not cats-only); on-topic funny reaction to hook; slots cover + inline_1/05/07; anti-repeat 14д; small stickers never on hook/face/phone.
-7. `inline_labels.*` — **3–6 фактов на панель** (цифры, порядок, инструменты из `article.html`). Не слоганы настроения, не «типичные ошибки» без конкретики.
+7. `inline_labels.*` — **3–6 фактов на панель** (цифры, порядок, инструменты из `article.html`). Для `realistic_photo` — короткие подписи контекста (МФЦ, подъезд, документ), не слоганы.
 8. **Cover phone CTA:** `+7 922 001 65 05` на обложке (канон quality-bar-9 / tenant-config `phone_display`).
-8. Labels — короткие (1–4 слова), но несут **пользу**: срок, %, шаг, сравнение.
-   брендов (Cursor, Make, MCP, AI, OpenAI…).
+9. Labels — короткие (1–4 слова), но несут **пользу**: срок, %, шаг, сравнение.
+10. **Inline placement (manifest):** Cover agent задаёт `visual_type: realistic_photo` на **2–4** слотах; минимум одна **пара** (`placement_group: pair`) — фото + схема на одном H2; не все H2 обязаны иметь картинку.
 
 ## Gate (обязательно до Kie)
 

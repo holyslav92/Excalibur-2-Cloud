@@ -79,17 +79,19 @@ PRIMARY: **grsai grsai standard image model** (`GRSAI_API_KEY`, Global→China, 
 9. **Expression invention (HARD)** — эмоция/мимика/поза **новые каждый run** под hook; `scene_hint` + `cover_emotion` + `cover_motifs.emotion/action/outfit/pose_framing`. i2i: «same person, NEW outfit+action+expression, do not copy reference clothes/pose/smile». Копия студийной улыбки 1:1 = FAIL.
 10. **REJECTED daypart formula** — never morning desk / day street / evening close / night split.
 
-## Inline canon (v3 utility-first)
+## Inline canon (v4 — flexible placement + realistic mix)
 
-Канон: `memory/cover/inline-visual-types.json` + `cover-canon.json` → `inline_utility`.
+Канон: `memory/cover/inline-visual-types.json` + `cover-canon.json` → `inline_utility` + `placement_v2`.
 
-1. **Стиль** = одобренная обложка B02: #FFFFFF high-key, gold/black, torn paper, tape, sun flare, collage.
-2. **NO host face** on inline — host только на cover.
-3. **NO co-host human** on inline — stock model, handsome realtor, generated man, large meme person = FAIL.
-4. **Meme stickers** — cats or catalog people-memes only; ≤15% frame; corner accent; real templates from `meme-top100.json`.
-5. **Тест пользы (FAIL):** без абзаца читатель выносит факт/порядок/число/сравнение по H2; ряд иконок+3 слова = FAIL.
-6. **Типы:** comparison_table → process_flow → bar_timeline_chart → structure_diagram → labeled_checklist.
-7. **Labels** = факты из статьи. Cover-QA: `inline_utility_all_7` + `inline_no_host_face` + `inline_no_co_host_human` + `inline_meme_sticker_scale`.
+1. **Размещение:** **не** 1 PNG под каждым H2. Допустимы **0, 1 или пара** (realistic_photo + diagram) на бит. Всего **7** inline PNG; inject гибкий (`image_placement.mode=flexible_v2`).
+2. **Микс:** **2–4** `realistic_photo` (квартира, подъезд, МФЦ, документ, улица Тюмени — high-key, **без лица хоста**, без stock-man hero) + остальное — informational (таблицы/схемы с цифрами).
+3. **Стиль** = одобренная обложка B02: #FFFFFF high-key, gold/black, torn paper, tape, sun flare, collage.
+4. **NO host face** on inline — host только на cover.
+5. **NO co-host human** on inline — stock model, handsome realtor, generated man, large meme person = FAIL.
+6. **Meme stickers** — cats or catalog people-memes only; ≤15% frame; corner accent; real templates from `meme-top100.json`.
+7. **Тест пользы (FAIL):** diagram учит факт/порядок/число; photo даёт узнаваемый контекст бита; ряд иконок+3 слова = FAIL.
+8. **Типы:** realistic_photo + comparison_table → process_flow → bar_timeline_chart → structure_diagram → labeled_checklist.
+9. **Labels** = факты из статьи. Gates: `inline_utility_all_7` + `inline_realistic_mix_2_4` + `inline_placement_flexible` + `inline_no_host_face` + `inline_no_co_host_human`.
 
 ## Runbook
 
@@ -128,7 +130,7 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 - `slots.cover.cover_emotion` — hook-matched face (shock, side-eye, grimace, bewildered…); never «same as reference»
 - `cover_motifs` — composition, location, meme, props, stickers, joke, **outfit, emotion, pose_framing, action**
 - `wordstat_stickers` — Scout topic research only (manifest log); **not painted on cover**
-- `slots.inline_1…7` — H2 anchors, `visual_type` (utility catalog), scene_hint (image API only), fact labels (3–6)
+- `slots.inline_1…7` — H2 anchors (flexible: 0/1/pair per H2), `visual_type` (`realistic_photo` or utility catalog), `placement_group` (`pair` when photo+diagram), scene_hint (image API only), fact labels (3–6)
 - **`alt` / caption** — human Russian via `excalibur_blog_image_caption_builder.py --apply`; never hook/CTA/memes/scene_hint in alt
 
 ## Self-check before Derouter REST
@@ -151,5 +153,5 @@ python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --comp
 ## QA
 
 - cover.png + inline-01…07 exist
-- inject `data-slot=inline_1…7` after H2
+- inject `data-slot=inline_1…7` — **гибко** (0/1/пара на H2; pair = два figure подряд на одном бите)
 - fragment `cover.md` PASS

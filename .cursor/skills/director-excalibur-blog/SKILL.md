@@ -85,7 +85,7 @@ python3 scripts/excalibur_blog_opening_meta_gate.py --article-dir <dir>
 python3 scripts/excalibur_blog_quality_bar_9_gate.py --article-dir <dir>
 ```
 
-**Quality bar 9/10** (`shared/quality-bar-9.md`): conversion early/mid/end TG+MAX, interlink 2–4, 2000–2600 слов. Без `quality-bar-9.json` all_pass → не Publish.
+**Quality bar 9/10** (`shared/quality-bar-9.md`): conversion early/mid/end TG+MAX, interlink 2–4, **~1800–2200 слов** (hard FAIL > ~2400), spine once, inline mix 2–4 realistic. Без `quality-bar-9.json` all_pass → не Publish.
 
 Плохой **слог/открытие/CTA** → верни **Sol**.  
 Сломан **смысл/факты** → верни **Writer**, потом снова Sol.

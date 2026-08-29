@@ -37,14 +37,16 @@ Cover slot → solo i2i; inline → utility t2i. Derouter primary, Kie посл�
 7. **Коты** — meme-cat на cover/inline **или** недельная каденция не просела (не 3+ статей подряд без кота).
 8. **Wordstat stickers** — 1–3 читаемых стикера с live P0-фразами (из `quad-manifest.json` → `wordstat_stickers`).
 9. **identity-real** — 4 live-файла на месте.
-10. **Inline utility (все 7)** — каждый inline проходит тест пользы: факт/порядок/число/сравнение по H2; не ряд иконок+3 слова; не host face.
-11. **inline_no_host_face** — ни на одном inline нет лица Святослава / identity-real.
-12. **inline_no_co_host_human** — нет stock model / generated man / handsome realtor / large meme person как co-host или presenter на inline.
-13. **inline_meme_sticker_scale** — если мем-человек на inline, он ≤15% кадра, угол/край, не герой.
-14. **meme_people_real_catalog** — people-memes из `memory/cover/meme-top100.json`, не выдуманные лица.
-15. **meme_variety_not_cats_only** — `meme_picks` содержит ≥1 people-meme когда есть cat-memes.
-16. **meme_on_topic** — `meme_picks` / `cover_motifs.meme` соответствуют hook (не random wallpaper).
-17. **meme_sacred_zones** — pixel: hook title, face, phone readable; meme не перекрывает (clearance 80px).
+10. **Inline utility (все 7)** — каждый inline проходит тест пользы: факт/порядок/число/сравнение **или** узнаваемый realistic-контекст; не ряд иконок+3 слова; не host face.
+11. **inline_realistic_mix_2_4** — manifest: 2–4 слота `realistic_photo`, остальное informational; no stock-man hero.
+12. **inline_placement_flexible** — HTML: не rigid 1:1 под первыми N H2; допустимы H2 без картинки и **пара подряд** на одном бите.
+13. **inline_no_host_face** — ни на одном inline нет лица Святослава / identity-real.
+14. **inline_no_co_host_human** — нет stock model / generated man / handsome realtor / large meme person как co-host или presenter на inline.
+15. **inline_meme_sticker_scale** — если мем-человек на inline, он ≤15% кадра, угол/край, не герой.
+16. **meme_people_real_catalog** — people-memes из `memory/cover/meme-top100.json`, не выдуманные лица.
+17. **meme_variety_not_cats_only** — `meme_picks` содержит ≥1 people-meme когда есть cat-memes.
+18. **meme_on_topic** — `meme_picks` / `cover_motifs.meme` соответствуют hook (не random wallpaper).
+19. **meme_sacred_zones** — pixel: hook title, face, phone readable; meme не перекрывает (clearance 80px).
 
 Канон: `memory/cover/cover-canon.json`.
 

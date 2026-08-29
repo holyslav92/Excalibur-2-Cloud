@@ -54,6 +54,7 @@ VISUAL_TYPE_ALIASES: dict[str, str] = {
 
 CANONICAL_INLINE_VISUAL_TYPES: frozenset[str] = frozenset(
     {
+        "realistic_photo",
         "comparison_table",
         "process_flow",
         "bar_timeline_chart",
@@ -83,6 +84,25 @@ LEGACY_RESULT_FILE = "cover/quad-mcp-result.json"
 # Fixed pattern: meme allowed on cover, inline_1, inline_5, inline_7 only.
 MEME_ALLOWED_SLOTS: frozenset[str] = frozenset({"cover", "inline_1", "inline_5", "inline_7"})
 NO_MEME_NO_CAT_SLOTS: frozenset[str] = frozenset({"inline_2", "inline_3", "inline_4", "inline_6"})
+REALISTIC_INLINE_VISUAL_TYPE = "realistic_photo"
+REALISTIC_INLINE_MIN = 2
+REALISTIC_INLINE_MAX = 4
+INFORMATIONAL_INLINE_TYPES: frozenset[str] = frozenset(
+    CANONICAL_INLINE_VISUAL_TYPES - {REALISTIC_INLINE_VISUAL_TYPE}
+)
+REALISTIC_H2_KEYWORDS: tuple[str, ...] = (
+    "квартир",
+    "подъезд",
+    "мфц",
+    "документ",
+    "выписк",
+    "улиц",
+    "двор",
+    "ключ",
+    "двер",
+    "сделк",
+    "росреестр",
+)
 CANVAS_2_SLOTS_NO_HOST_FACE: frozenset[str] = frozenset(CANVAS_2_SLOTS)
 
 
@@ -181,5 +201,7 @@ def apply_quad_canon_to_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
         "no_meme_no_cat_slots": sorted(NO_MEME_NO_CAT_SLOTS),
         "canvas_2_no_host_face": True,
         "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+        "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+        "realistic_inline_count": "2-4 of 7",
     }
     return manifest

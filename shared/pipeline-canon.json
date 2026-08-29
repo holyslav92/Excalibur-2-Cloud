@@ -162,8 +162,12 @@
     "contract": "shared/quality-bar-9.md",
     "gate": "scripts/excalibur_blog_quality_bar_9_gate.py",
     "output": "quality-bar-9.json",
-    "word_count_min": 2000,
-    "word_count_max": 2600,
+    "word_count_target_min": 1800,
+    "word_count_target_max": 2200,
+    "word_count_hard_max": 2400,
+    "dzen_reading_minutes_max": 12,
+    "word_count_min": 1800,
+    "word_count_max": 2200,
     "dzen_engagement_goal": "likes_comments_subscriptions",
     "comment_magnet_required": true,
     "required_before_publish": true
@@ -209,6 +213,24 @@
         "anti_repeat_log": "memory/cover/used-motifs.json",
         "manifest_field": "meme_picks",
         "docs": ["memory/cover/cover-canon.json", "skills/cover-text-excalibur-blog/SKILL.md"]
+      },
+      "one_breath_v1": {
+        "owner_date": "2026-08-29",
+        "target_words": "1800-2200",
+        "hard_fail_words": 2400,
+        "dzen_reading_minutes_max": 12,
+        "spine_once": "lead_story_practice_once_agency_ending",
+        "forbidden": [
+          "retell_same_scene_in_lead_middle_and_summary",
+          "recap_paragraphs",
+          "korotko_esli_nekogda_dumps",
+          "repeat_same_numbers_flags_three_times",
+          "lecture_tails_after_casus_finale"
+        ],
+        "image_placement": "not_one_per_h2_allow_0_1_or_pair",
+        "realistic_inline_count": "2-4",
+        "informational_inline_rest": true,
+        "docs": ["shared/quality-bar-9.md", "memory/cover/inline-visual-types.json"]
       },
       "cover_fail_fast": {
         "max_full_attempts": 2,
