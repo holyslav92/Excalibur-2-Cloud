@@ -1,0 +1,9 @@
+{
+  "topic_id": "B14",
+  "description": "Ключи от подвала были, фотография клетки тоже. Но в Тюмени покупатели нашли в ЕГРН только квартиру — и до аванса поняли, что «подарок» может остаться чужим.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
