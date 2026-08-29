@@ -1,0 +1,39 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B13",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-29",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/news/story/ddef20b4-3ac1-5c3e-a0dc-863d3c8cffe5",
+        "type": "news",
+        "note": "Арендный дом Тюмень август 2026 — контекст аренды жилья в регионе"
+      },
+      {
+        "url": "https://amulex.ru/daily/docu/arenda-kvartiry-s-posleduyushchim-vykupom-riski-dd80nd/",
+        "type": "community",
+        "note": "Актуальный материал 2026 о рисках аренды с выкупом"
+      },
+      {
+        "url": "https://wordstat.yandex.ru/",
+        "type": "community_search_signal",
+        "note": "Wordstat 29.08.2026: если в тюмени аренда с выкупом квартиры — 15 показов"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить вторичку в тюмени",
+    "p0_volume": 4882,
+    "secondary_phrase": "аренда с выкупом квартиры",
+    "secondary_volume": 38
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "note": "No bank tariffs cited; legal norms from Consultant/GK RF"
+  }
+}

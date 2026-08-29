@@ -1,0 +1,38 @@
+{
+  "cover": {
+    "scene_hint": "Светлый офис риелтора в Тюмени: мужчина в терракотовой рубашке резко отводит взгляд от выписки ЕГРН, держит ключи и договор; выражение — ошеломлённый скепсис, полуростовой ракурс справа, солнечные блики, roll_safe и smudge_cat как маленькие угловые стикеры, без текста на стикерах.",
+    "alt": "Покупатель в светлом офисе рассматривает выписку ЕГРН и ключи после неожиданной смены собственника квартиры."
+  },
+  "inline_1": {
+    "scene_hint": "comparison_table, bright torn-paper collage: two columns «Платили по договору» и «Что показал ЕГРН», object-only layout with contract, payment receipts, registry extract, gold and black accents, tiny corner cat sticker.",
+    "alt": "Сравнение платежей по договору и сведений о собственнике в выписке ЕГРН."
+  },
+  "inline_2": {
+    "scene_hint": "process_flow, high-key paper collage with five numbered steps: договор, платежи, проверка ЕГРН, обнаружение нового владельца, юридическая консультация; arrows, document icons, no people, small catalog meme sticker in corner.",
+    "alt": "Последовательность проверки сделки: от договора и платежей до выписки ЕГРН и обращения за консультацией."
+  },
+  "inline_3": {
+    "scene_hint": "bar_timeline_chart, bright horizontal timeline for three years of payments, monthly receipt stacks gradually growing, a sharp red marker at «собственник изменён», white background, gold tape, tiny cat reaction sticker.",
+    "alt": "Хронология трёх лет платежей и момента, когда в реестре появился другой собственник."
+  },
+  "inline_4": {
+    "scene_hint": "structure_diagram, clean high-key diagram linking buyer, seller, contract, apartment and EGRN record; highlighted break between payment obligations and registered ownership, torn paper edges, no human figures.",
+    "alt": "Схема связи покупателя, продавца, договора, квартиры и записи о праве собственности в ЕГРН."
+  },
+  "inline_5": {
+    "scene_hint": "labeled_checklist, bright checklist card with document icons and factual labels: договор, расписка, банковские платежи, переписка, выписка ЕГРН, даты регистрации; gold checkmarks, black lettering, no people.",
+    "alt": "Перечень документов, которые стоит сохранить для подтверждения платежей и проверки истории квартиры."
+  },
+  "inline_6": {
+    "scene_hint": "comparison_table, high-key collage contrasting «договорённость о будущем выкупе» and «зарегистрированное право» with scales, keys, registry stamp and warning marker; concise factual labels, no people.",
+    "alt": "Сравнение договорённости о будущем выкупе и зарегистрированного права собственности на квартиру."
+  },
+  "inline_7": {
+    "scene_hint": "process_flow, bright legal-action roadmap with four labeled stages: зафиксировать документы, запросить ЕГРН, проверить договор, выбрать способ защиты; arrows, folders and magnifying glass, no humans, tiny corner meme sticker.",
+    "alt": "Порядок действий после обнаружения другого собственника: собрать документы, запросить ЕГРН и проверить договор."
+  },
+  "wordstat_stickers": [
+    "выписка ЕГРН",
+    "купить вторичку"
+  ]
+}

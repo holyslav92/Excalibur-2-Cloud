@@ -1,0 +1,27 @@
+{
+  "slug": "tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-",
+  "topic_id": "B13",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B13-tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 897039,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9260 slug=tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-\nOK categories=31,58\nOK yoast_social_image=1\nOK featured_image=9261\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9262 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-inline-01.png\nOK inline_alt=9262\nOK inline_caption=9262\nOK inline_description=9262\nOK inline_image_upload=9263 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-inline-02.png\nOK inline_alt=9263\nOK inline_caption=9263\nOK inline_description=9263\nOK inline_image_upload=9264 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-inline-03.png\nOK inline_alt=9264\nOK inline_caption=9264\nOK inline_description=9264\nOK inline_image_upload=9265 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-inline-04.png\nOK inline_alt=9265\nOK inline_caption=9265\nOK inline_description=9265\nOK inline_image_upload=9266 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-inline-05.png\nOK inline_alt=9266\nOK inline_caption=9266\nOK inline_description=9266\nOK inline_image_upload=9267 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-inline-06.png\nOK inline_alt=9267\nOK inline_caption=9267\nOK inline_description=9267\nOK inline_image_upload=9268 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-inline-07.png\nOK inline_alt=9268\nOK inline_caption=9268\nOK inline_description=9268\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru/",
+    "errors": []
+  }
+}

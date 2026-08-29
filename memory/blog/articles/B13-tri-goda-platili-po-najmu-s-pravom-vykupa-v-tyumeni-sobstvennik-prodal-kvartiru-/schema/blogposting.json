@@ -1,0 +1,11 @@
+Проверю структуру статьи и обязательные входы, затем соберу schema через derouter, отдельно прогоню gate и создам fragment после PASS.Для сборки schema недостаточно входных данных: в сообщении есть только H1, `topic_id` и автор.
+
+Нужны файлы:
+
+- `article.html`
+- `article.meta.json`
+- `research-notes.md` — в том числе `datePublished`
+- `shared/authors-registry.json`
+- `memory/brief/site-brief.md` или `PUBLIC_SITE_URL`
+
+Особенно необходим `article.html`, чтобы определить наличие видимой секции FAQ и корректно отразить её в `FAQPage`. Пришлите содержимое файлов или предоставьте доступ к рабочему дереву репозитория.
