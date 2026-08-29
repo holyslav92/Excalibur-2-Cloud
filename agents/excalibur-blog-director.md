@@ -38,7 +38,7 @@ Sol = финальный слог (`article.html`) по SOUL + soul-examples.
 2. Research → Title → Writer → **Sol**
 3. shell `pipeline_canon --stamp` + opening_meta + html_linter
 4. **Description** → cover-text || schema → Cover
-5. **Cover-QA** → indexer → publish
+5. **Cover-QA** → при FAIL или `cover-budget-result.json` exhausted: **1× cover_fixer** (`excalibur_blog_cover_fixer.py`) → re-QA → затем indexer → publish
 6. Fixer → merge → content-learner
 
 Skill: `skills/director-excalibur-blog/SKILL.md`

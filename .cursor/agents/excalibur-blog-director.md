@@ -44,7 +44,7 @@ Sol = финальный слог (`article.html`) по SOUL + soul-examples.
 2. Research → Title → Writer → **Sol**
 3. shell `pipeline_canon --stamp` + opening_meta + html_linter + **quality-bar-9** (`shared/quality-bar-9.md`)
 4. **Description** → cover-text || schema → Cover
-5. **Cover-QA** → indexer → publish (только при quality-bar-9 all_pass + FTP + EXCALIBUR_BLOG_ALLOW_PUBLISH=yes)
+5. **Cover-QA** → при FAIL или budget exhausted: **1× cover_fixer** → re-QA → indexer → publish (только при quality-bar-9 all_pass + cover_qa_pass)
 6. Fixer → merge code to main → content-learner
 
 Conversion canon: early TG+MAX после hook + прозаический лид; mid после чеклиста; end dual CTA + полный набор каналов; interlink 2–4 sibling. CTA URLs — `tenant-config.cta_channels`.

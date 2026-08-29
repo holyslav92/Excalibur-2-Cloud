@@ -56,6 +56,48 @@ HOST_CLOSEUP_PROMPT_SUFFIX = (
     "face height must exceed 14% of frame. Phone in hand at chest level, fully readable."
 )
 
+STRIP_BAN_SOLO_SUFFIX = (
+    "WORDSTAT STRIP BAN (mandatory): ZERO Wordstat query strips/bars on cover canvas — "
+    "NO paper search strips, NO gold query bars anywhere. "
+    "Phone +7 922 001 65 05 fully visible in hand, not clipped. "
+    "People-meme + cat-meme small corner stickers only."
+)
+
+
+def is_solo_cover_article(article_dir: Path) -> bool:
+    """Solo grsai cover path (no quad canvas) — B13/B10 pattern."""
+    cover_dir = article_dir / "cover"
+    if (cover_dir / "grsai-solo-batch.json").is_file():
+        return True
+    if (cover_dir / "cover-budget-result.json").is_file():
+        return not (cover_dir / "canvas-quad-01.png").is_file()
+    return False
+
+
+def needs_strip_fix(result: Any) -> bool:
+    checks = result.checks
+    return not checks.get("pixel_no_wordstat_query_strips")
+
+
+def regen_cover_solo_strip_fix(article_dir: Path, root: Path) -> bool:
+    """Solo grsai regen with strip-ban + host/phone lock — B13 post-budget path."""
+    solo = root / "scripts" / "excalibur_blog_grsai_solo_cover.py"
+    rel = article_dir.relative_to(root)
+    suffix = STRIP_BAN_SOLO_SUFFIX + "\n" + HOST_CLOSEUP_PROMPT_SUFFIX
+    rc = run_cmd(
+        root,
+        [
+            str(solo),
+            "--article-dir",
+            str(rel),
+            "--prompt-suffix",
+            suffix,
+            "--max-attempts",
+            "1",
+        ],
+    )
+    return rc == 0
+
 
 def regen_cover_panel(article_dir: Path, root: Path) -> bool:
     regen = root / "scripts" / "excalibur_blog_quad_regen_panels.py"
@@ -139,10 +181,18 @@ def run_fixer(
         artifact_fail = needs_artifact_fix(last_result)
         host_fail = needs_host_fix(last_result)
         layout_fail = needs_layout_fix(last_result)
+        strip_fail = needs_strip_fix(last_result)
+        solo_path = is_solo_cover_article(article_dir)
 
-        if layout_fail or artifact_fail or host_fail:
+        if layout_fail or artifact_fail or host_fail or strip_fail:
             if allow_regen:
-                if host_fail and not layout_fail and not artifact_fail:
+                if solo_path and (strip_fail or layout_fail):
+                    log.append(
+                        f"round {round_idx}: solo cover strip/layout FAIL → grsai solo regen "
+                        "(STRIP_BAN + HOST_CROP_LOCK suffix)"
+                    )
+                    regen_ok = regen_cover_solo_strip_fix(article_dir, root)
+                elif host_fail and not layout_fail and not artifact_fail and not strip_fail:
                     log.append(
                         f"round {round_idx}: host close-up FAIL → grsai solo regen "
                         "(HOST_CROP_LOCK suffix, no peel/inpaint person)"
@@ -151,7 +201,7 @@ def run_fixer(
                 else:
                     reason = (
                         "layout/hook/phone/meme/wordstat-strip FAIL"
-                        if layout_fail
+                        if layout_fail or strip_fail
                         else "inpaint/text/host FAIL"
                     )
                     log.append(f"round {round_idx}: {reason} → regen cover panel (no peel/inpaint person)")

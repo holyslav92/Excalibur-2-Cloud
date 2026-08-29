@@ -130,6 +130,44 @@ class OcrEscapeHatchTest(unittest.TestCase):
         self.assertFalse(new_checks["pixel_host_face_present"])
         self.assertNotIn("ocr_false_positive_escape", new_evidence)
 
+    def test_escape_soft_phone_and_people_meme_flakes(self) -> None:
+        from excalibur_blog_cover_qa_pixels import apply_ocr_false_positive_escape
+
+        checks = {key: True for key in (
+            "pixel_host_face_present",
+            "pixel_host_close_up",
+            "pixel_hook_title_present",
+            "pixel_hook_title_cyrillic",
+            "pixel_meme_present",
+            "pixel_layout_not_collapsed",
+            "pixel_no_foreign_article_text",
+            "pixel_not_services_checklist",
+            "pixel_no_text_on_clothing",
+            "pixel_light_high_key",
+        )}
+        checks["pixel_phone_readable"] = False
+        checks["pixel_phone_not_clipped"] = False
+        checks["pixel_no_wordstat_query_strips"] = False
+        checks["pixel_hook_title_not_truncated"] = False
+        phone_metrics = {"ink": 1387, "digits": "79220", "clipped": True}
+        meme_metrics = {"legacy_signal": 20, "orange_fur": 7, "host_face": True}
+        errors = [
+            "pixel_phone_readable FAIL",
+            "pixel_no_wordstat_query_strips FAIL",
+            "pixel_hook_title_not_truncated FAIL",
+        ]
+        new_checks, _, new_evidence = apply_ocr_false_positive_escape(
+            checks,
+            errors,
+            {},
+            phone_metrics=phone_metrics,
+            meme_metrics=meme_metrics,
+            people_meme_expected=True,
+            query_strips={"strip_components": 2, "paper_frac": 0.0686, "ok": False},
+        )
+        self.assertNotIn("ocr_false_positive_escape", new_evidence)
+        self.assertFalse(new_checks["pixel_no_wordstat_query_strips"])
+
 
 if __name__ == "__main__":
     unittest.main()
