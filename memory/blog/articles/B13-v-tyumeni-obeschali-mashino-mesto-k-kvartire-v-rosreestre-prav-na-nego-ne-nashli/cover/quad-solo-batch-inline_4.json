@@ -1,0 +1,16 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "inline_4",
+  "output_canvas": "cover/inline-04.png",
+  "jobs": [
+    {
+      "slot": "inline_4",
+      "tool": "grsai-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 editorial infographic panel, high-key #FFF, gold/black Cyrillic.\nсхема устройства механизма; «Номер на схеме — это ещё не объект в ЕГРН»; Светлая структурная схема паркинга: номер на плане, разметка пола, кадастровый объект и право собственности разнесены по четырём блокам; между ними золотые стрелки и знак «не равн…. TXT:Объект с 2017 года | Не «раз есть номер» | Разметка на полу | Пользование ≠ собственность | Четыре разные конструкции. LOCK: NO host face / БЕЗ лица ведущего; NO meme NO cat / БЕЗ мема БЕЗ кота; NO person co-host / БЕЗ человека.\nNEGATIVE: NO host face / NO Святослав / БЕЗ лица ведущего; NO meme / NO cat sticker / БЕЗ мема / БЕЗ кота; NO person / NO co-host / БЕЗ человека. icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face. tape/pins/strings/paper scraps; high-key #FFF/gold; not noir.\nTEXT LANGUAGE LOCK: Russian Cyrillic only.\n",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}

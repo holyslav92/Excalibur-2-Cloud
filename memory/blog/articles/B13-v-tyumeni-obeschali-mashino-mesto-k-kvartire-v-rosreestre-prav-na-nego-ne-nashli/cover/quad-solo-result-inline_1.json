@@ -1,0 +1,22 @@
+{
+  "local_path": "cover/inline-01.png",
+  "source": "grsai-api",
+  "model": "grsai-standard",
+  "bytes": 1706075,
+  "aspect_ratio": "2048x1152",
+  "quality": "high",
+  "endpoint": "/v1/api/generate",
+  "path_strategy": "api_generate_json",
+  "host": "grsaiapi.com",
+  "mode": "t2i",
+  "response_kind": "url",
+  "attempts": 1,
+  "resized_to": [
+    2048,
+    1152
+  ],
+  "result_url_host": "file7.aitohumanize.com",
+  "task_id": "2-5a3c3c37-68b5-4486-bd46-6f57f03e67b0",
+  "poll": false,
+  "model_tier": "standard"
+}

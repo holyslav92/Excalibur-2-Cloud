@@ -1,0 +1,16 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "inline_6",
+  "output_canvas": "cover/inline-06.png",
+  "jobs": [
+    {
+      "slot": "inline_6",
+      "tool": "grsai-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 editorial infographic panel, high-key #FFF, gold/black Cyrillic.\nкарточка фактов; «Квартира и парковка: разные объекты, разные проверки»; Чистая бело-золотая факт-карточка разделяет квартиру и парковку двумя независимыми колонками; между ними пунктирная граница, два кадастровых номера, договора и доверенности.. TXT:Квартира и парковка | Два кадастровых номера | Два договора | Доверенность отдельно | Чистая квартира не гарантия. LOCK: NO host face / БЕЗ лица ведущего; NO meme NO cat / БЕЗ мема БЕЗ кота; NO person co-host / БЕЗ человека.\nNEGATIVE: NO host face / NO Святослав / БЕЗ лица ведущего; NO meme / NO cat sticker / БЕЗ мема / БЕЗ кота; NO person / NO co-host / БЕЗ человека. icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face. tape/pins/strings/paper scraps; high-key #FFF/gold; not noir.\nTEXT LANGUAGE LOCK: Russian Cyrillic only.\n",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}

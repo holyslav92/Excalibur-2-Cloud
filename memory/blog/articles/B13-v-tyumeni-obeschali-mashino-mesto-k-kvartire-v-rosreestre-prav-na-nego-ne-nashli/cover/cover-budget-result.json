@@ -1,60 +1,40 @@
 {
   "status": "FAIL",
   "reason": "cover_budget_exhausted",
-  "max_attempts": 2,
+  "max_attempts": 1,
   "best_candidate": "/workspace/memory/blog/articles/B13-v-tyumeni-obeschali-mashino-mesto-k-kvartire-v-rosreestre-prav-na-nego-ne-nashli/cover/cover.png",
   "last_errors": [
     "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
-    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0029 chest_blue=0.007 smear=0.000",
-    "pixel_phone_readable FAIL: phone_digits='79220' ink=1387 clipped=True",
-    "pixel_phone_not_clipped FAIL: digits='79220' clipped=True ocr='1 | +792200 | +7 922 0'",
-    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Обещанное', 'место', 'исчезло', 'реестра'] last_word='реестра' ocr='зещанное Me™'",
-    "pixel_no_collage_inset FAIL: white_frac=0.584 inset_face=False blob_count=4",
-    "pixel_meme_present FAIL: orange_fur=7 legacy=20 host_face=True",
-    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.0686",
+    "pixel_phone_readable FAIL: phone_digits='14' ink=247 clipped=True",
+    "pixel_phone_not_clipped FAIL: digits='14' clipped=True ocr='14'",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['исчезло', 'реестра'] last_word='реестра' ocr='Обещанное место ТРУ ТВТ Х. BAM МУ. rAAPr и о >'",
+    "pixel_no_collage_inset FAIL: white_frac=0.618 inset_face=False blob_count=2",
+    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.4919",
     "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
   ],
   "attempts": [
     {
       "attempt": 1,
       "model": "grsai-standard",
-      "bytes": 1001697,
-      "host": "grsaiapi.com",
-      "qa_status": "FAIL",
-      "qa_errors": [
-        "pixel_wordstat_not_opaque_bars FAIL: 3 horizontal opaque bar(s)",
-        "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
-        "pixel_phone_readable FAIL: phone_digits='' ink=913 clipped=False",
-        "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
-        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Обещанное', 'исчезло'] last_word='реестра' ocr='ещанное место 5 ==4ехиз реестра'",
-        "pixel_no_collage_inset FAIL: white_frac=0.184 inset_face=True blob_count=5",
-        "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.1462",
-        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
-      ],
-      "qa_fail": true
-    },
-    {
-      "attempt": 2,
-      "model": "grsai-standard",
-      "bytes": 1041161,
+      "bytes": 945860,
       "host": "grsaiapi.com",
       "qa_status": "FAIL",
       "qa_errors": [
         "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
-        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0029 chest_blue=0.007 smear=0.000",
-        "pixel_phone_readable FAIL: phone_digits='79220' ink=1387 clipped=True",
-        "pixel_phone_not_clipped FAIL: digits='79220' clipped=True ocr='1 | +792200 | +7 922 0'",
-        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Обещанное', 'место', 'исчезло', 'реестра'] last_word='реестра' ocr='зещанное Me™'",
-        "pixel_no_collage_inset FAIL: white_frac=0.584 inset_face=False blob_count=4",
-        "pixel_meme_present FAIL: orange_fur=7 legacy=20 host_face=True",
-        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.0686",
+        "pixel_phone_readable FAIL: phone_digits='14' ink=247 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='14' clipped=True ocr='14'",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['исчезло', 'реестра'] last_word='реестра' ocr='Обещанное место ТРУ ТВТ Х. BAM МУ. rAAPr и о >'",
+        "pixel_no_collage_inset FAIL: white_frac=0.618 inset_face=False blob_count=2",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.4919",
         "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
       ],
       "qa_fail": true
     }
   ],
   "next_steps": [
-    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Run 1 cover_fixer round: python3 scripts/excalibur_blog_cover_fixer.py --article-dir <dir>",
+    "If fixer still FAIL → proceed Indexer only; publish blocked until cover_qa_pass",
+    "Do NOT deep-dive Cover-QA source — if visual OK after fixer, stamp manual PASS or OCR escape",
     "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "inline_3",
+  "output_canvas": "cover/inline-03.png",
+  "jobs": [
+    {
+      "slot": "inline_3",
+      "tool": "grsai-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 editorial infographic panel, high-key #FFF, gold/black Cyrillic.\nграфик / шкала сроков; «Финал: в Росреестре права на обещанное место не нашли»; Белая инфографика с горизонтальной шкалой финала: права не нашли, аванс не внесли, комплект рассыпался, сделки развели, продавец без права; красная отметка стоит на результате про…. TXT:Права не нашли | Аванс не внесли | Комплект рассыпался | Сделки развели | Продавец без права. LOCK: NO host face / БЕЗ лица ведущего; NO meme NO cat / БЕЗ мема БЕЗ кота; NO person co-host / БЕЗ человека.\nNEGATIVE: NO host face / NO Святослав / БЕЗ лица ведущего; NO meme / NO cat sticker / БЕЗ мема / БЕЗ кота; NO person / NO co-host / БЕЗ человека. icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face. tape/pins/strings/paper scraps; high-key #FFF/gold; not noir.\nTEXT LANGUAGE LOCK: Russian Cyrillic only.\n",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}

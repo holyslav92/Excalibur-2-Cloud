@@ -3,9 +3,9 @@
   "status": "FAIL",
   "checked_at": "2026-08-29",
   "topic_id": "B13",
-  "cover_md5": "9ac5e70d459b33d9aab07f9d477fba04",
+  "cover_md5": "224574a36fb5bc276caf3bc41eb355a0",
   "pixel_qa": true,
-  "pixel_description": "1200x675; mean_lum=200; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=1 bar-like gold strips; face_h_frac=0.42",
+  "pixel_description": "1200x675; mean_lum=204; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=1 bar-like gold strips; face_h_frac=0.46",
   "checks": {
     "meme_variety_not_cats_only": true,
     "pixel_light_high_key": true,
@@ -21,14 +21,14 @@
     "pixel_meme_not_occluded_by_wordstat": true,
     "pixel_wordstat_only_top_left": true,
     "pixel_no_text_on_clothing": true,
-    "pixel_no_inpaint_artifacts": false,
+    "pixel_no_inpaint_artifacts": true,
     "pixel_meme_clearance_80px": true,
     "pixel_wordstat_phrases_not_truncated": true,
     "pixel_hook_title_present": true,
     "pixel_hook_title_cyrillic": true,
     "pixel_phone_readable": false,
     "pixel_phone_not_clipped": false,
-    "pixel_meme_present": false,
+    "pixel_meme_present": true,
     "pixel_no_blank_sticky_notes": true,
     "pixel_no_foreign_article_text": true,
     "pixel_hook_title_not_truncated": false,
@@ -66,13 +66,11 @@
   },
   "pixel_errors": [
     "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
-    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0029 chest_blue=0.007 smear=0.000",
-    "pixel_phone_readable FAIL: phone_digits='79220' ink=1387 clipped=True",
-    "pixel_phone_not_clipped FAIL: digits='79220' clipped=True ocr='1 | +792200 | +7 922 0'",
-    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Обещанное', 'место', 'исчезло', 'реестра'] last_word='реестра' ocr='зещанное Me™'",
-    "pixel_no_collage_inset FAIL: white_frac=0.584 inset_face=False blob_count=4",
-    "pixel_meme_present FAIL: orange_fur=7 legacy=20 host_face=True",
-    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.0686",
+    "pixel_phone_readable FAIL: phone_digits='14' ink=247 clipped=True",
+    "pixel_phone_not_clipped FAIL: digits='14' clipped=True ocr='14'",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['исчезло', 'реестра'] last_word='реестра' ocr='Обещанное место ТРУ ТВТ Х. BAM МУ. rAAPr и о >'",
+    "pixel_no_collage_inset FAIL: white_frac=0.618 inset_face=False blob_count=2",
+    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.4919",
     "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
   ],
   "pixel_evidence": {
@@ -80,84 +78,39 @@
       1200,
       675
     ],
-    "mean_luminance": 199.8,
+    "mean_luminance": 203.9,
     "gold_bands": [
       {
-        "y0": 646,
-        "y1": 674,
-        "height": 29,
-        "width": 380,
-        "x0": 785,
-        "x1": 1164,
-        "aspect": 13.1,
-        "strip_frac": 0.83,
+        "y0": 596,
+        "y1": 612,
+        "height": 17,
+        "width": 420,
+        "x0": 751,
+        "x1": 1170,
+        "aspect": 24.71,
+        "strip_frac": 0.92,
         "touches_right_edge": false,
         "bar_like": true
       }
     ],
-    "host_dark_ratio": 0.087,
-    "ocr_false_positive_escape": {
-      "applied": false,
-      "auto_gate_blocked_by": [
-        "pixel_phone_readable",
-        "pixel_meme_present"
-      ],
-      "visual_manual_B08_B09": true,
-      "visual_core_confirmed": {
-        "host_face": true,
-        "cyrillic_hook": true,
-        "phone_cta": "+7 922 001 65 05",
-        "meme_cat": true,
-        "high_key": true,
-        "invented_outfit_terracotta": true
-      },
-      "pattern": "Grey thinking-cat fails orange_fur heuristic (7<40); phone OCR clips styled digits on torn-paper inset; gold «исчезло» brush triggers bar/strip/collage flakes",
-      "cover_budget_exhausted": true,
-      "fixer_skipped": "budget 2/2 — no cover panel regen"
-    }
+    "host_dark_ratio": 0.07
   },
-  "notes": "Cover-QA B13: grsai solo 2/2 budget. Visual PASS — host terracotta overshirt close-up LEFT; hook «Обещанное место исчезло из реестра» Cyrillic readable; phone +7 922 001 65 05; sticky «Проверили до аванса»; thinking-cat meme BR; high-key. Auto apply_ocr_false_positive_escape NOT applied (core keys pixel_phone_readable + pixel_meme_present fail — OCR/cat-color false negatives). B08/B09 visual core OK. Fixer skipped (budget exhausted). Gate FAIL: missing 7 inline PNGs — regen inline slots before Publish.",
+  "notes": "Pixel QA on cover.png md5=224574a36fb5bc276caf3bc41eb355a0; 1200x675; mean_lum=204; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=1 bar-like gold strips; face_h_frac=0.46",
   "gate_status": "FAIL",
   "gate_errors": [
-    "missing image: cover/inline-01.png",
-    "missing image: cover/inline-02.png",
-    "missing image: cover/inline-03.png",
-    "missing image: cover/inline-04.png",
-    "missing image: cover/inline-05.png",
-    "missing image: cover/inline-06.png",
-    "missing image: cover/inline-07.png",
     "pixel check failed: pixel_hook_title_not_truncated",
     "pixel check failed: pixel_wordstat_not_opaque_bars",
-    "pixel check failed: pixel_no_inpaint_artifacts",
     "pixel check failed: pixel_phone_readable",
     "pixel check failed: pixel_phone_not_clipped",
-    "pixel check failed: pixel_meme_present",
     "pixel check failed: pixel_no_wordstat_query_strips",
     "pixel check failed: pixel_no_collage_inset",
     "pixel check failed: pixel_designed_thumbnail",
     "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
-    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0029 chest_blue=0.007 smear=0.000",
-    "pixel_phone_readable FAIL: phone_digits='79220' ink=1387 clipped=True",
-    "pixel_phone_not_clipped FAIL: digits='79220' clipped=True ocr='1 | +792200 | +7 922 0'",
-    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Обещанное', 'место', 'исчезло', 'реестра'] last_word='реестра' ocr='зещанное Me™'",
-    "pixel_no_collage_inset FAIL: white_frac=0.584 inset_face=False blob_count=4",
-    "pixel_meme_present FAIL: orange_fur=7 legacy=20 host_face=True",
-    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.0686",
+    "pixel_phone_readable FAIL: phone_digits='14' ink=247 clipped=True",
+    "pixel_phone_not_clipped FAIL: digits='14' clipped=True ocr='14'",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['исчезло', 'реестра'] last_word='реестра' ocr='Обещанное место ТРУ ТВТ Х. BAM МУ. rAAPr и о >'",
+    "pixel_no_collage_inset FAIL: white_frac=0.618 inset_face=False blob_count=2",
+    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.4919",
     "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
-  ],
-  "fail_fast": {
-    "cover_budget_exhausted": true,
-    "max_attempts": 2,
-    "recommendation": "Indexer",
-    "publish_blockers": [
-      "cover/inline-01.png",
-      "cover/inline-02.png",
-      "cover/inline-03.png",
-      "cover/inline-04.png",
-      "cover/inline-05.png",
-      "cover/inline-06.png",
-      "cover/inline-07.png"
-    ]
-  },
-  "cover_panel_visual": "PASS"
+  ]
 }

@@ -1,0 +1,16 @@
+{
+  "pipeline": "quad_solo_panel_regen",
+  "slot": "inline_1",
+  "output_canvas": "cover/inline-01.png",
+  "jobs": [
+    {
+      "slot": "inline_1",
+      "tool": "grsai-rest",
+      "mcp_args": {
+        "prompt": "Single 16:9 editorial infographic panel, high-key #FFF, gold/black Cyrillic.\nсравнительная таблица с колонками; ««Машино-место в подарок» — и аванс через два дня»; Яркая коллажная сравнительная таблица на белом фоне: слева квартира, справа машино-место; пять коротких фактов, жёлтая стрелка к сроку «два дня до аванса», маленький bad_luck_bria…. TXT:Два дня до аванса | Номер на схеме | Строка в приложении | Квартира чистая | Парковка — бонус. LOCK: NO host face / БЕЗ лица ведущего. +tiny meme sticker only (≤15% frame, corner accent from memory/cover/meme-top100.json; NO co-host human; NO presenter).\nNEGATIVE: NO host face / NO Святослав / БЕЗ лица ведущего; tiny meme sticker ≤15% frame corner only from meme-top100.json. icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face. tape/pins/strings/paper scraps; high-key #FFF/gold; not noir.\nTEXT LANGUAGE LOCK: Russian Cyrillic only.\n",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}
