@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B13 — 2026-08-29
+
+- **topic_id:** B13
+- **slug:** v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta
+- **post_id:** 9270
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta/
+- **featured_image:** 9271
+- **inline_images:** 9272–9278 (7)
+- **wp_category_slugs:** vtorichka-i-riski, riski-sdelki (category_ids=31,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 4 siblings OK)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme path not in configured root)
+
 ## B12 — 2026-08-28
 
 - **topic_id:** B12
