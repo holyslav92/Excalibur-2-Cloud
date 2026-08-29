@@ -1,0 +1,67 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B13",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-29",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://allestate.pro/news/19.08.2026/kak-v-2026-godu-vydelit-doli-detyam-posle-vyplaty-ipoteki-s-matkapitalom-instrukciya-s-nyuansami",
+        "type": "news",
+        "note": "Свежий отраслевый обзор 19.08.2026 — выделение долей после ипотеки с маткапиталом, изменения 2026"
+      },
+      {
+        "url": "https://harant.ru/blog/nedvizhimost/materinskij-kapital-i-vydelenie-dolej-novoe-v-2026-godu/",
+        "type": "community",
+        "note": "Юридический обзор 2026 о рисках невыделенных долей и проверках СФР/прокуратуры"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant signal channel — Tyumen realtor editorial context"
+      },
+      {
+        "url": "https://t.me/holyslav92",
+        "type": "community",
+        "note": "Tenant Telegram CTA channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "доли маткапитала детей",
+    "p0_volume": 94,
+    "compare225_volume": 7457,
+    "localized_phrase": "выделить доли детям в квартире маткапитал",
+    "localized_volume": 23,
+    "related_phrase": "выделение долей детям маткапитал",
+    "related_volume": 16,
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_distinct_from": "matkapital_opieka_kids_cancel_3y"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["sfr_matkapital_zhile", "sfr_matkapital_faq", "sfr_booklet_2026", "sfr_altai_guidance"],
+    "errors": [],
+    "note": "Тарифные claims банков отсутствуют; обязанность общей собственности и сроки — verified по СФР"
+  },
+  "key_facts_count": 31,
+  "official_sources_count": 4,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
