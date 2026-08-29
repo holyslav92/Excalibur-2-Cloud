@@ -6,10 +6,7 @@
       "@id": "{{SITE_BASE}}/#organization",
       "name": "The Риэлтор",
       "url": "{{SITE_BASE}}/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
-      }
+      "logo": "{{SITE_BASE}}/wp-content/uploads/logo.png"
     },
     {
       "@type": "Person",
@@ -30,9 +27,13 @@
     {
       "@type": "BlogPosting",
       "@id": "{{SITE_BASE}}/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii/#blogposting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii/"
+      },
       "url": "{{SITE_BASE}}/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii/",
       "headline": "В Тюмени приставы арестовали квартиру за два дня до регистрации",
-      "description": "В Тюмени приставы арестовали квартиру за два дня до регистрации — аванс ещё не вносили. Проверка ФССП, запрет в ЕГРН и безопасная схема до аванса.",
+      "description": "Приставы наложили запрет за два дня до МФЦ — аванс не вносили. Как проверить ФССП и ЕГРН перед сделкой в Тюмени.",
       "datePublished": "2026-08-29",
       "inLanguage": "ru-RU",
       "author": {
@@ -40,10 +41,6 @@
       },
       "publisher": {
         "@id": "{{SITE_BASE}}/#organization"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{SITE_BASE}}/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii/"
       }
     }
   ]

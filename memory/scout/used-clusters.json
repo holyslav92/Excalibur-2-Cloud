@@ -5,6 +5,15 @@
   "last_sync": "2026-08-29",
   "clusters": [
     {
+      "cluster_id": "fssp_arrest_day_before_registration_tyumen",
+      "first_seen": "2026-08-29",
+      "locked_until": "2026-09-28",
+      "source": "live_wp",
+      "slug": "v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii",
+      "topic_id": "LIVE-V-TYUMENI-PRISTAVY-AREST",
+      "title": "В Тюмени приставы арестовали квартиру за два дня до регистрации"
+    },
+    {
       "cluster_id": "illegal_renovation_rosreestr_blocks_registration",
       "first_seen": "2026-08-28",
       "locked_until": "2026-09-27",

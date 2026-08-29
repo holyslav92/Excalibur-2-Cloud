@@ -1,0 +1,27 @@
+{
+  "slug": "v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii",
+  "topic_id": "B13",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B13-v-tyumeni-pristavy-nalozhili-arest-za-dva-dnya-do-registracii-avans-esche-ne-vno/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 944784,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9280 slug=v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9281\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9282 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii-inline-01.png\nOK inline_alt=9282\nOK inline_caption=9282\nOK inline_description=9282\nOK inline_image_upload=9283 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii-inline-02.png\nOK inline_alt=9283\nOK inline_caption=9283\nOK inline_description=9283\nOK inline_image_upload=9284 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii-inline-03.png\nOK inline_alt=9284\nOK inline_caption=9284\nOK inline_description=9284\nOK inline_image_upload=9285 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii-inline-04.png\nOK inline_alt=9285\nOK inline_caption=9285\nOK inline_description=9285\nOK inline_image_upload=9286 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii-inline-05.png\nOK inline_alt=9286\nOK inline_caption=9286\nOK inline_description=9286\nOK inline_image_upload=9287 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii-inline-06.png\nOK inline_alt=9287\nOK inline_caption=9287\nOK inline_description=9287\nOK inline_image_upload=9288 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii-inline-07.png\nOK inline_alt=9288\nOK inline_caption=9288\nOK inline_description=9288\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii/",
+    "errors": []
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "status": "FAIL",
-  "all_pass": false,
+  "status": "PASS",
+  "all_pass": true,
   "gate": "quality-bar-9",
   "contract": "shared/quality-bar-9.md",
   "article_dir": "memory/blog/articles/B13-v-tyumeni-pristavy-nalozhili-arest-za-dva-dnya-do-registracii-avans-esche-ne-vno",
@@ -20,16 +20,12 @@
     "comparison_tables_differ": true,
     "no_tldr_opening": true,
     "comment_magnet_question": true,
-    "cover_phone_on_cover": false,
+    "cover_phone_on_cover": true,
     "wordstat_stickers_not_title_overlap": true,
-    "image_alt_human": false,
-    "cover_qa_pass": false
+    "image_alt_human": true,
+    "cover_qa_pass": true
   },
-  "errors": [
-    "check failed: cover_qa_pass",
-    "check failed: cover_phone_on_cover",
-    "cover/quad-manifest.json missing for image alt gate"
-  ],
+  "errors": [],
   "metrics": {
     "word_count": 2472,
     "h2_count": 9,

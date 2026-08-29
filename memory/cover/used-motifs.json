@@ -137,6 +137,21 @@
         "pose_framing": "waist_three_quarter_right",
         "action": "letter_in_hand_points_payment"
       }
+    },
+    {
+      "date": "2026-08-29",
+      "topic_id": "B13",
+      "slug": "",
+      "motifs": {
+        "composition": "host_large_left_holds_egrn_ban_stamp",
+        "location": "bright_mfc_lobby_white_glass_tyumen",
+        "meme": "disappointed_black_guy_sticker_plus_polite_cat_cutout",
+        "sticker_set": "yellow_sticky_snachala_vypiska_potom_avans",
+        "outfit": "steel_grey_blazer_white_tee",
+        "emotion": "shocked_disbelief_wide_eyes",
+        "pose_framing": "host_large_left_three_quarter_waist",
+        "action": "holds_egrn_paper_points_ban_line"
+      }
     }
   ]
 }
