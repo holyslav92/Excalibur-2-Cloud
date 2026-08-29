@@ -13,3 +13,4 @@
 - [В Тюмени открытая кухня остановила регистрацию квартиры]({{SITE_BASE}}/v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii/): В Тюмени открытая кухня остановила регистрацию квартиры
 - [Застройщик сдвинул сдачу ЖК в Тюмени на год — ипотека осталась]({{SITE_BASE}}/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/): Застройщик сдвинул сдачу ЖК в Тюмени на год — ипотека осталась
 - [В Тюмени приставы арестовали квартиру за два дня до регистрации]({{SITE_BASE}}/v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii/): Запрет ФССП на регистрационные действия: проверка продавца, ЕГРН и безопасный порядок перед авансом.
+- [В Тюмени кладовка «в подарок» остановила сделку — в ЕГРН её не было]({{SITE_BASE}}/v-tyumeni-obeschali-kladovku-v-podarok-v-vypiske-egrn-ee-ne-okazalos/): В Тюмени кладовка «в подарок» остановила сделку — в ЕГРН её не было
