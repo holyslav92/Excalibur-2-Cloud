@@ -191,15 +191,70 @@ def article_has_tyumen(meta: dict[str, Any]) -> bool:
     return "тюмен" in blob or "tyumen" in blob
 
 
-def hook_stakes_sentence(manifest: dict[str, Any], meta: dict[str, Any]) -> str:
+def cover_hook_plain(manifest: dict[str, Any], meta: dict[str, Any]) -> str:
     hook = normalize_text(manifest.get("cover_hook"))
     if not hook:
         hook = normalize_text(meta.get("h1") or meta.get("title"))
+    return hook.rstrip(".!?")
+
+
+def hook_stakes_sentence(manifest: dict[str, Any], meta: dict[str, Any]) -> str:
+    hook = cover_hook_plain(manifest, meta)
     if not hook:
         return ""
     if hook[-1] not in ".!?":
         hook += "."
     return hook
+
+
+def hook_already_in_visual(visual: str, hook_plain: str) -> bool:
+    if not hook_plain:
+        return False
+    return hook_plain.casefold() in normalize_text(visual).casefold()
+
+
+def strip_trailing_hook_repeats(text: str, hook_plain: str) -> str:
+    """Remove repeated trailing hook sentences (idempotent --apply guard)."""
+    if not hook_plain:
+        return normalize_text(text)
+    visual = normalize_text(text)
+    hook_lower = hook_plain.casefold()
+    while visual:
+        lower = visual.casefold().rstrip(".!? ")
+        stripped = False
+        for sep in (". ", ".", " — ", " - "):
+            suffix = (sep + hook_plain).casefold()
+            if lower.endswith(suffix):
+                visual = visual[: len(visual) - len(sep) - len(hook_plain)].rstrip(" .")
+                stripped = True
+                break
+        if not stripped and lower.endswith(hook_lower) and len(lower) > len(hook_lower):
+            visual = visual[: len(visual) - len(hook_plain)].rstrip(" .")
+            stripped = True
+        if not stripped:
+            break
+    return visual
+
+
+def build_cover_visual_from_motifs(
+    slot: dict[str, Any],
+    motifs: dict[str, Any],
+    *,
+    host_name: str,
+) -> str:
+    outfit = outfit_phrase_from_motifs(motifs)
+    emotion = normalize_text(slot.get("cover_emotion"))
+    sticky = normalize_text(slot.get("sticky"))
+    chunks: list[str] = []
+    if host_name.split()[0].casefold() not in (emotion + sticky).casefold():
+        chunks.append(host_name)
+    if outfit:
+        chunks.append(outfit)
+    if emotion:
+        chunks.append(f"с эмоцией «{emotion}»")
+    if sticky:
+        chunks.append(f"со стикером «{sticky}»")
+    return " ".join(chunks).strip() or f"{host_name} на обложке кейса"
 
 
 def build_cover_alt(
@@ -212,26 +267,20 @@ def build_cover_alt(
     slot = slot or (manifest.get("slots") or {}).get("cover") or {}
     motifs = manifest.get("cover_motifs") or {}
     raw_alt = normalize_text(slot.get("alt"))
+    hook_plain = cover_hook_plain(manifest, meta)
 
     visual = ""
     if raw_alt and not is_prompt_like_alt(raw_alt)[0]:
-        visual = raw_alt.rstrip(".")
+        visual = strip_trailing_hook_repeats(raw_alt, hook_plain)
     else:
         visual = extract_visual_segment(raw_alt)
         if not visual:
-            outfit = outfit_phrase_from_motifs(motifs)
-            emotion = normalize_text(slot.get("cover_emotion"))
-            sticky = normalize_text(slot.get("sticky"))
-            chunks: list[str] = []
-            if host_name.split()[0].casefold() not in (emotion + sticky).casefold():
-                chunks.append(host_name)
-            if outfit:
-                chunks.append(outfit)
-            if emotion:
-                chunks.append(f"с эмоцией «{emotion}»")
-            if sticky:
-                chunks.append(f"со стикером «{sticky}»")
-            visual = " ".join(chunks).strip() or f"{host_name} на обложке кейса"
+            visual = build_cover_visual_from_motifs(slot, motifs, host_name=host_name)
+
+    # Repeated --apply wrote hook into manifest alt; rebuild visual from motifs once.
+    if hook_plain and visual.casefold().count(hook_plain.casefold()) > 1:
+        visual = build_cover_visual_from_motifs(slot, motifs, host_name=host_name)
+        visual = strip_trailing_hook_repeats(visual, hook_plain)
 
     first_name = host_name.split()[0]
     if first_name.casefold() not in visual.casefold():
@@ -241,6 +290,8 @@ def build_cover_alt(
         visual = f"{visual.rstrip('.')} в Тюмени"
 
     stakes = hook_stakes_sentence(manifest, meta)
+    if stakes and hook_already_in_visual(visual, hook_plain):
+        return f"{visual.rstrip('.')}."
     if stakes:
         return f"{visual.rstrip('.')}. {stakes}"
     return f"{visual.rstrip('.')}."

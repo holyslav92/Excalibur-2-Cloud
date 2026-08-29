@@ -14,6 +14,7 @@ from scripts.excalibur_blog_image_caption_builder import (
     collect_article_alts,
     is_prompt_like_alt,
     resolve_slot_alt,
+    strip_trailing_hook_repeats,
 )
 
 
@@ -120,6 +121,77 @@ class ImageCaptionBuilderTests(unittest.TestCase):
             self.assertNotIn("NO human", html)
             gate = collect_article_alts(article_dir, root)
             self.assertTrue(gate["all_pass"])
+
+    def test_build_cover_alt_idempotent_no_hook_duplication(self) -> None:
+        hook = "Маткапитал остановил сделку до задатка"
+        manifest = {
+            "cover_hook": hook,
+            "slots": {
+                "cover": {
+                    "alt": (
+                        "Святослав Шакин риэлтор смотрит на выписку ЕГРН без детских долей в Тюмени. "
+                        f"{hook}. {hook}. {hook}."
+                    ),
+                    "cover_emotion": "сжатые губы, недоверие",
+                    "sticky": "Хорошо, что проверили",
+                }
+            },
+        }
+        meta = {
+            "h1": "Маткапитал потратили, а детям доли не выделили",
+            "slug": "matkapital-potratili-v-tyumeni",
+        }
+        alt = build_cover_alt(manifest, meta, host_name="Святослав Шакин")
+        prompt_like, errors = is_prompt_like_alt(alt)
+        self.assertFalse(prompt_like, msg=f"{alt!r} errors={errors}")
+        self.assertEqual(alt.casefold().count(hook.casefold()), 1)
+        self.assertLessEqual(len(alt), 240)
+
+    def test_strip_trailing_hook_repeats(self) -> None:
+        hook = "Маткапитал остановил сделку до задатка"
+        raw = f"Визуал в Тюмени. {hook}. {hook}. {hook}."
+        cleaned = strip_trailing_hook_repeats(raw, hook)
+        self.assertEqual(cleaned, "Визуал в Тюмени")
+
+    def test_apply_cover_alt_twice_is_idempotent(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            article_dir = Path(tmp) / "B13-test"
+            cover_dir = article_dir / "cover"
+            cover_dir.mkdir(parents=True)
+            manifest = {
+                "cover_hook": "Маткапитал остановил сделку до задатка",
+                "cover_motifs": {"outfit": "burgundy_merino_turtleneck"},
+                "slots": {
+                    "cover": {
+                        "alt": "Святослав Шакин риэлтор смотрит на выписку ЕГРН без детских долей в Тюмени.",
+                        "cover_emotion": "сжатые губы, недоверие",
+                        "sticky": "Хорошо, что проверили",
+                    }
+                },
+            }
+            (cover_dir / "quad-manifest.json").write_text(
+                json.dumps(manifest, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            (article_dir / "article.meta.json").write_text(
+                json.dumps(
+                    {
+                        "h1": "Маткапитал потратили — сделку развернули до задатка",
+                        "slug": "matkapital-potratili-v-tyumeni",
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            root = Path(__file__).resolve().parents[1]
+            apply_article_captions(article_dir, root)
+            first = json.loads((cover_dir / "quad-manifest.json").read_text(encoding="utf-8"))
+            alt1 = first["slots"]["cover"]["alt"]
+            apply_article_captions(article_dir, root)
+            second = json.loads((cover_dir / "quad-manifest.json").read_text(encoding="utf-8"))
+            alt2 = second["slots"]["cover"]["alt"]
+            self.assertEqual(alt1, alt2)
+            self.assertFalse(is_prompt_like_alt(alt2)[0], msg=alt2)
 
 
 if __name__ == "__main__":

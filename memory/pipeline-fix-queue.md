@@ -439,3 +439,50 @@ files_changed:
 checks_run:
 - B12 `quality-bar-9.json` word_count=2558 PASS
 commit: n/a
+
+## INC-20260829-1252-cover-pixel-budget-b13
+status: fixed
+run_date: 2026-08-29
+role: excalibur-blog-fixer
+topic_id: B13
+article_dir: memory/blog/articles/B13-matkapital-potratili-a-detyam-doli-ne-vydelili-v-tyumeni-sdelku-razvernuli-do-de
+severity: medium
+category: script
+
+### What went wrong
+- Solo cover 2/2 attempts + cover fixer 2 rounds → `cover-budget-result.json` FAIL.
+- Pixel QA: missing hook sacred zone, unreadable phone, Wordstat query strips, layout collapsed (face-only crop); OCR escape inapplicable (CORE keys `pixel_hook_title_present` / `pixel_phone_readable` false).
+- `excalibur_blog_image_caption_builder.py --apply` re-appended `cover_hook` on each run → quad-manifest cover `alt` grew to 275–315 chars (`alt too long`); hook duplicated 5–6×.
+- Attempt 2 of `grsai_solo_cover` reused identical prompt after attempt 1 text-layout miss.
+
+### How the agent recovered this run
+- B13 left at `cover-budget-result.json` FAIL per owner lock; Indexer path (no Cover-QA infinite loop).
+- Fixer durable repo fixes only (no B13 article artifact patch).
+
+### Durable fix needed before next run
+- Idempotent cover alt builder: strip trailing hook repeats; do not append hook if already in visual; rebuild when manifest alt contaminated.
+- Solo cover attempt 2+: `TEXT_LAYOUT_RETRY_SUFFIX` when attempt 1 fails hook/phone/layout/wordstat-strip checks.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_image_caption_builder.py`
+- `scripts/excalibur_blog_grsai_solo_cover.py`
+- `tests/test_image_caption_builder.py`
+- `tests/test_cover_budget.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-29
+fix_summary:
+- Caption builder idempotent: `strip_trailing_hook_repeats`, `hook_already_in_visual`, rebuild from motifs when alt has multiple hook copies; double `--apply` no longer grows alt.
+- `grsai_solo_cover` attempt 2+ appends `TEXT_LAYOUT_RETRY_SUFFIX` when prior attempt missed hook/phone/layout/wordstat-strip pixel checks.
+files_changed:
+- `scripts/excalibur_blog_image_caption_builder.py`
+- `scripts/excalibur_blog_grsai_solo_cover.py`
+- `tests/test_image_caption_builder.py`
+- `tests/test_cover_budget.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py scripts/excalibur_blog_grsai_solo_cover.py`
+- `python3 -m unittest tests.test_image_caption_builder tests.test_cover_budget.CoverBudgetTest`
+commit: pending
