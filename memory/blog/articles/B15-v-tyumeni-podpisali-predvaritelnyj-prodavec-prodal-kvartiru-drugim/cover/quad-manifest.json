@@ -1,0 +1,258 @@
+{
+  "topic_id": "B15",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Договор подписали — квартиру продали другим",
+  "cover_hook_highlight": "продали",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин в терракотовом поло рвёт предварительный договор в переговорной в Тюмени. Договор подписали — квартиру продали другим.",
+      "scene_hint": "Tears PDKP; stunned; gold продали; sticky; phone; memes.",
+      "meme_caption_ru": "",
+      "sticky": "Деньги не вернут квартиру",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие",
+      "meme_picks": [
+        "two_buttons",
+        "polite_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Подписали предварительный — ипотеку одобрили, дату сделки назначили",
+      "visual_type": "comparison_table",
+      "scene_hint": "comparison_table: PDKP; deposit; mortgage; calendar; art429; chloe tiny.",
+      "alt": "Сравнительная таблица: предварительный договор, задаток, одобрение ипотеки, дата сделки и значение статьи 429.",
+      "labels": [
+        "ПДКП подписан",
+        "Задаток передан",
+        "Ипотека одобрена",
+        "Дата в календаре",
+        "Ст.429 обещание"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "side_eye_chloe"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Через две недели продавец заключил основной договор с другими",
+      "visual_type": "process_flow",
+      "scene_hint": "process_flow: 2w→3d; others; reg; extract; no flag.",
+      "alt": "Схема последовательности событий от предварительного договора до регистрации квартиры на других покупателей.",
+      "labels": [
+        "Через 2 нед.",
+        "3 дня до сделки",
+        "Основной с другими",
+        "Доки на регистрацию",
+        "Выписка без флага"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Финал: квартиру зарегистрировали за другими, задаток вернули по штрафу",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "bar_timeline: others; penalty; no x2; stopped; flat gone.",
+      "alt": "Временная диаграмма последствий: право зарегистрировано за другими, а покупателю возвращён задаток со штрафом.",
+      "labels": [
+        "Право за другими",
+        "Задаток по штрафу",
+        "Не x2 возврат",
+        "Аванс остановили",
+        "Квартиру не вернули"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Предварительный договор — обещание, а не запись в ЕГРН",
+      "visual_type": "structure_diagram",
+      "scene_hint": "structure_diagram: PDKP center; no EGRN; owner free; art429§6; 1y default.",
+      "alt": "Структурная схема, объясняющая, почему предварительный договор не является регистрацией права собственности.",
+      "labels": [
+        "Не запись в ЕГРН",
+        "Госрегистрации нет",
+        "Собственник распоряжается",
+        "Пункт шесть — тихий",
+        "Без срока — год"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Задаток, аванс и ипотечный аванс — три разных платежа",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "labeled_checklist: deposit vs advance vs mortgage advance; penalty; wojak tiny.",
+      "alt": "Чек-лист различий между задатком, авансом и ипотечным авансом.",
+      "labels": [
+        "Задаток или аванс",
+        "Штраф вместо удвоения",
+        "Три разных платежа",
+        "Ипотечный аванс отдельно",
+        "Текст договора решает"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "wojak"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Понуждение, штраф и убытки: что реально можно требовать",
+      "visual_type": "fact_card",
+      "scene_hint": "fact_card: compel 6mo; money after reg; damages prove; dispute exception.",
+      "alt": "Карточка с вариантами требований покупателя: понуждение к сделке, взыскание денег и убытков.",
+      "labels": [
+        "Понуждение шесть месяцев",
+        "После регистрации — деньги",
+        "Убытки доказываются",
+        "Три трека отдельно",
+        "Оспаривание — исключение"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Таблица: что покупатель ожидает от ПДКП и что даёт закон",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "workflow: expectation vs law; extract; court; written offer deadline; pepe tiny.",
+      "alt": "Схема сопоставляет ожидания покупателя от предварительного договора с тем, что реально даёт закон.",
+      "labels": [
+        "Ожидание — бронь",
+        "Закон — обещание",
+        "Выписка без вашей сделки",
+        "Суд не вернёт квартиру",
+        "Предложение письменно в срок"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "pepe_frog"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "предварительный договор купли продажи квартиры",
+    "с задатком",
+    "предварительный договор купли продажи"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "ошеломлённое недоверие",
+  "cover_motifs": {
+    "composition": "поясной портрет по центру справа, слева чистая зона под заголовок; документы в движении, много белого воздуха",
+    "location": "светлая переговорная в современном тюменском жилом комплексе, белые стены и солнечный блик",
+    "meme": "two_buttons и polite_cat как две маленькие каталожные наклейки",
+    "prop_set": "копия предварительного договора, папка с ипотечным одобрением, красный календарный листок, жёлтый стикер",
+    "sticker_set": "один жёлтый стикер «Деньги не вернут квартиру»; two_buttons и polite_cat в углах, каждый менее 15% кадра",
+    "joke": "две кнопки на стикере символизируют выбор продавца, а вежливый кот невозмутимо смотрит на разорванное обещание",
+    "outfit": "терракотовое поло с кремовой overshirt и светлые брюки",
+    "emotion": "ошеломлённое недоверие",
+    "pose_framing": "поясной динамичный разворот к камере, обе руки с разрываемым договором",
+    "action": "разрывает копию ПДКП и смотрит на лист с датой сделки"
+  },
+  "meme_picks": {
+    "cover": [
+      "two_buttons",
+      "polite_cat"
+    ],
+    "inline_1": [
+      "side_eye_chloe"
+    ],
+    "inline_5": [
+      "wojak"
+    ],
+    "inline_7": [
+      "pepe_frog"
+    ]
+  }
+}

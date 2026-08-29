@@ -137,6 +137,23 @@
         "pose_framing": "waist_three_quarter_right",
         "action": "letter_in_hand_points_payment"
       }
+    },
+    {
+      "date": "2026-08-29",
+      "topic_id": "B15",
+      "slug": "",
+      "motifs": {
+        "composition": "поясной портрет по центру справа документы в движении",
+        "location": "светлая переговорная тюменский жилой комплекс",
+        "meme": "two_buttons_sticker_plus_polite_cat_cutout",
+        "prop_set": "pdkp_copy_mortgage_folder_red_calendar",
+        "sticker_set": "yellow_sticky_two_buttons_polite_cat_no_wordstat_bars",
+        "joke": "two_buttons_choice_polite_cat_broken_promise",
+        "outfit": "terracotta_polo_cream_overshirt_light_trousers",
+        "emotion": "stunned_disbelief_tearing_contract",
+        "pose_framing": "waist_center_right_dynamic_both_hands",
+        "action": "tears_pdkp_copy_looks_at_deal_date"
+      }
     }
   ]
 }
