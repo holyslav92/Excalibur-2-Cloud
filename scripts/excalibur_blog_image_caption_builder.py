@@ -242,6 +242,10 @@ def build_cover_alt(
 
     stakes = hook_stakes_sentence(manifest, meta)
     if stakes:
+        hook_core = stakes.rstrip(".!?").casefold()
+        if hook_core and hook_core in visual.casefold():
+            stakes = ""
+    if stakes:
         return f"{visual.rstrip('.')}. {stakes}"
     return f"{visual.rstrip('.')}."
 
