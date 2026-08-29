@@ -12,3 +12,5 @@
 | [LESSON-20260828-1310-B12-cover-fixer-wordstat-strip-round1](content-lessons/LESSON-20260828-1310-B12-cover-fixer-wordstat-strip-round1.md) | B12 | proposed | structure |
 | [LESSON-20260828-1310-B12-sol-tighten-writer-over-2600](content-lessons/LESSON-20260828-1310-B12-sol-tighten-writer-over-2600.md) | B12 | proposed | structure |
 | [LESSON-20260828-1310-B12-ddu-escrow-novostroyka-cluster](content-lessons/LESSON-20260828-1310-B12-ddu-escrow-novostroyka-cluster.md) | B12 | proposed | geo |
+| [LESSON-20260829-0602-B13-cover-budget-phone-wordstat-publish-block](content-lessons/LESSON-20260829-0602-B13-cover-budget-phone-wordstat-publish-block.md) | B13 | proposed | structure |
+| [LESSON-20260829-0602-B13-adult-guardianship-opeku-cluster](content-lessons/LESSON-20260829-0602-B13-adult-guardianship-opeku-cluster.md) | B13 | proposed | geo |
