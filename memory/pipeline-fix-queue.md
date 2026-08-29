@@ -492,4 +492,4 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_cover_qa_pixels.py scripts/excalibur_blog_cover_fixer.py scripts/excalibur_blog_grsai_solo_cover.py`
 - `python3 -m unittest tests.test_cover_budget tests.test_cover_fixer_solo`
 - B13 pixel QA → status FAIL (real strips); publish gate remains blocked
-commit: pending
+commit: 31530fc
