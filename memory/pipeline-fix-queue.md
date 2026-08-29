@@ -446,7 +446,7 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 - B15 dry-run `--apply --dry-run` → cover alt unchanged, all_pass
-commit: b06ca2a
+commit: 1fdf495
 
 ## INC-20260828-1302-writer-word-count-sol-tighten-b12
 status: fixed
