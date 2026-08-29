@@ -1,0 +1,56 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B13-v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta/cover/cover.png",
+  "last_errors": [
+    "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+    "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+    "pixel_phone_readable FAIL: phone_digits='1792200' ink=1314 clipped=True",
+    "pixel_phone_not_clipped FAIL: digits='1792200' clipped=True ocr='47922 00 | +792200 | 1 +7 922 00'",
+    "pixel_hook_title_not_truncated FAIL: truncated=True missing=['Чистая', 'спасла'] last_word='сделку' ocr='стая выписка ) сделк\\\\'",
+    "pixel_no_collage_inset FAIL: white_frac=0.635 inset_face=True blob_count=5",
+    "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.0655",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model": "grsai-standard",
+      "bytes": 955259,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_phone_readable FAIL: phone_digits='79220016505' ink=1909 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='79220016505' clipped=True ocr='92200165 | 9220016505 | 3 | 3 | 79220016505'",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['спасла', 'сделку'] last_word='сделку' ocr='Чистая выписка'",
+        "pixel_no_collage_inset FAIL: white_frac=0.759 inset_face=False blob_count=3",
+        "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0191",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model": "grsai-standard",
+      "bytes": 968090,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+        "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+        "pixel_phone_readable FAIL: phone_digits='1792200' ink=1314 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='1792200' clipped=True ocr='47922 00 | +792200 | 1 +7 922 00'",
+        "pixel_hook_title_not_truncated FAIL: truncated=True missing=['Чистая', 'спасла'] last_word='сделку' ocr='стая выписка ) сделк\\\\'",
+        "pixel_no_collage_inset FAIL: white_frac=0.635 inset_face=True blob_count=5",
+        "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.0655",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "topic_id": "B13",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Чистая выписка не спасла сделку",
+  "cover_hook_highlight": "спасла",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин риэлтор на просмотре держит выписку ЕГРН и останавливает подписание договора в Тюмени. Чистая выписка не спасла сделку.",
+      "scene_hint": "Viewing: host EGRN stop; stunned; gold спасла; phone.",
+      "meme_caption_ru": "",
+      "sticky": "Аванс остановили",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие с тревожной гримасой",
+      "meme_picks": [
+        "two_buttons",
+        "grumpy_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Квартира согласована — и накануне аванса всплыло заявление в суд",
+      "visual_type": "comparison_table",
+      "scene_hint": "table EGRN vs court; no ban; signal; blinking.",
+      "alt": "Сравнение данных чистой выписки и сигнала о заявлении в суд перед авансом.",
+      "labels": [
+        "Нет в ЕГРН",
+        "Автозапрета нет",
+        "Дееспособен",
+        "Выписка чистая",
+        "Сигнал, не стоп"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "blinking_white_guy"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "За день до расчётов: адекватный продавец и семейный сигнал",
+      "visual_type": "process_flow",
+      "scene_hint": "flow call→court→15d guardianship.",
+      "alt": "Последовательность действий после звонка родственника о заявлении в суд перед расчётами.",
+      "labels": [
+        "Звонок родственника",
+        "Заявление подано в суд",
+        "Не оформят за день",
+        "Опека — 15 дней"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Финал: аванс не внесли, регистрацию не открывали",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "timeline stop: no advance; no sign; buyer safe.",
+      "alt": "Временная шкала показывает, что аванс, договор и регистрацию остановили до движения денег.",
+      "labels": [
+        "Аванс не внесли",
+        "Договор не подписан",
+        "Регистрация не открыта",
+        "Покупатель без потерь",
+        "Неприятный вечер"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Три состояния продавца: недееспособный, ограниченно дееспособный и «пока только заявление»",
+      "visual_type": "structure_diagram",
+      "scene_hint": "3 blocks: incapacitated; limited; claim filed.",
+      "alt": "Диаграмма различает три состояния продавца и роль опекуна или попечителя.",
+      "labels": [
+        "Уже признан недееспособным",
+        "Ограниченная дееспособность",
+        "Заявление подано",
+        "Опекун — не попечитель",
+        "Автозапрета нет"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Статья 171 и статья 177: ничтожность против оспоримости",
+      "visual_type": "fact_card",
+      "scene_hint": "fact card 171 void vs 177 voidable; expanding_brain.",
+      "alt": "Карточка сравнивает последствия применения статей 171 и 177 Гражданского кодекса.",
+      "labels": [
+        "Статья 171 — ничтожность",
+        "Статья 177 — оспоримость",
+        "Не понимал своих действий",
+        "Опекун оспорит позже",
+        "Календарь судебного спора"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "expanding_brain"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Обзор ВС РФ № 12/2026: экспертиза, наследник и реституция",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "checklist VS 12/2026; expert; heir; registry.",
+      "alt": "Чек-лист выделяет экспертизу, наследника, реестровую запись и реституцию в обзоре Верховного суда.",
+      "labels": [
+        "Обзор июль 2026",
+        "Экспертиза — центр дела",
+        "При жизни не оспорит",
+        "Запись в реестре",
+        "Отказ от экспертизы"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить до аванса, если родственники начали процедуру недееспособности",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "workflow paper→3 states→guardianship→stop; disappointed.",
+      "alt": "Алгоритм проверки перед авансом при начале процедуры признания продавца недееспособным.",
+      "labels": [
+        "Бумага, не пересказ",
+        "Три состояния — различить",
+        "Опека — 15 дней",
+        "Деньги не двигать",
+        "Стоп до аванса"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disappointed_black_guy"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "признание недееспособным",
+    "заявление о признании недееспособным",
+    "разрешение опеки на продажу квартиры"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "ошеломлённое недоверие с тревожной гримасой",
+  "cover_motifs": {
+    "composition": "host_medium_right_egrn_folder_contract_stop_hook_left",
+    "location": "bright_sunny_tyumen_apartment_viewing_white_walls_window",
+    "meme": "two_buttons_sticker_plus_grumpy_cat_cutout",
+    "prop_set": "egrn_clean_extract_fold_court_application_phone_cta",
+    "sticker_set": "one_yellow_sticky_hook_only_no_query_bars",
+    "joke": "clean_extract_green_check_vs_court_application_red_stamp",
+    "outfit": "terracotta_linen_shirt_beige_vest_no_blazer",
+    "emotion": "stunned_anxious_disbelief_raised_brows",
+    "pose_framing": "host_medium_right_three_quarter_not_left_bust",
+    "action": "host_blocks_contract_pen_holds_egrn_folder_phone_ring"
+  },
+  "meme_picks": {
+    "cover": [
+      "two_buttons",
+      "grumpy_cat"
+    ],
+    "inline_1": [
+      "blinking_white_guy"
+    ],
+    "inline_5": [
+      "expanding_brain"
+    ],
+    "inline_7": [
+      "disappointed_black_guy"
+    ]
+  }
+}

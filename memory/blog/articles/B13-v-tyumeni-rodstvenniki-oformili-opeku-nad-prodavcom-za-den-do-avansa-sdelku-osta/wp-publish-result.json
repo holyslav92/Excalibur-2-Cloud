@@ -1,0 +1,27 @@
+{
+  "slug": "v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta",
+  "topic_id": "B13",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B13-v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 968090,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9270 slug=v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta\nOK categories=31,58\nOK yoast_social_image=1\nOK featured_image=9271\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9272 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta-inline-01.png\nOK inline_alt=9272\nOK inline_caption=9272\nOK inline_description=9272\nOK inline_image_upload=9273 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta-inline-02.png\nOK inline_alt=9273\nOK inline_caption=9273\nOK inline_description=9273\nOK inline_image_upload=9274 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta-inline-03.png\nOK inline_alt=9274\nOK inline_caption=9274\nOK inline_description=9274\nOK inline_image_upload=9275 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta-inline-04.png\nOK inline_alt=9275\nOK inline_caption=9275\nOK inline_description=9275\nOK inline_image_upload=9276 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta-inline-05.png\nOK inline_alt=9276\nOK inline_caption=9276\nOK inline_description=9276\nOK inline_image_upload=9277 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta-inline-06.png\nOK inline_alt=9277\nOK inline_caption=9277\nOK inline_description=9277\nOK inline_image_upload=9278 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta-inline-07.png\nOK inline_alt=9278\nOK inline_caption=9278\nOK inline_description=9278\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-rodstvenniki-oformili-opeku-nad-prodavcom-za-den-do-avansa-sdelku-osta/",
+    "errors": []
+  }
+}

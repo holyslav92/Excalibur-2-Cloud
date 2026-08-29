@@ -137,6 +137,21 @@
         "pose_framing": "waist_three_quarter_right",
         "action": "letter_in_hand_points_payment"
       }
+    },
+    {
+      "date": "2026-08-29",
+      "topic_id": "B13",
+      "slug": "",
+      "motifs": {
+        "composition": "host_medium_right_egrn_folder_contract_stop_hook_left",
+        "location": "bright_sunny_tyumen_apartment_viewing_white_walls_window",
+        "meme": "two_buttons_sticker_plus_grumpy_cat_cutout",
+        "sticker_set": "one_yellow_sticky_hook_only_no_query_bars",
+        "outfit": "terracotta_linen_shirt_beige_vest_no_blazer",
+        "emotion": "stunned_anxious_disbelief_raised_brows",
+        "pose_framing": "host_medium_right_three_quarter_not_left_bust",
+        "action": "host_blocks_contract_pen_holds_egrn_folder_phone_ring"
+      }
     }
   ]
 }

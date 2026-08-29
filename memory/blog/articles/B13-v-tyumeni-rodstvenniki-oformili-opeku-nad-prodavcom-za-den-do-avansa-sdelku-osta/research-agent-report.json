@@ -1,0 +1,72 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B13",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-29",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_542234/",
+        "type": "news",
+        "note": "19.08.2026 — Росфинмониторинг: признаки подозрительных сделок для риелторов"
+      },
+      {
+        "url": "https://vestnik115fz.ru/news/news_post/rosfinmonitoring-obratil-vnimanie-rieltorov-na-podozritelnye-sdelki-s-nedvizhimostyu",
+        "type": "news",
+        "note": "21.08.2026 — републикация сообщения Росфинмониторинга"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "29.08.2026 — активный Dzen-канал тенанта (свежий пост)"
+      },
+      {
+        "url": "https://vsrf.ru/documents/all/36132/",
+        "type": "official",
+        "note": "Тематический обзор ВС РФ № 12/2026, утв. 01.07.2026 — ст. 171/177/178, доказывание"
+      },
+      {
+        "url": "https://moshousing.ru/kvartiry-nedeesposobnyh-prava-riski-i-zashchita-pokupatelya/",
+        "type": "community",
+        "note": "Риски покупателя при сделках с недееспособным взрослым"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "признание недееспособным",
+    "p0_volume": 157,
+    "secondary_phrases": [
+      {"phrase": "разрешение опеки на продажу квартиры", "volume": 77, "regions": ["55", "11176"]},
+      {"phrase": "опека продажа квартиры", "volume": 186, "regions": ["55", "11176"]},
+      {"phrase": "заявление о признании недееспособным", "volume": 55, "regions": ["55", "11176"]},
+      {"phrase": "признание судом недееспособным", "volume": 50, "regions": ["55", "11176"]},
+      {"phrase": "опека при продаже квартиры", "volume": 28, "regions": ["55", "11176"]}
+    ],
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "adult_guardianship_incapacitated_blocks_sale"
+  },
+  "official_source_audit": {
+    "required": false,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["vsrf_12_2026", "gk_171", "gk_37"],
+    "errors": [],
+    "note": "Банковские тарифы не используются; нормы ГК/ВС verified in official_verifications"
+  },
+  "key_facts_count": 19,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}

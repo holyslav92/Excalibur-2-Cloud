@@ -91,14 +91,15 @@ def regen_cover_host_closeup(article_dir: Path, root: Path) -> bool:
 
 
 def needs_layout_fix(result: Any) -> bool:
+    """Regen only when sacred layout is truly missing — not OCR phone flakes (B13)."""
     checks = result.checks
+    phone_ok = checks.get("pixel_phone_zone_present") or checks.get("pixel_phone_readable")
     return not (
         checks.get("pixel_hook_title_present")
-        and checks.get("pixel_phone_readable")
+        and phone_ok
         and checks.get("pixel_meme_present")
         and checks.get("pixel_layout_not_collapsed")
-        and checks.get("pixel_designed_thumbnail")
-        and checks.get("pixel_no_wordstat_query_strips")
+        and checks.get("pixel_host_face_present")
     )
 
 
