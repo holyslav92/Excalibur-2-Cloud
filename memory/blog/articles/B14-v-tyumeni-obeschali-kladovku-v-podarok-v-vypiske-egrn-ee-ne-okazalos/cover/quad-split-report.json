@@ -1,0 +1,295 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B14-v-tyumeni-obeschali-kladovku-v-podarok-v-vypiske-egrn-ee-ne-okazalos/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_too_far_from_center",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 600,
+              "end": 638
+            },
+            "v_gutter_px": {
+              "start": 987,
+              "end": 1034
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 43.0,
+              "v_center_offset_px": 13.5,
+              "max_aspect_crop_loss": 0.0986,
+              "per_panel_crop_loss": {
+                "top_left": 0.075,
+                "top_right": 0.05,
+                "bottom_left": 0.074,
+                "bottom_right": 0.0986
+              },
+              "reject_reason": "gutter_too_far_from_center"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Святослав Шакин риэлтор показывает ключи и папку у подвальной кладовки, где обещанный бонус не подтверждён документами в Тюмени. Кладовка остановила сделку до аванса. Кладовка остановила сделку до аванса.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Сравнение двух квартир показывает, как обещанная кладовка влияет на цену и почему устный бонус не заменяет документ.",
+            "h2_anchor": "Кладовку назвали подарком — и квартира выглядела выгоднее соседних"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема проверки за три дня до аванса показывает путь от заказа расширенной выписки до выявления расхождения.",
+            "h2_anchor": "За три дня до аванса заказали выписку ЕГРН"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Процесс сделки показывает, почему ключи не подтверждают право, а отсутствие записи остановило внесение аванса.",
+            "h2_anchor": "Финал: в документе только квартира, сделку остановили"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B14-v-tyumeni-obeschali-kladovku-v-podarok-v-vypiske-egrn-ee-ne-okazalos/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1016,
+          569
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 569,
+            "end": 583
+          },
+          "v_gutter_px": {
+            "start": 1016,
+            "end": 1030
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 1.0,
+            "max_aspect_crop_loss": 0.0059,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0059,
+              "bottom_left": 0.0,
+              "bottom_right": 0.0059
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 569
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 569
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Временная шкала отделяет привычку пользоваться кладовкой от подтверждённого права собственности.",
+            "h2_anchor": "Ключи, фотографии и привычка пользоваться — это не право"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2045,
+              "bottom": 569
+            },
+            "raw_box_px": {
+              "left": 1030,
+              "top": 0,
+              "right": 2048,
+              "bottom": 569
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чек-лист помогает проверить, оформлена ли кладовка как самостоятельный объект недвижимости.",
+            "h2_anchor": "Когда кладовка — самостоятельный объект в ЕГРН"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 583,
+              "right": 1016,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 583,
+              "right": 1016,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема объясняет, почему подвальная клетка может относиться к общему имуществу многоквартирного дома.",
+            "h2_anchor": "Подвальная клетка и общее имущество многоквартирного дома"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1033,
+              "top": 583,
+              "right": 2045,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1030,
+              "top": 583,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Пошаговая схема показывает, какие документы нужно сверить перед обещанным дарением кладовки и внесением аванса.",
+            "h2_anchor": "«Подарок» на словах: устное обещание и дарение"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Кладовку назвали подарком — и квартира выглядела выгоднее соседних",
+    "skip inline_2: already correct under H2 — За три дня до аванса заказали выписку ЕГРН",
+    "skip inline_3: already correct under H2 — Финал: в документе только квартира, сделку остановили",
+    "skip inline_4: already correct under H2 — Ключи, фотографии и привычка пользоваться — это не право",
+    "skip inline_5: already correct under H2 — Когда кладовка — самостоятельный объект в ЕГРН",
+    "skip inline_6: already correct under H2 — Подвальная клетка и общее имущество многоквартирного дома",
+    "skip inline_7: already correct under H2 — «Подарок» на словах: устное обещание и дарение"
+  ]
+}

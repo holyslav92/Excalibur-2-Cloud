@@ -14,6 +14,15 @@
       "title": "В Тюмени приставы арестовали квартиру за два дня до регистрации"
     },
     {
+      "cluster_id": "storage_room_promised_not_in_egrn",
+      "first_seen": "2026-08-29",
+      "locked_until": "2026-09-28",
+      "source": "live_wp",
+      "slug": "v-tyumeni-obeschali-kladovku-v-podarok-v-vypiske-egrn-ee-ne-okazalos",
+      "topic_id": "LIVE-V-TYUMENI-OBESCHALI-KLAD",
+      "title": "В Тюмени кладовка «в подарок» остановила сделку — в ЕГРН её не было"
+    },
+    {
       "cluster_id": "illegal_renovation_rosreestr_blocks_registration",
       "first_seen": "2026-08-28",
       "locked_until": "2026-09-27",

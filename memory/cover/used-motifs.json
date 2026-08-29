@@ -152,6 +152,23 @@
         "pose_framing": "host_large_left_three_quarter_waist",
         "action": "holds_egrn_paper_points_ban_line"
       }
+    },
+    {
+      "date": "2026-08-29",
+      "topic_id": "B14",
+      "slug": "",
+      "motifs": {
+        "composition": "host_full_body_right_storage_cage_keys_folder",
+        "location": "bright_basement_corridor_metal_storage_cage_gold_flare",
+        "meme": "side_eye_chloe_sticker_plus_cheems_cutout",
+        "prop_set": "keys_transparent_folder_empty_registry_line_cell_photo",
+        "sticker_set": "one_yellow_sticky_slovam_verit_nelzya_no_query_bars",
+        "joke": "keys_photo_gift_empty_registry_line",
+        "outfit": "orange_work_jacket_cream_tee_navy_trousers_no_blazer",
+        "emotion": "stunned_disbelief_raised_brows_grimace",
+        "pose_framing": "full_body_right_three_quarter_not_left_bust",
+        "action": "one_hand_keys_other_points_empty_registry_folder"
+      }
     }
   ]
 }

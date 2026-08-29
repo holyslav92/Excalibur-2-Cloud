@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B14",
+  "slug": "v-tyumeni-obeschali-kladovku-v-podarok-v-vypiske-egrn-ee-ne-okazalos",
+  "candidates_count": 15,
+  "outbound_found": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net"
+    },
+    {
+      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "title": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk"
+    },
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn"
+    },
+    {
+      "slug": "v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii",
+      "title": "v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
