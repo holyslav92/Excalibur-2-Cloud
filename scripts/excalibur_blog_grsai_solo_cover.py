@@ -101,7 +101,9 @@ def write_budget_exhausted_report(
         "last_errors": last_errors,
         "attempts": attempts_log,
         "next_steps": [
-            "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+            "Run 1 cover_fixer round: python3 scripts/excalibur_blog_cover_fixer.py --article-dir <dir>",
+            "If fixer still FAIL → proceed Indexer only; publish blocked until cover_qa_pass",
+            "Do NOT deep-dive Cover-QA source — if visual OK after fixer, stamp manual PASS or OCR escape",
             "Never PIL mashup / Kie; regen only via grsai solo cover within budget",
         ],
     }

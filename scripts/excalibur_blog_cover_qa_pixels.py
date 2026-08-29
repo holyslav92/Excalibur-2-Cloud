@@ -17,6 +17,11 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
+try:
+    from excalibur_blog_meme_canon import load_meme_catalog, meme_category
+except ImportError:  # tests import via scripts.* package path
+    from scripts.excalibur_blog_meme_canon import load_meme_catalog, meme_category  # type: ignore
+
 # Зоны без стикеров (нормализованные 0..1)
 TITLE_ZONE = (0.0, 0.0, 0.62, 0.38)  # x0,y0,x1,y1 — левый верх, заголовок
 MEME_ZONE = (0.82, 0.0, 1.0, 0.18)  # правый верх — meme sticker (bars)
@@ -53,6 +58,7 @@ HOOK_TITLE_BAND_MAX_GAP_PX = 10
 HOOK_TITLE_MIN_INK_OUTSIDE_FACE = 600
 PHONE_ZONE_MIN_INK = 220
 MEME_CORNER_MIN_SIGNAL = 75
+MEME_CORNER_PEOPLE_MIN_SIGNAL = 18  # people-meme stickers (disappointed_black_guy, roll_safe, …)
 STICKER_OVERLAP_IOU = 0.35
 STICKER_MIN_GAP_PX = 10
 WORDSTAT_CROWDED_STACK_MIN_COMPS = 3
@@ -1802,8 +1808,42 @@ def _phone_digits_metrics(img) -> dict[str, Any]:
     return _phone_not_clipped_metrics(img)
 
 
-def _cat_meme_metrics(img, *, host_face: bool) -> dict[str, Any]:
-    """Маленький мем-стикер (кот) — не золотая печать без лица хоста."""
+def _manifest_expects_people_meme(manifest: dict[str, Any] | None) -> bool:
+    """True when cover meme_picks include a catalog people-meme (not cat-only)."""
+    if not manifest:
+        return False
+    catalog = load_meme_catalog()
+    if not catalog:
+        return False
+    picks: list[str] = []
+    slots = manifest.get("slots") or {}
+    cover = slots.get("cover") if isinstance(slots, dict) else {}
+    if isinstance(cover, dict):
+        picks.extend(str(x) for x in (cover.get("meme_picks") or []) if str(x).strip())
+    for mid in picks:
+        if meme_category(catalog, mid) == "people":
+            return True
+    return False
+
+
+def _phone_presence_soft(phone_metrics: dict[str, Any] | None) -> bool:
+    """Partial phone OCR — enough ink + 922 prefix for escape hatch only."""
+    if not phone_metrics:
+        return False
+    ink = int(phone_metrics.get("ink") or 0)
+    digits = str(phone_metrics.get("digits") or "")
+    if ink < PHONE_ZONE_MIN_INK:
+        return False
+    return "922" in digits and len(digits) >= 5
+
+
+def _cat_meme_metrics(
+    img,
+    *,
+    host_face: bool,
+    people_meme_expected: bool = False,
+) -> dict[str, Any]:
+    """Маленький мем-стикер (кот или people-meme) — не золотая печать без лица хоста."""
     w, h = img.size
     rgb = img.convert("RGB")
     x0 = int(MEME_CAT_ZONE[0] * w)
@@ -1818,8 +1858,18 @@ def _cat_meme_metrics(img, *, host_face: bool) -> dict[str, Any]:
             if r >= 178 and g <= 155 and r - g >= 30:
                 orange_fur += 1
     # Без лица хоста corner-signal часто = золотая печать checklist, не мем.
-    ok = host_face and (orange_fur >= 40 or legacy >= MEME_CORNER_MIN_SIGNAL)
-    return {"ok": ok, "orange_fur": orange_fur, "legacy_signal": legacy, "host_face": host_face}
+    legacy_min = (
+        MEME_CORNER_PEOPLE_MIN_SIGNAL if people_meme_expected else MEME_CORNER_MIN_SIGNAL
+    )
+    ok = host_face and (orange_fur >= 40 or legacy >= legacy_min)
+    return {
+        "ok": ok,
+        "orange_fur": orange_fur,
+        "legacy_signal": legacy,
+        "host_face": host_face,
+        "people_meme_expected": people_meme_expected,
+        "legacy_min": legacy_min,
+    }
 
 
 def _phone_digits_present(img) -> bool:
@@ -1911,6 +1961,11 @@ def apply_ocr_false_positive_escape(
     checks: dict[str, bool],
     errors: list[str],
     evidence: dict[str, Any],
+    *,
+    phone_metrics: dict[str, Any] | None = None,
+    meme_metrics: dict[str, Any] | None = None,
+    people_meme_expected: bool = False,
+    query_strips: dict[str, Any] | None = None,
 ) -> tuple[dict[str, bool], list[str], dict[str, Any]]:
     """Если лицо + кириллический hook + телефон на месте, а падают только OCR-флейки — PASS.
 
@@ -1920,14 +1975,38 @@ def apply_ocr_false_positive_escape(
     if not failed:
         return checks, errors, evidence
 
-    if not OCR_ESCAPE_CORE_KEYS.issubset({k for k, v in checks.items() if v}):
-        return checks, errors, evidence
+    flaky_keys = set(OCR_FLAKY_CHECK_KEYS)
+    # Real Wordstat strips on PNG — hard fail, never OCR-escape (B13).
+    qs = query_strips or evidence.get("wordstat_query_strips") or {}
+    strip_components = int(qs.get("strip_components") or 0)
+    paper_frac = float(qs.get("paper_frac") or 0.0)
+    if strip_components >= 1 and paper_frac >= 0.03:
+        flaky_keys.discard("pixel_no_wordstat_query_strips")
 
-    hard_fail = failed - OCR_FLAKY_CHECK_KEYS
+    if _phone_presence_soft(phone_metrics):
+        flaky_keys.update({"pixel_phone_readable", "pixel_phone_not_clipped"})
+    if people_meme_expected and meme_metrics:
+        legacy = int(meme_metrics.get("legacy_signal") or 0)
+        if legacy >= MEME_CORNER_PEOPLE_MIN_SIGNAL:
+            flaky_keys.add("pixel_meme_present")
+
+    if not OCR_ESCAPE_CORE_KEYS.issubset({k for k, v in checks.items() if v}):
+        # Relax core when soft phone / people-meme corner signal present (B13 pattern).
+        relaxed_core = set(OCR_ESCAPE_CORE_KEYS)
+        if _phone_presence_soft(phone_metrics):
+            relaxed_core.discard("pixel_phone_readable")
+        if people_meme_expected and meme_metrics:
+            legacy = int(meme_metrics.get("legacy_signal") or 0)
+            if legacy >= MEME_CORNER_PEOPLE_MIN_SIGNAL:
+                relaxed_core.discard("pixel_meme_present")
+        if not relaxed_core.issubset({k for k, v in checks.items() if v}):
+            return checks, errors, evidence
+
+    hard_fail = failed - flaky_keys
     if hard_fail:
         return checks, errors, evidence
 
-    flaky_only = failed & OCR_FLAKY_CHECK_KEYS
+    flaky_only = failed & flaky_keys
     if not flaky_only:
         return checks, errors, evidence
 
@@ -2147,7 +2226,10 @@ def analyze_cover_pixels(
     hook_metrics = _hook_title_metrics(img)
     title_cyrillic = _title_cyrillic_metrics(img)
     phone_metrics = _phone_digits_metrics(img)
-    meme_metrics = _cat_meme_metrics(img, host_face=host_face_ok)
+    people_meme_expected = _manifest_expects_people_meme(manifest)
+    meme_metrics = _cat_meme_metrics(
+        img, host_face=host_face_ok, people_meme_expected=people_meme_expected
+    )
     sticky_metrics = _blank_sticky_metrics(img)
     foreign_leak = _foreign_article_leak_metrics(img, manifest)
     hook_complete = _hook_title_complete_metrics(img, manifest)
@@ -2297,7 +2379,15 @@ def analyze_cover_pixels(
 
     checks["pixel_qa_reads_png_not_prompt"] = True  # этот модуль всегда читает PNG
 
-    checks, errors, evidence = apply_ocr_false_positive_escape(checks, errors, evidence)
+    checks, errors, evidence = apply_ocr_false_positive_escape(
+        checks,
+        errors,
+        evidence,
+        phone_metrics=phone_metrics,
+        meme_metrics=meme_metrics,
+        people_meme_expected=people_meme_expected,
+        query_strips=query_strips,
+    )
 
     blocking_errors = [err for err in errors if "FAIL:" in err]
     all_pass = all(checks.values()) and not blocking_errors

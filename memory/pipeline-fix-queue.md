@@ -440,3 +440,56 @@ files_changed:
 checks_run:
 - B12 `quality-bar-9.json` word_count=2558 PASS
 commit: n/a
+
+## INC-20260829-0740-b13-cover-budget-strip-fail-no-fixer
+status: fixed
+run_date: 2026-08-29
+role: excalibur-blog-content-learner
+topic_id: B13
+article_dir: memory/blog/articles/B13-v-tyumeni-obeschali-mashino-mesto-k-kvartire-v-rosreestre-prav-na-nego-ne-nashli
+severity: medium
+category: qa
+
+### What went wrong
+- Cover budget exhausted (2/2 grsai standard) with persistent `pixel_no_wordstat_query_strips` + hook/phone/meme/layout FAIL.
+- Director skipped cover_fixer round (B12 used fixer+OCR escape → PASS); proceeded Indexer with `cover_qa.json` FAIL.
+- Publish blocked correctly via `quality-bar-9.json` `cover_qa_pass: false`.
+
+### How the agent recovered this run
+- Content-learner recorded B13 lessons; durable applied quad-style strip-ban prefix + cover-canon `after_exhaust_fixer` note.
+- Indexer (llms) complete; prose gates PASS.
+
+### Durable fix needed before next run
+- Fixer: 1 cover_fixer round on B13 before re-QA / publish retry (phone-in-hand close-up, strip-ban solo regen).
+- Confirm B11 OCR escape applies only after visual core OK — B13 has hard hook/phone/meme FAIL, not OCR flakes alone.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_fixer.py`
+- `scripts/excalibur_blog_grsai_solo_cover.py`
+- `memory/cover/cover-canon.json` (after_exhaust_fixer note applied)
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-29
+fix_summary:
+- Director skill/agent: mandatory 1× cover_fixer before Indexer when budget exhausted or pixel FAIL (B13 skipped → publish blocked).
+- cover_fixer: solo grsai path (`grsai-solo-batch` / budget exhaust) → `regen_cover_solo_strip_fix` with STRIP_BAN + HOST_CROP_LOCK suffix (not quad panel).
+- cover_qa_pixels: people-meme lower legacy threshold; soft-phone OCR escape; real Wordstat strips (paper_frac≥0.03) never OCR-escape.
+- grsai_solo_cover budget report next_steps → cover_fixer command.
+files_changed:
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `scripts/excalibur_blog_cover_fixer.py`
+- `scripts/excalibur_blog_grsai_solo_cover.py`
+- `skills/director-excalibur-blog/SKILL.md`
+- `.cursor/skills/director-excalibur-blog/SKILL.md`
+- `agents/excalibur-blog-director.md`
+- `.cursor/agents/excalibur-blog-director.md`
+- `tests/test_cover_budget.py`
+- `tests/test_cover_fixer_solo.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_cover_qa_pixels.py scripts/excalibur_blog_cover_fixer.py scripts/excalibur_blog_grsai_solo_cover.py`
+- `python3 -m unittest tests.test_cover_budget tests.test_cover_fixer_solo`
+- B13 pixel QA → status FAIL (real strips); publish gate remains blocked
+commit: pending

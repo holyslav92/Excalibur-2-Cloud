@@ -92,7 +92,17 @@ python3 scripts/excalibur_blog_quality_bar_9_gate.py --article-dir <dir>
 
 ### 5 Cover-text || Schema → Cover
 ### 5b Cover-QA
-`Task(excalibur-blog-cover-qa)` → `cover/cover_qa.json` PASS. FAIL → Cover.
+`Task(excalibur-blog-cover-qa)` → `cover/cover_qa.json` PASS.
+
+**Cover budget exhausted** (`cover/cover-budget-result.json`) или pixel FAIL:
+
+```bash
+python3 scripts/excalibur_blog_cover_fixer.py --article-dir memory/blog/articles/<topic_id>-<slug>
+```
+
+**1 fixer round обязателен** перед Indexer на publish-intent run (B13: пропуск fixer → publish blocked).
+Solo-cover path (grsai-solo-batch) → fixer использует strip-ban solo regen, не quad panel.
+Indexer без `cover_qa_pass` — только llms; Publish всё равно блокируется quality-bar.
 
 ### 6 Indexer → Publish
 ### 7 Fixer → merge → learner
