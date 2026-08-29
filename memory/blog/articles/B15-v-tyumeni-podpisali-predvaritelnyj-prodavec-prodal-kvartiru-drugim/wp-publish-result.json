@@ -1,0 +1,27 @@
+{
+  "slug": "v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim",
+  "topic_id": "B15",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B15-v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 984577,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9310 slug=v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9311\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9312 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim-inline-01.png\nOK inline_alt=9312\nOK inline_caption=9312\nOK inline_description=9312\nOK inline_image_upload=9313 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim-inline-02.png\nOK inline_alt=9313\nOK inline_caption=9313\nOK inline_description=9313\nOK inline_image_upload=9314 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim-inline-03.png\nOK inline_alt=9314\nOK inline_caption=9314\nOK inline_description=9314\nOK inline_image_upload=9315 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim-inline-04.png\nOK inline_alt=9315\nOK inline_caption=9315\nOK inline_description=9315\nOK inline_image_upload=9316 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim-inline-05.png\nOK inline_alt=9316\nOK inline_caption=9316\nOK inline_description=9316\nOK inline_image_upload=9317 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim-inline-06.png\nOK inline_alt=9317\nOK inline_caption=9317\nOK inline_description=9317\nOK inline_image_upload=9318 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim-inline-07.png\nOK inline_alt=9318\nOK inline_caption=9318\nOK inline_description=9318\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim/",
+    "errors": []
+  }
+}

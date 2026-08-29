@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B15",
+  "slug": "v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim",
+  "candidates_count": 14,
+  "outbound_found": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net"
+    },
+    {
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "title": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri"
+    },
+    {
+      "slug": "skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo",
+      "title": "skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

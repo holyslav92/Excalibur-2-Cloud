@@ -16,3 +16,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-08-26 | B10 | v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v | /blog/vtorichka-i-riski/v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/ | published |
 | 2026-08-28 | B11 | v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii | /blog/vtorichka-i-riski/v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii/ | published |
 | 2026-08-28 | B12 | klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili | /blog/vtorichka-i-riski/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/ | published |
+| 2026-08-29 | B15 | v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim | /blog/vtorichka-i-riski/v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim/ | published |
