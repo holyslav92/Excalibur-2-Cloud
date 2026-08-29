@@ -21,6 +21,7 @@ category: env
 - **2026-08-26 B10 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9161 ingest skipped; B10 lessons recorded without behavioral signals.
 - **2026-08-28 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9230 ingest skipped; B11 lessons recorded without behavioral signals.
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
+- **2026-08-29 B13 content-learner:** same METRIKA CREDENTIALS BLOCKER; B13 pre-publish (cover budget FAIL); lessons recorded from quality-bar-9 + cover-budget-result (core pixel fail, caption builder idempotency).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
