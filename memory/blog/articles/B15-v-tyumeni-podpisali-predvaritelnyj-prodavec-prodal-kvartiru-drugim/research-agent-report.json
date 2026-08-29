@@ -1,0 +1,75 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B15",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-29",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://www.klerk.ru/buh/news/704837/",
+        "type": "news",
+        "note": "18.08.2026 — ВС РФ: отказ в ипотеке не автоматический возврат задатка; буквальное толкование ПДКП"
+      },
+      {
+        "url": "https://news.ru/society/verhovnyj-sud-razyasnil-kogda-mozhno-poteryat-zadatok-za-kvartiru",
+        "type": "news",
+        "note": "17.08.2026 — пресс-линия ВС по задатку и условиям оплаты в предварительном договоре"
+      },
+      {
+        "url": "https://harant.ru/questions/q-85450/",
+        "type": "community",
+        "note": "Community Q&A: продавец продал квартиру другим после ПДКП и задатка"
+      },
+      {
+        "url": "https://72.ru/text/business/2026/03/26/76315469/",
+        "type": "news",
+        "note": "Тюменский региональный сигнал: задаток и параллельная продажа (коммерческое помещение)"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant signal channel — Tyumen realtor casus spine"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "предварительный договор купли продажи квартиры",
+    "p0_volume": 62,
+    "localized_phrase": "предварительный договор купли продажи квартиры",
+    "localized_volume": 62,
+    "buyer_spine_phrase": "договор предварительный купли продажи квартиры с задатком",
+    "buyer_spine_volume": 12,
+    "ru225_phrase": "предварительный договор купли продажи квартиры",
+    "ru225_volume": 6612,
+    "partial": [
+      "wordstat_get_top_requests «продавец продал квартиру другому» — MCP empty response (non-blocker)"
+    ]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "Cluster preliminary_contract_seller_sold_elsewhere_tyumen distinct from rent_to_buy, double_sale_yalutorovsk, deposit_auction"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 11,
+    "entities_checked": ["gk_rf_art_429", "gk_rf_art_380", "gk_rf_art_381", "gk_rf_art_445", "garant_preliminary_contract_encyclopedia"],
+    "errors": [],
+    "note": "Тарифные claims банков отсутствуют; нормы ГК РФ и ГАРАНТ-энциклопедия verified in official_verifications; research-official-gate PASS"
+  },
+  "key_facts_count": 42,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
