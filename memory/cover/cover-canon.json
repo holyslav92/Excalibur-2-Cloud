@@ -203,7 +203,8 @@
       "env_override": "EXCALIBUR_COVER_MAX_ATTEMPTS",
       "script": "scripts/excalibur_blog_grsai_solo_cover.py",
       "exhausted_report": "cover/cover-budget-result.json",
-      "conductor_timebox_minutes": "15-20"
+      "conductor_timebox_minutes": "15-20",
+      "after_exhaust_fixer": "On publish intent: 1 cover_fixer round when pixel_no_wordstat_query_strips or layout/hook/phone/meme FAIL before Indexer — B13 skipped fixer → publish blocked; B12 fixer+OCR escape path canonical"
     },
     "short_hook": {
       "rule": "ONE line, 5-7 Cyrillic words (B08-style), prefer words ≥5 letters for OCR; em dash OK",
