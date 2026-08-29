@@ -53,6 +53,26 @@ class ImageCaptionBuilderTests(unittest.TestCase):
         self.assertNotIn("hook", alt.casefold())
         self.assertNotIn("cta", alt.casefold())
 
+    def test_build_cover_alt_idempotent_hook_append(self) -> None:
+        manifest = {
+            "cover_hook": "Чистая выписка не спасла сделку",
+            "cover_motifs": {},
+            "slots": {
+                "cover": {
+                    "alt": (
+                        "Святослав Шакин риэлтор на просмотре держит выписку ЕГРН "
+                        "в Тюмени. Чистая выписка не спасла сделку. "
+                        "Чистая выписка не спасла сделку."
+                    ),
+                }
+            },
+        }
+        meta = {"h1": "Опека за день до аванса", "slug": "opeka-avans"}
+        alt = build_cover_alt(manifest, meta, host_name="Святослав Шакин")
+        self.assertEqual(alt.count("Чистая выписка не спасла сделку"), 1)
+        prompt_like, errors = is_prompt_like_alt(alt)
+        self.assertFalse(prompt_like, msg=f"{alt!r} errors={errors}")
+
     def test_build_inline_alt_from_labels(self) -> None:
         slot = {
             "visual_type": "comparison_table",

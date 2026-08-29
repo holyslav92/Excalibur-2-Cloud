@@ -1519,9 +1519,11 @@ def _phone_not_clipped_metrics(img) -> dict[str, Any]:
         clipped = True
     if not has_suffix and bool(phone_lines or ocr_lines):
         clipped = True
-    ok = ink >= PHONE_ZONE_MIN_INK // 2 and has_suffix and not clipped
+    zone_present = ink >= PHONE_ZONE_MIN_INK // 2
+    ok = zone_present and has_suffix and not clipped
     return {
         "ok": ok,
+        "zone_present": zone_present,
         "ink": ink,
         "digits": digits[:24],
         "clipped": clipped,
@@ -1881,6 +1883,7 @@ OCR_FLAKY_CHECK_KEYS = frozenset(
         "pixel_wordstat_not_opaque_bars",
         "pixel_wordstat_not_edge_truncated",
         "pixel_no_wordstat_ocr_strips",
+        "pixel_phone_readable",
         "pixel_phone_not_clipped",
         "pixel_wordstat_phrases_not_truncated",
         "pixel_no_collage_inset",
@@ -1896,7 +1899,7 @@ OCR_ESCAPE_CORE_KEYS = frozenset(
         "pixel_host_close_up",
         "pixel_hook_title_present",
         "pixel_hook_title_cyrillic",
-        "pixel_phone_readable",
+        "pixel_phone_zone_present",
         "pixel_meme_present",
         "pixel_layout_not_collapsed",
         "pixel_no_foreign_article_text",
@@ -1943,7 +1946,7 @@ def apply_ocr_false_positive_escape(
     escape_note = {
         "applied": True,
         "flaky_checks_overridden": sorted(flaky_only),
-        "pattern": "B08/B09 live — host face + Cyrillic hook + phone; OCR truncation/opaque flakes only",
+        "pattern": "B08/B09/B13 live — host face + Cyrillic hook + phone zone ink; OCR truncation/clipping flakes only",
     }
     evidence["ocr_false_positive_escape"] = escape_note
     patched_errors.append(
@@ -2175,6 +2178,7 @@ def analyze_cover_pixels(
 
     checks["pixel_hook_title_present"] = bool(hook_metrics.get("present"))
     checks["pixel_hook_title_cyrillic"] = bool(title_cyrillic.get("ok"))
+    checks["pixel_phone_zone_present"] = bool(phone_metrics.get("zone_present"))
     checks["pixel_phone_readable"] = bool(phone_metrics.get("ok"))
     checks["pixel_phone_not_clipped"] = bool(phone_metrics.get("ok"))
     checks["pixel_meme_present"] = bool(meme_metrics.get("ok"))

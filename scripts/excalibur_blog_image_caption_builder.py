@@ -242,7 +242,12 @@ def build_cover_alt(
 
     stakes = hook_stakes_sentence(manifest, meta)
     if stakes:
-        return f"{visual.rstrip('.')}. {stakes}"
+        stakes_plain = stakes.rstrip(".!?")
+        base = visual.rstrip(".")
+        hook_idx = base.casefold().find(stakes_plain.casefold())
+        if hook_idx >= 0:
+            base = base[:hook_idx].rstrip(". ")
+        return f"{base.rstrip('.')}. {stakes}"
     return f"{visual.rstrip('.')}."
 
 
