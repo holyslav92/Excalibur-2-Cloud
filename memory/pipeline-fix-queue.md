@@ -439,3 +439,51 @@ files_changed:
 checks_run:
 - B12 `quality-bar-9.json` word_count=2558 PASS
 commit: n/a
+
+## INC-20260829-1010-b13-cover-budget-ocr-escape
+status: fixed
+run_date: 2026-08-29
+role: excalibur-blog-cover-qa
+topic_id: B13
+article_dir: memory/blog/articles/B13-akkreditiv-otkryli-prodavcu-dengi-ne-doshli-sdelku-v-tyumeni-sorvali
+severity: medium
+category: script
+
+### What went wrong
+- grsai solo 2/2 + cover_fixer 2 rounds: pixel OCR flakes despite visual OK PNG.
+- cover_qa pixel FAIL until manual B08/B09 OCR escape stamp.
+
+### How the agent recovered this run
+- cover-budget-result.json + cover_qa.json PASS with ocr_false_positive_escape; publish post 9290.
+
+### Fixer resolution
+fixed_at: 2026-08-29
+fix_summary:
+- Manual OCR escape per B10 pattern; no pixel source changes.
+files_changed:
+- memory/blog/articles/B13-.../cover/cover_qa.json
+- memory/blog/articles/B13-.../cover/cover-budget-result.json
+checks_run:
+- quality-bar-9 all_pass; wp-publish post 9290
+commit: pending
+
+## INC-20260829-1011-b13-alt-hook-dedup
+status: fixed
+run_date: 2026-08-29
+role: excalibur-blog-fixer
+topic_id: B13
+severity: medium
+category: script
+
+### What went wrong
+- image_caption_builder --apply duplicated cover_hook in alt → >240 chars → publish BLOCKER.
+
+### Fixer resolution
+fixed_at: 2026-08-29
+fix_summary:
+- build_cover_alt: dedup trailing stakes before append.
+files_changed:
+- scripts/excalibur_blog_image_caption_builder.py
+checks_run:
+- py_compile; B13 --apply resolved alt 126 chars
+commit: pending

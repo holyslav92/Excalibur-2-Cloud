@@ -2,7 +2,7 @@
 
 **CRITICAL EXECUTION CONTEXT:** You are already running inside `excalibur_blog_derouter_opus_chat.py` (utility tier gpt-5.6-terra). The conductor completed all shell/MCP/Wordstat gates. **Your job is ONLY to write the Scout handoff markdown body** — no tool calls, no BLOCKER messages, no refusals. Output the complete handoff text now.
 
-**run_date:** 2026-08-29 (YEKT Saturday weekend slot 12:00)
+**run_date:** 2026-08-29 (YEKT Saturday slot 12:00)
 **tenant:** The Риэлтор — Святослав Шакин, Тюмень (tymenrieltor.ru)
 **topic_focus:** real_estate
 **dzen_rf_pack:** true — Meta/Instagram/Facebook/LinkedIn/X/Discord/VPN heroes DENY
@@ -11,32 +11,32 @@
 
 - `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters` → 16 active locks
 - **FROZEN today (29 Aug 2026 live plots — DO NOT reuse):**
-  - rent_to_buy_owner_sold_while_contract — «В Тюмени три года платили за квартиру — собственник продал её другим»
-  - guardianship/incapacity day before advance — «Квартиру в Тюмени остановили за день до аванса — родственники пошли в суд»
-- Closed clusters (30d): illegal_renovation (B11), marital_share, court_took_apartment, four_months_search, matkapital_opieka, seller_bankruptcy, elderly_phone, pnd_discount, military_summons, grandma_poa, inheritance_son, egrn_line, deceased_spouse, discount_2m, doverennost_svo, deposit_auction, B12 ddu_escrow_handover_delay, live double_sale Ялуторовск, etc.
-- Live WP ~20 (from excalibur_blog_today RECENT_WP_POSTS): today's rent_to_buy + guardianship; B12 escrow delay; Yalutorovsk double sale; B11 open kitchen; notarius; court 2y; matkapital; bankruptcy; elderly phone; pnd discount; etc.
+  - FSSP arrest 2 days before registration — daily «приставы арестовали квартиру» (overlap BLOCKER)
+  - rent_to_buy_owner_sold_while_contract — «три года платили — собственник продал другим»
+  - guardianship day before advance — «родственники оформили опеку за день до аванса»
+  - Yalutorovsk double sale — «квартиру продали двоим»
+- Closed clusters (30d): illegal_renovation (B11), marital_share, court_took_apartment, four_months_search, matkapital_opieka, seller_bankruptcy, elderly_phone, pnd_discount, military_summons, grandma_poa, inheritance_son, egrn_line, deceased_spouse, discount_2m, doverennost_svo, deposit_auction, B12 ddu_escrow_handover_delay, etc.
 - `published-titles-only.md` + `shared/published-articles.md` — B02–B12 ledger
 
 ## Proposed topic (PASS scout_helper --check-query + story_dup PASS)
 
 - **topic_id:** B13
-- **title_draft:** В Тюмени приставы наложили арест за два дня до регистрации — аванс ещё не вносили
-- **slug:** v-tyumeni-pristavy-nalozhili-arest-za-dva-dnya-do-registracii
-- **cluster_id (new):** fssp_arrest_day_before_registration_tyumen
-- **story_dup_check:** PASS — distinct from seller_bankruptcy (банкротство/финуправляющий), egrn_line_blocks_advance (строка обременения в выписке), military_summons, receipt/no money; plot = внезапный запрет ФССП на регистрационные действия за 48 часов до сделки после «чистой» проверки продавца
+- **title_draft:** Аккредитив открыли — продавцу деньги не дошли, сделку в Тюмени сорвали
+- **slug:** akkreditiv-otkryli-prodavcu-dengi-ne-doshli-sdelku-v-tyumeni-sorvali
+- **cluster_id (new):** letter_of_credit_seller_no_money_tyumen
+- **story_dup_check:** PASS — distinct from B12 escrow/DDU delay (застройщик/эскроу), seller_bankruptcy (банкротство), egrn_line (строка обременения в выписке); plot = безотзывный аккредитив открыт, банк не раскрыл продавцу из-за расхождения условий/документов, регистрация сорвана
 
 ## Dzen news-casus shape (target PASS)
 
-- **event:** пара в Тюмени выбрала вторичку, проверила продавца в ФССП и банкротство, согласовала ипотеку и дату регистрации в МФЦ
-- **risk:** судебный пристав внёс запрет на регистрационные действия по долгу продавца — Росреестр приостановил сделку; деньги ещё на аккредитиве/не внесены
-- **time:** за два дня до подачи на регистрацию (после одобрения ипотеки)
-- **finale:** сделку развернули до аванса; покупатели ушли к другому объекту; продавец должен гасить долг и снимать запрет (2–6 недель) — покупатели не ждали
-- **comment_magnet_angle:** «Если сегодня в ФССП чисто — вы всё равно вносите аванс до регистрации или ждёте финальной проверки в день сделки?»
+- **event:** семья в Тюмени согласовала вторичку, банк открыл безотзывный аккредитив, стороны пришли на регистрацию в МФЦ
+- **risk:** банк не исполнил аккредитив — расхождение в договоре/реквизитах или условие «после регистрации» не выполнено; продавец не получил деньги, покупатель не может зарегистрировать право
+- **time:** в день подачи на регистрацию / через сутки после открытия аккредитива
+- **finale:** сделку развернули; аккредитив закрыли без выплаты продавцу; покупатели потеряли 2–3 недели и комиссию банка; объект ушёл другим (или продавец вернулся к переговорам после исправления документов)
+- **comment_magnet_angle:** «Если банк уже открыл аккредитив — вы считаете, что деньги „на месте“, или ждёте раскрытия после регистрации?»
 
 ## Klyshin hook
 
-- **klyshin_hook:** none | original: none (fresh Tyumen FSSP casus without Klyshin — preferred; avoid today's rent_to_buy and guardianship plots)
-- **signal_urls:** see list below
+- **klyshin_hook:** none | original: none (fresh Tyumen akkreditiv casus without Klyshin — preferred)
 
 ## Wordstat MCP-KV (live 2026-08-29)
 
@@ -44,29 +44,28 @@
 
 | probe | regions | freq (phrase total) |
 |-------|---------|---------------------|
-| пристав арест квартира | 55+11176 | 38 |
-| долг капремонт | 55+11176 | 47 (rejected — weaker casus spine) |
-| переуступка дду | 55+11176 | 25 (rejected — too close to B12 escrow/DDU cluster) |
-| купить кладовку в тюмени | 55+11176 | 108 (rejected — EGRN dup with egrn_line if «выписка» in hook) |
-| **фссп проверить задолженность** | **55+11176** | **232** |
-| фссп по тюменской области проверить задолженность | 55+11176 | 54 |
-| фссп проверить задолженность | 225 (compare) | 18776 |
+| аккредитив при покупке квартиры | 55+11176 | 44 |
+| аккредитив при покупке квартиры | 225 (compare) | 3799 |
+| аккредитив в банке при покупке квартиры | 55+11176 | 11 |
 | купить квартиру в тюмени | 55+11176 | 22699 (context only) |
+| машино место квартира | 55+11176 | 1 (rejected — weak) |
+| кладовка квартира егрн | 55+11176 | API empty (rejected — EGRN cluster overlap risk) |
 
 **wordstat_rework log:**
-- probe «пристав арест квартира» 55+11176 → 38 (on-plot but narrow)
-- probe «запрет фссп квартира» → API empty (skip)
-- probe «долг капремонт» 55+11176 → 47 (weak P0)
-- **rework:** buyer jargon «проверить продавца у приставов» → **final P0 «фссп проверить задолженность» regions 55,11176 freq 232** (compare RU225 18776); local variant «фссп по тюменской области проверить задолженность» 54
+- probe «аккредитив при покупке квартиры» 55+11176 → 44 (on-plot)
+- probe «аккредитив квартира тюмень» → API empty (skip)
+- rework buyer jargon: «безотзывный аккредитив сделка» → keep P0 «аккредитив при покупке квартиры» 44 (compare RU225 3799) — buyer demand spine for H2/practice, not in H1
+
+**final P0:** «аккредитив при покупке квартиры» regions 55,11176 freq 44 (compare RU225 3799)
 
 ## signal_urls (research)
 
-- https://dzen.ru/a/ailPOoO-Zyx4iqEu — канал holyslav: ФССП и приостановка сделки (контекст, не дубль кластера)
-- https://publishernews.ru/PressRelease/PressReleaseShow.asp?id=738661 — Росреестр: приостановка из-за долгов/запрета
-- https://t.me/klyshin_A — checked, not used this slot
+- https://www.sberbank.ru/ru/person/credits/home/buy/accreddit — условия аккредитива Сбер (контекст)
+- https://base.garant.ru/ — ГК РФ ст. 867–877 аккредитив (официальный контекст)
 - https://dzen.ru/holyslav
 - {{SITE_BASE}}/blog/
 - https://t.me/holyslav92
+- https://t.me/klyshin_A — checked, not used this slot
 
 ## Output required
 

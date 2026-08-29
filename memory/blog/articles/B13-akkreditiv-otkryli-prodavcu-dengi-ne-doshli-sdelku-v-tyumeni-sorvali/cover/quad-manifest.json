@@ -1,0 +1,256 @@
+{
+  "topic_id": "B13",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Аккредитив открыли — деньги не ушли",
+  "cover_hook_highlight": "деньги",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин в оливковой рубашке сравнивает два документа в банковском атриуме Тюмени. Аккредитив открыли — деньги не ушли.",
+      "scene_hint": "Atrium: host compares docs; sticky; phone; memes.",
+      "meme_caption_ru": "",
+      "sticky": "Документы не сошлись",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломление с недоверием и напряжённым прищуром",
+      "meme_picks": [
+        "roll_safe",
+        "disappointed_black_guy"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Аккредитив открыли — и все вздохнули",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow: docs check → registration → payment; fail point marked; blinking_white_guy sticker.",
+      "alt": "Схема последовательности проверки документов, регистрации сделки и перечисления средств с отмеченным местом сбоя.",
+      "labels": [
+        "Проверка документов",
+        "Регистрация сделки",
+        "Перечисление средств",
+        "Несовпадение данных"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Регистрация прошла, а деньги так и не ушли",
+      "visual_type": "comparison_table",
+      "scene_hint": "Table: contract vs application vs bank order; mismatch fields highlighted.",
+      "alt": "Сравнительная таблица реквизитов в договоре, заявлении и банковском поручении.",
+      "labels": [
+        "Договор",
+        "Заявление",
+        "Банковское поручение",
+        "Реквизиты",
+        "Получатель"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Финал: сделку развернули без суда",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Checklist yellow card: FIO, account, sum, dates, signatures before MFC.",
+      "alt": "Чек-лист для проверки сторон, счёта, суммы, сроков и подписей перед операцией.",
+      "labels": [
+        "ФИО сторон",
+        "Реквизиты счёта",
+        "Сумма",
+        "Сроки",
+        "Подписи"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Открытие аккредитива и раскрытие — не одно и то же",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Roles diagram: buyer, bank, registrar, seller; responsibility arrows.",
+      "alt": "Диаграмма участников сделки и направлений взаимодействия между ними.",
+      "labels": [
+        "Покупатель",
+        "Банк",
+        "Регистратор",
+        "Продавец",
+        "Зона ответственности"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Где расходятся документы: таблица типовых ошибок",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Timeline: submit → check → register → confirm → wait; polite_cat sticker.",
+      "alt": "Временная шкала основных этапов операции от подачи документов до подтверждения условий.",
+      "labels": [
+        "Подача документов",
+        "Проверка",
+        "Регистрация",
+        "Подтверждение условий",
+        "Ожидание"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Безотзывный аккредитив: почему «просто закрыть» не выходит",
+      "visual_type": "comparison_table",
+      "scene_hint": "Two columns: condition met vs delayed; next step row.",
+      "alt": "Сравнение штатного сценария и задержки по условию, результату и следующему шагу.",
+      "labels": [
+        "Условие выполнено",
+        "Условие не выполнено",
+        "Результат",
+        "Следующий шаг"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить до подачи в МФЦ",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Action checklist: reason, fix data, re-check, bank confirm; crying_cat sticker.",
+      "alt": "Практический чек-лист действий при задержке перечисления средств.",
+      "labels": [
+        "Зафиксировать причину",
+        "Запросить пояснение",
+        "Исправить данные",
+        "Повторно проверить",
+        "Получить подтверждение"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    {
+      "text": "аккредитив при покупке квартиры",
+      "frequency": 44,
+      "usage": "manifest_log_only",
+      "paint_on_cover": false
+    },
+    {
+      "text": "купить квартиру в тюмени",
+      "frequency": 22699,
+      "usage": "manifest_log_only",
+      "paint_on_cover": false
+    }
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "ошеломление с недоверием и напряжённым прищуром",
+  "cover_motifs": {
+    "outfit": "оливковая рубашка с закатанными рукавами, светлые брюки, без чёрного пиджака",
+    "emotion": "ошеломление: широко раскрытые глаза, приоткрытый рот, напряжённый прищур",
+    "pose_framing": "средний план по пояс, герой справа от центра, корпус развёрнут к документам",
+    "action": "сравнивает два документа, разводит их в руках и указывает на несовпадающие данные",
+    "location": "светлый современный банковский атриум с высокими окнами, стеклом и золотистыми отражениями",
+    "composition": "яркий high-key коллаж: герой справа, два документа в центре, свободная белая зона слева под заголовок и телефон",
+    "meme": "roll_safe и disappointed_black_guy как небольшие угловые стикеры с реакцией на несостыковку документов",
+    "props": [
+      "два листа документов с подчёркнутыми разными реквизитами без читаемых мелких надписей",
+      "папка с золотым зажимом",
+      "стойка банковского обслуживания на заднем плане"
+    ],
+    "stickers": [
+      {
+        "id": "roll_safe",
+        "placement": "нижний левый угол, далеко от заголовка и телефона",
+        "scale": "до 10% ширины кадра"
+      },
+      {
+        "id": "disappointed_black_guy",
+        "placement": "верхний правый угол рядом с документами, не закрывает лицо героя",
+        "scale": "до 10% ширины кадра"
+      }
+    ],
+    "joke": "герой обнаружил, что торжественная банковская процедура упёрлась в одну несовпавшую строку"
+  }
+}

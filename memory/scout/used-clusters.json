@@ -5,6 +5,15 @@
   "last_sync": "2026-08-29",
   "clusters": [
     {
+      "cluster_id": "letter_of_credit_seller_no_money_tyumen",
+      "first_seen": "2026-08-29",
+      "locked_until": "2026-09-28",
+      "source": "ledger",
+      "slug": "akkreditiv-otkryli-prodavcu-dengi-ne-doshli-sdelku-v-tyumeni-sorvali",
+      "topic_id": "B13",
+      "title": "Аккредитив открыли, сделку зарегистрировали — продавец без денег"
+    },
+    {
       "cluster_id": "illegal_renovation_rosreestr_blocks_registration",
       "first_seen": "2026-08-28",
       "locked_until": "2026-09-27",
