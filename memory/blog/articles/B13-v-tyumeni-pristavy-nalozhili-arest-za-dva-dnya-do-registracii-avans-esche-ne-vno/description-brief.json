@@ -1,0 +1,9 @@
+{
+  "topic_id": "B13",
+  "description": "В ФССП у продавца было чисто — и это почти успокоило покупателей. Свежая выписка ЕГРН за два дня до МФЦ показала запрет: аванс не внесли, но что успело измениться?",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
