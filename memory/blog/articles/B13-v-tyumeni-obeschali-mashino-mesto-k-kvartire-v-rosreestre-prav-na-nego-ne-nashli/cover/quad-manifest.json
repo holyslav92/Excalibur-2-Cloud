@@ -1,0 +1,258 @@
+{
+  "topic_id": "B13",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Обещанное место исчезло из реестра",
+  "cover_hook_highlight": "исчезло",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин покупатель сравнивает выписку ЕГРН с планом парковки и обнаруживает отсутствие права на обещанное машино-место в Тюмени. Обещанное место исчезло из реестра.",
+      "scene_hint": "Светлый паркинг с солнечным бликом от рампы: герой в терракотовой куртке ошарашенно держит выписку и схему; золотом выделено «исчезло», стикер «Проверили до аванса», телефон +7 922 001 65 05.",
+      "meme_caption_ru": "",
+      "sticky": "Проверили до аванса",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие с гримасой и жестом остановки",
+      "meme_picks": [
+        "disappointed_black_guy",
+        "grumpy_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Машино-место в подарок» — и аванс через два дня",
+      "visual_type": "comparison_table",
+      "scene_hint": "Яркая коллажная сравнительная таблица на белом фоне: слева квартира, справа машино-место; пять коротких фактов, жёлтая стрелка к сроку «два дня до аванса», маленький bad_luck_brian в углу.",
+      "alt": "Сравнение обещанного машино-места и квартиры перед внесением аванса: схема есть, но парковку нужно проверять отдельно.",
+      "labels": [
+        "Два дня до аванса",
+        "Номер на схеме",
+        "Строка в приложении",
+        "Квартира чистая",
+        "Парковка — бонус"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "bad_luck_brian"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Проверили не квартиру, а место в паркинге",
+      "visual_type": "process_flow",
+      "scene_hint": "Светлая инфографика процесса из пяти крупных шагов с иконками выписки, дома, парковочного места и кадастрового номера; золотая линия ведёт к проверке до аванса, без людей и мемов.",
+      "alt": "Порядок проверки машино-места: отдельная выписка, отдельный объект и собственный кадастровый номер.",
+      "labels": [
+        "Выписка на место",
+        "Квартира — отдельно",
+        "С 2017 — объект",
+        "Кадастровый номер свой",
+        "До аванса ещё можно"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Финал: в Росреестре права на обещанное место не нашли",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Белая инфографика с горизонтальной шкалой финала: права не нашли, аванс не внесли, комплект рассыпался, сделки развели, продавец без права; красная отметка стоит на результате проверки.",
+      "alt": "Последовательность событий после проверки: права на место не нашли, поэтому аванс не внесли и сделки разделили.",
+      "labels": [
+        "Права не нашли",
+        "Аванс не внесли",
+        "Комплект рассыпался",
+        "Сделки развели",
+        "Продавец без права"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Номер на схеме — это ещё не объект в ЕГРН",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Светлая структурная схема паркинга: номер на плане, разметка пола, кадастровый объект и право собственности разнесены по четырём блокам; между ними золотые стрелки и знак «не равно».",
+      "alt": "Схема показывает, почему номер на плане и разметка на полу сами по себе не подтверждают право собственности на машино-место.",
+      "labels": [
+        "Объект с 2017 года",
+        "Не «раз есть номер»",
+        "Разметка на полу",
+        "Пользование ≠ собственность",
+        "Четыре разные конструкции"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Что должно быть в отдельной выписке на машино-место",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Яркая чек-лист-карточка с пятью пунктами отдельной выписки ЕГРН: вид объекта, собственник и обременения; рядом увеличительная лупа, в углу маленький blinking_white_guy.",
+      "alt": "Чек-лист отдельной выписки ЕГРН на машино-место: вид объекта, собственник и обременения.",
+      "labels": [
+        "Своя выписка ЕГРН",
+        "Вид — машино-место",
+        "Собственник отдельно",
+        "Обременения отдельно",
+        "Схема не заменяет"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "blinking_white_guy"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Квартира и парковка: разные объекты, разные проверки",
+      "visual_type": "fact_card",
+      "scene_hint": "Чистая бело-золотая факт-карточка разделяет квартиру и парковку двумя независимыми колонками; между ними пунктирная граница, два кадастровых номера, договора и доверенности.",
+      "alt": "Квартира и парковка требуют отдельных проверок, кадастровых номеров и договоров.",
+      "labels": [
+        "Квартира и парковка",
+        "Два кадастровых номера",
+        "Два договора",
+        "Доверенность отдельно",
+        "Чистая квартира не гарантия"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что делать, если место не подтверждено до аванса",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "Светлая workflow-схема из пяти шагов с крупными стрелками: не вносить аванс, разделить сделки, убрать обещание подарка, повторить выписку, проверить выдел; sacrednik_priest — маленький угловой стикер.",
+      "alt": "План действий при неподтверждённом машино-месте: остановить аванс, разделить сделки и повторить проверку документов.",
+      "labels": [
+        "Аванс не вносим",
+        "Сделки разделить",
+        "Убрать «подарок» из воздуха",
+        "Выписку повторить",
+        "Выдел — не неделя"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "sacrednik_priest"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить машиноместо в Тюмени",
+    "купить машиноместо",
+    "машиноместо ЕГРН"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "растерянное недоверие с резкой гримасой",
+  "cover_motifs": {
+    "composition": "host_center_full_body_parking_ramp_hook_left_sacred",
+    "location": "bright_sunlit_parking_ramp_tyumen_white_lines",
+    "meme": "disappointed_black_guy_sticker_plus_grumpy_cat_cutout",
+    "prop_set": "egrn_no_rights_parking_plan_spot_number_keys",
+    "sticker_set": "sticky_proverili_do_avansa_one_yellow_no_query_bars",
+    "joke": "plan_number_leads_empty_spot_egrn_zero_rights",
+    "outfit": "terracotta_overshirt_white_tee_graphite_pants",
+    "emotion": "stunned_disbelief_raised_brows_grimace_stop_gesture",
+    "pose_framing": "full_body_center_vertical_not_left_bust_not_side_eye",
+    "action": "holds_egrn_printout_open_palm_stop_advance"
+  },
+  "meme_picks": {
+    "cover": [
+      "disappointed_black_guy",
+      "grumpy_cat"
+    ],
+    "inline_1": [
+      "bad_luck_brian"
+    ],
+    "inline_5": [
+      "blinking_white_guy"
+    ],
+    "inline_7": [
+      "sacrednik_priest"
+    ]
+  }
+}

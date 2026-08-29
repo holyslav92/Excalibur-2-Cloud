@@ -137,6 +137,23 @@
         "pose_framing": "waist_three_quarter_right",
         "action": "letter_in_hand_points_payment"
       }
+    },
+    {
+      "date": "2026-08-29",
+      "topic_id": "B13",
+      "slug": "",
+      "motifs": {
+        "composition": "host_center_full_body_parking_ramp_hook_left_sacred",
+        "location": "bright_sunlit_parking_ramp_tyumen_white_lines",
+        "meme": "disappointed_black_guy_sticker_plus_grumpy_cat_cutout",
+        "prop_set": "egrn_no_rights_parking_plan_spot_number_keys",
+        "sticker_set": "sticky_proverili_do_avansa_one_yellow_no_query_bars",
+        "joke": "plan_number_leads_empty_spot_egrn_zero_rights",
+        "outfit": "terracotta_overshirt_white_tee_graphite_pants",
+        "emotion": "stunned_disbelief_raised_brows_grimace_stop_gesture",
+        "pose_framing": "full_body_center_vertical_not_left_bust_not_side_eye",
+        "action": "holds_egrn_printout_open_palm_stop_advance"
+      }
     }
   ]
 }
