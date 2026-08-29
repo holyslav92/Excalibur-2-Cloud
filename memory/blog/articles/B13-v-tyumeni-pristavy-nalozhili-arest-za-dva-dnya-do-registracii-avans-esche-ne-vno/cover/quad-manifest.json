@@ -1,0 +1,242 @@
+{
+  "topic_id": "B13",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Приставы арестовали за два дня",
+  "cover_hook_highlight": "арестовали",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин с выпиской ЕГРН с запретом приставов; телефон риэлтора в Тюмени.",
+      "scene_hint": "Bright MFTC lobby: EGRN ban stamp; shocked host; gold hook; phone; memes.",
+      "meme_caption_ru": "",
+      "sticky": "Сначала выписка, потом аванс",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "шок и недоверие",
+      "meme_picks": [
+        "disappointed_black_guy",
+        "polite_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Два дня до МФЦ — и в выписке появился запрет",
+      "visual_type": "comparison_table",
+      "scene_hint": "table: clean vs ban 48h; MFС date; mortgage ok; no advance.",
+      "alt": "Сравнение: чистая выписка и запрет за два дня до МФЦ при одобренной ипотеке.",
+      "labels": [
+        "Запрет в выписке",
+        "Два дня до МФЦ",
+        "Ипотека одобрена",
+        "Аванс не вносили"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Проверяли ФССП заранее: почему «чисто» не сработало",
+      "visual_type": "process_flow",
+      "scene_hint": "flow: FSSP clean → new ban → snapshot date → repeat deal day.",
+      "alt": "Схема: ранняя проверка ФССП чистая, затем запрет до сделки.",
+      "labels": [
+        "ФССП чисто",
+        "Потом запрет",
+        "Снимок на дату",
+        "Повторить в день сделки"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Аванс не вносили — и это спасло сделку",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "timeline: no money out; escrow closed; other flat; handle before advance.",
+      "alt": "Шкала: аванс не внесён — деньги не ушли, сделку развернули.",
+      "labels": [
+        "Деньги не ушли",
+        "Аккредитив закрыт",
+        "Ушли к другому",
+        "Ручка до аванса"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Чем запрет пристава отличается от долга и от строки в ЕГРН",
+      "visual_type": "structure_diagram",
+      "scene_hint": "3-layer diagram: debt vs order vs EGRN line.",
+      "alt": "Диаграмма трёх слоёв: долг, постановление пристава, строка в ЕГРН.",
+      "labels": [
+        "Долг ≠ запрет",
+        "Постановление",
+        "Строка в ЕГРН",
+        "Три слоя риска"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Как Росреестр видит арест: приостановление или отказ",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "checklist: pause → refuse; mortgage timer; registrar reads EGRN.",
+      "alt": "Чеклист: приостановление регистрации, затем отказ при неустранении запрета.",
+      "labels": [
+        "Приостановление",
+        "Потом отказ",
+        "Ипотека горит",
+        "Регистратор смотрит ЕГРН"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Повторная проверка в день сделки: что смотреть",
+      "visual_type": "fact_card",
+      "scene_hint": "fact card: morning deal day; fresh EGRN; FSSP repeat.",
+      "alt": "Карточка: что проверить утром в день сделки — ЕГРН и ФССП.",
+      "labels": [
+        "Утро дня сделки",
+        "Свежая выписка",
+        "ФССП повторно",
+        "Не по словам"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Аккредитив и условный аванс: что они не исправят",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "workflow: escrow ≠ clean title; frozen money; deadlines burn.",
+      "alt": "Схема: аккредитив не снимает запрет пристава в ЕГРН.",
+      "labels": [
+        "Аккредитив ≠ чистота",
+        "Деньги заморожены",
+        "Сроки горят",
+        "Проверка отдельно"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "фссп проверить задолженность",
+    "купить квартиру в тюмени вторичка",
+    "проверить продавца квартиры"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "шок и недоверие",
+  "cover_motifs": {
+    "composition": "host_large_left_holds_egrn_ban_stamp",
+    "location": "bright_mfc_lobby_white_glass_tyumen",
+    "meme": "disappointed_black_guy_sticker_plus_polite_cat_cutout",
+    "prop_set": "egrn_fold_red_ban_stamp_calendar_mfc_date_phone_cta",
+    "sticker_set": "yellow_sticky_snachala_vypiska_potom_avans",
+    "joke": "fssp_clean_yesterday_ban_today",
+    "outfit": "steel_grey_blazer_white_tee_no_black_blazer",
+    "emotion": "shocked_disbelief_wide_eyes",
+    "pose_framing": "host_large_left_three_quarter_waist",
+    "action": "holds_egrn_paper_points_ban_line"
+  },
+  "meme_picks": {
+    "cover": [
+      "disappointed_black_guy",
+      "polite_cat"
+    ],
+    "inline_1": [
+      "surprised_pikachu"
+    ],
+    "inline_5": [
+      "confused_math_lady"
+    ],
+    "inline_7": [
+      "two_buttons"
+    ]
+  }
+}
