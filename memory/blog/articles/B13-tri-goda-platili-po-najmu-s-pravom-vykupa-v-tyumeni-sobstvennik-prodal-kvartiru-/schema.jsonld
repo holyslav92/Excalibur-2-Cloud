@@ -1,0 +1,47 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://t.me/holyslav92",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-/#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-/"
+      },
+      "url": "{{SITE_BASE}}/tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-/",
+      "headline": "В Тюмени три года платили за квартиру — собственник продал её другим",
+      "description": "В Тюмени деньги за квартиру уходили по графику три года. Но одна сделка на стороне превратила привычные платежи в спор: кто теперь отвечает за жильё и потерянные суммы?",
+      "datePublished": "2026-08-29",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B13-tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 564,
+              "end": 618
+            },
+            "v_gutter_px": {
+              "start": 984,
+              "end": 1011
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 15.0,
+              "v_center_offset_px": 26.5,
+              "max_aspect_crop_loss": 0.0849,
+              "per_panel_crop_loss": {
+                "top_left": 0.0177,
+                "top_right": 0.0328,
+                "bottom_left": 0.0356,
+                "bottom_right": 0.0849
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема связи покупателя, продавца, договора, квартиры и записи о праве собственности в ЕГРН.",
+            "h2_anchor": "Платежи не равны собственность — до записи в ЕГРН"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Перечень документов, которые стоит сохранить для подтверждения платежей и проверки истории квартиры.",
+            "h2_anchor": "Найм с выкупом, предварительный ДКП и рассрочка — не одно и то же"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Сравнение договорённости о будущем выкупе и зарегистрированного права собственности на квартиру.",
+            "h2_anchor": "Что отделять в графике: наём, выкупная часть, коммуналка"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Порядок действий после обнаружения другого собственника: собрать документы, запросить ЕГРН и проверить договор.",
+            "h2_anchor": "Таблица: что даёт платёж и что видно в реестре"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B13-tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_too_far_from_center",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 579,
+              "end": 644
+            },
+            "v_gutter_px": {
+              "start": 1017,
+              "end": 1083
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 35.5,
+              "v_center_offset_px": 26.0,
+              "max_aspect_crop_loss": 0.1121,
+              "per_panel_crop_loss": {
+                "top_left": 0.0121,
+                "top_right": 0.0622,
+                "bottom_left": 0.1121,
+                "bottom_right": 0.0642
+              },
+              "reject_reason": "gutter_too_far_from_center"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Святослав Шакин покупатель в светлом офисе рассматривает выписку ЕГРН и ключи после неожиданной смены собственника квартиры в Тюмени. Три года платили — продали другим. Три года платили — продали другим. Три года платили — продали другим. Три года платили — продали другим. Три года платили — продали другим.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Сравнение платежей по договору и сведений о собственнике в выписке ЕГРН.",
+            "h2_anchor": "Три года платили «как свои» — график до последнего выкупного"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Последовательность проверки сделки: от договора и платежей до выписки ЕГРН и обращения за консультацией.",
+            "h2_anchor": "За неделю до финала — в ЕГРН другой собственник"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Хронология трёх лет платежей и момента, когда в реестре появился другой собственник.",
+            "h2_anchor": "Финал: аванс на другую квартиру остановили, выплаты взыскали через суд"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Три года платили «как свои» — график до последнего выкупного",
+    "skip inline_2: already correct under H2 — За неделю до финала — в ЕГРН другой собственник",
+    "skip inline_3: already correct under H2 — Финал: аванс на другую квартиру остановили, выплаты взыскали через суд",
+    "skip inline_4: already correct under H2 — Платежи не равны собственность — до записи в ЕГРН",
+    "skip inline_5: already correct under H2 — Найм с выкупом, предварительный ДКП и рассрочка — не одно и то же",
+    "skip inline_6: already correct under H2 — Что отделять в графике: наём, выкупная часть, коммуналка",
+    "skip inline_7: already correct under H2 — Таблица: что даёт платёж и что видно в реестре"
+  ]
+}

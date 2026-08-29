@@ -409,6 +409,11 @@ def build_prompt(
         or "",
         380,
     )
+    if "Wordstat" in style_prefix:
+        style_prefix = style_prefix.replace(
+            "1-3 Wordstat stickers (Тюмень). ",
+            "NO Wordstat query strips on cover — Scout Wordstat is topic-only. ",
+        )
     if not style_prefix:
         style_prefix = (
             "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic ink, "

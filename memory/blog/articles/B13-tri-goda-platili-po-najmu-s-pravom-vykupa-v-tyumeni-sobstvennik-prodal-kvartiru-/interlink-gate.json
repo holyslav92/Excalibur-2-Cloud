@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B13",
+  "slug": "tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-",
+  "candidates_count": 14,
+  "outbound_found": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero"
+    },
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn"
+    },
+    {
+      "slug": "v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii",
+      "title": "v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

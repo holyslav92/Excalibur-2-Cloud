@@ -1,0 +1,52 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B13-tri-goda-platili-po-najmu-s-pravom-vykupa-v-tyumeni-sobstvennik-prodal-kvartiru-/cover/cover.png",
+  "last_errors": [
+    "pixel_phone_readable FAIL: phone_digits='' ink=1556 clipped=False",
+    "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['продали'] last_word='другим' ocr='и года платили — юолали. другим'",
+    "pixel_no_collage_inset FAIL: white_frac=0.583 inset_face=False blob_count=4",
+    "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0504",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "bytes": 1071912,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+        "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+        "pixel_phone_readable FAIL: phone_digits='' ink=1110 clipped=False",
+        "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['продали'] last_word='другим' ocr='и года платили — другим'",
+        "pixel_no_collage_inset FAIL: white_frac=0.675 inset_face=False blob_count=2",
+        "pixel_no_wordstat_query_strips FAIL: 4 Wordstat strip(s), 0 bar band(s), paper_frac=0.2597",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "bytes": 964082,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_phone_readable FAIL: phone_digits='' ink=1556 clipped=False",
+        "pixel_phone_not_clipped FAIL: digits='' clipped=False ocr=''",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['продали'] last_word='другим' ocr='и года платили — юолали. другим'",
+        "pixel_no_collage_inset FAIL: white_frac=0.583 inset_face=False blob_count=4",
+        "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0504",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}
