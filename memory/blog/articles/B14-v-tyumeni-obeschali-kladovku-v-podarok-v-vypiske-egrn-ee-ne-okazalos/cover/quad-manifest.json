@@ -1,0 +1,258 @@
+{
+  "topic_id": "B14",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Кладовка остановила сделку до аванса",
+  "cover_hook_highlight": "Кладовка",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин риэлтор с ключами и папкой у подвальной кладовки в Тюмени. Кладовка остановила сделку до аванса.",
+      "scene_hint": "Клетка: оранжевая куртка, ключи+папка, «Кладовка», стикер.",
+      "meme_caption_ru": "",
+      "sticky": "Словам верить нельзя",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошарашенное недоверие с гримасой «это серьёзно?»",
+      "meme_picks": [
+        "side_eye_chloe",
+        "cheems"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Кладовку назвали подарком — и квартира выглядела выгоднее соседних",
+      "visual_type": "comparison_table",
+      "scene_hint": "Весы: 2 квартиры, бонус vs нет документа.",
+      "alt": "Сравнение двух квартир показывает, как обещанная кладовка влияет на цену и почему устный бонус не заменяет документ.",
+      "labels": [
+        "Бонус на весах",
+        "Две квартиры",
+        "Спрос −60%",
+        "Меньше сотни в месяц",
+        "Слово без документа"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "expanding_brain"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "За три дня до аванса заказали выписку ЕГРН",
+      "visual_type": "structure_diagram",
+      "scene_hint": "3 дня→выписка→только квартира.",
+      "alt": "Схема проверки за три дня до аванса показывает путь от заказа расширенной выписки до выявления расхождения.",
+      "labels": [
+        "3 дня до аванса",
+        "Расширенная выписка",
+        "Ипотека одобрена",
+        "Дата в МФЦ",
+        "Выписка — одна квартира"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Финал: в документе только квартира, сделку остановили",
+      "visual_type": "process_flow",
+      "scene_hint": "Ключи→нет кадастра→стоп аванс.",
+      "alt": "Процесс сделки показывает, почему ключи не подтверждают право, а отсутствие записи остановило внесение аванса.",
+      "labels": [
+        "Только квартира",
+        "Нет кадастрового номера",
+        "Ключи — не право",
+        "Аванс не внесли",
+        "Есть другая запись"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Ключи, фотографии и привычка пользоваться — это не право",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "10 лет/ключи vs право в реестре.",
+      "alt": "Временная шкала отделяет привычку пользоваться кладовкой от подтверждённого права собственности.",
+      "labels": [
+        "Ключи — не документ",
+        "10 лет пользования",
+        "Право — в реестре",
+        "Фото клетки",
+        "Бонус усиливает цену"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Когда кладовка — самостоятельный объект в ЕГРН",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Чек-лист кадастра и выписки.",
+      "alt": "Чек-лист помогает проверить, оформлена ли кладовка как самостоятельный объект недвижимости.",
+      "labels": [
+        "Отдельный кадастровый номер",
+        "Своя выписка ЕГРН",
+        "Продавец — правообладатель",
+        "Сверка построчно",
+        "Спросите номер"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "sacrednik_priest"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Подвальная клетка и общее имущество многоквартирного дома",
+      "visual_type": "fact_card",
+      "scene_hint": "Подвал=общее имущество, ст.36 ЖК.",
+      "alt": "Схема объясняет, почему подвальная клетка может относиться к общему имуществу многоквартирного дома.",
+      "labels": [
+        "Подвал — общее имущество",
+        "Статья 36 ЖК РФ",
+        "Доля не отчуждается",
+        "Самовольная перегородка",
+        "Решает собрание"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "«Подарок» на словах: устное обещание и дарение",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "Номер→выписка→аванс после документов.",
+      "alt": "Пошаговая схема показывает, какие документы нужно сверить перед обещанным дарением кладовки и внесением аванса.",
+      "labels": [
+        "Номер кладовки",
+        "Отдельная выписка ЕГРН",
+        "Сверить правообладателя",
+        "Договор и объявление",
+        "Аванс после документов"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "crying_jordan"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "выписка ЕГРН",
+    "купить квартиру в тюмени вторичка",
+    "кладовка егрн"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "ошарашенное недоверие с гримасой «это серьёзно?»",
+  "cover_motifs": {
+    "composition": "герой в полный рост справа, клетка кладовки по центру, крупная папка и ключи на переднем плане, свободная светлая зона слева под заголовок",
+    "location": "ярко освещённый подвальный коридор с металлической кладовкой-сеткой и золотым солнечным бликом",
+    "meme": "side_eye_chloe и cheems маленькими угловыми стикерами, реагирующими на обещание подарка",
+    "prop_set": "связка ключей, прозрачная папка с пустой строкой реестра, фотография клетки, небольшой план квартиры",
+    "sticker_set": "side_eye_chloe в верхнем углу и cheems в нижнем углу, вместе не более 15% кадра, с отступом от лица, заголовка и телефона",
+    "joke": "ключи и фотография торжественно предъявлены как подарок, а пустая строка в папке выдаёт подвох",
+    "outfit": "светлая оранжевая рабочая куртка поверх кремовой футболки, тёмно-синие брюки, без пиджака",
+    "emotion": "ошарашенное недоверие, поднятые брови, напряжённая гримаса и слегка приоткрытый рот",
+    "pose_framing": "вертикальная фигура справа в три четверти, корпус развёрнут к клетке, средний дальний план, не бюст и не боковой взгляд",
+    "action": "одной рукой герой показывает ключи, другой раскрывает папку и указывает на отсутствие отдельной записи"
+  },
+  "meme_picks": {
+    "cover": [
+      "side_eye_chloe",
+      "cheems"
+    ],
+    "inline_1": [
+      "expanding_brain"
+    ],
+    "inline_5": [
+      "sacrednik_priest"
+    ],
+    "inline_7": [
+      "crying_jordan"
+    ]
+  }
+}
