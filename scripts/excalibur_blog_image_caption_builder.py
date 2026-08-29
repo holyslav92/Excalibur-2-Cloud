@@ -241,8 +241,13 @@ def build_cover_alt(
         visual = f"{visual.rstrip('.')} в Тюмени"
 
     stakes = hook_stakes_sentence(manifest, meta)
-    if stakes:
-        return f"{visual.rstrip('.')}. {stakes}"
+    stakes_plain = stakes.rstrip(".") if stakes else ""
+    if stakes_plain:
+        # Не дублировать hook при повторных --apply (raw alt уже содержит stakes).
+        while visual.casefold().endswith(stakes_plain.casefold()):
+            visual = visual[: -len(stakes_plain)].rstrip(" .,")
+        if stakes_plain.casefold() not in visual.casefold():
+            return f"{visual.rstrip('.')}. {stakes}"
     return f"{visual.rstrip('.')}."
 
 
