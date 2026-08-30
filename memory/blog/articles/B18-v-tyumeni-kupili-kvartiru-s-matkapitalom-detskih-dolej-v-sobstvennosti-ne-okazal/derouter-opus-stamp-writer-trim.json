@@ -1,0 +1,7 @@
+{
+  "role": "writer_trim",
+  "method": "writer_trim_chunk",
+  "parts": 3,
+  "word_count_before": 3104,
+  "word_count_after": 2391
+}

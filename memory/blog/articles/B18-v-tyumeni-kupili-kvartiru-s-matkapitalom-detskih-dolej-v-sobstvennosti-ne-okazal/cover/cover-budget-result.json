@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "reason": "cover_regen_success",
+  "max_attempts": 1,
+  "best_candidate": "cover/cover.png",
+  "cover_md5": "e7db5ad7370402cd468ec9ab675394af",
+  "cover_qa": "PASS",
+  "identity": "pixel_identity_matches_studio=true, face_h_frac=0.48"
+}

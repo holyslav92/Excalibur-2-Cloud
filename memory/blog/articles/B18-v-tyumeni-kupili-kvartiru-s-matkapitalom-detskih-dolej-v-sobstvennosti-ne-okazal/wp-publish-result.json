@@ -1,0 +1,27 @@
+{
+  "slug": "v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal",
+  "topic_id": "B18",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B18-v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1023082,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9352 slug=v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal\nOK categories=48,31\nOK yoast_social_image=1\nOK featured_image=9353\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9354 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal-inline-05.png\nOK inline_alt=9354\nOK inline_caption=9354\nOK inline_description=9354\nOK inline_image_upload=9355 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal-inline-02.png\nOK inline_alt=9355\nOK inline_caption=9355\nOK inline_description=9355\nOK inline_image_upload=9356 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal-inline-01.png\nOK inline_alt=9356\nOK inline_caption=9356\nOK inline_description=9356\nOK inline_image_upload=9357 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal-inline-06.png\nOK inline_alt=9357\nOK inline_caption=9357\nOK inline_description=9357\nOK inline_image_upload=9358 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal-inline-03.png\nOK inline_alt=9358\nOK inline_caption=9358\nOK inline_description=9358\nOK inline_image_upload=9359 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal-inline-07.png\nOK inline_alt=9359\nOK inline_caption=9359\nOK inline_description=9359\nOK inline_image_upload=9360 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal-inline-04.png\nOK inline_alt=9360\nOK inline_caption=9360\nOK inline_description=9360\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal/",
+    "errors": []
+  }
+}
