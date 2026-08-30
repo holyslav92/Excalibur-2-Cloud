@@ -137,6 +137,21 @@
         "pose_framing": "waist_three_quarter_right",
         "action": "letter_in_hand_points_payment"
       }
+    },
+    {
+      "date": "2026-08-30",
+      "topic_id": "B13",
+      "slug": "",
+      "motifs": {
+        "composition": "host_full_body_table_two_papers_hook_left",
+        "location": "bright_tyumen_kitchen_sun_flare",
+        "meme": "two_buttons_grumpy_cat_stickers",
+        "sticker_set": "sticky_proverili_no_query_bars",
+        "outfit": "terracotta_overshirt_cream_tee",
+        "emotion": "bewildered_squint_paper_mismatch",
+        "pose_framing": "full_body_table_center",
+        "action": "compares_spravka_egrn_lien"
+      }
     }
   ]
 }

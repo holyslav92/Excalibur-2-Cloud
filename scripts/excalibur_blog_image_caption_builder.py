@@ -241,9 +241,13 @@ def build_cover_alt(
         visual = f"{visual.rstrip('.')} в Тюмени"
 
     stakes = hook_stakes_sentence(manifest, meta)
+    visual_plain = visual.rstrip(".")
     if stakes:
-        return f"{visual.rstrip('.')}. {stakes}"
-    return f"{visual.rstrip('.')}."
+        stakes_plain = stakes.rstrip(".")
+        if stakes_plain.casefold() in visual_plain.casefold():
+            return f"{visual_plain}."
+        return f"{visual_plain}. {stakes}"
+    return f"{visual_plain}."
 
 
 def shorten_h2(h2: str, *, max_len: int = 72) -> str:
