@@ -439,3 +439,38 @@ files_changed:
 checks_run:
 - B12 `quality-bar-9.json` word_count=2558 PASS
 commit: n/a
+
+## INC-20260830-0505-cover-alt-hook-dedup
+status: fixed
+run_date: 2026-08-30
+role: excalibur-blog-publish
+topic_id: B13
+article_dir: memory/blog/articles/B13-v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal
+severity: blocker
+category: script
+
+### What went wrong
+- `apply_article_captions` wrote resolved cover alt (visual + hook) back to `quad-manifest.json`; each `quality-bar-9` / publish gate re-run appended `cover_hook` again → alt >240 chars → publish BLOCKER.
+
+### How the agent recovered this run
+- Shortened manifest visual alt; patched `build_cover_alt` to skip hook append when hook already present in visual; re-ran caption builder + quality-bar-9 PASS; publish post 9320 live PASS.
+
+### Durable fix needed before next run
+- None — `scripts/excalibur_blog_image_caption_builder.py` now dedups hook in `build_cover_alt`.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_image_caption_builder.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-30
+fix_summary:
+- `build_cover_alt`: if `cover_hook` already contained in visual alt, do not append stakes sentence again.
+files_changed:
+- `scripts/excalibur_blog_image_caption_builder.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
+- B13 quality-bar-9 PASS; wp-publish post 9320 live-page PASS
+commit: pending
