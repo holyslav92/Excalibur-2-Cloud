@@ -1,0 +1,9 @@
+{
+  "topic_id": "B13",
+  "description": "Справка банка сказала: кредит закрыт. Но в Тюмени покупатели нашли в ЕГРН старый залог — и поняли, что обещание снять его «в день сделки» может стоить им аванса.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
