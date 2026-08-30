@@ -1,0 +1,84 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B18",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-30",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://allestate.pro/news/19.08.2026/kak-v-2026-godu-vydelit-doli-detyam-posle-vyplaty-ipoteki-s-matkapitalom-instrukciya-s-nyuansami",
+        "type": "news",
+        "note": "Отраслевый материал 19.08.2026 — выделение долей после ипотеки, изменения 2026 (ФЗ № 195-ФЗ), риски при продаже без долей"
+      },
+      {
+        "url": "https://nacio.ru/news/s-2026-goda-doli-detyam-po-2026-08-04",
+        "type": "news",
+        "note": "Новость 04.08.2026 — доли детям без согласия банка с 01.01.2026"
+      },
+      {
+        "url": "[REDACTED]/blog/vtorichka-i-riski/matkapital-proverka-do-avansa/",
+        "type": "community",
+        "note": "Локальная практика тенанта (Тюмень, июль 2026): проверка маткапитала и детских долей до аванса, справка СФР"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant signal channel — Tyumen realtor casus spine"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "продажа квартиры с материнским капиталом",
+    "p0_volume": 43,
+    "p0_volume_ru225": 4752,
+    "localized_phrase": "квартира за материнский капитал",
+    "localized_volume": 127,
+    "buyer_spine_phrase": "доля в квартире за материнский капитал",
+    "buyer_spine_volume": 44,
+    "partial": ["маткапитал детские доли totalCount=192"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "matkapital_missing_child_shares",
+    "note": "Отделён от matkapital_opieka_kids_cancel_3y и B15–B17"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 8,
+    "entities_checked": ["fz_256", "gk_rf_37", "fz_48_opeka", "tyumen_opieka_49r", "rosreestr_perm_2026", "dom_rf_instructions"],
+    "errors": [],
+    "note": "Банковские тарифы отсутствуют; госпошлина 4000 ₽ — из разъяснения Росреестра, не банковский тариф"
+  },
+  "key_facts_count": 38,
+  "live_source_urls": [
+    "https://www.consultant.ru/document/cons_doc_LAW_114247/",
+    "https://www.consultant.ru/document/cons_doc_LAW_5142/",
+    "https://www.consultant.ru/document/cons_doc_LAW_77180/",
+    "https://base.garant.ru/406155777/",
+    "https://krasnokamsk.ru/Novosti/Novosti/novosti_rosrejestra/2026/01/22/381967/",
+    "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/instructions/kak-vydelit-doli-detyam-po-materinskomu-kapitalu/",
+    "https://allestate.pro/news/19.08.2026/kak-v-2026-godu-vydelit-doli-detyam-posle-vyplaty-ipoteki-s-matkapitalom-instrukciya-s-nyuansami",
+    "[REDACTED]/blog/vtorichka-i-riski/matkapital-proverka-do-avansa/",
+    "https://regions.ru/obschestvo/porjadok-prodazhi-kvartir-s-detskimi-doljami-v-2026-godu-chto-objazany-sdelat-roditeli",
+    "https://t-j.ru/guide/opeka-razreshi-prodazhu/",
+    "https://realty.ria.ru/20240708/riski-1957704625.html",
+    "https://finance.mail.ru/article/rossiyanam-obyasnili-kak-prodat-kvartiru-s-materinskim-kapitalom-69207760/",
+    "https://nacio.ru/news/s-2026-goda-doli-detyam-po-2026-08-04",
+    "https://dzen.ru/holyslav",
+    "https://t.me/holyslav92"
+  ],
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
