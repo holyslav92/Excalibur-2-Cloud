@@ -1,0 +1,258 @@
+{
+  "topic_id": "B13",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Маткапитал остановил сделку до задатка",
+  "cover_hook_highlight": "Маткапитал",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch.",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин в пиджаке с эмоцией «сжатые губы, недоверие» со стикером «Хорошо, что проверили» в Тюмени. Маткапитал остановил сделку до задатка.",
+      "scene_hint": "EGRN adults only; sticky; phone; memes.",
+      "meme_caption_ru": "",
+      "sticky": "Хорошо, что проверили",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "сжатые губы, недоверие",
+      "meme_picks": [
+        "disappointed_black_guy",
+        "grumpy_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "В выписке только родители — а ипотека покупателям уже одобрена",
+      "visual_type": "comparison_table",
+      "scene_hint": "EGRN vs matkapital; blink sticker.",
+      "alt": "Таблица: в ЕГРН только родители, а банк уже одобрил ипотеку.",
+      "labels": [
+        "Только двое взрослых",
+        "Обременений нет",
+        "Детей нет в выписке",
+        "ЕГРН не видит маткапитал",
+        "Банк одобрил ипотеку"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "blinking_white_guy"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "За два дня до задатка: маткапитал в истории, детских долей в ЕГРН нет",
+      "visual_type": "structure_diagram",
+      "scene_hint": "matkapital; no shares; kids exist.",
+      "alt": "Схема: маткапитал в истории, детских долей в ЕГРН нет, дети у продавцов есть.",
+      "labels": [
+        "Маткапитал в истории",
+        "Детских долей нет",
+        "Дети есть у продавцов",
+        "Три факта вместе",
+        "Проверка до денег"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Финал: сделку развернули до денег — задаток не внесли",
+      "visual_type": "process_flow",
+      "scene_hint": "no deposit; walk away.",
+      "alt": "Процесс: документов нет — задаток не внесли, ушли на другой объект.",
+      "labels": [
+        "Задаток не вносили",
+        "Документов не дали",
+        "Выбрали другой объект",
+        "Спора не было",
+        "Два дня до денег"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Что ЕГРН показывает — и чего в выписке не будет",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "chart EGRN shows vs missing matkapital rights.",
+      "alt": "Диаграмма: что ЕГРН показывает и чего в выписке не будет про маткапитал.",
+      "labels": [
+        "Кто собственник сейчас",
+        "Доли и обременения",
+        "Маткапитала нет в строках",
+        "Права детей по закону",
+        "Второй вопрос — деньги"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Обязанность выделить доли: правила СФР и сроки",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "checklist 256-FZ shares; 6mo rule; priest sticker.",
+      "alt": "Чеклист СФР: все дети по 256-ФЗ, сначала доли, потом продажа.",
+      "labels": [
+        "Все дети по 256-ФЗ",
+        "Шесть месяцев после ипотеки",
+        "Сначала доли, потом продажа",
+        "СФР: обязанность по закону",
+        "Без бумаги долг остался"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "sacrednik_priest"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Три красных флага и стоп-сигналы продавца",
+      "visual_type": "fact_card",
+      "scene_hint": "three red flags card; parents+kids+matkapital.",
+      "alt": "Карточка трёх красных флагов: родители в ЕГРН, дети есть, маткапитал в документах.",
+      "labels": [
+        "Только родители в ЕГРН",
+        "Дети есть у продавца",
+        "Маткапитал в документах",
+        "Три пункта вместе",
+        "Стоп-сигнал продавца"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что запросить до задатка: документы и таблица",
+      "visual_type": "workflow_diagram",
+      "scene_hint": "workflow docs before deposit; two_buttons sticker.",
+      "alt": "Схема документов до задатка: выписка, договор, СФР, доли, опека.",
+      "labels": [
+        "Свежая выписка ЕГРН",
+        "Договор первой покупки",
+        "Сведения СФР",
+        "Соглашение о долях",
+        "Разрешение опеки"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "two_buttons"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "доли маткапитала детей",
+    "материнский капитал квартира",
+    "выписка егрн квартира"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)"
+  },
+  "cover_emotion": "сжатые губы, недоверие",
+  "cover_motifs": {
+    "composition": "host_three_quarter_left_holds_egrn_fold_hook_right_sacred_zone",
+    "location": "bright_white_family_law_consultation_corner_sun_flare_tyumen",
+    "meme": "disappointed_black_guy_sticker_plus_grumpy_cat_cutout",
+    "prop_set": "egrn_print_sfr_matkapital_stamp_red_circle_empty_kids_row",
+    "sticker_set": "sticky_horosho_chto_proverili_no_wordstat_bars",
+    "joke": "egrn_shows_two_adults_only_red_x_on_missing_children_shares",
+    "outfit": "burgundy_merino_turtleneck_dark_denim_no_blazer",
+    "emotion": "tight_lipped_disbelief_narrowed_brows_not_side_eye",
+    "pose_framing": "three_quarter_left_waist_up_not_right_not_black_blazer_bust",
+    "action": "pinches_egrn_corner_points_at_empty_children_line"
+  },
+  "meme_picks": {
+    "cover": [
+      "disappointed_black_guy",
+      "grumpy_cat"
+    ],
+    "inline_1": [
+      "blinking_white_guy"
+    ],
+    "inline_5": [
+      "sacrednik_priest"
+    ],
+    "inline_7": [
+      "two_buttons"
+    ]
+  }
+}

@@ -55,6 +55,16 @@ class CoverBudgetTest(unittest.TestCase):
         params = inspect.signature(generate_image).parameters
         self.assertIn("ref_path", params)
 
+    def test_needs_text_layout_retry_detects_hook_phone_fail(self) -> None:
+        from excalibur_blog_grsai_solo_cover import needs_text_layout_retry
+
+        errors = [
+            "pixel_hook_title_present FAIL: no large readable hook",
+            "pixel_phone_readable FAIL: phone_digits=''",
+        ]
+        self.assertTrue(needs_text_layout_retry(errors))
+        self.assertFalse(needs_text_layout_retry(["pixel_light_high_key FAIL"]))
+
 
 class OcrEscapeHatchTest(unittest.TestCase):
     def test_escape_overrides_only_flaky_checks(self) -> None:

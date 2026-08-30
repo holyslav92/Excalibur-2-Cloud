@@ -33,6 +33,27 @@ from excalibur_blog_grsai_gpt_image2_api import (
 DEFAULT_REF = "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg"
 SOLO_COVER_SIZE = "1200x675"
 
+# Attempt 2+ when attempt 1 misses headline/phone/layout (B13 pattern).
+TEXT_LAYOUT_RETRY_SUFFIX = (
+    "TEXT LAYOUT LOCK (mandatory retry): Cyrillic headline hook MUST be large and readable "
+    "in RIGHT sacred zone (52–96% width, 14–40% height) — NOT face-only crop. "
+    "Phone CTA digits «+7 922 001 65 05» fully readable bottom-right on white torn paper. "
+    "ZERO Wordstat/search-keyword strips or beige query bars. Host face left ~35% frame width."
+)
+
+TEXT_LAYOUT_FAIL_MARKERS = (
+    "pixel_hook_title_present",
+    "pixel_phone_readable",
+    "pixel_layout_not_collapsed",
+    "pixel_no_wordstat_query_strips",
+    "pixel_hook_title_not_truncated",
+)
+
+
+def needs_text_layout_retry(errors: list[str]) -> bool:
+    blob = " ".join(errors)
+    return any(marker in blob for marker in TEXT_LAYOUT_FAIL_MARKERS)
+
 
 def build_prompt_for_article(article_dir: Path, root: Path) -> str:
     sys.path.insert(0, str(root / "scripts"))
@@ -180,15 +201,20 @@ def main() -> int:
     attempts_log: list[dict[str, Any]] = []
     best_cover_path = article_dir / "cover" / "cover.png"
 
-    image_input = {
-        "prompt": prompt,
+    image_input_base = {
         "aspect_ratio": "16:9",
         "resolution": "2K",
     }
 
+    attempt_prompt = prompt
     for attempt in range(1, max_attempts + 1):
+        if attempt > 1 and last_errors and needs_text_layout_retry(last_errors):
+            attempt_prompt = prompt + "\n" + TEXT_LAYOUT_RETRY_SUFFIX
+            print("retry: TEXT_LAYOUT_LOCK suffix (hook/phone/layout/wordstat-strip miss)", flush=True)
+        else:
+            attempt_prompt = prompt
         print(f"attempt {attempt}/{max_attempts} model={model}", flush=True)
-        batch_path = write_temp_batch(article_dir, prompt, ref_path)
+        batch_path = write_temp_batch(article_dir, attempt_prompt, ref_path)
 
         attempt_entry: dict[str, Any] = {"attempt": attempt, "model": model}
 
@@ -196,7 +222,7 @@ def main() -> int:
             raw_bytes, gen_meta = generate_image(
                 root=root,
                 batch_path=batch_path,
-                image_input=image_input,
+                image_input={**image_input_base, "prompt": attempt_prompt},
                 api_key=api_key,
                 model=model,
                 quality=quality,

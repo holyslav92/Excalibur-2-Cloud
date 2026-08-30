@@ -137,6 +137,23 @@
         "pose_framing": "waist_three_quarter_right",
         "action": "letter_in_hand_points_payment"
       }
+    },
+    {
+      "date": "2026-08-29",
+      "topic_id": "B13",
+      "slug": "",
+      "motifs": {
+        "composition": "host_three_quarter_left_holds_egrn_fold_hook_right_sacred_zone",
+        "location": "bright_white_family_law_consultation_corner_sun_flare_tyumen",
+        "meme": "disappointed_black_guy_sticker_plus_grumpy_cat_cutout",
+        "prop_set": "egrn_print_sfr_matkapital_stamp_red_circle_empty_kids_row",
+        "sticker_set": "sticky_horosho_chto_proverili_no_wordstat_bars",
+        "joke": "egrn_shows_two_adults_only_red_x_on_missing_children_shares",
+        "outfit": "burgundy_merino_turtleneck_dark_denim_no_blazer",
+        "emotion": "tight_lipped_disbelief_narrowed_brows_not_side_eye",
+        "pose_framing": "three_quarter_left_waist_up_not_right_not_black_blazer_bust",
+        "action": "pinches_egrn_corner_points_at_empty_children_line"
+      }
     }
   ]
 }
