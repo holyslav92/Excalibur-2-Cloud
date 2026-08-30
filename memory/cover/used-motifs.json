@@ -137,6 +137,23 @@
         "pose_framing": "waist_three_quarter_right",
         "action": "letter_in_hand_points_payment"
       }
+    },
+    {
+      "date": "2026-08-30",
+      "topic_id": "B18",
+      "slug": "",
+      "motifs": {
+        "composition": "host_center_left_eger_printout_hook_right_phone_bottom_right_designed_1200x675",
+        "location": "bright_white_mfc_glass_atrium_tyumen_sun_flare",
+        "meme": "disappointed_black_guy_plus_grumpy_cat_stickers_corner",
+        "prop_set": "egrn_printout_two_adults_circled_empty_child_share_row_matkapital_folder",
+        "sticker_set": "one_yellow_sticky_hook_only_no_wordstat",
+        "joke": "grumpy_cat_side_eye_at_empty_child_share_line",
+        "outfit": "mustard_linen_blazer_white_tee_no_black_blazer",
+        "emotion": "jaw_drop_disbelief_pointing_empty_share_row_not_studio_smile",
+        "pose_framing": "three_quarter_center_left_leaning_table_not_left_bust_side_eye",
+        "action": "finger_points_red_circle_empty_detskie_doli_row_on_egrn"
+      }
     }
   ]
 }

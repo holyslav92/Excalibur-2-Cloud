@@ -1,0 +1,300 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B18-v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 576,
+              "end": 600
+            },
+            "v_gutter_px": {
+              "start": 1010,
+              "end": 1042
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 12.0,
+              "v_center_offset_px": 2.0,
+              "max_aspect_crop_loss": 0.0287,
+              "per_panel_crop_loss": {
+                "top_left": 0.0139,
+                "top_right": 0.0174,
+                "bottom_left": 0.0287,
+                "bottom_right": 0.0249
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Святослав в горчичном льняном пиджаке смотрит на выписку ЕГРН без детских долей в Тюмени. Детских долей не нашли — сделку остановили.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Покупатель у двери квартиры с папкой свежей выписки ЕГРН до аванса.",
+            "h2_anchor": "За несколько дней до аванса запросили свежую выписку"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица сравнения: что видит выписка ЕГРН и чего в ней нет про маткапитал.",
+            "h2_anchor": "За несколько дней до аванса запросили свежую выписку"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Семья уходит из квартиры без подписанного предварительного договора — аванс не внесли.",
+            "h2_anchor": "Финал: сделку развернули, аванс не вносили"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B18-v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 582,
+              "end": 591
+            },
+            "v_gutter_px": {
+              "start": 1020,
+              "end": 1028
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 10.5,
+              "v_center_offset_px": 0.0,
+              "max_aspect_crop_loss": 0.0225,
+              "per_panel_crop_loss": {
+                "top_left": 0.0137,
+                "top_right": 0.0137,
+                "bottom_left": 0.0225,
+                "bottom_right": 0.0225
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Стол МФЦ с пакетом документов и неподписанным предварительным договором.",
+            "h2_anchor": "Что проверить до аванса: документы и таблица"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема двух сценариев: доли не в реестре и продажа с опекой.",
+            "h2_anchor": "Ипотеку одобрили, цену согласовали — и всплыл маткапитал"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема: соглашение о долях не равно записи в реестре.",
+            "h2_anchor": "Продавец говорил «доли выделены» — в ЕГРН детей не оказалось"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чеклист рисков маткапитала: доли, залог, опека и сроки.",
+            "h2_anchor": "Два разных риска: доли не зарегистрированы и продажа без опеки"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — За несколько дней до аванса запросили свежую выписку",
+    "skip inline_2: already correct under H2 — За несколько дней до аванса запросили свежую выписку",
+    "skip inline_3: already correct under H2 — Финал: сделку развернули, аванс не вносили",
+    "moved inline_4 → H2 — Что проверить до аванса: документы и таблица (was under [финал: сделку развернули, аванс не вносили]; removed=1)",
+    "moved inline_5 → H2 — Ипотеку одобрили, цену согласовали — и всплыл маткапитал (was under [два разных риска: доли не зарегистрированы и продажа без опеки]; removed=1)",
+    "moved inline_6 → H2 — Продавец говорил «доли выделены» — в ЕГРН детей не оказалось (was under [что проверить до аванса: документы и таблица]; removed=1)",
+    "moved inline_7 → H2 — Два разных риска: доли не зарегистрированы и продажа без опеки (was under [с 2026 года доли можно выделить без банка — но сделка не ждёт месяцы]; removed=1)"
+  ]
+}
