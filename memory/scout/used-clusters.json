@@ -5,6 +5,24 @@
   "last_sync": "2026-08-30",
   "clusters": [
     {
+      "cluster_id": "registered_persons_block_sale_before_advance",
+      "first_seen": "2026-08-30",
+      "locked_until": "2026-09-29",
+      "source": "ledger",
+      "slug": "v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu",
+      "topic_id": "B17",
+      "title": "Перед авансом в Тюмени нашли прописанных — сделку остановили"
+    },
+    {
+      "cluster_id": "communal_share_preemptive_right_neighbor_blocked",
+      "first_seen": "2026-08-30",
+      "locked_until": "2026-09-29",
+      "source": "ledger",
+      "slug": "v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan",
+      "topic_id": "B16",
+      "title": "В Тюмени сосед остановил покупку доли перед авансом"
+    },
+    {
       "cluster_id": "illegal_renovation_rosreestr_blocks_registration",
       "first_seen": "2026-08-28",
       "locked_until": "2026-09-27",
@@ -147,15 +165,6 @@
       "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
       "topic_id": "B03",
       "title": "pochti vnesli zadatok za 48 chasov do torgov kvartiru podarili docheri"
-    },
-    {
-      "cluster_id": "communal_share_preemptive_right_neighbor_blocked",
-      "first_seen": "2026-08-30",
-      "locked_until": "2026-09-29",
-      "source": "ledger",
-      "slug": "v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan",
-      "topic_id": "B16",
-      "title": "В Тюмени сосед остановил покупку доли перед авансом"
     }
   ]
 }

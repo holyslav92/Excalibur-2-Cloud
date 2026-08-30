@@ -21,10 +21,11 @@ category: env
 - **2026-08-26 B10 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9161 ingest skipped; B10 lessons recorded without behavioral signals.
 - **2026-08-28 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9230 ingest skipped; B11 lessons recorded without behavioral signals.
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
+- **2026-08-30 B17 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9342 ingest skipped; B17 lesson recorded without behavioral signals (registered_persons_before_advance cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230) и B12 (post 9250) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250) и B17 (post 9342) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -439,3 +440,54 @@ files_changed:
 checks_run:
 - B12 `quality-bar-9.json` word_count=2558 PASS
 commit: n/a
+
+## INC-20260830-1045-writer-trim-524-b17
+status: fixed
+run_date: 2026-08-30
+role: excalibur-blog-writer
+topic_id: B17
+article_dir: memory/blog/articles/B17-v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu
+severity: medium
+category: api
+
+### What went wrong
+- Writer 3-chunk merge succeeded, но merged `drafts/writer.html` был длинным с spine-once повторами и дублями interlink.
+- Single-shot Writer trim pass (`assembled-writer-trim-inputs.md` + полный HTML) → HTTP 524 (Cloudflare timeout).
+- Recovery: ручной spine-once dedupe в черновике (`derouter-opus-stamp-writer.json` → `trim_note`).
+
+### How the agent recovered this run
+- Manual dedupe spine-once + duplicate interlink URLs в `drafts/writer.html`; Sol 3-chunk PASS; publish PASS (post 9342).
+
+### Durable fix needed before next run
+- `excalibur_blog_writer_trim_chunk.py` — mirror sol_chunk for post-merge shorten: 3 Derouter calls по H2-секциям, не single-shot на полный HTML.
+- Writer skill/agent + derouter contract: default trim path `--if-over 2200`.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_writer_trim_chunk.py`
+- `skills/writer-excalibur-blog/SKILL.md`
+- `agents/excalibur-blog-writer.md`
+- `shared/derouter-opus-brain-contract.md`
+- `scripts/excalibur_blog_doctor.py`
+- `tests/test_pipeline_speed_b03.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-30
+fix_summary:
+- Added `excalibur_blog_writer_trim_chunk.py` — splits `drafts/writer.html` by H2, 3-part Derouter trim, merge + stamp `derouter-opus-stamp-writer-trim.json`.
+- Writer skill/agent + derouter contract document trim chunk path; doctor lists script.
+files_changed:
+- `scripts/excalibur_blog_writer_trim_chunk.py`
+- `skills/writer-excalibur-blog/SKILL.md`
+- `.cursor/skills/writer-excalibur-blog/SKILL.md`
+- `agents/excalibur-blog-writer.md`
+- `.cursor/agents/excalibur-blog-writer.md`
+- `shared/derouter-opus-brain-contract.md`
+- `scripts/excalibur_blog_doctor.py`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_writer_trim_chunk.py`
+- `python3 -m unittest tests.test_pipeline_speed_b03.WriterTrimChunkTest`
+commit: 18e293b

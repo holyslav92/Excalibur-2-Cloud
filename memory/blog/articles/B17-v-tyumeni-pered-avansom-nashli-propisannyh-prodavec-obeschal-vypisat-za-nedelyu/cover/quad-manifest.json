@@ -1,0 +1,262 @@
+{
+  "topic_id": "B17",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Нашли прописанных — аванс не внесли",
+  "cover_hook_highlight": "прописанных",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_emotion": "недоумение с приподнятыми бровями",
+  "mcp_note": "PRIMARY: grsai standard image REST — 2K 16:9, one job per canvas (2×). i2i face-studio-2026-06-23.jpg on canvas 1.",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав в розовой рубашке смотрит на справку о зарегистрированных в Тюмени; два имени выделены; аванс не внесли. Нашли прописанных — аванс не внесли.",
+      "scene_hint": "Rose shirt center-R; справка 2 names circled; hook RIGHT; phone; memes; MFC sun",
+      "meme_caption_ru": "",
+      "sticky": "Сначала справка, потом деньги",
+      "cover_emotion": "недоумение с приподнятыми бровями",
+      "meme_sticker": true,
+      "meme_picks": [
+        "disappointed_black_guy",
+        "polite_cat"
+      ],
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "За три дня до аванса: в квартире оказались двое «формальностей»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Hallway door labels; Pikachu corner",
+      "alt": "Подъезд квартиры в Тюмени: на двери две формальности — бывшая жена и взрослый сын, не собственники.",
+      "labels": [
+        "За три дня",
+        "Бывшая жена",
+        "Взрослый сын"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "meme_picks": [
+        "surprised_pikachu"
+      ],
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "За три дня до аванса: в квартире оказались двое «формальностей»",
+      "visual_type": "comparison_table",
+      "scene_hint": "Table promise vs fact",
+      "alt": "Таблица: обещание «выпишутся за неделю» против факта — заявлений нет, двое взрослых зарегистрированы.",
+      "labels": [
+        "За неделю",
+        "Заявлений нет",
+        "Двое взрослых"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Финал: сделку остановили до передачи денег",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Envelope untouched; paused transfer",
+      "alt": "Сделку остановили до аванса: деньги не передавали, ждут свежую справку о зарегистрированных.",
+      "labels": [
+        "Аванс не внесли",
+        "Деньги не передали",
+        "Ждём справку"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "«Выпишутся за неделю» — слова продавца без заявлений",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Desk calendar 7 days red X; empty application forms; oral promise sticky; MFC stamp; NO faces",
+      "alt": "Календарь с обещанием «за неделю» — заявлений на выписку нет, только слова продавца.",
+      "labels": [
+        "Три разные истории",
+        "Прописка без доли",
+        "Отказ от приватизации",
+        "Пожизненное право",
+        "Сейчас никого не навсегда"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Прописка, собственность и право проживания — не одно и то же",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow ЕГРН → МФЦ → Госуслуги → архив; gold arrows; torn tape labels; tiny Doge sticker corner",
+      "alt": "Схема: ЕГРН не показывает всех — справка через МФЦ, Госуслуги и архив регистраций.",
+      "labels": [
+        "ЕГРН не показывает",
+        "Справка через МФЦ",
+        "Госуслуги — третий путь",
+        "Архив регистраций",
+        "Сверьте фамилии"
+      ],
+      "meme_sticker": true,
+      "meme_picks": [
+        "doge"
+      ],
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Где смотреть зарегистрированных и почему ЕГРН не хватает",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Blocks: суд ≠ МФЦ; пошлина 3000 ₽; 3–6 мес; коммуналка; bank caution icon; NO meme",
+      "alt": "Схема: если не согласны выписаться — суд, пошлина 3 000 ₽, сроки три–шесть месяцев.",
+      "labels": [
+        "Суд — не МФЦ",
+        "Пошлина 3 000 ₽",
+        "Три–шесть месяцев",
+        "Коммуналка на вас",
+        "Банк может попросить"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Если не согласны выписаться: суд, сроки и что это стоит",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bar timeline: справка → сверка → приватизация → срок → пауза; gold bars; Blinking Guy sticker corner",
+      "alt": "Шкала до аванса: свежая справка, сверка рассказа, проверка приватизации, срок выписки письменно.",
+      "labels": [
+        "Свежая справка",
+        "Сверьте рассказ",
+        "Проверьте приватизацию",
+        "Срок выписки письменно",
+        "Пауза бесплатна"
+      ],
+      "meme_sticker": true,
+      "meme_picks": [
+        "blinking_white_guy"
+      ],
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_motifs": {
+    "composition": "host_center_right_registration_list_two_names_circled_hook_right",
+    "location": "bright_mfc_tyumen_registration_counter_white_glass_sunflare",
+    "meme": "disappointed_black_guy_sticker_plus_polite_cat_small_corner",
+    "prop_set": "spravka_zaregistrirovannyh_fold_red_circles_two_names_calendar_7days_phone_cta",
+    "sticker_set": "yellow_sticky_snachala_spravka_potom_dengi_no_wordstat_bars",
+    "joke": "sticky_za_nedelyu_promise_crossed_red_x_on_empty_forms",
+    "outfit": "dusty_rose_linen_shirt_rolled_sleeves_beige_chinos_NO_blazer",
+    "emotion": "incredulous_raised_eyebrows_open_mouth_NOT_side_eye_NOT_smile",
+    "pose_framing": "waist_center_right_dynamic_lean_forward_NOT_left_bust",
+    "action": "holds_registration_list_pointing_two_names_advance_blocked"
+  },
+  "meme_picks": {
+    "cover": [
+      "disappointed_black_guy",
+      "polite_cat"
+    ],
+    "inline_1": [
+      "surprised_pikachu"
+    ],
+    "inline_5": [
+      "doge"
+    ],
+    "inline_7": [
+      "blinking_white_guy"
+    ]
+  },
+  "wordstat_stickers": [
+    "прописка при покупке квартиры",
+    "снять квартиру с регистрацией в тюмени",
+    "прописанные в квартире риски"
+  ],
+  "cover_keys_ru": [],
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  }
+}

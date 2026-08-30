@@ -1,0 +1,13 @@
+{
+  "role": "writer",
+  "tier": "powerful",
+  "model": "claude-opus-5",
+  "method": "writer_chunk_3parts",
+  "parts": [
+    "derouter-opus-stamp-writer-part1.json",
+    "derouter-opus-stamp-writer-part2.json",
+    "derouter-opus-stamp-writer-part3.json"
+  ],
+  "trim_note": "manual spine-once dedupe after trim pass HTTP 524",
+  "completed_at": "2026-08-30T10:22:00Z"
+}

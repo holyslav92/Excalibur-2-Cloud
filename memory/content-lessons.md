@@ -12,3 +12,4 @@
 | [LESSON-20260828-1310-B12-cover-fixer-wordstat-strip-round1](content-lessons/LESSON-20260828-1310-B12-cover-fixer-wordstat-strip-round1.md) | B12 | proposed | structure |
 | [LESSON-20260828-1310-B12-sol-tighten-writer-over-2600](content-lessons/LESSON-20260828-1310-B12-sol-tighten-writer-over-2600.md) | B12 | proposed | structure |
 | [LESSON-20260828-1310-B12-ddu-escrow-novostroyka-cluster](content-lessons/LESSON-20260828-1310-B12-ddu-escrow-novostroyka-cluster.md) | B12 | proposed | geo |
+| [LESSON-20260830-1045-B17-registered-persons-before-advance-cluster](content-lessons/LESSON-20260830-1045-B17-registered-persons-before-advance-cluster.md) | B17 | proposed | structure |

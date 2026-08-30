@@ -1,0 +1,65 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B17",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-30",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://knowrealty.ru/kvartira-s-obremeneniem/",
+        "type": "news",
+        "note": "Отраслевый обзор 11.08.2026 — прописанные лица как скрытый риск вторички"
+      },
+      {
+        "url": "https://harant.ru/questions/q-218527/",
+        "type": "community",
+        "note": "Live Q&A 02.08.2026 — проверка лиц с правом проживания до покупки"
+      },
+      {
+        "url": "https://vk.com/wall-90897478_4572",
+        "type": "community",
+        "note": "Тюменское VK-обсуждение: продавец обещал выписаться; комментарии про суд и сроки"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant signal channel — Tyumen realtor casus spine"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "прописка при покупке квартиры",
+    "p0_volume_tyumen": 10,
+    "p0_volume_ru": 477,
+    "localized_phrase": "снять квартиру с регистрацией в тюмени",
+    "localized_volume": 13,
+    "risk_phrase": "прописанные в квартире риски",
+    "risk_volume": 4,
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["law_5242_1", "pp_rf_713", "gk_rf_292", "zhk_rf_31", "nk_rf_333_19", "koap_19_15_1"],
+    "errors": [],
+    "note": "Тарифные claims банков отсутствуют; регучёт/судебные сроки/госпошлина — в official_verifications с оговорками; research-official-gate PASS"
+  },
+  "key_facts_count": 42,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
