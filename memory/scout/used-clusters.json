@@ -2,8 +2,17 @@
   "version": 1,
   "anti_repeat_days": 30,
   "description": "Closed story clusters — Scout must not reuse until locked_until. Sync via: python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters",
-  "last_sync": "2026-08-29",
+  "last_sync": "2026-08-30",
   "clusters": [
+    {
+      "cluster_id": "seller_mortgage_not_discharged_bank_lien_blocks_deal",
+      "first_seen": "2026-08-30",
+      "locked_until": "2026-09-29",
+      "source": "ledger",
+      "slug": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal",
+      "topic_id": "B13",
+      "title": "Продавец закрыл ипотеку, но залог сорвал сделку в Тюмени"
+    },
     {
       "cluster_id": "illegal_renovation_rosreestr_blocks_registration",
       "first_seen": "2026-08-28",

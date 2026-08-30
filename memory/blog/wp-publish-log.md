@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B13 — 2026-08-30
+
+- **topic_id:** B13
+- **slug:** v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal
+- **post_id:** 9320
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/
+- **featured_image:** 9321
+- **inline_images:** 9322–9328 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 4 siblings OK)
+- **notes:** cover alt hook dedup in image_caption_builder; SFTP root fallback to `.`
+
 ## B12 — 2026-08-28
 
 - **topic_id:** B12
