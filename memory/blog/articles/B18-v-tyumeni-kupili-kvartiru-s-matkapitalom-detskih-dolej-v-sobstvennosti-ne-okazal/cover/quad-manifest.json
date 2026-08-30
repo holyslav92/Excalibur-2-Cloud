@@ -46,11 +46,11 @@
     "cover": {
       "quadrant": "top_left",
       "role": "cover_editorial_hero",
-      "alt": "Святослав в горчичном льняном пиджаке смотрит на выписку ЕГРН без детских долей в Тюмени. Детских долей не нашли — сделку остановили.",
-      "scene_hint": "MFC; mustard blazer host at EGRN; hook RIGHT; phone; memes",
+      "alt": "Святослав в зелёной кофте внимательно смотрит на выписку ЕГРН без детских долей в Тюмени. Детских долей не нашли — сделку остановили.",
+      "scene_hint": "bright MFC desk; host extreme close-up bust left reading EGRN printout; hook right; phone bottom-right; one tiny cat meme corner only",
       "meme_caption_ru": "",
-      "sticky": "Проверьте ЕГРН до аванса",
-      "cover_emotion": "шок и недоверие",
+      "sticky": "",
+      "cover_emotion": "спокойное недоверие — приподнятая бровь, без шока",
       "meme_picks": [
         "disappointed_black_guy",
         "grumpy_cat"
@@ -205,14 +205,16 @@
   "cover_keys_ru": [],
   "wordstat_stickers": [
     "продажа квартиры с материнским капиталом",
-    "доля в квартире за материнский капитал",
-    "маткапитал детские доли"
+    "квартира за материнский капитал"
+  ],
+  "wordstat_sticker_positions": [
+    [0.78, 0.82],
+    [0.82, 0.88]
   ],
   "cover_phone_cta": "+7 922 001 65 05",
-  "cover_emotion": "шок и недоверие",
+  "cover_emotion": "спокойное недоверие — приподнятая бровь, без шока",
   "meme_picks": {
     "cover": [
-      "disappointed_black_guy",
       "grumpy_cat"
     ],
     "inline_1": [
@@ -226,16 +228,16 @@
     ]
   },
   "cover_motifs": {
-    "composition": "host_center_left_eger_printout_hook_right_phone_bottom_right_designed_1200x675",
-    "location": "bright_white_mfc_glass_atrium_tyumen_sun_flare",
-    "meme": "disappointed_black_guy_plus_grumpy_cat_stickers_corner",
-    "prop_set": "egrn_printout_two_adults_circled_empty_child_share_row_matkapital_folder",
-    "sticker_set": "one_yellow_sticky_hook_only_NO_wordstat",
-    "joke": "grumpy_cat_side_eye_at_empty_child_share_line",
-    "outfit": "mustard_linen_blazer_white_tee_NO_black_blazer",
-    "emotion": "jaw_drop_disbelief_pointing_empty_share_row_NOT_studio_smile",
-    "pose_framing": "three_quarter_center_left_leaning_table_NOT_left_bust_side_eye",
-    "action": "finger_points_red_circle_empty_detskie_doli_row_on_egrn"
+    "composition": "designed_single_frame_1200x675_host_close_bust_left_hook_right_phone_br",
+    "location": "bright_soft_bokeh_mfc_window_tyumen_high_key_no_white_collage",
+    "meme": "grumpy_cat_tiny_corner_only_12pct",
+    "prop_set": "egrn_printout_folded_in_hand_no_monitor_inset",
+    "sticker_set": "zero_wordstat_strips_one_yellow_sticky_optional_left",
+    "joke": "cat_side_eye_at_empty_child_share_line",
+    "outfit": "sage_green_knit_cardigan_cream_tee_NO_blue_NO_mustard_NO_black_blazer",
+    "emotion": "calm_skeptical_raised_eyebrow_reading_NOT_jaw_drop_NOT_studio_smile",
+    "pose_framing": "extreme_close_bust_center_left_face_height_42pct_frame_NOT_distant",
+    "action": "holds_egrn_printout_at_chest_glances_at_camera_skeptical"
   },
   "image_placement": {
     "mode": "flexible_v2",

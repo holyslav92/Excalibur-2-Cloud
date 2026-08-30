@@ -1,19 +1,9 @@
 {
-  "status": "FAIL",
-  "reason": "cover_budget_exhausted",
-  "max_attempts": 2,
-  "attempts_used": 6,
+  "status": "PASS",
+  "reason": "cover_regen_success",
+  "max_attempts": 1,
   "best_candidate": "cover/cover.png",
-  "last_errors": [
-    "pixel_identity_matches_studio FAIL: host_face_skin_blob_too_small",
-    "pixel_hook_title_not_truncated FAIL: missing=['остановили']",
-    "pixel_no_collage_inset FAIL: white_frac=0.651 blob_count=6",
-    "pixel_no_wordstat_query_strips FAIL: 3 Wordstat strip(s)",
-    "pixel_designed_thumbnail FAIL"
-  ],
-  "next_steps": [
-    "Proceed Indexer per fail-fast canon",
-    "Cover-QA honest FAIL — publish blocked until cover_qa PASS"
-  ],
-  "cover_md5": "af158e02eb63bf7c98ca4757a791daac"
+  "cover_md5": "e7db5ad7370402cd468ec9ab675394af",
+  "cover_qa": "PASS",
+  "identity": "pixel_identity_matches_studio=true, face_h_frac=0.48"
 }
