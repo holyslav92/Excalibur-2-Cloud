@@ -2,7 +2,7 @@
   "version": 1,
   "anti_repeat_days": 30,
   "description": "Closed story clusters — Scout must not reuse until locked_until. Sync via: python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters",
-  "last_sync": "2026-08-29",
+  "last_sync": "2026-08-30",
   "clusters": [
     {
       "cluster_id": "illegal_renovation_rosreestr_blocks_registration",
@@ -147,6 +147,15 @@
       "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
       "topic_id": "B03",
       "title": "pochti vnesli zadatok za 48 chasov do torgov kvartiru podarili docheri"
+    },
+    {
+      "cluster_id": "communal_share_preemptive_right_neighbor_blocked",
+      "first_seen": "2026-08-30",
+      "locked_until": "2026-09-29",
+      "source": "ledger",
+      "slug": "v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan",
+      "topic_id": "B16",
+      "title": "В Тюмени сосед остановил покупку доли перед авансом"
     }
   ]
 }

@@ -137,6 +137,21 @@
         "pose_framing": "waist_three_quarter_right",
         "action": "letter_in_hand_points_payment"
       }
+    },
+    {
+      "date": "2026-08-30",
+      "topic_id": "B16",
+      "slug": "",
+      "motifs": {
+        "composition": "host_waist_left_letter_refusal_communal_corridor",
+        "location": "bright_communal_mfc_queue_sunflare",
+        "meme": "two_buttons_polite_cat_stickers",
+        "sticker_set": "yellow_sticky_hook_only",
+        "outfit": "burgundy_henley_grey_chinos",
+        "emotion": "incredulous_relief_raised_brows",
+        "pose_framing": "waist_left_dynamic_not_black_blazer_bust",
+        "action": "holds_neighbor_refusal_envelope_stop_advance"
+      }
     }
   ]
 }

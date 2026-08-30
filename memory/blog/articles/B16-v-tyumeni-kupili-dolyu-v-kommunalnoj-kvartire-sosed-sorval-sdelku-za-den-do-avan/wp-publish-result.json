@@ -1,0 +1,27 @@
+{
+  "slug": "v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan",
+  "topic_id": "B16",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B16-v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 939818,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9332 slug=v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9333\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9334 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan-inline-01.png\nOK inline_alt=9334\nOK inline_caption=9334\nOK inline_description=9334\nOK inline_image_upload=9335 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan-inline-02.png\nOK inline_alt=9335\nOK inline_caption=9335\nOK inline_description=9335\nOK inline_image_upload=9336 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan-inline-03.png\nOK inline_alt=9336\nOK inline_caption=9336\nOK inline_description=9336\nOK inline_image_upload=9337 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan-inline-04.png\nOK inline_alt=9337\nOK inline_caption=9337\nOK inline_description=9337\nOK inline_image_upload=9338 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan-inline-05.png\nOK inline_alt=9338\nOK inline_caption=9338\nOK inline_description=9338\nOK inline_image_upload=9339 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan-inline-06.png\nOK inline_alt=9339\nOK inline_caption=9339\nOK inline_description=9339\nOK inline_image_upload=9340 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan-inline-07.png\nOK inline_alt=9340\nOK inline_caption=9340\nOK inline_description=9340\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan/",
+    "errors": []
+  }
+}

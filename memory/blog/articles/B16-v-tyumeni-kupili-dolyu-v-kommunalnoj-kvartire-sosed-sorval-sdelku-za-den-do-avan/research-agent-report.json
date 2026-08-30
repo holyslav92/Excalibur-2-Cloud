@@ -1,0 +1,69 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B16",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-30",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://vce-yuristi.ru/voprosi/28485",
+        "type": "community",
+        "note": "30.08.2026 SERP — покупка доли в коммунальной, уведомление соседей"
+      },
+      {
+        "url": "https://tyumen.gorod.guru/dolya-vykup",
+        "type": "local_guide",
+        "note": "2026-08-30 — Tyumen доля выкуп, МФЦ, 30 дней извещение"
+      },
+      {
+        "url": "https://www.consultant.ru/law/podborki/prodazha_doli_v_kommunalnoj_kvartire/",
+        "type": "official",
+        "note": "Подборка коммунальная доля"
+      },
+      {
+        "url": "https://rg.ru/2026/02/25/kvartira-po-chastiam.html",
+        "type": "news",
+        "note": "25.02.2026 — продажа доли нотариус"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant signal"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени",
+    "p0_volume": 22699,
+    "secondary_phrases": [
+      {"phrase": "вторичка в тюмени", "volume": 6173, "regions": ["55", "11176"]},
+      {"phrase": "коммунальная квартира купить тюмень", "volume": 20, "regions": ["55", "11176"]}
+    ],
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["gk_rf_250", "fz_registration_42"],
+    "errors": [],
+    "note": "ст. 250 ГК РФ + ст. 42 ФЗ о регистрации verified"
+  },
+  "key_facts_count": 45,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

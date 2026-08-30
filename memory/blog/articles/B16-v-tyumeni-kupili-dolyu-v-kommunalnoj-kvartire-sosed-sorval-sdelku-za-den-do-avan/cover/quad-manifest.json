@@ -1,0 +1,247 @@
+{
+  "topic_id": "B16",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Сосед остановил покупку доли до аванса",
+  "cover_hook_highlight": "остановил",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин с конвертом отказа соседа в коммуналке, Тюмень. Сосед остановил покупку доли до аванса.",
+      "scene_hint": "Коммуналка: henley, конверт, свет справа.",
+      "meme_caption_ru": "",
+      "sticky": "Деньги не ушли зря",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "изумление"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Коммунальная квартира: отдельная комната и общий сосед",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Прихожая коммуналки: договор, календарь «день до аванса», конверт; без людей.",
+      "alt": "реалистичный кадр (без лица хоста): за день до аванса, заявление соседа, преимущественное право, проверка до сделки.",
+      "labels": [
+        "за день до аванса",
+        "заявление соседа",
+        "преимущественное право"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Коммунальная квартира: отдельная комната и общий сосед",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Комната, общий коридор и кухня, связки ключей; без людей.",
+      "alt": "реалистичный кадр (без лица хоста): отдельная комната, общий коридор, общая кухня, сосед по коммуналке.",
+      "labels": [
+        "отдельная комната",
+        "общий коридор",
+        "общая кухня"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Выписка была чистой — а риск остался",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема: чистая выписка → собственники → риск преимущественного права.",
+      "alt": "схема устройства механизма: чистая выписка, состав собственников, комната в коммуналке, скрытый риск.",
+      "labels": [
+        "чистая выписка",
+        "состав собственников",
+        "комната в коммуналке"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Финал: аванс не внесли и ушли на другую квартиру",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Пустая квартира: неподписанный договор и ключи на подоконнике; без людей.",
+      "alt": "реалистичный кадр (без лица хоста): аванс не внесли, сделку остановили, другая квартира, сохранённые деньги.",
+      "labels": [
+        "аванс не внесли",
+        "сделку остановили",
+        "другая квартира"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true,
+      "placement_group": "pair"
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "За день до аванса сосед заговорил о преимущественном праве",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: доля vs коммуналка, кто уведомлять, срок ответа.",
+      "alt": "сравнительная таблица с колонками: доля, комната в коммуналке, преимущественное право, уведомление соседей.",
+      "labels": [
+        "доля",
+        "комната в коммуналке",
+        "преимущественное право"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Преимущественное право: что это в быту, не в учебнике",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Шкала 30 дней: извещение, ожидание, отказ или сделка.",
+      "alt": "график / шкала сроков: 30 дней, уведомление, нотариальный отказ, срок ожидания.",
+      "labels": [
+        "30 дней",
+        "уведомление",
+        "нотариальный отказ"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Тридцать дней и нотариальный отказ — где смотреть дату",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Чеклист: собственники, документы, цена, уведомление.",
+      "alt": "чеклист ошибок vs правильный путь: проверить собственников, сверить документы, уточнить цену, проверить уведомление.",
+      "labels": [
+        "проверить собственников",
+        "сверить документы",
+        "уточнить цену"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    {
+      "phrase": "преимущественное право покупки доли",
+      "volume": 0
+    },
+    {
+      "phrase": "аванс за долю в квартире",
+      "volume": 0
+    }
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_emotion": "изумление и облегчение",
+  "cover_motifs": {
+    "outfit": "бордовый henley и светло-серые чиносы",
+    "emotion": "изумление с облегчением после остановки рискованной сделки",
+    "pose_framing": "динамичный план по пояс, герой слева, корпус развёрнут к камере, правая рука с письмом поднята",
+    "action": "держит конверт с отказом соседа и жестом останавливает внесение аванса",
+    "composition": "герой в левой трети, справа чистая светлая зона под заголовок и телефон, маленькие мем-стикеры в дальних углах",
+    "location": "яркий коридор коммунальной квартиры с визуальными намёками на очередь в МФЦ, дневной свет и солнечные блики",
+    "meme": "two_buttons и polite_cat как небольшие реакционные стикеры о выборе между авансом и проверкой преимущественного права",
+    "prop_set": "конверт с отказом соседа, папка с документами, связка ключей, смартфон без читаемого текста",
+    "sticker_set": "two_buttons и polite_cat, компактные стикеры в углах, не перекрывают заголовок, лицо и телефон",
+    "joke": "герой уже почти отдал аванс, но сосед буквально нажал кнопку «стоп»"
+  },
+  "meme_picks": {
+    "cover": [
+      "two_buttons",
+      "polite_cat"
+    ],
+    "inline_1": [
+      "bad_luck_brian"
+    ],
+    "inline_5": [
+      "blinking_white_guy"
+    ],
+    "inline_7": [
+      "disappointed_black_guy"
+    ]
+  }
+}

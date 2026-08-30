@@ -439,3 +439,38 @@ files_changed:
 checks_run:
 - B12 `quality-bar-9.json` word_count=2558 PASS
 commit: n/a
+
+## INC-20260830-1200-cover-alt-hook-duplication-b16
+status: fixed
+run_date: 2026-08-30
+role: excalibur-blog-publish
+topic_id: B16
+article_dir: memory/blog/articles/B16-v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan
+severity: medium
+category: script
+
+### What went wrong
+- `apply_article_captions` (publish preflight) re-appended `cover_hook` to cover alt each run → hook repeated 4× → `alt too long` publish BLOCKER.
+
+### How the agent recovered this run
+- Shortened manifest alt to visual-only; patched `build_cover_alt` to skip hook when already in visual; publish PASS post 9332.
+
+### Durable fix needed before next run
+- Hook dedup guard in `excalibur_blog_image_caption_builder.py` (applied).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_image_caption_builder.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-30
+fix_summary:
+- `build_cover_alt`: do not append stakes sentence when hook already present in visual segment.
+files_changed:
+- `scripts/excalibur_blog_image_caption_builder.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
+- B16 publish PASS; image caption gate all_pass
+commit: afb3786

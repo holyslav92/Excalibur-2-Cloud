@@ -17,3 +17,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-08-28 | B11 | v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii | /blog/vtorichka-i-riski/v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii/ | published |
 | 2026-08-28 | B12 | klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili | /blog/vtorichka-i-riski/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/ | published |
 | 2026-08-30 | B14 | v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal | /blog/vtorichka-i-riski/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/ | published |
+| 2026-08-30 | B16 | v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan | /blog/vtorichka-i-riski/v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan/ | published |
