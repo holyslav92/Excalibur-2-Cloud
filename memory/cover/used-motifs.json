@@ -137,6 +137,23 @@
         "pose_framing": "waist_three_quarter_right",
         "action": "letter_in_hand_points_payment"
       }
+    },
+    {
+      "date": "2026-08-30",
+      "topic_id": "B17",
+      "slug": "",
+      "motifs": {
+        "composition": "host_center_right_registration_list_two_names_circled_hook_right",
+        "location": "bright_mfc_tyumen_registration_counter_white_glass_sunflare",
+        "meme": "disappointed_black_guy_sticker_plus_polite_cat_small_corner",
+        "prop_set": "spravka_zaregistrirovannyh_fold_red_circles_two_names_calendar_7days_phone_cta",
+        "sticker_set": "yellow_sticky_snachala_spravka_potom_dengi_no_wordstat_bars",
+        "joke": "sticky_za_nedelyu_promise_crossed_red_x_on_empty_forms",
+        "outfit": "dusty_rose_linen_shirt_rolled_sleeves_beige_chinos_no_blazer",
+        "emotion": "incredulous_raised_eyebrows_open_mouth_not_side_eye_not_smile",
+        "pose_framing": "waist_center_right_dynamic_lean_forward_not_left_bust",
+        "action": "holds_registration_list_pointing_two_names_advance_blocked"
+      }
     }
   ]
 }
