@@ -194,6 +194,18 @@
         ["дол", "долев", "аванс", "банк", "отказ"]
       ],
       "examples": ["skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo"]
+    },
+    {
+      "id": "communal_share_preemptive_right_neighbor_blocked",
+      "label_ru": "Доля в коммуналке: сосед с преимущественным правом остановил сделку перед авансом",
+      "required_groups": [
+        ["коммунал", "коммунальн", "доля", "долев", "комната"],
+        ["сосед", "преимуществен", "уведомлен", "отказ"],
+        ["аванс", "останов", "сорвал", "до\\s+аванс", "перед\\s+аванс"]
+      ],
+      "examples": [
+        "v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan"
+      ]
     }
   ]
 }
