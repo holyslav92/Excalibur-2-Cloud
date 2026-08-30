@@ -5,6 +5,15 @@
   "last_sync": "2026-08-30",
   "clusters": [
     {
+      "cluster_id": "matkapital_missing_child_shares",
+      "first_seen": "2026-08-30",
+      "locked_until": "2026-09-29",
+      "source": "ledger",
+      "slug": "v-tyumeni-kupili-kvartiru-s-matkapitalom-detskih-dolej-v-sobstvennosti-ne-okazal",
+      "topic_id": "B18",
+      "title": "Квартиру с маткапиталом не купили: детских долей не было в ЕГРН"
+    },
+    {
       "cluster_id": "registered_persons_block_sale_before_advance",
       "first_seen": "2026-08-30",
       "locked_until": "2026-09-29",
