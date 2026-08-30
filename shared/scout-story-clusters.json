@@ -196,6 +196,18 @@
       "examples": ["skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo"]
     },
     {
+      "id": "registered_persons_block_sale_before_advance",
+      "label_ru": "Прописанные в квартире: продавец обещал выписать — сделку остановили перед авансом",
+      "required_groups": [
+        ["пропис", "зарегистр", "регистрац", "выписк", "справк"],
+        ["выпис", "снять", "снят", "высел", "утратил"],
+        ["аванс", "останов", "сорвал", "до\\s+аванс", "перед\\s+аванс", "задаток"]
+      ],
+      "examples": [
+        "v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu"
+      ]
+    },
+    {
       "id": "communal_share_preemptive_right_neighbor_blocked",
       "label_ru": "Доля в коммуналке: сосед с преимущественным правом остановил сделку перед авансом",
       "required_groups": [
