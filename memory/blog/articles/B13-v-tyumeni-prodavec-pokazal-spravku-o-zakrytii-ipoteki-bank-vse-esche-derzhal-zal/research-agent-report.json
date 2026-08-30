@@ -1,0 +1,78 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B13",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-30",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/08/27/76610181/",
+        "type": "news",
+        "note": "Тюмень 27.08.2026 — ипотечная вторичка в сценариях обмена/трейд-ин"
+      },
+      {
+        "url": "https://dom.aspec.ru/media/chto-delat-posle-zakrytiya-ipoteki",
+        "type": "industry",
+        "note": "Обновлён 23.03.2026 — справка vs снятие обременения после ипотеки"
+      },
+      {
+        "url": "https://proverka-kvartiry.ru/blog/pokupka-kvartiry-v-ipoteke-prodavca/",
+        "type": "guide",
+        "note": "29.05.2026 — схемы покупки с ипотекой продавца, свежая выписка ЕГРН"
+      },
+      {
+        "url": "https://sudzakon.ru/spravka-o-zakrytii-kredita-chto-delat-esli-bank-zatyagivaet-vydachu/",
+        "type": "community",
+        "note": "Август 2026 — справка о закрытии vs обременение в ЕГРН"
+      },
+      {
+        "url": "https://pledge.domclick.ru/",
+        "type": "official",
+        "note": "Официальный сервис Сбера — сроки снятия обременения"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant signal channel — Tyumen realtor casus spine"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени вторичка",
+    "p0_volume": 4165,
+    "p0_volume_handoff": 3225,
+    "related_phrases": {
+      "купить квартиру в тюмени": 22699,
+      "купить квартиру вторичка": 5298,
+      "выписка из егрн на квартиру": 92,
+      "снятие обременения с квартиры": 31
+    },
+    "partial": ["купить квартиру в ипотеке продавца — totalCount 14 only"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "distinct_from": ["B09", "B11", "B12"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["102_fz", "domclick_sber"],
+    "errors": [],
+    "note": "Тарифные claims банков отсутствуют; 102-ФЗ ст.25/37 и процесс Domclick verified в official_verifications"
+  },
+  "key_facts_count": 45,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "handoff": ".cursor/excalibur-blog-handoff.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}
