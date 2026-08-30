@@ -1,0 +1,110 @@
+{
+  "topic_id": "B14",
+  "pipeline": "grsai_solo_cover",
+  "inline_count": 7,
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Справка есть — залог остался в реестре",
+  "cover_hook_highlight": "залог",
+  "cover_phone_cta": "+7 922 001 65 05",
+  "slots": {
+    "cover": {
+      "role": "cover_editorial_hero",
+      "alt": "Святослав сравнивает справку банка и выписку ЕГРН с записью залога в Тюмени. Справка есть — залог остался в реестре.",
+      "scene_hint": "Designed 1200x675 thumbnail: HUGE host face close-up LEFT 40% frame; sage-green cardigan white tee (NOT black blazer); visible dark stubble on jaw like reference; worried frown comparing bank СПРАВКА vs EGRN paper with yellow залог highlight; LARGE Cyrillic hook RIGHT top: «Справка есть — залог остался в реестре» with gold word залог only; yellow sticky top-left «Проверили до аванса»; phone +7 922 001 65 05 bottom-right fully inside frame on torn paper; small confused cat meme sticker corner; bright high-key kitchen; NO Wordstat query bars; NO opaque gold horizontal bars",
+      "sticky": "Проверили до аванса",
+      "cover_emotion": "сосредоточенное недоумение",
+      "meme_sticker": true,
+      "meme_picks": [
+        "confused_cat",
+        "roll_safe"
+      ]
+    },
+    "inline_1": {
+      "visual_type": "comparison_table",
+      "labels": [
+        "Справка",
+        "ЕГРН",
+        "Залог",
+        "До аванса"
+      ],
+      "no_host_face": true
+    },
+    "inline_2": {
+      "visual_type": "process_flow",
+      "labels": [
+        "Кредит",
+        "Запись",
+        "Реестр",
+        "Аванс"
+      ],
+      "no_host_face": true
+    },
+    "inline_3": {
+      "visual_type": "structure_diagram",
+      "labels": [
+        "Справка",
+        "Выписка",
+        "Банк",
+        "Срок"
+      ],
+      "no_host_face": true
+    },
+    "inline_4": {
+      "visual_type": "workflow_diagram",
+      "labels": [
+        "Обещание",
+        "Документ",
+        "Согласие",
+        "Дата"
+      ],
+      "no_host_face": true
+    },
+    "inline_5": {
+      "visual_type": "bar_timeline_chart",
+      "labels": [
+        "Закрытие",
+        "Заявление",
+        "3 дня",
+        "Проверка"
+      ],
+      "no_host_face": true
+    },
+    "inline_6": {
+      "visual_type": "checklist_board",
+      "labels": [
+        "Справка",
+        "Выписка",
+        "Банк",
+        "Срок"
+      ],
+      "no_host_face": true
+    },
+    "inline_7": {
+      "visual_type": "comparison_table_ui",
+      "labels": [
+        "Документ",
+        "Реестр",
+        "Аванс",
+        "Выход"
+      ],
+      "no_host_face": true
+    }
+  },
+  "cover_motifs": {
+    "outfit": "sage_green_cardigan_white_tee_NOT_blazer",
+    "emotion": "worried_focus_comparing_documents_NOT_smile",
+    "pose_framing": "close_up_left_holding_two_papers",
+    "action": "comparing_bank_certificate_vs_egrn_zalog_line",
+    "location": "bright_modern_kitchen_high_key",
+    "meme": "small_confused_cat_sticker"
+  },
+  "meme_picks": [
+    "confused_cat",
+    "roll_safe"
+  ],
+  "wordstat_stickers": [],
+  "cover_emotion": "сосредоточенное недоумение"
+}
