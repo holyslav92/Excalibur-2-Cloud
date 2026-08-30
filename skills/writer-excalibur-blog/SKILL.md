@@ -27,6 +27,17 @@ python3 scripts/excalibur_blog_writer_chunk.py \
 
 Longform (7 inline): **3 части на первом проходе** — не ждать HTTP 524. `--single-shot` только для коротких статей.
 
+**Trim pass (если черновик > ~2400 слов или spine-once/дубли interlink):** не single-shot Derouter на полный `drafts/writer.html` — предсказуемый HTTP 524 (B17). Используй chunk-trim:
+
+```bash
+python3 scripts/excalibur_blog_writer_trim_chunk.py \
+  --article-dir <article_dir> \
+  --user-file <assembled-writer-trim-inputs.md> \
+  --if-over 2200
+```
+
+3 части по H2-секциям; merge → `drafts/writer.html` + stamp `derouter-opus-stamp-writer-trim.json`.
+
 Контракт: `shared/derouter-opus-brain-contract.md`.
 `DEROUTER WRITER BLOCKER` → стоп. Запрещён тихий fallback на Composer/Auto.
 

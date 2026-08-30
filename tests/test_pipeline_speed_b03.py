@@ -142,6 +142,33 @@ class WriterChunkTest(unittest.TestCase):
         self.assertEqual(len(groups), 3)
 
 
+class WriterTrimChunkTest(unittest.TestCase):
+    def test_split_html_by_h2(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_writer_trim_chunk import split_html_by_h2
+
+        html = "<p>lead</p><h2>A</h2><p>a</p><h2>B</h2><p>b</p>"
+        sections = split_html_by_h2(html)
+        self.assertEqual(len(sections), 3)
+        self.assertIn("lead", sections[0])
+        self.assertIn("<h2>A</h2>", sections[1])
+
+    def test_merge_trim_fragments_strips_fences(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_writer_trim_chunk import merge_trim_fragments
+
+        merged = merge_trim_fragments(["```html\n<p>a</p>\n```", "<p>b</p>"])
+        self.assertIn("<p>a</p>", merged)
+        self.assertIn("<p>b</p>", merged)
+        self.assertNotIn("```", merged)
+
+    def test_if_over_skip_logic_word_count(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_writer_trim_chunk import word_count
+
+        self.assertEqual(word_count("<p>one two three</p>"), 3)
+
+
 class SolChunkTest(unittest.TestCase):
     def test_split_h2_groups_shared(self) -> None:
         sys.path.insert(0, str(ROOT / "scripts"))
