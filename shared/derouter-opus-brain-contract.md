@@ -47,10 +47,13 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 ```bash
 python3 scripts/excalibur_blog_writer_chunk.py --system-file ... --user-file ... --article-dir ...
+python3 scripts/excalibur_blog_writer_trim_chunk.py --article-dir ... --if-over 2200   # post-merge shorten
 python3 scripts/excalibur_blog_sol_chunk.py --system-file ... --user-file ... --article-dir ...
 ```
 
 По умолчанию 3 части по H2 outline; merge → `drafts/writer.html` / `article.html`. `--single-shot` только для коротких статей.
+
+**Writer trim:** если merged `drafts/writer.html` > ~2200 слов или нужен spine-once dedupe — `excalibur_blog_writer_trim_chunk.py` (3 части по H2-секциям). Single-shot trim на полный HTML → HTTP 524 (B17).
 
 ## Не Derouter chat (остаётся Cursor / Python / MCP)
 
