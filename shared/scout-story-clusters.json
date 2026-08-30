@@ -194,6 +194,18 @@
         ["дол", "долев", "аванс", "банк", "отказ"]
       ],
       "examples": ["skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo"]
+    },
+    {
+      "id": "fssp_arrest_day_before_registration_tyumen",
+      "label_ru": "ФССП арест / запрет на регистрацию за 1–2 дня до МФЦ, аванс не внесён",
+      "required_groups": [
+        ["пристав", "фссп", "fssp", "исполнител"],
+        ["арест", "запрет", "регистрац", "мфц", "егрн"],
+        ["два\\s+дн", "2\\s*дн", "48\\s*час", "перед\\s+сдел", "до\\s+регистрац"]
+      ],
+      "examples": [
+        "v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii"
+      ]
     }
   ]
 }

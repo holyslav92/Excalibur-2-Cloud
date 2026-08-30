@@ -1,0 +1,51 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B13-v-tyumeni-pristavy-nalozhili-arest-za-dva-dnya-do-registracii-avans-esche-ne-vno/cover/cover.png",
+  "last_errors": [
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['арестовали'] last_word='арестовали' ocr='Приставы = «естовали'",
+    "pixel_no_collage_inset FAIL: white_frac=0.439 inset_face=False blob_count=5",
+    "pixel_meme_present FAIL: orange_fur=0 legacy=0 host_face=True",
+    "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0164",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model": "grsai-standard",
+      "bytes": 968066,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+        "pixel_phone_readable FAIL: phone_digits='792200165055' ink=1021 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='792200165055' clipped=True ocr='0 65055 | +792200165055 | 79220016505 | 9'",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Приставы'] last_word='арестовали' ocr='ставы арестовали Pa nua'",
+        "pixel_no_collage_inset FAIL: white_frac=0.566 inset_face=False blob_count=3",
+        "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.031",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model": "grsai-standard",
+      "bytes": 1007736,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['арестовали'] last_word='арестовали' ocr='Приставы = «естовали'",
+        "pixel_no_collage_inset FAIL: white_frac=0.439 inset_face=False blob_count=5",
+        "pixel_meme_present FAIL: orange_fur=0 legacy=0 host_face=True",
+        "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0164",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}

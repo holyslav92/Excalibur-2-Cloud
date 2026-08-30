@@ -20,4 +20,3 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 | B10 | v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v | Пожилого продавца вели по телефону — родственники сорвали сделку | published |
 | B11 | v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii | В Тюмени открытая кухня остановила регистрацию квартиры | published |
 | B12 | klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili | Застройщик сдвинул сдачу ЖК в Тюмени на год — ипотека осталась | published |
-| B13 | v-tyumeni-pristavy-arestovali-kvartiru-za-dva-dnya-do-registracii | В Тюмени приставы арестовали квартиру за два дня до регистрации | published |

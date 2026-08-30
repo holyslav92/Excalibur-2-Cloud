@@ -1,0 +1,70 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B13",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-29",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://172.ru/house/u-tyumencev-za-dolgi-izyali-zhilyo-id7225814/",
+        "type": "news",
+        "note": "УФССП Тюменской области, 12.08.2026 — запрет регистрационных действий, 17 жилых объектов на реализацию за 1 пол. 2026"
+      },
+      {
+        "url": "https://tyumen.ru/gorod/za-chto-tyumency-stanovyatsya-dolzhnikami-i-kakie-mery-k-nim-primenyayut-id476536/",
+        "type": "news",
+        "note": "Пресс-служба УФССП, 21.08.2026 — меры взыскания, арест недвижимости"
+      },
+      {
+        "url": "https://amulex.ru/daily/bankrotstvo/arest-avtomobilya-pristavami/",
+        "type": "news",
+        "note": "11.08.2026 — различие запрета рег. действий (ст. 64) и ареста (ст. 80)"
+      },
+      {
+        "url": "https://dzen.ru/a/ailPOoO-Zyx4iqEu",
+        "type": "community",
+        "note": "Tenant Dzen ~25.08.2026 — контраст банкротства vs запрет ФССП"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "фссп проверить задолженность",
+    "p0_volume": 232,
+    "p0_volume_ru225": 18776,
+    "localized_phrase": "фссп по тюменской области проверить задолженность",
+    "localized_volume": 54,
+    "buyer_spine_phrase": "купить квартиру в тюмени вторичка",
+    "buyer_spine_volume": 4165,
+    "related_phrase": "запрет на регистрационные действия квартиры",
+    "related_volume": 19,
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "fssp_arrest_day_before_registration_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["fssp_229fz", "rosreestr_218fz", "fssp_bdip"],
+    "errors": [],
+    "note": "Банковские тарифы N/A; ст. 80/64/67 229-ФЗ, п. 55 регламента, fssp.gov.ru verified"
+  },
+  "casus_status": "modelled_tyumen_composite; no real names, addresses, debt amounts",
+  "key_facts_count": 38,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
