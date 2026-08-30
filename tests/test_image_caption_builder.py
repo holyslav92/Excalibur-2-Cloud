@@ -66,6 +66,71 @@ class ImageCaptionBuilderTests(unittest.TestCase):
         self.assertIn("Сравнительная таблица", alt)
         self.assertIn("Цена согласована", alt)
 
+    def test_cover_alt_idempotent_when_hook_already_present(self) -> None:
+        hook = "Договор подписали — квартиру продали другим"
+        visual = (
+            "Святослав Шакин в терракотовом поло рвёт предварительный договор "
+            "в переговорной в Тюмени. Договор подписали — квартиру продали другим."
+        )
+        manifest = {
+            "cover_hook": hook,
+            "slots": {"cover": {"alt": visual}},
+        }
+        meta = {
+            "h1": "В Тюмени подписали предварительный — продавец продал квартиру другим",
+            "slug": "v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim",
+        }
+        alt = build_cover_alt(manifest, meta, host_name="Святослав Шакин")
+        self.assertEqual(alt, visual)
+        self.assertEqual(alt.count("Договор подписали"), 1)
+
+    def test_cover_alt_dedupes_repeated_hook_sentences(self) -> None:
+        hook = "Договор подписали — квартиру продали другим"
+        bloated = (
+            "Святослав Шакин в терракотовом поло рвёт предварительный договор в Тюмени. "
+            f"{hook}. {hook}. {hook}."
+        )
+        manifest = {"cover_hook": hook, "slots": {"cover": {"alt": bloated}}}
+        meta = {"slug": "v-tyumeni-podpisali-predvaritelnyj"}
+        alt = build_cover_alt(manifest, meta, host_name="Святослав Шакин")
+        self.assertEqual(alt.count("Договор подписали"), 1)
+        self.assertFalse(is_prompt_like_alt(alt)[0], msg=alt)
+
+    def test_apply_cover_alt_twice_is_idempotent(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            article_dir = Path(tmp) / "B15-test"
+            cover_dir = article_dir / "cover"
+            cover_dir.mkdir(parents=True)
+            hook = "Договор подписали — квартиру продали другим"
+            visual = (
+                "Святослав Шакин в терракотовом поло рвёт предварительный договор "
+                f"в переговорной в Тюмени. {hook}."
+            )
+            manifest = {"cover_hook": hook, "slots": {"cover": {"alt": visual}}}
+            (cover_dir / "quad-manifest.json").write_text(
+                json.dumps(manifest, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            (article_dir / "article.meta.json").write_text(
+                json.dumps(
+                    {
+                        "h1": "В Тюмени подписали предварительный — продавец продал квартиру другим",
+                        "slug": "v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim",
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            root = Path(__file__).resolve().parents[1]
+            apply_article_captions(article_dir, root)
+            second = apply_article_captions(article_dir, root)
+            cover_alt = json.loads((cover_dir / "quad-manifest.json").read_text(encoding="utf-8"))[
+                "slots"
+            ]["cover"]["alt"]
+            self.assertEqual(cover_alt.count("Договор подписали"), 1)
+            self.assertFalse(any("cover:" in c for c in second["changes"]))
+            self.assertTrue(second["gate"]["all_pass"])
+
     def test_apply_updates_manifest_and_html(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             article_dir = Path(tmp) / "B10-test"

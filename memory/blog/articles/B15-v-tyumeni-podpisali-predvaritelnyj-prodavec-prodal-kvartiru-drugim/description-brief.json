@@ -1,0 +1,9 @@
+{
+  "topic_id": "B15",
+  "description": "«У нас же договор» — так успокаивали себя покупатели в Тюмени, пока квартира не сменила владельцев. ПДКП и задаток помогли вернуть деньги, но не сам объект.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

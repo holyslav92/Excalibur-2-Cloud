@@ -405,6 +405,49 @@ checks_run:
 - `python3 -m unittest tests.test_pipeline_speed_b03.QuadManifestCanonTest`
 commit: a1bb898
 
+## INC-20260829-1300-cover-alt-hook-duplication-b15
+status: fixed
+run_date: 2026-08-29
+role: excalibur-blog-fixer
+topic_id: B15
+article_dir: memory/blog/articles/B15-v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim
+severity: medium
+category: script
+
+### What went wrong
+- `excalibur_blog_image_caption_builder.py` `build_cover_alt` appended `cover_hook` stakes sentence even when `slots.cover.alt` already contained the hook.
+- Each `quality-bar-9` / `--apply` pass duplicated «Договор подписали — квартиру продали другим» → alt too long (269–314 chars) FAIL in `image-alt-gate.json`.
+- `check_image_alt_human` calls `apply_article_captions` before gate — non-idempotent cover alt on every quality-bar run.
+
+### How the agent recovered this run
+- Publish proceeded after manual quad-manifest alt; `quality-bar-9.json` `image_alt_human` PASS at publish time.
+- `image-alt-gate.json` captured duplication artifact from repeated apply during gate loop.
+
+### Durable fix needed before next run
+- Skip hook append when hook already in visual alt; dedupe repeated hook sentences on re-apply.
+- Unit tests for B15-style idempotent cover alt.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_image_caption_builder.py`
+- `tests/test_image_caption_builder.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-29
+fix_summary:
+- Added `hook_already_in_alt`, `dedupe_repeated_hook_sentences`, `cover_hook_plain`; `build_cover_alt` idempotent when hook present.
+- Tests: idempotent apply, dedupe bloated alt, B15 hook pattern.
+files_changed:
+- `scripts/excalibur_blog_image_caption_builder.py`
+- `tests/test_image_caption_builder.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
+- `python3 -m unittest tests.test_image_caption_builder`
+- B15 dry-run `--apply --dry-run` → cover alt unchanged, all_pass
+commit: 1fdf495
+
 ## INC-20260828-1302-writer-word-count-sol-tighten-b12
 status: fixed
 run_date: 2026-08-28

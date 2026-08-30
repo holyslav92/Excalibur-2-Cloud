@@ -1,0 +1,52 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B15-v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim/cover/cover.png",
+  "last_errors": [
+    "pixel_phone_readable FAIL: phone_digits='3' ink=1413 clipped=True",
+    "pixel_phone_not_clipped FAIL: digits='3' clipped=True ocr='3 | 3'",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Договор', 'квартиру', 'продали', 'другим'] last_word='другим' ocr='овор подписали — а ПРА'",
+    "pixel_no_collage_inset FAIL: white_frac=0.241 inset_face=True blob_count=5",
+    "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.039",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model": "grsai-standard",
+      "bytes": 930982,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_hook_title_present FAIL: no large readable hook title in sacred zone (bands=[])",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Договор', 'квартиру', 'продали', 'другим'] last_word='другим' ocr='говор подписали —'",
+        "pixel_no_collage_inset FAIL: white_frac=0.671 inset_face=True blob_count=3",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.2876",
+        "pixel_layout_not_collapsed FAIL: face-only crop with no hook title (face_h=0.4, face_w=0.532)",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model": "grsai-standard",
+      "bytes": 991290,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_phone_readable FAIL: phone_digits='3' ink=1413 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='3' clipped=True ocr='3 | 3'",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Договор', 'квартиру', 'продали', 'другим'] last_word='другим' ocr='овор подписали — а ПРА'",
+        "pixel_no_collage_inset FAIL: white_frac=0.241 inset_face=True blob_count=5",
+        "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.039",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}

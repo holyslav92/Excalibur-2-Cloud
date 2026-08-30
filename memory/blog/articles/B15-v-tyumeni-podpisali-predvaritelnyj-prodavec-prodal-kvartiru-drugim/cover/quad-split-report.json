@@ -1,0 +1,308 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "BLOCK",
+  "splits": [
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B15-v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 586,
+              "end": 620
+            },
+            "v_gutter_px": {
+              "start": 1020,
+              "end": 1028
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 27.0,
+              "v_center_offset_px": 0.0,
+              "max_aspect_crop_loss": 0.0725,
+              "per_panel_crop_loss": {
+                "top_left": 0.0205,
+                "top_right": 0.0205,
+                "bottom_left": 0.0725,
+                "bottom_right": 0.0725
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Структурная схема, объясняющая, почему предварительный договор не является регистрацией права собственности.",
+            "h2_anchor": "Предварительный договор — обещание, а не запись в ЕГРН"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Чек-лист различий между задатком, авансом и ипотечным авансом.",
+            "h2_anchor": "Задаток, аванс и ипотечный аванс — три разных платежа"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Карточка с вариантами требований покупателя: понуждение к сделке, взыскание денег и убытков.",
+            "h2_anchor": "Понуждение, штраф и убытки: что реально можно требовать"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема сопоставляет ожидания покупателя от предварительного договора с тем, что реально даёт закон.",
+            "h2_anchor": "Таблица: что покупатель ожидает от ПДКП и что даёт закон"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B15-v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 567,
+              "end": 586
+            },
+            "v_gutter_px": {
+              "start": 1015,
+              "end": 1066
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 0.5,
+              "v_center_offset_px": 16.5,
+              "max_aspect_crop_loss": 0.0265,
+              "per_panel_crop_loss": {
+                "top_left": 0.0069,
+                "top_right": 0.0265,
+                "bottom_left": 0.0089,
+                "bottom_right": 0.0247
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Святослав Шакин покупатель в светлой переговорной держит разорванную копию предварительного договора в Тюмени. Договор подписали — квартиру продали другим. Договор подписали — квартиру продали другим. Договор подписали — квартиру продали другим. Договор подписали — квартиру продали другим. Договор подписали — квартиру продали другим.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Сравнительная таблица: предварительный договор, задаток, одобрение ипотеки, дата сделки и значение статьи 429.",
+            "h2_anchor": "Подписали предварительный — ипотеку одобрили, дату сделки назначили"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема последовательности событий от предварительного договора до регистрации квартиры на других покупателей.",
+            "h2_anchor": "Через две недели продавец заключил основной договор с другими"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Временная диаграмма последствий: право зарегистрировано за другими, а покупателю возвращён задаток со штрафом.",
+            "h2_anchor": "Финал: квартиру зарегистрировали за другими, задаток вернули по штрафу"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Подписали предварительный — ипотеку одобрили, дату сделки назначили",
+    "skip inline_2: already correct under H2 — Через две недели продавец заключил основной договор с другими",
+    "skip inline_3: already correct under H2 — Финал: квартиру зарегистрировали за другими, задаток вернули по штрафу",
+    "skip inline_4: already correct under H2 — Предварительный договор — обещание, а не запись в ЕГРН",
+    "skip inline_5: already correct under H2 — Задаток, аванс и ипотечный аванс — три разных платежа",
+    "skip inline_6: already correct under H2 — Понуждение, штраф и убытки: что реально можно требовать",
+    "skip inline_7: already correct under H2 — Таблица: что покупатель ожидает от ПДКП и что даёт закон"
+  ],
+  "errors": [
+    "removed inline_1 from wrong H2 [подписали предварительный — ипотеку одобрили, дату сделки назначили] but target H2 not found — Предварительный подписан — ипотека одобрена",
+    "removed inline_2 from wrong H2 [через две недели продавец заключил основной договор с другими] but target H2 not found — Продавец заключил основной с другими",
+    "removed inline_3 from wrong H2 [финал: квартиру зарегистрировали за другими, задаток вернули по штрафу] but target H2 not found — Квартиру зарегистрировали за другими",
+    "inline_1 figure count after inject=0 (need exactly 1)",
+    "inline_2 figure count after inject=0 (need exactly 1)",
+    "inline_3 figure count after inject=0 (need exactly 1)"
+  ]
+}

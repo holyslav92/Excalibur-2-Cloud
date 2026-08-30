@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B15 — 2026-08-29
+
+- **topic_id:** B15
+- **slug:** v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim
+- **post_id:** 9310
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim/
+- **featured_image:** 9311
+- **inline_images:** 9312–9318 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 3 siblings OK)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (active theme `tymenrieltor-light`, script expects `kov4eg-mcp-theme`); cover alt gate fixed in quad-manifest before publish
+
 ## B12 — 2026-08-28
 
 - **topic_id:** B12

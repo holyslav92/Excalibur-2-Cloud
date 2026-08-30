@@ -5,6 +5,15 @@
   "last_sync": "2026-08-29",
   "clusters": [
     {
+      "cluster_id": "preliminary_contract_seller_sold_elsewhere_tyumen",
+      "first_seen": "2026-08-29",
+      "locked_until": "2026-09-28",
+      "source": "ledger",
+      "slug": "v-tyumeni-podpisali-predvaritelnyj-prodavec-prodal-kvartiru-drugim",
+      "topic_id": "B15",
+      "title": "В Тюмени подписали предварительный договор — квартиру продали другим"
+    },
+    {
       "cluster_id": "illegal_renovation_rosreestr_blocks_registration",
       "first_seen": "2026-08-28",
       "locked_until": "2026-09-27",

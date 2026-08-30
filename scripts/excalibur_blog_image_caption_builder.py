@@ -191,15 +191,59 @@ def article_has_tyumen(meta: dict[str, Any]) -> bool:
     return "тюмен" in blob or "tyumen" in blob
 
 
-def hook_stakes_sentence(manifest: dict[str, Any], meta: dict[str, Any]) -> str:
+def cover_hook_plain(manifest: dict[str, Any], meta: dict[str, Any]) -> str:
     hook = normalize_text(manifest.get("cover_hook"))
     if not hook:
         hook = normalize_text(meta.get("h1") or meta.get("title"))
+    return hook
+
+
+def hook_stakes_sentence(manifest: dict[str, Any], meta: dict[str, Any]) -> str:
+    hook = cover_hook_plain(manifest, meta)
     if not hook:
         return ""
     if hook[-1] not in ".!?":
         hook += "."
     return hook
+
+
+def _normalize_sentence_for_compare(sentence: str) -> str:
+    return normalize_text(sentence).casefold().rstrip(".!?")
+
+
+def hook_already_in_alt(visual: str, hook: str) -> bool:
+    """True when cover_hook / stakes sentence is already present in visual alt."""
+    hook_norm = _normalize_sentence_for_compare(hook)
+    if not hook_norm:
+        return False
+    visual_norm = normalize_text(visual).casefold()
+    if hook_norm in visual_norm:
+        return True
+    # Tolerate trailing punctuation variants on the last sentence.
+    for part in re.split(r"(?<=[.!?])\s+", normalize_text(visual)):
+        if _normalize_sentence_for_compare(part) == hook_norm:
+            return True
+    return False
+
+
+def dedupe_repeated_hook_sentences(text: str, hook: str) -> str:
+    """Collapse repeated cover_hook sentences (idempotent --apply safety)."""
+    hook_norm = _normalize_sentence_for_compare(hook)
+    if not hook_norm or not text:
+        return normalize_text(text)
+    parts = [normalize_text(p) for p in re.split(r"(?<=[.!?])\s+", normalize_text(text)) if normalize_text(p)]
+    if not parts:
+        return normalize_text(text)
+    seen_hook = False
+    kept: list[str] = []
+    for part in parts:
+        part_norm = _normalize_sentence_for_compare(part)
+        if part_norm == hook_norm or (hook_norm in part_norm and len(part_norm) <= len(hook_norm) + 8):
+            if seen_hook:
+                continue
+            seen_hook = True
+        kept.append(part)
+    return " ".join(kept)
 
 
 def build_cover_alt(
@@ -211,7 +255,10 @@ def build_cover_alt(
 ) -> str:
     slot = slot or (manifest.get("slots") or {}).get("cover") or {}
     motifs = manifest.get("cover_motifs") or {}
+    hook_plain = cover_hook_plain(manifest, meta)
     raw_alt = normalize_text(slot.get("alt"))
+    if raw_alt and hook_plain:
+        raw_alt = dedupe_repeated_hook_sentences(raw_alt, hook_plain)
 
     visual = ""
     if raw_alt and not is_prompt_like_alt(raw_alt)[0]:
@@ -241,7 +288,7 @@ def build_cover_alt(
         visual = f"{visual.rstrip('.')} в Тюмени"
 
     stakes = hook_stakes_sentence(manifest, meta)
-    if stakes:
+    if stakes and not hook_already_in_alt(visual, hook_plain or stakes.rstrip(".!?")):
         return f"{visual.rstrip('.')}. {stakes}"
     return f"{visual.rstrip('.')}."
 
