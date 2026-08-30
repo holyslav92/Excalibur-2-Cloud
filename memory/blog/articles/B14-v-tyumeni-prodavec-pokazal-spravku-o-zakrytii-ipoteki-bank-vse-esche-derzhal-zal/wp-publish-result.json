@@ -1,0 +1,27 @@
+{
+  "slug": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal",
+  "topic_id": "B14",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B14-v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 939154,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9320 slug=v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal\nOK categories=31,54\nOK yoast_social_image=1\nOK featured_image=9331\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 0,
+    "expected_inline": 0,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/",
+    "errors": []
+  }
+}

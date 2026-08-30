@@ -61,6 +61,7 @@ REQUIRED_CHECKS = (
 
 PIXEL_REQUIRED = (
     "pixel_qa_reads_png_not_prompt",
+    "pixel_identity_matches_studio",
     "pixel_host_face_present",
     "pixel_host_close_up",
     "pixel_host_not_distant_fullbody",

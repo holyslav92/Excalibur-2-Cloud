@@ -118,6 +118,36 @@ class OcrEscapeHatchTest(unittest.TestCase):
         self.assertTrue(new_checks["pixel_no_collage_inset"])
         self.assertTrue(new_evidence.get("ocr_false_positive_escape", {}).get("applied"))
 
+    def test_escape_does_not_override_identity_fail(self) -> None:
+        from excalibur_blog_cover_qa_pixels import apply_ocr_false_positive_escape
+
+        checks = {
+            "pixel_identity_matches_studio": False,
+            "pixel_host_face_present": True,
+            "pixel_hook_title_not_truncated": False,
+        }
+        errors = [
+            "pixel_identity_matches_studio FAIL",
+            "pixel_hook_title_not_truncated FAIL",
+        ]
+        new_checks, _, new_evidence = apply_ocr_false_positive_escape(checks, errors, {})
+        self.assertFalse(new_checks["pixel_identity_matches_studio"])
+        self.assertFalse(new_checks["pixel_hook_title_not_truncated"])
+        self.assertNotIn("ocr_false_positive_escape", new_evidence)
+
+    def test_wrong_live_cover_fails_identity_gate(self) -> None:
+        from pathlib import Path
+        from PIL import Image
+        from excalibur_blog_cover_qa_pixels import _check_identity_matches_studio
+
+        wrong_path = Path("/tmp/cover-lien-live.png")
+        if not wrong_path.is_file():
+            self.skipTest("wrong live cover not downloaded")
+        ok, evidence = _check_identity_matches_studio(Image.open(wrong_path))
+        self.assertFalse(ok)
+        self.assertIn("fail_reason", evidence)
+        self.assertEqual(evidence.get("fail_reason"), "not_svyatoslav_vs_studio_portrait")
+
     def test_escape_does_not_override_hard_fail(self) -> None:
         from excalibur_blog_cover_qa_pixels import apply_ocr_false_positive_escape
 
