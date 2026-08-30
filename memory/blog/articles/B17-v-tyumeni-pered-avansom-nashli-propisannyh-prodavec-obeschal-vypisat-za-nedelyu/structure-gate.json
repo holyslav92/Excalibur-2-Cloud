@@ -1,6 +1,6 @@
 {
   "gate": "structure",
-  "status": "FAIL",
+  "status": "PASS",
   "article_dir": "memory/blog/articles/B17-v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu",
   "checks": [
     {
@@ -50,12 +50,10 @@
     },
     {
       "name": "quality_bar_9",
-      "ok": false,
-      "detail": "exit=1"
+      "ok": true,
+      "detail": "exit=0"
     }
   ],
-  "failed": [
-    "quality_bar_9"
-  ],
+  "failed": [],
   "note": "Structural/links/HTML only — does not rewrite prose."
 }
