@@ -1,0 +1,27 @@
+{
+  "slug": "v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu",
+  "topic_id": "B17",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B17-v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1079949,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9342 slug=v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9343\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9344 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu-inline-01.png\nOK inline_alt=9344\nOK inline_caption=9344\nOK inline_description=9344\nOK inline_image_upload=9345 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu-inline-02.png\nOK inline_alt=9345\nOK inline_caption=9345\nOK inline_description=9345\nOK inline_image_upload=9346 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu-inline-04.png\nOK inline_alt=9346\nOK inline_caption=9346\nOK inline_description=9346\nOK inline_image_upload=9347 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu-inline-03.png\nOK inline_alt=9347\nOK inline_caption=9347\nOK inline_description=9347\nOK inline_image_upload=9348 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu-inline-05.png\nOK inline_alt=9348\nOK inline_caption=9348\nOK inline_description=9348\nOK inline_image_upload=9349 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu-inline-06.png\nOK inline_alt=9349\nOK inline_caption=9349\nOK inline_description=9349\nOK inline_image_upload=9350 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu-inline-07.png\nOK inline_alt=9350\nOK inline_caption=9350\nOK inline_description=9350\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu/",
+    "errors": []
+  }
+}

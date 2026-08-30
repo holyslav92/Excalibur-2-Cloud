@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B17 — 2026-08-30
+
+- **topic_id:** B17
+- **slug:** v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu
+- **post_id:** 9342
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu/
+- **featured_image:** 9343
+- **inline_images:** 9344–9350 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 3 siblings OK)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT locally (theme patched on server via prior runs)
+
 ## B12 — 2026-08-28
 
 - **topic_id:** B12
