@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B16",
+  "slug": "v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan",
+  "candidates_count": 15,
+  "outbound_found": [
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero"
+    },
+    {
+      "slug": "nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya",
+      "title": "nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya"
+    },
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn"
+    },
+    {
+      "slug": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal",
+      "title": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
