@@ -1,0 +1,40 @@
+{
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "canvas_index": 2,
+  "identity_reference_local": "",
+  "identity_reference_id": "",
+  "reference_url_hosted": "",
+  "output_canvas": "cover/canvas-quad-02.png",
+  "result_path": "cover/quad-mcp-result-02.json",
+  "slots": [
+    "inline_4",
+    "inline_5",
+    "inline_6",
+    "inline_7"
+  ],
+  "preferred_image_flow": {
+    "provider": "grsai-rest",
+    "script": "scripts/excalibur_blog_grsai_gpt_image2_api.py",
+    "contract": "shared/grsai-gpt-image-api-contract.md",
+    "resolution": "2K",
+    "note": "PRIMARY: grsai grsai standard image model REST (Global → China, 2K 16:9). Optional last resort: Derouter image REST (EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1). FORBIDDEN: Kie, flux2-pro-*, Seedream, nano_banana*, z-image, PIL mashup.",
+    "apply_script": "python3 scripts/excalibur_blog_quad_apply.py --article-dir <article_dir> --canvas-index 2 --inject-html"
+  },
+  "jobs": [
+    {
+      "slot": "canvas_quad",
+      "tool": "grsai-rest",
+      "mcp_args": {
+        "prompt": "High-key bright RU editorial collage, airy #FFFFFF, sun flare/light leak/soft glow, BLACK #141821 Cyrillic, gold #dcc5a1 accent. Host LARGE left = same 28yo man i2i face-studio-2026-06-23 (jaw/stubble/hairline lock), medium slim (NOT chubby). 1-3 Wordstat stickers (Тюмень). Meme cat/people cutouts. No dark cinematic, no inventory props.\nCanvas 2048x1152 exact 2x2; four 16:9 panels (1024x576); thin white gutters; no bleed.\nBan: dark/low-key; inventory props; celebrity memes; EXCALIBUR stamp; chubby host; stock/generated man co-host on inline; large meme person on inline; meme_canon_v1: only memory/cover/meme-top100.json real ids; people+cats not cats-only; on-topic funny stickers ≤15% never on hook/face/phone; icon slogans; empty cells; desk scene; cover copy; celebrity memes; stock model man; handsome realtor co-host; generated stranger presenter; large human on inline; meme person >15% frame; invented meme face.\nTEXT LANGUAGE LOCK: all visible text is RUSSIAN Cyrillic only; exact LABELS per panel only.\nCanvas 2 inlines: ZERO host face / НОЛЬ лица ведущего на всех 4 панелях; meme stickers ONLY on inline_5 and inline_7 (tiny ≤15%); inline_4 and inline_6: NO meme NO cat NO person / БЕЗ мема БЕЗ кота БЕЗ человека. People-memes only as tiny stickers from memory/cover/meme-top100.json; infographic is hero.\nTop-left inline: реалистичный кадр (без лица хоста); ««Снимем обременение в день сделки» — обещание без гарантии»; Two papers+blank avans; no people.. TXT:Две бумаги | Справка честная | Ипотека в выписке | Аванс не внесли | Другая квартира. LOCK: NO host face / БЕЗ лица ведущего; NO meme NO cat / БЕЗ мема БЕЗ кота; NO person co-host / БЕЗ человека. ZERO meme ZERO cat ZERO person / НОЛЬ мемов котов людей.\nTop-right inline: нумерованный процесс / таймлайн; «Кредит закрыт и залог в реестре — это не одно и то же»; Flow art37→art25 3d→EGRN; pikachu tiny.. TXT:Статья 37 | Согласие банка | Статья 25 | Три рабочих дня | После заявления. LOCK: NO host face / БЕЗ лица ведущего. +tiny meme sticker only (≤15% frame, corner accent from memory/cover/meme-top100.json; NO co-host human; NO presenter).\nBottom-left inline: схема устройства механизма; «Закон: согласие банка и три рабочих дня после заявления»; Diagram bank 30d vs deal calendar.. TXT:Автоматика банка | До 30 дней | Два рабочих дня | Проверка в ЕГРН | Сроки не совпали. LOCK: NO host face / БЕЗ лица ведущего; NO meme NO cat / БЕЗ мема БЕЗ кота; NO person co-host / БЕЗ человека. ZERO meme ZERO cat ZERO person / НОЛЬ мемов котов людей.\nBottom-right inline: график / шкала сроков; «Автоматика банка и срок до 30 дней — не ваш календарь сделки»; Timeline spravka vs lien vs avans; pepe tiny.. TXT:Справка: долг нулевой | ЕГРН: залог есть | Разные даты | Разные вопросы | Проверить до аванса. LOCK: NO host face / БЕЗ лица ведущего. +tiny meme sticker only (≤15% frame, corner accent from memory/cover/meme-top100.json; NO co-host human; NO presenter).\nInline all: #FFF collage, gold/black Cyrillic labels, tape/pins/strings/paper scraps; high-key #FFF/gold; not noir; dense facts/numbers; exact TXT per panel; meme only if +meme AND sticker-scale; no human hero on inline; no icon soup; zero typos.",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ],
+  "validation": {
+    "prompt_chars": 3180,
+    "max_prompt_chars": 3800,
+    "required_reference_host": "",
+    "resolution": "2K"
+  }
+}
