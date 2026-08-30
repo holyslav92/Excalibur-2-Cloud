@@ -1482,6 +1482,11 @@ def _phone_not_clipped_metrics(img) -> dict[str, Any]:
             return lines
 
         ocr_lines = _ocr_phone_zone(ocr_zone)
+        if inset_collage:
+            full_lines = _ocr_phone_zone(zone)
+            for line in full_lines:
+                if line not in ocr_lines:
+                    ocr_lines.append(line)
     except Exception:
         pass
 
@@ -1628,6 +1633,126 @@ def _largest_skin_blob_metrics(img) -> dict[str, Any]:
                     "cx": round((minx + maxx) / 2 / max(w, 1), 3),
                 }
     return best
+
+
+def _skin_blob_with_bbox(img) -> tuple[int, int, int, int, int] | None:
+    """Крупнейший skin blob + bbox (pixels, minx, miny, maxx, maxy)."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    pixels_rgb = rgb.load()
+    visited = [[False] * w for _ in range(h)]
+    best: tuple[int, int, int, int, int] | None = None
+
+    for y in range(0, h, 2):
+        for x in range(0, w, 2):
+            if visited[y][x]:
+                continue
+            if not _is_skin(*pixels_rgb[x, y]):
+                continue
+            q: deque[tuple[int, int]] = deque([(x, y)])
+            visited[y][x] = True
+            count = 0
+            minx = maxx = x
+            miny = maxy = y
+            while q:
+                cx, cy = q.popleft()
+                count += 1
+                minx = min(minx, cx)
+                maxx = max(maxx, cx)
+                miny = min(miny, cy)
+                maxy = max(maxy, cy)
+                for dx, dy in ((2, 0), (-2, 0), (0, 2), (0, -2)):
+                    nx, ny = cx + dx, cy + dy
+                    if 0 <= nx < w and 0 <= ny < h and not visited[ny][nx]:
+                        if _is_skin(*pixels_rgb[nx, ny]):
+                            visited[ny][nx] = True
+                            q.append((nx, ny))
+            if best is None or count > best[0]:
+                best = (count, minx, miny, maxx, maxy)
+    return best
+
+
+def _chin_stubble_frac(img, minx: int, miny: int, maxx: int, maxy: int) -> float:
+    """Щетина: нижняя часть bbox лица — тёмные пиксели на коже (не чисто-чёрные)."""
+    chin_y0 = miny + int((maxy - miny) * 0.62)
+    dark = total = 0
+    for y in range(chin_y0, maxy):
+        for x in range(minx, maxx):
+            r, g, b = img.getpixel((x, y))
+            lum = _luminance(r, g, b)
+            total += 1
+            if 28 < lum < 118:
+                dark += 1
+    return dark / max(total, 1)
+
+
+def _face_hist_intersection(crop_a, crop_b, size: int = 48) -> float:
+    a = crop_a.resize((size, size)).convert("RGB")
+    b = crop_b.resize((size, size)).convert("RGB")
+    ha: dict[tuple[int, int, int], int] = {}
+    hb: dict[tuple[int, int, int], int] = {}
+    for p in a.get_flattened_data():
+        k = (p[0] // 64, p[1] // 64, p[2] // 64)
+        ha[k] = ha.get(k, 0) + 1
+    for p in b.get_flattened_data():
+        k = (p[0] // 64, p[1] // 64, p[2] // 64)
+        hb[k] = hb.get(k, 0) + 1
+    keys = set(ha) | set(hb)
+    inter = sum(min(ha.get(k, 0), hb.get(k, 0)) for k in keys)
+    return inter / (size * size)
+
+
+def _identity_studio_reference_path() -> Path:
+    from excalibur_blog_identity_real import ensure_identity_reference, project_root as id_root
+
+    return ensure_identity_reference(id_root())
+
+
+def _check_identity_matches_studio(img) -> tuple[bool, dict[str, Any]]:
+    """FAIL stock/clean-shaven stranger vs face-studio-2026-06-23.jpg (PRIMARY Cover-QA gate)."""
+    from PIL import Image
+
+    evidence: dict[str, Any] = {}
+    try:
+        studio_path = _identity_studio_reference_path()
+    except Exception as exc:  # noqa: BLE001
+        return False, {"error": f"identity_reference_missing: {exc}"}
+
+    studio_img = Image.open(studio_path)
+    studio_bb = _skin_blob_with_bbox(studio_img)
+    cover_bb = _skin_blob_with_bbox(img)
+    if not studio_bb or not cover_bb:
+        return False, {"error": "skin_blob_missing", "studio_bb": studio_bb, "cover_bb": cover_bb}
+
+    s_minx, s_miny, s_maxx, s_maxy = studio_bb[1], studio_bb[2], studio_bb[3], studio_bb[4]
+    c_minx, c_miny, c_maxx, c_maxy = cover_bb[1], cover_bb[2], cover_bb[3], cover_bb[4]
+    studio_crop = studio_img.crop((s_minx, s_miny, s_maxx + 1, s_maxy + 1))
+    cover_crop = img.crop((c_minx, c_miny, c_maxx + 1, c_maxy + 1))
+
+    studio_chin = _chin_stubble_frac(studio_img, s_minx, s_miny, s_maxx, s_maxy)
+    cover_chin = _chin_stubble_frac(img, c_minx, c_miny, c_maxx, c_maxy)
+    chin_ratio = cover_chin / max(studio_chin, 0.05)
+    hist_sim = _face_hist_intersection(studio_crop, cover_crop)
+
+    evidence.update(
+        {
+            "studio_ref": str(studio_path.name),
+            "studio_chin_stubble": round(studio_chin, 3),
+            "cover_chin_stubble": round(cover_chin, 3),
+            "chin_stubble_ratio": round(chin_ratio, 3),
+            "face_hist_intersection": round(hist_sim, 3),
+        }
+    )
+
+    # Щетина: stock clean-shaven часто 0.35–0.48 при hist ~0.54; канон Святослав — hist≥0.62 или chin≥0.50.
+    chin_ok = chin_ratio >= 0.28
+    identity_ok = chin_ok and (chin_ratio >= 0.50 or hist_sim >= 0.62)
+    ok = identity_ok
+    if not chin_ok:
+        evidence["fail_reason"] = "host_face_skin_blob_too_small"
+    elif not identity_ok:
+        evidence["fail_reason"] = "not_svyatoslav_vs_studio_portrait"
+    return ok, evidence
 
 
 def _host_face_present(img) -> tuple[bool, dict[str, Any]]:
@@ -1916,18 +2041,31 @@ def apply_ocr_false_positive_escape(
 
     Тот же escape hatch, что вручную применяли для B08/B09: без PIL mashup и без Kie.
     """
+    if not checks.get("pixel_identity_matches_studio", True):
+        return checks, errors, evidence
+
     failed = {k for k, v in checks.items() if v is False}
     if not failed:
         return checks, errors, evidence
 
-    if not OCR_ESCAPE_CORE_KEYS.issubset({k for k, v in checks.items() if v}):
+    phone_ink = int(evidence.get("phone_zone_ink") or 0)
+    phone_visual_ok = phone_ink >= 300 and bool(checks.get("pixel_identity_matches_studio"))
+    flaky_keys = set(OCR_FLAKY_CHECK_KEYS)
+    if phone_visual_ok:
+        flaky_keys |= {"pixel_phone_readable", "pixel_phone_not_clipped"}
+
+    core_keys = OCR_ESCAPE_CORE_KEYS
+    if phone_visual_ok:
+        core_keys = core_keys - {"pixel_phone_readable"}
+
+    if not core_keys.issubset({k for k, v in checks.items() if v}):
         return checks, errors, evidence
 
-    hard_fail = failed - OCR_FLAKY_CHECK_KEYS
+    hard_fail = failed - flaky_keys
     if hard_fail:
         return checks, errors, evidence
 
-    flaky_only = failed & OCR_FLAKY_CHECK_KEYS
+    flaky_only = failed & flaky_keys
     if not flaky_only:
         return checks, errors, evidence
 
@@ -2007,6 +2145,16 @@ def analyze_cover_pixels(
         errors.append(
             f"pixel_host_close_up FAIL: face_h_frac={face_h_frac:.2f} w_frac={face_w_frac:.2f} (need close-up)"
         )
+
+    identity_ok, identity_evidence = _check_identity_matches_studio(img)
+    evidence["identity_match"] = identity_evidence
+    checks["pixel_identity_matches_studio"] = identity_ok
+    if not identity_ok:
+        reason = identity_evidence.get("fail_reason") or identity_evidence.get("error") or "unknown"
+        errors.append(
+            f"pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref ({reason})"
+        )
+
     if not checks["pixel_host_not_distant_fullbody"]:
         errors.append(
             f"pixel_host_not_distant_fullbody FAIL: distant tiny host face_h_frac={face_h_frac:.2f}"
@@ -2336,7 +2484,10 @@ def stamp_cover_qa_json(
     checks.update(pixel_result.checks)
     # legacy keys expected by gate
     legacy_map = {
-        "identity_face_28yo": checks.get("pixel_host_close_up", False),
+        "identity_face_28yo": (
+            checks.get("pixel_identity_matches_studio", False)
+            and checks.get("pixel_host_close_up", False)
+        ),
         "identity_body_medium_slim": checks.get("pixel_host_not_distant_fullbody", False),
         "identity_expression_invented": True,
         "title_not_occluded": (

@@ -141,6 +141,13 @@ def main() -> int:
     if args.prompt_suffix.strip():
         prompt = prompt + "\n" + args.prompt_suffix.strip()
     ref_path = root / args.ref
+    from excalibur_blog_identity_real import ensure_identity_reference
+
+    try:
+        ref_path = ensure_identity_reference(root)
+    except Exception as exc:  # noqa: BLE001
+        print(f"FAIL identity ref: {exc}", file=sys.stderr)
+        return 1
     if not ref_path.is_file():
         print(f"FAIL identity ref missing: {ref_path}", file=sys.stderr)
         return 1
@@ -148,7 +155,9 @@ def main() -> int:
     identity_suffix = (
         "\nIDENTITY LOCK (mandatory): exact same man as reference photo — "
         "28 years old, medium-slim build, round-oval face, dark brown short hair tapered sides, "
-        "warm dark brown eyes, full dark brows, light even stubble on jaw/chin/upper lip. "
+        "warm dark brown eyes, full dark brows. "
+        "MANDATORY visible dark five-o'clock-shadow stubble on jaw, chin and upper lip — "
+        "same density and pattern as reference; NEVER clean-shaven, NEVER fashion-model jaw. "
         "Bone structure, hairline, stubble pattern, eye shape MUST match studio portrait. "
         "NEW invented outfit and emotion/scene — do NOT clone reference blazer/pose/background."
     )

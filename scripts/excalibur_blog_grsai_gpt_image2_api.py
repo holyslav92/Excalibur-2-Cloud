@@ -270,10 +270,35 @@ def resolve_local_reference_paths(
             paths.append(path)
             break
     if not paths:
+        from excalibur_blog_identity_real import ensure_identity_reference
+
+        try:
+            ensured = ensure_identity_reference(root)
+            if ensured.is_file():
+                paths.append(ensured)
+        except Exception:
+            pass
+    if not paths:
         raise GrsaiApiError(
             f"prefer_local_reference/identity_reference_local set but file missing: {candidates[0]}"
         )
     return paths
+
+
+def cover_i2i_required(batch_path: Path) -> bool:
+    """Cover slot / solo cover MUST use face i2i — text-only is a bug."""
+    batch = load_json(batch_path)
+    slot = str(batch.get("slot") or "").strip().lower()
+    pipeline = str(batch.get("pipeline") or "").strip().lower()
+    if slot == "cover" or pipeline in {"grsai_solo_cover", "solo_cover"}:
+        return True
+    jobs = batch.get("jobs") or []
+    for job in jobs:
+        if isinstance(job, dict) and str(job.get("slot") or "").strip().lower() == "cover":
+            return True
+    if batch.get("prefer_local_reference"):
+        return True
+    return False
 
 
 def build_reference_images(
@@ -571,6 +596,11 @@ def generate_image(
         local_refs,
         input_urls if isinstance(input_urls, list) else None,
     )
+    if cover_i2i_required(batch_path) and not ref_images:
+        raise GrsaiApiError(
+            "COVER i2i BLOCKER: text-only cover generation forbidden; "
+            "face-studio identity reference missing or not attached"
+        )
     aspect = aspect_ratio_for_grsai(
         str(image_input.get("aspect_ratio") or DEFAULT_ASPECT_16_9),
         model=model,

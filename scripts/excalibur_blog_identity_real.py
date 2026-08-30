@@ -3,14 +3,15 @@
 
 from __future__ import annotations
 
-import hashlib
 import json
 import shutil
+import sys
 from pathlib import Path
 
 IDENTITY_REAL_DIR = Path("memory/cover/assets/identity-real")
 VISUAL_INBOX_DIR = Path("memory/setup/visual-inbox")
 SCENE_COMPOSITION_DIR = Path("memory/cover/assets/scene-composition-only")
+FACE_STUDIO_UPLOAD_REL = "/wp-content/uploads/2026/06/2026-06-23-15.57.42.jpg"
 
 # Единственный FACE source для /images/edits — студийный портрет.
 FACE_PRIMARY: dict[str, str | bool] = {
@@ -111,6 +112,51 @@ def resolve_identity_reference_path(
     return root / IDENTITY_REAL_DIR / str(spec["file"])
 
 
+def canonical_face_studio_url() -> str:
+    """Публичный URL студийного портрета на WP (runtime, не коммитить live host в артефакты)."""
+    from excalibur_blog_site_base import normalize_public_base, resolve_public_base_from_env
+
+    base = normalize_public_base(resolve_public_base_from_env())
+    if not base:
+        raise RuntimeError(
+            "PUBLIC_SITE_URL (or WP_HOME/WP_SITE_URL) required to fetch canonical face studio portrait"
+        )
+    return f"{base}{FACE_STUDIO_UPLOAD_REL}"
+
+
+def ensure_identity_reference(root: Path | None = None) -> Path:
+    """FACE i2i source must exist — download canonical studio portrait if missing (FAIL closed)."""
+    root = root or project_root()
+    path = resolve_identity_reference_path(root=root)
+    if path.is_file() and path.stat().st_size > 1024:
+        return path
+    from asset_download import download_url_bytes
+
+    source_url = canonical_face_studio_url()
+    data, evidence = download_url_bytes(source_url, timeout=45, retries=4)
+    if len(data) < 1024:
+        raise RuntimeError(
+            f"identity-real FACE download too small ({len(data)} bytes) from {source_url}"
+        )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(data)
+    stamp = path.with_suffix(path.suffix + ".download.json")
+    stamp.write_text(
+        json.dumps(
+            {
+                "source_url": source_url,
+                "bytes": len(data),
+                "content_type": evidence.get("content_type"),
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    return path
+
+
 def stage_from_visual_inbox(root: Path | None = None) -> list[str]:
     """Копирует canonical identity files из visual-inbox → identity-real."""
     root = root or project_root()
@@ -148,6 +194,11 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="Identity-real staging and rotation helpers")
     ap.add_argument("--stage-from-inbox", action="store_true", help="Copy from visual-inbox")
     ap.add_argument("--check", action="store_true", help="Print missing identity-real files")
+    ap.add_argument(
+        "--ensure-face",
+        action="store_true",
+        help="Ensure studio face file exists (download canonical WP URL if missing)",
+    )
     ap.add_argument("--pick", metavar="TOPIC_ID", help="Show face reference for topic")
     ap.add_argument("--json", action="store_true", help="Emit JSON summary")
     args = ap.parse_args()
@@ -163,8 +214,20 @@ def main() -> int:
             print("WARN no identity files found in visual-inbox")
         return 0
 
+    if args.ensure_face:
+        try:
+            path = ensure_identity_reference(root)
+            print(f"OK face reference: {path.relative_to(root)} ({path.stat().st_size} bytes)")
+        except Exception as exc:  # noqa: BLE001
+            print(f"FAIL ensure_identity_reference: {exc}", file=sys.stderr)
+            return 1
+        return 0
+
     if args.check:
         missing = missing_identity_files(root)
+        face_path = resolve_identity_reference_path(root=root)
+        if not face_path.is_file():
+            missing.append(str(face_path.relative_to(root)))
         if missing:
             print("FAIL missing identity-real:")
             for path in missing:
