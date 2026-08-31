@@ -1,0 +1,76 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B19",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-31",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://ppt.ru/news/idea/otmena-perekhoda-dolga-po-kapremontu-k-pokupatelyu",
+        "type": "news",
+        "note": "Обновление статуса законопроекта 1192673-8, 07.08.2026 — первое чтение, дата не назначена"
+      },
+      {
+        "url": "https://ekaterinburg-news.ru/society/2026/08/27/27804.html",
+        "type": "news",
+        "note": "27.08.2026: горячая линия фонда капремонта Свердловской области — свежий ЖКХ-сигнал недели"
+      },
+      {
+        "url": "https://news.mail.ru/society/72104955/",
+        "type": "news",
+        "note": "ТАСС/депутат Чаплин: капремонт переходит к покупателю, коммуналка — нет"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel — локальный casus slot"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени вторичка",
+    "p0_volume": 4146,
+    "plot_phrase": "долг по капремонту",
+    "plot_volume": 29,
+    "buyer_spine_phrases": [
+      {"phrase": "долг по капремонту переходит", "volume": 9},
+      {"phrase": "долг по капремонту новый собственник", "volume": 6},
+      {"phrase": "справка об отсутствии долгов по капремонту", "volume": 3}
+    ],
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "kapremont_debt_new_owner_blocks_sale",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["zhk_rf", "fkr_tyumen"],
+    "errors": [],
+    "note": "ЖК РФ ст. 158 ч. 3 + ФКР ТО fkr72.ru verified; законопроект 1192673-8 marked as NOT law; bank tariffs N/A"
+  },
+  "law_draft_status": {
+    "number": "1192673-8",
+    "registered": "2026-03-31",
+    "status_as_of": "2026-08-31",
+    "stage": "preliminary_review_passed_first_reading_pending",
+    "first_reading_date": null,
+    "is_law": false
+  },
+  "key_facts_count": 22,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}

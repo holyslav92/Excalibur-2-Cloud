@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa",
+  "topic_id": "B19",
+  "post_id": 9398,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B19-v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 976162,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9398 slug=v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9399\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9400 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa-inline-05.png\nOK inline_alt=9400\nOK inline_caption=9400\nOK inline_description=9400\nOK inline_image_upload=9401 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa-inline-01.png\nOK inline_alt=9401\nOK inline_caption=9401\nOK inline_description=9401\nOK inline_image_upload=9402 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa-inline-02.png\nOK inline_alt=9402\nOK inline_caption=9402\nOK inline_description=9402\nOK inline_image_upload=9403 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa-inline-03.png\nOK inline_alt=9403\nOK inline_caption=9403\nOK inline_description=9403\nOK inline_image_upload=9404 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa-inline-04.png\nOK inline_alt=9404\nOK inline_caption=9404\nOK inline_description=9404\nOK inline_image_upload=9405 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa-inline-06.png\nOK inline_alt=9405\nOK inline_caption=9405\nOK inline_description=9405\nOK inline_image_upload=9406 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa-inline-07.png\nOK inline_alt=9406\nOK inline_caption=9406\nOK inline_description=9406\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa/",
+    "errors": []
+  }
+}

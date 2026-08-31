@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B19 — 2026-08-31
+
+- **topic_id:** B19
+- **slug:** v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa
+- **post_id:** 9398
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa/
+- **featured_image:** 9399
+- **inline_images:** 9400–9406 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound 3 targets (8984 B06, 8823 B04, 9063 B09); outbound 4 siblings OK
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme path not in configured root)
+
 ## B15 — 2026-08-31
 
 - **topic_id:** B15
