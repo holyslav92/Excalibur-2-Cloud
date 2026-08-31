@@ -29,12 +29,12 @@
     },
     {
       "@type": "BlogPosting",
-      "@id": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili/#blogposting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili/#blogposting",
       "headline": "В Тюмени квартиру продали дважды — второй аванс остановили",
       "description": "В Тюмени у одной квартиры нашлись два покупателя: второй едва не перевёл аванс. Святослав Шакин разбирает, кто пропустил проверку — продавец или риэлтор.",
       "datePublished": "2026-08-31",
       "inLanguage": "ru-RU",
-      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili/",
+      "url": "{{SITE_BASE}}/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili/",
       "author": {
         "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
       },
@@ -43,7 +43,7 @@
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili/"
+        "@id": "{{SITE_BASE}}/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili/"
       }
     }
   ]

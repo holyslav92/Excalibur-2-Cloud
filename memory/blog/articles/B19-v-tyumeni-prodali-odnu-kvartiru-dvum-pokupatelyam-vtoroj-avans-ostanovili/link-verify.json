@@ -1,0 +1,114 @@
+{
+  "source": "memory/blog/articles/B19-v-tyumeni-prodali-odnu-kvartiru-dvum-pokupatelyam-vtoroj-avans-ostanovili/article.html",
+  "total_links": 11,
+  "failed_count": 0,
+  "verdict": "pass",
+  "links": [
+    {
+      "url": "https://t.me/Tyumen_Rieltor",
+      "kind": "external",
+      "status": null,
+      "ok": true,
+      "skipped": true,
+      "method": null,
+      "error": null
+    },
+    {
+      "url": "https://max.ru/id561413315447_biz",
+      "kind": "external",
+      "status": null,
+      "ok": true,
+      "skipped": true,
+      "method": null,
+      "error": null
+    },
+    {
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/"
+    },
+    {
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/"
+    },
+    {
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/"
+    },
+    {
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/"
+    },
+    {
+      "url": "{{SITE_BASE}}/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/"
+    },
+    {
+      "url": "{{SITE_BASE}}/gajdy/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/gajdy/"
+    },
+    {
+      "url": "https://dzen.ru/holyslav",
+      "kind": "external",
+      "status": null,
+      "ok": true,
+      "skipped": true,
+      "method": null,
+      "error": null
+    },
+    {
+      "url": "https://vk.ru/tymenrieltor",
+      "kind": "external",
+      "status": null,
+      "ok": true,
+      "skipped": true,
+      "method": null,
+      "error": null
+    },
+    {
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/rieltor-tyumen/"
+    }
+  ]
+}

@@ -6,8 +6,18 @@
   "author_id": "svyatoslav-shakin",
   "article_mode": "B",
   "description": "",
+  "theme_blocks": {
+    "faq": "skip",
+    "quiz": "skip",
+    "side_stickers": "skip"
+  },
   "date": "2026-08-31",
   "pipeline_canon": "human-first-v2",
   "editorial_swarm": false,
-  "wp_category_slugs": ["dokumenty-i-oformlenie", "vtorichka-i-riski", "riski-sdelki"]
+  "wp_category_slugs": [
+    "dokumenty-i-oformlenie",
+    "vtorichka-i-riski",
+    "riski-sdelki"
+  ],
+  "wp_post_id": 9385
 }

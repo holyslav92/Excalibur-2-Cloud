@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili",
+  "topic_id": "B19",
+  "post_id": 9385,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B19-v-tyumeni-prodali-odnu-kvartiru-dvum-pokupatelyam-vtoroj-avans-ostanovili/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 996388,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9385 slug=v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili\nOK categories=54,31,58\nOK yoast_social_image=1\nOK featured_image=9386\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9387 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili-inline-03.png\nOK inline_alt=9387\nOK inline_caption=9387\nOK inline_description=9387\nOK inline_image_upload=9388 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili-inline-01.png\nOK inline_alt=9388\nOK inline_caption=9388\nOK inline_description=9388\nOK inline_image_upload=9389 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili-inline-02.png\nOK inline_alt=9389\nOK inline_caption=9389\nOK inline_description=9389\nOK inline_image_upload=9390 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili-inline-04.png\nOK inline_alt=9390\nOK inline_caption=9390\nOK inline_description=9390\nOK inline_image_upload=9391 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili-inline-05.png\nOK inline_alt=9391\nOK inline_caption=9391\nOK inline_description=9391\nOK inline_image_upload=9392 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili-inline-06.png\nOK inline_alt=9392\nOK inline_caption=9392\nOK inline_description=9392\nOK inline_image_upload=9393 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili-inline-07.png\nOK inline_alt=9393\nOK inline_caption=9393\nOK inline_description=9393\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kvartiru-prodali-dvazhdy-vtoroy-avans-ostanovili/",
+    "errors": []
+  }
+}
