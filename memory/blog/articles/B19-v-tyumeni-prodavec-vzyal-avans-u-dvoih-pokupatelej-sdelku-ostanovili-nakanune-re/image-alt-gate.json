@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "all_pass": true,
+  "changes": [
+    "cover-registry.json updated",
+    "article.html img inline_1 alt updated",
+    "article.html img inline_2 alt updated",
+    "article.html img inline_3 alt updated",
+    "article.html img inline_4 alt updated",
+    "article.html img inline_5 alt updated",
+    "article.html img inline_6 alt updated",
+    "article.html img inline_7 alt updated"
+  ],
+  "slots": {
+    "cover": {
+      "raw_alt": "Святослав сравнивает два договора об авансе на одну квартиру в Тюмени. Продавец взял аванс у двоих.",
+      "resolved_alt": "Святослав сравнивает два договора об авансе на одну квартиру в Тюмени. Продавец взял аванс у двоих.",
+      "pass": true,
+      "errors": []
+    },
+    "inline_1": {
+      "raw_alt": "Документы и ключи при продаже квартиры на вторичном рынке.",
+      "resolved_alt": "Документы и ключи при продаже квартиры на вторичном рынке.",
+      "pass": true,
+      "errors": []
+    },
+    "inline_2": {
+      "raw_alt": "Сравнение аванса и задатка при покупке квартиры.",
+      "resolved_alt": "Сравнение аванса и задатка при покупке квартиры.",
+      "pass": true,
+      "errors": []
+    },
+    "inline_3": {
+      "raw_alt": "Последовательность событий при получении двух авансов за одну квартиру.",
+      "resolved_alt": "Последовательность событий при получении двух авансов за одну квартиру.",
+      "pass": true,
+      "errors": []
+    },
+    "inline_4": {
+      "raw_alt": "Сроки безопасной подготовки сделки с квартирой.",
+      "resolved_alt": "Сроки безопасной подготовки сделки с квартирой.",
+      "pass": true,
+      "errors": []
+    },
+    "inline_5": {
+      "raw_alt": "Документы для проверки сделки с квартирой.",
+      "resolved_alt": "Документы для проверки сделки с квартирой.",
+      "pass": true,
+      "errors": []
+    },
+    "inline_6": {
+      "raw_alt": "Подготовка документов для оформления сделки в МФЦ.",
+      "resolved_alt": "Подготовка документов для оформления сделки в МФЦ.",
+      "pass": true,
+      "errors": []
+    },
+    "inline_7": {
+      "raw_alt": "Что проверить перед передачей аванса за квартиру.",
+      "resolved_alt": "Что проверить перед передачей аванса за квартиру.",
+      "pass": true,
+      "errors": []
+    }
+  },
+  "html_alts": [
+    {
+      "src": "cover/inline-01.png",
+      "alt": "Документы и ключи при продаже квартиры на вторичном рынке.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "src": "cover/inline-02.png",
+      "alt": "Сравнение аванса и задатка при покупке квартиры.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "src": "cover/inline-05.png",
+      "alt": "Документы для проверки сделки с квартирой.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "src": "cover/inline-06.png",
+      "alt": "Подготовка документов для оформления сделки в МФЦ.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "src": "cover/inline-03.png",
+      "alt": "Последовательность событий при получении двух авансов за одну квартиру.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "src": "cover/inline-07.png",
+      "alt": "Что проверить перед передачей аванса за квартиру.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "src": "cover/inline-04.png",
+      "alt": "Сроки безопасной подготовки сделки с квартирой.",
+      "pass": true,
+      "errors": []
+    }
+  ],
+  "registry_alts": [
+    {
+      "file": "cover/cover.png",
+      "slot": "cover",
+      "alt": "Святослав сравнивает два договора об авансе на одну квартиру в Тюмени. Продавец взял аванс у двоих.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "file": "cover/inline-01.png",
+      "slot": "inline_1",
+      "alt": "Документы и ключи при продаже квартиры на вторичном рынке.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "file": "cover/inline-02.png",
+      "slot": "inline_2",
+      "alt": "Сравнение аванса и задатка при покупке квартиры.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "file": "cover/inline-03.png",
+      "slot": "inline_3",
+      "alt": "Последовательность событий при получении двух авансов за одну квартиру.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "file": "cover/inline-04.png",
+      "slot": "inline_4",
+      "alt": "Сроки безопасной подготовки сделки с квартирой.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "file": "cover/inline-05.png",
+      "slot": "inline_5",
+      "alt": "Документы для проверки сделки с квартирой.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "file": "cover/inline-06.png",
+      "slot": "inline_6",
+      "alt": "Подготовка документов для оформления сделки в МФЦ.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "file": "cover/inline-07.png",
+      "slot": "inline_7",
+      "alt": "Что проверить перед передачей аванса за квартиру.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "file": "cover/cover.png",
+      "slot": "cover",
+      "alt": "Святослав сравнивает два договора об авансе на одну квартиру в Тюмени. Продавец взял аванс у двоих.",
+      "pass": true,
+      "errors": []
+    }
+  ]
+}

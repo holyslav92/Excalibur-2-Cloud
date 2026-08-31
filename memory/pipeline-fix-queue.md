@@ -439,3 +439,73 @@ files_changed:
 checks_run:
 - B12 `quality-bar-9.json` word_count=2558 PASS
 commit: n/a
+
+## INC-20260831-0730-cover-qa-fail-fast-b19
+status: fixed
+run_date: 2026-08-31
+role: excalibur-blog-cover-qa
+topic_id: B19
+article_dir: memory/blog/articles/B19-v-tyumeni-prodavec-vzyal-avans-u-dvoih-pokupatelej-sdelku-ostanovili-nakanune-re
+severity: high
+category: qa
+
+### What went wrong
+- grsai solo cover 2/2 FAIL: wordstat query strips on PNG, phone clipped, meme weak, hook OCR flakes
+- cover_fixer 2 rounds FAIL (panel regen + solo still dirty)
+- quality-bar-9 `cover_qa_pass` false → Publish STOP per canon
+
+### How the agent recovered this run
+- Fail-fast: `cover-budget-result.json` → Indexer (llms.txt, used-clusters, used-motifs)
+- Текст + inline 7 + image_alt PASS; Publish не запускался
+
+### Durable fix needed before next run
+- Manifest не должен нести wordstat_stickers на cover при FORBIDDEN_FOREVER
+- Preflight: 0 stickers OK когда wordstat_on_cover forbidden
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quad_manifest.py`
+- `scripts/excalibur_blog_quad_manifest_preflight.py`
+- `memory/cover/cover-canon.json`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-08-31
+fix_summary:
+- `wordstat_on_cover_forbidden()` в preflight; manifest builder очищает wordstat_stickers[]
+- preflight FAIL если stickers непустые при forbidden canon
+files_changed:
+- `scripts/excalibur_blog_quad_manifest.py`
+- `scripts/excalibur_blog_quad_manifest_preflight.py`
+checks_run:
+- `python3 -m py_compile` on changed scripts
+commit: 13fa9a0
+
+## INC-20260831-0731-sol-word-count-soft-b19
+status: open
+run_date: 2026-08-31
+role: excalibur-blog-sol
+topic_id: B19
+article_dir: memory/blog/articles/B19-v-tyumeni-prodavec-vzyal-avans-u-dvoih-pokupatelej-sdelku-ostanovili-nakanune-re
+severity: low
+category: prompt
+
+### What went wrong
+- Sol final 2232 words; quality-bar soft gate `word_count_1800_2200` FAIL (hard max 2400 OK)
+
+### How the agent recovered this run
+- Не возвращали Sol (publish уже заблокирован cover_qa); оставлено для следующего tighten pass
+
+### Durable fix needed before next run
+- Sol assembled-inputs: target 2000–2200 для news-casus без потери finale/comment magnet
+
+### Suggested files to inspect/change
+- `skills/sol-excalibur-blog/SKILL.md`
+- `shared/quality-bar-9.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+- pending
