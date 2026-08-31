@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "topic_id": "B19",
+  "research_date": "2026-08-31",
+  "tenant": "The Риэлтор / Святослав Шакин / Тюмень",
+  "cluster_id": "double_sale_two_buyers_same_apartment",
+  "case_type": "modeled_composite_case",
+  "fresh_signal_status": "PASS",
+  "fresh_signal_requirement": {
+    "status": "PASS",
+    "week_of": "2026-08-31",
+    "community_or_news_signal_present": true,
+    "signals": [
+      {
+        "source": "Dzen / holyslav",
+        "type": "tenant/community",
+        "url": "https://dzen.ru/holyslav",
+        "accessed_at": "2026-08-31"
+      },
+      {
+        "source": "Prav.io",
+        "type": "forum/legal Q&A",
+        "period": "2026-08",
+        "accessed_at": "2026-08-31"
+      },
+      {
+        "source": "Tyumen.fz44.org",
+        "type": "regional media",
+        "accessed_at": "2026-08-31"
+      }
+    ]
+  },
+  "wordstat_status": {
+    "status": "PASS",
+    "accessed_at": "2026-08-31",
+    "regions": [
+      "55",
+      "11176"
+    ],
+    "queries_checked": 5,
+    "results": [
+      {
+        "query": "купить квартиру в тюмени вторичка",
+        "totalCount": 4146
+      },
+      {
+        "query": "задаток при покупке квартиры",
+        "totalCount": 95
+      },
+      {
+        "query": "договор задатка при покупке квартиры",
+        "totalCount": 18
+      },
+      {
+        "query": "предварительный договор купли продажи квартиры",
+        "totalCount": 49
+      },
+      {
+        "query": "аванс при покупке квартиры",
+        "totalCount": 8
+      }
+    ]
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "official_sources_present": true,
+    "verifications": [
+      {
+        "subject": "ГК РФ, статьи 380–381: задаток",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_5142/",
+        "accessed_at": "2026-08-31"
+      },
+      {
+        "subject": "ГК РФ, статья 487: предварительная оплата",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_5142/",
+        "accessed_at": "2026-08-31"
+      },
+      {
+        "subject": "Федеральный закон № 218-ФЗ: государственная регистрация прав",
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_182661/",
+        "accessed_at": "2026-08-31"
+      }
+    ]
+  },
+  "source_freshness": {
+    "status": "PASS",
+    "all_source_table_entries_have_today_accessed_at": true,
+    "today_iso": "2026-08-31"
+  },
+  "editorial_safety": {
+    "status": "PASS",
+    "no_real_names_or_addresses": true,
+    "no_case_number": true,
+    "modeled_case_labeled": true,
+    "no_automatic_criminality_claim": true,
+    "no_guarantee_of_legal_outcome": true,
+    "no_ready_lead_or_h2_outline": true
+  },
+  "writer_safe_urls": [
+    "https://dzen.ru/holyslav",
+    "https://t.me/Tyumen_Rieltor",
+    "https://www.consultant.ru/document/cons_doc_LAW_5142/",
+    "https://www.consultant.ru/law/podborki/avans_gk_rf/"
+  ]
+}

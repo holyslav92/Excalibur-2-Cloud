@@ -1,0 +1,50 @@
+{
+  "status": "FAIL",
+  "all_pass": false,
+  "gate": "quality-bar-9",
+  "contract": "shared/quality-bar-9.md",
+  "article_dir": "memory/blog/articles/B19-v-tyumeni-prodavec-vzyal-avans-u-dvoih-pokupatelej-sdelku-ostanovili-nakanune-re",
+  "checks": {
+    "brand_first_person_tyumen": true,
+    "phone_in_body": true,
+    "early_cta_tg_max_only": true,
+    "mid_cta_tg_max_nudge": true,
+    "end_cta_full_channels": true,
+    "interlink_siblings_2_4": true,
+    "dual_cta_soft": true,
+    "word_count_1800_2200": false,
+    "word_count_hard_max_2400": true,
+    "dzen_reading_time_ok": true,
+    "spine_once_no_recap": true,
+    "h2_count_5_plus": true,
+    "inline_figures_7": false,
+    "inline_placement_flexible": true,
+    "inline_realistic_mix_2_4": false,
+    "no_sol_artifact": true,
+    "no_unlabeled_live_inventory": true,
+    "comparison_tables_differ": true,
+    "no_tldr_opening": true,
+    "comment_magnet_question": true,
+    "cover_phone_on_cover": false,
+    "wordstat_stickers_not_title_overlap": true,
+    "image_alt_human": false,
+    "cover_qa_pass": false
+  },
+  "errors": [
+    "word_count 2232 outside target 1800-2200",
+    "inline figures 0 < 7",
+    "cover/quad-manifest.json missing for realistic mix gate",
+    "check failed: cover_qa_pass",
+    "check failed: cover_phone_on_cover",
+    "cover/quad-manifest.json missing for image alt gate"
+  ],
+  "metrics": {
+    "word_count": 2232,
+    "word_count_target": "1800-2200",
+    "word_count_hard_max": 2400,
+    "dzen_reading_minutes_est": 12,
+    "h2_count": 10,
+    "inline_figures": 0,
+    "sibling_interlinks": 3
+  }
+}

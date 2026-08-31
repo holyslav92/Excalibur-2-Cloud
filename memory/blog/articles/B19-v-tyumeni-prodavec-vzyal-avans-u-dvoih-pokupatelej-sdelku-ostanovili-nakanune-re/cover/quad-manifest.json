@@ -1,0 +1,237 @@
+{
+  "topic_id": "B19",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Продавец взял аванс у двоих",
+  "cover_hook_highlight": "двоих",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав сравнивает два договора об авансе на одну квартиру в Тюмени. Продавец взял аванс у двоих.",
+      "scene_hint": "Bright kitchen: host left holds two contracts, shocked; hook right; phone bottom.",
+      "meme_caption_ru": "",
+      "sticky": "Сделку остановили",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "shocked disbelief at two contracts",
+      "meme_picks": [
+        "roll_safe",
+        "smudge_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Как одна квартира умудряется продаться дважды",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Bright Tyumen hallway: deal folder, keys, two signed papers on console, no people.",
+      "alt": "Документы и ключи при продаже квартиры на вторичном рынке.",
+      "labels": [
+        "Аванс",
+        "Задаток",
+        "Два покупателя",
+        "До регистрации"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Как одна квартира умудряется продаться дважды",
+      "visual_type": "comparison_table",
+      "scene_hint": "Table: advance vs deposit, buyer/seller risks, light collage labels.",
+      "alt": "Сравнение аванса и задатка при покупке квартиры.",
+      "labels": [
+        "Предварительный",
+        "Второй аванс",
+        "Стоп",
+        "Росреестр"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Почему «квартира забронирована» — это вообще не юридический факт",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Flow: buyer1 pays, buyer2 pays, conflict found, deal stopped.",
+      "alt": "Последовательность событий при получении двух авансов за одну квартиру.",
+      "labels": [
+        "ЕГРН",
+        "Чистая",
+        "Второй",
+        "Риск"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Чем всё закончилось: сделку остановили, деньги вернули, время — нет",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Timeline: viewing, advance agreement, EGRN check, main contract.",
+      "alt": "Сроки безопасной подготовки сделки с квартирой.",
+      "labels": [
+        "Расписка",
+        "Не бронь",
+        "Два договора",
+        "Проверка"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Почему покупатель узнаёт об этом последним",
+      "visual_type": "process_flow",
+      "scene_hint": "Deal folder diagram: advance agreement, receipt, EGRN extract, contract.",
+      "alt": "Документы для проверки сделки с квартирой.",
+      "labels": [
+        "Задаток",
+        "Аванс",
+        "Возврат",
+        "Суд"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Аванс, задаток, обеспечительный платёж — три слова, за которыми стоят очень разные деньги",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bright MFC entrance Tyumen, queue kiosk, document folder, no people.",
+      "alt": "Подготовка документов для оформления сделки в МФЦ.",
+      "labels": [
+        "48 часов",
+        "Повтор",
+        "Выписка",
+        "Стоп"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Красные флаги, которые видно до передачи денег",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Checklist before money: owner, flat ID, amount, receipt, deadline.",
+      "alt": "Что проверить перед передачей аванса за квартиру.",
+      "labels": [
+        "Деньги",
+        "Карта",
+        "Ячейка",
+        "Аванс"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени вторичка",
+    "задаток при покупке квартиры",
+    "аванс при покупке квартиры"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "outfit": "песочная льняная рубашка навыпуск, светлые брюки, без пиджака",
+    "emotion": "ошарашенное недоверие",
+    "pose_framing": "поясной портрет слева, корпус слегка развёрнут к документам, свободная правая часть под заголовок",
+    "action": "держит два разных договора об авансе и сравнивает их",
+    "location": "светлая кухня вторичной квартиры в Тюмени",
+    "meme": "roll_safe, smudge_cat"
+  },
+  "meme_picks": [
+    "roll_safe",
+    "smudge_cat"
+  ],
+  "cover_emotion": "shocked disbelief at two contracts"
+}

@@ -1,0 +1,61 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B19-v-tyumeni-prodavec-vzyal-avans-u-dvoih-pokupatelej-sdelku-ostanovili-nakanune-re/cover/cover.png",
+  "last_errors": [
+    "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (host_face_skin_blob_too_small)",
+    "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+    "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+    "pixel_phone_readable FAIL: phone_digits='72' ink=1133 clipped=True",
+    "pixel_phone_not_clipped FAIL: digits='72' clipped=True ocr='72'",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Продавец', 'аванс', 'двоих'] last_word='двоих' ocr='родавец взял P25 is гг на'",
+    "pixel_no_collage_inset FAIL: white_frac=0.308 inset_face=False blob_count=5",
+    "pixel_meme_present FAIL: orange_fur=30 legacy=28 host_face=True",
+    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.2315",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model": "grsai-standard",
+      "bytes": 1018577,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (host_face_skin_blob_too_small)",
+        "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+        "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['аванс', 'двоих'] last_word='двоих' ocr='Продавец взя) Рас \\\\/'",
+        "pixel_no_collage_inset FAIL: white_frac=0.546 inset_face=True blob_count=8",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.2151",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model": "grsai-standard",
+      "bytes": 961774,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (host_face_skin_blob_too_small)",
+        "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+        "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+        "pixel_phone_readable FAIL: phone_digits='72' ink=1133 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='72' clipped=True ocr='72'",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Продавец', 'аванс', 'двоих'] last_word='двоих' ocr='родавец взял P25 is гг на'",
+        "pixel_no_collage_inset FAIL: white_frac=0.308 inset_face=False blob_count=5",
+        "pixel_meme_present FAIL: orange_fur=30 legacy=28 host_face=True",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.2315",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}

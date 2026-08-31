@@ -2,8 +2,17 @@
   "version": 1,
   "anti_repeat_days": 30,
   "description": "Closed story clusters — Scout must not reuse until locked_until. Sync via: python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters",
-  "last_sync": "2026-08-30",
+  "last_sync": "2026-08-31",
   "clusters": [
+    {
+      "cluster_id": "double_sale_two_buyers_same_apartment",
+      "first_seen": "2026-08-31",
+      "locked_until": "2026-09-30",
+      "source": "ledger",
+      "slug": "v-tyumeni-prodavec-vzyal-avans-u-dvoih-pokupatelej-sdelku-ostanovili-nakanune-re",
+      "topic_id": "B19",
+      "title": "В Тюмени продавец квартиры взял аванс у двоих — сделку остановили"
+    },
     {
       "cluster_id": "matkapital_missing_child_shares",
       "first_seen": "2026-08-30",
@@ -21,6 +30,15 @@
       "slug": "v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu",
       "topic_id": "B17",
       "title": "Перед авансом в Тюмени нашли прописанных — сделку остановили"
+    },
+    {
+      "cluster_id": "communal_share_preemptive_right_neighbor_blocked",
+      "first_seen": "2026-08-30",
+      "locked_until": "2026-09-29",
+      "source": "ledger",
+      "slug": "v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan",
+      "topic_id": "B16",
+      "title": "В Тюмени сосед остановил покупку доли перед авансом"
     },
     {
       "cluster_id": "illegal_renovation_rosreestr_blocks_registration",
@@ -165,15 +183,6 @@
       "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
       "topic_id": "B03",
       "title": "pochti vnesli zadatok za 48 chasov do torgov kvartiru podarili docheri"
-    },
-    {
-      "cluster_id": "communal_share_preemptive_right_neighbor_blocked",
-      "first_seen": "2026-08-30",
-      "locked_until": "2026-09-29",
-      "source": "ledger",
-      "slug": "v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan",
-      "topic_id": "B16",
-      "title": "В Тюмени сосед остановил покупку доли перед авансом"
     }
   ]
 }

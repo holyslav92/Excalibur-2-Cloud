@@ -1,0 +1,24 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-prodavec-vzyal-avans-u-dvoih-pokupatelej-sdelku-ostanovili-nakanune-re/#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-prodavec-vzyal-avans-u-dvoih-pokupatelej-sdelku-ostanovili-nakanune-re/"
+      },
+      "headline": "В Тюмени продавец квартиры взял аванс у двоих — сделку остановили",
+      "datePublished": "2026-08-31",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@type": "Person",
+        "@id": "{{SITE_BASE}}/author/svyatoslav-shakin/",
+        "name": "Святослав Шакин",
+        "sameAs": [
+          "{{SITE_BASE}}/author/svyatoslav-shakin/"
+        ]
+      }
+    }
+  ]
+}
