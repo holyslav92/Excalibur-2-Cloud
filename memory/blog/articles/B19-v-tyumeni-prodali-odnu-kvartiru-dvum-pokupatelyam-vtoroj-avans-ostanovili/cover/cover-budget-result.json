@@ -1,0 +1,60 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B19-v-tyumeni-prodali-odnu-kvartiru-dvum-pokupatelyam-vtoroj-avans-ostanovili/cover/cover.png",
+  "last_errors": [
+    "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (not_svyatoslav_vs_studio_portrait)",
+    "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+    "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+    "pixel_phone_readable FAIL: phone_digits='4' ink=590 clipped=True",
+    "pixel_phone_not_clipped FAIL: digits='4' clipped=True ocr='4'",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['дважды'] last_word='дважды' ocr='В Тюмени одну квартиру продали'",
+    "pixel_no_collage_inset FAIL: white_frac=0.418 inset_face=False blob_count=2",
+    "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.3",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model": "grsai-standard",
+      "bytes": 968632,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (not_svyatoslav_vs_studio_portrait)",
+        "pixel_phone_readable FAIL: phone_digits='70' ink=1576 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='70' clipped=True ocr='70 | 1'",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Тюмени', 'квартиру'] last_word='дважды' ocr='юмени одну ‚ртиру продали Дважды'",
+        "pixel_no_collage_inset FAIL: white_frac=0.749 inset_face=False blob_count=2",
+        "pixel_meme_present FAIL: orange_fur=14 legacy=26 host_face=True",
+        "pixel_no_wordstat_query_strips FAIL: 3 Wordstat strip(s), 0 bar band(s), paper_frac=0.3433",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model": "grsai-standard",
+      "bytes": 1053446,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (not_svyatoslav_vs_studio_portrait)",
+        "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+        "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+        "pixel_phone_readable FAIL: phone_digits='4' ink=590 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='4' clipped=True ocr='4'",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['дважды'] last_word='дважды' ocr='В Тюмени одну квартиру продали'",
+        "pixel_no_collage_inset FAIL: white_frac=0.418 inset_face=False blob_count=2",
+        "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.3",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}
