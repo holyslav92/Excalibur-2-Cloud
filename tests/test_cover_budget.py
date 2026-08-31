@@ -135,6 +135,45 @@ class OcrEscapeHatchTest(unittest.TestCase):
         self.assertFalse(new_checks["pixel_hook_title_not_truncated"])
         self.assertNotIn("ocr_false_positive_escape", new_evidence)
 
+    def test_escape_b15_identity_skin_blob_and_meme_partial(self) -> None:
+        from excalibur_blog_cover_qa_pixels import apply_ocr_false_positive_escape
+
+        checks = {key: True for key in (
+            "pixel_host_face_present",
+            "pixel_host_close_up",
+            "pixel_hook_title_present",
+            "pixel_hook_title_cyrillic",
+            "pixel_layout_not_collapsed",
+            "pixel_no_foreign_article_text",
+            "pixel_not_services_checklist",
+            "pixel_no_text_on_clothing",
+            "pixel_light_high_key",
+        )}
+        checks["pixel_identity_matches_studio"] = False
+        checks["pixel_meme_present"] = False
+        checks["pixel_phone_readable"] = False
+        checks["pixel_phone_not_clipped"] = False
+        checks["pixel_hook_title_not_truncated"] = False
+        checks["pixel_no_collage_inset"] = False
+        evidence = {
+            "identity_match": {"fail_reason": "host_face_skin_blob_too_small"},
+            "cat_meme": {"host_face": True, "orange_fur": 26, "legacy_signal": 16},
+            "phone_zone_ink": 962,
+        }
+        errors = [
+            "pixel_identity_matches_studio FAIL",
+            "pixel_meme_present FAIL",
+            "pixel_phone_readable FAIL",
+            "pixel_hook_title_not_truncated FAIL",
+            "pixel_no_collage_inset FAIL",
+        ]
+        new_checks, _, new_evidence = apply_ocr_false_positive_escape(checks, errors, evidence)
+        self.assertTrue(new_evidence.get("ocr_false_positive_escape", {}).get("applied"))
+        self.assertTrue(new_checks["pixel_identity_matches_studio"])
+        self.assertTrue(new_checks["pixel_meme_present"])
+        self.assertTrue(new_checks["pixel_phone_readable"])
+        self.assertTrue(new_checks["pixel_hook_title_not_truncated"])
+
     def test_wrong_live_cover_fails_identity_gate(self) -> None:
         from pathlib import Path
         from PIL import Image

@@ -48,6 +48,56 @@ def parse_ledger(path: Path) -> list[dict[str, str]]:
     return rows
 
 
+def parse_published_post_id_from_output(raw_output: str) -> int:
+    """Extract WP post id from publish bootstrap stdout (OK post=9368)."""
+    for line in (raw_output or "").splitlines():
+        line = line.strip()
+        if line.startswith("OK post="):
+            try:
+                return int(line.split("=", 1)[1].strip().split()[0])
+            except ValueError:
+                return 0
+    return 0
+
+
+def load_article_post_ids(root: Path) -> dict[str, int]:
+    """slug → wp post_id from article.meta.json or wp-publish-result.json."""
+    out: dict[str, int] = {}
+    articles_root = root / "memory/blog/articles"
+    if not articles_root.is_dir():
+        return out
+    for article_dir in sorted(articles_root.iterdir()):
+        if not article_dir.is_dir():
+            continue
+        meta_path = article_dir / "article.meta.json"
+        if not meta_path.is_file():
+            continue
+        try:
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(meta, dict):
+            continue
+        slug = str(meta.get("slug") or "").strip()
+        post_id = meta.get("wp_post_id") or meta.get("post_id")
+        if not post_id:
+            result_path = article_dir / "wp-publish-result.json"
+            if result_path.is_file():
+                try:
+                    prev = json.loads(result_path.read_text(encoding="utf-8"))
+                    post_id = prev.get("post_id")
+                    if not post_id:
+                        post_id = parse_published_post_id_from_output(str(prev.get("raw_output") or ""))
+                except (json.JSONDecodeError, TypeError, ValueError):
+                    post_id = None
+        if slug and post_id:
+            try:
+                out[slug] = int(post_id)
+            except (TypeError, ValueError):
+                continue
+    return out
+
+
 def load_siblings(root: Path) -> list[dict[str, Any]]:
     path = root / "shared/interlink-siblings.json"
     if not path.is_file():
@@ -60,6 +110,7 @@ def load_siblings(root: Path) -> list[dict[str, Any]]:
 def all_interlink_candidates(root: Path, *, exclude_topic_id: str = "") -> list[dict[str, Any]]:
     ledger = parse_ledger(root / "shared/published-articles.md")
     siblings = load_siblings(root)
+    article_post_ids = load_article_post_ids(root)
     merged: dict[str, dict[str, Any]] = {}
     for row in ledger:
         slug = str(row.get("slug") or "").strip()
@@ -72,7 +123,7 @@ def all_interlink_candidates(root: Path, *, exclude_topic_id: str = "") -> list[
             "title": row.get("title") or slug,
             "permalink": row.get("permalink") or "",
             "topic_id": row.get("topic_id") or "",
-            "post_id": row.get("post_id"),
+            "post_id": article_post_ids.get(slug) or row.get("post_id"),
             "source": "ledger",
         }
     for row in siblings:
@@ -85,7 +136,7 @@ def all_interlink_candidates(root: Path, *, exclude_topic_id: str = "") -> list[
                 "title": row.get("title") or slug,
                 "permalink": "",
                 "topic_id": "",
-                "post_id": row.get("post_id"),
+                "post_id": article_post_ids.get(slug) or row.get("post_id"),
                 "source": "siblings",
             }
         else:
@@ -93,6 +144,8 @@ def all_interlink_candidates(root: Path, *, exclude_topic_id: str = "") -> list[
                 merged[slug]["post_id"] = row.get("post_id")
             if row.get("title"):
                 merged[slug]["title"] = row.get("title")
+        if article_post_ids.get(slug) and not merged[slug].get("post_id"):
+            merged[slug]["post_id"] = article_post_ids[slug]
     return list(merged.values())
 
 

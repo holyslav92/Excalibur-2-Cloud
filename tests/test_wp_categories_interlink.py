@@ -102,6 +102,18 @@ class WpCategoriesInterlinkTests(unittest.TestCase):
         finally:
             ledger_path.write_text(backup, encoding="utf-8")
 
+    def test_interlink_candidates_resolve_post_id_from_meta(self) -> None:
+        import sys
+
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_interlink_lib import all_interlink_candidates
+
+        candidates = all_interlink_candidates(ROOT, exclude_topic_id="B15")
+        by_slug = {row["slug"]: row for row in candidates}
+        self.assertIn("v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v", by_slug)
+        b10 = by_slug["v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v"]
+        self.assertEqual(b10.get("post_id"), 9161)
+
 
 if __name__ == "__main__":
     unittest.main()

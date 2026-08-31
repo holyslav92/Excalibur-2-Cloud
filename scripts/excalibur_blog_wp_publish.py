@@ -988,6 +988,25 @@ def publish_via_sftp(env: dict[str, str], php: str, public_base: str, *, bootstr
     return out
 
 
+def stamp_wp_post_id_in_meta(article_dir: Path, post_id: int) -> None:
+    """Persist WP post id after successful publish for interlink + media refresh."""
+    if post_id <= 0:
+        return
+    meta_path = article_dir / "article.meta.json"
+    if not meta_path.is_file():
+        return
+    try:
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return
+    if not isinstance(meta, dict):
+        return
+    if meta.get("wp_post_id") == post_id:
+        return
+    meta["wp_post_id"] = int(post_id)
+    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def ledger_url_for_commit(permalink: str, slug: str = "") -> str:
     """Store path-only URL in git ledger to avoid secret-scan on PUBLIC_SITE_URL host."""
     value = (permalink or "").strip()
@@ -1586,9 +1605,15 @@ def main() -> int:
     media = evaluate_publish_output(out, payload)
     result_path = article_dir / "wp-publish-result.json"
     permalink = ""
+    published_post_id = 0
     for line in out.splitlines():
         if line.startswith("permalink="):
             permalink = line.split("=", 1)[1].strip()
+        elif line.startswith("OK post="):
+            try:
+                published_post_id = int(line.split("=", 1)[1].strip().split()[0])
+            except ValueError:
+                published_post_id = 0
     # Commit-safe artifact: redact live PUBLIC_SITE_URL → {{SITE_BASE}} (never [REDACTED]).
     safe_permalink = redact_site_base(permalink, public)
     safe_raw = redact_site_base(out, public)
@@ -1596,6 +1621,7 @@ def main() -> int:
     result = {
         "slug": payload["slug"],
         "topic_id": payload["topic_id"],
+        "post_id": published_post_id or None,
         "permalink": safe_permalink,
         "publish_method": "sftp",
         "cover_evidence": redact_structure(payload.get("cover_evidence", {}), public),
@@ -1673,6 +1699,8 @@ def main() -> int:
         json.dumps(result, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    if published_post_id:
+        stamp_wp_post_id_in_meta(article_dir, published_post_id)
     upsert_publish_ledger(root, payload, permalink or safe_permalink)
     deploy_llms = bool(args.deploy_llms or tenant_deploy_llms_default(root))
     if deploy_llms:
