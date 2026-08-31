@@ -1,0 +1,27 @@
+{
+  "slug": "v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom",
+  "topic_id": "B15",
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B15-v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1011025,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9368 slug=v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom\nOK categories=54,31,58\nOK yoast_social_image=1\nOK featured_image=9369\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9370 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom-inline-03.png\nOK inline_alt=9370\nOK inline_caption=9370\nOK inline_description=9370\nOK inline_image_upload=9371 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom-inline-04.png\nOK inline_alt=9371\nOK inline_caption=9371\nOK inline_description=9371\nOK inline_image_upload=9372 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom-inline-02.png\nOK inline_alt=9372\nOK inline_caption=9372\nOK inline_description=9372\nOK inline_image_upload=9373 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom-inline-01.png\nOK inline_alt=9373\nOK inline_caption=9373\nOK inline_description=9373\nOK inline_image_upload=9374 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom-inline-05.png\nOK inline_alt=9374\nOK inline_caption=9374\nOK inline_description=9374\nOK inline_image_upload=9375 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom-inline-06.png\nOK inline_alt=9375\nOK inline_caption=9375\nOK inline_description=9375\nOK inline_image_upload=9376 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/08/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom-inline-07.png\nOK inline_alt=9376\nOK inline_caption=9376\nOK inline_description=9376\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/",
+    "errors": []
+  }
+}
