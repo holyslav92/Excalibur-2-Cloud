@@ -1,0 +1,46 @@
+{
+  "topic_id": "B16",
+  "locked": true,
+  "scout_skipped": true,
+  "date": "2026-08-31",
+  "owner": "Святослав Шакин",
+  "brand": "The Риэлтор",
+  "angle": "news-casus траншевая ипотека на новостройке в Тюмени",
+  "primary_audience": "семьи с детьми",
+  "secondary_audience": "инвесторы",
+  "plot": {
+    "casus": "Тюменская семья с ребёнком почти забронировала новостройку: офис продаж продал платёж как «как аренда» ~10 800 ₽/мес. Публичный локальный факт (72.ru 16 Mar 2026): промо застройщика для готовых домов — первые 6 мес 10 800, следующие 6 мес 21 500, затем 86 000 ₽ до конца ипотеки; взнос от 20,1%; ПСК в рекламе ~19–26%. Не копировать рекламу, не name-shame. Казус: семья почти подписала бронь/ДДУ, не увидев третий транш. Остановили до денег. Потом смотрели объекты под реальный платёж (семейная 6% в региональном лимите 6 млн или честный полный график).",
+    "investor_beat": "Низкий платёж на стройке выглядит как «бесплатный рычаг», потом бьёт третий транш, пока квартира не сдана / не сдана в аренду."
+  },
+  "wordstat_tyumen_54": {
+    "date": "2026-08-31",
+    "phrases": {
+      "новостройки тюмень": 182,
+      "квартиры в тюмени новостройки": 65,
+      "купить новостройку в тюмени": 37,
+      "новостройки в тюмени от застройщика": 26,
+      "приемка квартиры в новостройке": {"national": 305, "tyumen": 7},
+      "ипотека от застройщика": 1105
+    },
+    "note": "Weave naturally in body; NO Wordstat words on cover"
+  },
+  "dzen_casus_shape": "PASS",
+  "story_dup_check": "PASS",
+  "comment_magnet_angle": "Сколько месяцев вы готовы платить «как аренду», не видя полного графика траншей?",
+  "forbidden": [
+    "вторичка как основной сюжет",
+    "how-to про семейную ипотеку до 1 октября 2026 (уже есть на Дзен)",
+    "checklist/TL;DR/bullet insider",
+    "name-shame застройщика"
+  ],
+  "signal_urls": [
+    "https://72.ru/text/realty/2026/03/16/76123456/",
+    "{{SITE_BASE}}/blog/vtorichka-i-riski/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/",
+    "{{SITE_BASE}}/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/"
+  ],
+  "interlink_siblings": [
+    {"slug": "klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili", "topic_id": "B12"},
+    {"slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn", "topic_id": "B09"}
+  ],
+  "wp_category_hint": "novostrojki или ipoteka"
+}

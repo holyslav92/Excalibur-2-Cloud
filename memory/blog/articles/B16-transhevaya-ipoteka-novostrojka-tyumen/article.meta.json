@@ -1,0 +1,30 @@
+{
+  "title": "Платёж по новостройке вырос в 8 раз — до брони",
+  "h1": "Платёж по новостройке вырос в 8 раз — до брони",
+  "slug": "transhevaya-ipoteka-novostrojka-tyumen",
+  "topic_id": "B16",
+  "author_id": "svyatoslav-shakin",
+  "article_mode": "B",
+  "description": "Семья в Тюмени увидела в графике не 10 800, а 86 000 ₽ — третий транш всплыл за дни до брони. Святослав Шакин разбирает, почему ДДУ так и не подписали.",
+  "wp_category_slugs": [
+    "ipoteka",
+    "pokupka-kvartiry"
+  ],
+  "meta_ab": {
+    "title_seo": "Платёж по новостройке вырос в 8 раз — до брони",
+    "title_ctr": "Платёж по новостройке вырос в 8 раз — до брони",
+    "title_aeo": "Платёж по новостройке вырос в 8 раз — до брони",
+    "description_seo": "В Тюмени семья остановила бронь — третий транш раскрыл платёж",
+    "description_ctr": "В Тюмени семья остановила бронь — третий транш раскрыл платёж",
+    "description_aeo": "В Тюмени семья остановила бронь — третий транш раскрыл платёж"
+  },
+  "theme_blocks": {
+    "faq": "skip",
+    "quiz": "skip",
+    "side_stickers": "skip"
+  },
+  "date": "2026-08-31",
+  "pipeline_canon": "human-first-v2",
+  "editorial_swarm": false,
+  "wp_post_id": 9411
+}
