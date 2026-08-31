@@ -38,6 +38,22 @@ def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def wordstat_on_cover_forbidden(root: Path) -> bool:
+    """cover-canon: Wordstat strips/bars на cover.png запрещены навсегда."""
+    canon_path = root / "memory/cover/cover-canon.json"
+    if not canon_path.is_file():
+        return False
+    try:
+        canon = load_json(canon_path)
+    except json.JSONDecodeError:
+        return False
+    title_zone = canon.get("title_zone_sacred") or {}
+    if str(title_zone.get("wordstat_on_cover") or "").startswith("FORBIDDEN"):
+        return True
+    ws = canon.get("wordstat_stickers") or {}
+    return bool(ws.get("forbidden_on_cover"))
+
+
 def validate_quad_manifest(manifest: dict[str, Any], root: Path | None = None) -> dict[str, Any]:
     """Проверить meme_density, no_host_face, wordstat_stickers до image API."""
     root = root or project_root()
@@ -52,7 +68,13 @@ def validate_quad_manifest(manifest: dict[str, Any], root: Path | None = None) -
         errors.append("wordstat_stickers must be a list")
         stickers = []
     sticker_phrases = [str(x).strip() for x in stickers if str(x).strip()]
-    if not (1 <= len(sticker_phrases) <= 3):
+    if wordstat_on_cover_forbidden(root):
+        if sticker_phrases:
+            errors.append(
+                "wordstat_stickers forbidden on cover (cover-canon); "
+                "manifest must have empty wordstat_stickers[]"
+            )
+    elif not (1 <= len(sticker_phrases) <= 3):
         errors.append(
             f"wordstat_stickers count {len(sticker_phrases)}; need 1–3 readable phrases"
         )

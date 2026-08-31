@@ -18,6 +18,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from excalibur_blog_quad_manifest_preflight import wordstat_on_cover_forbidden
 from excalibur_blog_quad_slots import (
     CANVAS_1_SLOTS,
     REALISTIC_H2_KEYWORDS,
@@ -286,6 +287,8 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
         wordstat_stickers = [
             str(x).strip() for x in cover_text["wordstat_stickers"] if str(x).strip()
         ]
+    if wordstat_on_cover_forbidden(root):
+        wordstat_stickers = []
 
     canvas_specs = canvas_specs_for_inline_count(inline_count)
     pipeline = (
