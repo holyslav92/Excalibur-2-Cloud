@@ -1,5 +1,5 @@
 ## LESSON-20260826-0834-B10-cover-budget-ocr-escape
-status: proposed
+status: validated
 topic_id: B10
 category: structure
 confidence: medium
