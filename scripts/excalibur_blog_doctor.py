@@ -112,6 +112,7 @@ def main() -> int:
         "shared/quality-bar-9.md",
         "shared/published-titles.md",
         "shared/topic-focus-contract.md",
+        "shared/newbuild-focus-lock.md",
         "memory/setup/status.json",
         "scripts/excalibur_blog_topic_focus.py",
         "agents/excalibur-blog-setup.md",
