@@ -55,7 +55,7 @@
       "no_cat": false,
       "no_person": false,
       "no_host_face": false,
-      "cover_emotion": "ошеломлённое недоверие",
+      "cover_emotion": "серьёзное недоверие — конверт с согласием",
       "meme_picks": [
         "blinking_white_guy",
         "polite_cat"
@@ -213,7 +213,7 @@
     "нужно ли согласие супруга на продажу квартиры"
   ],
   "cover_phone_cta": "+7 922 001 65 05",
-  "cover_emotion": "ошеломлённое недоверие",
+  "cover_emotion": "серьёзное недоверие — конверт с согласием",
   "cover_motifs": {
     "composition": "waist_center_envelope_consent_hook_right_zone",
     "location": "bright_sunlit_tyumen_meeting_room_window",
@@ -221,10 +221,10 @@
     "prop_set": "cream_envelope_notary_consent_gold_magnifier_phone_cta",
     "sticker_set": "yellow_sticky_konvert_warning_gold_tape_corner_only",
     "joke": "sticky_konvert_ne_dokazatelstvo_envelope_looks_real",
-    "outfit": "white_shirt_sand_vest_rolled_sleeves_no_blazer",
-    "emotion": "stunned_disbelief_direct_gaze_not_side_eye",
-    "pose_framing": "waist_center_forward_not_left_bust",
-    "action": "lifts_consent_from_envelope_stop_gesture_at_phone"
+    "outfit": "light_blue_oxford_shirt_no_tie_no_blazer",
+    "emotion": "concerned_skepticism_envelope_not_smile",
+    "pose_framing": "waist_center_forward_holding_envelope",
+    "action": "opens_cream_envelope_checks_consent_paper"
   },
   "meme_picks": [
     "blinking_white_guy",

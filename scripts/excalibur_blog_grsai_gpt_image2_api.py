@@ -259,6 +259,12 @@ def resolve_local_reference_paths(
     identity_local = str(batch.get("identity_reference_local") or "").strip()
     if identity_local and identity_local not in candidates:
         candidates.append(identity_local)
+    extra_refs = batch.get("additional_local_references") or []
+    if isinstance(extra_refs, list):
+        for item in extra_refs:
+            rel = str(item or "").strip()
+            if rel and rel not in candidates:
+                candidates.append(rel)
     if not candidates:
         return []
     paths: list[Path] = []
@@ -268,7 +274,6 @@ def resolve_local_reference_paths(
             path = root / path
         if path.is_file():
             paths.append(path)
-            break
     if not paths:
         from excalibur_blog_identity_real import ensure_identity_reference
 

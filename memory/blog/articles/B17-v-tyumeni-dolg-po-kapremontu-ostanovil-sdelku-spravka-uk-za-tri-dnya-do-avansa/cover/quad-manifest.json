@@ -1,0 +1,29 @@
+{
+  "topic_id": "B17",
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "cover_hook": "Чистая ЕГРН скрыла долг по капремонту",
+  "cover_hook_highlight": "долг",
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_emotion": "тревога — чистая выписка и штамп долга",
+  "slots": {
+    "cover": {
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин риэлтор сравнивает чистую выписку ЕГРН и справку о долге по капремонту в Тюмени. Чистая ЕГРН скрыла долг по капремонту.",
+      "scene_hint": "Host compares EGRN paper vs red DEBT stamp.",
+      "sticky": "Аванс остановили вовремя",
+      "cover_emotion": "alarm at EGRN vs debt certificate",
+      "meme_picks": ["worried_cat"]
+    }
+  },
+  "cover_motifs": {
+    "outfit": "steel_blue_oxford_shirt_rolled_sleeves",
+    "emotion": "alarmed_disbelief_papers_contrast",
+    "pose_framing": "three_quarter_left_two_papers_forward",
+    "action": "holds_clean_EGRN_left_debt_stamp_right",
+    "location": "high_key_off_white_studio_board",
+    "meme": "ginger_worried_cat_paws_face_small"
+  },
+  "meme_picks": ["worried_cat"]
+}

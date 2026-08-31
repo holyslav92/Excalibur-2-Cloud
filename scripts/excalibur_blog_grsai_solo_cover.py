@@ -61,13 +61,34 @@ def stamp_qa(article_dir: Path, root: Path, topic_id: str) -> dict[str, Any]:
     return {"status": pixel.status, "errors": pixel.errors, "md5": qa.get("cover_md5")}
 
 
-def write_temp_batch(article_dir: Path, prompt: str, ref_path: Path) -> Path:
+def identity_real_i2i_paths(root: Path, face_primary: Path) -> list[str]:
+    """Студийный портрет + live body refs для i2i (не клонировать сцену)."""
+    from excalibur_blog_identity_real import IDENTITY_REAL_DIR, IDENTITY_REAL_FILES
+
+    rels: list[str] = []
+    face_rel = str(face_primary.relative_to(root))
+    rels.append(face_rel)
+    for spec in IDENTITY_REAL_FILES:
+        role = str(spec.get("role") or "")
+        if role in {"body_build_only", "face_primary"}:
+            rel = IDENTITY_REAL_DIR / str(spec["file"])
+            srel = str(rel)
+            if srel not in rels and (root / rel).is_file():
+                rels.append(srel)
+    return rels
+
+
+def write_temp_batch(article_dir: Path, prompt: str, ref_path: Path, root: Path) -> Path:
+    additional = [
+        r for r in identity_real_i2i_paths(root, ref_path) if r != str(ref_path.relative_to(root))
+    ]
     batch = {
         "pipeline": "grsai_solo_cover",
         "slot": "cover",
         "output_canvas": "cover/cover.png",
         "prefer_local_reference": True,
-        "local_reference": str(ref_path),
+        "local_reference": str(ref_path.relative_to(root)),
+        "additional_local_references": additional,
         "jobs": [
             {
                 "slot": "cover",
@@ -188,7 +209,7 @@ def main() -> int:
 
     for attempt in range(1, max_attempts + 1):
         print(f"attempt {attempt}/{max_attempts} model={model}", flush=True)
-        batch_path = write_temp_batch(article_dir, prompt, ref_path)
+        batch_path = write_temp_batch(article_dir, prompt, ref_path, root)
 
         attempt_entry: dict[str, Any] = {"attempt": attempt, "model": model}
 

@@ -1,0 +1,29 @@
+{
+  "topic_id": "B16",
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "cover_hook": "В Тюмени одну квартиру продали дважды",
+  "cover_hook_highlight": "ДВАЖДЫ",
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_emotion": "шок и растерянность — два комплекта ключей",
+  "slots": {
+    "cover": {
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин риэлтор с двумя комплектами ключей на фоне светлой квартиры в Тюмени. В Тюмени одну квартиру продали дважды.",
+      "scene_hint": "Host holds two key bunches up; shocked WTF.",
+      "sticky": "Второй аванс остановили",
+      "cover_emotion": "шок — два ключа в руках",
+      "meme_picks": ["confused_cat"]
+    }
+  },
+  "cover_motifs": {
+    "outfit": "terracotta_casual_button_shirt_no_blazer",
+    "emotion": "shocked_alarm_two_keys_not_grimace",
+    "pose_framing": "center_waist_up_keys_raised",
+    "action": "raises_two_keyrings_side_by_side",
+    "location": "bright_empty_apartment_moving_boxes_blur",
+    "meme": "confused_grey_cat_sticker_bottom_right"
+  },
+  "meme_picks": ["confused_cat"]
+}
