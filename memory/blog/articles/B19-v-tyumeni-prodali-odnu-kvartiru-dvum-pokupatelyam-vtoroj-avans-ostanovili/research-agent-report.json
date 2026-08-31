@@ -1,0 +1,73 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B19",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-31",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://pravo.ppt.ru/informatsionnoye-soobshcheniye/351557",
+        "type": "official",
+        "note": "Росфинмониторинг 19.08.2026: многократные сделки с одним объектом — признак для риэлторов"
+      },
+      {
+        "url": "https://www.law.ru/news/46380-rosfinmonitoring-ujestochil-kontrol-za-sdelkami-s-nedvijimostyu",
+        "type": "news",
+        "note": "Обзор сообщения Росфинмониторинга, 24.08.2026"
+      },
+      {
+        "url": "https://ura.news/news/1053102901",
+        "type": "news",
+        "note": "Тюменская область / Ялуторовск: двойная продажа одной квартиры, 22.06.2026"
+      },
+      {
+        "url": "https://vk.com/wall-46013226_419410",
+        "type": "community",
+        "note": "ТопТюмень VK — обсуждение схемы двойных продаж"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "продал квартиру двум покупателям аванс",
+    "p0_volume": 135,
+    "p0_volume_source": "scout_handoff",
+    "p0_volume_ru225": "strong buyer intent (scout compare 225)",
+    "buyer_spine_phrases": [
+      {"phrase": "продал квартиру двум покупателям", "volume": 3, "note": "live MCP region 11176 only"},
+      {"phrase": "двойная продажа квартиры", "volume": "weak/empty Tyumen per scout rework"}
+    ],
+    "rework_from": "двойная продажа квартиры weak → аванс + вторичка → P0 135",
+    "partial": ["combined regions 55+11176 MCP format error on second probe"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "double_sale_two_buyers_one_apartment",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 2,
+    "entities_checked": ["rosfinmonitoring", "gk_rf"],
+    "errors": [],
+    "note": "No bank tariff claims; Rosfinmonitoring Aug 2026 message + GK advance norms verified"
+  },
+  "derouter": {
+    "attempts": 2,
+    "stamp": "derouter-opus-stamp-research.json",
+    "post_edit": "Manual factual correction after Derouter invented casus sums/URLs not in assembled inputs"
+  },
+  "key_facts_count": 18,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}
