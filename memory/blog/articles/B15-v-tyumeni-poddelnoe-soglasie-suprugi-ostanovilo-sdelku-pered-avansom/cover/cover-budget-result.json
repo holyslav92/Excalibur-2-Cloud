@@ -1,0 +1,60 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B15-v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/cover/cover.png",
+  "last_errors": [
+    "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (host_face_skin_blob_too_small)",
+    "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+    "pixel_phone_readable FAIL: phone_digits='0' ink=962 clipped=True",
+    "pixel_phone_not_clipped FAIL: digits='0' clipped=True ocr='0 | 4'",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Проверка', 'супруги', 'остановила', 'аванс'] last_word='аванс' ocr='роверка согласия луг neTaunpwuns. »sPaur'",
+    "pixel_no_collage_inset FAIL: white_frac=0.23 inset_face=False blob_count=3",
+    "pixel_meme_present FAIL: orange_fur=26 legacy=16 host_face=True",
+    "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.051",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model_tier": "standard",
+      "bytes": 912149,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (host_face_skin_blob_too_small)",
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0000 chest_blue=0.041 smear=0.000",
+        "pixel_phone_readable FAIL: phone_digits='792200165' ink=331 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='792200165' clipped=True ocr='+792200165 | +792200165 | +192200165'",
+        "pixel_hook_title_not_truncated FAIL: truncated=True missing=['Проверка', 'остановила', 'аванс'] last_word='аванс' ocr='оверка согласия супруг LATALIADIZNIA Aapaun'",
+        "pixel_no_collage_inset FAIL: white_frac=0.758 inset_face=False blob_count=4",
+        "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.2527",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model_tier": "standard",
+      "bytes": 1011025,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (host_face_skin_blob_too_small)",
+        "pixel_wordstat_not_opaque_bars FAIL: 1 horizontal opaque bar(s)",
+        "pixel_phone_readable FAIL: phone_digits='0' ink=962 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='0' clipped=True ocr='0 | 4'",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Проверка', 'супруги', 'остановила', 'аванс'] last_word='аванс' ocr='роверка согласия луг neTaunpwuns. »sPaur'",
+        "pixel_no_collage_inset FAIL: white_frac=0.23 inset_face=False blob_count=3",
+        "pixel_meme_present FAIL: orange_fur=26 legacy=16 host_face=True",
+        "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.051",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Do NOT deep-dive Cover-QA source — if visual OK, stamp manual PASS or proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}

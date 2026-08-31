@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B15 — 2026-08-31
+
+- **topic_id:** B15
+- **slug:** v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom
+- **post_id:** 9368
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/
+- **featured_image:** 9369
+- **inline_images:** 9370–9376 (7)
+- **wp_category_slugs:** dokumenty-i-oformlenie, vtorichka-i-riski, riski-sdelki (category_ids=54,31,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 4 siblings OK)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B12 — 2026-08-28
 
 - **topic_id:** B12
