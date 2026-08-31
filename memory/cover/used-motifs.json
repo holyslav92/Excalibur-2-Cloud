@@ -154,6 +154,21 @@
         "pose_framing": "waist_center_forward_not_left_bust",
         "action": "lifts_consent_from_envelope_stop_gesture_at_phone"
       }
+    },
+    {
+      "date": "2026-08-31",
+      "topic_id": "B16",
+      "slug": "",
+      "motifs": {
+        "composition": "host_medium_right_jaw_drop_over_tranche_ladder_chart_hook_left_sacred",
+        "location": "bright_sunlit_tyumen_newbuild_sales_showroom_model_apartment",
+        "meme": "disappointed_black_guy_sticker_plus_grumpy_cat_cutout",
+        "sticker_set": "yellow_sticky_vot_gde_menyaetsya_gold_tape_corner_only",
+        "outfit": "forest_green_knit_sweater_tan_chinos_no_blazer",
+        "emotion": "jaw_drop_shock_wide_eyes_not_side_eye",
+        "pose_framing": "three_quarter_right_leaning_over_chart_not_left_bust",
+        "action": "finger_traces_payment_cliff_on_tranche_ladder_printout"
+      }
     }
   ]
 }

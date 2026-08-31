@@ -1,0 +1,263 @@
+{
+  "topic_id": "B16",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Платёж вырос после третьего транша",
+  "cover_hook_highlight": "вырос",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин в офисе продаж смотрит на график роста платежа по траншам в Тюмени. Платёж вырос после третьего транша.",
+      "scene_hint": "Showroom; green sweater host jaw-drops at tranche ladder chart; sun flare.",
+      "meme_caption_ru": "",
+      "sticky": "Вот где всё меняется",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "шок от скачка платежа на графике",
+      "meme_picks": [
+        "disappointed_black_guy",
+        "grumpy_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Как аренда» за десять с половиной тысяч — семья почти забронировала новостройку",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Family at model layout, tablet 10800; stonks sticker.",
+      "alt": "Семья в офисе продаж смотрит макет квартиры и расчёт первого платежа.",
+      "labels": [
+        "Старт 10 800",
+        "Первый транш 30%",
+        "В рекламе «от»"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "stonks"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Как аренда» за десять с половиной тысяч — семья почти забронировала новостройку",
+      "visual_type": "comparison_table",
+      "scene_hint": "Table 10800→21500→86000; torn paper; NO meme.",
+      "alt": "Таблица трёх ступеней платежа: 10 800, 21 500 и 86 000 рублей.",
+      "prompt_negatives": "NO meme stickers; БЕЗ мемов; NO host face",
+      "labels": [
+        "6 мес — 10 800",
+        "6 мес — 21 500",
+        "Дальше 86 000"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Лестница платежей: второй транш и тот, что не показали сразу",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Cancelled booking, unsigned DDU, schedule; NO faces.",
+      "alt": "На столе отменённая бронь, неподписанный ДДУ и график платежей.",
+      "prompt_negatives": "NO meme stickers; БЕЗ мемов; NO host face",
+      "labels": [
+        "График по запросу",
+        "Третий транш",
+        "Бронь отменили",
+        "ДДУ не подписали"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Финал: бронь и ДДУ остановили до денег",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Construction crane + escrow statement on clipboard; keys pending; sunny; NO host.",
+      "alt": "Стройка новостройки и выписка по эскроу-счёту до ввода дома.",
+      "prompt_negatives": "NO meme stickers; БЕЗ мемов; NO host face",
+      "labels": [
+        "Старт как аренда",
+        "Финал не аренда",
+        "Ключей ещё нет",
+        "Деньги на эскроу"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Инвестор в той же логике: аренда не дотягивает до финального транша",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow: 1-4 tranches/36mo, DDU registered, no overdue; tiny doakes sticker.",
+      "alt": "Схема выдачи траншей за 36 месяцев при зарегистрированном ДДУ.",
+      "labels": [
+        "1–4 транша",
+        "Все за 36 мес",
+        "ДДУ зарегистрирован",
+        "Без просрочки"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "james_doakes"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Как устроена траншевая ипотека на новостройке в Тюмени",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bar chart: family 6% vs tranche 21.2% branches; do not combine; NO meme.",
+      "alt": "Диаграмма: семейная 6% и траншевая 21,2% — разные ветки.",
+      "prompt_negatives": "NO meme stickers; БЕЗ мемов; NO host face",
+      "labels": [
+        "Семейная — 6%",
+        "Траншевая — 21,2%",
+        "Не совмещаются",
+        "Выбор нагрузки"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Семейная ипотека и траншевая — разные ветки, не одна «скидка»",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Diagram: full schedule before booking, tranche dates, no overdue; tiny brain sticker.",
+      "alt": "Схема проверок до брони: график, даты траншей, без просрочки.",
+      "labels": [
+        "Полный график",
+        "Дата транша",
+        "До брони",
+        "Без просрочки"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "expanding_brain"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "траншевая ипотека тюмень",
+    "траншевая ипотека",
+    "ипотека от застройщика"
+  ],
+  "cover_emotion": "шок от скачка платежа на графике",
+  "cover_motifs": {
+    "composition": "host_medium_right_jaw_drop_over_tranche_ladder_chart_hook_left_sacred",
+    "location": "bright_sunlit_tyumen_newbuild_sales_showroom_model_apartment",
+    "meme": "disappointed_black_guy_sticker_plus_grumpy_cat_cutout",
+    "prop_set": "giant_payment_ladder_chart_tablet_10800_arrow_86000_yellow_sticky_phone_cta",
+    "sticker_set": "yellow_sticky_vot_gde_menyaetsya_gold_tape_corner_only",
+    "joke": "chart_shows_rent_then_cliff_after_third_tranche",
+    "outfit": "forest_green_knit_sweater_tan_chinos_no_blazer",
+    "emotion": "jaw_drop_shock_wide_eyes_not_side_eye",
+    "pose_framing": "three_quarter_right_leaning_over_chart_not_left_bust",
+    "action": "finger_traces_payment_cliff_on_tranche_ladder_printout"
+  },
+  "meme_picks": {
+    "cover": [
+      "disappointed_black_guy",
+      "grumpy_cat"
+    ],
+    "inline_1": [
+      "stonks"
+    ],
+    "inline_5": [
+      "james_doakes"
+    ],
+    "inline_7": [
+      "expanding_brain"
+    ]
+  },
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  }
+}
