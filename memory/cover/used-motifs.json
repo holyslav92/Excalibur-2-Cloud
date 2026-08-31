@@ -137,6 +137,23 @@
         "pose_framing": "waist_three_quarter_right",
         "action": "letter_in_hand_points_payment"
       }
+    },
+    {
+      "date": "2026-08-31",
+      "topic_id": "B15",
+      "slug": "",
+      "motifs": {
+        "composition": "waist_center_envelope_consent_hook_right_zone",
+        "location": "bright_sunlit_tyumen_meeting_room_window",
+        "meme": "blinking_white_guy_sticker_plus_polite_cat_cutout",
+        "prop_set": "cream_envelope_notary_consent_gold_magnifier_phone_cta",
+        "sticker_set": "yellow_sticky_konvert_warning_gold_tape_corner_only",
+        "joke": "sticky_konvert_ne_dokazatelstvo_envelope_looks_real",
+        "outfit": "white_shirt_sand_vest_rolled_sleeves_no_blazer",
+        "emotion": "stunned_disbelief_direct_gaze_not_side_eye",
+        "pose_framing": "waist_center_forward_not_left_bust",
+        "action": "lifts_consent_from_envelope_stop_gesture_at_phone"
+      }
     }
   ]
 }

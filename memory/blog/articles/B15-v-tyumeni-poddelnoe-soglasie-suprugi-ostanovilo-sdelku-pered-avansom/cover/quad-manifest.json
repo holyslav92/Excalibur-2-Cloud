@@ -1,0 +1,257 @@
+{
+  "topic_id": "B15",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Проверка согласия супруги остановила аванс",
+  "cover_hook_highlight": "остановила",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин риэлтор держит конверт с документом и проверяет сведения перед переводом денег в Тюмени. Проверка согласия супруги остановила аванс.",
+      "scene_hint": "Host lifts envelope; gold остановила.",
+      "meme_caption_ru": "",
+      "sticky": "Конверт не доказательство",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие",
+      "meme_picks": [
+        "blinking_white_guy",
+        "polite_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Почему «чистая» выписка ЕГРН не закрывает вопрос супруга",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Bank: EGRN, envelope; two_buttons.",
+      "alt": "Документы для сделки на банковском столе: выписка, конверт с согласием и отметка об одобренной ипотеке.",
+      "labels": [
+        "Ипотека одобрена",
+        "Выписка чистая",
+        "Согласие в конверте",
+        "Аванс сегодня",
+        "Банк подпись не проверил"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "meme_picks": [
+        "two_buttons"
+      ],
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Почему «чистая» выписка ЕГРН не закрывает вопрос супруга",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Diagram: one owner, two spouses; art 34/35.",
+      "alt": "Схема различает сведения выписки ЕГРН и права супругов в браке.",
+      "labels": [
+        "Один в выписке",
+        "Права у двоих",
+        "Статья 34 — брак",
+        "Статья 35 — согласие",
+        "Реестр не про брак"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "В Тюмени деньги к авансу уже стояли — в конверте лежало согласие",
+      "visual_type": "realistic_photo",
+      "scene_hint": "MFC: EGRN, envelope, contract.",
+      "alt": "На стойке лежат выписка ЕГРН, конверт с согласием и документы о режиме имущества.",
+      "labels": [
+        "ЕГРН — титул",
+        "Не режим имущества",
+        "Брачный договор отдельно",
+        "Документы-основания",
+        "Один ≠ нет второго"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Подлинность не подтвердили: перевод остановили на пороге",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Consent macro: notary, reg no, seal.",
+      "alt": "Крупный план полей нотариального согласия, которые следует сверить перед сделкой.",
+      "labels": [
+        "ФИО нотариуса",
+        "Регистрационный номер",
+        "Адрес объекта",
+        "Вид сделки",
+        "Подпись и печать"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Что сверять в нотариальном согласии до перевода денег",
+      "visual_type": "comparison_table",
+      "scene_hint": "Table: property, FNP; disappointed_black_guy.",
+      "alt": "Таблица проверок нотариального согласия перед переводом аванса.",
+      "labels": [
+        "Совместная собственность",
+        "Реквизиты согласия",
+        "Совпадение со сделкой",
+        "Проверка через ФНП",
+        "Возврат при отказе"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disappointed_black_guy"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Отсутствие согласия, подделка и отзыв — разные риски",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Checklist: missing, fake, revoked.",
+      "alt": "Чек-лист отличает риски отсутствующего, поддельного и отозванного согласия.",
+      "labels": [
+        "Реестр нотариата",
+        "Реестровый номер",
+        "Нотариальная тайна",
+        "Сервис не оценит режим",
+        "Запрос от продавца"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "До аванса: таблица проверок и условия возврата",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow: verify, refund; sacrednik.",
+      "alt": "Схема показывает последовательность проверок и условие возврата денег до аванса.",
+      "labels": [
+        "Деньги не ушли",
+        "Продавец ищет новое",
+        "Сделка рассыпалась",
+        "Бумага — не факт",
+        "Проверка до аванса"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "sacrednik_priest"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "нотариальное согласие супруга",
+    "согласие супруга на продажу квартиры",
+    "нужно ли согласие супруга на продажу квартиры"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "cover_emotion": "ошеломлённое недоверие",
+  "cover_motifs": {
+    "composition": "waist_center_envelope_consent_hook_right_zone",
+    "location": "bright_sunlit_tyumen_meeting_room_window",
+    "meme": "blinking_white_guy_sticker_plus_polite_cat_cutout",
+    "prop_set": "cream_envelope_notary_consent_gold_magnifier_phone_cta",
+    "sticker_set": "yellow_sticky_konvert_warning_gold_tape_corner_only",
+    "joke": "sticky_konvert_ne_dokazatelstvo_envelope_looks_real",
+    "outfit": "white_shirt_sand_vest_rolled_sleeves_no_blazer",
+    "emotion": "stunned_disbelief_direct_gaze_not_side_eye",
+    "pose_framing": "waist_center_forward_not_left_bust",
+    "action": "lifts_consent_from_envelope_stop_gesture_at_phone"
+  },
+  "meme_picks": [
+    "blinking_white_guy",
+    "polite_cat"
+  ],
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  }
+}
