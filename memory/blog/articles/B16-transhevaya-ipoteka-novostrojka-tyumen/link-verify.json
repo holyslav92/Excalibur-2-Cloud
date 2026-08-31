@@ -1,5 +1,5 @@
 {
-  "source": "/workspace/memory/blog/articles/B16-transhevaya-ipoteka-novostrojka-tyumen/article.html",
+  "source": "memory/blog/articles/B16-transhevaya-ipoteka-novostrojka-tyumen/article.html",
   "total_links": 9,
   "failed_count": 0,
   "verdict": "pass",
@@ -43,6 +43,24 @@
       "checked_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/"
     },
     {
+      "url": "https://dzen.ru/holyslav",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
+      "url": "https://vk.ru/tymenrieltor",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
       "url": "{{SITE_BASE}}/",
       "status": 200,
       "ok": true,
@@ -61,24 +79,6 @@
       "kind": "internal_relative",
       "skipped": false,
       "checked_url": "{{SITE_BASE}}/gajdy/"
-    },
-    {
-      "url": "https://dzen.ru/holyslav",
-      "status": 200,
-      "ok": true,
-      "method": "HEAD",
-      "error": null,
-      "kind": "external",
-      "skipped": false
-    },
-    {
-      "url": "https://vk.ru/tymenrieltor",
-      "status": 200,
-      "ok": true,
-      "method": "GET",
-      "error": null,
-      "kind": "external",
-      "skipped": false
     },
     {
       "url": "{{SITE_BASE}}/rieltor-tyumen/",
