@@ -5,6 +5,15 @@
   "last_sync": "2026-08-31",
   "clusters": [
     {
+      "cluster_id": "kapremont_debt_new_owner_blocks_sale",
+      "first_seen": "2026-08-31",
+      "locked_until": "2026-09-30",
+      "source": "ledger",
+      "slug": "v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa",
+      "topic_id": "B19",
+      "title": "В Тюмени чистая ЕГРН не спасла вторичку: долг остановил сделку"
+    },
+    {
       "cluster_id": "matkapital_missing_child_shares",
       "first_seen": "2026-08-30",
       "locked_until": "2026-09-29",
