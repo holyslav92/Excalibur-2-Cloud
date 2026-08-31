@@ -1,0 +1,75 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B16",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-31",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://svoy-dev.ru/promos/transevaia-ipoteka",
+        "type": "developer_promo",
+        "note": "Активная акция 01.08–31.12.2026, доступна на дату исследования 31.08.2026"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/03/16/76308934/",
+        "type": "regional_media",
+        "note": "16.03.2026 — спрос на траншевую ипотеку в Тюмени; рекламное раскрытие лестницы 10 800 → 21 500 → 86 000 ₽"
+      },
+      {
+        "url": "https://navigator-tmn.ru/blog/chto-takoe-transhevaya-ipoteka/",
+        "type": "developer_context",
+        "note": "17.04.2026 — примеры лестниц для строящегося и готового жилья"
+      },
+      {
+        "url": "https://t-j.ru/guide/split-ipoteka/",
+        "type": "media_explainer",
+        "note": "15.05.2026 — механика траншей, 36 мес, несовместимость с льготной ипотекой"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4695,
+    "secondary_phrases": [
+      {"phrase": "ипотека от застройщика", "volume": 753, "regions": ["55", "11176"]},
+      {"phrase": "ипотека от застройщика тюмень", "volume": 507, "regions": ["55", "11176"]},
+      {"phrase": "купить новостройку в тюмени", "volume": 862, "regions": ["55", "11176"]},
+      {"phrase": "траншевая ипотека тюмень", "volume": 82, "regions": ["55", "11176"]},
+      {"phrase": "траншевая ипотека в тюмени от застройщика", "volume": 31, "regions": ["55", "11176"]}
+    ],
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["sberbank_disclosure_via_developer", "developer_promo_svoy", "developer_promo_72ru"],
+    "errors": [],
+    "note": "sberbank.ru person-page недоступен из Cloud; банковские цифры только через рекламные раскрытия застройщиков с пометкой; research-official-gate PASS"
+  },
+  "key_facts_count": 48,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "verified_media_fact": {
+    "source": "https://72.ru/text/realty/2026/03/16/76308934/",
+    "lock_brief_url_404": "https://72.ru/text/realty/2026/03/16/76123456/",
+    "payment_ladder_ready_unit": "10800 → 21500 → 86000 RUB/mo",
+    "down_payment": "from 20.1%",
+    "psk_range": "19.009–26.74%",
+    "tranche_schedule": "10% + 10% at +6mo + remainder at +12mo"
+  },
+  "incident_report": "none"
+}
