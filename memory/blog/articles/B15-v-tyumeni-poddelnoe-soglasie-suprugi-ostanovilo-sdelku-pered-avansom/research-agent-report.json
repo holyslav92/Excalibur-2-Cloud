@@ -1,0 +1,68 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B15",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-08-31",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://xn--80aaxsfnme.xn--p1ai/ru-ru/news/fnp-zapuskaet-servis-po-proverke-elektronnyh-notarialnyh-dokumentov-2603",
+        "type": "official",
+        "note": "ФНП 13.03.2026 + актуализация на 2026-08-31: provend.notariat.ru, проверка согласий супругов в электронной форме"
+      },
+      {
+        "url": "https://xn--80aaxsfnme.xn--p1ai/",
+        "type": "news",
+        "note": "ФНП 28.08.2026: «Машиночитаемые доверенности» и «Народный нотариус: обмен квартиру» — свежая лента недели"
+      },
+      {
+        "url": "https://dzen.ru/a/ah9mExOlyQXBSpwe",
+        "type": "community",
+        "note": "Dzen casus: заявленная подделка подписи на согласии супруга — параллельный plot, не Tyumen"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel — локальный casus slot"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "согласие супруга на продажу квартиры",
+    "p0_volume": 54,
+    "p0_volume_ru225": 4816,
+    "buyer_spine_phrases": [
+      {"phrase": "нотариальное согласие супруга", "volume": 138},
+      {"phrase": "нотариальное согласие супруга на продажу", "volume": 50},
+      {"phrase": "нужно согласие супруга на продажу квартиры", "volume": 23}
+    ],
+    "rework_from": "мнимая сделка (55) → оспорили продажу (9) → final P0",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "forged_spouse_consent_blocks_advance",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["fnp", "sk_rf", "gk_rf"],
+    "errors": [],
+    "note": "Bank/notary fee tariffs excluded (N/A); legal norms + FNP verification services verified"
+  },
+  "key_facts_count": 23,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}
