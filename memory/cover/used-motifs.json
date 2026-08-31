@@ -154,6 +154,23 @@
         "pose_framing": "waist_center_forward_not_left_bust",
         "action": "lifts_consent_from_envelope_stop_gesture_at_phone"
       }
+    },
+    {
+      "date": "2026-08-31",
+      "topic_id": "B19",
+      "slug": "",
+      "motifs": {
+        "composition": "waist_center_right_dual_papers_hook_left_sacred_zone",
+        "location": "bright_sunny_tyumen_panel_courtyard_spring_flare",
+        "meme": "disappointed_black_guy_sticker_plus_surprised_tom_cutout",
+        "prop_set": "egrn_clean_print_fkr_debt_red_total_receipt_stack_calendar_3days",
+        "sticker_set": "yellow_sticky_avans_stopped_gold_tape_corner_only_no_wordstat",
+        "joke": "sticky_avans_ostanovili_vovremya_green_check_vs_red_debt",
+        "outfit": "rust_linen_shirt_rolled_sleeves_grey_chinos_no_blazer",
+        "emotion": "jaw_drop_disbelief_comparing_docs_not_side_eye",
+        "pose_framing": "waist_center_right_holding_two_papers_forward",
+        "action": "holds_clean_egrn_vs_kapremont_debt_certificate_toward_camera"
+      }
     }
   ]
 }
