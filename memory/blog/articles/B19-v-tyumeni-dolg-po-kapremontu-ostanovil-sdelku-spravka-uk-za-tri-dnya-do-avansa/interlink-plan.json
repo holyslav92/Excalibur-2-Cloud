@@ -1,0 +1,111 @@
+{
+  "topic_id": "B19",
+  "slug": "v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa",
+  "title": "В Тюмени чистая ЕГРН не спасла вторичку: долг остановил сделку",
+  "outbound_required_min": 1,
+  "outbound_found": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "permalink": "/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+      "topic_id": "B02",
+      "post_id": 8720,
+      "source": "ledger"
+    },
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "permalink": "/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/",
+      "topic_id": "B09",
+      "post_id": 9063,
+      "source": "ledger"
+    },
+    {
+      "slug": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal",
+      "title": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal",
+      "permalink": "/blog/vtorichka-i-riski/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/",
+      "topic_id": "B14",
+      "post_id": 9320,
+      "source": "ledger"
+    },
+    {
+      "slug": "v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom",
+      "title": "v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom",
+      "permalink": "/blog/vtorichka-i-riski/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/",
+      "topic_id": "B15",
+      "post_id": 9368,
+      "source": "ledger"
+    }
+  ],
+  "outbound_missing_suggestions": [
+    {
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "title": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "permalink": "/blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/",
+      "topic_id": "B03",
+      "post_id": 8813,
+      "source": "ledger"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "permalink": "/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "topic_id": "B04",
+      "post_id": 8823,
+      "source": "ledger"
+    },
+    {
+      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "title": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "permalink": "/blog/vtorichka-i-riski/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/",
+      "topic_id": "B05",
+      "post_id": 8886,
+      "source": "ledger"
+    }
+  ],
+  "inbound_targets": [
+    {
+      "slug": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "title": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "permalink": "/blog/vtorichka-i-riski/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/",
+      "topic_id": "B06",
+      "post_id": 8984,
+      "source": "ledger"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "permalink": "/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "topic_id": "B04",
+      "post_id": 8823,
+      "source": "ledger"
+    },
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "permalink": "/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/",
+      "topic_id": "B09",
+      "post_id": 9063,
+      "source": "ledger"
+    }
+  ],
+  "inbound_updates": [
+    {
+      "post_id": 8984,
+      "marker": "data-excalibur-interlink-from=\"v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa\"><b>Читайте также:</b> <a href=\"{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa/\">В Тюмени чистая ЕГРН не спасла вторичку: долг остановил сделку</a></p>"
+    },
+    {
+      "post_id": 8823,
+      "marker": "data-excalibur-interlink-from=\"v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa\"><b>Читайте также:</b> <a href=\"{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa/\">В Тюмени чистая ЕГРН не спасла вторичку: долг остановил сделку</a></p>"
+    },
+    {
+      "post_id": 9063,
+      "marker": "data-excalibur-interlink-from=\"v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa\"><b>Читайте также:</b> <a href=\"{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa/\">В Тюмени чистая ЕГРН не спасла вторичку: долг остановил сделку</a></p>"
+    }
+  ],
+  "new_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-dolg-po-kapremontu-ostanovil-sdelku-spravka-uk-za-tri-dnya-do-avansa/",
+  "dry_run": false
+}
