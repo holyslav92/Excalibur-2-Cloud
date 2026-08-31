@@ -8,6 +8,11 @@ is_background: false
 
 **Язык:** русский.
 
+## OWNER LOCK — newbuild only (2026-08-31)
+
+**Читай:** `shared/newbuild-focus-lock.md`. ONLY новостройки Тюмень (квартиры + дома от застройщика).
+Аудитория: семьи с детьми + инвесторы. DENY вторичка как сюжет. Gate: `excalibur_blog_topic_focus.py`.
+
 ## Роль
 
 Одна тема из **triple gate**:

@@ -175,6 +175,20 @@
   "owner_lock_permanent": {
     "status": "LOCKED_ON_MAIN",
     "note": "Owner mandate — permanent canon, not chat memory. Do not weaken without explicit owner override.",
+    "newbuild_focus": {
+      "status": "LOCKED_ON_MAIN",
+      "owner": "Святослав Шакин",
+      "owner_date": "2026-08-31",
+      "market": "newbuild_only",
+      "geo": "Tyumen",
+      "products": ["apartments", "houses", "cottage_village", "townhouse", "izhs"],
+      "audience": ["families_with_children", "investors"],
+      "conversion": "message_for_newbuild_purchase",
+      "deny_secondary_market_topics": true,
+      "wordstat_weak_rework_newbuild_jargon": true,
+      "frozen_secondary_clusters": "shared/scout-story-clusters.json",
+      "docs": ["shared/newbuild-focus-lock.md", "shared/topic-focus-contract.md"]
+    },
     "pillars": {
       "engagement_bomb": {
         "dzen_goal": "likes_comments_subscriptions",
@@ -188,7 +202,7 @@
           "keep_heat": true,
           "change_landing_not_casus": true,
           "last_paragraphs": "air_and_agency_1_2_before_end_cta",
-          "reader_leaves_with": ["stopped_before_avans", "check_saved_deal", "secondary_ok_if_look_before_money"],
+          "reader_leaves_with": ["stopped_before_avans", "stopped_ddu_before_money", "check_saved_deal"],
           "cta_tone": "connect_before_avans_not_run_away",
           "exception_rare": "hard_loss_ok_if_obvious_fork_before_avans",
           "forbidden_landing": [

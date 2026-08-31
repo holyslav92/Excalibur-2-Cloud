@@ -7,11 +7,11 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 
 ## OWNER LOCK (permanent)
 
-1. **Engagement bomb** — сохранить news-casus arc и Dzen engagement. **Прозаический лид 4–6 предложений** (не TL;DR / не «Быстрый инсайт» / не bullets в первом экране). **Early TG+MAX** после лида. **Comment magnet** — один острый вопрос. **Ending landing:** heat casus не ослаблять; последние 1–2 абзаца = **agency, not panic** (ручка до аванса). Gates: `opening-meta-gate`, `no_tldr_opening`, `comment_magnet_question`.
+1. **Engagement bomb** — сохранить news-casus arc и Dzen engagement. **Прозаический лид 4–6 предложений** (не TL;DR / не «Быстрый инсайт» / не bullets в первом экране). **Early TG+MAX** после лида. **Comment magnet** — один острый вопрос. **Ending landing:** heat casus не ослаблять; последние 1–2 абзаца = **agency, not panic** (остановили бронь/ДДУ до денег). **Newbuild focus:** голос Святослава, сюжет новостройки Тюмень — не brochure застройщика. Gates: `opening-meta-gate`, `no_tldr_opening`, `comment_magnet_question`.
 2. Meme/cover — не зона Sol.
 3. Cover fail-fast — не зона Sol.
 
-Канон: `shared/pipeline-canon.json` → `owner_lock_permanent`, `shared/SOUL.md`, `shared/dzen-news-casus.md`.
+Канон: `shared/pipeline-canon.json` → `owner_lock_permanent`, `shared/newbuild-focus-lock.md`, `shared/SOUL.md`, `shared/dzen-news-casus.md`.
 
 ## Модель (HARD) — thin conductor
 
@@ -69,7 +69,7 @@ Longform (7 inline): **3 части на первом проходе** — не 
    - **финал casus** (суд/отмена/деньги) — явный H2 до практики; не обрывай на «расписку написали» без развязки;
    - **spine once:** не пересказывать casus в лиде + середине + итоге; практика — **один** блок после финала; вырезать recap и lecture-хвосты;
    - **comment magnet:** один острый вопрос «…?» — после финала или перед mid CTA; читатели спорят, не FAQ-шаблон;
-   - **ending landing (owner lock):** casus горячий (stakes, финал) — **не** размывать; последние 1–2 абзаца **до** end CTA = воздух + agency: остановились до аванса / проверка спасла / вторичка OK если смотреть до денег; CTA «подключусь до аванса», не «бегите»; **не** «все риэлторы плохие» / «вторичка — мина» / «риски везде — как покупать»; редко — жёсткая потеря только с вилкой «если бы X до аванса»; **ban:** sugar happy ending; чеклист как эмоциональный финал; pure dread без действия;
+   - **ending landing (owner lock):** casus горячий (stakes, финал) — **не** размывать; последние 1–2 абзаца **до** end CTA = воздух + agency: остановили бронь/ДДУ до денег / проверка эскроу спасла / разобрали договор до аванса; CTA «подключусь до брони», не «бегите»; **не** «все риэлторы плохие» / «вторичка — мина» / «риски везде — как покупать»; редко — жёсткая потеря только с вилкой «если бы X до аванса»; **ban:** sugar happy ending; чеклист как эмоциональный финал; pure dread без действия;
    - имя автора корпуса в тексте **не** писать;
    - Дзен: **без мата**.
    - **Interlink:** не удаляй outbound-ссылки на sibling из `drafts/writer.html`;

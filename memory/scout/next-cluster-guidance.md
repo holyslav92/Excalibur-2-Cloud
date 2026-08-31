@@ -2,16 +2,21 @@
 
 **Обновляет:** Scout перед topic lock. **Окно anti-repeat:** 30 дней.
 
+**Owner lock 2026-08-31:** `shared/newbuild-focus-lock.md` — **ONLY новостройки
+Тюмень** (квартиры + дома от застройщика). Вторичка как сюжет = **BLOCK**.
+Frozen secondary clusters ниже — **не retitle** под «новостройку».
+
 ## Перед topic lock (HARD)
 
 1. Live `PUBLIC_SITE_URL/blog/` — последние **~20** заголовков (не тела).
 2. `shared/published-articles.md` + `shared/published-titles.md` / `published-titles-only.md`.
 3. `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters`
 4. `python3 scripts/excalibur_blog_scout_helper.py --check-query "<title + hook + slug>"`
+5. `python3 scripts/excalibur_blog_topic_focus.py --text "<title>"` — newbuild gate
 
-**Klyshin OPTIONAL.** Если берёшь угол из @klyshin_A — только **свежий** пост Telegram или **свежий** YouTube; старые посты не тянуть, если кластер уже закрыт. Wordstat Tyumen (55+11176) — **всегда**. Новый hot Tyumen casus **без** Klyshin предпочтителен, когда Klyshin дублировал бы закрытый кластер.
+**Klyshin OPTIONAL.** Если берёшь угол из @klyshin_A — только **свежий** пост Telegram или **свежий** YouTube **и только если hook = новостройка**; старые посты не тянуть, если кластер уже закрыт. Wordstat Tyumen (55+11176) — **всегда**. Слабый Wordstat → rework **newbuild** hook (семейная ипотека, эскроу, ДДУ, уступка, срок сдачи, отделка, КП) — **не** вторичка.
 
-## Закрытые кластеры (до ~2026-09-26)
+## Закрытые кластеры (до ~2026-09-26) — FROZEN secondary, не retitle
 
 Каждый weekday-слот (09/12/15/17 YEKT) = **другой** кластер равного engagement-качества (news-casus, не checklist).
 
@@ -32,20 +37,25 @@
 | deposit_before_auction | задаток перед торгами | 2026-09-19 |
 | discount_two_million_hidden_risk | уценка ~2 млн + скрытый риск | 2026-09-19 |
 | doverennost_svo_seller | доверенность + СВО | 2026-09-19 |
+| forged_spouse_consent | фальшивое согласие супруги | 2026-09-26 |
+| registered_persons_block_sale_before_advance | прописанные сорвали сделку | 2026-09-26 |
+| communal_share_preemptive_right_neighbor_blocked | соседская доля / преимущественное право | 2026-09-26 |
+| matkapital_missing_child_shares | детские доли на вторичке | 2026-09-26 |
 
 Полный машиночитаемый список: `memory/scout/used-clusters.json`.
 
-## Открытые углы (примеры для следующего слота)
+## Открытые углы — ONLY newbuild (примеры для следующего слота)
 
-Выбирай **другой legal plot** с финалом и comment magnet:
+Выбирай **другой newbuild plot** с финалом и comment magnet (семьи + инвесторы):
 
-- эскроу / аккредитив / «деньги ушли не туда»
-- новостройка / ДДУ / долгострой / переуступка
-- неузаконенная перепланировка / снос балкона
-- соседское самовольное присоединение / спор о границе
-- машино-место / кладовка «в подарок», которой нет в ЕГРН
-- аренда с выкупом / договор найма с правом выкупа
-- мошенничество с двойной продажей / «два покупателя»
-- опека над взрослым собственником (не детская доля)
+- ДДУ / эскроу / «деньги ушли не на эскроу-счёт»
+- долгострой / срыв срока сдачи / штрафы застройщика
+- переуступка / цена выросла после брони
+- семейная ипотека + маткапитал на новостройку (не вторичка)
+- приёмка квартиры: дефекты / отказ от подписания акта
+- коттеджный посёлок / ИЖС: границы участка / коммуникации
+- инвестор: сдача в аренду vs переуступка до ключей
+- застройщик сменил юрлицо / реорганизация ДДУ
+- бронь сгорела / условия изменились за 48 часов
 
-**FAIL:** перефраз закрытого кластера под новый H1. **PASS:** другой риск + другой family-plot + Wordstat Tyumen после rework.
+**FAIL:** перефраз закрытого secondary-кластера под «новостройку». **FAIL:** вторичка как сюжет. **PASS:** другой newbuild-риск + другой plot + Wordstat Tyumen после rework.

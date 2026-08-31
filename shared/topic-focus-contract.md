@@ -1,6 +1,6 @@
 # Topic Focus Contract (HARD)
 
-**Обновлено:** 2026-08-06
+**Обновлено:** 2026-08-31
 **Владелец:** Scout + `scripts/excalibur_blog_topic_focus.py` + `research_start`
 
 Этот контракт — **жёсткий gate**, не «советы». Soft-инструкции Scout уже 4 раза
@@ -8,8 +8,12 @@
 индексацию вместо ядра канала. B137 — в Meta (запрещена в РФ) без чтения
 полного Дзен-канона.
 
+**Owner lock (2026-08-31):** `shared/newbuild-focus-lock.md` — **только новостройки
+Тюмень** (квартиры + дома от застройщика). Вторичка как тема = **BLOCK**.
+См. `topic_market_focus: newbuild_only` в `shared/tenant-config.json`.
+
 **До Scout обязательно:** `shared/dzen-content-rules.md` +
-`shared/rf-blocked-entities.json`.
+`shared/rf-blocked-entities.json` + `shared/newbuild-focus-lock.md`.
 
 ## Ядро (ALLOW — новая тема обязана попасть сюда)
 
@@ -17,10 +21,15 @@
 (проверяется вместе со slug).
 
 **Профиль тенанта:** `shared/tenant-config.json` → `topic_focus_profile`.
-По умолчанию — Cursor/AI ядро ниже. Для `real_estate` (The Риэлтор) —
-маркеры buyer demand: ЕГРН, квартира, ипотека, сделка, аванс, ДДУ,
-эскроу, новостройка, аренда, риэлтор, Тюмень и т.п. (см.
-`REAL_ESTATE_ALLOW_PATTERNS` в `scripts/excalibur_blog_topic_focus.py`).
+По умолчанию — Cursor/AI ядро ниже. Для `real_estate` (The Риэлтор) при
+`topic_market_focus: newbuild_only` — **только новостройки Тюмень**: квартиры
+и дома от застройщика (ЖК, ДДУ, эскроу, переуступка, КП, ИЖС, таунхаус).
+Маркеры buyer demand: новостройка, ДДУ, эскроу, застройщик, ЖК, семейная ипотека,
+срок сдачи, отделка, бронь, коттедж, КП… (см. `NEWBUILD_REQUIRED_PATTERNS` в
+`scripts/excalibur_blog_topic_focus.py`).
+
+**DENY при newbuild_only:** вторичка / вторичный рынок как сюжет (`SECONDARY_MARKET_DENY_PATTERNS`).
+Слабый Wordstat → rework newbuild hook, **не** drop на вторичку.
 
 ### Cursor / AI (default profile)
 
@@ -64,6 +73,7 @@ Scout может выбрать **новость сегодняшнего дня
 | Индексация/кабинеты поиска | Яндекс Вебмастер «добавить сайт», Google Search Console |
 | Чистый SEO-аудит без агента | «скорость загрузки», «индексация сайта» без Cursor-агентного workflow |
 | Абстрактный AI-хайп без применения | «новая AGI модель», если читателю нечего с ней делать |
+| **Вторичка как тема** (при `topic_market_focus: newbuild_only`) | «вторичка в тюмени», ЕГРН/наследство/маткапитал на вторичке, бабушка/доверенность, ПНД, супружеская доля — см. `shared/newbuild-focus-lock.md` |
 | **RF / Дзен DENY heroes** | Meta, Facebook, Instagram, Threads, Muse Code/Spark, LinkedIn, Twitter/X, Discord, Signal/Viber-how-to, VPN/обход блокировок |
 
 **Исключение уже опубликованных** исторических статей (B91–B99, старый
@@ -93,5 +103,6 @@ Instagram-автопостинг, B124 Meta и т.п.) — остаются в l
 
 - Fixer **не** удаляет и **не** ослабляет этот контракт / скрипт / Дзен-канон.
 - Doctor проверяет наличие `shared/topic-focus-contract.md`,
+  `shared/newbuild-focus-lock.md`,
   `shared/dzen-content-rules.md`, `shared/rf-blocked-entities.json` и
   `scripts/excalibur_blog_topic_focus.py`.

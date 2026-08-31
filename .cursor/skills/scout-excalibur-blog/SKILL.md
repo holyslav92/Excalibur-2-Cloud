@@ -5,6 +5,18 @@ description: Pick P0 Tyumen news-casus topic — Wordstat demand + 30d story-clu
 
 # Scout — Wordstat demand + 30d story-cluster anti-repeat
 
+## OWNER LOCK — newbuild only (2026-08-31, permanent)
+
+**Читай:** `shared/newbuild-focus-lock.md` + `shared/pipeline-canon.json` → `owner_lock_permanent.newbuild_focus`.
+
+- **ONLY** новостройки в Тюмени: квартиры **и** дома (коттедж / КП / ИЖС / таунхаус от застройщика).
+- **Аудитория:** семьи с детьми + инвесторы → конверсия в TG/MAX/телефон за **покупку новостройки**.
+- **DENY:** вторичка как сюжет. Слабый Wordstat → rework newbuild hook (семейная ипотека, эскроу, ДДУ, уступка, срок сдачи, отделка, КП) — **не** drop на вторичку.
+- **Klyshin:** optional, только свежий TG/YouTube, **и только если hook = новостройка**.
+- **Frozen secondary clusters** — не retitle под «новостройку». См. `memory/scout/used-clusters.json`.
+
+Gate: `python3 scripts/excalibur_blog_topic_focus.py --text "<title>"` → `NEWBUILD FOCUS BLOCKER` на вторичку.
+
 ## Thin conductor + Derouter utility (HARD)
 
 Handoff-проза (topic, rework log, title draft) — **только** через Derouter utility tier (gpt-5.6-terra).
@@ -56,7 +68,7 @@ Klyshin **не** заменяет частоты. Wordstat **не** binary skip 
 2. Live blog + ledger + used-clusters → список закрытых кластеров
 3. Свежий Tyumen casus angle (Klyshin optional) → news-casus (событие + риск + время + финал)
 4. wordstat_get_top_requests: hook phrase + tyumen analogs (55, 11176; compare 225)
-5. Слабый объём → rework news angle (локализация, buyer-жаргон), НЕ drop casus
+5. Слабый объём → rework **newbuild** news angle (семейная ипотека, эскроу, ДДУ, уступка, срок сдачи, отделка, КП), НЕ drop casus и **НЕ** вторичка
 6. Title draft — news headline. P0 Wordstat — demand spine под H1
 7. scout_helper.py --check-query → BLOCKER если duplicate cluster
 8. Лог: klyshin_hook (optional) + final P0 + dzen_casus_shape: PASS + comment_magnet_angle

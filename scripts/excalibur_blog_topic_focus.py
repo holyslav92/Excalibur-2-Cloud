@@ -151,7 +151,6 @@ REAL_ESTATE_ALLOW_PATTERNS: tuple[str, ...] = (
     r"дду\b",
     r"эскроу",
     r"новострой",
-    r"вторичк",
     r"аренд",
     r"дом\b",
     r"таунхаус",
@@ -169,6 +168,48 @@ REAL_ESTATE_ALLOW_PATTERNS: tuple[str, ...] = (
     r"оценк\w*\s+квартир",
     r"приемк\w*\s+квартир",
     r"чек[\s-]?лист",
+    r"коттедж",
+    r"ижс",
+    r"переуступк",
+    r"уступк",
+    r"долгострой",
+    r"стройк",
+    r"отделк",
+    r"бронь",
+    r"кп\b",
+)
+
+# Owner lock 2026-08-31: secondary market as topic = BLOCK when newbuild_only.
+SECONDARY_MARKET_DENY_PATTERNS: tuple[str, ...] = (
+    r"вторичк",
+    r"вторичн",
+    r"б[\s/]?у\s+квартир",
+    r"со\s+вторич",
+    r"на\s+вторич",
+    r"рынок\s+вторич",
+)
+
+# Required when tenant topic_market_focus == newbuild_only.
+NEWBUILD_REQUIRED_PATTERNS: tuple[str, ...] = (
+    r"новострой",
+    r"дду\b",
+    r"эскроу",
+    r"застройщик",
+    r"жк\b",
+    r"коттедж",
+    r"кп\b",
+    r"ижс",
+    r"таунхаус",
+    r"переуступк",
+    r"уступк",
+    r"долгострой",
+    r"стройк",
+    r"сдач\w*\s+дом",
+    r"сдач\w*\s+квартир",
+    r"дом\s+от\s+застройщик",
+    r"семейн\w*\s+ипотек",
+    r"бронь",
+    r"отделк",
 )
 
 
@@ -200,7 +241,18 @@ def allow_patterns_for_tenant() -> tuple[str, ...]:
     return ALLOW_PATTERNS
 
 
+def newbuild_only_for_tenant() -> bool:
+    tenant = _tenant_config()
+    focus = str(tenant.get("topic_market_focus") or "").strip().lower()
+    return focus in {"newbuild_only", "newbuild", "novostroyka_only", "novostroyka"}
+
+
 def core_focus_hint() -> str:
+    if newbuild_only_for_tenant():
+        return (
+            "Tyumen newbuild only (novostroyka/DDU/escrow/developer/JK/"
+            "cottage/townhouse/IJHS) — families + investors"
+        )
     if allow_patterns_for_tenant() is REAL_ESTATE_ALLOW_PATTERNS:
         return (
             "real-estate buyer demand (EGRN/apartment/mortgage/deal/Tyumen/"
@@ -241,6 +293,21 @@ def focus_check(text: str) -> dict[str, Any]:
                 "allow_hit": None,
             }
 
+    if newbuild_only_for_tenant():
+        for pat in SECONDARY_MARKET_DENY_PATTERNS:
+            if re.search(pat, blob, flags=re.IGNORECASE):
+                return {
+                    "status": "BLOCK",
+                    "blocker": "NEWBUILD FOCUS BLOCKER",
+                    "reason": (
+                        "secondary market topic forbidden — owner lock "
+                        f"newbuild_only (matched /{pat}/). "
+                        "Rework Tyumen newbuild hook; see shared/newbuild-focus-lock.md"
+                    ),
+                    "deny_hit": pat,
+                    "allow_hit": None,
+                }
+
     allow_hit = None
     for pat in allow_patterns_for_tenant():
         if re.search(pat, blob, flags=re.IGNORECASE):
@@ -254,6 +321,25 @@ def focus_check(text: str) -> dict[str, Any]:
             "deny_hit": None,
             "allow_hit": None,
         }
+
+    if newbuild_only_for_tenant():
+        newbuild_hit = None
+        for pat in NEWBUILD_REQUIRED_PATTERNS:
+            if re.search(pat, blob, flags=re.IGNORECASE):
+                newbuild_hit = pat
+                break
+        if not newbuild_hit:
+            return {
+                "status": "BLOCK",
+                "blocker": "NEWBUILD FOCUS BLOCKER",
+                "reason": (
+                    "no newbuild marker (novostroyka/DDU/escrow/developer/JK/"
+                    "cottage/townhouse) — owner lock newbuild_only. "
+                    "See shared/newbuild-focus-lock.md"
+                ),
+                "deny_hit": None,
+                "allow_hit": allow_hit,
+            }
 
     return {
         "status": "PASS",

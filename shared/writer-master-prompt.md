@@ -15,7 +15,8 @@
 4. `published-titles-only.md` / `shared/published-titles.md` — только anti-dup
 5. `shared/tenant-config.json` — CTA / язык / флаги
 6. `shared/dzen-news-casus.md` — news-casus shape (прозаический лид, не TL;DR)
-7. При сомнении по Дзен/РФ (если `dzen_rf_pack`): `shared/dzen-content-rules.md`,
+7. `shared/newbuild-focus-lock.md` — сюжет только новостройки Тюмень (семьи + инвесторы)
+8. При сомнении по Дзен/РФ (если `dzen_rf_pack`): `shared/dzen-content-rules.md`,
    `shared/rf-blocked-entities.json`
 
 ## Что писать
