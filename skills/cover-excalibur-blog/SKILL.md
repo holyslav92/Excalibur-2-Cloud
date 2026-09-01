@@ -118,6 +118,9 @@ python3 scripts/excalibur_blog_grsai_gpt_image2_api.py --article-dir "$ARTICLE" 
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 1 --inject-html
 python3 scripts/excalibur_blog_quad_apply.py --article-dir "$ARTICLE" --canvas-index 2 --inject-html
 
+# Cover slot: if quad-split cover.png FAIL pixel QA (Wordstat strips / host crop) → solo regen (max 2)
+python3 scripts/excalibur_blog_grsai_solo_cover.py --article-dir "$ARTICLE"
+
 # Wordstat overlay DISABLED — owner banned query strips on cover (canon v3)
 
 python3 scripts/excalibur_blog_cover_motif_gate.py record --topic-id <id> --composition "..." ...

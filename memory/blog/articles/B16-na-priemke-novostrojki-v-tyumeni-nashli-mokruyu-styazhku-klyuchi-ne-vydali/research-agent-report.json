@@ -1,0 +1,67 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B16",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-01",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/a/amtYRpP-tkHrf4uj",
+        "type": "community",
+        "note": "2026-08-31 — приёмка новостройки Тюмень 2026, чеклист, опубликовано «вчера» от 01.09.2026"
+      },
+      {
+        "url": "https://tyumen-info.ru/incident/2026/08/27/37122.html",
+        "type": "news",
+        "note": "2026-08-27 — поручение главы СК по делу о нарушениях застройщика в Тюмени"
+      },
+      {
+        "url": "https://megatyumen.ru/obshestvo/zhit-nevozmozhno-zhiteli-novogo-zhk-v-tyumeni-pozhalovalis-na-protechki-gryaz-i-zatoplennyj-dvor/",
+        "type": "regional news",
+        "note": "2026-08-02 — протечки, сырость, промерзание окон в тюменском ЖК (контекст)"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant signal channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "приемка квартиры в новостройке тюмень",
+    "p0_volume": 29,
+    "secondary_phrases": [
+      {"phrase": "приёмка квартиры в новостройке", "volume": 108, "regions": ["55", "11176"]},
+      {"phrase": "акт приемки квартиры в новостройке", "volume": 247, "regions": ["225"]},
+      {"phrase": "подписание акта приемки квартиры в новостройке", "volume": 58, "regions": ["225"]},
+      {"phrase": "существенные недостатки при приемке новостройки", "volume": 22, "regions": ["225"]},
+      {"phrase": "приемка квартиры в новостройке на что обратить", "volume": 17, "regions": ["55", "11176"]}
+    ],
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "Distinct from B12 (delivery delay/escrow); cluster newbuild_acceptance_defects_refuse_act"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["214_fz", "pp_rf_2380", "pp_rf_2226", "pp_rf_2227"],
+    "errors": [],
+    "note": "Банковские тарифы не используются; 214-ФЗ и подзаконные акты verified in official_verifications"
+  },
+  "key_facts_count": 38,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}

@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B16 — 2026-09-01
+
+- **topic_id:** B16
+- **slug:** na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali
+- **post_id:** 9439
+- **permalink:** /blog/pokupka-kvartiry/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/
+- **featured_image:** 9440
+- **inline_images:** 9441–9447 (7)
+- **wp_category_slugs:** pokupka-kvartiry, dokumenty-i-oformlenie, riski-sdelki (category_ids=36,54,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound 3 targets (B06, B04, B09); outbound 4 siblings OK
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B15 — 2026-08-31
 
 - **topic_id:** B15

@@ -14,3 +14,5 @@
 | [LESSON-20260828-1310-B12-ddu-escrow-novostroyka-cluster](content-lessons/LESSON-20260828-1310-B12-ddu-escrow-novostroyka-cluster.md) | B12 | proposed | geo |
 | [LESSON-20260831-0608-B15-cover-budget-ocr-escape-repeat](content-lessons/LESSON-20260831-0608-B15-cover-budget-ocr-escape-repeat.md) | B15 | proposed | structure |
 | [LESSON-20260831-0608-B15-forged-spouse-consent-cluster](content-lessons/LESSON-20260831-0608-B15-forged-spouse-consent-cluster.md) | B15 | proposed | geo |
+| [LESSON-20260901-0625-B16-cover-solo-regen-wordstat-strip-ocr-escape](content-lessons/LESSON-20260901-0625-B16-cover-solo-regen-wordstat-strip-ocr-escape.md) | B16 | proposed | structure |
+| [LESSON-20260901-0625-B16-newbuild-acceptance-defects-cluster](content-lessons/LESSON-20260901-0625-B16-newbuild-acceptance-defects-cluster.md) | B16 | proposed | geo |

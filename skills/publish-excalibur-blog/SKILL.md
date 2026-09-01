@@ -116,6 +116,11 @@ python3 scripts/excalibur_blog_theme_contract_deploy.py --deploy
 Скрипт делает backup и учит тему уважать future-only meta-флаги. Без этого
 live-page gate после upload заблокирует generic FAQ/quiz/stickers.
 
+**ENOENT / theme path missing:** при неверном `SSH_ROOT` или уже пропатченной теме
+скрипт печатает `WARN theme_contract_deploy SKIP` и exit **0** (не BLOCKER publish).
+Первый setup на чистом сервере: `--strict` → exit 2. Совпадает с `wp-publish-log`
+note «theme already patched on prior runs».
+
 ### 1. Preflight publish
 
 ```bash
