@@ -41,6 +41,8 @@ class WriterEditorialContractsTest(unittest.TestCase):
         self.assertIn("published-titles-only.md", skill)
         self.assertIn("Sol", skill)
         self.assertIn("dzen-engagement-lock.md", skill)
+        self.assertIn("тройной пересказ", skill)
+        self.assertNotIn("короткие абзацы", skill)
         self.assertNotIn("1800–2200", skill)
 
     def test_dzen_engagement_lock_wired(self) -> None:
@@ -49,6 +51,9 @@ class WriterEditorialContractsTest(unittest.TestCase):
         text = lock.read_text(encoding="utf-8")
         self.assertIn("1400–1600", text)
         self.assertIn("agency not panic", text)
+        self.assertIn("тройной пересказ", text)
+        self.assertIn("рубка", text)
+        self.assertIn("энергию удара", text)
         canon = json.loads((ROOT / "shared/pipeline-canon.json").read_text(encoding="utf-8"))
         de = (canon.get("owner_lock_permanent") or {}).get("dzen_engagement") or {}
         self.assertEqual(de.get("status"), "LOCKED_ON_MAIN")
