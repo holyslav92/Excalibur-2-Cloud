@@ -1,0 +1,76 @@
+{
+  "description": "GOLD style corpus — rhythm/voice only. Plots FROZEN; Scout must NOT reuse.",
+  "market_note": "Secondary hits + one tightened newbuild; newbuild_only pipeline unchanged.",
+  "posts": [
+    {
+      "slug": "kupili-kvartiru-bankrotstvo",
+      "title": "Продавец обанкротился — через год суд забрал купленную квартиру",
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/kupili-kvartiru-v-tyumeni-prodavec-ushel-v-bankrotstvo-finupravlyayuschij-ospori/",
+      "style_gold": true,
+      "plot_for_scout": false
+    },
+    {
+      "slug": "egrn-stroka-avans",
+      "title": "В выписке ЕГРН есть строка, после которой аванс вносить нельзя",
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/",
+      "style_gold": true,
+      "plot_for_scout": false
+    },
+    {
+      "slug": "vypiska-chisto-tri-mesyaca",
+      "title": "Чистая выписка на квартиру — через полгода сделку оспорили",
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-vypiske-vse-chisto-prodavec-vladel-tri-mesyaca/",
+      "style_gold": true,
+      "plot_for_scout": false
+    },
+    {
+      "slug": "rodstvenniki-osporili-prodazhu",
+      "title": "Купил вторичку в Тюмени — через два года суд забрал квартиру",
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/rodstvenniki-osporili-prodazhu-v-proshloj-sdelke-deneg-ne-bylo/",
+      "style_gold": true,
+      "plot_for_scout": false
+    },
+    {
+      "slug": "babushka-sobstvennik-osmotr",
+      "title": "Бабушку-собственницу не нашли на осмотре — аванс остановили",
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/kvartira-v-tyumeni-babushka-sobstvennik-v-obyavlenii-na-osmotre-pered-avansom-ee/",
+      "style_gold": true,
+      "plot_for_scout": false
+    },
+    {
+      "slug": "akkreditiv-dengi-ne-doshli",
+      "title": "Аккредитив открыли, сделку зарегистрировали — продавец без денег",
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/akkreditiv-otkryli-prodavcu-dengi-ne-doshli-sdelku-v-tyumeni-sorvali/",
+      "style_gold": true,
+      "plot_for_scout": false
+    },
+    {
+      "slug": "propisannye-pered-avansom",
+      "title": "Перед авансом в Тюмени нашли прописанных — сделку остановили",
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-pered-avansom-nashli-propisannyh-prodavec-obeschal-vypisat-za-nedelyu/",
+      "style_gold": true,
+      "plot_for_scout": false
+    },
+    {
+      "slug": "dolya-kommunalnaya-sosed",
+      "title": "В Тюмени сосед остановил покупку доли перед авансом",
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan/",
+      "style_gold": true,
+      "plot_for_scout": false
+    },
+    {
+      "slug": "chetyre-mesyaca-vtorichka",
+      "title": "Четыре месяца искали вторичку — через два года суд оспорил сделку",
+      "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-chetyre-mesyaca-iskali-vtorichku-ustavshij-pokupatel-soglasilsya-na-ri/",
+      "style_gold": true,
+      "plot_for_scout": false
+    },
+    {
+      "slug": "transhevaya-ipoteka-novostrojka",
+      "title": "Платёж по новостройке вырос в 8 раз — до брони",
+      "url": "{{SITE_BASE}}/blog/ipoteka/transhevaya-ipoteka-novostrojka-tyumen/",
+      "style_gold": true,
+      "plot_for_scout": false
+    }
+  ]
+}

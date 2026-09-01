@@ -42,7 +42,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 ```text
 Scout? → research_start → Research → Title → Writer
-→ Sol → Description → Cover-text||Schema → Cover → Cover-QA → Indexer → Publish
+→ Sol → Stylo → Description → Cover-text||Schema → Cover → Cover-QA → Indexer → Publish
 ```
 
 - **Writer** — смысл → `drafts/writer.html`
@@ -73,9 +73,13 @@ python3 scripts/excalibur_blog_research_start.py --topic-id <ID> --title "<short
 `Task(excalibur-blog-sol)` → `article.html` + `drafts/variant-a.html`  
 из смысла Writer + SOUL/examples. Не выдумывает факты.
 
-### 3c Description (Дзен-карточка)
+### 3c Stylo (голос vs gold)
+`Task(excalibur-blog-stylo)` → `stylo-report.json` + `stylo-notes.md`.  
+Gold-сюжеты **не** для Scout (`shared/stylo-voice-lock.md`). При FAIL — **≤1** Sol с notes, без 3+ циклов.
+
+### 3d Description (Дзен-карточка)
 `Task(excalibur-blog-description)` → `description-brief.json`  
-после Sol stamp. Gate: `excalibur_blog_description_gate.py`.
+после Stylo + stamp. Gate: `excalibur_blog_description_gate.py`.
 
 ### 4 Stamp + structural checks (shell, не LLM)
 ```bash

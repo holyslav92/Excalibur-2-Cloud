@@ -29,21 +29,22 @@
 
 ```text
 Scout? → research_start → Research → Title → Writer(смысл)
-→ Sol(слог) → Description → Cover-text || Schema → Cover → Cover-QA
+→ Sol(слог) → Stylo(голос) → Description → Cover-text || Schema → Cover → Cover-QA
 → Indexer(llms) → Publish → Fixer → merge → Content-learner
 ```
 
 **Writer** → `drafts/writer.html` (факты и смысл).  
 **Sol** (`excalibur-blog-sol`) → финальный `article.html` слогом тенанта
 (`shared/SOUL.md` + `shared/soul-examples/`).  
-После Sol — stamp `pipeline_canon` + structural checks. Прозу после Sol
-не переписывают (кроме возврата Sol при FAIL гейтов слога).
+**Stylo** (`excalibur-blog-stylo`) → `excalibur_blog_stylo.py` vs `memory/stylo/gold`; при FAIL — **≤1** Sol с `stylo-notes.md` (только ритм, не факты). Gold-сюжеты **не** для Scout.  
+После Stylo — stamp `pipeline_canon` + structural checks. Прозу после Sol
+не переписывают (кроме одного stylo-driven Sol или возврата Sol при FAIL гейтов слога).
 
 **Title** → `title-brief.json`. **Description** → `description-brief.json` (Дзен-карточка, после Sol).
 
 **Цель каждого поста — вовлечение в Дзен** (лайки, комментарии, подписки): hot **news-casus актуалочка** (Тюмень, stakes, финал), прозаический лид → early TG+MAX → история → практика → **ending landing (agency, not panic)** → CTAs + **comment magnet** (один острый вопрос). Не чеклист, не TL;DR, не robotic insider bullets. Последние 1–2 абзаца — ручка до аванса, не «риски везде — никогда не покупать». См. `shared/dzen-news-casus.md`, `shared/quality-bar-9.md`.
 
-**18 ролей** (см. `.cursor/agents/FOR-AGENTS.md`): 16 pipeline + `excalibur-blog-description` + `excalibur-blog-cover-qa`.
+**19 ролей** (см. `.cursor/agents/FOR-AGENTS.md`): 17 pipeline + `excalibur-blog-description` + `excalibur-blog-cover-qa` (включая **stylo**).
 
 Никто не читает уже опубликованные статьи сайта — только
 `published-titles-only.md` / `shared/published-titles.md` для anti-dup.

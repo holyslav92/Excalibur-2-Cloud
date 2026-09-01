@@ -2,7 +2,7 @@
 
 Карта: [shared/pipeline-task-map.md](../shared/pipeline-task-map.md)
 
-**Всего 18 ролей** (16 прежних + `description` + `cover-qa`).
+**Всего 19 ролей** (17 прежних pipeline + `description` + `cover-qa` + **`stylo`**).
 
 ## Директор и Setup (не Task)
 
@@ -27,7 +27,8 @@
 | ①b | title | H1 |
 | ② | writer | Смысл → `drafts/writer.html` |
 | ②b | **sol** | **Финал `article.html` (слог SOUL)** |
-| ②c | **description** | **Дзен-карточка → `description-brief.json`** |
+| ②c | **stylo** | **Голос vs gold; ≤1 Sol с notes** |
+| ②d | **description** | **Дзен-карточка → `description-brief.json`** |
 | ④a | cover-text | RU надписи |
 | ④b | schema | JSON-LD |
 | ④c | cover | Image API + figures |
@@ -40,16 +41,16 @@
 ## Канон порядка
 
 ```text
-Scout? → Research → Title → Writer → Sol → Description
-→ Cover-text || Schema → Cover → Cover-QA → Indexer → Publish
+Scout? → Research → Title → Writer → Sol → Stylo
+→ Description → Cover-text || Schema → Cover → Cover-QA → Indexer → Publish
 → Fixer → Content-learner
 ```
 
-После **Sol**: shell `pipeline_canon --stamp` + opening_meta / html_linter.
+После **Stylo**: shell `pipeline_canon --stamp` + opening_meta / html_linter.
 
 Пока setup не complete — только Setup (+ setup-voice/visual).
 
-## Полный список имён (18)
+## Полный список имён (19)
 
 1. `excalibur-blog-setup`
 2. `excalibur-blog-setup-voice`
@@ -60,12 +61,13 @@ Scout? → Research → Title → Writer → Sol → Description
 7. `excalibur-blog-title`
 8. `excalibur-blog-writer`
 9. `excalibur-blog-sol`
-10. `excalibur-blog-description`
-11. `excalibur-blog-cover-text`
-12. `excalibur-blog-schema`
-13. `excalibur-blog-cover`
-14. `excalibur-blog-cover-qa`
-15. `excalibur-blog-indexer`
-16. `excalibur-blog-publish`
-17. `excalibur-blog-fixer`
-18. `excalibur-blog-content-learner`
+10. `excalibur-blog-stylo`
+11. `excalibur-blog-description`
+12. `excalibur-blog-cover-text`
+13. `excalibur-blog-schema`
+14. `excalibur-blog-cover`
+15. `excalibur-blog-cover-qa`
+16. `excalibur-blog-indexer`
+17. `excalibur-blog-publish`
+18. `excalibur-blog-fixer`
+19. `excalibur-blog-content-learner`

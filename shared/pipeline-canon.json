@@ -1,7 +1,7 @@
 {
   "version": "human-first-v2",
-  "description": "Research → Title → Writer(meaning) → Sol(style) → Description → Cover||Schema → Cover-QA → Indexer → Publish",
-  "pipeline_agents_count": 18,
+  "description": "Research → Title → Writer(meaning) → Sol(style) → Stylo(voice) → Description → Cover||Schema → Cover-QA → Indexer → Publish",
+  "pipeline_agents_count": 19,
   "pipeline_agents": [
     "excalibur-blog-setup",
     "excalibur-blog-setup-voice",
@@ -12,6 +12,7 @@
     "excalibur-blog-title",
     "excalibur-blog-writer",
     "excalibur-blog-sol",
+    "excalibur-blog-stylo",
     "excalibur-blog-description",
     "excalibur-blog-cover-text",
     "excalibur-blog-schema",
@@ -74,8 +75,14 @@
     "published site articles",
     "memory/topics/",
     "memory/content-lessons.md",
+    "memory/stylo/gold/*.txt (plots frozen — voice metrics only via stylo agent)",
     "Foreign channel posts as style exemplars (use only tenant SOUL examples)"
   ],
+  "stylo_agent": "excalibur-blog-stylo",
+  "stylo_output": "stylo-report.json",
+  "stylo_rules": "shared/stylo-voice-lock.md",
+  "stylo_gate": "scripts/excalibur_blog_stylo.py",
+  "stylo_max_sol_rewrites": 1,
   "required_article_meta": {
     "pipeline_canon": "human-first-v2",
     "editorial_swarm": false
