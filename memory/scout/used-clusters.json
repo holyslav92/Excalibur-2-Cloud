@@ -5,6 +5,15 @@
   "last_sync": "2026-09-01",
   "clusters": [
     {
+      "cluster_id": "newbuild_developer_legal_entity_change_ddu_escrow_tyumen",
+      "first_seen": "2026-09-01",
+      "locked_until": "2026-10-01",
+      "source": "ledger",
+      "slug": "v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot",
+      "topic_id": "B20",
+      "title": "В Тюмени застройщик сменил юрлицо — банк не открыл эскроу"
+    },
+    {
       "cluster_id": "matkapital_missing_child_shares",
       "first_seen": "2026-08-30",
       "locked_until": "2026-09-29",

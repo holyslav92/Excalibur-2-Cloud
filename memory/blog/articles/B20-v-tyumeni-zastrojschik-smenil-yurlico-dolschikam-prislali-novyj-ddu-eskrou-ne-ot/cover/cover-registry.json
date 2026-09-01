@@ -1,0 +1,86 @@
+{
+  "topic_id": "B20",
+  "slug": "v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "Святослав Шакин покупатель сравнивает два договора и реквизиты застройщика у стойки регистрации, рядом лежит папка с документами и отображается таймер брони в Тюмени. Застройщик сменил компанию — бронь зависла.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-09-01T13:10:21+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "Святослав Шакин покупатель сравнивает два договора и реквизиты застройщика у стойки регистрации, рядом лежит папка с документами и отображается таймер брони в Тюмени. Застройщик сменил компанию — бронь зависла.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "Семья в новой квартире сравнивает первый договор с документами новой компании; на столе заметны разные реквизиты и папка ДДУ.",
+      "h2_anchor": "«Техническая» смена ООО — и семья пошла к ДДУ в новостройке",
+      "visual_type": "realistic_photo",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "Сравнительная таблица показывает, как проверка банка влияет на бронь квартиры: счёт не открыт, возникает пауза, затем бронь истекает.",
+      "h2_anchor": "«Техническая» смена ООО — и семья пошла к ДДУ в новостройке",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "На стойке продаж лежат ДДУ и передаточный акт, рядом остановившийся таймер 72 часа и символ неоткрытого эскроу.",
+      "h2_anchor": "Через 72 часа бронь сгорела: эскроу так и не открыли",
+      "visual_type": "realistic_photo",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "Прежняя вывеска застройщика сопоставлена с новым договором, в котором указан другой ИНН; рядом отмечены пункты повторной проверки банком.",
+      "h2_anchor": "Вывеска та же, ИНН другой: где начинается новый застройщик",
+      "visual_type": "realistic_photo",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "Схема показывает связь покупателя, нового застройщика и банка, а также отдельные этапы аккредитации, регистрации ДДУ, открытия счёта и брони.",
+      "h2_anchor": "Новый ДДУ против зарегистрированного: что видит банк",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "Пять шагов проверки ДДУ перед подписью: ИНН, объект и площадь, цена, срок передачи и реквизиты счёта.",
+      "h2_anchor": "Что сверять до подписи — таблица",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "Временная шкала показывает, где между сверкой договоров, письмами банку и открытием эскроу может прерваться цепочка, пока действует бронь.",
+      "h2_anchor": "Эскроу, бронь и правопреемство: где ломается цепочка",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}
