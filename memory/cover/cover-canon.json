@@ -113,6 +113,12 @@
       "gate": "scripts/excalibur_blog_cover_motif_gate.py --meme <catalog_id_or_motif>",
       "rule": "Same meme id/motif must not repeat within 14 days — pick fresh reaction from catalog"
     },
+    "banned_default_memes": {
+      "ids": ["thinking_cat"],
+      "reason": "Owner ban — solo-cover default thinking-paw tabby recycled; use people-meme or other catalog cat",
+      "pixel_gate": "pixel_no_banned_thinking_cat",
+      "solo_prompt_forbidden": true
+    },
     "manifest_fields": {
       "cover_text": "meme_picks — slot → catalog id(s) with optional topic_hook one-liner",
       "quad_manifest": "meme_picks copied from cover-text; cover_motifs.meme logs chosen ids for anti-repeat"

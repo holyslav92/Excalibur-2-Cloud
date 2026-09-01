@@ -1,19 +1,19 @@
 # Excalibur BLOG — WP publish log
 
-## B19 — 2026-09-01
+## B16 — 2026-09-01
 
-- **topic_id:** B19
-- **slug:** semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli
-- **post_id:** 9452
-- **permalink:** /blog/ipoteka/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/
-- **featured_image:** 9453
-- **inline_images:** 9454–9460 (7)
-- **wp_category_slugs:** ipoteka, matkapital-i-sdelki (category_ids=32,48)
+- **topic_id:** B16
+- **slug:** na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali
+- **post_id:** 9439
+- **permalink:** /blog/pokupka-kvartiry/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/
+- **featured_image:** 9440
+- **inline_images:** 9441–9447 (7)
+- **wp_category_slugs:** pokupka-kvartiry, dokumenty-i-oformlenie, riski-sdelki (category_ids=36,54,58)
 - **schema_meta:** ok
 - **live_page_gate:** PASS
 - **llms_deploy:** PASS (llms.txt, llms-full.txt)
-- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
-- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme path not in configured root)
+- **interlink:** inbound 3 targets (B06, B04, B09); outbound 4 siblings OK
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
 
 ## B15 — 2026-08-31
 

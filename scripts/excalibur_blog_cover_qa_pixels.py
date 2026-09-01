@@ -67,8 +67,26 @@ SERVICES_HEADER_ZONE = (0.04, 0.03, 0.42, 0.16)
 SERVICES_LIST_ZONE = (0.05, 0.16, 0.55, 0.72)
 SERVICES_PAPER_ZONE = (0.05, 0.10, 0.75, 0.85)
 MEME_CAT_ZONE = (0.68, 0.58, 0.99, 0.95)
+MEME_PEOPLE_ZONE = (0.52, 0.04, 0.98, 0.58)  # people cutouts top-right / mid-right
+PEOPLE_MEME_MIN_SIGNAL = 100
+CLOTHING_BUTTON_INK_FLAKE_MAX = 0.10
 HOST_FACE_BLOB_MIN_PIXELS = 10_000
 HOST_FACE_BLOB_MIN_H_FRAC = 0.42
+# Зоны кистей (нормализованные) — ниже лица, для анатомии пальцев
+HAND_ZONE_LEFT = (0.06, 0.46, 0.50, 0.96)
+HAND_ZONE_RIGHT = (0.50, 0.46, 0.96, 0.96)
+HAND_SKIN_MIN_PIXELS = 350
+HAND_MAX_FRAGMENTS = 2
+HAND_MELTED_ASPECT = 2.5
+HAND_FINGER_ASPECT = 2.0
+HAND_FINGER_BLOB_MAX = 3200
+HAND_SINGLE_ZONE_MAX_BLOBS = 2
+# Левая зона при single-hand pose — почти без кожи
+HAND_HIDDEN_ZONE_MAX_SKIN = 650
+HAND_NO_FRAME_MAX_SKIN = 900
+# Зона только для кистей хоста при no_hands pose (левый нижний угол; грудь/шея выше y=0.72 игнорируем).
+HOST_HAND_ZONE_NO_FRAME = (0.04, 0.72, 0.42, 0.96)
+HOST_HAND_NO_FRAME_MAX_BLOBS = 1
 LATIN_GARBAGE_TOKENS = ("ZAGS", "EGRN", "EGRP")
 SERVICES_CHECKLIST_MARKERS = ("ПОМОГАЮ", "КАКЯПОМОГАЮ", "КАКЯПОМОГА")
 PHONE_DIGITS_NEEDLE = "9220016505"
@@ -420,6 +438,46 @@ def _meme_corner_signal(img) -> int:
             if max(r, g, b) - min(r, g, b) > 42 and lum < 215:
                 signal += 1
     return signal
+
+
+def _people_meme_signal(img) -> int:
+    """Cutout people-memes (disappointed guy, priest) — верхняя/средняя правая зона."""
+    w, h = img.size
+    x0 = int(MEME_PEOPLE_ZONE[0] * w)
+    y0 = int(MEME_PEOPLE_ZONE[1] * h)
+    x1 = int(MEME_PEOPLE_ZONE[2] * w)
+    y1 = int(MEME_PEOPLE_ZONE[3] * h)
+    signal = 0
+    rgb = img.convert("RGB")
+    for y in range(y0, y1, 3):
+        for x in range(x0, x1, 3):
+            r, g, b = rgb.getpixel((x, y))
+            if _is_pure_white_paper(r, g, b):
+                continue
+            lum = _luminance(r, g, b)
+            if lum > 238:
+                continue
+            if lum < 85:
+                signal += 2
+                continue
+            if max(r, g, b) - min(r, g, b) > 38 and lum < 220:
+                signal += 1
+    return signal
+
+
+def _manifest_people_only_memes(manifest: dict[str, Any] | None) -> bool:
+    from excalibur_blog_meme_canon import load_meme_catalog, meme_category, normalize_meme_picks
+
+    picks = normalize_meme_picks((manifest or {}).get("meme_picks"))
+    cover_ids = picks.get("cover") or []
+    if not cover_ids and isinstance((manifest or {}).get("meme_picks"), list):
+        cover_ids = [str(x) for x in (manifest or {}).get("meme_picks") if str(x).strip()]
+    if not cover_ids:
+        return False
+    catalog = load_meme_catalog()
+    people = sum(1 for mid in cover_ids if meme_category(catalog, mid) == "people")
+    cats = sum(1 for mid in cover_ids if meme_category(catalog, mid) == "cat")
+    return people > 0 and cats == 0
 
 
 def _paper_sticker_components(
@@ -1333,6 +1391,250 @@ def _all_skin_blobs(img, *, min_pixels: int = 1200) -> list[dict[str, Any]]:
     return blobs
 
 
+def _skin_blobs_in_zone(
+    img,
+    zone: tuple[float, float, float, float],
+    *,
+    min_pixels: int = HAND_SKIN_MIN_PIXELS,
+    min_cy: float = 0.0,
+) -> list[dict[str, Any]]:
+    """Связные skin-blob внутри нормализованной зоны."""
+    w, h = img.size
+    rgb = img.convert("RGB")
+    pixels_rgb = rgb.load()
+    x0, y0, x1, y1 = (
+        int(zone[0] * w),
+        int(zone[1] * h),
+        int(zone[2] * w),
+        int(zone[3] * h),
+    )
+    visited = [[False] * w for _ in range(h)]
+    blobs: list[dict[str, Any]] = []
+    for y in range(y0, y1, 2):
+        for x in range(x0, x1, 2):
+            if visited[y][x] or not _is_skin(*pixels_rgb[x, y]):
+                continue
+            q: deque[tuple[int, int]] = deque([(x, y)])
+            visited[y][x] = True
+            count = 0
+            minx = maxx = x
+            miny = maxy = y
+            while q:
+                cx, cy = q.popleft()
+                count += 1
+                minx = min(minx, cx)
+                maxx = max(maxx, cx)
+                miny = min(miny, cy)
+                maxy = max(maxy, cy)
+                for dx, dy in ((2, 0), (-2, 0), (0, 2), (0, -2)):
+                    nx, ny = cx + dx, cy + dy
+                    if x0 <= nx < x1 and y0 <= ny < y1 and not visited[ny][nx]:
+                        if _is_skin(*pixels_rgb[nx, ny]):
+                            visited[ny][nx] = True
+                            q.append((nx, ny))
+            if count < min_pixels:
+                continue
+            cy_norm = (miny + maxy) / 2 / max(h, 1)
+            if cy_norm < min_cy:
+                continue
+            bw = maxx - minx + 2
+            bh = maxy - miny + 2
+            blobs.append(
+                {
+                    "pixels": count,
+                    "w_frac": round(bw / max(w, 1), 3),
+                    "h_frac": round(bh / max(h, 1), 3),
+                    "cx": round((minx + maxx) / 2 / max(w, 1), 3),
+                    "cy": round(cy_norm, 3),
+                }
+            )
+    blobs.sort(key=lambda b: int(b.get("pixels") or 0), reverse=True)
+    return blobs
+
+
+def _manifest_no_hands_in_frame(manifest: dict[str, Any] | None) -> bool:
+    """True когда manifest требует кроп выше локтей — рук в кадре быть не должно."""
+    motifs = (manifest or {}).get("cover_motifs") or {}
+    action = str(motifs.get("action") or "").casefold()
+    pose = str(motifs.get("pose_framing") or "").casefold()
+    composition = str(motifs.get("composition") or "").casefold()
+    scene = str(
+        ((manifest or {}).get("slots") or {}).get("cover", {}).get("scene_hint") or ""
+    ).casefold()
+    tokens = (
+        "no_hands_in_frame",
+        "hands_not_in_frame",
+        "hands_out_of_frame",
+        "arms_cropped_below_elbow",
+        "crop_above_elbows",
+        "host_hands_not_in_frame",
+    )
+    blob = " ".join((action, pose, composition, scene))
+    return any(tok in blob for tok in tokens)
+
+
+def _manifest_single_hand_left_hidden(manifest: dict[str, Any] | None) -> bool:
+    """True когда manifest требует спрятать левую кисть / только одну руку на влагомере."""
+    if _manifest_no_hands_in_frame(manifest):
+        return False
+    motifs = (manifest or {}).get("cover_motifs") or {}
+    action = str(motifs.get("action") or "").casefold()
+    pose = str(motifs.get("pose_framing") or "").casefold()
+    tokens = (
+        "single_hand",
+        "one_hand",
+        "left_arm_out",
+        "left_hand_hidden",
+        "left_hand_out_of_frame",
+        "no_pointing",
+        "no_clipboard_in_hands",
+    )
+    return any(tok in action or tok in pose for tok in tokens)
+
+
+def _hand_zone_skin_pixels(img, zone: tuple[float, float, float, float]) -> int:
+    w, h = img.size
+    rgb = img.convert("RGB")
+    x0, y0, x1, y1 = (
+        int(zone[0] * w),
+        int(zone[1] * h),
+        int(zone[2] * w),
+        int(zone[3] * h),
+    )
+    total = 0
+    for y in range(y0, y1, 2):
+        for x in range(x0, x1, 2):
+            if _is_skin(*rgb.getpixel((x, y))):
+                total += 1
+    return total
+
+
+def _hands_anatomy_metrics(img, manifest: dict[str, Any] | None = None) -> dict[str, Any]:
+    """FAIL melted/mangled hands: фрагменты, вытянутые «пальцы», две кисти при single-hand pose."""
+    left = _skin_blobs_in_zone(img, HAND_ZONE_LEFT, min_cy=0.40)
+    right = _skin_blobs_in_zone(img, HAND_ZONE_RIGHT, min_cy=0.40)
+    reasons: list[str] = []
+    mangled = False
+    finger_blobs = 0
+    no_hands = _manifest_no_hands_in_frame(manifest)
+    single_hand = _manifest_single_hand_left_hidden(manifest)
+
+    if no_hands:
+        host_blobs = _skin_blobs_in_zone(img, HOST_HAND_ZONE_NO_FRAME, min_cy=0.72)
+        host_skin = _hand_zone_skin_pixels(img, HOST_HAND_ZONE_NO_FRAME)
+        finger_like = 0
+        for blob in host_blobs:
+            wf = float(blob.get("w_frac") or 0.0)
+            hf = float(blob.get("h_frac") or 0.0)
+            aspect = max(wf, hf) / max(min(wf, hf), 0.01)
+            px = int(blob.get("pixels") or 0)
+            if aspect >= HAND_MELTED_ASPECT and px >= HAND_SKIN_MIN_PIXELS:
+                mangled = True
+                reasons.append(f"host_hand_melted_aspect_{aspect:.1f}")
+            if (
+                HAND_FINGER_ASPECT <= aspect < HAND_MELTED_ASPECT
+                and HAND_SKIN_MIN_PIXELS <= px <= HAND_FINGER_BLOB_MAX
+            ):
+                finger_like += 1
+                reasons.append(f"host_elongated_finger_blob_aspect_{aspect:.1f}")
+        if finger_like >= 1:
+            mangled = True
+            reasons.append(f"host_finger_sausage_count_{finger_like}")
+        # Две+ отдельные кожные «кисти» в нижнем левом углу = модель нарисовала руки.
+        hand_sized = [b for b in host_blobs if int(b.get("pixels") or 0) >= HAND_SKIN_MIN_PIXELS]
+        if len(hand_sized) >= 2:
+            mangled = True
+            reasons.append(f"host_multiple_hand_blobs_{len(hand_sized)}")
+        return {
+            "ok": not mangled,
+            "left_blobs": len(host_blobs),
+            "right_blobs": 0,
+            "finger_blobs": finger_like,
+            "no_hands_pose": True,
+            "single_hand_pose": False,
+            "host_skin_pixels": host_skin,
+            "reasons": reasons,
+        }
+
+    for label, blobs in (("left", left), ("right", right)):
+        if len(blobs) > HAND_SINGLE_ZONE_MAX_BLOBS:
+            mangled = True
+            reasons.append(f"{label}_hand_too_many_blobs_{len(blobs)}")
+        for blob in blobs:
+            wf = float(blob.get("w_frac") or 0.0)
+            hf = float(blob.get("h_frac") or 0.0)
+            px = int(blob.get("pixels") or 0)
+            aspect = max(wf, hf) / max(min(wf, hf), 0.01)
+            if aspect >= HAND_MELTED_ASPECT:
+                mangled = True
+                reasons.append(f"{label}_hand_melted_aspect_{aspect:.1f}")
+            if (
+                HAND_FINGER_ASPECT <= aspect < HAND_MELTED_ASPECT
+                and HAND_SKIN_MIN_PIXELS <= px <= HAND_FINGER_BLOB_MAX
+            ):
+                finger_blobs += 1
+                reasons.append(f"{label}_elongated_finger_blob_aspect_{aspect:.1f}")
+
+    if finger_blobs >= 2:
+        mangled = True
+        reasons.append(f"finger_sausage_count_{finger_blobs}")
+
+    if single_hand:
+        left_skin = _hand_zone_skin_pixels(img, HAND_ZONE_LEFT)
+        if left_skin > HAND_HIDDEN_ZONE_MAX_SKIN:
+            mangled = True
+            reasons.append(f"left_hand_should_be_hidden_skin_pixels_{left_skin}")
+        if len(left) >= 2:
+            mangled = True
+            reasons.append("left_hand_visible_blobs_when_single_hand_pose")
+
+    return {
+        "ok": not mangled,
+        "left_blobs": len(left),
+        "right_blobs": len(right),
+        "finger_blobs": finger_blobs,
+        "single_hand_pose": single_hand,
+        "left_skin_pixels": _hand_zone_skin_pixels(img, HAND_ZONE_LEFT) if single_hand else 0,
+        "reasons": reasons,
+    }
+
+
+def _banned_thinking_cat_metrics(img, manifest: dict[str, Any] | None) -> dict[str, Any]:
+    """FAIL thinking-paw tabby default или cat sticker когда запрошены только people-memes."""
+    from excalibur_blog_meme_canon import (
+        BANNED_DEFAULT_MEME_IDS,
+        load_meme_catalog,
+        meme_category,
+        meme_field_contains_thinking_cat,
+        normalize_meme_picks,
+    )
+
+    motifs = (manifest or {}).get("cover_motifs") or {}
+    meme_field = str(motifs.get("meme") or "")
+    picks = normalize_meme_picks((manifest or {}).get("meme_picks"))
+    cover_ids = picks.get("cover") or []
+    if not cover_ids and isinstance((manifest or {}).get("meme_picks"), list):
+        cover_ids = [str(x) for x in (manifest or {}).get("meme_picks") if str(x).strip()]
+
+    catalog = load_meme_catalog()
+    people = sum(1 for mid in cover_ids if meme_category(catalog, mid) == "people")
+    cats = sum(1 for mid in cover_ids if meme_category(catalog, mid) == "cat")
+    banned_pick = any(mid in BANNED_DEFAULT_MEME_IDS for mid in cover_ids)
+    banned_field = meme_field_contains_thinking_cat(meme_field)
+
+    people_only_request = people > 0 and cats == 0
+    # Pixel cat-detection отключён при people-only picks — оранжевый влагомер/кожа даёт false positive.
+    # FAIL только по manifest: banned id или thinking_cat в cover_motifs.meme.
+    fail = banned_pick or banned_field
+    return {
+        "ok": not fail,
+        "banned_pick": banned_pick,
+        "banned_field": banned_field,
+        "people_only_request": people_only_request,
+        "cover_ids": cover_ids,
+    }
+
+
 def _foreign_article_leak_metrics(img, manifest: dict[str, Any] | None) -> dict[str, Any]:
     """Чужой hook/Wordstat-текст с другой статьи (B06 mashup leak)."""
     hook_norm = _norm_ocr_text(_manifest_cover_hook(manifest))
@@ -1744,9 +2046,9 @@ def _check_identity_matches_studio(img) -> tuple[bool, dict[str, Any]]:
         }
     )
 
-    # Щетина: stock clean-shaven часто 0.35–0.48 при hist ~0.54; канон Святослав — hist≥0.62 или chin≥0.50.
-    chin_ok = chin_ratio >= 0.28
-    identity_ok = chin_ok and (chin_ratio >= 0.50 or hist_sim >= 0.62)
+    # Owner ground truth: hist alone ~0.62 пропускал чужое лицо — требуем hist≥0.64 И щетину.
+    chin_ok = chin_ratio >= 0.32
+    identity_ok = chin_ok and hist_sim >= 0.64 and chin_ratio >= 0.40
     ok = identity_ok
     if not chin_ok:
         evidence["fail_reason"] = "host_face_skin_blob_too_small"
@@ -1927,8 +2229,8 @@ def _phone_digits_metrics(img) -> dict[str, Any]:
     return _phone_not_clipped_metrics(img)
 
 
-def _cat_meme_metrics(img, *, host_face: bool) -> dict[str, Any]:
-    """Маленький мем-стикер (кот) — не золотая печать без лица хоста."""
+def _cat_meme_metrics(img, *, host_face: bool, manifest: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Маленький мем-стикер — кот или people cutout; не золотая печать без лица хоста."""
     w, h = img.size
     rgb = img.convert("RGB")
     x0 = int(MEME_CAT_ZONE[0] * w)
@@ -1937,14 +2239,27 @@ def _cat_meme_metrics(img, *, host_face: bool) -> dict[str, Any]:
     y1 = int(MEME_CAT_ZONE[3] * h)
     orange_fur = 0
     legacy = _meme_corner_signal(img)
+    people_signal = _people_meme_signal(img)
     for y in range(y0, y1, 2):
         for x in range(x0, x1, 2):
             r, g, b = rgb.getpixel((x, y))
             if r >= 178 and g <= 155 and r - g >= 30:
                 orange_fur += 1
+    people_only = _manifest_people_only_memes(manifest)
     # Без лица хоста corner-signal часто = золотая печать checklist, не мем.
-    ok = host_face and (orange_fur >= 40 or legacy >= MEME_CORNER_MIN_SIGNAL)
-    return {"ok": ok, "orange_fur": orange_fur, "legacy_signal": legacy, "host_face": host_face}
+    ok = host_face and (
+        orange_fur >= 40
+        or legacy >= MEME_CORNER_MIN_SIGNAL
+        or (people_only and people_signal >= PEOPLE_MEME_MIN_SIGNAL)
+    )
+    return {
+        "ok": ok,
+        "orange_fur": orange_fur,
+        "legacy_signal": legacy,
+        "people_signal": people_signal,
+        "people_only": people_only,
+        "host_face": host_face,
+    }
 
 
 def _phone_digits_present(img) -> bool:
@@ -2044,16 +2359,9 @@ def _identity_skin_blob_flake(checks: dict[str, bool], evidence: dict[str, Any])
 
 
 def _identity_hist_near_match_flake(checks: dict[str, bool], evidence: dict[str, Any]) -> bool:
-    """Close-up host with hist≥0.55 but chin/stubble expression flake (B19 shocked face)."""
-    identity_ev = evidence.get("identity_match") or {}
-    hist = float(identity_ev.get("face_hist_intersection") or 0.0)
-    return (
-        not checks.get("pixel_identity_matches_studio", True)
-        and identity_ev.get("fail_reason") == "not_svyatoslav_vs_studio_portrait"
-        and hist >= 0.55
-        and bool(checks.get("pixel_host_face_present"))
-        and bool(checks.get("pixel_host_close_up"))
-    )
+    """Disabled for wrong-face escape — owner ground truth; OCR escape must NOT bypass stock stranger."""
+    _ = checks, evidence
+    return False
 
 
 def _meme_partial_signal_flake(checks: dict[str, bool], evidence: dict[str, Any]) -> bool:
@@ -2063,6 +2371,9 @@ def _meme_partial_signal_flake(checks: dict[str, bool], evidence: dict[str, Any]
         return False
     orange_fur = int(cat_meme.get("orange_fur") or 0)
     legacy = int(cat_meme.get("legacy_signal") or 0)
+    people_signal = int(cat_meme.get("people_signal") or 0)
+    if cat_meme.get("people_only") and people_signal >= 60:
+        return True
     return orange_fur >= 20 or legacy >= 12
 
 
@@ -2079,10 +2390,18 @@ def apply_ocr_false_positive_escape(
     if not failed:
         return checks, errors, evidence
 
-    identity_flaky = _identity_skin_blob_flake(checks, evidence) or _identity_hist_near_match_flake(
-        checks, evidence
-    )
+    identity_flaky = _identity_skin_blob_flake(checks, evidence)
+    # never escape not_svyatoslav_vs_studio_portrait — wrong face is hard FAIL
+    identity_ev = evidence.get("identity_match") or {}
+    if identity_ev.get("fail_reason") == "not_svyatoslav_vs_studio_portrait":
+        identity_flaky = False
     meme_partial = _meme_partial_signal_flake(checks, evidence)
+
+    clothing_frac = float(evidence.get("clothing_dark_ink_frac") or 0.0)
+    clothing_button_flake = (
+        not checks.get("pixel_no_text_on_clothing", True)
+        and clothing_frac < CLOTHING_BUTTON_INK_FLAKE_MAX
+    )
 
     phone_ink = int(evidence.get("phone_zone_ink") or 0)
     phone_visual_ok = phone_ink >= 300 and (
@@ -2095,12 +2414,16 @@ def apply_ocr_false_positive_escape(
         flaky_keys |= {"pixel_phone_readable", "pixel_phone_not_clipped"}
     if meme_partial:
         flaky_keys.add("pixel_meme_present")
+    if clothing_button_flake:
+        flaky_keys.add("pixel_no_text_on_clothing")
 
     core_keys = set(OCR_ESCAPE_CORE_KEYS)
     if phone_visual_ok:
         core_keys.discard("pixel_phone_readable")
     if meme_partial:
         core_keys.discard("pixel_meme_present")
+    if clothing_button_flake:
+        core_keys.discard("pixel_no_text_on_clothing")
 
     if not core_keys.issubset({k for k, v in checks.items() if v}):
         return checks, errors, evidence
@@ -2204,6 +2527,25 @@ def analyze_cover_pixels(
         reason = identity_evidence.get("fail_reason") or identity_evidence.get("error") or "unknown"
         errors.append(
             f"pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref ({reason})"
+        )
+
+    hands_metrics = _hands_anatomy_metrics(img, manifest)
+    evidence["hands_anatomy"] = hands_metrics
+    checks["pixel_host_hands_anatomy"] = bool(hands_metrics.get("ok"))
+    if not checks["pixel_host_hands_anatomy"]:
+        errors.append(
+            "pixel_host_hands_anatomy FAIL: mangled/melted hands detected "
+            f"({'; '.join(hands_metrics.get('reasons') or [])})"
+        )
+
+    thinking_cat_metrics = _banned_thinking_cat_metrics(img, manifest)
+    evidence["banned_thinking_cat"] = thinking_cat_metrics
+    checks["pixel_no_banned_thinking_cat"] = bool(thinking_cat_metrics.get("ok"))
+    if not checks["pixel_no_banned_thinking_cat"]:
+        errors.append(
+            "pixel_no_banned_thinking_cat FAIL: thinking_cat banned in manifest "
+            f"(banned_pick={thinking_cat_metrics.get('banned_pick')} "
+            f"banned_field={thinking_cat_metrics.get('banned_field')})"
         )
 
     if not checks["pixel_host_not_distant_fullbody"]:
@@ -2346,7 +2688,7 @@ def analyze_cover_pixels(
     hook_metrics = _hook_title_metrics(img)
     title_cyrillic = _title_cyrillic_metrics(img)
     phone_metrics = _phone_digits_metrics(img)
-    meme_metrics = _cat_meme_metrics(img, host_face=host_face_ok)
+    meme_metrics = _cat_meme_metrics(img, host_face=host_face_ok, manifest=manifest)
     sticky_metrics = _blank_sticky_metrics(img)
     foreign_leak = _foreign_article_leak_metrics(img, manifest)
     hook_complete = _hook_title_complete_metrics(img, manifest)
