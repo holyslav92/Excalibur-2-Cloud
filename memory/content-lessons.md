@@ -14,3 +14,6 @@
 | [LESSON-20260828-1310-B12-ddu-escrow-novostroyka-cluster](content-lessons/LESSON-20260828-1310-B12-ddu-escrow-novostroyka-cluster.md) | B12 | proposed | geo |
 | [LESSON-20260831-0608-B15-cover-budget-ocr-escape-repeat](content-lessons/LESSON-20260831-0608-B15-cover-budget-ocr-escape-repeat.md) | B15 | proposed | structure |
 | [LESSON-20260831-0608-B15-forged-spouse-consent-cluster](content-lessons/LESSON-20260831-0608-B15-forged-spouse-consent-cluster.md) | B15 | proposed | geo |
+| [LESSON-20260901-0813-B19-cover-ocr-hist-near-escape-validated](content-lessons/LESSON-20260901-0813-B19-cover-ocr-hist-near-escape-validated.md) | B19 | validated | structure |
+| [LESSON-20260901-0813-B19-sol-end-cta-surgical-fix](content-lessons/LESSON-20260901-0813-B19-sol-end-cta-surgical-fix.md) | B19 | proposed | cta |
+| [LESSON-20260901-0813-B19-matkapital-escrow-cluster](content-lessons/LESSON-20260901-0813-B19-matkapital-escrow-cluster.md) | B19 | proposed | geo |
