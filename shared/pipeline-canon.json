@@ -107,7 +107,12 @@
     "day one",
     "day 1",
     "first win",
-    "quick win"
+    "quick win",
+    "случай собирательный",
+    "без фамилий",
+    "без адреса жк",
+    "без названия банка",
+    "механика в тюмени повторяется"
   ],
   "forbidden_title_markers": [
     "без копипаста за вечер",
@@ -208,7 +213,8 @@
         "self_score_9_loop",
         "word_quota_1800_2100",
         "critic_table_in_writer_html",
-        "wordstat_phrases_in_h1"
+        "wordstat_phrases_in_h1",
+        "composite_case_meta_disclaimer_in_body"
       ],
       "docs": ["shared/dzen-engagement-lock.md"]
     },
