@@ -531,3 +531,120 @@ checks_run:
 - `python3 -m unittest tests.test_wp_categories_interlink.WpCategoriesInterlinkTests.test_interlink_candidates_resolve_post_id_from_meta`
 - B15 interlink-plan inbound_targets 3 with post_id
 commit: pending
+
+## INC-20260901-0625-cover-quad-wordstat-strip-b16
+status: fixed
+run_date: 2026-09-01
+role: excalibur-blog-cover
+topic_id: B16
+article_dir: memory/blog/articles/B16-na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali
+severity: medium
+category: script
+
+### What went wrong
+- Quad canvas 1 global prefix still carried legacy «1-3 Wordstat stickers (Тюмень)» — grsai painted query strips on cover TL; quad-split cover FAIL pixel QA; `canvas1_attempts: 2` before solo path.
+
+### How the agent recovered this run
+- `excalibur_blog_grsai_solo_cover.py` attempt 1/2 with NO Wordstat prefix → pre_qa PASS; inlines from quad split OK.
+
+### Durable fix needed before next run
+- Sanitize quad canvas 1 style prefix (same as solo regen); update `quad-style-the-rieltor.json`; document solo regen fallback in cover skill.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_quad_prompt.py`
+- `memory/cover/quad-style-the-rieltor.json`
+- `skills/cover-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-01
+fix_summary:
+- `sanitize_style_prefix_no_cover_wordstat()` shared by quad canvas 1 + solo prompts.
+- `quad-style-the-rieltor.json` global_prefix → NO Wordstat strips on cover.
+- Cover skill runbook: solo regen after quad cover FAIL.
+files_changed:
+- `scripts/excalibur_blog_cover_quad_prompt.py`
+- `memory/cover/quad-style-the-rieltor.json`
+- `skills/cover-excalibur-blog/SKILL.md`
+- `.cursor/skills/cover-excalibur-blog/SKILL.md`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_cover_quad_prompt.py`
+- `python3 -m unittest tests.test_pipeline_speed_b03.QuadPromptWordstatPrefixTest`
+commit: pending
+
+## INC-20260901-0626-cover-qa-ocr-escape-b16
+status: fixed
+run_date: 2026-09-01
+role: excalibur-blog-cover-qa
+topic_id: B16
+article_dir: memory/blog/articles/B16-na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali
+severity: low
+category: qa
+
+### What went wrong
+- Solo cover PASS required `apply_ocr_false_positive_escape` — 7 OCR-flaky checks (phone/hook/collage/inpaint/query strips).
+
+### How the agent recovered this run
+- Auto escape on visual core OK (face + Cyrillic hook + phone); `cover_qa.json` PASS; publish post 9439.
+
+### Durable fix needed before next run
+- None — B11/B15 OCR escape path already canonical; B16 live proof #6.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `skills/cover-qa-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-01
+fix_summary:
+- Confirmed existing `apply_ocr_false_positive_escape` handled B16 without new code.
+files_changed:
+- none (contract already canonical)
+checks_run:
+- B16 `cover/cover_qa.json` PASS + `ocr_false_positive_escape.applied: true`
+commit: n/a
+
+## INC-20260901-0627-theme-contract-deploy-enoent-b16
+status: fixed
+run_date: 2026-09-01
+role: excalibur-blog-publish
+topic_id: B16
+article_dir: memory/blog/articles/B16-na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali
+severity: low
+category: script
+
+### What went wrong
+- `excalibur_blog_theme_contract_deploy.py --deploy` → theme path ENOENT under configured SSH_ROOT; publish log noted «theme already patched on prior runs»; live-page gate PASS.
+
+### How the agent recovered this run
+- Publish continued; SFTP bootstrap used root fallback to `.`; post 9439 live OK.
+
+### Durable fix needed before next run
+- Idempotent deploy: WARN + exit 0 when theme missing (non-blocker); `--strict` for first setup; align SSH_ROOT candidates with wp_publish.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_theme_contract_deploy.py`
+- `skills/publish-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-01
+fix_summary:
+- `resolve_theme_base()` tries SSH_ROOT + `.`; missing theme → WARN SKIP exit 0 (default); `--strict` exit 2.
+- Publish skill documents ENOENT as non-blocker when theme pre-patched.
+files_changed:
+- `scripts/excalibur_blog_theme_contract_deploy.py`
+- `skills/publish-excalibur-blog/SKILL.md`
+- `.cursor/skills/publish-excalibur-blog/SKILL.md`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_theme_contract_deploy.py`
+- `python3 scripts/excalibur_blog_theme_contract_deploy.py --deploy` → WARN SKIP exit 0
+commit: pending
