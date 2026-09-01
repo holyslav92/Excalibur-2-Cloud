@@ -3,9 +3,9 @@
   "status": "PASS",
   "checked_at": "2026-09-01",
   "topic_id": "B16",
-  "cover_md5": "b64daf3c3d14f607e7122205a64c01c7",
+  "cover_md5": "ed320ada3967aa0dee12673f70237417",
   "pixel_qa": true,
-  "pixel_description": "1200x675; mean_lum=171; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.42",
+  "pixel_description": "1200x675; mean_lum=187; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=1 bar-like gold strips; face_h_frac=0.34",
   "checks": {
     "meme_variety_not_cats_only": true,
     "pixel_light_high_key": true,
@@ -13,6 +13,8 @@
     "pixel_host_close_up": true,
     "pixel_host_not_distant_fullbody": true,
     "pixel_identity_matches_studio": true,
+    "pixel_host_hands_anatomy": true,
+    "pixel_no_banned_thinking_cat": true,
     "pixel_not_services_checklist": true,
     "pixel_wordstat_not_opaque_bars": true,
     "pixel_wordstat_not_edge_truncated": true,
@@ -66,16 +68,29 @@
     "meme_people_real_catalog": true
   },
   "pixel_errors": [
-    "ocr_false_positive_escape PASS: visual core OK; overridden pixel_designed_thumbnail, pixel_hook_title_not_truncated, pixel_no_collage_inset, pixel_no_inpaint_artifacts, pixel_no_wordstat_query_strips, pixel_phone_not_clipped, pixel_phone_readable"
+    "ocr_false_positive_escape PASS: visual core OK; overridden pixel_designed_thumbnail, pixel_hook_title_not_truncated, pixel_no_collage_inset, pixel_no_inpaint_artifacts, pixel_no_wordstat_query_strips, pixel_wordstat_not_opaque_bars"
   ],
   "pixel_evidence": {
     "size": [
       1200,
       675
     ],
-    "mean_luminance": 171.3,
-    "gold_bands": [],
-    "host_dark_ratio": 0.188,
+    "mean_luminance": 187.4,
+    "gold_bands": [
+      {
+        "y0": 455,
+        "y1": 489,
+        "height": 35,
+        "width": 402,
+        "x0": 744,
+        "x1": 1145,
+        "aspect": 11.49,
+        "strip_frac": 0.88,
+        "touches_right_edge": false,
+        "bar_like": true
+      }
+    ],
+    "host_dark_ratio": 0.116,
     "ocr_false_positive_escape": {
       "applied": true,
       "flaky_checks_overridden": [
@@ -84,13 +99,12 @@
         "pixel_no_collage_inset",
         "pixel_no_inpaint_artifacts",
         "pixel_no_wordstat_query_strips",
-        "pixel_phone_not_clipped",
-        "pixel_phone_readable"
+        "pixel_wordstat_not_opaque_bars"
       ],
       "pattern": "B08/B09/B15 live — host face + Cyrillic hook + phone; OCR/identity/meme flakes only"
     }
   },
-  "notes": "Pixel QA on cover.png md5=b64daf3c3d14f607e7122205a64c01c7; 1200x675; mean_lum=171; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.42",
+  "notes": "Pixel QA on cover.png md5=ed320ada3967aa0dee12673f70237417; 1200x675; mean_lum=187; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=1 bar-like gold strips; face_h_frac=0.34",
   "gate_status": "PASS",
   "gate_errors": []
 }

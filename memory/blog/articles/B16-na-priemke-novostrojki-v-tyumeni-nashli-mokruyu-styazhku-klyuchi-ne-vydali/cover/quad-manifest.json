@@ -49,18 +49,18 @@
       "quadrant": "top_left",
       "role": "cover_editorial_hero",
       "alt": "Святослав Шакин риэлтор на приёмке новостройки в Тюмени проверяет влажность стяжки и смотрит на неподписанный акт. Мокрая стяжка — ключи не выдали.",
-      "scene_hint": "Kneels, meter on wet screed, unsigned act; memes corner.",
+      "scene_hint": "Waist-up close face+shoulders; moisture meter in one hand, unsigned act on clipboard; bright empty newbuild.",
       "meme_caption_ru": "",
       "sticky": "Подписывать или ждать?",
       "meme_sticker": true,
       "no_meme": false,
-      "no_cat": false,
+      "no_cat": true,
       "no_person": false,
       "no_host_face": false,
       "cover_emotion": "обеспокоенная гримаса при проверке влажности",
       "meme_picks": [
-        "two_buttons",
-        "surprised_tom"
+        "disappointed_black_guy",
+        "sacrednik_priest"
       ]
     },
     "inline_1": {
@@ -212,20 +212,20 @@
   "cover_phone_cta": "+7 922 001 65 05",
   "cover_emotion": "обеспокоенная гримаса при проверке влажности",
   "cover_motifs": {
-    "composition": "knee_level_right_moisture_meter_wet_screed_hook_left_sacred_zone",
+    "composition": "waist_up_right_close_face_moisture_meter_unsigned_act_hook_left_sacred_zone",
     "location": "bright_sunlit_tyumen_newbuild_empty_apartment_white_walls_panoramic_window",
-    "meme": "two_buttons_sticker_plus_surprised_tom_cutout_corner_only",
-    "prop_set": "moisture_meter_tube_wet_screed_unsigned_act_key_rack_empty_phone_cta",
+    "meme": "disappointed_black_guy_sticker_plus_sacrednik_priest_cutout_corner_only",
+    "prop_set": "moisture_meter_unsigned_act_clipboard_empty_key_rack_phone_cta",
     "sticker_set": "yellow_sticky_podpisyvat_ili_zhdat_gold_tape_corner_only_no_wordstat",
     "joke": "sticky_wet_screed_arrow_to_unsigned_act_keys_withheld",
     "outfit": "teal_workshirt_over_henley_rolled_sleeves_no_blazer",
-    "emotion": "concerned_grimace_kneeling_inspection_not_side_eye",
-    "pose_framing": "knee_level_right_three_quarter_not_left_bust",
-    "action": "presses_moisture_meter_into_wet_screed_points_unsigned_act"
+    "emotion": "concerned_grimace_direct_gaze_inspection_not_side_eye",
+    "pose_framing": "waist_up_right_close_face_shoulders_not_kneeling_not_left_bust",
+    "action": "holds_moisture_meter_one_hand_five_fingers_points_unsigned_act_other_hand"
   },
   "meme_picks": [
-    "two_buttons",
-    "surprised_tom"
+    "disappointed_black_guy",
+    "sacrednik_priest"
   ],
   "image_placement": {
     "mode": "flexible_v2",
