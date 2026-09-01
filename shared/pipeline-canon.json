@@ -214,7 +214,8 @@
         "word_quota_1800_2100",
         "critic_table_in_writer_html",
         "wordstat_phrases_in_h1",
-        "composite_case_meta_disclaimer_in_body"
+        "composite_case_meta_disclaimer_in_body",
+        "academic_lawyer_blog_plain_language_violation"
       ],
       "docs": ["shared/dzen-engagement-lock.md"]
     },

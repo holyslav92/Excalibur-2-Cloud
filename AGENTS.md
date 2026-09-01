@@ -88,6 +88,7 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - Sol выдумывает факты, которых нет в `drafts/writer.html` / research
 - **Spine once FAIL:** пересказ одной сцены в лиде + середине + «итоге»; recap («коротко если некогда»); повтор одних цифр/флагов трижды; lecture-хвост после финала casus
 - **Composite disclaimer FAIL:** «случай собирательный», «без фамилий/адреса ЖК/названия банка», «механика в Тюмени повторяется», modeled/anonymized/«не репортаж» meta-text в теле; gate `no_composite_disclaimer`
+- **Plain language FAIL:** академический/lawyer-blog тон, стопки юртерминов, «заумно»; термин без мгновенного перевода; снять heat casus чеклистом/lecture
 - **Length FAIL:** > ~2400 слов или Дзен 14+ мин; раздутый текст «как раньше» 2600+
 - Cursor пишет Scout/Title/Writer/Sol/Description/Cover-text/Schema prose своей моделью вместо `excalibur_blog_derouter_opus_chat.py`
 - `alt` / caption / WP Media с production-токенами (hook, CTA, memes, scene_hint, semicolon prompt list)
