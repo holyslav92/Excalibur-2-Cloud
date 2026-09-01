@@ -96,8 +96,13 @@ def find_article_dir(root: Path, topic_id: str, slug: str) -> Path | None:
 
 
 def build_media_meta_payload(article_dir: Path, root: Path, public_base: str) -> dict[str, Any]:
-    from excalibur_blog_image_caption_builder import apply_article_captions, resolve_slot_alt, load_hero_name, load_visual_type_labels
-    from excalibur_blog_wp_publish import load_json as _lj, registry_asset_index, resolve_cover_media_fields
+    from excalibur_blog_image_caption_builder import (
+        apply_article_captions,
+        load_hero_name,
+        load_visual_type_labels,
+        resolve_slot_alt,
+    )
+    from excalibur_blog_wp_publish import registry_asset_index, resolve_cover_media_fields
 
     apply_article_captions(article_dir, root)
     meta_path = article_dir / "article.meta.json"
