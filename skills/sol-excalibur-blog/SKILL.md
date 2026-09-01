@@ -7,7 +7,7 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 
 ## OWNER LOCK (permanent)
 
-1. **Dzen engagement** — читай `shared/dzen-engagement-lock.md`: сохранить news-casus arc; read-through ~1400–1600 слов / ~10 мин; spine once; bipolar comment magnet **сразу после** финала casus; subs = голос Святослава, early TG+MAX, agency ending. **Newbuild focus:** `shared/newbuild-focus-lock.md`. Gates: `opening-meta-gate`, `no_tldr_opening`, `comment_magnet_question`. **Без** self-score 9.0 loop.
+1. **Dzen engagement** — читай `shared/dzen-engagement-lock.md`: сохранить news-casus arc; лид 4–6 без рубки; HIT casus+число в первой строке; read-through ~1400–1600 слов / ~10 мин; **тройной пересказ = FAIL**; bipolar comment magnet **сразу после** финала casus; subs = голос Святослава, early TG+MAX, agency ending. **Klyshin:** только энергия первой строки; сюжеты свои. **Newbuild focus:** `shared/newbuild-focus-lock.md`. Gates: `opening-meta-gate`, `no_tldr_opening`, `comment_magnet_question`. **Без** self-score 9.0 loop; **без** рубки 1–2 предложения; **без** копирования кейсов Klyshin / TG-дампов.
 2. Meme/cover — не зона Sol.
 3. Cover fail-fast — не зона Sol.
 
@@ -66,10 +66,10 @@ Longform (7 inline): **3 части на первом проходе** — не 
 3. Перепиши **целиком** в слог тенанта:
    - слова/ходы из good-outputs тенанта;
    - несколько битов под H2;
-   - **лид = news-casus**, проза 4–6 предложений; не how-to checklist; без research-даты и термин-дампа;
+   - **лид = news-casus**, проза **4–6 предложений**; предложение 1 (или первые два) = **casus + число + последствие**; остаток = сцена; **без** warm-up («я риэлтор», атмосфера); не how-to checklist; без research-даты и термин-дампа; **не** рубить абзацы до 1–2 предложений;
    - **запрещено в первом экране:** TL;DR, «Быстрый инсайт», bullet-списки до первого H2;
    - **финал casus** (суд/отмена/деньги) — явный H2 до практики; не обрывай на «расписку написали» без развязки;
-   - **spine once:** не пересказывать casus в лиде + середине + итоге; практика — **один** короткий блок после финала; вырезать recap и lecture-хвосты; **ban:** table + list + «главный вывод» подряд;
+   - **тройной пересказ (FAIL / spine once):** не пересказывать одну сцену в лиде + середине + финале — резать до publish; практика — **один** короткий блок после финала; вырезать recap и lecture-хвосты; **ban:** table + list + «главный вывод» подряд;
    - **comment magnet:** один острый **bipolar**-вопрос «…?» — **сразу после** финала casus; не «а вы как считаете, друзья»;
    - **ending landing (owner lock):** casus горячий (stakes, финал) — **не** размывать; последние 1–2 абзаца **до** end CTA = воздух + agency: остановили бронь/ДДУ до денег / проверка эскроу спасла / разобрали договор до аванса; CTA «подключусь до брони», не «бегите»; **не** «все риэлторы плохие» / «вторичка — мина» / «риски везде — как покупать»; редко — жёсткая потеря только с вилкой «если бы X до аванса»; **ban:** sugar happy ending; чеклист как эмоциональный финал; pure dread без действия;
    - имя автора корпуса в тексте **не** писать;
@@ -81,13 +81,16 @@ Longform (7 inline): **3 части на первом проходе** — не 
    - `drafts/variant-a.html` — копия финала
    - не затирай `drafts/writer.html`
 5. Сверка с `bad-outputs.md` перед сдачей.
-6. **Dzen engagement lock:** `shared/dzen-engagement-lock.md` — **~1400–1600 слов** (~10 мин Дзен max), early TG+MAX после лида, телефон один раз, 2–4 interlink, spine once. **Без** self-score 9.0 loop в Sol.
+6. **Dzen engagement lock:** `shared/dzen-engagement-lock.md` — лид **4–6 предложений** (HIT casus+число; **без рубки**); **~1400–1600 слов** (~10 мин Дзен max); early TG+MAX после лида; телефон один раз; 2–4 interlink; **тройной пересказ = FAIL**. **Klyshin:** только энергия первой строки. **Без** self-score 9.0 loop в Sol.
 
 ## Запреты
 
 - Новые факты, цифры, URL, которых нет у Writer/research
 - Вернуть SEO-робота / пресс-релиз / глоссарий / **how-to checklist** в лид вместо casus
 - TL;DR / «Быстрый инсайт» / bullet-dump в открытии (прозаический лид 4–6 предложений)
+- Рубка абзацев до 1–2 предложений; warm-up вместо HIT в первой строке тела
+- Копирование кейсов Klyshin / архив 2022–24 / чеклисты / TG-дампы
+- **Тройной пересказ** одной сцены в лиде + середине + финале
 - Пропустить comment magnet или вставить риторический «подписывайтесь» вместо острого вопроса
 - Убрать или размыть **финал** (суд, отмена, потеря денег) — обязателен по `dzen-news-casus.md`
 - **Ending landing FAIL:** pure dread без действия; «риски везде — как покупать»; «все риэлторы плохие» / «вторичка — мина»; sugar happy ending; чеклист N шагов как последний эмоциональный beat
