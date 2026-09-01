@@ -7,7 +7,7 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 
 ## OWNER LOCK (permanent)
 
-1. **Dzen engagement** — читай `shared/dzen-engagement-lock.md`: сохранить news-casus arc; лид 4–6 без рубки; HIT casus+число в первой строке; read-through ~1400–1600 слов / ~10 мин; **тройной пересказ = FAIL**; **no composite disclaimer** (конкретный день в комнате, без «случай собирательный»/«без фамилий»); bipolar comment magnet **сразу после** финала casus; subs = голос Святослава, early TG+MAX, agency ending. **Klyshin:** только энергия первой строки; сюжеты свои. **Newbuild focus:** `shared/newbuild-focus-lock.md`. Gates: `opening-meta-gate`, `no_tldr_opening`, `no_composite_disclaimer`, `comment_magnet_question`. **Без** self-score 9.0 loop; **без** рубки 1–2 предложения; **без** копирования кейсов Klyshin / TG-дампов.
+1. **Dzen engagement** — читай `shared/dzen-engagement-lock.md`: сохранить news-casus arc; лид 4–6 без рубки; HIT casus+число в первой строке; read-through ~1400–1600 слов / ~10 мин; **тройной пересказ = FAIL**; **no composite disclaimer** (конкретный день в комнате, без «случай собирательный»/«без фамилий»); **plain language** (kitchen-table, без lawyer-blog/«заумно», термин → простым русским, heat casus не снимать); bipolar comment magnet **сразу после** финала casus; subs = голос Святослава, early TG+MAX, agency ending. **Klyshin:** только энергия первой строки; сюжеты свои. **Newbuild focus:** `shared/newbuild-focus-lock.md`. Gates: `opening-meta-gate`, `no_tldr_opening`, `no_composite_disclaimer`, `comment_magnet_question`. **Без** self-score 9.0 loop; **без** рубки 1–2 предложения; **без** копирования кейсов Klyshin / TG-дампов.
 2. Meme/cover — не зона Sol.
 3. Cover fail-fast — не зона Sol.
 
@@ -70,6 +70,7 @@ Longform (7 inline): **3 части на первом проходе** — не 
    - **запрещено в первом экране:** TL;DR, «Быстрый инсайт», bullet-списки до первого H2;
    - **финал casus** (суд/отмена/деньги) — явный H2 до практики; не обрывай на «расписку написали» без развязки;
    - **no composite disclaimer (FAIL):** casus = конкретный день в комнате; **не** «случай собирательный», «без фамилий/адреса ЖК/названия банка», «механика в Тюмени повторяется», modeled/anonymized/«не репортаж»; не выдумывай реальные ЖК/банк; не объясняй, почему нет имён;
+   - **plain language (kitchen-table):** просто для обычных людей; **сохраняй** casus-тон и HIT первой строки; **ban** академический/lawyer-blog ритм, стопки терминов, «заумно»; термин — только если нужен, сразу простым русским; **не** превращай в чеклист/lecture и **не** снимай heat news-casus;
    - **тройной пересказ (FAIL / spine once):** не пересказывать одну сцену в лиде + середине + финале — резать до publish; практика — **один** короткий блок после финала; вырезать recap и lecture-хвосты; **ban:** table + list + «главный вывод» подряд;
    - **comment magnet:** один острый **bipolar**-вопрос «…?» — **сразу после** финала casus; не «а вы как считаете, друзья»;
    - **ending landing (owner lock):** casus горячий (stakes, финал) — **не** размывать; последние 1–2 абзаца **до** end CTA = воздух + agency: остановили бронь/ДДУ до денег / проверка эскроу спасла / разобрали договор до аванса; CTA «подключусь до брони», не «бегите»; **не** «все риэлторы плохие» / «вторичка — мина» / «риски везде — как покупать»; редко — жёсткая потеря только с вилкой «если бы X до аванса»; **ban:** sugar happy ending; чеклист как эмоциональный финал; pure dread без действия;
@@ -93,6 +94,7 @@ Longform (7 inline): **3 части на первом проходе** — не 
 - Копирование кейсов Klyshin / архив 2022–24 / чеклисты / TG-дампы
 - **Тройной пересказ** одной сцены в лиде + середине + финале
 - **Composite disclaimer FAIL:** «случай собирательный», «без фамилий/адреса ЖК», «механика повторяется», «не репортаж», «моделируемый сюжет» — сцена, не оговорка
+- **Plain language FAIL:** lawyer-blog/академический тон, стопки терминов, «заумно»; снять heat casus чеклистом или lecture-хвостом
 - Пропустить comment magnet или вставить риторический «подписывайтесь» вместо острого вопроса
 - Убрать или размыть **финал** (суд, отмена, потеря денег) — обязателен по `dzen-news-casus.md`
 - **Ending landing FAIL:** pure dread без действия; «риски везде — как покупать»; «все риэлторы плохие» / «вторичка — мина»; sugar happy ending; чеклист N шагов как последний эмоциональный beat

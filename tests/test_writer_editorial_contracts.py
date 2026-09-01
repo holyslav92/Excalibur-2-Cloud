@@ -55,6 +55,7 @@ class WriterEditorialContractsTest(unittest.TestCase):
         self.assertIn("рубка", text)
         self.assertIn("энергию удара", text)
         self.assertIn("no_composite_disclaimer", text)
+        self.assertIn("kitchen-table", text)
         canon = json.loads((ROOT / "shared/pipeline-canon.json").read_text(encoding="utf-8"))
         de = (canon.get("owner_lock_permanent") or {}).get("dzen_engagement") or {}
         self.assertEqual(de.get("status"), "LOCKED_ON_MAIN")
@@ -91,6 +92,11 @@ class WriterEditorialContractsTest(unittest.TestCase):
         prompt = (ROOT / "shared/writer-master-prompt.md").read_text(encoding="utf-8")
         self.assertIn("no_composite_disclaimer", prompt)
         self.assertIn("случай собирательный", prompt.lower())
+
+    def test_writer_master_plain_language_lock(self) -> None:
+        prompt = (ROOT / "shared/writer-master-prompt.md").read_text(encoding="utf-8")
+        self.assertIn("kitchen-table", prompt)
+        self.assertIn("заумно", prompt)
 
     def test_published_titles_script_never_reads_html(self) -> None:
         source = (ROOT / "scripts/excalibur_blog_published_titles.py").read_text(encoding="utf-8")
