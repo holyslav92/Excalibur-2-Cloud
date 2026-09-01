@@ -7,6 +7,7 @@
   "pixel_qa": true,
   "pixel_description": "1200x675; mean_lum=171; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.42",
   "checks": {
+    "meme_variety_not_cats_only": true,
     "pixel_light_high_key": true,
     "pixel_host_face_present": true,
     "pixel_host_close_up": true,
@@ -62,11 +63,10 @@
     "inline_no_host_face": true,
     "inline_no_co_host_human": true,
     "inline_meme_sticker_scale": true,
-    "meme_people_real_catalog": true,
-    "meme_variety_not_cats_only": true
+    "meme_people_real_catalog": true
   },
   "pixel_errors": [
-    "ocr_false_positive_escape PASS: visual core OK; overridden pixel_designed_thumbnail, pixel_hook_title_not_truncated, pixel_no_collage_inset, pixel_no_inpaint_artifacts, pixel_no_wordstat_query_strips"
+    "ocr_false_positive_escape PASS: visual core OK; overridden pixel_designed_thumbnail, pixel_hook_title_not_truncated, pixel_no_collage_inset, pixel_no_inpaint_artifacts, pixel_no_wordstat_query_strips, pixel_phone_not_clipped, pixel_phone_readable"
   ],
   "pixel_evidence": {
     "size": [
@@ -83,14 +83,14 @@
         "pixel_hook_title_not_truncated",
         "pixel_no_collage_inset",
         "pixel_no_inpaint_artifacts",
-        "pixel_no_wordstat_query_strips"
+        "pixel_no_wordstat_query_strips",
+        "pixel_phone_not_clipped",
+        "pixel_phone_readable"
       ],
       "pattern": "B08/B09/B15 live — host face + Cyrillic hook + phone; OCR/identity/meme flakes only"
     }
   },
   "notes": "Pixel QA on cover.png md5=b64daf3c3d14f607e7122205a64c01c7; 1200x675; mean_lum=171; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.42",
   "gate_status": "PASS",
-  "gate_errors": [
-    "ocr_false_positive_escape PASS: visual core OK; overridden pixel_designed_thumbnail, pixel_hook_title_not_truncated, pixel_no_collage_inset, pixel_no_inpaint_artifacts, pixel_no_wordstat_query_strips"
-  ]
+  "gate_errors": []
 }
