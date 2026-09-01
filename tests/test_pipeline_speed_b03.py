@@ -176,5 +176,54 @@ class WordstatOverlayTest(unittest.TestCase):
             self.assertTrue(path.is_file())
 
 
+class QuadPromptWordstatPrefixTest(unittest.TestCase):
+    def test_sanitize_style_prefix_replaces_legacy_wordstat(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_cover_quad_prompt import (
+            WORDSTAT_COVER_PREFIX_BAN,
+            WORDSTAT_COVER_PREFIX_LEGACY,
+            sanitize_style_prefix_no_cover_wordstat,
+        )
+
+        legacy = f"Bright collage. {WORDSTAT_COVER_PREFIX_LEGACY}Meme cutouts."
+        sanitized = sanitize_style_prefix_no_cover_wordstat(legacy)
+        self.assertNotIn(WORDSTAT_COVER_PREFIX_LEGACY, sanitized)
+        self.assertIn(WORDSTAT_COVER_PREFIX_BAN, sanitized)
+
+    def test_canvas1_prompt_bans_wordstat_in_global_prefix(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_cover_quad_prompt import build_prompt
+
+        style = {
+            "global_prompt_prefix": (
+                "High-key collage. 1-3 Wordstat stickers (Тюмень). Meme cutouts."
+            )
+        }
+        manifest = {
+            "cover_hook": "Мокрая стяжка — ключи не выдали",
+            "cover_hook_highlight": "Мокрая",
+            "slots": {
+                "cover": {
+                    "scene_hint": "Host checks wet screed",
+                    "cover_emotion": "grimace",
+                    "sticky": "Подписывать или ждать?",
+                },
+                "inline_1": {"scene_hint": "Room", "visual_type": "realistic_photo", "h2_anchor": "H2"},
+                "inline_2": {"scene_hint": "Table", "visual_type": "comparison_table", "h2_anchor": "H2"},
+                "inline_3": {"scene_hint": "Desk", "visual_type": "realistic_photo", "h2_anchor": "H2"},
+            },
+        }
+        prompt = build_prompt(
+            manifest,
+            style,
+            {},
+            {"types": {}},
+            {},
+            has_cover=True,
+        )
+        self.assertNotIn("1-3 Wordstat stickers", prompt.split("\n", 1)[0])
+        self.assertIn("NO Wordstat query strips on cover", prompt.split("\n", 1)[0])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -381,6 +381,19 @@ def style_is_situational_cat_hero(style: dict) -> bool:
     return motif in {"situational_cat_hero", "cat_hero"}
 
 
+WORDSTAT_COVER_PREFIX_LEGACY = "1-3 Wordstat stickers (Тюмень). "
+WORDSTAT_COVER_PREFIX_BAN = (
+    "NO Wordstat query strips on cover — Scout Wordstat is topic-only. "
+)
+
+
+def sanitize_style_prefix_no_cover_wordstat(style_prefix: str) -> str:
+    """Replace legacy quad global prefix that invites Wordstat strips on cover TL (B12/B16)."""
+    if "Wordstat" not in style_prefix:
+        return style_prefix
+    return style_prefix.replace(WORDSTAT_COVER_PREFIX_LEGACY, WORDSTAT_COVER_PREFIX_BAN)
+
+
 def build_prompt(
     manifest: dict,
     style: dict,
@@ -414,6 +427,8 @@ def build_prompt(
             "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic ink, "
             "gold #dcc5a1 one accent only. Torn paper, gold tape/sticky, informative UI cards."
         )
+    if has_cover:
+        style_prefix = sanitize_style_prefix_no_cover_wordstat(style_prefix)
 
     quadrant_labels = ("Top-left", "Top-right", "Bottom-left", "Bottom-right")
     panel_lines: list[str] = []
@@ -533,11 +548,7 @@ def build_solo_cover_prompt(
         style.get("global_prompt_prefix") or design_code.get("cover_panel_prompt_block") or "",
         320,
     )
-    if "Wordstat" in style_prefix:
-        style_prefix = style_prefix.replace(
-            "1-3 Wordstat stickers (Тюмень). ",
-            "NO Wordstat query strips on cover — Scout Wordstat is topic-only. ",
-        )
+    style_prefix = sanitize_style_prefix_no_cover_wordstat(style_prefix)
 
     bans = (
         "BAN HARD: ANY Cyrillic/latin text on clothes/jacket/vest/chest/torso; Wordstat/search-keyword strips/bars; "
