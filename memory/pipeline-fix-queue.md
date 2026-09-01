@@ -615,7 +615,7 @@ files_changed:
 - `.cursor/skills/cover-qa-excalibur-blog/SKILL.md`
 checks_run:
 - B19 `analyze_cover_pixels` → PASS (would avoid false budget exhaust on same PNG)
-commit: pending
+commit: 6af034a, 1278e59
 
 ## INC-20260901-0812-sol-end-cta-channels-b19
 status: fixed
