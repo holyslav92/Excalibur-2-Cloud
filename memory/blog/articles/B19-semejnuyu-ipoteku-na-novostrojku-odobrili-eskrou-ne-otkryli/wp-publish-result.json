@@ -1,0 +1,28 @@
+{
+  "slug": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli",
+  "topic_id": "B19",
+  "post_id": 9452,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B19-semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 996397,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9452 slug=semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli\nOK categories=32,48\nOK yoast_social_image=1\nOK featured_image=9453\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9454 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli-inline-01.png\nOK inline_alt=9454\nOK inline_caption=9454\nOK inline_description=9454\nOK inline_image_upload=9455 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli-inline-02.png\nOK inline_alt=9455\nOK inline_caption=9455\nOK inline_description=9455\nOK inline_image_upload=9456 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli-inline-03.png\nOK inline_alt=9456\nOK inline_caption=9456\nOK inline_description=9456\nOK inline_image_upload=9457 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli-inline-04.png\nOK inline_alt=9457\nOK inline_caption=9457\nOK inline_description=9457\nOK inline_image_upload=9458 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli-inline-05.png\nOK inline_alt=9458\nOK inline_caption=9458\nOK inline_description=9458\nOK inline_image_upload=9459 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli-inline-06.png\nOK inline_alt=9459\nOK inline_caption=9459\nOK inline_description=9459\nOK inline_image_upload=9460 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli-inline-07.png\nOK inline_alt=9460\nOK inline_caption=9460\nOK inline_description=9460\npermalink={{SITE_BASE}}/blog/ipoteka/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/",
+    "errors": []
+  }
+}

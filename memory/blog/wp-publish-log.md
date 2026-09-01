@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B19 — 2026-09-01
+
+- **topic_id:** B19
+- **slug:** semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli
+- **post_id:** 9452
+- **permalink:** /blog/ipoteka/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/
+- **featured_image:** 9453
+- **inline_images:** 9454–9460 (7)
+- **wp_category_slugs:** ipoteka, matkapital-i-sdelki (category_ids=32,48)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme path not in configured root)
+
 ## B15 — 2026-08-31
 
 - **topic_id:** B15
