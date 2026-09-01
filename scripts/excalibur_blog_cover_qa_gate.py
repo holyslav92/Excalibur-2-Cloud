@@ -90,6 +90,8 @@ PIXEL_REQUIRED = (
     "pixel_no_collage_inset",
     "pixel_layout_not_collapsed",
     "pixel_designed_thumbnail",
+    "pixel_host_hands_anatomy",
+    "pixel_no_banned_thinking_cat",
 )
 
 BANNED_OUTFIT_TOKENS = (

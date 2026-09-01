@@ -21,6 +21,7 @@ from excalibur_blog_quad_slots import (
     slot_forbids_meme_cat_person,
 )
 from excalibur_blog_identity_real import pick_identity_reference
+from excalibur_blog_meme_canon import format_solo_cover_meme_line, load_meme_catalog
 from excalibur_blog_site_base import (
     REDACTED_LITERAL,
     SITE_BASE_PLACEHOLDER,
@@ -528,6 +529,8 @@ def build_solo_cover_prompt(
     sticky = compact(str(cover.get("sticky") or ""), 48)
     outfit = compact(str(motifs.get("outfit") or ""), 100)
     sticky_line = f' Yellow sticky EXACT «{sticky}» pinned left.' if sticky else ""
+    action = compact(str(motifs.get("action") or ""), 100)
+    meme_line = format_solo_cover_meme_line(manifest, load_meme_catalog())
 
     style_prefix = compact(
         style.get("global_prompt_prefix") or design_code.get("cover_panel_prompt_block") or "",
@@ -556,10 +559,12 @@ def build_solo_cover_prompt(
         f"Phone EXACT «{COVER_PHONE_CTA}» white torn paper bottom-RIGHT corner (55–98% width, 70–96% height).\n"
         f"{sticky_line}\n"
         f"Host i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}. "
-        f"Outfit INVENTED: {outfit}. Expression: {emotion}.\n"
+        f"Outfit INVENTED: {outfit}. Expression: {emotion}. Action: {action}. "
+        f"HANDS LOCK: exactly 5 fingers per visible hand, anatomically correct wrists and knuckles; "
+        f"natural grip on props; NO melted/mangled/extra/missing fingers.\n"
         f"{compact(scene, COVER_SCENE_HINT_COMPACT)}. "
         "Close-up face+shoulders LEFT or center-left (~35% frame) — NOT full-bleed face crop, room for headline right. "
-        "Tiny thinking-cat meme sticker bottom-right corner ONLY — ≥80px clear margin from phone/headline. "
+        f"{meme_line} "
         "ZERO Wordstat/search-keyword strips — never paint query bars; optional one yellow sticky from hook only. "
         "Sun flare, tape/pins aesthetic on board only, perfect Cyrillic, #FFF bright."
     )

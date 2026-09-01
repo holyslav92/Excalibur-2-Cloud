@@ -137,6 +137,53 @@
         "pose_framing": "динамичный кадр от колен корпус к камере",
         "action": "показывает красную карточку отмены брони"
       }
+    },
+    {
+      "date": "2026-08-31",
+      "topic_id": "B15",
+      "slug": "v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom",
+      "motifs": {
+        "meme": "thinking_cat_sticker_thinking_paw_tabby_solo_regen_wp9368",
+        "meme_ids": [
+          "thinking_cat"
+        ]
+      }
+    },
+    {
+      "date": "2026-09-01",
+      "topic_id": "WP9385",
+      "slug": "cover_featured_attachment",
+      "motifs": {
+        "meme": "thinking_cat_sticker_thinking_paw_tabby",
+        "meme_ids": [
+          "thinking_cat"
+        ]
+      }
+    },
+    {
+      "date": "2026-09-01",
+      "topic_id": "WP9398",
+      "slug": "cover_featured_attachment",
+      "motifs": {
+        "meme": "thinking_cat_sticker_thinking_paw_tabby",
+        "meme_ids": [
+          "thinking_cat"
+        ]
+      }
+    },
+    {
+      "date": "2026-09-01",
+      "topic_id": "B16",
+      "slug": "na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali",
+      "motifs": {
+        "composition": "waist_up_right_close_face_moisture_meter_unsigned_act_hook_left_sacred_zone",
+        "location": "bright_sunlit_tyumen_newbuild_empty_apartment_white_walls_panoramic_window",
+        "meme": "disappointed_black_guy_sticker_plus_sacrednik_priest_cutout_corner_only",
+        "outfit": "teal_workshirt_over_henley_rolled_sleeves_no_blazer",
+        "emotion": "concerned_grimace_direct_gaze_inspection_not_side_eye",
+        "pose_framing": "waist_up_right_close_face_shoulders_not_kneeling_not_left_bust",
+        "action": "holds_moisture_meter_one_hand_five_fingers_points_unsigned_act_other_hand"
+      }
     }
   ]
 }

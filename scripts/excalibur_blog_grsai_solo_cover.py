@@ -61,13 +61,83 @@ def stamp_qa(article_dir: Path, root: Path, topic_id: str) -> dict[str, Any]:
     return {"status": pixel.status, "errors": pixel.errors, "md5": qa.get("cover_md5")}
 
 
-def write_temp_batch(article_dir: Path, prompt: str, ref_path: Path) -> Path:
+def _record_cover_motifs(article_dir: Path, root: Path, topic_id: str) -> None:
+    """Append cover motifs to used-motifs.json after successful solo regen."""
+    import subprocess
+
+    manifest_path = article_dir / "cover" / "quad-manifest.json"
+    if not manifest_path.is_file():
+        return
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    motifs = manifest.get("cover_motifs") or {}
+    if not motifs:
+        return
+    meta_path = article_dir / "article.meta.json"
+    slug = ""
+    if meta_path.is_file():
+        slug = str(json.loads(meta_path.read_text(encoding="utf-8")).get("slug") or "")
+    cmd = [
+        sys.executable,
+        str(root / "scripts/excalibur_blog_cover_motif_gate.py"),
+        "record",
+        "--topic-id",
+        topic_id,
+        "--slug",
+        slug,
+    ]
+    field_map = {
+        "composition": "--composition",
+        "location": "--location",
+        "meme": "--meme",
+        "prop_set": "--prop-set",
+        "sticker_set": "--sticker-set",
+        "joke": "--joke",
+        "outfit": "--outfit",
+        "emotion": "--emotion",
+        "pose_framing": "--pose-framing",
+        "action": "--action",
+    }
+    for key, flag in field_map.items():
+        value = str(motifs.get(key) or "").strip()
+        if value:
+            cmd.extend([flag, value])
+    subprocess.run(cmd, cwd=root, check=False)
+
+
+def _identity_i2i_reference_paths(root: Path, face_ref: Path) -> list[str]:
+    """FACE primary + body-build refs from identity-real (WHO + medium-slim build)."""
+    from excalibur_blog_identity_real import BODY_BUILD_FILES, IDENTITY_REAL_DIR
+
+    refs: list[str] = []
+    seen: set[str] = set()
+
+    def add(path: Path) -> None:
+        if not path.is_file():
+            return
+        key = str(path.resolve())
+        if key in seen:
+            return
+        seen.add(key)
+        try:
+            refs.append(str(path.relative_to(root)))
+        except ValueError:
+            refs.append(str(path))
+
+    add(face_ref)
+    for spec in BODY_BUILD_FILES:
+        add(root / IDENTITY_REAL_DIR / str(spec["file"]))
+    return refs
+
+
+def write_temp_batch(article_dir: Path, prompt: str, ref_path: Path, root: Path) -> Path:
+    identity_locals = _identity_i2i_reference_paths(root, ref_path)
     batch = {
         "pipeline": "grsai_solo_cover",
         "slot": "cover",
         "output_canvas": "cover/cover.png",
         "prefer_local_reference": True,
-        "local_reference": str(ref_path),
+        "local_reference": identity_locals[0] if identity_locals else str(ref_path),
+        "identity_reference_locals": identity_locals,
         "jobs": [
             {
                 "slot": "cover",
@@ -189,7 +259,7 @@ def main() -> int:
 
     for attempt in range(1, max_attempts + 1):
         print(f"attempt {attempt}/{max_attempts} model={model}", flush=True)
-        batch_path = write_temp_batch(article_dir, prompt, ref_path)
+        batch_path = write_temp_batch(article_dir, prompt, ref_path, root)
 
         attempt_entry: dict[str, Any] = {"attempt": attempt, "model": model}
 
@@ -232,6 +302,7 @@ def main() -> int:
 
         if qa["status"] == "PASS":
             print(f"OK cover_qa PASS md5={qa['md5']}")
+            _record_cover_motifs(article_dir, root, topic_id)
             return 0
 
         last_errors = list(qa["errors"])

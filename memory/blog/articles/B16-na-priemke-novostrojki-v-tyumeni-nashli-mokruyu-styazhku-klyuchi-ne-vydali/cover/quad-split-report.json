@@ -1,0 +1,300 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B16-na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 566,
+              "end": 605
+            },
+            "v_gutter_px": {
+              "start": 1013,
+              "end": 1034
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 9.5,
+              "v_center_offset_px": 0.5,
+              "max_aspect_crop_loss": 0.0414,
+              "per_panel_crop_loss": {
+                "top_left": 0.0069,
+                "top_right": 0.0079,
+                "bottom_left": 0.0405,
+                "bottom_right": 0.0414
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Святослав Шакин риэлтор на приёмке новостройки в Тюмени проверяет влажность стяжки и смотрит на неподписанный акт. Мокрая стяжка — ключи не выдали.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Пустая квартира в новостройке: мокрая стяжка, трещина в стене и холодный подоконник на приёмке.",
+            "h2_anchor": "«Подпишите сейчас — исправим потом»: ключи в обмен на акт"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Таблица сравнивает выдачу ключей сегодня и отдельный акт осмотра при устном обещании исправить.",
+            "h2_anchor": "«Подпишите сейчас — исправим потом»: ключи в обмен на акт"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "На столе застройщика лежит неподписанный акт, ключи перенесены на 45 дней, ипотека продолжается.",
+            "h2_anchor": "Финал: акт не подписали, ключи через 45 дней, ипотека без заселения"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B16-na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 565,
+              "end": 617
+            },
+            "v_gutter_px": {
+              "start": 1015,
+              "end": 1067
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 15.0,
+              "v_center_offset_px": 17.0,
+              "max_aspect_crop_loss": 0.0631,
+              "per_panel_crop_loss": {
+                "top_left": 0.0108,
+                "top_right": 0.023,
+                "bottom_left": 0.0631,
+                "bottom_right": 0.0306
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "На стойке лежит проект акта осмотра: серьёзность дефекта требует документов, а не ощущений.",
+            "h2_anchor": "Документы с 2026 года: специалист СРО при любом разногласии"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема процедуры с 2026 года: специалист СРО при споре, осмотр за 5 дней, исправление до 60 дней.",
+            "h2_anchor": "На приёмке в Тюмени: мокрая стяжка, трещина и холодный подоконник"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Шкала сроков фиксации дефектов: доверенность, фото с привязкой, два экземпляра, отказ зафиксировать.",
+            "h2_anchor": "Существенный дефект или перегиб: где граница отказа от подписи"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Схема цены решения: платёж по графику, аренда плюс ипотека, лимит три процента, ручка как инструмент.",
+            "h2_anchor": "Как фиксировать дефекты на приёмке: таблица и перечень"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — «Подпишите сейчас — исправим потом»: ключи в обмен на акт",
+    "skip inline_2: already correct under H2 — «Подпишите сейчас — исправим потом»: ключи в обмен на акт",
+    "skip inline_3: already correct under H2 — Финал: акт не подписали, ключи через 45 дней, ипотека без заселения",
+    "moved inline_4 → H2 — Документы с 2026 года: специалист СРО при любом разногласии (was under [существенный дефект или перегиб: где граница отказа от подписи]; removed=1)",
+    "moved inline_5 → H2 — На приёмке в Тюмени: мокрая стяжка, трещина и холодный подоконник (was under [документы с 2026 года: специалист сро при любом разногласии]; removed=1)",
+    "moved inline_6 → H2 — Существенный дефект или перегиб: где граница отказа от подписи (was under [как фиксировать дефекты на приёмке: таблица и перечень]; removed=1)",
+    "moved inline_7 → H2 — Как фиксировать дефекты на приёмке: таблица и перечень (was under [цена решения: ипотека, аренда и денежные требования]; removed=1)"
+  ]
+}
