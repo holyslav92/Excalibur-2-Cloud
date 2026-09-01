@@ -1,0 +1,9 @@
+{
+  "topic_id": "B19",
+  "description": "В Тюмени семья уже выбрала квартиру, а банк на финальной проверке увидел старый маткапитал без детских долей. Бронь сгорела, зато эскроу не успели пополнить.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

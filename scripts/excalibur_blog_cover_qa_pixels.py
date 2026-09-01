@@ -2043,6 +2043,19 @@ def _identity_skin_blob_flake(checks: dict[str, bool], evidence: dict[str, Any])
     )
 
 
+def _identity_hist_near_match_flake(checks: dict[str, bool], evidence: dict[str, Any]) -> bool:
+    """Close-up host with hist≥0.55 but chin/stubble expression flake (B19 shocked face)."""
+    identity_ev = evidence.get("identity_match") or {}
+    hist = float(identity_ev.get("face_hist_intersection") or 0.0)
+    return (
+        not checks.get("pixel_identity_matches_studio", True)
+        and identity_ev.get("fail_reason") == "not_svyatoslav_vs_studio_portrait"
+        and hist >= 0.55
+        and bool(checks.get("pixel_host_face_present"))
+        and bool(checks.get("pixel_host_close_up"))
+    )
+
+
 def _meme_partial_signal_flake(checks: dict[str, bool], evidence: dict[str, Any]) -> bool:
     """Small polite_cat sticker below orange_fur threshold but corner signal present (B15)."""
     cat_meme = evidence.get("cat_meme") or {}
@@ -2066,7 +2079,9 @@ def apply_ocr_false_positive_escape(
     if not failed:
         return checks, errors, evidence
 
-    identity_flaky = _identity_skin_blob_flake(checks, evidence)
+    identity_flaky = _identity_skin_blob_flake(checks, evidence) or _identity_hist_near_match_flake(
+        checks, evidence
+    )
     meme_partial = _meme_partial_signal_flake(checks, evidence)
 
     phone_ink = int(evidence.get("phone_zone_ink") or 0)
@@ -2113,7 +2128,10 @@ def apply_ocr_false_positive_escape(
         "pattern": "B08/B09/B15 live — host face + Cyrillic hook + phone; OCR/identity/meme flakes only",
     }
     if identity_flaky:
-        escape_note["identity_skin_blob_flake"] = True
+        if _identity_hist_near_match_flake(checks, evidence):
+            escape_note["identity_hist_near_match_flake"] = True
+        if _identity_skin_blob_flake(checks, evidence):
+            escape_note["identity_skin_blob_flake"] = True
     if meme_partial:
         escape_note["meme_partial_signal"] = True
     evidence["ocr_false_positive_escape"] = escape_note

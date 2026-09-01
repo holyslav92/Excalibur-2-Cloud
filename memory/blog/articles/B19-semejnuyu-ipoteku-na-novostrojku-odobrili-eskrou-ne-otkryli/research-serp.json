@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-01",
+    "today_ru": "01.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B19",
+    "title": "Семейную ипотеку на новостройку одобрили — эскроу не открыли",
+    "h1": "Семейную ипотеку на новостройку одобрили — эскроу не открыли",
+    "slug": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli",
+    "primary_query": "Семейную ипотеку на новостройку одобрили — эскроу не открыли",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "Семейную ипотеку на новостройку одобрили — эскроу не открыли 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Ипотека на новостройку 2026: аккредитация ЖК, эскроу, транши",
+          "url": "https://novostroikino.ru/blog/kak-ustroena-ipoteka-na-novostroyku-akkreditatsiya-transhi-2026/",
+          "snippet": ""
+        },
+        {
+          "title": "Семейная ипотека в 2026 году: условия, как получить кредит с ...",
+          "url": "https://blog.domclick.ru/ipoteka/post/semejnaya-ipoteka-kak-poluchit-kredit-s-gosudarstvennoj-podderzhkoj",
+          "snippet": "Если вы впервые оформляете ДДУ на новостройку в ипотеку, разберём по шагам, что такое аккредитация жилого комплекса, как работает эскроу-счёт и чем траншевая схема выдачи кредита отличается от обычной — и на что это влияет в цифрах."
+        },
+        {
+          "title": "Семейная ипотека на новостройку: условия 2026",
+          "url": "https://kvarnado.ru/semejnaya-ipoteka/guide-semeynaya-ipoteka-na-novostroyku-usloviya",
+          "snippet": "Программа была запущена еще в 2018 году, но с тех пор ее параметры неоднократно менялись. Разбираемся, кто, как и на каких условиях может получить семейную ипотеку в 2026 году."
+        },
+        {
+          "title": "Ипотека на новостройку 2026: эскроу, ставки, риски | Кредит Просто",
+          "url": "https://creditprosto.ru/zhurnal/ipoteka-na-novostroyku/",
+          "snippet": "Семейная ипотека в 2026 году по-прежнему остаётся рабочим инструментом для покупки новостройки, если заранее проверить ставку, взнос и требования банка к объекту."
+        },
+        {
+          "title": "Изменения в программе семейной ипотеки с 1 октября 2026 года:",
+          "url": "https://lenta.ru/articles/2026/06/30/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-goda/",
+          "snippet": "Как устроена ипотека на новостройку в 2026: счета эскроу, проектное финансирование, ставки, госпрограммы, риски и пошаговый разбор сделки от заявки до ключей."
+        },
+        {
+          "title": "Почему семейная ипотека только на новостройки: разбор",
+          "url": "https://www.kvarnado.ru/semejnaya-ipoteka/guide-pochemu-semeynaya-ipoteka-tolko-na-novostroyki",
+          "snippet": "До 1 октября 2026 года она продолжит действовать в нынешнем виде. «Лента.ру» рассказывает, какие именно изменения обсуждаются и как нововведения повлияют на заемщиков с одним, двумя, тремя и..."
+        }
+      ],
+      "searched_at": "2026-09-01"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "Семейную ипотеку на новостройку одобрили — эскроу не открыли 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Семейная ипотека в 2026 году: условия, как получить кредит с ...",
+          "url": "https://blog.domclick.ru/ipoteka/post/semejnaya-ipoteka-kak-poluchit-kredit-s-gosudarstvennoj-podderzhkoj",
+          "snippet": ""
+        },
+        {
+          "title": "Что изменится в условиях Семейной ипотеки с 1 октября 2026 года ...",
+          "url": "https://blog.domclick.ru/novosti/post/chto-izmenitsya-v-usloviyah-semejnoj-ipoteki-s-1-oktyabrya-2026-goda-prognozy-ekspertov",
+          "snippet": "Программа была запущена еще в 2018 году, но с тех пор ее параметры неоднократно менялись. Разбираемся, кто, как и на каких условиях может получить семейную ипотеку в 2026 году."
+        },
+        {
+          "title": "Семейная ипотека в 2026 году: актуальные условия, изменения, кто ...",
+          "url": "https://101-app.com/blog/semejnaya-ipoteka-2026-usloviya-izmeneniya-banki",
+          "snippet": "Минфин официально подтвердил, что параметры программы пока дорабатываются, а решение об изменениях будет принято не ранее 1 октября 2026 года."
+        },
+        {
+          "title": "Изменения в программе семейной ипотеки с 1 октября 2026 года:",
+          "url": "https://lenta.ru/articles/2026/06/30/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-goda/",
+          "snippet": "Что изменилось в семейной ипотеке в 2026 году? Главное изменение 2026 года — правило «одна семья — одна льготная ипотека», которое действует с 1 февраля 2026 года."
+        },
+        {
+          "title": "Семейная ипотека на новостройку: условия 2026",
+          "url": "https://kvarnado.ru/semejnaya-ipoteka/guide-semeynaya-ipoteka-na-novostroyku-usloviya",
+          "snippet": "До 1 октября 2026 года она продолжит действовать в нынешнем виде. «Лента.ру» рассказывает, какие именно изменения обсуждаются и как нововведения повлияют на заемщиков с одним, двумя, тремя и..."
+        },
+        {
+          "title": "Почему семейная ипотека только на новостройки: разбор",
+          "url": "https://www.kvarnado.ru/semejnaya-ipoteka/guide-pochemu-semeynaya-ipoteka-tolko-na-novostroyki",
+          "snippet": "Семейная ипотека в 2026 году по-прежнему остаётся рабочим инструментом для покупки новостройки, если заранее проверить ставку, взнос и требования банка к объекту."
+        }
+      ],
+      "searched_at": "2026-09-01"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "Семейную ипотеку на новостройку одобрили — эскроу не открыли official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Семейная ипотека в 2026 году: условия, как получить кредит с ...",
+          "url": "https://blog.domclick.ru/ipoteka/post/semejnaya-ipoteka-kak-poluchit-kredit-s-gosudarstvennoj-podderzhkoj",
+          "snippet": ""
+        },
+        {
+          "title": "Семейная ипотека с 1 октября 2026 года: как изменятся условия ...",
+          "url": "https://lenta.ru/articles/2026/06/30/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-goda/",
+          "snippet": "Программа была запущена еще в 2018 году, но с тех пор ее параметры неоднократно менялись. Разбираемся, кто, как и на каких условиях может получить семейную ипотеку в 2026 году."
+        },
+        {
+          "title": "Семейная ипотека в 2026 году: актуальные условия, изменения, кто ...",
+          "url": "https://101-app.com/blog/semejnaya-ipoteka-2026-usloviya-izmeneniya-banki",
+          "snippet": "До 1 октября 2026 года она продолжит действовать в нынешнем виде. «Лента.ру» рассказывает, какие именно изменения обсуждаются и как нововведения повлияют на заемщиков с одним, двумя, тремя и..."
+        },
+        {
+          "title": "Семейная ипотека 2026 на новостройку: условия и ставки - АН «Владис»",
+          "url": "https://vladis.ru/blog/semeynaya-ipoteka-usloviya-2026-na-novostroyku",
+          "snippet": "Семейная ипотека в 2026: что поменялось и каких сюрпризов еще ждать? Разбираем семейную ипотеку в 2026 году: изменения, условия, кто подходит, что можно купить и какие банки выдают."
+        },
+        {
+          "title": "Семейная ипотека в 2026 году: новые правила, ограничения и кому теперь ...",
+          "url": "https://www.mbk.ru/blogs/semeinaia-ipoteka-v-2026-2028-godax-novye-pravila-i-cto-izmenitsia-dlia-zaemshhikov",
+          "snippet": "Полный обзор условий семейной ипотеки на новостройки в 2026 году. Узнайте актуальные ставки (6%), требования к семьям и детям, размер первоначального взноса и как использовать маткапитал."
+        },
+        {
+          "title": "Новые правила семейной ипотеки: что изменится, ответы на главные вопросы",
+          "url": "https://www.cian.ru/stati-novye-uslovija-semejnoj-ipoteki-otvety-na-voprosy-335926/",
+          "snippet": "С февраля 2026 года семейная ипотека изменилась: теперь действует правило одной ипотеки на семью, а банки стали строже одобрять заявки."
+        }
+      ],
+      "searched_at": "2026-09-01"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com Семейную ипотеку на новостройку одобрили — эскроу не открыли 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "GitHub - scaik/scam-max-disabler: Позволяет убедительно показать, что ...",
+          "url": "https://github.com/scaik/scam-max-disabler",
+          "snippet": ""
+        },
+        {
+          "title": "GitHub - femarko/mortgage_calc",
+          "url": "https://github.com/Femarko/mortgage_calc",
+          "snippet": "Делает вид, что MAX падает при запуске, хотя на самом деле он не удалён. Переустановка MAX не помогает — он продолжает казаться «нерабочим». Не требует root и удаления приложений."
+        },
+        {
+          "title": "docs/favicon.svg at main · sirlund/docs · GitHub",
+          "url": "https://github.com/sirlund/docs/blob/main/favicon.svg",
+          "snippet": "Задача: В новом банке решили начать выдавать ипотеку. Появилась необходимость разработать для них ипотечный калькулятор. Нужно рассчитать финальную процентную ставку по ипотеке."
+        },
+        {
+          "title": "[Проблема] ПОСЛЕ ЗАПРЕТА НЕ РАБОТАЕТ ТВИЧ #3884",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/issues/3884",
+          "snippet": "Contribute to sirlund/docs development by creating an account on GitHub."
+        },
+        {
+          "title": "RMTS-Manual/media/drill_pattern.svg at master - GitHub",
+          "url": "https://github.com/reilleya/RMTS-Manual/blob/master/media/drill_pattern.svg",
+          "snippet": "Опишите вашу проблему после запрета не работает твич, сначала думал что это у меня проблемы с интернетом, но потом после того как я закрыл запрет твич сразу же заработал."
+        },
+        {
+          "title": "xiaohongshu-mcp/assets/cursor_mcp_settings.png at main · xpzouying ...",
+          "url": "https://github.com/xpzouying/xiaohongshu-mcp/blob/main/assets/cursor_mcp_settings.png",
+          "snippet": "User manual for RMTS. Contribute to reilleya/RMTS-Manual development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-09-01"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "Семейную ипотеку на новостройку одобрили — эскроу не открыли forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Ипотека на новостройку 2026: аккредитация ЖК, эскроу, транши",
+          "url": "https://novostroikino.ru/blog/kak-ustroena-ipoteka-na-novostroyku-akkreditatsiya-transhi-2026/",
+          "snippet": ""
+        },
+        {
+          "title": "Почему семейная ипотека только на новостройки: разбор",
+          "url": "https://www.kvarnado.ru/semejnaya-ipoteka/guide-pochemu-semeynaya-ipoteka-tolko-na-novostroyki",
+          "snippet": "Если вы впервые оформляете ДДУ на новостройку в ипотеку, разберём по шагам, что такое аккредитация жилого комплекса, как работает эскроу-счёт и чем траншевая схема выдачи кредита отличается от обычной — и на что это влияет в цифрах."
+        },
+        {
+          "title": "Семейная ипотека в 2026 году: условия, как получить кредит с ...",
+          "url": "https://blog.domclick.ru/ipoteka/post/semejnaya-ipoteka-kak-poluchit-kredit-s-gosudarstvennoj-podderzhkoj",
+          "snippet": "Короткий ответ: семейная ипотека на вторичку в большинстве случаев не подходит. Исключения бывают, но они редкие и зависят от региона, статуса дома и конкретных правил банка."
+        },
+        {
+          "title": "Ипотека на новостройку 2026: эскроу, ставки, риски | Кредит Просто",
+          "url": "https://creditprosto.ru/zhurnal/ipoteka-na-novostroyku/",
+          "snippet": "Программа была запущена еще в 2018 году, но с тех пор ее параметры неоднократно менялись. Разбираемся, кто, как и на каких условиях может получить семейную ипотеку в 2026 году."
+        },
+        {
+          "title": "Семейная ипотека в 2026 году: новые правила и ставки",
+          "url": "https://rb.ru/reviews/semeynaya-ipoteka-2026/",
+          "snippet": "Как устроена ипотека на новостройку в 2026: счета эскроу, проектное финансирование, ставки, госпрограммы, риски и пошаговый разбор сделки от заявки до ключей."
+        },
+        {
+          "title": "Семейная ипотека в 2026 году: актуальные условия, изменения, кто ...",
+          "url": "https://101-app.com/blog/semejnaya-ipoteka-2026-usloviya-izmeneniya-banki",
+          "snippet": "Текущие условия семейной ипотеки, включая ставку до 6%, сохраняются без изменений до 1 октября 2026 года. В правительстве обсуждают новые параметры программы — в том числе дифференцированную ставку, которую могут привязать к количеству детей."
+        }
+      ],
+      "searched_at": "2026-09-01"
+    }
+  ],
+  "errors": []
+}
