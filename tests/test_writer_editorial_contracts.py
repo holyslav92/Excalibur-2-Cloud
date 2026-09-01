@@ -54,6 +54,7 @@ class WriterEditorialContractsTest(unittest.TestCase):
         self.assertIn("тройной пересказ", text)
         self.assertIn("рубка", text)
         self.assertIn("энергию удара", text)
+        self.assertIn("no_composite_disclaimer", text)
         canon = json.loads((ROOT / "shared/pipeline-canon.json").read_text(encoding="utf-8"))
         de = (canon.get("owner_lock_permanent") or {}).get("dzen_engagement") or {}
         self.assertEqual(de.get("status"), "LOCKED_ON_MAIN")
@@ -85,6 +86,11 @@ class WriterEditorialContractsTest(unittest.TestCase):
         self.assertFalse(canon["writer_is_final"])
         self.assertIn("memory/blog/articles/*/article.html", canon["writer_forbidden_sources"])
         self.assertEqual(canon["opening_rules"].get("soul"), "shared/SOUL.md")
+
+    def test_writer_master_bans_composite_disclaimer(self) -> None:
+        prompt = (ROOT / "shared/writer-master-prompt.md").read_text(encoding="utf-8")
+        self.assertIn("no_composite_disclaimer", prompt)
+        self.assertIn("случай собирательный", prompt.lower())
 
     def test_published_titles_script_never_reads_html(self) -> None:
         source = (ROOT / "scripts/excalibur_blog_published_titles.py").read_text(encoding="utf-8")

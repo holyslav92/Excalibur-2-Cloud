@@ -63,6 +63,15 @@ Cover-QA, story-duplicate clusters, Derouter split, Wordstat MCP-KV gate.
 
 Полезная часть («что проверить») — **после** истории, как **разбор последствий**, не вместо неё.
 
+### Casus specificity — no composite disclaimer (owner lock 2026-09-01)
+
+Casus = **конкретный день в комнате** (звонок, офис банка, кухня перед бронью). Анонимизация **молча**:
+«семья», «застройщик», «банк» — без реальных названий ЖК/банков и **без** объяснения читателю.
+
+**FAIL в теле:** «Случай собирательный»; «без фамилий» / «без адреса ЖК» / «без названия банка»;
+«механика в Тюмени повторяется из месяца в месяц»; любой disclaimer про composite / modeled / anonymized / «не репортаж».
+Gate: `no_composite_disclaimer` (`scripts/excalibur_blog_composite_disclaimer.py`).
+
 ---
 
 ## Заголовки = news headlines

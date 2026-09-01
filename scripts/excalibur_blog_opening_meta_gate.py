@@ -16,6 +16,12 @@ import sys
 from pathlib import Path
 from typing import Any
 
+_SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_DIR))
+
+from excalibur_blog_composite_disclaimer import composite_disclaimer_hits
+
 
 # Calque of "API" that reads as machine Russian, not Lebedev.
 STYK_API_RE = re.compile(
@@ -153,6 +159,8 @@ def check_article(article_dir: Path) -> dict[str, Any]:
         screen = first_screen_html(html_raw)
         for h in opening_tldr_errors(screen):
             errors.append(f"article.html-opening: {h}")
+        for h in composite_disclaimer_hits(html_raw):
+            errors.append(f"article.html: {h}")
     else:
         errors.append("article.html missing")
 

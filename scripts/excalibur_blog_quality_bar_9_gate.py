@@ -20,6 +20,8 @@ _SCRIPTS_DIR = Path(__file__).resolve().parent
 if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
+from excalibur_blog_composite_disclaimer import check_no_composite_disclaimer
+
 
 WORD_TARGET_MIN = 1800
 WORD_TARGET_MAX = 2200
@@ -70,6 +72,7 @@ REQUIRED_CHECKS = (
     "no_unlabeled_live_inventory",
     "comparison_tables_differ",
     "no_tldr_opening",
+    "no_composite_disclaimer",
     "comment_magnet_question",
     "cover_qa_pass",
     "cover_phone_on_cover",
@@ -636,6 +639,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
     checks["comparison_tables_differ"] = tbl_ok
     tldr_ok, tldr_errors = check_no_tldr_opening(html)
     checks["no_tldr_opening"] = tldr_ok
+    composite_ok, composite_errors = check_no_composite_disclaimer(html)
+    checks["no_composite_disclaimer"] = composite_ok
     magnet_ok, magnet_errors = check_comment_magnet(html)
     checks["comment_magnet_question"] = magnet_ok
     checks["cover_phone_on_cover"] = check_cover_phone(article_dir)
@@ -677,6 +682,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
                 )
             elif key == "no_tldr_opening" and tldr_errors:
                 errors.extend(tldr_errors)
+            elif key == "no_composite_disclaimer" and composite_errors:
+                errors.extend(composite_errors)
             elif key == "comment_magnet_question" and magnet_errors:
                 errors.extend(magnet_errors)
             elif key == "image_alt_human" and alt_errors:
