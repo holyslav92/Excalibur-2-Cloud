@@ -224,12 +224,12 @@ def main() -> int:
         return 1
 
     identity_suffix = (
-        "\nIDENTITY LOCK (mandatory): exact same man as reference photo — "
-        "28 years old, medium-slim build, round-oval face, dark brown short hair tapered sides, "
+        "\nIDENTITY LOCK (mandatory): exact same man as ALL attached identity-real reference photos — "
+        "Svyatoslav Shakin, 28 years old, medium-slim build, round-oval face, dark brown short hair tapered sides, "
         "warm dark brown eyes, full dark brows. "
         "MANDATORY visible dark five-o'clock-shadow stubble on jaw, chin and upper lip — "
-        "same density and pattern as reference; NEVER clean-shaven, NEVER fashion-model jaw. "
-        "Bone structure, hairline, stubble pattern, eye shape MUST match studio portrait. "
+        "same density and pattern as face-studio reference; NEVER clean-shaven, NEVER stock model, NEVER different man. "
+        "Bone structure, hairline, stubble pattern, eye shape MUST match studio portrait exactly. "
         "NEW invented outfit and emotion/scene — do NOT clone reference blazer/pose/background."
     )
     prompt = prompt + identity_suffix
@@ -301,6 +301,28 @@ def main() -> int:
         attempt_entry["qa_errors"] = list(qa["errors"])
 
         if qa["status"] == "PASS":
+            # Owner gates: identity + hands never waived by OCR escape.
+            from excalibur_blog_cover_qa_pixels import analyze_cover_pixels, load_json as load_json_pixels
+
+            manifest = load_json_pixels(article_dir / "cover" / "quad-manifest.json")
+            pixel = analyze_cover_pixels(article_dir / "cover" / "cover.png", manifest=manifest)
+            owner_blockers: list[str] = []
+            if not pixel.checks.get("pixel_identity_matches_studio"):
+                owner_blockers.append("pixel_identity_matches_studio")
+            if not pixel.checks.get("pixel_host_hands_anatomy"):
+                owner_blockers.append("pixel_host_hands_anatomy")
+            if owner_blockers:
+                qa["status"] = "FAIL"
+                qa["errors"] = list(qa.get("errors") or []) + [
+                    f"owner_gate_blocker: {','.join(owner_blockers)}"
+                ]
+                print(f"WARN owner gate block SFTP: {owner_blockers}", flush=True)
+                last_errors = list(qa["errors"])
+                attempt_entry["qa_status"] = "FAIL"
+                attempt_entry["qa_fail"] = True
+                attempt_entry["owner_gate_blockers"] = owner_blockers
+                attempts_log.append(attempt_entry)
+                continue
             print(f"OK cover_qa PASS md5={qa['md5']}")
             _record_cover_motifs(article_dir, root, topic_id)
             return 0

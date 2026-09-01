@@ -8,10 +8,10 @@
     "path": "memory/blog/articles/B16-na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/cover/cover.png",
     "source": "existing_file",
     "decode_verified": true,
-    "bytes": 1094411,
+    "bytes": 1114102,
     "detected_format": "png"
   },
-  "raw_output": "OK post=9439 slug=na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali\nOK categories=36,54,58\nOK yoast_social_image=1\nOK featured_image=9489\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/\n",
+  "raw_output": "OK post=9439 slug=na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali\nOK categories=36,54,58\nOK yoast_social_image=1\nOK featured_image=9503\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/\n",
   "media_check": {
     "featured_ok": true,
     "inline_ok": 0,
