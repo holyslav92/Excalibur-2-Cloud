@@ -93,7 +93,7 @@ Dual CTA (мягко): «напишите на консультацию» **ил
 - Wordstat-стикеры **1–3**, **не перекрывают** главный заголовок (positions x≥0.68; PIL overlay если модель накрыла title).
 - Мемы TOP-100 — **маленькие**, не hero; host = единственный крупный человек.
 - Cover-QA checks: `title_not_occluded`, `outfit_invented`, `action_invented`, `emotion_not_copied_from_recent_covers`.
-- **Alt/caption (HARD):** короткая русская фраза — кто/что на кадре + смысл кейса (cover) или что показывает инфографика (inline). **Запрещено навсегда:** hook, CTA, memes, scene_hint, sticky, prompt, i2i, quad, inline_N, «мемы» как тег, списки через `;`. Builder: `scripts/excalibur_blog_image_caption_builder.py`. Gate: `image_alt_human`.
+- **Alt/caption (HARD):** одна короткая русская SEO-фраза **80–140 символов** — смысл кейса (cover) или раздела (inline). **Подпись featured (WP caption) = пустая** — Dzen показывает caption как текст в ленте. **Запрещено навсегда:** hook, CTA, memes, scene_hint, scene-painting («рядом лежит», «у стойки», дубль имени хоста, склейка с hook), sticky, prompt, i2i, quad, inline_N, «мемы» как тег, списки через `;`. Builder: `scripts/excalibur_blog_image_caption_builder.py`. Gate: `image_alt_human`.
 
 ## INLINES
 

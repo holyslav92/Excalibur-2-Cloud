@@ -362,7 +362,7 @@
     "image_alt_caption": {
       "builder": "scripts/excalibur_blog_image_caption_builder.py",
       "gate": "image_alt_human",
-      "human_ru": "1 short sentence: who/what on frame + article meaning (cover) or diagram content (inline)",
+      "human_ru": "1 short Russian SEO sentence 80-140 chars (cover topic / inline section); featured WP caption empty",
       "forbidden_forever": [
         "hook",
         "CTA",

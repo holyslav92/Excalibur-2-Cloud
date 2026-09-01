@@ -235,10 +235,14 @@ def build_attachment_fields(
     description: str = "",
     title_fallback: str = "",
     h2_anchor: str = "",
+    use_alt_as_caption: bool = True,
 ) -> dict[str, str]:
     """Map texts to WP Media Library fields: alt / caption / description / title."""
     alt_n = normalize_media_text(alt)
-    caption_n = normalize_media_text(caption) or alt_n
+    if use_alt_as_caption:
+        caption_n = normalize_media_text(caption) or alt_n
+    else:
+        caption_n = normalize_media_text(caption)
     desc_n = normalize_media_text(description)
     if not desc_n:
         h2 = normalize_media_text(h2_anchor)
@@ -336,9 +340,10 @@ def resolve_cover_media_fields(
         )
     return build_attachment_fields(
         alt=str(alt),
-        caption=str(alt),
+        caption="",
         description=str(alt),
         title_fallback="cover",
+        use_alt_as_caption=False,
     )
 
 
@@ -375,10 +380,11 @@ def resolve_inline_media_fields(
             description = alt
     return build_attachment_fields(
         alt=alt,
-        caption=caption,
+        caption="",
         description=description,
         title_fallback=title_fallback,
         h2_anchor=h2,
+        use_alt_as_caption=False,
     )
 
 
