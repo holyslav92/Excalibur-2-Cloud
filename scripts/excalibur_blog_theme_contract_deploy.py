@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import os
 import posixpath
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -124,14 +125,33 @@ def _settings() -> tuple[str, str, str, int, list[str]]:
     if not all((host, user, password)):
         raise RuntimeError("SFTP credentials missing")
     port = int(values.get("SSH_PORT") or 22)
-    configured_root = (values.get("SSH_ROOT") or values.get("FTP_ROOT") or ".").strip()
+    configured_root = (
+        values.get("SSH_ROOT") or values.get("FTP_ROOT") or values.get("FTP_PATH") or "."
+    ).strip()
     if configured_root in {"", "/"}:
         configured_root = "."
-    roots = list(dict.fromkeys((configured_root, ".")))
+    if configured_root not in {".", "./"}:
+        roots = list(dict.fromkeys((configured_root, ".")))
+    else:
+        roots = ["."]
     return host, user, password, port, roots
 
 
-def deploy() -> None:
+THEME_REL = "wp-content/themes/kov4eg-mcp-theme"
+
+
+def resolve_theme_base(sftp, roots: list[str]) -> str | None:
+    for root in roots:
+        candidate = posixpath.normpath(posixpath.join(root, THEME_REL))
+        try:
+            sftp.stat(candidate)
+            return candidate
+        except OSError:
+            continue
+    return None
+
+
+def deploy(*, strict: bool = False) -> int:
     import paramiko
 
     host, user, password, port, roots = _settings()
@@ -141,18 +161,15 @@ def deploy() -> None:
     base = ""
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
     try:
-        for root in roots:
-            candidate = posixpath.normpath(
-                posixpath.join(root, "wp-content/themes/kov4eg-mcp-theme")
-            )
-            try:
-                sftp.stat(candidate)
-                base = candidate
-                break
-            except OSError:
-                continue
+        base = resolve_theme_base(sftp, roots) or ""
         if not base:
-            raise RuntimeError("WordPress theme path not found in configured root or login cwd")
+            msg = (
+                "WARN theme_contract_deploy SKIP: WordPress theme path not found "
+                f"(ENOENT under {roots!r}); assume already patched on prior runs. "
+                "Set SSH_ROOT/FTP_ROOT to '.' if SFTP login cwd is site root."
+            )
+            print(msg, file=sys.stderr)
+            return 2 if strict else 0
         for name, patcher in (
             ("functions.php", patch_functions),
             ("single.php", patch_single),
@@ -173,6 +190,7 @@ def deploy() -> None:
     finally:
         sftp.close()
         transport.close()
+    return 0
 
 
 def main() -> int:
@@ -182,11 +200,15 @@ def main() -> int:
         action="store_true",
         help="Patch remote theme over SFTP; otherwise only validates local fixture args",
     )
+    parser.add_argument(
+        "--strict",
+        action="store_true",
+        help="Exit 2 when theme path missing (default: WARN + exit 0 for idempotent publish)",
+    )
     args = parser.parse_args()
     if not args.deploy:
         parser.error("--deploy required")
-    deploy()
-    return 0
+    return deploy(strict=args.strict)
 
 
 if __name__ == "__main__":

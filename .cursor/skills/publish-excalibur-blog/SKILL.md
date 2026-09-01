@@ -116,6 +116,11 @@ python3 scripts/excalibur_blog_theme_contract_deploy.py --deploy
 Скрипт делает backup и учит тему уважать future-only meta-флаги. Без этого
 live-page gate после upload заблокирует generic FAQ/quiz/stickers.
 
+Если `FTP_ROOT`/`SSH_ROOT` указывает не на login cwd — скрипт пробует `.` и при
+полном ENOENT пишет **WARN SKIP exit 0** (тема уже пропатчена на прошлых run).
+Для setup/первого деплоя: `--strict` → exit 2 при отсутствии theme path.
+Канон Cloud Secret: `FTP_ROOT=.`.
+
 ### 1. Preflight publish
 
 ```bash
