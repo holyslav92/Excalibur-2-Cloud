@@ -96,9 +96,9 @@ python3 scripts/excalibur_blog_cover_fixer.py --article-dir "$ARTICLE"
 
 Gate читает **PNG bytes** (`cover_qa_pixels.py`), пишет `cover_qa.json` с `pixel_qa=true` и `cover_md5`. Publish блокируется без PASS + md5 match.
 
-**OCR false-positive escape (B08/B09):** если на PNG есть лицо + кириллический hook + телефон, а падают только OCR truncation / opaque Wordstat flakes — `apply_ocr_false_positive_escape` даёт PASS без PIL mashup/Kie.
+**OCR false-positive escape (B08/B09/B15/B19):** если на PNG есть лицо + кириллический hook + телефон, а падают только OCR/identity/meme flakes — `apply_ocr_false_positive_escape` даёт PASS без PIL mashup/Kie. Flaky keys включают `pixel_wordstat_phrases_not_truncated`, collage/query-strip/thumbnail/inpaint. Identity escape: `host_face_skin_blob_too_small` (B15) или `not_svyatoslav_vs_studio_portrait` при `face_hist_intersection≥0.55` + close-up (B19 shocked-face chin/stubble).
 
-**Cover budget:** solo regen max **2** attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`); после бюджета — `cover-budget-result.json`, не бесконечный loop. Дирижёр: ≤15–20 мин на cover, не копать pixel source.
+**Cover budget:** solo regen max **2** attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`); `analyze_cover_pixels` вызывает escape **до** verdict — OCR-only FAIL не должен сжигать бюджет. После исчерпания — `cover-budget-result.json` + re-run gate на `best_candidate` (не бесконечный loop). Дирижёр: ≤15–20 мин на cover, не копать pixel source.
 
 Только `OK cover QA stamp` → Indexer/Publish.
 

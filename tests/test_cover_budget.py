@@ -124,16 +124,67 @@ class OcrEscapeHatchTest(unittest.TestCase):
         checks = {
             "pixel_identity_matches_studio": False,
             "pixel_host_face_present": True,
+            "pixel_host_close_up": True,
             "pixel_hook_title_not_truncated": False,
         }
         errors = [
             "pixel_identity_matches_studio FAIL",
             "pixel_hook_title_not_truncated FAIL",
         ]
-        new_checks, _, new_evidence = apply_ocr_false_positive_escape(checks, errors, {})
+        evidence = {
+            "identity_match": {
+                "fail_reason": "not_svyatoslav_vs_studio_portrait",
+                "face_hist_intersection": 0.35,
+            }
+        }
+        new_checks, _, new_evidence = apply_ocr_false_positive_escape(checks, errors, evidence)
         self.assertFalse(new_checks["pixel_identity_matches_studio"])
         self.assertFalse(new_checks["pixel_hook_title_not_truncated"])
         self.assertNotIn("ocr_false_positive_escape", new_evidence)
+
+    def test_escape_b19_identity_hist_near_match_and_wordstat_phrases(self) -> None:
+        """B19: shocked-face chin/stubble flake with hist≥0.55 + phrase OCR flake."""
+        from excalibur_blog_cover_qa_pixels import apply_ocr_false_positive_escape
+
+        checks = {key: True for key in (
+            "pixel_host_face_present",
+            "pixel_host_close_up",
+            "pixel_hook_title_present",
+            "pixel_hook_title_cyrillic",
+            "pixel_meme_present",
+            "pixel_layout_not_collapsed",
+            "pixel_no_foreign_article_text",
+            "pixel_not_services_checklist",
+            "pixel_no_text_on_clothing",
+            "pixel_light_high_key",
+        )}
+        checks["pixel_identity_matches_studio"] = False
+        checks["pixel_phone_readable"] = False
+        checks["pixel_phone_not_clipped"] = False
+        checks["pixel_hook_title_not_truncated"] = False
+        checks["pixel_wordstat_phrases_not_truncated"] = False
+        checks["pixel_no_collage_inset"] = False
+        evidence = {
+            "identity_match": {
+                "fail_reason": "not_svyatoslav_vs_studio_portrait",
+                "face_hist_intersection": 0.606,
+            },
+            "phone_zone_ink": 1078,
+        }
+        errors = [
+            "pixel_identity_matches_studio FAIL",
+            "pixel_phone_readable FAIL",
+            "pixel_hook_title_not_truncated FAIL",
+            "pixel_wordstat_phrases_not_truncated FAIL",
+            "pixel_no_collage_inset FAIL",
+        ]
+        new_checks, _, new_evidence = apply_ocr_false_positive_escape(checks, errors, evidence)
+        escape = new_evidence.get("ocr_false_positive_escape") or {}
+        self.assertTrue(escape.get("applied"))
+        self.assertTrue(escape.get("identity_hist_near_match_flake"))
+        self.assertTrue(new_checks["pixel_identity_matches_studio"])
+        self.assertTrue(new_checks["pixel_wordstat_phrases_not_truncated"])
+        self.assertTrue(new_checks["pixel_phone_readable"])
 
     def test_escape_b15_identity_skin_blob_and_meme_partial(self) -> None:
         from excalibur_blog_cover_qa_pixels import apply_ocr_false_positive_escape
