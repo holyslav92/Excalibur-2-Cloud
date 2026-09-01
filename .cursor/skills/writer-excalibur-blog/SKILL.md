@@ -7,11 +7,11 @@ description: Write meaning draft drafts/writer.html; Sol applies tenant SOUL sty
 
 ## OWNER LOCK (permanent)
 
-1. **Engagement bomb** — цель = Dzen likes/comments/subs. **News-casus актуалочка** (событие → финал → практика после). **Прозаический лид 4–6 предложений** → **early TG+MAX** → история → практика → CTAs + **comment magnet**. **Ending landing:** heat сохраняем, посадка = **agency, not panic** (остановили бронь/ДДУ до денег, не «бегите»). **Newbuild focus:** сюжет = новостройка Тюмень (квартиры/дома от застройщика); аудитория — семьи с детьми + инвесторы; конверсия — обращение за покупкой новостройки. **Запрещено:** TL;DR, «Быстрый инсайт», bullets до первого H2, checklist/how-to в лиде; brochure застройщика; sugar-happy ending; checklist как эмоциональный финал; «риски везде — как покупать».
+1. **Dzen engagement** — читай `shared/dzen-engagement-lock.md`: CTR (Title), read-through (один casus, ~1400–1600 слов), comments (bipolar-вопрос после финала), subs (голос Святослава, early TG+MAX, agency ending). **Newbuild focus:** `shared/newbuild-focus-lock.md`. **Запрещено:** TL;DR, «Быстрый инсайт», bullets до первого H2, checklist/how-to в лиде; table+list+«главный вывод» в хвосте; self-score 9.0 loop; квота 1800+ слов.
 2. Meme/cover — не зона Writer; см. Cover skill + `meme_canon_v1`.
 3. Cover fail-fast — не зона Writer; Cover agent: max 2 attempts, ≤15–20 min.
 
-Канон: `shared/pipeline-canon.json` → `owner_lock_permanent`, `shared/newbuild-focus-lock.md`, `shared/quality-bar-9.md`, `shared/dzen-news-casus.md`.
+Канон: `shared/pipeline-canon.json` → `owner_lock_permanent`, `shared/dzen-engagement-lock.md`, `shared/newbuild-focus-lock.md`, `shared/dzen-news-casus.md`.
 
 ## Модель (HARD) — thin conductor
 
@@ -36,19 +36,21 @@ Longform (7 inline): **3 части на первом проходе** — не 
 Финал слога делает **Sol** (`excalibur-blog-sol`) по SOUL + examples.
 
 Выход: **`drafts/writer.html`** (чистый HTML-фрагмент без `<h1>`).  
-**Quality bar:** ориентир `shared/quality-bar-9.md` — **~1800–2200 слов** после Sol (hard FAIL > ~2400 / 14+ мин Дзен), **spine once** (не пересказывать casus трижды), brand+phone в теле, таблицы с разными колонками, лоты только из research или «как пример».
+**Dzen engagement lock:** `shared/dzen-engagement-lock.md` — **~1400–1600 слов** (~10 мин Дзен max), **spine once**, brand+phone в теле, таблицы с разными колонками, лоты только из research или «как пример». **Без** self-score 9.0 loop и critic-таблицы в HTML.
 Можно положить ту же копию во временный `article.html`, но канон —
 `drafts/writer.html`. Sol перепишет `article.html`.
 
 ## Читаешь
 
 1. `shared/writer-master-prompt.md` (секция Writer / смысл)
-2. `research-notes.md`
-3. `title-brief.json`
-4. `published-titles-only.md`
-5. `shared/published-articles.md` — **только** `status=published` для outbound interlink
-6. `shared/dzen-content-rules.md` + RF (не герой Meta/…) — кратко
-7. `shared/dzen-news-casus.md` — **default news-casus shape** (история → финал → практика после)
+2. `shared/dzen-engagement-lock.md` — **HARD** read-through / comments / subs
+3. `shared/newbuild-focus-lock.md`
+4. `research-notes.md`
+5. `title-brief.json`
+6. `published-titles-only.md`
+7. `shared/published-articles.md` — **только** `status=published` для outbound interlink
+8. `shared/dzen-content-rules.md` + RF (не герой Meta/…) — кратко
+9. `shared/dzen-news-casus.md` — **default news-casus shape** (история → финал → практика после)
 
 ## Не обязан читать (это зона Sol)
 
@@ -60,14 +62,14 @@ Longform (7 inline): **3 части на первом проходе** — не 
 - Все факты только из research; не выдумывай.
 - **Default shape = новость-казус** (`shared/dzen-news-casus.md`): лид — завершённое событие; середина — хронология; **финал обязателен** (суд, отмена, деньги не вернули). Без финала — FAIL (урок «Расписку написали»).
 - **Практика после истории**, не вместо неё: «что проверить теперь» — разбор последствий casus, не сухой how-to в лиде.
-- **Spine once (one-breath):** casus **один раз** — лид → развитие → финал → **практика один раз** → agency ending. **Не** пересказывать ту же сцену в лиде, середине и «итоге». **Вырезать:** recap («коротко если некогда»), повтор одних цифр/флагов трижды, lecture-хвосты.
-- Структура: **hook + прозаический лид (4–6 предложений, news-casus)** → **early CTA (TG+MAX only)** → H2 развитие casus → H2 **финал** → H2 практика (ol/таблица — aftermath, **один блок**, не главный hook) → **mid CTA** → **ending landing (1–2 абзаца: agency, not panic)** → **end CTA**. **5–8 H2** — не раздувать ради картинок.
+- **Spine once (one-breath):** casus **один раз** — лид → развитие → финал → **практика один раз** → agency ending. **Не** пересказывать ту же сцену в лиде, середине и «итоге». **Вырезать:** recap («коротко если некогда»), повтор одних цифр/флагов трижды, lecture-хвосты. **Запрещено в хвосте:** table + list + «главный вывод» подряд.
+- Структура: **hook + прозаический лид (4–6 предложений, news-casus)** → **early CTA (TG+MAX only)** → H2 развитие casus → H2 **финал** → H2 практика (ol/таблица — aftermath, **один блок**, не главный hook) → **comment magnet (bipolar-вопрос сразу после финала casus)** → **ending landing (1–2 абзаца: agency, not panic)** → **end CTA**. **5–8 H2** — не раздувать ради картинок.
 - **Ending landing (owner lock):** casus остаётся горячим; последние 1–2 абзаца **до** end CTA — читатель уходит с **ручкой**: остановили бронь/ДДУ до денег / проверка эскроу спасла / разобрали договор до аванса. **Не** «все риэлторы плохие», «вторичка — мина», «риски везде — как покупать». Редко: жёсткая потеря OK, если вилка «если бы X до аванса — не потеряли»; never pure dread без действия. **Ban:** sugar happy ending; чеклист N шагов как эмоциональный финал.
 - **Запрещено в первом экране:** английский TL;DR; «Быстрый инсайт» / «быстрый инсайдер»; bullet-списки `<ul>/<ol>` до первого H2.
-- **Comment magnet:** один острый вопрос для комментариев Дзена — после финала casus или перед mid CTA (`title-brief.json` → `comment_magnet_angle` если есть).
+- **Comment magnet:** один острый **bipolar**-вопрос — **сразу после** финала casus (`title-brief.json` → `comment_magnet_angle` если есть). Не «а вы как считаете, друзья».
 - **Запрещено как каркас:** открытие «чеклист / N шагов / как купить без риелтора» без завершённого события.
 - Без research-даты / Wordstat в открытии (Sol всё равно вычистит, но не засоряй).
-- CTA conversion: early/mid/end по `shared/quality-bar-9.md`; PRIMARY — Telegram + MAX URL из `cta_channels`; телефон один раз в теле.
+- CTA conversion: early после лида (TG+MAX); телефон **+7 922 001 65 05** один раз в теле; ending agency not panic.
 - **Interlink (если `interlink_old_articles=true`):** **2–4** контекстные `<a href="/blog/...">` на
   опубликованные sibling из ledger; якорь по смыслу H2, не «читайте также» в каждом абзаце.
 - Не читай чужие article.html / live-сайт / уже опубликованные статьи сайта / topics.

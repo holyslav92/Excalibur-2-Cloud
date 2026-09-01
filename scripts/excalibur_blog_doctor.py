@@ -113,6 +113,7 @@ def main() -> int:
         "shared/published-titles.md",
         "shared/topic-focus-contract.md",
         "shared/newbuild-focus-lock.md",
+        "shared/dzen-engagement-lock.md",
         "memory/setup/status.json",
         "scripts/excalibur_blog_topic_focus.py",
         "agents/excalibur-blog-setup.md",
