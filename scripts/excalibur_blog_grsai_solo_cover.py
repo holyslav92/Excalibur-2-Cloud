@@ -19,6 +19,10 @@ from pathlib import Path
 from typing import Any
 
 from excalibur_blog_cover_budget import resolve_cover_max_attempts
+from excalibur_blog_cover_layout_retry import (
+    TEXT_LAYOUT_RETRY_SUFFIX,
+    needs_text_layout_retry,
+)
 from excalibur_blog_grsai_gpt_image2_api import (
     DEFAULT_TIMEOUT_SECONDS,
     MIN_TIMEOUT_SECONDS,
@@ -181,15 +185,20 @@ def main() -> int:
     attempts_log: list[dict[str, Any]] = []
     best_cover_path = article_dir / "cover" / "cover.png"
 
-    image_input = {
-        "prompt": prompt,
+    image_input_base = {
         "aspect_ratio": "16:9",
         "resolution": "2K",
     }
 
+    attempt_prompt = prompt
     for attempt in range(1, max_attempts + 1):
+        if attempt > 1 and last_errors and needs_text_layout_retry(last_errors):
+            attempt_prompt = prompt + "\n" + TEXT_LAYOUT_RETRY_SUFFIX
+            print("retry: TEXT_LAYOUT_LOCK suffix (hook/phone/layout/wordstat-strip miss)", flush=True)
+        else:
+            attempt_prompt = prompt
         print(f"attempt {attempt}/{max_attempts} model={model}", flush=True)
-        batch_path = write_temp_batch(article_dir, prompt, ref_path)
+        batch_path = write_temp_batch(article_dir, attempt_prompt, ref_path)
 
         attempt_entry: dict[str, Any] = {"attempt": attempt, "model": model}
 
@@ -197,7 +206,7 @@ def main() -> int:
             raw_bytes, gen_meta = generate_image(
                 root=root,
                 batch_path=batch_path,
-                image_input=image_input,
+                image_input={**image_input_base, "prompt": attempt_prompt},
                 api_key=api_key,
                 model=model,
                 quality=quality,
