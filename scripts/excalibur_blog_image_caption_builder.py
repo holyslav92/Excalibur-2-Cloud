@@ -42,9 +42,25 @@ MEME_TAG_RE = re.compile(r"(?:^|[;\s])мемы(?:$|[;\s])", re.I)
 
 PHONE_ONLY_RE = re.compile(r"^\+?7[\s\d\-()]{10,}$")
 
-# Short Russian SEO alt for WP/Dzen (owner lock 2026-09-01).
-ALT_SEO_MIN = 80
-ALT_SEO_MAX = 140
+# Short Russian visible-safe alt (theme prints alt/caption as body text).
+ALT_SEO_MIN = 40
+ALT_SEO_MAX = 100
+ALT_COVER_WP_EMPTY = True  # featured alt leaks under H1 on tymenrieltor theme
+
+# Production / catalog tokens — never visible to reader.
+PRODUCTION_ALT_RES: tuple[re.Pattern[str], ...] = (
+    re.compile(r"реалистичный\s+кадр", re.I),
+    re.compile(r"без\s+лица\s+хоста", re.I),
+    re.compile(r"к\s+разделу", re.I),
+    re.compile(r"иллюстрация\s+к", re.I),
+    re.compile(r"разбору\s+сделки", re.I),
+    re.compile(r"кейсу\s+о\s+сделке", re.I),
+    re.compile(r"схема\s+устройства\s+механизма", re.I),
+    re.compile(r"нумерованный\s+процесс", re.I),
+    re.compile(r"график\s*/\s*шкала", re.I),
+    re.compile(r"сравнительная\s+таблица\s+с\s+колонками", re.I),
+    re.compile(r"по\s+новостройке\s+в\s+тюмени", re.I),
+)
 
 # Scene-painting / scene_hint dump markers — must never appear in alt/caption.
 SCENE_PAINTING_RES: tuple[re.Pattern[str], ...] = (
@@ -134,6 +150,73 @@ def load_hero_name(root: Path) -> str:
         except json.JSONDecodeError:
             pass
     return "Святослав Шакин"
+
+
+def production_alt_hits(text: str) -> list[str]:
+    hits: list[str] = []
+    for rx in PRODUCTION_ALT_RES:
+        if rx.search(text or ""):
+            hits.append(f"production token: {rx.pattern}")
+    return hits
+
+
+def load_scene_draft_slot_alts(article_dir: Path | None) -> dict[str, str]:
+    if article_dir is None:
+        return {}
+    path = article_dir / "cover" / "scene-draft.json"
+    if not path.is_file():
+        return {}
+    try:
+        data = load_json(path)
+    except json.JSONDecodeError:
+        return {}
+    out: dict[str, str] = {}
+    for key, slot in (data.get("slots") or {}).items():
+        if isinstance(slot, dict) and normalize_text(slot.get("alt")):
+            out[str(key)] = normalize_text(slot.get("alt"))
+    return out
+
+
+def humanize_picture_alt(raw: str) -> str:
+    """Strip scene-painting tails; keep one short Russian sentence."""
+    text = normalize_text(raw)
+    for sep in ("; ", ", рядом ", ", на заднем ", ", рядом ", " — иллюстрация"):
+        if sep in text:
+            text = text.split(sep, 1)[0].strip()
+    text = text.rstrip(".!?")
+    for rx in PRODUCTION_ALT_RES:
+        text = normalize_text(rx.sub("", text))
+    return text
+
+
+def build_inline_alt_from_labels(
+    visual_type: str,
+    labels: list[str],
+    *,
+    meta: dict[str, Any] | None = None,
+) -> str:
+    tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
+    blob = " ".join(labels).casefold()
+    if visual_type == "comparison_table" and labels:
+        return clamp_seo_alt(f"Таблица: {', '.join(labels[:3])}{tyumen}.")
+    if visual_type == "structure_diagram" and labels:
+        return clamp_seo_alt(f"Схема: {', '.join(labels[:3])}{tyumen}.")
+    if visual_type == "process_flow" and labels:
+        return clamp_seo_alt(f"Проверка договора: {', '.join(labels[:3])}{tyumen}.")
+    if visual_type == "bar_timeline_chart" and labels:
+        return clamp_seo_alt(f"График сроков: {', '.join(labels[:3])}{tyumen}.")
+    if visual_type == "realistic_photo":
+        if "первый договор" in blob or "новая компания" in blob or "другие инн" in blob:
+            return clamp_seo_alt(f"Семья сравнивает два договора ДДУ с разными реквизитами{tyumen}.")
+        if "вывеска" in blob and "инн" in blob:
+            return clamp_seo_alt(f"Вывеска застройщика и договор с другим ИНН{tyumen}.")
+        if "72" in blob or "бронь" in blob or "эскроу" in blob or "передаточный" in blob:
+            return clamp_seo_alt(f"ДДУ и таймер 72 часа на стойке продаж{tyumen}.")
+        if labels:
+            return clamp_seo_alt(f"Кадр по сделке: {', '.join(labels[:2])}{tyumen}.")
+    if labels:
+        return clamp_seo_alt(f"{', '.join(labels[:3])}{tyumen}.")
+    return clamp_seo_alt(f"Иллюстрация к материалу{tyumen}.")
 
 
 def banned_alt_hits(text: str) -> list[str]:
@@ -237,7 +320,9 @@ def clamp_seo_alt(text: str, *, min_len: int = ALT_SEO_MIN, max_len: int = ALT_S
     if not raw:
         return raw
     if len(raw) <= max_len and len(raw) >= min_len:
-        return f"{raw}."
+        if len(raw) + 1 <= max_len:
+            return f"{raw}."
+        return raw
     if len(raw) > max_len:
         cut = raw[: max_len - 1]
         if " " in cut:
@@ -254,10 +339,13 @@ def is_prompt_like_alt(
     manifest: dict[str, Any] | None = None,
     meta: dict[str, Any] | None = None,
     seo_length: bool = True,
+    allow_empty: bool = False,
 ) -> tuple[bool, list[str]]:
     raw = normalize_text(text)
     errors: list[str] = []
     if not raw:
+        if allow_empty:
+            return False, []
         errors.append("alt empty")
         return True, errors
     if not CYRILLIC_RE.search(raw):
@@ -265,6 +353,9 @@ def is_prompt_like_alt(
     hits = banned_alt_hits(raw)
     if hits:
         errors.append(f"banned tokens: {', '.join(hits)}")
+    prod = production_alt_hits(raw)
+    if prod:
+        errors.extend(prod)
     if looks_like_prompt_list(raw):
         errors.append("semicolon prompt list")
     if PHONE_ONLY_RE.match(raw.replace(" ", "")):
@@ -336,29 +427,13 @@ def build_cover_alt(
     host_name: str,
     slot: dict[str, Any] | None = None,
 ) -> str:
-    """One short Russian SEO sentence from title/topic — never scene_hint painting."""
+    """Featured alt пустой — тема tymenrieltor печатает alt под H1."""
+    _ = (manifest, meta, host_name, slot)
+    if ALT_COVER_WP_EMPTY:
+        return ""
     slot = slot or (manifest.get("slots") or {}).get("cover") or {}
-    scene_hint = normalize_text(slot.get("scene_hint"))
     title = normalize_text(meta.get("h1") or meta.get("title") or manifest.get("cover_hook"))
-    if not title:
-        title = "Новостройка в Тюмени: проверка договора перед подписью"
-    core = title.rstrip(".!?")
-    if article_has_tyumen(meta) and "тюмен" not in core.casefold():
-        core = f"{core} в Тюмени"
-    if len(core) < ALT_SEO_MIN:
-        core = f"{core}: что проверить в договоре и эскроу до подписи"
-    alt = clamp_seo_alt(core)
-    # Safety: if still scene-like, fall back to title only.
-    if is_prompt_like_alt(
-        alt,
-        scene_hint=scene_hint,
-        host_name=host_name,
-        manifest=manifest,
-        meta=meta,
-        seo_length=False,
-    )[0]:
-        alt = clamp_seo_alt(title)
-    return alt
+    return clamp_seo_alt(title or "Новостройка в Тюмени")
 
 
 def shorten_h2(h2: str, *, max_len: int = 72) -> str:
@@ -378,22 +453,19 @@ def build_inline_alt(
     *,
     labels_map: dict[str, str],
     meta: dict[str, Any] | None = None,
+    article_dir: Path | None = None,
+    slot_key: str = "",
 ) -> str:
-    visual_type = normalize_text(slot.get("visual_type"))
-    label_ru = visual_type_label(visual_type, labels_map)
-    h2 = shorten_h2(normalize_text(slot.get("h2_anchor")), max_len=48)
+    _ = labels_map
+    visual_type = normalize_text(slot.get("visual_type")) or "realistic_photo"
     panel_labels = [normalize_text(x) for x in (slot.get("labels") or []) if normalize_text(x)]
-
-    if panel_labels and visual_type not in {"realistic_photo", "cover_editorial_hero"}:
-        facts = ", ".join(panel_labels[:3])
-        alt = f"{label_ru} по новостройке в Тюмени: {facts} — иллюстрация к разбору сделки."
-    elif h2:
-        tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
-        alt = f"{label_ru} к разделу «{h2}»{tyumen} — иллюстрация к кейсу о сделке."
-    else:
-        tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
-        alt = f"{label_ru} по новостройке{tyumen} — иллюстрация к материалу."
-    return clamp_seo_alt(alt)
+    scene_draft_alts = load_scene_draft_slot_alts(article_dir) if article_dir else {}
+    draft_raw = scene_draft_alts.get(slot_key) or ""
+    if draft_raw:
+        humanized = humanize_picture_alt(draft_raw)
+        if humanized and not is_prompt_like_alt(humanized, seo_length=False)[0]:
+            return clamp_seo_alt(humanized)
+    return build_inline_alt_from_labels(visual_type, panel_labels, meta=meta)
 
 
 def resolve_slot_alt(
@@ -404,10 +476,17 @@ def resolve_slot_alt(
     *,
     host_name: str,
     labels_map: dict[str, str],
+    article_dir: Path | None = None,
 ) -> str:
     if slot_key == "cover":
         return build_cover_alt(manifest, meta, host_name=host_name, slot=slot)
-    return build_inline_alt(slot, labels_map=labels_map, meta=meta)
+    return build_inline_alt(
+        slot,
+        labels_map=labels_map,
+        meta=meta,
+        article_dir=article_dir,
+        slot_key=slot_key,
+    )
 
 
 def validate_alt_for_gate(
@@ -419,6 +498,8 @@ def validate_alt_for_gate(
     meta: dict[str, Any],
     host_name: str,
 ) -> tuple[bool, list[str]]:
+    if slot_key == "cover" and ALT_COVER_WP_EMPTY:
+        return is_prompt_like_alt(alt, allow_empty=True, seo_length=False)
     scene_hint = normalize_text(slot.get("scene_hint")) if slot_key != "cover" else normalize_text(
         ((manifest.get("slots") or {}).get("cover") or {}).get("scene_hint")
     )
@@ -456,7 +537,13 @@ def collect_article_alts(article_dir: Path, root: Path) -> dict[str, Any]:
             continue
         raw = normalize_text(slot.get("alt"))
         resolved = resolve_slot_alt(
-            slot_key, slot, manifest, meta, host_name=host_name, labels_map=labels_map
+            slot_key,
+            slot,
+            manifest,
+            meta,
+            host_name=host_name,
+            labels_map=labels_map,
+            article_dir=article_dir,
         )
         ok, errors = validate_alt_for_gate(
             resolved,
@@ -530,19 +617,18 @@ def collect_article_alts(article_dir: Path, root: Path) -> dict[str, Any]:
                 }
             )
         cover_alt = normalize_text(registry.get("alt"))
-        if cover_alt:
-            cover_slot = (manifest.get("slots") or {}).get("cover") or {}
-            ok, errors = validate_alt_for_gate(
-                cover_alt,
-                slot_key="cover",
-                slot=cover_slot if isinstance(cover_slot, dict) else {},
-                manifest=manifest,
-                meta=meta,
-                host_name=host_name,
-            )
-            registry_alts.append(
-                {"file": "cover/cover.png", "slot": "cover", "alt": cover_alt, "pass": not ok, "errors": errors}
-            )
+        cover_slot = (manifest.get("slots") or {}).get("cover") or {}
+        ok, errors = validate_alt_for_gate(
+            cover_alt,
+            slot_key="cover",
+            slot=cover_slot if isinstance(cover_slot, dict) else {},
+            manifest=manifest,
+            meta=meta,
+            host_name=host_name,
+        )
+        registry_alts.append(
+            {"file": "cover/cover.png", "slot": "cover", "alt": cover_alt, "pass": not ok, "errors": errors}
+        )
 
     all_items = list(slots_out.values()) + html_alts + registry_alts
     all_pass = cover_caption_ok and all(item.get("pass") for item in all_items) if all_items else cover_caption_ok
@@ -579,7 +665,13 @@ def apply_article_captions(article_dir: Path, root: Path, *, dry_run: bool = Fal
         if slot_key != "cover" and not slot.get("h2_anchor"):
             continue
         resolved = resolve_slot_alt(
-            slot_key, slot, manifest, meta, host_name=host_name, labels_map=labels_map
+            slot_key,
+            slot,
+            manifest,
+            meta,
+            host_name=host_name,
+            labels_map=labels_map,
+            article_dir=article_dir,
         )
         old = normalize_text(slot.get("alt"))
         slot_alts[slot_key] = resolved
@@ -596,20 +688,16 @@ def apply_article_captions(article_dir: Path, root: Path, *, dry_run: bool = Fal
 
     if registry_path.is_file() and not dry_run:
         registry = load_json(registry_path)
-        cover_alt = slot_alts.get("cover") or registry.get("alt") or ""
-        if cover_alt:
-            registry["alt"] = cover_alt
+        cover_alt = slot_alts.get("cover", "")
+        registry["alt"] = cover_alt
         for asset in registry.get("assets") or []:
             if not isinstance(asset, dict):
                 continue
             slot_key = str(asset.get("slot") or "")
             if slot_key in slot_alts:
                 asset["alt"] = slot_alts[slot_key]
-                if asset.get("role") == "cover" or slot_key == "cover":
-                    asset["caption"] = ""
-                else:
-                    asset["caption"] = ""
-                asset["description"] = slot_alts[slot_key]
+                asset["caption"] = ""
+                asset["description"] = ""
         registry["caption"] = ""
         registry_path.write_text(
             json.dumps(registry, ensure_ascii=False, indent=2) + "\n",
@@ -645,6 +733,8 @@ def apply_article_captions(article_dir: Path, root: Path, *, dry_run: bool = Fal
                 if n2:
                     changes.append(f"article.html img {file_name} alt updated")
 
+        # Убрать figcaption — тема может дублировать alt/caption в теле.
+        new_html = re.sub(r"<figcaption\b[^>]*>.*?</figcaption>", "", new_html, flags=re.I | re.S)
         if new_html != html and not dry_run:
             html_path.write_text(new_html, encoding="utf-8", newline="\n")
 
@@ -652,12 +742,22 @@ def apply_article_captions(article_dir: Path, root: Path, *, dry_run: bool = Fal
     return {"changes": changes, "gate": gate, "dry_run": dry_run}
 
 
-def ensure_human_alt(text: str, *, slot_key: str, manifest: dict[str, Any], meta: dict[str, Any], root: Path) -> str:
+def ensure_human_alt(
+    text: str,
+    *,
+    slot_key: str,
+    manifest: dict[str, Any],
+    meta: dict[str, Any],
+    root: Path,
+    article_dir: Path | None = None,
+) -> str:
     """Publish-time safety net: never return prompt-like alt."""
     raw = normalize_text(text)
     host_name = load_hero_name(root)
     labels_map = load_visual_type_labels(root)
     slot = (manifest.get("slots") or {}).get(slot_key) or {}
+    if slot_key == "cover" and ALT_COVER_WP_EMPTY:
+        return ""
     if raw and not is_prompt_like_alt(raw)[0]:
         return raw
     return resolve_slot_alt(
@@ -667,6 +767,7 @@ def ensure_human_alt(text: str, *, slot_key: str, manifest: dict[str, Any], meta
         meta,
         host_name=host_name,
         labels_map=labels_map,
+        article_dir=article_dir,
     )
 
 

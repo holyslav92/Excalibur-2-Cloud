@@ -133,8 +133,8 @@ def build_media_meta_payload(article_dir: Path, root: Path, public_base: str) ->
                 "role": "cover",
                 "alt": cover_media["alt"],
                 "caption": "",
-                "description": cover_media["description"],
-                "title": cover_media["title"],
+                "description": "",
+                "title": cover_media["title"] or "cover",
             }
         )
 
@@ -151,7 +151,9 @@ def build_media_meta_payload(article_dir: Path, root: Path, public_base: str) ->
         basename = Path(src.replace("\\", "/")).name
         slot_key = src_to_slot.get(basename, "")
         slot = (manifest.get("slots") or {}).get(slot_key) or {}
-        alt = resolve_slot_alt(slot_key, slot, manifest, meta, host_name=host_name, labels_map=labels_map) if slot_key else ""
+        alt = resolve_slot_alt(
+            slot_key, slot, manifest, meta, host_name=host_name, labels_map=labels_map, article_dir=article_dir
+        ) if slot_key else ""
         asset = assets.get(src) or assets.get(basename) or {}
         if not alt:
             alt = str(asset.get("alt") or "")
@@ -162,8 +164,8 @@ def build_media_meta_payload(article_dir: Path, root: Path, public_base: str) ->
                 "src": src,
                 "alt": alt,
                 "caption": "",
-                "description": alt,
-                "title": alt[:120],
+                "description": "",
+                "title": (alt[:120] if alt else basename),
             }
         )
 
@@ -224,13 +226,13 @@ foreach (($p['attachments'] ?? []) as $item) {{
     if (array_key_exists('caption', $item)) {{
         $update['post_excerpt'] = sanitize_text_field((string) $item['caption']);
     }}
-    if (array_key_exists('description', $item) && $item['description'] !== '') {{
+    if (array_key_exists('description', $item)) {{
         $update['post_content'] = wp_kses_post((string) $item['description']);
     }}
     if (count($update) > 1) {{
         wp_update_post($update);
     }}
-    if (!empty($item['alt'])) {{
+    if (array_key_exists('alt', $item)) {{
         update_post_meta($att_id, '_wp_attachment_image_alt', sanitize_text_field((string) $item['alt']));
     }}
     $n++;
