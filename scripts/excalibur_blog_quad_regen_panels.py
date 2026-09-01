@@ -15,6 +15,10 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+from excalibur_blog_cover_layout_retry import (
+    TEXT_LAYOUT_RETRY_SUFFIX,
+    needs_text_layout_retry,
+)
 from excalibur_blog_quad_slots import INLINE_FILES, slot_allows_meme_sticker
 
 
@@ -273,8 +277,20 @@ def main() -> int:
         from excalibur_blog_cover_budget import resolve_cover_max_attempts
 
         max_attempts = resolve_cover_max_attempts() if slot_key == "cover" else 1
+        last_errors: list[str] = []
         for attempt in range(1, max_attempts + 1):
             prompt = build_panel_prompt(manifest, slot_key, root)
+            if (
+                attempt > 1
+                and slot_key == "cover"
+                and last_errors
+                and needs_text_layout_retry(last_errors)
+            ):
+                prompt = prompt + "\n" + TEXT_LAYOUT_RETRY_SUFFIX
+                print(
+                    "retry: TEXT_LAYOUT_LOCK suffix (hook/phone/layout/wordstat-strip miss)",
+                    flush=True,
+                )
             with_i2i = slot_key == "cover"
             batch_path = write_solo_batch(
                 article_dir, slot_key, prompt, with_i2i=with_i2i, ref_url=ref_url
@@ -292,9 +308,12 @@ def main() -> int:
             from excalibur_blog_cover_qa_pixels import analyze_cover_pixels
 
             pre = analyze_cover_pixels(article_dir / "cover" / "cover.png", manifest=manifest)
+            last_errors = list(pre.errors)
             model_dirty = pre.status != "PASS" or not (
                 pre.checks.get("pixel_host_close_up")
                 and pre.checks.get("pixel_phone_readable")
+                and pre.checks.get("pixel_layout_not_collapsed")
+                and pre.checks.get("pixel_hook_title_present")
                 and pre.checks.get("pixel_no_text_on_clothing")
                 and pre.checks.get("pixel_no_wordstat_query_strips")
                 and pre.checks.get("pixel_wordstat_not_on_host_chest")
