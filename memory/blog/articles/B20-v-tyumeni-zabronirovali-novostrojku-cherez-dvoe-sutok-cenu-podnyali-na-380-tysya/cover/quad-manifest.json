@@ -1,0 +1,248 @@
+{
+  "topic_id": "B20",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Бронь квартиры не сохранила прежнюю цену",
+  "cover_hook_highlight": "прежнюю цену",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин покупатель в офисе продаж сравнивает условия брони квартиры с изменившейся стоимостью на фоне макета жилого комплекса в Тюмени. Бронь квартиры не сохранила прежнюю цену.",
+      "scene_hint": "Офис продаж: герой сравнивает бронь и новую цену на калькуляторе, макет ЖК, солнечный свет.",
+      "meme_caption_ru": "",
+      "sticky": "Вот тебе и бронь",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Двое суток, которые ничего не держали",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стойка офиса: бронь, план квартиры, калькулятор, макет ЖК, без людей.",
+      "alt": "Документы по брони квартиры, план жилья и калькулятор на стойке офиса продаж новостройки.",
+      "labels": [
+        "Бронь на странице",
+        "Срок двое суток",
+        "Не договор",
+        "Квартира закреплена"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Двое суток, которые ничего не держали",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: бронь vs +48ч, +380k",
+      "alt": "Сравнение стоимости квартиры в момент бронирования и через двое суток с разницей 380 тысяч рублей.",
+      "labels": [
+        "Бесплатно: ноль рублей",
+        "Квартиру не показывают",
+        "Платная бронь с суммой",
+        "Ипотека отдельно"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Почему бесплатная бронь — это не про цену",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема 4 шага: выбор, бронь, документы, проверка цены.",
+      "alt": "Последовательность действий покупателя от выбора квартиры до повторной проверки цены перед оплатой.",
+      "labels": [
+        "Прайс обновился ночью",
+        "Плюс 380 тысяч",
+        "Тот же этаж",
+        "Цена не закреплена"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true,
+      "placement_group": "single"
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Почему цена уехала, пока бронь ещё «действовала»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Пустая кухня новостройки: план гарнитура и смета на столе.",
+      "alt": "Пустая кухня в новой квартире с планом гарнитура и сметой семейного бюджета.",
+      "labels": [
+        "Три варианта",
+        "Доплата 380 тысяч",
+        "Этаж дешевле",
+        "Отпустить квартиру"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true,
+      "placement_group": "pair"
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Чем всё закончилось",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Таймлайн: бронь → +48ч → рост +380 000 ₽.",
+      "alt": "Рост стоимости квартиры за 48 часов между бронированием и повторной проверкой цены.",
+      "labels": [
+        "Цена отдельной строкой",
+        "Срок под реальный темп",
+        "Письменное подтверждение",
+        "Ипотека не сделка"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "placement_group": "pair"
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Как держать цену, а не надежду",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема: срок цены, платёж, возврат, письмо застройщика.",
+      "alt": "Четыре пункта, которые важно проверить в условиях бронирования квартиры.",
+      "labels": [
+        "Цена письмом",
+        "Сначала одобрение",
+        "Проект договора",
+        "Полчаса до платежа"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true,
+      "placement_group": "single"
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что я делаю, когда захожу в бронь вместе с человеком",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Вход в новый ЖК Тюмени, стенд офиса продаж, солнечно.",
+      "alt": "Вход в новый жилой комплекс Тюмени рядом с офисом продаж.",
+      "labels": [
+        "Объект отдельно от цены",
+        "Цена только в прайсе",
+        "Без цифры нет цены",
+        "Прайс меняется"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "placement_group": "single"
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "бронь квартиры",
+    "цена новостройки Тюмень",
+    "как сохранить цену квартиры"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_emotion": "ошеломление с недоверием и напряжённым прищуром",
+  "cover_motifs": {
+    "outfit": "светлая голубая overshirt-рубашка поверх белой футболки, песочные брюки, часы с ярким ремешком",
+    "emotion": "ошеломление, недоверие, короткий нервный смешок",
+    "pose_framing": "крупный план по пояс справа, корпус развёрнут к экрану с расчётом, одна рука поднята в жесте «как так?»",
+    "action": "герой держит распечатку брони и показывает пальцем на новую сумму в калькуляторе менеджера",
+    "location": "светлый офис продаж новостройки в Тюмени с панорамными окнами, макетом жилого квартала и солнечным бликом",
+    "meme": [
+      "two_buttons",
+      "surprised_tom"
+    ],
+    "props": [
+      "распечатка брони",
+      "план кухни",
+      "калькулятор с разницей в цене",
+      "макет новостройки"
+    ],
+    "stickers": [
+      "two_buttons",
+      "surprised_tom",
+      "Вот тебе и бронь"
+    ],
+    "joke": "Бронь есть, цена убежала"
+  }
+}

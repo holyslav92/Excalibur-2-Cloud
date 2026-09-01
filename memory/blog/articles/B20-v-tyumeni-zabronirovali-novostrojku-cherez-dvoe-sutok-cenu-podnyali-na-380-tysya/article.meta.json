@@ -5,7 +5,7 @@
   "topic_id": "B20",
   "author_id": "svyatoslav-shakin",
   "article_mode": "B",
-  "description": "Бронь новостройки в Тюмени — за двое суток цена выросла на 380 тысяч",
+  "description": "В Тюмени бронь на квартиру пережила выходные, а цена — нет. Святослав Шакин разбирает, как одна оговорка в бумаге увела 380 тысяч из бюджета на кухню.",
   "meta_ab": {
     "title_seo": "Бронь новостройки в Тюмени — за двое суток цена выросла на 380 тысяч",
     "title_ctr": "Бронь новостройки в Тюмени — за двое суток цена выросла на 380 тысяч",
@@ -20,6 +20,11 @@
     "side_stickers": "skip"
   },
   "date": "2026-09-01",
+  "wp_category_slugs": [
+    "pokupka-kvartiry",
+    "ipoteka"
+  ],
   "pipeline_canon": "human-first-v2",
-  "editorial_swarm": false
+  "editorial_swarm": false,
+  "wp_post_id": 9465
 }

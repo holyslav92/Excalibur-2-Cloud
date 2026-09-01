@@ -1,0 +1,300 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B20-v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_too_far_from_center",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 585,
+              "end": 627
+            },
+            "v_gutter_px": {
+              "start": 1018,
+              "end": 1030
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 30.0,
+              "v_center_offset_px": 0.0,
+              "max_aspect_crop_loss": 0.0835,
+              "per_panel_crop_loss": {
+                "top_left": 0.0205,
+                "top_right": 0.0205,
+                "bottom_left": 0.0835,
+                "bottom_right": 0.0835
+              },
+              "reject_reason": "gutter_too_far_from_center"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Святослав Шакин покупатель в офисе продаж сравнивает условия брони квартиры с изменившейся стоимостью на фоне макета жилого комплекса в Тюмени. Бронь квартиры не сохранила прежнюю цену.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Документы по брони квартиры, план жилья и калькулятор на стойке офиса продаж новостройки.",
+            "h2_anchor": "Двое суток, которые ничего не держали"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Сравнение стоимости квартиры в момент бронирования и через двое суток с разницей 380 тысяч рублей.",
+            "h2_anchor": "Двое суток, которые ничего не держали"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Последовательность действий покупателя от выбора квартиры до повторной проверки цены перед оплатой.",
+            "h2_anchor": "Почему бесплатная бронь — это не про цену"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B20-v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 578,
+              "end": 585
+            },
+            "v_gutter_px": {
+              "start": 1006,
+              "end": 1023
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 5.5,
+              "v_center_offset_px": 9.5,
+              "max_aspect_crop_loss": 0.0208,
+              "per_panel_crop_loss": {
+                "top_left": 0.0208,
+                "top_right": 0.0,
+                "bottom_left": 0.0,
+                "bottom_right": 0.0166
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Пустая кухня в новой квартире с планом гарнитура и сметой семейного бюджета.",
+            "h2_anchor": "Почему цена уехала, пока бронь ещё «действовала»"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Рост стоимости квартиры за 48 часов между бронированием и повторной проверкой цены.",
+            "h2_anchor": "Чем всё закончилось"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Четыре пункта, которые важно проверить в условиях бронирования квартиры.",
+            "h2_anchor": "Как держать цену, а не надежду"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Вход в новый жилой комплекс Тюмени рядом с офисом продаж.",
+            "h2_anchor": "Что я делаю, когда захожу в бронь вместе с человеком"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Двое суток, которые ничего не держали",
+    "skip inline_2: already correct under H2 — Двое суток, которые ничего не держали",
+    "skip inline_3: already correct under H2 — Почему бесплатная бронь — это не про цену",
+    "injected inline_4 after H2 — Почему цена уехала, пока бронь ещё «действовала»",
+    "injected inline_5 after H2 — Чем всё закончилось",
+    "injected inline_6 after H2 — Как держать цену, а не надежду",
+    "injected inline_7 after H2 — Что я делаю, когда захожу в бронь вместе с человеком"
+  ]
+}

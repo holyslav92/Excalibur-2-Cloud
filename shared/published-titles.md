@@ -22,3 +22,4 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 | B12 | klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili | Застройщик сдвинул сдачу ЖК в Тюмени на год — ипотека осталась | published |
 | B14 | v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal | Продавец закрыл ипотеку, но залог сорвал сделку в Тюмени | published |
 | B15 | v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom | В Тюмени не подтвердили согласие супруги — аванс остановили | published |
+| B19 | semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli | В Тюмени ипотеку одобрили — эскроу сорвал маткапитал | published |
