@@ -73,8 +73,14 @@ HOST_FACE_BLOB_MIN_H_FRAC = 0.42
 HAND_ZONE_LEFT = (0.06, 0.46, 0.50, 0.96)
 HAND_ZONE_RIGHT = (0.50, 0.46, 0.96, 0.96)
 HAND_SKIN_MIN_PIXELS = 350
-HAND_MAX_FRAGMENTS = 5
-HAND_MELTED_ASPECT = 3.8
+HAND_MAX_FRAGMENTS = 2
+HAND_MELTED_ASPECT = 2.5
+HAND_FINGER_ASPECT = 2.0
+HAND_FINGER_BLOB_MAX = 3200
+HAND_SINGLE_ZONE_MAX_BLOBS = 2
+# Левая зона при single-hand pose — почти без кожи
+HAND_HIDDEN_ZONE_MAX_SKIN = 650
+HAND_NO_FRAME_MAX_SKIN = 900
 LATIN_GARBAGE_TOKENS = ("ZAGS", "EGRN", "EGRP")
 SERVICES_CHECKLIST_MARKERS = ("ПОМОГАЮ", "КАКЯПОМОГАЮ", "КАКЯПОМОГА")
 PHONE_DIGITS_NEEDLE = "9220016505"
@@ -1400,27 +1406,142 @@ def _skin_blobs_in_zone(
     return blobs
 
 
-def _hands_anatomy_metrics(img) -> dict[str, Any]:
-    """FAIL melted/mangled hands: слишком много skin-фрагментов или вытянутые кляксы в зонах кистей."""
+def _manifest_no_hands_in_frame(manifest: dict[str, Any] | None) -> bool:
+    """True когда manifest требует кроп выше локтей — рук в кадре быть не должно."""
+    motifs = (manifest or {}).get("cover_motifs") or {}
+    action = str(motifs.get("action") or "").casefold()
+    pose = str(motifs.get("pose_framing") or "").casefold()
+    composition = str(motifs.get("composition") or "").casefold()
+    scene = str(
+        ((manifest or {}).get("slots") or {}).get("cover", {}).get("scene_hint") or ""
+    ).casefold()
+    tokens = (
+        "no_hands_in_frame",
+        "hands_not_in_frame",
+        "hands_out_of_frame",
+        "arms_cropped_below_elbow",
+        "crop_above_elbows",
+        "host_hands_not_in_frame",
+    )
+    blob = " ".join((action, pose, composition, scene))
+    return any(tok in blob for tok in tokens)
+
+
+def _manifest_single_hand_left_hidden(manifest: dict[str, Any] | None) -> bool:
+    """True когда manifest требует спрятать левую кисть / только одну руку на влагомере."""
+    if _manifest_no_hands_in_frame(manifest):
+        return False
+    motifs = (manifest or {}).get("cover_motifs") or {}
+    action = str(motifs.get("action") or "").casefold()
+    pose = str(motifs.get("pose_framing") or "").casefold()
+    tokens = (
+        "single_hand",
+        "one_hand",
+        "left_arm_out",
+        "left_hand_hidden",
+        "left_hand_out_of_frame",
+        "no_pointing",
+        "no_clipboard_in_hands",
+    )
+    return any(tok in action or tok in pose for tok in tokens)
+
+
+def _hand_zone_skin_pixels(img, zone: tuple[float, float, float, float]) -> int:
+    w, h = img.size
+    rgb = img.convert("RGB")
+    x0, y0, x1, y1 = (
+        int(zone[0] * w),
+        int(zone[1] * h),
+        int(zone[2] * w),
+        int(zone[3] * h),
+    )
+    total = 0
+    for y in range(y0, y1, 2):
+        for x in range(x0, x1, 2):
+            if _is_skin(*rgb.getpixel((x, y))):
+                total += 1
+    return total
+
+
+def _hands_anatomy_metrics(img, manifest: dict[str, Any] | None = None) -> dict[str, Any]:
+    """FAIL melted/mangled hands: фрагменты, вытянутые «пальцы», две кисти при single-hand pose."""
     left = _skin_blobs_in_zone(img, HAND_ZONE_LEFT, min_cy=0.40)
     right = _skin_blobs_in_zone(img, HAND_ZONE_RIGHT, min_cy=0.40)
     reasons: list[str] = []
     mangled = False
-    for label, blobs in (("left", left), ("right", right)):
-        if len(blobs) > HAND_MAX_FRAGMENTS:
+    finger_blobs = 0
+    no_hands = _manifest_no_hands_in_frame(manifest)
+    single_hand = _manifest_single_hand_left_hidden(manifest)
+
+    if no_hands:
+        left_skin = _hand_zone_skin_pixels(img, HAND_ZONE_LEFT)
+        right_skin = _hand_zone_skin_pixels(img, HAND_ZONE_RIGHT)
+        total_skin = left_skin + right_skin
+        if total_skin > HAND_NO_FRAME_MAX_SKIN or len(left) >= 2 or len(right) >= 2:
             mangled = True
-            reasons.append(f"{label}_hand_fragmented_{len(blobs)}_blobs")
+            reasons.append(
+                f"hands_visible_when_no_hands_pose_total_skin_{total_skin}_"
+                f"left_blobs_{len(left)}_right_blobs_{len(right)}"
+            )
+        for label, blobs in (("left", left), ("right", right)):
+            for blob in blobs:
+                wf = float(blob.get("w_frac") or 0.0)
+                hf = float(blob.get("h_frac") or 0.0)
+                aspect = max(wf, hf) / max(min(wf, hf), 0.01)
+                if aspect >= HAND_MELTED_ASPECT:
+                    mangled = True
+                    reasons.append(f"{label}_hand_melted_aspect_{aspect:.1f}")
+        return {
+            "ok": not mangled,
+            "left_blobs": len(left),
+            "right_blobs": len(right),
+            "finger_blobs": 0,
+            "no_hands_pose": True,
+            "single_hand_pose": False,
+            "left_skin_pixels": left_skin,
+            "right_skin_pixels": right_skin,
+            "reasons": reasons,
+        }
+
+    for label, blobs in (("left", left), ("right", right)):
+        if len(blobs) > HAND_SINGLE_ZONE_MAX_BLOBS:
+            mangled = True
+            reasons.append(f"{label}_hand_too_many_blobs_{len(blobs)}")
         for blob in blobs:
             wf = float(blob.get("w_frac") or 0.0)
             hf = float(blob.get("h_frac") or 0.0)
+            px = int(blob.get("pixels") or 0)
             aspect = max(wf, hf) / max(min(wf, hf), 0.01)
             if aspect >= HAND_MELTED_ASPECT:
                 mangled = True
                 reasons.append(f"{label}_hand_melted_aspect_{aspect:.1f}")
+            if (
+                HAND_FINGER_ASPECT <= aspect < HAND_MELTED_ASPECT
+                and HAND_SKIN_MIN_PIXELS <= px <= HAND_FINGER_BLOB_MAX
+            ):
+                finger_blobs += 1
+                reasons.append(f"{label}_elongated_finger_blob_aspect_{aspect:.1f}")
+
+    if finger_blobs >= 2:
+        mangled = True
+        reasons.append(f"finger_sausage_count_{finger_blobs}")
+
+    if single_hand:
+        left_skin = _hand_zone_skin_pixels(img, HAND_ZONE_LEFT)
+        if left_skin > HAND_HIDDEN_ZONE_MAX_SKIN:
+            mangled = True
+            reasons.append(f"left_hand_should_be_hidden_skin_pixels_{left_skin}")
+        if len(left) >= 2:
+            mangled = True
+            reasons.append("left_hand_visible_blobs_when_single_hand_pose")
+
     return {
         "ok": not mangled,
         "left_blobs": len(left),
         "right_blobs": len(right),
+        "finger_blobs": finger_blobs,
+        "single_hand_pose": single_hand,
+        "left_skin_pixels": _hand_zone_skin_pixels(img, HAND_ZONE_LEFT) if single_hand else 0,
         "reasons": reasons,
     }
 
@@ -1872,9 +1993,9 @@ def _check_identity_matches_studio(img) -> tuple[bool, dict[str, Any]]:
         }
     )
 
-    # Щетина: stock clean-shaven часто 0.35–0.48 при hist ~0.54; канон Святослав — hist≥0.62 или chin≥0.50.
-    chin_ok = chin_ratio >= 0.28
-    identity_ok = chin_ok and (chin_ratio >= 0.50 or hist_sim >= 0.62)
+    # Owner ground truth: hist alone ~0.62 пропускал чужое лицо — требуем hist≥0.64 И щетину.
+    chin_ok = chin_ratio >= 0.32
+    identity_ok = chin_ok and hist_sim >= 0.64 and chin_ratio >= 0.40
     ok = identity_ok
     if not chin_ok:
         evidence["fail_reason"] = "host_face_skin_blob_too_small"
@@ -2329,7 +2450,7 @@ def analyze_cover_pixels(
             f"pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref ({reason})"
         )
 
-    hands_metrics = _hands_anatomy_metrics(img)
+    hands_metrics = _hands_anatomy_metrics(img, manifest)
     evidence["hands_anatomy"] = hands_metrics
     checks["pixel_host_hands_anatomy"] = bool(hands_metrics.get("ok"))
     if not checks["pixel_host_hands_anatomy"]:

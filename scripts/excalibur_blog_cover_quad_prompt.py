@@ -530,7 +530,34 @@ def build_solo_cover_prompt(
     outfit = compact(str(motifs.get("outfit") or ""), 100)
     sticky_line = f' Yellow sticky EXACT «{sticky}» pinned left.' if sticky else ""
     action = compact(str(motifs.get("action") or ""), 100)
+    pose_framing = compact(str(motifs.get("pose_framing") or ""), 80)
     meme_line = format_solo_cover_meme_line(manifest, load_meme_catalog())
+
+    pose_blob = f"{action} {pose_framing}".casefold()
+    no_hands_pose = any(
+        tok in pose_blob
+        for tok in (
+            "no_hands_in_frame",
+            "hands_not_in_frame",
+            "hands_out_of_frame",
+            "arms_cropped_below_elbow",
+            "host_hands_not_in_frame",
+        )
+    )
+    if no_hands_pose:
+        hands_lock = (
+            "HANDS OUT OF FRAME LOCK: chest-up bust ONLY — crop at upper chest/mid-torso; "
+            "BOTH arms and hands COMPLETELY OUT OF FRAME (nothing below elbow visible); "
+            "host does NOT hold meter, clipboard, keys, or phone; "
+            "moisture meter and unsigned acceptance act rest on wet screed floor in FOREGROUND props only; "
+            "NO pointing, NO spaghetti fingers, NO fused fingers."
+        )
+    else:
+        hands_lock = (
+            "HANDS POSE LOCK: ONLY ONE visible hand (right) holds moisture meter at chest with exactly 5 separate "
+            "fingers and natural wrist; LEFT arm cropped OUT OF FRAME below shoulder — NO left hand, NO pointing, "
+            "NO clipboard in hands, NO spaghetti fingers; unsigned act rests on table/floor beside host NOT held."
+        )
 
     style_prefix = compact(
         style.get("global_prompt_prefix") or design_code.get("cover_panel_prompt_block") or "",
@@ -559,9 +586,8 @@ def build_solo_cover_prompt(
         f"Phone EXACT «{COVER_PHONE_CTA}» white torn paper bottom-RIGHT corner (55–98% width, 70–96% height).\n"
         f"{sticky_line}\n"
         f"Host i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}. "
-        f"Outfit INVENTED: {outfit}. Expression: {emotion}. Action: {action}. "
-        f"HANDS LOCK: exactly 5 fingers per visible hand, anatomically correct wrists and knuckles; "
-        f"natural grip on props; NO melted/mangled/extra/missing fingers.\n"
+        f"Outfit INVENTED: {outfit}. Expression: {emotion}. Action: {action}. Pose: {pose_framing}. "
+        f"{hands_lock}\n"
         f"{compact(scene, COVER_SCENE_HINT_COMPACT)}. "
         "Close-up face+shoulders LEFT or center-left (~35% frame) — NOT full-bleed face crop, room for headline right. "
         f"{meme_line} "
