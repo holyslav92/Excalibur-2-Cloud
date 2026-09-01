@@ -1,0 +1,252 @@
+{
+  "topic_id": "B19",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Ипотеку одобрили — бронь всё равно сняли",
+  "cover_hook_highlight": "сняли",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин риэлтор в шоуруме новостройки показывает отменённую бронь и папку для сделки в Тюмени. Ипотеку одобрили — бронь всё равно сняли.",
+      "scene_hint": "Host right cancel card escrow",
+      "meme_caption_ru": "",
+      "sticky": "Проверка была впереди",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие: поднятые брови, приоткрытый рот, взгляд прямо в камеру",
+      "meme_picks": [
+        "bad_luck_brian",
+        "grumpy_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Ипотеку одобрили» — и семья пошла к ДДУ в новостройке",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Family model DDU",
+      "alt": "Семья рассматривает макет жилого комплекса перед оформлением договора.",
+      "labels": [
+        "Семейная ипотека до 6%",
+        "Взнос от 20%",
+        "Лимит до 6 миллионов",
+        "Маткапитал во взнос",
+        "Одобрение не равно сделке"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disaster_girl"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Ипотеку одобрили» — и семья пошла к ДДУ в новостройке",
+      "visual_type": "comparison_table",
+      "scene_hint": "Stages table",
+      "alt": "Таблица этапов сделки от бронирования квартиры до регистрации договора.",
+      "labels": [
+        "Бронь у застройщика",
+        "Предварительное одобрение",
+        "Проверка банка",
+        "Регистрация договора",
+        "Бронь оплачивается отдельно"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Через 48 часов бронь сняли: эскроу так и не открыли",
+      "visual_type": "realistic_photo",
+      "scene_hint": "48h calendar",
+      "alt": "Календарь срока бронирования и документы на стойке отдела продаж.",
+      "labels": [
+        "Срок брони вышел",
+        "Финальная проверка банка",
+        "Детских долей нет",
+        "Оформление остановили",
+        "Эскроу не открыли"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Почему банк копает прошлый маткапитал при новой семейной ипотеке",
+      "visual_type": "realistic_photo",
+      "scene_hint": "SFR EGRN desk",
+      "alt": "Документы СФР и выписка ЕГРН на столе для банковской проверки.",
+      "labels": [
+        "Закон 256-ФЗ",
+        "Доли всем детям",
+        "Обязанность осталась",
+        "Прошлое не списывается"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Детские доли: обязанность, которую нельзя «закрыть» новым законом",
+      "visual_type": "process_flow",
+      "scene_hint": "Child shares flow meme corner",
+      "alt": "Схема проверки документов о детских долях при оформлении ипотеки.",
+      "labels": [
+        "Заявление через банк",
+        "Сведения из СФР",
+        "ЕГРН прошлого жилья",
+        "Проверка детских долей",
+        "Оформление приостановят"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disappointed_black_guy"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что сверять до брони и подписания ДДУ — таблица",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Pre-book timeline",
+      "alt": "Шкала проверок документов перед бронированием квартиры и подписанием ДДУ.",
+      "labels": [
+        "ЕГРН прежней квартиры",
+        "Сведения из СФР",
+        "Документы для банка",
+        "Срок брони",
+        "Эскроу в договоре"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Эскроу, бронь и маткапитал: где ломается цепочка",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Loan escrow chain meme corner",
+      "alt": "Схема связи одобрения ипотеки, выдачи кредита и открытия эскроу.",
+      "labels": [
+        "Одобрение не выдача",
+        "Выдача не эскроу",
+        "Банк может остановиться",
+        "Деньги не ушли",
+        "Сначала документы"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "success_kid"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "семейная ипотека тюмень — 89",
+    "маткапитал на первоначальный взнос — 156",
+    "эскроу счет новостройка — 42"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_emotion": "ошеломлённое недоверие: поднятые брови, приоткрытый рот, взгляд прямо в камеру",
+  "cover_motifs": {
+    "composition": "ведущий в правой нижней трети в рост от колен, слева и сверху чистая светлая зона под заголовок; стикеры в дальних углах",
+    "location": "светлый шоурум новостройки у макета жилого квартала, белые стены, золотистое солнце и мягкий lens flare",
+    "meme": "bad_luck_brian и grumpy_cat как маленькие реакции на внезапно отменённую бронь",
+    "prop_set": "красная карточка «бронь снята» без читаемого мелкого текста, папка с символом эскроу, макет новостройки, жёлтый стикер-проверка",
+    "sticker_set": "bad_luck_brian в левом нижнем углу и grumpy_cat в правом верхнем углу, каждый менее 15% кадра, вдали от лица, заголовка и телефона",
+    "joke": "у героя уже есть одобрение и папка для сделки, но красная карточка отмены бронни выглядит как нелепый финальный уровень игры",
+    "outfit": "яркая бирюзовая трикотажная рубашка-поло с коротким рукавом, песочные брюки, тонкие золотистые часы",
+    "emotion": "ошеломлённое недоверие после известия об отмене брони",
+    "pose_framing": "динамичный кадр от колен, корпус развёрнут к камере, одна рука показывает красную карточку, другая держит папку у груди",
+    "action": "ведущий только что сверяет отменённую бронь с папкой эскроу и показывает зрителю неожиданную проблему"
+  }
+}
