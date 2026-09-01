@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya",
+  "topic_id": "B20",
+  "post_id": 9465,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B20-v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 972065,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9465 slug=v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya\nOK categories=36,32\nOK yoast_social_image=1\nOK featured_image=9466\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9467 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya-inline-01.png\nOK inline_alt=9467\nOK inline_caption=9467\nOK inline_description=9467\nOK inline_image_upload=9468 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya-inline-02.png\nOK inline_alt=9468\nOK inline_caption=9468\nOK inline_description=9468\nOK inline_image_upload=9469 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya-inline-03.png\nOK inline_alt=9469\nOK inline_caption=9469\nOK inline_description=9469\nOK inline_image_upload=9470 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya-inline-04.png\nOK inline_alt=9470\nOK inline_caption=9470\nOK inline_description=9470\nOK inline_image_upload=9471 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya-inline-05.png\nOK inline_alt=9471\nOK inline_caption=9471\nOK inline_description=9471\nOK inline_image_upload=9472 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya-inline-06.png\nOK inline_alt=9472\nOK inline_caption=9472\nOK inline_description=9472\nOK inline_image_upload=9473 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya-inline-07.png\nOK inline_alt=9473\nOK inline_caption=9473\nOK inline_description=9473\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya/",
+    "errors": []
+  }
+}

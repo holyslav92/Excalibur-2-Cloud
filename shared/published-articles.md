@@ -19,3 +19,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-08-30 | B14 | v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal | /blog/vtorichka-i-riski/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/ | published |
 | 2026-08-31 | B15 | v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom | /blog/vtorichka-i-riski/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/ | published |
 | 2026-09-01 | B19 | semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli | /blog/ipoteka/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/ | published |
+| 2026-09-01 | B20 | v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya | /blog/ipoteka/v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya/ | published |

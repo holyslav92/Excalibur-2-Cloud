@@ -137,6 +137,16 @@
         "pose_framing": "динамичный кадр от колен корпус к камере",
         "action": "показывает красную карточку отмены брони"
       }
+    },
+    {
+      "date": "2026-09-01",
+      "topic_id": "B20",
+      "slug": "",
+      "motifs": {
+        "composition": "office sales calculator booking",
+        "location": "tyumen newbuild office",
+        "meme": "two_buttons surprised_tom"
+      }
     }
   ]
 }
