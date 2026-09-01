@@ -1,0 +1,22 @@
+{
+  "gate": "writer-meaning",
+  "status": "FAIL",
+  "word_count_estimate": 2255,
+  "checks": {
+    "word_count_1800_2200": false,
+    "word_count_hard_max_2400": true,
+    "prose_lead_4_6": true,
+    "no_tldr_opening": true,
+    "early_cta": true,
+    "mid_cta": true,
+    "end_cta": true,
+    "phone_once": true,
+    "comment_magnet": true,
+    "interlink_2_4": true,
+    "spine_once": true,
+    "html_lint": true
+  },
+  "errors": [
+    "word_count 2255 outside 1800-2200"
+  ]
+}
