@@ -1,0 +1,60 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B20",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-01",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/a/apZvsyWD6W9q5lHp",
+        "type": "community",
+        "note": "Dzen mirror live casus 2026-09-01"
+      },
+      {
+        "url": "https://vk.com/wall-73862566_376425",
+        "type": "community",
+        "note": "VK snippet wet screed acceptance Tyumen"
+      },
+      {
+        "url": "https://nashgorod.ru/news/2025-05-21/my-byli-v-shoke-priemschiki-raskryvayut-problemy-tyumenskih-novostroek-5394914",
+        "type": "local",
+        "note": "Tyumen acceptance quality context"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "приёмка квартиры в новостройке",
+    "p0_volume": null,
+    "support_phrases": [
+      {"phrase": "новостройки тюмени", "volume": null}
+    ],
+    "rework_from": "rewrite live WP 9439 — demand from acceptance casus",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_acceptance_wet_screed_keys_denied",
+    "story_dup_check": "PASS — rewrite same live post"
+  },
+  "official_source_audit": {
+    "required": false,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["214-fz", "pp-2380"],
+    "errors": [],
+    "note": "Legal norms cited from assembled inputs; no bank/developer tariff claims"
+  },
+  "key_facts_count": 22,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}

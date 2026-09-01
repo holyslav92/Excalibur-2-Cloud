@@ -1,0 +1,236 @@
+{
+  "topic_id": "B20",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Мокрая стяжка — ключи не выдали",
+  "cover_hook_highlight": "Мокрая",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин на приёмке новостройки в Тюмени проверяет мокрую стяжку влагомером — ключи и акт на столе. Мокрая стяжка — ключи не выдали.",
+      "scene_hint": "Bright newbuild room: host in light blue shirt kneels, checks wet screed with moisture meter; keys and act on table; phone visible.",
+      "meme_caption_ru": "",
+      "sticky": "Акт не подписали",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "concerned_skeptical_side_glance",
+      "meme_picks": [
+        "grumpy_cat",
+        "disaster_girl"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Подпишите акт — ключи уже на столе»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Bright empty newbuild room, moisture meter on wet screed patch, no host face",
+      "alt": "Приёмка новостройки в Тюмени: влагомер на мокрой стяжке в пустой комнате.",
+      "labels": [
+        "Приёмка новостройки",
+        "Влагомер на полу",
+        "Стяжка мокрая"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Подпишите акт — ключи уже на столе»",
+      "visual_type": "comparison_table",
+      "scene_hint": "Keys and transfer act papers on meeting table, high-key office",
+      "alt": "Ключи от квартиры и передаточный акт лежат на столе в переговорной застройщика.",
+      "labels": [
+        "Ключи на столе",
+        "Акт на подпись",
+        "Выбор за вами"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "До стола: что нашли в квартире",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Wet floor stain and wall crack in new apartment, daylight",
+      "alt": "Мокрое пятно на стяжке и трещина в стене на приёмке квартиры в новостройке.",
+      "labels": [
+        "Мокрый пол",
+        "Проверьте влагу",
+        "До подписи акта"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Акт не подписали — ключи через 45 дней, ипотека капает",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Unsigned act document and keys on table, 45 days calendar note",
+      "alt": "Неподписанный акт и ключи: выдачу перенесли на 45 дней после отказа от подписи.",
+      "labels": [
+        "Акт не подписали",
+        "Ключи не выдали",
+        "Замечания в акт"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Что записать на приёмке, пока не взяли ручку",
+      "visual_type": "process_flow",
+      "scene_hint": "Process flow diagram acceptance defects timeline 45 days",
+      "alt": "Схема: что делать на приёмке, если нашли дефекты и не подписали акт.",
+      "labels": [
+        "Срок 45 дней",
+        "Ждём устранения",
+        "Без обещаний"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Подпишете акт — или уйдёте без ключей?",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Photo checklist defects moisture meter readings",
+      "alt": "Фото дефектов и показания влагомера — что зафиксировать до подписи акта.",
+      "labels": [
+        "Фото всех дефектов",
+        "Показания влагомера",
+        "Копия акта"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "До стола: что нашли в квартире",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Two choice buttons sign act or leave without keys diagram",
+      "alt": "Подписать акт ради ключей или уйти без ключей — выбор покупателя на приёмке.",
+      "labels": [
+        "Подписать или уйти",
+        "Ключи важнее",
+        "Что выберете"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "приёмка новостройки",
+    "мокрая стяжка"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "outfit": "light blue shirt, no blazer",
+    "emotion": "concerned_skeptical_side_glance",
+    "pose_framing": "host large on the left, kneeling and holding a moisture meter",
+    "action": "kneeling and checking the wet screed with a moisture meter",
+    "location": "bright empty newbuild apartment acceptance room with white walls and a visibly wet floor patch",
+    "meme": "grumpy_cat and disaster_girl as tiny corner stickers",
+    "props": [
+      "moisture meter",
+      "wet screed",
+      "apartment keys",
+      "transfer act",
+      "phone +7 922 001 65 05"
+    ],
+    "stickers": [
+      "grumpy_cat",
+      "disaster_girl"
+    ],
+    "joke": "The keys are ready, but the wet floor says the apartment is not."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{SITE_BASE}}/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{SITE_BASE}}/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/"
+  },
+  "headline": "На приёмке новостройки в Тюмени нашли мокрую стяжку — ключи не выдали",
+  "description": "Квартира выглядела готовой, пока прибор не показал лишнюю влагу. Святослав Шакин в Тюмени — о приёмке, где спешка стоила бы дорого.",
+  "datePublished": "2026-09-01",
+  "author": {
+    "@type": "Person",
+    "name": "Святослав Шакин",
+    "sameAs": []
+  }
+}
