@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B20",
+  "slug": "na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali",
+  "candidates_count": 17,
+  "outbound_found": [
+    {
+      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "title": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk"
+    },
+    {
+      "slug": "klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili",
+      "title": "klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili"
+    },
+    {
+      "slug": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli",
+      "title": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

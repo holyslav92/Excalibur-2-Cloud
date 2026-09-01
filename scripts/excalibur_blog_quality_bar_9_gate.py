@@ -81,8 +81,29 @@ REQUIRED_CHECKS = (
 )
 
 
-def project_root() -> Path:
-    return Path(__file__).resolve().parents[1]
+def load_word_count_targets(root: Path) -> tuple[int, int, int, str]:
+    """Owner lock dzen_engagement (1400–1600) overrides legacy 1800–2200 when present."""
+    canon_path = root / "shared/pipeline-canon.json"
+    min_w, max_w, hard_max = WORD_TARGET_MIN, WORD_TARGET_MAX, WORD_HARD_MAX
+    source = "quality_bar_9_default"
+    if canon_path.is_file():
+        try:
+            canon = load_json(canon_path)
+            engagement = (
+                (canon.get("owner_lock_permanent") or {}).get("dzen_engagement") or {}
+            )
+            target = str(engagement.get("read_through_word_target") or "").strip()
+            if target and "-" in target:
+                parts = target.split("-", 1)
+                min_w = int(parts[0].strip())
+                max_w = int(parts[1].strip())
+                source = "owner_lock_dzen_engagement"
+            hard = (canon.get("quality_bar_9") or {}).get("word_count_hard_max")
+            if hard:
+                hard_max = int(hard)
+        except (json.JSONDecodeError, ValueError, TypeError):
+            pass
+    return min_w, max_w, hard_max, source
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -598,6 +619,7 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
     html_path = article_dir / "article.html"
     errors: list[str] = []
     checks: dict[str, bool] = {}
+    word_min, word_max, word_hard_max, word_target_source = load_word_count_targets(root)
 
     if not html_path.is_file():
         return {
@@ -621,8 +643,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
     interlink_ok, interlink_count = check_interlinks(html, root, article_dir)
     checks["interlink_siblings_2_4"] = interlink_ok
     checks["dual_cta_soft"] = check_dual_cta(html)
-    checks["word_count_1800_2200"] = WORD_TARGET_MIN <= wc <= WORD_TARGET_MAX
-    checks["word_count_hard_max_2400"] = wc <= WORD_HARD_MAX
+    checks["word_count_1800_2200"] = word_min <= wc <= word_max
+    checks["word_count_hard_max_2400"] = wc <= word_hard_max
     reading_min = estimate_dzen_reading_minutes(wc)
     checks["dzen_reading_time_ok"] = reading_min < DZEN_READING_MINUTES_MAX + 2  # <14 min
     spine_ok, spine_errors = check_spine_once_no_recap(html)
@@ -658,9 +680,9 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
             if key == "comparison_tables_differ" and tbl_errors:
                 errors.extend(tbl_errors)
             elif key == "word_count_1800_2200":
-                errors.append(f"word_count {wc} outside target {WORD_TARGET_MIN}-{WORD_TARGET_MAX}")
+                errors.append(f"word_count {wc} outside target {word_min}-{word_max} ({word_target_source})")
             elif key == "word_count_hard_max_2400":
-                errors.append(f"word_count {wc} exceeds hard max {WORD_HARD_MAX}")
+                errors.append(f"word_count {wc} exceeds hard max {word_hard_max}")
             elif key == "dzen_reading_time_ok":
                 errors.append(
                     f"dzen_reading_minutes ~{reading_min} (words/{DZEN_WORDS_PER_MINUTE}); "
@@ -703,8 +725,9 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
         "errors": errors,
         "metrics": {
             "word_count": wc,
-            "word_count_target": f"{WORD_TARGET_MIN}-{WORD_TARGET_MAX}",
-            "word_count_hard_max": WORD_HARD_MAX,
+            "word_count_target": f"{word_min}-{word_max}",
+            "word_count_target_source": word_target_source,
+            "word_count_hard_max": word_hard_max,
             "dzen_reading_minutes_est": reading_min,
             "h2_count": h2c,
             "inline_figures": inlines,

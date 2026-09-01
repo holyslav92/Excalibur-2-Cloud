@@ -1,0 +1,24 @@
+{
+  "scene_hint": "Bright high-key newbuild acceptance room: Svyatoslav in a light blue shirt kneels on wet screed, checking it with a moisture meter, concerned skeptical side-glance; keys, transfer act and phone +7 922 001 65 05 on a table, tiny grumpy_cat and disaster_girl stickers in clear corners.",
+  "cover_emotion": "concerned_skeptical_side_glance",
+  "cover_motifs": {
+    "outfit": "light blue shirt, no blazer",
+    "emotion": "concerned_skeptical_side_glance",
+    "pose_framing": "host large on the left, kneeling and holding a moisture meter",
+    "action": "kneeling and checking the wet screed with a moisture meter",
+    "location": "bright empty newbuild apartment acceptance room with white walls and a visibly wet floor patch",
+    "meme": "grumpy_cat and disaster_girl as tiny corner stickers",
+    "props": [
+      "moisture meter",
+      "wet screed",
+      "apartment keys",
+      "transfer act",
+      "phone +7 922 001 65 05"
+    ],
+    "stickers": [
+      "grumpy_cat",
+      "disaster_girl"
+    ],
+    "joke": "The keys are ready, but the wet floor says the apartment is not."
+  }
+}

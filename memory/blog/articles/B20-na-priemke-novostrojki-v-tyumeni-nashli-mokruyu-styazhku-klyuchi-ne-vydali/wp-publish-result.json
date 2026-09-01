@@ -1,0 +1,28 @@
+{
+  "slug": "na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali",
+  "topic_id": "B20",
+  "post_id": 9439,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B20-na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1086394,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9439 slug=na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali\nOK categories=36,34\nOK yoast_social_image=1\nOK featured_image=9479\nOK featured_alt=1\nOK featured_caption=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9480 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali-inline-01-1.png\nOK inline_alt=9480\nOK inline_caption=9480\nOK inline_description=9480\nOK inline_image_upload=9481 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali-inline-02-1.png\nOK inline_alt=9481\nOK inline_caption=9481\nOK inline_description=9481\nOK inline_image_upload=9482 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali-inline-03-1.png\nOK inline_alt=9482\nOK inline_caption=9482\nOK inline_description=9482\nOK inline_image_upload=9483 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali-inline-04-1.png\nOK inline_alt=9483\nOK inline_caption=9483\nOK inline_description=9483\nOK inline_image_upload=9484 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali-inline-05-1.png\nOK inline_alt=9484\nOK inline_caption=9484\nOK inline_description=9484\nOK inline_image_upload=9485 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali-inline-07-1.png\nOK inline_alt=9485\nOK inline_caption=9485\nOK inline_description=9485\nOK inline_image_upload=9486 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali-inline-06-1.png\nOK inline_alt=9486\nOK inline_caption=9486\nOK inline_description=9486\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali/",
+    "errors": []
+  }
+}
