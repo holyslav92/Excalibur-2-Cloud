@@ -15,3 +15,4 @@
 - [Продавец закрыл ипотеку, но залог сорвал сделку в Тюмени]({{SITE_BASE}}/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/): Продавец закрыл ипотеку, но залог сорвал сделку в Тюмени
 - [В Тюмени не подтвердили согласие супруги — аванс остановили]({{SITE_BASE}}/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/): В Тюмени не подтвердили согласие супруги — аванс остановили
 - [В Тюмени ипотеку одобрили — эскроу сорвал маткапитал]({{SITE_BASE}}/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/): В Тюмени ипотеку одобрили — эскроу сорвал маткапитал
+- [В Тюмени застройщик сменил юрлицо — банк не открыл эскроу]({{SITE_BASE}}/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/): В Тюмени застройщик сменил юрлицо — банк не открыл эскроу
