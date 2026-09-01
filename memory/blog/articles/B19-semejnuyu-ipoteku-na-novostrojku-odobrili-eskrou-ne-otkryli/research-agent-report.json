@@ -1,0 +1,73 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B19",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-01",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://allestate.pro/news/19.08.2026/kak-v-2026-godu-vydelit-doli-detyam-posle-vyplaty-ipoteki-s-matkapitalom-instrukciya-s-nyuansami",
+        "type": "news",
+        "note": "19.08.2026 — доли после ипотеки с маткапиталом, изменения 2025–2026"
+      },
+      {
+        "url": "https://megatyumen.ru/realty/v-dvuh-novostrojkah-ryadom-s-turoj-mozhno-oformit-kombo-rassrochku/",
+        "type": "local",
+        "note": "Тюмень, новостройки у Туры, акция до конца августа 2026"
+      },
+      {
+        "url": "https://novostroikino.ru/blog/bronirovanie-kvartiry-v-novostroyke-2026/",
+        "type": "market",
+        "note": "06.08.2026 — сроки и условия бронирования новостройки"
+      },
+      {
+        "url": "https://dzen.ru/a/aH--Ef8VaD2nva1K",
+        "type": "community",
+        "note": "Dzen — ФЗ 195-ФЗ, доли без согласия банка"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить новостройку в тюмени в ипотеку",
+    "p0_volume": 93,
+    "p0_volume_ru225": 140,
+    "support_phrases": [
+      {"phrase": "новостройки тюмени семейная ипотека", "volume": 40},
+      {"phrase": "семейная ипотека новостройка", "volume": 126},
+      {"phrase": "маткапитал новостройка", "volume": 3}
+    ],
+    "rework_from": "маткапитал новостройка (3) → семейная ипотека новостройка (126) → P0 mortgage+newbuild Tyumen",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_family_mortgage_matkapital_escrow_blocked_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["sfr", "dom_rf"],
+    "errors": [],
+    "note": "Family mortgage rate/down/limit and matkapital rules verified via SFR + dom.rf person pages"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}
