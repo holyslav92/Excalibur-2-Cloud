@@ -9,10 +9,10 @@
     "phone_in_body": true,
     "early_cta_tg_max_only": true,
     "mid_cta_tg_max_nudge": true,
-    "end_cta_full_channels": false,
+    "end_cta_full_channels": true,
     "interlink_siblings_2_4": true,
-    "dual_cta_soft": false,
-    "word_count_1800_2200": false,
+    "dual_cta_soft": true,
+    "word_count_1800_2200": true,
     "word_count_hard_max_2400": true,
     "dzen_reading_time_ok": true,
     "spine_once_no_recap": true,
@@ -31,19 +31,16 @@
     "cover_qa_pass": false
   },
   "errors": [
-    "check failed: end_cta_full_channels",
-    "check failed: dual_cta_soft",
-    "word_count 2232 outside target 1800-2200",
     "cover/quad-manifest.json missing for realistic mix gate",
     "check failed: cover_qa_pass",
     "check failed: cover_phone_on_cover",
     "cover/quad-manifest.json missing for image alt gate"
   ],
   "metrics": {
-    "word_count": 2232,
+    "word_count": 2125,
     "word_count_target": "1800-2200",
     "word_count_hard_max": 2400,
-    "dzen_reading_minutes_est": 12,
+    "dzen_reading_minutes_est": 11,
     "h2_count": 6,
     "inline_figures": 7,
     "sibling_interlinks": 4
