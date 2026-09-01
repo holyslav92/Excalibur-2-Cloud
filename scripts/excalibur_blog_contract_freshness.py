@@ -15,6 +15,8 @@ WATCHED = (
     "shared/soul-examples/bad-outputs.md",
     "shared/article-style.md",
     "shared/writer-master-prompt.md",
+    "shared/dzen-engagement-lock.md",
+    "shared/newbuild-focus-lock.md",
     "shared/pipeline-canon.json",
     "agents/excalibur-blog-writer.md",
     "agents/excalibur-blog-sol.md",

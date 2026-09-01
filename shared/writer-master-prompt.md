@@ -15,15 +15,18 @@
 4. `published-titles-only.md` / `shared/published-titles.md` — только anti-dup
 5. `shared/tenant-config.json` — CTA / язык / флаги
 6. `shared/dzen-news-casus.md` — news-casus shape (прозаический лид, не TL;DR)
-7. `shared/newbuild-focus-lock.md` — сюжет только новостройки Тюмень (семьи + инвесторы)
-8. При сомнении по Дзен/РФ (если `dzen_rf_pack`): `shared/dzen-content-rules.md`,
+7. `shared/dzen-engagement-lock.md` — **HARD:** CTR/read-through/comments/subs (разные части поста; ~1400–1600 слов; spine once; без self-score 9.0)
+8. `shared/newbuild-focus-lock.md` — сюжет только новостройки Тюмень (семьи + инвесторы)
+9. При сомнении по Дзен/РФ (если `dzen_rf_pack`): `shared/dzen-content-rules.md`,
    `shared/rf-blocked-entities.json`
 
 ## Что писать
 
 - Чистый HTML-фрагмент без `<h1>` → `drafts/writer.html`
 - Открытие: hook + **прозаический лид 4–6 предложений** (news-casus актуалочка, часть истории). **Не** TL;DR, **не** «Быстрый инсайт», **не** bullet-списки в первом экране.
-- **Comment magnet:** один острый вопрос для комментариев Дзена — после финала casus или перед mid CTA.
+- **Read-through** (`dzen-engagement-lock`): один casus один раз; практика **после** истории (один короткий блок); ориентир **~1400–1600 слов** / ~10 мин Дзен; FAIL за scene-repeat и lecture tail, не за краткость.
+- **Comment magnet:** один острый bipolar-вопрос — **сразу после** финала casus (не «а вы как считаете, друзья»).
+- **Subs:** early CTA после лида — только TG+MAX; телефон один раз в теле; ending agency not panic; 2–4 sibling interlink.
 - H2 с мыслями + практика/ограничения + CTA (если есть в tenant)
 - Факты только из research
 - Ссылки CTA: **только** из `tenant-config.cta_links` + MAX по `cta_channels.max`

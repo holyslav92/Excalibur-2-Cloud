@@ -30,6 +30,8 @@
   "cover_qa_output": "cover/cover_qa.json",
   "writer_allowed_sources": [
     "shared/writer-master-prompt.md",
+    "shared/dzen-engagement-lock.md",
+    "shared/newbuild-focus-lock.md",
     "research-notes.md",
     "title-brief.json",
     "published-titles-only.md",
@@ -60,6 +62,8 @@
     "shared/soul-examples/good-outputs.md",
     "shared/soul-examples/bad-outputs.md",
     "shared/article-style.md",
+    "shared/dzen-engagement-lock.md",
+    "shared/newbuild-focus-lock.md",
     "shared/dzen-news-casus.md",
     "drafts/writer.html",
     "title-brief.json",
@@ -188,6 +192,25 @@
       "wordstat_weak_rework_newbuild_jargon": true,
       "frozen_secondary_clusters": "shared/scout-story-clusters.json",
       "docs": ["shared/newbuild-focus-lock.md", "shared/topic-focus-contract.md"]
+    },
+    "dzen_engagement": {
+      "status": "LOCKED_ON_MAIN",
+      "owner": "Святослав Шакин",
+      "owner_date": "2026-09-01",
+      "goals": ["ctr_card", "read_through", "comments", "subscriptions"],
+      "ctr": "title_description_only_klyshin_casus_number_punch",
+      "read_through": "one_casus_once_prose_lead_practice_after_story",
+      "read_through_word_target": "1400-1600",
+      "dzen_reading_minutes_max": 10,
+      "comments": "one_bipolar_question_after_casus_ending",
+      "subscriptions": "svyatoslav_voice_unique_angle_early_cta_agency_ending",
+      "explicitly_not": [
+        "self_score_9_loop",
+        "word_quota_1800_2100",
+        "critic_table_in_writer_html",
+        "wordstat_phrases_in_h1"
+      ],
+      "docs": ["shared/dzen-engagement-lock.md"]
     },
     "pillars": {
       "engagement_bomb": {

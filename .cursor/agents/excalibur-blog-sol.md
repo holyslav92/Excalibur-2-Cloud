@@ -39,9 +39,11 @@ Skill: `skills/sol-excalibur-blog/SKILL.md`
 4. `shared/soul-examples/good-outputs.md`
 5. `shared/soul-examples/bad-outputs.md`
 6. `shared/article-style.md`
-7. `drafts/writer.html` (обязателен)
-8. `title-brief.json`
-9. `research-notes.md` (сверка фактов)
+7. `shared/dzen-engagement-lock.md`
+8. `shared/newbuild-focus-lock.md`
+9. `drafts/writer.html` (обязателен)
+10. `title-brief.json`
+11. `research-notes.md` (сверка фактов)
 
 ## Выход
 
@@ -50,7 +52,8 @@ Skill: `skills/sol-excalibur-blog/SKILL.md`
 - `drafts/writer.html` — не трогать
 
 **HTML whitelist (HARD):** только `<b>` не `<strong>`, `<i>` не `<em>`; теги тела — как в
-`scripts/excalibur_blog_html_linter.py`. После Sol директор запускает `html_linter --fix`.
+`scripts/excalibur_blog_html_linter.py` (`h2,h3,p,b,i,a,ul,ol,li,…`). После Sol директор
+запускает `html_linter --fix` перед gate.
 
 ```text
 === EXCALIBUR BLOG SOL ===

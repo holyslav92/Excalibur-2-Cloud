@@ -7,11 +7,11 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 
 ## OWNER LOCK (permanent)
 
-1. **Engagement bomb** — сохранить news-casus arc и Dzen engagement. **Прозаический лид 4–6 предложений** (не TL;DR / не «Быстрый инсайт» / не bullets в первом экране). **Early TG+MAX** после лида. **Comment magnet** — один острый вопрос. **Ending landing:** heat casus не ослаблять; последние 1–2 абзаца = **agency, not panic** (остановили бронь/ДДУ до денег). **Newbuild focus:** голос Святослава, сюжет новостройки Тюмень — не brochure застройщика. Gates: `opening-meta-gate`, `no_tldr_opening`, `comment_magnet_question`.
+1. **Dzen engagement** — читай `shared/dzen-engagement-lock.md`: сохранить news-casus arc; read-through ~1400–1600 слов / ~10 мин; spine once; bipolar comment magnet **сразу после** финала casus; subs = голос Святослава, early TG+MAX, agency ending. **Newbuild focus:** `shared/newbuild-focus-lock.md`. Gates: `opening-meta-gate`, `no_tldr_opening`, `comment_magnet_question`. **Без** self-score 9.0 loop.
 2. Meme/cover — не зона Sol.
 3. Cover fail-fast — не зона Sol.
 
-Канон: `shared/pipeline-canon.json` → `owner_lock_permanent`, `shared/newbuild-focus-lock.md`, `shared/SOUL.md`, `shared/dzen-news-casus.md`.
+Канон: `shared/pipeline-canon.json` → `owner_lock_permanent`, `shared/dzen-engagement-lock.md`, `shared/newbuild-focus-lock.md`, `shared/SOUL.md`, `shared/dzen-news-casus.md`.
 
 ## Модель (HARD) — thin conductor
 
@@ -46,11 +46,13 @@ Longform (7 inline): **3 части на первом проходе** — не 
 4. `shared/soul-examples/good-outputs.md` — живые посты + Calibration
 5. `shared/soul-examples/bad-outputs.md`
 6. `shared/article-style.md` — язык / Дзен (без мата)
-7. `shared/dzen-news-casus.md` — **сохранить news-casus arc** (история → финал → практика после)
-8. `drafts/writer.html` — смысл от Writer (**обязателен**)
-9. `title-brief.json` — H1 не ломай в SEO
-10. `research-notes.md` — только сверка фактов (не копируй research в лид)
-11. `shared/published-articles.md` — если interlink включён: **сохрани** outbound-ссылки Writer
+7. `shared/dzen-engagement-lock.md` — **HARD** read-through / comments / subs
+8. `shared/newbuild-focus-lock.md`
+9. `shared/dzen-news-casus.md` — **сохранить news-casus arc** (история → финал → практика после)
+10. `drafts/writer.html` — смысл от Writer (**обязателен**)
+11. `title-brief.json` — H1 не ломай в SEO
+12. `research-notes.md` — только сверка фактов (не копируй research в лид)
+13. `shared/published-articles.md` — если interlink включён: **сохрани** outbound-ссылки Writer
 
 ## Не читаешь
 
@@ -67,8 +69,8 @@ Longform (7 inline): **3 части на первом проходе** — не 
    - **лид = news-casus**, проза 4–6 предложений; не how-to checklist; без research-даты и термин-дампа;
    - **запрещено в первом экране:** TL;DR, «Быстрый инсайт», bullet-списки до первого H2;
    - **финал casus** (суд/отмена/деньги) — явный H2 до практики; не обрывай на «расписку написали» без развязки;
-   - **spine once:** не пересказывать casus в лиде + середине + итоге; практика — **один** блок после финала; вырезать recap и lecture-хвосты;
-   - **comment magnet:** один острый вопрос «…?» — после финала или перед mid CTA; читатели спорят, не FAQ-шаблон;
+   - **spine once:** не пересказывать casus в лиде + середине + итоге; практика — **один** короткий блок после финала; вырезать recap и lecture-хвосты; **ban:** table + list + «главный вывод» подряд;
+   - **comment magnet:** один острый **bipolar**-вопрос «…?» — **сразу после** финала casus; не «а вы как считаете, друзья»;
    - **ending landing (owner lock):** casus горячий (stakes, финал) — **не** размывать; последние 1–2 абзаца **до** end CTA = воздух + agency: остановили бронь/ДДУ до денег / проверка эскроу спасла / разобрали договор до аванса; CTA «подключусь до брони», не «бегите»; **не** «все риэлторы плохие» / «вторичка — мина» / «риски везде — как покупать»; редко — жёсткая потеря только с вилкой «если бы X до аванса»; **ban:** sugar happy ending; чеклист как эмоциональный финал; pure dread без действия;
    - имя автора корпуса в тексте **не** писать;
    - Дзен: **без мата**.
@@ -79,7 +81,7 @@ Longform (7 inline): **3 части на первом проходе** — не 
    - `drafts/variant-a.html` — копия финала
    - не затирай `drafts/writer.html`
 5. Сверка с `bad-outputs.md` перед сдачей.
-6. **Quality bar 9/10:** `shared/quality-bar-9.md` — conversion early/mid/end CTA, 2–4 interlink, **~1800–2200 слов** (hard FAIL > ~2400), **spine once**; после Sol запусти `excalibur_blog_quality_bar_9_gate.py` → `quality-bar-9.json` all_pass.
+6. **Dzen engagement lock:** `shared/dzen-engagement-lock.md` — **~1400–1600 слов** (~10 мин Дзен max), early TG+MAX после лида, телефон один раз, 2–4 interlink, spine once. **Без** self-score 9.0 loop в Sol.
 
 ## Запреты
 

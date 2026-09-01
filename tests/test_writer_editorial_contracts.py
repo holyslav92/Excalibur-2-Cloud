@@ -24,6 +24,8 @@ class WriterEditorialContractsTest(unittest.TestCase):
             canon["writer_allowed_sources"],
             [
                 "shared/writer-master-prompt.md",
+                "shared/dzen-engagement-lock.md",
+                "shared/newbuild-focus-lock.md",
                 "research-notes.md",
                 "title-brief.json",
                 "published-titles-only.md",
@@ -38,6 +40,20 @@ class WriterEditorialContractsTest(unittest.TestCase):
         self.assertIn("drafts/writer.html", skill)
         self.assertIn("published-titles-only.md", skill)
         self.assertIn("Sol", skill)
+        self.assertIn("dzen-engagement-lock.md", skill)
+        self.assertNotIn("1800–2200", skill)
+
+    def test_dzen_engagement_lock_wired(self) -> None:
+        lock = ROOT / "shared/dzen-engagement-lock.md"
+        self.assertTrue(lock.is_file())
+        text = lock.read_text(encoding="utf-8")
+        self.assertIn("1400–1600", text)
+        self.assertIn("agency not panic", text)
+        canon = json.loads((ROOT / "shared/pipeline-canon.json").read_text(encoding="utf-8"))
+        de = (canon.get("owner_lock_permanent") or {}).get("dzen_engagement") or {}
+        self.assertEqual(de.get("status"), "LOCKED_ON_MAIN")
+        self.assertIn("shared/dzen-engagement-lock.md", de.get("docs", []))
+        self.assertIn("shared/dzen-engagement-lock.md", canon["sol_allowed_sources"])
 
     def test_soul_layer_present(self) -> None:
         soul = (ROOT / "shared/SOUL.md").read_text(encoding="utf-8")

@@ -29,6 +29,8 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 ## Вход
 
 - `shared/writer-master-prompt.md`
+- `shared/dzen-engagement-lock.md`
+- `shared/newbuild-focus-lock.md`
 - `research-notes.md`
 - `title-brief.json`
 - `published-titles-only.md`
