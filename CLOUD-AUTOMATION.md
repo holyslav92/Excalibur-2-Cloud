@@ -51,9 +51,11 @@
 
 ```text
 Scout? → research_start → Research → Title → Writer → Sol
-→ Description → Cover-text || Schema → Cover → Cover-QA → Indexer
+→ Stylo → Description → Cover-text || Schema → Cover → Cover-QA → Indexer
 → Publish? → Fixer → merge → Content-learner
 ```
+
+- **Stylo** — после Sol: `excalibur_blog_stylo.py` vs `memory/stylo/gold` (ритм/голос Dzen-hit; сюжеты gold **не** для Scout). `stylo_pass: false` → **один** Derouter `--role sol` с `stylo-notes.md`, повтор measure, стоп. См. `shared/stylo-voice-lock.md`.
 
 - **Scout?** — по handoff / needs_scout; иначе research_start с заданным `topic_id`.
 - **Cover-QA** — обязательный финиш визуала (cover + 7 inline); **pixel gate** на `cover.png` bytes через `scripts/excalibur_blog_cover_qa_pixels.py` + `cover_qa.json` (`pixel_qa=true`, `cover_md5`). Без PASS дальше не идём. **Designed thumbnail gate:** hook H1 (справа, вне лица), телефон +7 922 001 65 05 (низ-право), мем-стикер (угол), optional yellow sticky from hook — **NO Wordstat query strips/bars** (`pixel_no_wordstat_query_strips`). FAIL: face-only collapse. **Fixer** — regen cover panel при layout FAIL; **never** PIL Wordstat overlay/repack → re-QA bytes.
@@ -71,7 +73,7 @@ Scout? → research_start → Research → Title → Writer → Sol
 - **Код и канон** (scripts, shared/*, skills, gates) — в `main`. Артефакты статьи — в ветке run / PR automation.
 - **Не коммитить** `EXCALIBUR_BLOG_ALLOW_PUBLISH=yes` в репозиторий, `.env`, `tenant-config` или Cloud Secrets в git.
 
-Writer = смысл (`drafts/writer.html`). Sol = слог тенанта (`shared/SOUL.md`).
+Writer = смысл (`drafts/writer.html`). Sol = слог тенанта (`shared/SOUL.md`). Stylo = голос vs gold centroid (`memory/stylo/profile.json`).
 
 ## Thin conductor + Derouter two-tier (HARD)
 

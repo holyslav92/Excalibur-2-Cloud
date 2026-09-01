@@ -12,6 +12,7 @@
   ├─ Scout (needs_scout)
   ├─ shell: today + research_start (+ titles-only)
   ├─ Research → Title → Writer → Sol
+  ├─ Stylo (stylo-report.json; ≤1 Sol)
   ├─ shell: pipeline_canon --stamp + opening_meta + html_linter
   ├─ Description (Dzen teaser)
   ├─ Cover-text || Schema → Cover
@@ -20,7 +21,7 @@
   └─ Fixer(open) → merge_to_main → Content-learner
 ```
 
-**18 ролей** — см. `agents/FOR-AGENTS.md`.
+**19 ролей** — см. `agents/FOR-AGENTS.md`.
 
 ## Кто трогает текст
 

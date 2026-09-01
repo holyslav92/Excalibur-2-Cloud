@@ -22,7 +22,7 @@ is_background: false
 
 ```text
 Scout? → research_start → Research → Title → Writer
-→ Sol → Description → Cover-text || Schema → Cover → Cover-QA
+→ Sol → Stylo → Description → Cover-text || Schema → Cover → Cover-QA
 → Indexer → Publish → Fixer → Content-learner
 ```
 
