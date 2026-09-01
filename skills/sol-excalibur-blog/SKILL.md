@@ -27,7 +27,18 @@ python3 scripts/excalibur_blog_sol_chunk.py \
 
 Longform (7 inline): **3 части на первом проходе** — не ждать HTTP 524 на single-shot Sol. `--single-shot` только для коротких статей.
 
-Копию финала: shell `cp article.html drafts/variant-a.html` (sol_chunk делает это автоматически при chunk merge).
+**Trim pass (после Sol, до Description):** если `quality-bar-9` или ручной подсчёт > **2200** слов — не переписывать Sol с нуля; сожми через chunk trim:
+
+```bash
+python3 scripts/excalibur_blog_sol_trim_chunk.py \
+  --article-dir memory/blog/articles/<topic_id>-<slug> \
+  --if-over 2200 \
+  --user-file memory/blog/articles/<topic_id>-<slug>/assembled-sol-trim-inputs.md
+```
+
+Цель trim: **2000–2150** слов; сохранить H2, inline figures, CTA blocks, comment magnet, interlinks. Stamp: `derouter-opus-stamp-sol-trim.json`.
+
+Копию финала: shell `cp article.html drafts/variant-a.html` (sol_chunk и sol_trim_chunk делают это автоматически при chunk merge).
 Контракт: `shared/derouter-opus-brain-contract.md`.
 `DEROUTER SOL BLOCKER` → стоп. Без тихого fallback.
 

@@ -1,0 +1,252 @@
+{
+  "topic_id": "B20",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Застройщик сменил компанию — бронь зависла",
+  "cover_hook_highlight": "компанию",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Святослав Шакин покупатель сравнивает два договора и реквизиты застройщика у стойки регистрации, рядом лежит папка с документами и отображается таймер брони в Тюмени. Застройщик сменил компанию — бронь зависла.",
+      "scene_hint": "Host right MFC two DDU INN timer memes",
+      "meme_caption_ru": "",
+      "sticky": "Вывеска прежняя, бумаги другие",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "bewildered disbelief, raised brows",
+      "meme_picks": [
+        "two_buttons",
+        "surprised_tom"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Техническая» смена ООО — и семья пошла к ДДУ в новостройке",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Family table two DDU different INN distracted_boyfriend corner",
+      "alt": "Семья в новой квартире сравнивает первый договор с документами новой компании; на столе заметны разные реквизиты и папка ДДУ.",
+      "labels": [
+        "Первый договор",
+        "Четыре месяца",
+        "Новая компания",
+        "Другие ИНН",
+        "Вывеска прежняя"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "distracted_boyfriend"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Техническая» смена ООО — и семья пошла к ДДУ в новостройке",
+      "visual_type": "comparison_table",
+      "scene_hint": "72h escrow bank pause table collage",
+      "alt": "Сравнительная таблица показывает, как проверка банка влияет на бронь квартиры: счёт не открыт, возникает пауза, затем бронь истекает.",
+      "labels": [
+        "Бронь 72 часа",
+        "Счёт не открыт",
+        "Проверка владельца",
+        "Пауза банка",
+        "Бронь истекла"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Через 72 часа бронь сгорела: эскроу так и не открыли",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Sales desk 72h timer frozen escrow transfer act",
+      "alt": "На стойке продаж лежат ДДУ и передаточный акт, рядом остановившийся таймер 72 часа и символ неоткрытого эскроу.",
+      "labels": [
+        "Вывеска не компания",
+        "Другой ИНН",
+        "Передаточный акт",
+        "Правопреемство проверить"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Вывеска та же, ИНН другой: где начинается новый застройщик",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Wall sign vs new contract INN mismatch bank stamp",
+      "alt": "Прежняя вывеска застройщика сопоставлена с новым договором, в котором указан другой ИНН; рядом отмечены пункты повторной проверки банком.",
+      "labels": [
+        "Договор регистрируют",
+        "Пять строк сверки",
+        "Новый получатель",
+        "Банк проверяет заново",
+        "Одобрение не бронь"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Новый ДДУ против зарегистрированного: что видит банк",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Buyer builder bank escrow chain this_is_fine_dog corner",
+      "alt": "Схема показывает связь покупателя, нового застройщика и банка, а также отдельные этапы аккредитации, регистрации ДДУ, открытия счёта и брони.",
+      "labels": [
+        "Три участника",
+        "Новая аккредитация",
+        "Сроков нет",
+        "Бронь отдельно",
+        "Деньги не ушли"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "this_is_fine_dog"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что сверять до подписи — таблица",
+      "visual_type": "process_flow",
+      "scene_hint": "Five-step DDU check flow before signature",
+      "alt": "Пять шагов проверки ДДУ перед подписью: ИНН, объект и площадь, цена, срок передачи и реквизиты счёта.",
+      "labels": [
+        "ИНН в шапке",
+        "Объект и площадь",
+        "Цена и оплата",
+        "Срок передачи",
+        "Реквизиты счёта"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Эскроу, бронь и правопреемство: где ломается цепочка",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Escrow chain timeline break wojak corner",
+      "alt": "Временная шкала показывает, где между сверкой договоров, письмами банку и открытием эскроу может прерваться цепочка, пока действует бронь.",
+      "labels": [
+        "Сверить договоры",
+        "Письма банку",
+        "Сначала открыть счёт",
+        "Бронь не кредит",
+        "Ждать бумаги"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "wojak"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки в тюмени от застройщика",
+    "дду эскроу",
+    "реорганизация застройщика"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_emotion": "bewildered disbelief, raised brows",
+  "cover_motifs": {
+    "composition": "горизонтальная сцена с героем в три четверти справа, двумя крупными вариантами решения на переднем плане и свободной светлой зоной слева под заголовок",
+    "location": "светлый коридор многофункционального центра с окном, стойкой регистрации и папкой документов, не шоурум",
+    "meme": "two_buttons и surprised_tom как небольшие реакционные стикеры в верхнем и нижнем углах",
+    "prop_set": "папка с новым ДДУ, два листа с различающимися реквизитами ООО, смартфон с таймером 72 часа, пластиковая карточка с надписью «эскроу»",
+    "sticker_set": "two_buttons рядом с двумя вариантами договора и surprised_tom в отдельном углу; оба стикера маленькие, не перекрывают лицо, заголовок и телефон",
+    "joke": "герой тянется одновременно к двум кнопкам «подписать» и «проверить ИНН», пока таймер брони нервно отсчитывает последние часы",
+    "outfit": "светлая терракотовая overshirt поверх кремовой футболки, серо-бежевые брюки, тонкие часы",
+    "emotion": "ошарашенное недоверие с поднятыми бровями и напряжённой полуулыбкой, не студийная улыбка",
+    "pose_framing": "средний план по пояс, герой справа, корпус развёрнут к документам, одна рука зависла над кнопками, вторая держит папку",
+    "action": "сравнивает старую вывеску на телефоне с новым заголовком ДДУ и пытается выбрать между подписанием и проверкой реквизитов"
+  }
+}

@@ -6,6 +6,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -174,6 +175,68 @@ class WordstatOverlayTest(unittest.TestCase):
             report = stamp_wordstat_stickers(path, ["ипотека тюмень"])
             self.assertEqual(report["status"], "OK")
             self.assertTrue(path.is_file())
+
+
+class ThemeContractDeployTest(unittest.TestCase):
+    def test_settings_prefers_dot_only_when_root_is_dot(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_theme_contract_deploy import _settings
+
+        with mock.patch.dict(
+            "os.environ",
+            {
+                "FTP_HOST": "example.com",
+                "FTP_USER": "u",
+                "FTP_PASS": "p",
+                "FTP_ROOT": ".",
+            },
+            clear=False,
+        ):
+            _host, _user, _password, _port, roots = _settings()
+        self.assertEqual(roots, ["."])
+
+    def test_deploy_warn_skip_exit_zero_when_theme_missing(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_theme_contract_deploy import deploy
+
+        class FakeSftp:
+            def stat(self, _path):  # noqa: ANN001
+                raise OSError("ENOENT")
+
+            def close(self) -> None:
+                return None
+
+        class FakeTransport:
+            def connect(self, **_kwargs) -> None:
+                return None
+
+            def close(self) -> None:
+                return None
+
+        with mock.patch(
+            "excalibur_blog_theme_contract_deploy._settings",
+            return_value=("h", "u", "p", 22, ["."]),
+        ), mock.patch(
+            "paramiko.Transport",
+            return_value=FakeTransport(),
+        ), mock.patch(
+            "paramiko.SFTPClient.from_transport",
+            return_value=FakeSftp(),
+        ):
+            rc = deploy(strict=False)
+        self.assertEqual(rc, 0)
+
+
+class SolTrimChunkTest(unittest.TestCase):
+    def test_split_html_by_h2_keeps_preamble(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_sol_trim_chunk import split_html_by_h2
+
+        html = "<p>lead</p>\n<h2>One</h2><p>a</p>\n<h2>Two</h2><p>b</p>"
+        parts = split_html_by_h2(html)
+        self.assertEqual(len(parts), 3)
+        self.assertIn("lead", parts[0])
+        self.assertIn("<h2>One</h2>", parts[1])
 
 
 if __name__ == "__main__":
