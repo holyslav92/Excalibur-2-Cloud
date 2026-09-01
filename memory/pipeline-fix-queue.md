@@ -651,3 +651,132 @@ files_changed:
 checks_run:
 - B19 `quality-bar-9.json` dual_cta_soft PASS, word_count=2125 PASS
 commit: b5d7db1
+
+## INC-20260901-1338-cover-layout-fixer-round-b20
+status: fixed
+run_date: 2026-09-01
+role: excalibur-blog-cover-qa
+topic_id: B20
+article_dir: memory/blog/articles/B20-v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot
+severity: medium
+category: qa
+
+### What went wrong
+- Initial cover PNG FAIL `pixel_layout_not_collapsed` (face-only crop, hook/phone dumped).
+- Cover-QA needed 1 Fixer round (`quad_regen_panels --slots cover` solo i2i) before OCR escape PASS.
+
+### How the agent recovered this run
+- `excalibur_blog_cover_fixer.py` round 1 → panel regen → re-QA PASS with `ocr_false_positive_escape` on residual flakes.
+
+### Durable fix needed before next run
+- TEXT_LAYOUT_RETRY suffix on grsai solo attempt 2+ and quad cover panel regen attempt 2+ when layout/hook/phone checks fail.
+- Include layout/hook in quad_regen `model_dirty` gate before accepting attempt 1.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_layout_retry.py`
+- `scripts/excalibur_blog_grsai_solo_cover.py`
+- `scripts/excalibur_blog_quad_regen_panels.py`
+- `tests/test_cover_budget.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-01
+fix_summary:
+- Shared `excalibur_blog_cover_layout_retry.py`; TEXT_LAYOUT_RETRY on solo cover attempt 2+ and quad cover regen attempt 2+.
+- quad_regen cover `model_dirty` now includes `pixel_layout_not_collapsed` + `pixel_hook_title_present`.
+files_changed:
+- `scripts/excalibur_blog_cover_layout_retry.py`
+- `scripts/excalibur_blog_grsai_solo_cover.py`
+- `scripts/excalibur_blog_quad_regen_panels.py`
+- `tests/test_cover_budget.py`
+checks_run:
+- `python3 -m py_compile` on changed scripts
+- `python3 -m unittest tests.test_cover_budget.CoverBudgetTest.test_needs_text_layout_retry_detects_hook_phone_fail`
+commit: pending
+
+## INC-20260901-1339-sol-trim-pass-b20
+status: fixed
+run_date: 2026-09-01
+role: excalibur-blog-sol
+topic_id: B20
+article_dir: memory/blog/articles/B20-v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot
+severity: low
+category: script
+
+### What went wrong
+- Sol chunk merge ~2259 words; quality-bar target 1800–2200 required manual 3-part Sol TRIM (2259→2126).
+
+### How the agent recovered this run
+- Manual Derouter sol_trim_chunk (3 parts) via `assembled-sol-trim-inputs.md`; `quality-bar-9.json` PASS at 2126.
+
+### Durable fix needed before next run
+- `excalibur_blog_sol_trim_chunk.py` mirror `writer_trim_chunk.py`; Sol skill documents `--if-over 2200` trim path.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_sol_trim_chunk.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `scripts/excalibur_blog_doctor.py`
+- `tests/test_pipeline_speed_b03.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-01
+fix_summary:
+- Added `excalibur_blog_sol_trim_chunk.py` (3-part Derouter trim, `--if-over 2200`, stamps variant-a.html).
+- Sol skill + doctor list trim script; unit test for H2 split.
+files_changed:
+- `scripts/excalibur_blog_sol_trim_chunk.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `.cursor/skills/sol-excalibur-blog/SKILL.md`
+- `scripts/excalibur_blog_doctor.py`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_sol_trim_chunk.py`
+- `python3 -m unittest tests.test_pipeline_speed_b03.SolTrimChunkTest`
+commit: pending
+
+## INC-20260901-1340-theme-contract-deploy-enoent-b20
+status: fixed
+run_date: 2026-09-01
+role: excalibur-blog-publish
+topic_id: B20
+article_dir: memory/blog/articles/B20-v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot
+severity: low
+category: publish
+
+### What went wrong
+- `excalibur_blog_theme_contract_deploy.py --deploy` ENOENT: theme path not under configured `FTP_ROOT`; wp_publish SFTP upload fell back to `.` with warning.
+
+### How the agent recovered this run
+- Publish continued (theme already patched prior runs); post 9490 live; wp-publish-log notes SFTP root fallback.
+
+### Durable fix needed before next run
+- theme_contract_deploy: WARN SKIP exit 0 when theme missing (non-strict); `--strict` for setup; document `FTP_ROOT=.` in publish skill.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_theme_contract_deploy.py`
+- `skills/publish-excalibur-blog/SKILL.md`
+- `shared/excalibur-wp-publish-contract.md`
+- `tests/test_pipeline_speed_b03.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-01
+fix_summary:
+- `resolve_theme_base()` + WARN SKIP exit 0 (non-strict) when theme ENOENT; `--strict` for setup.
+- Publish skill documents ENOENT non-blocker + `FTP_ROOT=.` canon.
+files_changed:
+- `scripts/excalibur_blog_theme_contract_deploy.py`
+- `skills/publish-excalibur-blog/SKILL.md`
+- `.cursor/skills/publish-excalibur-blog/SKILL.md`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_theme_contract_deploy.py`
+- `python3 -m unittest tests.test_pipeline_speed_b03.ThemeContractDeployTest`
+commit: pending
