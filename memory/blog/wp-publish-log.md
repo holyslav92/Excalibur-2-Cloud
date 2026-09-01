@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B20 — 2026-09-01
+
+- **topic_id:** B20
+- **slug:** v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot
+- **post_id:** 9490
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/
+- **featured_image:** 9491
+- **inline_images:** 9492–9498 (7)
+- **wp_category_slugs:** dokumenty-i-oformlenie, riski-sdelki, pokupka-kvartiry (category_ids=54,58,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme path not in configured root)
+
 ## B19 — 2026-09-01
 
 - **topic_id:** B19
