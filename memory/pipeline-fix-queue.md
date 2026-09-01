@@ -573,7 +573,7 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_cover_qa_pixels.py`
 - `python3 -m unittest tests.test_cover_budget.OcrEscapeHatchTest`
 - B19 `analyze_cover_pixels` → PASS + `identity_hist_near_match_flake`
-commit: pending
+commit: 6af034a, 1278e59
 
 ## INC-20260901-0811-cover-budget-exhausted-before-escape-b19
 status: fixed
