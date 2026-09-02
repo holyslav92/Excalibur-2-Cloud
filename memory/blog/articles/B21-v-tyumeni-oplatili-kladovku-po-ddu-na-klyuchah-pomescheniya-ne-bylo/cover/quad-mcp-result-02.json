@@ -1,0 +1,22 @@
+{
+  "local_path": "cover/canvas-quad-02.png",
+  "source": "grsai-api",
+  "model": "grsai-standard",
+  "bytes": 2131300,
+  "aspect_ratio": "2048x1152",
+  "quality": "high",
+  "endpoint": "/v1/api/generate",
+  "path_strategy": "api_generate_json",
+  "host": "grsaiapi.com",
+  "mode": "t2i",
+  "response_kind": "url",
+  "attempts": 1,
+  "resized_to": [
+    2048,
+    1152
+  ],
+  "result_url_host": "file5.aitohumanize.com",
+  "task_id": "6-e1a88aec-df09-483c-bcb0-145ab12c5723",
+  "poll": false,
+  "model_tier": "standard"
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo",
+  "topic_id": "B21",
+  "post_id": 9549,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo/",
+  "publish_method": "sftp",
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo/",
+    "errors": []
+  }
+}

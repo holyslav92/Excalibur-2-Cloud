@@ -1,0 +1,286 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B21-v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1023,
+          571
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 571,
+            "end": 587
+          },
+          "v_gutter_px": {
+            "start": 1023,
+            "end": 1041
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 3.0,
+            "v_center_offset_px": 8.0,
+            "max_aspect_crop_loss": 0.0186,
+            "per_panel_crop_loss": {
+              "top_left": 0.0078,
+              "top_right": 0.0088,
+              "bottom_left": 0.0186,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 4,
+              "top": 0,
+              "right": 1019,
+              "bottom": 571
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1023,
+              "bottom": 571
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени оплатили кладовку по ДДУ — на ключах её не оказалось: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1041,
+              "top": 2,
+              "right": 2048,
+              "bottom": 568
+            },
+            "raw_box_px": {
+              "left": 1041,
+              "top": 0,
+              "right": 2048,
+              "bottom": 571
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «На ключах квартиру отдали — кладовки с номером…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "На ключах квартиру отдали — кладовки с номером из ДДУ не оказалось"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 9,
+              "top": 587,
+              "right": 1013,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 587,
+              "right": 1023,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: В акте пусто, Коридор за сеткой, Подписали под ипотеку — иллюстрация к разбору…",
+            "h2_anchor": "На ключах квартиру отдали — кладовки с номером из ДДУ не оказалось"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1041,
+              "top": 587,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1041,
+              "top": 587,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Акт на квартиру под ипотечным дедлайном: устное…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Акт на квартиру под ипотечным дедлайном: устное «допишем потом»"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B21-v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_too_far_from_center",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 571,
+              "end": 584
+            },
+            "v_gutter_px": {
+              "start": 1060,
+              "end": 1084
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 1.5,
+              "v_center_offset_px": 48.0,
+              "max_aspect_crop_loss": 0.0508,
+              "per_panel_crop_loss": {
+                "top_left": 0.0425,
+                "top_right": 0.0508,
+                "bottom_left": 0.0472,
+                "bottom_right": 0.0458
+              },
+              "reject_reason": "gutter_too_far_from_center"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Два месяца, Кладовка меньше, Доплата 180 тыс — иллюстрация к разбору сделки.",
+            "h2_anchor": "«Опция», «достроят», другой номер: что сказали в офисе продаж"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Ипотека идёт, Допишем потом, Акт в суде — иллюстрация к разбору сделки.",
+            "h2_anchor": "Через два месяца — меньшая кладовка или доплата около 180 000 рублей"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: ДДУ, Декларация, Акт без отказа — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что проверить в ДДУ и актах до подписи — таблица"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "чеклист ошибок vs правильный путь по новостройке в Тюмени: Эскроу — деньги, Четыре документа, Претензия в день — иллюстрация к разбору…",
+            "h2_anchor": "Эскроу закрыт, помещение нет: где остаётся спор"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json"
+}
