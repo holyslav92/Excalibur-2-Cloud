@@ -75,6 +75,52 @@ class QualityBar9GateTest(unittest.TestCase):
             )
             self.assertFalse(_stamped_cover_qa_visual_pass(article))
 
+    def test_url_present_accepts_site_base_placeholder_paths(self) -> None:
+        from excalibur_blog_quality_bar_9_gate import url_present
+
+        html = (
+            '<a href="{{SITE_BASE}}/">сайт</a> '
+            '<a href="{{SITE_BASE}}/gajdy/">гайды</a> '
+            '<a href="{{SITE_BASE}}/rieltor-tyumen/">риэлтор</a>'
+        )
+        self.assertTrue(url_present(html, "/"))
+        self.assertTrue(url_present(html, "/gajdy/"))
+        self.assertTrue(url_present(html, "/rieltor-tyumen/"))
+
+    def test_check_end_cta_passes_b21_placeholder_channels(self) -> None:
+        from excalibur_blog_quality_bar_9_gate import check_end_cta
+
+        html = """
+<div class="excalibur-cta-end excalibur-social-cta">
+<p>консультация</p>
+<p><a href="https://t.me/Tyumen_Rieltor">TG</a>
+<a href="https://max.ru/id561413315447_biz">MAX</a>
+<a href="tel:+79220016505">+7 922 001 65 05</a></p>
+<p><a href="https://dzen.ru/holyslav">Дзен</a>
+<a href="https://vk.ru/tymenrieltor">VK</a>
+<a href="/">сайт</a>
+<a href="/gajdy/">гайды</a>
+<a href="{{SITE_BASE}}/rieltor-tyumen/">риэлтор</a></p>
+</div>
+"""
+        self.assertTrue(check_end_cta(html))
+
+    def test_check_end_cta_fails_without_site_root(self) -> None:
+        from excalibur_blog_quality_bar_9_gate import check_end_cta
+
+        html = """
+<div class="excalibur-cta-end excalibur-social-cta">
+<p><a href="https://t.me/Tyumen_Rieltor">TG</a>
+<a href="https://max.ru/id561413315447_biz">MAX</a>
+<a href="tel:+79220016505">+7 922 001 65 05</a></p>
+<p><a href="https://dzen.ru/holyslav">Дзен</a>
+<a href="https://vk.ru/tymenrieltor">VK</a>
+<a href="{{SITE_BASE}}/gajdy/">гайды</a>
+<a href="{{SITE_BASE}}/rieltor-tyumen/">риэлтор</a></p>
+</div>
+"""
+        self.assertFalse(check_end_cta(html))
+
 
 class StampCoverQaEscapePreserveTest(unittest.TestCase):
     def test_stamp_preserves_manual_escape_when_pixel_reruns_fail(self) -> None:
