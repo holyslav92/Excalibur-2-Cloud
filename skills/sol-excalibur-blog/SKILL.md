@@ -89,6 +89,7 @@ python3 scripts/excalibur_blog_sol_trim_chunk.py \
    - Дзен: **без мата**.
    - **Interlink:** не удаляй outbound-ссылки на sibling из `drafts/writer.html`;
      при необходимости переформулируй якорь, но оставь **2–4** живые ссылки.
+   - **End CTA (`excalibur-cta-end`):** dual CTA + **полный набор каналов** — TG, MAX, tel, Дзен, VK, **сайт** (`href="/"` или `{{SITE_BASE}}/`), `/gajdy/`, `/rieltor-tyumen/` (path или `{{SITE_BASE}}/…`). Gate `end_cta_full_channels` FAIL без любого из них.
 4. Сохрани:
    - `article.html` — **финал для публикации**
    - `drafts/variant-a.html` — копия финала

@@ -782,3 +782,115 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_theme_contract_deploy.py`
 - `python3 -m unittest tests.test_pipeline_speed_b03.ThemeContractDeployTest`
 commit: pending
+
+## INC-20260902-0850-cover-attempt1-layout-b21
+status: fixed
+run_date: 2026-09-02
+role: excalibur-blog-cover
+topic_id: B21
+article_dir: memory/blog/articles/B21-v-tyumeni-v-kp-obeschali-gaz-i-vodu-na-klyuchah-kommunikacii-ne-podveli
+severity: medium
+category: qa
+
+### What went wrong
+- grsai solo cover attempt 1 pixel QA FAIL (layout/hook/phone flakes); attempt 2 with TEXT_LAYOUT_RETRY suffix → PASS + OCR escape.
+
+### How the agent recovered this run
+- `excalibur_blog_grsai_solo_cover.py` attempt 2 TEXT_LAYOUT_LOCK; Cover-QA `apply_ocr_false_positive_escape` on residual flakes; budget 2/2 not exhausted.
+
+### Durable fix needed before next run
+- None — B20 `excalibur_blog_cover_layout_retry.py` + B15/B19 OCR escape already canonical on main.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_grsai_solo_cover.py`
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-02
+fix_summary:
+- Confirmed existing TEXT_LAYOUT_RETRY + OCR escape handled B21 attempt 1→2 without new code.
+files_changed:
+- none (contract already canonical)
+checks_run:
+- B21 `cover/cover_qa.json` PASS after attempt 2 (md5=6e521d835f9abd53e8a2c39ccfb0eddf)
+commit: 0234a34
+
+## INC-20260902-0851-stylo-sol-rewrite-b21
+status: fixed
+run_date: 2026-09-02
+role: excalibur-blog-stylo
+topic_id: B21
+article_dir: memory/blog/articles/B21-v-tyumeni-v-kp-obeschali-gaz-i-vodu-na-klyuchah-kommunikacii-ne-podveli
+severity: low
+category: prompt
+
+### What went wrong
+- Stylo first measure delta 3.48 > 2.85 (sent_len_std, legal_per_1k, lead 64w, spine_overlap); one stylo-driven Sol pass required.
+
+### How the agent recovered this run
+- `drafts/stylo-sol-input.md` + Derouter Sol rhythm fix → delta 2.57 PASS; `sol_trim_chunk` 2313→2239 words.
+
+### Durable fix needed before next run
+- Stylo skill: explicit CTA href byte-for-byte preservation in stylo-sol pass.
+
+### Suggested files to inspect/change
+- `skills/stylo-excalibur-blog/SKILL.md`
+- `.cursor/skills/stylo-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-02
+fix_summary:
+- Stylo skill documents CTA block href preservation during rhythm-only Sol pass.
+files_changed:
+- `skills/stylo-excalibur-blog/SKILL.md`
+- `.cursor/skills/stylo-excalibur-blog/SKILL.md`
+checks_run:
+- B21 `stylo-report.json` stylo_pass=true after one sol_rewrite
+commit: pending
+
+## INC-20260902-0852-sol-end-cta-site-link-b21
+status: fixed
+run_date: 2026-09-02
+role: excalibur-blog-sol
+topic_id: B21
+article_dir: memory/blog/articles/B21-v-tyumeni-v-kp-obeschali-gaz-i-vodu-na-klyuchah-kommunikacii-ne-podveli
+severity: low
+category: script
+
+### What went wrong
+- Sol first pass omitted `href="/"` site link in `excalibur-cta-end`; `url_present` did not accept `{{SITE_BASE}}/gajdy/` → quality-bar `end_cta_full_channels` FAIL until manual HTML fix.
+
+### How the agent recovered this run
+- Cover commit added `<a href="/">сайт</a>` and `/gajdy/` paths; quality-bar-9 PASS.
+
+### Durable fix needed before next run
+- `url_present` accept `{{SITE_BASE}}/path` git-safe hrefs; gate require `/rieltor-tyumen/`; Sol skill explicit full end-CTA channel list incl. site root.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `tests/test_quality_bar_9_gate.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-02
+fix_summary:
+- `url_present` matches `{{SITE_BASE}}/…` paths; `check_end_cta` requires `/rieltor-tyumen/`; Sol skill documents full end-CTA channel set incl. site root.
+files_changed:
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `.cursor/skills/sol-excalibur-blog/SKILL.md`
+- `tests/test_quality_bar_9_gate.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_quality_bar_9_gate.py`
+- `python3 -m unittest tests.test_quality_bar_9_gate`
+- B21 `quality-bar-9.json` end_cta_full_channels PASS
+commit: abcf510

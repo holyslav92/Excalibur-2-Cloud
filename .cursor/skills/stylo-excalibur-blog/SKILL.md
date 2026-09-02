@@ -32,6 +32,7 @@ python3 scripts/excalibur_blog_stylo.py \
    - `drafts/writer.html` (факты — не менять)
    - текущий `article.html`
    - явная инструкция: править **только ритм/голос** по осям notes; не факты, не сюжет, не newbuild→вторичка.
+   - **CTA blocks (`excalibur-cta-early|mid|end`):** сохранить HTML и **все href** byte-for-byte (TG, MAX, tel, Дзен, VK, `href="/"` сайт, `/gajdy/`, `/rieltor-tyumen/` или `{{SITE_BASE}}/…`); не удалять каналы при ужатии ритма.
 
 2. Один вызов Derouter:
 
