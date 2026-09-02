@@ -1,0 +1,258 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-02",
+    "today_ru": "02.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "среда"
+  },
+  "topic": {
+    "topic_id": "B21",
+    "title": "В Тюмени оплатили переуступку в новостройке — застройщик отказал переоформлять ДДУ",
+    "h1": "В Тюмени оплатили переуступку в новостройке — застройщик отказал переоформлять ДДУ",
+    "slug": "v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-",
+    "primary_query": "В Тюмени оплатили переуступку в новостройке — застройщик отказал переоформлять ДДУ",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени оплатили переуступку в новостройке — застройщик отказал переоформлять ДДУ 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Судебная практика расторжения договора участия в долевом строительстве⚡ ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/rastorzhenie-ddu-s-zastroyshchikom/sudebnaya-praktika-rastorzheniya-dogovora-uchastiya-v-dolevom-stroitelstve/",
+          "snippet": ""
+        },
+        {
+          "title": "Областные власти судятся с собственником недостроенного замка под ...",
+          "url": "https://tumen.dk.ru/news/237246773",
+          "snippet": "Юридическая фирма \"Двитекс\" накопила значительную судебную практику по расторжению ДДУ, взысканию неустойки по ДДУ и иным договорам. С решениями судов по спорам с застройщиками и расторжению договоров долевого участия (ДДУ) можно ознакомиться в разделе \"Выигранные дела\" по ссылке."
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома в 2026: как взыскать неустойку по ДДУ ...",
+          "url": "https://t-j.ru/guide/neustoyka/",
+          "snippet": "В департаменте имущественных отношений DK.RU сообщили, что на июнь 2026 г. зарегистрировано лишь право собственности на недостроенное здание со степенью готовости на те же 62%."
+        },
+        {
+          "title": "Судебная практика по взысканию неустойки по дду \\ 2026-2025-2024 год ...",
+          "url": "https://www.consultant.ru/law/podborki/sudebnaya_praktika_po_vzyskaniyu_neustojki_po_ddu/",
+          "snippet": "С застройщика можно взыскать компенсации. Я специализируюсь на спорах с застройщиками и рекомендую обращаться побыстрее в суд, если что-то идет не так. Расскажу, как получить компенсацию через суд в 2026 году. Представим, что вы приобрели квартиру в строящемся доме."
+        },
+        {
+          "title": "Как оформить переуступку ДДУ: пошаговая инструкция",
+          "url": "https://kvarnado.ru/dolevoe-stroitelstvo/guide-kak-oformit-pereustupku-ddu",
+          "snippet": "Согласно материалам дела, со стороны истца нарушений в части исполнения обязательств по договору не усматривалось, в то время как застройщик просрочил передачу объекта строительства, о ..."
+        },
+        {
+          "title": "Переуступка прав по ДДУ: что это, как оформить, налоги и риски",
+          "url": "https://pravo-pro.ru/blog/posts/perestupka-prav-po-ddu/",
+          "snippet": "Эта статья подойдёт тем, кто покупает или продаёт квартиру в строящемся доме и хочет понять, как оформить переуступку ДДУ без лишних кругов по МФЦ и Росреестру."
+        }
+      ],
+      "searched_at": "2026-09-02"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени оплатили переуступку в новостройке — застройщик отказал переоформлять ДДУ 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Кому в Тюмени девелопер поможет закрыть ипотеку - 27 августа 2026 | 72.ру",
+          "url": "https://72.ru/text/realty/2026/08/27/76610181/?erid=2SDnjcbeJ9H",
+          "snippet": ""
+        },
+        {
+          "title": "Судебная практика расторжения договора участия в долевом строительстве⚡ ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/rastorzhenie-ddu-s-zastroyshchikom/sudebnaya-praktika-rastorzheniya-dogovora-uchastiya-v-dolevom-stroitelstve/",
+          "snippet": "В статье рассказывается о проблеме трейд-ин в Тюмени и о том, как девелоперы помогают закрыть ипотеку. Узнайте, кто может воспользоваться уникальным шансом улучшить жилищные условия."
+        },
+        {
+          "title": "Взыскание неустойки по ДДУ с застройщика в Тюмени",
+          "url": "https://www.dvitex.ru/service_fiz/nedvizhimost/vzyskanie-neustoyki-po-ddu-s-zastroyshchika-v-tyumeni/",
+          "snippet": "Юридическая фирма \"Двитекс\" накопила значительную судебную практику по расторжению ДДУ, взысканию неустойки по ДДУ и иным договорам. С решениями судов по спорам с застройщиками и расторжению договоров долевого участия (ДДУ) можно ознакомиться в разделе \"Выигранные дела\" по ссылке."
+        },
+        {
+          "title": "Отмена моратория на неустойку по ДДУ в 2026 году: как дольщику получить ...",
+          "url": "https://favorit-consult.ru/article/otmena-moratoriya-na-neustojku-po-ddu/",
+          "snippet": "Взыскание неустойки по ДДУ с застройщика в Тюмени: как мы вам поможем? Мы предлагаем полное сопровождение процедуры взыскания неустойки с застройщика в г. Тюмень в дистанционном формате."
+        },
+        {
+          "title": "Судебная практика по взысканию неустойки по дду \\ 2026-2025-2024 год ...",
+          "url": "https://www.consultant.ru/law/podborki/sudebnaya_praktika_po_vzyskaniyu_neustojki_po_ddu/",
+          "snippet": "В этой статье разбираем, кому положена выплата, как рассчитать неустойку по ДДУ с учётом трёх периодов моратория, в какой суд подавать и что делать, если застройщик тянет время."
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома в 2026: как взыскать неустойку по ДДУ ...",
+          "url": "https://t-j.ru/guide/neustoyka/",
+          "snippet": "Согласно материалам дела, со стороны истца нарушений в части исполнения обязательств по договору не усматривалось, в то время как застройщик просрочил передачу объекта строительства, о ..."
+        }
+      ],
+      "searched_at": "2026-09-02"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени оплатили переуступку в новостройке — застройщик отказал переоформлять ДДУ official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Как оформить переуступку ДДУ: пошаговая инструкция",
+          "url": "https://kvarnado.ru/dolevoe-stroitelstvo/guide-kak-oformit-pereustupku-ddu",
+          "snippet": ""
+        },
+        {
+          "title": "Переуступка прав в новостройке: риски, налоги и как…",
+          "url": "https://alkorspb.ru/journal/pereustupka-novostroika-bez-brendov-2026/",
+          "snippet": "Эта статья подойдёт тем, кто покупает или продаёт квартиру в строящемся доме и хочет понять, как оформить переуступку ДДУ без лишних кругов по МФЦ и Росреестру."
+        },
+        {
+          "title": "Взыскание неустойки с застройщика в Тюмени | Юрист по ДДУ | «Лекс»",
+          "url": "https://lex-pravo.ru/tyumen/spory-s-zastrojshhikami/",
+          "snippet": "Частые причины отказа: неполный комплект документов, несогласованная форма договора с условиями ДДУ/застройщика/банка, ошибки или расхождения в персональных данных сторон сделки."
+        },
+        {
+          "title": "Переуступка прав по ДДУ: что это, как оформить, налоги и риски",
+          "url": "https://pravo-pro.ru/blog/posts/perestupka-prav-po-ddu/",
+          "snippet": "Подключаемся, когда застройщик затягивает передачу квартиры, спорит по дефектам, предлагает подписать невыгодные документы или фактически уводит спор от реального решения."
+        },
+        {
+          "title": "Требование доплаты за лишние метры по ДДУ и БТИ после переуступки ...",
+          "url": "https://palata-advokatov.ru/vopros-yuristu/doplata-za-lishnie-metry-po-ddu/",
+          "snippet": "Переуступка по ДДУ — это передача права требования к застройщику, а не продажа готовой квартиры. Стороны сделки: первоначальный дольщик (цедент) и новый приобретатель (цессионарий). Уступка возможна только после полной оплаты цены ДДУ либо одновременно с переводом долга на цессионария."
+        },
+        {
+          "title": "Что такое переуступка ДДУ: правила, риски и сделка",
+          "url": "https://kvarnado.ru/dolevoe-stroitelstvo/guide-pereustupka-ddu-chto-eto",
+          "snippet": "Вопрос юристу: Купил квартиру в строящемся доме через переуступку прав, а теперь застройщик требует доплатить за лишние квадратные метры, которые появились после обмера БТИ."
+        }
+      ],
+      "searched_at": "2026-09-02"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени оплатили переуступку в новостройке — застройщик отказал переоформлять ДДУ 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "[Проблема] zapret ne rabotaet · Issue #10160 - GitHub",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/issues/10160",
+          "snippet": ""
+        },
+        {
+          "title": "tx-ui/media/token.png at main · Incognito-Coder/tx-ui · GitHub",
+          "url": "https://github.com/Incognito-Coder/tx-ui/blob/main/media/token.png",
+          "snippet": "Запустите service.bat и выберите пункт Run Diagnostics, чтобы проверить на конфликтующие сервисы. Если у вас проблемы с запуском Discord, то в конце согласитесь на очистку кэша. Если не работает / перестала работать стратегия, то попробуйте другие."
+        },
+        {
+          "title": "SNI-Proxy/images/sni-proxy2.PNG at main · nullroute1970/SNI-Proxy",
+          "url": "https://github.com/nullroute1970/SNI-Proxy/blob/main/images/sni-proxy2.PNG",
+          "snippet": "Advanced Xray Panel Support Multi Protocols, Based on MHSanaei/3x-ui Focusing on Stability - tx-ui/media/token.png at main · Incognito-Coder/tx-ui"
+        },
+        {
+          "title": "Wand-Enhancer-28-06-2026/assets/icon.svg at master - GitHub",
+          "url": "https://github.com/SoulLightninWolff/Wand-Enhancer-28-06-2026/blob/master/assets/icon.svg",
+          "snippet": "Contribute to nullroute1970/SNI-Proxy development by creating an account on GitHub."
+        },
+        {
+          "title": "GWJ85/icon.svg at master · jintachi/GWJ85 · GitHub",
+          "url": "https://github.com/jintachi/GWJ85/blob/master/icon.svg",
+          "snippet": "SoulLightninWolff / Wand-Enhancer-28-06-2026 Public forked from k1tbyte/Wand-Enhancer Notifications Fork 4 Star 1"
+        },
+        {
+          "title": "Paper2Video/assets/workflow.png at main · Gen-Verse/Paper2Video",
+          "url": "https://github.com/Gen-Verse/Paper2Video/blob/main/assets/workflow.png",
+          "snippet": "Contribute to jintachi/GWJ85 development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-09-02"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени оплатили переуступку в новостройке — застройщик отказал переоформлять ДДУ forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Взыскание неустойки с застройщика в Тюмени | Юрист по ДДУ | «Лекс»",
+          "url": "https://lex-pravo.ru/tyumen/spory-s-zastrojshhikami/",
+          "snippet": ""
+        },
+        {
+          "title": "Судебная практика расторжения договора участия в долевом строительстве⚡ ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/rastorzhenie-ddu-s-zastroyshchikom/sudebnaya-praktika-rastorzheniya-dogovora-uchastiya-v-dolevom-stroitelstve/",
+          "snippet": "Подключаемся, когда застройщик затягивает передачу квартиры, спорит по дефектам, предлагает подписать невыгодные документы или фактически уводит спор от реального решения."
+        },
+        {
+          "title": "Как оформить переуступку ДДУ: пошаговая инструкция",
+          "url": "https://kvarnado.ru/dolevoe-stroitelstvo/guide-kak-oformit-pereustupku-ddu",
+          "snippet": "Истица обратилась в суд с требованием заменить объект долевого строительства, ссылаясь на ст. 21 Закона о защите прав потребителей, суд отказал в удовлетворении требований."
+        },
+        {
+          "title": "Переуступка прав по ДДУ: что это, как оформить, налоги и риски",
+          "url": "https://pravo-pro.ru/blog/posts/perestupka-prav-po-ddu/",
+          "snippet": "Эта статья подойдёт тем, кто покупает или продаёт квартиру в строящемся доме и хочет понять, как оформить переуступку ДДУ без лишних кругов по МФЦ и Росреестру."
+        },
+        {
+          "title": "Переуступка прав по ДДУ: риски для покупателя и как себя защитить - Fedelis",
+          "url": "https://fedelis.ru/article/pereustupka-prav-po-ddu/",
+          "snippet": "Переуступка по ДДУ — это передача права требования к застройщику, а не продажа готовой квартиры. Стороны сделки: первоначальный дольщик (цедент) и новый приобретатель (цессионарий). Уступка возможна только после полной оплаты цены ДДУ либо одновременно с переводом долга на цессионария."
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома в 2026: как взыскать неустойку по ДДУ ...",
+          "url": "https://t-j.ru/guide/neustoyka/",
+          "snippet": "Покупка квартиры по переуступке прав (цессии) — это способ приобрести жильё в новостройке на условиях, которые могут быть выгоднее прямого договора с застройщиком. Но за этой выгодой скрываются риски."
+        }
+      ],
+      "searched_at": "2026-09-02"
+    }
+  ],
+    {
+      "query_id": "fresh_assignment_market_2026",
+      "query": "переуступка новостройки скидки Тюмень 2026",
+      "purpose": "свежий рыночный сигнал недели",
+      "result_count": 3,
+      "results": [
+        {
+          "title": "В каких городах России максимальные скидки на квартиры при переуступках — Движение.ру",
+          "url": "https://dvizhenie.ru/media/8260/v-kakih-gorodah-rossii-maksimalnye-skidki-na-kvartiry-v-pri-pereustupkah",
+          "snippet": "Обновлено 31.08.2026. Тюмень: средняя цена 1 кв. м в переуступке 167,0 тыс. ₽ vs 158,3 по ДДУ (-5%)."
+        },
+        {
+          "title": "Кому в Тюмени девелопер поможет закрыть ипотеку - 72.ру",
+          "url": "https://72.ru/text/realty/2026/08/27/76610181/",
+          "snippet": "27.08.2026. Локальный рынок новостроек Тюмени, trade-in, бронь и ипотека."
+        },
+        {
+          "title": "Уступка прав по ДДУ: риски для нового дольщика — Dvitex",
+          "url": "https://www.dvitex.ru/poleznoe/nedvizhimost/sdelki-s-nedvizhimostyu/zaklyuchenie-dogovora-ustupki-po-ddu-kakie-riski-dlya-dolshchika/",
+          "snippet": "07.08.2026. Регистрация цессии, согласие застройщика, перевод долга."
+        }
+      ],
+      "searched_at": "2026-09-02"
+    },
+    {
+      "query_id": "wordstat_live_b21",
+      "query": "wordstat MCP-KV regions 55,11176,225",
+      "purpose": "частотности Scout P0 и on-plot",
+      "result_count": 6,
+      "results": [
+        {"title": "купить новостройку в тюмени", "url": "mcp-kv:wordstat", "snippet": "874 (55+11176); compare RU225 1882"},
+        {"title": "переуступка новостройки", "url": "mcp-kv:wordstat", "snippet": "10 (55+11176); 2422 (RU225)"},
+        {"title": "купить новостройку в тюмени от застройщика", "url": "mcp-kv:wordstat", "snippet": "413"},
+        {"title": "купить новостройку в тюмени в ипотеку", "url": "mcp-kv:wordstat", "snippet": "93"},
+        {"title": "покупка квартиры в новостройке переуступка", "url": "mcp-kv:wordstat", "snippet": "4"},
+        {"title": "переуступка квартиры в новостройке риски", "url": "mcp-kv:wordstat", "snippet": "2"}
+      ],
+      "searched_at": "2026-09-02"
+    }
+  ],
+  "errors": []
+}

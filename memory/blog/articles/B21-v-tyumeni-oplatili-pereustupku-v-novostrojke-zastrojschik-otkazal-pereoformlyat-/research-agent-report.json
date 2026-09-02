@@ -1,0 +1,77 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B21",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-02",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dvizhenie.ru/media/8260/v-kakih-gorodah-rossii-maksimalnye-skidki-na-kvartiry-v-pri-pereustupkah",
+        "type": "market",
+        "note": "31.08.2026 — переуступка vs ДДУ в Тюмени (-5% в выборке Dvizhenie)"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/08/27/76610181/",
+        "type": "regional_news",
+        "note": "27.08.2026 — тюменский рынок новостроек, ипотека, бронь"
+      },
+      {
+        "url": "https://www.dvitex.ru/poleznoe/nedvizhimost/sdelki-s-nedvizhimostyu/zaklyuchenie-dogovora-ustupki-po-ddu-kakie-riski-dlya-dolshchika/",
+        "type": "legal_media",
+        "note": "07.08.2026 — риски цессии, согласие застройщика, перевод долга"
+      },
+      {
+        "url": "https://fedelis.ru/article/pereustupka-prav-po-ddu/",
+        "type": "legal_media",
+        "note": "2026 — условия переуступки, залог банка, регистрация"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 874,
+    "p0_volume_ru225": 1882,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени от застройщика", "volume": 413},
+      {"phrase": "купить новостройку в тюмени в ипотеку", "volume": 93},
+      {"phrase": "переуступка новостройки", "volume": 10, "volume_ru225": 2422},
+      {"phrase": "покупка квартиры в новостройке переуступка", "volume": 4},
+      {"phrase": "переуступка квартиры в новостройке риски", "volume": 2}
+    ],
+    "rework_from": "переуступка новостройки (10) → купить новостройку в тюмени (874) — buyer demand spine",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_assignment_developer_refused_dd_reregistration_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["legal_norms_214fz", "legal_norms_gk_rf"],
+    "errors": [],
+    "note": "214-ФЗ ст. 11, 15.4–15.5 and GK RF цессия norms; no bank tariff claims"
+  },
+  "key_facts_count": 38,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
