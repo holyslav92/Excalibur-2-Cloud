@@ -5,6 +5,15 @@
   "last_sync": "2026-09-02",
   "clusters": [
     {
+      "cluster_id": "newbuild_developer_installment_balance_increased_before_handover_tyumen",
+      "first_seen": "2026-09-02",
+      "locked_until": "2026-10-02",
+      "source": "ledger",
+      "slug": "v-tyumeni-platili-rassrochku-po-ddu-pered-sdachej-zastrojschik-podnyal-ostatok",
+      "topic_id": "B21",
+      "title": "В Тюмени платили рассрочку по ДДУ — перед сдачей застройщик поднял остаток"
+    },
+    {
       "cluster_id": "newbuild_developer_legal_entity_change_ddu_escrow_tyumen",
       "first_seen": "2026-09-01",
       "locked_until": "2026-10-01",
