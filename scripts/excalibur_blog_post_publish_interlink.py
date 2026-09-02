@@ -17,6 +17,7 @@ from excalibur_blog_interlink_lib import (
     outbound_links_in_html,
     pick_inbound_targets,
     project_root,
+    resolve_article_public_path,
 )
 from excalibur_blog_site_base import SITE_BASE_PLACEHOLDER, expand_site_base
 
@@ -55,7 +56,7 @@ def main() -> int:
     inbound_targets = pick_inbound_targets(candidates, new_slug=slug, max_inbound=args.max_inbound)
 
     public = os.environ.get("PUBLIC_SITE_URL", "").strip()
-    new_path = f"/blog/vtorichka-i-riski/{slug}/"
+    new_path = resolve_article_public_path(root, article_dir, slug=slug)
     if public:
         new_url = expand_site_base(f"{SITE_BASE_PLACEHOLDER}{new_path}", public)
     else:
@@ -67,24 +68,6 @@ def main() -> int:
         new_url=new_url,
         targets=inbound_targets,
     )
-
-    result_path = article_dir / "wp-publish-result.json"
-    if result_path.is_file():
-        try:
-            prev = json.loads(result_path.read_text(encoding="utf-8"))
-            published_path = str(prev.get("permalink") or "").strip()
-            if published_path.startswith("/"):
-                new_url = expand_site_base(f"{SITE_BASE_PLACEHOLDER}{published_path}", public) if public else published_path
-            elif published_path.startswith("http"):
-                new_url = published_path
-            inbound_updates = build_inbound_updates(
-                new_slug=slug,
-                new_title=title,
-                new_url=new_url,
-                targets=inbound_targets,
-            )
-        except json.JSONDecodeError:
-            pass
 
     plan = {
         "topic_id": topic_id,

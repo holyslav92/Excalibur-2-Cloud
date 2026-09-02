@@ -162,10 +162,22 @@ def load_env(root: Path) -> dict[str, str]:
     return env
 
 
+LEGACY_SFTP_ROOT_PREFIXES: tuple[str, ...] = (
+    "/home/",
+    "/var/www/",
+    "/www/",
+    "/public_html",
+    "/domains/",
+)
+
+
 def normalize_sftp_root_value(value: str) -> str:
     """Map empty or panel ``/`` to SFTP login cwd ``.`` (where wp-load.php usually is)."""
     raw = (value or "").strip()
     if not raw or raw in {"/", "./"}:
+        return "."
+    lowered = raw.lower()
+    if any(lowered.startswith(prefix) for prefix in LEGACY_SFTP_ROOT_PREFIXES):
         return "."
     return raw
 

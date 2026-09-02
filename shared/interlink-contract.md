@@ -16,6 +16,9 @@
 - Не более **3 inbound** правок за один publish-run.
 - Не трогать посты со `status != published` в ledger.
 - URL только path из ledger или `{{SITE_BASE}}/slug/` после expand.
+- **Inbound URL категории:** `resolve_article_public_path()` — publish permalink → ledger →
+  `wp_category_slugs` с приоритетом `pokupka-kvartiry` / `ipoteka` / `vtorichka-i-riski`
+  (не хардкод `vtorichka-i-riski` для newbuild).
 - **post_id для inbound:** из `article.meta.json` → `wp_post_id` (stamp после publish) или
   `wp-publish-result.json` (`post_id` / `OK post=` в raw_output); ledger path-only без post_id.
 - Не переписывать тело статьи — только append блока, если ссылки ещё нет.

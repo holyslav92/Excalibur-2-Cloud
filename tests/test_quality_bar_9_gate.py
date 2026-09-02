@@ -119,6 +119,57 @@ class StampCoverQaEscapePreserveTest(unittest.TestCase):
                 .get("applied")
             )
 
+    def test_stamp_sets_gate_status_and_splits_escape_notes(self) -> None:
+        from excalibur_blog_cover_qa_pixels import PixelQAResult, stamp_cover_qa_json
+
+        with tempfile.TemporaryDirectory() as td:
+            article = Path(td)
+            cover_dir = article / "cover"
+            cover_dir.mkdir(parents=True)
+            (cover_dir / "cover.png").write_bytes(b"cover-stamp-gate")
+            pixel_checks = {
+                key: True
+                for key in (
+                    "pixel_identity_matches_studio",
+                    "pixel_host_close_up",
+                    "pixel_host_not_distant_fullbody",
+                    "pixel_title_zone_clear",
+                    "pixel_wordstat_not_on_host_chest",
+                    "pixel_meme_not_occluded_by_wordstat",
+                    "pixel_no_text_on_clothing",
+                    "pixel_meme_clearance_80px",
+                    "pixel_hook_title_present",
+                    "pixel_hook_title_cyrillic",
+                    "pixel_hook_title_not_truncated",
+                    "pixel_no_foreign_article_text",
+                    "pixel_no_wordstat_query_strips",
+                    "pixel_no_wordstat_ocr_strips",
+                    "pixel_no_collage_inset",
+                    "pixel_layout_not_collapsed",
+                    "pixel_not_services_checklist",
+                    "pixel_manifest_outfit_matches",
+                    "pixel_phone_readable",
+                    "pixel_wordstat_not_opaque_bars",
+                    "pixel_wordstat_phrases_not_truncated",
+                    "pixel_light_high_key",
+                )
+            }
+            pass_pixel = PixelQAResult(
+                "PASS",
+                checks=pixel_checks,
+                errors=[
+                    "ocr_false_positive_escape PASS: visual core OK; overridden pixel_no_collage_inset"
+                ],
+                evidence={"cover_md5": "abc", "ocr_false_positive_escape": {"applied": True}},
+            )
+            stamp_cover_qa_json(article, pass_pixel, topic_id="B21")
+            stamped = json.loads((cover_dir / "cover_qa.json").read_text(encoding="utf-8"))
+            self.assertEqual(stamped.get("status"), "PASS")
+            self.assertEqual(stamped.get("gate_status"), "PASS")
+            self.assertEqual(stamped.get("gate_errors"), [])
+            self.assertEqual(stamped.get("pixel_errors"), [])
+            self.assertEqual(len(stamped.get("pixel_escape_notes") or []), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
