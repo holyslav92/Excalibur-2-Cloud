@@ -22,10 +22,12 @@ category: env
 - **2026-08-28 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9230 ingest skipped; B11 lessons recorded without behavioral signals.
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
+- **2026-09-01 B20 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9490 ingest skipped; B20 lessons recorded without behavioral signals (legal_entity cluster, sol-trim, OCR escape).
+- **2026-09-02 B21 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9536 ingest skipped; B21 lesson recorded without behavioral signals (installment_balance_ddu cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250) и B15 (post 9368) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368), B20 (post 9490) и B21 (post 9536) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -739,8 +741,117 @@ checks_run:
 - `python3 -m unittest tests.test_pipeline_speed_b03.SolTrimChunkTest`
 commit: pending
 
-## INC-20260901-1340-theme-contract-deploy-enoent-b20
+## INC-20260902-1000-inbound-interlink-href-site-root-b21
 status: fixed
+run_date: 2026-09-02
+role: excalibur-blog-publish
+topic_id: B21
+article_dir: memory/blog/articles/B21-v-tyumeni-platili-rassrochku-po-ddu-pered-sdachej-zastrojschik-podnyal-ostatok
+severity: medium
+category: publish
+
+### What went wrong
+- Post-publish inbound interlink stamped `href="{{SITE_BASE}}"` (site root only) on 3 sibling posts while `new_url` in plan had full `/blog/pokupka-kvartiry/...` path.
+- `post_publish_interlink` ignored `wp-publish-result.json` permalink when it starts with `{{SITE_BASE}}` (not `/` or `http`).
+- Default fallback path hardcoded `/blog/vtorichka-i-riski/{slug}/` — wrong category for B21 (`pokupka-kvartiry`).
+
+### How the agent recovered this run
+- Publish post 9536 PASS; outbound 4 siblings OK; inbound bootstrap reported 3 targets but live href pointed to site root.
+
+### Durable fix needed before next run
+- Resolve permalink path from `{{SITE_BASE}}/path`, ledger, or last `wp_category_slugs`.
+- Validate inbound href contains article slug before SFTP apply; git-safe plan with full `{{SITE_BASE}}/path` in html.
+- **Human:** re-run inbound repair on posts 8984, 8823, 9063 (replace broken marker blocks) after fix lands.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_post_publish_interlink.py`
+- `scripts/excalibur_blog_interlink_lib.py`
+- `tests/test_wp_categories_interlink.py`
+- `shared/interlink-contract.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-02
+fix_summary:
+- `normalize_permalink_to_path` + `resolve_new_article_permalink_path` handle `{{SITE_BASE}}/path` permalinks.
+- `build_new_article_urls` uses publish result / ledger / category slug (not hardcoded vtorichka).
+- `validate_inbound_updates_href` blocks site-root-only href; plan stores git-safe full paths.
+files_changed:
+- `scripts/excalibur_blog_interlink_lib.py`
+- `scripts/excalibur_blog_post_publish_interlink.py`
+- `tests/test_wp_categories_interlink.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_interlink_lib.py scripts/excalibur_blog_post_publish_interlink.py`
+- `python3 -m unittest tests.test_wp_categories_interlink`
+commit: fa8d7aa
+status: fixed
+run_date: 2026-09-02
+role: excalibur-blog-cover-qa
+topic_id: B21
+article_dir: memory/blog/articles/B21-v-tyumeni-platili-rassrochku-po-ddu-pered-sdachej-zastrojschik-podnyal-ostatok
+severity: low
+category: qa
+
+### What went wrong
+- grsai solo cover attempt 2/2 pixel QA FAIL on OCR flakes; `apply_ocr_false_positive_escape` → PASS (7 flaky checks overridden).
+
+### How the agent recovered this run
+- Canonical OCR escape path; `cover_qa.json` PASS without extra regen or Fixer round.
+
+### Durable fix needed before next run
+- None — B08/B09/B15/B19 escape contract already on main.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-02
+fix_summary:
+- No code change — B21 confirms existing OCR escape on attempt 2/2 within cover budget.
+files_changed:
+- none
+checks_run:
+- B21 `cover/cover_qa.json` PASS + `ocr_false_positive_escape.applied=true`
+commit: n/a
+
+## INC-20260902-1002-sol-trim-chunk-b21
+status: fixed
+run_date: 2026-09-02
+role: excalibur-blog-sol
+topic_id: B21
+article_dir: memory/blog/articles/B21-v-tyumeni-platili-rassrochku-po-ddu-pered-sdachej-zastrojschik-podnyal-ostatok
+severity: low
+category: script
+
+### What went wrong
+- Sol chunk merge ~2223 words; `sol_trim_chunk` → 2154; final quality-bar PASS at 2113 words.
+
+### How the agent recovered this run
+- `excalibur_blog_sol_trim_chunk.py` (B20 fix) per assembled-sol-trim-inputs.
+
+### Durable fix needed before next run
+- None — expected Writer→Sol trim contract; B20 `sol_trim_chunk` script canonical.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_sol_trim_chunk.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-02
+fix_summary:
+- No code change — B21 confirms B20 sol_trim_chunk path; quality-bar word_count=2113 PASS.
+files_changed:
+- none
+checks_run:
+- B21 `quality-bar-9.json` word_count_1800_2200 PASS
+commit: n/a
 run_date: 2026-09-01
 role: excalibur-blog-publish
 topic_id: B20

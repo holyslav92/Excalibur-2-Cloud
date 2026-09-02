@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B21 — 2026-09-02
+
+- **topic_id:** B21
+- **slug:** v-tyumeni-platili-rassrochku-po-ddu-pered-sdachej-zastrojschik-podnyal-ostatok
+- **post_id:** 9536
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-platili-rassrochku-po-ddu-pered-sdachej-zastrojschik-podnyal-ostatok/
+- **featured_image:** 9537
+- **inline_images:** 9538–9544 (7)
+- **wp_category_slugs:** dokumenty-i-oformlenie, riski-sdelki, pokupka-kvartiry (category_ids=54,58,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B20 — 2026-09-01
 
 - **topic_id:** B20

@@ -1,0 +1,75 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B21",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-02",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://realty.yandex.ru/journal/post/kogda-ne-stoit-podpisyvat-dopolnitelnoe-soglashenie-k-ddu/",
+        "type": "market",
+        "note": "2026-09-02 — уловки застройщика при допсоглашении, одностороннее подписание"
+      },
+      {
+        "url": "https://ic-iskra.ru/news/8549-predostavlenie-rassrochki-zastroyshchikom-po-ddu",
+        "type": "legal_news",
+        "note": "25.08.2026 — проект Минстроя: рассрочка по ДДУ, электронная форма, 3 года после ввода"
+      },
+      {
+        "url": "https://ppt.ru/news/dolevoe-stroitelstvo/predlozhili-rassrochku-na-ostatok-po-ddu-posle-sdachi-doma",
+        "type": "market_news",
+        "note": "18.08.2026 — рассрочка на остаток после сдачи, публичное обсуждение до 28.08"
+      },
+      {
+        "url": "https://lawyersforum.ru/threads/zastrojschik-dopustil-oshibku-v-dogovore-i-vmesto-ogovorennyx-12-mesjacev-rassrochki-predostavil-24-mesjaca-grozitsja-rastorgnut-dogovor-esli-ne-vernem-12.4789/",
+        "type": "community",
+        "note": "12.06.2025 — форум: угроза расторжения при изменении графика рассрочки"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel (Scout signal)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4649,
+    "p0_volume_ru225": null,
+    "support_phrases": [
+      {"phrase": "рассрочка от застройщика", "volume": 213, "volume_ru225": 21115},
+      {"phrase": "рассрочка от застройщика тюмень", "volume": 142},
+      {"phrase": "квартира в рассрочку от застройщика тюмень", "volume": 88}
+    ],
+    "rework_from": "«рассрочка от застройщика тюмень» 142 → P0 «новостройки тюмень» 4649; rejected «долгострой тюмень» 91 (B12 overlap)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_developer_installment_balance_increased_before_handover_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["legal_norms_214fz"],
+    "errors": [],
+    "note": "214-ФЗ ст. 5, 8, 9, 15.4–15.5 verified via consultant.ru / legalacts.ru; developer pages — market context only"
+  },
+  "key_facts_count": 43,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
