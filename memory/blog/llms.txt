@@ -16,3 +16,4 @@
 - [В Тюмени не подтвердили согласие супруги — аванс остановили]({{SITE_BASE}}/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/): В Тюмени не подтвердили согласие супруги — аванс остановили
 - [В Тюмени ипотеку одобрили — эскроу сорвал маткапитал]({{SITE_BASE}}/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/): В Тюмени ипотеку одобрили — эскроу сорвал маткапитал
 - [В Тюмени застройщик сменил юрлицо — банк не открыл эскроу]({{SITE_BASE}}/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/): В Тюмени застройщик сменил юрлицо — банк не открыл эскроу
+- [В Тюмени дом сдали без газа и воды — семья не взяла ключи]({{SITE_BASE}}/v-tyumeni-v-kp-obeschali-gaz-i-vodu-na-klyuchah-kommunikacii-ne-podveli/): В Тюмени дом сдали без газа и воды — семья не взяла ключи

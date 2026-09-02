@@ -21,6 +21,7 @@ if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
 from excalibur_blog_composite_disclaimer import check_no_composite_disclaimer
+from excalibur_blog_site_base import SITE_BASE_PLACEHOLDER
 
 
 WORD_TARGET_MIN = 1800
@@ -213,11 +214,21 @@ def url_present(html: str, url: str) -> bool:
     url = (url or "").strip()
     if not url:
         return False
+    body = html or ""
+    site = re.escape(SITE_BASE_PLACEHOLDER)
     if url == "/":
-        return bool(re.search(r"""href=["']/["']""", html or ""))
+        patterns = (
+            r"""href=["']/["']""",
+            rf"""href=["']{site}/?["']""",
+        )
+        return any(re.search(p, body) for p in patterns)
     if url.startswith("/"):
         path = url.rstrip("/")
-        return bool(re.search(rf"""href=["']{re.escape(path)}/?["']""", html or "", re.I))
+        patterns = (
+            rf"""href=["']{re.escape(path)}/?["']""",
+            rf"""href=["']{site}{re.escape(path)}/?["']""",
+        )
+        return any(re.search(p, body, re.I) for p in patterns)
     if url.lower().startswith("tel:"):
         return has_phone(html)
     parsed = urlparse(url)
@@ -327,6 +338,8 @@ def check_end_cta(html: str) -> bool:
     if not all(url_present(tail, u) for u in required):
         return False
     if not url_present(tail, "/gajdy/"):
+        return False
+    if not url_present(tail, "/rieltor-tyumen/"):
         return False
     if not url_present(tail, "/"):
         return False

@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B21 — 2026-09-02
+
+- **topic_id:** B21
+- **slug:** v-tyumeni-v-kp-obeschali-gaz-i-vodu-na-klyuchah-kommunikacii-ne-podveli
+- **post_id:** 9523
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-v-kp-obeschali-gaz-i-vodu-na-klyuchah-kommunikacii-ne-podveli/
+- **featured_image:** 9524
+- **inline_images:** 9525–9531 (7)
+- **wp_category_slugs:** dokumenty-i-oformlenie, riski-sdelki, pokupka-kvartiry (category_ids=54,58,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B20 — 2026-09-01
 
 - **topic_id:** B20

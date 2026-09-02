@@ -1,0 +1,9 @@
+{
+  "topic_id": "B21",
+  "description": "На презентации тюменского КП были газ и вода. В день приёмки выяснилось: до конкретного участка они не дошли — а застройщик уже торопил семью подписать акт.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

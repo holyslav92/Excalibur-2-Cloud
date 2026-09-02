@@ -1,0 +1,300 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B21-v-tyumeni-v-kp-obeschali-gaz-i-vodu-na-klyuchah-kommunikacii-ne-podveli/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_too_far_from_center",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 606,
+              "end": 624
+            },
+            "v_gutter_px": {
+              "start": 1023,
+              "end": 1025
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 39.0,
+              "v_center_offset_px": 0.0,
+              "max_aspect_crop_loss": 0.0821,
+              "per_panel_crop_loss": {
+                "top_left": 0.0512,
+                "top_right": 0.0512,
+                "bottom_left": 0.0821,
+                "bottom_right": 0.0821
+              },
+              "reject_reason": "gutter_too_far_from_center"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени дом сдали без газа и воды — семья не взяла ключи: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «В субботу у забора пусто: семья пришла на «ключ…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "В субботу у забора пусто: семья пришла на «ключи» и не подписала акт"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Газ в посёлке, Вода на улице, Труба мимо участка — иллюстрация к разбору сделки.",
+            "h2_anchor": "В субботу у забора пусто: семья пришла на «ключи» и не подписала акт"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Газ в посёлке» и вода «на улице» — не одно и т…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Газ в посёлке» и вода «на улице» — не одно и то же с вводом на участок"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B21-v-tyumeni-v-kp-obeschali-gaz-i-vodu-na-klyuchah-kommunikacii-ne-podveli/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 569,
+              "end": 583
+            },
+            "v_gutter_px": {
+              "start": 1034,
+              "end": 1062
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 0.0,
+              "v_center_offset_px": 24.0,
+              "max_aspect_crop_loss": 0.0246,
+              "per_panel_crop_loss": {
+                "top_left": 0.0213,
+                "top_right": 0.0246,
+                "bottom_left": 0.0213,
+                "bottom_right": 0.0246
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Генплан в буклете и участок в выписке: второй с…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Генплан в буклете и участок в выписке: второй спор в тот же осмотр"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Деньги у застройщика, Десять рабочих дней, Ввод комплекса — иллюстрация к разбору…",
+            "h2_anchor": "Ключи не взяли: застройщик надавил на односторонний акт"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: ДДУ с приложениями, Проектная декларация, Выписка на участок — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что сверять перед покупкой дома в КП — таблица формул и документов"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Договор на столе, Перечень несоответствий, До аванса проверка — иллюстрация к разбору…",
+            "h2_anchor": "Эскроу, ипотека и отказ от акта: что не зависит от вашей подписи"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — В субботу у забора пусто: семья пришла на «ключи» и не подписала акт",
+    "skip inline_2: already correct under H2 — В субботу у забора пусто: семья пришла на «ключи» и не подписала акт",
+    "skip inline_3: already correct under H2 — «Газ в посёлке» и вода «на улице» — не одно и то же с вводом на участок",
+    "skip inline_4: already correct under H2 — Генплан в буклете и участок в выписке: второй спор в тот же осмотр",
+    "skip inline_5: already correct under H2 — Ключи не взяли: застройщик надавил на односторонний акт",
+    "skip inline_6: already correct under H2 — Что сверять перед покупкой дома в КП — таблица формул и документов",
+    "skip inline_7: already correct under H2 — Эскроу, ипотека и отказ от акта: что не зависит от вашей подписи"
+  ]
+}

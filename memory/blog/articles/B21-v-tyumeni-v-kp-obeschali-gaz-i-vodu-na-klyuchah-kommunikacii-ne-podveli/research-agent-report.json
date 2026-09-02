@@ -1,0 +1,73 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B21",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-02",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community/channel",
+        "note": "2026-09-02 — свежий тюменский сигнал о фото/видео фиксации дефектов при приёмке новостроек"
+      },
+      {
+        "url": "https://fedelis.ru/article/priemka-kvartiry-u-zastrojshhika/",
+        "type": "legal-practice",
+        "note": "2026 — мотивированный отказ от акта, ч. 5 ст. 8 214-ФЗ"
+      },
+      {
+        "url": "https://prav.io/browse/questions/kak-reshit-problemu-dom-zastroyshchik-sdal-no-gaz-ne-podklyuchen-kto-mozhet-zastavit-podpisat-akt-priemki-peredachi",
+        "type": "legal-QA",
+        "note": "Спор о газе и невозможности принудить к акту при невыполнении ДДУ"
+      },
+      {
+        "url": "https://72.ru/text/house/2026/07/30/76562088/",
+        "type": "local-news",
+        "note": "30.07.2026 — тюменский фон тревоги о воде (не КП-casus)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "коттеджные поселки тюмень купить дом",
+    "p0_volume": 59,
+    "secondary_phrases": [
+      {"phrase": "расторжение дду", "volume": 123, "regions": ["55", "11176"]},
+      {"phrase": "кп онегин тюмень", "volume": 140, "regions": ["55", "11176"]},
+      {"phrase": "онегин тюмень коттеджный поселок купить дом", "volume": 8, "regions": ["55", "11176"]},
+      {"phrase": "новостройки тюмень купить от застройщика", "volume": 528, "regions": ["55", "11176"]}
+    ],
+    "partial": ["приемка новостройки коммуникации — MCP empty response"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_kp_land_boundary_utilities_denied_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["214_fz"],
+    "errors": [],
+    "note": "Банковские тарифы не используются; ст. 7, 8, 9, 15.5 214-ФЗ verified в official_verifications"
+  },
+  "casus_verification": {
+    "mode": "modeled_composite",
+    "public_case_found": false,
+    "note": "Семейный casus из Scout handoff не подтверждён публичным делом; legal mechanics verified"
+  },
+  "key_facts_count": 38,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
