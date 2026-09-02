@@ -1,6 +1,6 @@
 {
-  "status": "PASS",
-  "all_pass": true,
+  "status": "FAIL",
+  "all_pass": false,
   "gate": "quality-bar-9",
   "contract": "shared/quality-bar-9.md",
   "article_dir": "memory/blog/articles/B20-v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot",
@@ -29,9 +29,11 @@
     "cover_phone_on_cover": true,
     "wordstat_stickers_not_title_overlap": true,
     "image_alt_human": true,
-    "cover_qa_pass": true
+    "cover_qa_pass": false
   },
-  "errors": [],
+  "errors": [
+    "check failed: cover_qa_pass"
+  ],
   "metrics": {
     "word_count": 2126,
     "word_count_target": "1800-2200",
