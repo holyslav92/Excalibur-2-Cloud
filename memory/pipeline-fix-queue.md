@@ -780,3 +780,95 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_theme_contract_deploy.py`
 - `python3 -m unittest tests.test_pipeline_speed_b03.ThemeContractDeployTest`
 commit: pending
+
+## INC-20260902-1340-sol-chunk-duplicate-h2-b21
+status: fixed
+run_date: 2026-09-02
+role: excalibur-blog-sol
+topic_id: B21
+article_dir: memory/blog/articles/B21-v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo
+severity: medium
+category: script
+
+### What went wrong
+- Stylo-driven Sol chunk rewrite duplicated first two H2 blocks (6→8 H2; H1/H2 repeated verbatim after merge).
+- `merge_sol_fragments` / sol_trim / writer_trim had no post-merge H2 dedupe; html_linter did not FAIL duplicate H2 titles.
+
+### How the agent recovered this run
+- Manual surgical removal of duplicate H2 sections in `article.html` before Description/Cover gates.
+
+### Durable fix needed before next run
+- Auto-dedupe duplicate H2 titles on sol_chunk/sol_trim/writer_trim merge; html_linter FAIL on duplicate H2.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_sol_chunk.py`
+- `scripts/excalibur_blog_sol_trim_chunk.py`
+- `scripts/excalibur_blog_writer_trim_chunk.py`
+- `scripts/excalibur_blog_html_linter.py`
+- `tests/test_pipeline_speed_b03.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-02
+fix_summary:
+- Added `excalibur_blog_html_merge_utils.py` with `dedupe_duplicate_h2_sections` + `merge_html_fragments`.
+- sol_chunk / sol_trim_chunk / writer_trim_chunk merge paths auto-dedupe; html_linter FAIL on duplicate H2 titles.
+files_changed:
+- `scripts/excalibur_blog_html_merge_utils.py`
+- `scripts/excalibur_blog_sol_chunk.py`
+- `scripts/excalibur_blog_sol_trim_chunk.py`
+- `scripts/excalibur_blog_writer_trim_chunk.py`
+- `scripts/excalibur_blog_html_linter.py`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m py_compile` on changed scripts
+- `python3 -m unittest tests.test_pipeline_speed_b03.SolTrimChunkTest`
+commit: pending
+
+## INC-20260902-1341-cover-motifs-wiped-b21
+status: fixed
+run_date: 2026-09-02
+role: excalibur-blog-cover
+topic_id: B21
+article_dir: memory/blog/articles/B21-v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo
+severity: medium
+category: script
+
+### What went wrong
+- B21 skipped `cover/scene-draft.json` (no Derouter cover-scene); Cover agent manually filled `cover_motifs` in quad-manifest.
+- `quad_manifest.py --merge` re-scaffold wiped `cover_motifs` from preserve; preflight did not BLOCKER missing motifs before image API.
+
+### How the agent recovered this run
+- Manual `cover_motifs` + scene_hint fill in `quad-manifest.json` before grsai solo cover.
+
+### Durable fix needed before next run
+- Preserve `cover_motifs` on `--merge`; `--merge-scene-draft` from `cover/scene-draft.json`; preflight FAIL if outfit/action/emotion/pose_framing missing.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quad_manifest.py`
+- `scripts/excalibur_blog_quad_scene_merge.py`
+- `scripts/excalibur_blog_quad_manifest_preflight.py`
+- `skills/cover-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-02
+fix_summary:
+- `build_manifest` preserves cover_motifs/meme_picks from preserve; `--merge-scene-draft` merges Derouter cover-scene JSON.
+- Preflight BLOCKER on missing cover_motifs variety fields; cover skill runbook documents scene-draft → merge path.
+files_changed:
+- `scripts/excalibur_blog_quad_manifest.py`
+- `scripts/excalibur_blog_quad_scene_merge.py`
+- `scripts/excalibur_blog_quad_manifest_preflight.py`
+- `skills/cover-excalibur-blog/SKILL.md`
+- `.cursor/skills/cover-excalibur-blog/SKILL.md`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m py_compile` on changed scripts
+- `python3 -m unittest tests.test_pipeline_speed_b03.QuadSceneMergeTest`
+- B21 quad_manifest_preflight → PASS with cover_motifs
+commit: pending

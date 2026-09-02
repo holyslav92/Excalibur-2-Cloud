@@ -118,6 +118,29 @@ def is_faq_section_heading(text: str) -> bool:
     return False
 
 
+def detect_duplicate_h2_sections(html: str) -> list[str]:
+    """Fail if article repeats the same H2 title (Sol chunk merge bleed, B21)."""
+    from excalibur_blog_html_merge_utils import h2_titles_in_order, normalize_h2_title
+
+    seen: set[str] = set()
+    duplicates: list[str] = []
+    for title in h2_titles_in_order(html):
+        key = normalize_h2_title(title)
+        if key in seen:
+            duplicates.append(title)
+        else:
+            seen.add(key)
+    if not duplicates:
+        return []
+    preview = "; ".join(duplicates[:4])
+    return [
+        "Forbidden duplicate H2 sections in article.html: "
+        + preview
+        + ". Keep each H2 title once; sol_chunk/sol_trim auto-dedupes on merge — "
+        "re-run merge or remove duplicate blocks manually."
+    ]
+
+
 def detect_duplicate_faq_sections(html: str) -> list[str]:
     """Fail if article has more than one thematic FAQ heading block."""
     errors: list[str] = []
@@ -340,6 +363,7 @@ def lint_html_file(html_path: Path, whitelist: set[str]) -> dict[str, Any]:
     linter.check_unclosed_tags()
     linter.errors.extend(detect_anchor_toc(html_content))
     linter.errors.extend(detect_duplicate_faq_sections(html_content))
+    linter.errors.extend(detect_duplicate_h2_sections(html_content))
     linter.errors.extend(detect_faq_h3_markup(html_content))
 
     return {

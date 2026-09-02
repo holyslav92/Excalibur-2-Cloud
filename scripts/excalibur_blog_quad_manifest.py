@@ -45,6 +45,7 @@ TYPE_PRIORITY = [
     "tool_screenshot",
     "infographic_card",
 ]
+from excalibur_blog_quad_scene_merge import merge_scene_draft_into_manifest
 from excalibur_blog_quad_slots import DEFAULT_SLOT_MAP  # noqa: E402
 
 
@@ -338,6 +339,15 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
             "realistic_count_target": f"{REALISTIC_INLINE_MIN}-{REALISTIC_INLINE_MAX}",
         },
     }
+    if preserve:
+        for key in (
+            "cover_motifs",
+            "cover_emotion",
+            "meme_picks",
+            "quad_canon",
+        ):
+            if preserve.get(key):
+                manifest[key] = preserve[key]
     return apply_quad_canon_to_manifest(manifest)
 
 
@@ -346,6 +356,11 @@ def main() -> int:
     ap.add_argument("--article-dir", required=True)
     ap.add_argument("--out", default="cover/quad-manifest.json")
     ap.add_argument("--merge", action="store_true")
+    ap.add_argument(
+        "--merge-scene-draft",
+        action="store_true",
+        help="Merge cover/scene-draft.json (Derouter cover-scene) into manifest after scaffold",
+    )
     args = ap.parse_args()
 
     root = project_root()
@@ -363,6 +378,13 @@ def main() -> int:
     except ValueError as exc:
         print(f"❌ QUAD MANIFEST BLOCKER: {exc}", file=sys.stderr)
         return 1
+
+    scene_path = article_dir / "cover" / "scene-draft.json"
+    if args.merge_scene_draft and scene_path.is_file():
+        scene = load_json(scene_path)
+        manifest = merge_scene_draft_into_manifest(manifest, scene)
+        print(f"OK merged scene-draft from {scene_path}")
+
     out_path.parent.mkdir(parents=True, exist_ok=True)
     save_json(out_path, manifest)
     print(f"OK manifest={out_path}")

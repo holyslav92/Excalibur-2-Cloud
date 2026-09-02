@@ -137,18 +137,9 @@ def build_part_prompt(
 
 
 def merge_sol_fragments(fragments: list[str]) -> str:
-    parts: list[str] = []
-    for frag in fragments:
-        text = frag.strip()
-        if not text:
-            continue
-        text = re.sub(r"^```(?:html)?\s*", "", text)
-        text = re.sub(r"\s*```\s*$", "", text)
-        parts.append(text.strip())
-    merged = "\n\n".join(parts)
-    if merged and not merged.endswith("\n"):
-        merged += "\n"
-    return merged
+    from excalibur_blog_html_merge_utils import merge_html_fragments
+
+    return merge_html_fragments(fragments, dedupe_h2=True)
 
 
 def main() -> int:

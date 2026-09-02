@@ -103,6 +103,14 @@ python3 scripts/excalibur_blog_cover_text_gate.py --article-dir "$ARTICLE"
 python3 scripts/excalibur_blog_quad_manifest.py --article-dir "$ARTICLE" --merge
 
 # HARD canon + preflight BEFORE image API (fail cheap)
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role cover-scene \
+  --system-file skills/cover-excalibur-blog/SKILL.md \
+  --user-file <assembled-cover-scene-inputs.md> \
+  --output cover/scene-draft.json \
+  --article-dir "$ARTICLE"
+
+python3 scripts/excalibur_blog_quad_manifest.py --article-dir "$ARTICLE" --merge --merge-scene-draft
 python3 scripts/excalibur_blog_quad_manifest_preflight.py --article-dir "$ARTICLE" --apply-canon
 
 # Agent fills scene_hint, cover_motifs, wordstat_stickers in quad-manifest.json

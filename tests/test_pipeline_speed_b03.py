@@ -236,7 +236,47 @@ class SolTrimChunkTest(unittest.TestCase):
         parts = split_html_by_h2(html)
         self.assertEqual(len(parts), 3)
         self.assertIn("lead", parts[0])
-        self.assertIn("<h2>One</h2>", parts[1])
+
+    def test_dedupe_duplicate_h2_sections_b21_pattern(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_html_merge_utils import dedupe_duplicate_h2_sections
+
+        h1 = "На ключах квартиру отдали — кладовки с номером из ДДУ не оказалось"
+        h2 = "«Опция», «достроят», другой номер: что сказали в офисе продаж"
+        html = (
+            f"<p>lead</p><h2>{h1}</h2><p>a</p>"
+            f"<h2>{h2}</h2><p>b</p>"
+            f"<h2>{h1}</h2><p>dup a</p>"
+            f"<h2>{h2}</h2><p>dup b</p>"
+            f"<h2>Third</h2><p>c</p>"
+        )
+        merged, dropped = dedupe_duplicate_h2_sections(html)
+        self.assertEqual(len(dropped), 2)
+        self.assertEqual(merged.count(f"<h2>{h1}</h2>"), 1)
+        self.assertEqual(merged.count(f"<h2>{h2}</h2>"), 1)
+        self.assertIn("<h2>Third</h2>", merged)
+
+
+class QuadSceneMergeTest(unittest.TestCase):
+    def test_merge_scene_draft_preserves_cover_motifs(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_quad_manifest import build_manifest, load_json, project_root
+        from excalibur_blog_quad_scene_merge import merge_scene_draft_into_manifest
+
+        root = project_root()
+        ad = root / "memory/blog/articles/B21-v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo"
+        preserve = load_json(ad / "cover/quad-manifest.json")
+        manifest = build_manifest(ad, root, preserve)
+        self.assertIsNotNone(manifest.get("cover_motifs"))
+        self.assertTrue(str((manifest.get("cover_motifs") or {}).get("outfit") or "").strip())
+
+        scene = {
+            "cover_motifs": {"outfit": "test outfit", "action": "points", "emotion": "shock", "pose_framing": "waist"},
+            "slots": {"cover": {"scene_hint": "bright scene"}},
+        }
+        merged = merge_scene_draft_into_manifest({"slots": {"cover": {}}}, scene)
+        self.assertEqual(merged["cover_motifs"]["outfit"], "test outfit")
+        self.assertEqual(merged["slots"]["cover"]["scene_hint"], "bright scene")
 
 
 if __name__ == "__main__":

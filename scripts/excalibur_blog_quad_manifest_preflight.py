@@ -23,6 +23,7 @@ from excalibur_blog_quad_slots import (
     slot_allows_meme_sticker,
 )
 from excalibur_blog_meme_canon import validate_manifest_meme_canon
+from excalibur_blog_quad_scene_merge import cover_motifs_missing_fields
 
 
 def project_root() -> Path:
@@ -149,6 +150,16 @@ def validate_quad_manifest(manifest: dict[str, Any], root: Path | None = None) -
     if meme_errors:
         errors.extend(meme_errors)
         status = "FAIL"
+
+    motifs_missing = cover_motifs_missing_fields(manifest)
+    if motifs_missing:
+        errors.append(
+            "cover_motifs incomplete before image API: "
+            + ", ".join(motifs_missing)
+            + " — run Derouter cover-scene and `quad_manifest.py --merge-scene-draft`"
+        )
+        status = "FAIL"
+
     return {
         "status": status,
         "errors": errors,
