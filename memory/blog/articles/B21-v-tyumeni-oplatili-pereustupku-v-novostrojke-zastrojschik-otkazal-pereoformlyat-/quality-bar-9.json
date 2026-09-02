@@ -38,7 +38,7 @@
     "cover/quad-manifest.json missing for image alt gate"
   ],
   "metrics": {
-    "word_count": 2141,
+    "word_count": 2117,
     "word_count_target": "1800-2200",
     "word_count_hard_max": 2400,
     "dzen_reading_minutes_est": 11,
