@@ -22,10 +22,12 @@ category: env
 - **2026-08-28 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9230 ingest skipped; B11 lessons recorded without behavioral signals.
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
+- **2026-09-01 B20 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9490 ingest skipped; B20 lessons recorded without behavioral signals (legal-entity cluster, sol trim, cover OCR escape).
+- **2026-09-02 B21 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9510 ingest skipped; B21 lessons recorded without behavioral signals (pereustupka cluster, stylo Sol rewrite, cover OCR escape 6th live).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250) и B15 (post 9368) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368), B20 (post 9490) и B21 (post 9510) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -779,4 +781,121 @@ files_changed:
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_theme_contract_deploy.py`
 - `python3 -m unittest tests.test_pipeline_speed_b03.ThemeContractDeployTest`
+commit: pending
+
+## INC-20260902-0615-cover-qa-gate-status-pixel-errors-b21
+status: fixed
+run_date: 2026-09-02
+role: excalibur-blog-cover-qa
+topic_id: B21
+article_dir: memory/blog/articles/B21-v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-
+severity: medium
+category: qa
+
+### What went wrong
+- B21 cover OCR escape PASS, но `cover_qa.json` имел `pixel_errors` с audit-строкой escape при `status: PASS` — выглядело как FAIL и путало gate/quality-bar.
+- `stamp_cover_qa_json` не писал `gate_status`/`gate_errors` при pixel stamp без повторного `cover_qa_gate --stamp`.
+
+### How the agent recovered this run
+- Cover-QA вручную проставил `gate_status: PASS`; publish post 9510.
+
+### Durable fix needed before next run
+- Stamp: `gate_status` синхронен с `status`; escape audit → `pixel_escape_notes`, не `pixel_errors`.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `tests/test_quality_bar_9_gate.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-02
+fix_summary:
+- `stamp_cover_qa_json` sets `gate_status`/`gate_errors`; splits `ocr_false_positive_escape PASS` into `pixel_escape_notes`.
+files_changed:
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `tests/test_quality_bar_9_gate.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_cover_qa_pixels.py`
+- `python3 -m unittest tests.test_quality_bar_9_gate.StampCoverQaEscapePreserveTest`
+commit: pending
+
+## INC-20260902-0616-inbound-interlink-category-b21
+status: fixed
+run_date: 2026-09-02
+role: excalibur-blog-publish
+topic_id: B21
+article_dir: memory/blog/articles/B21-v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-
+severity: medium
+category: publish
+
+### What went wrong
+- `post_publish_interlink.py` default `new_path` hardcoded `/blog/vtorichka-i-riski/{slug}/`; B21 live permalink — `pokupka-kvartiry`.
+- Риск неверного inbound href при отсутствии `wp-publish-result.permalink`.
+
+### How the agent recovered this run
+- Inbound applied с корректным `pokupka-kvartiry` URL из `wp-publish-result.json` (B06/B04/B09).
+
+### Durable fix needed before next run
+- `resolve_article_public_path()`: publish result → ledger → `wp_category_slugs` priority (`pokupka-kvartiry`, `ipoteka`, …).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_interlink_lib.py`
+- `scripts/excalibur_blog_post_publish_interlink.py`
+- `shared/interlink-contract.md`
+- `tests/test_wp_categories_interlink.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-02
+fix_summary:
+- Added `resolve_article_public_path` + `PATH_CATEGORY_PRIORITY`; interlink uses it instead of vtorichka default.
+files_changed:
+- `scripts/excalibur_blog_interlink_lib.py`
+- `scripts/excalibur_blog_post_publish_interlink.py`
+- `shared/interlink-contract.md`
+- `tests/test_wp_categories_interlink.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_interlink_lib.py scripts/excalibur_blog_post_publish_interlink.py`
+- `python3 -m unittest tests.test_wp_categories_interlink.WpCategoriesInterlinkTests.test_resolve_article_public_path_prefers_pokupka_kategoriya`
+commit: pending
+
+## INC-20260902-0617-sftp-root-fallback-warning-b21
+status: fixed
+run_date: 2026-09-02
+role: excalibur-blog-publish
+topic_id: B21
+article_dir: memory/blog/articles/B21-v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-
+severity: low
+category: publish
+
+### What went wrong
+- Publish log: `SFTP root fallback to '.'` — Cloud `FTP_ROOT` указывал legacy absolute path (`/home/...`, `/var/www/...`), не SFTP login cwd.
+
+### How the agent recovered this run
+- `upload_bootstrap_sftp` retry at `.`; publish post 9510 OK (repeat B19/B20 pattern).
+
+### Durable fix needed before next run
+- `normalize_sftp_root_value`: map legacy panel absolute paths → `.` at load time (no ENOENT retry noise).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_wp_publish.py`
+- `tests/test_pipeline_speed_b03.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-02
+fix_summary:
+- `LEGACY_SFTP_ROOT_PREFIXES` → auto-normalize `/home/`, `/var/www/`, etc. to `.` in `load_env`.
+files_changed:
+- `scripts/excalibur_blog_wp_publish.py`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_wp_publish.py`
+- `python3 -m unittest tests.test_pipeline_speed_b03.ThemeContractDeployTest.test_normalize_sftp_root_maps_legacy_absolute_paths_to_dot`
 commit: pending

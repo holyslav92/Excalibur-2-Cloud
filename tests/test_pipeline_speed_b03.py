@@ -195,6 +195,14 @@ class ThemeContractDeployTest(unittest.TestCase):
             _host, _user, _password, _port, roots = _settings()
         self.assertEqual(roots, ["."])
 
+    def test_normalize_sftp_root_maps_legacy_absolute_paths_to_dot(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_wp_publish import normalize_sftp_root_value
+
+        self.assertEqual(normalize_sftp_root_value("/home/user/public_html"), ".")
+        self.assertEqual(normalize_sftp_root_value("/var/www/site"), ".")
+        self.assertEqual(normalize_sftp_root_value("subdir"), "subdir")
+
     def test_deploy_warn_skip_exit_zero_when_theme_missing(self) -> None:
         sys.path.insert(0, str(ROOT / "scripts"))
         from excalibur_blog_theme_contract_deploy import deploy

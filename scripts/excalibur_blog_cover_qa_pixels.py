@@ -2580,16 +2580,26 @@ def stamp_cover_qa_json(
     }
     checks.update(legacy_map)
     all_true = all(checks.values()) and pixel_result.status == "PASS"
+    stamp_status = "PASS" if all_true else "FAIL"
+    pixel_errors = [
+        err for err in pixel_result.errors if not err.startswith("ocr_false_positive_escape PASS")
+    ]
+    pixel_escape_notes = [
+        err for err in pixel_result.errors if err.startswith("ocr_false_positive_escape PASS")
+    ]
     payload = {
         "agent": "excalibur-blog-cover-qa",
-        "status": "PASS" if all_true else "FAIL",
+        "status": stamp_status,
         "checked_at": date.today().isoformat(),
         "topic_id": topic_id or "",
         "cover_md5": pixel_result.evidence.get("cover_md5"),
         "pixel_qa": True,
         "pixel_description": pixel_result.evidence.get("pixel_description"),
         "checks": checks,
-        "pixel_errors": pixel_result.errors,
+        "pixel_errors": pixel_errors,
+        "pixel_escape_notes": pixel_escape_notes,
+        "gate_status": stamp_status,
+        "gate_errors": [] if stamp_status == "PASS" else pixel_errors,
         "pixel_evidence": {
             k: pixel_result.evidence[k]
             for k in (

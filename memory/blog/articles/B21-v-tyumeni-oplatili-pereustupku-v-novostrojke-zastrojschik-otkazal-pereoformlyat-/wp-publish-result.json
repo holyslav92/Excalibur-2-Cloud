@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-",
+  "topic_id": "B21",
+  "post_id": 9510,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B21-v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1013970,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9510 slug=v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-\nOK categories=54,58,36\nOK yoast_social_image=1\nOK featured_image=9511\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9512 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-inline-01.png\nOK inline_alt=9512\nOK inline_description=9512\nOK inline_image_upload=9513 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-inline-02.png\nOK inline_alt=9513\nOK inline_description=9513\nOK inline_image_upload=9514 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-inline-03.png\nOK inline_alt=9514\nOK inline_description=9514\nOK inline_image_upload=9515 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-inline-04.png\nOK inline_alt=9515\nOK inline_description=9515\nOK inline_image_upload=9516 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-inline-05.png\nOK inline_alt=9516\nOK inline_description=9516\nOK inline_image_upload=9517 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-inline-06.png\nOK inline_alt=9517\nOK inline_description=9517\nOK inline_image_upload=9518 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-inline-07.png\nOK inline_alt=9518\nOK inline_description=9518\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat/",
+    "errors": []
+  }
+}

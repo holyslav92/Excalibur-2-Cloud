@@ -114,6 +114,18 @@ class WpCategoriesInterlinkTests(unittest.TestCase):
         b10 = by_slug["v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v"]
         self.assertEqual(b10.get("post_id"), 9161)
 
+    def test_resolve_article_public_path_prefers_pokupka_kategoriya(self) -> None:
+        import sys
+
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_interlink_lib import resolve_article_public_path
+
+        article_dir = ROOT / "memory/blog/articles/B21-v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-"
+        slug = "v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat-"
+        path = resolve_article_public_path(ROOT, article_dir, slug=slug)
+        self.assertIn("/blog/pokupka-kvartiry/", path)
+        self.assertNotIn("/blog/vtorichka-i-riski/", path)
+
 
 if __name__ == "__main__":
     unittest.main()

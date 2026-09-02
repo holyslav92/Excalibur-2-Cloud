@@ -178,9 +178,61 @@ def append_interlink_block(content: str, *, from_slug: str, target_url: str, tar
     )
 
 
+PATH_CATEGORY_PRIORITY: tuple[str, ...] = (
+    "pokupka-kvartiry",
+    "ipoteka",
+    "matkapital-i-sdelki",
+    "vtorichka-i-riski",
+    "proverka-pered-pokupkoj",
+    "dokumenty-i-oformlenie",
+    "riski-sdelki",
+)
+
+
 def permalink_path_for_slug(slug: str, category_slug: str = "vtorichka-i-riski") -> str:
     slug = slug.strip("/")
     return f"/blog/{category_slug}/{slug}/"
+
+
+def resolve_path_category_slug(category_slugs: list[str], registry: dict[str, Any]) -> str:
+    """Pick blog path segment for /blog/{category}/{slug}/ (not always first wp_category_slug)."""
+    known = set((registry.get("categories") or {}).keys())
+    slug_set = [slug for slug in category_slugs if slug in known]
+    for preferred in PATH_CATEGORY_PRIORITY:
+        if preferred in slug_set:
+            return preferred
+    default = str(registry.get("default_primary_slug") or "vtorichka-i-riski").strip()
+    return default or "vtorichka-i-riski"
+
+
+def resolve_article_public_path(root: Path, article_dir: Path, *, slug: str) -> str:
+    """Resolve /blog/{category}/{slug}/ for inbound interlink (publish result → ledger → meta)."""
+    result_path = article_dir / "wp-publish-result.json"
+    if result_path.is_file():
+        try:
+            prev = json.loads(result_path.read_text(encoding="utf-8"))
+            published_path = str(prev.get("permalink") or "").strip()
+            if published_path.startswith("http"):
+                published_path = urlparse(published_path).path or ""
+            if published_path.startswith("/blog/"):
+                return published_path if published_path.endswith("/") else f"{published_path}/"
+        except json.JSONDecodeError:
+            pass
+
+    for row in parse_ledger(root / "shared/published-articles.md"):
+        if str(row.get("slug") or "") == slug:
+            permalink = str(row.get("permalink") or "").strip()
+            if permalink.startswith("/blog/"):
+                return permalink if permalink.endswith("/") else f"{permalink}/"
+
+    try:
+        from excalibur_blog_wp_categories import load_registry, resolve_category_slugs
+
+        registry = load_registry(root)
+        category = resolve_path_category_slug(resolve_category_slugs(root, article_dir), registry)
+    except Exception:
+        category = "vtorichka-i-riski"
+    return permalink_path_for_slug(slug, category)
 
 
 def resolve_public_path(candidate: dict[str, Any], public_base: str = "") -> str:

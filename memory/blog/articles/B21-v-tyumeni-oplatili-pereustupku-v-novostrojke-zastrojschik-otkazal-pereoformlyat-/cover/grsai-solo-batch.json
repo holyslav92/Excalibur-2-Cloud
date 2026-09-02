@@ -1,0 +1,18 @@
+{
+  "pipeline": "grsai_solo_cover",
+  "slot": "cover",
+  "output_canvas": "cover/cover.png",
+  "prefer_local_reference": true,
+  "local_reference": "/workspace/memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+  "jobs": [
+    {
+      "slot": "cover",
+      "tool": "grsai-rest",
+      "mcp_args": {
+        "prompt": "High-key bright RU editorial collage, airy #FFFFFF, sun flare/light leak/soft glow, BLACK #141821 Cyrillic, gold #dcc5a1 accent. Host LARGE left = same 28yo man i2i face-studio-2026-06-23 (jaw/stubble/hairline lock), medium slim (NOT chubby). NO Wordstat query strips on cover — Scout Wordstat is topic-only. Meme cat/people cutouts. No dark cinematic,…\nONE SINGLE 16:9 cover frame 1200x675 — NOT a 2x2 grid, NOT four panels, NOT quad canvas, NOT split collage.\nBAN HARD: ANY Cyrillic/latin text on clothes/jacket/vest/chest/torso; Wordstat/search-keyword strips/bars; beige/gold query labels top-left; blue/cyan outline halos on hair/face; smeared ghost text; black blazer; mustard+navy vest repeat; dark cinematic; chubby host; polite studio smile copy; text on skin.\nTEXT LOCK: Russian Cyrillic only. Allowed on-canvas text: headline hook, phone CTA, one small sticky — NOTHING else.\nHeadline ONE line only: 5–7 Russian words (min 4, ≤56 chars), prefer words ≥5 letters for OCR; em dash OK; FORBIDDEN novel-length multi-line hooks.\nHeadline EXACT «Оплатили переуступку — дольщиком не стали» bold black RIGHT sacred zone (52–96% width, 14–40% height), paint ONLY the word \"дольщиком\" in gold #dcc5a1 brush accent. Leave clear typography band — do NOT fill headline zone with face.\nPhone EXACT «+7 922 001 65 05» white torn paper bottom-RIGHT corner (55–98% width, 70–96% height).\n Yellow sticky EXACT «Оплата не даёт права» pinned left.\nHost i2i face-studio-2026-06-23 (face-studio identity: jaw/stubble/hairline/eyes; medium-slim; NOT chubby/puffy); same person as reference, NEW expression for the hook, do NOT copy reference closed-mouth smile/pose/head angle; FORBIDDEN polite studio smile. Outfit INVENTED: коралловая льняная рубашка, светло-серый жилет без пиджака, тёмные брюки. Expression: frustrated disbelief, tight jaw, furrowed brow.\nHost left desk uступka STOP doge. Close-up face+shoulders LEFT or center-left (~35% frame) — NOT full-bleed face crop, room for headline right. Tiny thinking-cat meme sticker bottom-right corner ONLY — ≥80px clear margin from phone/headline. ZERO Wordstat/search-keyword strips — never paint query bars; optional one yellow sticky from hook only. Sun flare, tape/pins aesthetic on board only, perfect Cyrillic, #FFF bright.\nIDENTITY LOCK (mandatory): exact same man as reference photo — 28 years old, medium-slim build, round-oval face, dark brown short hair tapered sides, warm dark brown eyes, full dark brows. MANDATORY visible dark five-o'clock-shadow stubble on jaw, chin and upper lip — same density and pattern as reference; NEVER clean-shaven, NEVER fashion-model jaw. Bone structure, hairline, stubble pattern, eye shape MUST match studio portrait. NEW invented outfit and emotion/scene — do NOT clone reference blazer/pose/background.",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}
