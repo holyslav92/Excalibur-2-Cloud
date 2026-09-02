@@ -785,9 +785,7 @@ files_changed:
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_interlink_lib.py scripts/excalibur_blog_post_publish_interlink.py`
 - `python3 -m unittest tests.test_wp_categories_interlink`
-commit: pending
-
-## INC-20260902-1001-cover-ocr-escape-solo-attempt2-b21
+commit: fa8d7aa
 status: fixed
 run_date: 2026-09-02
 role: excalibur-blog-cover-qa
