@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B21 — 2026-09-02
+
+- **topic_id:** B21
+- **slug:** v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo
+- **post_id:** 9549
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo/
+- **featured_image:** 9550
+- **inline_images:** 9551–9557 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063); outbound 4 siblings
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B20 — 2026-09-01
 
 - **topic_id:** B20
