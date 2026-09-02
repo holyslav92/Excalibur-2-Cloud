@@ -1,9 +1,13 @@
 {
   "category_ids": [
-    31
+    54,
+    58,
+    36
   ],
   "category_slugs": [
-    "vtorichka-i-riski"
+    "dokumenty-i-oformlenie",
+    "riski-sdelki",
+    "pokupka-kvartiry"
   ],
   "errors": [],
   "status": "PASS"
