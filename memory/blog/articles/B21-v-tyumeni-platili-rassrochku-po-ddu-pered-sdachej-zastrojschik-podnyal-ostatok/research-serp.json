@@ -1,0 +1,262 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-02",
+    "today_ru": "02.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "среда"
+  },
+  "topic": {
+    "topic_id": "B21",
+    "title": "В Тюмени платили рассрочку по ДДУ — перед сдачей застройщик поднял остаток",
+    "h1": "В Тюмени платили рассрочку по ДДУ — перед сдачей застройщик поднял остаток",
+    "slug": "v-tyumeni-platili-rassrochku-po-ddu-pered-sdachej-zastrojschik-podnyal-ostatok",
+    "primary_query": "В Тюмени платили рассрочку по ДДУ — перед сдачей застройщик поднял остаток",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени платили рассрочку по ДДУ — перед сдачей застройщик поднял остаток 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Взыскание неустойки с застройщика по ДДУ в 2026 году",
+          "url": "https://pronovostroi.com/tpost/vzyskanie-neustoyki-s-zastroyshchika-2026",
+          "snippet": ""
+        },
+        {
+          "title": "Расчёт неустойки по ДДУ в 2026 году - jalober.ru",
+          "url": "https://jalober.ru/blog/ddu-neustojka-raschet-2026",
+          "snippet": "С 1 января 2026 года начисление неустойки возобновлено, однако по требованиям к застройщикам действует отсрочка исполнения ранее присуждённых санкций — до 31 декабря 2026 года."
+        },
+        {
+          "title": "Просрочка по ДДУ: что делать дольщику в 2026 | Dzin.pro",
+          "url": "https://dzin.pro/blog/prosrochka-peredachi-kvartiry/",
+          "snippet": "Как рассчитать неустойку по ДДУ после снятия моратория в 2026 году. Формула, ставка ЦБ, примеры расчёта, досудебная претензия застройщику."
+        },
+        {
+          "title": "Отмена моратория на неустойку по ДДУ в 2026 году: как дольщику получить ...",
+          "url": "https://favorit-consult.ru/article/otmena-moratoriya-na-neustojku-po-ddu/",
+          "snippet": "Теперь за каждый день опоздания застройщик обязан платить по закону 214-ФЗ — автоматически, без доказательства его вины."
+        },
+        {
+          "title": "Отмена моратория на неустойку по ДДУ с 2026 года: как дольщику получить ...",
+          "url": "https://favorit-consult.ru/article/otmena-moratoriya-po-ddu/",
+          "snippet": "В этой статье разбираем, кому положена выплата, как рассчитать неустойку по ДДУ с учётом трёх периодов моратория, в какой суд подавать и что делать, если застройщик тянет время."
+        },
+        {
+          "title": "Отмена моратория на неустойку по ДДУ в 2026: пошаговая инструкция для ...",
+          "url": "https://fedelis.ru/article/otmena-moratoriya-na-neustojku-po-ddu/",
+          "snippet": "С 1 января 2026 года в России официально отменён пятилетний мораторий на взыскание неустойки с застройщиков за просрочку передачи квартир по договорам долевого участия (ДДУ). Это значит, что дольщики снова могут требовать компенсацию за каждый день задержки сдачи жилья."
+        }
+      ],
+      "searched_at": "2026-09-02"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени платили рассрочку по ДДУ — перед сдачей застройщик поднял остаток 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Предложили рассрочку на остаток по ДДУ после сдачи дома",
+          "url": "https://ppt.ru/news/dolevoe-stroitelstvo/predlozhili-rassrochku-na-ostatok-po-ddu-posle-sdachi-doma",
+          "snippet": ""
+        },
+        {
+          "title": "Застройщики станут предоставлять рассрочку по ДДУ с учетом ...",
+          "url": "https://www.consultant.ru/legalnews/32353/",
+          "snippet": "Застройщикам разрешат предоставлять дольщикам рассрочку по уплате цены ДДУ, окончание срока которой приходится на период после получения разрешения на ввод объекта в эксплуатацию."
+        },
+        {
+          "title": "Названы плюсы и минусы покупки жилья в рассрочку по новым правилам ...",
+          "url": "https://www.gazeta.ru/business/news/2026/08/24/29166865.shtml",
+          "snippet": "Согласно поправкам ДДУ с рассрочкой будет только электронным. Заверять его нужно квалифицированной ЭП, а форма документа должна отвечать требованиям Росреестра. Стороны смогут закрепить, что дольщик обязан полностью выплатить цену договора после того, как застройщик получит разрешение на ввод объекта в эксплуатацию."
+        },
+        {
+          "title": "Предоставление рассрочки застройщиком по ДДУ",
+          "url": "https://ic-iskra.ru/news/8549-predostavlenie-rassrochki-zastroyshchikom-po-ddu",
+          "snippet": "При неоднократных просрочках застройщик сможет потребовать досрочно выплатить остаток долга, а договором могут устанавливаться проценты за задержку платежей — до 20% годовых. Без согласия..."
+        },
+        {
+          "title": "Как продлить рассрочку по ДДУ: условия дополнительного соглашения",
+          "url": "https://pravoved.ru/question/4428916/",
+          "snippet": "Срок определят по проектной декларации на день сделки. Данные изменения планируют применять к ДДУ, которые заключат с 1 сентября 2027 года."
+        },
+        {
+          "title": "Рассрочка от застройщика в Тюмени: как не купить красивый платёж",
+          "url": "https://dzen.ru/a/ahfNSXM-KU9ruvUt",
+          "snippet": "Разбираемся, возможно ли через доп соглашение к ДДУ продлить срок рассрочки оплаты квартиры до момента ввода дома в эксплуатацию в 2026 году."
+        }
+      ],
+      "searched_at": "2026-09-02"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени платили рассрочку по ДДУ — перед сдачей застройщик поднял остаток official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Застройщики станут предоставлять рассрочку по ДДУ с учетом ...",
+          "url": "https://tls-pravo.ru/tpost/ek8y6xg061-zastroischiki-stanut-predostavlyat-rassr",
+          "snippet": ""
+        },
+        {
+          "title": "Минстрой предложил давать рассрочку по ДДУ после ввода дома",
+          "url": "https://abireg.ru/newsitem/116577/",
+          "snippet": "Стороны смогут закрепить, что дольщик обязан полностью выплатить цену договора после того, как застройщик получит разрешение на ввод объекта в эксплуатацию."
+        },
+        {
+          "title": "Застройщики станут предоставлять рассрочку по ДДУ с учетом ...",
+          "url": "https://www.consultant.ru/legalnews/32353/",
+          "snippet": "Минстрой России представил законопроект, позволяющий застройщикам предоставлять гражданам участникам долевого строительства рассрочку по уплате цены договора участия в долевом ..."
+        },
+        {
+          "title": "Застройщики станут предоставлять рассрочку по ДДУ с учетом ...",
+          "url": "https://telecom.perm.ru/2026/08/zastrojshhiki-stanut-predostavlyat-rassrochku-po-ddu-s-uchetom-specztrebovanij-proekt-minstroya/",
+          "snippet": "Минстрой пояснил: сейчас застройщики принимают оплату частями, но период внесения денег ограничен датой ввода объекта в эксплуатацию. Публичное обсуждение новшеств завершат 28 августа."
+        },
+        {
+          "title": "Предложили рассрочку на остаток по ДДУ после сдачи дома",
+          "url": "https://ppt.ru/news/dolevoe-stroitelstvo/predlozhili-rassrochku-na-ostatok-po-ddu-posle-sdachi-doma",
+          "snippet": "Стороны смогут закрепить, что дольщик обязан полностью выплатить цену договора после того, как застройщик получит разрешение на ввод объекта в эксплуатацию."
+        },
+        {
+          "title": "Рассрочка по дду \\ 2026-2025-2024 год \\ Акты, образцы, формы, договоры ...",
+          "url": "https://www.consultant.ru/law/podborki/rassrochka_po_ddu/",
+          "snippet": "Застройщикам разрешат предоставлять дольщикам рассрочку по уплате цены ДДУ, окончание срока которой приходится на период после получения разрешения на ввод объекта в эксплуатацию."
+        }
+      ],
+      "searched_at": "2026-09-02"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени платили рассрочку по ДДУ — перед сдачей застройщик поднял остаток 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 5,
+      "results": [
+        {
+          "title": "GitHub - sergeypristavko/zhilbalans-razbor: Разбор рассрочки на ...",
+          "url": "https://github.com/sergeypristavko/zhilbalans-razbor",
+          "snippet": ""
+        },
+        {
+          "title": "neo/PNEO/Screens/bt01.png at main · neo-engine/neo · GitHub",
+          "url": "https://github.com/neo-engine/neo/blob/main/PNEO/Screens/bt01.png",
+          "snippet": "Четыре живых случая с графиками: сколько человек реально отдал кооперативу и сколько отдал бы банку по плавающей ставке «СР + спред», месяц за месяцем, на фактических данных."
+        },
+        {
+          "title": "Остатки с разбивкой по периодам в запросе 1С · GitHub",
+          "url": "https://gist.github.com/AronMav/3d551a4109501a08e10c00e8ae01d933",
+          "snippet": "A homebrew Pokémon nds game; written from scratch using devkitPro - neo/PNEO/Screens/bt01.png at main · neo-engine/neo"
+        },
+        {
+          "title": "EdgeBench/assets/wechat_qr.jpg at main · ByteDance-Seed/EdgeBench",
+          "url": "https://github.com/ByteDance-Seed/EdgeBench/blob/main/assets/wechat_qr.jpg",
+          "snippet": "Часто перед программистом 1с возникает следующая задача: в запросе требуется взять остатки регистра бухгалтерии или накопления по периодам."
+        },
+        {
+          "title": "grpc-gateway/docs/assets/images/architecture_introduction ... - GitHub",
+          "url": "https://github.com/grpc-ecosystem/grpc-gateway/blob/main/docs/assets/images/architecture_introduction_diagram.svg",
+          "snippet": "EdgeBench: Unveiling scaling laws of learning from real-world environments - ByteDance-Seed/EdgeBench"
+        }
+      ],
+      "searched_at": "2026-09-02"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени платили рассрочку по ДДУ — перед сдачей застройщик поднял остаток forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Просрочка по ДДУ: что делать дольщику в 2026 | Dzin.pro",
+          "url": "https://dzin.pro/blog/prosrochka-peredachi-kvartiry/",
+          "snippet": ""
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома — как взыскать неустойку по ДДУ в 2026 ...",
+          "url": "https://jalober.ru/blog/zastrojshchik-prosrochil-sdachu-doma",
+          "snippet": "Теперь за каждый день опоздания застройщик обязан платить по закону 214-ФЗ — автоматически, без доказательства его вины."
+        },
+        {
+          "title": "Взыскание неустойки по ДДУ за просрочку сдачи дома: пошаговая ...",
+          "url": "https://pravo-pro.ru/blog/posts/vzyskanie-neustojki-po-ddu/",
+          "snippet": "Застройщик обещал ключи в 2025 году, а на дворе 2026-й — квартиры до сих пор нет. С 1 января 2026 года мораторий на неустойку по ДДУ снят, и дольщики снова могут требовать полную компенсацию."
+        },
+        {
+          "title": "Взыскание неустойки по ДДУ с застройщика в Тюмени",
+          "url": "https://www.dvitex.ru/service_fiz/nedvizhimost/vzyskanie-neustoyki-po-ddu-s-zastroyshchika-v-tyumeni/",
+          "snippet": "Пошаговое руководство по самостоятельному взысканию неустойки с застройщика за просрочку сдачи квартиры по ДДУ: правовая основа, расчёт с учётом мораториев, досудебная претензия ..."
+        },
+        {
+          "title": "Судебная практика по взысканию неустойки при просрочке по ДДУ: 3 важных ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/vzyskanie-neustoyki-ddu-s-zastroyshchika/sudebnaya-praktika-po-vzyskaniyu-neustoyki-pri-prosrochke-po-dolevomu-stroitelstvu/",
+          "snippet": "Взыскание неустойки по ДДУ с застройщика в Тюмени: как мы вам поможем? Мы предлагаем полное сопровождение процедуры взыскания неустойки с застройщика в г. Тюмень в дистанционном формате."
+        },
+        {
+          "title": "Рассрочка от застройщика в Тюмени: как не купить красивый платёж",
+          "url": "https://dzen.ru/a/ahfNSXM-KU9ruvUt",
+          "snippet": "В данной статье мы проанализировали судебную практику по взысканию неустойки по ДДУ с застройщика и систематизировали выводы судов, на которые стоит обратить внимание дольщикам."
+        }
+      ],
+      "searched_at": "2026-09-02"
+    }
+  ],
+  "errors": [],
+  "wordstat": {
+    "accessed_at": "2026-09-02",
+    "regions": ["55", "11176"],
+    "compare_region": "225",
+    "queries": [
+      {
+        "phrase": "новостройки тюмень",
+        "volume": 4649,
+        "region": "55,11176"
+      },
+      {
+        "phrase": "рассрочка от застройщика",
+        "volume": 213,
+        "volume_ru225": 21115,
+        "region": "55,11176"
+      },
+      {
+        "phrase": "рассрочка от застройщика тюмень",
+        "volume": 142,
+        "region": "55,11176"
+      },
+      {
+        "phrase": "квартира в рассрочку от застройщика тюмень",
+        "volume": 88,
+        "region": "55,11176"
+      }
+    ],
+    "p0_final": {
+      "phrase": "новостройки тюмень",
+      "volume": 4649
+    }
+  },
+  "fresh_signal_urls_verified": [
+    {
+      "url": "https://realty.yandex.ru/journal/post/kogda-ne-stoit-podpisyvat-dopolnitelnoe-soglashenie-k-ddu/",
+      "accessed_at": "2026-09-02",
+      "type": "market"
+    },
+    {
+      "url": "https://ic-iskra.ru/news/8549-predostavlenie-rassrochki-zastroyshchikom-po-ddu",
+      "accessed_at": "2026-09-02",
+      "type": "legal_news"
+    },
+    {
+      "url": "https://ppt.ru/news/dolevoe-stroitelstvo/predlozhili-rassrochku-na-ostatok-po-ddu-posle-sdachi-doma",
+      "accessed_at": "2026-09-02",
+      "type": "market_news"
+    }
+  ]
+}
