@@ -5,6 +5,15 @@
   "last_sync": "2026-09-02",
   "clusters": [
     {
+      "cluster_id": "newbuild_ddu_cellar_paid_not_handed_tyumen",
+      "first_seen": "2026-09-02",
+      "locked_until": "2026-10-02",
+      "source": "ledger",
+      "slug": "v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo",
+      "topic_id": "B21",
+      "title": "В Тюмени оплатили кладовку по ДДУ — на ключах её не оказалось"
+    },
+    {
       "cluster_id": "newbuild_developer_legal_entity_change_ddu_escrow_tyumen",
       "first_seen": "2026-09-01",
       "locked_until": "2026-10-01",
