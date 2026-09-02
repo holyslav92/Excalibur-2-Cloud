@@ -4,16 +4,16 @@
   "tier": "powerful",
   "model": "claude-opus-5",
   "endpoint": "https://api.derouter.ai/openai/v1/chat/completions",
-  "request_id": "chatcmpl-2bf09412a9fb436490a21f15",
+  "request_id": "chatcmpl-96d4d3ba59414600b11795ee",
   "usage": {
-    "prompt_tokens": 6627,
-    "completion_tokens": 4084,
-    "total_tokens": 10711,
+    "prompt_tokens": 7067,
+    "completion_tokens": 5083,
+    "total_tokens": 12150,
     "prompt_tokens_details": {
       "cached_tokens": 3772
     }
   },
-  "created_at": "2026-09-02T12:38:37.928092+00:00",
+  "created_at": "2026-09-02T13:16:36.671453+00:00",
   "provider": "derouter-rest",
   "user_prompt_chars": 200,
   "contract": "shared/derouter-opus-brain-contract.md"

@@ -154,6 +154,23 @@
         "pose_framing": "средний план по пояс, герой справа, корпус развёрнут к документам",
         "action": "сравнивает старую вывеску на телефоне с новым заголовком дду и пытается выбрать между подписанием и проверкой реквизитов"
       }
+    },
+    {
+      "date": "2026-09-02",
+      "topic_id": "B21",
+      "slug": "",
+      "motifs": {
+        "composition": "host waist center foreground empty metal storage cage right hook zone left sun flare",
+        "location": "bright underground storage level newbuild tyumen concrete ramp light not showroom not mfc",
+        "meme": "james_doakes shocked sticker top-right pop_cat small bottom-left corner",
+        "prop_set": "ddu page storage line highlighted keyring open empty cage door yellow sticky act fear",
+        "sticker_set": "james_doakes and pop_cat tiny reaction stickers clear of hook face phone 80px",
+        "joke": "host compares ddu storage number to empty cage while keys dangle uselessly",
+        "outfit": "navy quilted vest over light grey henley rolled sleeves khaki chinos no blazer",
+        "emotion": "stunned open-mouth disbelief furrowed brow not studio smile not side-eye",
+        "pose_framing": "waist center kneeling glance into empty cage not left bust not right mfc pose",
+        "action": "holds ddu folder and keyring staring at missing storage unit number mismatch"
+      }
     }
   ]
 }
