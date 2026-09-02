@@ -114,6 +114,41 @@ class WpCategoriesInterlinkTests(unittest.TestCase):
         b10 = by_slug["v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v"]
         self.assertEqual(b10.get("post_id"), 9161)
 
+    def test_resolve_new_article_path_from_placeholder_permalink(self) -> None:
+        import sys
+
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_interlink_lib import (
+            build_new_article_urls,
+            normalize_permalink_to_path,
+            validate_inbound_updates_href,
+        )
+
+        slug = "v-tyumeni-platili-rassrochku-po-ddu-pered-sdachej-zastrojschik-podnyal-ostatok"
+        article_dir = ROOT / "memory/blog/articles/B21-v-tyumeni-platili-rassrochku-po-ddu-pered-sdachej-zastrojschik-podnyal-ostatok"
+        path = normalize_permalink_to_path(
+            "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-platili-rassrochku-po-ddu-pered-sdachej-zastrojschik-podnyal-ostatok/"
+        )
+        self.assertIn("pokupka-kvartiry", path)
+        self.assertIn(slug, path)
+
+        runtime, git_safe = build_new_article_urls(slug, article_dir, ROOT, "https://example.com")
+        self.assertIn("pokupka-kvartiry", runtime)
+        self.assertIn(slug, runtime)
+        self.assertIn("{{SITE_BASE}}", git_safe)
+        self.assertIn(slug, git_safe)
+
+        bad = [
+            {
+                "post_id": 1,
+                "html": (
+                    '<p class="excalibur-interlink-readalso" data-excalibur-interlink-from="x">'
+                    '<b>Читайте также:</b> <a href="{{SITE_BASE}}">Title</a></p>'
+                ),
+            }
+        ]
+        self.assertTrue(validate_inbound_updates_href(bad, slug))
+
 
 if __name__ == "__main__":
     unittest.main()

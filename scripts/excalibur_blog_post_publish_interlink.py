@@ -13,12 +13,15 @@ from excalibur_blog_interlink_lib import (
     all_interlink_candidates,
     build_inbound_updates,
     build_interlink_bootstrap_php,
+    build_new_article_urls,
+    expand_inbound_updates_for_runtime,
+    git_safe_inbound_plan,
     load_tenant,
     outbound_links_in_html,
     pick_inbound_targets,
     project_root,
+    validate_inbound_updates_href,
 )
-from excalibur_blog_site_base import SITE_BASE_PLACEHOLDER, expand_site_base
 
 
 def main() -> int:
@@ -55,36 +58,29 @@ def main() -> int:
     inbound_targets = pick_inbound_targets(candidates, new_slug=slug, max_inbound=args.max_inbound)
 
     public = os.environ.get("PUBLIC_SITE_URL", "").strip()
-    new_path = f"/blog/vtorichka-i-riski/{slug}/"
-    if public:
-        new_url = expand_site_base(f"{SITE_BASE_PLACEHOLDER}{new_path}", public)
-    else:
-        new_url = new_path
+    runtime_url, git_safe_url = build_new_article_urls(slug, article_dir, root, public)
 
-    inbound_updates = build_inbound_updates(
+    inbound_runtime = build_inbound_updates(
         new_slug=slug,
         new_title=title,
-        new_url=new_url,
+        new_url=runtime_url,
         targets=inbound_targets,
     )
+    inbound_plan = git_safe_inbound_plan(
+        build_inbound_updates(
+            new_slug=slug,
+            new_title=title,
+            new_url=git_safe_url,
+            targets=inbound_targets,
+        ),
+        public,
+    )
 
-    result_path = article_dir / "wp-publish-result.json"
-    if result_path.is_file():
-        try:
-            prev = json.loads(result_path.read_text(encoding="utf-8"))
-            published_path = str(prev.get("permalink") or "").strip()
-            if published_path.startswith("/"):
-                new_url = expand_site_base(f"{SITE_BASE_PLACEHOLDER}{published_path}", public) if public else published_path
-            elif published_path.startswith("http"):
-                new_url = published_path
-            inbound_updates = build_inbound_updates(
-                new_slug=slug,
-                new_title=title,
-                new_url=new_url,
-                targets=inbound_targets,
-            )
-        except json.JSONDecodeError:
-            pass
+    href_errors = validate_inbound_updates_href(inbound_runtime, slug)
+    if href_errors:
+        for err in href_errors:
+            print(f"FAIL interlink: {err}", file=sys.stderr)
+        return 2
 
     plan = {
         "topic_id": topic_id,
@@ -94,8 +90,8 @@ def main() -> int:
         "outbound_found": outbound_found,
         "outbound_missing_suggestions": outbound_missing[:3],
         "inbound_targets": inbound_targets,
-        "inbound_updates": inbound_updates,
-        "new_url": new_url,
+        "inbound_updates": inbound_plan,
+        "new_url": git_safe_url,
         "dry_run": bool(args.dry_run),
     }
     plan_path = article_dir / "interlink-plan.json"
@@ -121,7 +117,7 @@ def main() -> int:
         print("WARN interlink inbound skip: PUBLIC_SITE_URL missing", file=sys.stderr)
         return 0
 
-    if not inbound_updates:
+    if not inbound_runtime:
         print("OK interlink: no inbound targets with post_id")
         return 0
 
@@ -133,13 +129,14 @@ def main() -> int:
         print(f"WARN interlink inbound skip: missing env {', '.join(missing)}", file=sys.stderr)
         return 0
 
-    php = build_interlink_bootstrap_php({"updates": inbound_updates})
+    inbound_apply = expand_inbound_updates_for_runtime(inbound_runtime, public)
+    php = build_interlink_bootstrap_php({"updates": inbound_apply})
     out = publish_via_sftp(env, php, public, bootstrap_name="excalibur-blog-interlink-once.php")
     print(out)
     if "OK interlink_done" not in out and "OK interlink_inbound=" not in out and "OK interlink_skip=" not in out:
         print("FAIL interlink inbound bootstrap", file=sys.stderr)
         return 2
-    print(f"OK interlink inbound applied: {len(inbound_updates)} targets")
+    print(f"OK interlink inbound applied: {len(inbound_apply)} targets")
     return 0
 
 

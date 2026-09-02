@@ -8,6 +8,13 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
+from excalibur_blog_site_base import (
+    SITE_BASE_PLACEHOLDER,
+    expand_site_base,
+    path_from_site_url,
+    redact_site_base,
+)
+
 INTERLINK_MARKER_PREFIX = 'data-excalibur-interlink-from="'
 
 
@@ -181,6 +188,115 @@ def append_interlink_block(content: str, *, from_slug: str, target_url: str, tar
 def permalink_path_for_slug(slug: str, category_slug: str = "vtorichka-i-riski") -> str:
     slug = slug.strip("/")
     return f"/blog/{category_slug}/{slug}/"
+
+
+def normalize_permalink_to_path(raw: str) -> str:
+    """Return ``/blog/.../`` path from ledger, {{SITE_BASE}}/path, or absolute URL."""
+    value = (raw or "").strip()
+    if not value:
+        return ""
+    if value.startswith(SITE_BASE_PLACEHOLDER):
+        path = path_from_site_url(value)
+        return path if path.startswith("/") else f"/{path.lstrip('/')}"
+    if value.startswith("/"):
+        return value
+    if "://" in value:
+        path = urlparse(value).path or ""
+        return path if path.startswith("/") else f"/{path.lstrip('/')}"
+    return ""
+
+
+def resolve_new_article_permalink_path(slug: str, article_dir: Path, root: Path) -> str:
+    """Resolve published article path for inbound interlink (not hardcoded vtorichka-i-riski)."""
+    slug = slug.strip("/")
+    if not slug:
+        return ""
+
+    result_path = article_dir / "wp-publish-result.json"
+    if result_path.is_file():
+        try:
+            prev = json.loads(result_path.read_text(encoding="utf-8"))
+            path = normalize_permalink_to_path(str(prev.get("permalink") or ""))
+            if path and slug in path:
+                return path
+        except json.JSONDecodeError:
+            pass
+
+    for row in parse_ledger(root / "shared/published-articles.md"):
+        if str(row.get("slug") or "").strip() == slug:
+            path = normalize_permalink_to_path(str(row.get("permalink") or ""))
+            if path:
+                return path
+
+    try:
+        from excalibur_blog_wp_categories import resolve_category_slugs
+
+        category_slugs = resolve_category_slugs(root, article_dir)
+        if category_slugs:
+            return permalink_path_for_slug(slug, str(category_slugs[-1]))
+    except ImportError:
+        pass
+
+    return permalink_path_for_slug(slug)
+
+
+def build_new_article_urls(
+    slug: str,
+    article_dir: Path,
+    root: Path,
+    public_base: str,
+) -> tuple[str, str]:
+    """Return (runtime_url, git_safe_url) for inbound «Читайте также» href."""
+    path = resolve_new_article_permalink_path(slug, article_dir, root)
+    git_safe = f"{SITE_BASE_PLACEHOLDER}{path}"
+    if public_base:
+        runtime = expand_site_base(git_safe, public_base)
+    else:
+        runtime = path
+    return runtime, git_safe
+
+
+def validate_inbound_updates_href(updates: list[dict[str, Any]], slug: str) -> list[str]:
+    """FAIL when inbound href is site root only or missing article slug."""
+    errors: list[str] = []
+    slug = slug.strip("/")
+    for row in updates:
+        html = str(row.get("html") or "")
+        post_id = row.get("post_id")
+        if slug and slug not in html:
+            errors.append(f"post_id={post_id}: inbound href missing slug {slug!r}")
+        href_match = html.split("href=", 1)
+        if len(href_match) > 1:
+            href = href_match[1].split(">", 1)[0].strip('"').strip("'")
+            if href in (SITE_BASE_PLACEHOLDER, f"{SITE_BASE_PLACEHOLDER}/"):
+                errors.append(f"post_id={post_id}: inbound href is site root only")
+    return errors
+
+
+def expand_inbound_updates_for_runtime(
+    updates: list[dict[str, Any]],
+    public_base: str,
+) -> list[dict[str, Any]]:
+    if not public_base:
+        return updates
+    out: list[dict[str, Any]] = []
+    for row in updates:
+        html = str(row.get("html") or "")
+        if SITE_BASE_PLACEHOLDER in html:
+            html = expand_site_base(html, public_base)
+        out.append({**row, "html": html})
+    return out
+
+
+def git_safe_inbound_plan(
+    updates: list[dict[str, Any]],
+    public_base: str,
+) -> list[dict[str, Any]]:
+    out: list[dict[str, Any]] = []
+    for row in updates:
+        html = redact_site_base(str(row.get("html") or ""), public_base)
+        out.append({**row, "html": html})
+    return out
 
 
 def resolve_public_path(candidate: dict[str, Any], public_base: str = "") -> str:
