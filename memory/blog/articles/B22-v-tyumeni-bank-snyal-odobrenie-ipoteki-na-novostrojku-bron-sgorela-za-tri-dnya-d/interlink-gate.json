@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B22",
+  "slug": "v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d",
+  "candidates_count": 19,
+  "outbound_found": [
+    {
+      "slug": "klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili",
+      "title": "klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili"
+    },
+    {
+      "slug": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli",
+      "title": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli"
+    },
+    {
+      "slug": "v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot",
+      "title": "v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
