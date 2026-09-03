@@ -911,7 +911,7 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder.ImageCaptionBuilderTests.test_build_inline_alt_labels_scene_overlap_falls_back_to_h2`
 - B22 `image_alt_human` PASS with labels restored (dry-run)
-commit: pending
+commit: 4340541
 
 ## INC-20260903-0801-cover-fixer-layout-hook-phone-b22
 status: fixed
@@ -985,4 +985,4 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_quality_bar_9_gate.py`
 - `python3 -m unittest tests.test_quality_bar_9_gate.QualityBar9GateTest.test_url_present_accepts_site_base_paths`
 - Sol B22 `check_end_cta` → True (git show 0316423)
-commit: pending
+commit: 4340541
