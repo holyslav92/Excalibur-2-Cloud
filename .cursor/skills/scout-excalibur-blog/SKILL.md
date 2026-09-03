@@ -113,6 +113,7 @@ story_dup_check: PASS | cluster_id: <новый уникальный>
 ```bash
 python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters
 python3 scripts/excalibur_blog_scout_helper.py --check-query "<title draft + hook + slug>"
+python3 scripts/excalibur_blog_scout_helper.py --slug-from-title "<title_draft>"
 # или:
 python3 scripts/excalibur_blog_scout_story_dup.py --text "<title + hook + slug>"
 ```
