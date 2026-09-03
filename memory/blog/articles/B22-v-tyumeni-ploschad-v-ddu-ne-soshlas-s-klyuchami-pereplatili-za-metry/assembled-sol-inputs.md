@@ -23,9 +23,12 @@ HARD:
 - **no composite disclaimer**
 - Короткие абзацы, диалоги в кавычках, контраст обычный/профи.
 
-CTA early: excalibur-cta-early — TG + MAX only
-CTA mid: excalibur-cta-mid — TG + MAX
-CTA end: excalibur-cta-end excalibur-social-cta — полный набор + tel
+CTA early (после лида, до H2): excalibur-cta-early — только TG https://t.me/Tyumen_Rieltor + MAX https://max.ru/id561413315447_biz
+CTA mid (после таблицы/практики): excalibur-cta-mid — TG + MAX
+CTA end: excalibur-cta-end excalibur-social-cta — dual CTA + полный набор: TG, MAX, tel, Дзен https://dzen.ru/holyslav, VK https://vk.ru/tymenrieltor, {{SITE_BASE}}/gajdy/, {{SITE_BASE}}/rieltor-tyumen/
+
+End CTA HTML (канон — {{SITE_BASE}} для site/guides/about; НЕ голый href="/"):
+<p><a href="https://t.me/Tyumen_Rieltor">Telegram</a> · <a href="https://max.ru/id561413315447_biz">MAX</a> · <a href="tel:+79220016505">+7 922 001 65 05</a> · <a href="{{SITE_BASE}}">Сайт</a> · <a href="https://dzen.ru/holyslav">Дзен</a> · <a href="https://vk.ru/tymenrieltor">VK</a> · <a href="{{SITE_BASE}}/gajdy/">Гайды</a> · <a href="{{SITE_BASE}}/rieltor-tyumen/">Обо мне</a></p>
 
 Soul: Klyshin rhythm, Shakin facts. «Расскажу изнутри», не агентство.
 
