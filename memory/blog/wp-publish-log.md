@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B22 — 2026-09-03
+
+- **topic_id:** B22
+- **slug:** v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d
+- **post_id:** 9601
+- **permalink:** /blog/ipoteka/v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d/
+- **featured_image:** 9602
+- **inline_images:** 9603–9609 (7)
+- **wp_category_slugs:** ipoteka, riski-sdelki, pokupka-kvartiry (category_ids=32,58,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B20 — 2026-09-01
 
 - **topic_id:** B20

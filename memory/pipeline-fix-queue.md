@@ -22,10 +22,12 @@ category: env
 - **2026-08-28 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9230 ingest skipped; B11 lessons recorded without behavioral signals.
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
+- **2026-09-01 B20 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9490 ingest skipped; B20 lessons recorded without behavioral signals (legal-entity-ddu-escrow cluster, sol trim spine-once, cover OCR escape).
+- **2026-09-03 B22 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9601 ingest skipped; B22 lessons recorded without behavioral signals (mortgage-approval-withdrawn-booking cluster, cover OCR escape attempt-1).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250) и B15 (post 9368) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368), B20 (post 9490) и B22 (post 9601) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -871,4 +873,45 @@ checks_run:
 - `python3 -m py_compile` on changed scripts
 - `python3 -m unittest tests.test_pipeline_speed_b03.QuadSceneMergeTest`
 - B21 quad_manifest_preflight → PASS with cover_motifs
+commit: pending
+
+## INC-20260903-1302-inline-alt-label-budget-b22
+status: fixed
+run_date: 2026-09-03
+role: excalibur-blog-fixer
+topic_id: B22
+article_dir: memory/blog/articles/B22-v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d
+severity: medium
+category: script
+
+### What went wrong
+- `image_caption_builder` `build_inline_alt` for `structure_diagram` inline_7: 3 quad-manifest labels + long `label_ru` → alt 141 chars (140 + terminal period).
+- `clamp_seo_alt` treated 140-char body as in-range, appended `.` → gate `alt too long (141 > 140)`.
+- Agent manually shortened quad-manifest labels (`Сверить два статуса` → `Два статуса`) before `--apply`.
+
+### How the agent recovered this run
+- Manual label shorten in `quad-manifest.json` + `image_caption_builder --apply` → `image-alt-gate.json` PASS; publish post 9601.
+
+### Durable fix needed before next run
+- `clamp_seo_alt`: terminal period counts toward `ALT_SEO_MAX`.
+- `fit_panel_labels_for_alt`: drop to 2/1 labels when 3-label facts exceed SEO budget (keep cover-text labels long for canvas).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_image_caption_builder.py`
+- `tests/test_image_caption_builder.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-03
+fix_summary:
+- `clamp_seo_alt` reserves 1 char for terminal period before PASS return.
+- `fit_panel_labels_for_alt` picks 3→2→1 manifest labels to fit 80–140 SEO alt for infographic inlines.
+files_changed:
+- `scripts/excalibur_blog_image_caption_builder.py`
+- `tests/test_image_caption_builder.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
+- `python3 -m unittest tests.test_image_caption_builder`
 commit: pending

@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-03",
+    "today_ru": "03.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "четверг"
+  },
+  "topic": {
+    "topic_id": "B22",
+    "title": "В Тюмени банк снял одобрение ипотеки на новостройку — бронь сгорела за три дня до ДДУ",
+    "h1": "В Тюмени банк снял одобрение ипотеки на новостройку — бронь сгорела за три дня до ДДУ",
+    "slug": "v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d",
+    "primary_query": "В Тюмени банк снял одобрение ипотеки на новостройку — бронь сгорела за три дня до ДДУ",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени банк снял одобрение ипотеки на новостройку — бронь сгорела за три дня до ДДУ 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Банки в Тюменской области сократили выдачу ипотеки",
+          "url": "https://t.rbc.ru/tyumen/14/05/2025/6821a32d9a79474ba8782a69",
+          "snippet": ""
+        },
+        {
+          "title": "Кому девелопер поможет закрыть ипотеку? — Новости Тюмени и Тюменской ...",
+          "url": "https://nashgorod.ru/news/2026-08-27/komu-developer-pomozhet-zakryt-ipoteku-5668646",
+          "snippet": "Банки в Тюменской области в первом квартале 2025 года выдали на 46% меньше денег на покупку жилья, чем годом ранее. Об этом РБК Тюмень сообщили в пресс-службе отделения Банка России по Тюменской области."
+        },
+        {
+          "title": "почему тюменцы отказываются от ипотеки - 6 марта 2025 | 72.ру",
+          "url": "https://72.ru/text/realty/2025/03/06/75188390/",
+          "snippet": "Понаехали в Тюмень, и это к лучшему! «Страна» оплатит переезд вашим близким Покупатели новостроек выбирают траншевую ипотеку ради экономии Почему новые OMODA C5 и JELAND J6 стали ..."
+        },
+        {
+          "title": "Эксперт назвал неочевидную причину для отказа банка в ипотеке в России ...",
+          "url": "https://ria.ru/20260830/ipoteka-2114094410.html",
+          "snippet": "С начала этого года всего треть сделок на рынке новостроек Тюмени прошли с использованием ипотечных займов — к таким выводам пришли эксперты в сфере недвижимости. По их мнению, это антирекорд последних лет: такого не было даже в пандемию."
+        },
+        {
+          "title": "Бронь Истекает, А Ипотека Не Одобрена: Что Делать | Pleada",
+          "url": "https://pleada.shop/blog/bron-istekaet-a-ipoteka-ne-odobrena-chto-delat/",
+          "snippet": "Около 30% клиентов сталкиваются с отказом в ипотеке из-за таких покупок, по оценкам кредитных брокеров."
+        },
+        {
+          "title": "Зумеры боятся ипотеки, но рынок держат семьи: что происходит с жильём в ...",
+          "url": "https://nashgorod.ru/news/2026-02-14/zumery-boyatsya-ipoteki-no-rynok-derzhat-semi-chto-proishodit-s-zhiliem-v-tyumeni-5549638",
+          "snippet": "Знакомая ситуация: присмотрели квартиру, внесли бронь, ждёте решения банка — а время неумолимо тикает. Если ипотеку не одобрят до окончания брони, квартиру могут продать другому."
+        }
+      ],
+      "searched_at": "2026-09-03"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени банк снял одобрение ипотеки на новостройку — бронь сгорела за три дня до ДДУ 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Банки в Тюменской области сократили выдачу ипотеки",
+          "url": "https://t.rbc.ru/tyumen/14/05/2025/6821a32d9a79474ba8782a69",
+          "snippet": ""
+        },
+        {
+          "title": "Кому девелопер поможет закрыть ипотеку? — Новости Тюмени и Тюменской ...",
+          "url": "https://nashgorod.ru/news/2026-08-27/komu-developer-pomozhet-zakryt-ipoteku-5668646",
+          "snippet": "Банки в Тюменской области в первом квартале 2025 года выдали на 46% меньше денег на покупку жилья, чем годом ранее. Об этом РБК Тюмень сообщили в пресс-службе отделения Банка России по Тюменской области."
+        },
+        {
+          "title": "почему тюменцы отказываются от ипотеки - 6 марта 2025 | 72.ру",
+          "url": "https://72.ru/text/realty/2025/03/06/75188390/",
+          "snippet": "Понаехали в Тюмень, и это к лучшему! «Страна» оплатит переезд вашим близким Покупатели новостроек выбирают траншевую ипотеку ради экономии Почему новые OMODA C5 и JELAND J6 стали ..."
+        },
+        {
+          "title": "Эксперт назвал неочевидную причину для отказа банка в ипотеке в России ...",
+          "url": "https://ria.ru/20260830/ipoteka-2114094410.html",
+          "snippet": "С начала этого года всего треть сделок на рынке новостроек Тюмени прошли с использованием ипотечных займов — к таким выводам пришли эксперты в сфере недвижимости. По их мнению, это антирекорд последних лет: такого не было даже в пандемию."
+        },
+        {
+          "title": "Бронь Истекает, А Ипотека Не Одобрена: Что Делать | Pleada",
+          "url": "https://pleada.shop/blog/bron-istekaet-a-ipoteka-ne-odobrena-chto-delat/",
+          "snippet": "Около 30% клиентов сталкиваются с отказом в ипотеке из-за таких покупок, по оценкам кредитных брокеров."
+        },
+        {
+          "title": "Зумеры боятся ипотеки, но рынок держат семьи: что происходит с жильём в ...",
+          "url": "https://nashgorod.ru/news/2026-02-14/zumery-boyatsya-ipoteki-no-rynok-derzhat-semi-chto-proishodit-s-zhiliem-v-tyumeni-5549638",
+          "snippet": "Знакомая ситуация: присмотрели квартиру, внесли бронь, ждёте решения банка — а время неумолимо тикает. Если ипотеку не одобрят до окончания брони, квартиру могут продать другому."
+        }
+      ],
+      "searched_at": "2026-09-03"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени банк снял одобрение ипотеки на новостройку — бронь сгорела за три дня до ДДУ official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Банки в Тюменской области сократили выдачу ипотеки",
+          "url": "https://t.rbc.ru/tyumen/14/05/2025/6821a32d9a79474ba8782a69",
+          "snippet": ""
+        },
+        {
+          "title": "почему тюменцы отказываются от ипотеки - 6 марта 2025 | 72.ру",
+          "url": "https://72.ru/text/realty/2025/03/06/75188390/",
+          "snippet": "Банки в Тюменской области в первом квартале 2025 года выдали на 46% меньше денег на покупку жилья, чем годом ранее. Об этом РБК Тюмень сообщили в пресс-службе отделения Банка России по Тюменской области."
+        },
+        {
+          "title": "В Тюмени застройщик сменил юрлицо — банк не открыл эскроу",
+          "url": "https://dzen.ru/a/apbVlVE6NU7DbRCT",
+          "snippet": "С начала этого года всего треть сделок на рынке новостроек Тюмени прошли с использованием ипотечных займов — к таким выводам пришли эксперты в сфере недвижимости. По их мнению, это антирекорд последних лет: такого не было даже в пандемию."
+        },
+        {
+          "title": "Эксперт назвал неочевидную причину для отказа банка в ипотеке в России ...",
+          "url": "https://ria.ru/20260830/ipoteka-2114094410.html",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : Семья с двумя детьми в Тюмени потеряла бронь на трёшку в новостройке за 72 часа: застройщик сменил юрлицо, а банк отказался открывать..."
+        },
+        {
+          "title": "Бронь Истекает, А Ипотека Не Одобрена: Что Делать | Pleada",
+          "url": "https://pleada.shop/blog/bron-istekaet-a-ipoteka-ne-odobrena-chto-delat/",
+          "snippet": "Около 30% клиентов сталкиваются с отказом в ипотеке из-за таких покупок, по оценкам кредитных брокеров."
+        },
+        {
+          "title": "Семейная ипотека на ИЖС рухнула в Тюмени",
+          "url": "https://dzen.ru/a/Z2ALBZu3iHWUo0-t",
+          "snippet": "Коротко: Попробуйте договориться с отделом продаж о продлении брони. Застройщики часто идут навстречу, особенно если вы уже подали документы в банк."
+        }
+      ],
+      "searched_at": "2026-09-03"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени банк снял одобрение ипотеки на новостройку — бронь сгорела за три дня до ДДУ 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "bullet_hell/icon.svg at main · TheCreator109/bullet_hell · GitHub",
+          "url": "https://github.com/TheCreator109/bullet_hell/blob/main/icon.svg",
+          "snippet": ""
+        },
+        {
+          "title": "orsted/orsted-homepage.png at main · almounah/orsted · GitHub",
+          "url": "https://github.com/almounah/orsted/blob/main/orsted-homepage.png",
+          "snippet": "Contribute to TheCreator109/bullet_hell development by creating an account on GitHub."
+        },
+        {
+          "title": "astroeasy/tests.svg at main · ssc-ai/astroeasy · GitHub",
+          "url": "https://github.com/ssc-ai/astroeasy/blob/main/tests.svg",
+          "snippet": "Contribute to almounah/orsted development by creating an account on GitHub."
+        },
+        {
+          "title": "sol2uml/examples/storage/AaveV3PoolStorageColor.svg at master ... - GitHub",
+          "url": "https://github.com/Chavrzp28/sol2uml/blob/master/examples/storage/AaveV3PoolStorageColor.svg",
+          "snippet": "Astrometry.net made easy -- containerize, invoke from python or manually, indices management, and more! - astroeasy/tests.svg at main · ssc-ai/astroeasy"
+        },
+        {
+          "title": "papirus-icons/Papirus/24x24/emblems/emblem-web.svg at vmlab - GitHub",
+          "url": "https://github.com/scan-dev/papirus-icons/blob/vmlab/Papirus/24x24/emblems/emblem-web.svg",
+          "snippet": "Solidity contract visualisation tool. Contribute to Chavrzp28/sol2uml development by creating an account on GitHub."
+        },
+        {
+          "title": "AI-Infra-Guard/img/logo-full-new.png at main · Tencent/AI-Infra-Guard",
+          "url": "https://github.com/Tencent/AI-Infra-Guard/blob/main/img/logo-full-new.png",
+          "snippet": "Contribute to scan-dev/papirus-icons development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-09-03"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени банк снял одобрение ипотеки на новостройку — бронь сгорела за три дня до ДДУ forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Тюменцы столкнулись с проблемой в выдаче ипотечных кредитов из-за ...",
+          "url": "https://tumen.dk.ru/news/237246850",
+          "snippet": ""
+        },
+        {
+          "title": "На приёмке новостройки в Тюмени нашли мокрую стяжку — ключи не выдали ...",
+          "url": "https://dzen.ru/a/apZvsyWD6W9q5lHp",
+          "snippet": "Жители Тюменской области столкнулись с проблемой в выдаче ипотеки на покупку загородного жилья. Людям не выдают одобренные суммы, из-за чего они не могут закрыть сделки. Как пишет 72.RU, речь идет о клиентах Сбербанка ..."
+        },
+        {
+          "title": "Кому в Тюмени девелопер поможет закрыть ипотеку - 27 августа 2026 | 72.ру",
+          "url": "https://72.ru/text/realty/2026/08/27/76610181/?erid=2SDnjcbeJ9H",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : Ключи лежали на столе в переговорной — и остались лежать на столе."
+        },
+        {
+          "title": "Одобрение ипотеки на форуме: советы заемщиков",
+          "url": "https://kvarnado.ru/ipoteka/guide-odobrenie-ipoteki-forum",
+          "snippet": "В статье рассказывается о проблеме трейд-ин в Тюмени и о том, как девелоперы помогают закрыть ипотеку. Узнайте, кто может воспользоваться уникальным шансом улучшить жилищные условия."
+        },
+        {
+          "title": "Эксперт назвал неочевидную причину для отказа банка в ипотеке в России ...",
+          "url": "https://ria.ru/20260830/ipoteka-2114094410.html",
+          "snippet": "Если заранее проверить платеж и собрать пакет без ошибок, одобрение ипотеки проходит заметно спокойнее. Эта статья подойдёт тем, кто ищет одобрение ипотеки форум и хочет понять, что из советов заемщиков реально работает, а что только создаёт шум."
+        },
+        {
+          "title": "Банк отказал по дому? Чеклист старого фонда в Тюмени",
+          "url": "https://dzen.ru/a/am7Yl2tbQE6qXY2F",
+          "snippet": "Около 30% клиентов сталкиваются с отказом в ипотеке из-за таких покупок, по оценкам кредитных брокеров."
+        }
+      ],
+      "searched_at": "2026-09-03"
+    }
+  ],
+  "supplemental_research_searches": [
+    {
+      "query_id": "official_sber_newbuild",
+      "query": "site:sberbank.ru ипотека новостройка срок одобрения документы объект",
+      "purpose": "официальные сроки Сбера",
+      "result_count": 2,
+      "results": [
+        {
+          "title": "Ипотека на новостройку — Сбербанк",
+          "url": "https://www.sberbank.ru/ru/person/credits/home/buying_project?tab=usl",
+          "snippet": "Документы по объекту — 90 календарных дней; рассмотрение заявки — не более 8 рабочих дней"
+        },
+        {
+          "title": "Типовые условия кредитного договора Сбера",
+          "url": "https://www.sberbank.ru/common/img/uploaded/files/el_docs/1_vsp.htm",
+          "snippet": "Кредит предоставляется не позднее 30 календарных дней с даты положительного решения"
+        }
+      ],
+      "searched_at": "2026-09-03"
+    },
+    {
+      "query_id": "official_cbr_bki_30d",
+      "query": "Банк России 44-19/1691 повторный запрос БКИ 30 дней",
+      "purpose": "регулятор: повторная проверка БКИ",
+      "result_count": 1,
+      "results": [
+        {
+          "title": "Письмо Банка России № 44-19/1691 от 05.03.2025",
+          "url": "https://www.garant.ru/products/ipo/prime/doc/411539215/",
+          "snippet": "Повторный запрос сведений о запрете в БКИ, если прошло более 30 календарных дней"
+        }
+      ],
+      "searched_at": "2026-09-03"
+    },
+    {
+      "query_id": "legal_vs_deposit_mortgage_refusal",
+      "query": "Верховный суд возврат задатка отказ банка ипотека",
+      "purpose": "судебная практика: отказ банка ≠ автовозврат",
+      "result_count": 1,
+      "results": [
+        {
+          "title": "ВС: отказ банка в ипотеке — не основание для возврата задатка",
+          "url": "https://www.klerk.ru/buh/news/704837/",
+          "snippet": "Отсутствие привязки к конкретному кредиту в договоре; определение № 48-КГ26-13-К7"
+        }
+      ],
+      "searched_at": "2026-09-03"
+    },
+    {
+      "query_id": "fresh_ria_mfo_installment",
+      "query": "банк отказ ипотека рассрочка МФО 2026",
+      "purpose": "свежий news-сигнал недели",
+      "result_count": 1,
+      "results": [
+        {
+          "title": "Эксперт назвал неочевидную причину отказа в ипотеке",
+          "url": "https://ria.ru/20260830/ipoteka-2114094410.html",
+          "snippet": "30.08.2026: онлайн-рассрочки с МФО как тревожный сигнал; ~30% по оценке брокеров"
+        }
+      ],
+      "searched_at": "2026-09-03"
+    }
+  ],
+  "wordstat_live": {
+    "accessed_at": "2026-09-03",
+    "regions": ["55", "11176"],
+    "queries": [
+      {"phrase": "купить квартиру в тюмени новостройка ипотека", "volume": 86},
+      {"phrase": "одобрение ипотеки", "volume": 224},
+      {"phrase": "бронь новостройки", "volume": 3}
+    ]
+  },
+  "errors": []
+}

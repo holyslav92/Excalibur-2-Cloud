@@ -1,0 +1,12 @@
+{
+  "gate": "research-official",
+  "status": "PASS",
+  "topic_id": "B22",
+  "research_date": "2026-09-03",
+  "required_entities": [],
+  "entities_checked": ["sberbank", "psb", "raiffeisen", "cbr"],
+  "has_official_verifications_section": true,
+  "verified_claims": 5,
+  "errors": [],
+  "warnings": []
+}

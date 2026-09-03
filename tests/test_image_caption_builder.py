@@ -13,6 +13,7 @@ from scripts.excalibur_blog_image_caption_builder import (
     apply_article_captions,
     build_cover_alt,
     build_inline_alt,
+    clamp_seo_alt,
     collect_article_alts,
     cover_caption_must_be_empty,
     is_prompt_like_alt,
@@ -94,6 +95,29 @@ class ImageCaptionBuilderTests(unittest.TestCase):
         prompt_like, _ = is_prompt_like_alt(alt, seo_length=True)
         self.assertFalse(prompt_like)
         self.assertIn("Сравнительная таблица", alt)
+
+    def test_build_inline_alt_fits_long_structure_diagram_labels_b22(self) -> None:
+        """B22 inline_7: 3 panel labels + long visual_type label must stay ≤140 with period."""
+        slot = {
+            "visual_type": "structure_diagram",
+            "h2_anchor": "До брони и до ДДУ: что проверить в одном узле",
+            "labels": [
+                "Сверить два статуса",
+                "Дом аккредитован",
+                "Бронь с продлением",
+            ],
+        }
+        labels_map = {"structure_diagram": "схема устройства механизма"}
+        alt = build_inline_alt(slot, labels_map=labels_map, meta={"h1": "Тюмень"})
+        prompt_like, errors = is_prompt_like_alt(alt, seo_length=True)
+        self.assertFalse(prompt_like, msg=f"{alt!r} errors={errors}")
+        self.assertLessEqual(len(alt), ALT_SEO_MAX)
+        self.assertGreaterEqual(len(alt), ALT_SEO_MIN)
+
+    def test_clamp_seo_alt_period_counts_toward_max(self) -> None:
+        raw = "x" * 139 + "y"  # 140 chars without period
+        alt = clamp_seo_alt(raw)
+        self.assertLessEqual(len(alt), ALT_SEO_MAX)
 
     def test_cover_caption_must_be_empty(self) -> None:
         ok, errors = cover_caption_must_be_empty("Подпись, которую Дзен покажет как текст")

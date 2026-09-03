@@ -1,0 +1,20 @@
+{
+  "script": "scripts/excalibur_blog_derouter_opus_chat.py",
+  "role": "sol",
+  "tier": "powerful",
+  "model": "claude-opus-5",
+  "endpoint": "https://api.derouter.ai/openai/v1/chat/completions",
+  "request_id": "chatcmpl-3d3363e66af440158c15f678",
+  "usage": {
+    "prompt_tokens": 6794,
+    "completion_tokens": 3834,
+    "total_tokens": 10628,
+    "prompt_tokens_details": {
+      "cached_tokens": 3772
+    }
+  },
+  "created_at": "2026-09-03T12:36:12.345513+00:00",
+  "provider": "derouter-rest",
+  "user_prompt_chars": 200,
+  "contract": "shared/derouter-opus-brain-contract.md"
+}

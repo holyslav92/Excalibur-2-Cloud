@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d",
+  "topic_id": "B22",
+  "post_id": 9601,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B22-v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 921594,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9601 slug=v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d\nOK categories=32,58,36\nOK yoast_social_image=1\nOK featured_image=9602\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9603 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d-inline-01.png\nOK inline_alt=9603\nOK inline_description=9603\nOK inline_image_upload=9604 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d-inline-02.png\nOK inline_alt=9604\nOK inline_description=9604\nOK inline_image_upload=9605 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d-inline-04.png\nOK inline_alt=9605\nOK inline_description=9605\nOK inline_image_upload=9606 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d-inline-03.png\nOK inline_alt=9606\nOK inline_description=9606\nOK inline_image_upload=9607 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d-inline-05.png\nOK inline_alt=9607\nOK inline_description=9607\nOK inline_image_upload=9608 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d-inline-06.png\nOK inline_alt=9608\nOK inline_description=9608\nOK inline_image_upload=9609 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d-inline-07.png\nOK inline_alt=9609\nOK inline_description=9609\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d/",
+    "errors": []
+  }
+}

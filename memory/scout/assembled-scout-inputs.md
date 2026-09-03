@@ -1,78 +1,75 @@
-# Scout inputs — 2026-09-01 (B19)
+# Scout inputs — 2026-09-03 (B22)
 
 **CRITICAL EXECUTION CONTEXT:** You are already running inside `excalibur_blog_derouter_opus_chat.py` (utility tier gpt-5.6-terra). The conductor completed all shell/MCP/Wordstat gates. **Your job is ONLY to write the Scout handoff markdown body** — no tool calls, no BLOCKER messages, no refusals. Output the complete handoff text now.
 
-**run_date:** 2026-09-01 (YEKT Monday slot 09:00)
+**run_date:** 2026-09-03 (YEKT slot ~12:00 UTC 12:04)
 **tenant:** The Риэлтор — Святослав Шакин, Тюмень (tymenrieltor.ru)
 **topic_market_focus:** newbuild_only
 **dzen_rf_pack:** true — Meta/Instagram/Facebook/LinkedIn/X/Discord/VPN heroes DENY
 
 ## Anti-repeat preflight (DONE)
 
-- `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters` → 19 active locks
-- **FROZEN today (01 Sep 2026 live plots — DO NOT reuse):**
-  - `newbuild_acceptance_wet_screed_keys_denied` — daily «На приёмке новостройки в Тюмени нашли мокрую стяжку — ключи не выдали» (slug na-priemke-novostrojki-v-tyumeni-nashli-mokruyu-styazhku-klyuchi-ne-vydali)
-  - `transhevaya_ipoteka_payment_spike` — «Платёж по новостройке вырос в 8 раз — до брони»
-- **Closed clusters (30d):** B12 `ddu_escrow_handover_delay_tyumen` (ключи перенесли на год / эскроу заморозили); matkapital_missing_child_shares (B18 secondary); registered_persons (B17); communal_share (B16); all frozen secondary clusters in used-clusters.json
-- Live WP ~20 (EXCALIBUR_RECENT_WP_POSTS 2026-09-01): today's priemka wet screed; transhevaya ipoteka; kapremont secondary; double sale; forged spouse B15; matkapital child shares; propisannye; communal share; closed mortgage cert B14; predvaritelny dogovor; kladovka EGRN; akkreditiv
-- `published-titles-only.md` + `shared/published-articles.md` — B02–B15 ledger (B13 never published; B16–B18 assigned to live secondary WP posts in used-clusters, not longform ledger)
+- `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters` → 21 active locks
+- **FROZEN today (03 Sep 2026 live plots — DO NOT reuse):**
+  - finishing mismatch — «В тюменской новостройке показали чистовую — в ДДУ была предчистовая»
+  - delay + certificate penalty — «В Тюмени ключи задержали на 8 месяцев — неустойку дали сертификатом»
+  - area mismatch at acceptance — «В Тюмени на приёмке не хватило метров — застройщик отказал в пересчёте»
+- **Closed newbuild clusters (30d):** newbuild_ddu_cellar_paid_not_handed_tyumen (B21); newbuild_developer_legal_entity_change_ddu_escrow_tyumen (B20); semejnaya ipoteka escrow (B19); installment raised before delivery (live 2026-09-02); assignment refused (live 2026-09-02); KP utilities missing (live 2026-09-02); B12 ddu_escrow_handover_delay
+- `topic_focus.py` PASS; `scout_helper.py --check-query` PASS — NO CANNIBALIZATION RISK
 
-## Proposed topic (PASS topic_focus + scout_helper --check-query + story_dup PASS)
+## Proposed topic (PASS all gates)
 
-- **topic_id:** B19
-- **title_draft:** Семейную ипотеку на новостройку в Тюмени одобрили — эскроу не открыли из‑за маткапитала
-- **slug:** v-tyumeni-semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli
-- **cluster_id (new):** newbuild_family_mortgage_matkapital_escrow_blocked_tyumen
-- **story_dup_check:** PASS — distinct from B12 (перенос сдачи/заморозка эскроу после внесения), today's priemka wet screed, matkapital_opieka_kids / matkapital_missing_child_shares (вторичка), B09 egrn_line; plot = семейная ипотека на новостройку одобрена, но банк/застройщик не открыли эскроу из‑за незакрытого обязательства по маткапиталу на прошлое жильё
+- **topic_id:** B22
+- **title_draft:** В Тюмени банк снял одобрение ипотеки на новостройку — бронь сгорела за три дня до ДДУ
+- **slug:** v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela
+- **cluster_id (new):** newbuild_mortgage_approval_withdrawn_booking_lost_tyumen
+- **story_dup_check:** PASS — distinct from B19 (эскроу/маткапитал), B20 (смена юрлица), B21 (кладовка), today's priemka/отделка/задержка plots; plot = банк отозвал одобрение ипотеки на новостройку за 3 дня до подписания ДДУ, бронь сгорела, квартиру продали другому
 
 ## Dzen news-casus shape (target PASS)
 
-- **event:** семья в Тюмени выбрала квартиру в новостройке под семейную ипотеку, банк одобрил кредит и согласовал схему с маткапиталом в первоначальный взнос
-- **risk:** при открытии эскроу-счёта всплыло незакрытое обязательство по прошлому использованию маткапитала (детские доли / справка ПФР / распоряжение) — банк приостановил открытие эскроу, срок брони в офисе продаж истекал
-- **time:** за 48 часов до дедлайна брони / подписания ДДУ (после одобрения семейной ипотеки)
-- **finale:** бронь сняли, квартиру ушла в свободную продажу; семья потеряла очередь и внесённую плату за бронирование; пришлось заново собирать пакет по маткапиталу и искать другой объект (2–4 недели)
-- **comment_magnet_angle:** «Маткапитал уже трогали на прошлую квартиру — вы всё равно бронируете новостройку в семейную ипотеку или сначала закрываете справку в ПФР?»
+- **event:** семья в Тюмени выбрала квартиру в новостройке, внесла плату за бронь, банк выдал одобрение ипотеки и согласовал схему с застройщиком
+- **risk:** за три дня до подписания ДДУ банк повторно проверил доход/кредитную историю и **снял одобрение** — без нового банка ДДУ подписать нельзя, срок брони истекает
+- **time:** за 72 часа до дедлайна брони / подписания ДДУ (после первичного одобрения ипотеки)
+- **finale:** бронь сгорела, квартиру ушла другому покупателю; плату за бронирование вернули частично или не вернули (штраф по условиям офиса продаж); семья заново искала объект и банк 2–3 недели
+- **comment_magnet_angle:** «Банк снял одобрение за три дня до ДДУ — вы успели бы найти другой банк или отказались бы от этой квартиры?»
 
 ## Klyshin hook
 
-- **klyshin_hook:** none | original: none (fresh Tyumen newbuild family-mortgage casus without Klyshin — preferred; avoid today's priemka plot and B12 escrow-delay cluster)
+- **klyshin_hook:** none | original: none (fresh Tyumen newbuild mortgage casus without Klyshin — preferred; no duplicate of closed clusters)
 
-## Wordstat MCP-KV (live 2026-09-01)
+## Wordstat MCP-KV (live 2026-09-03)
 
-**Preflight:** wordstat_get_user_info OK (Yandex Cloud API)
+**Preflight:** wordstat_get_user_info OK (Yandex Cloud API, Folder ID b1g6bq34gkivjj20be06)
 
 | probe | regions | freq (phrase total) |
 |-------|---------|---------------------|
-| переуступка дду | 55+11176 | 25 (rejected — weak volume; close to B12 DDU spine) |
-| переуступка новостройка | 55+11176 | 10 (rejected — weak) |
-| маткапитал новостройка | 55+11176 | 3 (rejected — weak standalone) |
-| семейная ипотека новостройка | 55+11176 | 126 |
-| новостройки тюмени семейная ипотека | 55+11176 | 40 |
-| новостройки тюмени семейная ипотека | 225 (compare) | 55 |
-| семейная ипотека | 55+11176 | 9233 (rejected — too broad, not newbuild-specific) |
-| **купить новостройку в тюмени в ипотеку** | **55+11176** | **93** |
-| купить новостройку в тюмени в ипотеку | 225 (compare) | 140 |
-| купить новостройку тюмень | 55+11176 | 1192 (context only) |
+| бронь новостройка | 55+11176 | 3 (rejected — weak) |
+| ипотека на новостройку тюмень | 55+11176 | 58 → child «ипотека в тюмени на новостройки» 41 |
+| одобрение ипотеки новостройка | 55+11176 | empty (rejected) |
+| машино-место новостройка | 55+11176 | empty (rejected) |
+| приемка квартиры новостройка | 55+11176 | 126 (rejected — today's priemka plot closed) |
+| новостройки тюмень | 55+11176 | 4683 (context spine) |
+| новостройки тюмень | 225 compare | 8767 |
+| **купить новостройку в тюмени в ипотеку** | **55+11176** | **86** |
+| купить новостройку в тюмени в ипотеку | 225 compare | 130 |
 
 **wordstat_rework log:**
-- probe «переуступка дду» 55+11176 → 25 (on-plot but narrow; overlap risk with B12)
-- probe «маткапитал новостройка» 55+11176 → 3 (weak P0)
-- probe «семейная ипотека новостройка» 55+11176 → 126; local «новостройки тюмени семейная ипотека» → 40
-- probe «семейная ипотека» 55+11176 → 9233 (too broad)
-- **rework:** buyer jargon mortgage+newbuild Tyumen → **final P0 «купить новостройку в тюмени в ипотеку» regions 55,11176 freq 93** (compare RU225 140); on-plot secondary «новостройки тюмени семейная ипотека» 40
+- probe «бронь новостройка» 55+11176 → 3 (weak P0)
+- probe «ипотека в тюмени на новостройки» 55+11176 → 41 (on-plot but narrow)
+- probe «новостройки тюмень» 55+11176 → 4683 (strong spine, less mortgage-specific)
+- **rework:** buyer jargon mortgage+newbuild Tyumen → **final P0 «купить новостройку в тюмени в ипотеку» regions 55,11176 freq 86** (compare RU225 130)
 
 ## signal_urls (research)
 
-- https://dzen.ru/holyslav — контекст семейной ипотеки и маткапитала на новостройку; не дубль кластера.
-- https://www.gosuslugi.ru/help/faq/maternal_capital/100359 — маткапитал: обязательства по выделению долей
+- https://dzen.ru/holyslav — контекст ипотеки на новостройку в Тюмени; не дубль кластера B19/B20
+- https://www.cbr.ru/finmarkets/files/supervision/sv_letters/2024/in_16-6-1_2024-03-15.pdf — ЦБ: требования к ипотечному кредитованию (контекст повторной проверки заёмщика)
 - https://t.me/klyshin_A — checked, not used this slot
-- https://dzen.ru/holyslav
 - {{SITE_BASE}}/blog/
-- https://t.me/holyslav92
+- https://t.me/Tyumen_Rieltor
 
 ## Output required
 
 Write complete Scout handoff markdown per SKILL.md with all fields:
 wordstat_preflight, klyshin_hook, anti_repeat_preflight, dzen_casus_shape PASS (event/risk/time/finale), comment_magnet_angle, wordstat_rework, wordstat P0 with mcp_kv + regions 55,11176,compare225, story_dup_check PASS + cluster_id.
 
-Lock topic_id B19, title, slug, signal_urls, research angles for Research role.
+Lock topic_id B22, title, slug, signal_urls, research angles for Research role.

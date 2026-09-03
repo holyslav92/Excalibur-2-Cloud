@@ -21,3 +21,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-09-01 | B19 | semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli | /blog/ipoteka/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/ | published |
 | 2026-09-01 | B20 | v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot | /blog/pokupka-kvartiry/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/ | published |
 | 2026-09-02 | B21 | v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo | /blog/vtorichka-i-riski/v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo/ | published |
+| 2026-09-03 | B22 | v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d | /blog/ipoteka/v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d/ | published |

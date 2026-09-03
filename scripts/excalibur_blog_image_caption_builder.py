@@ -236,14 +236,21 @@ def clamp_seo_alt(text: str, *, min_len: int = ALT_SEO_MIN, max_len: int = ALT_S
     raw = normalize_text(text).rstrip(".!?")
     if not raw:
         return raw
-    if len(raw) <= max_len and len(raw) >= min_len:
-        return f"{raw}."
     if len(raw) > max_len:
         cut = raw[: max_len - 1]
         if " " in cut:
             cut = cut.rsplit(" ", 1)[0]
         return f"{cut.rstrip('.,;:')}…"
-    return f"{raw}."
+    # Terminal period counts toward SEO max (B22: 140 chars + "." was 141 → gate FAIL).
+    with_period = f"{raw}."
+    if len(with_period) > max_len:
+        cut = raw[: max_len - 1]
+        if " " in cut:
+            cut = cut.rsplit(" ", 1)[0]
+        return f"{cut.rstrip('.,;:')}."
+    if len(with_period) >= min_len:
+        return with_period
+    return with_period
 
 
 def is_prompt_like_alt(
@@ -373,6 +380,35 @@ def visual_type_label(visual_type: str, labels_map: dict[str, str]) -> str:
     return labels_map.get(key) or VISUAL_TYPE_FALLBACK_RU.get(key) or "Инфографика"
 
 
+def fit_panel_labels_for_alt(
+    panel_labels: list[str],
+    *,
+    prefix: str,
+    suffix: str,
+    max_len: int = ALT_SEO_MAX,
+) -> str:
+    """Pick 1–3 manifest labels that fit SEO alt budget (reserve 1 char for terminal period)."""
+    labels = [normalize_text(x) for x in panel_labels if normalize_text(x)]
+    if not labels:
+        return ""
+    budget = max_len - len(prefix) - len(suffix) - 1
+    if budget <= 0:
+        return labels[0][: max(1, budget)]
+    for count in (3, 2, 1):
+        if count > len(labels):
+            continue
+        facts = ", ".join(labels[:count])
+        if len(facts) <= budget:
+            return facts
+    single = labels[0]
+    if len(single) <= budget:
+        return single
+    cut = single[:budget]
+    if " " in cut:
+        cut = cut.rsplit(" ", 1)[0]
+    return cut.rstrip(".,;:")
+
+
 def build_inline_alt(
     slot: dict[str, Any],
     *,
@@ -385,8 +421,10 @@ def build_inline_alt(
     panel_labels = [normalize_text(x) for x in (slot.get("labels") or []) if normalize_text(x)]
 
     if panel_labels and visual_type not in {"realistic_photo", "cover_editorial_hero"}:
-        facts = ", ".join(panel_labels[:3])
-        alt = f"{label_ru} по новостройке в Тюмени: {facts} — иллюстрация к разбору сделки."
+        prefix = f"{label_ru} по новостройке в Тюмени: "
+        suffix = " — иллюстрация к разбору сделки."
+        facts = fit_panel_labels_for_alt(panel_labels, prefix=prefix, suffix=suffix)
+        alt = f"{prefix}{facts}{suffix}"
     elif h2:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
         alt = f"{label_ru} к разделу «{h2}»{tyumen} — иллюстрация к кейсу о сделке."
