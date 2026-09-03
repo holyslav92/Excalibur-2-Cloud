@@ -1,0 +1,246 @@
+{
+  "topic_id": "B22",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Банк снял ипотеку перед сделкой",
+  "cover_hook_highlight": "снял",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени банк снял одобрение ипотеки за 72 часа до ДДУ — бронь сгорела: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Showroom lemon shirt phone folder calendar; memes tiny",
+      "meme_caption_ru": "",
+      "sticky": "Бронь уже не спасти",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "шок и растерянность",
+      "meme_picks": [
+        "disappointed_black_guy",
+        "pop_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Три дня до ДДУ: семья у выбранной квартиры в новостройке",
+      "visual_type": "realistic_photo",
+      "scene_hint": "New flat blur family window, booking folder 3 calendars keys; this_is_fine_dog corner",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Три дня до ДДУ: семья у выбранной квартиры в но…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Плата за бронь",
+        "Не эскроу",
+        "Предварительное одобрение",
+        "Три календаря"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "this_is_fine_dog"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Три дня до ДДУ: семья у выбранной квартиры в новостройке",
+      "visual_type": "comparison_table",
+      "scene_hint": "Table before vs 72h: booking installment MFO debt revoked; no people",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: За 72 часа, Новая рассрочка, След МФО — иллюстрация к разбору сделки.",
+      "labels": [
+        "За 72 часа",
+        "Новая рассрочка",
+        "След МФО",
+        "Решение сняли"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Бронь сгорела: квартиру купил другой покупатель",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Plan SOLD stamp expired calendar closed folder sales desk; no faces",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Бронь сгорела: квартиру купил другой покупатель» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "До 8 дней",
+        "Срок истёк",
+        "Продали в среду",
+        "Возврат частичный"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Банк перепроверил доход — и снял одобрение ипотеки",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Approval letter vs credit contract 4 bank steps 90/30 days gold arrow",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Банк перепроверил доход — и снял одобрение ипот…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Четыре шага банка",
+        "Проверка объекта",
+        "90 дней на документы",
+        "30 дней на выдачу"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Ипотеку одобрили» не равно «кредит точно дадут»",
+      "visual_type": "process_flow",
+      "scene_hint": "Booking agreement hub arrows refund date extension; sacrednik_priest corner",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Не в Росреестре, Ещё не дольщик, Отказ не вернут — иллюстрация к разбору сделки.",
+      "labels": [
+        "Не в Росреестре",
+        "Ещё не дольщик",
+        "Отказ не вернут",
+        "Срок указан датой"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "sacrednik_priest"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что в соглашении о бронировании определяет возврат денег",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "6-step flow: booking deadline bank stages two deadlines plan B",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Сначала срок брони, Спросить про отказ, Четыре этапа банка — иллюстрация к разбору сделки.",
+      "labels": [
+        "Сначала срок брони",
+        "Спросить про отказ",
+        "Четыре этапа банка",
+        "План второй"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "До брони и до ДДУ: что проверить в одном узле",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Bar chart status accreditation extension no loan; stonks corner",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Сверить два статуса, Дом аккредитован, Бронь с продлением — иллюстрация к разбору сделки.",
+      "labels": [
+        "Сверить два статуса",
+        "Дом аккредитован",
+        "Бронь с продлением",
+        "Остановиться до брони"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "stonks"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "одобрение ипотеки",
+    "купить квартиру в тюмени новостройка ипотека",
+    "ипотека в тюмени на новостройки"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "герой в полный рост чуть правее центра, корпус развёрнут к зрителю, одна рука сжимает папку с документами, другая резко показывает на экран телефона; свободная светлая зона слева под заголовок",
+    "location": "солнечный шоурум новостройки с панорамными окнами, макетом жилого комплекса и яркими жёлтыми акцентами, не МФЦ",
+    "meme": "disappointed_black_guy и pop_cat как небольшие реакционные стикеры в нижних углах",
+    "prop_set": "папка с договором, телефон с нейтральным уведомлением банка без читаемых запросов, брелок от квартиры, настольный календарь с отмеченными тремя днями",
+    "sticker_set": "disappointed_black_guy у папки и pop_cat у телефона, каждый компактный, с безопасным отступом от лица, заголовка и номера телефона",
+    "joke": "папка почти торжественно открыта, но телефон буквально «отменяет праздник» за три дня до сделки",
+    "outfit": "светлая лимонно-бежeвая рубашка навыпуск, оливковые брюки, тонкие белые кеды, без чёрного пиджака",
+    "emotion": "внезапный шок, растерянность и возмущённое недоверие",
+    "pose_framing": "средний план до бёдер, фронтальная поза с лёгким наклоном вперёд, обе руки в активном жесте, не бюст слева и не боковой взгляд",
+    "action": "герой одновременно раскрывает папку и показывает на телефон после снятия банковского решения"
+  },
+  "cover_emotion": "шок и растерянность"
+}
