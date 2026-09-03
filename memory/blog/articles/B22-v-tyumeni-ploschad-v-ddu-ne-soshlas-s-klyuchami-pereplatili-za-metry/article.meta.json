@@ -20,6 +20,12 @@
     "side_stickers": "skip"
   },
   "date": "2026-09-03",
+  "wp_category_slugs": [
+    "dokumenty-i-oformlenie",
+    "riski-sdelki",
+    "pokupka-kvartiry"
+  ],
   "pipeline_canon": "human-first-v2",
-  "editorial_swarm": false
+  "editorial_swarm": false,
+  "wp_post_id": 9562
 }

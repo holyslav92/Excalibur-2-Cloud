@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry",
+  "topic_id": "B22",
+  "post_id": 9562,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B22-v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 965785,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9562 slug=v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry\nOK categories=54,58,36\nOK yoast_social_image=1\nOK featured_image=9563\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9564 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry-inline-01.png\nOK inline_alt=9564\nOK inline_description=9564\nOK inline_image_upload=9565 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry-inline-02.png\nOK inline_alt=9565\nOK inline_description=9565\nOK inline_image_upload=9566 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry-inline-03.png\nOK inline_alt=9566\nOK inline_description=9566\nOK inline_image_upload=9567 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry-inline-04.png\nOK inline_alt=9567\nOK inline_description=9567\nOK inline_image_upload=9568 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry-inline-05.png\nOK inline_alt=9568\nOK inline_description=9568\nOK inline_image_upload=9569 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry-inline-06.png\nOK inline_alt=9569\nOK inline_description=9569\nOK inline_image_upload=9570 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry-inline-07.png\nOK inline_alt=9570\nOK inline_description=9570\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry/",
+    "errors": []
+  }
+}
