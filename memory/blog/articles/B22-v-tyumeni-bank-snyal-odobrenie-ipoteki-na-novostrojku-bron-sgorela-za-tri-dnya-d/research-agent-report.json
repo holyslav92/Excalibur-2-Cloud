@@ -1,0 +1,71 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B22",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-03",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://ria.ru/20260830/ipoteka-2114094410.html",
+        "type": "news",
+        "published_at": "2026-08-30",
+        "note": "РИА: онлайн-рассрочки с следом МФО как фактор отказа в ипотеке; оценка брокеров ~30%"
+      },
+      {
+        "url": "https://www.kommersant.ru/doc/8910194",
+        "type": "news",
+        "published_at": "2026-08-28",
+        "note": "Аналитика Сбера: Тюменская область 57% ипотечных выдач на новостройки в июле 2026"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/08/27/76610181/",
+        "type": "local",
+        "published_at": "2026-08-27",
+        "note": "72.ru Тюмень: риск слёта брони при затягивании сделки (trade-in контекст)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в тюмени новостройка ипотека",
+    "p0_volume": 86,
+    "buyer_spine_phrases": [
+      {"phrase": "одобрение ипотеки", "volume": 224},
+      {"phrase": "одобрение ипотеки сколько", "volume": 51},
+      {"phrase": "сколько действует одобрение ипотеки", "volume": 24},
+      {"phrase": "ипотека в тюмени на новостройки", "volume": 41},
+      {"phrase": "бронь новостройки", "volume": 3}
+    ],
+    "rework_from": "бронь новостройка (3) → ипотека тюмень новостройки (41) → P0 86",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_mortgage_approval_withdrawn_booking_lost_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "case_verification": {
+    "status": "NOT_A_CONFIRMED_SINGLE_FAMILY_REPORT",
+    "note": "Типовой локальный casus без первичного источника о конкретной семье/банке/ЖК"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["sberbank", "psb", "raiffeisen", "cbr"],
+    "errors": []
+  },
+  "key_facts_count": 22,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
