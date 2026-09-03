@@ -919,7 +919,7 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_assemble_sol_inputs.py`
 - `python3 -m unittest tests.test_pipeline_speed_b03.AssembleSolInputsTest`
 - B22 `--stamp` + `--check` PASS
-commit: pending
+commit: 60950d4
 
 ## INC-20260903-0551-wordstat-seed-phrase-b22
 status: fixed
@@ -965,4 +965,4 @@ files_changed:
 checks_run:
 - `python3 -m unittest tests.test_pipeline_speed_b03.AssembleSolInputsTest.test_wordstat_buyer_seed_kupit_novostroyku`
 - `scout_helper --slug-from-title` → `ploschad` canonical slug
-commit: pending
+commit: ff2ce8d
