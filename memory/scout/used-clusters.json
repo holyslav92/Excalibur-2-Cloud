@@ -5,6 +5,15 @@
   "last_sync": "2026-09-03",
   "clusters": [
     {
+      "cluster_id": "newbuild_mortgage_approval_withdrawn_booking_lost_tyumen",
+      "first_seen": "2026-09-03",
+      "locked_until": "2026-10-03",
+      "source": "ledger",
+      "slug": "v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d",
+      "topic_id": "B22",
+      "title": "В Тюмени банк снял одобрение ипотеки за 72 часа до ДДУ — бронь сгорела"
+    },
+    {
       "cluster_id": "newbuild_ddu_cellar_paid_not_handed_tyumen",
       "first_seen": "2026-09-02",
       "locked_until": "2026-10-02",
