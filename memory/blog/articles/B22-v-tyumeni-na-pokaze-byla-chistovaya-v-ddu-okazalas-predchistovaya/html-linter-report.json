@@ -1,0 +1,11 @@
+{
+  "file": "article.html",
+  "verdict": "fail",
+  "total_errors": 4,
+  "errors": [
+    "Line 90, Col 0: Forbidden <div> — need class excalibur-cta-early|mid|end or excalibur-social-cta (got: cta-block).",
+    "Line 92, Col 0: Unexpected closing tag </div> with no matching open tag.",
+    "Line 129, Col 0: Forbidden <div> — need class excalibur-cta-early|mid|end or excalibur-social-cta (got: cta-block).",
+    "Line 131, Col 0: Unexpected closing tag </div> with no matching open tag."
+  ]
+}

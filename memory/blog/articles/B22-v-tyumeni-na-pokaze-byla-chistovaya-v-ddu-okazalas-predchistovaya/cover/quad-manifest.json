@@ -1,0 +1,232 @@
+{
+  "topic_id": "B22",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "В шоу-руме чистовая — в ДДУ предчистовая",
+  "cover_hook_highlight": "чистовая",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В тюменской новостройке показали чистовую — в ДДУ была предчистовая: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Tyumen showroom laminate vs bare screed; host right holds DDU appendix, confused stickers",
+      "meme_caption_ru": "",
+      "sticky": "Приложение решает, не витрина",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "растерянное недоверие",
+      "meme_picks": [
+        "confused_math_lady",
+        "smudge_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Шоу-рум с ламинатом — и семья пошла бронировать",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Bright showroom laminate interior, no people, Tyumen newbuild",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Шоу-рум с ламинатом — и семья пошла бронировать» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "шоу-рум",
+        "чистовая отделка",
+        "сверяем с ДДУ"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "hide_pain_harold"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Шоу-рум с ламинатом — и семья пошла бронировать",
+      "visual_type": "comparison_table",
+      "scene_hint": "Paper card table: showroom vs DDU rows laminate walls plumbing",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: ДДУ, предчистовая отделка, что обещали — иллюстрация к разбору сделки.",
+      "labels": [
+        "ДДУ",
+        "предчистовая отделка",
+        "что обещали"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "За сутки до конца брони открыли проект ДДУ",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Phone on table: DDU app white box list, keys, no faces",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За сутки до конца брони открыли проект ДДУ» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "отделка",
+        "не только витрина",
+        "проверка на месте"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "В приложении — white box, не чистовая",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Timeline: booking ends, DDU opened, advance refused, +420k bar",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «В приложении — white box, не чистовая» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "приложение",
+        "фото из квартиры",
+        "сверка по пунктам"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Доплата 420 тысяч: прайс застройщика против обещания менеджера",
+      "visual_type": "process_flow",
+      "scene_hint": "Newbuild hallway door, contract folder keys, no logos",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: договор важнее, смотрим ДДУ, фиксируем расхождения — иллюстрация к разбору сделки.",
+      "labels": [
+        "договор важнее",
+        "смотрим ДДУ",
+        "фиксируем расхождения"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Бронь сняли — планировку продали через неделю",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "DDU appendix checklist: walls floor plumbing doors wiring",
+      "alt": "график / шкала сроков по новостройке в Тюмени: шоу-рум — образец, ДДУ — обязательства, проверяем отделку — иллюстрация к разбору сделки.",
+      "labels": [
+        "шоу-рум — образец",
+        "ДДУ — обязательства",
+        "проверяем отделку"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что сверять в приложении к ДДУ — таблица",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Flow: showroom → appendix → GOST → DDU four blocks",
+      "alt": "схема устройства механизма по новостройке в Тюмени: до приёмки, сверить отделку, сохранить документы — иллюстрация к разбору сделки.",
+      "labels": [
+        "до приёмки",
+        "сверить отделку",
+        "сохранить документы"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "купить новостройку в тюмени",
+    "новостройки отделкой тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "host right showroom laminate sample left headline zone phone bottom-right",
+    "location": "bright Tyumen newbuild sales showroom with sample floor and open DDU folder",
+    "meme": "confused_math_lady and smudge_cat small corner stickers",
+    "prop_set": "DDU appendix white box spec laminate sample yellow sticky phone CTA",
+    "sticker_set": "confused_math_lady near contract smudge_cat bottom corner only",
+    "joke": "host compares shiny showroom floor to bare screed line in appendix",
+    "outfit": "terracotta overshirt cream tee beige chinos",
+    "emotion": "bewildered disbelief raised brows",
+    "pose_framing": "host medium shot right third pointing at floor sample",
+    "action": "compares showroom finish to DDU appendix wording"
+  }
+}

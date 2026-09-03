@@ -1,0 +1,14 @@
+{
+  "agent": "excalibur-blog-research",
+  "status": "PASS",
+  "research_date": "2026-09-03",
+  "topic_id": "B22",
+  "official_source_audit": {
+    "status": "PASS",
+    "note": "214-ФЗ consultant reference; no bank tariff claims"
+  },
+  "fresh_signal": {
+    "status": "PASS",
+    "source": "29.ru realty 2026-05-14 + GOST 72509-2026 context"
+  }
+}
