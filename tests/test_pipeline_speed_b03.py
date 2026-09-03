@@ -279,5 +279,51 @@ class QuadSceneMergeTest(unittest.TestCase):
         self.assertEqual(merged["slots"]["cover"]["scene_hint"], "bright scene")
 
 
+class AssembleSolInputsTest(unittest.TestCase):
+    def test_build_cta_block_has_site_base(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_assemble_sol_inputs import build_cta_block, has_full_cta_block
+
+        block = build_cta_block(
+            {
+                "telegram_lead": "https://t.me/Tyumen_Rieltor",
+                "max": "https://max.ru/id561413315447_biz",
+                "dzen": "https://dzen.ru/holyslav",
+                "vk": "https://vk.ru/tymenrieltor",
+                "guides": "{{SITE_BASE}}/gajdy/",
+                "about": "{{SITE_BASE}}/rieltor-tyumen/",
+                "site": "{{SITE_BASE}}",
+                "phone": "+79220016505",
+                "phone_display": "+7 922 001 65 05",
+            }
+        )
+        self.assertIn("{{SITE_BASE}}/gajdy/", block)
+        self.assertTrue(has_full_cta_block(block))
+
+    def test_wordstat_buyer_seed_kupit_novostroyku(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_wordstat_gate import handoff_has_live_wordstat, load_geo, project_root
+
+        geo = load_geo(project_root())
+        handoff = (
+            "wordstat_preflight: mcp-kv wordstat_get_user_info OK\n"
+            "klyshin_hook: none | original: none\n"
+            "wordstat_rework: probe 11 → final 857\n"
+            "wordstat: mcp_kv live | regions 55,11176 | final «купить новостройку в тюмени» 857\n"
+        )
+        ok, reason = handoff_has_live_wordstat(handoff, geo)
+        self.assertTrue(ok, reason)
+
+    def test_scout_slug_from_title_ploschad(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_scout_helper import slug_from_title
+
+        title = "В Тюмени площадь в ДДУ не сошлась с ключами — переплатили за метры"
+        self.assertEqual(
+            slug_from_title(title),
+            "v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry",
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

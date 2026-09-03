@@ -27,6 +27,19 @@ python3 scripts/excalibur_blog_sol_chunk.py \
 
 Longform (7 inline): **3 части на первом проходе** — не ждать HTTP 524 на single-shot Sol. `--single-shot` только для коротких статей.
 
+**Перед Sol (HARD):** дирижёр штампует `assembled-sol-inputs.md` с полным CTA-контрактом (`{{SITE_BASE}}/gajdy/`, `{{SITE_BASE}}/rieltor-tyumen/`):
+
+```bash
+python3 scripts/excalibur_blog_assemble_sol_inputs.py \
+  --article-dir memory/blog/articles/<topic_id>-<slug> \
+  --stamp
+python3 scripts/excalibur_blog_assemble_sol_inputs.py \
+  --article-dir memory/blog/articles/<topic_id>-<slug> \
+  --check
+```
+
+Без `{{SITE_BASE}}` в CTA end Sol часто пишет голый `href="/"` — gate link-verify ожидает канонические URL.
+
 **Trim pass (после Sol, до Description):** если `quality-bar-9` или ручной подсчёт > **2200** слов — не переписывать Sol с нуля; сожми через chunk trim:
 
 ```bash

@@ -142,6 +142,7 @@ def main() -> int:
         "scripts/excalibur_blog_writer_chunk.py",
         "scripts/excalibur_blog_sol_chunk.py",
         "scripts/excalibur_blog_sol_trim_chunk.py",
+        "scripts/excalibur_blog_assemble_sol_inputs.py",
         "scripts/excalibur_blog_stylo.py",
         "scripts/excalibur_blog_stylo_learn.py",
         "scripts/excalibur_blog_stylo_fetch_gold.py",
