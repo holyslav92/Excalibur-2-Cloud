@@ -384,10 +384,14 @@ def build_inline_alt(
     h2 = shorten_h2(normalize_text(slot.get("h2_anchor")), max_len=48)
     panel_labels = [normalize_text(x) for x in (slot.get("labels") or []) if normalize_text(x)]
 
+    scene_hint = normalize_text(slot.get("scene_hint"))
     if panel_labels and visual_type not in {"realistic_photo", "cover_editorial_hero"}:
         facts = ", ".join(panel_labels[:3])
-        alt = f"{label_ru} по новостройке в Тюмени: {facts} — иллюстрация к разбору сделки."
-    elif h2:
+        label_alt = f"{label_ru} по новостройке в Тюмени: {facts} — иллюстрация к разбору сделки."
+        # Panel labels often echo scene_hint facts (B22 inline_2/7); h2 fallback avoids false overlap FAIL.
+        if not scene_hint or scene_hint_overlap_ratio(label_alt, scene_hint) < 0.45:
+            return clamp_seo_alt(label_alt)
+    if h2:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
         alt = f"{label_ru} к разделу «{h2}»{tyumen} — иллюстрация к кейсу о сделке."
     else:

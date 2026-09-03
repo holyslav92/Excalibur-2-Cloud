@@ -213,11 +213,23 @@ def url_present(html: str, url: str) -> bool:
     url = (url or "").strip()
     if not url:
         return False
+    blob = html or ""
+    site_base_href = r"""\{\{SITE_BASE\}\}"""
     if url == "/":
-        return bool(re.search(r"""href=["']/["']""", html or ""))
+        return bool(
+            re.search(r"""href=["']/["']""", blob)
+            or re.search(rf"""href=["']{site_base_href}/?["']""", blob, re.I)
+        )
     if url.startswith("/"):
         path = url.rstrip("/")
-        return bool(re.search(rf"""href=["']{re.escape(path)}/?["']""", html or "", re.I))
+        return bool(
+            re.search(rf"""href=["']{re.escape(path)}/?["']""", blob, re.I)
+            or re.search(
+                rf"""href=["']{site_base_href}{re.escape(path)}/?["']""",
+                blob,
+                re.I,
+            )
+        )
     if url.lower().startswith("tel:"):
         return has_phone(html)
     parsed = urlparse(url)
@@ -311,6 +323,11 @@ def check_mid_cta(html: str) -> bool:
     return False
 
 
+def has_site_link(html: str) -> bool:
+    """Site root or about page — git-safe {{SITE_BASE}} paths included via url_present."""
+    return url_present(html, "/") or url_present(html, "/rieltor-tyumen/")
+
+
 def check_end_cta(html: str) -> bool:
     end_m = re.search(
         r'<div[^>]*class="[^"]*excalibur-cta-end[^"]*"[^>]*>.*?</div>\s*(?:<p[^>]*>Материал проверен|$)',
@@ -328,7 +345,7 @@ def check_end_cta(html: str) -> bool:
         return False
     if not url_present(tail, "/gajdy/"):
         return False
-    if not url_present(tail, "/"):
+    if not has_site_link(tail):
         return False
     return has_phone(tail)
 
