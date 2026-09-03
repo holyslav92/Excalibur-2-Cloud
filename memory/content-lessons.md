@@ -17,3 +17,6 @@
 | [LESSON-20260901-1338-B20-legal-entity-ddu-escrow-cluster](content-lessons/LESSON-20260901-1338-B20-legal-entity-ddu-escrow-cluster.md) | B20 | proposed | geo |
 | [LESSON-20260901-1338-B20-sol-trim-spine-once](content-lessons/LESSON-20260901-1338-B20-sol-trim-spine-once.md) | B20 | proposed | structure |
 | [LESSON-20260901-1338-B20-cover-ocr-escape-no-budget-exhaust](content-lessons/LESSON-20260901-1338-B20-cover-ocr-escape-no-budget-exhaust.md) | B20 | proposed | structure |
+| [LESSON-20260903-0802-B22-alt-label-scene-hint-leak](content-lessons/LESSON-20260903-0802-B22-alt-label-scene-hint-leak.md) | B22 | proposed | structure |
+| [LESSON-20260903-0802-B22-cover-fixer-layout-round1](content-lessons/LESSON-20260903-0802-B22-cover-fixer-layout-round1.md) | B22 | proposed | structure |
+| [LESSON-20260903-0802-B22-delay-penalty-certificate-cluster](content-lessons/LESSON-20260903-0802-B22-delay-penalty-certificate-cluster.md) | B22 | proposed | geo |

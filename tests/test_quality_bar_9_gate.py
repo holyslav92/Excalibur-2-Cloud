@@ -75,6 +75,24 @@ class QualityBar9GateTest(unittest.TestCase):
             )
             self.assertFalse(_stamped_cover_qa_visual_pass(article))
 
+    def test_url_present_accepts_site_base_paths(self) -> None:
+        from excalibur_blog_quality_bar_9_gate import check_end_cta, url_present
+
+        cta = (
+            '<div class="excalibur-cta-end">'
+            '<a href="https://t.me/Tyumen_Rieltor">TG</a>'
+            '<a href="https://max.ru/id561413315447_biz">MAX</a>'
+            '<a href="tel:+79220016505">+7 922 001 65 05</a>'
+            '<a href="https://dzen.ru/holyslav">Дзен</a>'
+            '<a href="https://vk.ru/tymenrieltor">VK</a>'
+            '<a href="{{SITE_BASE}}/gajdy/">гайды</a>'
+            '<a href="{{SITE_BASE}}/rieltor-tyumen/">риэлтор</a>'
+            "</div>"
+        )
+        self.assertTrue(url_present(cta, "/gajdy/"))
+        self.assertTrue(url_present(cta, "/rieltor-tyumen/"))
+        self.assertTrue(check_end_cta(cta))
+
 
 class StampCoverQaEscapePreserveTest(unittest.TestCase):
     def test_stamp_preserves_manual_escape_when_pixel_reruns_fail(self) -> None:

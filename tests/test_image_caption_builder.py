@@ -95,6 +95,25 @@ class ImageCaptionBuilderTests(unittest.TestCase):
         self.assertFalse(prompt_like)
         self.assertIn("Сравнительная таблица", alt)
 
+    def test_build_inline_alt_labels_scene_overlap_falls_back_to_h2(self) -> None:
+        """B22: panel labels echo scene_hint — use h2 anchor alt, keep labels on PNG."""
+        slot = {
+            "visual_type": "comparison_table",
+            "h2_anchor": "День ключей в офисе продаж: «подпишите — и сертификат ваш»",
+            "scene_hint": "Таблица на белом: уведомление, допсоглашение, 214-ФЗ, просрочка, ставка 14%.",
+            "labels": [
+                "Уведомление одностороннее",
+                "Дата только допсоглашением",
+                "Закон 214-ФЗ",
+            ],
+        }
+        labels_map = {"comparison_table": "Сравнительная таблица с колонками"}
+        alt = build_inline_alt(slot, labels_map=labels_map, meta={"h1": "Тюмень"})
+        prompt_like, errors = is_prompt_like_alt(alt, scene_hint=slot["scene_hint"], seo_length=True)
+        self.assertFalse(prompt_like, msg=f"{alt!r} errors={errors}")
+        self.assertIn("к разделу", alt)
+        self.assertNotIn("Уведомление одностороннее", alt)
+
     def test_cover_caption_must_be_empty(self) -> None:
         ok, errors = cover_caption_must_be_empty("Подпись, которую Дзен покажет как текст")
         self.assertFalse(ok)

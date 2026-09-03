@@ -1,0 +1,24 @@
+{
+  "agent": "excalibur-blog-fixer",
+  "status": "PASS",
+  "checked_at": "2026-09-03",
+  "topic_id": "B22",
+  "article_dir": "memory/blog/articles/B22-v-tyumeni-zastrojschik-zaderzhal-klyuchi-na-8-mesyacev-neustojku-predlozhili-ser",
+  "run_date": "2026-09-03",
+  "cluster_id": "newbuild_developer_delay_penalty_certificate_instead_cash_tyumen",
+  "incidents_closed": [
+    "INC-20260903-0800-image-alt-labels-scene-overlap-b22",
+    "INC-20260903-0801-cover-fixer-layout-hook-phone-b22",
+    "INC-20260903-0802-sol-end-cta-site-base-b22"
+  ],
+  "durable_fixes": [
+    "build_inline_alt: h2 fallback when panel labels echo scene_hint (keep labels on PNG)",
+    "url_present + has_site_link: accept {{SITE_BASE}} paths for /gajdy/ and /rieltor-tyumen/"
+  ],
+  "runtime_recoveries": [
+    "inline_2/inline_7 labels cleared manually before publish (superseded by script fallback)",
+    "cover_fixer round 1 layout/hook/phone regen",
+    "end CTA structure normalized in article.html before publish"
+  ],
+  "errors": []
+}
