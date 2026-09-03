@@ -218,6 +218,18 @@
       "examples": [
         "v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan"
       ]
+    },
+    {
+      "id": "newbuild_showroom_finish_ddu_mismatch_tyumen",
+      "label_ru": "Новостройка: шоу-рум с чистовой, в ДДУ — предчистовая/white box",
+      "required_groups": [
+        ["шоу", "витрин", "показ", "образц"],
+        ["чистов", "white\\s*box", "предчист", "отделк"],
+        ["дду", "приложен", "договор", "бронь", "аванс"]
+      ],
+      "examples": [
+        "v-tyumeni-na-pokaze-byla-chistovaya-v-ddu-okazalas-predchistovaya"
+      ]
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "status": "FAIL",
+  "article_dir": "memory/blog/articles/B22-v-tyumeni-na-pokaze-byla-chistovaya-v-ddu-okazalas-predchistovaya",
+  "cta_required": true,
+  "required": [
+    "https://t.me/Tyumen_Rieltor",
+    "https://max.ru/id561413315447_biz",
+    "tel:+79220016505"
+  ],
+  "present": {
+    "https://t.me/Tyumen_Rieltor": false,
+    "https://max.ru/id561413315447_biz": false,
+    "tel:+79220016505": false,
+    "cta_channels.max": false
+  },
+  "errors": [
+    "missing required CTA href https://t.me/Tyumen_Rieltor",
+    "missing required CTA href https://max.ru/id561413315447_biz",
+    "missing required CTA href tel:+79220016505",
+    "missing MAX URL https://max.ru/id561413315447_biz"
+  ]
+}

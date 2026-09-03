@@ -63,6 +63,7 @@ python3 scripts/excalibur_blog_stylo.py \
 - Подтягивать сюжеты из `memory/stylo/gold` в Scout
 - Ослаблять composite disclaimer / 1400–1600 kitchen-table / quality-bar 9
 - Писать прозу Cursor-моделью (только Derouter `--role sol`)
+- **Stylo Sol rewrite:** не менять `excalibur-cta-early` / `excalibur-cta-mid` / `excalibur-cta-end` class names и не сворачивать в generic `cta-block` — quality-bar CTA gates завязаны на эти div
 
 ## Self-learn (опционально, post-publish)
 
