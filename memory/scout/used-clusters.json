@@ -5,6 +5,15 @@
   "last_sync": "2026-09-03",
   "clusters": [
     {
+      "cluster_id": "newbuild_developer_delay_penalty_certificate_instead_cash_tyumen",
+      "first_seen": "2026-09-03",
+      "locked_until": "2026-10-03",
+      "source": "ledger",
+      "slug": "v-tyumeni-zastrojschik-zaderzhal-klyuchi-na-8-mesyacev-neustojku-predlozhili-ser",
+      "topic_id": "B22",
+      "title": "В Тюмени ключи задержали на 8 месяцев — неустойку дали сертификатом"
+    },
+    {
       "cluster_id": "newbuild_ddu_cellar_paid_not_handed_tyumen",
       "first_seen": "2026-09-02",
       "locked_until": "2026-10-02",
