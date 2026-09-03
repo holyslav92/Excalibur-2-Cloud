@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B22 — 2026-09-03
+
+- **topic_id:** B22
+- **slug:** v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry
+- **post_id:** 9562
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry/
+- **featured_image:** 9563
+- **inline_images:** 9564–9570 (7)
+- **wp_category_slugs:** dokumenty-i-oformlenie, riski-sdelki, pokupka-kvartiry (category_ids=54,58,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme path not in configured root)
+
 ## B20 — 2026-09-01
 
 - **topic_id:** B20

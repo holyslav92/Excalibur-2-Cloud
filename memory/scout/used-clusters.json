@@ -2,8 +2,17 @@
   "version": 1,
   "anti_repeat_days": 30,
   "description": "Closed story clusters — Scout must not reuse until locked_until. Sync via: python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters",
-  "last_sync": "2026-09-02",
+  "last_sync": "2026-09-03",
   "clusters": [
+    {
+      "cluster_id": "newbuild_ddu_area_mismatch_overpay_tyumen",
+      "first_seen": "2026-09-03",
+      "locked_until": "2026-10-03",
+      "source": "ledger",
+      "slug": "v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry",
+      "topic_id": "B22",
+      "title": "В Тюмени на приёмке не хватило метров — застройщик отказал в пересчёте"
+    },
     {
       "cluster_id": "newbuild_ddu_cellar_paid_not_handed_tyumen",
       "first_seen": "2026-09-02",

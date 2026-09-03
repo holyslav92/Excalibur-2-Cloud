@@ -22,10 +22,12 @@ category: env
 - **2026-08-28 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9230 ingest skipped; B11 lessons recorded without behavioral signals.
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
+- **2026-09-01 B20 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9490 ingest skipped; B20 lessons recorded without behavioral signals (legal_entity cluster, OCR escape no budget exhaust).
+- **2026-09-03 B22 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9562 ingest skipped; B22 lessons recorded without behavioral signals (ddu area mismatch cluster, OCR escape solo attempt 1).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250) и B15 (post 9368) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368), B20 (post 9490) и B22 (post 9562) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -872,3 +874,95 @@ checks_run:
 - `python3 -m unittest tests.test_pipeline_speed_b03.QuadSceneMergeTest`
 - B21 quad_manifest_preflight → PASS with cover_motifs
 commit: pending
+
+## INC-20260903-0550-sol-inputs-cta-urls-b22
+status: fixed
+run_date: 2026-09-03
+role: excalibur-blog-sol
+topic_id: B22
+article_dir: memory/blog/articles/B22-v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry
+severity: medium
+category: script
+
+### What went wrong
+- `assembled-sol-inputs.md` truncated CTA line (`полный набор + tel` only) — no `{{SITE_BASE}}/gajdy/` / `{{SITE_BASE}}/rieltor-tyumen/` contract.
+- Sol end CTA used relative `href="/"` and `/gajdy/` instead of canonical `{{SITE_BASE}}` URLs (link-verify expects SITE_BASE after publish expand).
+
+### How the agent recovered this run
+- Publish PASS post 9562; quality-bar `end_cta_full_channels` PASS on relative paths; manual pipeline complete.
+
+### Durable fix needed before next run
+- `excalibur_blog_assemble_sol_inputs.py` stamps full CTA block from `tenant-config.json`; Sol skill documents `--stamp` + `--check` before Derouter Sol.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_assemble_sol_inputs.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `scripts/excalibur_blog_doctor.py`
+- `tests/test_pipeline_speed_b03.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-03
+fix_summary:
+- Added `excalibur_blog_assemble_sol_inputs.py` — stamps full CTA block with `{{SITE_BASE}}/gajdy/` + `{{SITE_BASE}}/rieltor-tyumen/` from tenant-config; `--check` gate before Sol.
+- Sol skill documents `--stamp`/`--check`; doctor lists script; B22 assembled-sol-inputs merged.
+files_changed:
+- `scripts/excalibur_blog_assemble_sol_inputs.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `.cursor/skills/sol-excalibur-blog/SKILL.md`
+- `scripts/excalibur_blog_doctor.py`
+- `tests/test_pipeline_speed_b03.py`
+- `memory/blog/articles/B22-v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry/assembled-sol-inputs.md`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_assemble_sol_inputs.py`
+- `python3 -m unittest tests.test_pipeline_speed_b03.AssembleSolInputsTest`
+- B22 `--stamp` + `--check` PASS
+commit: 60950d4
+
+## INC-20260903-0551-wordstat-seed-phrase-b22
+status: fixed
+run_date: 2026-09-03
+role: excalibur-blog-scout
+topic_id: B22
+article_dir: memory/blog/articles/B22-v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry
+severity: medium
+category: script
+
+### What went wrong
+- Final P0 «купить новостройку в тюмени» and secondary «приемка квартиры в новостройке тюмень» did not match `p0_buyer_seed_phrases` substring gate unless handoff also cited «дду».
+- Scout slug in handoff used `ploshchad` (Derouter) vs canonical `ploschad` from `research_start.slugify_title`.
+
+### How the agent recovered this run
+- Handoff wordstat line included `on-plot «дду» context` → gate PASS; research_start used correct slug for article dir.
+
+### Durable fix needed before next run
+- Expand `wordstat-geo.json` seeds: `купить новостройку`, `новостройку`, `приемка`.
+- `scout_helper.py --slug-from-title` + Scout skill: slug from slugify, not Derouter invention.
+
+### Suggested files to inspect/change
+- `memory/cover/wordstat-geo.json`
+- `scripts/excalibur_blog_wordstat_gate.py`
+- `scripts/excalibur_blog_scout_helper.py`
+- `skills/scout-excalibur-blog/SKILL.md`
+- `tests/test_pipeline_speed_b03.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-03
+fix_summary:
+- Expanded `p0_buyer_seed_phrases` with `купить новостройку`, `новостройку`, `приемка`, `приёмка`.
+- `scout_helper.slug_from_title()` + CLI `--slug-from-title`; Scout skill documents canonical slug path.
+files_changed:
+- `memory/cover/wordstat-geo.json`
+- `scripts/excalibur_blog_scout_helper.py`
+- `skills/scout-excalibur-blog/SKILL.md`
+- `.cursor/skills/scout-excalibur-blog/SKILL.md`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m unittest tests.test_pipeline_speed_b03.AssembleSolInputsTest.test_wordstat_buyer_seed_kupit_novostroyku`
+- `scout_helper --slug-from-title` → `ploschad` canonical slug
+commit: ff2ce8d

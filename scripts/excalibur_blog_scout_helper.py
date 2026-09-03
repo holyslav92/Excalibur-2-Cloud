@@ -241,6 +241,13 @@ def transliterate_ru(text: str) -> str:
     return "".join(out)
 
 
+def slug_from_title(title: str) -> str:
+    """Canonical slug for Scout handoff — matches research_start.slugify_title."""
+    from excalibur_blog_research_start import slugify_title
+
+    return slugify_title(title)
+
+
 def _stem_token(word: str) -> str:
     w = word.strip().lower()
     if not w:
@@ -417,6 +424,12 @@ def main() -> int:
     ap.add_argument("--suggest-next", action="store_true", help="Print next available Topic ID and summary")
     ap.add_argument("--check-query", type=str, default="", help="Check new primary query for overlaps")
     ap.add_argument("--check-slug", type=str, default="", help="Check new slug against ledger and recent live WP posts")
+    ap.add_argument(
+        "--slug-from-title",
+        type=str,
+        default="",
+        help="Print canonical slug via research_start.slugify_title (Scout handoff — do not invent slug in Derouter)",
+    )
     ap.add_argument(
         "--report-ledger-drift",
         action="store_true",
@@ -640,6 +653,11 @@ def main() -> int:
                 print(f"  Message: {w['message']}")
             return 1
         print("✅ NO SLUG COLLISION: Slug is clean and unique.")
+        return 0
+
+    if args.slug_from_title:
+        slug = slug_from_title(args.slug_from_title)
+        print(slug)
         return 0
 
     ap.print_help()
