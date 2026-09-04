@@ -1,0 +1,79 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B23",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-04",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/08/23/76593428/",
+        "type": "news",
+        "note": "Тюмень 23.08.2026 — участки с ВРИ ИЖС, но зона П-1 и СЗЗ блокируют строительство; суд vs администрация; механика расхождения ЕГРН и градограничений"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/08/30/76613266/",
+        "type": "news",
+        "note": "Тюмень 30.08.2026 — покупка дома в КП, проверка документов и площади перед договором"
+      },
+      {
+        "url": "https://lovezem.ru/news/pochemu-rosreestr-mozhet-otkazat-v-registracii-uchastka",
+        "type": "industry",
+        "note": "Типовые причины отказа/приостановки регистрации участка 2026, несоответствие ВРИ"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant signal channel — Tyumen realtor casus spine"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Tenant TG channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "коттеджные поселки тюмень",
+    "p0_volume": 1832,
+    "ru_compare_volume": 2930,
+    "buyer_anchor_phrase": "новостройки тюмень",
+    "buyer_anchor_volume": 4683,
+    "legal_context_phrase": "категории земельных участков",
+    "legal_context_volume": 125,
+    "egrn_phrase": "выписка егрн земельный участок",
+    "egrn_volume": 134,
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 9,
+    "entities_checked": [
+      "zk_rf",
+      "218fz_rosreestr",
+      "214fz_escrow_ddu",
+      "grk_rf_vri",
+      "gk_rf_222",
+      "172fz_52fz_land_category"
+    ],
+    "errors": [],
+    "note": "Банковские тарифы не используются; правовые нормы verified через consultant.ru"
+  },
+  "key_facts_count": 52,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "blockers": [],
+  "incident_report": "none"
+}
