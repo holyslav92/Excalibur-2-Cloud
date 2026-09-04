@@ -3,74 +3,6 @@
   "window_days": 14,
   "entries": [
     {
-      "date": "2026-08-20",
-      "topic_id": "B03",
-      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
-      "motifs": {
-        "composition": "host_slim_left_jaw_drop_points_egrn_gift_line_string_web_sun_flare",
-        "location": "bright_white_corkboard_investigation_tyumen_glass_atrium",
-        "meme": "woman_yelling_cat_sticker_plus_surprised_wojak_cutout",
-        "prop_set": "efrsb_lot_card_egrn_fold_gift_deed_red_circle_daughter_icon_phone_cta",
-        "sticker_set": "wordstat_bankrotstvo_torgi_tyumen_gold_tape_phone_number",
-        "joke": "sticky_карточка_чистая_green_check_fake_crossed_red_x",
-        "outfit": "black blazer over black t-shirt",
-        "emotion": "jaw_drop_shock_open_mouth",
-        "pose_framing": "host_large_left_bust_talking_head",
-        "action": "points_at_egrn_gift_deed_line"
-      }
-    },
-    {
-      "date": "2026-08-20",
-      "topic_id": "B04",
-      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
-      "motifs": {
-        "composition": "host_large_left_side_eye_power_of_attorney_board",
-        "location": "bright_white_investigation_board_tyumen",
-        "meme": "serious_cat_sticker_seriozno",
-        "prop_set": "power_of_attorney_fold_yellow_sticky_kto_prodaet_phone_cta",
-        "sticker_set": "wordstat_doverennost_egrn_kupit_kvartiru_tyumen",
-        "joke": "sticky_kto_prodaet_yellow_note",
-        "outfit": "black blazer over black t-shirt",
-        "emotion": "side_eye_skeptical_glance",
-        "pose_framing": "host_large_left_bust_talking_head",
-        "action": "side_glance_at_power_of_attorney_paper"
-      }
-    },
-    {
-      "date": "2026-08-20",
-      "topic_id": "B05",
-      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
-      "motifs": {
-        "composition": "host_three_quarter_right_stop_gesture_headline_left_white_board_sun_flare",
-        "location": "bright_sunny_tyumen_apartment_entrance_white_stone_steps_glass_door",
-        "meme": "thinking_cat_sticker_small_top_right_corner",
-        "prop_set": "egrn_folder_fold_minus_2mln_price_tag_red_circle_bankruptcy_stamp_phone_cta",
-        "sticker_set": "wordstat_tyumen_bankrotstvo_vtorichka_gold_tape_right_edge_only",
-        "joke": "sticky_zadatok_segodnya_yellow_note_pinned",
-        "outfit": "terracotta merino sweater + light grey unbuttoned overcoat + dark jeans",
-        "emotion": "alert_wary_focused_frown_narrowed_eyes",
-        "pose_framing": "three_quarter_body_host_right_entrance_steps_not_left_bust",
-        "action": "left_hand_holds_egrn_folder_right_palm_stop_gesture_at_discount_tag"
-      }
-    },
-    {
-      "date": "2026-08-21",
-      "topic_id": "B06",
-      "slug": "",
-      "motifs": {
-        "composition": "host_medium_right_price_jump_18_to_20_headline_left_sacred_sun_flare",
-        "location": "bright_sunny_tyumen_apartment_panoramic_window_white_walls",
-        "meme": "wide_eyes_cat_sticker_plus_confused_math_lady_corner",
-        "prop_set": "phone_price_chart_tablet_18mln_card_20mln_up_arrow_viewing_badges",
-        "sticker_set": "pil_wordstat_right_edge_only_no_canvas_wordstat",
-        "joke": "calculator_18mln_buyers_push_tag_to_20mln",
-        "outfit": "lemon_yellow_linen_shirt_white_tee_glasses_on_head_no_blazer",
-        "emotion": "stunned_half_smile_raised_brows_market_caught_up",
-        "pose_framing": "host_medium_right_dynamic_not_left_bust_not_side_eye",
-        "action": "finger_traces_18_to_20mln_phone_viewing_notifications"
-      }
-    },
-    {
       "date": "2026-08-26",
       "topic_id": "B10",
       "slug": "",
@@ -153,6 +85,23 @@
         "emotion": "ошарашенное недоверие с поднятыми бровями и напряжённой полуулыбкой",
         "pose_framing": "средний план по пояс, герой справа, корпус развёрнут к документам",
         "action": "сравнивает старую вывеску на телефоне с новым заголовком дду и пытается выбрать между подписанием и проверкой реквизитов"
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "topic_id": "B22",
+      "slug": "",
+      "motifs": {
+        "composition": "герой в полный рост по центру у светлого ипотечного стола",
+        "location": "светлый банковский ипотечный кабинет с панелью процентных ставок",
+        "meme": "disaster_girl и keyboard_cat",
+        "prop_set": "письмо о пересчёте ставки, калькулятор, смартфон, папка с документами",
+        "sticker_set": "disaster_girl верхний угол keyboard_cat у клавиатуры",
+        "joke": "одобрение в руках но калькулятор показывает неподъёмный платёж",
+        "outfit": "светлая лимонно-жёлтая рубашка поверх молочного джемпера без пиджака",
+        "emotion": "растерянность недоверие поднятые брови напряжённая полуулыбка",
+        "pose_framing": "вертикальный full-body взгляд прямо на зрителя не боковой",
+        "action": "держит письмо с новым расчётом нажимает калькулятор"
       }
     }
   ]

@@ -1,0 +1,75 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B22",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-04",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://www.sravni.ru/text/stavki-po-ipoteke-na-28-avgusta-2026-goda/",
+        "type": "news",
+        "note": "28.08.2026 — агрегированные ставки на новостройки 18,74%; фон после решения ЦБ 14%"
+      },
+      {
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "04.09.2026 — tenant TG: ожидание заседания ЦБ, контекст дорогой ипотеки"
+      },
+      {
+        "url": "https://xn--80aacozicjl1agbl4lraw.xn--p1ai/publications/sila-semi-sila-regiona/semeynaya-ipoteka-v-tyumenskoy-oblasti-v-2026-godu-kak-kupit-zhile-i-poluchit-podderzhku-seme-s-detm/",
+        "type": "official regional",
+        "note": "20.07.2026 — семейная ипотека Тюмень; изменения отложены до 01.10.2026"
+      },
+      {
+        "url": "https://novostroikino.ru/blog/bronirovanie-kvartiry-v-novostroyke-2026/",
+        "type": "market",
+        "note": "06.08.2026 — сроки брони, аванс vs услуга бронирования"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel (scout signal)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "ипотека на новостройку процентная ставка",
+    "p0_volume": 21,
+    "p0_volume_ru225": 960,
+    "support_phrases": [
+      {"phrase": "ипотека в тюмени на новостройки", "volume": 41},
+      {"phrase": "ставка ипотеки новостройка", "volume": 54},
+      {"phrase": "ипотека процентная ставка на сегодня новостройка", "volume": 13},
+      {"phrase": "ипотека на новостройки 2026 процентная ставка", "volume": 6}
+    ],
+    "rework_from": "scout P0 locked «ипотека на новостройку процентная ставка» (21) after Tyumen newbuild mortgage-rate jargon rework",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_mortgage_rate_changed_before_ddu_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 8,
+    "entities_checked": ["cbr", "dom_rf", "tyumen_oblast_portal"],
+    "errors": [],
+    "note": "Key rate, family mortgage program params, Tyumen regional portal; bank vitrine rates NOT verified (official pages 500 from cloud)"
+  },
+  "key_facts_count": 32,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

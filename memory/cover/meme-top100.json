@@ -89,8 +89,8 @@
     {"id": "surprised_tom", "name_ru": "Surprised Tom", "category": "cat", "aliases": ["tom and jerry surprised"], "template": "Tom cat shocked face", "allowed_on": ["cover", "inline"], "max_frame_share": 0.10},
     {"id": "nyan_cat", "name_ru": "Nyan Cat", "category": "cat", "aliases": ["pop tart cat"], "template": "Pixel cat with rainbow trail", "allowed_on": ["cover", "inline"], "max_frame_share": 0.10},
     {"id": "distracted_boyfriend", "name_ru": "Distracted Boyfriend (tiny)", "category": "people", "aliases": ["guy looking back"], "template": "Man looking back at other woman (sticker crop — no celebrity names in prompt)", "allowed_on": ["cover", "inline"], "max_frame_share": 0.10},
-    {"id": "drake_no_yes", "name_ru": "Drake format (BANNED full panel)", "category": "banned", "aliases": ["drake hotline"], "template": "BANNED — use other reaction memes", "allowed_on": [], "max_frame_share": 0},
-    {"id": "salt_bae", "name_ru": "Salt Bae (BANNED)", "category": "banned", "aliases": ["nusret"], "template": "BANNED per inline-visual-types", "allowed_on": [], "max_frame_share": 0},
+    {"id": "drake_no_yes", "name_ru": "Drake format (BANNED full panel)", "category": "banned", "aliases": ["drake", "drake hotline", "hotline bling"], "template": "BANNED — use other reaction memes", "allowed_on": [], "max_frame_share": 0},
+    {"id": "salt_bae", "name_ru": "Salt Bae (BANNED)", "category": "banned", "aliases": ["nusret", "salt bae"], "template": "BANNED per inline-visual-types", "allowed_on": [], "max_frame_share": 0},
     {"id": "stock_handsome_man", "name_ru": "Stock handsome man (BANNED)", "category": "banned", "aliases": ["generated realtor", "co-host model", "handsome man pointing"], "template": "BANNED — owner FAIL; never generate", "allowed_on": [], "max_frame_share": 0}
   ]
 }
