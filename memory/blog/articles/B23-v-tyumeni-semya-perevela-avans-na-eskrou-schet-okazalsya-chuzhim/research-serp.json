@@ -1,0 +1,63 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-04",
+    "today_ru": "04.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "пятница"
+  },
+  "topic": {
+    "topic_id": "B23",
+    "title": "В Тюмени семья перевела аванс на эскроу — счёт оказался чужим",
+    "h1": "В Тюмени семья перевела аванс на эскроу — счёт оказался чужим",
+    "slug": "v-tyumeni-semya-perevela-avans-na-eskrou-schet-okazalsya-chuzhim",
+    "primary_query": "В Тюмени семья перевела аванс на эскроу — счёт оказался чужим",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени семья перевела аванс на эскроу — счёт оказался чужим 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-04"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени семья перевела аванс на эскроу — счёт оказался чужим 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-04"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени семья перевела аванс на эскроу — счёт оказался чужим official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-04"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени семья перевела аванс на эскроу — счёт оказался чужим 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-04"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени семья перевела аванс на эскроу — счёт оказался чужим forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-04"
+    }
+  ],
+  "errors": []
+}
