@@ -22,10 +22,12 @@ category: env
 - **2026-08-28 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9230 ingest skipped; B11 lessons recorded without behavioral signals.
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
+- **2026-09-01 B20 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9490 ingest skipped; B20 lessons recorded without behavioral signals (legal-entity cluster, sol trim, cover OCR escape).
+- **2026-09-04 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9653 ingest skipped; B23 lessons recorded without behavioral signals (KP land-category cluster, cover fixer solo strip-ban, inline alt table differentiation, sol trim).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250) и B15 (post 9368) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368), B20 (post 9490) и B23 (post 9653) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -988,3 +990,117 @@ files_changed:
 checks_run:
 - git log B22 branch linear (9ef5c92 indexer → 81fc5c3 publish)
 commit: n/a
+
+## INC-20260904-1315-cover-fixer-phone-on-vest-b23
+status: fixed
+run_date: 2026-09-04
+role: excalibur-blog-cover-qa
+topic_id: B23
+article_dir: memory/blog/articles/B23-v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya
+severity: medium
+category: qa
+
+### What went wrong
+- Initial cover PNG FAIL `pixel_no_text_on_clothing` (phone CTA ink in chest/vest bbox — «phone on vest» OCR).
+- Cover-QA needed 1 Fixer round (`quad_regen_panels --slots cover`) before OCR escape PASS on phone flakes.
+
+### How the agent recovered this run
+- `excalibur_blog_cover_fixer.py` round 1 → panel regen → re-QA PASS with `ocr_false_positive_escape` on phone_readable/phone_not_clipped flakes.
+
+### Durable fix needed before next run
+- Exclude `PHONE_STICKER_ZONE` from `CLOTHING_NO_TEXT_ZONE` ink measurement — legitimate phone sticker overlaps vest bbox.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `tests/test_cover_budget.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-04
+fix_summary:
+- `pixel_no_text_on_clothing` clothing ink now excludes `PHONE_STICKER_ZONE` (B23 phone-on-vest false positive).
+files_changed:
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_cover_qa_pixels.py`
+- B23 `analyze_cover_pixels` → PASS
+commit: pending
+
+## INC-20260904-1316-image-alt-inline2-scene-hint-b23
+status: fixed
+run_date: 2026-09-04
+role: excalibur-blog-fixer
+topic_id: B23
+article_dir: memory/blog/articles/B23-v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya
+severity: medium
+category: script
+
+### What went wrong
+- `inline_2` comparison_table alt built from h2 fallback when manifest `labels` empty; scene_hint overlap / weak alt required manual manifest label fix + caption rebuild.
+
+### How the agent recovered this run
+- Updated `inline_2` labels in quad-manifest; `excalibur_blog_image_caption_builder.py --apply` → label-based alt PASS.
+
+### Durable fix needed before next run
+- Caption builder: fallback to `cover-text.json` `inline_labels` when manifest slot labels empty (infographic alts).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_image_caption_builder.py`
+- `tests/test_image_caption_builder.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-04
+fix_summary:
+- `load_cover_text_inline_labels` + `slot_labels_with_fallback`; `build_inline_alt` uses cover-text labels when manifest labels missing.
+files_changed:
+- `scripts/excalibur_blog_image_caption_builder.py`
+- `tests/test_image_caption_builder.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
+- `python3 -m unittest tests.test_image_caption_builder`
+commit: pending
+
+## INC-20260904-1317-sol-end-cta-site-base-b23
+status: fixed
+run_date: 2026-09-04
+role: excalibur-blog-sol
+topic_id: B23
+article_dir: memory/blog/articles/B23-v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya
+severity: low
+category: script
+
+### What went wrong
+- Sol end CTA used git-safe `{{SITE_BASE}}/gajdy/` paths; `check_end_cta` only matched literal `/gajdy/` → false FAIL.
+- `dual_cta_soft` missed future-tense «подключусь» (only «подключаюсь» in deal phrase list).
+- Manual structural fix: full `<ul>` channel list + `/` site link before publish.
+
+### How the agent recovered this run
+- Surgical HTML edit in `article.html`: standard end CTA block with `<ul>`, `/gajdy/`, `/rieltor-tyumen/`, `/` site link.
+
+### Durable fix needed before next run
+- `url_present` accepts `{{SITE_BASE}}/path` for path checks; `check_dual_cta` accepts «подключусь».
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `tests/test_quality_bar_9_gate.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-04
+fix_summary:
+- `url_present` matches `{{SITE_BASE}}/path` and `{{SITE_BASE}}/` for site root; dual_cta deal phrases include «подключусь».
+files_changed:
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `tests/test_quality_bar_9_gate.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_quality_bar_9_gate.py`
+- `python3 -m unittest tests.test_quality_bar_9_gate`
+- B23 original Sol: gajdy/rieltor placeholder paths now PASS url_present; missing `/` site link still correctly FAIL
+commit: pending

@@ -108,6 +108,41 @@ def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_cover_text_inline_labels(article_dir: Path) -> dict[str, list[str]]:
+    """cover-text.json inline_labels — fallback when manifest slot labels empty (B23)."""
+    cover_text_path = article_dir / "cover" / "cover-text.json"
+    if not cover_text_path.is_file():
+        return {}
+    try:
+        cover_text = load_json(cover_text_path)
+    except json.JSONDecodeError:
+        return {}
+    raw = cover_text.get("inline_labels") or {}
+    out: dict[str, list[str]] = {}
+    if not isinstance(raw, dict):
+        return out
+    for slot_key, labels in raw.items():
+        if not isinstance(labels, list):
+            continue
+        cleaned = [normalize_text(x) for x in labels if normalize_text(x)]
+        if cleaned:
+            out[str(slot_key)] = cleaned
+    return out
+
+
+def slot_labels_with_fallback(
+    slot_key: str,
+    slot: dict[str, Any],
+    *,
+    cover_text_labels: dict[str, list[str]] | None = None,
+) -> list[str]:
+    panel_labels = [normalize_text(x) for x in (slot.get("labels") or []) if normalize_text(x)]
+    if panel_labels:
+        return panel_labels
+    fallback = (cover_text_labels or {}).get(slot_key) or []
+    return [normalize_text(x) for x in fallback if normalize_text(x)]
+
+
 def load_visual_type_labels(root: Path) -> dict[str, str]:
     catalog_path = root / "memory/cover/inline-visual-types.json"
     labels: dict[str, str] = dict(VISUAL_TYPE_FALLBACK_RU)
@@ -378,11 +413,17 @@ def build_inline_alt(
     *,
     labels_map: dict[str, str],
     meta: dict[str, Any] | None = None,
+    cover_text_labels: dict[str, list[str]] | None = None,
+    slot_key: str = "",
 ) -> str:
     visual_type = normalize_text(slot.get("visual_type"))
     label_ru = visual_type_label(visual_type, labels_map)
     h2 = shorten_h2(normalize_text(slot.get("h2_anchor")), max_len=48)
-    panel_labels = [normalize_text(x) for x in (slot.get("labels") or []) if normalize_text(x)]
+    panel_labels = slot_labels_with_fallback(
+        slot_key,
+        slot,
+        cover_text_labels=cover_text_labels,
+    )
 
     if panel_labels and visual_type not in {"realistic_photo", "cover_editorial_hero"}:
         facts = ", ".join(panel_labels[:3])
@@ -404,10 +445,17 @@ def resolve_slot_alt(
     *,
     host_name: str,
     labels_map: dict[str, str],
+    cover_text_labels: dict[str, list[str]] | None = None,
 ) -> str:
     if slot_key == "cover":
         return build_cover_alt(manifest, meta, host_name=host_name, slot=slot)
-    return build_inline_alt(slot, labels_map=labels_map, meta=meta)
+    return build_inline_alt(
+        slot,
+        labels_map=labels_map,
+        meta=meta,
+        cover_text_labels=cover_text_labels,
+        slot_key=slot_key,
+    )
 
 
 def validate_alt_for_gate(
@@ -447,6 +495,7 @@ def collect_article_alts(article_dir: Path, root: Path) -> dict[str, Any]:
     meta = load_json(meta_path) if meta_path.is_file() else {}
     host_name = load_hero_name(root)
     labels_map = load_visual_type_labels(root)
+    cover_text_labels = load_cover_text_inline_labels(article_dir)
 
     slots_out: dict[str, dict[str, Any]] = {}
     for slot_key, slot in (manifest.get("slots") or {}).items():
@@ -456,7 +505,13 @@ def collect_article_alts(article_dir: Path, root: Path) -> dict[str, Any]:
             continue
         raw = normalize_text(slot.get("alt"))
         resolved = resolve_slot_alt(
-            slot_key, slot, manifest, meta, host_name=host_name, labels_map=labels_map
+            slot_key,
+            slot,
+            manifest,
+            meta,
+            host_name=host_name,
+            labels_map=labels_map,
+            cover_text_labels=cover_text_labels,
         )
         ok, errors = validate_alt_for_gate(
             resolved,
@@ -570,6 +625,7 @@ def apply_article_captions(article_dir: Path, root: Path, *, dry_run: bool = Fal
     meta = load_json(meta_path) if meta_path.is_file() else {}
     host_name = load_hero_name(root)
     labels_map = load_visual_type_labels(root)
+    cover_text_labels = load_cover_text_inline_labels(article_dir)
 
     changes: list[str] = []
     slot_alts: dict[str, str] = {}
@@ -579,7 +635,13 @@ def apply_article_captions(article_dir: Path, root: Path, *, dry_run: bool = Fal
         if slot_key != "cover" and not slot.get("h2_anchor"):
             continue
         resolved = resolve_slot_alt(
-            slot_key, slot, manifest, meta, host_name=host_name, labels_map=labels_map
+            slot_key,
+            slot,
+            manifest,
+            meta,
+            host_name=host_name,
+            labels_map=labels_map,
+            cover_text_labels=cover_text_labels,
         )
         old = normalize_text(slot.get("alt"))
         slot_alts[slot_key] = resolved
@@ -652,11 +714,24 @@ def apply_article_captions(article_dir: Path, root: Path, *, dry_run: bool = Fal
     return {"changes": changes, "gate": gate, "dry_run": dry_run}
 
 
-def ensure_human_alt(text: str, *, slot_key: str, manifest: dict[str, Any], meta: dict[str, Any], root: Path) -> str:
+def ensure_human_alt(
+    text: str,
+    *,
+    slot_key: str,
+    manifest: dict[str, Any],
+    meta: dict[str, Any],
+    root: Path,
+    article_dir: Path | None = None,
+) -> str:
     """Publish-time safety net: never return prompt-like alt."""
     raw = normalize_text(text)
     host_name = load_hero_name(root)
     labels_map = load_visual_type_labels(root)
+    cover_text_labels = (
+        load_cover_text_inline_labels(article_dir)
+        if article_dir is not None
+        else {}
+    )
     slot = (manifest.get("slots") or {}).get(slot_key) or {}
     if raw and not is_prompt_like_alt(raw)[0]:
         return raw
@@ -667,6 +742,7 @@ def ensure_human_alt(text: str, *, slot_key: str, manifest: dict[str, Any], meta
         meta,
         host_name=host_name,
         labels_map=labels_map,
+        cover_text_labels=cover_text_labels,
     )
 
 

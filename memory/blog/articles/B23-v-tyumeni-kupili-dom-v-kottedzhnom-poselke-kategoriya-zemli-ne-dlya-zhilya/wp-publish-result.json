@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya",
+  "topic_id": "B23",
+  "post_id": 9653,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B23-v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1095831,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9653 slug=v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9654\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9655 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya-inline-01.png\nOK inline_alt=9655\nOK inline_description=9655\nOK inline_image_upload=9656 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya-inline-02.png\nOK inline_alt=9656\nOK inline_description=9656\nOK inline_image_upload=9657 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya-inline-03.png\nOK inline_alt=9657\nOK inline_description=9657\nOK inline_image_upload=9658 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya-inline-04.png\nOK inline_alt=9658\nOK inline_description=9658\nOK inline_image_upload=9659 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya-inline-05.png\nOK inline_alt=9659\nOK inline_description=9659\nOK inline_image_upload=9660 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya-inline-06.png\nOK inline_alt=9660\nOK inline_description=9660\nOK inline_image_upload=9661 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya-inline-07.png\nOK inline_alt=9661\nOK inline_description=9661\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya/",
+    "errors": []
+  }
+}

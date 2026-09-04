@@ -2282,11 +2282,12 @@ def analyze_cover_pixels(
         )
 
     # --- ghost/garbled text on clothing ---
+    # Exclude PHONE_STICKER_ZONE: legitimate phone CTA ink overlaps chest/vest bbox (B23 fixer round).
     clothing_ink = _frac_predicate_in_zone(
         img,
         CLOTHING_NO_TEXT_ZONE,
         _is_dark_ink_pixel,
-        exclude_zones=(FACE_EXCLUDE_ZONE, CAT_MEME_CORE, TITLE_ZONE),
+        exclude_zones=(FACE_EXCLUDE_ZONE, CAT_MEME_CORE, TITLE_ZONE, PHONE_STICKER_ZONE),
     )
     evidence["clothing_dark_ink_frac"] = round(clothing_ink, 4)
     checks["pixel_no_text_on_clothing"] = clothing_ink < 0.045

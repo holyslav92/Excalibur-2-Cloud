@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B23 — 2026-09-04
+
+- **topic_id:** B23
+- **slug:** v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya
+- **post_id:** 9653
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-kupili-dom-v-kottedzhnom-poselke-kategoriya-zemli-ne-dlya-zhilya/
+- **featured_image:** 9654
+- **inline_images:** 9655–9661 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31, default_primary_slug)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B22 — 2026-09-04
 
 - **topic_id:** B22

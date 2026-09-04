@@ -16,6 +16,27 @@ class QualityBar9GateTest(unittest.TestCase):
     def test_contract_file_exists(self) -> None:
         self.assertTrue((ROOT / "shared/quality-bar-9.md").is_file())
 
+    def test_url_present_accepts_site_base_placeholder_paths(self) -> None:
+        from excalibur_blog_quality_bar_9_gate import check_dual_cta, check_end_cta, url_present
+
+        html = (
+            '<div class="excalibur-cta-end excalibur-social-cta">'
+            '<p>Напишите на консультацию — подключусь до акта.</p>'
+            '<p><a href="https://t.me/Tyumen_Rieltor">TG</a> '
+            '<a href="https://max.ru/id561413315447_biz">MAX</a> '
+            '<a href="tel:+79220016505">+7 922 001 65 05</a></p>'
+            '<p><a href="{{SITE_BASE}}/gajdy/">гайды</a> '
+            '<a href="{{SITE_BASE}}/rieltor-tyumen/">обо мне</a> '
+            '<a href="{{SITE_BASE}}/">сайт</a> '
+            '<a href="https://dzen.ru/holyslav">Дзен</a> '
+            '<a href="https://vk.ru/tymenrieltor">VK</a></p>'
+            "</div>"
+        )
+        self.assertTrue(url_present(html, "/gajdy/"))
+        self.assertTrue(url_present(html, "/"))
+        self.assertTrue(check_end_cta(html))
+        self.assertTrue(check_dual_cta(html))
+
     def test_pipeline_canon_references_quality_bar(self) -> None:
         canon = json.loads((ROOT / "shared/pipeline-canon.json").read_text(encoding="utf-8"))
         qb = canon.get("quality_bar_9") or {}
