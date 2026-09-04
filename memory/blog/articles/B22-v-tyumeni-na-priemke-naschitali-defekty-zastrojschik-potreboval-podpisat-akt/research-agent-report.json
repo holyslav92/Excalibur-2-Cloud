@@ -1,0 +1,69 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B22",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-04",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://krasnodar.allestate.pro/news/01.09.2026/priemka-kvartiry-kak-zafiksirovat-nedochety-po-zakonu",
+        "type": "news",
+        "note": "01.09.2026 — свежий медиасигнал недели: фиксация дефектов при приёмке, ПП №2226, отказ подписывать чистый акт"
+      },
+      {
+        "url": "https://zozpp.expert/priemka-kvartiry-s-nedostatkami-2026/",
+        "type": "community",
+        "note": "Legal community — давление подписать без замечаний vs акт осмотра, лимит 3%, специалист 2026"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Tenant signal channel — локальный CTA"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant Dzen channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4683,
+    "casus_spine_phrase": "приемка квартиры в новостройке",
+    "casus_spine_volume": 6287,
+    "secondary_phrases": [
+      {"phrase": "акт приемки квартиры в новостройке", "volume": 256, "regions": ["225"]},
+      {"phrase": "подписание акта приемки квартиры в новостройке", "volume": 69, "regions": ["225"]},
+      {"phrase": "приемка квартиры в новостройке тюмень", "volume": 32, "regions": ["55", "11176"]}
+    ],
+    "partial": [],
+    "note": "Scout preflight P0 8767; live MCP 4683 on 2026-09-04 — use live for research_date"
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_acceptance_defects_act_pressure_tyumen"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["214_fz", "pp_rf_2226", "pp_rf_2380"],
+    "errors": [],
+    "note": "Банковские тарифы не используются; 214-ФЗ ст. 6–8, 10 и ПП №2226/2380 verified in official_verifications"
+  },
+  "key_facts_count": 48,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
