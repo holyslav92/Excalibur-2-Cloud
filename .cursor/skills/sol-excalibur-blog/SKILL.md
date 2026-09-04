@@ -32,11 +32,11 @@ Longform (7 inline): **3 части на первом проходе** — не 
 ```bash
 python3 scripts/excalibur_blog_sol_trim_chunk.py \
   --article-dir memory/blog/articles/<topic_id>-<slug> \
-  --if-over 2200 \
+  --if-over 2200 --until-under 2200 --max-passes 2 \
   --user-file memory/blog/articles/<topic_id>-<slug>/assembled-sol-trim-inputs.md
 ```
 
-Цель trim: **2000–2150** слов; сохранить H2, inline figures, CTA blocks, comment magnet, interlinks. Stamp: `derouter-opus-stamp-sol-trim.json`.
+Цель trim: **2000–2150** слов; сохранить H2, inline figures, CTA blocks (dual consult+deal в `excalibur-cta-end`), comment magnet, interlinks. Скрипт нормализует `{{SITE_BASE}}` → site-relative href и **BLOCKER**, если после 2 проходов всё ещё >2200. Stamp: `derouter-opus-stamp-sol-trim.json`.
 
 Копию финала: shell `cp article.html drafts/variant-a.html` (sol_chunk и sol_trim_chunk делают это автоматически при chunk merge).
 Контракт: `shared/derouter-opus-brain-contract.md`.

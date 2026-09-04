@@ -256,6 +256,13 @@ class SolTrimChunkTest(unittest.TestCase):
         self.assertEqual(merged.count(f"<h2>{h2}</h2>"), 1)
         self.assertIn("<h2>Third</h2>", merged)
 
+    def test_normalize_site_base_hrefs(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_sol_trim_chunk import normalize_site_base_hrefs
+
+        html = '<a href="{{SITE_BASE}}/gajdy/">x</a>'
+        self.assertIn('href="/gajdy/"', normalize_site_base_hrefs(html))
+
 
 class QuadSceneMergeTest(unittest.TestCase):
     def test_merge_scene_draft_preserves_cover_motifs(self) -> None:

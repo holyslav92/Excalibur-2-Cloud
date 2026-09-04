@@ -874,3 +874,51 @@ checks_run:
 - `python3 -m unittest tests.test_pipeline_speed_b03.QuadSceneMergeTest`
 - B21 quad_manifest_preflight → PASS with cover_motifs
 commit: pending
+
+## INC-20260904-0530-sol-trim-cta-wordcount-b22
+status: fixed
+run_date: 2026-09-04
+role: excalibur-blog-director
+topic_id: B22
+article_dir: memory/blog/articles/B22-v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt
+severity: medium
+category: script
+
+### What went wrong
+- `sol_trim_chunk` 2498→2310 words — still >2200 target; no BLOCKER, pipeline continued to Description/Cover.
+- Trim rewrote `excalibur-cta-end`: `{{SITE_BASE}}/gajdy/` broke `end_cta_full_channels` (`/gajdy/`, `/`); stripped deal phrase → `dual_cta_soft` FAIL on variant-a.
+- Director manually patched `article.html`: full end CTA (consult+deal, `/`, `/gajdy/`), word trim 2310→2134 before publish post 9614.
+
+### How the agent recovered this run
+- Surgical HTML edit in `article.html` (end CTA + ~176-word trim); `quality-bar-9.json` PASS; publish wp_post_id 9614.
+
+### Durable fix needed before next run
+- `sol_trim_chunk`: multi-pass up to 2, `--until-under 2200` BLOCKER; normalize `{{SITE_BASE}}` hrefs post-merge; TRIM header mandates dual CTA + literal site paths.
+- `quality-bar-9`: `url_present` accept `{{SITE_BASE}}/path`; `dual_cta_soft` scoped to `excalibur-cta-end` block (not comment magnet).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_sol_trim_chunk.py`
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `tests/test_quality_bar_9_gate.py`
+- `tests/test_pipeline_speed_b03.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-04
+fix_summary:
+- `sol_trim_chunk`: `--until-under` + `--max-passes 2` loop; `normalize_site_base_hrefs`; TRIM header dual CTA + literal `/gajdy/` `/` paths.
+- `quality-bar-9`: `url_present` accepts `{{SITE_BASE}}/path`; `check_dual_cta` scoped to `excalibur-cta-end` via `extract_end_cta_block`.
+files_changed:
+- `scripts/excalibur_blog_sol_trim_chunk.py`
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `.cursor/skills/sol-excalibur-blog/SKILL.md`
+- `tests/test_quality_bar_9_gate.py`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_sol_trim_chunk.py scripts/excalibur_blog_quality_bar_9_gate.py`
+- `python3 -m unittest tests.test_quality_bar_9_gate.QualityBar9GateTest tests.test_pipeline_speed_b03.SolTrimChunkTest`
+commit: pending

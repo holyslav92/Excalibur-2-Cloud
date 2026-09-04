@@ -213,11 +213,20 @@ def url_present(html: str, url: str) -> bool:
     url = (url or "").strip()
     if not url:
         return False
+    site_base = r"(?:\{\{SITE_BASE\}\})?"
     if url == "/":
-        return bool(re.search(r"""href=["']/["']""", html or ""))
+        return bool(
+            re.search(rf"""href=["']{site_base}/["']""", html or "", re.I)
+        )
     if url.startswith("/"):
         path = url.rstrip("/")
-        return bool(re.search(rf"""href=["']{re.escape(path)}/?["']""", html or "", re.I))
+        return bool(
+            re.search(
+                rf"""href=["']{site_base}{re.escape(path)}/?["']""",
+                html or "",
+                re.I,
+            )
+        )
     if url.lower().startswith("tel:"):
         return has_phone(html)
     parsed = urlparse(url)
@@ -311,13 +320,17 @@ def check_mid_cta(html: str) -> bool:
     return False
 
 
-def check_end_cta(html: str) -> bool:
+def extract_end_cta_block(html: str) -> str:
     end_m = re.search(
-        r'<div[^>]*class="[^"]*excalibur-cta-end[^"]*"[^>]*>.*?</div>\s*(?:<p[^>]*>Материал проверен|$)',
+        r'<div[^>]*class="[^"]*excalibur-cta-end[^"]*"[^>]*>.*?</div>',
         html or "",
         flags=re.I | re.S,
     )
-    tail = end_m.group(0) if end_m else (html or "")[-3500:]
+    return end_m.group(0) if end_m else ""
+
+
+def check_end_cta(html: str) -> bool:
+    tail = extract_end_cta_block(html) or (html or "")[-3500:]
     required = (
         TG_URL,
         MAX_URL,
@@ -383,11 +396,26 @@ def check_socials(html: str) -> bool:
 
 
 def check_dual_cta(html: str) -> bool:
-    low = (html or "").lower()
-    consult = any(x in low for x in ("консультац", "напишите", "напиши", "написать", "telegram"))
+    """Consult + deal phrases must live in excalibur-cta-end (not comment magnet alone)."""
+    block = extract_end_cta_block(html)
+    if not block:
+        return False
+    low = block.lower()
+    consult = any(
+        x in low
+        for x in ("консультац", "напишите", "напиши", "написать", "напишите мне")
+    )
     deal = any(
         x in low
-        for x in ("к делу", "подключаюсь", "веду сделк", "от звонка до регистрации", "до аванса")
+        for x in (
+            "к делу",
+            "подключаюсь",
+            "веду сделк",
+            "от звонка до регистрации",
+            "до аванса",
+            "от брони до ключ",
+            "веду переписку",
+        )
     )
     banned = any(x in low for x in ("лучший риэлтор", "нулевой риск", "гарантия нул"))
     return consult and deal and not banned
