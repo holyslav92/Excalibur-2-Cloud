@@ -2,7 +2,7 @@
   "version": 1,
   "anti_repeat_days": 30,
   "description": "Closed story clusters — Scout must not reuse until locked_until. Sync via: python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters",
-  "last_sync": "2026-09-02",
+  "last_sync": "2026-09-04",
   "clusters": [
     {
       "cluster_id": "newbuild_ddu_cellar_paid_not_handed_tyumen",
