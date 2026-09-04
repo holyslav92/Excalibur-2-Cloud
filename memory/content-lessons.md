@@ -17,3 +17,6 @@
 | [LESSON-20260901-1338-B20-legal-entity-ddu-escrow-cluster](content-lessons/LESSON-20260901-1338-B20-legal-entity-ddu-escrow-cluster.md) | B20 | proposed | geo |
 | [LESSON-20260901-1338-B20-sol-trim-spine-once](content-lessons/LESSON-20260901-1338-B20-sol-trim-spine-once.md) | B20 | proposed | structure |
 | [LESSON-20260901-1338-B20-cover-ocr-escape-no-budget-exhaust](content-lessons/LESSON-20260901-1338-B20-cover-ocr-escape-no-budget-exhaust.md) | B20 | proposed | structure |
+| [LESSON-20260904-0821-B22-newbuild-mortgage-rate-before-ddu-cluster](content-lessons/LESSON-20260904-0821-B22-newbuild-mortgage-rate-before-ddu-cluster.md) | B22 | proposed | geo |
+| [LESSON-20260904-0821-B22-cover-ocr-escape-identity-skin-blob](content-lessons/LESSON-20260904-0821-B22-cover-ocr-escape-identity-skin-blob.md) | B22 | proposed | structure |
+| [LESSON-20260904-0821-B22-derouter-drake-meme-ban-gate](content-lessons/LESSON-20260904-0821-B22-derouter-drake-meme-ban-gate.md) | B22 | applied | other |

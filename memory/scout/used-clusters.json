@@ -5,6 +5,15 @@
   "last_sync": "2026-09-04",
   "clusters": [
     {
+      "cluster_id": "newbuild_mortgage_rate_changed_before_ddu_tyumen",
+      "first_seen": "2026-09-04",
+      "locked_until": "2026-10-04",
+      "source": "ledger",
+      "slug": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi",
+      "topic_id": "B22",
+      "title": "В Тюмени банк поднял ставку ипотеки перед ДДУ — бронь сгорела"
+    },
+    {
       "cluster_id": "newbuild_ddu_cellar_paid_not_handed_tyumen",
       "first_seen": "2026-09-02",
       "locked_until": "2026-10-02",
