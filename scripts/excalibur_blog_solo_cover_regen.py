@@ -38,6 +38,16 @@ I2I_EXPRESSION_LOCK = (
     "same person identity from reference photo — NEW invented expression for hook; "
     "do NOT copy reference studio smile/pose; preserve jaw/stubble/hairline/eyes"
 )
+IDENTITY_SUFFIX = (
+    "\nIDENTITY LOCK (mandatory): exact same man as reference photo — "
+    "28 years old, medium-slim build, round-oval face, dark brown short hair tapered sides, "
+    "warm dark brown eyes, full dark brows. "
+    "MANDATORY visible dark five-o'clock-shadow stubble on jaw, chin and upper lip — "
+    "same density and pattern as reference; NEVER clean-shaven, NEVER fashion-model jaw. "
+    "Bone structure, hairline, stubble pattern, eye shape MUST match studio portrait. "
+    "Black blazer over black tee like reference when outfit not specified. "
+    "NEW invented emotion/scene — do NOT clone reference studio smile/pose/background."
+)
 
 COVER_REGEN_MANIFEST: list[dict[str, Any]] = [
     {"post_id": 9627, "slug": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi", "hook": "Банк поднял ставку — платёж вырос", "highlight": "платёж", "sticky": "Одобрение не гарантия", "emotion": "shocked at calculator", "scene": "bright office, mortgage papers, calculator higher payment"},
@@ -97,12 +107,11 @@ def build_solo_prompt(item: dict[str, Any]) -> str:
         f"Phone EXACT «{COVER_PHONE}» white torn paper bottom-RIGHT.\n"
         f"{sticky_line}\n"
         f"Host i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}. "
-        "IDENTITY LOCK: must be the SAME man as reference photo (Svyatoslav Shakin realtor Tyumen) — "
-        "oval face, short dark textured hair, neat stubble, brown eyes, slim jaw; NOT generic stock model. "
         f"Expression: {emotion}. Scene: {scene}. "
         "Face+shoulders LEFT (~35% frame), room for headline right. "
         "Tiny thinking-cat meme ≤10% bottom-right, ≥80px from phone/headline. "
         "Sun flare, bright #FFF, perfect Cyrillic."
+        f"{IDENTITY_SUFFIX}"
     )
 
 

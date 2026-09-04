@@ -11,9 +11,10 @@
     "post_id": 9601,
     "slug": "v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d",
     "hook": "Банк снял ипотеку перед сделкой",
-    "status": "generated",
+    "status": "regenerated_v2",
     "cover_path": "memory/blog/cover-regen/9601-v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d/cover.png",
-    "alt_text": "Святослав Шакин — Банк снял ипотеку перед сделкой"
+    "alt_text": "Святослав Шакин — Банк снял ипотеку перед сделкой",
+    "note": "stronger identity lock + WP upload 9683"
   },
   {
     "post_id": 9588,
