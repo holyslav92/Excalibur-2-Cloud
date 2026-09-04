@@ -95,6 +95,31 @@ class ImageCaptionBuilderTests(unittest.TestCase):
         self.assertFalse(prompt_like)
         self.assertIn("Сравнительная таблица", alt)
 
+    def test_build_inline_alt_uses_cover_text_labels_fallback(self) -> None:
+        slot = {
+            "visual_type": "comparison_table",
+            "h2_anchor": "Семья подписала ДДУ",
+            "scene_hint": "колонки этапов сделки в схеме",
+            "labels": [],
+        }
+        cover_text_labels = {
+            "inline_2": ["Договор подписан", "Кредит одобрен", "Ключи не выданы"],
+        }
+        alt = build_inline_alt(
+            slot,
+            labels_map={"comparison_table": "Сравнительная таблица"},
+            meta={"h1": "Тюмень"},
+            cover_text_labels=cover_text_labels,
+            slot_key="inline_2",
+        )
+        prompt_like, errors = is_prompt_like_alt(
+            alt,
+            scene_hint="колонки этапов сделки в схеме",
+            seo_length=True,
+        )
+        self.assertFalse(prompt_like, msg=f"{alt!r} errors={errors}")
+        self.assertIn("Договор подписан", alt)
+
     def test_cover_caption_must_be_empty(self) -> None:
         ok, errors = cover_caption_must_be_empty("Подпись, которую Дзен покажет как текст")
         self.assertFalse(ok)

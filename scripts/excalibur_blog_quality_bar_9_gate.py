@@ -21,6 +21,7 @@ if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
 from excalibur_blog_composite_disclaimer import check_no_composite_disclaimer
+from excalibur_blog_site_base import SITE_BASE_PLACEHOLDER
 
 
 WORD_TARGET_MIN = 1800
@@ -214,10 +215,21 @@ def url_present(html: str, url: str) -> bool:
     if not url:
         return False
     if url == "/":
-        return bool(re.search(r"""href=["']/["']""", html or ""))
+        return bool(
+            re.search(r"""href=["']/["']""", html or "")
+            or re.search(
+                rf"""href=["']{re.escape(SITE_BASE_PLACEHOLDER)}/?["']""",
+                html or "",
+                re.I,
+            )
+        )
     if url.startswith("/"):
         path = url.rstrip("/")
-        return bool(re.search(rf"""href=["']{re.escape(path)}/?["']""", html or "", re.I))
+        patterns = [
+            rf"""href=["']{re.escape(path)}/?["']""",
+            rf"""href=["']{re.escape(SITE_BASE_PLACEHOLDER)}{re.escape(path)}/?["']""",
+        ]
+        return any(re.search(pat, html or "", re.I) for pat in patterns)
     if url.lower().startswith("tel:"):
         return has_phone(html)
     parsed = urlparse(url)
@@ -387,7 +399,14 @@ def check_dual_cta(html: str) -> bool:
     consult = any(x in low for x in ("консультац", "напишите", "напиши", "написать", "telegram"))
     deal = any(
         x in low
-        for x in ("к делу", "подключаюсь", "веду сделк", "от звонка до регистрации", "до аванса")
+        for x in (
+            "к делу",
+            "подключаюсь",
+            "подключусь",
+            "веду сделк",
+            "от звонка до регистрации",
+            "до аванса",
+        )
     )
     banned = any(x in low for x in ("лучший риэлтор", "нулевой риск", "гарантия нул"))
     return consult and deal and not banned
