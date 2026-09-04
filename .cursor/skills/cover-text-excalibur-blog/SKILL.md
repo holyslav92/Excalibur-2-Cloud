@@ -10,6 +10,16 @@ description: "Cover-text: exact Russian inscriptions in cover-text.json, gate PA
 **Не пиши надписи моделью Cursor:**
 
 ```bash
+python3 scripts/excalibur_blog_cover_text_derouter.py \
+  --article-dir <article_dir> \
+  --system-file skills/cover-text-excalibur-blog/SKILL.md \
+  --user-file <assembled-cover-text-inputs.md>
+```
+
+Скрипт вызывает Derouter, прогоняет `cover_text_gate` и **один retry** при BLOCK
+(например banned/unknown `meme_picks` вроде `drake`). Прямой вызов Derouter без gate:
+
+```bash
 python3 scripts/excalibur_blog_derouter_opus_chat.py \
   --role cover-text \
   --system-file skills/cover-text-excalibur-blog/SKILL.md \
@@ -68,6 +78,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 - **Variety:** people-memes **+** cat-memes — **не cats-only** (если кот, добавь people-meme; host ≠ people-meme).
 - **On-topic + funny:** реакция под hook/stakes casus (скепсис, боль, WTF), не «обои».
 - **Slots:** `cover` (1–2 ids), `inline_1`, `inline_5`, `inline_7` — только разрешённые meme slots.
+- **BANNED ids (gate BLOCK):** `drake`, `drake_no_yes`, `salt_bae`, `stock_handsome_man` — celebrity/stock templates; use reaction memes instead.
 - **Anti-repeat 14д:** не повторять тот же `id`, что в `used-motifs.json` за 14 дней.
 - **Sacred:** стикеры маленькие (≤15% кадра), **не** перекрывают hook / лицо / телефон (+80px clearance).
 

@@ -36,6 +36,20 @@ class MemeCanonTest(unittest.TestCase):
         errs = validate_meme_picks(picks, catalog)
         self.assertTrue(any("not in meme-top100" in e for e in errs))
 
+    def test_rejects_banned_drake_alias(self) -> None:
+        catalog = load_meme_catalog(ROOT)
+        picks = {"cover": ["drake", "smudge_cat"]}
+        errs = validate_meme_picks(picks, catalog)
+        self.assertTrue(any("BANNED" in e and "drake" in e for e in errs))
+
+    def test_resolve_harold_alias(self) -> None:
+        from scripts.excalibur_blog_meme_canon import resolve_meme_id
+
+        catalog = load_meme_catalog(ROOT)
+        canonical, err = resolve_meme_id("harold", catalog)
+        self.assertIsNone(err)
+        self.assertEqual(canonical, "hide_pain_harold")
+
     def test_cover_canon_meme_system(self) -> None:
         import json
 

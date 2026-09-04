@@ -872,3 +872,119 @@ checks_run:
 - `python3 -m unittest tests.test_pipeline_speed_b03.QuadSceneMergeTest`
 - B21 quad_manifest_preflight → PASS with cover_motifs
 commit: pending
+
+## INC-20260904-0815-cover-text-banned-meme-drake-b22
+status: fixed
+run_date: 2026-09-04
+role: excalibur-blog-cover-text
+topic_id: B22
+article_dir: memory/blog/articles/B22-v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi
+severity: medium
+category: prompt
+
+### What went wrong
+- Derouter cover-text returned invalid/banned meme id `drake` in `meme_picks`.
+- Gate would BLOCK on unknown/banned id; agent manually replaced picks before commit.
+
+### How the agent recovered this run
+- Manual fix `meme_picks` to catalog ids (`disaster_girl`, `keyboard_cat`, etc.) → gate PASS.
+
+### Durable fix needed before next run
+- Explicit BANNED alias detection (`drake` → drake_no_yes) with clear gate error.
+- Derouter wrapper: gate + one retry with error feedback before manual edit.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_meme_canon.py`
+- `scripts/excalibur_blog_cover_text_derouter.py`
+- `memory/cover/meme-top100.json`
+- `skills/cover-text-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-04
+fix_summary:
+- `resolve_meme_id` + banned alias map (`drake`, `salt bae`); `excalibur_blog_cover_text_derouter.py` gate-retry wrapper.
+- Cover-text skill documents BANNED ids; doctor lists derouter wrapper.
+files_changed:
+- `scripts/excalibur_blog_meme_canon.py`
+- `scripts/excalibur_blog_cover_text_derouter.py`
+- `memory/cover/meme-top100.json`
+- `skills/cover-text-excalibur-blog/SKILL.md`
+- `.cursor/skills/cover-text-excalibur-blog/SKILL.md`
+- `scripts/excalibur_blog_doctor.py`
+- `tests/test_meme_canon.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_meme_canon.py scripts/excalibur_blog_cover_text_derouter.py`
+- `python3 -m unittest tests.test_meme_canon`
+commit: pending
+
+## INC-20260904-0816-cover-qa-ocr-escape-first-pass-b22
+status: fixed
+run_date: 2026-09-04
+role: excalibur-blog-cover-qa
+topic_id: B22
+article_dir: memory/blog/articles/B22-v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi
+severity: low
+category: qa
+
+### What went wrong
+- First pixel QA pass FAIL on OCR/identity flakes; `apply_ocr_false_positive_escape` needed on re-run.
+
+### How the agent recovered this run
+- OCR escape PASS (`identity_skin_blob_flake` + flaky checks); `cover_qa.json` PASS; publish post 9627.
+
+### Durable fix needed before next run
+- None — B11/B15/B19 OCR escape path already canonical; B22 expected first-pass flake pattern.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+- `skills/cover-qa-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-04
+fix_summary:
+- No code change — existing `apply_ocr_false_positive_escape` handled B22 on first re-QA.
+files_changed:
+- none (contract already canonical)
+checks_run:
+- B22 `cover/cover_qa.json` PASS with `ocr_false_positive_escape`
+commit: n/a
+
+## INC-20260904-0817-indexer-separate-commit-b22
+status: fixed
+run_date: 2026-09-04
+role: excalibur-blog-indexer
+topic_id: B22
+article_dir: memory/blog/articles/B22-v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi
+severity: low
+category: other
+
+### What went wrong
+- Indexer agent committed `llms.txt` / `llms-full.txt` separately (`9ef5c92`) before publish commit on same branch.
+
+### How the agent recovered this run
+- Publish + fixer continued on same feature branch; all B22 commits linear.
+
+### Durable fix needed before next run
+- None — separate per-agent commits on one Cloud branch are OK; fixer `merge_to_main` collects full branch.
+
+### Suggested files to inspect/change
+- `skills/fixer-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-04
+fix_summary:
+- No code change — operational note: indexer mid-run commit is non-blocker when fixer merges branch to main.
+files_changed:
+- none
+checks_run:
+- git log B22 branch linear (9ef5c92 indexer → 81fc5c3 publish)
+commit: n/a

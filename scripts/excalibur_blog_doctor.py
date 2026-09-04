@@ -166,6 +166,7 @@ def main() -> int:
         "scripts/excalibur_blog_opening_meta_gate.py",
         "scripts/excalibur_blog_writer_ready_gate.py",
         "scripts/excalibur_blog_cover_text_gate.py",
+        "scripts/excalibur_blog_cover_text_derouter.py",
         "scripts/excalibur_blog_derouter_opus_chat.py",
         "scripts/excalibur_blog_interlink_lib.py",
         "scripts/excalibur_blog_interlinker.py",
