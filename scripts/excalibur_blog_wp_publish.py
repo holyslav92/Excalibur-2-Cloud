@@ -337,11 +337,12 @@ def resolve_cover_media_fields(
             manifest=quad_manifest,
             meta=meta,
             root=root,
+            article_dir=article_dir,
         )
     return build_attachment_fields(
-        alt=str(alt),
+        alt="",
         caption="",
-        description=str(alt),
+        description="",
         title_fallback="cover",
         use_alt_as_caption=False,
     )
@@ -373,15 +374,12 @@ def resolve_inline_media_fields(
             manifest=quad_manifest,
             meta=meta or {},
             root=root,
+            article_dir=None,
         )
-        if not caption or caption == str(asset.get("alt") or ""):
-            caption = alt
-        if not description:
-            description = alt
     return build_attachment_fields(
         alt=alt,
         caption="",
-        description=description,
+        description="",
         title_fallback=title_fallback,
         h2_anchor=h2,
         use_alt_as_caption=False,

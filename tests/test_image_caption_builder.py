@@ -57,7 +57,7 @@ class ImageCaptionBuilderTests(unittest.TestCase):
         self.assertGreaterEqual(len(good), ALT_SEO_MIN)
         self.assertLessEqual(len(good), ALT_SEO_MAX)
 
-    def test_build_cover_alt_short_seo(self) -> None:
+    def test_build_cover_alt_empty_for_theme_leak(self) -> None:
         manifest = {
             "cover_hook": "Застройщик сменил компанию — бронь зависла",
             "slots": {
@@ -72,16 +72,9 @@ class ImageCaptionBuilderTests(unittest.TestCase):
             "slug": "v-tyumeni-zastrojschik-smenil-yurlico",
         }
         alt = build_cover_alt(manifest, meta, host_name="Святослав Шакин")
-        prompt_like, errors = is_prompt_like_alt(
-            alt,
-            host_name="Святослав Шакин",
-            manifest=manifest,
-            meta=meta,
-            seo_length=True,
-        )
-        self.assertFalse(prompt_like, msg=f"{alt!r} errors={errors}")
-        self.assertNotIn("рядом лежит", alt.casefold())
-        self.assertNotIn("у стойки", alt.casefold())
+        self.assertEqual(alt, "")
+        prompt_like, errors = is_prompt_like_alt(alt, allow_empty=True, seo_length=False)
+        self.assertFalse(prompt_like, msg=str(errors))
 
     def test_build_inline_alt_from_labels(self) -> None:
         slot = {
@@ -93,7 +86,8 @@ class ImageCaptionBuilderTests(unittest.TestCase):
         alt = build_inline_alt(slot, labels_map={"comparison_table": "Сравнительная таблица"}, meta={"h1": "Тюмень"})
         prompt_like, _ = is_prompt_like_alt(alt, seo_length=True)
         self.assertFalse(prompt_like)
-        self.assertIn("Сравнительная таблица", alt)
+        self.assertNotIn("иллюстрация", alt.casefold())
+        self.assertNotIn("сравнительная таблица с колонками", alt.casefold())
 
     def test_cover_caption_must_be_empty(self) -> None:
         ok, errors = cover_caption_must_be_empty("Подпись, которую Дзен покажет как текст")
@@ -171,10 +165,7 @@ class ImageCaptionBuilderTests(unittest.TestCase):
             self.assertTrue(result["changes"])
             updated = json.loads((cover_dir / "quad-manifest.json").read_text(encoding="utf-8"))
             cover_alt = updated["slots"]["cover"]["alt"]
-            self.assertFalse(
-                is_prompt_like_alt(cover_alt, seo_length=True)[0],
-                msg=cover_alt,
-            )
+            self.assertEqual(cover_alt, "")
             registry = json.loads((cover_dir / "cover-registry.json").read_text(encoding="utf-8"))
             self.assertEqual(registry["assets"][0].get("caption"), "")
             html = (article_dir / "article.html").read_text(encoding="utf-8")
