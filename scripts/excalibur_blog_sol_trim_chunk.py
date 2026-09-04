@@ -28,6 +28,9 @@ TRIM_HEADER = """ROLE: Sol TRIM pass — сжать финальный article.h
 - comment magnet и interlink href
 - таблицы и casus spine (лид, финал, agency ending)
 
+excalibur-cta-end ОБЯЗАТЕЛЬНО: dual CTA — consult («консультац»/«напишите») + deal («подключаюсь к сделке»/«от брони до ключей»/«веду переписку»).
+Ссылки в end CTA: literal href="/gajdy/", href="/", href="/rieltor-tyumen/" — НЕ {{SITE_BASE}}.
+
 ЗАПРЕЩЕНО: новые факты, composite disclaimer, TL;DR, удаление H2/inline/CTA.
 HTML: <b> не <strong>, <i> не <em>. Выход: только HTML фрагмент без fences.
 """
@@ -103,60 +106,26 @@ def build_trim_part_prompt(
     )
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--article-dir", required=True)
-    ap.add_argument("--input", default="article.html", help="Sol final to trim in-place")
-    ap.add_argument("--user-file", help="Optional extra trim instructions (header only; body ignored)")
-    ap.add_argument("--parts", type=int, default=3)
-    ap.add_argument(
-        "--if-over",
-        type=int,
-        default=2200,
-        help="Skip unless article word count exceeds this threshold (0 = always run)",
-    )
-    ap.add_argument(
-        "--single-shot",
-        action="store_true",
-        help="Force one Derouter call with full article (not recommended on longform)",
-    )
-    args = ap.parse_args()
+def normalize_site_base_hrefs(html: str) -> str:
+    """Sol trim sometimes emits {{SITE_BASE}}/path — normalize to site-relative /path."""
+    return (html or "").replace("{{SITE_BASE}}", "")
 
-    root = project_root()
-    article_dir = Path(args.article_dir)
-    if not article_dir.is_absolute():
-        article_dir = root / article_dir
 
-    in_path = Path(args.input)
-    if not in_path.is_absolute():
-        in_path = article_dir / in_path
-    if not in_path.is_file():
-        print(f"SOL TRIM BLOCKER: missing {in_path}", file=sys.stderr)
-        return 1
-
-    draft = in_path.read_text(encoding="utf-8")
-    wc = word_count(draft)
-    if args.if_over and wc <= args.if_over:
-        print(f"SKIP sol trim: word_count={wc} <= --if-over={args.if_over}")
-        return 0
-
-    extra_instructions = ""
-    if args.user_file:
-        user_path = Path(args.user_file)
-        if not user_path.is_absolute():
-            user_path = root / user_path
-        if user_path.is_file():
-            raw = user_path.read_text(encoding="utf-8")
-            marker = "Текущий article.html"
-            if marker in raw:
-                extra_instructions = raw.split(marker, 1)[0].strip()
-            else:
-                extra_instructions = raw.strip()
-
+def run_chunk_trim(
+    *,
+    root: Path,
+    article_dir: Path,
+    in_path: Path,
+    draft: str,
+    extra_instructions: str,
+    parts: int,
+    single_shot: bool,
+) -> tuple[int, str]:
+    """Run one trim pass; returns (exit_code, merged_html)."""
     derouter = root / "scripts/excalibur_blog_derouter_opus_chat.py"
     system_path = root / "skills/sol-excalibur-blog/SKILL.md"
 
-    if args.single_shot:
+    if single_shot:
         with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False, encoding="utf-8") as tf:
             tf.write(build_trim_part_prompt(extra_instructions, 1, 1, draft))
             tmp_user = Path(tf.name)
@@ -176,18 +145,17 @@ def main() -> int:
         ]
         rc = subprocess.call(cmd, cwd=str(root))
         tmp_user.unlink(missing_ok=True)
-        if rc == 0:
-            variant = article_dir / "drafts/variant-a.html"
-            variant.parent.mkdir(parents=True, exist_ok=True)
-            variant.write_text(in_path.read_text(encoding="utf-8"), encoding="utf-8")
-        return rc
+        if rc != 0:
+            return rc, draft
+        merged = normalize_site_base_hrefs(in_path.read_text(encoding="utf-8"))
+        return 0, merged
 
     sections = split_html_by_h2(draft)
     if len(sections) < 2:
         print("SOL TRIM BLOCKER: need H2 sections to chunk trim", file=sys.stderr)
-        return 1
+        return 1, draft
 
-    groups = split_h2_groups(sections, max(1, args.parts))
+    groups = split_h2_groups(sections, max(1, parts))
     fragments: list[str] = []
 
     with tempfile.TemporaryDirectory(prefix="sol-trim-chunk-") as tmpdir:
@@ -223,10 +191,98 @@ def main() -> int:
                     f"DEROUTER SOL TRIM BLOCKER chunk {i}/{len(groups)} exit={rc}",
                     file=sys.stderr,
                 )
-                return rc
+                return rc, draft
             fragments.append(part_out.read_text(encoding="utf-8"))
 
-    merged = merge_trim_fragments(fragments)
+    merged = normalize_site_base_hrefs(merge_trim_fragments(fragments))
+    return 0, merged
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--article-dir", required=True)
+    ap.add_argument("--input", default="article.html", help="Sol final to trim in-place")
+    ap.add_argument("--user-file", help="Optional extra trim instructions (header only; body ignored)")
+    ap.add_argument("--parts", type=int, default=3)
+    ap.add_argument(
+        "--if-over",
+        type=int,
+        default=2200,
+        help="Skip unless article word count exceeds this threshold (0 = always run)",
+    )
+    ap.add_argument(
+        "--single-shot",
+        action="store_true",
+        help="Force one Derouter call with full article (not recommended on longform)",
+    )
+    ap.add_argument(
+        "--until-under",
+        type=int,
+        default=2200,
+        help="After trim, FAIL if word count still above this (0 = no post-check)",
+    )
+    ap.add_argument(
+        "--max-passes",
+        type=int,
+        default=2,
+        help="Re-run chunk trim up to N passes while word count > --until-under",
+    )
+    args = ap.parse_args()
+
+    root = project_root()
+    article_dir = Path(args.article_dir)
+    if not article_dir.is_absolute():
+        article_dir = root / article_dir
+
+    in_path = Path(args.input)
+    if not in_path.is_absolute():
+        in_path = article_dir / in_path
+    if not in_path.is_file():
+        print(f"SOL TRIM BLOCKER: missing {in_path}", file=sys.stderr)
+        return 1
+
+    draft = in_path.read_text(encoding="utf-8")
+    wc_before = word_count(draft)
+    if args.if_over and wc_before <= args.if_over:
+        print(f"SKIP sol trim: word_count={wc_before} <= --if-over={args.if_over}")
+        return 0
+
+    extra_instructions = ""
+    if args.user_file:
+        user_path = Path(args.user_file)
+        if not user_path.is_absolute():
+            user_path = root / user_path
+        if user_path.is_file():
+            raw = user_path.read_text(encoding="utf-8")
+            marker = "Текущий article.html"
+            if marker in raw:
+                extra_instructions = raw.split(marker, 1)[0].strip()
+            else:
+                extra_instructions = raw.strip()
+
+    merged = draft
+    wc = wc_before
+    passes_run = 0
+    max_passes = max(1, args.max_passes)
+
+    while passes_run < max_passes:
+        passes_run += 1
+        print(f"SOL TRIM pass {passes_run}/{max_passes} words≈{wc}")
+        rc, merged = run_chunk_trim(
+            root=root,
+            article_dir=article_dir,
+            in_path=in_path,
+            draft=merged,
+            extra_instructions=extra_instructions,
+            parts=args.parts,
+            single_shot=args.single_shot,
+        )
+        if rc != 0:
+            return rc
+        wc = word_count(merged)
+        if args.until_under and wc <= args.until_under:
+            break
+
     in_path.write_text(merged, encoding="utf-8")
     variant = article_dir / "drafts/variant-a.html"
     variant.parent.mkdir(parents=True, exist_ok=True)
@@ -234,18 +290,25 @@ def main() -> int:
     stamp = {
         "role": "sol_trim",
         "method": "sol_trim_chunk",
-        "parts": len(groups),
-        "word_count_before": wc,
-        "word_count_after": word_count(merged),
+        "parts": args.parts,
+        "passes": passes_run,
+        "word_count_before": wc_before,
+        "word_count_after": wc,
     }
     (article_dir / "derouter-opus-stamp-sol-trim.json").write_text(
         json.dumps(stamp, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
     print(
-        f"WROTE {in_path} (trim merged {len(groups)} chunks, "
-        f"{wc}→{stamp['word_count_after']} words)"
+        f"WROTE {in_path} (trim {passes_run} pass(es), "
+        f"{wc_before}→{wc} words)"
     )
+    if args.until_under and wc > args.until_under:
+        print(
+            f"SOL TRIM BLOCKER: word_count={wc} still > --until-under={args.until_under}",
+            file=sys.stderr,
+        )
+        return 1
     return 0
 
 

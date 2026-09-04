@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-04",
+  "topic_id": "B22",
+  "article_dir": "memory/blog/articles/B22-v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt",
+  "slug": "v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": []
+}

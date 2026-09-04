@@ -75,6 +75,28 @@ class QualityBar9GateTest(unittest.TestCase):
             )
             self.assertFalse(_stamped_cover_qa_visual_pass(article))
 
+    def test_url_present_accepts_site_base_placeholder(self) -> None:
+        from excalibur_blog_quality_bar_9_gate import url_present
+
+        html = '<a href="{{SITE_BASE}}/gajdy/">guides</a> <a href="{{SITE_BASE}}/">home</a>'
+        self.assertTrue(url_present(html, "/gajdy/"))
+        self.assertTrue(url_present(html, "/"))
+
+    def test_dual_cta_requires_deal_in_end_block_not_comment_magnet(self) -> None:
+        from excalibur_blog_quality_bar_9_gate import check_dual_cta
+
+        html = (
+            "<p>Напишите в комментариях</p>"
+            '<div class="excalibur-cta-end excalibur-social-cta">'
+            "<p>Напишите мне до дня осмотра</p></div>"
+        )
+        self.assertFalse(check_dual_cta(html))
+        html_ok = (
+            '<div class="excalibur-cta-end excalibur-social-cta">'
+            "<p>Напишите для консультации. Подключаюсь к сделке от брони до ключей.</p></div>"
+        )
+        self.assertTrue(check_dual_cta(html_ok))
+
 
 class StampCoverQaEscapePreserveTest(unittest.TestCase):
     def test_stamp_preserves_manual_escape_when_pixel_reruns_fail(self) -> None:
