@@ -16,4 +16,5 @@
 | [LESSON-20260831-0608-B15-forged-spouse-consent-cluster](content-lessons/LESSON-20260831-0608-B15-forged-spouse-consent-cluster.md) | B15 | proposed | geo |
 | [LESSON-20260901-1338-B20-legal-entity-ddu-escrow-cluster](content-lessons/LESSON-20260901-1338-B20-legal-entity-ddu-escrow-cluster.md) | B20 | proposed | geo |
 | [LESSON-20260901-1338-B20-sol-trim-spine-once](content-lessons/LESSON-20260901-1338-B20-sol-trim-spine-once.md) | B20 | proposed | structure |
-| [LESSON-20260901-1338-B20-cover-ocr-escape-no-budget-exhaust](content-lessons/LESSON-20260901-1338-B20-cover-ocr-escape-no-budget-exhaust.md) | B20 | proposed | structure |
+| [LESSON-20260904-1000-B23-sol-cta-href-drift](content-lessons/LESSON-20260904-1000-B23-sol-cta-href-drift.md) | B23 | proposed | structure |
+| [LESSON-20260904-1000-B23-schema-derouter-preamble](content-lessons/LESSON-20260904-1000-B23-schema-derouter-preamble.md) | B23 | applied | script |

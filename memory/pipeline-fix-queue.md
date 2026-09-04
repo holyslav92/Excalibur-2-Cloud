@@ -988,3 +988,76 @@ files_changed:
 checks_run:
 - git log B22 branch linear (9ef5c92 indexer → 81fc5c3 publish)
 commit: n/a
+
+## INC-20260904-1000-schema-derouter-preamble-b23
+status: fixed
+run_date: 2026-09-04
+role: excalibur-blog-fixer
+topic_id: B23
+article_dir: memory/blog/articles/B23-v-tyumeni-semya-perevela-avans-na-eskrou-schet-okazalsya-chuzhim
+severity: medium
+category: script
+
+### What went wrong
+- Derouter schema role wrote Russian agent narration before JSON in `schema.jsonld`
+- `schema-gate` FAIL: invalid JSON until manual rewrite
+
+### How the agent recovered this run
+- Hand-rebuilt schema.jsonld from B22 @graph template
+- Added `extract_json_payload()` auto-strip in `excalibur_blog_schema_gate.py`
+
+### Durable fix needed before next run
+- schema_gate auto-strips Derouter preamble (done)
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_schema_gate.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-04
+fix_summary:
+- `extract_json_payload()` detects prose before `{` and rewrites clean JSON to schema.jsonld with gate warning
+files_changed:
+- `scripts/excalibur_blog_schema_gate.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_schema_gate.py`
+- `python3 scripts/excalibur_blog_schema_gate.py --article-dir memory/blog/articles/B23-v-tyumeni-semya-perevela-avans-na-eskrou-schet-okazalsya-chuzhim` → PASS
+commit: pending
+
+## INC-20260904-1000-sol-cta-href-drift-b23
+status: needs-human
+run_date: 2026-09-04
+role: excalibur-blog-sol
+topic_id: B23
+article_dir: memory/blog/articles/B23-v-tyumeni-semya-perevela-avans-na-eskrou-schet-okazalsya-chuzhim
+severity: medium
+category: agent
+
+### What went wrong
+- Sol chunk 3 left CTAs without TG/MAX href, dropped interlinks, duplicate comment magnet
+- quality-bar-9 FAIL until structural repair in article.html
+
+### How the agent recovered this run
+- Patched CTA blocks + 4 sibling interlinks from writer.html; quality-bar-9 all_pass
+
+### Durable fix needed before next run
+- Sol assembled inputs / skill: mandate href + interlink copy from writer draft (proposal in LESSON-20260904-1000-B23-sol-cta-href-drift)
+
+### Suggested files to inspect/change
+- `.cursor/skills/sol-excalibur-blog/SKILL.md`
+- assembled-sol-inputs template
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-04
+fix_summary:
+- No code change — quality-bar-9 already gates; lesson recorded for Sol contract review
+files_changed:
+- `memory/content-lessons/LESSON-20260904-1000-B23-sol-cta-href-drift.md`
+checks_run:
+- quality-bar-9 all_pass after CTA repair
+commit: pending
