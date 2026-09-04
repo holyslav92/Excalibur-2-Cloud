@@ -17,3 +17,6 @@
 | [LESSON-20260901-1338-B20-legal-entity-ddu-escrow-cluster](content-lessons/LESSON-20260901-1338-B20-legal-entity-ddu-escrow-cluster.md) | B20 | proposed | geo |
 | [LESSON-20260901-1338-B20-sol-trim-spine-once](content-lessons/LESSON-20260901-1338-B20-sol-trim-spine-once.md) | B20 | proposed | structure |
 | [LESSON-20260901-1338-B20-cover-ocr-escape-no-budget-exhaust](content-lessons/LESSON-20260901-1338-B20-cover-ocr-escape-no-budget-exhaust.md) | B20 | proposed | structure |
+| [LESSON-20260904-0551-B22-sol-trim-8h2-priemka-legal](content-lessons/LESSON-20260904-0551-B22-sol-trim-8h2-priemka-legal.md) | B22 | proposed | structure |
+| [LESSON-20260904-0551-B22-sol-trim-end-cta-dual-soft-regression](content-lessons/LESSON-20260904-0551-B22-sol-trim-end-cta-dual-soft-regression.md) | B22 | proposed | cta |
+| [LESSON-20260904-0551-B22-acceptance-defect-act-pressure-cluster](content-lessons/LESSON-20260904-0551-B22-acceptance-defect-act-pressure-cluster.md) | B22 | proposed | geo |
