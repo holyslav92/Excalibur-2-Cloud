@@ -20,6 +20,11 @@
     "side_stickers": "skip"
   },
   "date": "2026-09-04",
+  "wp_category_slugs": [
+    "ipoteka",
+    "pokupka-kvartiry"
+  ],
   "pipeline_canon": "human-first-v2",
-  "editorial_swarm": false
+  "editorial_swarm": false,
+  "wp_post_id": 9627
 }
