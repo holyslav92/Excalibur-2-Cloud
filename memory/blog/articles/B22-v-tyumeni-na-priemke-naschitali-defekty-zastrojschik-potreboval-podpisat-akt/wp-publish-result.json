@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt",
+  "topic_id": "B22",
+  "post_id": 9614,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B22-v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1215009,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9614 slug=v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt\nOK categories=36\nOK yoast_social_image=1\nOK featured_image=9615\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9616 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt-inline-05.png\nOK inline_alt=9616\nOK inline_description=9616\nOK inline_image_upload=9617 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt-inline-06.png\nOK inline_alt=9617\nOK inline_description=9617\nOK inline_image_upload=9618 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt-inline-01.png\nOK inline_alt=9618\nOK inline_description=9618\nOK inline_image_upload=9619 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt-inline-02.png\nOK inline_alt=9619\nOK inline_description=9619\nOK inline_image_upload=9620 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt-inline-03.png\nOK inline_alt=9620\nOK inline_description=9620\nOK inline_image_upload=9621 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt-inline-07.png\nOK inline_alt=9621\nOK inline_description=9621\nOK inline_image_upload=9622 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt-inline-04.png\nOK inline_alt=9622\nOK inline_description=9622\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt/",
+    "errors": []
+  }
+}

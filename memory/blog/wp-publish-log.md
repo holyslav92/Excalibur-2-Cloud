@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B22 — 2026-09-04
+
+- **topic_id:** B22
+- **slug:** v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt
+- **post_id:** 9614
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt/
+- **featured_image:** 9615
+- **inline_images:** 9616–9622 (7)
+- **wp_category_slugs:** pokupka-kvartiry (category_id=36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B20 — 2026-09-01
 
 - **topic_id:** B20
