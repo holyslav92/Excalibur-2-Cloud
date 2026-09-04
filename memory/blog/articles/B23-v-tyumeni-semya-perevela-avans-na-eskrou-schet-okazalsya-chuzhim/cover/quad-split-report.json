@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B23-v-tyumeni-semya-perevela-avans-na-eskrou-schet-okazalsya-chuzhim/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          570
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 570,
+            "end": 586
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 2.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0089,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0089,
+              "bottom_right": 0.0089
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 570
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 570
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Семья в Тюмени перевела аванс за новостройку — счёт оказался чужим: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 570
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 570
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Банк остановил сделку: счёт не тот» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Банк остановил сделку: счёт не тот"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 586,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 586,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: QR в мессенджере, Получатель другой, ИНН не совпал — иллюстрация к разбору сделки.",
+            "h2_anchor": "Банк остановил сделку: счёт не тот"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1037,
+              "top": 586,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 586,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Как не потерять квартиру из-за одной цифры» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Как не потерять квартиру из-за одной цифры"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B23-v-tyumeni-semya-perevela-avans-na-eskrou-schet-okazalsya-chuzhim/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1013,
+          567
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 567,
+            "end": 589
+          },
+          "v_gutter_px": {
+            "start": 1013,
+            "end": 1035
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 2.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0118,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0118,
+              "bottom_right": 0.0118
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1013,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1013,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Одобрили ипотеку» — и перевели «на эскроу»» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Одобрили ипотеку» — и перевели «на эскроу»"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1035,
+              "top": 0,
+              "right": 2048,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 1035,
+              "top": 0,
+              "right": 2048,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Застройщик в декларации, ИНН в платёжке, Банк эскроу-агент — иллюстрация к…",
+            "h2_anchor": "Менеджер прислал QR — семья не сверила получателя"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 6,
+              "top": 589,
+              "right": 1007,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 589,
+              "right": 1013,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Не платите по QR, Сверьте получателя, Сохраните переписку — иллюстрация к разбору сделки.",
+            "h2_anchor": "Возврат затянулся — бронь сгорела"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1041,
+              "top": 589,
+              "right": 2042,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1035,
+              "top": 589,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Деньги не на эскроу, Бронь не защита, Проверка до перевода — иллюстрация к разбору…",
+            "h2_anchor": "Что проверить до перевода — таблица"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Банк остановил сделку: счёт не тот",
+    "skip inline_2: already correct under H2 — Банк остановил сделку: счёт не тот",
+    "skip inline_3: already correct under H2 — Как не потерять квартиру из-за одной цифры",
+    "skip inline_4: already correct under H2 — «Одобрили ипотеку» — и перевели «на эскроу»",
+    "skip inline_5: already correct under H2 — Менеджер прислал QR — семья не сверила получателя",
+    "skip inline_6: already correct under H2 — Возврат затянулся — бронь сгорела",
+    "skip inline_7: already correct under H2 — Что проверить до перевода — таблица"
+  ]
+}

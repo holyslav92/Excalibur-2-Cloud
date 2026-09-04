@@ -1,0 +1,29 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B23",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-04",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://secrets.tbank.ru/voprosy-otvety/pismo-vozvrat/",
+        "type": "official-adjacent",
+        "note": "2026 — возврат ошибочно перечисленных средств"
+      },
+      {
+        "url": "https://kvarnado.ru/glossarij/guide-kak-popolnit-eskrou-schet-pri-pokupke-kvartiry",
+        "type": "community",
+        "note": "2026-09-04 — ошибка реквизитов эскроу до регистрации ДДУ"
+      }
+    ]
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "entities_checked": ["214-ФЗ эскроу", "ГК РФ неосновательное обогащение"]
+  },
+  "staleness_check": "PASS",
+  "notes": "Modeled Tyumen casus; no named public case"
+}

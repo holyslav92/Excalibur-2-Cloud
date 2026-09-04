@@ -22,6 +22,36 @@ def project_root() -> Path:
     return Path(__file__).resolve().parents[1]
 
 
+def extract_json_payload(text: str) -> tuple[str, bool]:
+    """Извлечь JSON из текста, если Derouter добавил prose-преамбулу перед объектом."""
+    raw = text.strip()
+    if not raw:
+        return raw, False
+    try:
+        json.loads(raw)
+        return raw, False
+    except json.JSONDecodeError:
+        pass
+    start = raw.find("{")
+    if start < 0:
+        return raw, False
+    candidate = raw[start:]
+    try:
+        json.loads(candidate)
+        return candidate, start > 0
+    except json.JSONDecodeError:
+        pass
+    end = raw.rfind("}")
+    if end > start:
+        candidate = raw[start : end + 1]
+        try:
+            json.loads(candidate)
+            return candidate, True
+        except json.JSONDecodeError:
+            pass
+    return raw, False
+
+
 def validate_schema_text(text: str) -> list[str]:
     errors: list[str] = []
     if not text.strip():
@@ -173,6 +203,16 @@ def main() -> int:
         text = ""
     else:
         text = schema_path.read_text(encoding="utf-8")
+        cleaned, had_preamble = extract_json_payload(text)
+        if had_preamble:
+            schema_path.write_text(
+                json.dumps(json.loads(cleaned), ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            warnings.append(
+                "schema.jsonld had Derouter prose preamble; auto-stripped to valid JSON"
+            )
+            text = cleaned
         errors.extend(validate_schema_text(text))
         try:
             schema_data = json.loads(text)
