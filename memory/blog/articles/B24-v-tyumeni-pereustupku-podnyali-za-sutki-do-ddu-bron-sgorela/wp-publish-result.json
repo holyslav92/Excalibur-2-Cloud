@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela",
+  "topic_id": "B24",
+  "post_id": 9710,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 978701,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9710 slug=v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela\nOK categories=36,54\nOK yoast_social_image=1\nOK featured_image=9711\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9712 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela-inline-03.png\nOK inline_alt=9712\nOK inline_description=9712\nOK inline_image_upload=9713 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela-inline-04.png\nOK inline_alt=9713\nOK inline_description=9713\nOK inline_image_upload=9714 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela-inline-05.png\nOK inline_alt=9714\nOK inline_description=9714\nOK inline_image_upload=9715 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela-inline-06.png\nOK inline_alt=9715\nOK inline_description=9715\nOK inline_image_upload=9716 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela-inline-01.png\nOK inline_alt=9716\nOK inline_description=9716\nOK inline_image_upload=9717 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela-inline-02.png\nOK inline_alt=9717\nOK inline_description=9717\nOK inline_image_upload=9718 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela-inline-07.png\nOK inline_alt=9718\nOK inline_description=9718\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela/",
+    "errors": []
+  }
+}
