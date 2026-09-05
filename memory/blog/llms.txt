@@ -3,17 +3,18 @@
 
 ## Blog Articles
 
-- [В выписке ЕГРН есть строка, после которой аванс вносить нельзя]({{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/): В выписке ЕГРН есть строка, после которой аванс вносить нельзя
-- [В Тюмени расписку за квартиру написали — денег на счёте нет]({{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/): В Тюмени расписку за квартиру написали — денег на счёте нет
-- [Почти внесли задаток на торгах — квартиру подарили дочери]({{SITE_BASE}}/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/): За 48 часов до задатка на торгах квартиру подарили дочери — что показала свежая ЕГРН
-- [Квартиру продавали по доверенности. Хозяин был на СВО]({{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/): Доверенность на продажу квартиры: как проверить волю собственника на СВО до аванса
-- [Квартиру уценили на два миллиона и просят задаток сегодня]({{SITE_BASE}}/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/): «Скидка только до вечера», — торопит продавец. Святослав Шакин в Тюмени объясняет: важнее не сумма в объявлении, а кто и зачем требует задаток сейчас.
-- [Автооценка занизила цену — и квартира подорожала за сутки]({{SITE_BASE}}/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/): Автооценка занизила цену — и квартира подорожала за сутки
 - [Пожилого продавца вели по телефону — родственники сорвали сделку]({{SITE_BASE}}/v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/): Пожилого продавца вели по телефону — родственники сорвали сделку
-- [В Тюмени открытая кухня остановила регистрацию квартиры]({{SITE_BASE}}/v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii/): В Тюмени открытая кухня остановила регистрацию квартиры
-- [Застройщик сдвинул сдачу ЖК в Тюмени на год — ипотека осталась]({{SITE_BASE}}/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/): Застройщик сдвинул сдачу ЖК в Тюмени на год — ипотека осталась
-- [Продавец закрыл ипотеку, но залог сорвал сделку в Тюмени]({{SITE_BASE}}/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/): Продавец закрыл ипотеку, но залог сорвал сделку в Тюмени
+- [Квартиру продавали по доверенности. Хозяин был на СВО]({{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/): Доверенность на продажу квартиры: как проверить волю собственника на СВО до аванса
+- [В Тюмени расписку за квартиру написали — денег на счёте нет]({{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/): В Тюмени расписку за квартиру написали — денег на счёте нет
 - [В Тюмени не подтвердили согласие супруги — аванс остановили]({{SITE_BASE}}/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/): В Тюмени не подтвердили согласие супруги — аванс остановили
-- [В Тюмени ипотеку одобрили — эскроу сорвал маткапитал]({{SITE_BASE}}/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/): В Тюмени ипотеку одобрили — эскроу сорвал маткапитал
-- [В Тюмени застройщик сменил юрлицо — банк не открыл эскроу]({{SITE_BASE}}/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/): В Тюмени застройщик сменил юрлицо — банк не открыл эскроу
+- [В Тюмени открытая кухня остановила регистрацию квартиры]({{SITE_BASE}}/v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii/): В Тюмени открытая кухня остановила регистрацию квартиры
 - [В Тюмени банк поднял ставку ипотеки перед ДДУ — бронь сгорела]({{SITE_BASE}}/v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi/): В Тюмени банк поднял ставку ипотеки перед ДДУ — бронь сгорела
+- [Застройщик сдвинул сдачу ЖК в Тюмени на год — ипотека осталась]({{SITE_BASE}}/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/): Застройщик сдвинул сдачу ЖК в Тюмени на год — ипотека осталась
+- [Автооценка занизила цену — и квартира подорожала за сутки]({{SITE_BASE}}/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/): Автооценка занизила цену — и квартира подорожала за сутки
+- [Квартиру уценили на два миллиона и просят задаток сегодня]({{SITE_BASE}}/skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk/): «Скидка только до вечера», — торопит продавец. Святослав Шакин в Тюмени объясняет: важнее не сумма в объявлении, а кто и зачем требует задаток сейчас.
+- [Продавец закрыл ипотеку, но залог сорвал сделку в Тюмени]({{SITE_BASE}}/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/): Продавец закрыл ипотеку, но залог сорвал сделку в Тюмени
+- [Почти внесли задаток на торгах — квартиру подарили дочери]({{SITE_BASE}}/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/): За 48 часов до задатка на торгах квартиру подарили дочери — что показала свежая ЕГРН
+- [В Тюмени ипотеку одобрили — эскроу сорвал маткапитал]({{SITE_BASE}}/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/): В Тюмени ипотеку одобрили — эскроу сорвал маткапитал
+- [В выписке ЕГРН есть строка, после которой аванс вносить нельзя]({{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/): В выписке ЕГРН есть строка, после которой аванс вносить нельзя
+- [В Тюмени застройщик сменил юрлицо — банк не открыл эскроу]({{SITE_BASE}}/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/): В Тюмени застройщик сменил юрлицо — банк не открыл эскроу
+- [В Тюмени взяли квартиру в рассрочку — досрочно потеряли скидку]({{SITE_BASE}}/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v/): В Тюмени взяли квартиру в рассрочку — досрочно потеряли скидку
