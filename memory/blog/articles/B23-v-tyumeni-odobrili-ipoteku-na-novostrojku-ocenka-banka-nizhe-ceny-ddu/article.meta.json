@@ -25,5 +25,6 @@
     "pokupka-kvartiry"
   ],
   "pipeline_canon": "human-first-v2",
-  "editorial_swarm": false
+  "editorial_swarm": false,
+  "wp_post_id": 9684
 }
