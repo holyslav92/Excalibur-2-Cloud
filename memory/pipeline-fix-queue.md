@@ -1062,4 +1062,4 @@ files_changed:
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
-commit: pending
+commit: cddd091
