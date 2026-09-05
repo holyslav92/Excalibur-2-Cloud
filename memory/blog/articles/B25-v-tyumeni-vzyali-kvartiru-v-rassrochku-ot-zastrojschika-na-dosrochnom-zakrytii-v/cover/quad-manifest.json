@@ -1,0 +1,244 @@
+{
+  "topic_id": "B25",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Досрочный платёж сделал квартиру дороже",
+  "cover_hook_highlight": "дороже",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени взяли квартиру в рассрочку — досрочно потеряли скидку: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "светлая переговорная рассрочки: голубая рубашка, расчёт комиссии, confused_math_lady pop_cat, sun flare",
+      "meme_caption_ru": "",
+      "sticky": "Такая рассрочка",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "недоверие, гримаса от суммы",
+      "meme_picks": [
+        "confused_math_lady",
+        "pop_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Ноль процентов» — и обещание закрыть рассрочку без штрафов",
+      "visual_type": "realistic_photo",
+      "scene_hint": "стол рассрочки: договор, акция, руки семьи, disappointed_black_guy",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Ноль процентов» — и обещание закрыть рассрочку…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Рассрочка вместо ипотеки",
+        "Ноль процентов",
+        "Скидка по акции"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disappointed_black_guy"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Ноль процентов» — и обещание закрыть рассрочку без штрафов",
+      "visual_type": "comparison_table",
+      "scene_hint": "инфографика сравнения этапов сделки на белом фоне, чёрно-золотая стилистика, без людей",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Деньги до регистрации, Бронь не защищает, Эскроу не открыт — иллюстрация к…",
+      "labels": [
+        "Деньги до регистрации",
+        "Бронь не защищает",
+        "Эскроу не открыт"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Платежи пошли, а ДДУ ещё не зарегистрировали",
+      "visual_type": "realistic_photo",
+      "scene_hint": "конверт и папка на столе, график платежей, без лиц",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Платежи пошли, а ДДУ ещё не зарегистрировали» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Четыре месяца",
+        "Продали машину",
+        "Остаток целиком"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Через четыре месяца семья принесла остаток досрочно",
+      "visual_type": "realistic_photo",
+      "scene_hint": "две страницы расчёта, руки клиента, папка брони, без лиц",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Через четыре месяца семья принесла остаток доср…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Другой менеджер",
+        "Две страницы расчёта",
+        "Досрочное закрытие",
+        "Обещание устно"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Скидку сняли, цену пересчитали — бронь сгорела",
+      "visual_type": "process_flow",
+      "scene_hint": "инфографика цепочки этапов на белом фоне, стрелки, золотые акценты, маленький стикер в углу",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Комиссия около 10%, Скидка сгорела, Сентябрьский прайс — иллюстрация к разбору…",
+      "labels": [
+        "Комиссия около 10%",
+        "Скидка сгорела",
+        "Сентябрьский прайс",
+        "Бронь сгорела"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "james_doakes"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Где в договоре прячется комиссия за досрочное закрытие",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "процесс: бронь, график, расчёты, акция, досрочное закрытие",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Четыре места проверки, Бронь и график, Раздел расчётов — иллюстрация к разбору сделки.",
+      "labels": [
+        "Четыре места проверки",
+        "Бронь и график",
+        "Раздел расчётов",
+        "Условия акции"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что спросить письменно до первого перевода",
+      "visual_type": "structure_diagram",
+      "scene_hint": "чек-лист: досрочно, комиссия, скидка, отказ, регистрация, side_eye_chloe",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Досрочно полностью, Комиссия цифрой, Скидка сохраняется — иллюстрация к разбору сделки.",
+      "labels": [
+        "Досрочно полностью",
+        "Комиссия цифрой",
+        "Скидка сохраняется",
+        "Деньги при отказе",
+        "Срок регистрации"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "side_eye_chloe"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "рассрочка от застройщика тюмень — 143",
+    "купить квартиру в рассрочку от застройщика — 33",
+    "рассрочка от застройщика — 21301 (РФ)"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "герой справа у стола, лист расчёта к камере, зона заголовка слева",
+    "location": "светлая переговорная рассрочки девелопера, окно, sun flare",
+    "meme": "confused_math_lady pop_cat",
+    "prop_set": "расчёт комиссии, калькулятор, папка брони, макет дома",
+    "sticker_set": "confused_math_lady слева внизу pop_cat справа вверху",
+    "joke": "досрочный платёж как задача по математике",
+    "outfit": "голубая рубашка, песочные брюки, без пиджака",
+    "emotion": "недоверие, гримаса от суммы",
+    "pose_framing": "поясной кадр справа, взгляд в камеру",
+    "action": "показывает строку комиссии на расчёте"
+  },
+  "cover_emotion": "недоверие, гримаса от суммы"
+}
