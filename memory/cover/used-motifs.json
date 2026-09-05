@@ -120,6 +120,23 @@
         "pose_framing": "full-body three-quarter both hands visible not side-eye bust",
         "action": "holds ddu points at egrn line pushes keys away"
       }
+    },
+    {
+      "date": "2026-09-05",
+      "topic_id": "B27",
+      "slug": "",
+      "motifs": {
+        "composition": "host_full_body_right_timeline_board_penalty_folder_hook_left",
+        "location": "bright_construction_sales_pavilion_timeline_board_sun_flare",
+        "meme": "this_is_fine_dog_sticker_plus_surprised_pikachu_cutout",
+        "prop_set": "claim_folder_penalty_calc_model_timeline_plus7m_yellow_marker",
+        "sticker_set": "this_is_fine_dog_top_corner_surprised_pikachu_bottom_no_wordstat_bars",
+        "joke": "timeline_slipped_7m_penalty_stayed_on_site",
+        "outfit": "lemon_yellow_work_jacket_white_tee_graphite_pants_safety_glasses_on_head",
+        "emotion": "stunned_indignant_raised_brow_tense_grimace_not_side_eye",
+        "pose_framing": "full_body_three_quarter_right_active_gesture_not_left_bust",
+        "action": "pins_red_card_plus7m_opens_penalty_claim_folder"
+      }
     }
   ]
 }
