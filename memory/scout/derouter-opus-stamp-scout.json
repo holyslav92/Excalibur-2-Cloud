@@ -3,14 +3,14 @@
   "role": "scout",
   "tier": "utility",
   "model": "gpt-5.6-terra",
-  "endpoint": "https://api.derouter.ai/openai/v1/chat/completions",
-  "request_id": "chatcmpl-92ef7b9ecde643d48edf14ea",
+  "endpoint": "https://api.apikey.cloud/openai/v1/chat/completions",
+  "request_id": "chatcmpl-934fb75eacc741b08c0502e1",
   "usage": {
-    "prompt_tokens": 3766,
-    "completion_tokens": 1909,
-    "total_tokens": 5675
+    "prompt_tokens": 3681,
+    "completion_tokens": 1814,
+    "total_tokens": 5495
   },
-  "created_at": "2026-09-04T07:04:45.896713+00:00",
+  "created_at": "2026-09-05T05:16:17.136372+00:00",
   "provider": "derouter-rest",
   "user_prompt_chars": 200,
   "contract": "shared/derouter-opus-brain-contract.md"

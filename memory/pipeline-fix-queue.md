@@ -1064,7 +1064,7 @@ files_changed:
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_sol_trim_chunk.py`
 - `python3 -m unittest tests.test_pipeline_speed_b03.SolTrimChunkTest`
-commit: pending
+commit: 7a68f94
 
 ## INC-20260905-0607-sol-end-cta-missing-site-home-b23
 status: fixed
@@ -1101,4 +1101,4 @@ files_changed:
 - `shared/quality-bar-9.md`
 checks_run:
 - `rg 'href="/"' skills/sol-excalibur-blog/SKILL.md shared/quality-bar-9.md`
-commit: pending
+commit: f65304b
