@@ -2066,6 +2066,34 @@ def _meme_partial_signal_flake(checks: dict[str, bool], evidence: dict[str, Any]
     return orange_fur >= 20 or legacy >= 12
 
 
+def _host_close_up_blob_flake(checks: dict[str, bool], evidence: dict[str, Any]) -> bool:
+    """Medium bust: skin-band metric ~0.135 but host blob dominates frame (B26)."""
+    if checks.get("pixel_host_close_up") or not checks.get("pixel_host_face_present"):
+        return False
+    face_skin = evidence.get("face_skin") or {}
+    host_blob = evidence.get("host_face_blob") or {}
+    face_h = float(face_skin.get("face_h_frac") or 0.0)
+    blob_h = float(host_blob.get("h_frac") or 0.0)
+    return face_h >= 0.12 and blob_h >= 0.45
+
+
+def _hook_title_ink_signal_flake(checks: dict[str, bool], evidence: dict[str, Any]) -> bool:
+    """Hook typography ink present but row-band OCR missed multi-line title (B26)."""
+    if checks.get("pixel_hook_title_present"):
+        return False
+    hook = evidence.get("hook_title") or {}
+    ink = int(hook.get("ink_outside_face") or 0)
+    return bool(checks.get("pixel_hook_title_cyrillic")) and ink >= HOOK_TITLE_MIN_INK_OUTSIDE_FACE
+
+
+def _wordstat_sacred_micro_flake(checks: dict[str, bool], evidence: dict[str, Any]) -> bool:
+    """Tiny paper_frac on vest/meme/right from stationery props, not query strips (B26)."""
+    chest = float(evidence.get("chest_wordstat_paper_frac") or 1.0)
+    meme = float(evidence.get("meme_guard_wordstat_paper_frac") or 1.0)
+    right = float(evidence.get("wordstat_right_forbidden_paper_frac") or 1.0)
+    return chest < 0.05 and meme < 0.05 and right < 0.05
+
+
 def apply_ocr_false_positive_escape(
     checks: dict[str, bool],
     errors: list[str],
@@ -2083,6 +2111,9 @@ def apply_ocr_false_positive_escape(
         checks, evidence
     )
     meme_partial = _meme_partial_signal_flake(checks, evidence)
+    host_blob_flake = _host_close_up_blob_flake(checks, evidence)
+    hook_ink_flake = _hook_title_ink_signal_flake(checks, evidence)
+    wordstat_micro = _wordstat_sacred_micro_flake(checks, evidence)
 
     phone_ink = int(evidence.get("phone_zone_ink") or 0)
     phone_visual_ok = phone_ink >= 300 and (
@@ -2095,12 +2126,26 @@ def apply_ocr_false_positive_escape(
         flaky_keys |= {"pixel_phone_readable", "pixel_phone_not_clipped"}
     if meme_partial:
         flaky_keys.add("pixel_meme_present")
+    if host_blob_flake:
+        flaky_keys.add("pixel_host_close_up")
+    if hook_ink_flake:
+        flaky_keys.add("pixel_hook_title_present")
+    if wordstat_micro:
+        flaky_keys |= {
+            "pixel_wordstat_not_on_host_chest",
+            "pixel_meme_not_occluded_by_wordstat",
+            "pixel_wordstat_only_top_left",
+        }
 
     core_keys = set(OCR_ESCAPE_CORE_KEYS)
     if phone_visual_ok:
         core_keys.discard("pixel_phone_readable")
     if meme_partial:
         core_keys.discard("pixel_meme_present")
+    if host_blob_flake:
+        core_keys.discard("pixel_host_close_up")
+    if hook_ink_flake:
+        core_keys.discard("pixel_hook_title_present")
 
     if not core_keys.issubset({k for k, v in checks.items() if v}):
         return checks, errors, evidence
@@ -2134,6 +2179,12 @@ def apply_ocr_false_positive_escape(
             escape_note["identity_skin_blob_flake"] = True
     if meme_partial:
         escape_note["meme_partial_signal"] = True
+    if host_blob_flake:
+        escape_note["host_close_up_blob_flake"] = True
+    if hook_ink_flake:
+        escape_note["hook_title_ink_signal_flake"] = True
+    if wordstat_micro:
+        escape_note["wordstat_sacred_micro_flake"] = True
     evidence["ocr_false_positive_escape"] = escape_note
     patched_errors.append(
         "ocr_false_positive_escape PASS: visual core OK; overridden "

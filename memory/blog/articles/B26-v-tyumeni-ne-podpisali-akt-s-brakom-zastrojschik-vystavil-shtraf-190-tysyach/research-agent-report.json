@@ -1,0 +1,75 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B26",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-05",
+  "derouter_synthesis": {
+    "required": true,
+    "status": "BLOCK",
+    "attempts": 3,
+    "last_error": "HTTP 524 origin timeout / HTTP 529 overloaded",
+    "notes_source": "assembled-research-inputs.md compiled to research-notes.md pending Derouter re-stamp"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://krasnodar.allestate.pro/news/01.09.2026/priemka-kvartiry-kak-zafiksirovat-nedochety-po-zakonu",
+        "type": "news",
+        "note": "01.09.2026 — приёмка 2026, ПП №2226, акт осмотра, лимит 3%"
+      },
+      {
+        "url": "https://realty.ria.ru/20260423/priemka-2088334169.html",
+        "type": "news",
+        "note": "23.04.2026 — эксперты РИА о правилах приёмки 2026"
+      },
+      {
+        "url": "https://dzen.ru/a/amtYRpP-tkHrf4uj",
+        "type": "community",
+        "note": "Tenant Dzen — приёмка новостройки Тюмень (контекст)"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Локальный канал tenant"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4660,
+    "secondary_phrases": [
+      {"phrase": "приемка новостройки", "volume": 7098, "regions": ["225"]},
+      {"phrase": "приемка квартиры в новостройке", "volume": 6211, "regions": ["225"]},
+      {"phrase": "приемка квартиры в новостройке тюмень", "volume": 33, "regions": ["55", "11176"]},
+      {"phrase": "неустойка застройщик приемка", "volume": 59, "regions": ["55", "225"], "partial": true}
+    ],
+    "partial": ["неустойка застройщик приемка — totalCount only"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 8,
+    "entities_checked": ["214_fz", "pp_rf_2226", "pp_rf_2227", "sber_transhe_typical"],
+    "errors": [],
+    "note": "190 000 ₽ и 0,1%/день — modeled DDU only, not official; Sber cited as typical transhe mechanism for физлица, not identified bank in casus"
+  },
+  "key_facts_count": 48,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "blockers": [
+    "DEROUTER RESEARCH BLOCKER — utility tier unavailable (524/529); research-notes compiled from verified inputs; recommend re-run excalibur_blog_derouter_opus_chat.py --role research before Writer if stamp required"
+  ],
+  "incident_report": "none"
+}
