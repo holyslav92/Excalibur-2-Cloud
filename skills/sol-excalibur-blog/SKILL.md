@@ -33,10 +33,20 @@ Longform (7 inline): **3 части на первом проходе** — не 
 python3 scripts/excalibur_blog_sol_trim_chunk.py \
   --article-dir memory/blog/articles/<topic_id>-<slug> \
   --if-over 2200 \
+  --target 2200 \
+  --max-rounds 2 \
   --user-file memory/blog/articles/<topic_id>-<slug>/assembled-sol-trim-inputs.md
 ```
 
-Цель trim: **2000–2150** слов; сохранить H2, inline figures, CTA blocks, comment magnet, interlinks. Stamp: `derouter-opus-stamp-sol-trim.json`.
+Цель trim: **≤2200** слов (quality-bar 1800–2200); до **2** chunk-round, если после первого прохода всё ещё выше `--target` (B23). Сохранить H2, inline figures, CTA blocks, comment magnet, interlinks. Stamp: `derouter-opus-stamp-sol-trim.json`.
+
+**End CTA (HARD — gate `end_cta_full_channels`):** в `excalibur-cta-end` обязателен **полный** набор:
+- dual CTA: «напишите на консультацию» **и** «подключусь до аванса / сразу в сделку»;
+- TG, MAX, tel (один раз), Дзен, VK;
+- **`href="/"` или `{{SITE_BASE}}/`** — главная сайта (не только `/gajdy/` и `/rieltor-tyumen/`);
+- `/gajdy/`, `/rieltor-tyumen/`.
+
+Сохраняй CTA-блоки из Writer; не выкидывай ссылку на главную при trim.
 
 Копию финала: shell `cp article.html drafts/variant-a.html` (sol_chunk и sol_trim_chunk делают это автоматически при chunk merge).
 Контракт: `shared/derouter-opus-brain-contract.md`.

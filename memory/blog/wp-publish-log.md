@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B23 — 2026-09-05
+
+- **topic_id:** B23
+- **slug:** v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela
+- **post_id:** 9697
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela/
+- **featured_image:** 9698
+- **inline_images:** 9699–9705 (7)
+- **wp_category_slugs:** pokupka-kvartiry, riski-sdelki (category_ids=36,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B22 — 2026-09-04
 
 - **topic_id:** B22

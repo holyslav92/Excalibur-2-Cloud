@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela",
+  "topic_id": "B23",
+  "post_id": 9697,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B23-v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1074622,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9697 slug=v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela\nOK categories=36,58\nOK yoast_social_image=1\nOK featured_image=9698\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9699 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela-inline-01.png\nOK inline_alt=9699\nOK inline_description=9699\nOK inline_image_upload=9700 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela-inline-02.png\nOK inline_alt=9700\nOK inline_description=9700\nOK inline_image_upload=9701 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela-inline-03.png\nOK inline_alt=9701\nOK inline_description=9701\nOK inline_image_upload=9702 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela-inline-04.png\nOK inline_alt=9702\nOK inline_description=9702\nOK inline_image_upload=9703 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela-inline-05.png\nOK inline_alt=9703\nOK inline_description=9703\nOK inline_image_upload=9704 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela-inline-06.png\nOK inline_alt=9704\nOK inline_description=9704\nOK inline_image_upload=9705 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela-inline-07.png\nOK inline_alt=9705\nOK inline_description=9705\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela/",
+    "errors": []
+  }
+}

@@ -22,10 +22,11 @@ category: env
 - **2026-08-28 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9230 ingest skipped; B11 lessons recorded without behavioral signals.
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
+- **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9697 ingest skipped; B23 lessons recorded without behavioral signals (trade-in-ddu-bron cluster, sol-trim wordcount chain; cover OCR escape skipped_duplicate vs B20).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250) и B15 (post 9368) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368) и B23 (post 9697) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -988,3 +989,116 @@ files_changed:
 checks_run:
 - git log B22 branch linear (9ef5c92 indexer → 81fc5c3 publish)
 commit: n/a
+
+## INC-20260905-0605-cover-qa-fixer-round-b23
+status: fixed
+run_date: 2026-09-05
+role: excalibur-blog-cover-qa
+topic_id: B23
+article_dir: memory/blog/articles/B23-v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela
+severity: low
+category: qa
+
+### What went wrong
+- Quad canvas cover split → initial PNG OCR/layout flakes; Cover-QA needed 1 Fixer round (`quad_solo_panel_regen` solo i2i) before `apply_ocr_false_positive_escape` PASS.
+
+### How the agent recovered this run
+- `excalibur_blog_cover_fixer.py` / `quad_solo_panel_regen` → re-QA PASS with `ocr_false_positive_escape` on residual flakes (md5=3e1c39c8).
+
+### Durable fix needed before next run
+- None — B20 layout retry + B11/B19 OCR escape path already canonical on main.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_fixer.py`
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-05
+fix_summary:
+- No code change — existing cover_fixer solo regen + OCR escape handled B23 without new code.
+files_changed:
+- none (contract already canonical)
+checks_run:
+- B23 `cover/cover_qa.json` PASS with `ocr_false_positive_escape`
+commit: n/a
+
+## INC-20260905-0606-sol-trim-still-over-target-b23
+status: fixed
+run_date: 2026-09-05
+role: excalibur-blog-sol
+topic_id: B23
+article_dir: memory/blog/articles/B23-v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela
+severity: medium
+category: script
+
+### What went wrong
+- Sol chunk merge ~2296 words; `sol_trim_chunk` round 1 → 2237 still above quality-bar `--target` 2200; manual sol-fix + second trim pass needed for 2183 PASS.
+
+### How the agent recovered this run
+- `excalibur_blog_sol_trim_chunk.py` once + manual CTA/word trim via `sol-fix-notes.md`; `quality-bar-9.json` PASS at 2183.
+
+### Durable fix needed before next run
+- `sol_trim_chunk`: `--target 2200` + auto second chunk-round (max 2) when still over target; dynamic trim header with over-by count.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_sol_trim_chunk.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `tests/test_pipeline_speed_b03.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-05
+fix_summary:
+- Added `--target` / `--max-rounds 2` loop in `excalibur_blog_sol_trim_chunk.py`; dynamic `build_trim_header` with round-2 over-by hint.
+- Sol skill documents second trim round + `--target 2200`.
+files_changed:
+- `scripts/excalibur_blog_sol_trim_chunk.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+- `.cursor/skills/sol-excalibur-blog/SKILL.md`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_sol_trim_chunk.py`
+- `python3 -m unittest tests.test_pipeline_speed_b03.SolTrimChunkTest`
+commit: 7a68f94
+
+## INC-20260905-0607-sol-end-cta-missing-site-home-b23
+status: fixed
+run_date: 2026-09-05
+role: excalibur-blog-sol
+topic_id: B23
+article_dir: memory/blog/articles/B23-v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela
+severity: low
+category: prompt
+
+### What went wrong
+- Sol first pass: `excalibur-cta-end` missing `href="/"` site home; `end_cta_full_channels` + `dual_cta_soft` quality-bar FAIL; `assembled-sol-inputs` listed gajdy/rieltor but not главная.
+
+### How the agent recovered this run
+- Surgical HTML edit per `sol-fix-notes.md`: added site home link, dual CTA phrases, trim to 2183 words PASS.
+
+### Durable fix needed before next run
+- Sol skill + quality-bar-9: explicit `href="/"` / `{{SITE_BASE}}/` in end CTA required channel list (recurring B19/B23 drift).
+
+### Suggested files to inspect/change
+- `skills/sol-excalibur-blog/SKILL.md`
+- `shared/quality-bar-9.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-05
+fix_summary:
+- Sol skill end CTA HARD block lists site home `href="/"`; quality-bar-9 documents gate `end_cta_full_channels` requires главная, not only gajdy/rieltor.
+files_changed:
+- `skills/sol-excalibur-blog/SKILL.md`
+- `.cursor/skills/sol-excalibur-blog/SKILL.md`
+- `shared/quality-bar-9.md`
+checks_run:
+- `rg 'href="/"' skills/sol-excalibur-blog/SKILL.md shared/quality-bar-9.md`
+commit: f65304b
