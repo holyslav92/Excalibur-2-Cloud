@@ -124,16 +124,18 @@
     {
       "date": "2026-09-05",
       "topic_id": "B24",
-      "slug": "",
+      "slug": "v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41",
       "motifs": {
-        "composition": "герой крупно слева, hook+phone справа",
-        "location": "светлый кабинет офиса продаж новостройки тюмени",
-        "meme": "confused_math_lady smudge_cat",
-        "sticker_set": "math_lady top-right cat bottom-left",
-        "outfit": "оливковая льняная рубашка без пиджака",
-        "emotion": "шок недоумение не студийная улыбка",
-        "pose_framing": "крупный план слева к документам",
-        "action": "сверяет дду 45 и декларацию 41"
+        "composition": "герой крупно слева в три четверти, справа светлая зона под hook и телефон, на столе два документа",
+        "location": "светлый кабинет проверки документов у окна в офисе продаж новостройки тюмени",
+        "meme": "confused_math_lady и smudge_cat",
+        "prop_set": "дду 45 м², декларация 41 м², линейка, калькулятор",
+        "sticker_set": "confused_math_lady + smudge_cat ≤15%",
+        "joke": "кот смотрит на салат из цифр",
+        "outfit": "оливковая льняная рубашка, песочные chinos",
+        "emotion": "ошарашенное недоумение",
+        "pose_framing": "крупный план по грудь слева, взгляд на цифры",
+        "action": "сравнивает две строки площади пальцем и линейкой"
       }
     }
   ]

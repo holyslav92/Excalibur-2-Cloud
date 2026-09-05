@@ -1,0 +1,9 @@
+{
+  "topic_id": "B24",
+  "description": "В договоре было 45 м², в декларации — 41. Святослав Шакин в Тюмени остановил сделку до подписи: четыре метра на бумаге способны изменить не только цену.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
