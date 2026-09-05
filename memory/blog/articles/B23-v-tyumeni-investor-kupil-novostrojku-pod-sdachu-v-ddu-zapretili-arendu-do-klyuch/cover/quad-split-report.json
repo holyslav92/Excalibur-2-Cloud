@@ -1,0 +1,295 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B23-v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1012,
+          565
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 565,
+            "end": 587
+          },
+          "v_gutter_px": {
+            "start": 1012,
+            "end": 1036
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0079,
+            "per_panel_crop_loss": {
+              "top_left": 0.0079,
+              "top_right": 0.0079,
+              "bottom_left": 0.0079,
+              "bottom_right": 0.0079
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 4,
+              "top": 0,
+              "right": 1008,
+              "bottom": 565
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1012,
+              "bottom": 565
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени инвестор не подписал ДДУ: аренду запретили до ключей: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1040,
+              "top": 0,
+              "right": 2044,
+              "bottom": 565
+            },
+            "raw_box_px": {
+              "left": 1036,
+              "top": 0,
+              "right": 2048,
+              "bottom": 565
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «В договоре — запрет аренды до ключей и сдача то…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "В договоре — запрет аренды до ключей и сдача только через УК"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 587,
+              "right": 1008,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 587,
+              "right": 1012,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Письмо за сутки, Проект ДДУ, Поиск аренда — иллюстрация к разбору сделки.",
+            "h2_anchor": "В договоре — запрет аренды до ключей и сдача только через УК"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1040,
+              "top": 587,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1036,
+              "top": 587,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Инвестор бронирует однушку под сдачу» — и счит…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Инвестор бронирует однушку под сдачу» — и считает доход с первого месяца"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B23-v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 566,
+              "end": 627
+            },
+            "v_gutter_px": {
+              "start": 1014,
+              "end": 1034
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 20.5,
+              "v_center_offset_px": 0.0,
+              "max_aspect_crop_loss": 0.0799,
+              "per_panel_crop_loss": {
+                "top_left": 0.0079,
+                "top_right": 0.0079,
+                "bottom_left": 0.0799,
+                "bottom_right": 0.0799
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Через три недели присылают проект ДДУ» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Через три недели присылают проект ДДУ"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Отказ от подписания, Бронь невозвратная, Лот вернули в продажу — иллюстрация к…",
+            "h2_anchor": "Доходность сдвигается, переуступка под вопросом"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Урок без суда, ДДУ до брони, Второй застройщик — иллюстрация к разбору сделки.",
+            "h2_anchor": "Инвестор отказался от ДДУ: бронь сгорела, лот вернулся в продажу"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Поиск аренда и наём, Период запрета, Договор с УК — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что проверить в проекте ДДУ до брони — таблица"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — В договоре — запрет аренды до ключей и сдача только через УК",
+    "skip inline_2: already correct under H2 — В договоре — запрет аренды до ключей и сдача только через УК",
+    "skip inline_3: already correct under H2 — «Инвестор бронирует однушку под сдачу» — и считает доход с первого месяца",
+    "skip inline_4: already correct under H2 — Через три недели присылают проект ДДУ",
+    "skip inline_5: already correct under H2 — Доходность сдвигается, переуступка под вопросом",
+    "skip inline_6: already correct under H2 — Инвестор отказался от ДДУ: бронь сгорела, лот вернулся в продажу",
+    "skip inline_7: already correct under H2 — Что проверить в проекте ДДУ до брони — таблица"
+  ]
+}
