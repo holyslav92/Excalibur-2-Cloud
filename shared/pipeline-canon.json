@@ -1,5 +1,6 @@
 {
   "version": "human-first-v2",
+  "owner_runtime_lock": "shared/owner-runtime-lock.json",
   "description": "Research → Title → Writer(meaning) → Sol(style) → Stylo(voice) → Description → Cover||Schema → Cover-QA → Indexer → Publish",
   "pipeline_agents_count": 19,
   "pipeline_agents": [

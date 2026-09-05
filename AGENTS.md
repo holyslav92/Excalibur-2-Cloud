@@ -13,7 +13,9 @@
 | 3 | **Cover fail-fast** | `excalibur_blog_grsai_solo_cover.py`: max **2** full attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`). **grsai standard only** — VIP tier отключён. Timebox **≤15–20 мин** на cover. После бюджета → `cover/cover-budget-result.json` → **Indexer** (не бесконечный Cover-QA). OCR escape без PIL mashup/Kie. Short hook **5–7** кириллических слов. |
 | 4 | **Newbuild focus** | **ONLY новостройки Тюмень** (квартиры + дома от застройщика). Scout **mirrors Dzen top-10 ENERGY** → newbuild plots only (`shared/dzen-top-angle-newbuild-lock.md`). **HARD anti-dupe:** 30d cluster + H1 fingerprint + formula spam (last 3). **4 slots/day 09/12/15/17 YEKT** — не резать. DENY secondary retitle; DENY guide/checklist. Gate: `excalibur_blog_topic_focus.py` + `shared/newbuild-focus-lock.md`. |
 
-Доки: `shared/quality-bar-9.md`, `shared/article-quality-score-lock.md`, `shared/dzen-news-casus.md`, `shared/newbuild-focus-lock.md`, `shared/dzen-top-angle-newbuild-lock.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills, `CLOUD-AUTOMATION.md`.
+Доки: `shared/owner-runtime-lock.json` (machine-readable SSOT + doctor drift guard), `shared/quality-bar-9.md`, `shared/article-quality-score-lock.md`, `shared/dzen-news-casus.md`, `shared/newbuild-focus-lock.md`, `shared/dzen-top-angle-newbuild-lock.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills, `CLOUD-AUTOMATION.md`.
+
+**Drift guard:** `python3 scripts/excalibur_blog_owner_runtime_lock.py` и `excalibur_blog_doctor.py` **FAIL-CLOSED**, если tenant/pipeline/skills/CLOUD-AUTOMATION Instructions расходятся с `shared/owner-runtime-lock.json`.
 
 ## Первый запуск
 

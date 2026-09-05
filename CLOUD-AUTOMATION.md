@@ -4,7 +4,7 @@
 
 ## OWNER LOCK (permanent — main)
 
-Зафиксировано в `shared/pipeline-canon.json` → `owner_lock_permanent`. Automation **всегда** соблюдает:
+Зафиксировано в `shared/pipeline-canon.json` → `owner_lock_permanent` и **`shared/owner-runtime-lock.json`** (machine-readable SSOT; doctor FAIL-CLOSED при drift). Automation **всегда** соблюдает:
 
 1. **Engagement bomb** — Dzen likes/comments/subs; news-casus актуалочка; прозаический лид 4–6 предложений; early TG+MAX; comment magnet; **ending landing = agency, not panic** (heat сохраняем); **no** TL;DR / «Быстрый инсайт» / opening bullets; **no** sugar-happy ending / checklist-as-finale / «risks everywhere never buy» takeaway.
 2. **Meme canon v1** — `meme-top100.json` only; people+cats; on-topic funny; stickers ≤15%; sacred hook/face/phone; anti-repeat 14д.
@@ -152,26 +152,28 @@ Cover + inline PNG **only grsai grsai standard image model** (Derouter image = o
 
 ## Automation prompt
 
-Скопируй блок ниже в **Instructions** каждого из 4 Cursor Automations (09/12/15/17 YEKT):
+> **OWNER: re-save required** — после каждого обновления `CLOUD-AUTOMATION.md` на `main` владелец **обязан один раз** вставить блок ниже в **Instructions** каждого из **4 Cursor Automations** (09/12/15/17 YEKT) и нажать Save. UI Automations **не** подтягивает git автоматически; без re-save weekday runs отстают от weekend Grok.
+
+Скопируй блок ниже в **Instructions** каждого из 4 Cursor Automations (09/12/15/17 YEKT; `runs_per_day: 4` — **never 2**):
 
 ```text
-Прочитай AGENTS.md + shared/pipeline-canon.json + shared/tenant-config.json + shared/quality-bar-9.md + shared/article-quality-score-lock.md + shared/dzen-news-casus.md + CLOUD-AUTOMATION.md.
+Прочитай AGENTS.md + shared/owner-runtime-lock.json + shared/pipeline-canon.json + shared/tenant-config.json + shared/quality-bar-9.md + shared/article-quality-score-lock.md + shared/dzen-news-casus.md + shared/dzen-top-angle-newbuild-lock.md + CLOUD-AUTOMATION.md.
 Если setup_complete != true — остановись (Setup).
 Игнорируй Automation Memory. Memories = OFF.
 
 Ты — ТОНКИЙ ДИРИЖЁР (default Composer — НЕ переключать модель). Прозу текстовых ролей пишет ТОЛЬКО
 scripts/excalibur_blog_derouter_opus_chat.py:
-  powerful gpt-6-astra → writer/sol (article prose only)
+  powerful gpt-6-astra → writer/sol (article prose only; NEVER claude-opus-5 / Opus)
   utility gpt-5.6-terra → scout/title/research/description/cover-text/schema/cover-scene
 Не пиши Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene своей моделью.
 DEROUTER <ROLE> BLOCKER → стоп пайплайна. Нет run_budget / circuit breaker.
 
-doctor + today.
+doctor + today (doctor FAIL если config ≠ shared/owner-runtime-lock.json).
 dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
 needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
 Scout HARD gates перед handoff: live blog ~20 + ledger + `--sync-used-clusters` + MCP-KV Wordstat + shared/dzen-news-casus.md + **shared/newbuild-focus-lock.md** + **shared/dzen-top-angle-newbuild-lock.md** (mirror top-10 ENERGY, plot ONLY newbuild; DENY secondary retitle; DENY guide/checklist) + `topic_focus.py` newbuild gate + `scout_helper.py --check-query` (**HARD anti-dupe:** 30d cluster + H1 fingerprint + formula spam last-3 + frozen secondary — fail before Writer via research_start; Klyshin optional, fresh only, newbuild hook only).
 research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
-Title/Writer/Sol: цель = Dzen engagement (лайки, комментарии, подписки); news-casus актуалочка (событие → финал → практика **один раз**); **spine once** — не пересказывать casus в лиде+середине+итоге; **учебный хвост после casus FAIL** (214-ФЗ простыня, таблицы-гайды перед end CTA); прозаический лид → early TG+MAX; comment magnet; ending landing — agency not panic; H1 forbidden: «чеклист», «N шагов»; body **~1400–1600** (hard FAIL > **1750** / >10 мин Дзен), useful part AFTER story.
+Title/Writer/Sol: цель = Dzen engagement (лайки, комментарии, подписки); news-casus актуалочка (событие → финал → практика **один раз**); **spine once** — не пересказывать casus в лиде+середине+итоге; **учебный хвост после casus FAIL** (214-ФЗ простыня, таблицы-гайды перед end CTA); прозаический лид → early TG+MAX; comment magnet; ending landing — agency not panic; H1 forbidden: «чеклист», «N шагов»; body **1400–1600** (hard FAIL > **1750** / >10 мин Дзен), useful part AFTER story.
 Description: news card energy (shared/dzen-description-rules.md), not SEO checklist blurb.
 
 Conversion + engagement (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
@@ -182,13 +184,13 @@ Conversion + engagement (shared/quality-bar-9.md + SOUL + tenant-config cta_chan
   Interlink 2–4 sibling из shared/published-articles.md (status=published)
   Comment magnet: один острый вопрос для комментариев (gate comment_magnet_question)
 
-После Sol: Stylo → article quality score gate (`excalibur_blog_quality_score_gate.py`; FAIL → один `--repair` Sol) → pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → quality-bar-9.json + article-quality-score.json all_pass.
-Description → Cover-text || Schema → Cover (hook H1 + phone + meme picks from meme-top100.json — on-topic funny, people+cats, ≤15% sticker, never on hook/face/phone — **NO Wordstat query strips**) → Cover-QA pixel gate (`pixel_no_wordstat_query_strips`, `pixel_hook_title_present`, `pixel_phone_readable`, `pixel_meme_present`, `pixel_layout_not_collapsed`; meme_variety_not_cats_only when meme_picks present; Fixer: regen cover panel only, **max 2 rounds**) → Indexer.
+После Sol: Stylo → article quality score gate (`excalibur_blog_quality_score_gate.py` → `article-quality-score.json` all_pass; FAIL → один `--repair` Sol; no self-score 9.0 loop) → pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → `quality-bar-9.json` all_pass.
+Description → Cover-text || Schema → Cover (grsai standard only — **never vip**; hook H1 + phone + meme picks from meme-top100.json — on-topic funny, people+cats, ≤15% sticker, never on hook/face/phone — **NO Wordstat query strips**) → `excalibur_blog_image_caption_builder.py --apply` (short SEO alt/caption, never scene_hint) → Cover-QA pixel gate (`pixel_no_wordstat_query_strips`, `pixel_hook_title_present`, `pixel_phone_readable`, `pixel_meme_present`, `pixel_layout_not_collapsed`; meme_variety_not_cats_only when meme_picks present; Fixer: regen cover panel only, **max 2 rounds**) → Indexer.
 
 Cover timebox: ≤15–20 min total on cover regen+QA. Hard budget `EXCALIBUR_COVER_MAX_ATTEMPTS=2` (solo cover + panel regen). After budget exhausted → read `cover/cover-budget-result.json` → Indexer anyway if visual OK; NEVER infinite Cover-QA loop or deep-dive grep of `cover_qa_pixels.py`. Short hook 5–7 Cyrillic words (cover-text gate). OCR false-positive escape in pixel gate (B08/B09 pattern).
 
 Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе И quality-bar-9.json all_pass И article-quality-score.json all_pass (или `--media-refresh --featured-only` для cover-only: pixel Cover-QA PASS + wp_post_id); иначе STOP после Indexer.
-Live = SFTP replace (не жди merge article в main для сайта). Код/канон — в main.
+Live = SFTP replace (не жди merge article в main для сайта). Код/канон — в main. Schedule: 4 Cursor Automations / weekday slots 09/12/15/17 YEKT (runs_per_day: 4 — never cut to 2).
 
 Один run = одна статья. Fixer → merge code fixes → content-learner.
 ```
