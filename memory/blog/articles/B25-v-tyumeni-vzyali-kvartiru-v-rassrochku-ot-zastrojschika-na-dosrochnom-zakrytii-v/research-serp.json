@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-05",
+    "today_ru": "05.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "суббота"
+  },
+  "topic": {
+    "topic_id": "B25",
+    "title": "В Тюмени взяли квартиру в рассрочку от застройщика — на досрочном закрытии всплыла комиссия",
+    "h1": "В Тюмени взяли квартиру в рассрочку от застройщика — на досрочном закрытии всплыла комиссия",
+    "slug": "v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v",
+    "primary_query": "В Тюмени взяли квартиру в рассрочку от застройщика — на досрочном закрытии всплыла комиссия",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени взяли квартиру в рассрочку от застройщика — на досрочном закрытии всплыла комиссия 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени выросло число расторжений договоров покупки жилья в рассрочку",
+          "url": "https://kvobzor.ru/news/i52033",
+          "snippet": ""
+        },
+        {
+          "title": "Почему в Тюмени снизилась популярность рассрочек от застройщика",
+          "url": "https://nashgorod.ru/news/2026-03-25/ne-vygodno-nikomu-pochemu-v-tyumeni-snizilas-populyarnost-rassrochek-ot-zastroyschika-5569287",
+          "snippet": "В 2025 году в Тюмени зафиксировали всплеск расторжений договоров по покупке жилья в рассрочку: показатель вырос на 64% по сравнению с 2024‑м."
+        },
+        {
+          "title": "Тюменцы стали расторгать договоры по покупке жилья в рассрочку",
+          "url": "https://t.rbc.ru/tyumen/16/05/2025/6807650a9a7947d2904a39f6",
+          "snippet": "В ближайшие месяцы рынок первичной недвижимости Тюмени окончательно избавится от неработающих механизмов продаж. Одной из первых «отваливается» рассрочка от застройщика."
+        },
+        {
+          "title": "Квартиру сдают позже срока: как взыскать с застройщика неустойку в 2026 ...",
+          "url": "https://rg.ru/2026/02/05/dolshchik-vprave-trebovat-neustojku-s-zastrojshchika-za-kazhdyj-den-prosrochki.html",
+          "snippet": "В 2024 году доля сделок по покупке квартир в рассрочку составила 24,8%. При этом около 10% покупателей, выбравших такой способ оплаты, расторгли договоры после внесения нескольких платежей."
+        },
+        {
+          "title": "Рассрочка от застройщика в Тюмени: как не купить красивый платёж",
+          "url": "https://dzen.ru/a/ahfNSXM-KU9ruvUt",
+          "snippet": "С 1 января 2026 года дольщики могут снова требовать с застройщика неустойку за задержку сдачи жилья. Мораторий на такие выплаты закончился, но для \"старых\" долгов действует годовая отсрочка...."
+        },
+        {
+          "title": "Новостройки (ЖК) в рассрочку в Тюмени от застройщика",
+          "url": "https://tyumen.domclick.ru/novostrojki/rassrochka",
+          "snippet": "Рассрочка от застройщика в Тюмени подходит покупателю только после проверки полной цены квартиры, графика платежей, остатка перед сдачей дома и условий штрафов. В 2026 году такие сделки стали жестче: девелоперы реже дают рассрочки, а требования к раскрытию условий усилились."
+        }
+      ],
+      "searched_at": "2026-09-05"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени взяли квартиру в рассрочку от застройщика — на досрочном закрытии всплыла комиссия 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Почему в Тюмени снизилась популярность рассрочек от застройщика",
+          "url": "https://nashgorod.ru/news/2026-03-25/ne-vygodno-nikomu-pochemu-v-tyumeni-snizilas-populyarnost-rassrochek-ot-zastroyschika-5569287",
+          "snippet": ""
+        },
+        {
+          "title": "Тюменцы стали расторгать договоры по покупке жилья в рассрочку",
+          "url": "https://t.rbc.ru/tyumen/16/05/2025/6807650a9a7947d2904a39f6",
+          "snippet": "В ближайшие месяцы рынок первичной недвижимости Тюмени окончательно избавится от неработающих механизмов продаж. Одной из первых «отваливается» рассрочка от застройщика."
+        },
+        {
+          "title": "Квартиру сдают позже срока: как взыскать с застройщика неустойку в 2026 ...",
+          "url": "https://rg.ru/2026/02/05/dolshchik-vprave-trebovat-neustojku-s-zastrojshchika-za-kazhdyj-den-prosrochki.html",
+          "snippet": "В 2024 году доля сделок по покупке квартир в рассрочку составила 24,8%. При этом около 10% покупателей, выбравших такой способ оплаты, расторгли договоры после внесения нескольких платежей."
+        },
+        {
+          "title": "Новостройки (ЖК) в рассрочку в Тюмени от застройщика",
+          "url": "https://tyumen.domclick.ru/novostrojki/rassrochka",
+          "snippet": "С 1 января 2026 года дольщики могут снова требовать с застройщика неустойку за задержку сдачи жилья. Мораторий на такие выплаты закончился, но для \"старых\" долгов действует годовая отсрочка...."
+        },
+        {
+          "title": "Квартиры в Тюмени и области в рассрочку — застройщик ЭНКО",
+          "url": "https://enco.ru/purchase/installment/",
+          "snippet": "⭐ Новостройки (ЖК) в Беспроцентную Рассрочку в Тюмени (Тюменская область) с актуальными ценам от застройщиков. В каталоге недвижимости 18 118 объявлений (ЖК) с описанием, планировками, фото и ..."
+        },
+        {
+          "title": "Рассрочка от застройщика в Тюмени: как не купить красивый платёж",
+          "url": "https://dzen.ru/a/ahfNSXM-KU9ruvUt",
+          "snippet": "Застройщик ЭНКО в Тюмени предоставляет беспроцентную рассрочку платежа. Подробные условия и варианты квартир, которые можно приобрести с рассрочкой платежа, уточняйте у специалистов отдела продаж."
+        }
+      ],
+      "searched_at": "2026-09-05"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени взяли квартиру в рассрочку от застройщика — на досрочном закрытии всплыла комиссия official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Квартира в рассрочку в Тюмени: условия застройщиков — РБК",
+          "url": "https://t.rbc.ru/tyumen/25/07/2025/687f0bd89a794770bb631bd3",
+          "snippet": ""
+        },
+        {
+          "title": "Почему в Тюмени снизилась популярность рассрочек от застройщика",
+          "url": "https://nashgorod.ru/news/2026-03-25/ne-vygodno-nikomu-pochemu-v-tyumeni-snizilas-populyarnost-rassrochek-ot-zastroyschika-5569287",
+          "snippet": "Эксперт отмечает: в конце 2024 года было проведено много нелогичных сделок, люди брали рассрочку на год в ожидании снижения ставок, но в конечном итоге не могли ее выплатить."
+        },
+        {
+          "title": "Тюменцы стали расторгать договоры по покупке жилья в рассрочку",
+          "url": "https://t.rbc.ru/tyumen/16/05/2025/6807650a9a7947d2904a39f6",
+          "snippet": "В ближайшие месяцы рынок первичной недвижимости Тюмени окончательно избавится от неработающих механизмов продаж. Одной из первых «отваливается» рассрочка от застройщика."
+        },
+        {
+          "title": "Рассрочка от застройщика в Тюмени - купить квартиру в новостройке на ...",
+          "url": "https://strana.com/tmn/purchase/installment/",
+          "snippet": "В 2024 году доля сделок по покупке квартир в рассрочку составила 24,8%. При этом около 10% покупателей, выбравших такой способ оплаты, расторгли договоры после внесения нескольких платежей."
+        },
+        {
+          "title": "Рассрочка от застройщика в Тюмени: как не купить красивый платёж",
+          "url": "https://dzen.ru/a/ahfNSXM-KU9ruvUt",
+          "snippet": "Подобрать и купить квартиру в рассрочку в ЖК от официального застройщика «Страна Девелопмент» в Тюмени. Продажа новостроек в рассрочку по выгодным ценам."
+        },
+        {
+          "title": "Новостройки (ЖК) в рассрочку в Тюмени от застройщика",
+          "url": "https://tyumen.domclick.ru/novostrojki/rassrochka",
+          "snippet": "Рассрочка от застройщика в Тюмени подходит покупателю только после проверки полной цены квартиры, графика платежей, остатка перед сдачей дома и условий штрафов. В 2026 году такие сделки стали жестче: девелоперы реже дают рассрочки, а требования к раскрытию условий усилились."
+        }
+      ],
+      "searched_at": "2026-09-05"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени взяли квартиру в рассрочку от застройщика — на досрочном закрытии всплыла комиссия 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "nabrukpy/output/snake.svg at main · nabrukpy/nabrukpy · GitHub",
+          "url": "https://github.com/nabrukpy/nabrukpy/blob/main/output/snake.svg",
+          "snippet": ""
+        },
+        {
+          "title": "Logos/images/logos_stat.png at main · ai-forever/Logos · GitHub",
+          "url": "https://github.com/ai-forever/Logos/blob/main/images/logos_stat.png",
+          "snippet": "Contribute to nabrukpy/nabrukpy development by creating an account on GitHub."
+        },
+        {
+          "title": "2D-game-Godot/icon.svg at main · Oblachko-Js/2D-game-Godot",
+          "url": "https://github.com/Oblachko-Js/2D-game-Godot/blob/main/icon.svg",
+          "snippet": "Download raw file Edit and raw actions Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        },
+        {
+          "title": "PmaControl/docs/cve_mpd.svg at master - GitHub",
+          "url": "https://github.com/PmaControl/PmaControl/blob/master/docs/cve_mpd.svg",
+          "snippet": "Contribute to Oblachko-Js/2D-game-Godot development by creating an account on GitHub."
+        },
+        {
+          "title": "DeepCAD/teaser.png at master · rundiwu/DeepCAD · GitHub",
+          "url": "https://github.com/rundiwu/DeepCAD/blob/master/teaser.png",
+          "snippet": "Loading Viewer requires iframe. Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        },
+        {
+          "title": "spotify-clone-music-player/cross.svg at master - GitHub",
+          "url": "https://github.com/prashantpandey-274/spotify-clone-music-player/blob/master/cross.svg",
+          "snippet": "Download raw file Edit and raw actions Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        }
+      ],
+      "searched_at": "2026-09-05"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени взяли квартиру в рассрочку от застройщика — на досрочном закрытии всплыла комиссия forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Квартира в рассрочку в Тюмени: условия застройщиков — РБК",
+          "url": "https://t.rbc.ru/tyumen/25/07/2025/687f0bd89a794770bb631bd3",
+          "snippet": ""
+        },
+        {
+          "title": "Квартиру в Тюмени остановили за день до аванса — родственники пошли в ...",
+          "url": "https://dzen.ru/a/apJ3Uq3UpQP2s7_9",
+          "snippet": "Эксперт отмечает: в конце 2024 года было проведено много нелогичных сделок, люди брали рассрочку на год в ожидании снижения ставок, но в конечном итоге не могли ее выплатить."
+        },
+        {
+          "title": "Рассрочка от застройщика в Тюмени: как не купить красивый платёж",
+          "url": "https://dzen.ru/a/ahfNSXM-KU9ruvUt",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : Квартиру в Тюмени сняли с расчётов за один рабочий день до аванса."
+        },
+        {
+          "title": "Тюменцы стали расторгать договоры по покупке жилья в рассрочку",
+          "url": "https://t.rbc.ru/tyumen/16/05/2025/6807650a9a7947d2904a39f6",
+          "snippet": "Рассрочка от застройщика в Тюмени подходит покупателю только после проверки полной цены квартиры, графика платежей, остатка перед сдачей дома и условий штрафов. В 2026 году такие сделки стали жестче: девелоперы реже дают рассрочки, а требования к раскрытию условий усилились."
+        },
+        {
+          "title": "Почему в Тюмени снизилась популярность рассрочек от застройщика",
+          "url": "https://nashgorod.ru/news/2026-03-25/ne-vygodno-nikomu-pochemu-v-tyumeni-snizilas-populyarnost-rassrochek-ot-zastroyschika-5569287",
+          "snippet": "В 2024 году доля сделок по покупке квартир в рассрочку составила 24,8%. При этом около 10% покупателей, выбравших такой способ оплаты, расторгли договоры после внесения нескольких платежей."
+        },
+        {
+          "title": "Риелтор Тюмени — Святослав Шакин | Аренда и покупка недвижимости",
+          "url": "{{SITE_BASE}}/rassrochka-na-zhile-chto-skryvayut-zastrojshhiki-ekspertno-o-tonkostyah-pokupki-kvartiry-v-rassrochku-svyatoslav-shakin/",
+          "snippet": "В ближайшие месяцы рынок первичной недвижимости Тюмени окончательно избавится от неработающих механизмов продаж. Одной из первых «отваливается» рассрочка от застройщика."
+        }
+      ],
+      "searched_at": "2026-09-05"
+    }
+  ],
+  "errors": []
+}
