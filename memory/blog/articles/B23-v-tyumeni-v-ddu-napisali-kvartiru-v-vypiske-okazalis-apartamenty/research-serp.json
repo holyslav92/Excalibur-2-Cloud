@@ -1,0 +1,128 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-05",
+    "today_ru": "05.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "суббота"
+  },
+  "topic": {
+    "topic_id": "B23",
+    "title": "В Тюмени в ДДУ написали квартиру — в выписке оказались апартаменты",
+    "h1": "В Тюмени в ДДУ написали квартиру — в выписке оказались апартаменты",
+    "slug": "v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty",
+    "primary_query": "В Тюмени в ДДУ написали квартиру — в выписке оказались апартаменты",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени в ДДУ написали квартиру — в выписке оказались апартаменты 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-05"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени в ДДУ написали квартиру — в выписке оказались апартаменты 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 0,
+      "results": [],
+      "error": "search failed for 'В Тюмени в ДДУ написали квартиру — в выписке оказались апартаменты 2026': <urlopen error _ssl.c:983: The handshake operation timed out>",
+      "searched_at": "2026-09-05"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени в ДДУ написали квартиру — в выписке оказались апартаменты official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени расписку за квартиру написали — денег на счёте нет",
+          "url": "https://dzen.ru/a/aoSimK3UpQP2WTgM",
+          "snippet": ""
+        },
+        {
+          "title": "Приемка квартиры по ДДУ в 2026 году: экспертиза, недостатки, права ...",
+          "url": "https://lab-sud.ru/novosti-i-stat-i/22-ekspertiza-kvartiry-v-novostrojke-v-2026-godu-chto-izmenilos-posle-novyh-pravil-po-ddu/",
+          "snippet": "«Расписку написали — денег нет». Так описывают ситуацию, когда сделка в Тюмени уже кажется закрытой: нотариус, подписи, усталые стороны — а на счёте продавца пусто."
+        },
+        {
+          "title": "В Тюмени приставы арестовали квартиру за два дня до регистрации ...",
+          "url": "https://dzen.ru/a/apKOyl_t_ztB8tNf",
+          "snippet": "В статье разберем, что изменилось для дольщика после новых правил ДДУ, как должна проходить приемка квартиры по ДДУ в 2026 году, что считается существенным недостатком квартиры, в каких ..."
+        },
+        {
+          "title": "Регистрация ДДУ в Росреестре 2026: как избежать двойной продажи новостройки",
+          "url": "https://novostroikino.ru/blog/registratsiya-ddu-v-rosreestre-dvoynaya-prodazha-2026/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : Дата подачи в МФЦ уже стояла в календаре у обеих сторон."
+        },
+        {
+          "title": "ДДУ при покупке квартиры в новостройке: инструкция 2026",
+          "url": "https://realty.yandex.ru/journal/post/kak-kupit-kvartiru-v-novostroyke-po-ddu/",
+          "snippet": "Разбираем, как устроена регистрация ДДУ в Росреестре, почему именно она, а не сам факт подписания договора, защищает от повторной продажи одной и той же квартиры, и какие шаги стоит пройти перед переводом денег, чтобы не оказаться одним из нескольких «покупателей» одного лота."
+        },
+        {
+          "title": "Приемка квартиры у застройщика: чек-лист недостатков 2026 - Fedelis",
+          "url": "https://fedelis.ru/article/priemka-kvartiry-u-zastrojshhika/",
+          "snippet": "Если речь идёт о покупке квартиры в строящейся новостройке у застройщика, то стандартным и наиболее распространённым вариантом в 2026 году является именно ДДУ."
+        }
+      ],
+      "searched_at": "2026-09-05"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени в ДДУ написали квартиру — в выписке оказались апартаменты 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "test-kitchen/project.svg at main · fissy-de/test-kitchen · GitHub",
+          "url": "https://github.com/fissy-de/test-kitchen/blob/main/project.svg",
+          "snippet": ""
+        },
+        {
+          "title": "InstaxBLE/example-mini.jpg at main · javl/InstaxBLE · GitHub",
+          "url": "https://github.com/javl/InstaxBLE/blob/main/example-mini.jpg",
+          "snippet": "BY INDUSTRY."
+        },
+        {
+          "title": "Manikeshmk/assets/divider.svg at main - GitHub",
+          "url": "https://github.com/Manikeshmk/Manikeshmk/blob/main/assets/divider.svg",
+          "snippet": "BY INDUSTRY."
+        },
+        {
+          "title": "pgdog/flamegraph.svg at main · pgdogdev/pgdog · GitHub",
+          "url": "https://github.com/pgdogdev/pgdog/blob/main/flamegraph.svg",
+          "snippet": "BY INDUSTRY."
+        },
+        {
+          "title": "open-webui/banner.png at main · open-webui/open-webui · GitHub",
+          "url": "https://github.com/open-webui/open-webui/blob/main/banner.png",
+          "snippet": "BY INDUSTRY."
+        },
+        {
+          "title": "valley-of-ai/apps/2026/03/25/peg-solitaire/thumbnail.svg at ... - GitHub",
+          "url": "https://github.com/jeffholst/valley-of-ai/blob/main/apps/2026/03/25/peg-solitaire/thumbnail.svg",
+          "snippet": "BY INDUSTRY."
+        }
+      ],
+      "searched_at": "2026-09-05"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени в ДДУ написали квартиру — в выписке оказались апартаменты forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-05"
+    }
+  ],
+  "errors": [
+    "search failed for 'В Тюмени в ДДУ написали квартиру — в выписке оказались апартаменты 2026': <urlopen error _ssl.c:983: The handshake operation timed out>"
+  ]
+}
