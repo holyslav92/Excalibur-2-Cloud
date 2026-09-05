@@ -1,0 +1,254 @@
+{
+  "topic_id": "B23",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Аренду запретили — бронь сгорела",
+  "cover_hook_highlight": "сгорела",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени инвестор не подписал ДДУ: аренду запретили до ключей: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Лаунж застройщика: инвестор в голубой рубашке указывает на запрет аренды в ДДУ",
+      "meme_caption_ru": "",
+      "sticky": "ДДУ прислали слишком поздно",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошарашенное недоверие с гримасой «как это вообще возможно?»",
+      "meme_picks": [
+        "confused_math_lady"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "В договоре — запрет аренды до ключей и сдача только через УК",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Планшет с бронью и план однушки в углу продаж, без людей",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «В договоре — запрет аренды до ключей и сдача то…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Однушка под аренду",
+        "Запад Тюмени",
+        "Бронь внесена"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "success_kid"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "В договоре — запрет аренды до ключей и сдача только через УК",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: буклет vs ДДУ — запрет аренды до ключей и три условия",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Письмо за сутки, Проект ДДУ, Поиск аренда — иллюстрация к разбору сделки.",
+      "labels": [
+        "Письмо за сутки",
+        "Проект ДДУ",
+        "Поиск аренда"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "«Инвестор бронирует однушку под сдачу» — и считает доход с первого месяца",
+      "visual_type": "realistic_photo",
+      "scene_hint": "План однушки и калькулятор дохода на светлом столе, без людей",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Инвестор бронирует однушку под сдачу» — и счит…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Запрет до акта",
+        "Сдача через УК",
+        "Комиссия за сдачу"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Через три недели присылают проект ДДУ",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Домашний стол: ноутбук с письмом о ДДУ, стопка договора с закладками, без людей",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Через три недели присылают проект ДДУ» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Аренда после ремонта",
+        "Комиссия сервиса",
+        "Переуступка с согласия",
+        "Комиссия 1–3 процента",
+        "Согласие банка"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Доходность сдвигается, переуступка под вопросом",
+      "visual_type": "process_flow",
+      "scene_hint": "Белая коллажная доска с золотыми стрелками между блоками, doge в углу",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Отказ от подписания, Бронь невозвратная, Лот вернули в продажу — иллюстрация к…",
+      "labels": [
+        "Отказ от подписания",
+        "Бронь невозвратная",
+        "Лот вернули в продажу",
+        "Деньги не вернули",
+        "Сначала ДДУ"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "doge"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Инвестор отказался от ДДУ: бронь сгорела, лот вернулся в продажу",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Горизонтальный таймлайн: бронь → ожидание ДДУ → отказ → потеря денег, без людей",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Урок без суда, ДДУ до брони, Второй застройщик — иллюстрация к разбору сделки.",
+      "labels": [
+        "Урок без суда",
+        "ДДУ до брони",
+        "Второй застройщик",
+        "Полтора месяца",
+        "Деньги не заморожены"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить в проекте ДДУ до брони — таблица",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема из пяти узлов вокруг ДДУ: аренда, запрет, УК, переуступка, бронь; this is fine dog",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Поиск аренда и наём, Период запрета, Договор с УК — иллюстрация к разбору сделки.",
+      "labels": [
+        "Поиск аренда и наём",
+        "Период запрета",
+        "Договор с УК",
+        "Комиссия переуступки",
+        "Договор бронирования"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "this_is_fine_dog"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "переуступка новостройка",
+    "сдавать квартиру в аренду в новостройке"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "герой в динамичном полуобороте справа, раскрытый проект ДДУ в руках, свободная светлая зона слева под заголовок и телефон",
+    "location": "светлый лаунж офиса застройщика с панорамным окном на строящийся жилой комплекс и солнечным бликом",
+    "meme": "confused_math_lady",
+    "prop_set": [
+      "проект ДДУ с закладками",
+      "смятый талон бронирования",
+      "смартфон с уведомлением об ипотеке",
+      "макет новостройки на столе"
+    ],
+    "sticker_set": [
+      "маленький confused_math_lady в верхнем углу",
+      "жёлтая стикерная стрелка к пункту аренды"
+    ],
+    "joke": "ипотеку одобрили, а аренду будто случайно выключили в договоре",
+    "outfit": "светлая голубая рубашка с оранжевым трикотажным жилетом и белыми кедами",
+    "emotion": "ошарашенное недоверие, поднятые брови, напряжённая полуулыбка и взгляд на пункт договора",
+    "pose_framing": "поясной ракурс справа, корпус развёрнут к камере, одна рука держит ДДУ, вторая резко показывает на страницу",
+    "action": "инвестор перелистывает проект ДДУ и обнаруживает запрет аренды до передачи ключей"
+  },
+  "cover_emotion": "ошарашенное недоверие с гримасой «как это вообще возможно?»"
+}
