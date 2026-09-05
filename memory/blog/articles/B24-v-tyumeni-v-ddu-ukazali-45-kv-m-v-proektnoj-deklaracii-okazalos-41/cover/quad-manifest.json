@@ -1,0 +1,240 @@
+{
+  "topic_id": "B24",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "ДДУ написали 45 — в декларации 41",
+  "cover_hook_highlight": "декларации",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени ДДU на 45 м² остановили: декларация показала 41: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Слева сверяет ДДУ 45 и декларацию 41; high-key, hook+phone справа; math_lady+cat.",
+      "meme_caption_ru": "",
+      "sticky": "Четыре метра исчезли",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "шок от расхождения метров",
+      "meme_picks": [
+        "confused_math_lady",
+        "smudge_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Три дня до регистрации: как всплыли четыре метра",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Ноутбук наш.дом.рф, ДДУ 45/декларация 41; hide_pain_harold угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Три дня до регистрации: как всплыли четыре метра» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "45 м² в договоре",
+        "41 м² в декларации",
+        "минус 4 м²",
+        "три дня до регистрации"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "hide_pain_harold"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Три дня до регистрации: как всплыли четыре метра",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bar timeline: буклет→декларация→сверка; gold/black, no memes.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: буклет — реклама, декларация — официально, сверяй до подписи — иллюстрация к разбору сделки.",
+      "labels": [
+        "буклет — реклама",
+        "декларация — официально",
+        "сверяй до подписи"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Почему проектная декларация важнее любого буклета",
+      "visual_type": "realistic_photo",
+      "scene_hint": "ДДУ: доплата за лишние, нет возврата; закладка «не подписывать».",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Почему проектная декларация важнее любого букле…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "доплата за лишние",
+        "возврат не прописан",
+        "не подписывать"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Почему нельзя было «подписать, а потом разобраться»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Смартфон наш.дом.рф, секция/этаж/номер, блокнот «15 мин»; sunny office, no people.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Почему нельзя было «подписать, а потом разобрат…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "наш.дом.рф",
+        "секция и этаж",
+        "сверка 15 минут"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Проверка началась не с договора, а с сайта",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица ДДУ 45 vs декларация 41, строки 4 м²/ипотека/доли; roll_safe угол.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: 4 м² — полмиллиона, ипотека под сумму, доли детям — иллюстрация к разбору сделки.",
+      "labels": [
+        "4 м² — полмиллиона",
+        "ипотека под сумму",
+        "доли детям"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "roll_safe"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Почему четыре метра — это не мелочь",
+      "visual_type": "process_flow",
+      "scene_hint": "Four-step infographic; red warning badge; gold white collage.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: площади квартир, приведённая площадь, срок передачи — иллюстрация к разбору сделки.",
+      "labels": [
+        "площади квартир",
+        "приведённая площадь",
+        "срок передачи"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Чем всё закончилось",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Diagram: не подписывать → письмо → деньги на месте; side_eye_chloe угол.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: не подписывать, письменный ответ, деньги на месте — иллюстрация к разбору сделки.",
+      "labels": [
+        "не подписывать",
+        "письменный ответ",
+        "деньги на месте"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "side_eye_chloe"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "проектная декларация",
+    "приёмка новостройки"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "герой крупно слева в три четверти, справа свободная светлая зона под короткий hook и телефон, на столе два документа рядом",
+    "location": "светлый кабинет проверки документов у окна в офисе продаж новостройки Тюмени, не шоурум и не комната передачи",
+    "meme": "confused_math_lady и smudge_cat как два маленьких угловых стикера на расхождение 45 против 41",
+    "prop_set": "распечатка проектной декларации с 41 м², ДДУ с 45 м², линейка, калькулятор, жёлтый стикер «минус 4»",
+    "sticker_set": "confused_math_lady верхний правый угол, smudge_cat нижний левый, ≤15%, ≥80px от hook/лица/телефона",
+    "joke": "кот смотрит на салат из цифр, пока герой сверяет метры",
+    "outfit": "оливковая льняная рубашка с закатанными рукавами, белая футболка, песочные чinos, без чёрного пиджака",
+    "emotion": "ошарашенное недоумение, нахмуренные брови, приоткрытый рот, не студийная улыбка",
+    "pose_framing": "крупный план по грудь слева, корпус к документам, взгляд на цифры, не боковой bust formula",
+    "action": "сравнивает две строки площади пальцем и линейкой на распечатках"
+  },
+  "cover_emotion": "недоумение и шок от расхождения цифр площади"
+}

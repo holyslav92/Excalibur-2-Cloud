@@ -120,6 +120,21 @@
         "pose_framing": "full-body three-quarter both hands visible not side-eye bust",
         "action": "holds ddu points at egrn line pushes keys away"
       }
+    },
+    {
+      "date": "2026-09-05",
+      "topic_id": "B24",
+      "slug": "",
+      "motifs": {
+        "composition": "герой крупно слева, hook+phone справа",
+        "location": "светлый кабинет офиса продаж новостройки тюмени",
+        "meme": "confused_math_lady smudge_cat",
+        "sticker_set": "math_lady top-right cat bottom-left",
+        "outfit": "оливковая льняная рубашка без пиджака",
+        "emotion": "шок недоумение не студийная улыбка",
+        "pose_framing": "крупный план слева к документам",
+        "action": "сверяет дду 45 и декларацию 41"
+      }
     }
   ]
 }
