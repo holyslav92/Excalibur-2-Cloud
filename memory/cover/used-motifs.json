@@ -120,6 +120,23 @@
         "pose_framing": "full-body three-quarter both hands visible not side-eye bust",
         "action": "holds ddu points at egrn line pushes keys away"
       }
+    },
+    {
+      "date": "2026-09-05",
+      "topic_id": "B26",
+      "slug": "",
+      "motifs": {
+        "composition": "вертикальная фигура хозяина справа в полный рост",
+        "location": "светлая незавершённая квартира в новостройке тюмени",
+        "meme": "disappointed_black_guy и long_cat",
+        "prop_set": "уровень планшет претензия 190000 рулетка жёлтый стикер",
+        "sticker_set": "disappointed_black_guy нижний левый long_cat нижний правый",
+        "joke": "уровень наклон стены длинный кот щель",
+        "outfit": "оливковая куртка белая футболка светлые джинсы",
+        "emotion": "ошеломлённое недоверие раздражённая гримаса",
+        "pose_framing": "полный рост справа уровень в руке",
+        "action": "сверяет стену уровнем читает претензию"
+      }
     }
   ]
 }

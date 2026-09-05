@@ -1,0 +1,246 @@
+{
+  "topic_id": "B26",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Застройщик требует деньги за найденный брак",
+  "cover_hook_highlight": "требует",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "На приёмке в Тюмени нашли брак — застройщик потребовал 190 тысяч: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Новостройка: герой справа, уровень, претензия 190k; memes.",
+      "meme_caption_ru": "",
+      "sticky": "Ключей всё ещё нет",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие, раздражённая гримаса",
+      "meme_picks": [
+        "disappointed_black_guy",
+        "long_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Семья пришла на приёмку с чек-листом — и увидела брак",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Приёмка: чек-лист, уровень, щель в откосе; confused_math_lady.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Семья пришла на приёмку с чек-листом — и увидел…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Семь рабочих дней",
+        "Кривые стены",
+        "Щели в окнах",
+        "Фото брака"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "confused_math_lady"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Семья пришла на приёмку с чек-листом — и увидела брак",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Таблица: 14 дней, 190 тыс., 0,1%/день, штрафа нет в законе.",
+      "alt": "чеклист ошибок vs правильный путь по новостройке в Тюмени: 14 дней, Около 190 тысяч, 0,1% в день — иллюстрация к разбору сделки.",
+      "labels": [
+        "14 дней",
+        "Около 190 тысяч",
+        "0,1% в день",
+        "Штрафа нет в законе"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Застройщик насчитал 190 тысяч за «затягивание»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "ДДУ flat-lay: односторонний акт, отказ, календарь 2 мес.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Застройщик насчитал 190 тысяч за «затягивание»» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Односторонний акт",
+        "Обоснованный отказ",
+        "Не раньше двух месяцев",
+        "Два механизма"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Банк не выдал финальный транш — аренда и ипотека одновременно",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: ипотека, второй транш, аренда; без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Банк не выдал финальный транш — аренда и ипотек…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Траншевая ипотека",
+        "Второй транш",
+        "Аренда параллельно",
+        "Два платежа"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Встречная претензия вместо подписи «без претензий»",
+      "visual_type": "comparison_table",
+      "scene_hint": "Схема: дефекты→претензия, не «без претензий»; wojak.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Без претензий нет, Встречная претензия, Дефекты зафиксированы — иллюстрация к…",
+      "labels": [
+        "Без претензий нет",
+        "Встречная претензия",
+        "Дефекты зафиксированы",
+        "Ключей пока нет"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "wojak"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что проверить в ДДУ и на приёмке — таблица",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow: уклонение, явка 7д, ст.8 ч.5, транш.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Пункт про уклонение, Явка семь дней, Статья 8 часть 5 — иллюстрация к разбору…",
+      "labels": [
+        "Пункт про уклонение",
+        "Явка семь дней",
+        "Статья 8 часть 5",
+        "Условие второго транша"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Застройщик насчитал 190 тысяч за «затягивание»",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Timeline: передача, уведомление, кредит; this_is_fine_dog.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Раздел передачи, Уведомление, Кредитный договор — иллюстрация к разбору сделки.",
+      "labels": [
+        "Раздел передачи",
+        "Уведомление",
+        "Кредитный договор",
+        "Читать до приёмки"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "this_is_fine_dog"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень — 3640",
+    "приемка новостройки — 110",
+    "приемка квартиры в новостройке тюмень — 20"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "вертикальная фигура хозяина справа в полный рост, слева светлая фактурная стена с длинным уровнем и листом претензии; чистая зона сверху для заголовка",
+    "location": "светлая незавершённая квартира в новостройке Тюмени, у окна с солнечным бликом, видны кривизна стены и щель у оконного откоса",
+    "meme": "disappointed_black_guy и long_cat, маленькие узнаваемые стикеры-реакции",
+    "prop_set": "строительный уровень, планшет с фото дефектов, лист претензии на 190 000 ₽, рулетка, жёлтый стикер «Ключей всё ещё нет»",
+    "sticker_set": "disappointed_black_guy в нижнем левом углу и long_cat у нижнего правого края, каждый менее 15% кадра, с отступом не менее 80px от лица, заголовка и телефона",
+    "joke": "уровень показывает наклон стены, а длинный кот будто измеряет щель у окна; человек смотрит на сумму претензии так, словно штраф появился за найденный брак",
+    "outfit": "светлая оливковая рабочая куртка-оверсайз поверх белой футболки, светлые джинсы, без пиджака",
+    "emotion": "ошеломлённое недоверие с раздражённой гримасой",
+    "pose_framing": "полный рост справа, корпус чуть наклонён к письму, одна рука держит уровень у стены, другая поднимает претензию",
+    "action": "сверяет кривую стену уровнем и читает штрафную претензию за отказ подписать акт"
+  },
+  "cover_emotion": "ошеломлённое недоверие, раздражённая гримаса"
+}
