@@ -7,7 +7,7 @@
 - [Квартиру продавали по доверенности. Хозяин был на СВО]({{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/): Доверенность на продажу квартиры: как проверить волю собственника на СВО до аванса
 - [В Тюмени расписку за квартиру написали — денег на счёте нет]({{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/): В Тюмени расписку за квартиру написали — денег на счёте нет
 - [В Тюмени не подтвердили согласие супруги — аванс остановили]({{SITE_BASE}}/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/): В Тюмени не подтвердили согласие супруги — аванс остановили
-- [В Тюмени подписали ДДУ на квартиру — в ЕГРН нашли апартаменты]({{SITE_BASE}}/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty/): В Тюмени подписали ДДУ на квартиру — в ЕГРН нашли апартаменты
+- [Застройщик в Тюмени задержал ключи на 7 месяцев — 340 тысяч не выплатил]({{SITE_BASE}}/v-tyumeni-zastrojschik-perenes-sdachu-na-7-mesyacev-neustojku-340-tysyach-ne-vyplatil/): Застройщик в Тюмени задержал ключи на 7 месяцев — 340 тысяч не выплатил
 - [В Тюмени открытая кухня остановила регистрацию квартиры]({{SITE_BASE}}/v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii/): В Тюмени открытая кухня остановила регистрацию квартиры
 - [В Тюмени банк поднял ставку ипотеки перед ДДУ — бронь сгорела]({{SITE_BASE}}/v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi/): В Тюмени банк поднял ставку ипотеки перед ДДУ — бронь сгорела
 - [Застройщик сдвинул сдачу ЖК в Тюмени на год — ипотека осталась]({{SITE_BASE}}/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/): Застройщик сдвинул сдачу ЖК в Тюмени на год — ипотека осталась

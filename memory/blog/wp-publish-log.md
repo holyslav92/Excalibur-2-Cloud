@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-05
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-zastrojschik-perenes-sdachu-na-7-mesyacev-neustojku-340-tysyach-ne-vyplatil
+- **post_id:** 9788
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-zastrojschik-perenes-sdachu-na-7-mesyacev-neustojku-340-tysyach-ne-vyplatil/
+- **featured_image:** 9789
+- **inline_images:** 9790–9796 (7)
+- **wp_category_slugs:** dokumenty-i-oformlenie, riski-sdelki, pokupka-kvartiry (category_ids=54,58,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23
