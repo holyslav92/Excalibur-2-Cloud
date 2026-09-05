@@ -22,3 +22,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-09-01 | B20 | v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot | /blog/pokupka-kvartiry/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/ | published |
 | 2026-09-02 | B21 | v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo | /blog/vtorichka-i-riski/v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo/ | published |
 | 2026-09-04 | B22 | v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi | /blog/ipoteka/v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi/ | published |
+| 2026-09-05 | B25 | v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v | /blog/pokupka-kvartiry/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v/ | published |

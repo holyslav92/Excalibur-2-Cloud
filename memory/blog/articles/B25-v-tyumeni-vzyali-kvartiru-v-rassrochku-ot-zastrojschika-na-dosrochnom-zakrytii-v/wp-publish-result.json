@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v",
+  "topic_id": "B25",
+  "post_id": 9736,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B25-v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 958165,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9736 slug=v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v\nOK categories=36,58\nOK yoast_social_image=1\nOK featured_image=9737\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9738 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v-inline-01.png\nOK inline_alt=9738\nOK inline_description=9738\nOK inline_image_upload=9739 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v-inline-02.png\nOK inline_alt=9739\nOK inline_description=9739\nOK inline_image_upload=9740 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v-inline-03.png\nOK inline_alt=9740\nOK inline_description=9740\nOK inline_image_upload=9741 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v-inline-04.png\nOK inline_alt=9741\nOK inline_description=9741\nOK inline_image_upload=9742 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v-inline-05.png\nOK inline_alt=9742\nOK inline_description=9742\nOK inline_image_upload=9743 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v-inline-06.png\nOK inline_alt=9743\nOK inline_description=9743\nOK inline_image_upload=9744 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v-inline-07.png\nOK inline_alt=9744\nOK inline_description=9744\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v/",
+    "errors": []
+  }
+}

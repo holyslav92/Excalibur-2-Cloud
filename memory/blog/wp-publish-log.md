@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B25 — 2026-09-05
+
+- **topic_id:** B25
+- **slug:** v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v
+- **post_id:** 9736
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-vzyali-kvartiru-v-rassrochku-ot-zastrojschika-na-dosrochnom-zakrytii-v/
+- **featured_image:** 9737
+- **inline_images:** 9738–9744 (7)
+- **wp_category_slugs:** pokupka-kvartiry, riski-sdelki (category_ids=36,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063); outbound 4 siblings
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B22 — 2026-09-04
 
 - **topic_id:** B22
