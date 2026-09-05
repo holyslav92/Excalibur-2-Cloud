@@ -1,0 +1,298 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "BLOCK",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-zastrojschik-perenes-sdachu-na-7-mesyacev-neustojku-340-tysyach-ne-vyplatil/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          994,
+          568
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 568,
+            "end": 585
+          },
+          "v_gutter_px": {
+            "start": 994,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 10.5,
+            "max_aspect_crop_loss": 0.0158,
+            "per_panel_crop_loss": {
+              "top_left": 0.0158,
+              "top_right": 0.0,
+              "bottom_left": 0.0141,
+              "bottom_right": 0.0069
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 4,
+              "right": 994,
+              "bottom": 563
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 994,
+              "bottom": 568
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Застройщик в Тюмени задержал ключи на 7 месяцев — 340 тысяч не выплатил: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 568
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 568
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «За три недели до ключей — письмо о переносе на…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "За три недели до ключей — письмо о переносе на семь месяцев"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 589,
+              "right": 994,
+              "bottom": 1148
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 585,
+              "right": 994,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: 340 тыс, 214-ФЗ, Перенос — иллюстрация к разбору сделки.",
+            "h2_anchor": "За три недели до ключей — письмо о переносе на семь месяцев"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1036,
+              "top": 585,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 585,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Финал: ключи получили, эскроу закрыли — неустой…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Финал: ключи получили, эскроу закрыли — неустойку не заплатили"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-zastrojschik-perenes-sdachu-na-7-mesyacev-neustojku-340-tysyach-ne-vyplatil/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1010,
+          567
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 567,
+            "end": 583
+          },
+          "v_gutter_px": {
+            "start": 1010,
+            "end": 1027
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 1.0,
+            "v_center_offset_px": 5.5,
+            "max_aspect_crop_loss": 0.0127,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0127,
+              "bottom_left": 0.0,
+              "bottom_right": 0.0088
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1010,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1010,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Просрочка наступила: претензия на 340 тысяч и о…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Просрочка наступила: претензия на 340 тысяч и ответ застройщика"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2041,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 1027,
+              "top": 0,
+              "right": 2048,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Мораторий сняли, Отсрочка до 31.12.2026, Статья 333 ГК РФ — иллюстрация к разбору…",
+            "h2_anchor": "Допсоглашение без неустойки: что предлагают «ради скорости»"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 583,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 583,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Срок в ДДУ, Письмо о переносе, Дата передачи ключей — иллюстрация к разбору сделки.",
+            "h2_anchor": "Неустойка в 2026: начисление вернулось, выплата может ждать"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1031,
+              "top": 583,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1027,
+              "top": 583,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Проверьте до подписи, Не спешите с допом, Ключи получили — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что проверить в ДДУ и переписке — таблица"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — За три недели до ключей — письмо о переносе на семь месяцев",
+    "skip inline_2: already correct under H2 — За три недели до ключей — письмо о переносе на семь месяцев",
+    "skip inline_3: already correct under H2 — Финал: ключи получили, эскроу закрыли — неустойку не заплатили",
+    "skip inline_4: already correct under H2 — Просрочка наступила: претензия на 340 тысяч и ответ застройщика",
+    "skip inline_5: already correct under H2 — Допсоглашение без неустойки: что предлагают «ради скорости»",
+    "skip inline_6: already correct under H2 — Неустойка в 2026: начисление вернулось, выплата может ждать",
+    "skip inline_7: already correct under H2 — Что проверить в ДДУ и переписке — таблица"
+  ],
+  "errors": [
+    "skip inline_1: H2 not found — Перенос на 7 месяцев",
+    "skip inline_2: H2 not found — Перенос на 7 месяцев",
+    "skip inline_3: H2 not found — Ключи без неустойки",
+    "inline_1 figure count after inject=0 (need exactly 1)",
+    "inline_2 figure count after inject=0 (need exactly 1)",
+    "inline_3 figure count after inject=0 (need exactly 1)"
+  ]
+}
