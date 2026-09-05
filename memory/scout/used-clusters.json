@@ -5,6 +5,15 @@
   "last_sync": "2026-09-05",
   "clusters": [
     {
+      "cluster_id": "newbuild_investor_ddu_rental_ban_before_keys_tyumen",
+      "first_seen": "2026-09-05",
+      "locked_until": "2026-10-05",
+      "source": "ledger",
+      "slug": "v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch",
+      "topic_id": "B23",
+      "title": "В Тюмени инвестор не подписал ДДУ: аренду запретили до ключей"
+    },
+    {
       "cluster_id": "newbuild_ddu_cellar_paid_not_handed_tyumen",
       "first_seen": "2026-09-02",
       "locked_until": "2026-10-02",

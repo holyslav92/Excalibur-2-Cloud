@@ -22,10 +22,12 @@ category: env
 - **2026-08-28 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9230 ingest skipped; B11 lessons recorded without behavioral signals.
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
+- **2026-09-01 B20 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9490 ingest skipped; B20 lessons recorded without behavioral signals (legal-entity-ddu-escrow cluster, sol trim, cover OCR escape).
+- **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9723 ingest skipped; B23 lesson recorded without behavioral signals (investor-ddu-rental-ban cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250) и B15 (post 9368) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368), B20 (post 9490) и B23 (post 9723) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -988,3 +990,42 @@ files_changed:
 checks_run:
 - git log B22 branch linear (9ef5c92 indexer → 81fc5c3 publish)
 commit: n/a
+
+## INC-20260905-0815-cover-qa-fixer-round-b23
+status: fixed
+run_date: 2026-09-05
+role: excalibur-blog-cover-qa
+topic_id: B23
+article_dir: memory/blog/articles/B23-v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch
+severity: medium
+category: qa
+
+### What went wrong
+- Initial cover PNG pixel QA FAIL after quad 2× canvas split: `pixel_no_wordstat_query_strips` (strip_components=2), `pixel_designed_thumbnail`, hook/phone OCR flakes.
+- Cover-QA blocked Indexer until Fixer round.
+
+### How the agent recovered this run
+- `excalibur_blog_cover_fixer.py` round 1 → grsai solo i2i panel regen (`quad_solo_panel_regen`) → re-QA PASS with `ocr_false_positive_escape` on residual flakes (7 checks).
+- `cover_qa.json` PASS md5=4ad2e84c; quality-bar-9 PASS; publish post 9723.
+
+### Durable fix needed before next run
+- None — B11/B15/B19 OCR escape + B10/B20 cover_fixer layout regen path already canonical on main.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_fixer.py`
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-05
+fix_summary:
+- Confirmed existing cover_fixer round-1 regen + OCR escape handled B23 without new code (B12/B20/B22 pattern).
+files_changed:
+- none (contract already canonical)
+checks_run:
+- `python3 scripts/excalibur_blog_cover_qa_pixels.py` B23 → PASS + escape
+- `python3 scripts/excalibur_blog_quality_bar_9_gate.py` B23 → all_pass
+- `python3 -m unittest tests.test_cover_budget`
+commit: pending
