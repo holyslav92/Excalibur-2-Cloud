@@ -1,0 +1,80 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B25",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-05",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "2026-09-05 — tenant TG: ключевая ставка 14%, контекст рассрочка vs ипотека"
+      },
+      {
+        "url": "https://asninfo.ru/news/125111-minstroy-podgotovil-zakonoproyekt-o-novykh-pravilakh-rassrochki-v-stroitelstve",
+        "type": "news",
+        "note": "2026-08-24 — законопроект Минстроя о рассрочке после ввода, досрочное погашение с уведомлением 30 дней"
+      },
+      {
+        "url": "https://www.consultant.ru/law/review/209803415.html",
+        "type": "official review",
+        "note": "2026-08-18 — обзор того же законопроекта"
+      },
+      {
+        "url": "https://novostroikino.ru/blog/bronirovanie-kvartiry-v-novostroyke-2026/",
+        "type": "market",
+        "note": "2026-08-06 — бронь, аванс vs услуга, возврат до ДДУ"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel (scout signal)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить квартиру в рассрочку от застройщика",
+    "p0_volume": 33,
+    "localized_phrase": "рассрочка от застройщика тюмень",
+    "localized_volume": 143,
+    "p0_volume_ru225": 2909,
+    "support_phrases": [
+      {"phrase": "рассрочка от застройщика", "volume": 21301, "region": "225"}
+    ],
+    "rework_from": "scout P0 locked «купить квартиру в рассрочку от застройщика» (33) with localized spine «рассрочка от застройщика тюмень» (143)",
+    "partial": ["досрочное погашение рассрочка застройщик — totalCount only"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_developer_installment_early_payoff_penalty_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["enco", "cbr", "214-fz"],
+    "errors": []
+  },
+  "key_facts_count": 34,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_brief": "research-brief.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "derouter": {
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "note": "First attempt HTTP 529 overloaded; succeeded on retry"
+  },
+  "incident_report": "none"
+}
