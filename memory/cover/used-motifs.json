@@ -103,6 +103,23 @@
         "pose_framing": "вертикальный full-body взгляд прямо на зрителя не боковой",
         "action": "держит письмо с новым расчётом нажимает калькулятор"
       }
+    },
+    {
+      "date": "2026-09-05",
+      "topic_id": "B23",
+      "slug": "",
+      "motifs": {
+        "composition": "host full-body right, clean hook zone left",
+        "location": "bright newbuild handover room tyumen",
+        "meme": "side_eye_chloe + pop_cat corner stickers",
+        "prop_set": "ddu квартира, egrn нежилое, keys tray, yellow folder",
+        "sticker_set": "side_eye_chloe top-left, pop_cat bottom-right, ≤15%",
+        "joke": "keys pushed aside until egrn checked",
+        "outfit": "light blue shirt mustard sweater beige chinos no blazer",
+        "emotion": "shocked disbelief raised brows tense grimace",
+        "pose_framing": "full-body three-quarter both hands visible not side-eye bust",
+        "action": "holds ddu points at egrn line pushes keys away"
+      }
     }
   ]
 }

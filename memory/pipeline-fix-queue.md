@@ -22,10 +22,11 @@ category: env
 - **2026-08-28 B11 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9230 ingest skipped; B11 lessons recorded without behavioral signals.
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
+- **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9749 ingest skipped; B23 lesson recorded without behavioral signals (newbuild_apartments_instead_flat_ddu_tyumen cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250) и B15 (post 9368) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368) и B23 (post 9749) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -988,3 +989,77 @@ files_changed:
 checks_run:
 - git log B22 branch linear (9ef5c92 indexer → 81fc5c3 publish)
 commit: n/a
+
+## INC-20260905-1100-cover-fixer-layout-hook-b23
+status: fixed
+run_date: 2026-09-05
+role: excalibur-blog-cover-qa
+topic_id: B23
+article_dir: memory/blog/articles/B23-v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty
+severity: medium
+category: qa
+
+### What went wrong
+- First quad-split cover.png FAIL: `pixel_layout_not_collapsed` + missing hook/phone/meme on canvas panel.
+- Cover-QA needed 1 Fixer round (`quad_regen_panels --slots cover` → solo i2i) before OCR escape PASS.
+
+### How the agent recovered this run
+- `excalibur_blog_cover_fixer.py` round 1 → `quad-solo-batch-cover.json` solo regen → re-QA PASS with `ocr_false_positive_escape` on residual flakes.
+
+### Durable fix needed before next run
+- None — B20 `TEXT_LAYOUT_RETRY` + cover_fixer layout/hook/phone/meme regen path already canonical on main.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_fixer.py`
+- `scripts/excalibur_blog_cover_layout_retry.py`
+- `skills/cover-qa-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-05
+fix_summary:
+- Confirmed existing cover_fixer regen + B11/B19 OCR escape handled B23 without new code.
+files_changed:
+- none (contract already canonical)
+checks_run:
+- B23 `cover/cover_qa.json` PASS after 1 fixer round + OCR escape
+commit: n/a
+
+## INC-20260905-1101-image-alt-clamp-offbyone-b23
+status: fixed
+run_date: 2026-09-05
+role: excalibur-blog-fixer
+topic_id: B23
+article_dir: memory/blog/articles/B23-v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty
+severity: low
+category: script
+
+### What went wrong
+- `build_inline_alt` + `clamp_seo_alt` could emit 141-char alts (140 body + trailing period) → `image-alt-gate` FAIL `alt too long (141 > 140)` on inline_2/inline_5 before apply.
+
+### How the agent recovered this run
+- `excalibur_blog_image_caption_builder.py --apply` rewrote manifest/registry/html; quality-bar `image_alt_human` PASS at publish.
+
+### Durable fix needed before next run
+- `clamp_seo_alt`: skip trailing period when `len(raw)+1 > ALT_SEO_MAX`.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_image_caption_builder.py`
+- `tests/test_image_caption_builder.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-05
+fix_summary:
+- `clamp_seo_alt` accounts for trailing period in max_len budget; unit test for 140-char edge.
+files_changed:
+- `scripts/excalibur_blog_image_caption_builder.py`
+- `tests/test_image_caption_builder.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
+- `python3 -m unittest tests.test_image_caption_builder`
+commit: cddd091
