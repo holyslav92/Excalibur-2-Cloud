@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty",
+  "topic_id": "B23",
+  "post_id": 9749,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B23-v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1044885,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9749 slug=v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9750\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9751 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty-inline-01.png\nOK inline_alt=9751\nOK inline_description=9751\nOK inline_image_upload=9752 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty-inline-02.png\nOK inline_alt=9752\nOK inline_description=9752\nOK inline_image_upload=9753 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty-inline-03.png\nOK inline_alt=9753\nOK inline_description=9753\nOK inline_image_upload=9754 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty-inline-04.png\nOK inline_alt=9754\nOK inline_description=9754\nOK inline_image_upload=9755 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty-inline-05.png\nOK inline_alt=9755\nOK inline_description=9755\nOK inline_image_upload=9756 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty-inline-06.png\nOK inline_alt=9756\nOK inline_description=9756\nOK inline_image_upload=9757 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty-inline-07.png\nOK inline_alt=9757\nOK inline_description=9757\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty/",
+    "errors": []
+  }
+}
