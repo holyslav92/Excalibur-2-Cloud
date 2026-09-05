@@ -13,6 +13,7 @@ from scripts.excalibur_blog_image_caption_builder import (
     apply_article_captions,
     build_cover_alt,
     build_inline_alt,
+    clamp_seo_alt,
     collect_article_alts,
     cover_caption_must_be_empty,
     is_prompt_like_alt,
@@ -82,6 +83,16 @@ class ImageCaptionBuilderTests(unittest.TestCase):
         self.assertFalse(prompt_like, msg=f"{alt!r} errors={errors}")
         self.assertNotIn("рядом лежит", alt.casefold())
         self.assertNotIn("у стойки", alt.casefold())
+
+    def test_clamp_seo_alt_period_within_max_len(self) -> None:
+        """B23: 140-char body + trailing period must not exceed ALT_SEO_MAX."""
+        body = "а" * 140
+        alt = clamp_seo_alt(body)
+        self.assertLessEqual(len(alt), ALT_SEO_MAX)
+        body139 = "а" * 139
+        alt139 = clamp_seo_alt(body139)
+        self.assertLessEqual(len(alt139), ALT_SEO_MAX)
+        self.assertTrue(alt139.endswith("."))
 
     def test_build_inline_alt_from_labels(self) -> None:
         slot = {

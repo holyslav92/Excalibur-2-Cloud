@@ -236,14 +236,15 @@ def clamp_seo_alt(text: str, *, min_len: int = ALT_SEO_MIN, max_len: int = ALT_S
     raw = normalize_text(text).rstrip(".!?")
     if not raw:
         return raw
-    if len(raw) <= max_len and len(raw) >= min_len:
-        return f"{raw}."
     if len(raw) > max_len:
         cut = raw[: max_len - 1]
         if " " in cut:
             cut = cut.rsplit(" ", 1)[0]
         return f"{cut.rstrip('.,;:')}…"
-    return f"{raw}."
+    # Trailing period counts toward max_len (B23: 140 chars + "." → 141 FAIL).
+    if len(raw) >= min_len:
+        return f"{raw}." if len(raw) + 1 <= max_len else raw
+    return f"{raw}." if len(raw) + 1 <= max_len else raw
 
 
 def is_prompt_like_alt(
