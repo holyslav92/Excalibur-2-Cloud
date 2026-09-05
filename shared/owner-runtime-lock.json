@@ -1,0 +1,184 @@
+{
+  "version": "2026-09-05",
+  "status": "LOCKED_ON_MAIN",
+  "description": "Single source of truth for owner runtime locks. Doctor FAIL-CLOSED if repo config disagrees.",
+  "owner_mandate": "Do not weaken without explicit owner override.",
+  "schedule": {
+    "timezone": "Asia/Yekaterinburg",
+    "weekdays_only": true,
+    "runs_per_day": 4,
+    "slots_local": ["09:00", "12:00", "15:00", "17:00"],
+    "forbidden_runs_per_day": [1, 2, 3],
+    "forbidden_slot_sets": [["09:00", "17:00"], ["09:00", "12:00"]],
+    "tenant_path": "shared/tenant-config.json",
+    "tenant_key": "publish_schedule"
+  },
+  "writing_model": {
+    "script": "scripts/excalibur_blog_derouter_opus_chat.py",
+    "contract": "shared/derouter-opus-brain-contract.md",
+    "fail_loud_if_unavailable": true,
+    "powerful": {
+      "model": "gpt-6-astra",
+      "model_env": "DEROUTER_POWERFUL_MODEL",
+      "legacy_env": "DEROUTER_OPUS_MODEL",
+      "roles": ["writer", "sol"]
+    },
+    "utility": {
+      "model": "gpt-5.6-terra",
+      "model_env": "DEROUTER_TERRA_MODEL",
+      "roles": [
+        "scout",
+        "title",
+        "research",
+        "description",
+        "cover-text",
+        "schema",
+        "cover-scene"
+      ]
+    },
+    "forbidden_powerful_models": [
+      "claude-opus-5",
+      "claude-opus-4",
+      "claude-opus",
+      "opus-5",
+      "gpt-5-opus"
+    ],
+    "forbidden_global_text_override_env": "DEROUTER_TEXT_MODEL"
+  },
+  "scout": {
+    "topic_market_focus": "newbuild_only",
+    "geo": "Tyumen",
+    "angle_lock_doc": "shared/dzen-top-angle-newbuild-lock.md",
+    "newbuild_lock_doc": "shared/newbuild-focus-lock.md",
+    "topic_focus_script": "scripts/excalibur_blog_topic_focus.py",
+    "anti_dupe_hard": {
+      "enabled": true,
+      "gate_script": "scripts/excalibur_blog_scout_story_dup.py",
+      "helper_script": "scripts/excalibur_blog_scout_helper.py",
+      "research_start_assert": "assert_anti_dupe_hard",
+      "cluster_days": 30,
+      "h1_fingerprint_days": 30,
+      "formula_spam_last_n": 3,
+      "fail_before_writer": true
+    }
+  },
+  "article_quality_score": {
+    "contract": "shared/article-quality-score-lock.md",
+    "gate": "scripts/excalibur_blog_quality_score_gate.py",
+    "output": "article-quality-score.json",
+    "placement": "after_stylo_before_description",
+    "word_count_target_min": 1400,
+    "word_count_target_max": 1600,
+    "word_count_hard_max": 1750,
+    "dzen_reading_minutes_max": 10,
+    "max_sol_rewrites": 1,
+    "repair_flag": "--repair",
+    "required_before_publish": true,
+    "forbidden_self_score_loop": true
+  },
+  "quality_bar_9": {
+    "contract": "shared/quality-bar-9.md",
+    "gate": "scripts/excalibur_blog_quality_bar_9_gate.py",
+    "output": "quality-bar-9.json",
+    "required_before_publish": true
+  },
+  "stylo": {
+    "gate": "scripts/excalibur_blog_stylo.py",
+    "max_sol_rewrites": 1,
+    "placement": "after_sol_before_quality_score"
+  },
+  "publish": {
+    "requires_quality_score_all_pass": true,
+    "requires_quality_bar_all_pass": true,
+    "requires_cover_qa_pass": true,
+    "requires_description_brief": true,
+    "requires_pipeline_canon_stamp": true,
+    "allow_publish_env": "EXCALIBUR_BLOG_ALLOW_PUBLISH",
+    "allow_publish_value": "yes",
+    "ftp_env_keys": ["FTP_HOST", "FTP_USER", "FTP_PASS", "FTP_ROOT"],
+    "site_url_env_keys": ["PUBLIC_SITE_URL", "WP_SITE_URL", "WP_HOME"]
+  },
+  "images": {
+    "provider": "grsai-rest",
+    "script": "scripts/excalibur_blog_grsai_gpt_image2_api.py",
+    "contract": "shared/grsai-gpt-image-api-contract.md",
+    "model_tier": "standard_only",
+    "vip_tier_forbidden": true,
+    "caption_builder": "scripts/excalibur_blog_image_caption_builder.py",
+    "forbidden_providers": ["kie", "Kie"],
+    "forbidden_scripts": [
+      "scripts/excalibur_blog_kie_gpt_image2_api.py",
+      "scripts/excalibur_blog_cover_pil_compose.py"
+    ],
+    "alt_human_gate": "image_alt_human"
+  },
+  "cover": {
+    "solo_script": "scripts/excalibur_blog_grsai_solo_cover.py",
+    "max_full_attempts": 2,
+    "env_override": "EXCALIBUR_COVER_MAX_ATTEMPTS",
+    "timebox_minutes": "15-20",
+    "short_hook_words": "5-7_cyrillic"
+  },
+  "forbidden_active_doc_phrases": [
+    "1800–2200",
+    "1800-2200",
+    "word_quota_1800_2100",
+    "runs_per_day\": 2",
+    "runs_per_day: 2",
+    "2 слотов в день"
+  ],
+  "forbidden_active_doc_globs": [
+    "AGENTS.md",
+    "CLOUD-AUTOMATION.md",
+    "shared/newbuild-focus-lock.md",
+    "shared/dzen-top-angle-newbuild-lock.md",
+    "shared/derouter-opus-brain-contract.md",
+    "shared/article-quality-score-lock.md",
+    "shared/quality-bar-9.md",
+    "skills/**/*.md",
+    "agents/**/*.md",
+    ".cursor/skills/**/*.md",
+    ".cursor/agents/**/*.md"
+  ],
+  "automation_instructions": {
+    "doc": "CLOUD-AUTOMATION.md",
+    "block_start": "```text",
+    "block_end": "```",
+    "owner_resave_required": true,
+    "required_markers": [
+      "shared/owner-runtime-lock.json",
+      "gpt-6-astra",
+      "gpt-5.6-terra",
+      "excalibur_blog_quality_score_gate.py",
+      "article-quality-score.json",
+      "shared/dzen-top-angle-newbuild-lock.md",
+      "HARD anti-dupe",
+      "09/12/15/17",
+      "runs_per_day: 4",
+      "4 Cursor Automations",
+      "EXCALIBUR_BLOG_ALLOW_PUBLISH=yes",
+      "quality-bar-9.json",
+      "excalibur_blog_image_caption_builder.py",
+      "EXCALIBUR_COVER_MAX_ATTEMPTS=2",
+      "never vip",
+      "1400–1600",
+      "1750",
+      "Memories = OFF"
+    ],
+    "forbidden_markers": [
+      "1800–2200",
+      "1800-2200",
+      "runs_per_day: 2"
+    ]
+  },
+  "doctor": {
+    "script": "scripts/excalibur_blog_doctor.py",
+    "validator": "scripts/excalibur_blog_owner_runtime_lock.py",
+    "fail_closed": true
+  },
+  "pipeline_wiring": {
+    "structure_gate_quality_score": "scripts/excalibur_blog_structure_gate.py",
+    "wp_publish_quality_score_check": "scripts/excalibur_blog_wp_publish.py",
+    "research_start_anti_dupe": "scripts/excalibur_blog_research_start.py"
+  }
+}

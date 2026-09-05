@@ -104,5 +104,6 @@
     "design_code": "memory/cover/cover-design-code.json",
     "style_preset": "memory/cover/quad-style-the-rieltor.json"
   },
-  "comment": "The Риэлтор / tymenrieltor.ru. Secrets only in Cloud (PUBLIC_SITE_URL, SFTP, EXCALIBUR_BLOG_ALLOW_PUBLISH). Do not enable publish in git."
+  "comment": "The Риэлтор / tymenrieltor.ru. Secrets only in Cloud (PUBLIC_SITE_URL, SFTP, EXCALIBUR_BLOG_ALLOW_PUBLISH). Do not enable publish in git.",
+  "owner_runtime_lock": "shared/owner-runtime-lock.json"
 }

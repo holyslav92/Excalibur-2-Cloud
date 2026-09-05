@@ -138,7 +138,10 @@ def main() -> int:
         "scripts/excalibur_blog_cover_wordstat_overlay.py",
         "scripts/excalibur_blog_quality_bar_9_gate.py",
         "scripts/excalibur_blog_quality_score_gate.py",
+        "scripts/excalibur_blog_owner_runtime_lock.py",
         "shared/article-quality-score-lock.md",
+        "shared/owner-runtime-lock.json",
+        "shared/dzen-top-angle-newbuild-lock.md",
         "scripts/excalibur_blog_image_caption_builder.py",
         "scripts/excalibur_blog_quad_regen_panels.py",
         "scripts/excalibur_blog_writer_chunk.py",
@@ -495,12 +498,26 @@ def main() -> int:
     powerful_model = str(powerful_cfg.get("model") or "gpt-6-astra")
     powerful_check = derouter_powerful_env or derouter_opus_env or powerful_model
     check(
-        bool(powerful_check) and ("astra" in powerful_check.lower() or "opus" in powerful_check.lower()),
-        f"powerful tier GPT-6 Astra ({powerful_check})",
+        powerful_model == "gpt-6-astra",
+        "tenant powerful model gpt-6-astra (Writer/Sol)",
         errors,
         warnings,
-        warn=not derouter_key,
     )
+    if powerful_check:
+        check(
+            "astra" in powerful_check.lower(),
+            f"powerful tier env/config is Astra ({powerful_check})",
+            errors,
+            warnings,
+            warn=not derouter_key,
+        )
+        check(
+            "opus" not in powerful_check.lower() or "astra" in powerful_check.lower(),
+            f"powerful tier not Opus ({powerful_check})",
+            errors,
+            warnings,
+            warn=not derouter_key,
+        )
     utility_cfg = (tenant.get("writing_model") or {}).get("utility") or {}
     utility_model = str(utility_cfg.get("model") or "gpt-5.6-terra")
     terra_env = os.environ.get("DEROUTER_TERRA_MODEL", "").strip()
@@ -599,6 +616,24 @@ def main() -> int:
             warnings,
         )
         print("NOTE read shared/dzen-content-rules.md + rf-blocked-entities.json BEFORE Scout")
+
+    sys.path.insert(0, str(root / "scripts"))
+    try:
+        from excalibur_blog_owner_runtime_lock import validate_owner_runtime_lock
+
+        lock_errors = validate_owner_runtime_lock(root)
+        check(
+            not lock_errors,
+            "owner-runtime-lock drift guard (shared/owner-runtime-lock.json)",
+            errors,
+            warnings,
+        )
+        for detail in lock_errors[:25]:
+            print(f"  LOCK: {detail}")
+        if len(lock_errors) > 25:
+            print(f"  LOCK: ... and {len(lock_errors) - 25} more")
+    except Exception as exc:
+        check(False, f"owner-runtime-lock validator: {exc}", errors, warnings)
 
     print(f"SUMMARY errors={len(errors)} warnings={len(warnings)} setup_complete={setup_complete}")
     if errors:

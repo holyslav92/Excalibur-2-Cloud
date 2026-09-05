@@ -56,7 +56,7 @@ Gate: `scripts/excalibur_blog_topic_focus.py` при `topic_market_focus: newbui
 |-----------|-----------|
 | news-casus: казус, stakes, финал, comment magnet | English TL;DR, «Быстрый инсайт», bullet-dump в лиде |
 | Прозаический лид 4–6 предложений → early TG+MAX | Чеклисты / «10 советов как выбрать ЖК» как каркас |
-| One-breath ~1800–2200 слов (~10 мин) | 14+ мин, вода, один beat трижды |
+| One-breath ~1400–1600 слов (~8–10 мин; hard FAIL >1750) | 14+ мин, вода, один beat трижды |
 | Ending: agency not panic (бронь/ДДУ до денег) | Brochure застройщика, how-to guide |
 | Interlink 2–4 sibling (без plot из старой вторички) | Переписывать старые published HTML |
 
