@@ -1,0 +1,73 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B23",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-05",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/08/27/76610181/",
+        "type": "local media",
+        "note": "27.08.2026 — трейд-ин боль: бронь слетает; Брусника Дни обмена 4–5.09.2026"
+      },
+      {
+        "url": "https://t-j.ru/tradein-developers/",
+        "type": "expert/community",
+        "note": "10.08.2026 статья; комментарии 03.09.2026 — сгоревшая бронь 50 тыс., нет связи с трейд-ин в договоре"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/03/31/76291987/",
+        "type": "local media/journalism",
+        "note": "31.03.2026 — тест 12 тюменских трейд-ин программ, дисконты и сроки оценки"
+      },
+      {
+        "url": "https://ttis.ru/buy/trade-in",
+        "type": "official developer",
+        "note": "официальные условия ТИС: фиксация в день брони, партнёр Этажи, выкуп до 8 млн"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "tenant TG — локальный community signal (scout)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "трейд ин новостройка",
+    "p0_volume": 479,
+    "p0_volume_ru225": 479,
+    "p0_volume_tyumen11176": 6,
+    "support_phrases": [
+      {"phrase": "новостройки трейд ин от застройщика", "volume": 121}
+    ],
+    "rework_from": "scout P0 locked «трейд ин новостройка» (479 RU225) after newbuild trade-in casus rework",
+    "partial": ["Tyumen oblast 11176 alone shows 6 — localized via Tyumen developers/media, not Wordstat volume"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_trade_in_failed_before_ddu_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["tis", "enco"],
+    "errors": [],
+    "note": "Developer program terms from ttis.ru and enco.ru; market discount ranges from media only"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
