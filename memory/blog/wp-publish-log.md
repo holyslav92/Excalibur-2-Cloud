@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B23 — 2026-09-05
+
+- **topic_id:** B23
+- **slug:** v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch
+- **post_id:** 9723
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch/
+- **featured_image:** 9724
+- **inline_images:** 9725–9731 (7)
+- **wp_category_slugs:** dokumenty-i-oformlenie, riski-sdelki, pokupka-kvartiry (category_ids=54,58,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B22 — 2026-09-04
 
 - **topic_id:** B22

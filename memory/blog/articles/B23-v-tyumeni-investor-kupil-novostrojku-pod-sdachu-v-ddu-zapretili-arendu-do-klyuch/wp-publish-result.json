@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch",
+  "topic_id": "B23",
+  "post_id": 9723,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B23-v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1058639,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9723 slug=v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch\nOK categories=54,58,36\nOK yoast_social_image=1\nOK featured_image=9724\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9725 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch-inline-03.png\nOK inline_alt=9725\nOK inline_description=9725\nOK inline_image_upload=9726 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch-inline-04.png\nOK inline_alt=9726\nOK inline_description=9726\nOK inline_image_upload=9727 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch-inline-01.png\nOK inline_alt=9727\nOK inline_description=9727\nOK inline_image_upload=9728 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch-inline-02.png\nOK inline_alt=9728\nOK inline_description=9728\nOK inline_image_upload=9729 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch-inline-05.png\nOK inline_alt=9729\nOK inline_description=9729\nOK inline_image_upload=9730 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch-inline-06.png\nOK inline_alt=9730\nOK inline_description=9730\nOK inline_image_upload=9731 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch-inline-07.png\nOK inline_alt=9731\nOK inline_description=9731\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch/",
+    "errors": []
+  }
+}
