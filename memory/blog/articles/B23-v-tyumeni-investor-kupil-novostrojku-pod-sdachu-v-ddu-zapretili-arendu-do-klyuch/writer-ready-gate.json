@@ -1,0 +1,20 @@
+{
+  "gate": "writer_ready",
+  "status": "PASS",
+  "checks": {
+    "word_count": 2125,
+    "interlink_count": 4,
+    "interlink_dupes": {},
+    "composite": "PASS",
+    "lead_sentences": 6,
+    "opening": "PASS",
+    "html_linter": "pass",
+    "early_cta": true,
+    "mid_cta": true,
+    "end_cta": true,
+    "phone_once": true,
+    "h2_count": 6,
+    "comment_magnet": true
+  },
+  "draft": "memory/blog/articles/B23-v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch/drafts/writer.html"
+}
