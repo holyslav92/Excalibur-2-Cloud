@@ -17,6 +17,73 @@ from urllib.request import Request, urlopen
 
 DEFAULT_ANTI_REPEAT_DAYS = 30
 DEFAULT_LIVE_LIMIT = 20
+DEFAULT_FORMULA_SPAM_LAST_N = 3
+
+# Механизмы newbuild для fingerprint / formula-spam (порядок = приоритет).
+MECHANISM_SIGNATURES: list[tuple[str, list[str]]] = [
+    ("booking_expired", [r"брон", r"bron", r"заброн"]),
+    ("escrow_blocked", [r"эскроу", r"escrow"]),
+    ("ddu_mismatch", [r"апартамент", r"apartament", r"квартир.*апарт"]),
+    ("assignment_lost", [r"переуступ", r"уступ"]),
+    ("keys_delay_penalty", [r"срок\s+сдач", r"ключ", r"перенос\s+сдач", r"неустой"]),
+    ("ddu_vs_escrow_amount", [r"дду", r"эскроу", r"сч[её]т"]),
+    ("developer_reorg", [r"юрлиц", r"реорганиз", r"сменил\s+застройщ"]),
+    ("mortgage_rate_hike", [r"ставк", r"процент.*ипотек", r"ипотек.*ставк"]),
+    ("acceptance_defects", [r"при[её]м", r"приемк", r"дефект"]),
+    ("installment_penalty", [r"рассроч"]),
+    ("appraisal_low", [r"оценк"]),
+    ("trade_in", [r"trade", r"трейд", r"trade\s*in", r"обмен\s+стар"]),
+    ("storage_missing", [r"кладов", r"паркинг", r"машиномест"]),
+    ("family_mortgage_escrow", [r"семейн.*ипотек", r"ипотек.*семейн"]),
+    ("generic_newbuild", [r"дду", r"новострой", r"застройщ", r"жк", r"эскроу", r"брон"]),
+]
+
+NUMBER_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
+    (
+        "48h",
+        re.compile(r"\b48\s*(?:час|ч)\b", re.IGNORECASE),
+    ),
+    (
+        "24h",
+        re.compile(r"\b(?:сутк|24\s*(?:час|ч))\b", re.IGNORECASE),
+    ),
+    (
+        "2m",
+        re.compile(r"\b(?:2|два|двух)\s*(?:млн|million|миллион)\b", re.IGNORECASE),
+    ),
+    (
+        "3m",
+        re.compile(r"\b(?:3|три|тр[её]х)\s*(?:млн|million|миллион)\b", re.IGNORECASE),
+    ),
+    (
+        "500k",
+        re.compile(
+            r"\b(?:500|пят(?:ь|и)сот)\s*(?:тыс|тысяч|000)\b",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "600k",
+        re.compile(
+            r"\b(?:600|шест(?:ь|и)сот)\s*(?:тыс|тысяч|000)\b",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "400k",
+        re.compile(
+            r"\b(?:400|четыр(?:е|ё)ст)\s*(?:тыс|тысяч|000)\b",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "amount",
+        re.compile(
+            r"\b(\d{1,3}(?:\s*\d{3})*|\d+)\s*(?:тыс|тысяч|млн|million|руб)\b",
+            re.IGNORECASE,
+        ),
+    ),
+]
 
 
 def project_root() -> Path:
@@ -49,6 +116,24 @@ def load_story_cluster_config(root: Path) -> dict[str, Any]:
     if not path.is_file():
         return {"anti_repeat_days": DEFAULT_ANTI_REPEAT_DAYS, "clusters": []}
     return load_json(path)
+
+
+def anti_dupe_hard_config(root: Path) -> dict[str, Any]:
+    cfg = load_story_cluster_config(root)
+    hard = cfg.get("anti_dupe_hard") or {}
+    if not isinstance(hard, dict):
+        hard = {}
+    return {
+        "enabled": bool(hard.get("enabled", True)),
+        "h1_fingerprint_days": int(hard.get("h1_fingerprint_days") or DEFAULT_ANTI_REPEAT_DAYS),
+        "same_day_fingerprint_block": bool(hard.get("same_day_fingerprint_block", True)),
+        "formula_spam_last_n": int(hard.get("formula_spam_last_n") or DEFAULT_FORMULA_SPAM_LAST_N),
+        "formula_spam_min_distinct_mechanisms": int(
+            hard.get("formula_spam_min_distinct_mechanisms") or 2
+        ),
+        "topic_id_repeat_days": int(hard.get("topic_id_repeat_days") or DEFAULT_ANTI_REPEAT_DAYS),
+        "generic_skeleton_tokens": list(hard.get("generic_skeleton_tokens") or []),
+    }
 
 
 def anti_repeat_days(root: Path) -> int:
@@ -208,6 +293,283 @@ def cluster_matches(text: str, cluster: dict[str, Any]) -> bool:
 
 def detect_story_clusters(text: str, clusters: list[dict[str, Any]]) -> list[str]:
     return [str(c["id"]) for c in clusters if cluster_matches(text, c)]
+
+
+def extract_primary_number_bucket(text: str) -> str | None:
+    blob = normalize_story_blob(text)
+    for bucket, pattern in NUMBER_PATTERNS:
+        if pattern.search(blob):
+            return bucket
+    return None
+
+
+def extract_mechanism_signature(text: str) -> str:
+    blob = normalize_story_blob(text)
+    for sig_id, patterns in MECHANISM_SIGNATURES:
+        if any(re.search(pat, blob, flags=re.IGNORECASE) for pat in patterns):
+            return sig_id
+    return "unknown"
+
+
+def extract_h1_fingerprint(text: str) -> str:
+    mechanism = extract_mechanism_signature(text)
+    number = extract_primary_number_bucket(text)
+    if number and mechanism not in {"unknown", "generic_newbuild"}:
+        return f"{number}:{mechanism}"
+    if mechanism != "unknown":
+        return mechanism
+    return "generic_newbuild"
+
+
+def is_frozen_secondary_cluster(cluster: dict[str, Any]) -> bool:
+    if cluster.get("frozen_secondary") is True:
+        return True
+    if str(cluster.get("market") or "").lower() == "newbuild":
+        return False
+    return True
+
+
+def detect_frozen_secondary_clusters(text: str, clusters: list[dict[str, Any]]) -> list[str]:
+    matched = detect_story_clusters(text, clusters)
+    return [cid for cid in matched if is_frozen_secondary_cluster(next(c for c in clusters if c["id"] == cid))]
+
+
+def _dated_sources(sources: list[dict[str, str]], *, newest_first: bool = True) -> list[dict[str, str]]:
+    def sort_key(src: dict[str, str]) -> tuple[int, str]:
+        d = parse_iso_date(src.get("date") or "") or date.min
+        return (d.toordinal(), str(src.get("topic_id") or ""))
+
+    return sorted(sources, key=sort_key, reverse=newest_first)
+
+
+def check_h1_fingerprint_duplicate(
+    new_text: str,
+    published_sources: list[dict[str, str]],
+    *,
+    root: Path,
+    today: date | None = None,
+) -> list[dict[str, Any]]:
+    hard = anti_dupe_hard_config(root)
+    if not hard["enabled"]:
+        return []
+
+    today = today or date.today()
+    window_days = hard["h1_fingerprint_days"]
+    new_fp = extract_h1_fingerprint(new_text)
+    if new_fp in {"generic_newbuild", "unknown"} or ":" not in new_fp:
+        return []
+
+    warnings: list[dict[str, Any]] = []
+    for src in published_sources:
+        src_fp = extract_h1_fingerprint(src.get("text") or "")
+        if src_fp != new_fp or ":" not in src_fp:
+            continue
+        src_date = parse_iso_date(src.get("date") or "")
+        if src_date is None:
+            continue
+        days_apart = (today - src_date).days
+        if hard["same_day_fingerprint_block"] and days_apart == 0:
+            warnings.append(
+                {
+                    "severity": "CRITICAL",
+                    "gate": "h1_fingerprint_same_day",
+                    "fingerprint": new_fp,
+                    "topic_id": src.get("topic_id") or "",
+                    "slug": src.get("slug") or "",
+                    "source": src.get("source") or "",
+                    "published_date": src_date.isoformat(),
+                    "message": (
+                        f"H1 FINGERPRINT SAME-DAY BLOCK: «{new_fp}» already published today "
+                        f"({src.get('topic_id') or src.get('slug')}). Pick different number or mechanism."
+                    ),
+                }
+            )
+            continue
+        if within_anti_repeat_window(src_date, today, window_days):
+            warnings.append(
+                {
+                    "severity": "CRITICAL",
+                    "gate": "h1_fingerprint",
+                    "fingerprint": new_fp,
+                    "topic_id": src.get("topic_id") or "",
+                    "slug": src.get("slug") or "",
+                    "source": src.get("source") or "",
+                    "published_date": src_date.isoformat(),
+                    "locked_until": (src_date + timedelta(days=window_days)).isoformat(),
+                    "message": (
+                        f"H1 FINGERPRINT DUPLICATE ({window_days}d): «{new_fp}» matches "
+                        f"{src.get('topic_id') or src.get('slug')} ({src_date.isoformat()}). "
+                        "Same number+mechanism = FAIL unless mechanism clearly different."
+                    ),
+                }
+            )
+    return warnings
+
+
+def check_formula_spam(
+    new_text: str,
+    published_sources: list[dict[str, str]],
+    *,
+    root: Path,
+) -> list[dict[str, Any]]:
+    hard = anti_dupe_hard_config(root)
+    if not hard["enabled"]:
+        return []
+
+    last_n = max(2, hard["formula_spam_last_n"])
+    min_distinct = max(2, hard["formula_spam_min_distinct_mechanisms"])
+    dated = [s for s in _dated_sources(published_sources) if parse_iso_date(s.get("date") or "")]
+    recent = dated[:last_n]
+    if len(recent) < last_n:
+        return []
+
+    recent_mechs = [extract_mechanism_signature(s.get("text") or "") for s in recent]
+    candidate_mech = extract_mechanism_signature(new_text)
+    distinct_recent = len(set(recent_mechs))
+
+    warnings: list[dict[str, Any]] = []
+    if distinct_recent < min_distinct and candidate_mech in set(recent_mechs):
+        warnings.append(
+            {
+                "severity": "CRITICAL",
+                "gate": "formula_spam",
+                "candidate_mechanism": candidate_mech,
+                "last_n_mechanisms": recent_mechs,
+                "message": (
+                    f"FORMULA SPAM BLOCK: last {last_n} published share skeleton "
+                    f"({', '.join(recent_mechs)}); candidate repeats «{candidate_mech}». "
+                    "Pick a clearly different newbuild mechanism (not бронь/ДДУ/застройщик Тюмень retitle)."
+                ),
+            }
+        )
+    elif all(m == "generic_newbuild" for m in recent_mechs) and candidate_mech == "generic_newbuild":
+        warnings.append(
+            {
+                "severity": "CRITICAL",
+                "gate": "formula_spam_generic",
+                "candidate_mechanism": candidate_mech,
+                "last_n_mechanisms": recent_mechs,
+                "message": (
+                    f"FORMULA SPAM BLOCK: last {last_n} posts are generic newbuild skeleton "
+                    "(бронь/ДДУ/застройщик Тюмень) without distinct mechanism. "
+                    "Scout must pick a new mechanism from shared/dzen-top-angle-newbuild-lock.md."
+                ),
+            }
+        )
+    return warnings
+
+
+def check_frozen_secondary_recycle(
+    new_text: str,
+    clusters: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    warnings: list[dict[str, Any]] = []
+    for cluster_id in detect_frozen_secondary_clusters(new_text, clusters):
+        cluster = next((c for c in clusters if c.get("id") == cluster_id), {})
+        warnings.append(
+            {
+                "severity": "CRITICAL",
+                "gate": "frozen_secondary_recycle",
+                "cluster_id": cluster_id,
+                "cluster_label": cluster.get("label_ru") or cluster_id,
+                "message": (
+                    f"FROZEN SECONDARY RECYCLE BLOCK: «{cluster.get('label_ru') or cluster_id}» "
+                    "is forbidden — do NOT retitle secondary plot as newbuild. "
+                    "Mirror top-energy only via newbuild mechanism "
+                    "(shared/dzen-top-angle-newbuild-lock.md)."
+                ),
+            }
+        )
+    return warnings
+
+
+def check_topic_id_duplicate(
+    topic_id: str,
+    published_sources: list[dict[str, str]],
+    *,
+    root: Path,
+    today: date | None = None,
+) -> list[dict[str, Any]]:
+    hard = anti_dupe_hard_config(root)
+    if not hard["enabled"] or not topic_id.strip():
+        return []
+
+    today = today or date.today()
+    window_days = hard["topic_id_repeat_days"]
+    tid = topic_id.strip().upper()
+    warnings: list[dict[str, Any]] = []
+    for src in published_sources:
+        if str(src.get("topic_id") or "").upper() != tid:
+            continue
+        src_date = parse_iso_date(src.get("date") or "")
+        if src_date is not None and not within_anti_repeat_window(src_date, today, window_days):
+            continue
+        warnings.append(
+            {
+                "severity": "CRITICAL",
+                "gate": "topic_id_duplicate",
+                "topic_id": tid,
+                "source": src.get("source") or "",
+                "published_date": (src_date.isoformat() if src_date else ""),
+                "message": (
+                    f"TOPIC ID DUPLICATE ({window_days}d): {tid} already in ledger/live "
+                    f"({src.get('source') or 'unknown'}). Pick next B-number."
+                ),
+            }
+        )
+    return warnings
+
+
+def check_anti_dupe_hard(
+    new_text: str,
+    published_sources: list[dict[str, str]],
+    clusters: list[dict[str, Any]],
+    *,
+    root: Path,
+    topic_id: str = "",
+    today: date | None = None,
+) -> list[dict[str, Any]]:
+    """Unified HARD anti-dupe: story cluster + fingerprint + formula spam + frozen secondary."""
+    today = today or date.today()
+    warnings: list[dict[str, Any]] = []
+    seen_keys: set[str] = set()
+
+    def _extend(items: list[dict[str, Any]]) -> None:
+        for item in items:
+            key = "|".join(
+                [
+                    str(item.get("gate") or ""),
+                    str(item.get("cluster_id") or item.get("fingerprint") or ""),
+                    str(item.get("topic_id") or ""),
+                    str(item.get("message") or "")[:60],
+                ]
+            )
+            if key in seen_keys:
+                continue
+            seen_keys.add(key)
+            warnings.append(item)
+
+    _extend(check_frozen_secondary_recycle(new_text, clusters))
+    _extend(check_story_duplicate(new_text, published_sources, clusters, root=root, today=today))
+    _extend(
+        check_h1_fingerprint_duplicate(
+            new_text,
+            published_sources,
+            root=root,
+            today=today,
+        )
+    )
+    _extend(check_formula_spam(new_text, published_sources, root=root))
+    if topic_id:
+        _extend(
+            check_topic_id_duplicate(
+                topic_id,
+                published_sources,
+                root=root,
+                today=today,
+            )
+        )
+    return warnings
 
 
 def load_published_titles_only(root: Path) -> list[dict[str, str]]:
@@ -506,6 +868,7 @@ def sync_used_clusters(
 def main() -> int:
     ap = argparse.ArgumentParser(description="HARD Scout story-duplicate gate (30-day window)")
     ap.add_argument("--text", default="", help="title draft + hook + primary_query + slug")
+    ap.add_argument("--topic-id", default="", help="optional topic_id for topic_id duplicate gate")
     ap.add_argument("--live-limit", type=int, default=DEFAULT_LIVE_LIMIT)
     ap.add_argument(
         "--sync-used-clusters",
@@ -551,23 +914,52 @@ def main() -> int:
     sources = build_published_story_sources(root, live_limit=live_limit, window_days=window_days)
     new_ids = detect_story_clusters(args.text, clusters)
     if not new_ids:
-        print(f"✅ STORY DUP PASS ({window_days}d): no published plot cluster detected in candidate text")
-        return 0
+        print(f"✅ ANTI-DUPE HARD PASS ({window_days}d): no plot cluster in candidate; checking fingerprint/formula…")
+        warnings = check_anti_dupe_hard(
+            args.text,
+            sources,
+            clusters,
+            root=root,
+            topic_id=args.topic_id.strip(),
+        )
+        if not warnings:
+            print(f"✅ ANTI-DUPE HARD PASS ({window_days}d): fingerprint + formula spam OK")
+            return 0
+        print(f"❌ SCOUT ANTI-DUPE HARD BLOCKER ({window_days}-day window):")
+        for w in warnings:
+            gate = w.get("gate") or "story_duplicate"
+            label = w.get("cluster_id") or w.get("fingerprint") or gate
+            print(f"  [{w['severity']}] {gate} | {label} | {w.get('topic_id', '')} ({w.get('source', '')})")
+            print(f"  {w['message']}")
+        print(
+            "BLOCKER: SCOUT ANTI-DUPE HARD — see shared/dzen-top-angle-newbuild-lock.md"
+        )
+        return 1
 
     print(f"Candidate story clusters: {', '.join(new_ids)}")
-    warnings = check_story_duplicate(args.text, sources, clusters, root=root)
+    print(f"Candidate H1 fingerprint: {extract_h1_fingerprint(args.text)}")
+    print(f"Candidate mechanism: {extract_mechanism_signature(args.text)}")
+    warnings = check_anti_dupe_hard(
+        args.text,
+        sources,
+        clusters,
+        root=root,
+        topic_id=args.topic_id.strip(),
+    )
     if not warnings:
-        print(f"✅ STORY DUP PASS ({window_days}d): cluster(s) detected but no published sibling match")
+        print(f"✅ ANTI-DUPE HARD PASS ({window_days}d): cluster/fingerprint/formula checks OK")
         return 0
 
-    print(f"❌ STORY DUPLICATE BLOCKER ({window_days}-day anti-repeat):")
+    print(f"❌ SCOUT ANTI-DUPE HARD BLOCKER ({window_days}-day window):")
     for w in warnings:
-        print(f"  [{w['severity']}] {w['cluster_id']} | {w['topic_id']} ({w['source']})")
+        gate = w.get("gate") or "story_duplicate"
+        label = w.get("cluster_id") or w.get("fingerprint") or gate
+        print(f"  [{w['severity']}] {gate} | {label} | {w.get('topic_id', '')} ({w.get('source', '')})")
         print(f"  {w['message']}")
     print(
-        "BLOCKER: SCOUT STORY DUPLICATE — pick a distinct legal risk + plot "
-        "(see shared/scout-story-clusters.json + memory/scout/used-clusters.json). "
-        "Wordstat rework ≠ same story."
+        "BLOCKER: SCOUT ANTI-DUPE HARD — pick distinct newbuild mechanism + top-energy angle "
+        "(shared/dzen-top-angle-newbuild-lock.md + scout-story-clusters.json). "
+        "Wordstat rework ≠ same story/formula."
     )
     return 1
 

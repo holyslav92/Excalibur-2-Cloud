@@ -22,6 +22,47 @@ from excalibur_blog_scout_helper import transliterate_ru
 from excalibur_blog_site_base import redact_structure
 from excalibur_blog_topic_focus import assert_topic_focus
 
+
+def assert_anti_dupe_hard(topic: dict[str, Any], root: Path | None = None) -> None:
+    """Fail before Writer/research if Scout duplicate gates would block this title."""
+    from excalibur_blog_scout_story_dup import (
+        build_published_story_sources,
+        check_anti_dupe_hard,
+        load_story_clusters,
+    )
+
+    root = root or project_root()
+    clusters = load_story_clusters(root)
+    if not clusters:
+        return
+    blob = " ".join(
+        [
+            str(topic.get("title") or ""),
+            str(topic.get("h1") or ""),
+            str(topic.get("primary_query") or ""),
+            str(topic.get("slug") or "").replace("-", " "),
+        ]
+    ).strip()
+    sources = build_published_story_sources(root, live_limit=20)
+    warnings = check_anti_dupe_hard(
+        blob,
+        sources,
+        clusters,
+        root=root,
+        topic_id=str(topic.get("topic_id") or ""),
+    )
+    if not warnings:
+        return
+    lines = ["SCOUT ANTI-DUPE HARD BLOCKER (fail before Writer):"]
+    for w in warnings:
+        gate = w.get("gate") or "story_duplicate"
+        lines.append(f"  [{w.get('severity')}] {gate}: {w.get('message')}")
+    lines.append(
+        "Pick distinct newbuild mechanism + top-energy angle "
+        "(shared/dzen-top-angle-newbuild-lock.md)."
+    )
+    raise RuntimeError("\n".join(lines))
+
 USER_AGENT = "ExcaliburBlogResearch/1.0 (+research-start)"
 DDG_HTML = "https://html.duckduckgo.com/html/"
 DEFAULT_TZ = "Europe/Moscow"
@@ -279,6 +320,7 @@ def run_research_start(
     topic = parse_topic_card(topic_id, title_override=title)
     root = project_root()
     assert_topic_focus(topic)
+    assert_anti_dupe_hard(topic, root=root)
     queries = build_search_queries(topic, ctx)
     out_dir = output_dir or article_dir(root, topic)
     out_dir.mkdir(parents=True, exist_ok=True)

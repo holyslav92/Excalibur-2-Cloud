@@ -463,8 +463,10 @@ def main() -> int:
     if args.check_story is not None:
         from excalibur_blog_scout_story_dup import (
             build_published_story_sources,
-            check_story_duplicate,
+            check_anti_dupe_hard,
             detect_story_clusters,
+            extract_h1_fingerprint,
+            extract_mechanism_signature,
             load_story_clusters,
         )
 
@@ -474,18 +476,22 @@ def main() -> int:
         candidate_ids = detect_story_clusters(args.check_story, clusters)
         if candidate_ids:
             print(f"candidate_clusters={','.join(candidate_ids)}")
-        warnings = check_story_duplicate(args.check_story, sources, clusters, root=root)
+        print(f"candidate_fingerprint={extract_h1_fingerprint(args.check_story)}")
+        print(f"candidate_mechanism={extract_mechanism_signature(args.check_story)}")
+        warnings = check_anti_dupe_hard(args.check_story, sources, clusters, root=root)
         if warnings:
-            print("❌ STORY DUPLICATE BLOCKER:")
+            print("❌ SCOUT ANTI-DUPE HARD BLOCKER:")
             for w in warnings:
-                print(f"  [{w['severity']}] {w['cluster_id']} | {w['topic_id']} ({w['source']})")
+                gate = w.get("gate") or "story_duplicate"
+                label = w.get("cluster_id") or w.get("fingerprint") or gate
+                print(f"  [{w['severity']}] {gate} | {label} | {w.get('topic_id', '')} ({w.get('source', '')})")
                 print(f"  {w['message']}")
             print(
-                "BLOCKER: SCOUT STORY DUPLICATE — same legal risk + plot as published sibling. "
-                "Wordstat may refine phrasing but must NOT recycle the story."
+                "BLOCKER: SCOUT ANTI-DUPE HARD — distinct newbuild mechanism required "
+                "(shared/dzen-top-angle-newbuild-lock.md)."
             )
             return 1
-        print("✅ STORY DUP PASS")
+        print("✅ ANTI-DUPE HARD PASS")
         return 0
 
     if args.check_focus is not None:
@@ -588,21 +594,27 @@ def main() -> int:
             return 1
         from excalibur_blog_scout_story_dup import (
             build_published_story_sources,
-            check_story_duplicate,
+            check_anti_dupe_hard,
+            extract_h1_fingerprint,
+            extract_mechanism_signature,
             load_story_clusters,
         )
 
         clusters = load_story_clusters(root)
         story_sources = build_published_story_sources(root, live_limit=live_limit)
-        story_warnings = check_story_duplicate(args.check_query, story_sources, clusters, root=root)
+        print(f"candidate_fingerprint={extract_h1_fingerprint(args.check_query)}")
+        print(f"candidate_mechanism={extract_mechanism_signature(args.check_query)}")
+        story_warnings = check_anti_dupe_hard(args.check_query, story_sources, clusters, root=root)
         if story_warnings:
-            print("❌ STORY DUPLICATE BLOCKER:")
+            print("❌ SCOUT ANTI-DUPE HARD BLOCKER:")
             for w in story_warnings:
-                print(f"  [{w['severity']}] {w['cluster_id']} | {w['topic_id']} ({w['source']})")
+                gate = w.get("gate") or "story_duplicate"
+                label = w.get("cluster_id") or w.get("fingerprint") or gate
+                print(f"  [{w['severity']}] {gate} | {label} | {w.get('topic_id', '')} ({w.get('source', '')})")
                 print(f"  {w['message']}")
             print(
-                "BLOCKER: SCOUT STORY DUPLICATE — pick distinct legal risk + plot "
-                "(shared/scout-story-clusters.json). Wordstat rework ≠ same story."
+                "BLOCKER: SCOUT ANTI-DUPE HARD — pick distinct newbuild mechanism + top-energy "
+                "(shared/dzen-top-angle-newbuild-lock.md). Wordstat rework ≠ same story/formula."
             )
             return 1
 
@@ -628,6 +640,7 @@ def main() -> int:
                     )
             return 1
         print("✅ NO CANNIBALIZATION RISK: Query is clean and unique.")
+        print("✅ ANTI-DUPE HARD PASS")
         print("✅ TOPIC FOCUS PASS")
         return 0
 
