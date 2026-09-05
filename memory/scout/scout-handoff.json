@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "scout_date": "2026-09-05",
+  "slot": "weekend-automation",
+  "topic_id": "B23",
+  "topic_market_focus": "newbuild_only",
+  "title": "В Тюмени одобрили ипотеку на новостройку — банковская оценка оказалась ниже цены в ДДУ",
+  "slug": "v-tyumeni-odobrili-ipoteku-na-novostroyku-ocenka-banka-nizhe-ceny-ddu",
+  "cluster_id": "newbuild_bank_appraisal_below_ddu_price_tyumen",
+  "casus_one_liner": "Ипотеку на новостройку одобрили и бронь оплатили — но банковская оценка оказалась ниже цены в ДДУ, разрыв в сотни тысяч сорвал сделку за неделю до подписания.",
+  "comment_magnet_angle": "Одобрение есть, а оценка ниже ДДУ — вы бы за неделю нашли недостающие деньги или развернулись, даже если бронь сгорит?",
+  "wordstat_preflight": "mcp-kv wordstat_get_user_info OK",
+  "klyshin_hook": "none",
+  "anti_repeat_preflight": "live_blog_25 + ledger + used-clusters sync OK",
+  "closed_clusters_sample": [
+    "newbuild_mortgage_rate_changed_before_ddu_tyumen",
+    "newbuild_developer_legal_entity_change_ddu_escrow_tyumen",
+    "newbuild_ddu_cellar_paid_not_handed_tyumen"
+  ],
+  "dzen_casus_shape": "PASS",
+  "dzen_casus": {
+    "event": "семья в Тюмени выбрала квартиру в новостройке, банк одобрил ипотеку от цены бронирования",
+    "risk": "отчёт банковского оценщика ниже цены в ДДУ — кредит пересчитали от оценки, не хватило собственных средств",
+    "time": "за 5–7 дней до подписания ДДУ после оплаченной брони",
+    "finale": "ДДУ не подписали, бронь сгорела, оплата оценки не вернулась, лот ушёл в продажу"
+  },
+  "wordstat_rework": "probe «оценка новостройки для ипотеки» 3 → «оценка квартиры для ипотеки новостройка» 1 → «ипотека в тюмени на новостройки» 41 (broader) → final P0 «оценка квартиры для ипотеки» 24",
+  "wordstat": {
+    "source": "mcp_kv live",
+    "regions": [55, 11176],
+    "compare_region": 225,
+    "p0_phrase": "оценка квартиры для ипотеки",
+    "p0_volume": 24,
+    "compare_p0_volume": 1578
+  },
+  "story_dup_check": "PASS",
+  "signal_urls": [
+    "https://dzen.ru/holyslav",
+    "https://www.cbr.ru/finmarkets/supervision/svps/",
+    "https://t.me/Tyumen_Rieltor",
+    "{{SITE_BASE}}/blog/"
+  ],
+  "gates": {
+    "topic_focus": "PASS",
+    "scout_helper": "PASS",
+    "story_dup": "PASS"
+  }
+}

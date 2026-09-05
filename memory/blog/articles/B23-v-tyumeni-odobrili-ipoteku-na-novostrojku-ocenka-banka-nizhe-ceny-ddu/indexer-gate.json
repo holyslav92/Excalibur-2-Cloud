@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-05",
+  "topic_id": "B23",
+  "article_dir": "memory/blog/articles/B23-v-tyumeni-odobrili-ipoteku-na-novostrojku-ocenka-banka-nizhe-ceny-ddu",
+  "slug": "v-tyumeni-odobrili-ipoteku-na-novostrojku-ocenka-banka-nizhe-ceny-ddu",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": []
+}
