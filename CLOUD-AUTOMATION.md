@@ -12,7 +12,7 @@
 
 См. `AGENTS.md`, `shared/quality-bar-9.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills.
 
-Тенант: **The Риэлтор** / tymenrieltor.ru — longform **~1800–2200 слов** (≈8–10 мин), cover + 7 inline-quad (гибкое размещение в HTML: 0/1/пара на H2).
+Тенант: **The Риэлтор** / tymenrieltor.ru — longform **~1400–1600 слов** (≈8–10 мин, hard FAIL >1750), cover + 7 inline-quad (гибкое размещение в HTML: 0/1/пара на H2).
 
 ## Расписание (owner: 9–17 YEKT)
 
@@ -56,6 +56,7 @@ Scout? → research_start → Research → Title → Writer → Sol
 ```
 
 - **Stylo** — после Sol: `excalibur_blog_stylo.py` vs `memory/stylo/gold` (ритм/голос Dzen-hit; сюжеты gold **не** для Scout). `stylo_pass: false` → **один** Derouter `--role sol` с `stylo-notes.md`, повтор measure, стоп. См. `shared/stylo-voice-lock.md`.
+- **Article quality score** — после Stylo, **до** Description: `excalibur_blog_quality_score_gate.py` → `article-quality-score.json` (H1/lead/middle/finale/length/tone). FAIL → **один** `--repair` Sol с `quality-score-notes.md`, стоп. См. `shared/article-quality-score-lock.md`. **Без** self-score 9.0 loop. **Тройной пересказ** и **учебный хвост после casus** = HARD FAIL.
 
 - **Scout?** — по handoff / needs_scout; иначе research_start с заданным `topic_id`.
 - **Cover-QA** — обязательный финиш визуала (cover + 7 inline); **pixel gate** на `cover.png` bytes через `scripts/excalibur_blog_cover_qa_pixels.py` + `cover_qa.json` (`pixel_qa=true`, `cover_md5`). Без PASS дальше не идём. **Designed thumbnail gate:** hook H1 (справа, вне лица), телефон +7 922 001 65 05 (низ-право), мем-стикер (угол), optional yellow sticky from hook — **NO Wordstat query strips/bars** (`pixel_no_wordstat_query_strips`). FAIL: face-only collapse. **Fixer** — regen cover panel при layout FAIL; **never** PIL Wordstat overlay/repack → re-QA bytes.
@@ -67,7 +68,7 @@ Scout? → research_start → Research → Title → Writer → Sol
 - **Publish** — **только если одновременно**:
   1. в Cloud Secrets уже есть SFTP: `FTP_HOST`, `FTP_USER`, `FTP_PASS`, `FTP_ROOT` (и `PUBLIC_SITE_URL`);
   2. на **этот процесс** выставлен `EXCALIBUR_BLOG_ALLOW_PUBLISH=yes` (env / Runtime Secret, **не git**);
-  3. `quality-bar-9.json` → `all_pass: true` (см. `shared/quality-bar-9.md`).
+  3. `quality-bar-9.json` → `all_pass: true` **и** `article-quality-score.json` → `all_pass: true` (см. `shared/quality-bar-9.md`, `shared/article-quality-score-lock.md`).
 - Если allow flag или FTP **нет** — run завершается после Indexer + артефактов в репо (**без live publish**).
 - Live = **SFTP replace** на tymenrieltor.ru; не жди merge `article.html` в `main` для выхода на сайт.
 - **Код и канон** (scripts, shared/*, skills, gates) — в `main`. Артефакты статьи — в ветке run / PR automation.
@@ -153,7 +154,7 @@ Cover + inline PNG **only grsai grsai standard image model** (Derouter image = o
 Скопируй блок ниже в **Instructions** каждого из 4 Cursor Automations (09/12/15/17 YEKT):
 
 ```text
-Прочитай AGENTS.md + shared/pipeline-canon.json + shared/tenant-config.json + shared/quality-bar-9.md + shared/dzen-news-casus.md + CLOUD-AUTOMATION.md.
+Прочитай AGENTS.md + shared/pipeline-canon.json + shared/tenant-config.json + shared/quality-bar-9.md + shared/article-quality-score-lock.md + shared/dzen-news-casus.md + CLOUD-AUTOMATION.md.
 Если setup_complete != true — остановись (Setup).
 Игнорируй Automation Memory. Memories = OFF.
 
@@ -169,7 +170,7 @@ dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
 needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
 Scout HARD gates перед handoff: live blog ~20 + ledger + `--sync-used-clusters` + MCP-KV Wordstat + shared/dzen-news-casus.md + **shared/newbuild-focus-lock.md** (ONLY новостройки Тюмень; DENY вторичка; слабый Wordstat → rework newbuild, NOT drop) + `topic_focus.py` newbuild gate + `scout_helper.py --check-query` (**30d story-duplicate** `shared/scout-story-clusters.json` + `memory/scout/used-clusters.json` — same legal risk+plot = FAIL even if title differs; Klyshin optional, fresh only, newbuild hook only).
 research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
-Title/Writer/Sol: цель = Dzen engagement (лайки, комментарии, подписки); news-casus актуалочка (событие → финал → практика **один раз**); **spine once** — не пересказывать casus в лиде+середине+итоге; прозаический лид → early TG+MAX; comment magnet; ending landing — agency not panic; H1 forbidden: «чеклист», «N шагов»; body **~1800–2200** (hard FAIL > ~2400 / 14+ мин Дзен), useful part AFTER story.
+Title/Writer/Sol: цель = Dzen engagement (лайки, комментарии, подписки); news-casus актуалочка (событие → финал → практика **один раз**); **spine once** — не пересказывать casus в лиде+середине+итоге; **учебный хвост после casus FAIL** (214-ФЗ простыня, таблицы-гайды перед end CTA); прозаический лид → early TG+MAX; comment magnet; ending landing — agency not panic; H1 forbidden: «чеклист», «N шагов»; body **~1400–1600** (hard FAIL > **1750** / >10 мин Дзен), useful part AFTER story.
 Description: news card energy (shared/dzen-description-rules.md), not SEO checklist blurb.
 
 Conversion + engagement (shared/quality-bar-9.md + SOUL + tenant-config cta_channels):
@@ -180,12 +181,12 @@ Conversion + engagement (shared/quality-bar-9.md + SOUL + tenant-config cta_chan
   Interlink 2–4 sibling из shared/published-articles.md (status=published)
   Comment magnet: один острый вопрос для комментариев (gate comment_magnet_question)
 
-После Sol: pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → quality-bar-9.json all_pass.
+После Sol: Stylo → article quality score gate (`excalibur_blog_quality_score_gate.py`; FAIL → один `--repair` Sol) → pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → quality-bar-9.json + article-quality-score.json all_pass.
 Description → Cover-text || Schema → Cover (hook H1 + phone + meme picks from meme-top100.json — on-topic funny, people+cats, ≤15% sticker, never on hook/face/phone — **NO Wordstat query strips**) → Cover-QA pixel gate (`pixel_no_wordstat_query_strips`, `pixel_hook_title_present`, `pixel_phone_readable`, `pixel_meme_present`, `pixel_layout_not_collapsed`; meme_variety_not_cats_only when meme_picks present; Fixer: regen cover panel only, **max 2 rounds**) → Indexer.
 
 Cover timebox: ≤15–20 min total on cover regen+QA. Hard budget `EXCALIBUR_COVER_MAX_ATTEMPTS=2` (solo cover + panel regen). After budget exhausted → read `cover/cover-budget-result.json` → Indexer anyway if visual OK; NEVER infinite Cover-QA loop or deep-dive grep of `cover_qa_pixels.py`. Short hook 5–7 Cyrillic words (cover-text gate). OCR false-positive escape in pixel gate (B08/B09 pattern).
 
-Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе И quality-bar-9.json all_pass (или `--media-refresh --featured-only` для cover-only: pixel Cover-QA PASS + wp_post_id); иначе STOP после Indexer.
+Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе И quality-bar-9.json all_pass И article-quality-score.json all_pass (или `--media-refresh --featured-only` для cover-only: pixel Cover-QA PASS + wp_post_id); иначе STOP после Indexer.
 Live = SFTP replace (не жди merge article в main для сайта). Код/канон — в main.
 
 Один run = одна статья. Fixer → merge code fixes → content-learner.

@@ -76,7 +76,7 @@ Dual CTA (мягко): «напишите на консультацию» **ил
 
 ## TEXT
 
-- **~1800–2200 слов** (≈8–10 мин чтения в Дзене). **Hard FAIL** если **> ~2400** слов или Дзен покажет **14+ мин**. Короткие абзацы. Klyshin rhythm, Shakin facts. Тюмень — конкретика.
+- **~1400–1600 слов** (≈8–10 мин чтения в Дзене). **Hard FAIL** если **> ~1750** слов или Дзен покажет **>10 мин**. Короткие абзацы. Klyshin rhythm, Shakin facts. Тюмень — конкретика.
 - **Spine once (one-breath):** один проход casus — **не** пересказывать ту же сцену в лиде, середине и «итоге». Структура: прозаический лид (4–6 предложений) → история со stakes → **практика один раз** → agency ending. Gate: `spine_once_no_recap`.
 - **Вырезать:** recap-абзацы («коротко если некогда», «в двух словах», «итого»), повтор одних и тех же цифр/флагов трижды, lecture-хвосты после финала casus.
 - **Comment magnet (HARD):** один острый вопрос, с которым читатели спорят в комментариях Дзена — реплика «…?» или прямой вопрос с двумя полюсами; после финала casus или перед mid CTA. Gate: `comment_magnet_question`.
@@ -102,6 +102,18 @@ Dual CTA (мягко): «напишите на консультацию» **ил
 - **Без** другого человека как co-host / stock-man hero (кроме cover = только Святослав). Мемы маленькие, 2–3 из 7.
 - **Utility test:** диаграмма учит факт/порядок/цифру; фото — узнаваемый контекст кейса. FAIL: идентичные двухколоночные таблицы, пустые ячейки, decorative icon row.
 - **Alt:** человеческий SEO-русский — что на кадре / что показывает схема; не scene_hint и не prompt.
+
+## Article quality score (после Stylo)
+
+Структурный гейт Grok Bot 7.5–9 bar — **до** Description/Cover:
+
+```bash
+python3 scripts/excalibur_blog_quality_score_gate.py --article-dir memory/blog/articles/<topic>-<slug>
+# один repair Sol при FAIL:
+python3 scripts/excalibur_blog_quality_score_gate.py --article-dir <dir> --repair
+```
+
+Контракт: `shared/article-quality-score-lock.md` → `article-quality-score.json` (`all_pass: true`).
 
 ## Self-score gate
 

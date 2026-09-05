@@ -23,11 +23,11 @@ if str(_SCRIPTS_DIR) not in sys.path:
 from excalibur_blog_composite_disclaimer import check_no_composite_disclaimer
 
 
-WORD_TARGET_MIN = 1800
-WORD_TARGET_MAX = 2200
-WORD_HARD_MAX = 2400
+WORD_TARGET_MIN = 1400
+WORD_TARGET_MAX = 1600
+WORD_HARD_MAX = 1750
 DZEN_WORDS_PER_MINUTE = 200
-DZEN_READING_MINUTES_MAX = 12
+DZEN_READING_MINUTES_MAX = 10
 H2_MIN = 5
 INLINE_MIN = 7
 REALISTIC_INLINE_MIN = 2
@@ -60,8 +60,8 @@ REQUIRED_CHECKS = (
     "end_cta_full_channels",
     "interlink_siblings_2_4",
     "dual_cta_soft",
-    "word_count_1800_2200",
-    "word_count_hard_max_2400",
+    "word_count_1400_1600",
+    "word_count_hard_max_1750",
     "dzen_reading_time_ok",
     "spine_once_no_recap",
     "h2_count_5_plus",
@@ -621,8 +621,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
     interlink_ok, interlink_count = check_interlinks(html, root, article_dir)
     checks["interlink_siblings_2_4"] = interlink_ok
     checks["dual_cta_soft"] = check_dual_cta(html)
-    checks["word_count_1800_2200"] = WORD_TARGET_MIN <= wc <= WORD_TARGET_MAX
-    checks["word_count_hard_max_2400"] = wc <= WORD_HARD_MAX
+    checks["word_count_1400_1600"] = WORD_TARGET_MIN <= wc <= WORD_TARGET_MAX
+    checks["word_count_hard_max_1750"] = wc <= WORD_HARD_MAX
     reading_min = estimate_dzen_reading_minutes(wc)
     checks["dzen_reading_time_ok"] = reading_min < DZEN_READING_MINUTES_MAX + 2  # <14 min
     spine_ok, spine_errors = check_spine_once_no_recap(html)
@@ -657,9 +657,9 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
         if not checks.get(key):
             if key == "comparison_tables_differ" and tbl_errors:
                 errors.extend(tbl_errors)
-            elif key == "word_count_1800_2200":
+            elif key == "word_count_1400_1600":
                 errors.append(f"word_count {wc} outside target {WORD_TARGET_MIN}-{WORD_TARGET_MAX}")
-            elif key == "word_count_hard_max_2400":
+            elif key == "word_count_hard_max_1750":
                 errors.append(f"word_count {wc} exceeds hard max {WORD_HARD_MAX}")
             elif key == "dzen_reading_time_ok":
                 errors.append(

@@ -13,6 +13,7 @@
   ├─ shell: today + research_start (+ titles-only)
   ├─ Research → Title → Writer → Sol
   ├─ Stylo (stylo-report.json; ≤1 Sol)
+  ├─ Article quality score (article-quality-score.json; ≤1 Sol --repair)
   ├─ shell: pipeline_canon --stamp + opening_meta + html_linter
   ├─ Description (Dzen teaser)
   ├─ Cover-text || Schema → Cover

@@ -83,6 +83,18 @@
   "stylo_rules": "shared/stylo-voice-lock.md",
   "stylo_gate": "scripts/excalibur_blog_stylo.py",
   "stylo_max_sol_rewrites": 1,
+  "article_quality_score": {
+    "contract": "shared/article-quality-score-lock.md",
+    "gate": "scripts/excalibur_blog_quality_score_gate.py",
+    "output": "article-quality-score.json",
+    "placement": "after_stylo_before_description",
+    "word_count_target_min": 1400,
+    "word_count_target_max": 1600,
+    "word_count_hard_max": 1750,
+    "max_sol_rewrites": 1,
+    "repair_flag": "--repair",
+    "required_before_publish": true
+  },
   "required_article_meta": {
     "pipeline_canon": "human-first-v2",
     "editorial_swarm": false
@@ -178,12 +190,12 @@
     "contract": "shared/quality-bar-9.md",
     "gate": "scripts/excalibur_blog_quality_bar_9_gate.py",
     "output": "quality-bar-9.json",
-    "word_count_target_min": 1800,
-    "word_count_target_max": 2200,
-    "word_count_hard_max": 2400,
-    "dzen_reading_minutes_max": 12,
-    "word_count_min": 1800,
-    "word_count_max": 2200,
+    "word_count_target_min": 1400,
+    "word_count_target_max": 1600,
+    "word_count_hard_max": 1750,
+    "dzen_reading_minutes_max": 10,
+    "word_count_min": 1400,
+    "word_count_max": 1600,
     "dzen_engagement_goal": "likes_comments_subscriptions",
     "comment_magnet_required": true,
     "required_before_publish": true
@@ -267,9 +279,9 @@
       },
       "one_breath_v1": {
         "owner_date": "2026-08-29",
-        "target_words": "1800-2200",
-        "hard_fail_words": 2400,
-        "dzen_reading_minutes_max": 12,
+        "target_words": "1400-1600",
+        "hard_fail_words": 1750,
+        "dzen_reading_minutes_max": 10,
         "spine_once": "lead_story_practice_once_agency_ending",
         "forbidden": [
           "retell_same_scene_in_lead_middle_and_summary",

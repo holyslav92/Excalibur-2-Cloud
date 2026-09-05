@@ -7,7 +7,7 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 
 ## OWNER LOCK (permanent)
 
-1. **Dzen engagement** — читай `shared/dzen-engagement-lock.md`: сохранить news-casus arc; лид 4–6 без рубки; HIT casus+число в первой строке; read-through ~1400–1600 слов / ~10 мин; **тройной пересказ = FAIL**; **no composite disclaimer** (конкретный день в комнате, без «случай собирательный»/«без фамилий»); **plain language** (kitchen-table, без lawyer-blog/«заумно», термин → простым русским, heat casus не снимать); bipolar comment magnet **сразу после** финала casus; subs = голос Святослава, early TG+MAX, agency ending. **Klyshin:** только энергия первой строки; сюжеты свои. **Newbuild focus:** `shared/newbuild-focus-lock.md`. Gates: `opening-meta-gate`, `no_tldr_opening`, `no_composite_disclaimer`, `comment_magnet_question`. **Без** self-score 9.0 loop; **без** рубки 1–2 предложения; **без** копирования кейсов Klyshin / TG-дампов.
+1. **Dzen engagement** — читай `shared/dzen-engagement-lock.md` + `shared/article-quality-score-lock.md`: сохранить news-casus arc; лид 4–6 без рубки; HIT casus+число в первой строке; read-through ~1400–1600 слов / ~10 мин (hard FAIL >1750); **тройной пересказ = FAIL**; **учебный хвост после casus = FAIL** (214-ФЗ простыня, таблицы-гайды перед end CTA); **no composite disclaimer** (конкретный день в комнате, без «случай собирательный»/«без фамилий»); **plain language** (kitchen-table, без lawyer-blog/«заумно», термин → простым русским, heat casus не снимать); bipolar comment magnet **сразу после** финала casus; subs = голос Святослава, early TG+MAX, agency ending. **Klyshin:** только энергия первой строки; сюжеты свои. **Newbuild focus:** `shared/newbuild-focus-lock.md`. Gates: `article-quality-score`, `opening-meta-gate`, `no_tldr_opening`, `no_composite_disclaimer`, `comment_magnet_question`. **Без** self-score 9.0 loop; **без** рубки 1–2 предложения; **без** копирования кейсов Klyshin / TG-дампов.
 2. Meme/cover — не зона Sol.
 3. Cover fail-fast — не зона Sol.
 
@@ -27,16 +27,16 @@ python3 scripts/excalibur_blog_sol_chunk.py \
 
 Longform (7 inline): **3 части на первом проходе** — не ждать HTTP 524 на single-shot Sol. `--single-shot` только для коротких статей.
 
-**Trim pass (после Sol, до Description):** если `quality-bar-9` или ручной подсчёт > **2200** слов — не переписывать Sol с нуля; сожми через chunk trim:
+**Trim pass (после Sol, до Description):** если `quality-bar-9` / `article-quality-score` или ручной подсчёт > **1750** слов — не переписывать Sol с нуля; сожми через chunk trim:
 
 ```bash
 python3 scripts/excalibur_blog_sol_trim_chunk.py \
   --article-dir memory/blog/articles/<topic_id>-<slug> \
-  --if-over 2200 \
+  --if-over 1750 \
   --user-file memory/blog/articles/<topic_id>-<slug>/assembled-sol-trim-inputs.md
 ```
 
-Цель trim: **2000–2150** слов; сохранить H2, inline figures, CTA blocks, comment magnet, interlinks. Stamp: `derouter-opus-stamp-sol-trim.json`.
+Цель trim: **1400–1600** слов; сохранить H2, inline figures, CTA blocks, comment magnet, interlinks. Stamp: `derouter-opus-stamp-sol-trim.json`.
 
 Копию финала: shell `cp article.html drafts/variant-a.html` (sol_chunk и sol_trim_chunk делают это автоматически при chunk merge).
 Контракт: `shared/derouter-opus-brain-contract.md`.
