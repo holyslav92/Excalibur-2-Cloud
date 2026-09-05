@@ -1,0 +1,75 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B23",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-05",
+  "derouter": {
+    "status": "OK",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "note": "First attempt timed out (HTTP 524); compact inputs succeeded on retry"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/a/amXODH4m4RWPJY_H",
+        "type": "community",
+        "date": "2026-09-02",
+        "note": "SAS Право — статус объекта только из ЕГРН; проверки до ключей; КС № 4-П/2026 (~3 days before 2026-09-05)"
+      },
+      {
+        "url": "https://morein.pro/blog/ddu-na-apartamenty",
+        "type": "market",
+        "date": "2026",
+        "note": "ДДУ на апартаменты 2026 — предмет договора нежилое, чек-лист до подписания"
+      },
+      {
+        "url": "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/instructions/semeinaya-ipoteka/",
+        "type": "official",
+        "date": "2026-06-03",
+        "note": "ДОМ.РФ инструкция семейной ипотеки accessed 2026-09-05"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 3640,
+    "p0_volume_ru225": 8705,
+    "support_phrases": [
+      {"phrase": "апартаменты тюмень", "volume": 646},
+      {"phrase": "купить апартаменты в тюмени", "volume": 35},
+      {"phrase": "купить новостройку в тюмени", "volume": 639}
+    ],
+    "rework_from": "апартаменты тюмень (646) → купить апартаменты (35) → P0 новостройки тюмень (3640)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_apartments_instead_flat_ddu_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["dom_rf", "consultant_214_fz", "ks_rf"],
+    "errors": [],
+    "note": "214-FZ st.4/st.9, family mortgage object list, KS 4-P/2026 via official/legal pages"
+  },
+  "key_facts_count": 24,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "assembled_inputs_compact": "assembled-research-inputs-compact.md"
+  },
+  "incident_report": "none"
+}
