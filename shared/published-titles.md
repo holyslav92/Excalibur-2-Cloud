@@ -26,3 +26,4 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 | B20 | v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot | В Тюмени застройщик сменил юрлицо — банк не открыл эскроу | published |
 | B21 | v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo | V tyumeni oplatili kladovku po ddu na klyuchah pomescheniya ne bylo | published |
 | B22 | v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi | В Тюмени банк поднял ставку ипотеки перед ДДУ — бронь сгорела | published |
+| B23 | v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty | V tyumeni v ddu napisali kvartiru v vypiske okazalis apartamenty | published |

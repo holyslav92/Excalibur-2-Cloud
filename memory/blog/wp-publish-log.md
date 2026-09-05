@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B26 — 2026-09-05
+
+- **topic_id:** B26
+- **slug:** v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach
+- **post_id:** 9762
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach/
+- **featured_image:** 9763
+- **inline_images:** 9764–9770 (7)
+- **wp_category_slugs:** pokupka-kvartiry, riski-sdelki, dokumenty-i-oformlenie (category_ids=36,58,54)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs); pre-publish image_alt_human fix (cleared inline_5/6 panel labels in quad-manifest)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23

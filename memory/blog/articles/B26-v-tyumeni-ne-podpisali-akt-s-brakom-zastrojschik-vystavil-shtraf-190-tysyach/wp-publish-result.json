@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach",
+  "topic_id": "B26",
+  "post_id": 9762,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B26-v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 949770,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9762 slug=v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach\nOK categories=36,58,54\nOK yoast_social_image=1\nOK featured_image=9763\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9764 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach-inline-01.png\nOK inline_alt=9764\nOK inline_description=9764\nOK inline_image_upload=9765 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach-inline-02.png\nOK inline_alt=9765\nOK inline_description=9765\nOK inline_image_upload=9766 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach-inline-03.png\nOK inline_alt=9766\nOK inline_description=9766\nOK inline_image_upload=9767 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach-inline-07.png\nOK inline_alt=9767\nOK inline_description=9767\nOK inline_image_upload=9768 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach-inline-04.png\nOK inline_alt=9768\nOK inline_description=9768\nOK inline_image_upload=9769 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach-inline-05.png\nOK inline_alt=9769\nOK inline_description=9769\nOK inline_image_upload=9770 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach-inline-06.png\nOK inline_alt=9770\nOK inline_description=9770\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach/",
+    "errors": []
+  }
+}
