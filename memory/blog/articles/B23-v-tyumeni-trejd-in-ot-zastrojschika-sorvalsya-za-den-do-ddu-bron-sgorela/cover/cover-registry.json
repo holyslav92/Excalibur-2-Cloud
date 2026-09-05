@@ -1,0 +1,86 @@
+{
+  "topic_id": "B23",
+  "slug": "v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "В Тюмени трейд-ин сорвался за день до ДДУ — бронь сгорела: что проверить в договоре и эскроу до подписи.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-09-05T05:47:43+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "В Тюмени трейд-ин сорвался за день до ДДУ — бронь сгорела: что проверить в договоре и эскроу до подписи.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Старая квартира в счёт новой» — и семья заброн…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "h2_anchor": "«Старая квартира в счёт новой» — и семья забронировала лот",
+      "visual_type": "realistic_photo",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: 3 недели, Цена не заморожена, Ипотека одобрена — иллюстрация к разбору сделки.",
+      "h2_anchor": "«Старая квартира в счёт новой» — и семья забронировала лот",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Три недели между бронью и датой ДДУ» в Тюмени — иллюстрация к кейсу о сделке.",
+      "h2_anchor": "Три недели между бронью и датой ДДУ",
+      "visual_type": "realistic_photo",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За сутки до подписания — повторная оценка трейд…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "h2_anchor": "За сутки до подписания — повторная оценка трейд-ин",
+      "visual_type": "realistic_photo",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Оценку снизили, Дисконт 15–25%, Два договора — иллюстрация к разбору сделки.",
+      "h2_anchor": "Первоначальный взнос перестал сходиться",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "график / шкала сроков по новостройке в Тюмени: ДДУ нет, Бронь истекла, Плата ушла — иллюстрация к разбору сделки.",
+      "h2_anchor": "ДДУ не подписали — бронь сгорела, лот ушёл",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Кто покупает, Срок оценки, Кто меняет цену — иллюстрация к разбору сделки.",
+      "h2_anchor": "Что проверить до брони и ДДУ — таблица",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}
