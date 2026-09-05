@@ -1028,4 +1028,4 @@ checks_run:
 - `python3 scripts/excalibur_blog_cover_qa_pixels.py` B23 → PASS + escape
 - `python3 scripts/excalibur_blog_quality_bar_9_gate.py` B23 → all_pass
 - `python3 -m unittest tests.test_cover_budget`
-commit: pending
+commit: 2936488
