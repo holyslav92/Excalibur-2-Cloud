@@ -84,7 +84,7 @@ Cursor Automation — **тонкий дирижёр** (default Composer): doctor
 
 | Tier | Derouter model | Роли |
 |------|----------------|------|
-| powerful | `claude-opus-5` | writer, sol |
+| powerful | `gpt-6-astra` | writer, sol |
 | utility | `gpt-5.6-terra` | scout, title, research, description, cover-text, schema, cover-scene |
 
 ```bash
@@ -142,7 +142,7 @@ Cover + inline PNG **only grsai grsai standard image model** (Derouter image = o
 3. Optional last resort: `EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1` → Derouter image REST (`excalibur_blog_derouter_gpt_image2_api.py`).
 4. grsai down → `GRSAI IMAGE BLOCKER` — diagnose/retry; **STOP**
 
-**Text roles unchanged:** Derouter Opus/Terra via `excalibur_blog_derouter_opus_chat.py`.
+**Text roles unchanged:** Derouter Astra/Terra via `excalibur_blog_derouter_opus_chat.py`.
 
 **FORBIDDEN FOREVER:** Kie (`KIE_API_KEY`, `excalibur_blog_kie_gpt_image2_api.py`), PIL template mashup (`excalibur_blog_cover_pil_compose.py`). Never `--fallback-kie`. Never upload mashup when APIs fail.
 
@@ -159,7 +159,7 @@ Cover + inline PNG **only grsai grsai standard image model** (Derouter image = o
 
 Ты — ТОНКИЙ ДИРИЖЁР (default Composer — НЕ переключать модель). Прозу текстовых ролей пишет ТОЛЬКО
 scripts/excalibur_blog_derouter_opus_chat.py:
-  powerful claude-opus-5 → writer/sol (article prose only)
+  powerful gpt-6-astra → writer/sol (article prose only)
   utility gpt-5.6-terra → scout/title/research/description/cover-text/schema/cover-scene
 Не пиши Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene своей моделью.
 DEROUTER <ROLE> BLOCKER → стоп пайплайна. Нет run_budget / circuit breaker.

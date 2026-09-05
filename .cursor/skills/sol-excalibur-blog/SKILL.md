@@ -15,7 +15,7 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 
 ## Модель (HARD) — thin conductor
 
-**Не пиши прозу моделью Cursor.** Собери `--user-file` из `drafts/writer.html` + SOUL/examples и вызови Derouter powerful tier (claude-opus-5):
+**Не пиши прозу моделью Cursor.** Собери `--user-file` из `drafts/writer.html` + SOUL/examples и вызови Derouter powerful tier (gpt-6-astra):
 
 ```bash
 python3 scripts/excalibur_blog_sol_chunk.py \

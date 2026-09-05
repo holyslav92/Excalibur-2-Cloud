@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sol longform chunking — 3 Derouter Opus parts on first try (avoid HTTP 524).
+"""Sol longform chunking — 3 Derouter Astra parts on first try (avoid HTTP 524).
 
 Thin conductor: splits assembled user inputs by H2 outline into ~3 parts,
 calls excalibur_blog_derouter_opus_chat.py per part, merges article.html.

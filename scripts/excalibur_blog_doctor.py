@@ -487,13 +487,14 @@ def main() -> int:
             warnings,
             warn=True,
         )
+    derouter_powerful_env = os.environ.get("DEROUTER_POWERFUL_MODEL", "").strip()
     derouter_opus_env = os.environ.get("DEROUTER_OPUS_MODEL", "").strip()
     powerful_cfg = (tenant.get("writing_model") or {}).get("powerful") or {}
-    powerful_model = str(powerful_cfg.get("model") or "claude-opus-5")
-    opus_check = derouter_opus_env or powerful_model
+    powerful_model = str(powerful_cfg.get("model") or "gpt-6-astra")
+    powerful_check = derouter_powerful_env or derouter_opus_env or powerful_model
     check(
-        bool(opus_check) and "opus" in opus_check.lower(),
-        f"powerful tier Opus family ({opus_check})",
+        bool(powerful_check) and ("astra" in powerful_check.lower() or "opus" in powerful_check.lower()),
+        f"powerful tier GPT-6 Astra ({powerful_check})",
         errors,
         warnings,
         warn=not derouter_key,

@@ -32,7 +32,7 @@ class SetupTenantTests(unittest.TestCase):
         writing = tenant.get("writing_model") or {}
         powerful = writing.get("powerful") or {}
         utility = writing.get("utility") or {}
-        self.assertEqual(powerful.get("model"), "claude-opus-5")
+        self.assertEqual(powerful.get("model"), "gpt-6-astra")
         self.assertEqual(utility.get("model"), "gpt-5.6-terra")
         self.assertIn("writer", powerful.get("roles") or [])
         self.assertIn("sol", powerful.get("roles") or [])

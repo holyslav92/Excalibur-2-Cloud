@@ -12,8 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 CANON_WRITING_MODEL = {
     "powerful": {
-        "model": "claude-opus-5",
-        "model_env": "DEROUTER_OPUS_MODEL",
+        "model": "gpt-6-astra",
+        "model_env": "DEROUTER_POWERFUL_MODEL",
         "roles": ["writer", "sol"],
     },
     "utility": {
@@ -33,7 +33,7 @@ CANON_WRITING_MODEL = {
 
 
 class DerouterResolveModelTests(unittest.TestCase):
-    def test_powerful_role_requires_opus_family(self) -> None:
+    def test_powerful_role_requires_astra_family(self) -> None:
         from scripts.excalibur_blog_derouter_opus_chat import resolve_model
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -45,11 +45,11 @@ class DerouterResolveModelTests(unittest.TestCase):
             )
             model, tier = resolve_model("writer", None, root)
             self.assertEqual(tier, "powerful")
-            self.assertEqual(model, "claude-opus-5")
+            self.assertEqual(model, "gpt-6-astra")
 
             model, tier = resolve_model("sol", None, root)
             self.assertEqual(tier, "powerful")
-            self.assertEqual(model, "claude-opus-5")
+            self.assertEqual(model, "gpt-6-astra")
 
             model, tier = resolve_model("research", None, root)
             self.assertEqual(tier, "utility")
@@ -70,7 +70,7 @@ class DerouterResolveModelTests(unittest.TestCase):
                 self.assertEqual(tier, "utility", role)
                 self.assertEqual(model, "gpt-5.6-terra", role)
 
-    def test_legacy_text_model_does_not_override_powerful_to_non_opus(self) -> None:
+    def test_legacy_text_model_does_not_override_powerful_to_non_astra(self) -> None:
         from scripts.excalibur_blog_derouter_opus_chat import resolve_model
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -80,7 +80,7 @@ class DerouterResolveModelTests(unittest.TestCase):
                 json.dumps(
                     {
                         "writing_model": {
-                            "powerful": {"model": "claude-opus-5", "roles": ["writer"]},
+                            "powerful": {"model": "gpt-6-astra", "roles": ["writer"]},
                             "utility": {"model": "gpt-5.6-terra", "roles": ["research"]},
                         }
                     }
@@ -90,7 +90,7 @@ class DerouterResolveModelTests(unittest.TestCase):
             with mock.patch.dict(os.environ, {"DEROUTER_TEXT_MODEL": "gpt-5.6-terra"}, clear=False):
                 model, tier = resolve_model("writer", None, root)
                 self.assertEqual(tier, "powerful")
-                self.assertIn("opus", model.lower())
+                self.assertIn("astra", model.lower())
 
 
 if __name__ == "__main__":

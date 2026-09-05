@@ -1,9 +1,9 @@
-# Writer / Sol — powerful tier (Derouter Opus REST)
+# Writer / Sol — powerful tier (Derouter GPT-6 Astra REST)
 
 > Канонический контракт всего «мозга» фабрики:
 > **`shared/derouter-opus-brain-contract.md`**
 
-Writer и Sol — **powerful tier** (`claude-opus-5` via Derouter REST).
+Writer и Sol — **powerful tier** (`gpt-6-astra` via Derouter REST).
 
 ```bash
 python3 scripts/excalibur_blog_derouter_opus_chat.py \
@@ -14,7 +14,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
   --article-dir <article_dir>
 ```
 
-- **Model:** `claude-opus-5` (env `DEROUTER_OPUS_MODEL`, семейство Claude Opus 5)
+- **Model:** `gpt-6-astra` (env `DEROUTER_POWERFUL_MODEL`, семейство GPT-6 Astra)
 - **Auth:** `DEROUTER_API_KEY` только из Cloud Secrets
 - **Endpoint:** `https://api.derouter.ai/openai/v1/chat/completions`
 

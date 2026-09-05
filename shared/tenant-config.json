@@ -82,9 +82,9 @@
     "contract": "shared/derouter-opus-brain-contract.md",
     "fail_loud_if_unavailable": true,
     "powerful": {
-      "model": "claude-opus-5",
-      "model_env": "DEROUTER_OPUS_MODEL",
-      "family": "claude-opus-5",
+      "model": "gpt-6-astra",
+      "model_env": "DEROUTER_POWERFUL_MODEL",
+      "family": "gpt-6-astra",
       "roles": ["writer", "sol"]
     },
     "utility": {

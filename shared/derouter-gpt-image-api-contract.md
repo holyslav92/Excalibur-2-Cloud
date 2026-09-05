@@ -2,7 +2,7 @@
 
 > **OWNER OVERRIDE (2026-08-22):** Derouter **image** generation is discontinued.
 > Cover/inline images use **grsai grsai standard image model** via `excalibur_blog_grsai_gpt_image2_api.py`.
-> **Text** roles remain Derouter Opus/Terra.
+> **Text** roles remain Derouter Astra/Terra.
 
 See: `shared/grsai-gpt-image-api-contract.md`
 
@@ -38,7 +38,7 @@ Primary contract: `shared/grsai-gpt-image-api-contract.md`
 - Management API (key check, not images): `GET https://cf-api.derouter.ai/balance` with same Bearer key
 - Timeout: **≥240s** client; default script **600s**
 - `api.derouter.ai` может дать HTTP **524** на длинной gen — script failover на следующий host
-- **Text chat** (Opus/Terra) остаётся на рабочем text endpoint — меняем только image base
+- **Text chat** (Astra/Terra) остаётся на рабочем text endpoint — меняем только image base
 
 ## Text → image (`/images/generations`)
 
