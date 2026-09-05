@@ -237,6 +237,24 @@ class SolTrimChunkTest(unittest.TestCase):
         self.assertEqual(len(parts), 3)
         self.assertIn("lead", parts[0])
 
+    def test_trim_rounds_needed_b23_pattern(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_sol_trim_chunk import trim_rounds_needed
+
+        self.assertEqual(trim_rounds_needed(2183, target=2200, max_rounds=2), 0)
+        self.assertEqual(trim_rounds_needed(2237, target=2200, max_rounds=2), 2)
+        self.assertEqual(trim_rounds_needed(2296, target=2200, max_rounds=2), 2)
+        self.assertEqual(trim_rounds_needed(2500, target=2200, max_rounds=1), 1)
+
+    def test_build_trim_header_second_round_mentions_over_by(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_sol_trim_chunk import build_trim_header
+
+        header = build_trim_header(target=2200, over_by=37, round_index=2)
+        self.assertIn("ROUND 2", header)
+        self.assertIn("37", header)
+        self.assertIn("≤ 2200", header)
+
     def test_dedupe_duplicate_h2_sections_b21_pattern(self) -> None:
         sys.path.insert(0, str(ROOT / "scripts"))
         from excalibur_blog_html_merge_utils import dedupe_duplicate_h2_sections
