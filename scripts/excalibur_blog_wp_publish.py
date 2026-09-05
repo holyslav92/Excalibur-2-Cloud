@@ -1360,6 +1360,20 @@ def check_publish_prerequisites(
             if str(quality.get("status") or "").upper() != "PASS" or not quality.get("all_pass"):
                 blockers.append("quality-bar-9.json status!=PASS or all_pass!=true")
 
+    score_path = article_dir / "article-quality-score.json"
+    if not score_path.is_file():
+        blockers.append(
+            "article-quality-score.json missing (run excalibur_blog_quality_score_gate.py after Stylo)"
+        )
+    else:
+        try:
+            score = json.loads(score_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            blockers.append("article-quality-score.json invalid")
+        else:
+            if str(score.get("status") or "").upper() != "PASS" or not score.get("all_pass"):
+                blockers.append("article-quality-score.json status!=PASS or all_pass!=true")
+
     return blockers
 
 

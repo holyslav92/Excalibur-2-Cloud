@@ -77,6 +77,14 @@ python3 scripts/excalibur_blog_research_start.py --topic-id <ID> --title "<short
 `Task(excalibur-blog-stylo)` → `stylo-report.json` + `stylo-notes.md`.  
 Gold-сюжеты **не** для Scout (`shared/stylo-voice-lock.md`). При FAIL — **≤1** Sol с notes, без 3+ циклов.
 
+### 3c2 Article quality score (после Stylo, до Description)
+```bash
+python3 scripts/excalibur_blog_quality_score_gate.py --article-dir <dir>
+# при FAIL — один repair Sol:
+python3 scripts/excalibur_blog_quality_score_gate.py --article-dir <dir> --repair
+```
+Контракт: `shared/article-quality-score-lock.md`. **Тройной пересказ** и **учебный хвост после casus** = HARD FAIL. Без `article-quality-score.json` all_pass → не Publish. **Без** self-score 9.0 loop.
+
 ### 3d Description (Дзен-карточка)
 `Task(excalibur-blog-description)` → `description-brief.json`  
 после Stylo + stamp. Gate: `excalibur_blog_description_gate.py`.
@@ -86,10 +94,11 @@ Gold-сюжеты **не** для Scout (`shared/stylo-voice-lock.md`). При F
 python3 scripts/excalibur_blog_pipeline_canon.py --article-dir <dir> --stamp
 python3 scripts/excalibur_blog_html_linter.py <dir>/article.html --fix
 python3 scripts/excalibur_blog_opening_meta_gate.py --article-dir <dir>
+python3 scripts/excalibur_blog_quality_score_gate.py --article-dir <dir>
 python3 scripts/excalibur_blog_quality_bar_9_gate.py --article-dir <dir>
 ```
 
-**Quality bar 9/10** (`shared/quality-bar-9.md`): conversion early/mid/end TG+MAX, interlink 2–4, **~1800–2200 слов** (hard FAIL > ~2400), spine once, inline mix 2–4 realistic. Без `quality-bar-9.json` all_pass → не Publish.
+**Article quality score** (`shared/article-quality-score-lock.md`): H1/lead/middle/finale/length/tone; **~1400–1600** слов (hard FAIL >1750); spine once; no lecture tail. **Quality bar 9/10** (`shared/quality-bar-9.md`): conversion early/mid/end TG+MAX, interlink 2–4, spine once, inline mix 2–4 realistic. Без `article-quality-score.json` + `quality-bar-9.json` all_pass → не Publish.
 
 Плохой **слог/открытие/CTA** → верни **Sol**.  
 Сломан **смысл/факты** → верни **Writer**, потом снова Sol.

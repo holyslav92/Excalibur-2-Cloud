@@ -67,6 +67,7 @@ openers). Канон в article — `<h2>Частые вопросы</h2>`; bare
 | WP рубрики | `article.meta.json` → `wp_category_slugs` или `topic_defaults`; gate `wp-categories-gate.json` PASS |
 | Interlink outbound | `interlink-gate.json` PASS (2–4 ссылки на published siblings) + `quality-bar-9.json` all_pass |
 | Quality bar 9 | `quality-bar-9.json` → `all_pass: true` (обязательно перед Publish) |
+| Article quality score | `article-quality-score.json` → `all_pass: true` (после Stylo; см. `shared/article-quality-score-lock.md`) |
 | Credentials | `FTP_HOST`/`FTP_USER`/`FTP_PASS`/`FTP_ROOT=.` + `PUBLIC_SITE_URL` |
 | Allow flag | `EXCALIBUR_BLOG_ALLOW_PUBLISH=yes` |
 

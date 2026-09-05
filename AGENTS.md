@@ -13,7 +13,7 @@
 | 3 | **Cover fail-fast** | `excalibur_blog_grsai_solo_cover.py`: max **2** full attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`). **grsai standard only** — VIP tier отключён. Timebox **≤15–20 мин** на cover. После бюджета → `cover/cover-budget-result.json` → **Indexer** (не бесконечный Cover-QA). OCR escape без PIL mashup/Kie. Short hook **5–7** кириллических слов. |
 | 4 | **Newbuild focus** | **ONLY новостройки Тюмень** (квартиры + дома от застройщика). Аудитория: семьи с детьми + инвесторы. Конверсия → TG/MAX/телефон за покупку новостройки. **DENY** вторичка как сюжет; слабый Wordstat → rework newbuild hook, не drop. Frozen secondary clusters — не retitle. Gate: `scripts/excalibur_blog_topic_focus.py` + `shared/newbuild-focus-lock.md`. |
 
-Доки: `shared/quality-bar-9.md`, `shared/dzen-news-casus.md`, `shared/newbuild-focus-lock.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills, `CLOUD-AUTOMATION.md`.
+Доки: `shared/quality-bar-9.md`, `shared/article-quality-score-lock.md`, `shared/dzen-news-casus.md`, `shared/newbuild-focus-lock.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills, `CLOUD-AUTOMATION.md`.
 
 ## Первый запуск
 
@@ -37,8 +37,9 @@ Scout? → research_start → Research → Title → Writer(смысл)
 **Sol** (`excalibur-blog-sol`) → финальный `article.html` слогом тенанта
 (`shared/SOUL.md` + `shared/soul-examples/`).  
 **Stylo** (`excalibur-blog-stylo`) → `excalibur_blog_stylo.py` vs `memory/stylo/gold`; при FAIL — **≤1** Sol с `stylo-notes.md` (только ритм, не факты). Gold-сюжеты **не** для Scout.  
-После Stylo — stamp `pipeline_canon` + structural checks. Прозу после Sol
-не переписывают (кроме одного stylo-driven Sol или возврата Sol при FAIL гейтов слога).
+**Article quality score** (после Stylo, до Description): `excalibur_blog_quality_score_gate.py` → `article-quality-score.json`; при FAIL — **≤1** Sol с `quality-score-notes.md` (`--repair`), без self-score 9.0 loop. Контракт: `shared/article-quality-score-lock.md`.  
+После Stylo + quality score — stamp `pipeline_canon` + structural checks. Прозу после Sol
+не переписывают (кроме одного stylo-driven Sol, одного quality-score Sol, или возврата Sol при FAIL гейтов слога).
 
 **Title** → `title-brief.json`. **Description** → `description-brief.json` (Дзен-карточка, после Sol).
 
@@ -90,7 +91,7 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - **Spine once FAIL:** пересказ одной сцены в лиде + середине + «итоге»; recap («коротко если некогда»); повтор одних цифр/флагов трижды; lecture-хвост после финала casus
 - **Composite disclaimer FAIL:** «случай собирательный», «без фамилий/адреса ЖК/названия банка», «механика в Тюмени повторяется», modeled/anonymized/«не репортаж» meta-text в теле; gate `no_composite_disclaimer`
 - **Plain language FAIL:** академический/lawyer-blog тон, стопки юртерминов, «заумно»; термин без мгновенного перевода; снять heat casus чеклистом/lecture
-- **Length FAIL:** > ~2400 слов или Дзен 14+ мин; раздутый текст «как раньше» 2600+
+- **Length FAIL:** > ~1750 слов (hard) / target **1400–1600**; Дзен **>10 мин**; padding до 1800+; **учебный хвост** после casus (214-ФЗ простыня, таблицы-гайды перед end CTA)
 - Cursor пишет Scout/Title/Writer/Sol/Description/Cover-text/Schema prose своей моделью вместо `excalibur_blog_derouter_opus_chat.py`
 - `alt` / caption / WP Media с production-токенами (hook, CTA, memes, scene_hint, semicolon prompt list)
 - Запуск пайплайна до завершения Setup
