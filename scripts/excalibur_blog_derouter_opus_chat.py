@@ -33,14 +33,15 @@ MIN_TIMEOUT_SECONDS = 60
 DEFAULT_MAX_RETRIES = 1
 DEFAULT_RETRY_WAIT_SECONDS = 5
 
-DEFAULT_OPUS_MODEL = "claude-opus-5"
+DEFAULT_POWERFUL_MODEL = "gpt-6-astra"
 DEFAULT_TERRA_MODEL = "gpt-5.6-terra"
-DEFAULT_OPUS_MODEL_ENV = "DEROUTER_OPUS_MODEL"
+DEFAULT_POWERFUL_MODEL_ENV = "DEROUTER_POWERFUL_MODEL"
+LEGACY_POWERFUL_MODEL_ENV = "DEROUTER_OPUS_MODEL"
 DEFAULT_TERRA_MODEL_ENV = "DEROUTER_TERRA_MODEL"
 
-OPUS_MODEL_ALIASES = (
-    "claude-opus-5",
-    "anthropic/claude-opus-5",
+POWERFUL_MODEL_ALIASES = (
+    "gpt-6-astra",
+    "openai/gpt-6-astra",
 )
 TERRA_MODEL_ALIASES = (
     "gpt-5.6-terra",
@@ -117,9 +118,9 @@ def tier_config(writing: dict[str, Any], tier: str) -> dict[str, Any]:
         return block
     if tier == "powerful":
         return {
-            "model": DEFAULT_OPUS_MODEL,
-            "model_env": DEFAULT_OPUS_MODEL_ENV,
-            "family": DEFAULT_OPUS_MODEL,
+            "model": DEFAULT_POWERFUL_MODEL,
+            "model_env": DEFAULT_POWERFUL_MODEL_ENV,
+            "family": DEFAULT_POWERFUL_MODEL,
             "roles": sorted(POWERFUL_ROLES),
         }
     return {
@@ -130,7 +131,7 @@ def tier_config(writing: dict[str, Any], tier: str) -> dict[str, Any]:
 
 
 def model_aliases_for_tier(tier: str, base_model: str) -> list[str]:
-    defaults = OPUS_MODEL_ALIASES if tier == "powerful" else TERRA_MODEL_ALIASES
+    defaults = POWERFUL_MODEL_ALIASES if tier == "powerful" else TERRA_MODEL_ALIASES
     ordered: list[str] = []
     for candidate in (base_model, *defaults):
         if candidate and candidate not in ordered:
@@ -138,8 +139,18 @@ def model_aliases_for_tier(tier: str, base_model: str) -> list[str]:
     return ordered
 
 
-def is_opus_family(model: str) -> bool:
-    return "opus" in model.lower()
+def is_powerful_family(model: str) -> bool:
+    lower = model.lower()
+    return "astra" in lower or "opus" in lower
+
+
+def powerful_env_model() -> str:
+    """Текущий env override powerful tier (новый + legacy)."""
+    for env_name in (DEFAULT_POWERFUL_MODEL_ENV, LEGACY_POWERFUL_MODEL_ENV):
+        value = os.environ.get(env_name, "").strip()
+        if value:
+            return value
+    return ""
 
 
 def is_model_not_found_error(exc: Exception) -> bool:
@@ -160,6 +171,8 @@ def resolve_model(role: str, override: str | None, root: Path) -> tuple[str, str
     config_model = str(tier_block.get("model") or "").strip()
     model_env = str(tier_block.get("model_env") or "").strip()
     env_model = os.environ.get(model_env, "").strip() if model_env else ""
+    if tier == "powerful" and not env_model:
+        env_model = powerful_env_model()
 
     if override and override.strip():
         model = override.strip()
@@ -168,24 +181,24 @@ def resolve_model(role: str, override: str | None, root: Path) -> tuple[str, str
     elif config_model:
         model = config_model
     else:
-        model = DEFAULT_OPUS_MODEL if tier == "powerful" else DEFAULT_TERRA_MODEL
+        model = DEFAULT_POWERFUL_MODEL if tier == "powerful" else DEFAULT_TERRA_MODEL
 
-    # DEROUTER_TEXT_MODEL — legacy; не даём переключить powerful-роли на non-Opus.
+    # DEROUTER_TEXT_MODEL — legacy; не даём переключить powerful-роли на utility.
     legacy_text = os.environ.get("DEROUTER_TEXT_MODEL", "").strip()
     if legacy_text and not override:
         if tier == "powerful":
-            if is_opus_family(legacy_text):
+            if is_powerful_family(legacy_text):
                 model = legacy_text
-            elif not is_opus_family(model):
-                model = DEFAULT_OPUS_MODEL
+            elif not is_powerful_family(model):
+                model = DEFAULT_POWERFUL_MODEL
         elif tier == "utility" and not env_model and not config_model:
             if "terra" in legacy_text.lower() or legacy_text == DEFAULT_TERRA_MODEL:
                 model = legacy_text
 
-    if tier == "powerful" and not is_opus_family(model):
+    if tier == "powerful" and not is_powerful_family(model):
         raise DerouterChatError(
-            f"Role {role!r} requires Claude Opus family; got {model!r}. "
-            f"Set {tier_block.get('model_env') or DEFAULT_OPUS_MODEL_ENV}=claude-opus-5"
+            f"Role {role!r} requires GPT-6 Astra powerful tier; got {model!r}. "
+            f"Set {tier_block.get('model_env') or DEFAULT_POWERFUL_MODEL_ENV}=gpt-6-astra"
         )
 
     if tier == "utility" and "terra" not in model.lower():
@@ -587,7 +600,7 @@ def run_chat(args: argparse.Namespace) -> int:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Derouter chat — двухуровневый мозг Excalibur BLOG (Opus powerful / Terra utility)"
+        description="Derouter chat — двухуровневый мозг Excalibur BLOG (Astra powerful / Terra utility)"
     )
     parser.add_argument(
         "--role",
@@ -609,7 +622,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--smoke",
         action="store_true",
-        help="Alias: --role smoke (terra ping + opus writer one-liner)",
+        help="Alias: --role smoke (terra ping + astra writer one-liner)",
     )
     parser.add_argument(
         "--model",

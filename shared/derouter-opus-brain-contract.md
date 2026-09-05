@@ -13,12 +13,12 @@
 
 | Tier | Model id (Derouter) | Env override | Роли |
 |------|---------------------|--------------|------|
-| **powerful** | `claude-opus-5` | `DEROUTER_OPUS_MODEL` | writer, sol |
+| **powerful** | `gpt-6-astra` | `DEROUTER_POWERFUL_MODEL` (legacy: `DEROUTER_OPUS_MODEL`) | writer, sol |
 | **utility** | `gpt-5.6-terra` | `DEROUTER_TERRA_MODEL` | scout, title, research, description, cover-text, schema, cover-scene |
 
-`resolve_model` выбирает tier по `--role`. **Не** используй глобальный `DEROUTER_TEXT_MODEL` как override всех ролей — если задан, он не переводит powerful-роли на non-Opus.
+`resolve_model` выбирает tier по `--role`. **Не** используй глобальный `DEROUTER_TEXT_MODEL` как override всех ролей — если задан, он не переводит powerful-роли на utility.
 
-При 404 model id скрипт пробует алиасы (`gpt-5.6-terra`, `openai/gpt-5.6-terra` для utility; `claude-opus-5`, `anthropic/claude-opus-5` для powerful) и при smoke может зафиксировать рабочий id в tenant-config.
+При 404 model id скрипт пробует алиасы (`gpt-5.6-terra`, `openai/gpt-5.6-terra` для utility; `gpt-6-astra`, `openai/gpt-6-astra` для powerful) и при smoke может зафиксировать рабочий id в tenant-config.
 
 ## Thin Cursor conductor (HARD)
 
@@ -39,7 +39,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 1. Cursor **собирает** `--user-file` из входов (research, handoff, article.html…).
 2. Cursor **вызывает** скрипт; берёт `--output` **как есть**.
 3. Cursor **не переписывает** HTML/JSON/надписи после Derouter.
-4. Stamp `derouter-opus-stamp-<role>.json` — tier + фактический model id (opus vs terra).
+4. Stamp `derouter-opus-stamp-<role>.json` — tier + фактический model id (astra vs terra).
 
 ## Longform chunking (HTTP 524 avoidance)
 
@@ -80,14 +80,14 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py --role smoke --smoke
 ```
 
 - Terra ping (utility, cheaper) → `memory/setup/derouter-smoke-terra-stamp.json`
-- Opus Writer one-liner → `memory/setup/derouter-smoke-opus-stamp.json`
+- Astra Writer one-liner → `memory/setup/derouter-smoke-opus-stamp.json`
 
 ## Запрещено
 
 - `mcp-derouter/start-mcp.sh` — только REST
 - Cursor-authored prose для любой роли из таблицы
 - Тихий fallback на weaker model или Composer
-- Документировать `model: claude-opus-5` / `gpt-5.6-terra` для Cursor Cloud Agent — эти id только для Derouter REST
+- Документировать `model: gpt-6-astra` / `gpt-5.6-terra` для Cursor Cloud Agent — эти id только для Derouter REST
 
 ## Legacy alias
 

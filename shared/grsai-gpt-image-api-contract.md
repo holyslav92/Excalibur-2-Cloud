@@ -15,7 +15,7 @@ Primary Cloud path for Excalibur BLOG cover/inline quad canvas generation (owner
 4. grsai down → GRSAI IMAGE BLOCKER — diagnose/retry; STOP
 ```
 
-**Text roles** (Writer, Sol, Scout, …) remain on Derouter Opus/Terra — **only images** switch to grsai.
+**Text roles** (Writer, Sol, Scout, …) remain on Derouter Astra/Terra — **only images** switch to grsai.
 
 **FORBIDDEN FOREVER:** Kie (`excalibur_blog_kie_gpt_image2_api.py`, `KIE_API_KEY` for images), PIL template mashup, `flux2-pro-*`, Seedream, `nano_banana*`, `z-image`.
 

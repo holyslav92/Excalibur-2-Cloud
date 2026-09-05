@@ -7,7 +7,7 @@
 ## Мандат
 
 Четыре цели Дзена достигаются **разными частями** поста — не длиной текста и не
-self-score до 9.0. Writer и Sol (Opus article roles) обязаны соблюдать этот lock
+self-score до 9.0. Writer и Sol (GPT-6 Astra article roles) обязаны соблюдать этот lock
 **вместе** с `shared/newbuild-focus-lock.md` (новостройки Тюмень, семьи + инвесторы).
 
 **Явно НЕ добавлять:** self-score 9.0 loop, квоту 1800–2100 слов, critic-таблицу в
