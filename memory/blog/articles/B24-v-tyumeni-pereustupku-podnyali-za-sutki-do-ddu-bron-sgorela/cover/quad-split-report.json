@@ -1,0 +1,295 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B24-v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 575,
+              "end": 596
+            },
+            "v_gutter_px": {
+              "start": 1012,
+              "end": 1035
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 9.5,
+              "v_center_offset_px": 0.5,
+              "max_aspect_crop_loss": 0.0247,
+              "per_panel_crop_loss": {
+                "top_left": 0.0104,
+                "top_right": 0.0087,
+                "bottom_left": 0.0237,
+                "bottom_right": 0.0247
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени переуступку подняли на 280 тысяч за сутки до ДДУ — бронь сгорела: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Отказ доплатить: переуступка сорвалась, квартир…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Отказ доплатить: переуступка сорвалась, квартира ушла другому"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Аванс цеденту, Бронь застройщика, Бронь не эскроу — иллюстрация к разбору сделки.",
+            "h2_anchor": "Отказ доплатить: переуступка сорвалась, квартира ушла другому"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Переуступка в Тюмени выглядела дешевле витрины…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Переуступка в Тюмени выглядела дешевле витрины — семья взяла лот"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B24-v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1017,
+          569
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 569,
+            "end": 584
+          },
+          "v_gutter_px": {
+            "start": 1017,
+            "end": 1031
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0069,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0069,
+              "bottom_right": 0.0069
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1017,
+              "bottom": 569
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1017,
+              "bottom": 569
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Неделя согласований: исходный ДДУ, аванс цедент…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Неделя согласований: исходный ДДУ, аванс цеденту и бронь у застройщика"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1031,
+              "top": 0,
+              "right": 2048,
+              "bottom": 569
+            },
+            "raw_box_px": {
+              "left": 1031,
+              "top": 0,
+              "right": 2048,
+              "bottom": 569
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Утром — индексация, К обеду — ошибка, Три версии за день — иллюстрация к разбору сделки.",
+            "h2_anchor": "За сутки до регистрации продавец потребовал ещё 280 тысяч"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 3,
+              "top": 584,
+              "right": 1013,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 584,
+              "right": 1017,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Не доплатили, Продавец не вышел, Срок брони истёк — иллюстрация к разбору сделки.",
+            "h2_anchor": "Объяснения менялись, а срок брони тикал"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1034,
+              "top": 584,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1031,
+              "top": 584,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Исходный ДДУ, Полная цена уступки, Согласие застройщика — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что проверить до денег по переуступке — таблица"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Отказ доплатить: переуступка сорвалась, квартира ушла другому",
+    "skip inline_2: already correct under H2 — Отказ доплатить: переуступка сорвалась, квартира ушла другому",
+    "skip inline_3: already correct under H2 — Переуступка в Тюмени выглядела дешевле витрины — семья взяла лот",
+    "moved inline_4 → H2 — Неделя согласований: исходный ДДУ, аванс цеденту и бронь у застройщика (was under [за сутки до регистрации продавец потребовал ещё 280 тысяч]; removed=1)",
+    "moved inline_5 → H2 — За сутки до регистрации продавец потребовал ещё 280 тысяч (was under [объяснения менялись, а срок брони тикал]; removed=1)",
+    "moved inline_6 → H2 — Объяснения менялись, а срок брони тикал (was under [отказ доплатить: переуступка сорвалась, квартира ушла другому]; removed=1)",
+    "skip inline_7: already correct under H2 — Что проверить до денег по переуступке — таблица"
+  ]
+}
