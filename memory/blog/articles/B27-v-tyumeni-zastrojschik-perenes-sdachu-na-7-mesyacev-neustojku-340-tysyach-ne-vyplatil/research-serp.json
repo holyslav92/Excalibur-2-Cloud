@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-05",
+    "today_ru": "05.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "суббота"
+  },
+  "topic": {
+    "topic_id": "B27",
+    "title": "В Тюмени застройщик перенёс сдачу на 7 месяцев — неустойку 340 тысяч не выплатил",
+    "h1": "В Тюмени застройщик перенёс сдачу на 7 месяцев — неустойку 340 тысяч не выплатил",
+    "slug": "v-tyumeni-zastrojschik-perenes-sdachu-na-7-mesyacev-neustojku-340-tysyach-ne-vyp",
+    "primary_query": "В Тюмени застройщик перенёс сдачу на 7 месяцев — неустойку 340 тысяч не выплатил",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени застройщик перенёс сдачу на 7 месяцев — неустойку 340 тысяч не выплатил 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Застройщик перенёс сдачу дома? Реальный кейс и пошаговая инструкция ...",
+          "url": "https://vk.com/wall312730976_2072",
+          "snippet": ""
+        },
+        {
+          "title": "Застройщик перенёс срок сдачи: что делать дольщику",
+          "url": "https://anydom.ru/layfhack/zastroyshchik-sdvinul-srok-plan-dolshchika",
+          "snippet": "Но недавно пришло официальное письмо: застройщик переносит срок передачи ключей на 30 апреля 2027 года. Итог: Срок сдачи дома сдвинулся на 7 месяцев (212 дней)."
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома — как взыскать неустойку по ДДУ в 2026 ...",
+          "url": "https://jalober.ru/blog/zastrojshchik-prosrochil-sdachu-doma",
+          "snippet": "Застройщик сдвинул срок сдачи квартиры? Пошаговый план: допсоглашение, расчёт неустойки по 214-ФЗ, приёмка и что реально взыскать в 2026 году."
+        },
+        {
+          "title": "Что делать, если застройщик вовремя не сдает дом",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/chto-delat-esli-zastrojshhik-vovremya-ne-sdaet-dom",
+          "snippet": "Это значит: если застройщик нарушил срок передачи квартиры и до сих пор не выдал ключи — неустойка начисляется за каждый день просрочки начиная с 1 января 2026 года."
+        },
+        {
+          "title": "Отложили сдачу дома: На 7 месяцев задерживают сдачу дома, что ...",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/otlozhili-sdachu-doma",
+          "snippet": "Ответ один: направить застройщику претензию с требованием выплатить неустойку за срыв сроков. Если это не помогло, придется подавать в суд — понадобится копия претензии к застройщику, исковое заявление и копии документов по сделке."
+        },
+        {
+          "title": "Взыскание неустойки с застройщика в 2026: свежая судебная практика и ...",
+          "url": "https://harant.ru/blog/zhilishchnye-voprosy/vzyskanie-neustojki-dolshhikom-pri-prosrochke-peredachi-kvartiry-aktualnaya-praktika-na-yanvar-2026-go/",
+          "snippet": "Когда квартиру передадут, осмотрите её внимательно и фиксируйте недостатки в акте. Затем можно направить застройщику письменную претензию с расчётом неустойки."
+        }
+      ],
+      "searched_at": "2026-09-05"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени застройщик перенёс сдачу на 7 месяцев — неустойку 340 тысяч не выплатил 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Застройщик просрочил сдачу дома — как взыскать неустойку по ДДУ в 2026 ...",
+          "url": "https://jalober.ru/blog/zastrojshchik-prosrochil-sdachu-doma",
+          "snippet": ""
+        },
+        {
+          "title": "Застройщик перенёс срок сдачи: что делать дольщику",
+          "url": "https://anydom.ru/layfhack/zastroyshchik-sdvinul-srok-plan-dolshchika",
+          "snippet": "Это значит: если застройщик нарушил срок передачи квартиры и до сих пор не выдал ключи — неустойка начисляется за каждый день просрочки начиная с 1 января 2026 года."
+        },
+        {
+          "title": "Застройщик перенёс сдачу дома? Реальный кейс и пошаговая инструкция ...",
+          "url": "https://vk.com/wall312730976_2072",
+          "snippet": "Застройщик сдвинул срок сдачи квартиры? Пошаговый план: допсоглашение, расчёт неустойки по 214-ФЗ, приёмка и что реально взыскать в 2026 году."
+        },
+        {
+          "title": "Что делать, если застройщик вовремя не сдает дом",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/chto-delat-esli-zastrojshhik-vovremya-ne-sdaet-dom",
+          "snippet": "Но недавно пришло официальное письмо: застройщик переносит срок передачи ключей на 30 апреля 2027 года. Итог: Срок сдачи дома сдвинулся на 7 месяцев (212 дней)."
+        },
+        {
+          "title": "Перенос сроков сдачи дома застройщиком⚡| Юристы по ДДУ",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/vzyskanie-neustoyki-ddu-s-zastroyshchika/perenos-srokov-zastroyshikom-vziskanie-neustojki-ddu/",
+          "snippet": "Ответ один: направить застройщику претензию с требованием выплатить неустойку за срыв сроков. Если это не помогло, придется подавать в суд — понадобится копия претензии к застройщику, исковое заявление и копии документов по сделке."
+        },
+        {
+          "title": "Квартиру сдают позже срока: как взыскать с застройщика неустойку в 2026 ...",
+          "url": "https://rg.ru/2026/02/05/dolshchik-vprave-trebovat-neustojku-s-zastrojshchika-za-kazhdyj-den-prosrochki.html",
+          "snippet": "В связи с данными изменениями мы внесли соответствующие корректировки в работу калькулятора неустойки по ДДУ."
+        }
+      ],
+      "searched_at": "2026-09-05"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени застройщик перенёс сдачу на 7 месяцев — неустойку 340 тысяч не выплатил official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Застройщик перенёс сдачу дома? Реальный кейс и пошаговая инструкция ...",
+          "url": "https://vk.com/wall312730976_2072",
+          "snippet": ""
+        },
+        {
+          "title": "Отложили сдачу дома: На 7 месяцев задерживают сдачу дома, что ...",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/otlozhili-sdachu-doma",
+          "snippet": "Но недавно пришло официальное письмо: застройщик переносит срок передачи ключей на 30 апреля 2027 года. Итог: Срок сдачи дома сдвинулся на 7 месяцев (212 дней)."
+        },
+        {
+          "title": "Застройщик перенёс срок сдачи: что делать дольщику",
+          "url": "https://anydom.ru/layfhack/zastroyshchik-sdvinul-srok-plan-dolshchika",
+          "snippet": "Когда квартиру передадут, осмотрите её внимательно и фиксируйте недостатки в акте. Затем можно направить застройщику письменную претензию с расчётом неустойки."
+        },
+        {
+          "title": "Здравствуйте! Застройщик перенёс дату сдачи дома. Квартира куплена по ...",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/zdrawstwujte-zastrojschik-peren-s-datu-sdachi-doma-kwartira-kuplena-po-ipoteku",
+          "snippet": "Застройщик сдвинул срок сдачи квартиры? Пошаговый план: допсоглашение, расчёт неустойки по 214-ФЗ, приёмка и что реально взыскать в 2026 году."
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома — как взыскать неустойку по ДДУ в 2026 ...",
+          "url": "https://jalober.ru/blog/zastrojshchik-prosrochil-sdachu-doma",
+          "snippet": "Если застройщик перенёс срок сдачи частного дома, можно предпринять следующие шаги: 1.Оценить ситуацию и понять насколько серьёзно нарушен срок передачи объекта, есть ли законные причины для задержки."
+        },
+        {
+          "title": "Взыскание неустойки с застройщика в 2026: свежая судебная практика и ...",
+          "url": "https://harant.ru/blog/zhilishchnye-voprosy/vzyskanie-neustojki-dolshhikom-pri-prosrochke-peredachi-kvartiry-aktualnaya-praktika-na-yanvar-2026-go/",
+          "snippet": "Застройщик обещал ключи в 2025 году, а на дворе 2026-й — квартиры до сих пор нет. С 1 января 2026 года мораторий на неустойку по ДДУ снят, и дольщики снова могут требовать полную компенсацию."
+        }
+      ],
+      "searched_at": "2026-09-05"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени застройщик перенёс сдачу на 7 месяцев — неустойку 340 тысяч не выплатил 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "RVCS_Godot/icon.svg at main · Danny-Wits/RVCS_Godot · GitHub",
+          "url": "https://github.com/Danny-Wits/RVCS_Godot/blob/main/icon.svg",
+          "snippet": ""
+        },
+        {
+          "title": "CoT-Sparql/COTs-SPARQL.svg at main · dice-group/CoT-Sparql",
+          "url": "https://github.com/dice-group/CoT-Sparql/blob/main/COTs-SPARQL.svg",
+          "snippet": "Loading Viewer requires iframe. Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        },
+        {
+          "title": "[Проблема] Совсем перестал работать обход дискорда #3156",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/issues/3156",
+          "snippet": "GitHub Copilot appDirect agents from issue to merge. MCP RegistryIntegrate external tools. DEVELOPER WORKFLOWS. ActionsAutomate any workflow. CodespacesInstant dev environments. IssuesPlan and track work. Code ReviewManage code changes. Code QualityEnforce quality at merge. APPLICATION SECURITY. GitHub Advanced SecurityFind and fix vulnerabilities."
+        },
+        {
+          "title": "was-node-suite-comfyui/image/stroke_node.jpg at main · RituCodeWeb/was ...",
+          "url": "https://github.com/RituCodeWeb/was-node-suite-comfyui/blob/main/image/stroke_node.jpg",
+          "snippet": "Сегодня совсем перестал работать дискорд (провайдер ростелеком).Я пробывал открывать все батники, все альты - но вообще ничто не работало, дискорд пишет \"check for updates\"."
+        },
+        {
+          "title": "Роблокс перестал работать с запретом · Flowseal zapret-discord-youtube ...",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/discussions/7618",
+          "snippet": "Download raw file Edit and raw actions Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        },
+        {
+          "title": "Arknights: Endfield - решения. · Flowseal zapret-discord-youtube ...",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/discussions/9497",
+          "snippet": "ДС тоже не работает, зато ютуб да. Пыталась переустановить, не помогло. Лист посмотрела все тоже ок. Но попозже постараюсь переустановить ещё раз. Если у кого-то такая же проблема - поделитесь. плюсую, такая же фигня."
+        }
+      ],
+      "searched_at": "2026-09-05"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени застройщик перенёс сдачу на 7 месяцев — неустойку 340 тысяч не выплатил forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Застройщик перенёс сдачу дома? Реальный кейс и пошаговая инструкция ...",
+          "url": "https://vk.com/wall312730976_2072",
+          "snippet": ""
+        },
+        {
+          "title": "Отложили сдачу дома: На 7 месяцев задерживают сдачу дома, что ...",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/otlozhili-sdachu-doma",
+          "snippet": "К сожалению, такое редко, но случается: застройщик не успевает сдать дом в срок. Что делать в этой ситуации, как защитить свои деньги и на какую сумму компенсации можно рассчитывать?"
+        },
+        {
+          "title": "Перенос сроков сдачи дома застройщиком⚡| Юристы по ДДУ",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/vzyskanie-neustoyki-ddu-s-zastroyshchika/perenos-srokov-zastroyshikom-vziskanie-neustojki-ddu/",
+          "snippet": "Когда квартиру передадут, осмотрите её внимательно и фиксируйте недостатки в акте. Затем можно направить застройщику письменную претензию с расчётом неустойки."
+        },
+        {
+          "title": "Продление сроков сдачи дома - чем рискует дольщик",
+          "url": "https://rg.ru/2026/02/05/prodlenie-srokov-sdachi-doma-chem-riskuet-dolshchik-podpisyvaia-dopsoglashenie.html",
+          "snippet": "Только в случае нарушения второго срока дольщик вправе взыскать неустойку за срыв сроков строительства, а при нарушении его более чем на 2 месяца - расторгнуть ДДУ."
+        },
+        {
+          "title": "Что делать, если застройщик вовремя не сдает дом",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/chto-delat-esli-zastrojshhik-vovremya-ne-sdaet-dom",
+          "snippet": "Разбираемся с экспертами, стоит ли на это соглашаться, что делать, если застройщик настаивает на подписании, и как вообще действовать в таких ситуациях. Что важно знать? Подписав допсоглашение,..."
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома — как взыскать неустойку по ДДУ в 2026 ...",
+          "url": "https://jalober.ru/blog/zastrojshchik-prosrochil-sdachu-doma",
+          "snippet": "Рассказываем в статье, как быть, если застройщик срывает сроки сдачи дома. И что делать, если квартиру в проблемной новостройке вы купили в ипотеку. Обо всем — по порядку."
+        }
+      ],
+      "searched_at": "2026-09-05"
+    }
+  ],
+  "errors": []
+}

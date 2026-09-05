@@ -1,0 +1,76 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-05",
+  "derouter_synthesis": {
+    "attempted": true,
+    "status": "BLOCKER",
+    "reason": "Derouter HTTP 524 origin timeout after 2 attempts; research-notes.md assembled manually from live sources per assembled-research-inputs"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://ura.news/news/1053120932",
+        "type": "news",
+        "note": "24.08.2026 — перенос сроков ЖК Сикрет Плэйс, данные ЕИСЖС, ключи март 2027"
+      },
+      {
+        "url": "https://tumentoday.ru/2026/08/18/stroitelstvo_zhk_ammonit_v_tyumeni_prodolzhayetsya_pod_kontrolem_prokuratury/",
+        "type": "news",
+        "note": "18.08.2026 — прокуратура контролирует сроки ЖК Аммонит"
+      },
+      {
+        "url": "https://amp.rbc.ru/regional/tyumen/freenews/6a16ab949a7947578d337c9f",
+        "type": "news",
+        "note": "28.05.2026 — рост доли задержек ввода тюменских застройщиков в I кв.2026 (ЕРЗ)"
+      },
+      {
+        "url": "https://harant.ru/blog/nedvizhimost/vzyskanie-neustojki-po-ddu-polnoe-rukovodstvo-na-2026-god/",
+        "type": "community",
+        "note": "Legal community — неустойка и претензионный порядок 2026"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "community",
+        "note": "Tenant signal channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "неустойка застройщик дду",
+    "p0_volume": 18,
+    "secondary_phrases": [
+      {"phrase": "взыскать неустойку с застройщика", "volume": 13, "regions": ["55", "11176"]},
+      {"phrase": "неустойка с застройщика", "volume": 3701, "regions": ["225"]},
+      {"phrase": "новостройки тюмень", "volume": 4660, "regions": ["55", "11176"]}
+    ],
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["214_fz", "pp_rf_326", "pp_rf_2227", "cbr_key_rate", "domrf_eiszhs"],
+    "errors": [],
+    "note": "Legal norms, moratorium/deferral PP, CBR key rate and EISZHS verified in official_verifications"
+  },
+  "key_facts_count": 48,
+  "sources_cited_count": 13,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "assembled_inputs_compact": "assembled-research-inputs-compact.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "incident_report": "none"
+}
