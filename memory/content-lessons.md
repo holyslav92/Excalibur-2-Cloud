@@ -17,3 +17,5 @@
 | [LESSON-20260901-1338-B20-legal-entity-ddu-escrow-cluster](content-lessons/LESSON-20260901-1338-B20-legal-entity-ddu-escrow-cluster.md) | B20 | proposed | geo |
 | [LESSON-20260901-1338-B20-sol-trim-spine-once](content-lessons/LESSON-20260901-1338-B20-sol-trim-spine-once.md) | B20 | proposed | structure |
 | [LESSON-20260901-1338-B20-cover-ocr-escape-no-budget-exhaust](content-lessons/LESSON-20260901-1338-B20-cover-ocr-escape-no-budget-exhaust.md) | B20 | proposed | structure |
+| [LESSON-20260905-0606-B23-trade-in-ddu-bron-cluster](content-lessons/LESSON-20260905-0606-B23-trade-in-ddu-bron-cluster.md) | B23 | proposed | geo |
+| [LESSON-20260905-0606-B23-sol-trim-wordcount-chain](content-lessons/LESSON-20260905-0606-B23-sol-trim-wordcount-chain.md) | B23 | proposed | structure |
