@@ -1,0 +1,50 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41/#blogposting",
+      "url": "{{SITE_BASE}}/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41/",
+      "headline": "В Тюмени ДДU на 45 м² остановили: декларация показала 41",
+      "description": "В договоре было 45 м², в декларации — 41. Святослав Шакин в Тюмени остановил сделку до подписи: четыре метра на бумаге способны изменить не только цену.",
+      "datePublished": "2026-09-05",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41/"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Новостройки Тюмень — расхождение площади ДДU и проектной декларации"
+      }
+    }
+  ]
+}
