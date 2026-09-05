@@ -37,9 +37,11 @@ Gate: `scripts/excalibur_blog_topic_focus.py` при `topic_market_focus: newbui
 
 Опционально, только свежий TG/YouTube, **и только если hook = новостройка**.
 
-### Anti-repeat 30 дней
+### Anti-repeat 30 дней + HARD anti-dupe (2026-09-05)
 
-Без изменений. **Frozen secondary clusters** остаются закрытыми — не retitle
+Без изменений по окну 30d для cluster_id. **Дополнительно:** H1 fingerprint (number+mechanism), formula spam (last 3), fail before Writer. См. **`shared/dzen-top-angle-newbuild-lock.md`**.
+
+**Frozen secondary clusters** остаются закрытыми — не retitle
 вторичный casus под «новостройку»:
 
 ЕГРН/банкротство, опека/маткапитал-вторичка, 4 месяца поиска, жёлтое заключение,

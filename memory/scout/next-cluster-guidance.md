@@ -2,6 +2,8 @@
 
 **Обновляет:** Scout перед topic lock. **Окно anti-repeat:** 30 дней.
 
+**Owner lock 2026-09-05:** `shared/dzen-top-angle-newbuild-lock.md` — mirror top-10 **energy**, plot **ONLY newbuild**. **4 slots/day (09/12/15/17 YEKT)** — не резать.
+
 **Owner lock 2026-08-31:** `shared/newbuild-focus-lock.md` — **ONLY новостройки
 Тюмень** (квартиры + дома от застройщика). Вторичка как сюжет = **BLOCK**.
 Frozen secondary clusters ниже — **не retitle** под «новостройку».
@@ -11,8 +13,9 @@ Frozen secondary clusters ниже — **не retitle** под «новостр�
 1. Live `PUBLIC_SITE_URL/blog/` — последние **~20** заголовков (не тела).
 2. `shared/published-articles.md` + `shared/published-titles.md` / `published-titles-only.md`.
 3. `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters`
-4. `python3 scripts/excalibur_blog_scout_helper.py --check-query "<title + hook + slug>"`
+4. `python3 scripts/excalibur_blog_scout_helper.py --check-query "<title + hook + slug>"` — HARD anti-dupe (cluster + fingerprint + formula spam)
 5. `python3 scripts/excalibur_blog_topic_focus.py --text "<title>"` — newbuild gate
+6. Прочитать `shared/dzen-top-angle-newbuild-lock.md` — назвать top_energy_mirror + newbuild_mechanism
 
 **Klyshin OPTIONAL.** Если берёшь угол из @klyshin_A — только **свежий** пост Telegram или **свежий** YouTube **и только если hook = новостройка**; старые посты не тянуть, если кластер уже закрыт. Wordstat Tyumen (55+11176) — **всегда**. Слабый Wordstat → rework **newbuild** hook (семейная ипотека, эскроу, ДДУ, уступка, срок сдачи, отделка, КП) — **не** вторичка.
 

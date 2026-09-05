@@ -1,7 +1,27 @@
 {
-  "version": 2,
-  "description": "HARD Scout anti-duplicate: same legal risk + same family/plot cluster = refuse topic even if title differs. Rolling window anti_repeat_days.",
+  "version": 3,
+  "description": "HARD Scout anti-duplicate: same legal risk + same family/plot cluster = refuse topic even if title differs. Rolling window anti_repeat_days. Owner 2026-09-05: top-energy newbuild angles + hard H1 fingerprint + formula spam.",
   "anti_repeat_days": 30,
+  "angle_lock_doc": "shared/dzen-top-angle-newbuild-lock.md",
+  "anti_dupe_hard": {
+    "enabled": true,
+    "h1_fingerprint_days": 30,
+    "same_day_fingerprint_block": true,
+    "formula_spam_last_n": 3,
+    "formula_spam_min_distinct_mechanisms": 2,
+    "topic_id_repeat_days": 30,
+    "generic_skeleton_tokens": ["брон", "дду", "застройщ", "новострой", "тюмен"],
+    "gate_script": "scripts/excalibur_blog_scout_story_dup.py",
+    "fail_before_writer": true
+  },
+  "top_energy_angles": [
+    "almost_lost_home",
+    "stopped_before_money",
+    "paper_clean_then_broke",
+    "someone_else_took_object",
+    "clock_ran_out",
+    "number_in_claim_vs_zero_paid"
+  ],
   "used_clusters_log": "memory/scout/used-clusters.json",
   "pre_lock_sources": [
     "PUBLIC_SITE_URL/blog/ (last ~20 live titles)",
@@ -217,7 +237,164 @@
       ],
       "examples": [
         "v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan"
-      ]
+      ],
+      "frozen_secondary": true
+    },
+    {
+      "id": "booking_expired_price_hike",
+      "market": "newbuild",
+      "top_energy": "almost_lost_home",
+      "label_ru": "Новостройка: бронь сгорела / застройщик поднял цену",
+      "required_groups": [
+        ["брон", "bron", "заброн"],
+        ["сгор", "истек", "истёк", "48\\s*час", "сутк", "день"],
+        ["цен", "дорож", "поднял", "повыс", "новострой", "застройщ", "жк", "дду"]
+      ],
+      "examples": ["bron-sgorala-zastrojschik-podnyal-cenu-novostrojka-tyumen"]
+    },
+    {
+      "id": "escrow_not_opened_after_mortgage",
+      "market": "newbuild",
+      "top_energy": "stopped_before_money",
+      "label_ru": "Новостройка: ипотеку одобрили — эскроу не открыли до ДДУ",
+      "required_groups": [
+        ["эскроу", "escrow"],
+        ["не\\s+откр", "не\\s+откры", "замороз", "закрыт", "стоп"],
+        ["ипотек", "семейн", "одобр", "дду", "новострой", "застройщ"]
+      ],
+      "examples": ["semejnuyu-ipoteku-odobrili-eskrou-ne-otkryli"]
+    },
+    {
+      "id": "ddu_apartment_vs_apartments_mismatch",
+      "market": "newbuild",
+      "top_energy": "paper_clean_then_broke",
+      "label_ru": "Новостройка: в ДДУ квартира — в выписке апартаменты",
+      "required_groups": [
+        ["дду", "договор"],
+        ["квартир", "апартамент", "apartament"],
+        ["выписк", "банк", "отказ", "не\\s+ипотек", "не\\s+одобр"]
+      ],
+      "examples": ["v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty"]
+    },
+    {
+      "id": "assignment_lost_to_faster_buyer",
+      "market": "newbuild",
+      "top_energy": "someone_else_took_object",
+      "label_ru": "Новостройка: переуступку забрал другой покупатель",
+      "required_groups": [
+        ["переуступ", "уступ"],
+        ["друг", "раньше", "обошл", "забрал", "снял", "брон"],
+        ["новострой", "застройщ", "дду", "жк"]
+      ],
+      "examples": ["pereustupku-kupil-drugoj-pokupatel-bron-novostrojka"]
+    },
+    {
+      "id": "keys_delay_penalty_unpaid",
+      "market": "newbuild",
+      "top_energy": "clock_ran_out",
+      "label_ru": "Новостройка: срок сдачи сдвинули — неустойку не выплатили",
+      "required_groups": [
+        ["срок", "сдач", "ключ", "перенос", "задерж"],
+        ["неустой", "штраф", "компенсац"],
+        ["не\\s+выплат", "не\\s+пришл", "обещал", "дду", "застройщ"]
+      ],
+      "examples": ["srok-sdachi-sdviguli-neustojku-ne-vyplatili"]
+    },
+    {
+      "id": "ddu_amount_vs_escrow_zero",
+      "market": "newbuild",
+      "top_energy": "number_in_claim_vs_zero_paid",
+      "label_ru": "Новостройка: сумма в ДДУ ≠ факт на эскроу",
+      "required_groups": [
+        ["дду", "договор", "брон"],
+        ["эскроу", "escrow", "сч[её]т", "счет"],
+        ["ноль", "0", "не\\s+внес", "не\\s+поступ", "расхож", "не\\s+совпад"]
+      ],
+      "examples": ["v-ddu-600-tysyach-na-eskrou-nol"]
+    },
+    {
+      "id": "developer_legal_entity_change",
+      "market": "newbuild",
+      "top_energy": "paper_clean_then_broke",
+      "label_ru": "Новостройка: застройщик сменил юрлицо — новый ДДУ",
+      "required_groups": [
+        ["юрлиц", "юр\\s*лиц", "реорганиз", "сменил", "новый\\s+застройщ"],
+        ["дду", "договор", "дольщ"],
+        ["эскроу", "новострой", "застройщ"]
+      ],
+      "examples": ["zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu"]
+    },
+    {
+      "id": "mortgage_rate_hike_before_ddu",
+      "market": "newbuild",
+      "top_energy": "stopped_before_money",
+      "label_ru": "Новостройка: банк поднял ставку накануне ДДУ",
+      "required_groups": [
+        ["ставк", "процент", "ипотек"],
+        ["поднял", "повыс", "вырос", "изменил"],
+        ["дду", "новострой", "застройщ", "останов", "сделк"]
+      ],
+      "examples": ["nakanune-ddu-bank-podnyal-stavku-ipoteki"]
+    },
+    {
+      "id": "acceptance_defects_penalty",
+      "market": "newbuild",
+      "top_energy": "paper_clean_then_broke",
+      "label_ru": "Новостройка: приёмка — дефекты / штраф за отказ от акта",
+      "required_groups": [
+        ["при[её]м", "приемк", "акт"],
+        ["дефект", "недодел", "отказ", "не\\s+подпис"],
+        ["новострой", "застройщ", "дду", "штраф"]
+      ],
+      "examples": ["priemka-defekty-otkazalis-podpisat-akt"]
+    },
+    {
+      "id": "installment_penalty_developer",
+      "market": "newbuild",
+      "top_energy": "clock_ran_out",
+      "label_ru": "Новостройка: рассрочка от застройщика — штраф за просрочку",
+      "required_groups": [
+        ["рассроч", "рассрочк"],
+        ["штраф", "пен", "просроч", "неустой"],
+        ["застройщ", "дду", "новострой"]
+      ],
+      "examples": ["rassrochka-zastrojschika-shtraf-za-prosrochku"]
+    },
+    {
+      "id": "bank_appraisal_below_ddu_price",
+      "market": "newbuild",
+      "top_energy": "number_in_claim_vs_zero_paid",
+      "label_ru": "Новостройка: оценка банка ниже цены в ДДУ",
+      "required_groups": [
+        ["оценк", "оценил"],
+        ["ниже", "меньше", "не\\s+дотян", "разниц"],
+        ["дду", "договор", "цена", "новострой", "ипотек"]
+      ],
+      "examples": ["ocenka-banka-nizhe-ceny-ddu-novostrojka"]
+    },
+    {
+      "id": "trade_in_rejected_developer",
+      "market": "newbuild",
+      "top_energy": "someone_else_took_object",
+      "label_ru": "Новостройка: trade-in — застройщик не принял старую квартиру",
+      "required_groups": [
+        ["trade", "трейд", "trade\\s*in", "обмен", "выкуп\\s+стар"],
+        ["не\\s+принял", "отказал", "сорвал", "не\\s+засчит"],
+        ["новострой", "застройщ", "дду", "брон"]
+      ],
+      "examples": ["trade-in-zastrojschik-ne-prinyal-staruyu-kvartiru"]
+    },
+    {
+      "id": "storage_room_missing_on_keys",
+      "market": "newbuild",
+      "top_energy": "paper_clean_then_broke",
+      "label_ru": "Новостройка: кладовку в ДДУ — на ключах помещения не было",
+      "required_groups": [
+        ["кладов", "кладовк", "паркинг", "машиномест"],
+        ["дду", "договор"],
+        ["ключ", "сдач", "нет", "не\\s+был", "отсутств"]
+      ],
+      "examples": ["oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo"]
     }
   ]
 }

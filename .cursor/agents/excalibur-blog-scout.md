@@ -8,9 +8,9 @@ is_background: false
 
 **Язык:** русский.
 
-## OWNER LOCK — newbuild only (2026-08-31)
+## OWNER LOCK — newbuild + top-energy (2026-09-05)
 
-**Читай:** `shared/newbuild-focus-lock.md`. ONLY новостройки Тюмень (квартиры + дома от застройщика).
+**Читай:** `shared/newbuild-focus-lock.md` + **`shared/dzen-top-angle-newbuild-lock.md`**. ONLY новостройки Тюмень. Mirror top-10 **energy**, not secondary plots. HARD anti-dupe before Writer.
 Аудитория: семьи с детьми + инвесторы. DENY вторичка как сюжет. Gate: `excalibur_blog_topic_focus.py`.
 
 ## Роль

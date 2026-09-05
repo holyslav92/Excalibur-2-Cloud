@@ -175,6 +175,15 @@
     "anti_repeat_days": 30,
     "clusters": "shared/scout-story-clusters.json",
     "used_clusters_log": "memory/scout/used-clusters.json",
+    "angle_lock_doc": "shared/dzen-top-angle-newbuild-lock.md",
+    "anti_dupe_hard": {
+      "enabled": true,
+      "h1_fingerprint_days": 30,
+      "same_day_fingerprint_block": true,
+      "formula_spam_last_n": 3,
+      "fail_before_writer": true,
+      "gate_script": "scripts/excalibur_blog_scout_story_dup.py"
+    },
     "pre_lock_sources": [
       "PUBLIC_SITE_URL/blog/ (last ~20)",
       "shared/published-articles.md",
@@ -215,7 +224,8 @@
       "deny_secondary_market_topics": true,
       "wordstat_weak_rework_newbuild_jargon": true,
       "frozen_secondary_clusters": "shared/scout-story-clusters.json",
-      "docs": ["shared/newbuild-focus-lock.md", "shared/topic-focus-contract.md"]
+      "dzen_top_angle_lock": "shared/dzen-top-angle-newbuild-lock.md",
+      "docs": ["shared/newbuild-focus-lock.md", "shared/topic-focus-contract.md", "shared/dzen-top-angle-newbuild-lock.md"]
     },
     "dzen_engagement": {
       "status": "LOCKED_ON_MAIN",

@@ -9,6 +9,7 @@
 1. **Engagement bomb** — Dzen likes/comments/subs; news-casus актуалочка; прозаический лид 4–6 предложений; early TG+MAX; comment magnet; **ending landing = agency, not panic** (heat сохраняем); **no** TL;DR / «Быстрый инсайт» / opening bullets; **no** sugar-happy ending / checklist-as-finale / «risks everywhere never buy» takeaway.
 2. **Meme canon v1** — `meme-top100.json` only; people+cats; on-topic funny; stickers ≤15%; sacred hook/face/phone; anti-repeat 14д.
 3. **Cover fail-fast** — max 2 solo attempts; ≤15–20 min cover timebox; budget exhausted → Indexer; no infinite Cover-QA loop; no PIL/Kie escape.
+4. **Newbuild + top-energy Scout** — `shared/dzen-top-angle-newbuild-lock.md`: mirror Dzen top-10 **energy**, plot **ONLY newbuild**; HARD anti-dupe (30d cluster + H1 fingerprint + formula spam); **4 slots/day 09/12/15/17 YEKT** — не резать.
 
 См. `AGENTS.md`, `shared/quality-bar-9.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills.
 
@@ -168,7 +169,7 @@ DEROUTER <ROLE> BLOCKER → стоп пайплайна. Нет run_budget / cir
 doctor + today.
 dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
 needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
-Scout HARD gates перед handoff: live blog ~20 + ledger + `--sync-used-clusters` + MCP-KV Wordstat + shared/dzen-news-casus.md + **shared/newbuild-focus-lock.md** (ONLY новостройки Тюмень; DENY вторичка; слабый Wordstat → rework newbuild, NOT drop) + `topic_focus.py` newbuild gate + `scout_helper.py --check-query` (**30d story-duplicate** `shared/scout-story-clusters.json` + `memory/scout/used-clusters.json` — same legal risk+plot = FAIL even if title differs; Klyshin optional, fresh only, newbuild hook only).
+Scout HARD gates перед handoff: live blog ~20 + ledger + `--sync-used-clusters` + MCP-KV Wordstat + shared/dzen-news-casus.md + **shared/newbuild-focus-lock.md** + **shared/dzen-top-angle-newbuild-lock.md** (mirror top-10 ENERGY, plot ONLY newbuild; DENY secondary retitle; DENY guide/checklist) + `topic_focus.py` newbuild gate + `scout_helper.py --check-query` (**HARD anti-dupe:** 30d cluster + H1 fingerprint + formula spam last-3 + frozen secondary — fail before Writer via research_start; Klyshin optional, fresh only, newbuild hook only).
 research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
 Title/Writer/Sol: цель = Dzen engagement (лайки, комментарии, подписки); news-casus актуалочка (событие → финал → практика **один раз**); **spine once** — не пересказывать casus в лиде+середине+итоге; **учебный хвост после casus FAIL** (214-ФЗ простыня, таблицы-гайды перед end CTA); прозаический лид → early TG+MAX; comment magnet; ending landing — agency not panic; H1 forbidden: «чеклист», «N шагов»; body **~1400–1600** (hard FAIL > **1750** / >10 мин Дзен), useful part AFTER story.
 Description: news card energy (shared/dzen-description-rules.md), not SEO checklist blurb.

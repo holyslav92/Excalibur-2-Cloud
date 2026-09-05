@@ -5,15 +5,16 @@ description: Pick P0 Tyumen news-casus topic — Wordstat demand + 30d story-clu
 
 # Scout — Wordstat demand + 30d story-cluster anti-repeat
 
-## OWNER LOCK — newbuild only (2026-08-31, permanent)
+## OWNER LOCK — newbuild only + top-energy angles (2026-09-05, permanent)
 
-**Читай:** `shared/newbuild-focus-lock.md` + `shared/pipeline-canon.json` → `owner_lock_permanent.newbuild_focus`.
+**Читай:** `shared/newbuild-focus-lock.md` + `shared/dzen-top-angle-newbuild-lock.md` + `shared/pipeline-canon.json` → `owner_lock_permanent.newbuild_focus`.
 
 - **ONLY** новостройки в Тюмени: квартиры **и** дома (коттедж / КП / ИЖС / таунхаус от застройщика).
+- **Top-energy mirror:** кради **эмоцию** top-10 Дзена (almost lost / stopped before money / paper clean then broke / someone else took object / clock ran out / number vs zero paid) — **plot ONLY newbuild**. FORBIDDEN: retitle secondary (бабушка, банкрот продавца, чистая ЕГРН-вторичка, опека/маткапитал secondary…).
 - **Аудитория:** семьи с детьми + инвесторы → конверсия в TG/MAX/телефон за **покупку новостройки**.
-- **DENY:** вторичка как сюжет. Слабый Wordstat → rework newbuild hook (семейная ипотека, эскроу, ДДУ, уступка, срок сдачи, отделка, КП) — **не** drop на вторичку.
+- **DENY:** вторичка как сюжет; calm «гайд / N шагов / как устроена».
 - **Klyshin:** optional, только свежий TG/YouTube, **и только если hook = новостройка**.
-- **Frozen secondary clusters** — не retitle под «новостройку». См. `memory/scout/used-clusters.json`.
+- **Frozen secondary clusters** — не retitle. **HARD anti-dupe:** 30d cluster + H1 fingerprint + formula spam (last 3). См. `memory/scout/used-clusters.json`.
 
 Gate: `python3 scripts/excalibur_blog_topic_focus.py --text "<title>"` → `NEWBUILD FOCUS BLOCKER` на вторичку.
 
@@ -43,7 +44,7 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 
 **Опционально:**
 
-- **Klyshin** — `memory/scout/klyshin-topic-bank.*` + **только свежий** `https://t.me/klyshin_A` или **свежий YouTube**. Старые посты **не** брать, если кластер закрыт. Новый hot Tyumen casus **без** Klyshin — OK и **предпочтителен**, когда Klyshin дублировал бы закрытый plot.
+- **Klyshin** — `memory/scout/klyshin-topic-bank.*` + **только свежий** `https://t.me/klyshin_A` или **свежий** YouTube. Старые посты **не** брать, если кластер закрыт. Новый hot Tyumen casus **без** Klyshin — OK и **предпочтителен**, когда Klyshin дублировал бы закрытый plot.
 
 **Цель каждой темы — вовлечение в Дзен** (лайки, комментарии, подписки): stakes в Тюмени, завершённое событие, финал. Scout намечает **угол спора** для comment magnet.
 
@@ -65,13 +66,14 @@ Klyshin **не** заменяет частоты. Wordstat **не** binary skip 
 
 ```text
 1. shared/dzen-news-casus.md (champion formula + forbidden hooks)
-2. Live blog + ledger + used-clusters → список закрытых кластеров
+2. shared/dzen-top-angle-newbuild-lock.md (top-energy → newbuild ONLY)
+3. Live blog + ledger + used-clusters → список закрытых кластеров
 3. Свежий Tyumen casus angle (Klyshin optional) → news-casus (событие + риск + время + финал)
 4. wordstat_get_top_requests: hook phrase + tyumen analogs (55, 11176; compare 225)
 5. Слабый объём → rework **newbuild** news angle (семейная ипотека, эскроу, ДДУ, уступка, срок сдачи, отделка, КП), НЕ drop casus и **НЕ** вторичка
 6. Title draft — news headline. P0 Wordstat — demand spine под H1
-7. scout_helper.py --check-query → BLOCKER если duplicate cluster
-8. Лог: klyshin_hook (optional) + final P0 + dzen_casus_shape: PASS + comment_magnet_angle
+7. scout_helper.py --check-query → BLOCKER если duplicate cluster / fingerprint / formula spam
+8. Лог: top_energy_mirror + newbuild_mechanism + why_newbuild_not_secondary + klyshin_hook (optional) + final P0 + dzen_casus_shape: PASS + comment_magnet_angle + anti_dupe_hard: PASS
 ```
 
 ## Klyshin — OPTIONAL (если используешь)
@@ -97,6 +99,9 @@ Preflight: `wordstat_get_user_info` → OK. Регионы: **Тюмень=55**,
 
 ```text
 wordstat_preflight: mcp-kv wordstat_get_user_info OK
+top_energy_mirror: <almost_lost_home|stopped_before_money|…>
+newbuild_mechanism: «…»
+why_newbuild_not_secondary: «…»
 klyshin_hook: optional | <hook_id> | original: «…» | signal: https://t.me/klyshin_A/… (или none)
 anti_repeat_preflight: live_blog_20 + ledger + used-clusters sync OK | closed_clusters: <ids>
 dzen_casus_shape: PASS | event: «…» | risk: «…» | time: «…» | finale: «…»
@@ -104,23 +109,31 @@ comment_magnet_angle: «…?»
 wordstat_rework: probe «…» <freq> → … → final P0 «…» <freq>
 wordstat: mcp_kv live | regions 55,11176,compare225 | P0 «…» <freq>
 story_dup_check: PASS | cluster_id: <новый уникальный>
+h1_fingerprint_check: PASS | fingerprint: <…>
+formula_spam_check: PASS | last3_mechanisms: <…>
+anti_dupe_hard: PASS
 ```
 
-## HARD story-duplicate (30 дней, не только title)
+## HARD anti-dupe (30 дней + fingerprint + formula spam)
 
-**Wordstat may refine phrasing — must NOT recycle the same story/cluster.**
+**Wordstat may refine phrasing — must NOT recycle the same story/cluster/formula.**
 
 ```bash
 python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters
 python3 scripts/excalibur_blog_scout_helper.py --check-query "<title draft + hook + slug>"
-# или:
 python3 scripts/excalibur_blog_scout_story_dup.py --text "<title + hook + slug>"
 ```
 
-Кластеры: `shared/scout-story-clusters.json` (owner lock 9 + legacy).
-Закрытые: `memory/scout/used-clusters.json` — **30д**, same cluster = FAIL even if title differs.
+| Gate | BLOCKER |
+|------|---------|
+| Same `cluster_id` 30d | `SCOUT STORY DUPLICATE` |
+| Same H1 fingerprint (number+mechanism) 30d / same-day | `H1 FINGERPRINT DUPLICATE` |
+| Last 3 published = same skeleton without new mechanism | `FORMULA SPAM` |
+| Frozen secondary plot retitle | `FROZEN SECONDARY RECYCLE` |
 
-**BLOCKER `SCOUT STORY DUPLICATE`** — pick distinct legal risk + plot. См. `memory/scout/next-cluster-guidance.md`.
+`research_start` повторяет gate **до Writer**. См. `shared/dzen-top-angle-newbuild-lock.md`.
+
+**4 slots/day (09/12/15/17 YEKT) — не резать.** Качество > retitle.
 
 ## Чеклист
 

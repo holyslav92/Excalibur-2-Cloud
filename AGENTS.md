@@ -11,9 +11,9 @@
 | 1 | **Engagement bomb** | Цель поста = **вовлечение в Дзен** (лайки, комментарии, подписки). Форма = hot **news-casus актуалочка** (Тюмень, stakes, финал). **Прозаический лид 4–6 предложений** → **early TG+MAX** → история → практика → **ending landing (agency, not panic)** → CTAs + **comment magnet** (один острый вопрос). Heat casus сохраняем; посадка = ручка до аванса, не «бегите». **Запрещено:** TL;DR, «Быстрый инсайт», bullet-dump в первом экране, how-to checklist вместо casus; sugar-happy ending; checklist как эмоциональный финал; «риски везде — как покупать». |
 | 2 | **Meme canon v1** | Covers + inlines: **only** `memory/cover/meme-top100.json` real templates. **People + cats** (NOT cats-only). **On-topic + funny**. Stickers ≤15%, **never** hook title / host face / phone (+80px). Anti-repeat **14д** (`used-motifs.json`). `meme_picks` in cover-text → quad-manifest. |
 | 3 | **Cover fail-fast** | `excalibur_blog_grsai_solo_cover.py`: max **2** full attempts (`EXCALIBUR_COVER_MAX_ATTEMPTS`). **grsai standard only** — VIP tier отключён. Timebox **≤15–20 мин** на cover. После бюджета → `cover/cover-budget-result.json` → **Indexer** (не бесконечный Cover-QA). OCR escape без PIL mashup/Kie. Short hook **5–7** кириллических слов. |
-| 4 | **Newbuild focus** | **ONLY новостройки Тюмень** (квартиры + дома от застройщика). Аудитория: семьи с детьми + инвесторы. Конверсия → TG/MAX/телефон за покупку новостройки. **DENY** вторичка как сюжет; слабый Wordstat → rework newbuild hook, не drop. Frozen secondary clusters — не retitle. Gate: `scripts/excalibur_blog_topic_focus.py` + `shared/newbuild-focus-lock.md`. |
+| 4 | **Newbuild focus** | **ONLY новостройки Тюмень** (квартиры + дома от застройщика). Scout **mirrors Dzen top-10 ENERGY** → newbuild plots only (`shared/dzen-top-angle-newbuild-lock.md`). **HARD anti-dupe:** 30d cluster + H1 fingerprint + formula spam (last 3). **4 slots/day 09/12/15/17 YEKT** — не резать. DENY secondary retitle; DENY guide/checklist. Gate: `excalibur_blog_topic_focus.py` + `shared/newbuild-focus-lock.md`. |
 
-Доки: `shared/quality-bar-9.md`, `shared/article-quality-score-lock.md`, `shared/dzen-news-casus.md`, `shared/newbuild-focus-lock.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills, `CLOUD-AUTOMATION.md`.
+Доки: `shared/quality-bar-9.md`, `shared/article-quality-score-lock.md`, `shared/dzen-news-casus.md`, `shared/newbuild-focus-lock.md`, `shared/dzen-top-angle-newbuild-lock.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills, `CLOUD-AUTOMATION.md`.
 
 ## Первый запуск
 
@@ -50,7 +50,7 @@ Scout? → research_start → Research → Title → Writer(смысл)
 Никто не читает уже опубликованные статьи сайта — только
 `published-titles-only.md` / `shared/published-titles.md` для anti-dup.
 
-`memory/topics/` запрещена. Scout → handoff + `signal_urls` + **quad gate: Wordstat Tyumen (55+11176, compare RU 225) × Dzen news-casus** (`shared/dzen-news-casus.md`) × **newbuild only** (`shared/newbuild-focus-lock.md`, `topic_market_focus: newbuild_only`) × **30d story-cluster anti-repeat** (`shared/scout-story-clusters.json` + `memory/scout/used-clusters.json`; live blog ~20 + ledger перед lock; same cluster = FAIL даже при новом title). **Klyshin OPTIONAL** — только свежий @klyshin_A / YouTube **и только если hook = новостройка**; новый hot Tyumen newbuild casus без Klyshin предпочтителен при риске дубля. Wordstat = **evaluate + rework for demand** (не binary skip; слабый → newbuild jargon, **не** вторичка). В handoff: **final P0 phrase+volume** + **`dzen_casus_shape: PASS`** + **`comment_magnet_angle`** + **`story_dup_check: PASS`**. Cover canon: `memory/cover/cover-canon.json`.
+`memory/topics/` запрещена. Scout → handoff + `signal_urls` + **quad gate: Wordstat Tyumen (55+11176, compare RU 225) × Dzen news-casus** (`shared/dzen-news-casus.md`) × **newbuild only** (`shared/newbuild-focus-lock.md`, `shared/dzen-top-angle-newbuild-lock.md`, `topic_market_focus: newbuild_only`) × **HARD anti-dupe** (`shared/scout-story-clusters.json` + `memory/scout/used-clusters.json` + H1 fingerprint + formula spam last-3; live blog ~20 + ledger; fail before Writer via `research_start`; same cluster/fingerprint = FAIL даже при новом title). **Klyshin OPTIONAL** — только свежий @klyshin_A / YouTube **и только если hook = новостройка**; новый hot Tyumen newbuild casus без Klyshin предпочтителен при риске дубля. Wordstat = **evaluate + rework for demand** (не binary skip; слабый → newbuild jargon, **не** вторичка). В handoff: **top_energy_mirror** + **newbuild_mechanism** + **why_newbuild_not_secondary** + **final P0 phrase+volume** + **`dzen_casus_shape: PASS`** + **`comment_magnet_angle`** + **`anti_dupe_hard: PASS`**. Cover canon: `memory/cover/cover-canon.json`.
 
 **Factory brain (двухуровневый split):** Cursor — **тонкий дирижёр** (default Composer; не переключать модель Cursor).
 Прозу пишет только `scripts/excalibur_blog_derouter_opus_chat.py` → Derouter REST (`DEROUTER_API_KEY`):
@@ -83,7 +83,9 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - Publish **без рубрик WP** (`wp_category_slugs` / `topic_defaults`) при `wp_categories_required=true`
 - Publish **без outbound interlink** (2–4 ссылки на опубликованные sibling) при `interlink_old_articles=true`
 - Scout/тема без **Wordstat×news-casus×newbuild-only×30d anti-repeat**, без rework-лога или с выдуманными частотами
-- Scout **повтор story-cluster** в 30д (новый title ≠ разрешение; см. `used-clusters.json`)
+- Scout **formula spam** — last 3 published share same skeleton (бронь/ДДУ/застройщик) без новой механики
+- Scout **H1 fingerprint duplicate** — тот же number+mechanism в 30d (напр. «бронь + 500 тысяч»)
+- Scout **frozen secondary retitle** — recycling бабушка/банкрот/ЕГРН-вторичка plots as «newbuild»
 - Scout **drop hook** при слабом Wordstat без цикла rework (локализация Тюмень, **newbuild**-жаргон: новостройки, ДДУ, эскроу, семейная ипотека, переуступка, срок сдачи, отделка, КП…)
 - Scout **вторичка как тема** при `topic_market_focus: newbuild_only` — **BLOCKER** (`NEWBUILD FOCUS BLOCKER`)
 - Scout/тема про RF-blocked heroes без Дзен-канона (если `dzen_rf_pack`)
