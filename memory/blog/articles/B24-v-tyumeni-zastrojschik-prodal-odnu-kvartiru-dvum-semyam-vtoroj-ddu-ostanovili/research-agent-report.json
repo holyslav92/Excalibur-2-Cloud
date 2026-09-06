@@ -1,0 +1,76 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-06",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "2026-09-04..06 — tenant TG: fresh newbuild-market context (acceptance risks, CBR rate 14%)"
+      },
+      {
+        "url": "https://www.cbr.ru/hd_base/KeyRate/",
+        "type": "official",
+        "note": "2026-09-04 — key rate 14,00% from 28.08.2026"
+      },
+      {
+        "url": "https://novostroikino.ru/blog/registratsiya-ddu-v-rosreestre-dvoynaya-prodazha-2026/",
+        "type": "market",
+        "note": "2026-07-16 — DDU registration blocks double sale on same lot"
+      },
+      {
+        "url": "https://www.mk.ru/realestate/2026/06/06/verkhovnyy-sud-razyasnil-situaciyu-s-dvoynoy-prodazhey-zhilya.html",
+        "type": "news",
+        "note": "2026-06-06 — Supreme Court double-sale priorities"
+      },
+      {
+        "url": "https://fedelis.ru/article/dvojnaya-prodazha-kvartiry-zastrojshhikom/",
+        "type": "expert",
+        "note": "2026 — DDU registration + escrow mechanics for double-sale conflicts"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "новостройки Тюмень",
+    "p0_volume": 3657,
+    "p0_volume_ru225": 8691,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 651},
+      {"phrase": "договор долевого участия", "volume": 274},
+      {"phrase": "ДДУ новостройка", "volume": 14},
+      {"phrase": "эскроу застройщик", "volume": 68},
+      {"phrase": "бронь новостройка", "volume": 3}
+    ],
+    "rework_from": "scout P0 locked «новостройки Тюмень» after niche «двойная продажа квартира» rework to newbuild jargon",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_double_sale_same_unit_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["cbr", "consultant_214fz", "dom_rf"],
+    "errors": [],
+    "note": "CBR key rate, 214-FZ registration and penalty caps via consultant; no bank tariff claims"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
