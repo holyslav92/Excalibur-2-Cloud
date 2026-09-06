@@ -1,0 +1,19 @@
+{
+  "gate": "writer-draft",
+  "status": "PASS",
+  "topic_id": "B24",
+  "word_count": 1592,
+  "word_count_target": "1400-1600",
+  "checks": {
+    "prose_lead_4_6": true,
+    "early_cta_tg_max": true,
+    "comment_magnet": true,
+    "ending_agency": true,
+    "no_composite_disclaimer": true,
+    "interlinks_2_4": true,
+    "html_lint": true,
+    "no_tldr_opening": true
+  },
+  "output": "drafts/writer.html",
+  "next": "Sol"
+}
