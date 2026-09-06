@@ -15,3 +15,11 @@ tmp/
 
 # test runtime fixtures
 memory/blog/articles/_cta_gate_fixture/
+
+# Cover regen outputs (large PNGs stay local)
+memory/blog/cover-regen/**/cover.png
+memory/blog/cover-regen/**/cover-prompt.txt
+memory/blog/cover-regen/**/grsai-solo-batch.json
+memory/blog/cover-regen/batch.log
+memory/blog/cover-regen/upload-results.json
+memory/blog/cover-regen/upload-all.log

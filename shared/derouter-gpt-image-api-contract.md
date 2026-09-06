@@ -5,9 +5,12 @@ Primary Cloud path for Excalibur BLOG cover/inline quad canvas generation.
 ## Order of preference (mandatory)
 
 ```text
-1. DEROUTER_API_KEY set → scripts/excalibur_blog_derouter_gpt_image2_api.py
-2. KIE_API_KEY set      → scripts/excalibur_blog_kie_gpt_image2_api.py (after Derouter auth/5xx + one retry)
-3. neither              → BLOCKER (DEROUTER API KEY MISSING / KIE API BLOCKER)
+1. GRSAI_API_KEY → scripts/excalibur_blog_grsai_gpt_image2_api.py (GPT Image 2 standard i2i)
+   Face lock: memory/cover/assets/identity-real/face-studio-2026-06-23.jpg (mandatory for cover)
+2. Optional last resort: EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1 (only if grsai down)
+3. Derouter REST image API: DISCONTINUED for all gpt-image* models on platform (2026-09).
+   gpt-6-astra is TEXT-only — not for cover PNG.
+4. Kie FORBIDDEN forever. No text-only cover without face i2i.
 ```
 
 **FORBIDDEN:** `flux2-pro-text-to-image`, `flux2-pro-image-to-image`, Seedream, `nano_banana*`, `z-image`, `mcp-derouter/start-mcp.sh` (broken stdio MCP).

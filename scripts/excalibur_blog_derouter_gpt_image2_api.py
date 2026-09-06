@@ -54,12 +54,27 @@ class DerouterApiError(RuntimeError):
     """Raised for API or response-shape failures."""
 
 
+def _derouter_image_model_discontinued(model: str) -> bool:
+    """Derouter снял image API (2026-09); gpt-6-astra — только текст."""
+    lowered = model.lower()
+    if lowered == "gpt-6-astra":
+        return True
+    if lowered.startswith("gpt-image"):
+        return True
+    return False
+
+
 def default_model() -> str:
     model = os.environ.get(DEFAULT_MODEL_ENV, "").strip()
     if not model:
         raise DerouterApiError(
-            "DEROUTER_IMAGE_MODEL unset; set image model id in Cloud Secrets "
-            "(see shared/derouter-gpt-image-api-contract.md)"
+            "DEROUTER_IMAGE_MODEL unset; Cover images use grsai i2i "
+            "(scripts/excalibur_blog_grsai_gpt_image2_api.py), not Derouter"
+        )
+    if _derouter_image_model_discontinued(model):
+        raise DerouterApiError(
+            f"DEROUTER_IMAGE_MODEL={model} unavailable for images on Derouter "
+            "(discontinued or text-only). Use grsai GPT Image 2 i2i with face-studio reference."
         )
     return model
 
