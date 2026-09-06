@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-06
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-na-eskrou-ne-hvatalo-400-tysyach-do-summy-ddu-bank-ostanovil-podpisani
+- **post_id:** 9849
+- **permalink:** /blog/ipoteka/v-tyumeni-na-eskrou-ne-hvatalo-400-tysyach-do-summy-ddu-bank-ostanovil-podpisani/
+- **featured_image:** 9850
+- **inline_images:** 9851–9857 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry (category_ids=32,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23
