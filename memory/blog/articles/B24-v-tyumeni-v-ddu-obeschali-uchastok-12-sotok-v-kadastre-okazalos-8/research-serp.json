@@ -1,0 +1,193 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-06",
+    "today_ru": "06.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "воскресенье"
+  },
+  "topic": {
+    "topic_id": "B24",
+    "title": "В Тюмени в ДДУ обещали участок 12 соток — в кадастре оказалось 8",
+    "h1": "В Тюмени в ДДУ обещали участок 12 соток — в кадастре оказалось 8",
+    "slug": "v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8",
+    "primary_query": "новостройки тюмень",
+    "priority": "P0",
+    "cluster_id": "newbuild_kp_plot_size_mismatch_ddu_cadastre_tyumen"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "ДДУ дом земельный участок площадь кадастр расхождение 2026",
+      "purpose": "актуальный SERP по механике casus",
+      "result_count": 5,
+      "results": [
+        {
+          "title": "214-ФЗ ст. 4 — ДДУ на ИЖС в КП: площадь участка, кадастровый номер",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/6837eb5962d010b4c55b5544c6cc4415019883b5/",
+          "snippet": "площадь земельного участка, условный номер, кадастровый номер, проект межевания — обязательные сведения ДДU на дом в малоэтажном жилом комплексе"
+        },
+        {
+          "title": "ВС РФ: согласованная разница площадей по ДДУ не считается недостатком",
+          "url": "https://www.consultant.ru/legalnews/28231/",
+          "snippet": "Определение № 127-КГ24-25-К4 от 04.03.2025 — перерасчёт по условиям договора"
+        },
+        {
+          "title": "Расхождение площади по ДДУ и обмерам БТИ в новостройке: доплата или возврат в 2026",
+          "url": "https://novostroikino.ru/blog/raskhozhdenie-ploshchadi-kvartiry-bti-ddu-doplata-2026/",
+          "snippet": "214-ФЗ: порог погрешности в ДДU, перерасчёт цены за м²"
+        },
+        {
+          "title": "Площадь квартиры не совпадает с ДДУ: возврат по ст. 7 214-ФЗ",
+          "url": "https://favorit-consult.ru/article/ploshhad-kvartiry-ne-sovpadaet-s-ddu/",
+          "snippet": "разница >5% — основание для расторжения; перерасчёт по договору"
+        },
+        {
+          "title": "214-ФЗ — полный текст",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/",
+          "snippet": "ст. 4.3 общее имущество КП; ст. 9.1 существенное изменение площади"
+        }
+      ],
+      "searched_at": "2026-09-06"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "коттеджный поселок Тюмень застройщик ДДУ участок сotki 2026",
+      "purpose": "Tyumen KP newbuild market",
+      "result_count": 4,
+      "results": [
+        {
+          "title": "Коттеджные посёлки — ЯРД, Тюмень",
+          "url": "https://yard72.ru/kottedzhnye-poselki/",
+          "snippet": "участки 7–8–25 сotok, ИЖС, Ирбитский тракт"
+        },
+        {
+          "title": "Navigator Development — коттеджные посёлки Тюмени",
+          "url": "https://navigator-tmn.ru/about/",
+          "snippet": "6 коттеджных посёлков, Ушаково, Альпийская долина"
+        },
+        {
+          "title": "Загородная недвижимость от застройщика — Этажи, Тюмень",
+          "url": "https://www.etagi.com/realty_out/ot-zastroyschika/",
+          "snippet": "дома с участками 5–9 сotok в пригороде"
+        },
+        {
+          "title": "Покупка участка под дом в 2026: ограничения для ИЖС",
+          "url": "https://www.restate.ru/material/pokupka-uchastka-pod-dom-v-2026-novye-ogranicheniya-dlya-izhs-189792.html",
+          "snippet": "семейная ипотека на ИЖС через эскроu и договор подряда"
+        }
+      ],
+      "searched_at": "2026-09-06"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "214-ФЗ статья 4 земельный участок площадь кадастровый номер ДДU",
+      "purpose": "официальные docs",
+      "result_count": 4,
+      "results": [
+        {
+          "title": "Статья 4. ДДU — КонсультантПлюс",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/6837eb5962d010b4c55b5544c6cc4415019883b5/",
+          "snippet": "ч. 4.2: площадь, условный номер, кадастровый номер, проект межевания"
+        },
+        {
+          "title": "Статья 21. Информация о проекте — ГАРАНТ",
+          "url": "https://base.garant.ru/12138267/b5dae26bebf2908c0e8dd3b8a66868fe/",
+          "snippet": "кадастровый номер и площадь земельного участка в проектной декларации"
+        },
+        {
+          "title": "Семейная ипотека — инструкция ДОМ.РФ",
+          "url": "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/instructions/semeinaya-ipoteka/",
+          "snippet": "обновлено 03.06.2026; квартира, дом, таунхаус"
+        },
+        {
+          "title": "Приказ Росreestr № П/0235/26 от 18.05.2026",
+          "url": "https://pravo.ppt.ru/prikaz/rosreyestr/n-p-0235-26-352415",
+          "snippet": "приостановление при расхождении площади участка с проектом межевания >10%"
+        }
+      ],
+      "searched_at": "2026-09-06"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "межевание участок меньше обещанного застройщик коттеджный поселок 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 5,
+      "results": [
+        {
+          "title": "Как проверить участок перед покупкой — Woodholz",
+          "url": "https://woodholz.ru/blog/proverka-uchastka-pered-pokupkoy",
+          "snippet": "13.02.2026: ЕГРН, границы, ВРИ, обременения до сделки"
+        },
+        {
+          "title": "Вот как вас обманывают застройщики ИЖС — Дзен",
+          "url": "https://dzen.ru/a/akdV5fsOLVnDrHSa",
+          "snippet": "риск расхождения обещанных и фактических границ без выноса в натуру"
+        },
+        {
+          "title": "Межевание земельного участка — Журнал Владис",
+          "url": "https://vladis.ru/blog/mezhevanie-zemelnogo-uchastka-chto-ehto-takoe-i-kak-ego-provesti",
+          "snippet": "10.06.2026: дом можно зарегистрировать без межевания — риск срыва сделки"
+        },
+        {
+          "title": "Межевание в 2026 — Рамблер/новости",
+          "url": "https://news.rambler.ru/politics/56677262-mezhevanie-zemelnogo-uchastka-v-2026-godu-kak-sdelat-tsena-i-novye-pravila/",
+          "snippet": "29.06.2026: без границ в ЕГРN сложности при сделках с 01.03.2025"
+        },
+        {
+          "title": "Конфликт с застройщиком на 7 сotok в КП — Prav.io",
+          "url": "https://prav.io/browse/questions/konflikt-s-zastroyshchikom-pravo-na-zemlyu-ili-neobosnovannye-trebovaniya-kak-zashchitit-svoi-interesy-na-uchastke-7-sotok-v-kottedzhnom-poselke",
+          "snippet": "6,77 vs 7 сotok — претензия о соразмерном уменьшении цены"
+        }
+      ],
+      "searched_at": "2026-09-06"
+    },
+    {
+      "query_id": "escrow_bank",
+      "query": "эскроu ипотека дом участок расхождение площади банк 2026",
+      "purpose": "банковский контекст эскроu",
+      "result_count": 3,
+      "results": [
+        {
+          "title": "Банк не закрывает счёт эскроu из-за расхождений данных",
+          "url": "https://bazanpa.ru/vopros/bank-ne-raskryvaet-ili-ne-zakryvaet-schyot-eskrou-iz-za-rashozhdenij-v-dannyh-zastrojshika-i-rosreestra/",
+          "snippet": "расхождения в площади, номере ДДU, корпусе — основание задержки"
+        },
+        {
+          "title": "Строите дома по семейной ипотеке с эскроu? — TenChat",
+          "url": "https://tenchat.ru/media/3621263-stroite-doma-po-semeynoy-ipoteke-s-eskrou",
+          "snippet": "банк может отказать в раскрытии эскроu при несоответствии проекту"
+        },
+        {
+          "title": "Доля эскроu-счетов в новостройках упала — Restate.ru",
+          "url": "https://www.restate.ru/material/dolya-eskrouschetov-v-novostroykah-upala-do-minimuma-za-dva-goda-188462.html",
+          "snippet": "контекст рынка эскроu 2026"
+        }
+      ],
+      "searched_at": "2026-09-06"
+    },
+    {
+      "query_id": "fresh_news_week",
+      "query": "ЕГРН границы участок сентябрь 2026",
+      "purpose": "свежий news/community сигнал недели",
+      "result_count": 2,
+      "results": [
+        {
+          "title": "Конец земельной неразберихе — Хакасия, 03.09.2026",
+          "url": "https://khakassia-news.ru/society/2026/09/03/19802.html",
+          "snippet": "программа точных границ, заполнение ЕГРN до 95% объектов"
+        },
+        {
+          "title": "Обзор изменений земельного законодательства в 2026 — Дзен",
+          "url": "https://dzen.ru/a/anubx1_t_ztBdXKY",
+          "snippet": "11.08.2026: межевание, ЗОУИТ, риски сделок без границ"
+        }
+      ],
+      "searched_at": "2026-09-06"
+    }
+  ],
+  "errors": []
+}
