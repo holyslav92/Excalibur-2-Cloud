@@ -12,7 +12,7 @@ import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import urlsplit, urlunsplit, urlparse
 
 from excalibur_blog_site_base import (
     SITE_BASE_PLACEHOLDER,
@@ -52,10 +52,32 @@ def extract_links(html: str) -> list[str]:
     return out
 
 
+def idna_encode_url(url: str) -> str:
+    """Encode Unicode hostnames to punycode so urllib accepts the URL."""
+    try:
+        parts = urlsplit(url)
+    except ValueError:
+        return url
+    if not parts.scheme or not parts.hostname:
+        return url
+    try:
+        ascii_host = parts.hostname.encode("idna").decode("ascii")
+    except (UnicodeError, UnicodeDecodeError):
+        return url
+    userinfo = parts.username or ""
+    if parts.password:
+        userinfo = f"{userinfo}:{parts.password}" if userinfo else parts.password
+    netloc = f"{userinfo}@{ascii_host}" if userinfo else ascii_host
+    if parts.port:
+        netloc = f"{netloc}:{parts.port}"
+    return urlunsplit((parts.scheme, netloc, parts.path, parts.query, parts.fragment))
+
+
 def check_url(url: str, timeout: float, user_agent: str) -> dict[str, Any]:
     ctx = ssl.create_default_context()
+    request_url = idna_encode_url(url)
     req = urllib.request.Request(
-        url,
+        request_url,
         method="HEAD",
         headers={"User-Agent": user_agent},
     )
@@ -73,7 +95,7 @@ def check_url(url: str, timeout: float, user_agent: str) -> dict[str, Any]:
         # Also retry when HEAD is disallowed / blocked (405/501/403/418).
         # VK kittenx (dev.vk.com) returns 418 on HEAD while GET 200 (B110).
         if e.code in (404, 405, 501, 403, 418):
-            return _get_fallback(url, timeout, user_agent, ctx, str(e))
+            return _get_fallback(request_url, timeout, user_agent, ctx, str(e))
         return {
             "url": url,
             "status": e.code,
@@ -88,7 +110,8 @@ def check_url(url: str, timeout: float, user_agent: str) -> dict[str, Any]:
 def _get_fallback(
     url: str, timeout: float, user_agent: str, ctx: ssl.SSLContext, head_error: str
 ) -> dict[str, Any]:
-    req = urllib.request.Request(url, headers={"User-Agent": user_agent})
+    request_url = idna_encode_url(url)
+    req = urllib.request.Request(request_url, headers={"User-Agent": user_agent})
     try:
         with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
             return {
