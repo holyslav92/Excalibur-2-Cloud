@@ -1,8 +1,7 @@
 {
-  "status": "FAIL",
-  "all_pass": false,
+  "status": "PASS",
+  "all_pass": true,
   "changes": [
-    "inline_5: 'сравнительная таблица с колонками по новостройке в Тюмени: Двое суток до подписи, Документы на столе, Сверка не сходится — иллюстрация к…' -> 'сравнительная таблица с колонками по новостройке в Тюмени: Двое суток до подписи, Пакет документов, Сверка не сходится — иллюстрация к…'",
     "cover-registry.json updated",
     "article.html img inline_1 alt updated",
     "article.html img inline_2 alt updated",
@@ -64,52 +63,8 @@
   },
   "html_alts": [
     {
-      "src": "cover/inline-01.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
-    },
-    {
       "src": "cover/inline-03.png",
       "alt": "реалистичный кадр (без лица хоста) к разделу ««Ипотеку одобрили» — и семья пошла подписывать…» в Тюмени — иллюстрация к кейсу о сделке.",
-      "pass": true,
-      "errors": []
-    },
-    {
-      "src": "cover/inline-02.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
-    },
-    {
-      "src": "cover/inline-03.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
-    },
-    {
-      "src": "cover/inline-04.png",
-      "alt": "реалистичный кадр (без лица хоста) к разделу «На эскроу лежало 5,8 миллиона — в договоре было…» в Тюмени — иллюстрация к кейсу о сделке.",
-      "pass": true,
-      "errors": []
-    },
-    {
-      "src": "cover/inline-05.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
-    },
-    {
-      "src": "cover/inline-01.png",
-      "alt": "реалистичный кадр (без лица хоста) к разделу «За 48 часов до подписания банк сверил счёт и ос…» в Тюмени — иллюстрация к кейсу о сделке.",
       "pass": true,
       "errors": []
     },
@@ -121,33 +76,21 @@
     },
     {
       "src": "cover/inline-04.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
+      "alt": "реалистичный кадр (без лица хоста) к разделу «На эскроу лежало 5,8 миллиона — в договоре было…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "src": "cover/inline-01.png",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За 48 часов до подписания банк сверил счёт и ос…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "pass": true,
+      "errors": []
     },
     {
       "src": "cover/inline-05.png",
       "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Двое суток до подписи, Пакет документов, Сверка не сходится — иллюстрация к…",
       "pass": true,
       "errors": []
-    },
-    {
-      "src": "cover/inline-06.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
-    },
-    {
-      "src": "cover/inline-07.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
     },
     {
       "src": "cover/inline-06.png",
