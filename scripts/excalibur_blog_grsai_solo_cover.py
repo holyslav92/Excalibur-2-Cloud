@@ -34,7 +34,11 @@ from excalibur_blog_grsai_gpt_image2_api import (
     resolve_hosts,
 )
 
-DEFAULT_REF = "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg"
+from excalibur_blog_cover_identity import (
+    FACE_PRIMARY,
+    IDENTITY_SUFFIX,
+    ensure_face_reference,
+)
 SOLO_COVER_SIZE = "1200x675"
 
 
@@ -118,7 +122,7 @@ def write_budget_exhausted_report(
 def main() -> int:
     ap = argparse.ArgumentParser(description="Generate solo 1200×675 cover via grsai standard image model")
     ap.add_argument("--article-dir", required=True)
-    ap.add_argument("--ref", default=DEFAULT_REF)
+    ap.add_argument("--ref", default=str(FACE_PRIMARY))
     ap.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT_SECONDS)
     ap.add_argument("--prompt-suffix", default="", help="Extra prompt lines appended")
     ap.add_argument(
@@ -145,11 +149,9 @@ def main() -> int:
     prompt = build_prompt_for_article(article_dir, root)
     if args.prompt_suffix.strip():
         prompt = prompt + "\n" + args.prompt_suffix.strip()
-    ref_path = root / args.ref
-    from excalibur_blog_identity_real import ensure_identity_reference
-
+    ref_path = root / FACE_PRIMARY
     try:
-        ref_path = ensure_identity_reference(root)
+        ref_path = ensure_face_reference(root)
     except Exception as exc:  # noqa: BLE001
         print(f"FAIL identity ref: {exc}", file=sys.stderr)
         return 1
@@ -157,15 +159,7 @@ def main() -> int:
         print(f"FAIL identity ref missing: {ref_path}", file=sys.stderr)
         return 1
 
-    identity_suffix = (
-        "\nIDENTITY LOCK (mandatory): exact same man as reference photo — "
-        "28 years old, medium-slim build, round-oval face, dark brown short hair tapered sides, "
-        "warm dark brown eyes, full dark brows. "
-        "MANDATORY visible dark five-o'clock-shadow stubble on jaw, chin and upper lip — "
-        "same density and pattern as reference; NEVER clean-shaven, NEVER fashion-model jaw. "
-        "Bone structure, hairline, stubble pattern, eye shape MUST match studio portrait. "
-        "NEW invented outfit and emotion/scene — do NOT clone reference blazer/pose/background."
-    )
+    identity_suffix = IDENTITY_SUFFIX
     prompt = prompt + identity_suffix
 
     timeout = max(MIN_TIMEOUT_SECONDS, int(args.timeout))

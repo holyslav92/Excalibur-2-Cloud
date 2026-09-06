@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Перегенерация только cover для live-постов (grsai standard, face i2i).
+"""Перегенерация только cover для live-постов (grsai GPT Image 2 i2i, face lock).
 
-Модель: grsai GPT Image 2 standard (НЕ VIP). FACE: face-studio-2026-06-23.jpg.
-После генерации — upload-plan.json для wordpress_upload_image_from_url.
+FACE: только face-studio-2026-06-23.jpg через /images/edits (grsai i2i).
+Derouter gpt-6-astra — текст; DEROUTER_IMAGE_MODEL для картинок снят с платформы.
 """
 
 from __future__ import annotations
@@ -14,6 +14,16 @@ import time
 from pathlib import Path
 from typing import Any
 
+from excalibur_blog_cover_identity import (
+    BODY_LOCK,
+    COVER_I2I_BANS,
+    COVER_PHONE,
+    FACE_PRIMARY,
+    IDENTITY_SUFFIX,
+    I2I_EXPRESSION_LOCK,
+    ensure_face_reference,
+    identity_public_url,
+)
 from excalibur_blog_grsai_gpt_image2_api import (
     DEFAULT_TIMEOUT_SECONDS,
     MIN_TIMEOUT_SECONDS,
@@ -24,57 +34,68 @@ from excalibur_blog_grsai_gpt_image2_api import (
     resolve_grsai_api_key,
     resolve_hosts,
 )
-from excalibur_blog_site_base import expand_site_base, resolve_public_base_from_env
 
-DEFAULT_REF = Path("memory/cover/assets/identity-real/face-studio-2026-06-23.jpg")
-IDENTITY_PUBLIC_PATH = "/wp-content/uploads/2026/06/2026-06-23-15.57.42.jpg"
 SOLO_COVER_SIZE = "1200x675"
-COVER_PHONE = "+7 922 001 65 05"
 
-BODY_LOCK = (
-    "medium slim build (NOT chubby/puffy/thick neck); blazer or smart-casual invented per hook"
-)
-I2I_EXPRESSION_LOCK = (
-    "same person identity from reference photo — NEW invented expression for hook; "
-    "do NOT copy reference studio smile/pose; preserve jaw/stubble/hairline/eyes"
-)
-IDENTITY_SUFFIX = (
-    "\nIDENTITY LOCK (mandatory): exact same man as reference photo — "
-    "28 years old, medium-slim build, round-oval face, dark brown short hair tapered sides, "
-    "warm dark brown eyes, full dark brows. "
-    "MANDATORY visible dark five-o'clock-shadow stubble on jaw, chin and upper lip — "
-    "same density and pattern as reference; NEVER clean-shaven, NEVER fashion-model jaw. "
-    "Bone structure, hairline, stubble pattern, eye shape MUST match studio portrait. "
-    "Black blazer over black tee like reference when outfit not specified. "
-    "NEW invented emotion/scene — do NOT clone reference studio smile/pose/background."
-)
-
-COVER_REGEN_MANIFEST: list[dict[str, Any]] = [
-    {"post_id": 9627, "slug": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi", "hook": "Банк поднял ставку — платёж вырос", "highlight": "платёж", "sticky": "Одобрение не гарантия", "emotion": "shocked at calculator", "scene": "bright office, mortgage papers, calculator higher payment"},
-    {"post_id": 9601, "slug": "v-tyumeni-bank-snyal-odobrenie-ipoteki-na-novostrojku-bron-sgorela-za-tri-dnya-d", "hook": "Банк снял ипотеку перед сделкой", "highlight": "снял", "sticky": "Бронь уже не спасти", "emotion": "panicked disbelief", "scene": "bank corridor, revoked approval, 72h countdown"},
-    {"post_id": 9588, "slug": "v-tyumeni-na-pokaze-byla-chistovaya-v-ddu-okazalas-predchistovaya", "hook": "В шоу-руме чистовая — в ДДУ предчистовая", "highlight": "чистовая", "sticky": "Приложение решает, не витрина", "emotion": "confused comparing finishes", "scene": "showroom laminate vs bare concrete walls"},
-    {"post_id": 9575, "slug": "v-tyumeni-zastrojschik-zaderzhal-klyuchi-na-8-mesyacev-neustojku-predlozhili-ser", "hook": "Задержка ключей — сертификат вместо денег", "highlight": "сертификат", "sticky": "Сначала подпись — потом ключи", "emotion": "frustrated with certificate", "scene": "keys and certificate instead of cash"},
-    {"post_id": 9562, "slug": "v-tyumeni-ploschad-v-ddu-ne-soshlas-s-klyuchami-pereplatili-za-metry", "hook": "В квартире пропали два метра", "highlight": "пропали", "sticky": "Это не допуск", "emotion": "skeptical at laser measure", "scene": "empty new apartment, floor plan mismatch"},
-    {"post_id": 9549, "slug": "v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo", "hook": "Кладовка по ДДУ исчезла на ключах", "highlight": "исчезла", "sticky": "Акт подписывать страшно", "emotion": "angry at empty storage door", "scene": "basement storage missing, keys and contract"},
-    {"post_id": 9536, "slug": "v-tyumeni-platili-rassrochku-po-ddu-pered-sdachej-zastrojschik-podnyal-ostatok", "hook": "Застройщик хочет ПОДНЯТЬ остаток перед ключами", "highlight": "ПОДНЯТЬ", "sticky": "Не подписывайте с ходу", "emotion": "alarmed at +400000 balance", "scene": "installment papers surprise top-up"},
-    {"post_id": 9523, "slug": "v-tyumeni-v-kp-obeschali-gaz-i-vodu-na-klyuchah-kommunikacii-ne-podveli", "hook": "У забора пусто — ключи не взяли", "highlight": "пусто", "sticky": "Акт не подписали", "emotion": "bewildered outdoors at empty utilities", "scene": "cottage fence, no gas/water hookups"},
-    {"post_id": 9510, "slug": "v-tyumeni-oplatili-pereustupku-v-novostrojke-zastrojschik-otkazal-pereoformlyat", "hook": "Оплатили переуступку — дольщиком не стали", "highlight": "дольщиком", "sticky": "Оплата не даёт права", "emotion": "firm stop gesture worried", "scene": "assignment contract desk, mini building model"},
-    {"post_id": 9490, "slug": "v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot", "hook": "Застройщик сменил компанию — бронь зависла", "highlight": "компанию", "sticky": "Вывеска прежняя, бумаги другие", "emotion": "stressed checking phone escrow blocked", "scene": "new legal entity papers, escrow delay"},
-    {"post_id": 9465, "slug": "v-tyumeni-zabronirovali-novostrojku-cherez-dvoe-sutok-cenu-podnyali-na-380-tysya", "hook": "Бронь квартиры не сохранила прежнюю цену", "highlight": "цену", "sticky": "Вот тебе и бронь", "emotion": "angry at +380000 calculator", "scene": "reservation papers, price jump weekend"},
-    {"post_id": 9452, "slug": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli", "hook": "Ипотеку одобрили — бронь всё равно сняли", "highlight": "сняли", "sticky": "Проверка была впереди", "emotion": "shocked holding БРОНЬ СНЯТА stamp", "scene": "approval card cancelled, maternity capital check"},
-    {"post_id": 9368, "slug": "v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom", "hook": "Проверка согласия супруги остановила аванс", "highlight": "остановила", "sticky": "Конверт не доказательство", "emotion": "suspicious examining envelope", "scene": "notarized consent envelope paused deal"},
-    {"post_id": 9332, "slug": "v-tyumeni-kupili-dolyu-v-kommunalnoj-kvartire-sosed-sorval-sdelku-za-den-do-avan", "hook": "Сосед остановил покупку доли до аванса", "highlight": "остановил", "sticky": "Деньги не ушли зря", "emotion": "worried with neighbor refusal", "scene": "communal share papers, refusal envelope"},
-    {"post_id": 9300, "slug": "v-tyumeni-obeschali-kladovku-v-podarok-v-vypiske-egrn-ee-ne-okazalos", "hook": "Кладовка остановила сделку до аванса", "highlight": "остановила", "sticky": "Словам верить нельзя", "emotion": "alert at EGRN mismatch", "scene": "EGRN extract, promised storage missing"},
-    {"post_id": 9250, "slug": "zastrojschik-perenes-sroki-sdachi-zhk-v-tyumeni-na-god-ipoteka-ostalas", "hook": "Застройщик перенёс ключи — платёж идёт", "highlight": "перенёс", "sticky": "Год без квартиры", "emotion": "exhausted at delay notice", "scene": "handover delay letter, mortgage still due"},
+# Новые посты (скриншоты пользователя 2026-09-06)
+NEW_COVER_BATCH: list[dict[str, Any]] = [
+    {
+        "post_id": 9640,
+        "slug": "v-tyumeni-semya-perevela-avans-na-eskrou-schet-okazalsya-chuzhim",
+        "hook": "Аванс ушёл на чужой счёт",
+        "highlight": "чужой",
+        "sticky": "QR из переписки",
+        "emotion": "worried checking phone payment",
+        "scene": "messenger QR wrong recipient, bank alert",
+    },
+    {
+        "post_id": 9723,
+        "slug": "v-tyumeni-investor-kupil-novostrojku-pod-sdachu-v-ddu-zapretili-arendu-do-klyuch",
+        "hook": "Аренду запретили — бронь сгорела",
+        "highlight": "сгорела",
+        "sticky": "ДДУ прислали слишком поздно",
+        "emotion": "frustrated at rent ban in DDU",
+        "scene": "DDU rent prohibited clause, keys on desk",
+    },
+    {
+        "post_id": 9710,
+        "slug": "v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela",
+        "hook": "Продавец ПОДНЯЛ цену перед самой сделкой",
+        "highlight": "ПОДНЯЛ",
+        "sticky": "Бронь сгорела за сутки",
+        "emotion": "stressed holding +280000 DDU paper",
+        "scene": "assignment price jump day before signing",
+    },
+    {
+        "post_id": 9697,
+        "slug": "v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela",
+        "hook": "Оценку квартиры СНИЗИЛИ — бронь сгорела",
+        "highlight": "СНИЗИЛИ",
+        "sticky": "-600 тыс за сутки",
+        "emotion": "baffled at trade-in appraisal drop",
+        "scene": "tablet appraisal graph down, reservation lost",
+    },
+    {
+        "post_id": 9749,
+        "slug": "v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty",
+        "hook": "Выписка ЕГРН лишила семью ИПОТЕКИ",
+        "highlight": "ИПОТЕКИ",
+        "sticky": "Ключи не взяли",
+        "emotion": "shocked EGRN says apartments not flat",
+        "scene": "EGRN extract apartment vs квартира mismatch",
+    },
+    {
+        "post_id": 9775,
+        "slug": "v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41",
+        "hook": "ДДУ написали 45 — в декларации 41",
+        "highlight": "41",
+        "sticky": "Четыре метра исчезли",
+        "emotion": "confused comparing DDU 45 vs declaration 41",
+        "scene": "floor plan area mismatch papers",
+    },
 ]
 
-
-def identity_public_url() -> str:
-    live = resolve_public_base_from_env()
-    placeholder = f"{{{{SITE_BASE}}}}{IDENTITY_PUBLIC_PATH}"
-    if live:
-        return expand_site_base(placeholder, live)
-    return placeholder
+COVER_REGEN_MANIFEST: list[dict[str, Any]] = NEW_COVER_BATCH
 
 
 def build_solo_prompt(item: dict[str, Any]) -> str:
@@ -93,15 +114,10 @@ def build_solo_prompt(item: dict[str, Any]) -> str:
         "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic ink, "
         "gold #dcc5a1 one accent only. Torn paper, gold tape/sticky, informative cards."
     )
-    bans = (
-        "BAN HARD: ANY text on clothes/chest; Wordstat/search strips; blue halos on hair; "
-        "generic stock-model face; different person than reference; mustard+navy vest repeat; "
-        "dark cinematic; chubby host; polite studio smile copy from reference."
-    )
     return (
         f"{style_prefix}\n"
         "ONE SINGLE 16:9 cover frame 1200x675 — NOT a 2x2 grid, NOT quad canvas.\n"
-        f"{bans}\n"
+        f"{COVER_I2I_BANS}\n"
         "TEXT LOCK: Russian Cyrillic only. Allowed: headline hook, phone CTA, one sticky.\n"
         f"Headline EXACT «{hook}» bold black RIGHT zone (52–96% width), {highlight_rule}.\n"
         f"Phone EXACT «{COVER_PHONE}» white torn paper bottom-RIGHT.\n"
@@ -115,11 +131,12 @@ def build_solo_prompt(item: dict[str, Any]) -> str:
     )
 
 
-def write_batch(article_dir: Path, prompt: str, root: Path) -> Path:
+def write_batch(article_dir: Path, prompt: str) -> Path:
     batch = {
         "pipeline": "grsai_solo_cover_regen",
+        "slot": "cover",
         "prefer_local_reference": True,
-        "local_reference": str(DEFAULT_REF),
+        "local_reference": str(FACE_PRIMARY),
         "cover_i2i_required": True,
         "jobs": [
             {
@@ -143,7 +160,8 @@ def write_batch(article_dir: Path, prompt: str, root: Path) -> Path:
 def generate_cover(root: Path, article_dir: Path, batch_path: Path, prompt: str) -> Path:
     api_key = resolve_grsai_api_key()
     if not api_key:
-        raise RuntimeError("GRSAI_API_KEY missing")
+        raise RuntimeError("GRSAI_API_KEY missing — cover i2i BLOCKER")
+    ref_path = ensure_face_reference(root)
     image_input = {"prompt": prompt, "aspect_ratio": "16:9", "resolution": "1K"}
     timeout = max(MIN_TIMEOUT_SECONDS, DEFAULT_TIMEOUT_SECONDS)
     image_bytes, _meta = generate_image(
@@ -158,7 +176,7 @@ def generate_cover(root: Path, article_dir: Path, batch_path: Path, prompt: str)
         hosts=resolve_hosts(),
         max_retries=1,
         retry_wait=5,
-        ref_path=root / DEFAULT_REF,
+        ref_path=ref_path,
     )
     cover_path = article_dir / "cover.png"
     cover_path.write_bytes(image_bytes)
@@ -181,8 +199,10 @@ def main() -> int:
             return 2
 
     root = project_root()
-    if not (root / DEFAULT_REF).is_file():
-        print(f"FAIL missing {DEFAULT_REF}", file=sys.stderr)
+    try:
+        ensure_face_reference(root)
+    except FileNotFoundError as exc:
+        print(f"FAIL {exc}", file=sys.stderr)
         return 2
 
     plan: list[dict[str, Any]] = []
@@ -195,7 +215,7 @@ def main() -> int:
         article_dir.mkdir(parents=True, exist_ok=True)
         prompt = build_solo_prompt(item)
         (article_dir / "cover-prompt.txt").write_text(prompt + "\n", encoding="utf-8")
-        batch_path = write_batch(article_dir, prompt, root)
+        batch_path = write_batch(article_dir, prompt)
 
         entry: dict[str, Any] = {"post_id": post_id, "slug": slug, "hook": item["hook"]}
 
@@ -212,6 +232,7 @@ def main() -> int:
                     "status": "generated",
                     "cover_path": str(cover_path.relative_to(root)),
                     "alt_text": f"Святослав Шакин — {item['hook']}",
+                    "provider": "grsai-i2i",
                 }
             )
             print(f"OK generated post_id={post_id} -> {cover_path}")
@@ -227,7 +248,7 @@ def main() -> int:
         if args.all and item != items[-1]:
             time.sleep(5)
 
-    plan_path = root / args.output_root / "regen-plan.json"
+    plan_path = root / args.output_root / "regen-plan-new.json"
     plan_path.write_text(json.dumps(plan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"OK plan={plan_path} failures={failures}/{len(plan)}")
     return 1 if failures else 0

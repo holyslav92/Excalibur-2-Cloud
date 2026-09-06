@@ -578,6 +578,8 @@ def main() -> int:
         batch = {
             "pipeline": manifest.get("pipeline") or "quad_canvas_2x_image_api_longform",
             "canvas_index": spec["index"],
+            "prefer_local_reference": bool(has_cover),
+            "local_reference": identity_rel if has_cover else "",
             "identity_reference_local": identity_rel if has_cover else "",
             "identity_reference_id": identity_spec["id"] if has_cover else "",
             "reference_url_hosted": batch_ref_url,
@@ -585,13 +587,13 @@ def main() -> int:
             "result_path": spec["result_file"],
             "slots": list(canvas_slots),
             "preferred_image_flow": {
-                "provider": "derouter-rest",
-                "script": "scripts/excalibur_blog_derouter_gpt_image2_api.py",
+                "provider": "grsai-rest",
+                "script": "scripts/excalibur_blog_grsai_gpt_image2_api.py",
                 "resolution": MCP_RESOLUTION,
                 "note": (
-                    "PRIMARY: Derouter REST image API (api-direct, 2K 16:9). "
-                    "Fallback: excalibur_blog_kie_gpt_image2_api.py when DEROUTER auth/5xx. "
-                    "FORBIDDEN: flux2-pro-*, Seedream, nano_banana*, z-image, mcp-derouter/start-mcp.sh."
+                    "PRIMARY: grsai GPT Image 2 standard i2i (face-studio identity). "
+                    "Derouter image API discontinued; gpt-6-astra is text-only. "
+                    "FORBIDDEN: text-only cover, flux2-pro-*, Seedream, nano_banana*, Kie, PIL mashup."
                 ),
                 "apply_script": (
                     "python3 scripts/excalibur_blog_quad_apply.py "

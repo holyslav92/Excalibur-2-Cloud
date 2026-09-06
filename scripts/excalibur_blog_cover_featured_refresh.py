@@ -129,7 +129,7 @@ def upload_one(root: Path, env: dict[str, str], entry: dict[str, Any], *, dry_ru
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--plan", default="memory/blog/cover-regen/regen-plan.json")
+    ap.add_argument("--plan", default="memory/blog/cover-regen/regen-plan-new.json")
     ap.add_argument("--post-id", type=int, default=0)
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
