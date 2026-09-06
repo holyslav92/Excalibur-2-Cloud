@@ -19,7 +19,7 @@ description: "Sol: rewrite Writer draft into tenant-SOUL final article.html."
 
 ```bash
 python3 scripts/excalibur_blog_sol_chunk.py \
-  --system-file skills/sol-excalibur-blog/SKILL.md \
+  --system-file shared/derouter-sol-brain.md \
   --user-file <assembled-sol-inputs.md> \
   --output article.html \
   --article-dir <article_dir>
