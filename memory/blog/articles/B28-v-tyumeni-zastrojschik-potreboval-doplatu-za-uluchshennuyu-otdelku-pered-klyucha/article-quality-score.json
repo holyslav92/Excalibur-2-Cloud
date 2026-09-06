@@ -34,10 +34,10 @@
   },
   "errors": [],
   "metrics": {
-    "word_count": 1444,
+    "word_count": 1481,
     "word_target": "1400-1600",
     "word_hard_max": 1750,
     "dzen_reading_minutes_est": 8,
-    "spine_overlap": 0.0493
+    "spine_overlap": 0.0532
   }
 }
