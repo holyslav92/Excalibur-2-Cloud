@@ -2,7 +2,6 @@
   "status": "PASS",
   "all_pass": true,
   "changes": [
-    "inline_6: 'пошаговая схема разделения личного участка и общей территории КП в Тюмени — иллюстрация к разбору сделки.' -> 'нумерованный процесс / таймлайн по новостройке в Тюмени: Картинка не граница, Общая территория КП, Межевание до подписи — иллюстрация к…'",
     "cover-registry.json updated",
     "article.html img inline_1 alt updated",
     "article.html img inline_2 alt updated",

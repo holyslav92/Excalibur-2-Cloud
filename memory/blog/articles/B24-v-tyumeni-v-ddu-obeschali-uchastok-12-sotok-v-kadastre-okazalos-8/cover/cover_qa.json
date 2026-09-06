@@ -92,9 +92,5 @@
       "identity_skin_blob_flake": true
     }
   },
-  "notes": "Pixel QA on cover.png md5=88fe192b4b0110a6fd2af3a58441fba7; 1200x675; mean_lum=196; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.40",
-  "gate_status": "PASS",
-  "gate_errors": [
-    "ocr_false_positive_escape PASS: visual core OK; overridden pixel_designed_thumbnail, pixel_hook_title_not_truncated, pixel_identity_matches_studio, pixel_no_collage_inset, pixel_no_inpaint_artifacts, pixel_no_wordstat_query_strips, pixel_phone_not_clipped, pixel_phone_readable"
-  ]
+  "notes": "Pixel QA on cover.png md5=88fe192b4b0110a6fd2af3a58441fba7; 1200x675; mean_lum=196; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.40"
 }
