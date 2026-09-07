@@ -256,6 +256,20 @@ class SolTrimChunkTest(unittest.TestCase):
         self.assertEqual(merged.count(f"<h2>{h2}</h2>"), 1)
         self.assertIn("<h2>Third</h2>", merged)
 
+    def test_dedupe_duplicate_inline_figures_b24_pattern(self) -> None:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from excalibur_blog_html_linter import detect_duplicate_inline_figures
+        from excalibur_blog_html_merge_utils import dedupe_duplicate_inline_figures
+
+        fig1 = '<figure class="inline-quad" data-slot="inline_01"><img src="cover/inline-01.png" alt="" loading="lazy"></figure>'
+        fig2 = '<figure class="inline-quad" data-slot="inline_1"><img src="cover/inline-01.png" alt="" loading="lazy"></figure>'
+        html = f"<h2>One</h2>\n{fig1}\n<p>a</p>\n{fig2}\n"
+        self.assertTrue(detect_duplicate_inline_figures(html))
+        merged, dropped = dedupe_duplicate_inline_figures(html)
+        self.assertEqual(len(dropped), 1)
+        self.assertEqual(merged.count("cover/inline-01.png"), 1)
+        self.assertFalse(detect_duplicate_inline_figures(merged))
+
 
 class QuadSceneMergeTest(unittest.TestCase):
     def test_merge_scene_draft_preserves_cover_motifs(self) -> None:
