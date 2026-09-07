@@ -1,0 +1,10 @@
+{
+  "role": "writer",
+  "tier": "powerful",
+  "model": "gpt-6-astra",
+  "script": "excalibur_blog_writer_chunk.py",
+  "parts": 3,
+  "output": "drafts/writer.html",
+  "completed_at": "2026-09-07T07:20:00Z",
+  "status": "OK"
+}
