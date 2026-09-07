@@ -1109,7 +1109,7 @@ checks_run:
 - `python3 -m py_compile` on changed scripts
 - `python3 -m unittest tests.test_pipeline_speed_b03.SolTrimChunkTest`
 - B24 `html_linter` article.html → PASS (7 figures)
-commit: pending
+commit: e68f1ef2
 
 ## INC-20260907-1153-alt-scene-painting-h2-false-positive-b24
 status: fixed
@@ -1149,7 +1149,7 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 - B24 `--gate` inline_3 PASS (no scene-painting)
-commit: pending
+commit: e68f1ef2
 
 ## INC-20260907-1153-quality-score-lead-repair-b24
 status: fixed
