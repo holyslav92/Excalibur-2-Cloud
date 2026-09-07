@@ -120,6 +120,23 @@
         "pose_framing": "full-body three-quarter both hands visible not side-eye bust",
         "action": "holds ddu points at egrn line pushes keys away"
       }
+    },
+    {
+      "date": "2026-09-07",
+      "topic_id": "B25",
+      "slug": "",
+      "motifs": {
+        "composition": "хост по пояс справа наклоняется к генплану линейка между забором и жёлтой меткой трубы",
+        "location": "светлый павильон продаж коттеджного посёлка под тюменью",
+        "meme": "confused_math_lady и cheems",
+        "prop_set": "генплан дду линейка маркер трубы смартфон",
+        "sticker_set": "confused_math_lady cheems",
+        "joke": "180 метров до трубы доплата 620 тысяч",
+        "outfit": "оливковый жилет кремовая футболка без пиджака",
+        "emotion": "недоумение прищур бровь выше",
+        "pose_framing": "три четверти по пояс справа",
+        "action": "меряет линейкой расстояние на генплане"
+      }
     }
   ]
 }
