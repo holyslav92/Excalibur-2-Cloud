@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok",
+  "topic_id": "B25",
+  "post_id": 9875,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B25-v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1151889,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9875 slug=v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok\nOK categories=54,58,36\nOK yoast_social_image=1\nOK featured_image=9876\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9877 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok-inline-01.png\nOK inline_alt=9877\nOK inline_description=9877\nOK inline_image_upload=9878 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok-inline-02.png\nOK inline_alt=9878\nOK inline_description=9878\nOK inline_image_upload=9879 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok-inline-03.png\nOK inline_alt=9879\nOK inline_description=9879\nOK inline_image_upload=9880 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok-inline-04.png\nOK inline_alt=9880\nOK inline_description=9880\nOK inline_image_upload=9881 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok-inline-05.png\nOK inline_alt=9881\nOK inline_description=9881\nOK inline_image_upload=9882 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok-inline-06.png\nOK inline_alt=9882\nOK inline_description=9882\nOK inline_image_upload=9883 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok-inline-07.png\nOK inline_alt=9883\nOK inline_description=9883\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok/",
+    "errors": []
+  }
+}
