@@ -173,6 +173,9 @@ def main() -> int:
     use_chunk = not args.single_shot and inline_count >= 7
 
     derouter = root / "scripts" / "excalibur_blog_derouter_opus_chat.py"
+    default_system = root / "shared" / "derouter-sol-system.md"
+    if default_system.is_file() and system_path.name.endswith("SKILL.md"):
+        system_path = default_system
     out_path = Path(args.output)
     if not out_path.is_absolute():
         out_path = article_dir / out_path
