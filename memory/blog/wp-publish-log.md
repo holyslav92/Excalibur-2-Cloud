@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-07
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos
+- **post_id:** 9888
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos/
+- **featured_image:** 9889
+- **inline_images:** 9890–9896 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31, default_primary_slug)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs); image_caption_builder --apply before publish
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23
