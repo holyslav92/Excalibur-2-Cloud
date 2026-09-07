@@ -1,0 +1,85 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-07",
+  "derouter": {
+    "status": "PARTIAL",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "note": "First compact synthesis OK (~14k chars); subsequent full/compact runs failed HTTP 529/524; final research-notes.md normalized from Derouter output + live URL audit"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://enco.ru/events/semeynaya-ipoteka-menyaetsya/",
+        "type": "channel/market Tyumen",
+        "note": "accessed 2026-09-07 — ENKO: 24 дня до возможных изменений семейной ипотеки 01.10.2026"
+      },
+      {
+        "url": "https://mperspektiva.ru/topics/banki-otklonyayut-60-zayavok-na-ipoteku/",
+        "type": "news",
+        "note": "2026-09-07 — ~60% отказов по ипотеке в июле 2026 (НБКИ)"
+      },
+      {
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "2026-09-07 — tenant TG, контекст проверки кредитной истории"
+      },
+      {
+        "url": "https://realty.ria.ru/20260201/ipoteka-2070299784.html",
+        "type": "news",
+        "note": "01–02.02.2026 — комментарий Дом.РФ о созаёмщиках"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "tenant Dzen (scout signal)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "семейная ипотека в тюмени",
+    "p0_volume": 730,
+    "p0_volume_ru225": 1063,
+    "support_phrases": [
+      {"phrase": "семейная ипотека тюмень", "volume": 1158},
+      {"phrase": "новостройки тюмень", "volume": 4670},
+      {"phrase": "созаемщик ипотека", "volume": 573},
+      {"phrase": "семейная ипотека созаемщик супруг", "volume": 12},
+      {"phrase": "ипотека 2026 созаемщик", "volume": 12}
+    ],
+    "rework_from": "scout P0 «семейная ипотека в тюмени» 730 after Tyumen+newbuild+coborrower rework",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_coborrower_dropped_before_ddu_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["dom_rf", "tyumen_oblast_portal"],
+    "errors": []
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_brief": "research-brief.json",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "assembled_inputs_compact": "assembled-research-inputs-compact.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

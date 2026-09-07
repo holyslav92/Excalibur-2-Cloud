@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-07",
+    "today_ru": "07.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "понедельник"
+  },
+  "topic": {
+    "topic_id": "B24",
+    "title": "В Тюмени семейную ипотеку одобрили на двоих — перед ДДУ созаёмщика исключили, лимит упал",
+    "h1": "В Тюмени семейную ипотеку одобрили на двоих — перед ДДУ созаёмщика исключили, лимит упал",
+    "slug": "v-tyumeni-semejnuyu-ipoteku-odobrili-na-dvoih-pered-ddu-sozaemschika-isklyuchili",
+    "primary_query": "В Тюмени семейную ипотеку одобрили на двоих — перед ДДУ созаёмщика исключили, лимит упал",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени семейную ипотеку одобрили на двоих — перед ДДУ созаёмщика исключили, лимит упал 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Семейная ипотека в Тюмени в 2026 году: условия, ставка и что изменится ...",
+          "url": "https://novostroyki-tumeni.ru/article/semeynaya-ipoteka-v-tyumeni-2026-usloviya-i-izmeneniya-s-oktyabrya",
+          "snippet": ""
+        },
+        {
+          "title": "Семейная ипотека меняется — акции от застройщика ЭНКО в Тюмени",
+          "url": "https://enco.ru/events/semeynaya-ipoteka-menyaetsya/",
+          "snippet": "Семейная ипотека в Тюмени в 2026 году: кто может оформить, ставка 6% и взнос 20%, лимит 6 млн рублей, новое правило для созаёмщиков и грядущие изменения с 1..."
+        },
+        {
+          "title": "Тюменцам разъяснили новые условия по семейной ипотеке",
+          "url": "https://72.ru/text/realty/2025/10/30/76098579/?erid=2SDnjckXBiP",
+          "snippet": "Возможные изменения с 1 октября 2026 года Главное изменение — дифференциация ставок и суммы кредита в зависимости от количества детей в семье и площади покупаемой квартиры."
+        },
+        {
+          "title": "Семейная ипотека с 1 октября 2026 года: как изменятся условия ...",
+          "url": "https://lenta.ru/articles/2026/06/30/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-goda/",
+          "snippet": "С 1 февраля 2026 года россиянам запретят оформлять две семейные ипотеки на одну семью. После вступления закона в силу супруги при получении льготного кредита обязательно должны быть созаемщиками."
+        },
+        {
+          "title": "Семейная ипотека в 2026 году: что изменилось с 1 февраля и почему ...",
+          "url": "https://www.klerk.ru/user/2528358/705170/",
+          "snippet": "Причина в том, что чрезмерная зависимость от субсидий искажает структуру рынка, а льготы, перестающие быть адресными, на деле снижают доступность недвижимости для россиян."
+        },
+        {
+          "title": "Изменения в семейной ипотеке 2026 - vtb.ru",
+          "url": "https://www.vtb.ru/articles/ipoteka/izmeneniya-v-semeynoy-ipoteke-2026/",
+          "snippet": "Один льготный кредит на семью, оба супруга созаемщики, лимит 12 млн только для двух агломераций. Разбираю правила, которые уже действуют, и что известно про перенос реформы."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени семейную ипотеку одобрили на двоих — перед ДДУ созаёмщика исключили, лимит упал 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Семейная ипотека в Тюмени в 2026 году: условия, ставка и что изменится ...",
+          "url": "https://novostroyki-tumeni.ru/article/semeynaya-ipoteka-v-tyumeni-2026-usloviya-i-izmeneniya-s-oktyabrya",
+          "snippet": ""
+        },
+        {
+          "title": "Тюменцам разъяснили новые условия по семейной ипотеке",
+          "url": "https://72.ru/text/realty/2025/10/30/76098579/?erid=2SDnjckXBiP",
+          "snippet": "Семейная ипотека в Тюмени в 2026 году: кто может оформить, ставка 6% и взнос 20%, лимит 6 млн рублей, новое правило для созаёмщиков и грядущие изменения с 1..."
+        },
+        {
+          "title": "Как правило «одна ипотека на семью» изменит тюменский рынок ...",
+          "url": "https://t.rbc.ru/tyumen/03/11/2025/6905de4c9a794730adf1bbc0",
+          "snippet": "С 1 февраля 2026 года россиянам запретят оформлять две семейные ипотеки на одну семью. После вступления закона в силу супруги при получении льготного кредита обязательно должны быть созаемщиками."
+        },
+        {
+          "title": "Семейная ипотека 2026: новые ограничения — что говорить клиентам",
+          "url": "https://smartagent.ru/novosti/rynok-nedvizhimosti/semejnaya-ipoteka-2026-novye-ogranicheniya",
+          "snippet": "С 1 февраля 2026 года Минфин планирует ввести новое правило для программы семейной ипотеки — одна семья сможет оформить только один льготный кредит."
+        },
+        {
+          "title": "Семейная ипотека 2026 новые условия - ограничения, лимиты и запрет двух ...",
+          "url": "https://www.novosel18.ru/info/articles/kak-izmenitsya-semeynaya-ipoteka-v-2026-godu/",
+          "snippet": "Родитель-заёмщик должен быть зарегистрирован по одному адресу с ребёнком, который даёт право на льготу. Если ребёнок прописан у бабушки, а родитель — в другом месте, в льготе откажут."
+        },
+        {
+          "title": "Семейная ипотека с 1 октября 2026 года: как изменятся условия ...",
+          "url": "https://lenta.ru/articles/2026/06/30/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-goda/",
+          "snippet": "Ниже - полный разбор того, как изменится семейная ипотека 2026, какие правила вступят в силу, что обсуждается дополнительно и как это повлияет на доступность жилья."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени семейную ипотеку одобрили на двоих — перед ДДУ созаёмщика исключили, лимит упал official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Семейная ипотека в Тюмени в 2026 году: условия, ставка и что изменится ...",
+          "url": "https://novostroyki-tumeni.ru/article/semeynaya-ipoteka-v-tyumeni-2026-usloviya-i-izmeneniya-s-oktyabrya",
+          "snippet": ""
+        },
+        {
+          "title": "Тюменцам разъяснили новые условия по семейной ипотеке",
+          "url": "https://72.ru/text/realty/2025/10/30/76098579/?erid=2SDnjckXBiP",
+          "snippet": "Семейная ипотека в Тюмени в 2026 году: кто может оформить, ставка 6% и взнос 20%, лимит 6 млн рублей, новое правило для созаёмщиков и грядущие изменения с 1..."
+        },
+        {
+          "title": "Как правило «одна ипотека на семью» изменит тюменский рынок ...",
+          "url": "https://t.rbc.ru/tyumen/03/11/2025/6905de4c9a794730adf1bbc0",
+          "snippet": "С 1 февраля 2026 года россиянам запретят оформлять две семейные ипотеки на одну семью. После вступления закона в силу супруги при получении льготного кредита обязательно должны быть созаемщиками."
+        },
+        {
+          "title": "Семейная ипотека меняется — акции от застройщика ЭНКО в Тюмени",
+          "url": "https://enco.ru/events/semeynaya-ipoteka-menyaetsya/",
+          "snippet": "С 1 февраля 2026 года Минфин планирует ввести новое правило для программы семейной ипотеки — одна семья сможет оформить только один льготный кредит."
+        },
+        {
+          "title": "Семейная ипотека на двоих - стоит ли торопиться до ужесточения правил",
+          "url": "https://vfokuse.mail.ru/articles/69479666-stoit-li-speshit-brat-semejnuyu-ipoteku-do-uzhestocheniya-pravil-otvechayut-eksperty/",
+          "snippet": "Возможные изменения с 1 октября 2026 года Главное изменение — дифференциация ставок и суммы кредита в зависимости от количества детей в семье и площади покупаемой квартиры."
+        },
+        {
+          "title": "Одна на двоих: Минфин меняет правила на рынке семейной ипотеки",
+          "url": "https://finance.mail.ru/article/odna-na-dvoih-minfin-otmenil-vozmozhnost-oformleniya-vtoroj-semejnoj-ipoteki-68500390/",
+          "snippet": "С 1 февраля 2026 года в России вступают в силу новые правила по семейной ипотеке на двоих."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени семейную ипотеку одобрили на двоих — перед ДДУ созаёмщика исключили, лимит упал 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "pdd-2026/icon-512.svg at main · gillescesar/pdd-2026 · GitHub",
+          "url": "https://github.com/gillescesar/pdd-2026/blob/main/icon-512.svg",
+          "snippet": ""
+        },
+        {
+          "title": "arm/images/000_ARM.jpg at main · TEAM-ARM/arm · GitHub",
+          "url": "https://github.com/TEAM-ARM/arm/blob/main/images/000_ARM.jpg",
+          "snippet": "Сезарио.ПДД обучение. Contribute to gillescesar/pdd-2026 development by creating an account on GitHub."
+        },
+        {
+          "title": "Releases · ppy/osu · GitHub",
+          "url": "https://github.com/ppy/osu/releases",
+          "snippet": "[NeurIPS'25 Spotlight] ARM: Adaptive Reasoning Model - arm/images/000_ARM.jpg at main · TEAM-ARM/arm"
+        },
+        {
+          "title": "Palasoliisi/icon.svg at main · kattilassa/Palasoliisi · GitHub",
+          "url": "https://github.com/kattilassa/Palasoliisi/blob/main/icon.svg",
+          "snippet": "GPG key ID: B5690EEEBB952194 Verified Learn about vigilant mode. Full Changelog: 2026.821.-tachyon...2026.821.-tachyon"
+        },
+        {
+          "title": "glow2d/icon.svg at main · AguaMineral/glow2d · GitHub",
+          "url": "https://github.com/AguaMineral/glow2d/blob/main/icon.svg",
+          "snippet": "GitHub Copilot appDirect agents from issue to merge. MCP RegistryIntegrate external tools. DEVELOPER WORKFLOWS. ActionsAutomate any workflow. CodespacesInstant dev environments. IssuesPlan and track work. Code ReviewManage code changes. Code QualityEnforce quality at merge. APPLICATION SECURITY. GitHub Advanced SecurityFind and fix vulnerabilities."
+        },
+        {
+          "title": "llmfit/assets/icon.svg at main · AlexsJones/llmfit · GitHub",
+          "url": "https://github.com/AlexsJones/llmfit/blob/main/assets/icon.svg",
+          "snippet": "GitHub Copilot appDirect agents from issue to merge. MCP RegistryIntegrate external tools. DEVELOPER WORKFLOWS. ActionsAutomate any workflow. CodespacesInstant dev environments. IssuesPlan and track work. Code ReviewManage code changes. Code QualityEnforce quality at merge. APPLICATION SECURITY. GitHub Advanced SecurityFind and fix vulnerabilities."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени семейную ипотеку одобрили на двоих — перед ДДУ созаёмщика исключили, лимит упал forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Одна на двоих: Минфин меняет правила на рынке семейной ипотеки",
+          "url": "https://finance.mail.ru/article/odna-na-dvoih-minfin-otmenil-vozmozhnost-oformleniya-vtoroj-semejnoj-ipoteki-68500390/",
+          "snippet": ""
+        },
+        {
+          "title": "Семейная ипотека на двоих - стоит ли торопиться до ужесточения правил",
+          "url": "https://vfokuse.mail.ru/articles/69479666-stoit-li-speshit-brat-semejnuyu-ipoteku-do-uzhestocheniya-pravil-otvechayut-eksperty/",
+          "snippet": "С 1 февраля 2026 года Министерство финансов России меняет правила предоставления семейной ипотеки. Теперь супруги смогут оформить только один льготный кредит на двоих, став созаемщиками по общему договору, а возможность брать отдельный льготный займ на каждого из них исчезнет."
+        },
+        {
+          "title": "Семейная ипотека 2026 новые условия - ограничения, лимиты и запрет двух ...",
+          "url": "https://www.novosel18.ru/info/articles/kak-izmenitsya-semeynaya-ipoteka-v-2026-godu/",
+          "snippet": "С 1 февраля 2026 года в России вступают в силу новые правила по семейной ипотеке на двоих. Эксперты объяснили, при каких условиях все еще удастся получить ипотеку на прежних условиях и ..."
+        },
+        {
+          "title": "Кому повлияет запрет на две льготные ипотеки и как действовать дальше",
+          "url": "https://odobrili.com/journal/komu-povliyaet-zapret-na-dve-lgotnye-ipoteki-i-kak-deystvovat-dalshe/",
+          "snippet": "Ниже - полный разбор того, как изменится семейная ипотека 2026, какие правила вступят в силу, что обсуждается дополнительно и как это повлияет на доступность жилья."
+        },
+        {
+          "title": "С 1 февраля меняются условия \"Семейной ипотеки\": Каковы новые правила",
+          "url": "https://rg.ru/2026/01/29/hodim-paroj.html",
+          "snippet": "Разбираем запрет на оформление двух льготных ипотек в одной семье: кого затронет нововведение, какие программы под ограничение, возможные исключения и практические рекомендации."
+        },
+        {
+          "title": "Семейная ипотека 2025 — новости на сайте застройщика ЭНКО в Тюмени",
+          "url": "https://enco.ru/news/semeynaya-ipoteka-2025/",
+          "snippet": "Теперь разрешается оформлять только одну ипотеку на семью - супруг обязательно должен стать созаемщиком. Правило о том, что можно получить лишь одну льготную ипотеку на человека, действует..."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    }
+  ],
+  "errors": []
+}
