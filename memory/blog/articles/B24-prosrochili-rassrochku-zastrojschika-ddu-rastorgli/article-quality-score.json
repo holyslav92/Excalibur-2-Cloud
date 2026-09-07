@@ -1,10 +1,10 @@
 {
-  "status": "FAIL",
-  "all_pass": false,
+  "status": "PASS",
+  "all_pass": true,
   "gate": "article-quality-score",
   "contract": "shared/article-quality-score-lock.md",
   "article_dir": "memory/blog/articles/B24-prosrochili-rassrochku-zastrojschika-ddu-rastorgli",
-  "sol_rewrite_applied": false,
+  "sol_rewrite_applied": true,
   "h1": "В Тюмени ДДУ расторгли из-за пяти дней просрочки — удержали 180 тысяч",
   "sections": {
     "h1": {
@@ -12,42 +12,32 @@
       "reasons": []
     },
     "lead": {
-      "pass": false,
-      "reasons": [
-        "lead-hit: first 1-2 sentences missing number/deadline"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "middle": {
       "pass": true,
       "reasons": []
     },
     "finale": {
-      "pass": false,
-      "reasons": [
-        "finale-third-retell: middle scene repeated in closing: «означает что деньги уже»"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "length": {
-      "pass": false,
-      "reasons": [
-        "length-over: 1650 words above target 1400-1600"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "tone": {
       "pass": true,
       "reasons": []
     }
   },
-  "errors": [
-    "lead-hit: first 1-2 sentences missing number/deadline",
-    "finale-third-retell: middle scene repeated in closing: «означает что деньги уже»",
-    "length-over: 1650 words above target 1400-1600"
-  ],
+  "errors": [],
   "metrics": {
-    "word_count": 1650,
+    "word_count": 1540,
     "word_target": "1400-1600",
     "word_hard_max": 1750,
-    "dzen_reading_minutes_est": 9,
-    "spine_overlap": 0.0627
+    "dzen_reading_minutes_est": 8,
+    "spine_overlap": 0.0621
   }
 }
