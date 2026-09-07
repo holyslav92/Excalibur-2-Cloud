@@ -1,0 +1,266 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-07",
+    "today_ru": "07.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "понедельник"
+  },
+  "topic": {
+    "topic_id": "B24",
+    "title": "Просрочили рассрочку застройщика — ДДУ расторгли",
+    "h1": "Просрочили рассрочку застройщика — ДДУ расторгли",
+    "slug": "prosrochili-rassrochku-zastrojschika-ddu-rastorgli",
+    "primary_query": "Просрочили рассрочку застройщика — ДДУ расторгли",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "Просрочили рассрочку застройщика — ДДУ расторгли 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Расторжение дду застройщиком \\ 2026-2025-2024 год \\ Акты, образцы ...",
+          "url": "https://www.consultant.ru/law/podborki/rastorzhenie_ddu_zastrojschikom/",
+          "snippet": ""
+        },
+        {
+          "title": "Расторжение ДДУ при задержке строительства в 2026: возврат денег и ...",
+          "url": "https://pravovedus.com/practical-law/housing/rastorzhenie-ddu-pri-zaderzhke-stroitelstva-vozvrat-deneg/",
+          "snippet": "Односторонний отказ застройщика от договора (расторжение договора) вследствие невнесения оплаты участником долевого строительства по договору долевого участия в строительстве ..."
+        },
+        {
+          "title": "Рассрочка по дду \\ 2026-2025-2024 год \\ Акты, образцы, формы, договоры ...",
+          "url": "https://www.consultant.ru/law/podborki/rassrochka_po_ddu/",
+          "snippet": "Процесс расторжения ДДУ из-за просрочки передачи объекта требует точного соблюдения установленной процедуры. Ошибки могут привести к затягиванию процесса или даже к отказу в возврате денег. Рассмотрим поэтапно весь алгоритм действий."
+        },
+        {
+          "title": "Застройщик задержал квартиру по ДДУ — неустойка 2026",
+          "url": "https://zhalobnik.net/situacii/zastroyshchik-prosrochil/",
+          "snippet": "В большинстве случаев договор предусматривает отсрочку или рассрочку платежа. Так проходят все сделки по ДДУ, по оплате с использованием материнского капитала, с предварительными ..."
+        },
+        {
+          "title": "Расторжение договора участия в долевом строительстве (ДДУ) с рассрочкой ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/rastorzhenie-ddu-s-zastroyshchikom/rastorzhenie-dogovora-uchastiya-v-dolevom-stroitelstve-ddu-s-rassrochkoy/",
+          "snippet": "Разберём, кому и сколько должен застройщик, как не ошибиться в расчёте и в какой последовательности действовать — от претензии до иска."
+        },
+        {
+          "title": "Расторжение договора участия в долевом строительстве (ДДУ) по 214-ФЗ в ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/rastorzhenie-ddu-s-zastroyshchikom/rastorzhenie-dogovora-uchastiya-v-dolevom-stroitelstve-ddu/",
+          "snippet": "Таким образом, застройщик имеет право расторгнуть ДДУ с рассрочкой платежа при нарушении дольщиком срока оплаты очередного платежа более чем на 2 месяца или при систематическом ..."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "Просрочили рассрочку застройщика — ДДУ расторгли 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Расторжение дду застройщиком \\ 2026-2025-2024 год \\ Акты, образцы ...",
+          "url": "https://www.consultant.ru/law/podborki/rastorzhenie_ddu_zastrojschikom/",
+          "snippet": ""
+        },
+        {
+          "title": "Расторжение ДДУ при задержке строительства в 2026: возврат денег и ...",
+          "url": "https://pravovedus.com/practical-law/housing/rastorzhenie-ddu-pri-zaderzhke-stroitelstva-vozvrat-deneg/",
+          "snippet": "Односторонний отказ застройщика от договора (расторжение договора) вследствие невнесения оплаты участником долевого строительства по договору долевого участия в строительстве ..."
+        },
+        {
+          "title": "Рассрочка по дду \\ 2026-2025-2024 год \\ Акты, образцы, формы, договоры ...",
+          "url": "https://www.consultant.ru/law/podborki/rassrochka_po_ddu/",
+          "snippet": "Процесс расторжения ДДУ из-за просрочки передачи объекта требует точного соблюдения установленной процедуры. Ошибки могут привести к затягиванию процесса или даже к отказу в возврате денег. Рассмотрим поэтапно весь алгоритм действий."
+        },
+        {
+          "title": "Расторжение договора участия в долевом строительстве (ДДУ) по 214-ФЗ в ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/rastorzhenie-ddu-s-zastroyshchikom/rastorzhenie-dogovora-uchastiya-v-dolevom-stroitelstve-ddu/",
+          "snippet": "В большинстве случаев договор предусматривает отсрочку или рассрочку платежа. Так проходят все сделки по ДДУ, по оплате с использованием материнского капитала, с предварительными ..."
+        },
+        {
+          "title": "Как взыскать неустойку с застройщика за просрочку по ДДУ в 2026 году ...",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/kak-vzyskat-neustojku-s-zastrojshika",
+          "snippet": "Закажите комплексные услуги юриста по расторжению ДДУ и взысканию с застройщика денег с оплатой по результату. Работаем за % от поступившей на счет суммы, без предоплаты."
+        },
+        {
+          "title": "Расторжение ДДУ с застройщиком в 2026 году: интерактивная схема⚡ ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/rastorzhenie-ddu-s-zastroyshchikom/rastorzhenie-dogovora-dolevogo-uchastiya/",
+          "snippet": "С января 2026 года мораторий отменен. Теперь взыскать штраф за нарушение сроков передачи квартиры можно в обычном порядке."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "Просрочили рассрочку застройщика — ДДУ расторгли official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Расторжение дду застройщиком \\ 2026-2025-2024 год \\ Акты, образцы ...",
+          "url": "https://www.consultant.ru/law/podborki/rastorzhenie_ddu_zastrojschikom/",
+          "snippet": ""
+        },
+        {
+          "title": "Просрочка по дду \\ 2026-2025-2024 год \\ Акты, образцы, формы, договоры ...",
+          "url": "https://www.consultant.ru/law/podborki/prosrochka_po_ddu/",
+          "snippet": "Расторжение дду застройщиком. Подборка наиболее важных документов по запросу Расторжение дду застройщиком(нормативно-правовые акты, формы, статьи, консультации экспертов и многое другое). Долевое строительство: Договор подряда или долевое строительство."
+        },
+        {
+          "title": "Расторжение ДДУ при задержке строительства в 2026: возврат денег и ...",
+          "url": "https://pravovedus.com/practical-law/housing/rastorzhenie-ddu-pri-zaderzhke-stroitelstva-vozvrat-deneg/",
+          "snippet": "Подборка наиболее важных документов по запросу Просрочка по дду (нормативно-правовые акты, формы, статьи, консультации экспертов и многое другое). (Плешанова О.)"
+        },
+        {
+          "title": "Как расторгнуть ДДУ с застройщиком: пошагово и возврат денег (2026)",
+          "url": "https://zastroy.advokati-moscow.ru/kak-rastorgnut-ddu/",
+          "snippet": "Процесс расторжения ДДУ из-за просрочки передачи объекта требует точного соблюдения установленной процедуры. Ошибки могут привести к затягиванию процесса или даже к отказу в возврате денег. Рассмотрим поэтапно весь алгоритм действий."
+        },
+        {
+          "title": "Расторжение ДДУ с застройщиком в 2026 году: интерактивная схема⚡ ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/rastorzhenie-ddu-s-zastroyshchikom/rastorzhenie-dogovora-dolevogo-uchastiya/",
+          "snippet": "Расторгнуть ДДУ можно не по любому желанию, а только при реальном нарушении со стороны застройщика. Есть два пути: односторонний отказ без суда и расторжение через суд. Что именно к чему относится, подробно в разборе статьи 9, а здесь по шагам: как это сделать и что вы получите назад."
+        },
+        {
+          "title": "Застройщик задержал квартиру по ДДУ — неустойка 2026",
+          "url": "https://zhalobnik.net/situacii/zastroyshchik-prosrochil/",
+          "snippet": "Вы можете заказать услуги по расторжению ДДУ с застройщиком с оплатой наших услуг после поступления денег от застройщика."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com Просрочили рассрочку застройщика — ДДУ расторгли 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub",
+          "url": "https://github.com/",
+          "snippet": ""
+        },
+        {
+          "title": "Sign in to GitHub · GitHub",
+          "url": "https://github.com/login",
+          "snippet": "Join GitHub Copilot Day, live on Sept 10. Come for the product news, stay for the demos, live coding, and surprises. Set your reminder. Navigation Menu. Sign in. Platform. AI CODE CREATION. GitHub CopilotWrite better code with AI. GitHub Copilot appDirect agents from issue to merge. MCP RegistryIntegrate external tools. DEVELOPER WORKFLOWS."
+        },
+        {
+          "title": "rngKomorebi (Sergei Kulkov) · GitHub",
+          "url": "https://github.com/rngKomorebi/",
+          "snippet": "GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects."
+        },
+        {
+          "title": "fridare/screenshots/555354813.jpg at main · suifei/fridare · GitHub",
+          "url": "https://github.com/suifei/fridare/blob/main/screenshots/555354813.jpg",
+          "snippet": "Uh oh! There was an error while loading. Please reload this page. Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        },
+        {
+          "title": "PUZZLE-GAME/icon.svg at main · UMAKANTGAUR/PUZZLE-GAME · GitHub",
+          "url": "https://github.com/UMAKANTGAUR/PUZZLE-GAME/blob/main/icon.svg",
+          "snippet": "强大的 Frida 重打包工具，用于 iOS 和 Android。 轻松修改 Frida 特征，增强隐蔽性，绕过检测。 简化逆向工程和安全测试。 Powerful Frida repackaging tool for iOS and Android. Easily modify Frida servers to enhance stealth and bypass detection. Streamlines reverse engineering and security testing. - fridare/screenshots/555354813.jpg at main · suifei/fridare."
+        },
+        {
+          "title": "Ultra-Fusion/images/pipeline.png at main · sjtuyinjie/Ultra-Fusion",
+          "url": "https://github.com/sjtuyinjie/Ultra-Fusion/blob/main/images/pipeline.png",
+          "snippet": "Loading Viewer requires iframe. Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        }
+      ],
+      "searched_at": "2026-09-07"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "Просрочили рассрочку застройщика — ДДУ расторгли forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Взыскание неустойки с застройщика по ДДУ в 2026 году",
+          "url": "https://pronovostroi.com/tpost/vzyskanie-neustoyki-s-zastroyshchika-2026",
+          "snippet": ""
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома — как взыскать неустойку по ДДУ в 2026 ...",
+          "url": "https://jalober.ru/blog/zastrojshchik-prosrochil-sdachu-doma",
+          "snippet": "С 1 января 2026 года начисление неустойки возобновлено, однако по требованиям к застройщикам действует отсрочка исполнения ранее присуждённых санкций — до 31 декабря 2026 года."
+        },
+        {
+          "title": "Взыскание неустойки с застройщика по ДДУ: как получить максимальную ...",
+          "url": "https://ak-tr.ru/news/blogs/vzyskanie-neustojki-s-zastrojshchika-po-ddu/",
+          "snippet": "Застройщик обещал ключи в 2025 году, а на дворе 2026-й — квартиры до сих пор нет. С 1 января 2026 года мораторий на неустойку по ДДУ снят, и дольщики снова могут требовать полную компенсацию."
+        },
+        {
+          "title": "Мораторий на неустойки отменён: как взыскать деньги с застройщика за ...",
+          "url": "https://harant.ru/blog/nedvizhimost/moratorij-na-neustojki-otmenyon-kak-poluchit-dengi-s-zastrojshhika-za-prosrochku-v-2026/",
+          "snippet": "Как рассчитать и взыскать неустойку с застройщика за просрочку по ДДУ в 2026 году, что изменилось после отмены моратория и как застройщики пытаются занизить выплату."
+        },
+        {
+          "title": "Как расторгнуть ДДУ с застройщиком: пошагово и возврат денег (2026)",
+          "url": "https://zastroy.advokati-moscow.ru/kak-rastorgnut-ddu/",
+          "snippet": "Хорошая новость: с 1 января 2026 года мораторий на взыскание неустойки официально отменен. Это значит, что правила игры изменились. Если застройщик нарушил сроки по Договору долевого участия (ДДУ), он обязан платить. И речь идет не о копейках, а о весьма ощутимых суммах."
+        },
+        {
+          "title": "Как взыскать неустойку с застройщика за просрочку по ДДУ в 2026 году ...",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/kak-vzyskat-neustojku-s-zastrojshika",
+          "snippet": "Расторгнуть ДДУ можно не по любому желанию, а только при реальном нарушении со стороны застройщика. Есть два пути: односторонний отказ без суда и расторжение через суд. Что именно к чему относится, подробно в разборе статьи 9, а здесь по шагам: как это сделать и что вы получите назад."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    }
+  ],
+  "errors": [],
+  "wordstat_live": {
+    "accessed_at": "2026-09-07",
+    "regions": [55, 11176],
+    "compare_ru225": 225,
+    "queries": [
+      {
+        "phrase": "новостройки тюмень",
+        "volume_tyumen": 4670,
+        "volume_ru225": 8658,
+        "role": "P0"
+      },
+      {
+        "phrase": "купить новостройку в тюмени",
+        "volume_tyumen": 870
+      },
+      {
+        "phrase": "рассрочка застройщик новостройка",
+        "volume_tyumen": 11
+      },
+      {
+        "phrase": "рассрочка новостройка тюмень",
+        "volume_tyumen": 12
+      },
+      {
+        "phrase": "дду расторжение новостройка",
+        "volume_tyumen": 0,
+        "note": "empty"
+      }
+    ],
+    "rework": "узкий юридический запрос слабый; spine — локальный покупательский запрос новостройки Тюмень"
+  },
+  "fresh_signals_week": [
+    {
+      "url": "https://krost.ru/news/dyhanie-oseni-sogrejtes-teplom-i-uyutom-vashego-no",
+      "date": "2026-09-01",
+      "type": "developer_market"
+    },
+    {
+      "url": "https://www.metrtv.ru/news/20524",
+      "date": "2026-09-02",
+      "type": "market_installment"
+    },
+    {
+      "url": "https://realty.rbc.ru/news/?category=realty&date=2026-09-04",
+      "date": "2026-09-04",
+      "type": "media_newbuild_demand"
+    }
+  ]
+}
