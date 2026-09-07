@@ -1,10 +1,10 @@
 {
-  "status": "FAIL",
-  "all_pass": false,
+  "status": "PASS",
+  "all_pass": true,
   "gate": "article-quality-score",
   "contract": "shared/article-quality-score-lock.md",
   "article_dir": "memory/blog/articles/B25-v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok",
-  "sol_rewrite_applied": false,
+  "sol_rewrite_applied": true,
   "h1": "В Тюмени ДДУ на коттедж обещал газ у забора — он был в 180 м",
   "sections": {
     "h1": {
@@ -20,33 +20,24 @@
       "reasons": []
     },
     "finale": {
-      "pass": false,
-      "reasons": [
-        "finale-third-retell: middle scene repeated in closing: «профессиональный вопрос звучит иначе»",
-        "lecture-tail:\\d{1,3}[-‑]ФЗ"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "length": {
-      "pass": false,
-      "reasons": [
-        "length-over: 1643 words above target 1400-1600"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "tone": {
       "pass": true,
       "reasons": []
     }
   },
-  "errors": [
-    "finale-third-retell: middle scene repeated in closing: «профессиональный вопрос звучит иначе»",
-    "lecture-tail:\\d{1,3}[-‑]ФЗ",
-    "length-over: 1643 words above target 1400-1600"
-  ],
+  "errors": [],
   "metrics": {
-    "word_count": 1643,
+    "word_count": 1506,
     "word_target": "1400-1600",
     "word_hard_max": 1750,
-    "dzen_reading_minutes_est": 9,
-    "spine_overlap": 0.0505
+    "dzen_reading_minutes_est": 8,
+    "spine_overlap": 0.0478
   }
 }
