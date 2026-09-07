@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m",
+  "topic_id": "B24",
+  "post_id": 9862,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1095671,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9862 slug=v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m\nOK categories=36,54,58\nOK yoast_social_image=1\nOK featured_image=9863\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9864 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m-inline-05.png\nOK inline_alt=9864\nOK inline_description=9864\nOK inline_image_upload=9865 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m-inline-02.png\nOK inline_alt=9865\nOK inline_description=9865\nOK inline_image_upload=9866 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m-inline-01.png\nOK inline_alt=9866\nOK inline_description=9866\nOK inline_image_upload=9867 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m-inline-06.png\nOK inline_alt=9867\nOK inline_description=9867\nOK inline_image_upload=9868 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m-inline-07.png\nOK inline_alt=9868\nOK inline_description=9868\nOK inline_image_upload=9869 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m-inline-03.png\nOK inline_alt=9869\nOK inline_description=9869\nOK inline_image_upload=9870 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m-inline-04.png\nOK inline_alt=9870\nOK inline_description=9870\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-byl-12-j-etazh-na-klyuchah-otdali-kvartiru-na-2-m/",
+    "errors": []
+  }
+}
