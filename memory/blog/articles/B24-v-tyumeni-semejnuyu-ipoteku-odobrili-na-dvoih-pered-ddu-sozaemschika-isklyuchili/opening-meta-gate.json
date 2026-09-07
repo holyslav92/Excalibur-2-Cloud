@@ -1,8 +1,6 @@
 {
   "gate": "opening-meta",
-  "status": "BLOCK",
-  "errors": [
-    "article.meta.json missing"
-  ],
+  "status": "PASS",
+  "errors": [],
   "article_dir": "/workspace/memory/blog/articles/B24-v-tyumeni-semejnuyu-ipoteku-odobrili-na-dvoih-pered-ddu-sozaemschika-isklyuchili"
 }
