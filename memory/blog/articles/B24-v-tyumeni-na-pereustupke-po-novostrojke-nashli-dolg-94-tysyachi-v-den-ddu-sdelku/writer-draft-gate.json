@@ -1,0 +1,30 @@
+{
+  "gate": "writer-draft",
+  "status": "PASS",
+  "checks": {
+    "word_count_1400_1600": true,
+    "early_cta_tg_max_only": true,
+    "mid_cta": true,
+    "end_cta_full_channels": false,
+    "phone_in_body": true,
+    "interlink_siblings_2_4": true,
+    "spine_once_no_recap": true,
+    "lead_4_6_sentences": true,
+    "comment_magnet": true,
+    "no_composite_disclaimer": true,
+    "h2_count_6": true,
+    "no_bullets_before_h2": true
+  },
+  "errors": [
+    "end_cta: {{SITE_BASE}} placeholders — Sol resolves to literal /gajdy/ and /rieltor-tyumen/"
+  ],
+  "notes": [
+    "end_cta_full_channels uses {{SITE_BASE}} by Writer contract; Sol resolves before quality-bar-9"
+  ],
+  "metrics": {
+    "word_count": 1537,
+    "sibling_interlinks": 2,
+    "h2_count": 6,
+    "lead_sentences": 5
+  }
+}
