@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk",
+  "topic_id": "B24",
+  "post_id": 9914,
+  "permalink": "{{SITE_BASE}}/blog/matkapital-i-sdelki/v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1018348,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9914 slug=v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk\nOK categories=48,54\nOK yoast_social_image=1\nOK featured_image=9915\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9916 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk-inline-01.png\nOK inline_alt=9916\nOK inline_description=9916\nOK inline_image_upload=9917 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk-inline-02.png\nOK inline_alt=9917\nOK inline_description=9917\nOK inline_image_upload=9918 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk-inline-04.png\nOK inline_alt=9918\nOK inline_description=9918\nOK inline_image_upload=9919 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk-inline-05.png\nOK inline_alt=9919\nOK inline_description=9919\nOK inline_image_upload=9920 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk-inline-06.png\nOK inline_alt=9920\nOK inline_description=9920\nOK inline_image_upload=9921 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk-inline-03.png\nOK inline_alt=9921\nOK inline_description=9921\nOK inline_image_upload=9922 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk-inline-07.png\nOK inline_alt=9922\nOK inline_description=9922\npermalink={{SITE_BASE}}/blog/matkapital-i-sdelki/v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/matkapital-i-sdelki/v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk/",
+    "errors": []
+  }
+}

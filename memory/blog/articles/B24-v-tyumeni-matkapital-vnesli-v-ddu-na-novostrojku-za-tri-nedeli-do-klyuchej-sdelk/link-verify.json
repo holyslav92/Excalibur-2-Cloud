@@ -1,6 +1,6 @@
 {
-  "source": "/workspace/memory/blog/articles/B24-v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk/article.html",
-  "total_links": 9,
+  "source": "memory/blog/articles/B24-v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk/article.html",
+  "total_links": 10,
   "failed_count": 0,
   "verdict": "pass",
   "links": [
@@ -69,6 +69,16 @@
       "error": null,
       "kind": "external",
       "skipped": false
+    },
+    {
+      "url": "{{SITE_BASE}}/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/"
     },
     {
       "url": "{{SITE_BASE}}/gajdy/",

@@ -1,9 +1,11 @@
 {
   "category_ids": [
-    31
+    48,
+    54
   ],
   "category_slugs": [
-    "vtorichka-i-riski"
+    "matkapital-i-sdelki",
+    "dokumenty-i-oformlenie"
   ],
   "errors": [],
   "status": "PASS"
