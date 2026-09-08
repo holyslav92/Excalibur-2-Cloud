@@ -5,7 +5,10 @@
   "topic_id": "B24",
   "author_id": "svyatoslav-shakin",
   "article_mode": "B",
-  "description": "В Тюмени долг первого дольщика сорвал переуступку по ДДУ",
+  "description": "В папке — оплаченный ДДУ, у покупателя — бронь. Но застройщик видит 94 тысячи чужого долга и не даёт передать право: почему сделка рассыпалась за 11 дней до ключей.",
+  "wp_category_slugs": [
+    "pokupka-kvartiry"
+  ],
   "meta_ab": {
     "title_seo": "В Тюмени долг первого дольщика сорвал переуступку по ДДУ",
     "title_ctr": "В Тюмени долг первого дольщика сорвал переуступку по ДДУ",
@@ -21,5 +24,6 @@
   },
   "date": "2026-09-08",
   "pipeline_canon": "human-first-v2",
-  "editorial_swarm": false
+  "editorial_swarm": false,
+  "wp_post_id": 9927
 }

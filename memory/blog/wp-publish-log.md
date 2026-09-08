@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-08
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku
+- **post_id:** 9927
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku/
+- **featured_image:** 9928
+- **inline_images:** 9929–9935 (7)
+- **wp_category_slugs:** pokupka-kvartiry (category_id=36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23
