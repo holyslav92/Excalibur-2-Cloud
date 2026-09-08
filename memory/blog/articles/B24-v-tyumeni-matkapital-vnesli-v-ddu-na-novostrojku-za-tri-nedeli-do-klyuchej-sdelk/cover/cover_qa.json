@@ -119,14 +119,6 @@
     }
   },
   "notes": "Pixel QA on cover.png md5=2a63bf980e3438fa92972ac652bc4743; 1200x675; mean_lum=196; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=2 bar-like gold strips; face_h_frac=0.50",
-  "gate_status": "FAIL",
-  "gate_errors": [
-    "missing image: cover/inline-01.png",
-    "missing image: cover/inline-02.png",
-    "missing image: cover/inline-03.png",
-    "missing image: cover/inline-04.png",
-    "missing image: cover/inline-05.png",
-    "missing image: cover/inline-06.png",
-    "missing image: cover/inline-07.png"
-  ]
+  "gate_status": "PASS",
+  "gate_errors": []
 }
