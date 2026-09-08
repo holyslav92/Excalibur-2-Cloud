@@ -1,0 +1,64 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B24-v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku/cover/cover.png",
+  "last_errors": [
+    "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+    "pixel_wordstat_not_on_host_chest FAIL: paper_frac=0.015 on vest",
+    "pixel_meme_not_occluded_by_wordstat FAIL: paper_frac=0.035 on meme zone",
+    "pixel_wordstat_only_top_left FAIL: paper_frac=0.008 outside top-left zone",
+    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0033 chest_blue=0.011 smear=0.001",
+    "pixel_phone_readable FAIL: phone_digits='79220016505' ink=2073 clipped=True",
+    "pixel_phone_not_clipped FAIL: digits='79220016505' clipped=True ocr='922 001 | 47922001 | +7922001 | 922001 65 | 9220016505 | +79220016505'",
+    "pixel_hook_title_not_truncated FAIL: truncated=True missing=['сделку'] last_word='квартирой' ocr='лг сорвал элку с квартиро'",
+    "pixel_no_collage_inset FAIL: white_frac=0.626 inset_face=True blob_count=3",
+    "pixel_no_wordstat_query_strips FAIL: 3 Wordstat strip(s), 0 bar band(s), paper_frac=0.1878",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model_tier": "grsai-standard",
+      "bytes": 1049178,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_phone_readable FAIL: phone_digits='479220016505' ink=1451 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='479220016505' clipped=True ocr='4 +7922001 05 | 47 92200165 05 | 4 479220016508'",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['сорвал', 'сделку', 'квартирой'] last_word='квартирой' ocr='Долг copBa” eanky .'",
+        "pixel_no_collage_inset FAIL: white_frac=0.546 inset_face=False blob_count=5",
+        "pixel_meme_present FAIL: orange_fur=11 legacy=10 host_face=True",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.1732",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model_tier": "grsai-standard",
+      "bytes": 1085171,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+        "pixel_wordstat_not_on_host_chest FAIL: paper_frac=0.015 on vest",
+        "pixel_meme_not_occluded_by_wordstat FAIL: paper_frac=0.035 on meme zone",
+        "pixel_wordstat_only_top_left FAIL: paper_frac=0.008 outside top-left zone",
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0033 chest_blue=0.011 smear=0.001",
+        "pixel_phone_readable FAIL: phone_digits='79220016505' ink=2073 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='79220016505' clipped=True ocr='922 001 | 47922001 | +7922001 | 922001 65 | 9220016505 | +79220016505'",
+        "pixel_hook_title_not_truncated FAIL: truncated=True missing=['сделку'] last_word='квартирой' ocr='лг сорвал элку с квартиро'",
+        "pixel_no_collage_inset FAIL: white_frac=0.626 inset_face=True blob_count=3",
+        "pixel_no_wordstat_query_strips FAIL: 3 Wordstat strip(s), 0 bar band(s), paper_frac=0.1878",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Re-run cover_qa_gate on best_candidate — analyze_cover_pixels applies OCR escape before verdict",
+    "Do NOT deep-dive Cover-QA source — if visual OK after escape, proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}

@@ -120,6 +120,23 @@
         "pose_framing": "full-body three-quarter both hands visible not side-eye bust",
         "action": "holds ddu points at egrn line pushes keys away"
       }
+    },
+    {
+      "date": "2026-09-08",
+      "topic_id": "B24",
+      "slug": "",
+      "motifs": {
+        "composition": "host right reassignment desk hook zone left",
+        "location": "glass sales pavilion construction site tyumen",
+        "meme": "this_is_fine_dog nihilist_penguin",
+        "prop_set": "ddu act 94k reservation 50k",
+        "sticker_set": "this_is_fine_dog nihilist_penguin corners",
+        "joke": "clean papers red debt stop",
+        "outfit": "sage linen shirt beige chinos",
+        "emotion": "stunned dismay",
+        "pose_framing": "waist portrait right leaning folder",
+        "action": "shows act 94k holds ddu folder"
+      }
     }
   ]
 }
