@@ -2,8 +2,62 @@
   "version": 1,
   "anti_repeat_days": 30,
   "description": "Closed story clusters — Scout must not reuse until locked_until. Sync via: python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters",
-  "last_sync": "2026-09-05",
+  "last_sync": "2026-09-08",
   "clusters": [
+    {
+      "cluster_id": "ddu_amount_vs_escrow_zero",
+      "first_seen": "2026-09-06",
+      "locked_until": "2026-10-06",
+      "source": "live_wp",
+      "slug": "v-tyumeni-na-eskrou-ne-hvatalo-400-tysyach-do-summy-ddu-bank-ostanovil-podpisani",
+      "topic_id": "LIVE-V-TYUMENI-NA-ESKROU-NE-H",
+      "title": "В Тюмени на эскроу не хватило 400 тысяч до ДДУ — банк остановил подписание"
+    },
+    {
+      "cluster_id": "ddu_apartment_vs_apartments_mismatch",
+      "first_seen": "2026-09-05",
+      "locked_until": "2026-10-05",
+      "source": "live_wp",
+      "slug": "v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty",
+      "topic_id": "LIVE-V-TYUMENI-V-DDU-NAPISALI",
+      "title": "В Тюмени подписали ДДУ на квартиру — в ЕГРН нашли апартаменты"
+    },
+    {
+      "cluster_id": "booking_expired_price_hike",
+      "first_seen": "2026-09-05",
+      "locked_until": "2026-10-05",
+      "source": "live_wp",
+      "slug": "v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela",
+      "topic_id": "LIVE-V-TYUMENI-PEREUSTUPKU-PO",
+      "title": "В Тюмени переуступку подняли на 280 тысяч за сутки до ДДУ — бронь сгорела"
+    },
+    {
+      "cluster_id": "assignment_lost_to_faster_buyer",
+      "first_seen": "2026-09-05",
+      "locked_until": "2026-10-05",
+      "source": "live_wp",
+      "slug": "v-tyumeni-pereustupku-podnyali-za-sutki-do-ddu-bron-sgorela",
+      "topic_id": "LIVE-V-TYUMENI-PEREUSTUPKU-PO",
+      "title": "В Тюмени переуступку подняли на 280 тысяч за сутки до ДДУ — бронь сгорела"
+    },
+    {
+      "cluster_id": "trade_in_rejected_developer",
+      "first_seen": "2026-09-05",
+      "locked_until": "2026-10-05",
+      "source": "live_wp",
+      "slug": "v-tyumeni-trejd-in-ot-zastrojschika-sorvalsya-za-den-do-ddu-bron-sgorela",
+      "topic_id": "LIVE-V-TYUMENI-TREJD-IN-OT-ZA",
+      "title": "В Тюмени трейд-ин сорвался за день до ДДУ — бронь сгорела"
+    },
+    {
+      "cluster_id": "bank_appraisal_below_ddu_price",
+      "first_seen": "2026-09-05",
+      "locked_until": "2026-10-05",
+      "source": "live_wp",
+      "slug": "v-tyumeni-odobrili-ipoteku-na-novostrojku-ocenka-banka-nizhe-ceny-ddu",
+      "topic_id": "LIVE-V-TYUMENI-ODOBRILI-IPOTE",
+      "title": "Ипотеку в Тюмени одобрили: оценка ниже на 400 тысяч — бронь сгорела"
+    },
     {
       "cluster_id": "newbuild_ddu_cellar_paid_not_handed_tyumen",
       "first_seen": "2026-09-02",
