@@ -1,4 +1,10 @@
-# Assembled title inputs — B24 (for Derouter title role)
+# Assembled title inputs — B24 TITLE UPDATE (for Derouter title role)
+
+**TASK:** TITLE UPDATE only — fix H1 for article-quality-score gate. Current H1 FAIL: `h1: no number or deadline in H1`.
+
+**Current H1 (FAIL):** «В Тюмени ДДУ с маткапиталом остановили — доли детям не оформили»
+
+**REQUIRED:** New H1 must include **number or deadline** (e.g. «3 недели до ключей», «за 21 день до ключей»). Keep subject (ДДУ + маткапитал + детские доли), Klyshin news-casus rhythm, consequence in second beat. No SEO tail. ~50–70 chars. Preserve `slug`, `slug_confirmed`, `comment_magnet_angle` unless sharper variant.
 
 **MANDATORY:** Derouter utility tier `gpt-5.6-terra`. Output **only** valid JSON for `title-brief.json` per SKILL.md schema. One variant. `verdict: PASS`.
 
