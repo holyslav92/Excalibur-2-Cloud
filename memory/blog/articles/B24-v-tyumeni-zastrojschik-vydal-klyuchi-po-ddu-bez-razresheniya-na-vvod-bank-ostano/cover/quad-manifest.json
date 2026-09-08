@@ -1,0 +1,239 @@
+{
+  "topic_id": "B24",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Ключи получили — банк остановил выплату ипотеки",
+  "cover_hook_highlight": "ипотеки",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Ключи получили — банк остановил выплату ипотеки: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Сырая квартира: хост слева, ключи+STOP, ноутбук, sticky, phone.",
+      "meme_caption_ru": "",
+      "sticky": "Ключи есть, денег нет",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие",
+      "meme_picks": [
+        "success_kid",
+        "grumpy_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Ключи выдали в субботу — в реестре разрешения ещё не было",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Вход ЖК суббота, очередь ключи, стенд без РНВ; this_is_fine_dog tiny.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Ключи выдали в субботу — в реестре разрешения е…» — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Приёмка в субботу",
+        "Акт ≠ разрешение",
+        "РНВ в реестре нет"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "this_is_fine_dog"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Ключи выдали в субботу — в реестре разрешения ещё не было",
+      "visual_type": "comparison_table",
+      "scene_hint": "Paper vs registry columns infographic; paused payout marker; no meme.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Траншевая ипотека, Основной транш стоп, Банк ждёт ввод — иллюстрация к разбору…",
+      "labels": [
+        "Траншевая ипотека",
+        "Основной транш стоп",
+        "Банк ждёт ввод"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что сверять на ключах: таблица «бумага vs реестр»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: бумага vs реестр, 10 дней; no people.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Что сверять на ключах: таблица «бумага vs реест…» — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Ввод — главное",
+        "10 рабочих дней",
+        "Акт — осмотр"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Акт подписали, ремонт начали — банк остановил остаток ипотеки",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Ремонт: краска, письмо стоп, претензия; no people.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Акт подписали, ремонт начали — банк остановил о…» — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Письмо в банк",
+        "Претензия застройщику",
+        "Даты акта и отказа"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Почему эскроу смотрит на ввод дома, а не на подпись акта",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow РНВ→эскроу→транш; dom.rf; bad_luck_brian tiny.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: наш.дом.рф, Стройкомплекс.РФ, С 1 сентября 2026 — иллюстрация к разбору сделки.",
+      "labels": [
+        "наш.дом.рф",
+        "Стройкомплекс.РФ",
+        "С 1 сентября 2026"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "bad_luck_brian"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Финал: претензия застройщику и письмо в банк",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема претензия+письмо банку; акт, РНВ, скрин; no meme.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Акт приёма, Разрешение на ввод, Письмо банка — иллюстрация к разбору сделки.",
+      "labels": [
+        "Акт приёма",
+        "Разрешение на ввод",
+        "Письмо банка"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Где проверить РНВ до приёмки — и что изменилось с сентября 2026",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bar: первый транш vs остаток; roll_safe tiny.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Первый ≠ остаток, Остаток на ввод, Пауза до подписи — иллюстрация к разбору сделки.",
+      "labels": [
+        "Первый ≠ остаток",
+        "Остаток на ввод",
+        "Пауза до подписи"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "roll_safe"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени новостройка ипотека",
+    "ввод жк в эксплуатацию",
+    "разрешение на ввод в эксплуатацию жк"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "хост крупно слева по пояс, диагональ ключи в одной руке и письмо банка STOP в другой, ноутбук и поднос с ключами справа, свободная светлая зона сверху слева под заголовок",
+    "location": "светлая сырая квартира в новом жилом комплексе Тюмени на этапе ремонта, большие окна, белые стены, дневной солнечный блик",
+    "meme": "success_kid как ироничная реакция на полученные ключи без выплаты ипотеки; рядом крошечный grumpy_cat",
+    "prop_set": "связка ключей, письмо банка с крупной отметкой STOP, ноутбук с экраном «РНВ: нет записи», подписанный акт, поднос для ключей, малярный валик, банка светлой краски, жёлтый стикер",
+    "sticker_set": "success_kid tiny top-right, grumpy_cat tiny lower-right, оба не перекрывают лицо, заголовок и номер телефона",
+    "joke": "торжественные ключи оказались бесполезными для следующего ипотечного транша: ремонт уже начат, а деньги остановлены",
+    "outfit": "светлая оливковая рабочая куртка поверх молочной футболки, без пиджака, заметные строительные перчатки в кармане",
+    "emotion": "ошеломление и раздражённое недоверие, будто герой только что увидел отказ банка после радостного получения ключей",
+    "pose_framing": "новый средний waist-up ракурс слева, корпус слегка развёрнут к ноутбуку, плечи напряжены, взгляд прямо в камеру с поднятой бровью",
+    "action": "герой демонстрирует ключи и письмо банка одновременно, указательным пальцем другой руки показывает на экран ноутбука с отсутствующей записью РНВ"
+  },
+  "cover_emotion": "ошеломлённое недоверие"
+}
