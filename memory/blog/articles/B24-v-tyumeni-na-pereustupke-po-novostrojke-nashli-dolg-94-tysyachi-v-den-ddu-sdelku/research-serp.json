@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-08",
+    "today_ru": "08.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B24",
+    "title": "В Тюмени на переуступке по новостройке нашли долг 94 тысячи — в день ДДУ сделку остановили",
+    "h1": "В Тюмени на переуступке по новостройке нашли долг 94 тысячи — в день ДДУ сделку остановили",
+    "slug": "v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku",
+    "primary_query": "В Тюмени на переуступке по новостройке нашли долг 94 тысячи — в день ДДУ сделку остановили",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени на переуступке по новостройке нашли долг 94 тысячи — в день ДДУ сделку остановили 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюменской области появились новые обманутые дольщики, сотни семей ...",
+          "url": "https://72.ru/text/realty/2025/09/06/76000201/",
+          "snippet": ""
+        },
+        {
+          "title": "Главных должников нашли в Тюмени — бизнесмены, не хотевшие расставаться ...",
+          "url": "https://72.ru/text/gorod/2025/11/14/76123107/",
+          "snippet": "Семьи, которые по условиям договоров подряда должны были справить новоселье и заехать в собственные дома еще в прошлом году, начали обращаться в редакцию 72.RU весной."
+        },
+        {
+          "title": "Как взыскать неустойку с застройщика за просрочку по ДДУ в 2026 году ...",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/kak-vzyskat-neustojku-s-zastrojshika",
+          "snippet": "«Самым дорогостоящим имуществом тюменцев, которые судебные приставы арестовали в 2025 году, стало нежилое здание площадью 11500 квадратных метров и стоимостью 100 миллионов рублей."
+        },
+        {
+          "title": "Переуступка прав по ДДУ: нюансы, сложности, риски дольщика",
+          "url": "https://realty.ria.ru/20200117/1563544106.html",
+          "snippet": "Теперь взыскать штраф за нарушение сроков передачи квартиры можно в обычном порядке. Но на выплату неустоек, накопленных за период действия моратория, застройщикам дали год — до конца 2026 ..."
+        },
+        {
+          "title": "Риски покупки по переуступке квартиры в новостройке",
+          "url": "https://kvarnado.ru/dolevoe-stroitelstvo/guide-riski-pokupki-kvartiry-po-pereustupke",
+          "snippet": "К основной опасности покупки квартиры по переуступке ДДУ является то, что, как правило, такие договоры появляются у не совсем добросовестных застройщиков, которые значительно нарушают сроки..."
+        },
+        {
+          "title": "В Тюмени неизвестные вандалы расписали дверь квартиры требованиями ...",
+          "url": "https://megatyumen.ru/proisshestviya/prishli-s-raboty-i-uvideli-poslanie-na-dveri-v-tyumeni-neizvestnye-vandaly-raspisali-dver-kvartiry-trebovaniyami-vernut-dolg/",
+          "snippet": "Я часто вижу, как покупатель приходит за скидкой 5-10%, а потом не замечает долг по ДДУ, спорный срок сдачи дома или запрет на уступку в договоре."
+        }
+      ],
+      "searched_at": "2026-09-08"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени на переуступке по новостройке нашли долг 94 тысячи — в день ДДУ сделку остановили 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюменской области появились новые обманутые дольщики, сотни семей ...",
+          "url": "https://72.ru/text/realty/2025/09/06/76000201/",
+          "snippet": ""
+        },
+        {
+          "title": "Главных должников нашли в Тюмени — бизнесмены, не хотевшие расставаться ...",
+          "url": "https://72.ru/text/gorod/2025/11/14/76123107/",
+          "snippet": "Семьи, которые по условиям договоров подряда должны были справить новоселье и заехать в собственные дома еще в прошлом году, начали обращаться в редакцию 72.RU весной."
+        },
+        {
+          "title": "Как взыскать неустойку с застройщика за просрочку по ДДУ в 2026 году ...",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/kak-vzyskat-neustojku-s-zastrojshika",
+          "snippet": "«Самым дорогостоящим имуществом тюменцев, которые судебные приставы арестовали в 2025 году, стало нежилое здание площадью 11500 квадратных метров и стоимостью 100 миллионов рублей."
+        },
+        {
+          "title": "Переуступка прав по ДДУ: нюансы, сложности, риски дольщика",
+          "url": "https://realty.ria.ru/20200117/1563544106.html",
+          "snippet": "Теперь взыскать штраф за нарушение сроков передачи квартиры можно в обычном порядке. Но на выплату неустоек, накопленных за период действия моратория, застройщикам дали год — до конца 2026 ..."
+        },
+        {
+          "title": "Риски покупки по переуступке квартиры в новостройке",
+          "url": "https://kvarnado.ru/dolevoe-stroitelstvo/guide-riski-pokupki-kvartiry-po-pereustupke",
+          "snippet": "К основной опасности покупки квартиры по переуступке ДДУ является то, что, как правило, такие договоры появляются у не совсем добросовестных застройщиков, которые значительно нарушают сроки..."
+        },
+        {
+          "title": "Тюмень кабальная: долги тюменцев по ипотеке резко выросли почти в три ...",
+          "url": "https://nashgorod.ru/news/2025-12-26/tyumen-kabalnaya-dolgi-tyumentsev-po-ipoteke-rezko-vyrosli-pochti-v-tri-raza-za-god-5529989",
+          "snippet": "Я часто вижу, как покупатель приходит за скидкой 5-10%, а потом не замечает долг по ДДУ, спорный срок сдачи дома или запрет на уступку в договоре."
+        }
+      ],
+      "searched_at": "2026-09-08"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени на переуступке по новостройке нашли долг 94 тысячи — в день ДДУ сделку остановили official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюменской области появились новые обманутые дольщики, сотни семей ...",
+          "url": "https://72.ru/text/realty/2025/09/06/76000201/",
+          "snippet": ""
+        },
+        {
+          "title": "Главных должников нашли в Тюмени — бизнесмены, не хотевшие расставаться ...",
+          "url": "https://72.ru/text/gorod/2025/11/14/76123107/",
+          "snippet": "Семьи, которые по условиям договоров подряда должны были справить новоселье и заехать в собственные дома еще в прошлом году, начали обращаться в редакцию 72.RU весной."
+        },
+        {
+          "title": "В Тюмени экс-директор строительной фирмы сохранял деловую репутацию ...",
+          "url": "https://vsluh.ru/novosti/dengi/v-tyumeni-eks-direktor-stroitelnoy-firmy-sokhranyal-delovuyu-reputatsiyu-mesyatsami-ne-vyplachivaya-_428081/",
+          "snippet": "«Самым дорогостоящим имуществом тюменцев, которые судебные приставы арестовали в 2025 году, стало нежилое здание площадью 11500 квадратных метров и стоимостью 100 миллионов рублей."
+        },
+        {
+          "title": "Как взыскать неустойку с застройщика за просрочку по ДДУ в 2026 году ...",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/kak-vzyskat-neustojku-s-zastrojshika",
+          "snippet": "В отношении директора возбуждено уголовное дело. В результате образовалась задолженность более 4 млн рублей, сообщает пресс-служба прокуратуры Тюменской области."
+        },
+        {
+          "title": "Новости Тюмени сегодня: последние тюменские новости за неделю, новости ...",
+          "url": "https://tumentoday.ru/",
+          "snippet": "Теперь взыскать штраф за нарушение сроков передачи квартиры можно в обычном порядке. Но на выплату неустоек, накопленных за период действия моратория, застройщикам дали год — до конца 2026 ..."
+        },
+        {
+          "title": "Переуступка прав по ДДУ: нюансы, сложности, риски дольщика",
+          "url": "https://realty.ria.ru/20200117/1563544106.html",
+          "snippet": "Все новости Тюмени и Тюменской области: основные происшествия и события за сегодня, за неделю, тюменская служба новостей."
+        }
+      ],
+      "searched_at": "2026-09-08"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени на переуступке по новостройке нашли долг 94 тысячи — в день ДДУ сделку остановили 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "GitHub - Musador13/stepik_exam_python: Решение итоговых работ с курса ...",
+          "url": "https://github.com/Musador13/stepik_exam_python",
+          "snippet": ""
+        },
+        {
+          "title": "videostream-go2rtc/assets/codecs.svg at master · tangjiang ... - GitHub",
+          "url": "https://github.com/tangjiang/videostream-go2rtc/blob/master/assets/codecs.svg",
+          "snippet": "Теперь ему надо выяснить, какие книги из этого списка у него есть. У Руслана на компьютере в текстовом файле записаны все книги из его домашней библиотеки в случайном порядке."
+        },
+        {
+          "title": "HFQ-BusTub/logo/bustub-whiteborder.svg at master · popopogg ... - GitHub",
+          "url": "https://github.com/popopogg/HFQ-BusTub/blob/master/logo/bustub-whiteborder.svg",
+          "snippet": "Loading Viewer requires iframe. Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        },
+        {
+          "title": "ocrmypdf/docs/images/logo.svg at main - GitHub",
+          "url": "https://github.com/ahmedoozziee/ocrmypdf/blob/main/docs/images/logo.svg",
+          "snippet": "Loading Viewer requires iframe. Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        },
+        {
+          "title": "console/docs/images/console-screenshot.png at main · kubestellar ...",
+          "url": "https://github.com/kubestellar/console/blob/main/docs/images/console-screenshot.png",
+          "snippet": "Loading Viewer requires iframe. Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        },
+        {
+          "title": "Numpy-CNN/images/training_progress.png at master · escontra/Numpy-CNN",
+          "url": "https://github.com/escontra/Numpy-CNN/blob/master/images/training_progress.png",
+          "snippet": "Download raw file Edit and raw actions Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        }
+      ],
+      "searched_at": "2026-09-08"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени на переуступке по новостройке нашли долг 94 тысячи — в день ДДУ сделку остановили forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Главных должников нашли в Тюмени — бизнесмены, не хотевшие расставаться ...",
+          "url": "https://72.ru/text/gorod/2025/11/14/76123107/",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюменской области появились новые обманутые дольщики, сотни семей ...",
+          "url": "https://72.ru/text/realty/2025/09/06/76000201/",
+          "snippet": "«Самым дорогостоящим имуществом тюменцев, которые судебные приставы арестовали в 2025 году, стало нежилое здание площадью 11500 квадратных метров и стоимостью 100 миллионов рублей."
+        },
+        {
+          "title": "Как взыскать неустойку с застройщика за просрочку по ДДУ в 2026 году ...",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/kak-vzyskat-neustojku-s-zastrojshika",
+          "snippet": "Семьи, которые по условиям договоров подряда должны были справить новоселье и заехать в собственные дома еще в прошлом году, начали обращаться в редакцию 72.RU весной."
+        },
+        {
+          "title": "Переуступка прав по ДДУ: нюансы, сложности, риски дольщика",
+          "url": "https://realty.ria.ru/20200117/1563544106.html",
+          "snippet": "Если претензия отправлена, но застройщик не ответил или отказал в выплате неустойки, дольщик имеет право обратиться в районный суд — по месту нахождения застройщика или объекта."
+        },
+        {
+          "title": "Названы города России с самыми большими скидками на квартиры по переуступке",
+          "url": "https://stroygaz.ru/news/dwelling/nazvany-goroda-rossii-s-samymi-bolshimi-skidkami-na-kvartiry-po-pereustupke/",
+          "snippet": "Эксперты рассказали сайту \"РИА Недвижимость\" о том, какие риски и особенности несут в себе сделки по переуступке права по ДДУ от юрлица."
+        },
+        {
+          "title": "Риски покупки по переуступке квартиры в новостройке",
+          "url": "https://kvarnado.ru/dolevoe-stroitelstvo/guide-riski-pokupki-kvartiry-po-pereustupke",
+          "snippet": "Об этом «Стройгазете» сообщили в аналитическом центре «Движение.ру», уточнив, что самая большая скидка среди городов-миллионников и Тюмени отмечена в Новосибирске. Переуступка, или цессия, - это покупка не готовой квартиры, а права требования по уже заключенному договору долевого участия."
+        }
+      ],
+      "searched_at": "2026-09-08"
+    }
+  ],
+  "errors": []
+}

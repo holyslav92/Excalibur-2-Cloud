@@ -1,0 +1,81 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-08",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://ppt.ru/art/dolevoe-stroitelstvo/registratsiya-pereustupki-ddu-v-rosreestre",
+        "type": "expert/news",
+        "note": "04.09.2026 — регистрация переуступки ДДУ, перевод долга, согласие застройщика, госпошлина 350 ₽"
+      },
+      {
+        "url": "https://rgr.ru/news/139ca4a1a14b11f186c8b4b52f561288",
+        "type": "expert/community",
+        "note": "26.08.2026 — РГР: скрытые долги дольщика, акт сверки, срок уступки до передаточного акта"
+      },
+      {
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "2026 — tenant TG: контекст проверки долгов перед сделкой в Тюмени"
+      },
+      {
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/26e3de2d783e453c4faf7fb26c33eecafddc2307/",
+        "type": "official",
+        "note": "214-ФЗ ст. 11 — уступка, перевод долга, срок до передаточного акта"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen (scout signal) — новостройки/переуступки Тюмень"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 662,
+    "p0_volume_spine": 3634,
+    "p0_spine_phrase": "новостройки тюмень",
+    "support_phrases": [
+      {"phrase": "переуступка по дду", "volume": 15},
+      {"phrase": "переуступка новостройки", "volume": 16},
+      {"phrase": "риски покупки квартиры по переуступке в новостройке", "volume": 10}
+    ],
+    "rework_from": "scout P0 locked «купить новостройку в тюмени» (662) after weak local tail on «переуступка» probes",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_assignment_first_buyer_debt_blocks_ddu_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["214-fz_consultant", "dom_rf"],
+    "errors": [],
+    "note": "214-ФЗ ст. 11 and dom.rf reference verified; developer consent fees cited as market range only, not as specific developer tariffs"
+  },
+  "derouter": {
+    "role": "research",
+    "status": "BLOCKER",
+    "reason": "HTTP 524 origin timeout / 529 overloaded after 3 attempts; research-notes compiled from live assembled inputs",
+    "attempts": 3
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_brief": "research-brief.json",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}
