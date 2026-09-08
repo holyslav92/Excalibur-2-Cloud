@@ -4,7 +4,17 @@
 You are running inside `excalibur_blog_derouter_opus_chat.py` (utility tier). Output **JSON only** per schema below. No BLOCKER refusals.
 
 ## Task
-Invent ONE H1/title for topic B24. verdict: PASS.
+**RETITLE** — quality score H1 FAIL. Invent ONE new H1/title for topic B24. verdict: PASS.
+
+## RETITLE requirements (HARD — quality gate)
+- Current FAIL H1: «В Тюмени долг первого дольщика сорвал переуступку по ДДУ»
+- FAIL reasons: no number/deadline in H1; missing punch beat (em-dash or consequence verb) in second beat
+- MUST include number **94 тысячи** (or **94 000**) in H1
+- MUST include news headline Klyshin rhythm: event + stakes + consequence
+- MUST include em-dash punch OR consequence verb (сорвали, остановили, не вернули, …) in second beat
+- Temporal marker welcome: «в день ДДУ», «за 11 дней до ключей»
+- slug_confirmed: true — slug MUST NOT change
+- Energy reference (do NOT copy verbatim): «В Тюмени 94 тысячи чужого долга — переуступку по ДДУ сорвали за 11 дней до ключей»
 
 ## topic_id
 B24
