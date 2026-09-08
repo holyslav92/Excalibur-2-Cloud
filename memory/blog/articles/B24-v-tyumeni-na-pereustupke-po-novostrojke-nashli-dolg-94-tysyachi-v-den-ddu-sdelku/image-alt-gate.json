@@ -1,8 +1,16 @@
 {
   "status": "PASS",
   "all_pass": true,
-  "cover_caption_empty": true,
-  "cover_caption_errors": [],
+  "changes": [
+    "cover-registry.json updated",
+    "article.html img inline_1 alt updated",
+    "article.html img inline_2 alt updated",
+    "article.html img inline_3 alt updated",
+    "article.html img inline_4 alt updated",
+    "article.html img inline_5 alt updated",
+    "article.html img inline_6 alt updated",
+    "article.html img inline_7 alt updated"
+  ],
   "slots": {
     "cover": {
       "raw_alt": "В Тюмени на переуступке нашли долг 94 тысячи — сделку остановили: что проверить в договоре и эскроу до подписи.",
