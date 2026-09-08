@@ -1,0 +1,74 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-08",
+  "derouter": {
+    "status": "BLOCK",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "attempts": 2,
+    "note": "HTTP 529 server overloaded, then HTTP 524 timeout; research-notes.md assembled from live-source inputs per SKILL fallback curator"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://svoedom.ru/journal/chto-vstupaet-v-silu-s-1-sentyabrya-2026-goda-90887934",
+        "type": "news",
+        "date": "2026-08-31",
+        "note": "Реестровая модель РНВ с 01.09.2026 — проверка до подписания акта в сентябре 2026"
+      },
+      {
+        "url": "https://allestate.pro/news/25.08.2026/poluchil-klyuchi-ot-kvartiry-v-novostroyke-chto-dalshe-polnyy-gid-po-deystviyam-v-2026-godu",
+        "type": "market",
+        "date": "2026-08-25",
+        "note": "Пост-ключевые сроки банку и страховке в 2026"
+      },
+      {
+        "url": "https://t-j.ru/developer-takes-money-out-escrow/",
+        "type": "community/expert",
+        "date": "2025-08-26",
+        "note": "Эскроу раскрывается только после ввода, не после акта — механизм core для B24"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени новостройка ипотека",
+    "p0_volume": 85,
+    "p0_volume_ru225": 123,
+    "support_phrases": [
+      {"phrase": "ввод жк в эксплуатацию", "volume": 21},
+      {"phrase": "разрешение на ввод в эксплуатацию жк", "volume": 9}
+    ],
+    "rework_from": "ввод жк 21 → разрешение на ввод 9 → P0 newbuild+ипотека Tyumen 85",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_keys_without_commissioning_mortgage_hold_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["consultant_214_fz", "dom_rf", "fsk_developer_faq", "svoedom_registry_news"],
+    "errors": [],
+    "note": "214-FZ st.8/st.15.5, registry RNV from 01.09.2026, EISЖS via dom.rf"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "assembled_inputs_compact": "assembled-research-inputs-compact.md"
+  },
+  "incident_report": "none"
+}
