@@ -212,7 +212,75 @@
         }
       ],
       "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "wordstat_primary",
+      "query": "приемка квартиры в новостройке",
+      "purpose": "Wordstat demand parent spine",
+      "regions": ["55", "11176"],
+      "result_count": 15,
+      "top_volume": 122,
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "wordstat_tyumen",
+      "query": "приемка квартиры в новостройке тюмень",
+      "purpose": "Wordstat P0 localized",
+      "regions": ["55", "11176"],
+      "result_count": 1,
+      "top_volume": 32,
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "fresh_tyumen_priemka",
+      "query": "приёмка новостройки Тюмень Fifty Fifty дефекты сентябрь 2026",
+      "purpose": "свежий community signal",
+      "result_count": 2,
+      "results": [
+        {
+          "title": "Экспертная помощь в приёмке — ЖК Fifty Fifty, 12 дефектов, 3 сентября 2026",
+          "url": "https://tumen.expert-priemka.ru/",
+          "snippet": "Отчёт приёмки ЖК Fifty Fifty, г. Тюмень — 12 дефектов, дата 03.09.2026"
+        },
+        {
+          "title": "Эксперты рассказали, что изменилось в приемке квартиры в 2026 году — РИА Недвижимость",
+          "url": "https://realty.ria.ru/20260423/priemka-2088334169.html",
+          "snippet": "Отмена одностороннего акта, акт осмотра, немедленные денежные требования с 01.01.2026"
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "official_214_fz",
+      "query": "214-ФЗ статья 8 акт приема передачи consultant",
+      "purpose": "официальные нормы приёмки",
+      "result_count": 3,
+      "results": [
+        {
+          "title": "Статья 8. Передача объекта долевого строительства — КонсультантПлюс",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/49cb99b1bfe1a09caaf585874de97bdb34fc6d48/",
+          "snippet": "ч.5 — акт о несоответствии до подписания передаточного акта"
+        },
+        {
+          "title": "Статья 7. Гарантии качества — КонсультантПлюс",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/aeb9f2327f835ecc02fb71b9a0312ead0b844204/",
+          "snippet": "Гарантия ≥3 лет на объект, ≥1 года на отделку"
+        },
+        {
+          "title": "Статья 16 ч.6 — регистрация права застройщиком 30 раб. дней",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/5643371209ce3f96717dde91c9b8fba82829890e/",
+          "snippet": "Электронная подача застройщиком с 01.03.2025"
+        }
+      ],
+      "searched_at": "2026-09-09"
     }
   ],
+  "wordstat_summary": {
+    "p0_phrase": "приемка квартиры в новостройке тюмень",
+    "p0_volume": 32,
+    "parent_phrase": "приемка квартиры в новостройке",
+    "parent_volume": 122,
+    "accessed_at": "2026-09-09"
+  },
   "errors": []
 }
