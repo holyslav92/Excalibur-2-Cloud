@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-09",
+  "topic_id": "B24",
+  "article_dir": "memory/blog/articles/B24-v-tyumeni-izmenili-proektnuyu-deklaraciyu-v-novoj-planirovke-propal-balkon-iz-dd",
+  "slug": "v-tyumeni-izmenili-proektnuyu-deklaraciyu-v-novoj-planirovke-propal-balkon-iz-dd",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": []
+}
