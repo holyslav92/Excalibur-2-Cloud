@@ -212,7 +212,77 @@
         }
       ],
       "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "research_live_legal",
+      "query": "214-ФЗ статья 19 проектная декларация изменения планировки балкон",
+      "purpose": "официальные нормы и декларация",
+      "result_count": 5,
+      "results": [
+        {
+          "title": "214-ФЗ Ст. 19. Проектная декларация",
+          "url": "https://legalacts.ru/doc/214_FZ-ob-uchastii-v-dolevom-stroitelstve-mnogokvartirnyh-domov-i-inyh-obektov-nedvizhimosti/statja-19/",
+          "snippet": "Застройщик обязан вносить изменения в проектную декларацию о фактах внесения изменений в проектную документацию ежемесячно не позднее 10-го числа месяца, следующего за отчетным."
+        },
+        {
+          "title": "214-ФЗ Ст. 4. Договор участия в долевом строительстве",
+          "url": "https://legalacts.ru/doc/214_FZ-ob-uchastii-v-dolevom-stroitelstve-mnogokvartirnyh-domov-i-inyh-obektov-nedvizhimosti/statja-4/",
+          "snippet": "План объекта долевого строительства с лоджиями, верандами, балконами, террасами — существенное условие ДДУ."
+        },
+        {
+          "title": "214-ФЗ Ст. 7. Гарантии качества",
+          "url": "https://legalacts.ru/doc/214_FZ-ob-uchastii-v-dolevom-stroitelstve-mnogokvartirnyh-domov-i-inyh-obektov-nedvizhimosti/statja-7/",
+          "snippet": "При отступлениях от договора и проекта дольщик вправе требовать устранения, снижения цены или возмещения расходов."
+        },
+        {
+          "title": "Планировка не совпадает с ДДУ в 2026 году",
+          "url": "https://novostroikino.ru/blog/planirovka-kvartiry-v-novostroyke-ne-sovpadaet-s-ddu-2026/",
+          "snippet": "На приёмке балкона, который был на картинке в ДДУ, вообще нет. Исчезновение лоджии — существенное изменение."
+        },
+        {
+          "title": "Застройщик изменил планировку: что делать в 2026 году?",
+          "url": "https://legascom.ru/notes/11187-zastrojshchik-izmenil-planirovku-chto-delat-v-2026-godu",
+          "snippet": "Изменения должны быть согласованы с дольщиками, внесены в декларацию и отражены в ДДУ через допсоглашение."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "research_live_fresh_week",
+      "query": "новостройки планировка сентябрь 2026",
+      "purpose": "свежий news/community сигнал недели",
+      "result_count": 3,
+      "results": [
+        {
+          "title": "Площадь квартир в новостройках Москвы снижается в 2026 году",
+          "url": "https://novostroikino.ru/news/ploshchad-kvartir-novostroyki-moskva-umenshaetsya-2026/",
+          "snippet": "8 сентября 2026: аналитики подтвердили сокращение метража и изменение конфигурации квартир в новостройках."
+        },
+        {
+          "title": "Цены на новостройки в Москве снижаются второй месяц",
+          "url": "https://novostroikino.ru/news/snizhenie-cen-novostroyki-moskva-vtoroy-mesyac-2026/",
+          "snippet": "7 сентября 2026: свежий обзор рынка новостроек."
+        },
+        {
+          "title": "Приёмка квартиры 2026: 15 пунктов нового чек-листа",
+          "url": "https://favorit-consult.ru/article/priyomka-kvartiry/",
+          "snippet": "С 1 января 2026 отменён 60-дневный срок ожидания устранения; проверка балконов и лоджий на приёмке."
+        }
+      ],
+      "searched_at": "2026-09-09"
     }
   ],
+  "wordstat": {
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4642,
+    "p0_volume_ru225": 8616,
+    "support": [
+      {"phrase": "проектная декларация застройщика", "volume": 20},
+      {"phrase": "балкон новостройка", "volume": 25},
+      {"phrase": "новостройки с балконами", "volume": 13},
+      {"phrase": "приемка квартиры в новостройке тюмень", "volume": 30}
+    ],
+    "accessed_at": "2026-09-09"
+  },
   "errors": []
 }
