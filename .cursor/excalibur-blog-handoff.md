@@ -72,3 +72,18 @@ story_dup_check: PASS | cluster_id: acceptance_defects_penalty
 h1_fingerprint_check: PASS | fingerprint: acceptance_act_without_remarks_bank_registration_defects
 formula_spam_check: PASS | last3_mechanisms: keys_without_commissioning_permit | assignment_debt_found | matkapital_before_keys_child_shares
 anti_dupe_hard: PASS
+
+=== EXCALIBUR BLOG PUBLISH ===
+topic_id: B24
+slug: v-tyumeni-na-priemke-novostrojki-podpisali-akt-bez-zamechanij-bank-ostanovil-reg
+article_dir: memory/blog/articles/B24-v-tyumeni-na-priemke-novostrojki-podpisali-akt-bez-zamechanij-bank-ostanovil-reg
+publish_date: 2026-09-09
+verdict: PASS
+permalink: /blog/ipoteka/v-tyumeni-na-priemke-novostrojki-podpisali-akt-bez-zamechanij-bank-ostanovil-reg/
+post_id: 9953
+featured_image: 9954
+inline_images: 9955-9961 (7)
+schema_meta: ok
+blockers: none
+
+PIPELINE DONE — B24 published live.

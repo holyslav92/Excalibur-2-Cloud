@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-09
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-na-priemke-novostrojki-podpisali-akt-bez-zamechanij-bank-ostanovil-reg
+- **post_id:** 9953
+- **permalink:** /blog/ipoteka/v-tyumeni-na-priemke-novostrojki-podpisali-akt-bez-zamechanij-bank-ostanovil-reg/
+- **featured_image:** 9954
+- **inline_images:** 9955–9961 (7)
+- **wp_category_slugs:** pokupka-kvartiry, ipoteka, riski-sdelki (category_ids=36,32,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23
