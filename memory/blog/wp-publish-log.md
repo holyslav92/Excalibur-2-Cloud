@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-09
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-izmenili-proektnuyu-deklaraciyu-v-novoj-planirovke-propal-balkon-iz-dd
+- **post_id:** 9992
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-izmenili-proektnuyu-deklaraciyu-v-novoj-planirovke-propal-balkon-iz-dd/
+- **featured_image:** 9993
+- **inline_images:** 9994–10000 (7)
+- **wp_category_slugs:** dokumenty-i-oformlenie, riski-sdelki, pokupka-kvartiry (category_ids=54,58,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23
