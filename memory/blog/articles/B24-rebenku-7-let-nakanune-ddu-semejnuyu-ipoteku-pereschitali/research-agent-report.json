@@ -1,0 +1,70 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-09",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/news/semeynaya-ipoteka-aktualnye-usloviya-na-sentyabr-2026/",
+        "type": "official_news",
+        "note": "01.09.2026 — ДОМ.РФ: условия семейной ипотеки на сентябрь, ребёнок до 6 лет включительно"
+      },
+      {
+        "url": "https://www.cian.ru/stati-novye-uslovija-semejnoj-ipoteki-otvety-na-voprosy-335926/",
+        "type": "media",
+        "note": "21.08.2026 — возраст на дату кредитного договора, 30 дней справок, созаёмщики"
+      },
+      {
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "~04.09.2026 — tenant TG: дорогая ипотека на рыночном фоне после решения ЦБ"
+      },
+      {
+        "url": "https://xn--80aacozicjl1agbl4lraw.xn--p1ai/publications/sila-semi-sila-regiona/semeynaya-ipoteka-v-tyumenskoy-oblasti-v-2026-godu-kak-kupit-zhile-i-poluchit-podderzhku-seme-s-detm/",
+        "type": "official regional",
+        "note": "20.07.2026 — Тюмень: комбо-ипотека, лимит 6 млн, нет запасного основания для одного ребёнка 7+"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "compare_region": "225",
+    "p0_phrase": "семейная ипотека в тюмени",
+    "p0_volume": 752,
+    "p0_volume_ru225": 1099,
+    "support_phrases": [
+      {"phrase": "семейная ипотека тюмень", "volume": 1210},
+      {"phrase": "семейная ипотека в тюмени условия 2026", "volume": 256},
+      {"phrase": "новостройки тюмени семейная ипотека", "volume": 27}
+    ],
+    "rework_from": "scout P0 locked «семейная ипотека в тюмени» (752) after newbuild-family-mortgage jargon rework",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_family_mortgage_child_age_clock_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["dom_rf", "minfin", "vtb", "tyumen_oblast_portal"],
+    "errors": []
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
