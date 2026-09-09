@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-09
+
+- **topic_id:** B24
+- **slug:** rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali
+- **post_id:** 9966
+- **permalink:** /blog/vtorichka-i-riski/rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali/
+- **featured_image:** 9967
+- **inline_images:** 9968–9974 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31, default_primary_slug)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23

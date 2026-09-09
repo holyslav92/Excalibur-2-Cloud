@@ -1,6 +1,6 @@
 {
-  "source": "/workspace/memory/blog/articles/B24-rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali/article.html",
-  "total_links": 8,
+  "source": "memory/blog/articles/B24-rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali/article.html",
+  "total_links": 9,
   "failed_count": 0,
   "verdict": "pass",
   "links": [
@@ -43,6 +43,26 @@
       "checked_url": "{{SITE_BASE}}/blog/ipoteka/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/"
     },
     {
+      "url": "{{SITE_BASE}}/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/"
+    },
+    {
+      "url": "{{SITE_BASE}}/gajdy/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/gajdy/"
+    },
+    {
       "url": "https://dzen.ru/holyslav",
       "status": 200,
       "ok": true,
@@ -59,16 +79,6 @@
       "error": null,
       "kind": "external",
       "skipped": false
-    },
-    {
-      "url": "{{SITE_BASE}}/gajdy/",
-      "status": 200,
-      "ok": true,
-      "method": "HEAD",
-      "error": null,
-      "kind": "internal_relative",
-      "skipped": false,
-      "checked_url": "{{SITE_BASE}}/gajdy/"
     },
     {
       "url": "{{SITE_BASE}}/rieltor-tyumen/",
