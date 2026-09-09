@@ -1,0 +1,30 @@
+{
+  "gate": "writer-draft",
+  "topic_id": "B24",
+  "status": "PASS",
+  "derouter": {
+    "tier": "powerful",
+    "model": "gpt-6-astra",
+    "method": "writer_chunk_3 + writer_trim_chunk_3"
+  },
+  "word_count": 1549,
+  "word_count_target": "1400-1600",
+  "checks": {
+    "html_linter": "PASS",
+    "word_count_1400_1600": true,
+    "word_count_hard_max_1750": true,
+    "h2_count_6": true,
+    "lead_4_6_sentences": true,
+    "early_cta_tg_max_only": true,
+    "mid_cta": true,
+    "end_cta_channels": true,
+    "phone_once": true,
+    "interlink_siblings_2_4": true,
+    "interlink_count": 2,
+    "comment_magnet": true,
+    "no_composite_disclaimer": true,
+    "no_tldr_bullets_lead": true,
+    "spine_once_no_recap": true
+  },
+  "notes": "Trim 2273→1549 words. Interlinks: B19, B22 (×2 same URL). Next: Sol."
+}
