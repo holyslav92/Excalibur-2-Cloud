@@ -2,7 +2,6 @@
   "status": "PASS",
   "all_pass": true,
   "changes": [
-    "inline_5: 'Порядок действий при расхождении плана и фактической стены на приёмке в Тюмени.' -> 'нумерованный процесс / таймлайн по новостройке в Тюмени: Статья 7 214-ФЗ, Устранить или снизить цену, Коэффициент 0,3 — иллюстрация к…'",
     "cover-registry.json updated",
     "article.html img inline_1 alt updated",
     "article.html img inline_2 alt updated",
