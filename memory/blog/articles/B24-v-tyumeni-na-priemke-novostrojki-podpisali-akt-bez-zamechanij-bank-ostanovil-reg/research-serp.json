@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-09",
+    "today_ru": "09.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "среда"
+  },
+  "topic": {
+    "topic_id": "B24",
+    "title": "В Тюмени на приёмке новостройки подписали акт без замечаний — банк остановил регистрацию из-за дефектов",
+    "h1": "В Тюмени на приёмке новостройки подписали акт без замечаний — банк остановил регистрацию из-за дефектов",
+    "slug": "v-tyumeni-na-priemke-novostrojki-podpisali-akt-bez-zamechanij-bank-ostanovil-reg",
+    "primary_query": "В Тюмени на приёмке новостройки подписали акт без замечаний — банк остановил регистрацию из-за дефектов",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени на приёмке новостройки подписали акт без замечаний — банк остановил регистрацию из-за дефектов 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "На приёмке новостройки в Тюмени нашли мокрую стяжку — ключи не выдали ...",
+          "url": "https://dzen.ru/a/apZvsyWD6W9q5lHp",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени застройщик потребовал акт с дефектами — иначе без ключей | The ...",
+          "url": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt/",
+          "snippet": "Подписанный «без замечаний» акт, за которым стоит только устное «исправим», разворачивает доказывание против покупателя: застройщик спокойно скажет, что дефекты появились после передачи."
+        },
+        {
+          "title": "Подписали акт без замечаний — потом жаловаться поздно",
+          "url": "https://dzen.ru/a/aKVW4u_gnBBLJluF",
+          "snippet": "В Тюмени застройщик потребовал акт с дефектами — иначе без ключей. Приёмка заняла два часа, список дефектов перевалил за несколько десятков пунктов — и ключи семье в тот день так и не отдали."
+        },
+        {
+          "title": "Подписали акт приёма квартиры «без замечаний» - всё потеряно? Коротко ...",
+          "url": "https://vk.com/wall-54033269_1868",
+          "snippet": "При приёмке вы видели их или могли увидеть, но всё равно подписали без оговорок. Прошёл срок, установленный договором или законом, для предъявления претензий по качеству."
+        },
+        {
+          "title": "Условие о приёмке без замечаний: как одна фраза в акте закрывает все ...",
+          "url": "https://zakon.ru/discussion/2026/05/14/uslovie_o_priyomke_bez_zamechanij_kak_odna_fraza_v_akte_zakryvaet_vse_pretenzii_po_kachestvu",
+          "snippet": "Важно понимать: Если дефект был очевидным, но вы его не указали в акте - спор становится сложнее, но не безнадёжным. Вывод: Акт «без замечаний» - не приговор, а всего лишь один из ..."
+        },
+        {
+          "title": "Компенсация после приёмки квартиры: можно ли требовать и как действовать",
+          "url": "https://lex-pravo.ru/blog/kompensaciya-posle-priemki-kvartiry/",
+          "snippet": "У меня был клиент — средний подрядчик в сфере промышленного строительства. Заказчик подписал акт КС-2 без замечаний, через шесть недель обнаружил дефекты в несущих конструкциях, направил претензию. Подрядчик ответил просто: «Вы приняли работы без замечаний, акт подписан, претензий нет»."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени на приёмке новостройки подписали акт без замечаний — банк остановил регистрацию из-за дефектов 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "На приёмке новостройки в Тюмени нашли мокрую стяжку — ключи не выдали ...",
+          "url": "https://dzen.ru/a/apZvsyWD6W9q5lHp",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени застройщик потребовал акт с дефектами — иначе без ключей | The ...",
+          "url": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt/",
+          "snippet": "Подписанный «без замечаний» акт, за которым стоит только устное «исправим», разворачивает доказывание против покупателя: застройщик спокойно скажет, что дефекты появились после передачи."
+        },
+        {
+          "title": "Подписали акт без замечаний — потом жаловаться поздно",
+          "url": "https://dzen.ru/a/aKVW4u_gnBBLJluF",
+          "snippet": "В Тюмени застройщик потребовал акт с дефектами — иначе без ключей. Приёмка заняла два часа, список дефектов перевалил за несколько десятков пунктов — и ключи семье в тот день так и не отдали."
+        },
+        {
+          "title": "Подписали акт приёма квартиры «без замечаний» - всё потеряно? Коротко ...",
+          "url": "https://vk.com/wall-54033269_1868",
+          "snippet": "При приёмке вы видели их или могли увидеть, но всё равно подписали без оговорок. Прошёл срок, установленный договором или законом, для предъявления претензий по качеству."
+        },
+        {
+          "title": "Компенсация после приёмки квартиры: можно ли требовать и как действовать",
+          "url": "https://lex-pravo.ru/blog/kompensaciya-posle-priemki-kvartiry/",
+          "snippet": "Важно понимать: Если дефект был очевидным, но вы его не указали в акте - спор становится сложнее, но не безнадёжным. Вывод: Акт «без замечаний» - не приговор, а всего лишь один из ..."
+        },
+        {
+          "title": "«Мы были в шоке»: приемщики раскрывают проблемы тюменских новостроек",
+          "url": "https://nashgorod.ru/news/2025-05-21/my-byli-v-shoke-priemschiki-raskryvayut-problemy-tyumenskih-novostroek-5394914",
+          "snippet": "Подписанный акт приёмки — не приговор. Если недостатки обнаружились позже или застройщик передал квартиру с нарушениями, деньги или ремонт можно требовать и после получения ключей."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени на приёмке новостройки подписали акт без замечаний — банк остановил регистрацию из-за дефектов official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "На приёмке новостройки в Тюмени нашли мокрую стяжку — ключи не выдали ...",
+          "url": "https://dzen.ru/a/apZvsyWD6W9q5lHp",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени застройщик потребовал акт с дефектами — иначе без ключей | The ...",
+          "url": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt/",
+          "snippet": "Подписанный «без замечаний» акт, за которым стоит только устное «исправим», разворачивает доказывание против покупателя: застройщик спокойно скажет, что дефекты появились после передачи."
+        },
+        {
+          "title": "Подписали акт приёма квартиры «без замечаний» - всё потеряно? Коротко ...",
+          "url": "https://vk.com/wall-54033269_1868",
+          "snippet": "В Тюмени застройщик потребовал акт с дефектами — иначе без ключей. Приёмка заняла два часа, список дефектов перевалил за несколько десятков пунктов — и ключи семье в тот день так и не отдали."
+        },
+        {
+          "title": "Подписали акт без замечаний — потом жаловаться поздно",
+          "url": "https://dzen.ru/a/aKVW4u_gnBBLJluF",
+          "snippet": "Важно понимать: Если дефект был очевидным, но вы его не указали в акте - спор становится сложнее, но не безнадёжным. Вывод: Акт «без замечаний» - не приговор, а всего лишь один из документов."
+        },
+        {
+          "title": "Условие о приёмке без замечаний: как одна фраза в акте закрывает все ...",
+          "url": "https://zakon.ru/discussion/2026/05/14/uslovie_o_priyomke_bez_zamechanij_kak_odna_fraza_v_akte_zakryvaet_vse_pretenzii_po_kachestvu",
+          "snippet": "При приёмке вы видели их или могли увидеть, но всё равно подписали без оговорок. Прошёл срок, установленный договором или законом, для предъявления претензий по качеству."
+        },
+        {
+          "title": "Существенные недостатки при приёмке квартиры: когда можно не ...",
+          "url": "https://auditnovostroy.ru/sporyi-s-zastrojshhikami/opyit-ekspertov/sushhestvennyie-nedostatki-po-ddu-i-pri-priemke-kvartiryi-kogda-mozhno-ne-podpisyivat-akt",
+          "snippet": "У меня был клиент — средний подрядчик в сфере промышленного строительства. Заказчик подписал акт КС-2 без замечаний, через шесть недель обнаружил дефекты в несущих конструкциях, направил претензию. Подрядчик ответил просто: «Вы приняли работы без замечаний, акт подписан, претензий нет»."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени на приёмке новостройки подписали акт без замечаний — банк остановил регистрацию из-за дефектов 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "custom-solar-flow-card/logo.svg at main · zarzak12/custom ... - GitHub",
+          "url": "https://github.com/zarzak12/custom-solar-flow-card/blob/main/logo.svg",
+          "snippet": ""
+        },
+        {
+          "title": "docs/favicon.svg at main · scheuclu/docs · GitHub",
+          "url": "https://github.com/scheuclu/docs/blob/main/favicon.svg",
+          "snippet": "Contribute to zarzak12/custom-solar-flow-card development by creating an account on GitHub."
+        },
+        {
+          "title": "BibleQuizzing/19f17c3817b618c4280da8d873b544b8.svg at main ...",
+          "url": "https://github.com/SmashcardsService/BibleQuizzing/blob/main/19f17c3817b618c4280da8d873b544b8.svg",
+          "snippet": "Contribute to scheuclu/docs development by creating an account on GitHub."
+        },
+        {
+          "title": "worldmonitor/new-world-monitor.png at main · aDavidBravo/worldmonitor",
+          "url": "https://github.com/aDavidBravo/worldmonitor/blob/main/new-world-monitor.png",
+          "snippet": "GitHub Copilot appDirect agents from issue to merge. MCP RegistryIntegrate external tools. DEVELOPER WORKFLOWS. ActionsAutomate any workflow. CodespacesInstant dev environments. IssuesPlan and track work. Code ReviewManage code changes. Code QualityEnforce quality at merge. APPLICATION SECURITY. GitHub Advanced SecurityFind and fix vulnerabilities."
+        },
+        {
+          "title": "nezha-v0/resource/static/brand.svg at master - GitHub",
+          "url": "https://github.com/Ms27520/nezha-v0/blob/master/resource/static/brand.svg",
+          "snippet": "Download raw file Edit and raw actions Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        },
+        {
+          "title": "xpu_graph/docs/xpu_graph_arch.png at master · XPU-Forces/xpu_graph · GitHub",
+          "url": "https://github.com/XPU-Forces/xpu_graph/blob/master/docs/xpu_graph_arch.png",
+          "snippet": "GitHub Copilot appDirect agents from issue to merge. MCP RegistryIntegrate external tools. DEVELOPER WORKFLOWS. ActionsAutomate any workflow. CodespacesInstant dev environments. IssuesPlan and track work. Code ReviewManage code changes. Code QualityEnforce quality at merge. APPLICATION SECURITY. GitHub Advanced SecurityFind and fix vulnerabilities."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени на приёмке новостройки подписали акт без замечаний — банк остановил регистрацию из-за дефектов forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "На приёмке новостройки в Тюмени нашли мокрую стяжку — ключи не выдали ...",
+          "url": "https://dzen.ru/a/apZvsyWD6W9q5lHp",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени застройщик потребовал акт с дефектами — иначе без ключей | The ...",
+          "url": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt/",
+          "snippet": "Именно здесь ломается большинство историй, которые приходят ко мне через месяц: подписали «без замечаний» под устное «исправим» — и теперь доказывают они, а не застройщик."
+        },
+        {
+          "title": "«Мы были в шоке»: приемщики раскрывают проблемы тюменских новостроек",
+          "url": "https://nashgorod.ru/news/2025-05-21/my-byli-v-shoke-priemschiki-raskryvayut-problemy-tyumenskih-novostroek-5394914",
+          "snippet": "Семья подпись «без замечаний» не поставила — оформила акт осмотра с перечнем, записала прямо в нём отказ представителя подписывать ведомость и отсняла каждый пункт."
+        },
+        {
+          "title": "Подписали акт без замечаний — потом жаловаться поздно",
+          "url": "https://dzen.ru/a/aKVW4u_gnBBLJluF",
+          "snippet": "Приемщики и строители раскрыли проблемы тюменских новостроек. Тюменцы всё чаще сталкиваются с дефектами в новых квартирах: кривые стены, щели, проблемы с вентиляцией. Приёмщики находят десятки нарушений, а застройщики экономят на всём — от материалов до рабочих. Почему новостройки всё хуже?"
+        },
+        {
+          "title": "Условие о приёмке без замечаний: как одна фраза в акте закрывает все ...",
+          "url": "https://zakon.ru/discussion/2026/05/14/uslovie_o_priyomke_bez_zamechanij_kak_odna_fraza_v_akte_zakryvaet_vse_pretenzii_po_kachestvu",
+          "snippet": "При приёмке вы видели их или могли увидеть, но всё равно подписали без оговорок. Прошёл срок, установленный договором или законом, для предъявления претензий по качеству."
+        },
+        {
+          "title": "Компенсация после приёмки квартиры: можно ли требовать и как действовать",
+          "url": "https://lex-pravo.ru/blog/kompensaciya-posle-priemki-kvartiry/",
+          "snippet": "У меня был клиент — средний подрядчик в сфере промышленного строительства. Заказчик подписал акт КС-2 без замечаний, через шесть недель обнаружил дефекты в несущих конструкциях, направил претензию. Подрядчик ответил просто: «Вы приняли работы без замечаний, акт подписан, претензий нет»."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    }
+  ],
+  "errors": []
+}

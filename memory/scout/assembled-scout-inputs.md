@@ -1,89 +1,75 @@
-# Scout inputs — 2026-09-05 (B23)
+# Scout inputs — 2026-09-09 (B24 ONLY — NOT B23)
 
-**CRITICAL EXECUTION CONTEXT:** You are already running inside `excalibur_blog_derouter_opus_chat.py` (utility tier gpt-5.6-terra). The conductor completed all shell/MCP/Wordstat gates. **Your job is ONLY to write the Scout handoff markdown body** — no tool calls, no BLOCKER messages, no refusals. Output the complete handoff text now.
+**FORBIDDEN:** Do NOT write B23, apartments-vs-flat, or cluster `newbuild_apartments_instead_flat_ddu_tyumen`. That topic is CLOSED and published.
 
-**run_date:** 2026-09-05 (YEKT Saturday slot ~12:00)
-**tenant:** The Риэлтор — Святослав Шакин, Тюмень (tymenrieltor.ru)
+**MANDATORY topic lock for this run:**
+- topic_id: **B24**
+- cluster_id: **acceptance_defects_penalty**
+- title: **В Тюмени на приёмке новостройки подписали акт без замечаний — банк остановил регистрацию из-за дефектов**
+
+**CRITICAL EXECUTION CONTEXT:** You are inside `excalibur_blog_derouter_opus_chat.py` (utility tier gpt-5.6-terra). **Write ONLY the Scout handoff markdown** for B24 acceptance_defects_penalty — no tool calls, no refusals.
+
+**run_date:** 2026-09-09 (YEKT weekday slot ~09:00)
+**tenant:** The Риэлтор — Святослав Шакин, Тюмень
+**topic_id:** B24
 **topic_market_focus:** newbuild_only
-**dzen_rf_pack:** true — Meta/Instagram/Facebook/LinkedIn/X/Discord/VPN heroes DENY
 
 ## Anti-repeat preflight (DONE)
 
-- `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters` → 21 active locks (last_sync 2026-09-05)
-- **Live WP 2026-09-05 (~12 titles) — DO NOT reuse plot:**
-  - инвестор: аренда запрещена до ключей в ДДУ
-  - переуступка +280к за сутки до ДДУ
-  - трейд-ин сорвался за день до ДДУ
-  - оценка банка ниже цены ДДУ на 400к
-  - категория земли сорвала ипотеку на дом в посёлке
-  - аванс на чужой счёт
-  - банк поднял ставку ипотеки перед ДДУ (B22)
-  - застройщик потребовал акт с дефектами — иначе без ключей
-  - банк снял одобрение ипотеки за 72 часа до ДДУ
-  - чистовая vs предчистовая в ДДУ
-  - ключи задержали 8 месяцев — неустойка сертификатом
-  - на приёмке не хватило метров — отказ в пересчёте
-- **Rejected overlap:** parking/cellar angle «оплатили машиноместо по ДДУ» → 47% overlap with B21 cellar cluster
-- **Rejected overlap:** matkapital/PFR return → overlap with live «банк снял одобрение 72ч»
-- **Rejected overlap:** developer installment cancelled → overlap with trade-in/day-before-DDU cluster
-- `scout_helper.py --check-query` PASS for proposed title+cluster+slug
-- `excalibur_blog_topic_focus.py` PASS (on-focus: квартир, дду)
+- `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters` → 27 active locks (last_sync 2026-09-09)
+- Live WP last ~12 (2026-09-05–2026-09-08) — closed newbuild plots include: escrow shortfall, wrong floor, double sale, apartamenty vs kvartira, mortgage rate hike, matkapital before keys, assignment debt, keys without permission, co-borrower removed, installment overdue, cottage gas, land area, extra finishing payment, trade-in rejected, booking expired, appraisal below DDU, keys delay penalty
+- **Formula spam last 3 mechanisms:** keys_without_commissioning_permit | assignment_debt_found | matkapital_before_keys_child_shares — proposed angle is **acceptance/act defects**, distinct
+- `scout_helper.py --check-query` PASS
+- `excalibur_blog_topic_focus.py` PASS (marker: новострой)
 
-## Proposed topic (PASS topic_focus + scout_helper + story_dup PASS)
+## Proposed topic (PASS all gates)
 
-- **topic_id:** B23
-- **title_draft:** В Тюмени в ДДУ написали квартиру — в выписке оказались апартаменты
-- **slug:** v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty
-- **cluster_id (new):** newbuild_apartments_instead_flat_ddu_tyumen
-- **story_dup_check:** PASS — distinct legal plot: в ДДУ и рекламе объект назван «квартира»/жилое помещение, семья внесла аванс и подписала ипотеку под жильё; при регистрации права в Росреестре в выписке ЕГРН статус — **апартаменты** (нежилое/коммерческое назначение) → выше коммуналка, нет прописки, ипотечная программа под угрозой, застройщик ссылается на формулировку в приложении к ДДУ
+- **title_draft:** В Тюмени на приёмке новостройки подписали акт без замечаний — банк остановил регистрацию из-за дефектов
+- **slug:** v-tyumeni-na-priemke-novostrojki-podpisali-akt-bez-zamechanij-bank-ostanovil-registraciyu
+- **cluster_id:** acceptance_defects_penalty
+- **top_energy_mirror:** paper_clean_then_broke
+- **newbuild_mechanism:** акт приёмки-передачи по ДДУ — семья подписала «без замечаний» под давлением менеджера («потом исправим»), через несколько дней независимая приёмка нашла дефекты; банк приостановил регистрацию права и выдачу остатка ипотеки, застройщик отказался устранять по уже подписанному акту
+- **why_newbuild_not_secondary:** сюжет только про сдачу объекта по ДДУ от застройщика, акт приёмки-передачи и ипотечную регистрацию новостройки — не осмотр вторички и не ЕГРН-продавец
 
-## Dzen news-casus shape (target PASS)
+## Dzen news-casus shape (PASS)
 
-- **event:** семья в Тюмени выбрала «квартиру» в новостройке, подписала ДДУ и ипотеку, деньги ушли на эскроу
-- **risk:** при подаче на регистрацию права в ЕГРН объект зарегистрирован как **апартаменты**, а не жилое помещение — нет постоянной регистрации, коммунальные тарифы как у коммерции, семейная/льготная ипотека может не пройти, налог и перепродажа по другим правилам
-- **time:** на этапе регистрации права после сдачи дома / перед получением ключей (через 2–3 недели после подачи документов)
-- **finale:** банк приостановил выдачу остатка ипотеки; застройщик отказался менять назначение; семья остановила приёмку и подала претензию — ключи не получили, спор ушёл в досудебку (или суд с требованием признать объект жилым / расторгнуть ДДУ)
-- **comment_magnet_angle:** «В ДДУ везде написано „квартира“, а в выписке — апартаменты: вы бы всё равно подписали акт приёмки или шли бы в суд, даже если ключи уже «на столе»?»
+- **event:** семья получила ключи от новостройки в Тюмени, на приёмке подписала акт без замечаний
+- **risk:** скрытые дефекты (отделка, окна, инженерия) + подписанный акт лишает претензий; банк не регистрирует право при открытых недоделках
+- **time:** через 5 дней после подписания акта, на этапе подачи документов в Росреестр
+- **finale:** банк остановил регистрацию и выдачу транша; застройщик отказал в бесплатном устранении — семья подала претензию, ключи формально получены, но право не зарегистрировано, ипотека «в подвешенном состоянии»
+- **comment_magnet_angle:** «Менеджер сказал „подпишите, потом исправим“ — вы бы подписали акт без замечаний или отказались от ключей в тот же день?»
 
 ## Klyshin hook
 
-- **klyshin_hook:** none | original: none (fresh Tyumen newbuild apartments-vs-flat casus without Klyshin — preferred; avoids today's 12 live plots and B21 cellar/parking overlap)
+- **klyshin_hook:** none (fresh Tyumen newbuild acceptance casus without Klyshin)
 
-## Wordstat MCP-KV (live 2026-09-05)
+## Wordstat MCP-KV (live 2026-09-09)
 
-**Preflight:** wordstat_get_user_info OK (Yandex Cloud API, Folder ID b1g6bq34gkivjj20be06)
+**Preflight:** wordstat_get_user_info OK (Yandex Cloud API)
 
-| probe | regions | freq (phrase total) |
-|-------|---------|---------------------|
-| апартаменты тюмень | 55 | 646 (noisy tail — отели/прочее) |
-| купить апартаменты в тюмени | 55 | 35 (buyer, narrow) |
-| маткапитал новостройка | 55 | 1 (rejected — B19 escrow cluster) |
-| рассрочка застройщик новостройка | 55 | 2 (rejected — overlap trade-in/day-before-DDU) |
-| машиноместо новостройка | 55 | 2 (rejected — 47% overlap B21 cellar) |
-| **новостройки тюмень** | **55** | **3640** |
-| новостройки тюмень | 11176 | (included in Tyumen metro demand) |
-| **новостройки тюмень** | **225 (compare)** | **8705** |
-| купить новостройку в тюмени | 55 | 639 (context) |
+| probe | regions | freq |
+|-------|---------|------|
+| приемка квартиры в новостройке | 55+11176 | 122 |
+| приемка квартиры в новостройке | 225 compare | 6032 |
+| приемка квартиры в новостройке тюмень | 55+11176 | 32 |
+| акт приемки передачи квартиры | 55+11176 | 37 (tail secondary) |
+| дефекты при приемке новостройки | 55+11176 | API empty |
 
-**wordstat_rework log:**
-- probe «апартаменты тюмень» 55 → 646; top child «купить апартаменты в тюмени» → 35 (on-topic but weak vs newbuild spine; tail polluted)
-- probe «маткапитал новостройка» 55 → 1 (weak; matkapital/escrow plot taken by B19)
-- probe «машиноместо новостройка» 55 → 2 (weak; cellar/parking plot overlap B21)
-- probe «рассрочка застройщик новостройка» 55 → 2 (weak; day-before-DDU timing cluster on live)
-- **rework:** localize Tyumen + newbuild buyer jargon (новостройки, ДДУ, выписка ЕГРН) → **final P0 «новостройки тюмень» regions 55,11176,compare225 freq 3640 (55) / 8705 (RU225)**
+**wordstat_rework:**
+- probe «приемка квартиры в новостройке» 55+11176 → 122
+- probe «акт приемки передачи квартиры» 55+11176 → 37 (secondary tail in top requests)
+- rework: localize Tyumen → **final P0 «приемка квартиры в новостройке тюмень» 55+11176 freq 32** (parent spine 122 / RU 6032)
 
 ## signal_urls (research)
 
-- https://dzen.ru/holyslav — контекст новостроек и ипотеки; не дубль кластера
-- https://www.consultant.ru/document/cons_doc_LAW_51057/ — ГрК РФ / жилое vs нежилое (контекст апартаментов)
-- https://www.domrf.ru/ — справочник застройщиков / ДДУ (контекст регистрации)
-- https://t.me/klyshin_A — checked, not used this slot
-- {{SITE_BASE}}/blog/
+- https://dzen.ru/holyslav
+- https://www.consultant.ru/document/cons_doc_LAW_51057/ — ГрК РФ, приёмка долевого строительства
+- https://www.domrf.ru/
 - https://t.me/Tyumen_Rieltor
+- {{SITE_BASE}}/blog/
 
 ## Output required
 
-Write complete Scout handoff markdown per SKILL.md with all fields:
-wordstat_preflight, klyshin_hook, anti_repeat_preflight, dzen_casus_shape PASS (event/risk/time/finale), comment_magnet_angle, wordstat_rework, wordstat P0 with mcp_kv + regions 55,11176,compare225, story_dup_check PASS + cluster_id.
-
-Lock topic_id B23, title, slug, signal_urls, research angles for Research role.
+Write complete Scout handoff markdown per SKILL.md with ALL fields:
+wordstat_preflight, top_energy_mirror, newbuild_mechanism, why_newbuild_not_secondary, klyshin_hook, anti_repeat_preflight, dzen_casus_shape PASS (event/risk/time/finale), comment_magnet_angle, wordstat_rework, wordstat P0, story_dup_check PASS + cluster_id, h1_fingerprint_check, formula_spam_check, anti_dupe_hard PASS.
+Lock topic_id B24, title, slug, signal_urls.
