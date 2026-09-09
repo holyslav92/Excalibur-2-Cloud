@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-09",
+    "today_ru": "09.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "среда"
+  },
+  "topic": {
+    "topic_id": "B24",
+    "title": "В Тюмени за год просрочки ключей застройщик не выплатил неустойку — приёмку остановили",
+    "h1": "В Тюмени за год просрочки ключей застройщик не выплатил неустойку — приёмку остановили",
+    "slug": "v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku-",
+    "primary_query": "В Тюмени за год просрочки ключей застройщик не выплатил неустойку — приёмку остановили",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени за год просрочки ключей застройщик не выплатил неустойку — приёмку остановили 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Тюменцы получат компенсации от застройщиков за не вовремя сданные ...",
+          "url": "https://nashgorod.ru/news/2026-04-06/tyumentsy-poluchat-kompensatsii-ot-zastroyschikov-za-nevovremya-sdannye-kvartiry-5575253",
+          "snippet": ""
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома — как взыскать неустойку по ДДУ в 2026 ...",
+          "url": "https://jalober.ru/blog/zastrojshchik-prosrochil-sdachu-doma",
+          "snippet": "С 1 января 2026 года в России отменили мораторий на штрафы для застройщиков, которые не передают ключи от квартир вовремя. Нововведения означают, что дольщики могут получить неустойку."
+        },
+        {
+          "title": "Мораторий на взыскание неустойки с застройщика отменен с 1 января 2026 ...",
+          "url": "https://vc.ru/legal/2678584-otmena-moratoriya-na-neustoyki-zastroyshchikov-s-2026-goda",
+          "snippet": "Застройщик обещал ключи в 2025 году, а на дворе 2026-й — квартиры до сих пор нет. С 1 января 2026 года мораторий на неустойку по ДДУ снят, и дольщики снова могут требовать полную компенсацию."
+        },
+        {
+          "title": "Квартиру сдают позже срока: как взыскать с застройщика неустойку в 2026 ...",
+          "url": "https://rg.ru/2026/02/05/dolshchik-vprave-trebovat-neustojku-s-zastrojshchika-za-kazhdyj-den-prosrochki.html",
+          "snippet": "Итак, с 1 января 2026 года отменен мораторий для застройщиков на штрафы и неустойки за нарушение условий ДДУ: задержку сроков выдачи ключей и передачу квартир с дефектами. Последний мораторий действовал с марта 2024 и несколько раз продлевался."
+        },
+        {
+          "title": "Взыскание неустойки с застройщика в 2026: свежая судебная практика и ...",
+          "url": "https://harant.ru/blog/zhilishchnye-voprosy/vzyskanie-neustojki-dolshhikom-pri-prosrochke-peredachi-kvartiry-aktualnaya-praktika-na-yanvar-2026-go/",
+          "snippet": "С 1 января 2026 года дольщики могут снова требовать с застройщика неустойку за задержку сдачи жилья. Мораторий на такие выплаты закончился, но для \"старых\" долгов действует годовая..."
+        },
+        {
+          "title": "Правила расчета неустойки по ДДУ в 2026 году с учетом мораторных ...",
+          "url": "https://mkau.ru/articles/pravila-rasceta-neustoiki-po-ddu-v-2026-godu-s-ucetom-moratornyx-ogranicenii-v-raznye-periody",
+          "snippet": "Застройщик задержал сдачу квартиры? Узнайте, как в 2026 году взыскать неустойку, актуальные законы, ставки и советы — читайте разбор с примерами!"
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени за год просрочки ключей застройщик не выплатил неустойку — приёмку остановили 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Тюменцы получат компенсации от застройщиков за не вовремя сданные ...",
+          "url": "https://nashgorod.ru/news/2026-04-06/tyumentsy-poluchat-kompensatsii-ot-zastroyschikov-za-nevovremya-sdannye-kvartiry-5575253",
+          "snippet": ""
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома — как взыскать неустойку по ДДУ в 2026 ...",
+          "url": "https://jalober.ru/blog/zastrojshchik-prosrochil-sdachu-doma",
+          "snippet": "С 1 января 2026 года в России отменили мораторий на штрафы для застройщиков, которые не передают ключи от квартир вовремя. Нововведения означают, что дольщики могут получить неустойку."
+        },
+        {
+          "title": "Мораторий на взыскание неустойки с застройщика отменен с 1 января 2026 ...",
+          "url": "https://vc.ru/legal/2678584-otmena-moratoriya-na-neustoyki-zastroyshchikov-s-2026-goda",
+          "snippet": "Застройщик обещал ключи в 2025 году, а на дворе 2026-й — квартиры до сих пор нет. С 1 января 2026 года мораторий на неустойку по ДДУ снят, и дольщики снова могут требовать полную компенсацию."
+        },
+        {
+          "title": "Квартиру сдают позже срока: как взыскать с застройщика неустойку в 2026 ...",
+          "url": "https://rg.ru/2026/02/05/dolshchik-vprave-trebovat-neustojku-s-zastrojshchika-za-kazhdyj-den-prosrochki.html",
+          "snippet": "Итак, с 1 января 2026 года отменен мораторий для застройщиков на штрафы и неустойки за нарушение условий ДДУ: задержку сроков выдачи ключей и передачу квартир с дефектами. Последний мораторий действовал с марта 2024 и несколько раз продлевался."
+        },
+        {
+          "title": "Взыскание неустойки с застройщика в 2026: свежая судебная практика и ...",
+          "url": "https://harant.ru/blog/zhilishchnye-voprosy/vzyskanie-neustojki-dolshhikom-pri-prosrochke-peredachi-kvartiry-aktualnaya-praktika-na-yanvar-2026-go/",
+          "snippet": "С 1 января 2026 года дольщики могут снова требовать с застройщика неустойку за задержку сдачи жилья. Мораторий на такие выплаты закончился, но для \"старых\" долгов действует годовая..."
+        },
+        {
+          "title": "Правила расчета неустойки по ДДУ в 2026 году с учетом мораторных ...",
+          "url": "https://mkau.ru/articles/pravila-rasceta-neustoiki-po-ddu-v-2026-godu-s-ucetom-moratornyx-ogranicenii-v-raznye-periody",
+          "snippet": "Застройщик задержал сдачу квартиры? Узнайте, как в 2026 году взыскать неустойку, актуальные законы, ставки и советы — читайте разбор с примерами!"
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени за год просрочки ключей застройщик не выплатил неустойку — приёмку остановили official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Тюменцы получат компенсации от застройщиков за не вовремя сданные ...",
+          "url": "https://nashgorod.ru/news/2026-04-06/tyumentsy-poluchat-kompensatsii-ot-zastroyschikov-za-nevovremya-sdannye-kvartiry-5575253",
+          "snippet": ""
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома — как взыскать неустойку по ДДУ в 2026 ...",
+          "url": "https://jalober.ru/blog/zastrojshchik-prosrochil-sdachu-doma",
+          "snippet": "С 1 января 2026 года в России отменили мораторий на штрафы для застройщиков, которые не передают ключи от квартир вовремя. Нововведения означают, что дольщики могут получить неустойку."
+        },
+        {
+          "title": "Квартиру сдают позже срока: как взыскать с застройщика неустойку в 2026 ...",
+          "url": "https://rg.ru/2026/02/05/dolshchik-vprave-trebovat-neustojku-s-zastrojshchika-za-kazhdyj-den-prosrochki.html",
+          "snippet": "Застройщик обещал ключи в 2025 году, а на дворе 2026-й — квартиры до сих пор нет. С 1 января 2026 года мораторий на неустойку по ДДУ снят, и дольщики снова могут требовать полную компенсацию."
+        },
+        {
+          "title": "Что делать, если застройщик вовремя не сдает дом - Недвижимость ...",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/chto-delat-esli-zastrojshhik-vovremya-ne-sdaet-dom",
+          "snippet": "С 1 января 2026 года дольщики могут снова требовать с застройщика неустойку за задержку сдачи жилья. Мораторий на такие выплаты закончился, но для \"старых\" долгов действует годовая отсрочка...."
+        },
+        {
+          "title": "Взыскание неустойки с застройщика в 2026: свежая судебная практика и ...",
+          "url": "https://harant.ru/blog/zhilishchnye-voprosy/vzyskanie-neustojki-dolshhikom-pri-prosrochke-peredachi-kvartiry-aktualnaya-praktika-na-yanvar-2026-go/",
+          "snippet": "Если к этому моменту ключи не получены, возникает просрочка. Рассказываем в статье, как быть, если застройщик срывает сроки сдачи дома."
+        },
+        {
+          "title": "В Тюмени застройщик потребовал акт с дефектами — иначе без ключей | The ...",
+          "url": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt/",
+          "snippet": "Застройщик задержал сдачу квартиры? Узнайте, как в 2026 году взыскать неустойку, актуальные законы, ставки и советы — читайте разбор с примерами!"
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени за год просрочки ключей застройщик не выплатил неустойку — приёмку остановили 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Как вытащить vpn список vless серверов из happ подписки для v2raya ...",
+          "url": "https://gist.github.com/bubasik/af37247b71ca0b253161b48614aba61a",
+          "snippet": ""
+        },
+        {
+          "title": "Роблокс перестал работать с запретом · Flowseal zapret-discord-youtube ...",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/discussions/7618",
+          "snippet": "Чтобы подключить больше 3-5 устройств: Способ 1: Сгенерировать новый HWID // Вставь в скрипт или выполни отдельно:echobin2hex(random_bytes(16)); // 32 символа, например: a1b2c3d4e5f6..."
+        },
+        {
+          "title": "VPN VLESS Configs Russia - GitHub",
+          "url": "https://github.com/kort0881/vpn-vless-configs-russia",
+          "snippet": "У кого отвалился Roblox надо в ipset-all добавить ipv4 адреса. (Для zapret на windows только ipv4 нужно, для linux желательно еще ipv6 добавить, так стабильнее работает)"
+        },
+        {
+          "title": "Восстанавливаем доступ к ДС с помощью Amnezia WG · GitHub",
+          "url": "https://gist.github.com/EgorBron/d190b0e45daa372db45f90240ce268ea",
+          "snippet": "Этот репозиторий создан исключительно в образовательных целях для изучения криптографических протоколов и сетевой безопасности. Автор: НЕ призывает к нарушению законодательства"
+        },
+        {
+          "title": "Проверка наличия существующих ключей SSH - Документация GitHub",
+          "url": "https://docs.github.com/ru/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys",
+          "snippet": "Но в свете последних событий — сбои Cloudflare (как с их стороны, так и со стороны этой страны), появления адекватных способов сделать всё как раньше,"
+        },
+        {
+          "title": "[Проблема] Просит одноразовый ключ · Issue #2567 · Flowseal/zapret ...",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/issues/2567",
+          "snippet": "Проверьте список файлов каталога, чтобы узнать, есть ли у вас открытый ключ SSH. По умолчанию имена файлов поддерживаемых открытых ключей для GitHub являются одним из следующих."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени за год просрочки ключей застройщик не выплатил неустойку — приёмку остановили forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Застройщик просрочил сдачу дома — как взыскать неустойку по ДДУ в 2026 ...",
+          "url": "https://jalober.ru/blog/zastrojshchik-prosrochil-sdachu-doma",
+          "snippet": ""
+        },
+        {
+          "title": "Тюменцы получат компенсации от застройщиков за не вовремя сданные ...",
+          "url": "https://nashgorod.ru/news/2026-04-06/tyumentsy-poluchat-kompensatsii-ot-zastroyschikov-za-nevovremya-sdannye-kvartiry-5575253",
+          "snippet": "Застройщик обещал ключи в 2025 году, а на дворе 2026-й — квартиры до сих пор нет. С 1 января 2026 года мораторий на неустойку по ДДУ снят, и дольщики снова могут требовать полную компенсацию."
+        },
+        {
+          "title": "Квартиру сдают позже срока: как взыскать с застройщика неустойку в 2026 ...",
+          "url": "https://rg.ru/2026/02/05/dolshchik-vprave-trebovat-neustojku-s-zastrojshchika-za-kazhdyj-den-prosrochki.html",
+          "snippet": "С 1 января 2026 года в России отменили мораторий на штрафы для застройщиков, которые не передают ключи от квартир вовремя. Нововведения означают, что дольщики могут получить неустойку."
+        },
+        {
+          "title": "Неустойка по ДДУ: когда застройщик обязан выплатить компенсацию за ...",
+          "url": "https://harant.ru/questions/q-135551/",
+          "snippet": "С 1 января 2026 года дольщики могут снова требовать с застройщика неустойку за задержку сдачи жилья. Мораторий на такие выплаты закончился, но для \"старых\" долгов действует годовая отсрочка...."
+        },
+        {
+          "title": "Мораторий на взыскание неустойки с застройщика отменен с 1 января 2026 ...",
+          "url": "https://vc.ru/legal/2678584-otmena-moratoriya-na-neustoyki-zastroyshchikov-s-2026-goda",
+          "snippet": "На январь 2026 года мораторий на начисление неустойки закончился 31 декабря 2025-го. Если подать претензию сейчас, застройщик обязан ответить в течение 10 рабочих дней и выплатить то, что причитается. Отсрочки до конца 2026 года действуют только для требований, заявленных раньше (до 2025 года)."
+        },
+        {
+          "title": "Взыскание неустойки с застройщика в 2026: свежая судебная практика и ...",
+          "url": "https://harant.ru/blog/zhilishchnye-voprosy/vzyskanie-neustojki-dolshhikom-pri-prosrochke-peredachi-kvartiry-aktualnaya-praktika-na-yanvar-2026-go/",
+          "snippet": "Итак, с 1 января 2026 года отменен мораторий для застройщиков на штрафы и неустойки за нарушение условий ДДУ: задержку сроков выдачи ключей и передачу квартир с дефектами."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    }
+  ],
+  "errors": []
+}
