@@ -1,0 +1,77 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-09",
+  "derouter": {
+    "status": "OK",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "note": "First attempt OK"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://novostroikino.ru/news/ploshchad-kvartir-novostroyki-moskva-umenshaetsya-2026/",
+        "type": "news",
+        "date": "2026-09-08",
+        "note": "Novostroikino — сжатие планировок/метража в новостройках; свежий рыночный контекст (~1 day before research)"
+      },
+      {
+        "url": "https://novostroikino.ru/news/snizhenie-cen-novostroyki-moskva-vtoroy-mesyac-2026/",
+        "type": "news",
+        "date": "2026-09-07",
+        "note": "Novostroikino — цены на новостройки, свежая новость недели"
+      },
+      {
+        "url": "https://novostroikino.ru/blog/planirovka-kvartiry-v-novostroyke-ne-sovpadaet-s-ddu-2026/",
+        "type": "community",
+        "date": "2026-07-28",
+        "note": "Прямой механизм: балкон на плане ДДУ отсутствует на приёмке; дополняет свежие news-сигналы"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4642,
+    "p0_volume_ru225": 8616,
+    "support_phrases": [
+      {"phrase": "проектная декларация застройщика", "volume": 20},
+      {"phrase": "балкон новостройка", "volume": 25},
+      {"phrase": "новостройки с балконами", "volume": 13},
+      {"phrase": "приемка квартиры в новостройке тюмень", "volume": 30}
+    ],
+    "rework_from": "балкон новостройка (25) → новостройки с балконами (13) → проектная декларация (20) → P0 новостройки тюмень (4642)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_project_declaration_balcony_removed_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["dom_rf", "legalacts_214_fz"],
+    "errors": [],
+    "note": "214-FZ st.4/5/7/9/19 via legalacts.ru (ред. 09.04.2026); ЕИСЖС наш.дом.рф"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs-compact.md",
+    "assembled_inputs_compact": "assembled-research-inputs-compact.md"
+  },
+  "article_dir": "memory/blog/articles/B24-v-tyumeni-izmenili-proektnuyu-deklaraciyu-v-novoj-planirovke-propal-balkon-iz-dd",
+  "incident_report": "none"
+}
