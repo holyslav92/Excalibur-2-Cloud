@@ -3,7 +3,7 @@
   "status": "PASS",
   "required_entities": [],
   "entities_checked": [],
-  "has_official_verifications_section": false,
+  "has_official_verifications_section": true,
   "errors": [],
   "warnings": []
 }
