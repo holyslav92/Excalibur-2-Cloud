@@ -1,0 +1,64 @@
+{
+  "topic_id": "B24",
+  "cluster_id": "finish_package_mismatch_ddu_tyumen",
+  "assembled_at": "2026-09-10",
+  "scout_signal_urls": [
+    "https://www.consultant.ru/document/cons_doc_LAW_51038/",
+    "https://www.domrf.ru/",
+    "https://dzen.ru/holyslav",
+    "https://t.me/Tyumen_Rieltor"
+  ],
+  "research_verified_urls": [
+    {
+      "url": "https://dzen.ru/a/amtYRpP-tkHrf4uj",
+      "type": "community",
+      "date": "2026-09-09",
+      "note": "Приёмка новостройки Тюмень 2026 — сравнение с приложениями к ДДУ, фиксация отсутствия отделки"
+    },
+    {
+      "url": "https://t.me/s/deptmn/8572",
+      "type": "community",
+      "date": "2026-09",
+      "note": "Департамент Недвижимости Тюмень — whitebox vs квартира с ремонтом как разные продукты"
+    },
+    {
+      "url": "https://kvarnado.ru/priemka-kvartiry/guide-priemka-kvartiry-white-box",
+      "type": "expert_media",
+      "date": "2026-05-18",
+      "note": "Приёмка whitebox — сверка с ДДУ, риск упрощённой сдачи"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/",
+      "type": "official",
+      "date": "2026-09-10",
+      "note": "214-ФЗ ст. 4, 7, 8, 10, 19"
+    },
+    {
+      "url": "https://наш.дом.рф/",
+      "type": "official",
+      "date": "2026-09-10",
+      "note": "Проектная декларация, ЕИСЖС"
+    },
+    {
+      "url": "https://gradbase.ru/guide/kvartira-v-novostrojke-s-otdelkoj-ot-zastrojshchika",
+      "type": "expert_media",
+      "date": "2026-05-07",
+      "note": "Контекст видов отделки, ГОСТ 72509-2026, приказ Минстроя №91/пр"
+    },
+    {
+      "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/priemka-obekta-po-ddu/nedostatki-kachestva-ddu/",
+      "type": "legal_media",
+      "date": "2026-09-10",
+      "note": "Претензионная практика по недостаткам ДДУ"
+    }
+  ],
+  "writer_safe_urls": [
+    "https://www.consultant.ru/document/cons_doc_LAW_51038/",
+    "https://наш.дом.рф/",
+    "https://дом.рф/",
+    "https://dzen.ru/a/amtYRpP-tkHrf4uj",
+    "https://kvarnado.ru/priemka-kvartiry/guide-priemka-kvartiry-white-box",
+    "https://dzen.ru/holyslav",
+    "https://t.me/Tyumen_Rieltor"
+  ]
+}
