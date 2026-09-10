@@ -1,0 +1,58 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B24-v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu/cover/cover.png",
+  "last_errors": [
+    "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+    "pixel_no_text_on_clothing FAIL: dark_ink_frac=0.062 on chest/clothes",
+    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0000 chest_blue=0.030 smear=0.000",
+    "pixel_phone_readable FAIL: phone_digits='29220016508' ink=2104 clipped=True",
+    "pixel_phone_not_clipped FAIL: digits='29220016508' clipped=True ocr='2 922001 6508 | +79220016505 | +79220016505'",
+    "pixel_hook_title_not_truncated FAIL: truncated=True missing=['Застройщик', 'отдал', 'обещанного'] last_word='ремонта' ocr='квартиру без ремонт'",
+    "pixel_no_collage_inset FAIL: white_frac=0.478 inset_face=False blob_count=3",
+    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.3889",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model_tier": "standard",
+      "bytes": 1000821,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_hook_title_not_truncated FAIL: truncated=True missing=['Застройщик'] last_word='ремонта' ocr='астройщик отдал квартир е3 обещанного ремонта'",
+        "pixel_no_collage_inset FAIL: white_frac=0.553 inset_face=False blob_count=6",
+        "pixel_meme_present FAIL: orange_fur=0 legacy=2 host_face=True",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.0656",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model_tier": "standard",
+      "bytes": 1071038,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+        "pixel_no_text_on_clothing FAIL: dark_ink_frac=0.062 on chest/clothes",
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0000 chest_blue=0.030 smear=0.000",
+        "pixel_phone_readable FAIL: phone_digits='29220016508' ink=2104 clipped=True",
+        "pixel_phone_not_clipped FAIL: digits='29220016508' clipped=True ocr='2 922001 6508 | +79220016505 | +79220016505'",
+        "pixel_hook_title_not_truncated FAIL: truncated=True missing=['Застройщик', 'отдал', 'обещанного'] last_word='ремонта' ocr='квартиру без ремонт'",
+        "pixel_no_collage_inset FAIL: white_frac=0.478 inset_face=False blob_count=3",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.3889",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Re-run cover_qa_gate on best_candidate — analyze_cover_pixels applies OCR escape before verdict",
+    "Do NOT deep-dive Cover-QA source — if visual OK after escape, proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}
