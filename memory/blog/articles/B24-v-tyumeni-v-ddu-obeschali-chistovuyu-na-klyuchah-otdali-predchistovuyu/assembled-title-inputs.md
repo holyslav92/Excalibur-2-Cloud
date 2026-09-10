@@ -58,6 +58,8 @@ B02–B23 published. Avoid angles: расписка, задаток/торги, 
 - Strong verb, active voice, temporal marker when it helps («на ключах», «на приёмке», «в ДДУ»)
 - **H1 на русском:** «предчистовую» или «предчистовая» — **не** whitebox/англицизм в заголовке (slug = predchistovuyu)
 - Prefer scout title_draft energy: «В Тюmenи в ДДУ обещали чистовую — на ключах отдали предчистовую»
+- **HARD quality gate:** H1 **обязан** содержать цифру или срок. В лиде статьи уже есть «4 позиции чистовой отделки» — **встрой «4» в H1** (например: «обещали 4 позиции чистовой — на ключах отдали предчистовую»), не выдумывай другую цифру.
+- **HARD punch beat:** второй такт через **тире** (—) или сильный глагол следствия; сохрани scout-энергию «в ДДУ обещали … — на ключах отдали …».
 - One variant only
 - Include slug confirmation in angle or separate field if needed
 
