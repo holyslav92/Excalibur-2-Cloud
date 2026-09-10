@@ -30,8 +30,8 @@ PRIMARY_ENDPOINT = "https://api.derouter.ai/openai/v1/chat/completions"
 FALLBACK_ENDPOINT = "https://api.apikey.cloud/openai/v1/chat/completions"
 DEFAULT_TIMEOUT_SECONDS = 300
 MIN_TIMEOUT_SECONDS = 60
-DEFAULT_MAX_RETRIES = 1
-DEFAULT_RETRY_WAIT_SECONDS = 5
+DEFAULT_MAX_RETRIES = 5
+DEFAULT_RETRY_WAIT_SECONDS = 8
 
 DEFAULT_POWERFUL_MODEL = "gpt-6-astra"
 DEFAULT_TERRA_MODEL = "gpt-5.6-terra"
@@ -222,7 +222,7 @@ def load_text_arg(*, inline: str | None, path: str | None, label: str) -> str:
 
 
 def is_retryable_http(status: int) -> bool:
-    return status in {401, 403, 408, 429, 500, 502, 503, 504, 524}
+    return status in {401, 403, 408, 429, 500, 502, 503, 504, 524, 529}
 
 
 def http_chat_post(
