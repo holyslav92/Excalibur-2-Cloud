@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-10",
+  "topic_id": "B24",
+  "article_dir": "memory/blog/articles/B24-v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu",
+  "slug": "v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": []
+}
