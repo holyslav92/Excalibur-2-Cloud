@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru",
+  "topic_id": "B24",
+  "post_id": 10031,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1084892,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10031 slug=v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru\nOK categories=36,58,54\nOK yoast_social_image=1\nOK featured_image=10032\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10033 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru-inline-01.png\nOK inline_alt=10033\nOK inline_description=10033\nOK inline_image_upload=10034 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru-inline-02.png\nOK inline_alt=10034\nOK inline_description=10034\nOK inline_image_upload=10035 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru-inline-03.png\nOK inline_alt=10035\nOK inline_description=10035\nOK inline_image_upload=10036 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru-inline-04.png\nOK inline_alt=10036\nOK inline_description=10036\nOK inline_image_upload=10037 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru-inline-05.png\nOK inline_alt=10037\nOK inline_description=10037\nOK inline_image_upload=10038 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru-inline-06.png\nOK inline_alt=10038\nOK inline_description=10038\nOK inline_image_upload=10039 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru-inline-07.png\nOK inline_alt=10039\nOK inline_description=10039\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-trejd-in-sorvalsya-nakanune-ddu-zastrojschik-ne-prinyal-ih-kvartiru/",
+    "errors": []
+  }
+}
