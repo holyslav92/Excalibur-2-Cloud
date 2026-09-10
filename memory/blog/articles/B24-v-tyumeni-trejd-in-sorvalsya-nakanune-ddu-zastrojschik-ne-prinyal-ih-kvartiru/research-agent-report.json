@@ -1,0 +1,82 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-10",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://www.infullbroker.ru/ipoteka/kalkulyator/tyumen/",
+        "type": "market",
+        "note": "09.09.2026 — свежая витрина ипотеки Тюмени (345 предложений); рыночный фон перед заседанием ЦБ"
+      },
+      {
+        "url": "https://www.e1.ru/text/realty/2026/07/17/76537452/",
+        "type": "news/community",
+        "note": "17.07.2026 — дисконт trade-in 5–20%; комментарии читателей про занижение оценки"
+      },
+      {
+        "url": "https://cbr.ru/press/pr/?file=24072026_133000key.htm",
+        "type": "official",
+        "note": "24.07.2026 — ключевая 14%; заседание 11.09.2026 (контекст недели)"
+      },
+      {
+        "url": "https://ttis.ru/buy/trade-in",
+        "type": "official developer",
+        "note": "Официальные условия trade-in тюменского застройщика ТИС"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel (scout signal)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4670,
+    "p0_volume_ru225": 8607,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 899},
+      {"phrase": "ипотека новостройка тюмень", "volume": 201},
+      {"phrase": "трейд ин новостройка", "volume": 5},
+      {"phrase": "дду новостройка", "volume": 20},
+      {"phrase": "эскроу новостройка", "volume": 2}
+    ],
+    "rework_from": "scout P0 locked «новостройки тюмень» (4670) after narrow trade-in probes",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "trade_in_rejected_developer",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["cbr", "consultant_214fz", "tis_developer"],
+    "errors": [],
+    "note": "Key rate, 214-FZ escrow articles, TIS trade-in program limits; bank vitrine rates NOT verified (aggregator only)"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "derouter": {
+    "status": "PASS",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "note": "First attempt 529 overloaded; succeeded on retry"
+  },
+  "incident_report": "none"
+}
