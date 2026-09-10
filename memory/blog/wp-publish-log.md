@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-10
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450-
+- **post_id:** 10005
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450/
+- **featured_image:** 10006
+- **inline_images:** 10007–10013 (7)
+- **wp_category_slugs:** pokupka-kvartiry, riski-sdelki (category_ids=36,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23

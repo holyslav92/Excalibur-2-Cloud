@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "topic_id": "B24",
+  "slug": "v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450-",
+  "candidates_count": 21,
+  "outbound_found": [
+    {
+      "slug": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli",
+      "title": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli"
+    },
+    {
+      "slug": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi",
+      "title": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

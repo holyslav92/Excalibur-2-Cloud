@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450-",
+  "topic_id": "B24",
+  "post_id": 10005,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450-/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1079283,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10005 slug=v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450-\nOK categories=36,58\nOK yoast_social_image=1\nOK featured_image=10006\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10007 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450-inline-01.png\nOK inline_alt=10007\nOK inline_description=10007\nOK inline_image_upload=10008 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450-inline-02.png\nOK inline_alt=10008\nOK inline_description=10008\nOK inline_image_upload=10009 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450-inline-03.png\nOK inline_alt=10009\nOK inline_description=10009\nOK inline_image_upload=10010 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450-inline-04.png\nOK inline_alt=10010\nOK inline_description=10010\nOK inline_image_upload=10011 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450-inline-05.png\nOK inline_alt=10011\nOK inline_description=10011\nOK inline_image_upload=10012 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450-inline-06.png\nOK inline_alt=10012\nOK inline_description=10012\nOK inline_image_upload=10013 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450-inline-07.png\nOK inline_alt=10013\nOK inline_description=10013\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450/",
+    "errors": []
+  }
+}
