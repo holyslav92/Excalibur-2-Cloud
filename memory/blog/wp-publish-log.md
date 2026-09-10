@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-10
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu
+- **post_id:** 10044
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu/
+- **featured_image:** 10045
+- **inline_images:** 10046–10052 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23
