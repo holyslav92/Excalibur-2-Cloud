@@ -3,14 +3,14 @@
   "role": "sol",
   "tier": "powerful",
   "model": "gpt-6-astra",
-  "endpoint": "https://api.derouter.ai/openai/v1/chat/completions",
-  "request_id": "chatcmpl-53a159d4c08843b394a334f7",
+  "endpoint": "https://api.apikey.cloud/openai/v1/chat/completions",
+  "request_id": "chatcmpl-b33539d68e6b4c1aab69f03f",
   "usage": {
-    "prompt_tokens": 7234,
-    "completion_tokens": 1214,
-    "total_tokens": 8448
+    "prompt_tokens": 8305,
+    "completion_tokens": 108,
+    "total_tokens": 8413
   },
-  "created_at": "2026-09-10T08:19:29.568646+00:00",
+  "created_at": "2026-09-10T08:31:09.403407+00:00",
   "provider": "derouter-rest",
   "user_prompt_chars": 200,
   "contract": "shared/derouter-opus-brain-contract.md"
