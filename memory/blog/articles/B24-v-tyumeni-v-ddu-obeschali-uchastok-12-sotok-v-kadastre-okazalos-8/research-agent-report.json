@@ -1,0 +1,76 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-06",
+  "derouter": {
+    "status": "OK",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "note": "First pass OK via assembled-research-inputs-compact.md"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://khakassia-news.ru/society/2026/09/03/19802.html",
+        "type": "news",
+        "date": "2026-09-03",
+        "note": "Программа точных границ и заполнения ЕГРН до 95% объектов — 3 дня до research_date"
+      },
+      {
+        "url": "https://woodholz.ru/blog/proverka-uchastka-pered-pokupkoy",
+        "type": "community",
+        "date": "2026-02-13",
+        "note": "Чек-лист проверки участка через ЕГРН/границы/ВРИ до сделки — due diligence перед ДДU"
+      },
+      {
+        "url": "https://dzen.ru/a/akdV5fsOLVnDrHSa",
+        "type": "community",
+        "date": "2026",
+        "note": "ИЖС-застройщики: риск расхождения обещанных и фактических границ без выноса в натуру"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 3657,
+    "p0_volume_ru225": 8691,
+    "support_phrases": [
+      {"phrase": "дом в коттеджном поселке тюмень", "volume": 42},
+      {"phrase": "купить дом в коттеджном поселке тюмень", "volume": 20},
+      {"phrase": "новостройки тюмень", "volume": 3657}
+    ],
+    "rework_from": "дом в коттеджном поселке тюмень (42) → купить дом в коттеджном поселке (20) → P0 новостройки тюмень (3657)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_kp_plot_size_mismatch_ddu_cadastre_tyumen",
+    "story_dup_check": "PASS",
+    "h1_fingerprint": "12_сotok_8_кадастр_дdu_кп"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["consultant_214_fz", "dom_rf", "rosreestr"],
+    "errors": [],
+    "note": "214-FZ st.4.2/4.3/7/8/9.1/15.4-15.5; family mortgage dom.rf 03.06.2026; Rosreestr order P/0235/26 (10% vs project межевание)"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs-compact.md",
+    "assembled_inputs_compact": "assembled-research-inputs-compact.md"
+  },
+  "incident_report": "none"
+}

@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8/#article",
+      "url": "{{SITE_BASE}}/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8/",
+      "headline": "В Тюмени в ДДУ обещали 12 соток — кадастр показал 8",
+      "description": "В тюменском коттеджном посёлке семья готовилась подписать ДДУ на дом с двенадцатью сотками, а за неделю до сделки кадастр показал восемь — банк остановил эскроу. Святослав Шакин разбирает, где рендер расходится с реестром и почему доплата за «недостающие» сотки опасна.",
+      "datePublished": "2026-09-06",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8/"
+      }
+    }
+  ]
+}

@@ -1063,3 +1063,40 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260906-1055-link-verify-idna-domrf-b24
+status: fixed
+run_date: 2026-09-06
+role: excalibur-blog-publish
+topic_id: B24
+article_dir: memory/blog/articles/B24-v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8
+severity: low
+category: script
+
+### What went wrong
+- `link-verify` on `https://наш.дом.рф/` failed: urllib latin-1 encode error, then IDNA host returned HTTP 403 from Cloud egress.
+
+### How the agent recovered this run
+- Added `idna_encode_url()` in `excalibur_blog_link_verify.py`; article href switched to working punycode `https://xn--d1aqf.xn--p1ai/` with visible text «наш.дом.рф»; link-verify PASS → publish PASS post_id=9836.
+
+### Durable fix needed before next run
+- Consider soft-pass or documented canonical punycode for dom.rf official links in Writer/Research contract.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_link_verify.py`
+- `shared/article-style.md` (dom.rf href canon)
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-06
+fix_summary:
+- IDNA encode in link_verify; B24 href punycode for dom.rf portal root.
+files_changed:
+- `scripts/excalibur_blog_link_verify.py`
+- `memory/blog/articles/B24-v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8/article.html`
+checks_run:
+- `excalibur_blog_link_verify.py` verdict=pass
+- `excalibur_blog_wp_publish.py` live-page PASS
+commit: d6703cb

@@ -1,0 +1,88 @@
+{
+  "agent": "excalibur-blog",
+  "step": "research_complete",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-06",
+    "today_ru": "06.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "воскресенье"
+  },
+  "topic": {
+    "topic_id": "B24",
+    "title": "В Тюмени в ДДУ обещали участок 12 соток — в кадастре оказалось 8",
+    "h1": "В Тюмени в ДДУ обещали участок 12 соток — в кадастре оказалось 8",
+    "slug": "v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8",
+    "primary_query": "новостройки тюмень",
+    "cluster_id": "newbuild_kp_plot_size_mismatch_ddu_cadastre_tyumen",
+    "priority": "P0",
+    "market_focus": "newbuild_only",
+    "top_energy_mirror": "paper_clean_then_broke",
+    "comment_magnet_angle": "Если в ДДУ 12 соток, а на межевании 8 — подписали бы ДДУ «как есть» или разорвали бронь, даже если дом почти готов?"
+  },
+  "search_queries": [
+    {
+      "id": "primary_fresh",
+      "query": "ДДУ дом земельный участок площадь кадастр расхождение 2026",
+      "purpose": "актуальный SERP по механике casus"
+    },
+    {
+      "id": "title_fresh",
+      "query": "коттеджный поселок Тюмень застройщик ДДУ участок сотки 2026",
+      "purpose": "SERP по Tyumen KP newbuild"
+    },
+    {
+      "id": "official_docs",
+      "query": "214-ФЗ статья 4 земельный участок площадь кадастровый номер ДДУ",
+      "purpose": "официальные docs"
+    },
+    {
+      "id": "community_experience",
+      "query": "межевание участок меньше обещанного застройщик коттеджный поселок 2026",
+      "purpose": "форумы и живые проблемы"
+    },
+    {
+      "id": "escrow_bank",
+      "query": "эскроу ипотека дом участок расхождение площади банк 2026",
+      "purpose": "банковский контекст эскроу"
+    }
+  ],
+  "wordstat": {
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume_55": 3657,
+    "p0_volume_ru225": 8691,
+    "support": [
+      {"phrase": "дом в коттеджном поселке тюмень", "volume_55": 42},
+      {"phrase": "купить дом в коттеджном поселке тюмень", "volume_55": 20}
+    ]
+  },
+  "research_status": "PASS",
+  "next_step": "Title",
+  "writer_allowed_sources": [
+    "shared/writer-master-prompt.md",
+    "research-notes.md",
+    "title-brief.json",
+    "published-titles-only.md"
+  ],
+  "sol_allowed_sources": [
+    "shared/SOUL.md",
+    "shared/soul-examples/",
+    "drafts/writer.html",
+    "title-brief.json",
+    "research-notes.md"
+  ],
+  "writer_titles_only": "published-titles-only.md",
+  "forbidden_sources_for_writer": [
+    "memory/blog/articles/*/article.html",
+    "memory/blog/articles/*/drafts",
+    "memory/topics/ (deleted — do not recreate)",
+    "memory/content-lessons.md",
+    "shared/golden-benchmark",
+    "QA reports",
+    "neighbor research-notes as prose exemplars",
+    "old article bodies"
+  ],
+  "published_titles_count": 18
+}

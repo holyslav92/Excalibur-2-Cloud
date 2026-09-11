@@ -1,0 +1,9 @@
+{
+  "topic_id": "B24",
+  "description": "На рендере — место для бани, в выписке ЕГРН — внутренняя дорога. В Тюмени банк остановил эскроу, а застройщик предложил семье отдельно купить недостающие сотки.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

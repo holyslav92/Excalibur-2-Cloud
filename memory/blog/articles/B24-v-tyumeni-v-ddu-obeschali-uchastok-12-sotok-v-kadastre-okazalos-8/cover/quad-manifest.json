@@ -1,0 +1,239 @@
+{
+  "topic_id": "B24",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Обещали двенадцать соток, кадастр показал восемь",
+  "cover_hook_highlight": "кадастр",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Solo cover via grsai_solo_cover.py for final cover.png.",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени в ДДУ обещали 12 соток — кадастр показал 8: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Павильон КП: герой слева, буклет 12 vs выписка 8; high-key, hook справа.",
+      "meme_caption_ru": "",
+      "sticky": "А где ещё четыре?",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошарашенный прищур",
+      "meme_picks": [
+        "confused_math_lady",
+        "long_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Выписка ЕГРН перед подписанием: в реестре восемь",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: ЕГРН, план 8 соток; doakes угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Выписка ЕГРН перед подписанием: в реестре восемь» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Коттеджный посёлок",
+        "ДДУ с участком",
+        "Двенадцать соток в рекламе"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "james_doakes"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Выписка ЕГРН перед подписанием: в реестре восемь",
+      "visual_type": "structure_diagram",
+      "scene_hint": "12→8 соток, −33%; torn paper.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Выписка за неделю, Кадастровый план, В реестре восемь соток — иллюстрация к разбору…",
+      "labels": [
+        "Выписка за неделю",
+        "Кадастровый план",
+        "В реестре восемь соток"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Бронь сняли: аванс вернули частично, ключи не брали",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Бронь, ключи в стороне, эскроу пауза.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Бронь сняли: аванс вернули частично, ключи не б…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Эскроу не открыли",
+        "Площадь в ДДУ",
+        "Докупить четыре сотки"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "На презентации — двенадцать соток, семья пошла в ипотеку",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Презентация КП, макет 12 соток.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «На презентации — двенадцать соток, семья пошла…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Второй платёж за сотки",
+        "Уже в цене ДДУ",
+        "Дорога на плане"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Банк поставил эскроу на паузу, застройщик предложил доплату",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица 12 vs 8 vs доплата; wojak.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: ДДУ не подписали, Ключи не брали, Аванс вернули частично — иллюстрация к…",
+      "labels": [
+        "ДДУ не подписали",
+        "Ключи не брали",
+        "Аванс вернули частично"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "wojak"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Дорога и сервисная зона — не ваши личные сотки",
+      "visual_type": "process_flow",
+      "scene_hint": "6-step flow chart gold tape, no memes.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Картинка не граница, Общая территория КП, Межевание до подписи — иллюстрация к…",
+      "labels": [
+        "Картинка не граница",
+        "Общая территория КП",
+        "Межевание до подписи"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что сверить до брони и ДДУ — таблица",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bar chart 6 проверок; cheems.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Выписка ЕГРН, Проект межевания, Шесть строк проверки — иллюстрация к разбору сделки.",
+      "labels": [
+        "Выписка ЕГРН",
+        "Проект межевания",
+        "Шесть строк проверки"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "cheems"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "дом в коттеджном поселке тюмень",
+    "купить дом в коттеджном поселке тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "host waist-left comparing two plot documents, hook+phone s…",
+    "location": "bright sunlit KP sales pavilion with plot maquette and win…",
+    "meme": "confused_math_lady + long_cat corner stickers ≤15%",
+    "prop_set": "brochure 12 sotok, EGRN extract 8 sotok, cadastral roll, y…",
+    "sticker_set": "confused_math_lady top-right corner, long_cat bottom-left …",
+    "joke": "math meme reacts to minus four sotok one third area gone",
+    "outfit": "sage linen overshirt cream henley rolled sleeves khaki chi…",
+    "emotion": "stunned squint raised inner brow comparing two area numbers",
+    "pose_framing": "waist-up three-quarter left both hands spread two document…",
+    "action": "holds marketing 12 sotok brochure beside EGRN print showin…"
+  },
+  "cover_emotion": "ошарашенный прищур"
+}

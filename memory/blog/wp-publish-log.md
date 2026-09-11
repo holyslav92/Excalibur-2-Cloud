@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-06
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8
+- **post_id:** 9836
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8/
+- **featured_image:** 9837
+- **inline_images:** 9838–9844 (7)
+- **wp_category_slugs:** dokumenty-i-oformlenie, riski-sdelki, pokupka-kvartiry (category_ids=54,58,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** link-verify preflight: IDNA encode in link_verify.py + href punycode for dom.rf; SFTP root fallback to `.`
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23

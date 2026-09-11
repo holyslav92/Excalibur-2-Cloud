@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8",
+  "topic_id": "B24",
+  "post_id": 9836,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1156246,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9836 slug=v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8\nOK categories=54,58,36\nOK yoast_social_image=1\nOK featured_image=9837\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9838 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8-inline-04.png\nOK inline_alt=9838\nOK inline_description=9838\nOK inline_image_upload=9839 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8-inline-01.png\nOK inline_alt=9839\nOK inline_description=9839\nOK inline_image_upload=9840 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8-inline-02.png\nOK inline_alt=9840\nOK inline_description=9840\nOK inline_image_upload=9841 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8-inline-05.png\nOK inline_alt=9841\nOK inline_description=9841\nOK inline_image_upload=9842 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8-inline-03.png\nOK inline_alt=9842\nOK inline_description=9842\nOK inline_image_upload=9843 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8-inline-06.png\nOK inline_alt=9843\nOK inline_description=9843\nOK inline_image_upload=9844 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8-inline-07.png\nOK inline_alt=9844\nOK inline_description=9844\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-obeschali-uchastok-12-sotok-v-kadastre-okazalos-8/",
+    "errors": []
+  }
+}
