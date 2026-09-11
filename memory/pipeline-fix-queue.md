@@ -1063,3 +1063,30 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260911-1054-schema-output-root
+status: open
+run_date: 2026-09-11
+role: excalibur-blog-schema
+topic_id: B24
+article_dir: memory/blog/articles/B24-v-tyumeni-odobrili-subsidirovannuyu-ipoteku-zastrojschik-snyal-subsidiyu-za-3-dn
+severity: medium
+category: tooling
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --role schema --output schema.jsonld --article-dir <article_dir>` wrote `schema.jsonld` to **repo root** (`/workspace/schema.jsonld`), not inside `--article-dir`.
+- `schema_gate.py` then FAIL: missing schema in article_dir until manual `mv`.
+
+### How the agent recovered this run
+- Moved root `schema.jsonld` into article_dir; gate PASS on retry.
+
+### Durable fix needed before next run
+- Skill canon: use `--output memory/blog/articles/<slug>/schema.jsonld` **or** teach derouter to resolve bare `--output` relative to `--article-dir` when set (mirror cover-text derouter).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_derouter_opus_chat.py` (output path resolution)
+- `skills/schema-excalibur-blog/SKILL.md` (document full output path)
+
+### Secrets
+- none recorded
+
