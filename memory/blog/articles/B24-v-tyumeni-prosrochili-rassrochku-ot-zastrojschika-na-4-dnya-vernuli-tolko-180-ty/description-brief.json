@@ -1,0 +1,9 @@
+{
+  "topic_id": "B24",
+  "description": "Ждали зарплату всего четыре дня — а из 400 тысяч вернули только 180. В Тюмени «без банка» может закончиться не ключами, а штрафом по договору.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
