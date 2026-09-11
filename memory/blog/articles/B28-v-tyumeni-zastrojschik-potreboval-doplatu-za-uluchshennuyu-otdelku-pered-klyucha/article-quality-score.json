@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "all_pass": true,
+  "gate": "article-quality-score",
+  "contract": "shared/article-quality-score-lock.md",
+  "article_dir": "memory/blog/articles/B28-v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha",
+  "sol_rewrite_applied": true,
+  "h1": "В Тюмени застройщик запросил 300 тысяч перед ключами — их нет в ДДУ",
+  "sections": {
+    "h1": {
+      "pass": true,
+      "reasons": []
+    },
+    "lead": {
+      "pass": true,
+      "reasons": []
+    },
+    "middle": {
+      "pass": true,
+      "reasons": []
+    },
+    "finale": {
+      "pass": true,
+      "reasons": []
+    },
+    "length": {
+      "pass": true,
+      "reasons": []
+    },
+    "tone": {
+      "pass": true,
+      "reasons": []
+    }
+  },
+  "errors": [],
+  "metrics": {
+    "word_count": 1481,
+    "word_target": "1400-1600",
+    "word_hard_max": 1750,
+    "dzen_reading_minutes_est": 8,
+    "spine_overlap": 0.0532
+  }
+}

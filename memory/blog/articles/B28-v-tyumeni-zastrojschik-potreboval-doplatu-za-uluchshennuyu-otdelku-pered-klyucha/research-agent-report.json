@@ -1,0 +1,87 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B28",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-06",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://www.fontanka.ru/2026/09/03/76622337/",
+        "type": "news",
+        "note": "03.09.2026 — чистовая отделка заявлена на этапе продаж; контраст с доплатой на ключах без ДДУ"
+      },
+      {
+        "url": "https://www.tatar-inform.ru/news/enko-obyavili-o-starte-prodaz-kvartir-v-novom-zilom-komplekse-kazani-6040142",
+        "type": "regional_news",
+        "note": "04.09.2026 — тюменский девелопер ЭНКО в новостях недели"
+      },
+      {
+        "url": "https://www.yurclub.ru/docs/stroika/article8.html",
+        "type": "legal_commentary",
+        "note": "15.01.2026 — удержание ключей из-за спорной доплаты незаконно (прямая механика B28)"
+      },
+      {
+        "url": "https://zhalobnik.net/situacii/zastroyschik-navyazyvaet-doplatu/",
+        "type": "legal_commentary",
+        "note": "июнь 2026 — навязанные доплаты перед ключами, штраф 5%"
+      },
+      {
+        "url": "https://specnovostroy.ru/blog/mozhno-li-predyavlyat-pretenzii-zastroyshchiku-do-polucheniya-klyuchey-yuridicheskiy-otvet-i-taktika/",
+        "type": "legal_community",
+        "note": "11.08.2026 — незаконные доплаты до выдачи ключей"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "Tenant Telegram channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4660,
+    "p0_volume_ru225": 8705,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 856},
+      {"phrase": "отделка новостройка", "volume": 269},
+      {"phrase": "новостройка с отделкой от застройщика", "volume": 59},
+      {"phrase": "отделка новостроек тюмень", "volume": 42},
+      {"phrase": "новостройки с предчистовой отделкой", "volume": 40}
+    ],
+    "rework_from": "улучшенная отделка новостройка (3) → новостройки тюмень (4660)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_extra_finish_payment_not_in_ddu_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["legal_norms_214fz", "legal_norms_zozpp", "legal_norms_gk_rf"],
+    "errors": [],
+    "note": "214-ФЗ, ЗоЗПП, ГК РФ via consultant.ru; no bank/developer tariff claims"
+  },
+  "key_facts_count": 38,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha",
+  "topic_id": "B28",
+  "post_id": 9810,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B28-v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1007460,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9810 slug=v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha\nOK categories=54,58,36\nOK yoast_social_image=1\nOK featured_image=9811\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9812 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha-inline-01.png\nOK inline_alt=9812\nOK inline_description=9812\nOK inline_image_upload=9813 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha-inline-02.png\nOK inline_alt=9813\nOK inline_description=9813\nOK inline_image_upload=9814 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha-inline-03.png\nOK inline_alt=9814\nOK inline_description=9814\nOK inline_image_upload=9815 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha-inline-04.png\nOK inline_alt=9815\nOK inline_description=9815\nOK inline_image_upload=9816 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha-inline-05.png\nOK inline_alt=9816\nOK inline_description=9816\nOK inline_image_upload=9817 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha-inline-06.png\nOK inline_alt=9817\nOK inline_description=9817\nOK inline_image_upload=9818 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha-inline-07.png\nOK inline_alt=9818\nOK inline_description=9818\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha/",
+    "errors": []
+  }
+}

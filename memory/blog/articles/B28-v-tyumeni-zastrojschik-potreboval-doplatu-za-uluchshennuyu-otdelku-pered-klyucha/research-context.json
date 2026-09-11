@@ -1,0 +1,94 @@
+{
+  "agent": "excalibur-blog",
+  "step": "research_complete",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-06",
+    "today_ru": "06.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "воскресенье"
+  },
+  "topic": {
+    "topic_id": "B28",
+    "title": "В Тюмени застройщик потребовал доплату за улучшенную отделку перед ключами — в ДДУ её не было",
+    "h1": "В Тюмени застройщик потребовал доплату за улучшенную отделку перед ключами — в ДДУ её не было",
+    "slug": "v-tyumeni-zastrojschik-potreboval-doplatu-za-uluchshennuyu-otdelku-pered-klyucha",
+    "primary_query": "новостройки тюмень",
+    "cluster_id": "newbuild_extra_finish_payment_not_in_ddu_tyumen",
+    "priority": "P0",
+    "top_energy": "stopped_before_money"
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4660,
+    "p0_volume_ru225": 8705,
+    "accessed_at": "2026-09-06",
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 856},
+      {"phrase": "отделка новостройка", "volume": 269},
+      {"phrase": "новостройка с отделкой от застройщика", "volume": 59},
+      {"phrase": "отделка новостроек тюмень", "volume": 42},
+      {"phrase": "новостройки с предчистовой отделкой", "volume": 40},
+      {"phrase": "улучшенная отделка новостройка", "volume": 3},
+      {"phrase": "отделка новостройка дду", "volume": 1}
+    ],
+    "rework_from": "улучшенная отделка новостройка (3) → новостройки тюмень (4660) — demand spine newbuild Tyumen"
+  },
+  "research_completed_at": "2026-09-06",
+  "search_queries": [
+    {
+      "id": "primary_fresh",
+      "query": "В Тюмени застройщик потребовал доплату за улучшенную отделку перед ключами — в ДДУ её не было 2026",
+      "purpose": "актуальный SERP"
+    },
+    {
+      "id": "title_fresh",
+      "query": "В Тюмени застройщик потребовал доплату за улучшенную отделку перед ключами — в ДДУ её не было 2026",
+      "purpose": "SERP по человеческому title"
+    },
+    {
+      "id": "official_docs",
+      "query": "В Тюмени застройщик потребовал доплату за улучшенную отделку перед ключами — в ДДУ её не было official docs 2026",
+      "purpose": "официальные docs"
+    },
+    {
+      "id": "github_evidence",
+      "query": "site:github.com В Тюмени застройщик потребовал доплату за улучшенную отделку перед ключами — в ДДУ её не было 2026",
+      "purpose": "GitHub evidence"
+    },
+    {
+      "id": "community_experience",
+      "query": "В Тюмени застройщик потребовал доплату за улучшенную отделку перед ключами — в ДДУ её не было forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы"
+    }
+  ],
+  "next_step": "Title → Writer",
+  "writer_allowed_sources": [
+    "shared/writer-master-prompt.md",
+    "research-notes.md",
+    "title-brief.json",
+    "published-titles-only.md"
+  ],
+  "sol_allowed_sources": [
+    "shared/SOUL.md",
+    "shared/soul-examples/",
+    "drafts/writer.html",
+    "title-brief.json",
+    "research-notes.md"
+  ],
+  "writer_titles_only": "published-titles-only.md",
+  "forbidden_sources_for_writer": [
+    "memory/blog/articles/*/article.html",
+    "memory/blog/articles/*/drafts",
+    "memory/topics/ (deleted — do not recreate)",
+    "memory/content-lessons.md",
+    "shared/golden-benchmark",
+    "QA reports",
+    "neighbor research-notes as prose exemplars",
+    "old article bodies"
+  ],
+  "published_titles_count": 18
+}
