@@ -1,1 +1,9 @@
-{"topic_id":"B35","description":"Двое жильцов уже ждали квартиру, но в приложении к ДДУ нашёлся запрет до регистрации права. В Тюмени Святослав Шакин разбирает, почему бронь и арендаторы ушли в соседний ЖК.","rhythm":"klyshin_case_hook","geo":"Тюмень","not_equal_title":true,"not_truncated_lead":true,"verdict":"PASS"}
+{
+  "topic_id": "B35",
+  "description": "Двое жильцов уже ждали квартиру, но в приложении к ДДУ нашёлся запрет до регистрации права. В Тюмени Святослав Шакин разбирает, почему бронь и арендаторы ушли в соседний ЖК.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
