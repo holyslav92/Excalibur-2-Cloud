@@ -86,8 +86,8 @@ Cursor Automation — **тонкий дирижёр** (default Composer): doctor
 
 | Tier | Derouter model | Роли |
 |------|----------------|------|
-| powerful | `gpt-6-astra` | writer, sol |
-| utility | `gpt-5.6-terra` | scout, title, research, description, cover-text, schema, cover-scene |
+| powerful | `gpt-6-astra` | writer, sol, title |
+| utility | `gpt-5.6-terra` | scout, research, description, cover-text, schema, cover-scene |
 
 ```bash
 python3 scripts/excalibur_blog_derouter_opus_chat.py \
@@ -163,8 +163,8 @@ Cover + inline PNG **only grsai grsai standard image model** (Derouter image = o
 
 Ты — ТОНКИЙ ДИРИЖЁР (default Composer — НЕ переключать модель). Прозу текстовых ролей пишет ТОЛЬКО
 scripts/excalibur_blog_derouter_opus_chat.py:
-  powerful gpt-6-astra → writer/sol (article prose only; NEVER claude-opus-5 / Opus)
-  utility gpt-5.6-terra → scout/title/research/description/cover-text/schema/cover-scene
+  powerful gpt-6-astra → writer/sol/title (article prose + H1; NEVER claude-opus-5 / Opus)
+  utility gpt-5.6-terra → scout/research/description/cover-text/schema/cover-scene
 Не пиши Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene своей моделью.
 DEROUTER <ROLE> BLOCKER → стоп пайплайна. Нет run_budget / circuit breaker.
 

@@ -13,8 +13,8 @@
 
 | Tier | Model id (Derouter) | Env override | Роли |
 |------|---------------------|--------------|------|
-| **powerful** | `gpt-6-astra` | `DEROUTER_POWERFUL_MODEL` (legacy: `DEROUTER_OPUS_MODEL`) | writer, sol |
-| **utility** | `gpt-5.6-terra` | `DEROUTER_TERRA_MODEL` | scout, title, research, description, cover-text, schema, cover-scene |
+| **powerful** | `gpt-6-astra` | `DEROUTER_POWERFUL_MODEL` (legacy: `DEROUTER_OPUS_MODEL`) | writer, sol, title |
+| **utility** | `gpt-5.6-terra` | `DEROUTER_TERRA_MODEL` | scout, research, description, cover-text, schema, cover-scene |
 
 `resolve_model` выбирает tier по `--role`. **Не** используй глобальный `DEROUTER_TEXT_MODEL` как override всех ролей — если задан, он не переводит powerful-роли на utility.
 
@@ -91,4 +91,4 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py --role smoke --smoke
 
 ## Legacy alias
 
-`shared/writer-model-contract.md` — Writer/Sol subset powerful tier.
+`shared/writer-model-contract.md` — Writer/Sol/Title powerful tier.

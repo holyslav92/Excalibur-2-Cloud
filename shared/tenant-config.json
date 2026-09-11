@@ -85,12 +85,12 @@
       "model": "gpt-6-astra",
       "model_env": "DEROUTER_POWERFUL_MODEL",
       "family": "gpt-6-astra",
-      "roles": ["writer", "sol"]
+      "roles": ["writer", "sol", "title"]
     },
     "utility": {
       "model": "gpt-5.6-terra",
       "model_env": "DEROUTER_TERRA_MODEL",
-      "roles": ["scout", "title", "research", "description", "cover-text", "schema", "cover-scene"]
+      "roles": ["scout", "research", "description", "cover-text", "schema", "cover-scene"]
     }
   },
   "interlink_old_articles": true,

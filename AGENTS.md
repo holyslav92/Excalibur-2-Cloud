@@ -56,8 +56,8 @@ Scout? → research_start → Research → Title → Writer(смысл)
 
 **Factory brain (двухуровневый split):** Cursor — **тонкий дирижёр** (default Composer; не переключать модель Cursor).
 Прозу пишет только `scripts/excalibur_blog_derouter_opus_chat.py` → Derouter REST (`DEROUTER_API_KEY`):
-- **powerful** `gpt-6-astra` (`DEROUTER_POWERFUL_MODEL`): Writer, Sol (article prose only)
-- **utility** `gpt-5.6-terra` (`DEROUTER_TERRA_MODEL`): Scout, Title, Research synthesis, Description, Cover-text, Schema, Cover-scene
+- **powerful** `gpt-6-astra` (`DEROUTER_POWERFUL_MODEL`): Writer, Sol (article prose only), Title
+- **utility** `gpt-5.6-terra` (`DEROUTER_TERRA_MODEL`): Scout, Research synthesis, Description, Cover-text, Schema, Cover-scene
 При недоступности → `DEROUTER <ROLE> BLOCKER`, без тихого fallback на Composer. См. `shared/derouter-opus-brain-contract.md`.
 **Cover PNG:** grsai grsai standard image model REST (`shared/grsai-gpt-image-api-contract.md`). Optional Derouter image fallback only. **Kie FORBIDDEN forever.** PIL mashup FORBIDDEN.
 **Meme canon:** `memory/cover/meme-top100.json` + `cover-canon.json` → meme_canon_v1: real top memes, people+cats variety, on-topic funny stickers ≤15%, never on hook/face/phone, anti-repeat 14д.

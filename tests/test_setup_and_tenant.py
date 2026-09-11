@@ -36,10 +36,10 @@ class SetupTenantTests(unittest.TestCase):
         self.assertEqual(utility.get("model"), "gpt-5.6-terra")
         self.assertIn("writer", powerful.get("roles") or [])
         self.assertIn("sol", powerful.get("roles") or [])
+        self.assertIn("title", powerful.get("roles") or [])
         self.assertNotIn("scout", powerful.get("roles") or [])
-        self.assertNotIn("title", powerful.get("roles") or [])
         self.assertIn("scout", utility.get("roles") or [])
-        self.assertIn("title", utility.get("roles") or [])
+        self.assertNotIn("title", utility.get("roles") or [])
         self.assertIn("research", utility.get("roles") or [])
         self.assertTrue(writing.get("fail_loud_if_unavailable"))
 

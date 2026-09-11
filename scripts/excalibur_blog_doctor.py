@@ -499,7 +499,7 @@ def main() -> int:
     powerful_check = derouter_powerful_env or derouter_opus_env or powerful_model
     check(
         powerful_model == "gpt-6-astra",
-        "tenant powerful model gpt-6-astra (Writer/Sol)",
+        "tenant powerful model gpt-6-astra (Writer/Sol/Title)",
         errors,
         warnings,
     )
@@ -580,14 +580,14 @@ def main() -> int:
     powerful_roles = set((brain.get("powerful") or {}).get("roles") or [])
     utility_roles = set((brain.get("utility") or {}).get("roles") or [])
     check(
-        {"writer", "sol"}.issubset(powerful_roles),
-        "tenant writing_model.powerful.roles includes writer/sol",
+        {"writer", "sol", "title"}.issubset(powerful_roles),
+        "tenant writing_model.powerful.roles includes writer/sol/title",
         errors,
         warnings,
     )
     check(
-        {"scout", "title", "research", "description", "cover-text", "schema", "cover-scene"}.issubset(utility_roles),
-        "tenant writing_model.utility.roles includes scout/title/research/description/cover-text/schema/cover-scene",
+        {"scout", "research", "description", "cover-text", "schema", "cover-scene"}.issubset(utility_roles),
+        "tenant writing_model.utility.roles includes scout/research/description/cover-text/schema/cover-scene",
         errors,
         warnings,
     )
