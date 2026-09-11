@@ -1,0 +1,9 @@
+{
+  "topic_id": "B24",
+  "description": "В тюменской новостройке CRM дважды назвала квартиру свободной. Бронь уже оплачена, но банк остановил вторую сделку до эскроу — застройщик предлагает этаж выше и доплату.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

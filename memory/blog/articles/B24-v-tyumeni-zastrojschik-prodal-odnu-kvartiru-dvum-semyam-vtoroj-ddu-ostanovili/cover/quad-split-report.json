@@ -1,0 +1,295 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B24-v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-semyam-vtoroj-ddu-ostanovili/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1022,
+          577
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 577,
+            "end": 586
+          },
+          "v_gutter_px": {
+            "start": 1022,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 5.5,
+            "v_center_offset_px": 3.5,
+            "max_aspect_crop_loss": 0.0157,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0104,
+              "bottom_left": 0.0157,
+              "bottom_right": 0.0089
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1022,
+              "bottom": 577
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1022,
+              "bottom": 577
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени застройщик продал 1 квартиру 2 семьям — второй ДДУ остановили: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1033,
+              "top": 3,
+              "right": 2048,
+              "bottom": 574
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 577
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Банк приостановил сделку до выяснения статуса к…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Банк приостановил сделку до выяснения статуса квартиры"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 8,
+              "top": 586,
+              "right": 1014,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 586,
+              "right": 1022,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Тот же номер, Первый договор подписан, Ипотека одобрена — иллюстрация к разбору…",
+            "h2_anchor": "Банк приостановил сделку до выяснения статуса квартиры"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1037,
+              "top": 586,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 586,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Два «свободно» в CRM — и две семьи на одну квар…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Два «свободно» в CRM — и две семьи на одну квартиру"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B24-v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-semyam-vtoroj-ddu-ostanovili/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_too_far_from_center",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 548,
+              "end": 580
+            },
+            "v_gutter_px": {
+              "start": 1049,
+              "end": 1066
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 12.0,
+              "v_center_offset_px": 33.5,
+              "max_aspect_crop_loss": 0.0715,
+              "per_panel_crop_loss": {
+                "top_left": 0.0715,
+                "top_right": 0.0081,
+                "bottom_left": 0.0305,
+                "bottom_right": 0.035
+              },
+              "reject_reason": "gutter_too_far_from_center"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Бронь, ДДУ и эскроу: что подтверждает каждый до…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Бронь, ДДУ и эскроу: что подтверждает каждый документ"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Другой этаж, Просят доплату, Претензия отправлена — иллюстрация к разбору сделки.",
+            "h2_anchor": "Первая семья подписала ДДУ, вторая получила одобрение ипотеки"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Система — статус, Бронь — удержание, Договор — право — иллюстрация к разбору сделки.",
+            "h2_anchor": "Первый договор зарегистрировали — второй ДДУ остановили"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Проверьте регистрацию, Сохраните переписку, Не подписывайте вслепую — иллюстрация к…",
+            "h2_anchor": "Застройщик предложил другой этаж с доплатой"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Банк приостановил сделку до выяснения статуса квартиры",
+    "skip inline_2: already correct under H2 — Банк приостановил сделку до выяснения статуса квартиры",
+    "skip inline_3: already correct under H2 — Два «свободно» в CRM — и две семьи на одну квартиру",
+    "injected inline_4 after H2 — Бронь, ДДУ и эскроу: что подтверждает каждый документ",
+    "injected inline_5 after H2 — Первая семья подписала ДДУ, вторая получила одобрение ипотеки",
+    "injected inline_6 after H2 — Первый договор зарегистрировали — второй ДДУ остановили",
+    "injected inline_7 after H2 — Застройщик предложил другой этаж с доплатой"
+  ]
+}
