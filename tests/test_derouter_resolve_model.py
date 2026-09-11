@@ -14,7 +14,7 @@ CANON_WRITING_MODEL = {
     "powerful": {
         "model": "gpt-6-astra",
         "model_env": "DEROUTER_POWERFUL_MODEL",
-        "roles": ["writer", "sol", "title"],
+        "roles": ["writer", "sol", "title", "description", "cover-text"],
     },
     "utility": {
         "model": "gpt-5.6-terra",
@@ -22,8 +22,6 @@ CANON_WRITING_MODEL = {
         "roles": [
             "scout",
             "research",
-            "description",
-            "cover-text",
             "schema",
             "cover-scene",
         ],
@@ -54,7 +52,7 @@ class DerouterResolveModelTests(unittest.TestCase):
             self.assertEqual(tier, "utility")
             self.assertEqual(model, "gpt-5.6-terra")
 
-    def test_scout_uses_utility_and_title_uses_powerful_tier(self) -> None:
+    def test_engagement_copy_roles_use_powerful_tier(self) -> None:
         from scripts.excalibur_blog_derouter_opus_chat import resolve_model
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -64,13 +62,25 @@ class DerouterResolveModelTests(unittest.TestCase):
                 json.dumps({"writing_model": CANON_WRITING_MODEL}),
                 encoding="utf-8",
             )
-            model, tier = resolve_model("scout", None, root)
-            self.assertEqual(tier, "utility")
-            self.assertEqual(model, "gpt-5.6-terra")
+            for role in ("title", "description", "cover-text"):
+                model, tier = resolve_model(role, None, root)
+                self.assertEqual(tier, "powerful", role)
+                self.assertEqual(model, "gpt-6-astra", role)
 
-            model, tier = resolve_model("title", None, root)
-            self.assertEqual(tier, "powerful")
-            self.assertEqual(model, "gpt-6-astra")
+    def test_scout_and_research_use_utility_tier(self) -> None:
+        from scripts.excalibur_blog_derouter_opus_chat import resolve_model
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "shared").mkdir()
+            (root / "shared" / "tenant-config.json").write_text(
+                json.dumps({"writing_model": CANON_WRITING_MODEL}),
+                encoding="utf-8",
+            )
+            for role in ("scout", "research", "schema", "cover-scene"):
+                model, tier = resolve_model(role, None, root)
+                self.assertEqual(tier, "utility", role)
+                self.assertEqual(model, "gpt-5.6-terra", role)
 
     def test_legacy_text_model_does_not_override_powerful_to_non_astra(self) -> None:
         from scripts.excalibur_blog_derouter_opus_chat import resolve_model

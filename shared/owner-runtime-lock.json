@@ -21,7 +21,7 @@
       "model": "gpt-6-astra",
       "model_env": "DEROUTER_POWERFUL_MODEL",
       "legacy_env": "DEROUTER_OPUS_MODEL",
-      "roles": ["writer", "sol", "title"]
+      "roles": ["writer", "sol", "title", "description", "cover-text"]
     },
     "utility": {
       "model": "gpt-5.6-terra",
@@ -29,8 +29,6 @@
       "roles": [
         "scout",
         "research",
-        "description",
-        "cover-text",
         "schema",
         "cover-scene"
       ]

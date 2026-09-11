@@ -5,9 +5,9 @@ description: "Cover-text: exact Russian inscriptions in cover-text.json, gate PA
 
 # Cover-text Agent — надписи, понятные русскому человеку
 
-## Thin conductor + Derouter utility (HARD)
+## Thin conductor + Derouter powerful (HARD)
 
-**Не пиши надписи моделью Cursor:**
+**Не пиши надписи моделью Cursor.** Derouter powerful tier (gpt-6-astra):
 
 ```bash
 python3 scripts/excalibur_blog_cover_text_derouter.py \

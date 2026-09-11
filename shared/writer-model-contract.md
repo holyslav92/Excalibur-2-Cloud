@@ -18,9 +18,9 @@ python3 scripts/excalibur_blog_derouter_opus_chat.py \
 - **Auth:** `DEROUTER_API_KEY` только из Cloud Secrets
 - **Endpoint:** `https://api.derouter.ai/openai/v1/chat/completions`
 
-Title — **powerful tier** (`gpt-6-astra`) вместе с Writer/Sol.
+Title, Description, Cover-text — **powerful tier** (`gpt-6-astra`) вместе с Writer/Sol.
 
-Utility tier (`gpt-5.6-terra`) — Scout, Research, Description, Cover-text, Schema, Cover-scene. См. brain contract.
+Utility tier (`gpt-5.6-terra`) — Scout, Research, Schema, Cover-scene. См. brain contract.
 
 ## Fail loud
 

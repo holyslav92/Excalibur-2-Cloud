@@ -5,9 +5,9 @@ description: "Description: Dzen card teaser after Sol; Klyshin rhythm; not title
 
 # Description — Dzen card teaser
 
-## Thin conductor + Derouter utility (HARD)
+## Thin conductor + Derouter powerful (HARD)
 
-**Не пиши description моделью Cursor:**
+**Не пиши description моделью Cursor.** Derouter powerful tier (gpt-6-astra):
 
 ```bash
 python3 scripts/excalibur_blog_derouter_opus_chat.py \

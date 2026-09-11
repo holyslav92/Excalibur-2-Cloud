@@ -37,10 +37,16 @@ class SetupTenantTests(unittest.TestCase):
         self.assertIn("writer", powerful.get("roles") or [])
         self.assertIn("sol", powerful.get("roles") or [])
         self.assertIn("title", powerful.get("roles") or [])
+        self.assertIn("description", powerful.get("roles") or [])
+        self.assertIn("cover-text", powerful.get("roles") or [])
         self.assertNotIn("scout", powerful.get("roles") or [])
         self.assertIn("scout", utility.get("roles") or [])
         self.assertNotIn("title", utility.get("roles") or [])
+        self.assertNotIn("description", utility.get("roles") or [])
+        self.assertNotIn("cover-text", utility.get("roles") or [])
         self.assertIn("research", utility.get("roles") or [])
+        self.assertIn("schema", utility.get("roles") or [])
+        self.assertIn("cover-scene", utility.get("roles") or [])
         self.assertTrue(writing.get("fail_loud_if_unavailable"))
 
     def test_setup_agents_present(self) -> None:
