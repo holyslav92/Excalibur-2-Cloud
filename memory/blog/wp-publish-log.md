@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-11
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty
+- **post_id:** 10070
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty/
+- **featured_image:** 10071
+- **inline_images:** 10072–10078 (7)
+- **wp_category_slugs:** pokupka-kvartiry, riski-sdelki (category_ids=36,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** wp_category_slug `novostrojki` → `riski-sdelki` (unknown slug fix); SFTP root fallback to `.`
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23

@@ -1,0 +1,239 @@
+{
+  "topic_id": "B24",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Просрочили на четыре дня — квартира ушла",
+  "cover_hook_highlight": "квартира",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени рассрочку у застройщика просрочили на 4 дня — квартира ушла: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Уголок рассрочки: кремовая рубашка, рост справа, расторжение vs +4 дня; math_lady + long_cat.",
+      "meme_caption_ru": "",
+      "sticky": "Квартира ушла",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое неверие, тревожная гримаса",
+      "meme_picks": [
+        "confused_math_lady",
+        "long_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Вернули 180 тысяч — квартиру уже показывают другому",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Показ новостройки другой паре; папка 400 000; james_doakes; без хоста.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Вернули 180 тысяч — квартиру уже показывают дру…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Рассрочка застройщика",
+        "Взнос 400 тысяч",
+        "Без заявки банка"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "james_doakes"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Вернули 180 тысяч — квартиру уже показывают другому",
+      "visual_type": "comparison_table",
+      "scene_hint": "Цепочка: +4 дня → расторжение → квартира в продаже; gold torn paper.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Оплата позже четырёх дней, Письмо о расторжении, Квартира снова продаётся —…",
+      "labels": [
+        "Оплата позже четырёх дней",
+        "Письмо о расторжении",
+        "Квартира снова продаётся"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "«Без банка» — и первый взнос 400 тысяч в новостройку",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол у окна: карточки 400 000 / 180 000 / удержано 220 000; письмо о возврате; без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Без банка» — и первый взнос 400 тысяч в новост…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Вернули 180 тысяч",
+        "Удержали 220 тысяч",
+        "Квартиру показывают другому"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Четыре дня просрочки: письмо о расторжении пришло раньше зарплаты",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Flat-lay: платёжка, получатель, +4 дня на календаре, письмо расторжения, папка бронь/ДДУ; без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Четыре дня просрочки: письмо о расторжении приш…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Кому ушли деньги",
+        "Назначение платежа",
+        "Бронь или договор"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Законная пеня и договорный штраф — это разные деньги",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема: пеня 1/300 ~100 ₽ vs штраф → удержано 220 000; не ДДУ; 30 дней; this_is_fine_dog угол.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Пеня одна трёхсотая, Удержали 220 тысяч, Не договор долевого участия —…",
+      "labels": [
+        "Пеня одна трёхсотая",
+        "Удержали 220 тысяч",
+        "Не договор долевого участия"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "this_is_fine_dog"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Три вопроса по платёжному поручению",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bar timeline: пакет → условие задержки → не вслепую → платёжки → расчёт удержаний; gold bars.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Пакет до взноса, Не подписывайте вслепую, Запросите расчёт удержаний — иллюстрация к…",
+      "labels": [
+        "Пакет до взноса",
+        "Не подписывайте вслепую",
+        "Запросите расчёт удержаний"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что сделать до перевода и если письмо уже пришло",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Диаграмма: договор, получатель, дата, штраф, ответ; центр «до перевода»; wojak угол.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Сверьте вид договора, Проверьте получателя, Найдите основу штрафа — иллюстрация к…",
+      "labels": [
+        "Сверьте вид договора",
+        "Проверьте получателя",
+        "Найдите основу штрафа"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "wojak"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "рассрочка от застройщика тюмень — 137",
+    "квартира в рассрочку от застройщика тюмень — 64",
+    "новостройки тюмень — 4580"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "хозяин кадра в полный рост справа у настенного календаря платежей, левой рукой держит уведомление о расторжении, правой указывает на четыре зачёркнутых дня; слева остаётся чистая светлая зона под заголовок",
+    "location": "светлый солнечный консультационный уголок отдела рассрочки у застройщика: белые стены, стекло, большой календарь платежей, без банковской стойки и без обычного офисного стола",
+    "meme": "confused_math_lady и long_cat",
+    "prop_set": "уведомление о расторжении, календарь с красной отметкой «4 дня», папка договора, телефон с напоминанием об оплате, карточка «400 000»",
+    "sticker_set": "маленькие confused_math_lady в нижнем левом углу и long_cat в верхнем правом углу, оба вне зоны заголовка, лица и телефона",
+    "joke": "математическая паника от четырёх дней: календарь выглядит как роковая формула, а длинный кот тянется вдоль края как слишком затянувшаяся просрочка",
+    "outfit": "светлая кремовая рубашка с закатанными рукавами, оливковые брюки, тонкие коричневые подтяжки",
+    "emotion": "ошеломлённое неверие с тревогой",
+    "pose_framing": "полный рост справа, корпус слегка подан к календарю, лицо развёрнуто в камеру, активный жест рукой",
+    "action": "сравнивает дату в уведомлении с четырьмя днями на календаре и осознаёт расторжение"
+  },
+  "cover_emotion": "ошеломлённое неверие, тревожная гримаса"
+}

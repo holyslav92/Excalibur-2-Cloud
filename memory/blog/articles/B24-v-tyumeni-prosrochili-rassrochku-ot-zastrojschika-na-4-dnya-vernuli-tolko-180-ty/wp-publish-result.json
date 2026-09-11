@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty",
+  "topic_id": "B24",
+  "post_id": 10070,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 986455,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10070 slug=v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty\nOK categories=36,58\nOK yoast_social_image=1\nOK featured_image=10071\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10072 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty-inline-03.png\nOK inline_alt=10072\nOK inline_description=10072\nOK inline_image_upload=10073 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty-inline-04.png\nOK inline_alt=10073\nOK inline_description=10073\nOK inline_image_upload=10074 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty-inline-01.png\nOK inline_alt=10074\nOK inline_description=10074\nOK inline_image_upload=10075 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty-inline-02.png\nOK inline_alt=10075\nOK inline_description=10075\nOK inline_image_upload=10076 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty-inline-05.png\nOK inline_alt=10076\nOK inline_description=10076\nOK inline_image_upload=10077 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty-inline-06.png\nOK inline_alt=10077\nOK inline_description=10077\nOK inline_image_upload=10078 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty-inline-07.png\nOK inline_alt=10078\nOK inline_description=10078\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty/",
+    "errors": []
+  }
+}

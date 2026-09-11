@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "all_pass": true,
+  "gate": "article-quality-score",
+  "contract": "shared/article-quality-score-lock.md",
+  "article_dir": "memory/blog/articles/B24-v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty",
+  "sol_rewrite_applied": true,
+  "h1": "В Тюмени рассрочку у застройщика просрочили на 4 дня — квартира ушла",
+  "sections": {
+    "h1": {
+      "pass": true,
+      "reasons": []
+    },
+    "lead": {
+      "pass": true,
+      "reasons": []
+    },
+    "middle": {
+      "pass": true,
+      "reasons": []
+    },
+    "finale": {
+      "pass": true,
+      "reasons": []
+    },
+    "length": {
+      "pass": true,
+      "reasons": [
+        "length-short: 1397 words below target 1400-1600 (warn only)"
+      ]
+    },
+    "tone": {
+      "pass": true,
+      "reasons": []
+    }
+  },
+  "errors": [],
+  "metrics": {
+    "word_count": 1397,
+    "word_target": "1400-1600",
+    "word_hard_max": 1750,
+    "dzen_reading_minutes_est": 7,
+    "spine_overlap": 0.0729
+  }
+}

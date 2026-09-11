@@ -1,0 +1,81 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-11",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://cbr.ru/hd_base/KeyRate/",
+        "type": "official",
+        "note": "11.09.2026 — ключевая ставка 14,00%; заседание ЦБ в день research"
+      },
+      {
+        "url": "https://dzen.ru/a/ahfNSXM-KU9ruvUt",
+        "type": "channel",
+        "note": "tenant Dzen — рассрочка в Тюмени 2026, штрафы, локальный контекст"
+      },
+      {
+        "url": "https://dzen.ru/a/anCDeZP-tkHrkQcn",
+        "type": "industry",
+        "note": "апрель 2026 — данные ЦБ по рассрочкам (1,5 трлн ₽) и правила 214-ФЗ для дольщика"
+      },
+      {
+        "url": "https://novostroyki-tumeni.ru/article/rassrochka-ot-zastroyshchika-v-tyumeni-2026",
+        "type": "local market",
+        "note": "локальный обзор рассрочек Тюмень; проверка 12.08.2026"
+      },
+      {
+        "url": "https://cbr.ru/press/event/?id=28446",
+        "type": "official",
+        "note": "01.04.2026 — 283-ФЗ сервис рассрочки"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "рассрочка от застройщика тюмень",
+    "p0_volume": 137,
+    "p0_volume_ru225": 217,
+    "support_phrases": [
+      {"phrase": "квартира в рассрочку от застройщика тюмень", "volume": 64, "volume_ru225": 110},
+      {"phrase": "новостройки тюмень", "volume": 4580, "note": "context spine from related queries"}
+    ],
+    "rework_from": "scout P0 locked «рассрочка от застройщика тюмень» (137) after Tyumen newbuild installment jargon rework",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "installment_penalty_developer",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["cbr"],
+    "errors": [],
+    "note": "Key rate, escrow installment FAQ, 283-FZ service rules, 214-FZ penalty via Rospotrebnadzor; no bank/developer tariff claims"
+  },
+  "key_facts_count": 28,
+  "derouter": {
+    "status": "PASS",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "attempts": 3,
+    "note": "Attempts 1-2 HTTP 529 overloaded; attempt 3 OK"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
