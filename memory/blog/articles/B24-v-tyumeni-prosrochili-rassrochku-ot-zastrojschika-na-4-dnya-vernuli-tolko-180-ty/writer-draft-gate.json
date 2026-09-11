@@ -1,0 +1,9 @@
+{
+  "gate": "writer-draft",
+  "status": "PASS",
+  "word_count": 1747,
+  "h2_count": 6,
+  "interlink_count": 4,
+  "derouter": "gpt-6-astra (powerful)",
+  "errors": []
+}
