@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-11
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-odobrili-subsidirovannuyu-ipoteku-zastrojschik-snyal-subsidiyu-za-3-dn
+- **post_id:** 10083
+- **permalink:** /blog/ipoteka/v-tyumeni-odobrili-subsidirovannuyu-ipoteku-zastrojschik-snyal-subsidiyu-za-3-dn/
+- **featured_image:** 10084
+- **inline_images:** 10085–10091 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry (category_ids=32,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23
