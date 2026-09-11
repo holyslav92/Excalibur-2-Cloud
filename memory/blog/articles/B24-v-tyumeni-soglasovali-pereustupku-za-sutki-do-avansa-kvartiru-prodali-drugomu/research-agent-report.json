@@ -1,0 +1,76 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-11",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "{{PUBLIC_SITE_URL}}/blog/",
+        "type": "tenant_live",
+        "note": "2026-09-08 WP post 9927 — переуступка, долг 94к у первого дольщика; свежий tenant casus, другой механизм"
+      },
+      {
+        "url": "{{PUBLIC_SITE_URL}}/blog/",
+        "type": "tenant_live",
+        "note": "2026-09-05 WP post 9710 — переуступка +280к price hike; anti-dupe reference"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "Tenant Telegram — newbuild/assignment market context"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen — переуступка checklist Tyumen July 2026"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "переуступка новостройки",
+    "p0_volume": 16,
+    "p0_volume_ru225": null,
+    "support_phrases": [
+      {"phrase": "новостройки тюмень", "volume": 4583},
+      {"phrase": "переуступка квартиры в новостройке риски", "volume": 2},
+      {"phrase": "договор переуступки новостройки", "volume": 1}
+    ],
+    "rework_from": "scout: переуступка новостройка (16) + anchor новостройки тюмень (4583)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "assignment_lost_to_faster_buyer_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "casus_confirmation": {
+    "chronology": "LOCKED in research-notes case_chronology_locked",
+    "assignment_mechanism": "переуступка прав по ДДУ в строящемся ЖК; письменное согласие застройщика получено; цессия не зарегистрирована",
+    "deal_locked_at": "госрегистрация договора уступки (214-ФЗ ст. 17); до этого — только коммерческое закрепление у застройщика",
+    "money_status": "задаток уступщику — был, возвращён полностью; аванс по цессии — не переводили",
+    "finale_locked": "объект потерян — та же планировка не закреплена; другую в ЖК не брали; +280к alternate layout NOT used"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["legal_norms_214fz", "dom_rf"],
+    "errors": [],
+    "note": "214-ФЗ ст. 11, 17 via consultant.ru LAW_51038; domrf.ru portal; no bank tariff claims"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}
