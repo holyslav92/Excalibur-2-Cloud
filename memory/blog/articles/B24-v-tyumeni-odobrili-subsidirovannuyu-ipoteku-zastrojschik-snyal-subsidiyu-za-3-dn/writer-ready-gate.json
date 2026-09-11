@@ -1,0 +1,11 @@
+{
+  "gate": "writer-ready",
+  "status": "PASS",
+  "errors": [],
+  "metrics": {
+    "word_count": 1552,
+    "interlink_count": 3,
+    "prose_lead_sentences": 5,
+    "end_cta": true
+  }
+}
