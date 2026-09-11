@@ -1,0 +1,233 @@
+{
+  "topic_id": "B24",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Застройщик снял субсидию перед сделкой",
+  "cover_hook_highlight": "субсидию",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени застройщик снял субсидию за 3 дня до ДДУ — бронь сгорела: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Павильон ЖК: герой ловит баннер субсидии, сверяет одобрение с ценником; high-key.",
+      "meme_caption_ru": "",
+      "sticky": "Одобрение не спасло",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошарашенное недоверие",
+      "meme_picks": [
+        "confused_math_lady",
+        "woman_yelling_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Ипотеку одобрили» — и семья забронировала квартиру под субсидию",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Руки с одобрением и бронью у макета; pikachu угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Ипотеку одобрили» — и семья забронировала квар…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Бронь оплачена"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "surprised_pikachu"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Ипотеку одобрили» — и семья забронировала квартиру под субсидию",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица субсидия/ДДУ/бронь; gold collage, no memes.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: До подписи не закреплено — иллюстрация к разбору сделки.",
+      "labels": [
+        "До подписи не закреплено"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Рекламная ставка и цена жили в разных документах",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: ставка vs цена ДДУ, календарь 3 дня; no people.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Рекламная ставка и цена жили в разных документах» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Субсидию убрали"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За три дня до ДДУ застройщик снял субсидию",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Flatlay: калькулятор, одобрение, взнос, ценник↑, перечёркнутая субсидия; no people.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За три дня до ДДУ застройщик снял субсидию» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Цена выше одобрения",
+        "Взноса не хватило",
+        "Нужен пересчёт"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Цена в проекте ДДУ выросла — одобрения не хватило",
+      "visual_type": "process_flow",
+      "scene_hint": "Process flow: акция→комиссия→семейная≠та же→срок акции→сверка; disappointed_black_guy угол.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Стандарт ЦБ 2025, Семейная не та же, Сверить расчёты — иллюстрация к разбору сделки",
+      "labels": [
+        "Стандарт ЦБ 2025",
+        "Семейная не та же",
+        "Сверить расчёты"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disappointed_black_guy"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Семья развернулась: до эскроу не дошли, бронь сгорела",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bar timeline: бронь→уведомление 3д→цена↑→нет ДДУ→нет эскроу→бронь сгорела; stop marker.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: ДДУ не подписали, Деньги не на эскроу, Бронь истекла — иллюстрация к разбору сделки.",
+      "labels": [
+        "ДДУ не подписали",
+        "Деньги не на эскроу",
+        "Бронь истекла"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить до подписания ДДУ — таблица",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Checklist diagram: реклама/ДДУ, акция письменно, бронь, новое одобрение, сверка; distracted_boyfriend угол.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Реклама и проект ДДУ, Договор бронирования, Сверка до подписи — иллюстрация к разбору…",
+      "labels": [
+        "Реклама и проект ДДУ",
+        "Договор бронирования",
+        "Сверка до подписи"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "distracted_boyfriend"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "ипотека от застройщика тюмень — 514",
+    "ипотека тюмень новостройки от застройщика — 98",
+    "субсидированная ипотека от застройщика тюмень — 27"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "ведущий в полный рост справа от центральной стойки продаж, слева свободная светлая зона под заголовок; наклонён к сорванному баннеру субсидии",
+    "location": "яркий павильон продаж новостройки в Тюмени, у стойки с макетом квартала и частично отклеенным баннером акции",
+    "meme": "confused_math_lady и woman_yelling_cat",
+    "prop_set": "отклеенный баннер «субсидия», папка ДДУ, лист предварительного одобрения, ценник с красной стрелкой вверх, макет новостройки",
+    "sticker_set": "маленькие угловые стикеры confused_math_lady и woman_yelling_cat, не перекрывают лицо, заголовок и телефон",
+    "joke": "ведущий пытается совместить лист одобрения с новым ценником, но отклеившийся баннер субсидии буквально ускользает из рук",
+    "outfit": "светлая рубашка в тонкую голубую полоску, песочные брюки, рукава закатаны",
+    "emotion": "ошарашенное недоверие",
+    "pose_framing": "полный рост справа, динамичный наклон вперёд, одна рука держит лист одобрения, другая ловит край баннера",
+    "action": "сверяет одобренную сумму с выросшей ценой и ловит сорванный баннер субсидии"
+  },
+  "cover_emotion": "ошарашенное недоверие, приподнятые брови и сжатые губы"
+}

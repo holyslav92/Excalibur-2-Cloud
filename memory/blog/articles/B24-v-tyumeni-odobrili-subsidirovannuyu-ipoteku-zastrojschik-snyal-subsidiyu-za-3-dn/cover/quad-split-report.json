@@ -1,0 +1,291 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B24-v-tyumeni-odobrili-subsidirovannuyu-ipoteku-zastrojschik-snyal-subsidiyu-za-3-dn/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1020,
+          571
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 571,
+            "end": 578
+          },
+          "v_gutter_px": {
+            "start": 1020,
+            "end": 1028
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 1.5,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1020,
+              "bottom": 571
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1020,
+              "bottom": 571
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени застройщик снял субсидию за 3 дня до ДДУ — бронь сгорела: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1028,
+              "top": 0,
+              "right": 2048,
+              "bottom": 571
+            },
+            "raw_box_px": {
+              "left": 1028,
+              "top": 0,
+              "right": 2048,
+              "bottom": 571
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Ипотеку одобрили» — и семья забронировала квар…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Ипотеку одобрили» — и семья забронировала квартиру под субсидию"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 578,
+              "right": 1020,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 578,
+              "right": 1020,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: До подписи не закреплено — иллюстрация к разбору сделки.",
+            "h2_anchor": "«Ипотеку одобрили» — и семья забронировала квартиру под субсидию"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1028,
+              "top": 578,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1028,
+              "top": 578,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Рекламная ставка и цена жили в разных документах» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Рекламная ставка и цена жили в разных документах"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B24-v-tyumeni-odobrili-subsidirovannuyu-ipoteku-zastrojschik-snyal-subsidiyu-za-3-dn/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1018,
+          566
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 566,
+            "end": 574
+          },
+          "v_gutter_px": {
+            "start": 1018,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 6.0,
+            "v_center_offset_px": 1.5,
+            "max_aspect_crop_loss": 0.0121,
+            "per_panel_crop_loss": {
+              "top_left": 0.0118,
+              "top_right": 0.0089,
+              "bottom_left": 0.0087,
+              "bottom_right": 0.0121
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 6,
+              "top": 0,
+              "right": 1012,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1018,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «За три дня до ДДУ застройщик снял субсидию» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "За три дня до ДДУ застройщик снял субсидию"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1037,
+              "top": 0,
+              "right": 2043,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Стандарт ЦБ 2025, Семейная не та же, Сверить расчёты — иллюстрация к разбору сделки",
+            "h2_anchor": "Цена в проекте ДДУ выросла — одобрения не хватило"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1018,
+              "bottom": 1149
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 574,
+              "right": 1018,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: ДДУ не подписали, Деньги не на эскроу, Бронь истекла — иллюстрация к разбору сделки.",
+            "h2_anchor": "Семья развернулась: до эскроу не дошли, бронь сгорела"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1033,
+              "top": 577,
+              "right": 2048,
+              "bottom": 1148
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 574,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Реклама и проект ДДУ, Договор бронирования, Сверка до подписи — иллюстрация к разбору…",
+            "h2_anchor": "Что проверить до подписания ДДУ — таблица"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — «Ипотеку одобрили» — и семья забронировала квартиру под субсидию",
+    "skip inline_2: already correct under H2 — «Ипотеку одобрили» — и семья забронировала квартиру под субсидию",
+    "skip inline_3: already correct under H2 — Рекламная ставка и цена жили в разных документах",
+    "injected inline_4 after H2 — За три дня до ДДУ застройщик снял субсидию",
+    "injected inline_5 after H2 — Цена в проекте ДДУ выросла — одобрения не хватило",
+    "injected inline_6 after H2 — Семья развернулась: до эскроу не дошли, бронь сгорела",
+    "injected inline_7 after H2 — Что проверить до подписания ДДУ — таблица"
+  ],
+  "errors": []
+}
