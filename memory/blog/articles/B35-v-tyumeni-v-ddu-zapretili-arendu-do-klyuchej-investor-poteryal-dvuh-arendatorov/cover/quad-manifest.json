@@ -1,0 +1,246 @@
+{
+  "topic_id": "B35",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Аренду запретили — жильцы ушли к соседям",
+  "cover_hook_highlight": "запретили",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Canvas 1 i2i identity; canvas 2 t2i.",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени за 7 дней до ДДУ запретили аренду — инвестор потерял 2 жильцов: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "шоурум: розовая overshirt, приложение №3 запрет аренды, disappointed_black_guy long_cat",
+      "meme_caption_ru": "",
+      "sticky": "Бронь сгорела",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "stunned disbelief",
+      "meme_picks": [
+        "disappointed_black_guy",
+        "long_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Два жильца на срок — и бронь на две недели в тюменской новостройке",
+      "visual_type": "realistic_photo",
+      "scene_hint": "однушка шоурума: две бирки жильцов, календарь 14 дней, expanding_brain",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Два жильца на срок — и бронь на две недели в тю…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Однушка аренда",
+        "Два жильца",
+        "Устно",
+        "Бронь 14 дней"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "expanding_brain"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Приложение к ДДУ: «сдавать нельзя до ключей и регистрации права»",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "шкала: бронь → приложение №3 → акт → регистрация",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Приложение №3, Акт передачи, Регистрация — иллюстрация к разбору сделки.",
+      "labels": [
+        "Приложение №3",
+        "Акт передачи",
+        "Регистрация",
+        "Санкции в ДДУ"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Приложение к ДДУ: «сдавать нельзя до ключей и регистрации права»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "стол: пакет ДДУ с почты, письмо застройщику, без лиц",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Приложение к ДДУ: «сдавать нельзя до ключей и р…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Вопрос письменно",
+        "Устное не считается",
+        "Пакет на почту",
+        "Деньги не внесены"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Что сверять в пакете до подписи — таблица",
+      "visual_type": "realistic_photo",
+      "scene_hint": "стол проверки: папка приложений, квитанция брони, срок передачи",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Что сверять в пакете до подписи — таблица» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Все приложения",
+        "Плата за бронь",
+        "Начало аренды",
+        "Срок передачи"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Финал: отказ от договора, бронь сгорела, арендаторы ушли",
+      "visual_type": "comparison_table",
+      "scene_hint": "таблица: отказ ДДУ / бронь / жильцы ушли, stonks",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Отказ от ДДУ, Бронь истекла, Жильцы ушли — иллюстрация к разбору сделки.",
+      "labels": [
+        "Отказ от ДДУ",
+        "Бронь истекла",
+        "Жильцы ушли",
+        "Эскроу не открыт"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "stonks"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Ключи, передаточный акт и регистрация — три разные даты для аренды",
+      "visual_type": "process_flow",
+      "scene_hint": "процесс: ключи → акт → регистрация → аренда",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Ключи не аренда, Ввод в эксплуатацию, Передаточный акт — иллюстрация к разбору…",
+      "labels": [
+        "Ключи не аренда",
+        "Ввод в эксплуатацию",
+        "Передаточный акт",
+        "Регистрация отдельно"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Бронь, ДДУ и доходность: где рвётся модель инвестора",
+      "visual_type": "structure_diagram",
+      "scene_hint": "схема: план аренды vs запрет ДДУ, james_doakes",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Первый месяц дохода, Бронь поджимает, Эскроу не аренда — иллюстрация к разбору сделки.",
+      "labels": [
+        "Первый месяц дохода",
+        "Бронь поджимает",
+        "Эскроу не аренда",
+        "План не сходится"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "james_doakes"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "дду эскроу",
+    "дду новостройка"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "герой по пояс справа, раскрытое приложение №3 по центру, свободная светлая зона слева под заголовок и телефон",
+    "location": "светлый шоурум новостройки с макетом квартиры, стеклянной стеной и солнечной засветкой, не банк и не МФЦ",
+    "meme": "disappointed_black_guy и long_cat",
+    "prop_set": "приложение №3 ДДУ с подчёркнутым запретом аренды, смартфон с двумя чатами арендаторов, жёлтый стикер бронь сгорела, макет однушки",
+    "sticker_set": "disappointed_black_guy в верхнем левом углу, long_cat вдоль нижнего края, оба ≤15% и не перекрывают заголовок, лицо и телефон",
+    "joke": "инвестор считал доход от аренды к ключам, а в приложении написано сдавать нельзя до акта и регистрации — жильцы уже уходят к соседям",
+    "outfit": "пыльно-розовая льняная overshirt поверх кремового henley, тёмно-оливковые чиносы, без пиджака",
+    "emotion": "ошеломлённое недоверие, приоткрытый рот, нахмуренные брови, напряжённый взгляд прямо в камеру",
+    "pose_framing": "по пояс справа, обе руки в кадре, корпус наклонён к документу, не бюст слева и не боковой взгляд",
+    "action": "одной рукой держит приложение №3 с запретом аренды, другой показывает смартфон с сообщениями «уходим к соседям», рядом телефон +7 922 001 65 05"
+  },
+  "cover_emotion": "stunned disbelief"
+}

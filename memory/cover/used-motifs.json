@@ -3,40 +3,6 @@
   "window_days": 14,
   "entries": [
     {
-      "date": "2026-08-26",
-      "topic_id": "B10",
-      "slug": "",
-      "motifs": {
-        "composition": "host_large_left_watching_elderly_phone_hook_right_sacred_zone",
-        "location": "bright_sunlit_tyumen_apartment_viewing_white_walls_window",
-        "meme": "hide_pain_harold_sticker_plus_smudge_cat_cutout",
-        "prop_set": "elderly_seller_smartphone_clutch_viewing_calendar_nota_date",
-        "sticker_set": "one_yellow_sticky_hook_only_no_wordstat_bars",
-        "joke": "sticky_horosho_ne_vnesli_avans",
-        "outfit": "sage_olive_cardigan_cream_tee_no_blazer_no_terracotta",
-        "emotion": "wary_side_glance_narrowed_brows_not_smile",
-        "pose_framing": "host_large_left_close_up_not_right_bust_not_side_eye_formula",
-        "action": "watches_elderly_seller_clutch_phone_during_viewing"
-      }
-    },
-    {
-      "date": "2026-08-28",
-      "topic_id": "B12",
-      "slug": "",
-      "motifs": {
-        "composition": "host_waist_right_letter_payment_hook_left",
-        "location": "bright_showroom_white_sun_flare",
-        "meme": "roll_safe_sticker_plus_crying_cat_cutout",
-        "prop_set": "delay_letter_calendar_mortgage_card",
-        "sticker_set": "sticky_god_bez_kvartiry_no_query_bars",
-        "joke": "calendar_plus_12m_payment_now",
-        "outfit": "light_blue_shirt_sand_chinos",
-        "emotion": "stunned_disbelief_raised_brows",
-        "pose_framing": "waist_three_quarter_right",
-        "action": "letter_in_hand_points_payment"
-      }
-    },
-    {
       "date": "2026-08-31",
       "topic_id": "B15",
       "slug": "",
@@ -119,6 +85,23 @@
         "emotion": "shocked disbelief raised brows tense grimace",
         "pose_framing": "full-body three-quarter both hands visible not side-eye bust",
         "action": "holds ddu points at egrn line pushes keys away"
+      }
+    },
+    {
+      "date": "2026-09-11",
+      "topic_id": "B35",
+      "slug": "",
+      "motifs": {
+        "composition": "герой по пояс справа, раскрытое приложение №3 по центру, свободная светлая зона слева под заголовок и телефон",
+        "location": "светлый шоурум новостройки с макетом квартиры, стеклянной стеной и солнечной засветкой, не банк и не мфц",
+        "meme": "disappointed_black_guy и long_cat",
+        "prop_set": "приложение №3 дду с подчёркнутым запретом аренды, смартфон с двумя чатами арендаторов, жёлтый стикер бронь сгорела, макет однушки",
+        "sticker_set": "disappointed_black_guy в верхнем левом углу, long_cat вдоль нижнего края, оба ≤15% и не перекрывают заголовок, лицо и телефон",
+        "joke": "инвестор считал доход от аренды к ключам, а в приложении написано сдавать нельзя до акта и регистрации — жильцы уже уходят к соседям",
+        "outfit": "пыльно-розовая льняная overshirt поверх кремового henley, тёмно-оливковые чиносы, без пиджака",
+        "emotion": "ошеломлённое недоверие, приоткрытый рот, нахмуренные брови, напряжённый взгляд прямо в камеру",
+        "pose_framing": "по пояс справа, обе руки в кадре, корпус наклонён к документу, не бюст слева и не боковой взгляд",
+        "action": "одной рукой держит приложение №3 с запретом аренды, другой показывает смартфон с сообщениями уходим к соседям, рядом телефон +7 922 001 65 05"
       }
     }
   ]
