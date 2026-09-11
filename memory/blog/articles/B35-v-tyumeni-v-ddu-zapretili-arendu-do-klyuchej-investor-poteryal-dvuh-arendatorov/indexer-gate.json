@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-11",
+  "topic_id": "B35",
+  "article_dir": "memory/blog/articles/B35-v-tyumeni-v-ddu-zapretili-arendu-do-klyuchej-investor-poteryal-dvuh-arendatorov",
+  "slug": "v-tyumeni-v-ddu-zapretili-arendu-do-klyuchej-investor-poteryal-dvuh-arendatorov",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": []
+}
