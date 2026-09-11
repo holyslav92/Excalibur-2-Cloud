@@ -120,6 +120,23 @@
         "pose_framing": "full-body three-quarter both hands visible not side-eye bust",
         "action": "holds ddu points at egrn line pushes keys away"
       }
+    },
+    {
+      "date": "2026-09-05",
+      "topic_id": "B24",
+      "slug": "v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41",
+      "motifs": {
+        "composition": "герой крупно слева в три четверти, справа светлая зона под hook и телефон, на столе два документа",
+        "location": "светлый кабинет проверки документов у окна в офисе продаж новостройки тюмени",
+        "meme": "confused_math_lady и smudge_cat",
+        "prop_set": "дду 45 м², декларация 41 м², линейка, калькулятор",
+        "sticker_set": "confused_math_lady + smudge_cat ≤15%",
+        "joke": "кот смотрит на салат из цифр",
+        "outfit": "оливковая льняная рубашка, песочные chinos",
+        "emotion": "ошарашенное недоумение",
+        "pose_framing": "крупный план по грудь слева, взгляд на цифры",
+        "action": "сравнивает две строки площади пальцем и линейкой"
+      }
     }
   ]
 }

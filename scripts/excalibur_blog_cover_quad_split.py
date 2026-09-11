@@ -7,6 +7,7 @@ import argparse
 import json
 import os
 import re
+import shutil
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -366,6 +367,18 @@ def split_canvas(
         host_name = load_hero_name(project_root())
         labels_map = load_visual_type_labels(project_root())
 
+        cover_qa_path = cover_dir / "cover_qa.json"
+        preserve_solo_cover = False
+        if cover_qa_path.is_file():
+            try:
+                cover_qa = load_json(cover_qa_path)
+                qa_status = str(
+                    cover_qa.get("gate_status") or cover_qa.get("status") or ""
+                ).upper()
+                preserve_solo_cover = qa_status == "PASS" and cover_qa.get("pixel_qa")
+            except json.JSONDecodeError:
+                preserve_solo_cover = False
+
         for slot_key in slot_keys:
             slot = slots.get(slot_key) or {}
             quadrant = resolve_quadrant(slot, slot_key)
@@ -376,9 +389,19 @@ def split_canvas(
             if output_size:
                 crop = crop.resize(output_size, Image.Resampling.LANCZOS)
 
-            out_name = "cover.png" if slot_key == "cover" else INLINE_FILES[slot_key]
-            out_path = cover_dir / out_name
-            crop.save(out_path, format="PNG", optimize=True)
+            if slot_key == "cover" and preserve_solo_cover:
+                solo_path = cover_dir / "cover.png"
+                solo_backup = cover_dir / "cover-solo-pass.png"
+                if solo_path.is_file() and not solo_backup.is_file():
+                    shutil.copy2(solo_path, solo_backup)
+                quad_panel_path = cover_dir / "cover-quad-panel.png"
+                crop.save(quad_panel_path, format="PNG", optimize=True)
+                out_name = "cover.png"
+                out_path = solo_path if solo_path.is_file() else quad_panel_path
+            else:
+                out_name = "cover.png" if slot_key == "cover" else INLINE_FILES[slot_key]
+                out_path = cover_dir / out_name
+                crop.save(out_path, format="PNG", optimize=True)
             resolved_alt = resolve_slot_alt(
                 slot_key,
                 slot,

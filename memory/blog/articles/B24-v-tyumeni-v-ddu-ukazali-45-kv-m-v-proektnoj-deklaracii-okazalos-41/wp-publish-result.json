@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41",
+  "topic_id": "B24",
+  "post_id": 9775,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-v-ddu-ukazali-45-kv-m-v-proektnoj-deklaracii-okazalos-41/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1031419,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9775 slug=v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41\nOK categories=36,54,58\nOK yoast_social_image=1\nOK featured_image=9776\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9777 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41-inline-01.png\nOK inline_alt=9777\nOK inline_description=9777\nOK inline_image_upload=9778 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41-inline-02.png\nOK inline_alt=9778\nOK inline_description=9778\nOK inline_image_upload=9779 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41-inline-03.png\nOK inline_alt=9779\nOK inline_description=9779\nOK inline_image_upload=9780 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41-inline-04.png\nOK inline_alt=9780\nOK inline_description=9780\nOK inline_image_upload=9781 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41-inline-05.png\nOK inline_alt=9781\nOK inline_description=9781\nOK inline_image_upload=9782 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41-inline-06.png\nOK inline_alt=9782\nOK inline_description=9782\nOK inline_image_upload=9783 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41-inline-07.png\nOK inline_alt=9783\nOK inline_description=9783\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41/",
+    "errors": []
+  }
+}

@@ -7,7 +7,6 @@
 - [Квартиру продавали по доверенности. Хозяин был на СВО]({{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/): Доверенность на продажу квартиры: как проверить волю собственника на СВО до аванса
 - [В Тюмени расписку за квартиру написали — денег на счёте нет]({{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/): В Тюмени расписку за квартиру написали — денег на счёте нет
 - [В Тюмени не подтвердили согласие супруги — аванс остановили]({{SITE_BASE}}/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/): В Тюмени не подтвердили согласие супруги — аванс остановили
-- [В Тюмени подписали ДДУ на квартиру — в ЕГРН нашли апартаменты]({{SITE_BASE}}/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty/): В Тюмени подписали ДДУ на квартиру — в ЕГРН нашли апартаменты
 - [В Тюмени открытая кухня остановила регистрацию квартиры]({{SITE_BASE}}/v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii/): В Тюмени открытая кухня остановила регистрацию квартиры
 - [В Тюмени банк поднял ставку ипотеки перед ДДУ — бронь сгорела]({{SITE_BASE}}/v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi/): В Тюмени банк поднял ставку ипотеки перед ДДУ — бронь сгорела
 - [Застройщик сдвинул сдачу ЖК в Тюмени на год — ипотека осталась]({{SITE_BASE}}/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/): Застройщик сдвинул сдачу ЖК в Тюмени на год — ипотека осталась
@@ -17,4 +16,5 @@
 - [Почти внесли задаток на торгах — квартиру подарили дочери]({{SITE_BASE}}/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/): За 48 часов до задатка на торгах квартиру подарили дочери — что показала свежая ЕГРН
 - [В Тюмени ипотеку одобрили — эскроу сорвал маткапитал]({{SITE_BASE}}/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/): В Тюмени ипотеку одобрили — эскроу сорвал маткапитал
 - [В выписке ЕГРН есть строка, после которой аванс вносить нельзя]({{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/): В выписке ЕГРН есть строка, после которой аванс вносить нельзя
+- [В Тюмени ДДU на 45 м² остановили: декларация показала 41]({{SITE_BASE}}/v-tyumeni-ddu-na-45-kv-m-ostanovili-deklaratsiya-pokazala-41/): В договоре было 45 м², в декларации — 41. Святослав Шакин в Тюмени остановил сделку до подписи: четыре метра на бумаге способны изменить не только цену.
 - [В Тюмени застройщик сменил юрлицо — банк не открыл эскроу]({{SITE_BASE}}/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/): В Тюмени застройщик сменил юрлицо — банк не открыл эскроу

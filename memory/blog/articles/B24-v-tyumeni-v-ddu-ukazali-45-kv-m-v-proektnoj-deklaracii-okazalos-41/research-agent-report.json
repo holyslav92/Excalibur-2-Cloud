@@ -1,0 +1,74 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-05",
+  "derouter": {
+    "status": "PARTIAL",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "note": "Attempts 1-2 HTTP 524 timeout on full/compact inputs; attempt 3 minimal returned BLOCK meta-text; attempt 4 timeout. Conductor assembled research-notes.md from live-verified sources in assembled-research-inputs-verified.md per skill fallback when synthesis blocked.",
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://tyumedia.ru/302577.html",
+        "type": "local official news",
+        "date": "2026-09-01",
+        "note": "Tyumen Rosreestr phone consultations September 2026 — 4 days before research_date"
+      },
+      {
+        "url": "https://tyumedia.ru/302658.html",
+        "type": "local official",
+        "date": "2026",
+        "note": "Tyumen Rosreestr: DDU area per project declaration (214-FZ Art 4); DDU vs act balcony mechanics"
+      },
+      {
+        "url": "https://dzen.ru/a/ajrYV_OqTyVciJYz",
+        "type": "community",
+        "date": "2026",
+        "note": "Holyslav Tyumen newbuild checklist — verify area vs declaration before DDU"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 856,
+    "support_phrases": [
+      {"phrase": "новостройки тюмень", "volume": 4660},
+      {"phrase": "проектная декларация застройщика", "volume": 48},
+      {"phrase": "приемка квартиры в новостройке тюмень", "volume": 33}
+    ],
+    "partial": ["площадь квартиры по дду — totalCount 7 only"],
+    "rework_from": "проектная декларация (48) → P0 купить новостройку в тюмени (856)"
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_ddu_area_vs_project_declaration_mismatch_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["214_fz", "218_fz", "dom_rf", "rosreestr"],
+    "errors": []
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "assembled_inputs_compact": "assembled-research-inputs-compact.md",
+    "assembled_inputs_verified": "assembled-research-inputs-verified.md"
+  },
+  "incident_report": "none"
+}
