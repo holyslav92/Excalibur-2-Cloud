@@ -1,0 +1,244 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-11",
+    "today_ru": "11.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "пятница"
+  },
+  "topic": {
+    "topic_id": "B24",
+    "title": "В Тюмени просрочили рассрочку от застройщика на 4 дня — вернули только 180 тысяч из 400",
+    "h1": "В Тюмени просрочили рассрочку от застройщика на 4 дня — вернули только 180 тысяч из 400",
+    "slug": "v-tyumeni-prosrochili-rassrochku-ot-zastrojschika-na-4-dnya-vernuli-tolko-180-ty",
+    "primary_query": "В Тюмени просрочили рассрочку от застройщика на 4 дня — вернули только 180 тысяч из 400",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени просрочили рассрочку от застройщика на 4 дня — вернули только 180 тысяч из 400 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени ДДУ расторгли из-за пяти дней просрочки — удержали 180 тысяч ...",
+          "url": "https://dzen.ru/a/ap6ljsSWjwEstOtz",
+          "snippet": ""
+        },
+        {
+          "title": "Рассрочка от застройщика в Тюмени в 2026 году: как это работает и что ...",
+          "url": "https://novostroyki-tumeni.ru/article/rassrochka-ot-zastroyshchika-v-tyumeni-2026",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : 5 дней задержки платежа — и вместо подготовки к получению ключей семья из Тюмени разбирает уведомление о расторжении ДДУ."
+        },
+        {
+          "title": "Почему в Тюмени снизилась популярность рассрочек от застройщика",
+          "url": "https://nashgorod.ru/news/2026-03-25/ne-vygodno-nikomu-pochemu-v-tyumeni-snizilas-populyarnost-rassrochek-ot-zastroyschika-5569287",
+          "snippet": "По прогнозам аналитиков, в 2026 году застройщики сами сокращают длинные рассрочки до 6-12 месяцев — это связано с необходимостью наполнить эскроу-счета к моменту их раскрытия."
+        },
+        {
+          "title": "Рассрочка от застройщика в Тюмени: как не купить красивый платёж",
+          "url": "https://dzen.ru/a/ahfNSXM-KU9ruvUt",
+          "snippet": "В ближайшие месяцы рынок первичной недвижимости Тюмени окончательно избавится от неработающих механизмов продаж. Одной из первых «отваливается» рассрочка от застройщика."
+        },
+        {
+          "title": "Эксперты оценили безопасность покупки квартиры в рассрочку от ...",
+          "url": "https://www.gazeta.ru/business/news/2026/08/21/29151349.shtml",
+          "snippet": "Рассрочка от застройщика в Тюмени подходит покупателю только после проверки полной цены квартиры, графика платежей, остатка перед сдачей дома и условий штрафов."
+        },
+        {
+          "title": "Рассрочка на квартиру от застройщика 0% - купить в Тюмени | «СКАНДИА»",
+          "url": "https://scandia.life/tools/rassrochka/",
+          "snippet": "Рассрочка от застройщика - это невыгодная схема сделок для обеих сторон, которая несет в себе массу потенциальных рисков. Проблема состоит в том, что она не привязана к срокам ввода объекта в..."
+        }
+      ],
+      "searched_at": "2026-09-11"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени просрочили рассрочку от застройщика на 4 дня — вернули только 180 тысяч из 400 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Рассрочка от застройщика в Тюмени: как не купить красивый платёж",
+          "url": "https://dzen.ru/a/ahfNSXM-KU9ruvUt",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени взяли квартиру в рассрочку — досрочно потеряли скидку",
+          "url": "https://dzen.ru/a/apvynqKBtmtjAEBW",
+          "snippet": "Рассрочка от застройщика в Тюмени подходит покупателю только после проверки полной цены квартиры, графика платежей, остатка перед сдачей дома и условий штрафов."
+        },
+        {
+          "title": "Рассрочка от застройщика в Тюмени в 2026 году: как это работает и что ...",
+          "url": "https://novostroyki-tumeni.ru/article/rassrochka-ot-zastroyshchika-v-tyumeni-2026",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : Четыре месяца семья из Тюмени спокойно платила по графику рассрочки от застройщика, а на пятый привезла в офис весь остаток — и..."
+        },
+        {
+          "title": "Почему в Тюмени снизилась популярность рассрочек от застройщика",
+          "url": "https://nashgorod.ru/news/2026-03-25/ne-vygodno-nikomu-pochemu-v-tyumeni-snizilas-populyarnost-rassrochek-ot-zastroyschika-5569287",
+          "snippet": "По прогнозам аналитиков, в 2026 году застройщики сами сокращают длинные рассрочки до 6-12 месяцев — это связано с необходимостью наполнить эскроу-счета к моменту их раскрытия."
+        },
+        {
+          "title": "Рассрочка на квартиру от застройщика 0% - купить в Тюмени | «СКАНДИА»",
+          "url": "https://scandia.life/tools/rassrochka/",
+          "snippet": "В ближайшие месяцы рынок первичной недвижимости Тюмени окончательно избавится от неработающих механизмов продаж. Одной из первых «отваливается» рассрочка от застройщика."
+        },
+        {
+          "title": "Квартира в рассрочку в Тюмени: условия застройщиков — РБК",
+          "url": "https://t.rbc.ru/tyumen/25/07/2025/687f0bd89a794770bb631bd3",
+          "snippet": "Беспроцентная рассрочка на квартиру от застройщика «СКАНДИА» в Тюмени. Покупка квартиры в рассрочку без банков и переплат до 3 лет."
+        }
+      ],
+      "searched_at": "2026-09-11"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени просрочили рассрочку от застройщика на 4 дня — вернули только 180 тысяч из 400 official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Рассрочка от застройщика в Тюмени в 2026 году: как это работает и что ...",
+          "url": "https://novostroyki-tumeni.ru/article/rassrochka-ot-zastroyshchika-v-tyumeni-2026",
+          "snippet": ""
+        },
+        {
+          "title": "Почему в Тюмени снизилась популярность рассрочек от застройщика",
+          "url": "https://nashgorod.ru/news/2026-03-25/ne-vygodno-nikomu-pochemu-v-tyumeni-snizilas-populyarnost-rassrochek-ot-zastroyschika-5569287",
+          "snippet": "По прогнозам аналитиков, в 2026 году застройщики сами сокращают длинные рассрочки до 6-12 месяцев — это связано с необходимостью наполнить эскроу-счета к моменту их раскрытия."
+        },
+        {
+          "title": "В Тюмени взяли квартиру в рассрочку — досрочно потеряли скидку",
+          "url": "https://dzen.ru/a/apvynqKBtmtjAEBW",
+          "snippet": "В ближайшие месяцы рынок первичной недвижимости Тюмени окончательно избавится от неработающих механизмов продаж. Одной из первых «отваливается» рассрочка от застройщика."
+        },
+        {
+          "title": "Рассрочка от застройщика в Тюмени: как не купить красивый платёж",
+          "url": "https://dzen.ru/a/ahfNSXM-KU9ruvUt",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : Четыре месяца семья из Тюмени спокойно платила по графику рассрочки от застройщика, а на пятый привезла в офис весь остаток — и..."
+        },
+        {
+          "title": "Рассрочка на квартиру от застройщика 0% - купить в Тюмени | «СКАНДИА»",
+          "url": "https://scandia.life/tools/rassrochka/",
+          "snippet": "Рассрочка от застройщика в Тюмени подходит покупателю только после проверки полной цены квартиры, графика платежей, остатка перед сдачей дома и условий штрафов."
+        },
+        {
+          "title": "Мораторий на неустойки отменён: как взыскать деньги с застройщика за ...",
+          "url": "https://harant.ru/blog/nedvizhimost/moratorij-na-neustojki-otmenyon-kak-poluchit-dengi-s-zastrojshhika-za-prosrochku-v-2026/",
+          "snippet": "Беспроцентная рассрочка на квартиру от застройщика «СКАНДИА» в Тюмени. Покупка квартиры в рассрочку без банков и переплат до 3 лет. Минимальный первоначальный взнос от 10%, гибкие условия платежей, юридические гарантии, фиксация цены на весь период."
+        }
+      ],
+      "searched_at": "2026-09-11"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени просрочили рассрочку от застройщика на 4 дня — вернули только 180 тысяч из 400 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "GitHub - AvenCores/open-antigravity-patcher: Патчер Antigravity для ...",
+          "url": "https://github.com/AvenCores/open-antigravity-patcher",
+          "snippet": ""
+        },
+        {
+          "title": "2026-group-13/assets/implementation/tutorial/step3.png at main · UoB ...",
+          "url": "https://github.com/UoB-COMSM0166/2026-group-13/blob/main/assets/implementation/tutorial/step3.png",
+          "snippet": "Патчер меняет только локальные файлы Antigravity/Antigravity CLI и не может выдать аккаунту лицензию или изменить ответ Google API, поэтому с этой ошибкой он не поможет. Решение: Смените регион аккаунта Google или используйте аккаунт, зарегистрированный в регионе, где Antigravity официально работает."
+        },
+        {
+          "title": "Блокировка роблокс чата на территории РФ",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/discussions/7463",
+          "snippet": "Contribute to UoB-COMSM0166/2026-group-13 development by creating an account on GitHub."
+        },
+        {
+          "title": "Активация на 180 дней · massgravel Microsoft ... - GitHub",
+          "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/discussions/937",
+          "snippet": "Опять же, если работать с тем что пишет поддержка в своем ответе: локация аккаунта обновляется динамически и региональные блокировки зависят только от текущей локации."
+        },
+        {
+          "title": "BryanCPineda/svg.svg at main - GitHub",
+          "url": "https://github.com/BryanCPineda/BryanCPineda/blob/main/svg.svg",
+          "snippet": "Do what I said, and it will resolve it, and you will get a 180-day KMS activation. The reason is why it's not showing 180 days KMS is because you used KMS38 to activate it before and that activates till 2038."
+        },
+        {
+          "title": "SFHformer/image/underwater_result.png at main · deng-ai-lab/SFHformer",
+          "url": "https://github.com/deng-ai-lab/SFHformer/blob/main/image/underwater_result.png",
+          "snippet": "Contribute to BryanCPineda/BryanCPineda development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-09-11"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени просрочили рассрочку от застройщика на 4 дня — вернули только 180 тысяч из 400 forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Рассрочка от застройщика в Тюмени в 2026 году: как это работает и что ...",
+          "url": "https://novostroyki-tumeni.ru/article/rassrochka-ot-zastroyshchika-v-tyumeni-2026",
+          "snippet": ""
+        },
+        {
+          "title": "Почему в Тюмени снизилась популярность рассрочек от застройщика",
+          "url": "https://nashgorod.ru/news/2026-03-25/ne-vygodno-nikomu-pochemu-v-tyumeni-snizilas-populyarnost-rassrochek-ot-zastroyschika-5569287",
+          "snippet": "По прогнозам аналитиков, в 2026 году застройщики сами сокращают длинные рассрочки до 6-12 месяцев — это связано с необходимостью наполнить эскроу-счета к моменту их раскрытия."
+        },
+        {
+          "title": "В Тюмени взяли квартиру в рассрочку — досрочно потеряли скидку",
+          "url": "https://dzen.ru/a/apvynqKBtmtjAEBW",
+          "snippet": "В ближайшие месяцы рынок первичной недвижимости Тюмени окончательно избавится от неработающих механизмов продаж. Одной из первых «отваливается» рассрочка от застройщика."
+        },
+        {
+          "title": "Эксперты оценили безопасность покупки квартиры в рассрочку от ...",
+          "url": "https://www.gazeta.ru/business/news/2026/08/21/29151349.shtml",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : Четыре месяца семья из Тюмени спокойно платила по графику рассрочки от застройщика, а на пятый привезла в офис весь остаток — и..."
+        },
+        {
+          "title": "Рассрочка на квартиру от застройщика 0% - купить в Тюмени | «СКАНДИА»",
+          "url": "https://scandia.life/tools/rassrochka/",
+          "snippet": "Рассрочка от застройщика - это невыгодная схема сделок для обеих сторон, которая несет в себе массу потенциальных рисков. Проблема состоит в том, что она не привязана к срокам ввода объекта в..."
+        },
+        {
+          "title": "Мораторий на неустойки отменён: как взыскать деньги с застройщика за ...",
+          "url": "https://harant.ru/blog/nedvizhimost/moratorij-na-neustojki-otmenyon-kak-poluchit-dengi-s-zastrojshhika-za-prosrochku-v-2026/",
+          "snippet": "Беспроцентная рассрочка на квартиру от застройщика «СКАНДИА» в Тюмени. Покупка квартиры в рассрочку без банков и переплат до 3 лет. Минимальный первоначальный взнос от 10%, гибкие условия платежей, юридические гарантии, фиксация цены на весь период."
+        }
+      ],
+      "searched_at": "2026-09-11"
+    }
+  ],
+  "errors": [],
+  "wordstat": {
+    "accessed_at": "2026-09-11",
+    "regions": [55, 11176],
+    "compare_region": 225,
+    "p0_phrase": "рассрочка от застройщика тюмень",
+    "p0_volume": 137,
+    "p0_volume_compare225": 217,
+    "support_phrases": [
+      {"phrase": "квартира в рассрочку от застройщика тюмень", "volume": 64, "volume_compare225": 110},
+      {"phrase": "рассрочка от застройщика тюмень без первоначального взноса", "volume": 6, "volume_compare225": 11}
+    ],
+    "context_spine": {"phrase": "новостройки тюмень", "volume_related": 4580}
+  },
+  "research_live_fetch": {
+    "accessed_at": "2026-09-11",
+    "official": [
+      "https://cbr.ru/hd_base/KeyRate/",
+      "https://cbr.ru/analytics/finansirovanie-dolevogo-stroitelstva/questions/2020-02-20/",
+      "https://cbr.ru/press/event/?id=28446"
+    ],
+    "community": [
+      "https://dzen.ru/a/ahfNSXM-KU9ruvUt",
+      "https://dzen.ru/a/anCDeZP-tkHrkQcn",
+      "https://novostroyki-tumeni.ru/article/rassrochka-ot-zastroyshchika-v-tyumeni-2026"
+    ]
+  }
+}
