@@ -1,0 +1,245 @@
+{
+  "topic_id": "B24",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "За лишние метры потребовали доплату",
+  "cover_hook_highlight": "доплату",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени застройщик потребовал 420 тысяч за лишние метры — ключи не выдал: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "комната: свитер, счёт 420 тысяч на столе, дальномер на столе, hide_pain_harold smudge_cat, руки вне кадра",
+      "meme_caption_ru": "",
+      "sticky": "Ключи заблокировали",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "возмущённое недоумение, сжатые губы, взгляд вбок на счёт",
+      "meme_picks": [
+        "hide_pain_harold",
+        "smudge_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Дом сдали вовремя, а за две недели до ключей пришёл счёт на 420 тысяч",
+      "visual_type": "realistic_photo",
+      "scene_hint": "коридор: счёт, ключи, blinking_white_guy",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Дом сдали вовремя, а за две недели до ключей пр…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Дом сдан",
+        "Счёт 420 тыс",
+        "За 2 недели",
+        "Лишние метры"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "blinking_white_guy"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Дом сдали вовремя, а за две недели до ключей пришёл счёт на 420 тысяч",
+      "visual_type": "comparison_table",
+      "scene_hint": "графическое сопоставление строительных нормативов",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Формула ДДУ, Лоджия 1,0, Допуск 1 метр — иллюстрация к разбору сделки.",
+      "labels": [
+        "Формула ДДУ",
+        "Лоджия 1,0",
+        "Допуск 1 метр",
+        "Холодный контур"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Застройщик заблокировал ключи: «сначала перечислите доплату, потом акт»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "офис: папка ДДУ, отказ в ключах",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Застройщик заблокировал ключи: «сначала перечис…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Отказ в ключах",
+        "Ультиматум",
+        "2 месяца срок",
+        "Сначала деньги"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Досудебная претензия и аннулирование счёта: ключи забрали без доплаты",
+      "visual_type": "realistic_photo",
+      "scene_hint": "комната: дальномер на штативе, чертеж",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Досудебная претензия и аннулирование счёта: клю…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Дальномер",
+        "Инженер",
+        "Лоджия 0,5",
+        "Итог 0,8 метра"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Откуда взялись «лишние метры»: лоджия, перегородки и договорная формула",
+      "visual_type": "process_flow",
+      "scene_hint": "претензия: штамп канцелярии, отмена счета, success_kid",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Претензия, Акт инженера, Статья 5 закона — иллюстрация к разбору сделки.",
+      "labels": [
+        "Претензия",
+        "Акт инженера",
+        "Статья 5 закона",
+        "Счёт отменён"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "success_kid"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Независимый обмер на объекте: что показал лазерный дальномер инженера",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "диаграмма: этапы проверки ДДУ, коэффициенты",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Сверка площади, Раздел о цене, Допуск метра — иллюстрация к разбору сделки.",
+      "labels": [
+        "Сверка площади",
+        "Раздел о цене",
+        "Допуск метра",
+        "Акт обмеров"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить в ДДУ до оплаты спорных метров — таблица",
+      "visual_type": "structure_diagram",
+      "scene_hint": "чек-лист безопасности: проверка до акта, doge",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Проверка до денег, Ведомость БТИ, Обмер инженера — иллюстрация к разбору сделки.",
+      "labels": [
+        "Проверка до денег",
+        "Ведомость БТИ",
+        "Обмер инженера",
+        "Приёмка"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "doge"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "купить от застройщика"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "крупный портрет героя справа, чистая светлая зона слева под заголовок, счёт и дальномер лежат на столе в нижнем плане без рук",
+    "location": "светлая квартира в сданной новостройке Тюмени с панорамным окном и залитыми солнцем бетонными стенами",
+    "meme": "hide_pain_harold и smudge_cat",
+    "prop_set": "счёт на 420 тысяч рублей на столе, лазерный дальномер на столе, папка ДДУ, связка ключей в прозрачном пакете, смартфон с +7 922 001 65 05",
+    "sticker_set": "маленький hide_pain_harold в левом нижнем углу и smudge_cat в правом верхнем, оба до 15% и не перекрывают лицо, заголовок и телефон",
+    "joke": "счёт на полмиллиона лежит на столе, а лазерный дальномер показывает, что метры посчитали не по закону",
+    "outfit": "тёмно-синий трикотажный свитер с круглым вырезом поверх белой футболки, без пиджака и бомбера",
+    "emotion": "возмущённое недоумение, сжатые губы, напряжённый взгляд вбок на счёт",
+    "pose_framing": "крупный портрет грудь-плечи, руки полностью вне кадра, корпус слегка развёрнут к счёту на столе",
+    "action": "герой смотрит вбок на лежащий на столе счёт, руки скрыты за кадром, дальномер и телефон на столе"
+  },
+  "cover_emotion": "возмущённое недоумение, сжатые губы, взгляд вбок на счёт"
+}

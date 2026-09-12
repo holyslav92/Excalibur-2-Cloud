@@ -1,0 +1,9 @@
+{
+  "topic_id": "B24",
+  "description": "Доплата за площадь или плата за доступ к собственной квартире? В Тюмени семье с двумя детьми не передают ключи, пока она не заплатит за «лишние метры».",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
