@@ -1,0 +1,26 @@
+{
+  "topic_id": "B24",
+  "slug": "v-tyumeni-nedelyu-derzhali-pereustupku-drugoj-vnes-bron-na-tu-zhe-planirovku-za-",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "grsai_solo_cover",
+  "file": "cover/cover.png",
+  "alt": "7 дней держали переуступку в Тюмени — квартиру забронировали другие: что проверить в договоре и эскроу до подписи.",
+  "caption": "",
+  "aspect_ratio": "16:9",
+  "canvas_source": "grsai_solo_cover",
+  "generated_at": "2026-09-12T12:48:00+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "7 дней держали переуступку в Тюмени — квартиру забронировали другие: что проверить в договоре и эскроу до подписи.",
+      "caption": "",
+      "description": "7 дней держали переуступку в Тюмени — квартиру забронировали другие: что проверить в договоре и эскроу до подписи.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}
