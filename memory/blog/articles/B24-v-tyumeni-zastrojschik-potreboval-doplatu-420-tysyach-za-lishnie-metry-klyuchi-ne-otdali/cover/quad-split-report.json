@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B24-v-tyumeni-zastrojschik-potreboval-doplatu-420-tysyach-za-lishnie-metry-klyuchi-ne-otdali/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1021,
+          571
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 571,
+            "end": 581
+          },
+          "v_gutter_px": {
+            "start": 1021,
+            "end": 1025
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 1.0,
+            "max_aspect_crop_loss": 0.0078,
+            "per_panel_crop_loss": {
+              "top_left": 0.0059,
+              "top_right": 0.0078,
+              "bottom_left": 0.0059,
+              "bottom_right": 0.0078
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 3,
+              "top": 0,
+              "right": 1018,
+              "bottom": 571
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1021,
+              "bottom": 571
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени застройщик потребовал 420 тысяч за лишние метры — ключи не выдал: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1029,
+              "top": 0,
+              "right": 2044,
+              "bottom": 571
+            },
+            "raw_box_px": {
+              "left": 1025,
+              "top": 0,
+              "right": 2048,
+              "bottom": 571
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Дом сдали вовремя, а за две недели до ключей пр…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Дом сдали вовремя, а за две недели до ключей пришёл счёт на 420 тысяч"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 3,
+              "top": 581,
+              "right": 1018,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 581,
+              "right": 1021,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Формула ДДУ, Лоджия 1,0, Допуск 1 метр — иллюстрация к разбору сделки.",
+            "h2_anchor": "Дом сдали вовремя, а за две недели до ключей пришёл счёт на 420 тысяч"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1029,
+              "top": 581,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1025,
+              "top": 581,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Застройщик заблокировал ключи: «сначала перечис…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Застройщик заблокировал ключи: «сначала перечислите доплату, потом акт»"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B24-v-tyumeni-zastrojschik-potreboval-doplatu-420-tysyach-za-lishnie-metry-klyuchi-ne-otdali/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1014,
+          565
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 565,
+            "end": 587
+          },
+          "v_gutter_px": {
+            "start": 1014,
+            "end": 1034
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0099,
+            "per_panel_crop_loss": {
+              "top_left": 0.0099,
+              "top_right": 0.0099,
+              "bottom_left": 0.0099,
+              "bottom_right": 0.0099
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 5,
+              "top": 0,
+              "right": 1009,
+              "bottom": 565
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1014,
+              "bottom": 565
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Досудебная претензия и аннулирование счёта: клю…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Досудебная претензия и аннулирование счёта: ключи забрали без доплаты"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1039,
+              "top": 0,
+              "right": 2043,
+              "bottom": 565
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 0,
+              "right": 2048,
+              "bottom": 565
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Претензия, Акт инженера, Статья 5 закона — иллюстрация к разбору сделки.",
+            "h2_anchor": "Откуда взялись «лишние метры»: лоджия, перегородки и договорная формула"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 5,
+              "top": 587,
+              "right": 1009,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 587,
+              "right": 1014,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Сверка площади, Раздел о цене, Допуск метра — иллюстрация к разбору сделки.",
+            "h2_anchor": "Независимый обмер на объекте: что показал лазерный дальномер инженера"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1039,
+              "top": 587,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 587,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Проверка до денег, Ведомость БТИ, Обмер инженера — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что проверить в ДДУ до оплаты спорных метров — таблица"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Дом сдали вовремя, а за две недели до ключей пришёл счёт на 420 тысяч",
+    "skip inline_2: already correct under H2 — Дом сдали вовремя, а за две недели до ключей пришёл счёт на 420 тысяч",
+    "skip inline_3: already correct under H2 — Застройщик заблокировал ключи: «сначала перечислите доплату, потом акт»",
+    "moved inline_4 → H2 — Досудебная претензия и аннулирование счёта: ключи забрали без доплаты (was under [независимый обмер на объекте: что показал лазерный дальномер инженера]; removed=1)",
+    "moved inline_5 → H2 — Откуда взялись «лишние метры»: лоджия, перегородки и договорная формула (was under [досудебная претензия и аннулирование счёта: ключи забрали без доплаты]; removed=1)",
+    "moved inline_6 → H2 — Независимый обмер на объекте: что показал лазерный дальномер инженера (was under [что проверить в дду до оплаты спорных метров — таблица]; removed=1)",
+    "skip inline_7: already correct under H2 — Что проверить в ДДУ до оплаты спорных метров — таблица"
+  ]
+}
