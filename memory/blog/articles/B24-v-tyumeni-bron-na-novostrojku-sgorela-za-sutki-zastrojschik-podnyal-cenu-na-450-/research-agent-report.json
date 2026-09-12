@@ -1,0 +1,79 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-10",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/08/76619954/",
+        "type": "news",
+        "note": "08.09.2026 — скидки до 400 тыс. ₽ на новостройки Тюмени (ЖК Концепт); свежий рыночный сигнал недели"
+      },
+      {
+        "url": "https://www.infox.ru/news/299/385287-tumen-vosla-v-cislo-liderov-po-prodazam-novostroek-so-skidkami",
+        "type": "news",
+        "note": "24.08.2026 — 58,4% сделок со скидкой в Тюмени (июль 2026), средняя скидка 8,9%"
+      },
+      {
+        "url": "https://novostroikino.ru/blog/bronirovanie-kvartiry-v-novostroyke-2026/",
+        "type": "market",
+        "note": "06.08.2026 — механика брони, аванс vs услуга, сроки и возврат"
+      },
+      {
+        "url": "https://tyumen.brusnika.ru/agreement_pantry/",
+        "type": "official",
+        "note": "Оферта бронирования Brusnika Tyumen: 3 дня, 5000 ₽ резерв"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel (scout signal)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 885,
+    "p0_volume_ru225": null,
+    "support_phrases": [
+      {"phrase": "новостройки тюмень", "volume": 4642},
+      {"phrase": "бронь новостройки", "volume": 3},
+      {"phrase": "бронь новостройки", "volume": 288, "region": "225"}
+    ],
+    "rework_from": "scout rework: бронь новостройки (3) → P0 купить новостройку в тюмени (885)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "booking_expired_price_hike_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 8,
+    "entities_checked": ["brusnika_tyumen", "aag_estate", "mig_estate", "consultant_214fz"],
+    "errors": [],
+    "note": "Developer booking fees/terms from official offers; market discount stats from media only"
+  },
+  "derouter": {
+    "attempts": 3,
+    "final_status": "manual_fallback",
+    "note": "Derouter utility returned meta-refusal or timed out (524); research-notes.md completed from live-verified assembled inputs"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
