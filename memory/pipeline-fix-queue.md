@@ -1112,7 +1112,7 @@ checks_run:
 - Initial cover from commit 76eab2d9 → pixel QA FAIL (wordstat strips, phone, collage inset)
 - Post-regen cover.png → pixel QA PASS + `ocr_false_positive_escape`
 - `python3 -m unittest tests.test_cover_budget` → OK
-commit: pending
+commit: cd10caa9
 
 ## INC-20260912-0606-quality-score-sol-repair-b24
 status: fixed
