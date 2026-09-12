@@ -3,7 +3,7 @@
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
 ## INC-20260821-0615-content-learner-metrika-credentials
-status: open
+status: needs-human
 run_date: 2026-08-21
 role: excalibur-blog-content-learner
 topic_id: B06
@@ -23,10 +23,11 @@ category: env
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
 - **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9749 ingest skipped; B23 lesson recorded without behavioral signals (newbuild_apartments_instead_flat_ddu_tyumen cluster).
+- **2026-09-12 B24 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 10122 ingest skipped; B24 lessons pending without behavioral signals (ddu_amount_vs_escrow_zero cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368) и B23 (post 9749) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (9161), B11 (9230), B12 (9250), B15 (9368), B23 (9749) и B24 (10122) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -34,6 +35,15 @@ category: env
 
 ### Secrets
 - none recorded (credentials absent)
+
+### Fixer resolution
+fixed_at: 2026-09-12
+fix_summary:
+- Env blocker — durable fix requires owner Cloud Secrets setup; no repo code change.
+reason:
+- Missing Metrika OAuth token and counter id cannot be synthesized in git.
+needed_decision_or_secret:
+- `YANDEX_METRIKA_OAUTH_TOKEN`, `YANDEX_METRIKA_COUNTER_ID` in Cloud Secrets
 
 ## INC-20260821-0614-quality-bar-wordstat-pil-b06
 status: fixed
@@ -1063,3 +1073,78 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260912-0605-cover-fixer-round1-b24
+status: fixed
+run_date: 2026-09-12
+role: excalibur-blog-cover-qa
+topic_id: B24
+article_dir: memory/blog/articles/B24-v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol
+severity: medium
+category: qa
+
+### What went wrong
+- Initial quad-split cover.png FAIL: wordstat query strips + opaque bars (`pixel_no_wordstat_query_strips`, `pixel_wordstat_not_opaque_bars`), phone clipped/unreadable, collage inset, designed-thumbnail flakes.
+- Cover-QA needed 1 Fixer round (`quad_regen_panels --slots cover` → solo i2i) before OCR escape PASS.
+
+### How the agent recovered this run
+- `excalibur_blog_cover_fixer.py` round 1 → `quad-solo-batch-cover.json` solo regen → re-QA PASS with `ocr_false_positive_escape` on residual OCR flakes (md5=b107b68d).
+- Publish post 10122; `cover_qa.json` gate PASS.
+
+### Durable fix needed before next run
+- None — B20 `TEXT_LAYOUT_RETRY` + cover_fixer layout/hook/phone/wordstat-strip regen + B11/B19 OCR escape already canonical on main.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_fixer.py`
+- `scripts/excalibur_blog_quad_regen_panels.py`
+- `scripts/excalibur_blog_cover_qa_pixels.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-12
+fix_summary:
+- Verified initial cover FAIL (13 pixel checks) resolved by existing cover_fixer solo panel regen + OCR escape; no new code.
+files_changed:
+- none (contract already canonical)
+checks_run:
+- Initial cover from commit 76eab2d9 → pixel QA FAIL (wordstat strips, phone, collage inset)
+- Post-regen cover.png → pixel QA PASS + `ocr_false_positive_escape`
+- `python3 -m unittest tests.test_cover_budget` → OK
+commit: cd10caa9
+
+## INC-20260912-0606-quality-score-sol-repair-b24
+status: fixed
+run_date: 2026-09-12
+role: excalibur-blog-sol
+topic_id: B24
+article_dir: memory/blog/articles/B24-v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol
+severity: low
+category: prompt
+
+### What went wrong
+- First Sol pass: quality-score gate FAIL `finale-third-retell` — closing repeated middle scene «перевод обычные реквизиты застройщика».
+
+### How the agent recovered this run
+- One quality-score Sol repair (`quality-score-notes.md` → Derouter sol) → `article-quality-score.json` PASS at 1594 words; publish post 10122.
+
+### Durable fix needed before next run
+- None — ≤1 quality-score Sol repair is canonical (`shared/article-quality-score-lock.md`); gate + notes builder already wired.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quality_score_gate.py`
+- `skills/sol-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-12
+fix_summary:
+- No code change — expected quality-score → single Sol repair contract; B24 PASS confirms pipeline behavior.
+files_changed:
+- none
+checks_run:
+- B24 `article-quality-score.json` all_pass=true, word_count=1594
+commit: d61b45ec

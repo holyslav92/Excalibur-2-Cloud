@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol/#blogposting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol/"
+      },
+      "url": "{{SITE_BASE}}/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol/",
+      "headline": "В ДДУ в Тюмени указали 4,2 млн — на эскроу был ноль",
+      "description": "Семья в Тюмени перевела взнос застройщику: менеджер обещал «зачтём в эскроу». Но банк денег на счёте не увидел — семье предложили внести 4,2 млн ещё раз.",
+      "datePublished": "2026-09-12",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}

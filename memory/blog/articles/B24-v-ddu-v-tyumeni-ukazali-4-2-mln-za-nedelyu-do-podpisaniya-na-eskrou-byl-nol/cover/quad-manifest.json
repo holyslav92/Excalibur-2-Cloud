@@ -1,0 +1,233 @@
+{
+  "topic_id": "B24",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Эскроу пуст, хотя деньги указали",
+  "cover_hook_highlight": "пуст",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В ДДУ в Тюмени указали 4,2 млн — на эскроу был ноль: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Стойка эскроу в офисе ЖК: герой справа, ДДУ 4,2 млн vs ноль; high-key, hook слева.",
+      "meme_caption_ru": "",
+      "sticky": "Сначала проверьте счёт",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошарашенное недоверие с приподнятой бровью и напряжённой гримасой",
+      "meme_picks": [
+        "confused_math_lady",
+        "long_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Финал: сделку остановили, предложили платить второй раз",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Коридор офиса: папка ДДУ, «подписание остановлено»; disappointed_black_guy угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Финал: сделку остановили, предложили платить вт…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Договор — 4,2 млн",
+        "Эскроу — ноль",
+        "Повторная оплата"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disappointed_black_guy"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Финал: сделку остановили, предложили платить второй раз",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: застройщик vs эскроу, ст.15.5, зачёт письменно.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Бронь, Аванс, Эскроу — иллюстрация к разбору сделки.",
+      "labels": [
+        "Бронь",
+        "Аванс",
+        "Эскроу"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "В проекте ДДУ — 4,2 млн, а на эскроу пусто",
+      "visual_type": "realistic_photo",
+      "scene_hint": "ДДУ 4,2 млн рядом с пустым эскроу; top-down bright.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «В проекте ДДУ — 4,2 млн, а на эскроу пусто» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "ДДУ — 4,2 млн",
+        "Эскроу пусто",
+        "Аванс не эскроу"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "«Мы зачтём в эскроу» — и перевод на реквизиты застройщика",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Квитанция застройщику vs эскроу, −7 дней, остаток 0.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Мы зачтём в эскроу» — и перевод на реквизиты з…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "За 7 дней",
+        "Остаток — ноль",
+        "Реквизиты застройщика"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "За семь дней до подписания банк увидел ноль",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Timeline −7 дней → ноль → двойная оплата; this_is_fine_dog.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Повторно 4,2 млн, Двойная оплата, Сделка остановлена — иллюстрация к разбору сделки.",
+      "labels": [
+        "Повторно 4,2 млн",
+        "Двойная оплата",
+        "Сделка остановлена"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Бронь, аванс и цена ДДУ — три разных платежа",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow: бронь → аванс → ДДУ → эскроу → зачёт.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Бронь, Аванс, Цена ДДУ — иллюстрация к разбору сделки.",
+      "labels": [
+        "Бронь",
+        "Аванс",
+        "Цена ДДУ"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что сверить до подписания — таблица",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Checklist: договор, эскроу, остаток, Росреестр; pepe_frog.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Счёт эскроу, Остаток подтверждён, Без повторной оплаты — иллюстрация к разбору сделки.",
+      "labels": [
+        "Счёт эскроу",
+        "Остаток подтверждён",
+        "Без повторной оплаты"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "эскроу счет",
+    "счет эскроу дду"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "светлая динамичная сцена в формате 2×2: герой в полный рост у стойки справа от центра, документы и баланс крупно в переднем плане, свободная зона под заголовок слева",
+    "location": "яркая стойка проверки эскроу в офисе продаж новостройки Тюмени, панорамные окна, макет жилого комплекса на фоне",
+    "meme": "confused_math_lady и маленький long_cat как две раздельные реакционные наклейки в углах",
+    "prop_set": "папка с проектом ДДУ, распечатка банковской выписки с нулевым остатком, лист с суммой 4,2 млн, ручка, планшет с реквизитами",
+    "sticker_set": "confused_math_lady у распечатки и long_cat у края стойки, суммарно до 15 процентов кадра, с зазором не менее 80 пикселей от текста, лица героя и телефона",
+    "joke": "на бумаге 4,2 млн, в банковском балансе ноль: герой сверяет два листа и выглядит так, будто калькулятор внезапно отменил деньги",
+    "outfit": "светлая оливково-серая куртка-рубашка с графитовой футболкой и песочными брюками, без чёрного пиджака",
+    "emotion": "ошарашенное недоверие, приподнятая бровь, напряжённая гримаса и взгляд на нулевой остаток",
+    "pose_framing": "новая асимметричная поза в полный рост, корпус развёрнут к стойке, одна рука держит папку, другая указывает на нулевой баланс, не бюст слева и не боковой взгляд",
+    "action": "сопоставляет строку 4,2 млн в проекте ДДУ с распечаткой эскроу и показывает несоответствие перед камерой"
+  },
+  "cover_emotion": "ошарашенное недоверие с приподнятой бровью и напряжённой гримасой"
+}

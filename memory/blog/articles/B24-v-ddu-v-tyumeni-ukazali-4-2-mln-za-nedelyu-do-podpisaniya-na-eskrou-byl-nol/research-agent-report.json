@@ -1,0 +1,70 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-12",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://tumentoday.ru/2026/08/31/v_tyumenskoy_oblasti_zaklyucheno_pochti_15_tysyachi_dogovorov_s_eskrou_pri_stroitelstve_chastnykh_domov/",
+        "type": "regional_news",
+        "note": "31.08.2026 — ГУС ТО, эскроу в ИЖС, опрос: ~половина жителей слабо знают механизм"
+      },
+      {
+        "url": "https://novostroikino.ru/blog/bronirovanie-kvartiry-v-novostroyke-2026/",
+        "type": "market",
+        "note": "06.08.2026 — бронь vs аванс vs услуга; возврат и сроки брони"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel — scout signal"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "Tenant Telegram lead channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4583,
+    "p0_volume_ru225": 8447,
+    "support_phrases": [
+      {"phrase": "счет эскроу дду", "volume": 27},
+      {"phrase": "эскроу счет", "volume": 863},
+      {"phrase": "договор долевого участия", "volume": 382}
+    ],
+    "rework_from": "эскроу счет новостройка тюмень (1) → счет эскроу дду (27) → эскроу счет (863) → P0 новостройки тюмень (4583)",
+    "partial": ["top_phrases_per_query_not_dumped"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "ddu_amount_vs_escrow_zero",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["legal_norms_214fz", "vtb_escrow_person"],
+    "errors": [],
+    "note": "214-ФЗ st. 1/3/15.4/15.5 via consultant.ru; VTB person escrow page; no bank tariff commission claims"
+  },
+  "key_facts_count": 38,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "research_official_gate": "research-official-gate.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}

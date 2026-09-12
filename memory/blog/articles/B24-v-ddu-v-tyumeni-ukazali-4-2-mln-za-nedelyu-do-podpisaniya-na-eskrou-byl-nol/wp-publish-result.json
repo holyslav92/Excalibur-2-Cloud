@@ -1,0 +1,28 @@
+{
+  "slug": "v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol",
+  "topic_id": "B24",
+  "post_id": 10122,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1114097,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10122 slug=v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol\nOK categories=54,58,36\nOK yoast_social_image=1\nOK featured_image=10123\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10124 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol-inline-03.png\nOK inline_alt=10124\nOK inline_description=10124\nOK inline_image_upload=10125 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol-inline-04.png\nOK inline_alt=10125\nOK inline_description=10125\nOK inline_image_upload=10126 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol-inline-05.png\nOK inline_alt=10126\nOK inline_description=10126\nOK inline_image_upload=10127 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol-inline-01.png\nOK inline_alt=10127\nOK inline_description=10127\nOK inline_image_upload=10128 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol-inline-02.png\nOK inline_alt=10128\nOK inline_description=10128\nOK inline_image_upload=10129 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol-inline-06.png\nOK inline_alt=10129\nOK inline_description=10129\nOK inline_image_upload=10130 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol-inline-07.png\nOK inline_alt=10130\nOK inline_description=10130\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol/",
+    "errors": []
+  }
+}
