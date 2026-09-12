@@ -1063,3 +1063,48 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260909-1035-cover-text-inline-label-wordcount
+status: open
+run_date: 2026-09-09
+topic_id: B24
+role: excalibur-blog-cover-text
+category: gate
+
+### What went wrong
+- Derouter cover-text (2 attempts) emitted `inline_2` label `6,5 млн × 90 дней` (5 tokens) → `cover_text_gate` BLOCK `inline_2.label: 5 words, need 1-4`.
+
+### How the agent recovered this run
+- Manual edit in `cover/cover-text.json`: replaced with `90 дней просрочки` (3 words). Gate PASS.
+
+### Durable fix needed before next run
+- Add assembled-cover-text-inputs reminder: symbols `×` count as separate tokens in gate word split; prefer `за` not `×` in labels.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_text_gate.py` (document tokenization)
+- assembled-cover-text-inputs template in prior articles
+
+### Secrets
+- none recorded
+
+## INC-20260909-1035-schema-derouter-output-path
+status: open
+run_date: 2026-09-09
+topic_id: B24
+role: excalibur-blog-schema
+category: script
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --output schema.jsonld` wrote to repo root `/workspace/schema.jsonld` instead of `article_dir/schema.jsonld` despite `--article-dir` set.
+
+### How the agent recovered this run
+- Copied JSON-LD into article dir, added missing `url` field, deleted stray root file. `schema_gate` PASS.
+
+### Durable fix needed before next run
+- Verify derouter resolves `--output` relative to `--article-dir` for schema role (same as cover-text subpath).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+
+### Secrets
+- none recorded

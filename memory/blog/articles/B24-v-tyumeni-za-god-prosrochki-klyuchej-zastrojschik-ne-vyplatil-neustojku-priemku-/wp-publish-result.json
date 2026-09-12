@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku-",
+  "topic_id": "B24",
+  "post_id": 9979,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku-/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1080495,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9979 slug=v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku-\nOK categories=32,36\nOK yoast_social_image=1\nOK featured_image=9980\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9981 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku-inline-01.png\nOK inline_alt=9981\nOK inline_description=9981\nOK inline_image_upload=9982 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku-inline-02.png\nOK inline_alt=9982\nOK inline_description=9982\nOK inline_image_upload=9983 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku-inline-03.png\nOK inline_alt=9983\nOK inline_description=9983\nOK inline_image_upload=9984 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku-inline-04.png\nOK inline_alt=9984\nOK inline_description=9984\nOK inline_image_upload=9985 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku-inline-05.png\nOK inline_alt=9985\nOK inline_description=9985\nOK inline_image_upload=9986 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku-inline-06.png\nOK inline_alt=9986\nOK inline_description=9986\nOK inline_image_upload=9987 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku-inline-07.png\nOK inline_alt=9987\nOK inline_description=9987\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-za-god-prosrochki-klyuchej-zastrojschik-ne-vyplatil-neustojku-priemku/",
+    "errors": []
+  }
+}

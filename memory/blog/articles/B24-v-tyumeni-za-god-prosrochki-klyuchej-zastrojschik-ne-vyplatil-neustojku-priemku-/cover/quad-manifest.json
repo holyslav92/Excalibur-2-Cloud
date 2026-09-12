@@ -1,0 +1,239 @@
+{
+  "topic_id": "B24",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Застройщик год тянул — деньги не отдал",
+  "cover_hook_highlight": "деньги",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени застройщик год не платил неустойку — семья остановила приёмку: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Вестибюль ЖК: герой справа отодвигает ключи от акта; календарь 365д; high-key; math_lady, long_cat.",
+      "meme_caption_ru": "",
+      "sticky": "Акт без денег?",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошарашенное недоверие с прищуром",
+      "meme_picks": [
+        "confused_math_lady",
+        "long_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Год просрочки — и звонят на приёмку без денег",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Холл приёмки: звонок, ДДУ, ключи, акт; high-key; wojak угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Год просрочки — и звонят на приёмку без денег» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Год без ключей",
+        "Звонок на приёмку",
+        "Акт без претензий"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "wojak"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Год просрочки — и звонят на приёмку без денег",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица Мораторий/Начисление: до дек, с 2026, 1/150, 90д, 546к; gold paper; no memes.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Мораторий до декабря, 90 дней просрочки, Около 546 тысяч ₽ — иллюстрация к…",
+      "labels": [
+        "Мораторий до декабря",
+        "90 дней просрочки",
+        "Около 546 тысяч ₽"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Счёт непростой: мораторий съел полгода, не весь год",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: акт vs отделка и расчёт; стикер Потом не дата; bright; no people.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Счёт непростой: мораторий съел полгода, не весь…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Отделка вместо денег",
+        "Смета на бумаге",
+        "«Потом» не дата"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "«Выплатим потом» и зачёт в отделку вместо перевода",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Почта: заказное, претензия, расчёт; ответ 10–30д; риск одностороннего акта.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Выплатим потом» и зачёт в отделку вместо перев…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Расчёт в претензии",
+        "Заказное с описью",
+        "Односторонний акт риск"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Финал: акт не подписали, претензию отправили на юрлицо",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow 5 шагов: ДДУ, расчёт, претензия, работы, юрлицо; this_is_fine_dog.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: ДДУ и уведомление, Претензия и отправка, Юрлицо в договоре — иллюстрация к…",
+      "labels": [
+        "ДДУ и уведомление",
+        "Претензия и отправка",
+        "Юрлицо в договоре"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "this_is_fine_dog"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что зафиксировать до подписи акта",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Timeline: ипотека, эскроу, регистрация, 31,9к, банк; no memes.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Ипотека не ждёт, Эскроу не выключатель, 31,9 тысячи Росреестру — иллюстрация к разбору сделки",
+      "labels": [
+        "Ипотека не ждёт",
+        "Эскроу не выключатель",
+        "31,9 тысячи Росреестру"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Ипотека и эскроу не ждут вашего спора о неустойке",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Diagram: До акта → расчёт, не потом, ключи; disappointed_black_guy.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Письменный расчёт, Не устное «потом», Ключи отдельно — иллюстрация к разбору сделки.",
+      "labels": [
+        "Письменный расчёт",
+        "Не устное «потом»",
+        "Ключи отдельно"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disappointed_black_guy"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "неустойка за просрочку застройщика",
+    "взыскание неустойки с застройщика",
+    "акт приемки квартиры в новостройке"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "герой справа у стойки приёмки, зона заголовка слева",
+    "location": "светлый вестибюль готовой новостройки Тюмени",
+    "meme": "confused_math_lady + long_cat",
+    "prop_set": "календарь 365д, акт с пустой выплатой, ключи, калькулятор",
+    "sticker_set": "math_lady + long_cat углы, ≤15%",
+    "joke": "калькулятор 546к, графа выплаты пуста",
+    "outfit": "белая рубашка, песочный жилет, синие брюки",
+    "emotion": "ошарашенное недоверие с прищуром",
+    "pose_framing": "поясной портрет справа, наклон к столу",
+    "action": "отодвигает ключи, указывает на пустую выплату"
+  },
+  "cover_emotion": "ошарашенное недоверие с прищуром"
+}
