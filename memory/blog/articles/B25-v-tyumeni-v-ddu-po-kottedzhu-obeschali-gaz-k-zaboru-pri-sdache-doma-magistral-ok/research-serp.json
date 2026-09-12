@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-07",
+    "today_ru": "07.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "понедельник"
+  },
+  "topic": {
+    "topic_id": "B25",
+    "title": "В Тюмени в ДДУ по коттеджу обещали газ к забору — при сдаче дома магистраль оказалась в 180 метрах",
+    "h1": "В Тюмени в ДДУ по коттеджу обещали газ к забору — при сдаче дома магистраль оказалась в 180 метрах",
+    "slug": "v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok",
+    "primary_query": "В Тюмени в ДДУ по коттеджу обещали газ к забору — при сдаче дома магистраль оказалась в 180 метрах",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени в ДДУ по коттеджу обещали газ к забору — при сдаче дома магистраль оказалась в 180 метрах 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени частный сектор переводят с централизованного теплоснабжения на ...",
+          "url": "https://tumentoday.ru/2025/08/19/v_tyumeni_chastnyy_sektor_perevodyat_s_tsentralizovannogo_teplosnabzheniya_na_gazovoye/",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюменской области подвести газ планируют к 150 дачным поселкам",
+          "url": "https://uralpolit.ru/news/tyumen/29-10-2025/315991",
+          "snippet": "Переход на газ снижает риски повреждений, затоплений и отключений в частном секторе."
+        },
+        {
+          "title": "В Тюменской области продолжается догазификация СНТ",
+          "url": "https://tyumen-info.ru/other/2026/03/23/1107.html",
+          "snippet": "Вчера губернатор Александр Моор в ходе прямой линии рассказал, что она коснется СНТ, входящих в границы населенных пунктов, к которым уже подведен газ."
+        },
+        {
+          "title": "В Тюменской области планируется подвести газ к 150 дачным поселкам",
+          "url": "https://tumen.dk.ru/news/237231756",
+          "snippet": "Программа действует с 2024 года и предполагает бесплатное проведение газа к участкам внутри товариществ. По плану до 2027 года в очереди на подключение порядка 170 СНТ."
+        },
+        {
+          "title": "В Тюмени руководителя компании судят за мошенничество при догазификации ...",
+          "url": "https://www.tumen.kp.ru/online/news/6992761/",
+          "snippet": "Тюменские власти обещают газифицировать 150 дачных поселков в регионе. СНТ включены в федеральную программу социальной догазификации."
+        },
+        {
+          "title": "В Тюменской области действует программа газификации - МК Тюмень",
+          "url": "https://tumen.mk.ru/social/2025/08/23/v-tyumenskoy-oblasti-deystvuet-programma-gazifikacii.html",
+          "snippet": "Обман вскрылся в октябре 2025 года во время проверки, когда выяснилось, что газопровод был построен задолго до заявленных сроков."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени в ДДУ по коттеджу обещали газ к забору — при сдаче дома магистраль оказалась в 180 метрах 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени частный сектор переводят с централизованного теплоснабжения на ...",
+          "url": "https://tumentoday.ru/2025/08/19/v_tyumeni_chastnyy_sektor_perevodyat_s_tsentralizovannogo_teplosnabzheniya_na_gazovoye/",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюменской области подвести газ планируют к 150 дачным поселкам",
+          "url": "https://uralpolit.ru/news/tyumen/29-10-2025/315991",
+          "snippet": "Переход на газ снижает риски повреждений, затоплений и отключений в частном секторе."
+        },
+        {
+          "title": "В Тюменской области продолжается догазификация СНТ",
+          "url": "https://tyumen-info.ru/other/2026/03/23/1107.html",
+          "snippet": "Вчера губернатор Александр Моор в ходе прямой линии рассказал, что она коснется СНТ, входящих в границы населенных пунктов, к которым уже подведен газ."
+        },
+        {
+          "title": "В Тюменской области действует программа газификации - МК Тюмень",
+          "url": "https://tumen.mk.ru/social/2025/08/23/v-tyumenskoy-oblasti-deystvuet-programma-gazifikacii.html",
+          "snippet": "Программа действует с 2024 года и предполагает бесплатное проведение газа к участкам внутри товариществ. По плану до 2027 года в очереди на подключение порядка 170 СНТ."
+        },
+        {
+          "title": "В Тюмени руководителя компании судят за мошенничество при догазификации ...",
+          "url": "https://www.tumen.kp.ru/online/news/6992761/",
+          "snippet": "Дальнейшее подведение \" голубого топлива\" предстоит оплатить хозяевам, но в Тюменской области предусмотрена выплата компенсации на газовое оборудование."
+        },
+        {
+          "title": "В Тюменской области планируется подвести газ к 150 дачным поселкам",
+          "url": "https://tumen.dk.ru/news/237231756",
+          "snippet": "Обман вскрылся в октябре 2025 года во время проверки, когда выяснилось, что газопровод был построен задолго до заявленных сроков."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени в ДДУ по коттеджу обещали газ к забору — при сдаче дома магистраль оказалась в 180 метрах official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Экстренные работы на газопроводе в Тюмени оставили дома без газа - АБН 24",
+          "url": "https://abnews.ru/ural/news/tyumen/2025/9/28/povrezhdenie-gazoprovoda-v-czentre-tyumeni-ustranyayut-avarijnye-sluzhby",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени руководителя компании судят за мошенничество при догазификации ...",
+          "url": "https://www.tumen.kp.ru/online/news/6992761/",
+          "snippet": "Все необходимые противоаварийные мероприятия будут завершены 28 сентября. Место повреждения находится на глубине пяти метров, где специалисты уже перекрыли трубу и откачали газ."
+        },
+        {
+          "title": "Карта газификации Тюмени в 2026 году",
+          "url": "https://gogov.ru/gazprommap/tyumen",
+          "snippet": "Обман вскрылся в октябре 2025 года во время проверки, когда выяснилось, что газопровод был построен задолго до заявленных сроков."
+        },
+        {
+          "title": "Распоряжение Департамента имущественных отношений Тюменской области от ...",
+          "url": "http://publication.pravo.gov.ru/document/7201202609020016",
+          "snippet": "Единая программа газификации России охватывает период 2020-2025 годов и реализуется Газпромом совместно с субъектами РФ. По каждому региону доступна интерактивная карта: где уже есть газ, какие газопроводы строятся и какие населенные пункты войдут в догазификацию."
+        },
+        {
+          "title": "В Тюмени дом сдали без газа и воды — семья не взяла ключи",
+          "url": "https://dzen.ru/a/apfkElE6NU7Ddhdc",
+          "snippet": "Распоряжение Департамента имущественных отношений Тюменской области от 01.09.2026 № 0393/10-1 \"Об утверждении границы охранной зоны газораспределительной сети и наложении ограничения ..."
+        },
+        {
+          "title": "В Тюмени более 100 квартир остались без газа",
+          "url": "https://tumentoday.ru/2026/03/31/v_tyumeni_boleye_100_kvartir_ostalis_bez_gaza/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : Семья с двумя детьми приехала за ключами от дома в коттеджном посёлке под Тюменью. Год после регистрации ДДУ."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени в ДДУ по коттеджу обещали газ к забору — при сдаче дома магистраль оказалась в 180 метрах 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "[Проблема] Youtube \"Нет подключения к интернету\" или \"Превышено время ...",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/issues/7509",
+          "snippet": ""
+        },
+        {
+          "title": "GitHub",
+          "url": "https://github.com/Raphire/Win11Debloat/raw/master/Assets/Images/menu.png",
+          "snippet": "При заходе либо вообще не грузит и уже сам браузер выдает \"Превышено время\", либо прогружается, но без превью видео (да и их самих, как на телефоне белый фон), и уже ютуб пишет \"Нет ..."
+        },
+        {
+          "title": "llmfit/assets/icon.svg at main · AlexsJones/llmfit · GitHub",
+          "url": "https://github.com/AlexsJones/llmfit/blob/main/assets/icon.svg",
+          "snippet": "GitHub"
+        },
+        {
+          "title": "ardy/assets/banner.png at main · nv-tlabs/ardy · GitHub",
+          "url": "https://github.com/nv-tlabs/ardy/blob/main/assets/banner.png",
+          "snippet": "Loading Viewer requires iframe. Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy"
+        },
+        {
+          "title": "ASASR/assets/Expr_SOTA.png at main · wafer-bob/ASASR · GitHub",
+          "url": "https://github.com/wafer-bob/ASASR/blob/main/assets/Expr_SOTA.png",
+          "snippet": "Official implementation of ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation (SIGGRAPH 2026). - ardy/assets/banner.png at main · nv-tlabs/ardy"
+        },
+        {
+          "title": "mm2-icons/BlossomGun.png at main · jammyhelloz-svg/mm2-icons",
+          "url": "https://github.com/jammyhelloz-svg/mm2-icons/blob/main/BlossomGun.png",
+          "snippet": "[ICML 2026] Coloring the Noise: Adversarial Sobolev Alignment for Faithful Image Super Resolution (Official Implementation) - ASASR/assets/Expr_SOTA.png at main · wafer-bob/ASASR"
+        }
+      ],
+      "searched_at": "2026-09-07"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени в ДДУ по коттеджу обещали газ к забору — при сдаче дома магистраль оказалась в 180 метрах forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Карта газификации Тюмени в 2026 году",
+          "url": "https://gogov.ru/gazprommap/tyumen",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюменской области подвести газ планируют к 150 дачным поселкам",
+          "url": "https://uralpolit.ru/news/tyumen/29-10-2025/315991",
+          "snippet": "Ниже - полный разбор, как посмотреть карту газификации, проверить свой адрес и узнать сроки подключений. Газпром ведет интерактивную карту газификации. Сначала нужно выбрать свой регион на этой странице."
+        },
+        {
+          "title": "В Тюменской области планируется подвести газ к 150 дачным поселкам",
+          "url": "https://tumen.dk.ru/news/237231756",
+          "snippet": "«Газификация СНТ - более сложный вопрос, чем подведение газа к отдельным домовладениям, поскольку СНТ плотно застроены и нужно дополнительное время для разработки проекта."
+        },
+        {
+          "title": "Распоряжение Департамента имущественных отношений Тюменской области от ...",
+          "url": "http://publication.pravo.gov.ru/document/7201202609020016",
+          "snippet": "Энергетики обещают модернизировать инфраструктуру. Планируется ли в будущем газифицировать СНТ, расположенные в отдалении от населенных пунктов, пока неизвестно."
+        },
+        {
+          "title": "В Тюмени более 100 квартир остались без газа",
+          "url": "https://tumentoday.ru/2026/03/31/v_tyumeni_boleye_100_kvartir_ostalis_bez_gaza/",
+          "snippet": "Распоряжение Департамента имущественных отношений Тюменской области от 01.09.2026 № 0393/10-1 \"Об утверждении границы охранной зоны газораспределительной сети и наложении ограничения ..."
+        },
+        {
+          "title": "Жители Тюменской области запустят топливо в свои дома - АБН 24",
+          "url": "https://abnews.ru/ural/news/tyumen/2026/5/2/v-tyumenskoj-oblasti-svyshe-65-tysyachi-lgotnikov-podklyuchat-gaz-k-domam",
+          "snippet": "После опрессовки подача газа будет возобновлена, - прокомментировали ситуацию в «Газпром межрегионгаз Север». Газ в доме появился."
+        }
+      ],
+      "searched_at": "2026-09-07"
+    }
+  ],
+  "errors": []
+}

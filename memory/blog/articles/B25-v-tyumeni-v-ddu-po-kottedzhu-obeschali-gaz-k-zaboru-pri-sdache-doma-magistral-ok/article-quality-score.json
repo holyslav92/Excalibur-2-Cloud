@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "all_pass": true,
+  "gate": "article-quality-score",
+  "contract": "shared/article-quality-score-lock.md",
+  "article_dir": "memory/blog/articles/B25-v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok",
+  "sol_rewrite_applied": true,
+  "h1": "В Тюмени ДДУ на коттедж обещал газ у забора — он был в 180 м",
+  "sections": {
+    "h1": {
+      "pass": true,
+      "reasons": []
+    },
+    "lead": {
+      "pass": true,
+      "reasons": []
+    },
+    "middle": {
+      "pass": true,
+      "reasons": []
+    },
+    "finale": {
+      "pass": true,
+      "reasons": []
+    },
+    "length": {
+      "pass": true,
+      "reasons": []
+    },
+    "tone": {
+      "pass": true,
+      "reasons": []
+    }
+  },
+  "errors": [],
+  "metrics": {
+    "word_count": 1506,
+    "word_target": "1400-1600",
+    "word_hard_max": 1750,
+    "dzen_reading_minutes_est": 8,
+    "spine_overlap": 0.0478
+  }
+}

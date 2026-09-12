@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-07",
+  "topic_id": "B25",
+  "article_dir": "memory/blog/articles/B25-v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok",
+  "slug": "v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": []
+}

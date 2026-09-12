@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B25 — 2026-09-07
+
+- **topic_id:** B25
+- **slug:** v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok
+- **post_id:** 9875
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-v-ddu-po-kottedzhu-obeschali-gaz-k-zaboru-pri-sdache-doma-magistral-ok/
+- **featured_image:** 9876
+- **inline_images:** 9877–9883 (7)
+- **wp_category_slugs:** dokumenty-i-oformlenie, riski-sdelki, pokupka-kvartiry (category_ids=54,58,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23

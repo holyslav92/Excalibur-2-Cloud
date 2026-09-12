@@ -1,0 +1,247 @@
+{
+  "topic_id": "B25",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Газ обещали рядом — доплата 620 тысяч",
+  "cover_hook_highlight": "доплата",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Solo cover for cover.png; canvas 1 inline_1-3; canvas 2 inline_4-7.",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени ДДУ на коттедж обещал газ у забора — он был в 180 м: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "павильон КП: жилет, линейка на генплане, метка трубы, confused_math_lady cheems",
+      "meme_caption_ru": "",
+      "sticky": "Труба в 180 метрах",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "недоумение, прищур, бровь выше",
+      "meme_picks": [
+        "confused_math_lady",
+        "cheems"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Газ к забору» в презентации — и семья подписала ДДУ на коттедж",
+      "visual_type": "realistic_photo",
+      "scene_hint": "офис: буклет газ к забору, ДДУ, макет, wojak",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Газ к забору» в презентации — и семья подписал…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Коттедж под Тюменью",
+        "ДДУ на дом",
+        "Газ к забору",
+        "Проектная декларация"
+      ],
+      "placement_group": "single",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "wojak"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "За две недели до акта на участке — труба в 180 метрах",
+      "visual_type": "comparison_table",
+      "scene_hint": "таблица у забора vs 180м, схема сетей",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Две недели до акта, Труба в 180 метрах, Точка подключения — иллюстрация к…",
+      "labels": [
+        "Две недели до акта",
+        "Труба в 180 метрах",
+        "Точка подключения",
+        "Схема сетей"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Застройщик назвал доплату 620 тысяч за «дотянуть до границы»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "смета 620 тыс, калькулятор, приложение ДДУ",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Застройщик назвал доплату 620 тысяч за «дотянут…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Доплата 620 тысяч",
+        "Можно в рассрочку",
+        "Дотянуть до границы",
+        "Сверить с ДДУ"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Акт не подписали: точки подключения в документах нет",
+      "visual_type": "realistic_photo",
+      "scene_hint": "участок: пустой акт, труба вдали, претензия",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Акт не подписали: точки подключения в документа…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Акт не подписан",
+        "Точки нет в бумагах",
+        "Письменная претензия",
+        "Фото и схема"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Газ в посёлке» и «газ у забора» — не одно и то же",
+      "visual_type": "process_flow",
+      "scene_hint": "flow: посёлок→забор→дом, 94%/59%, long_cat",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Газ в посёлке, Газ у забора, 94% до границы — иллюстрация к разбору сделки.",
+      "labels": [
+        "Газ в посёлке",
+        "Газ у забора",
+        "94% до границы",
+        "59% подключены"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "long_cat"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Газ в посёлке» и «газ у забора» — не одно и то же",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "bar chart: посёлок/граница/дом, газпроммап",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Сеть в посёлке, У границы участка, Газ в доме — иллюстрация к разбору сделки.",
+      "labels": [
+        "Сеть в посёлке",
+        "У границы участка",
+        "Газ в доме",
+        "Карта газпроммап"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что сверить до акта приёмки — таблица",
+      "visual_type": "structure_diagram",
+      "scene_hint": "чеклист ДДУ схема ТУ, james_doakes",
+      "alt": "схема устройства механизма по новостройке в Тюмени: ДДУ и приложения, Схема с привязкой, Технические условия — иллюстрация к разбору сделки.",
+      "labels": [
+        "ДДУ и приложения",
+        "Схема с привязкой",
+        "Технические условия",
+        "Ведомость недостатков"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "james_doakes"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "подключение газа в тюмени",
+    "купить новостройку в тюмени"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "хост по пояс справа наклоняется к генплану, линейка между забором и жёлтой меткой трубы, свободная зона слева под заголовок",
+    "location": "светлый павильон продаж коттеджного посёлка под Тюменью с окном, солнечной засветкой и столом с документами",
+    "meme": "confused_math_lady и cheems как маленькие реакционные стикеры",
+    "prop_set": "генплан участка, папка ДДУ, жёлтая линейка, маркер трубы, смартфон с номером",
+    "sticker_set": "confused_math_lady верхний левый угол, cheems у края стола, оба ≤15% кадра",
+    "joke": "на плане 180 метров до трубы, а в голове у покупателя считают доплату 620 тысяч",
+    "outfit": "оливковый жилет поверх кремовой футболки с длинным рукавом, без пиджака",
+    "emotion": "недоумение и тревожное удивление, прищур, одна бровь выше, не боковой взгляд",
+    "pose_framing": "три четверти по пояс справа, корпус наклонён к плану, обе руки в кадре",
+    "action": "измеряет линейкой расстояние на генплане от забора до метки газовой трубы"
+  },
+  "cover_emotion": "недоумение: прищур, бровь выше"
+}
