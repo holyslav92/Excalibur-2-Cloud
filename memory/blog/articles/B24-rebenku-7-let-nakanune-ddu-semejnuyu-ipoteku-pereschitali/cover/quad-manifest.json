@@ -1,0 +1,222 @@
+{
+  "topic_id": "B24",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Ребёнок вырос — банк изменил платёж",
+  "cover_hook_highlight": "платёж",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Перед ДДУ ребёнку исполнилось 7 лет — семейную ипотеку пересчитали: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Кухня-гостиная: жилет горчичный, календарь vs два платежа; hook слева; телефон.",
+      "meme_caption_ru": "",
+      "sticky": "Одобрение не равно кредиту",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "растерянное недоумение",
+      "meme_picks": [
+        "confused_math_lady"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Семейную ипотеку одобрили — и семья забронировала новостройку",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Бронь + одобрение на столе продаж; без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Семейную ипотеку одобрили — и семья забронирова…» — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Ребёнку было шесть",
+        "Предварительное одобрение",
+        "Плата за бронь"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Семейную ипотеку одобрили — и семья забронировала новостройку",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица этапов сделки + календарь рождения.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Заявка, бронь, ДДУ, Дата кредитного договора, День рождения в календаре —…",
+      "labels": [
+        "Заявка, бронь, ДДУ",
+        "Дата кредитного договора",
+        "День рождения в календаре"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Между одобрением и ДДУ календарь шёл своим ходом",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Календарь: день рождения и ДДУ через 6 дней.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Между одобрением и ДДУ календарь шёл своим ходом» — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Шесть дней до ДДУ",
+        "Исполнилось семь лет",
+        "Банк смотрит дату"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За шесть дней до подписания ребёнку исполнилось семь лет",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Два расчёта платежа на столе; без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За шесть дней до подписания ребёнку исполнилось…» — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Ставка до 6%",
+        "Платёж не влез",
+        "Бронь не спасает"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Банк пересчитал семейную ипотеку — платёж и лимит разъехались с бронью",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема: льгота 6 млн → комбо-кредит → платёж.",
+      "alt": "схема устройства механизма к разделу «Банк пересчитал семейную ипотеку — платёж и лим…» — иллюстрация к кейсу о сделке.",
+      "labels": [],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Семья остановилась: бронь сгорела, до эскроу деньги не дошли",
+      "visual_type": "process_flow",
+      "scene_hint": "Горизонтальная инфографика этапов без людей на светлом фоне.",
+      "alt": "нумерованный процесс / таймлайн к разделу «Семья остановилась: бронь сгорела, до эскроу де…» — иллюстрация к кейсу о сделке.",
+      "labels": [],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить до брони и подписания — таблица",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Чек-лист проверок; surprised_pikachu угол.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: День рождения ребёнка, Дата кредитного договора, Условия брони — иллюстрация к разбору сделки",
+      "labels": [
+        "День рождения ребёнка",
+        "Дата кредитного договора",
+        "Условия брони"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "surprised_pikachu"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "семейная ипотека тюмень",
+    "семейная ипотека в тюмени",
+    "новостройки тюмени семейная ипотека"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "герой справа до колен, hook зона слева",
+    "location": "светлая кухня-гостиная новой квартиры",
+    "meme": "confused_math_lady",
+    "prop_set": "календарь день рождения, два расчёта платежа, телефон +7 922 001 65 05",
+    "sticker_set": "confused_math_lady top-right ≤10%",
+    "joke": "день рождения vs новый платёж",
+    "outfit": "горчичный жилет белая рубашка без пиджака",
+    "emotion": "ошарашенное недоумение прямой взгляд",
+    "pose_framing": "до колен у острова не left bust",
+    "action": "сравнивает два расчёта платежа"
+  },
+  "cover_emotion": "растерянное недоумение с тревожной гримасой"
+}

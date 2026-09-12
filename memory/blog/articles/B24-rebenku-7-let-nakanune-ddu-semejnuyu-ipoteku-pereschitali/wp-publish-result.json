@@ -1,0 +1,28 @@
+{
+  "slug": "rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali",
+  "topic_id": "B24",
+  "post_id": 9966,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1160222,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9966 slug=rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9967\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9968 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali-inline-01.png\nOK inline_alt=9968\nOK inline_description=9968\nOK inline_image_upload=9969 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali-inline-02.png\nOK inline_alt=9969\nOK inline_description=9969\nOK inline_image_upload=9970 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali-inline-03.png\nOK inline_alt=9970\nOK inline_description=9970\nOK inline_image_upload=9971 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali-inline-04.png\nOK inline_alt=9971\nOK inline_description=9971\nOK inline_image_upload=9972 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali-inline-05.png\nOK inline_alt=9972\nOK inline_description=9972\nOK inline_image_upload=9973 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali-inline-06.png\nOK inline_alt=9973\nOK inline_description=9973\nOK inline_image_upload=9974 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali-inline-07.png\nOK inline_alt=9974\nOK inline_description=9974\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali/",
+    "errors": []
+  }
+}

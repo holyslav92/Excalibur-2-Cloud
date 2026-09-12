@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-09",
+    "today_ru": "09.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "среда"
+  },
+  "topic": {
+    "topic_id": "B24",
+    "title": "Ребёнку 7 лет накануне ДДУ — семейную ипотеку пересчитали",
+    "h1": "Ребёнку 7 лет накануне ДДУ — семейную ипотеку пересчитали",
+    "slug": "rebenku-7-let-nakanune-ddu-semejnuyu-ipoteku-pereschitali",
+    "primary_query": "Ребёнку 7 лет накануне ДДУ — семейную ипотеку пересчитали",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "Ребёнку 7 лет накануне ДДУ — семейную ипотеку пересчитали 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Всё о семейной ипотеке в 2026: условия, ставки и изменения",
+          "url": "https://mama.ru/articles/vse-o-semeinoi-ipoteke-v-2026-usloviia-stavki-i-izmeneniia/",
+          "snippet": ""
+        },
+        {
+          "title": "Семейная ипотека 2026: условия, документы, новые правила",
+          "url": "https://www.finance-pravila.ru/articles/semeynaya-ipoteka-usloviya-2026-dokumenty/",
+          "snippet": "В 2026 году семейная ипотека изменится — она станет менее доступной семьям с одним ребёнком, так как у властей есть планы поднять ставку. Разбираемся, что поменяется в условиях семейной ипотеки, кто может на неё претендовать и какие квартиры в разных регионах России можно купить с господдержкой."
+        },
+        {
+          "title": "Новые правила семейной ипотеки: что изменится, ответы на главные вопросы",
+          "url": "https://www.cian.ru/stati-novye-uslovija-semejnoj-ipoteki-otvety-na-voprosy-335926/",
+          "snippet": "С 1 февраля 2026 года правила семейной ипотеки изменились. Рассказываем, кто может получить кредит под 6%, какие требования к заемщикам и детям, полный список документов для оформления."
+        },
+        {
+          "title": "Семейная ипотека с 1 октября 2026 года: как изменятся условия ...",
+          "url": "https://lenta.ru/articles/2026/06/30/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-goda/",
+          "snippet": "Разбираем условия семейной ипотеки с 1 февраля 2026 и выясняем, как они изменятся с 1 октября 2026-го: новые ставки, лимиты, прогнозы."
+        },
+        {
+          "title": "Новые условия по семейной ипотеке после 1 февраля 2026 года",
+          "url": "https://www.vbr.ru/banki/help/mortgage/semeinaya-ipoteka-novie-ysloviya/",
+          "snippet": "Минфин перенес сроки изменения условий программы льготного кредитования «Семейная ипотека». До 1 октября 2026 года она продолжит действовать в нынешнем виде."
+        },
+        {
+          "title": "Семейная ипотека: как будет работать, сколько нужно детей, что ...",
+          "url": "https://v1.ru/text/realty/2026/02/19/76271449/",
+          "snippet": "Программа семейной ипотеки действует с 2018 года. За это время она несколько раз менялась. Последняя крупная трансформация произошла 1 июля 2024 года. С этого момента жилищный кредит с максимальной ставкой 6% годовых могут получить только семьи, в которых есть хоть один ребёнок младше семи лет."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "Ребёнку 7 лет накануне ДДУ — семейную ипотеку пересчитали 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Всё о семейной ипотеке в 2026: условия, ставки и изменения",
+          "url": "https://mama.ru/articles/vse-o-semeinoi-ipoteke-v-2026-usloviia-stavki-i-izmeneniia/",
+          "snippet": ""
+        },
+        {
+          "title": "Новые правила семейной ипотеки: что изменится, ответы на главные вопросы",
+          "url": "https://www.cian.ru/stati-novye-uslovija-semejnoj-ipoteki-otvety-na-voprosy-335926/",
+          "snippet": "В 2026 году семейная ипотека изменится — она станет менее доступной семьям с одним ребёнком, так как у властей есть планы поднять ставку. Разбираемся, что поменяется в условиях семейной ипотеки, кто может на неё претендовать и какие квартиры в разных регионах России можно купить с господдержкой."
+        },
+        {
+          "title": "Семейная ипотека 2026: условия, документы, новые правила",
+          "url": "https://www.finance-pravila.ru/articles/semeynaya-ipoteka-usloviya-2026-dokumenty/",
+          "snippet": "Разбираем условия семейной ипотеки с 1 февраля 2026 и выясняем, как они изменятся с 1 октября 2026-го: новые ставки, лимиты, прогнозы."
+        },
+        {
+          "title": "Возраст Ребёнка Для Семейной Ипотеки: До Скольки Лет | Pleada",
+          "url": "https://pleada.shop/blog/vozrast-rebyonka-dlya-semeynoy-ipoteki-do-skolki-let/",
+          "snippet": "С 1 февраля 2026 года правила семейной ипотеки изменились. Рассказываем, кто может получить кредит под 6%, какие требования к заемщикам и детям, полный список документов для оформления."
+        },
+        {
+          "title": "Семейная ипотека: как будет работать, сколько нужно детей, что ...",
+          "url": "https://v1.ru/text/realty/2026/02/19/76271449/",
+          "snippet": "Условия в Санкт-Петербурге Семейная ипотека в 2026 году доступна, если младшему ребёнку ещё не исполнилось 7 лет на момент подачи заявки. Это ключевое возрастное ограничение программы."
+        },
+        {
+          "title": "Новые условия по семейной ипотеке после 1 февраля 2026 года",
+          "url": "https://www.vbr.ru/banki/help/mortgage/semeinaya-ipoteka-novie-ysloviya/",
+          "snippet": "Главное условие семейной ипотеки то же: наличие ребенка в возрасте до семи лет, но кредит теперь автоматически берут оба родителя. С 1 февраля получить семейную ипотеку стало сложнее. Теперь муж и жена не могут каждый купить по квартире, поскольку стало действовать правило «одна ипотека на семью»."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "Ребёнку 7 лет накануне ДДУ — семейную ипотеку пересчитали official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Семейная ипотека 2026: условия, документы, новые правила",
+          "url": "https://www.finance-pravila.ru/articles/semeynaya-ipoteka-usloviya-2026-dokumenty/",
+          "snippet": ""
+        },
+        {
+          "title": "ДДУ на ребёнка в новостройке Москвы и Подмосковья: разрешение опеки в ...",
+          "url": "https://novostroikino.ru/blog/ddu-na-nesovershennoletnego-rebenka-novostroyka-2026/",
+          "snippet": "С 1 февраля 2026 года правила семейной ипотеки изменились. Рассказываем, кто может получить кредит под 6%, какие требования к заемщикам и детям, полный список документов для оформления."
+        },
+        {
+          "title": "Всё о семейной ипотеке в 2026: условия, ставки и изменения",
+          "url": "https://mama.ru/articles/vse-o-semeinoi-ipoteke-v-2026-usloviia-stavki-i-izmeneniia/",
+          "snippet": "Да, ребёнок любого возраста может быть стороной договора участия в долевом строительстве — законодательство не ограничивает круг участников долевого строительства по возрасту."
+        },
+        {
+          "title": "Семейная ипотека с 1 октября 2026 года: как изменятся условия ...",
+          "url": "https://lenta.ru/articles/2026/06/30/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-goda/",
+          "snippet": "В 2026 году семейная ипотека изменится — она станет менее доступной семьям с одним ребёнком, так как у властей есть планы поднять ставку. Разбираемся, что поменяется в условиях семейной ипотеки, кто может на неё претендовать и какие квартиры в разных регионах России можно купить с господдержкой."
+        },
+        {
+          "title": "Семейная ипотека — 2026: все об ипотеке с господдержкой для семей с ...",
+          "url": "https://realty.rbc.ru/news/60d066709a79474c9ddb3f7d",
+          "snippet": "Минфин перенес сроки изменения условий программы льготного кредитования «Семейная ипотека». До 1 октября 2026 года она продолжит действовать в нынешнем виде."
+        },
+        {
+          "title": "Новые правила семейной ипотеки: что изменится, ответы на главные вопросы",
+          "url": "https://www.cian.ru/stati-novye-uslovija-semejnoj-ipoteki-otvety-na-voprosy-335926/",
+          "snippet": "Программой «Семейная ипотека» в 2026 году можно воспользоваться для покупки жилья в новостройке у застройщика или для приобретения частного дома с земельным участком."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com Ребёнку 7 лет накануне ДДУ — семейную ипотеку пересчитали 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "pdd-2026/icon-512.svg at main · gillescesar/pdd-2026 · GitHub",
+          "url": "https://github.com/gillescesar/pdd-2026/blob/main/icon-512.svg",
+          "snippet": ""
+        },
+        {
+          "title": "honk/favicon.svg at main · sasfatu/honk · GitHub",
+          "url": "https://github.com/sasfatu/honk/blob/main/favicon.svg",
+          "snippet": "Contribute to gillescesar/pdd-2026 development by creating an account on GitHub."
+        },
+        {
+          "title": "GitHub Docs",
+          "url": "https://docs.github.com/",
+          "snippet": "Contribute to sasfatu/honk development by creating an account on GitHub."
+        },
+        {
+          "title": "domashka/Almaty_districts.svg at main - GitHub",
+          "url": "https://github.com/DariyaYdyrys/domashka/blob/main/Almaty_districts.svg",
+          "snippet": "Get started, troubleshoot, and make the most of GitHub. Documentation for new users, developers, administrators, and all of GitHub's products."
+        },
+        {
+          "title": "BibleQuizzing/4bc8ae766aa44086c8ce7eaf207db1fa.svg at main ...",
+          "url": "https://github.com/SmashcardsService/BibleQuizzing/blob/main/4bc8ae766aa44086c8ce7eaf207db1fa.svg",
+          "snippet": "Why GitHub. Documentation. Blog. Changelog. Marketplace. View all features. Solutions. BY COMPANY SIZE. Enterprises. Small and medium teams. Startups. Nonprofits. BY USE CASE. App Modernization. DevSecOps. DevOps. CI/CD. View all use cases. BY INDUSTRY."
+        },
+        {
+          "title": "window/favicon.svg at main · Kikbcode/window · GitHub",
+          "url": "https://github.com/Kikbcode/window/blob/main/favicon.svg",
+          "snippet": "Coach your team to victory in this Bible Quizzing game! - BibleQuizzing/4bc8ae766aa44086c8ce7eaf207db1fa.svg at main · SmashcardsService/BibleQuizzing."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "Ребёнку 7 лет накануне ДДУ — семейную ипотеку пересчитали forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Семейная ипотека: Ребёнок исполнилось 7 лет и старший 23 учится очно ...",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/semejnaq-ipoteka-229f8128",
+          "snippet": ""
+        },
+        {
+          "title": "Рефинансирование на семейную ипотеку после рождения ребёнка: как ...",
+          "url": "https://pleada.shop/blog/refinansirovanie-semejnaya-ipoteka-posle-rozhdeniya-2026/",
+          "snippet": "Ребёнок исполнилось 7 лет и старший 23 учится очно можно брать семейную ипотеку?"
+        },
+        {
+          "title": "Всё о семейной ипотеке в 2026: условия, ставки и изменения",
+          "url": "https://mama.ru/articles/vse-o-semeinoi-ipoteke-v-2026-usloviia-stavki-i-izmeneniia/",
+          "snippet": "Как перейти с рыночной ипотеки на семейную после рождения ребёнка в 2026 году: банки, условия, ставки, подводные камни. Реальный способ снизить платёж."
+        },
+        {
+          "title": "Семейная ипотека: как будет работать, сколько нужно детей, что ...",
+          "url": "https://ngs.ru/text/realty/2026/02/19/76271460/",
+          "snippet": "Разбираемся, что поменяется в условиях семейной ипотеки, кто может на неё претендовать и какие квартиры в разных регионах России можно купить с господдержкой."
+        },
+        {
+          "title": "Семейная ипотека: Подхожу ли я под семейную ипотеку ,если у меня ...",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/semejnaq-ipoteka-0c98dc49",
+          "snippet": "Если детей до 7 лет двое, и один прописан с мамой, а другой с папой — тогда, в теории, каждый из родителей может взять по семейной ипотеке. Но только если они в разводе."
+        },
+        {
+          "title": "Семейную ипотеку предложили давать семьям с детьми до 16 лет",
+          "url": "https://www.sravni.ru/novost/2026/3/19/semejnuyu-ipoteku-predlozhili-davat-semyam-s-detmi-do-16-let/",
+          "snippet": "Я бы сказал, что в вашей ситуации под классическую семейную ипотеку вы не подходите — и вот почему. Дело в статусе опекуна. Программа рассчитана на родителей: кровных или усыновителей."
+        }
+      ],
+      "searched_at": "2026-09-09"
+    }
+  ],
+  "errors": []
+}
