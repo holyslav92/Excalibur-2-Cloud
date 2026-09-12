@@ -1,0 +1,28 @@
+{
+  "slug": "transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu",
+  "topic_id": "B24",
+  "post_id": 10189,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1106281,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10189 slug=transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu\nOK categories=32,36\nOK yoast_social_image=1\nOK featured_image=10190\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10191 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu-inline-01.png\nOK inline_alt=10191\nOK inline_description=10191\nOK inline_image_upload=10192 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu-inline-02.png\nOK inline_alt=10192\nOK inline_description=10192\nOK inline_image_upload=10193 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu-inline-03.png\nOK inline_alt=10193\nOK inline_description=10193\nOK inline_image_upload=10194 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu-inline-04.png\nOK inline_alt=10194\nOK inline_description=10194\nOK inline_image_upload=10195 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu-inline-05.png\nOK inline_alt=10195\nOK inline_description=10195\nOK inline_image_upload=10196 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu-inline-06.png\nOK inline_alt=10196\nOK inline_description=10196\nOK inline_image_upload=10197 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu-inline-07.png\nOK inline_alt=10197\nOK inline_description=10197\npermalink={{SITE_BASE}}/blog/ipoteka/transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu/",
+    "errors": []
+  }
+}
