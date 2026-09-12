@@ -369,6 +369,27 @@ def shorten_h2(h2: str, *, max_len: int = 72) -> str:
     return text[: max_len - 1].rstrip() + "…"
 
 
+# Scene-painting fragments in H2 anchors must not leak into inline alt templates (B24).
+H2_ALT_NEUTRALIZE_RES: tuple[tuple[re.Pattern[str], str], ...] = (
+    (re.compile(r"\s+и\s+на\s+столе\s+", re.I), " "),
+    (re.compile(r"на\s+столе\s+", re.I), ""),
+    (re.compile(r"рядом\s+лежит\s+", re.I), ""),
+    (re.compile(r"у\s+стойки\s+", re.I), ""),
+    (re.compile(r"без\s+людей\s+в\s+кадре", re.I), ""),
+)
+
+
+def sanitize_h2_for_alt(h2: str) -> str:
+    text = normalize_text(h2)
+    if not text:
+        return text
+    for rx, repl in H2_ALT_NEUTRALIZE_RES:
+        text = rx.sub(repl, text)
+    text = re.sub(r"\s*—\s*—\s*", " — ", text)
+    text = re.sub(r"\s+", " ", text).strip(" —")
+    return text or normalize_text(h2)
+
+
 def visual_type_label(visual_type: str, labels_map: dict[str, str]) -> str:
     key = normalize_text(visual_type)
     return labels_map.get(key) or VISUAL_TYPE_FALLBACK_RU.get(key) or "Инфографика"
@@ -382,7 +403,7 @@ def build_inline_alt(
 ) -> str:
     visual_type = normalize_text(slot.get("visual_type"))
     label_ru = visual_type_label(visual_type, labels_map)
-    h2 = shorten_h2(normalize_text(slot.get("h2_anchor")), max_len=48)
+    h2 = shorten_h2(sanitize_h2_for_alt(normalize_text(slot.get("h2_anchor"))), max_len=48)
     panel_labels = [normalize_text(x) for x in (slot.get("labels") or []) if normalize_text(x)]
 
     if panel_labels and visual_type not in {"realistic_photo", "cover_editorial_hero"}:

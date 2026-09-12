@@ -23,10 +23,11 @@ category: env
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
 - **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9749 ingest skipped; B23 lesson recorded without behavioral signals (newbuild_apartments_instead_flat_ddu_tyumen cluster).
+- **2026-09-07 B24 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9888 ingest skipped; B24 lesson recorded without behavioral signals (installment_penalty_developer cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368) и B23 (post 9749) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368), B23 (post 9749) и B24 (post 9888) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -1063,3 +1064,125 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260907-1153-quality-score-sol-duplicate-inlines-b24
+status: fixed
+run_date: 2026-09-07
+role: excalibur-blog-quality-score
+topic_id: B24
+article_dir: memory/blog/articles/B24-prosrochili-rassrochku-zastrojschika-ddu-rastorgli
+severity: medium
+category: script
+
+### What went wrong
+- Quality-score `--repair` Sol pass duplicated all 7 `figure.inline-quad` blocks (14 total): zero-padded `inline_01` + canonical `inline_1` for same PNG src.
+- `build_sol_input` embedded full `article.html` with figures; Sol re-emitted figures while originals remained.
+
+### How the agent recovered this run
+- Manual dedupe in article.html before publish (7 figures); quality-bar `inline_figures_7` PASS; publish post 9888.
+
+### Durable fix needed before next run
+- Strip inline figures from quality-score Sol repair input; list figures separately with HARD no-dup contract.
+- Post-repair `dedupe_duplicate_inline_figures`; html_linter FAIL on duplicate inline src.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quality_score_gate.py`
+- `scripts/excalibur_blog_html_merge_utils.py`
+- `scripts/excalibur_blog_html_linter.py`
+- `tests/test_pipeline_speed_b03.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-07
+fix_summary:
+- `build_sol_input` strips inline figures from prose, lists them once with HARD no-dup note.
+- `post_repair_dedupe_inline_figures` after quality-score Sol repair; `dedupe_duplicate_inline_figures` in html_merge_utils.
+- `detect_duplicate_inline_figures` in html_linter; B24 pattern unit test.
+files_changed:
+- `scripts/excalibur_blog_quality_score_gate.py`
+- `scripts/excalibur_blog_html_merge_utils.py`
+- `scripts/excalibur_blog_html_linter.py`
+- `tests/test_pipeline_speed_b03.py`
+checks_run:
+- `python3 -m py_compile` on changed scripts
+- `python3 -m unittest tests.test_pipeline_speed_b03.SolTrimChunkTest`
+- B24 `html_linter` article.html → PASS (7 figures)
+commit: e68f1ef2
+
+## INC-20260907-1153-alt-scene-painting-h2-false-positive-b24
+status: fixed
+run_date: 2026-09-07
+role: excalibur-blog-fixer
+topic_id: B24
+article_dir: memory/blog/articles/B24-prosrochili-rassrochku-zastrojschika-ddu-rastorgli
+severity: low
+category: script
+
+### What went wrong
+- `build_inline_alt` embedded H2 «…и на столе уведомление…» → `image-alt-gate` FAIL `scene-painting: на\\s+столе` on inline_3 before caption apply.
+- Scene-painting detector flagged editorial H2 phrase, not scene_hint dump.
+
+### How the agent recovered this run
+- `excalibur_blog_image_caption_builder.py --apply` rewrote alts; manual gate pass at publish.
+
+### Durable fix needed before next run
+- `sanitize_h2_for_alt()` neutralizes scene-painting fragments in H2 anchors before alt template.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_image_caption_builder.py`
+- `tests/test_image_caption_builder.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-07
+fix_summary:
+- Added `sanitize_h2_for_alt` + `H2_ALT_NEUTRALIZE_RES`; `build_inline_alt` uses sanitized H2.
+- B24 inline_3 alt no longer triggers `на столе` scene-painting; unit test added.
+files_changed:
+- `scripts/excalibur_blog_image_caption_builder.py`
+- `tests/test_image_caption_builder.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
+- `python3 -m unittest tests.test_image_caption_builder`
+- B24 `--gate` inline_3 PASS (no scene-painting)
+commit: e68f1ef2
+
+## INC-20260907-1153-quality-score-lead-repair-b24
+status: fixed
+run_date: 2026-09-07
+role: excalibur-blog-quality-score
+topic_id: B24
+article_dir: memory/blog/articles/B24-prosrochili-rassrochku-zastrojschika-ddu-rastorgli
+severity: low
+category: prompt
+
+### What went wrong
+- First quality-score gate FAIL: lead missing number/deadline, finale third-retell, length 1650 > target 1400–1600.
+- One Sol repair + sol_trim_chunk → PASS at 1540 words.
+
+### How the agent recovered this run
+- `quality-score-notes.md` → Derouter Sol repair → `excalibur_blog_sol_trim_chunk.py` → `article-quality-score.json` PASS.
+
+### Durable fix needed before next run
+- None — expected Stylo→quality-score→≤1 Sol repair contract (`shared/article-quality-score-lock.md`); duplicate-inline side effect fixed in INC-20260907-1153-quality-score-sol-duplicate-inlines-b24.
+
+### Suggested files to inspect/change
+- `shared/article-quality-score-lock.md`
+- `skills/sol-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-07
+fix_summary:
+- No code change — expected quality-score repair + trim path; B24 PASS confirms contract.
+files_changed:
+- none (contract already canonical)
+checks_run:
+- B24 `article-quality-score.json` all_pass PASS, word_count=1540
+commit: n/a

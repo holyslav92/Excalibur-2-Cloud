@@ -5,6 +5,11 @@ from __future__ import annotations
 
 import re
 
+INLINE_FIGURE_BLOCK_RE = re.compile(
+    r'<figure\s+class="inline-quad"[^>]*>.*?</figure>',
+    re.I | re.S,
+)
+
 
 def normalize_h2_title(raw: str) -> str:
     text = re.sub(r"<[^>]+>", "", raw or "")
@@ -78,6 +83,53 @@ def dedupe_duplicate_h2_sections(html: str) -> tuple[str, list[str]]:
     if merged and not merged.endswith("\n"):
         merged += "\n"
     return merged, dropped
+
+
+def extract_inline_figure_blocks(html: str) -> list[str]:
+    return [m.group(0).strip() for m in INLINE_FIGURE_BLOCK_RE.finditer(html or "")]
+
+
+def strip_inline_figure_blocks(html: str) -> str:
+    stripped = INLINE_FIGURE_BLOCK_RE.sub("", html or "")
+    stripped = re.sub(r"\n{3,}", "\n\n", stripped)
+    return stripped.strip() + ("\n" if stripped.strip() else "")
+
+
+def _inline_figure_img_src(block: str) -> str:
+    match = re.search(r'<img\b[^>]*\bsrc="([^"]+)"', block, flags=re.I)
+    return (match.group(1) if match else "").strip().casefold()
+
+
+def dedupe_duplicate_inline_figures(html: str) -> tuple[str, list[str]]:
+    """Drop later inline-quad figures that reuse the same img src (B24 quality-score Sol repair)."""
+    matches = list(INLINE_FIGURE_BLOCK_RE.finditer(html or ""))
+    if not matches:
+        return html, []
+
+    seen_src: set[str] = set()
+    drop_ranges: list[tuple[int, int]] = []
+    dropped_srcs: list[str] = []
+
+    for match in matches:
+        src = _inline_figure_img_src(match.group(0))
+        if not src:
+            continue
+        if src in seen_src:
+            drop_ranges.append((match.start(), match.end()))
+            dropped_srcs.append(src)
+            continue
+        seen_src.add(src)
+
+    if not drop_ranges:
+        return html, []
+
+    out = html
+    for start, end in sorted(drop_ranges, key=lambda pair: pair[0], reverse=True):
+        out = out[:start] + out[end:]
+    out = re.sub(r"\n{3,}", "\n\n", out)
+    if out and not out.endswith("\n"):
+        out += "\n"
+    return out, dropped_srcs
 
 
 def merge_html_fragments(fragments: list[str], *, dedupe_h2: bool = True) -> str:

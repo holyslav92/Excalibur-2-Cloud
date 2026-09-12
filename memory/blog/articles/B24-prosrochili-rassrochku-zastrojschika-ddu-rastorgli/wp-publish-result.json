@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos",
+  "topic_id": "B24",
+  "post_id": 9888,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-prosrochili-rassrochku-zastrojschika-ddu-rastorgli/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 992274,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9888 slug=v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=9889\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9890 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos-inline-03.png\nOK inline_alt=9890\nOK inline_description=9890\nOK inline_image_upload=9891 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos-inline-04.png\nOK inline_alt=9891\nOK inline_description=9891\nOK inline_image_upload=9892 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos-inline-01.png\nOK inline_alt=9892\nOK inline_description=9892\nOK inline_image_upload=9893 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos-inline-02.png\nOK inline_alt=9893\nOK inline_description=9893\nOK inline_image_upload=9894 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos-inline-05.png\nOK inline_alt=9894\nOK inline_description=9894\nOK inline_image_upload=9895 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos-inline-06.png\nOK inline_alt=9895\nOK inline_description=9895\nOK inline_image_upload=9896 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos-inline-07.png\nOK inline_alt=9896\nOK inline_description=9896\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prosrochili-rassrochku-zastrojschika-ddu-rastorgli-uderzhali-vznos/",
+    "errors": []
+  }
+}

@@ -106,6 +106,16 @@ class ImageCaptionBuilderTests(unittest.TestCase):
         self.assertFalse(prompt_like)
         self.assertIn("Сравнительная таблица", alt)
 
+    def test_build_inline_alt_neutralizes_h2_scene_painting_b24(self) -> None:
+        slot = {
+            "visual_type": "realistic_photo",
+            "h2_anchor": "Пять дней задержки — и на столе уведомление о расторжении",
+        }
+        alt = build_inline_alt(slot, labels_map={"realistic_photo": "реалистичный кадр (без лица хоста)"}, meta={"h1": "Тюмень"})
+        prompt_like, errors = is_prompt_like_alt(alt, seo_length=True)
+        self.assertFalse(prompt_like, msg=f"{alt!r} errors={errors}")
+        self.assertNotIn("на столе", alt.casefold())
+
     def test_cover_caption_must_be_empty(self) -> None:
         ok, errors = cover_caption_must_be_empty("Подпись, которую Дзен покажет как текст")
         self.assertFalse(ok)

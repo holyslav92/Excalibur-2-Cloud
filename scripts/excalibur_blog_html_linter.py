@@ -141,6 +141,30 @@ def detect_duplicate_h2_sections(html: str) -> list[str]:
     ]
 
 
+def detect_duplicate_inline_figures(html: str) -> list[str]:
+    """Fail if the same inline PNG src appears in more than one figure.inline-quad (B24)."""
+    from excalibur_blog_html_merge_utils import INLINE_FIGURE_BLOCK_RE, _inline_figure_img_src
+
+    seen: dict[str, int] = {}
+    duplicates: list[str] = []
+    for match in INLINE_FIGURE_BLOCK_RE.finditer(html or ""):
+        src = _inline_figure_img_src(match.group(0))
+        if not src:
+            continue
+        seen[src] = seen.get(src, 0) + 1
+        if seen[src] == 2:
+            duplicates.append(src)
+    if not duplicates:
+        return []
+    preview = ", ".join(duplicates[:6])
+    return [
+        "Forbidden duplicate inline figure src in article.html: "
+        + preview
+        + ". Keep exactly one <figure class=\"inline-quad\"> per inline PNG; "
+        "quality-score Sol repair auto-dedupes — re-run gate or remove duplicate blocks."
+    ]
+
+
 def detect_duplicate_faq_sections(html: str) -> list[str]:
     """Fail if article has more than one thematic FAQ heading block."""
     errors: list[str] = []
@@ -364,6 +388,7 @@ def lint_html_file(html_path: Path, whitelist: set[str]) -> dict[str, Any]:
     linter.errors.extend(detect_anchor_toc(html_content))
     linter.errors.extend(detect_duplicate_faq_sections(html_content))
     linter.errors.extend(detect_duplicate_h2_sections(html_content))
+    linter.errors.extend(detect_duplicate_inline_figures(html_content))
     linter.errors.extend(detect_faq_h3_markup(html_content))
 
     return {

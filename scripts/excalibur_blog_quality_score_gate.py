@@ -30,6 +30,11 @@ from excalibur_blog_quality_bar_9_gate import (
     strip_html,
     word_count,
 )
+from excalibur_blog_html_merge_utils import (
+    dedupe_duplicate_inline_figures,
+    extract_inline_figure_blocks,
+    strip_inline_figure_blocks,
+)
 from excalibur_blog_stylo import lead_block, spine_overlap, tokenize_words
 
 
@@ -474,6 +479,9 @@ def build_sol_input(article_dir: Path, notes_path: Path) -> Path:
         "Прочитай quality-score-notes.md и исправь article.html.",
         "Факты — только из drafts/writer.html. Без self-score 9.0 loop.",
         "",
+        "**Inline figures (HARD):** вставь ровно один раз каждый блок из списка ниже — "
+        "после соответствующего H2. Не дублируй figure.inline-quad и не добавляй новые PNG.",
+        "",
     ]
     if notes_path.is_file():
         parts.append(notes_path.read_text(encoding="utf-8"))
@@ -485,10 +493,26 @@ def build_sol_input(article_dir: Path, notes_path: Path) -> Path:
         parts.append("")
     current = article_dir / "article.html"
     if current.is_file():
-        parts.append("## Current article.html (перепиши слогом Sol)")
-        parts.append(current.read_text(encoding="utf-8")[:20000])
+        current_html = current.read_text(encoding="utf-8")
+        figures = extract_inline_figure_blocks(current_html)
+        if figures:
+            parts.append("## Inline figures (вставь ровно один раз каждый, без дублей)")
+            parts.extend(figures)
+            parts.append("")
+        parts.append("## Current article.html (перепиши слогом Sol, prose only)")
+        parts.append(strip_inline_figure_blocks(current_html)[:20000])
     out.write_text("\n".join(parts), encoding="utf-8")
     return out
+
+
+def post_repair_dedupe_inline_figures(article_dir: Path) -> list[str]:
+    article_html = article_dir / "article.html"
+    if not article_html.is_file():
+        return []
+    merged, dropped = dedupe_duplicate_inline_figures(article_html.read_text(encoding="utf-8"))
+    if dropped:
+        article_html.write_text(merged, encoding="utf-8")
+    return dropped
 
 
 def run_repair_sol(article_dir: Path, root: Path, user_file: Path) -> int:
@@ -550,6 +574,9 @@ def main() -> int:
             if rc != 0:
                 report["repair_error"] = f"derouter sol exit={rc}"
             else:
+                dropped = post_repair_dedupe_inline_figures(article_dir)
+                if dropped:
+                    report["inline_figures_deduped"] = dropped
                 report = evaluate(article_dir, root, sol_rewrite_applied=True)
                 report["repair_attempted"] = True
 
