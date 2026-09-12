@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p",
+  "topic_id": "B24",
+  "post_id": 10176,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1115267,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10176 slug=v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p\nOK categories=36,34\nOK yoast_social_image=1\nOK featured_image=10177\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10178 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p-inline-01.png\nOK inline_alt=10178\nOK inline_description=10178\nOK inline_image_upload=10179 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p-inline-02.png\nOK inline_alt=10179\nOK inline_description=10179\nOK inline_image_upload=10180 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p-inline-03.png\nOK inline_alt=10180\nOK inline_description=10180\nOK inline_image_upload=10181 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p-inline-07.png\nOK inline_alt=10181\nOK inline_description=10181\nOK inline_image_upload=10182 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p-inline-04.png\nOK inline_alt=10182\nOK inline_description=10182\nOK inline_image_upload=10183 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p-inline-05.png\nOK inline_alt=10183\nOK inline_description=10183\nOK inline_image_upload=10184 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p-inline-06.png\nOK inline_alt=10184\nOK inline_description=10184\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p/",
+    "errors": []
+  }
+}
