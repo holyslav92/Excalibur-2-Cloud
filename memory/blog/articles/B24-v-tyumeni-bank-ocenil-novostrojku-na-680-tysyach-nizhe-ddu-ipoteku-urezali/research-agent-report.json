@@ -1,0 +1,70 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-12",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://cbr.ru/press/keypr/",
+        "type": "official",
+        "note": "11.09.2026 — ЦБ сохранил ключевую ставку 14%; следующее заседание 23.10.2026"
+      },
+      {
+        "url": "https://ural.tsargrad.tv/news/ipoteka-v-tjumeni-vyrosla-v-15-raza-kogda-podeshevejut-novostrojki_1858113",
+        "type": "news",
+        "note": "10.09.2026 — Тюменский макрорегион: ипотечный рынок +1,5×; без широкого удешевления новостроек"
+      },
+      {
+        "url": "https://novostroikino.ru/blog/otsenka-kvartiry-v-novostroyke-dlya-ipoteki-2026/",
+        "type": "market",
+        "note": "28.07.2026 — оценка новостройки для ипотеки; механика «оценка ниже ДДУ»"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel (scout signal)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 3593,
+    "p0_volume_55_11176": 4560,
+    "p0_volume_ru225": 8430,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 688},
+      {"phrase": "ипотека новостройка", "volume": 398},
+      {"phrase": "оценка квартиры для ипотеки", "volume": 20}
+    ],
+    "rework_from": "scout P0 locked «новостройки тюмень» (3593) after appraisal/DDU jargon probes weak",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "bank_appraisal_below_ddu_price",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 8,
+    "entities_checked": ["cbr", "dom_rf", "sberbank"],
+    "errors": [],
+    "note": "Key rate, family mortgage program params, Sber PSC example appraisal 2000 RUB (person section); LTV 80-90% from market only"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

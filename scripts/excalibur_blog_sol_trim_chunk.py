@@ -154,7 +154,7 @@ def main() -> int:
                 extra_instructions = raw.strip()
 
     derouter = root / "scripts/excalibur_blog_derouter_opus_chat.py"
-    system_path = root / "skills/sol-excalibur-blog/SKILL.md"
+    system_path = root / "shared/derouter-sol-system.md"
 
     if args.single_shot:
         with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False, encoding="utf-8") as tf:
