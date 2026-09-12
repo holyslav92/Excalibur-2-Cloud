@@ -1,0 +1,248 @@
+{
+  "topic_id": "B24",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "850 тысяч брака — дом не приняли",
+  "cover_hook_highlight": "брака",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Под Тюменью дом от застройщика не приняли из-за брака на 850 тысяч: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Коттедж: тепловизор, стоп акт, оливковая куртка, sun flare.",
+      "meme_caption_ru": "",
+      "sticky": "Акт не подписали",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие",
+      "meme_picks": [
+        "this_is_fine_dog",
+        "long_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Новый дом в посёлке под Тюменью: семья приехала за ключами",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Семья у дома, фасад и окна; james_doakes угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Новый дом в посёлке под Тюменью: семья приехала…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Посёлок под Тюменью",
+        "Технадзор",
+        "Морозный день"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "james_doakes"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Новый дом в посёлке под Тюменью: семья приехала за ключами",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Тепловизионная карта стен нового дома под Тюменью: зоны промерзания, продувание окон, кровля, стяжка и сумма 850 000 ₽; золото, чёрный, красные маркеры.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Новый дом в посёлке под Тюменью: семья приехала…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Промерзание углов",
+        "Продувание окон",
+        "Смета 850 000 ₽"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Смета переделок на 850 тысяч: почему семья не взяла ключи",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Прораб протягивает чистый акт на веранде; заказчик сомневается; bright, без мемов.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Смета переделок на 850 тысяч: почему семья не в…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Прораб держит акт",
+        "За месяц устраним",
+        "Гарантия ≠ ремонт"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Что показал тепловизор: скрытые мостики холода и брак кровли",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Смета 850 000 ₽, ключи не взяты, тепловизор на столе; bright docs, без мемов.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Что показал тепловизор: скрытые мостики холода…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Вскрытие кровли",
+        "Работы до переезда",
+        "Бригада застройщика"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Подпишите сейчас, а устраним по гарантии» — ловушка прораба",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема мотивированного отказа: дефекты, фото, требования, без чистого акта; wojak угол.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Дефектная ведомость, Фото к строке, Повторный осмотр — иллюстрация к разбору сделки",
+      "labels": [
+        "Дефектная ведомость",
+        "Фото к строке",
+        "Повторный осмотр"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "wojak"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Мотивированный отказ вместо чистого акта: как зафиксировать дефекты",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Чеклист зон дома: фасад, окна, кровля, стяжка, инженерка; gold markers, без мемов.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Кровля и утеплитель, Окна и швы, Стяжка пола — иллюстрация к разбору сделки.",
+      "labels": [
+        "Кровля и утеплитель",
+        "Окна и швы",
+        "Стяжка пола"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Чеклист приёмки загородного дома от застройщика — таблица",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Timeline проверки: осмотр → тепловизор → дефекты → смета → акт; cheems угол.",
+      "alt": "чеклист ошибок vs правильный путь по новостройке в Тюмени: Тепловизор при морозе, Анемометр на окнах, Ведомость замечаний — иллюстрация к…",
+      "labels": [
+        "Тепловизор при морозе",
+        "Анемометр на окнах",
+        "Ведомость замечаний"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "cheems"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "приемка квартир тюмень",
+    "дома в тюмени от застройщика",
+    "приемка квартиры в новостройке тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "герой в три четверти справа, широкий план с фасадом коттеджа и раскрытой дефектной ведомостью на переднем плане",
+    "location": "загородный дом на приёмке под Тюменью, светлая веранда и заснеженный участок",
+    "meme": "this_is_fine_dog и long_cat как маленькие ироничные стикеры о провальной приёмке",
+    "prop_set": [
+      "тепловизор с яркими холодными зонами",
+      "дефектная ведомость",
+      "рулон строительной ленты",
+      "связка ключей на столе",
+      "план дома"
+    ],
+    "sticker_set": [
+      "this_is_fine_dog",
+      "long_cat"
+    ],
+    "joke": "на фоне идеального фасада тепловизор показывает, что дому явно не до спокойного новоселья",
+    "outfit": "светлая утеплённая оливковая куртка поверх кремового худи, вязаная шапка цвета шафрана",
+    "emotion": "ошеломлённое недоверие с приподнятой бровью и напряжённой полуулыбкой",
+    "pose_framing": "средний план в три четверти справа, корпус развёрнут к тепловизору, одна рука поднята в жесте «стоп»",
+    "action": "герой удерживает тепловизор над раскрытой дефектной ведомостью и останавливает подписание акта"
+  },
+  "cover_emotion": "ошеломлённое недоверие"
+}

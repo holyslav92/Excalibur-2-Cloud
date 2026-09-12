@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-12
+
+- **topic_id:** B24
+- **slug:** pod-tyumenyu-dom-ot-zastrojshchika-ne-prinyali-iz-za-braka-na-850-tysyach
+- **post_id:** 10137
+- **permalink:** /blog/proverka-pered-pokupkoj/pod-tyumenyu-dom-ot-zastrojshchika-ne-prinyali-iz-za-braka-na-850-tysyach/
+- **featured_image:** 10138
+- **inline_images:** 10139–10145 (7)
+- **wp_category_slugs:** proverka-pered-pokupkoj, pokupka-kvartiry, riski-sdelki (category_ids=34,36,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS (HTTP 200)
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; pre-publish quality-bar fixes (end CTA template, word count 1400)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23

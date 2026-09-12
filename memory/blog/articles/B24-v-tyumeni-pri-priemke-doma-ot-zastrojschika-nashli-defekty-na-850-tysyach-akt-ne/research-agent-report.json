@@ -1,0 +1,54 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-12",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel (scout signal)"
+      },
+      {
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "Tenant Telegram channel (scout signal)"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/01/12/76186766/",
+        "type": "news",
+        "note": "Тюменские новостройки и проблемы с качеством сдачи домов от застройщиков"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "приемка квартир тюмень",
+    "p0_volume": 279,
+    "p0_volume_ru225": 436,
+    "support_phrases": [
+      {"phrase": "новостройки тюмень купить", "volume": 1189},
+      {"phrase": "дома в тюмени от застройщика", "volume": 279},
+      {"phrase": "приемка квартиры в новостройке тюмень", "volume": 29}
+    ],
+    "rework_from": "scout P0 locked «приемка квартир тюмень» (279) after Tyumen newbuild acceptance jargon rework",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "acceptance_defects_penalty",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 2,
+    "entities_checked": ["pravo_gov_ru"],
+    "errors": []
+  }
+}
