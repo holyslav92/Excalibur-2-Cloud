@@ -6,4 +6,4 @@ H1: 7 дней держали переуступку в Тюмени — ква�
 Без self-score loop. Без padding до 1800+. Target 1400–1600 слов.
 
 ## FINALE FAIL
-- finale-third-retell: middle scene repeated in closing: «цена цедентом согласована документы»
+- finale-third-retell: middle scene repeated in closing: «иногда вместе его ценой»
