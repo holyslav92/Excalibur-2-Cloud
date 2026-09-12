@@ -120,6 +120,23 @@
         "pose_framing": "full-body three-quarter both hands visible not side-eye bust",
         "action": "holds ddu points at egrn line pushes keys away"
       }
+    },
+    {
+      "date": "2026-09-08",
+      "topic_id": "B24",
+      "slug": "",
+      "motifs": {
+        "composition": "хост крупно слева по пояс, диагональ ключи в одной руке и письмо банка stop в другой",
+        "location": "светлая сырая квартира в новом жилом комплексе тюмени на этапе ремонта",
+        "meme": "success_kid + grumpy_cat corner stickers",
+        "prop_set": "ключи, письмо stop, ноутбук рнв нет, акт, малярный валик, жёлтый стикер",
+        "sticker_set": "success_kid top-right, grumpy_cat lower-right",
+        "joke": "ключи есть, остаток ипотеки остановлен",
+        "outfit": "оливковая рабочая куртка, молочная футболка, без пиджака",
+        "emotion": "ошеломление и раздражённое недоверие",
+        "pose_framing": "waist-up слева, взгляд прямо в камеру",
+        "action": "показывает ключи и письмо банка, указывает на ноутбук без рнв"
+      }
     }
   ]
 }
