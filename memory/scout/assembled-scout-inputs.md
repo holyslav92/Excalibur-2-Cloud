@@ -1,82 +1,83 @@
-# Scout inputs — 2026-09-05 (B23)
+# Scout inputs — 2026-09-08 (B24)
 
 **CRITICAL EXECUTION CONTEXT:** You are already running inside `excalibur_blog_derouter_opus_chat.py` (utility tier gpt-5.6-terra). The conductor completed all shell/MCP/Wordstat gates. **Your job is ONLY to write the Scout handoff markdown body** — no tool calls, no BLOCKER messages, no refusals. Output the complete handoff text now.
 
-**run_date:** 2026-09-05 (YEKT Saturday slot ~12:00)
+**run_date:** 2026-09-08 (YEKT weekday slot ~09:00)
 **tenant:** The Риэлтор — Святослав Шакин, Тюмень (tymenrieltor.ru)
 **topic_market_focus:** newbuild_only
 **dzen_rf_pack:** true — Meta/Instagram/Facebook/LinkedIn/X/Discord/VPN heroes DENY
 
 ## Anti-repeat preflight (DONE)
 
-- `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters` → 21 active locks (last_sync 2026-09-05)
-- **Live WP 2026-09-05 (~12 titles) — DO NOT reuse plot:**
-  - инвестор: аренда запрещена до ключей в ДДУ
-  - переуступка +280к за сутки до ДДУ
-  - трейд-ин сорвался за день до ДДУ
-  - оценка банка ниже цены ДДУ на 400к
-  - категория земли сорвала ипотеку на дом в посёлке
-  - аванс на чужой счёт
-  - банк поднял ставку ипотеки перед ДДУ (B22)
-  - застройщик потребовал акт с дефектами — иначе без ключей
-  - банк снял одобрение ипотеки за 72 часа до ДДУ
-  - чистовая vs предчистовая в ДДУ
-  - ключи задержали 8 месяцев — неустойка сертификатом
-  - на приёмке не хватило метров — отказ в пересчёте
-- **Rejected overlap:** parking/cellar angle «оплатили машиноместо по ДДУ» → 47% overlap with B21 cellar cluster
-- **Rejected overlap:** matkapital/PFR return → overlap with live «банк снял одобрение 72ч»
-- **Rejected overlap:** developer installment cancelled → overlap with trade-in/day-before-DDU cluster
+- `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters` → 28 active locks (last_sync 2026-09-08)
+- **Live WP Sep 5–7 (~12 titles) — DO NOT reuse plot:**
+  - созаёмщика убрали за 7 дней до ДДУ
+  - рассрочка застройщика — 5 дней просрочки, ДДУ расторгли
+  - газ у коттеджа в ДДУ vs факт 180 м
+  - этаж в ДДУ 12-й — на ключах 2-й
+  - на эскроу не хватило 400 тыс до ДДУ
+  - участок 12 соток в ДДУ — кадастр 8
+  - двойная продажа одной квартиры
+  - доплата 300 тыс за отделку перед ключами
+  - задержка ключей 7 мес — неустойка не выплачена
+  - площадь 45 м² в ДДУ — декларация 41
+  - штраф 190 тыс за отказ подписать акт с браком
+  - апартаменты вместо квартиры в выписке (B23)
+- **Distinct from B18** `matkapital_missing_child_shares` (secondary ЕГРН plot) — this slot is **newbuild DDU + matkapital + child shares wording before keys**
 - `scout_helper.py --check-query` PASS for proposed title+cluster+slug
-- `excalibur_blog_topic_focus.py` PASS (on-focus: квартир, дду)
+- `excalibur_blog_topic_focus.py` PASS (on-focus: новострой, дду, маткапитал)
 
 ## Proposed topic (PASS topic_focus + scout_helper + story_dup PASS)
 
-- **topic_id:** B23
-- **title_draft:** В Тюмени в ДДУ написали квартиру — в выписке оказались апартаменты
-- **slug:** v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty
-- **cluster_id (new):** newbuild_apartments_instead_flat_ddu_tyumen
-- **story_dup_check:** PASS — distinct legal plot: в ДДУ и рекламе объект назван «квартира»/жилое помещение, семья внесла аванс и подписала ипотеку под жильё; при регистрации права в Росреестре в выписке ЕГРН статус — **апартаменты** (нежилое/коммерческое назначение) → выше коммуналка, нет прописки, ипотечная программа под угрозой, застройщик ссылается на формулировку в приложении к ДДУ
+- **topic_id:** B24
+- **title_draft:** В Тюмени маткапитал внесли в ДДУ на новостройку — за три недели до ключей сделку остановили
+- **slug:** v-tyumeni-matkapital-v-ddu-na-novostrojku-pered-klyuchami-sdelku-ostanovili
+- **cluster_id (new):** newbuild_matkapital_child_shares_ddu_blocked
+- **story_dup_check:** PASS — distinct legal plot: семья направила маткапитал в первоначальный взнос по семейной ипотеке на новостройку, подписала ДДУ; в договоре и приложениях **нет корректной формулировки об обязательстве выделить доли детям**; за три недели до выдачи ключей ПФР/банк остановили сделку — без исправления ДДУ или соглашения о долях регистрация права невозможна
 
 ## Dzen news-casus shape (target PASS)
 
-- **event:** семья в Тюмени выбрала «квартиру» в новостройке, подписала ДДУ и ипотеку, деньги ушли на эскроу
-- **risk:** при подаче на регистрацию права в ЕГРН объект зарегистрирован как **апартаменты**, а не жилое помещение — нет постоянной регистрации, коммунальные тарифы как у коммерции, семейная/льготная ипотека может не пройти, налог и перепродажа по другим правилам
-- **time:** на этапе регистрации права после сдачи дома / перед получением ключей (через 2–3 недели после подачи документов)
-- **finale:** банк приостановил выдачу остатка ипотеки; застройщик отказался менять назначение; семья остановила приёмку и подала претензию — ключи не получили, спор ушёл в досудебку (или суд с требованием признать объект жилым / расторгнуть ДДУ)
-- **comment_magnet_angle:** «В ДДУ везде написано „квартира“, а в выписке — апартаменты: вы бы всё равно подписали акт приёмки или шли бы в суд, даже если ключи уже «на столе»?»
+- **event:** семья в Тюмени купила квартиру в новостройке с маткапиталом и семейной ипотекой, деньги на эскроу, дом сдан
+- **risk:** маткапитал использован, но в ДДУ не прописано обязательство выделить доли детям в срок — ПФР отказывает в согласовании, банк блокирует регистрацию права
+- **time:** за три недели до подписания акта приёмки и получения ключей
+- **finale:** сделку остановили; застройщик отказался бесплатно переподписывать ДДУ; семья внесла допсоглашение через юриста — ключи перенесли на месяц, без исправления риск расторжения и возврата маткапитала
+- **comment_magnet_angle:** «Доли детям — прямо в ДДУ или отдельным соглашением до подписания: где бы вы поставили красную линию, если ключи уже «на подходе»?»
+
+## Top-energy mirror
+
+- **top_energy_mirror:** stopped_before_money
+- **newbuild_mechanism:** маткапитал + семейная ипотека на ДДУ новостройки — обязательство выделить доли детям не зафиксировано в договоре; ПФР/банк блокируют регистрацию за 3 недели до ключей
+- **why_newbuild_not_secondary:** сюжет в цепочке ДДУ/застройщик/эскроу/ипотека на новостройку; не покупка вторички и не проверка детских долей в ЕГРН продавца (B18)
 
 ## Klyshin hook
 
-- **klyshin_hook:** none | original: none (fresh Tyumen newbuild apartments-vs-flat casus without Klyshin — preferred; avoids today's 12 live plots and B21 cellar/parking overlap)
+- **klyshin_hook:** none | original: none (fresh Tyumen newbuild matkapital casus without Klyshin — preferred; avoids Sep 5–7 live plots)
 
-## Wordstat MCP-KV (live 2026-09-05)
+## Wordstat MCP-KV (live 2026-09-08)
 
 **Preflight:** wordstat_get_user_info OK (Yandex Cloud API, Folder ID b1g6bq34gkivjj20be06)
 
 | probe | regions | freq (phrase total) |
 |-------|---------|---------------------|
-| апартаменты тюмень | 55 | 646 (noisy tail — отели/прочее) |
-| купить апартаменты в тюмени | 55 | 35 (buyer, narrow) |
-| маткапитал новостройка | 55 | 1 (rejected — B19 escrow cluster) |
-| рассрочка застройщик новостройка | 55 | 2 (rejected — overlap trade-in/day-before-DDU) |
-| машиноместо новостройка | 55 | 2 (rejected — 47% overlap B21 cellar) |
-| **новостройки тюмень** | **55** | **3640** |
-| новостройки тюмень | 11176 | (included in Tyumen metro demand) |
-| **новостройки тюмень** | **225 (compare)** | **8705** |
-| купить новостройку в тюмени | 55 | 639 (context) |
+| маткапитал новостройка | 55,11176,225 | 349 |
+| новостройки с маткапиталом | 55,11176,225 | **175** |
+| маткапитал ипотека новостройка | 55,11176,225 | 102 |
+| выделение долей детям маткапитал | 225 (compare) | 872 |
+| приемка квартиры новостройка тюмень | 55 | 65 (rejected — acceptance fine cluster Sep 5) |
+| рассрочка от застройщика тюмень | 55 | 110 (rejected — installment cancel Sep 7) |
 
 **wordstat_rework log:**
-- probe «апартаменты тюмень» 55 → 646; top child «купить апартаменты в тюмени» → 35 (on-topic but weak vs newbuild spine; tail polluted)
-- probe «маткапитал новостройка» 55 → 1 (weak; matkapital/escrow plot taken by B19)
-- probe «машиноместо новостройка» 55 → 2 (weak; cellar/parking plot overlap B21)
-- probe «рассрочка застройщик новостройка» 55 → 2 (weak; day-before-DDU timing cluster on live)
-- **rework:** localize Tyumen + newbuild buyer jargon (новостройки, ДДУ, выписка ЕГРН) → **final P0 «новостройки тюмень» regions 55,11176,compare225 freq 3640 (55) / 8705 (RU225)**
+- probe «маткапитал новостройка» 55,11176,225 → 349; top «новостройки с маткапиталом» → 175
+- probe «маткапитал ипотека новостройка» → 102 (supporting)
+- probe «выделение долей детям маткапитал» RU225 → 872 (mechanism demand spine)
+- rejected weak/overlap probes: приёмка (Sep 5), рассрочка (Sep 7)
+- **rework:** localize Tyumen + newbuild buyer jargon (новостройки, маткапитал, ДДУ, доли детям) → **final P0 «новостройки с маткапиталом» regions 55,11176,compare225 freq 175**
 
 ## signal_urls (research)
 
-- https://dzen.ru/holyslav — контекст новостроек и ипотеки; не дубль кластера
-- https://www.consultant.ru/document/cons_doc_LAW_51057/ — ГрК РФ / жилое vs нежилое (контекст апартаментов)
-- https://www.domrf.ru/ — справочник застройщиков / ДДУ (контекст регистрации)
+- https://dzen.ru/holyslav — контекст новостроек и семейной ипотеки
+- https://www.consultant.ru/document/cons_doc_LAW_25659/ — 256-ФЗ материнский капитал / выделение долей
+- https://www.domrf.ru/ — справочник застройщиков / ДДУ
 - https://t.me/klyshin_A — checked, not used this slot
 - {{SITE_BASE}}/blog/
 - https://t.me/Tyumen_Rieltor
@@ -84,6 +85,6 @@
 ## Output required
 
 Write complete Scout handoff markdown per SKILL.md with all fields:
-wordstat_preflight, klyshin_hook, anti_repeat_preflight, dzen_casus_shape PASS (event/risk/time/finale), comment_magnet_angle, wordstat_rework, wordstat P0 with mcp_kv + regions 55,11176,compare225, story_dup_check PASS + cluster_id.
+wordstat_preflight, top_energy_mirror, newbuild_mechanism, why_newbuild_not_secondary, klyshin_hook, anti_repeat_preflight, dzen_casus_shape PASS (event/risk/time/finale), comment_magnet_angle, wordstat_rework, wordstat P0 with mcp_kv + regions 55,11176,compare225, story_dup_check PASS + cluster_id, h1_fingerprint_check PASS, formula_spam_check PASS, anti_dupe_hard PASS.
 
-Lock topic_id B23, title, slug, signal_urls, research angles for Research role.
+Lock topic_id B24, title, slug, signal_urls, research angles for Research role.

@@ -120,6 +120,23 @@
         "pose_framing": "full-body three-quarter both hands visible not side-eye bust",
         "action": "holds ddu points at egrn line pushes keys away"
       }
+    },
+    {
+      "date": "2026-09-08",
+      "topic_id": "B24",
+      "slug": "",
+      "motifs": {
+        "composition": "vertical diagonal host at folding table empty newbuild apartment docs foreground hook zone top-right",
+        "location": "bright empty apartment delivered newbuild tyumen window sun flare",
+        "meme": "james_doakes long_cat small corner stickers",
+        "prop_set": "ddu pages sfr application credit folder sealed keys envelope yellow sticky",
+        "sticker_set": "james_doakes bottom-left long_cat bottom-right under 15 percent",
+        "joke": "keys envelope on table but documents bureaucratic stop signal",
+        "outfit": "sage linen shirt rolled sleeves dark blue jeans no blazer",
+        "emotion": "stunned confusion raised brows open mouth comparing share lines",
+        "pose_framing": "three-quarter full body right of center leaning over table two pages",
+        "action": "compares children shares in ddu and sfr application keys sealed"
+      }
     }
   ]
 }

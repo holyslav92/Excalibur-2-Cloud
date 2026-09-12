@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-08
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk
+- **post_id:** 9914
+- **permalink:** /blog/matkapital-i-sdelki/v-tyumeni-matkapital-vnesli-v-ddu-na-novostrojku-za-tri-nedeli-do-klyuchej-sdelk/
+- **featured_image:** 9915
+- **inline_images:** 9916–9922 (7)
+- **wp_category_slugs:** matkapital-i-sdelki, dokumenty-i-oformlenie (category_ids=48,54)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23
