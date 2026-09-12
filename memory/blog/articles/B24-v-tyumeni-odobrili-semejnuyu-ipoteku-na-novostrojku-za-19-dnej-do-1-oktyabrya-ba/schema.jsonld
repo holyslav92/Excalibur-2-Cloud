@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba/#blogposting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba/"
+      },
+      "url": "{{SITE_BASE}}/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba/",
+      "headline": "19 дней до 1 октября: банк пересчитал семейную ипотеку — семья остановила ДДУ",
+      "description": "Одобрение на руках, бронь оплачена — казалось, до ДДУ в Тюмени оставался последний шаг. Но банк заново свёл цифры, и семейной ипотеке внезапно понадобился другой первоначальный взнос.",
+      "datePublished": "2026-09-12",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}

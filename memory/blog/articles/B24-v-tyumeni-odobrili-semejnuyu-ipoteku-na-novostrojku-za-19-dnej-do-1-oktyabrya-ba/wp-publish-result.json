@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba",
+  "topic_id": "B24",
+  "post_id": 10150,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1078928,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10150 slug=v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba\nOK categories=32,36\nOK yoast_social_image=1\nOK featured_image=10151\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10152 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba-inline-01.png\nOK inline_alt=10152\nOK inline_description=10152\nOK inline_image_upload=10153 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba-inline-02.png\nOK inline_alt=10153\nOK inline_description=10153\nOK inline_image_upload=10154 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba-inline-03.png\nOK inline_alt=10154\nOK inline_description=10154\nOK inline_image_upload=10155 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba-inline-04.png\nOK inline_alt=10155\nOK inline_description=10155\nOK inline_image_upload=10156 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba-inline-05.png\nOK inline_alt=10156\nOK inline_description=10156\nOK inline_image_upload=10157 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba-inline-06.png\nOK inline_alt=10157\nOK inline_description=10157\nOK inline_image_upload=10158 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba-inline-07.png\nOK inline_alt=10158\nOK inline_description=10158\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba/",
+    "errors": []
+  }
+}

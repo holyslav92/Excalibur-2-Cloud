@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-12",
+    "today_ru": "12.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "суббота"
+  },
+  "topic": {
+    "topic_id": "B24",
+    "title": "В Тюмени одобрили семейную ипотеку на новостройку — за 19 дней до 1 октября банк пересчитал лимит",
+    "h1": "В Тюмени одобрили семейную ипотеку на новостройку — за 19 дней до 1 октября банк пересчитал лимит",
+    "slug": "v-tyumeni-odobrili-semejnuyu-ipoteku-na-novostrojku-za-19-dnej-do-1-oktyabrya-ba",
+    "primary_query": "В Тюмени одобрили семейную ипотеку на новостройку — за 19 дней до 1 октября банк пересчитал лимит",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени одобрили семейную ипотеку на новостройку — за 19 дней до 1 октября банк пересчитал лимит 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Семейная ипотека в Тюмени в 2026 году: условия, ставка и что изменится ...",
+          "url": "https://novostroyki-tumeni.ru/article/semeynaya-ipoteka-v-tyumeni-2026-usloviya-i-izmeneniya-s-oktyabrya",
+          "snippet": ""
+        },
+        {
+          "title": "Изменения в программе семейной ипотеки с 1 октября 2026 года:",
+          "url": "https://lenta.ru/articles/2026/06/30/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-goda/",
+          "snippet": "Разбираем, что действует сейчас и к чему готовиться, если планируете оформление в ближайшие месяцы."
+        },
+        {
+          "title": "Тюменцы спешат в последний вагон семейной ипотеки: спрос на новостройки ...",
+          "url": "https://72.ru/text/realty/2025/12/17/76175356/",
+          "snippet": "Минфин перенес сроки изменения условий программы льготного кредитования «Семейная ипотека». До 1 октября 2026 года она продолжит действовать в нынешнем виде."
+        },
+        {
+          "title": "Когда вырастет спрос на семейную ипотеку в Тюмени - 10 июля 2026 | 72.ру",
+          "url": "https://72.ru/text/realty/2026/07/10/76526744/",
+          "snippet": "Доля семейной ипотеки в среди всех заявок на одобрение банковских займов стабильно растет с сентября 2025 года. Тогда она была на уровне 60%, в октябре увеличилась до 66%, в ноябре до 73%."
+        },
+        {
+          "title": "Спрос на семейную ипотеку в Тюмени вырос в 3,5 раза за год",
+          "url": "https://tyumen.ru/realty/spros-na-semeinuyu-ipoteku-v-tyumeni-vyros-v-3-5-raza-za-god-id12474/",
+          "snippet": "После того как стало известно, что изменения в программе семейной ипотеки отложили как минимум до 1 октября, активность покупателей начала снижаться. Однако специалисты уверены: это временная пауза. Уже в августе и сентябре спрос может снова вырасти."
+        },
+        {
+          "title": "Семейная ипотека с июля 2026: новые ставки и лимиты кредитов | Банки.ру",
+          "url": "https://www.banki.ru/news/daytheme/?id=11025142",
+          "snippet": "Три четверти сделок с недвижимостью в Тюмени теперь осуществляются по льготной семейной ипотеке."
+        }
+      ],
+      "searched_at": "2026-09-12"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени одобрили семейную ипотеку на новостройку — за 19 дней до 1 октября банк пересчитал лимит 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Семейная ипотека в Тюмени в 2026 году: условия, ставка и что изменится ...",
+          "url": "https://novostroyki-tumeni.ru/article/semeynaya-ipoteka-v-tyumeni-2026-usloviya-i-izmeneniya-s-oktyabrya",
+          "snippet": ""
+        },
+        {
+          "title": "Изменения в программе семейной ипотеки с 1 октября 2026 года:",
+          "url": "https://lenta.ru/articles/2026/06/30/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-goda/",
+          "snippet": "Разбираем, что действует сейчас и к чему готовиться, если планируете оформление в ближайшие месяцы."
+        },
+        {
+          "title": "Тюменцы спешат в последний вагон семейной ипотеки: спрос на новостройки ...",
+          "url": "https://72.ru/text/realty/2025/12/17/76175356/",
+          "snippet": "Минфин перенес сроки изменения условий программы льготного кредитования «Семейная ипотека». До 1 октября 2026 года она продолжит действовать в нынешнем виде."
+        },
+        {
+          "title": "Когда вырастет спрос на семейную ипотеку в Тюмени - 10 июля 2026 | 72.ру",
+          "url": "https://72.ru/text/realty/2026/07/10/76526744/",
+          "snippet": "Доля семейной ипотеки в среди всех заявок на одобрение банковских займов стабильно растет с сентября 2025 года. Тогда она была на уровне 60%, в октябре увеличилась до 66%, в ноябре до 73%."
+        },
+        {
+          "title": "Спрос на семейную ипотеку в Тюмени вырос в 3,5 раза за год",
+          "url": "https://tyumen.ru/realty/spros-na-semeinuyu-ipoteku-v-tyumeni-vyros-v-3-5-raza-za-god-id12474/",
+          "snippet": "После того как стало известно, что изменения в программе семейной ипотеки отложили как минимум до 1 октября, активность покупателей начала снижаться. Однако специалисты уверены: это временная пауза. Уже в августе и сентябре спрос может снова вырасти."
+        },
+        {
+          "title": "Семейная ипотека с июля 2026: новые ставки и лимиты кредитов | Банки.ру",
+          "url": "https://www.banki.ru/news/daytheme/?id=11025142",
+          "snippet": "Три четверти сделок с недвижимостью в Тюмени теперь осуществляются по льготной семейной ипотеке."
+        }
+      ],
+      "searched_at": "2026-09-12"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени одобрили семейную ипотеку на новостройку — за 19 дней до 1 октября банк пересчитал лимит official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Семейная ипотека с 1 октября 2026 года: как изменятся условия ...",
+          "url": "https://lenta.ru/articles/2026/06/30/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-goda/",
+          "snippet": ""
+        },
+        {
+          "title": "Семейная ипотека с 1 октября 2026 года: изменение условий и ставки ...",
+          "url": "https://blog.domclick.ru/novosti/post/chto-izmenitsya-v-usloviyah-semejnoj-ipoteki-s-1-oktyabrya-2026-goda-prognozy-ekspertov",
+          "snippet": "Минфин перенес сроки изменения условий программы льготного кредитования «Семейная ипотека». До 1 октября 2026 года она продолжит действовать в нынешнем виде."
+        },
+        {
+          "title": "Минфин: условия программы «Семейная ипотека» сохранятся до 1 октября — РБК",
+          "url": "https://www.rbc.ru/society/29/06/2026/6a4295ac9a79473bfacba3e0",
+          "snippet": "Минфин официально подтвердил, что параметры программы пока дорабатываются, а решение об изменениях будет принято не ранее 1 октября 2026 года."
+        },
+        {
+          "title": "Семейная ипотека в Тюмени от СберБанка онлайн в 2026 году, взять ...",
+          "url": "https://tyumen.domclick.ru/ipoteka/programs/gosChildren",
+          "snippet": "«В этой связи решение об изменении условий программы будет принято не ранее 1 октября 2026 года», — говорится в сообщении. До этого изменение правил было запланировано на 1 июля."
+        },
+        {
+          "title": "Семейная ипотека в 2026 году: условия, как получить кредит с ...",
+          "url": "https://blog.domclick.ru/ipoteka/post/semejnaya-ipoteka-kak-poluchit-kredit-s-gosudarstvennoj-podderzhkoj",
+          "snippet": "Банк вправе отказать в предоставлении ипотечного кредита без объяснения причин. Подробнее об условиях кредитования, необходимых документах, ограничениях на сайте sberbank.ru."
+        },
+        {
+          "title": "Семейная ипотека на вторичное жилье в 2026 году в Тюмени с ...",
+          "url": "https://tyumen.domclick.ru/ipoteka/programs/gosChildrenSecondary",
+          "snippet": "Программа была запущена еще в 2018 году, но с тех пор ее параметры неоднократно менялись. Разбираемся, кто, как и на каких условиях может получить семейную ипотеку в 2026 году."
+        }
+      ],
+      "searched_at": "2026-09-12"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени одобрили семейную ипотеку на новостройку — за 19 дней до 1 октября банк пересчитал лимит 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "vexa/assets/architecture.svg at main · Vexa-ai/vexa · GitHub",
+          "url": "https://github.com/Vexa-ai/vexa/blob/main/assets/architecture.svg",
+          "snippet": ""
+        },
+        {
+          "title": "jumpcutter/src/icons/icon.svg at master · WofWca/jumpcutter",
+          "url": "https://github.com/WofWca/jumpcutter/blob/master/src/icons/icon.svg",
+          "snippet": "Open-source meeting transcription API for Google Meet, Microsoft Teams & Zoom. Auto-join bots, real-time WebSocket transcripts, MCP server for AI agents. Self-host or use hosted SaaS. - vexa/assets/architecture.svg at main · Vexa-ai/vexa."
+        },
+        {
+          "title": "Краткое руководство по репозиториям - Документация GitHub",
+          "url": "https://docs.github.com/ru/repositories/creating-and-managing-repositories/quickstart-for-repositories",
+          "snippet": "⏩ Fast-forwards long pauses between sentences — watch lectures ~1.5x faster (browser extension) - jumpcutter/src/icons/icon.svg at master · WofWca/jumpcutter"
+        },
+        {
+          "title": "axonhub/docs/screenshots/axonhub-model-price.png at unstable · looplj ...",
+          "url": "https://github.com/looplj/axonhub/blob/unstable/docs/screenshots/axonhub-model-price.png",
+          "snippet": "Узнайте, как создать новый репозиторий и зафиксировать первое изменение за 5 минут."
+        },
+        {
+          "title": "pasture-ai/docs/screenshots/geometric-breeding.svg at main ...",
+          "url": "https://github.com/SuperInstance/pasture-ai/blob/main/docs/screenshots/geometric-breeding.svg",
+          "snippet": "⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing. - axonhub/docs/screenshots/axonhub-model-price.png at unstable · looplj/axonhub."
+        },
+        {
+          "title": "object-detection-fasterrcnn-yolov8/data/sample_images_with_boxes.png at ...",
+          "url": "https://github.com/sa1ah-ai/object-detection-fasterrcnn-yolov8/blob/main/data/sample_images_with_boxes.png",
+          "snippet": "Contribute to SuperInstance/pasture-ai development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-09-12"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени одобрили семейную ипотеку на новостройку — за 19 дней до 1 октября банк пересчитал лимит forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Семейная ипотека в Тюмени в 2026 году: условия, ставка и что изменится ...",
+          "url": "https://novostroyki-tumeni.ru/article/semeynaya-ipoteka-v-tyumeni-2026-usloviya-i-izmeneniya-s-oktyabrya",
+          "snippet": ""
+        },
+        {
+          "title": "Изменения в программе семейной ипотеки с 1 октября 2026 года:",
+          "url": "https://lenta.ru/articles/2026/06/30/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-goda/",
+          "snippet": "Разбираем, что действует сейчас и к чему готовиться, если планируете оформление в ближайшие месяцы."
+        },
+        {
+          "title": "Когда вырастет спрос на семейную ипотеку в Тюмени - 10 июля 2026 | 72.ру",
+          "url": "https://72.ru/text/realty/2026/07/10/76526744/",
+          "snippet": "Минфин перенес сроки изменения условий программы льготного кредитования «Семейная ипотека». До 1 октября 2026 года она продолжит действовать в нынешнем виде."
+        },
+        {
+          "title": "Минфин: условия программы «Семейная ипотека» сохранятся до 1 октября — РБК",
+          "url": "https://www.rbc.ru/society/29/06/2026/6a4295ac9a79473bfacba3e0",
+          "snippet": "После того как стало известно, что изменения в программе семейной ипотеки отложили как минимум до 1 октября, активность покупателей начала снижаться. Однако специалисты уверены: это временная пауза. Уже в августе и сентябре спрос может снова вырасти."
+        },
+        {
+          "title": "Что известно о будущем программы семейной ипотеки в России. Главное",
+          "url": "https://rg.ru/2026/06/29/minfin-usloviia-programmy-semejnoj-ipoteki-ostanutsia-bez-izmenenij-do-1-oktiabria.html",
+          "snippet": "«В этой связи решение об изменении условий программы будет принято не ранее 1 октября 2026 года», — говорится в сообщении. До этого изменение правил было запланировано на 1 июля."
+        },
+        {
+          "title": "Семейная ипотека с июля 2026: новые ставки и лимиты кредитов | Банки.ру",
+          "url": "https://www.banki.ru/news/daytheme/?id=11025142",
+          "snippet": "Что известно о будущем программы семейной ипотеки в России. Главное. Новые правила получения семейной ипотеки заработают не раньше 1 октября, сообщила пресс-служба Минфина России...."
+        }
+      ],
+      "searched_at": "2026-09-12"
+    }
+  ],
+  "errors": []
+}
