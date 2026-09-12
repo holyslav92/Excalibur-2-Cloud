@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-12
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-zastrojschik-potreboval-doplatu-420-tysyach-za-lishnie-metry-klyuchi-ne-otdali
+- **post_id:** 10109
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-zastrojschik-potreboval-doplatu-420-tysyach-za-lishnie-metry-klyuchi-ne-otdali/
+- **featured_image:** 10110
+- **inline_images:** 10111–10117 (7)
+- **wp_category_slugs:** pokupka-kvartiry, riski-sdelki, dokumenty-i-oformlenie (category_ids=36,58,54)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23

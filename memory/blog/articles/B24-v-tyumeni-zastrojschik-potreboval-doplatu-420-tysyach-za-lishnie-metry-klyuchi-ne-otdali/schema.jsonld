@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "В Тюмени застройщик потребовал 420 тысяч за лишние метры — ключи не выдал",
+      "description": "Доплата за площадь или плата за доступ к собственной квартире? В Тюмени семье с двумя детьми не передают ключи, пока она не заплатит за «лишние метры».",
+      "datePublished": "2026-09-12",
+      "inLanguage": "ru-RU",
+      "url": "{{SITE_BASE}}/v-tyumeni-zastrojschik-potreboval-doplatu-420-tysyach-za-lishnie-metry-klyuchi-ne-otdali/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-zastrojschik-potreboval-doplatu-420-tysyach-za-lishnie-metry-klyuchi-ne-otdali/"
+      },
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}
