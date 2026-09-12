@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-07
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-semejnuyu-ipoteku-odobrili-na-dvoih-pered-ddu-sozaemschika-isklyuchili
+- **post_id:** 9901
+- **permalink:** /blog/ipoteka/v-tyumeni-semejnuyu-ipoteku-odobrili-na-dvoih-pered-ddu-sozaemschika-isklyuchili/
+- **featured_image:** 9902
+- **inline_images:** 9903–9909 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry (category_ids=32,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23

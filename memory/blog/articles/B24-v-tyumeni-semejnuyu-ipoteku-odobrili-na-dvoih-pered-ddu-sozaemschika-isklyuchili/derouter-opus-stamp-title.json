@@ -1,0 +1,14 @@
+{
+  "script": "manual-derouter-retry-529",
+  "role": "title",
+  "tier": "utility",
+  "model": "gpt-5.6-terra",
+  "endpoint": "https://api.derouter.ai/openai/v1/chat/completions",
+  "request_id": "chatcmpl-c3b931d542a94e54a69c750d",
+  "usage": {
+    "prompt_tokens": 2922,
+    "completion_tokens": 483,
+    "total_tokens": 3405
+  },
+  "attempt": 1
+}

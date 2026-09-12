@@ -23,3 +23,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-09-02 | B21 | v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo | /blog/vtorichka-i-riski/v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo/ | published |
 | 2026-09-04 | B22 | v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi | /blog/ipoteka/v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi/ | published |
 | 2026-09-05 | B23 | v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty | /blog/vtorichka-i-riski/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty/ | published |
+| 2026-09-07 | B24 | v-tyumeni-semejnuyu-ipoteku-odobrili-na-dvoih-pered-ddu-sozaemschika-isklyuchili | /blog/ipoteka/v-tyumeni-semejnuyu-ipoteku-odobrili-na-dvoih-pered-ddu-sozaemschika-isklyuchili/ | published |

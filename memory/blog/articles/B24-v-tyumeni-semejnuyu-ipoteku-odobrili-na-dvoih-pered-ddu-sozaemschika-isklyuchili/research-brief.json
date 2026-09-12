@@ -1,0 +1,82 @@
+{
+  "topic_id": "B24",
+  "cluster_id": "newbuild_coborrower_dropped_before_ddu_tyumen",
+  "research_date": "2026-09-07",
+  "title": "В Тюмени семейную ипотеку одобрили на двоих — перед ДДУ созаёмщика исключили, лимит упал",
+  "tenant": "The Риэлтор — Святослав Шакин, Тюмень",
+  "topic_market_focus": "newbuild_only",
+  "case_status": "modeled_composite_casus",
+  "reader_problem": "Семья считает предодобрение семейной ипотеки на двоих финалом и едет подписывать ДДУ, не понимая, что банк может исключить второго созаёмщика и снизить лимит в день сделки.",
+  "reader_outcome": "Поймёт разницу между предодобрением на двоих и финальным решением; правила созаёмщиков с 01.02.2026; проверки до брони; связку бронь–ДДУ–эскроу; действия при падении лимита.",
+  "comment_magnet_angle": "Банк неделю держал одобрение на двоих, а перед ДДУ созаёмщика исключили. Вы бы подписали договор на оставшийся лимит или забрали бы бронь?",
+  "key_facts": [
+    "С 01.02.2026 по семейной ипотеке супруги обязаны быть созаёмщиками; правило «одна семья — одна льготная ипотека» (ДОМ.РФ).",
+    "Предварительное одобрение на двоих не гарантирует финальную сумму и состав заёмщиков до кредитного договора.",
+    "Исключение созаёмщика убирает его доход из расчёта — лимит кредита падает, ПВ может не хватить под цену ДДУ.",
+    "214-ФЗ: расчёты по ДДУ через эскроу; сумма депонирования должна сходиться с одобренной схемой.",
+    "Бронь и эскроу — разные деньги; возврат брони только по договору бронирования.",
+    "«Слабое звено» семьи (КИ, ФССП, доход второго супруга) критично после обязательных созаёмщиков (RBC Тюmenь, Sravni).",
+    "Тюmenская область: 6%, 20%, 6 млн; изменения программы отложены до 01.10.2026 (официальный портал).",
+    "Свежий локальный сигнал: ENCO Тюmenь — дедлайн 01.10.2026 (accessed 2026-09-07); ~60% отказов по ипотеке в июле 2026 (mperspektiva 07.09.2026)."
+  ],
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "семейная ипотека в тюмени",
+    "p0_volume": 730,
+    "p0_volume_ru225": 1063,
+    "support_phrases": [
+      {"phrase": "семейная ипотека тюмень", "volume": 1158},
+      {"phrase": "новостройки тюмень", "volume": 4670},
+      {"phrase": "созаемщик ипотека", "volume": 573},
+      {"phrase": "семейная ипотека созаемщик супруг", "volume": 12}
+    ],
+    "rework_from": "scout: созаемщик ипотека (573) → локализация Tyumen+семейная ипотека+ДДУ → P0 «семейная ипотека в тюмени» 730"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://enco.ru/events/semeynaya-ipoteka-menyaetsya/",
+        "type": "channel/market",
+        "date": "2026-09-07",
+        "note": "ENKO Тюmenь: «24 дня» до возможных изменений семейной ипотеки с 01.10.2026"
+      },
+      {
+        "url": "https://mperspektiva.ru/topics/banki-otklonyayut-60-zayavok-na-ipoteku/",
+        "type": "news",
+        "date": "2026-09-07",
+        "note": "60% отказов по ипотеке в июле 2026 (НБКИ)"
+      },
+      {
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "type": "channel",
+        "date": "2026-09-07",
+        "note": "tenant TG — контекст проверки КИ"
+      }
+    ]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_coborrower_dropped_before_ddu_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "constraints": [
+    "Собирательный casus, не репортаж",
+    "Не B22/B19/B09",
+    "Не вторичка",
+    "Не обещать возврат брони",
+    "Цифры банков — только official_verifications"
+  ],
+  "writer_safe_urls": [
+    "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/instructions/semeinaya-ipoteka/",
+    "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/catalog/semeynaya-ipoteka-/",
+    "https://xn--80aacozicjl1agbl4lraw.xn--p1ai/publications/sila-semi-sila-regiona/semeynaya-ipoteka-v-tyumenskoy-oblasti-v-2026-godu-kak-kupit-zhile-i-poluchit-podderzhku-seme-s-detm/",
+    "https://www.consultant.ru/document/cons_doc_LAW_51057/",
+    "https://dzen.ru/holyslav",
+    "https://t.me/Tyumen_Rieltor",
+    "https://max.ru/id561413315447_biz"
+  ],
+  "verdict": "PASS"
+}
