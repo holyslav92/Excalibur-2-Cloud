@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-12
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p
+- **post_id:** 10176
+- **permalink:** /blog/proverka-pered-pokupkoj/v-tyumeni-zastrojschik-zabral-skidku-za-dosrochnyj-platezh-po-rassrochke-semya-p/
+- **featured_image:** 10177
+- **inline_images:** 10178–10184 (7)
+- **wp_category_slugs:** pokupka-kvartiry, proverka-pered-pokupkoj (category_ids=36,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23

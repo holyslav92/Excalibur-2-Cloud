@@ -47,32 +47,25 @@
       "quadrant": "top_left",
       "role": "cover_editorial_hero",
       "alt": "Застройщик забрал скидку за досрочный платёж: семья потеряла 320 тысяч в Тюмени: что проверить в договоре и эскроу до подписи.",
-      "scene_hint": "Светлый офис продаж новостройки: герой слева держит график рассрочки с зачёркнутой скидкой; high-key, hook справа.",
+      "scene_hint": "Герой, график, скидка.",
       "meme_caption_ru": "",
       "sticky": "Минус 320 тысяч",
       "meme_sticker": true,
       "no_meme": false,
       "no_cat": false,
       "no_person": false,
-      "no_host_face": false,
-      "cover_emotion": "возмущённое недоверие — приоткрытый рот, нахмуренные брови, не студийная улыбка",
-      "meme_picks": [
-        "james_doakes",
-        "nyan_cat"
-      ]
+      "no_host_face": false
     },
     "inline_1": {
       "quadrant": "top_right",
       "h2_anchor": "Скидку триста двадцать тысяч обещали за досрочный платёж",
       "visual_type": "realistic_photo",
-      "scene_hint": "",
+      "scene_hint": "Офис продаж: руки менеджера на графике рассрочки с",
       "alt": "реалистичный кадр (без лица хоста) к разделу «Скидку триста двадцать тысяч обещали за досрочн…» в Тюмени — иллюстрация к кейсу о сделке.",
       "labels": [
         "Рассрочка застройщика",
         "Скидка 320 тысяч",
-        "Досрочный платёж",
-        "Условие в ДДУ",
-        "Первоначальный взнос"
+        "Досрочный платёж"
       ],
       "placement_group": "pair",
       "meme_sticker": true,
@@ -85,14 +78,12 @@
       "quadrant": "bottom_left",
       "h2_anchor": "Скидку триста двадцать тысяч обещали за досрочный платёж",
       "visual_type": "comparison_table",
-      "scene_hint": "",
+      "scene_hint": "Таблица: реклама vs ДДУ vs график, скидка и досроч",
       "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Перевод раньше срока, Скидка должна остаться, Письменный ответ — иллюстрация к…",
       "labels": [
         "Перевод раньше срока",
         "Скидка должна остаться",
-        "Письменный ответ",
-        "Цена в ДДУ",
-        "График рассрочки"
+        "Письменный ответ"
       ],
       "placement_group": "pair",
       "meme_sticker": false,
@@ -105,14 +96,12 @@
       "quadrant": "bottom_right",
       "h2_anchor": "Семья внесла деньги раньше графика — и ждала выгоду",
       "visual_type": "realistic_photo",
-      "scene_hint": "",
+      "scene_hint": "Смартфон с переводом и календарь с ранней датой, р",
       "alt": "реалистичный кадр (без лица хоста) к разделу «Семья внесла деньги раньше графика — и ждала вы…» в Тюмени — иллюстрация к кейсу о сделке.",
       "labels": [
         "Пять–семь дней",
         "Плюс 320 тысяч",
-        "Строго по графику",
-        "Порядок оплаты",
-        "Переписка сохранена"
+        "Строго по графику"
       ],
       "meme_sticker": false,
       "no_meme": true,
@@ -124,14 +113,12 @@
       "quadrant": "top_left",
       "h2_anchor": "За неделю до финального транша прислали новый расчёт",
       "visual_type": "realistic_photo",
-      "scene_hint": "",
+      "scene_hint": "Ноутбук с новым графиком и лист ДДУ, жест удивлени",
       "alt": "реалистичный кадр (без лица хоста) к разделу «За неделю до финального транша прислали новый р…» в Тюмени — иллюстрация к кейсу о сделке.",
       "labels": [
         "Базовая цена",
         "Доплата перед траншем",
-        "Без допсоглашения",
-        "Возврат две–три недели",
-        "Не штраф — выгода"
+        "Без допсоглашения"
       ],
       "meme_sticker": false,
       "no_meme": true,
@@ -143,14 +130,12 @@
       "quadrant": "top_right",
       "h2_anchor": "Скидку забрали: к оплате вернули триста двадцать тысяч",
       "visual_type": "process_flow",
-      "scene_hint": "",
+      "scene_hint": "Схема: досрочный платёж → пересчёт → возврат выгод",
       "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Реклама не ДДУ, Условие в приложении, Пересчёт цены — иллюстрация к разбору сделки.",
       "labels": [
         "Реклама не ДДУ",
         "Условие в приложении",
-        "Пересчёт цены",
-        "Соглашение по закону",
-        "Другой корпус"
+        "Пересчёт цены"
       ],
       "meme_sticker": true,
       "no_meme": false,
@@ -162,14 +147,12 @@
       "quadrant": "bottom_left",
       "h2_anchor": "Что проверить в графике и ДДУ до досрочного платежа",
       "visual_type": "bar_timeline_chart",
-      "scene_hint": "",
+      "scene_hint": "Таймлайн траншей, досрочный платёж выделен, новый ",
       "alt": "график / шкала сроков по новостройке в Тюмени: Цена в ДДУ, График платежей, Условие выгоды — иллюстрация к разбору сделки.",
       "labels": [
         "Цена в ДДУ",
         "График платежей",
-        "Условие выгоды",
-        "Досрочная оплата",
-        "Зачёт перевода"
+        "Условие выгоды"
       ],
       "meme_sticker": false,
       "no_meme": true,
@@ -181,14 +164,12 @@
       "quadrant": "bottom_right",
       "h2_anchor": "Семья внесла деньги раньше графика — и ждала выгоду",
       "visual_type": "structure_diagram",
-      "scene_hint": "",
+      "scene_hint": "Блок-схема проверки ДДУ и графика до перевода дене",
       "alt": "схема устройства механизма по новостройке в Тюмени: Базовая цена, Сумма в ДДУ, Итог после траншей — иллюстрация к разбору сделки.",
       "labels": [
         "Базовая цена",
         "Сумма в ДДУ",
-        "Итог после траншей",
-        "Письменный ответ",
-        "Новый график"
+        "Итог после траншей"
       ],
       "meme_sticker": true,
       "no_meme": false,
@@ -198,18 +179,6 @@
     }
   },
   "cover_keys_ru": [],
-  "cover_motifs": {
-    "composition": "host waist-left crossed payment schedule hook sacred zone right",
-    "location": "bright newbuild sales desk installment board sun flare tyumen",
-    "meme": "james_doakes sticker plus nyan_cat tiny corner cutouts",
-    "prop_set": "installment schedule red strikethrough 320k discount DDU folder calculator",
-    "sticker_set": "james_doakes top-left corner nyan_cat bottom edge ≤15% frame",
-    "joke": "discount line crossed out right before final payment",
-    "outfit": "forest green crewneck sweater white tee dark jeans no blazer",
-    "emotion": "outraged disbelief open mouth furrowed brows not polite smile",
-    "pose_framing": "waist-up three-quarter left both hands on schedule not side-eye bust",
-    "action": "points at crossed discount line on payment schedule sheet"
-  },
   "wordstat_stickers": [
     "рассрочка от застройщика тюмень",
     "новостройки тюмень рассрочка",
@@ -221,6 +190,18 @@
     "not_one_per_h2": true,
     "allow_pair_same_h2": true,
     "realistic_count_target": "2-4"
+  },
+  "cover_motifs": {
+    "composition": "host waist-left crossed payment schedule hook sacred zone right",
+    "location": "bright newbuild sales desk installment board sun flare tyumen",
+    "meme": "james_doakes sticker plus nyan_cat tiny corner cutouts",
+    "prop_set": "installment schedule red strikethrough 320k discount DDU folder calculator",
+    "sticker_set": "james_doakes top-left corner nyan_cat bottom edge ≤15% frame",
+    "joke": "discount line crossed out right before final payment",
+    "outfit": "forest green crewneck sweater white tee dark jeans no blazer",
+    "emotion": "outraged disbelief open mouth furrowed brows not polite smile",
+    "pose_framing": "waist-up three-quarter left both hands on schedule not side-eye bust",
+    "action": "points at crossed discount line on payment schedule sheet"
   },
   "quad_canon": {
     "meme_allowed_slots": [
