@@ -154,7 +154,9 @@ def main() -> int:
                 extra_instructions = raw.strip()
 
     derouter = root / "scripts/excalibur_blog_derouter_opus_chat.py"
-    system_path = root / "skills/sol-excalibur-blog/SKILL.md"
+    system_path = root / "skills/sol-excalibur-blog/DEROUTER-SYSTEM.md"
+    if not system_path.is_file():
+        system_path = root / "skills/sol-excalibur-blog/SKILL.md"
 
     if args.single_shot:
         with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False, encoding="utf-8") as tf:

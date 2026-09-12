@@ -1,0 +1,14 @@
+{
+  "status": "FAIL",
+  "word_count": 1854,
+  "fails": [
+    "word_count_1400_1600",
+    "word_count_hard_max_1750"
+  ],
+  "interlinks": [
+    "/blog/ipoteka/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/",
+    "/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/",
+    "/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/",
+    "/blog/pokupka-kvartiry/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/"
+  ]
+}

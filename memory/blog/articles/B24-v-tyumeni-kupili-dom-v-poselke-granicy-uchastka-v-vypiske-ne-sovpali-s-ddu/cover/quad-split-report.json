@@ -1,0 +1,295 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B24-v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1018,
+          569
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 569,
+            "end": 574
+          },
+          "v_gutter_px": {
+            "start": 1018,
+            "end": 1031
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 4.5,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0104,
+            "per_panel_crop_loss": {
+              "top_left": 0.0059,
+              "top_right": 0.0,
+              "bottom_left": 0.0087,
+              "bottom_right": 0.0104
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 3,
+              "top": 0,
+              "right": 1015,
+              "bottom": 569
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1018,
+              "bottom": 569
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени подписали ДДУ на дом — в выписке не хватило 1,5 сотки: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1031,
+              "top": 0,
+              "right": 2048,
+              "bottom": 569
+            },
+            "raw_box_px": {
+              "left": 1031,
+              "top": 0,
+              "right": 2048,
+              "bottom": 569
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Выписка ЕГРН: 10,5 соток и забор соседа на спор…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Выписка ЕГРН: 10,5 соток и забор соседа на спорной линии"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1018,
+              "bottom": 1149
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 574,
+              "right": 1018,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Контур другой, Забор соседа, Забор не граница — иллюстрация к разбору сделки.",
+            "h2_anchor": "Выписка ЕГРН: 10,5 соток и забор соседа на спорной линии"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1031,
+              "top": 577,
+              "right": 2048,
+              "bottom": 1149
+            },
+            "raw_box_px": {
+              "left": 1031,
+              "top": 574,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Ключи не взяли: банк, эскроу и претензия» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Ключи не взяли: банк, эскроу и претензия"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B24-v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 576,
+              "end": 615
+            },
+            "v_gutter_px": {
+              "start": 1026,
+              "end": 1060
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 19.5,
+              "v_center_offset_px": 19.0,
+              "max_aspect_crop_loss": 0.0692,
+              "per_panel_crop_loss": {
+                "top_left": 0.0,
+                "top_right": 0.0347,
+                "bottom_left": 0.0692,
+                "bottom_right": 0.0334
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «В посёлке обещали 12 соток — семья пошла в ипот…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "В посёлке обещали 12 соток — семья пошла в ипотеку ИЖС"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Порог 5%, Статья 4, Ответ письменно — иллюстрация к разбору сделки.",
+            "h2_anchor": "В приложении к ДДУ нарисована одна граница, на участке — другая"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Ключи не взяли, Письменная претензия, Банку нужна выписка — иллюстрация к разбору…",
+            "h2_anchor": "Застройщик сказал «подпишите акт, домежуем потом»"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Площадь, Границы, Номер — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что сверить в ДДУ и ЕГРН до подписания акта — таблица"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Выписка ЕГРН: 10,5 соток и забор соседа на спорной линии",
+    "skip inline_2: already correct under H2 — Выписка ЕГРН: 10,5 соток и забор соседа на спорной линии",
+    "skip inline_3: already correct under H2 — Ключи не взяли: банк, эскроу и претензия",
+    "moved inline_4 → H2 — В посёлке обещали 12 соток — семья пошла в ипотеку ИЖС (was under [застройщик сказал «подпишите акт, домежуем потом»]; removed=1)",
+    "moved inline_5 → H2 — В приложении к ДДУ нарисована одна граница, на участке — другая (was under [застройщик сказал «подпишите акт, домежуем потом»]; removed=1)",
+    "moved inline_6 → H2 — Застройщик сказал «подпишите акт, домежуем потом» (was under [ключи не взяли: банк, эскроу и претензия]; removed=1)",
+    "skip inline_7: already correct under H2 — Что сверить в ДДУ и ЕГРН до подписания акта — таблица"
+  ]
+}

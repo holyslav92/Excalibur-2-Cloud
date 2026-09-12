@@ -167,6 +167,12 @@ def main() -> int:
     system_path = Path(args.system_file)
     if not system_path.is_absolute():
         system_path = root / system_path
+    derouter_system = root / "skills/sol-excalibur-blog/DEROUTER-SYSTEM.md"
+    if derouter_system.is_file() and system_path.name in {
+        "SKILL.md",
+        "excalibur-blog-sol.md",
+    }:
+        system_path = derouter_system
 
     user_text = user_path.read_text(encoding="utf-8")
     inline_count = inline_count_from_tenant(root)

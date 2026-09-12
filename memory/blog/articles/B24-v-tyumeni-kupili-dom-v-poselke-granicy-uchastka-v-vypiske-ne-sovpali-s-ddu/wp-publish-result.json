@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu",
+  "topic_id": "B24",
+  "post_id": 10044,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1055083,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10044 slug=v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=10045\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10046 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu-inline-04.png\nOK inline_alt=10046\nOK inline_description=10046\nOK inline_image_upload=10047 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu-inline-05.png\nOK inline_alt=10047\nOK inline_description=10047\nOK inline_image_upload=10048 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu-inline-01.png\nOK inline_alt=10048\nOK inline_description=10048\nOK inline_image_upload=10049 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu-inline-02.png\nOK inline_alt=10049\nOK inline_description=10049\nOK inline_image_upload=10050 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu-inline-06.png\nOK inline_alt=10050\nOK inline_description=10050\nOK inline_image_upload=10051 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu-inline-03.png\nOK inline_alt=10051\nOK inline_description=10051\nOK inline_image_upload=10052 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu-inline-07.png\nOK inline_alt=10052\nOK inline_description=10052\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-kupili-dom-v-poselke-granicy-uchastka-v-vypiske-ne-sovpali-s-ddu/",
+    "errors": []
+  }
+}

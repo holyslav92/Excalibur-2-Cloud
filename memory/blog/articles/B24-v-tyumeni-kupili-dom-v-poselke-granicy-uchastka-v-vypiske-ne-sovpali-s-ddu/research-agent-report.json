@@ -1,0 +1,76 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-10",
+  "derouter": {
+    "status": "OK",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "note": "First attempt HTTP 529 overloaded; compact inputs succeeded on retry 2"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/a/akIJ_Jqx3n8ABhXG",
+        "type": "community",
+        "date": "2026-09-08",
+        "note": "Myjus.ru Dzen — новая форма выписки ЕГРН на ЗУ с 01.07.2026 (ЗОУИТ/ОКН/сервитут); ~2 days before research_date"
+      },
+      {
+        "url": "https://perm.mk.ru/social/2026/07/13/prodat-zemelnyy-uchastok-bez-ustanovlennykh-granic-nevozmozhno-napominayut-v-rosreestre-prikamya.html",
+        "type": "official_context",
+        "date": "2026-07-13",
+        "note": "Росреестр Прикамье — без границ в ЕГРН сделки невозможны; забор ≠ граница"
+      },
+      {
+        "url": "https://dzen.ru/a/aklKVGI5OxalJnQi",
+        "type": "community",
+        "date": "2026",
+        "note": "Кожевникова — выписка ЕГРН на участок до подписания ДДУ"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4670,
+    "support_phrases": [
+      {"phrase": "коттеджный поселок тюмень", "volume": 1341},
+      {"phrase": "ижс тюмень", "volume": 522},
+      {"phrase": "дом в коттеджном поселке тюмень", "volume": 43},
+      {"phrase": "купить участок ижс тюмень", "volume": 166}
+    ],
+    "rework_from": "машиноместо (reject B21) → коттеджный поселок 1341 → ижс 522 → P0 новостройки тюмень 4670",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_cottage_plot_boundary_ddu_mismatch_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["consultant_214_fz", "rosreestr_p0565", "dom_rf", "cbr_izhs_letter"],
+    "errors": [],
+    "note": "214-FZ st.4/7/8/9, P/0565, P/0251/25, 487-FZ, PP 2380; gate excalibur_blog_research_official_gate.py PASS"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_brief": "research-brief.json",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "assembled_inputs_compact": "assembled-research-inputs-compact.md"
+  },
+  "incident_report": "none"
+}
