@@ -1,0 +1,12 @@
+{
+  "script": "manual-quality-score-repair",
+  "role": "sol",
+  "tier": "powerful",
+  "model": "gpt-6-astra",
+  "note": "Derouter unavailable (HTTP 529/500). Surgical repair applied per quality-score-notes.md: length trim + finale-third-retell rephrase.",
+  "derouter_attempts": "blocked",
+  "word_count_before": 1715,
+  "word_count_after": 1600,
+  "created_at": "2026-09-10T08:45:00+00:00",
+  "contract": "shared/derouter-opus-brain-contract.md"
+}

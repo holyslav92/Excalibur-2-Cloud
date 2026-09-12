@@ -1,0 +1,29 @@
+{
+  "gate": "writer-draft-check",
+  "status": "WARN",
+  "word_count": 1745,
+  "interlinks": [
+    "/blog/pokupka-kvartiry/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/",
+    "/blog/ipoteka/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/",
+    "/blog/vtorichka-i-riski/v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo/",
+    "/blog/vtorichka-i-riski/klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili/"
+  ],
+  "interlink_count": 4,
+  "checks": {
+    "derouter_writer": "PASS",
+    "word_count_1400_1600": false,
+    "word_count_hard_max_1750": true,
+    "h2_count": 6,
+    "early_cta": true,
+    "end_cta": true,
+    "tel_once": true,
+    "no_composite_disclaimer": true,
+    "html_lint": true,
+    "lead_4_6": true,
+    "opening_tldr": true,
+    "comment_magnet": true
+  },
+  "errors": [
+    "word_count 1745 outside target 1400-1600"
+  ]
+}

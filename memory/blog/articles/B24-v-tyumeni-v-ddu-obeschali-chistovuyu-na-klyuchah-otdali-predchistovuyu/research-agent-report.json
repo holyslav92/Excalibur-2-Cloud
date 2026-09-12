@@ -1,0 +1,79 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-10",
+  "derouter": {
+    "status": "OK",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "note": "First two attempts HTTP 529 overloaded; succeeded on third retry with DEROUTER_MAX_RETRIES=3"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/a/amtYRpP-tkHrf4uj",
+        "type": "community",
+        "date": "2026-09-09",
+        "note": "Tyumen acceptance 2026 — compare finish list from DDU appendix, not showroom"
+      },
+      {
+        "url": "https://t.me/s/deptmn/8572",
+        "type": "community",
+        "date": "2026-09",
+        "note": "Tyumen market channel — whitebox vs finish as separate product lines"
+      },
+      {
+        "url": "https://kvarnado.ru/priemka-kvartiry/guide-priemka-kvartiry-white-box",
+        "type": "expert_media",
+        "date": "2026-05-18",
+        "note": "Whitebox acceptance — compare with DDU promise"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "отделка квартир в новостройках",
+    "p0_volume": 173,
+    "p0_volume_ru225": null,
+    "support_phrases": [
+      {"phrase": "отделка новостройка", "volume": 260},
+      {"phrase": "новостройки Тюмень", "volume": 4642},
+      {"phrase": "чистовая отделка новостройка", "volume": 34},
+      {"phrase": "тюмень новостройки с чистовой отделкой", "volume": 8},
+      {"phrase": "вайт бокс отделка квартиры в новостройке", "volume": 10},
+      {"phrase": "отделка квартир в новостройках тюмень", "volume": 27}
+    ],
+    "rework_from": "чистовая отделка новостройка (34) → отделка новостройка (260) → P0 отделка квартир в новостройках (173) → anchor новостройки Тюмень (4642)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "finish_package_mismatch_ddu_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["consultant_214_fz", "dom_rf_eisjhs"],
+    "errors": [],
+    "note": "214-FZ st.4/st.7/st.8/st.10/st.19 via consultant.ru; project declaration via наш.дом.рф"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_brief": "research-brief.md",
+    "signal_urls": "signal_urls.json",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}

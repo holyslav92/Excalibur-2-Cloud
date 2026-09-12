@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu",
+  "topic_id": "B24",
+  "post_id": 10018,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1071038,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10018 slug=v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu\nOK categories=54,58,36\nOK yoast_social_image=1\nOK featured_image=10019\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10020 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu-inline-01.png\nOK inline_alt=10020\nOK inline_description=10020\nOK inline_image_upload=10021 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu-inline-02.png\nOK inline_alt=10021\nOK inline_description=10021\nOK inline_image_upload=10022 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu-inline-03.png\nOK inline_alt=10022\nOK inline_description=10022\nOK inline_image_upload=10023 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu-inline-04.png\nOK inline_alt=10023\nOK inline_description=10023\nOK inline_image_upload=10024 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu-inline-05.png\nOK inline_alt=10024\nOK inline_description=10024\nOK inline_image_upload=10025 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu-inline-06.png\nOK inline_alt=10025\nOK inline_description=10025\nOK inline_image_upload=10026 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu-inline-07.png\nOK inline_alt=10026\nOK inline_description=10026\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-obeschali-chistovuyu-na-klyuchah-otdali-predchistovuyu/",
+    "errors": []
+  }
+}
