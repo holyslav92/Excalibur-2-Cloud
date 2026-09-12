@@ -1,0 +1,78 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-12",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://polis.online/blog/nedvizhimost/riski-rassrochki-ot-zastrojshchika-chto-proverit-v-dogovore-do-podpisaniya/",
+        "type": "expert/market",
+        "note": "07.09.2026 — свежий разбор рисков рассрочки, наценки, штрафов, БКИ vs прямая рассрочка"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/08/76619954/",
+        "type": "local media",
+        "note": "08.09.2026 — Тюмень: скидки до 400 тыс. ₽ на новостройки"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/08/76628494/",
+        "type": "local media",
+        "note": "08.09.2026 — ЭНКО Айвазовский: сентябрьская акция, экономия >1 млн"
+      },
+      {
+        "url": "https://dzen.ru/a/apvynqKBtmtjAEBW",
+        "type": "channel",
+        "note": "SERP 12.09.2026 — тематическое зеркало clawback скидки при досрочном платеже (tenant Dzen ecosystem)"
+      },
+      {
+        "url": "https://www.cbr.ru/press/event/?id=28511",
+        "type": "official",
+        "note": "март 2026 — ЦБ: 1,6 трлн ₽ обязательств по рассрочке; нет проверки платёжеспособности"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "рассрочка от застройщика тюмень",
+    "p0_volume": 127,
+    "p0_volume_ru225": null,
+    "support_phrases": [
+      {"phrase": "рассрочка на квартиру от застройщика тюмень", "volume": 21},
+      {"phrase": "рассрочка от застройщика тюмень без первоначального взноса", "volume": 6},
+      {"phrase": "новостройки скидки от застройщиков", "volume": 10, "region": "55"},
+      {"phrase": "новостройки от застройщика скидки тюмень", "volume": 8, "region": "55"}
+    ],
+    "rework_from": "scout P0 locked «рассрочка от застройщика тюмень» (127) after newbuild installment jargon rework",
+    "partial": [
+      {"phrase": "досрочный платеж рассрочка застройщик", "totalCount": 3, "region": "225"},
+      {"phrase": "график платежей дду", "totalCount": 24, "region": "225"}
+    ]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "installment_early_pay_discount_clawback_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["214_fz", "enco", "tis", "cbr"],
+    "errors": [],
+    "note": "214-ФЗ ст. 5 (consultant.ru); ЭНКО и ТИС installment/discount pages; ЦБ press on installment volume and penalty proposals"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
