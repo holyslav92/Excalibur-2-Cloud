@@ -1,0 +1,17 @@
+{
+  "gate": "research-official",
+  "status": "BLOCK",
+  "required_entities": [
+    "sberbank"
+  ],
+  "entities_checked": [
+    "sberbank"
+  ],
+  "has_official_verifications_section": true,
+  "errors": [
+    "sberbank: tariff-like claim detected but no official source in source_table"
+  ],
+  "warnings": [
+    "research-agent-report.json missing official_source_audit block (recommended)"
+  ]
+}
