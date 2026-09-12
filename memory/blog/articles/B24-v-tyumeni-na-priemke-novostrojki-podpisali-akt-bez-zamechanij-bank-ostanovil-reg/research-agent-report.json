@@ -1,0 +1,78 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-09",
+  "derouter": {
+    "status": "OK",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "note": "First attempt returned BLOCKER (refusal); compact inputs succeeded on retry"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://tumen.expert-priemka.ru/",
+        "type": "community",
+        "date": "2026-09-03",
+        "note": "ЖК Fifty Fifty, Тюмень — 12 дефектов на приёмке (6 дней до research_date)"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "date": "2026-09-09",
+        "note": "Tenant TG — пост о фиксации дефектов при приёмке новостройки"
+      },
+      {
+        "url": "https://realty.ria.ru/20260423/priemka-2088334169.html",
+        "type": "media",
+        "date": "2026-04-23",
+        "note": "Изменения правил приёмки 2026 (ПП 2226/2227, акт осмотра, отмена одностороннего акта)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "приемка квартиры в новостройке тюмень",
+    "p0_volume": 32,
+    "p0_volume_parent": 122,
+    "support_phrases": [
+      {"phrase": "приемка квартиры в новостройке", "volume": 122},
+      {"phrase": "приемка квартиры в новостройке на что обратить", "volume": 16},
+      {"phrase": "акт приемки передачи квартиры", "volume": 37},
+      {"phrase": "акт приемки квартиры в новостройке", "volume": 9}
+    ],
+    "rework_from": "приемка квартиры в новостройке (122) → P0 тюмень (32)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "acceptance_defects_penalty",
+    "story_dup_check": "PASS",
+    "note": "Distinct from B11 (Rosreestr/perепланировка), B12 (keys delay), B19/B22 (mortgage/escrow)"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["214_fz_consultant", "rosreestr_gosweb"],
+    "errors": [],
+    "note": "214-FZ st.7/st.8/st.16 via consultant; Rosreestr gosweb press on 30-day developer registration"
+  },
+  "key_facts_count": 22,
+  "official_sources_count": 4,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "assembled_inputs_compact": "assembled-research-inputs-compact.md"
+  },
+  "incident_report": "none"
+}

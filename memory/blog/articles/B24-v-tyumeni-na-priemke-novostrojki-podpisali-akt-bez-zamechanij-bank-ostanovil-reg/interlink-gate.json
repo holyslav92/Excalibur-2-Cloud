@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "topic_id": "B24",
+  "slug": "v-tyumeni-na-priemke-novostrojki-podpisali-akt-bez-zamechanij-bank-ostanovil-reg",
+  "candidates_count": 21,
+  "outbound_found": [
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn"
+    },
+    {
+      "slug": "v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo",
+      "title": "v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
