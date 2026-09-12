@@ -1,0 +1,241 @@
+{
+  "topic_id": "B24",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Второй транш увеличил платёж на сорок тысяч",
+  "cover_hook_highlight": "сорок",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени второй транш ипотеки вырос на 480 тысяч — ДДУ остановили: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Лаунж: ведущий на колене, 2 платежа, hook, sticky.",
+      "meme_caption_ru": "",
+      "sticky": "ДДУ остановили вовремя",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие",
+      "meme_picks": [
+        "confused_math_lady",
+        "doge"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Платёж на стройке» — и семья забронировала новостройку в Тюмени",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол продаж: планшет малый платёж, бронь, одобрение; tiny meme; no host.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Платёж на стройке» — и семья забронировала нов…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Бронь оформлена",
+        "Ипотека одобрена",
+        "Малый платёж",
+        "Не весь кредит"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "disappointed_black_guy"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Платёж на стройке» — и семья забронировала новостройку в Тюмени",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: транш слева, полный кредит справа, дата второго; no meme.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Одобрение не платёж, Деньги частями, Дата второго транша — иллюстрация к…",
+      "labels": [
+        "Одобрение не платёж",
+        "Деньги частями",
+        "Дата второго транша"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Между одобрением и ДДУ: что показывали в расчёте",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Расчёт: малый платёж зачёркнут, стрелка к большой сумме; no people.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Между одобрением и ДДУ: что показывали в расчёте» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "За день до ДДУ",
+        "Плюс сорок тысяч",
+        "480 тысяч в год"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За день до подписания: второй транш пересчитали — нагрузка +480 тысяч в год",
+      "visual_type": "realistic_photo",
+      "scene_hint": "ДДУ закрыта STOP, пустое эскроу, ключи; no faces.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За день до подписания: второй транш пересчитали…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "ДДУ не подписали",
+        "Эскроу не открыли",
+        "Бюджет не сошёлся"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Семья развернулась: ДДУ не подписали, эскроу не открыли",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow: 2 транша → полный платёж; long_cat.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Деньги частями, Аренда плюс ипотека, Доход не перепроверят — иллюстрация к…",
+      "labels": [
+        "Деньги частями",
+        "Аренда плюс ипотека",
+        "Доход не перепроверят"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "long_cat"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Как устроен второй транш — и почему платёж скачет",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bar chart: низкий платёж, скачок после 2-го транша; no meme.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Полный график, Проект ДДУ, Договор брони — иллюстрация к разбору сделки.",
+      "labels": [
+        "Полный график",
+        "Проект ДДУ",
+        "Договор брони"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить до ДДУ — таблица",
+      "visual_type": "structure_diagram",
+      "scene_hint": "4 блока проверки до аванса; tiny stonks.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: До подписания ДДУ, График траншей, Платёж после остатка — иллюстрация к разбору сделки.",
+      "labels": [
+        "До подписания ДДУ",
+        "График траншей",
+        "Платёж после остатка",
+        "Проверка до аванса"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "stonks"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "ипотека на новостройки тюмень",
+    "траншевая ипотека новостройка"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "Хозяин кадра kneeling у стеклянного журнального стола, крупная двухколоночная схема платежей на переднем плане, священная зона заголовка в верхней правой части, небольшие мемные стикеры по углам",
+    "location": "светлый лаунж продаж новостройки в Тюмени с панорамным окном и видом на строительную площадку",
+    "meme": "confused_math_lady в верхнем левом углу и doge в нижнем левом углу, маленькие стикеры по теме внезапного пересчёта",
+    "prop_set": "стеклянный журнальный стол, распечатка графика траншей, калькулятор, планшет с двумя суммами, жёлтый стикер, папка с документами, вид на кран и строящийся дом",
+    "sticker_set": "confused_math_lady и doge, компактные стикеры с зазором от заголовка, лица ведущего и номера телефона",
+    "joke": "маленький платёж выглядит спокойным, а второй столбец внезапно вырастает как строительный кран",
+    "outfit": "светлая оливковая рубашка с закатанными рукавами, кремовые брюки и белые кеды",
+    "emotion": "растерянность, переходящая в недоверчивый пересчёт и резкое решение остановиться",
+    "pose_framing": "полурост в динамичном ракурсе сверху сбоку, ведущий на одном колене у стола, корпус развёрнут к графику, не бюст слева и не боковой взгляд",
+    "action": "ведущий придерживает пальцем низкий первый столбец и второй рукой показывает на резко выросший столбец после второго транша"
+  },
+  "cover_emotion": "ошеломлённое недоверие с гримасой пересчёта"
+}
