@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku",
+  "topic_id": "B24",
+  "post_id": 9927,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1040736,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=9927 slug=v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku\nOK categories=36\nOK yoast_social_image=1\nOK featured_image=9928\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=9929 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku-inline-03.png\nOK inline_alt=9929\nOK inline_description=9929\nOK inline_image_upload=9930 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku-inline-01.png\nOK inline_alt=9930\nOK inline_description=9930\nOK inline_image_upload=9931 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku-inline-02.png\nOK inline_alt=9931\nOK inline_description=9931\nOK inline_image_upload=9932 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku-inline-04.png\nOK inline_alt=9932\nOK inline_description=9932\nOK inline_image_upload=9933 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku-inline-05.png\nOK inline_alt=9933\nOK inline_description=9933\nOK inline_image_upload=9934 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku-inline-06.png\nOK inline_alt=9934\nOK inline_description=9934\nOK inline_image_upload=9935 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku-inline-07.png\nOK inline_alt=9935\nOK inline_description=9935\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-pereustupke-po-novostrojke-nashli-dolg-94-tysyachi-v-den-ddu-sdelku/",
+    "errors": []
+  }
+}
