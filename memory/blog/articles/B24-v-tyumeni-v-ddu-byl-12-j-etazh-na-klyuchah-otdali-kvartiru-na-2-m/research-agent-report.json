@@ -1,0 +1,75 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-07",
+  "derouter": {
+    "status": "OK",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "note": "First run OK; research-notes.md moved from workspace root to article dir"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://krasnodar.allestate.pro/news/01.09.2026/priemka-kvartiry-kak-zafiksirovat-nedochety-po-zakonu",
+        "type": "news",
+        "date": "2026-09-01",
+        "note": "Приёмка 2026: фиксация недочётов, акт о несоответствии, отказ от акта при существенных нарушениях"
+      },
+      {
+        "url": "https://novostroikino.ru/blog/planirovka-kvartiry-v-novostroyke-ne-sovpadaet-s-ddu-2026/",
+        "type": "market",
+        "date": "2026-07-28",
+        "note": "Несовпадение характеристик объекта с ДДУ; допсоглашение обязательно"
+      },
+      {
+        "url": "https://dzen.ru/a/amtYRpP-tkHrf4uj",
+        "type": "community",
+        "date": "2026",
+        "note": "Приёмка новостройки Тюмень — канал tenant The Риэлтор"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4663,
+    "p0_volume_ru225": 8691,
+    "support_phrases": [
+      {"phrase": "приемка новостроек тюмень", "volume": 36},
+      {"phrase": "приемка квартиры в новостройке тюмень", "volume": 33},
+      {"phrase": "купить новостройку в тюмени", "volume": 865}
+    ],
+    "rework_from": "этаж новостройка дду (empty) → приемка новостроек тюмень (36) → P0 новостройки тюмень (4663)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "ddu_floor_changed_at_keys_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["consultant_214_fz", "consultant_grk", "dom_rf"],
+    "errors": [],
+    "note": "214-FZ st.4/7/8/9, GrK project docs, dom.rf declaration registry; no bank tariff claims"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

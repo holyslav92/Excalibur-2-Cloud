@@ -120,6 +120,22 @@
         "pose_framing": "full-body three-quarter both hands visible not side-eye bust",
         "action": "holds ddu points at egrn line pushes keys away"
       }
+    },
+    {
+      "date": "2026-09-07",
+      "topic_id": "B24",
+      "slug": "",
+      "motifs": {
+        "composition": "host full-body right corridor elevator floor 2 vs ddu 12",
+        "location": "bright low-floor newbuild corridor near elevator tyumen",
+        "meme": "confused_math_lady + long_cat corner stickers",
+        "sticker_set": "confused_math_lady bottom-left long_cat top-right ≤15%",
+        "joke": "door says 2 contract says 12 long cat reaches for 12",
+        "outfit": "coral linen shirt rolled sleeves charcoal chinos white sneakers",
+        "emotion": "stunned disbelief raised brow squint",
+        "pose_framing": "full-body three-quarter at door plate not bust",
+        "action": "compares door plate 2 with ddu appendix 12 steps back"
+      }
     }
   ]
 }
