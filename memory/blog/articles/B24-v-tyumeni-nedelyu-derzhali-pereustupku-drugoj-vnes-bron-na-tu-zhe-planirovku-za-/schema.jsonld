@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-nedelyu-derzhali-pereustupku-drugoj-vnes-bron-na-tu-zhe-planirovku-za-/#blogposting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-nedelyu-derzhali-pereustupku-drugoj-vnes-bron-na-tu-zhe-planirovku-za-/"
+      },
+      "url": "{{SITE_BASE}}/v-tyumeni-nedelyu-derzhali-pereustupku-drugoj-vnes-bron-na-tu-zhe-planirovku-za-/",
+      "headline": "Неделю ждали переуступку в Тюмени — квартиру забронировал другой",
+      "description": "Тюменская семья неделю готовила переуступку по зарегистрированному ДДУ, но не внесла бронь у застройщика — за сутки до визита лот забрал другой покупатель. Святослав Шакин объясняет, почему согласованная цена не удерживает квартиру.",
+      "datePublished": "2026-09-12",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}
