@@ -2,8 +2,26 @@
   "version": 1,
   "anti_repeat_days": 30,
   "description": "Closed story clusters — Scout must not reuse until locked_until. Sync via: python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters",
-  "last_sync": "2026-09-05",
+  "last_sync": "2026-09-10",
   "clusters": [
+    {
+      "cluster_id": "booking_expired_price_hike",
+      "first_seen": "2026-09-10",
+      "locked_until": "2026-10-10",
+      "source": "live_wp",
+      "slug": "v-tyumeni-bron-na-novostrojku-sgorela-za-sutki-zastrojschik-podnyal-cenu-na-450",
+      "topic_id": "LIVE-V-TYUMENI-BRON-NA-NOVOST",
+      "title": "В Тюмени бронь новостройки сгорела — цена выросла на 450 тысяч"
+    },
+    {
+      "cluster_id": "ddu_amount_vs_escrow_zero",
+      "first_seen": "2026-09-06",
+      "locked_until": "2026-10-06",
+      "source": "live_wp",
+      "slug": "v-tyumeni-na-eskrou-ne-hvatalo-400-tysyach-do-summy-ddu-bank-ostanovil-podpisani",
+      "topic_id": "LIVE-V-TYUMENI-NA-ESKROU-NE-H",
+      "title": "В Тюмени на эскроу не хватило 400 тысяч до ДДУ — банк остановил подписание"
+    },
     {
       "cluster_id": "newbuild_ddu_cellar_paid_not_handed_tyumen",
       "first_seen": "2026-09-02",
