@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-12
+
+- **topic_id:** B24
+- **slug:** transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu
+- **post_id:** 10189
+- **permalink:** /blog/ipoteka/transhevaya-ipoteka-vtoroj-transh-vyros-na-480-tysyach-semya-ostanovila-ddu/
+- **featured_image:** 10190
+- **inline_images:** 10191–10197 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry (category_ids=32,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS (HTTP 200)
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23
