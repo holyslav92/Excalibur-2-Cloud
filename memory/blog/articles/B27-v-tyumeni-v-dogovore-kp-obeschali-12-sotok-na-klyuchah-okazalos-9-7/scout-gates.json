@@ -1,0 +1,23 @@
+{
+  "topic_id": "B27",
+  "run_date": "2026-09-13",
+  "slot": "17:00 YEKT Sunday",
+  "cluster_id": "newbuild_kp_plot_area_mismatch_tyumen",
+  "gates": {
+    "used_clusters_sync": "PASS",
+    "scout_helper_check_query": "PASS",
+    "story_dup": "PASS",
+    "topic_focus": "PASS",
+    "h1_fingerprint": "PASS",
+    "formula_spam": "PASS",
+    "anti_dupe_hard": "PASS",
+    "wordstat_preflight": "PASS",
+    "wordstat_gate": "PASS"
+  },
+  "rejected_candidates": [
+    "assignment_lost_to_faster_buyer — LIVE overlap 37%",
+    "family_mortgage_child_age_deadline — LIVE overlap",
+    "keys_delay_penalty_unpaid — H1 fingerprint duplicate",
+    "booking_expired_cottage_price_hike — cluster lock"
+  ]
+}

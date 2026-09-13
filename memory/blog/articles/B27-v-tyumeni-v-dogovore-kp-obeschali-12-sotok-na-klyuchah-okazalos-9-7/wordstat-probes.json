@@ -1,0 +1,22 @@
+{
+  "preflight": "wordstat_get_user_info OK (Yandex Cloud API)",
+  "regions": {
+    "tyumen": "55",
+    "tyumen_oblast": "11176",
+    "ru_compare": "225"
+  },
+  "probes": [
+    {"phrase": "переуступка новостройки", "regions": ["55", "11176"], "freq": 18, "note": "rejected — LIVE assignment overlap"},
+    {"phrase": "семейная ипотека новостройка", "regions": ["55", "11176"], "freq": 93, "note": "rejected — LIVE family recalc overlap"},
+    {"phrase": "неустойка застройщика", "regions": ["55", "11176"], "freq": 138, "note": "rejected — fingerprint dup"},
+    {"phrase": "коттеджный поселок тюмень участок", "regions": ["55", "11176"], "freq": 34, "note": "weak local tail"},
+    {"phrase": "участок в коттеджном поселке", "regions": ["55", "11176"], "freq": 52, "note": "support"},
+    {"phrase": "коттеджные поселки тюмень", "regions": ["55", "11176"], "freq": 1566, "note": "final P0 Tyumen"},
+    {"phrase": "коттеджные поселки тюмень", "regions": ["225"], "freq": 2525, "note": "RU compare"}
+  ],
+  "final_p0": {
+    "phrase": "коттеджные поселки тюмень",
+    "freq_tyumen": 1566,
+    "freq_ru225": 2525
+  }
+}
