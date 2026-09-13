@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B24-v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1018,
+          563
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 563,
+            "end": 576
+          },
+          "v_gutter_px": {
+            "start": 1018,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 6.5,
+            "v_center_offset_px": 1.5,
+            "max_aspect_crop_loss": 0.0167,
+            "per_panel_crop_loss": {
+              "top_left": 0.0167,
+              "top_right": 0.0138,
+              "bottom_left": 0.0052,
+              "bottom_right": 0.0087
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 8,
+              "top": 0,
+              "right": 1009,
+              "bottom": 563
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1018,
+              "bottom": 563
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени машино-место по ДДУ отдали другому дольщику: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1040,
+              "top": 0,
+              "right": 2041,
+              "bottom": 563
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 563
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Ключи на столе — а на P-42 стоит чужая машина» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Ключи на столе — а на P-42 стоит чужая машина"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 577,
+              "right": 1018,
+              "bottom": 1150
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1018,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Акт по квартире, Парковку не проверили, Отдельный ДДУ — иллюстрация к разбору…",
+            "h2_anchor": "Ключи на столе — а на P-42 стоит чужая машина"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1033,
+              "top": 578,
+              "right": 2048,
+              "bottom": 1149
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Квартиру приняли, парковку отложили на потом» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Квартиру приняли, парковку отложили на потом"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B24-v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          567
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 567,
+            "end": 586
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0089,
+            "per_panel_crop_loss": {
+              "top_left": 0.0069,
+              "top_right": 0.0069,
+              "bottom_left": 0.0089,
+              "bottom_right": 0.0089
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 3,
+              "top": 0,
+              "right": 1011,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Что сверить до ключей — таблица» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Что сверить до ключей — таблица"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1036,
+              "top": 0,
+              "right": 2044,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: С 2017 года, План и площадь, Оплата и передача — иллюстрация к разбору сделки.",
+            "h2_anchor": "«Опечатка в приложении» и предложение аналога"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 586,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 586,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: План и номер, Наш.дом.рф, Отдельный эскроу — иллюстрация к разбору сделки.",
+            "h2_anchor": "Претензия, отказ от замены и стоп регистрации"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1037,
+              "top": 586,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 586,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Эскроу не спор, Отдельный договор, Проверка до ключей — иллюстрация к разбору сделки.",
+            "h2_anchor": "Почему номер на плане — не мелочь отдела продаж"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Ключи на столе — а на P-42 стоит чужая машина",
+    "skip inline_2: already correct under H2 — Ключи на столе — а на P-42 стоит чужая машина",
+    "skip inline_3: already correct under H2 — Квартиру приняли, парковку отложили на потом",
+    "injected inline_4 after H2 — Что сверить до ключей — таблица",
+    "injected inline_5 after H2 — «Опечатка в приложении» и предложение аналога",
+    "injected inline_6 after H2 — Претензия, отказ от замены и стоп регистрации",
+    "injected inline_7 after H2 — Почему номер на плане — не мелочь отдела продаж"
+  ]
+}
