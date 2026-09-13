@@ -1,0 +1,9 @@
+{
+  "topic_id": "B25",
+  "description": "«Доделаем потом», — услышала семья на приёмке в Тюмени. Но в приложении к ДДУ были пол, двери и сантехника, а перед ними — white box. Подписывать акт или фиксировать расхождения?",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
