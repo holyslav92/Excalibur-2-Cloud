@@ -1,10 +1,11 @@
 ---
-status: PASS
+status: FAIL
 topic_id: B24
-pipeline: quad_canvas_2x_grsai_standard
-budget_exhausted: false
+pipeline: grsai_solo_cover_regen
+budget_exhausted: true
 grsai_canvas_attempts: 1
-solo_cover_attempts: 0
+solo_cover_attempts: 1
+cover_attempts_total: 2
 ---
 
 # Cover fragment — B24
@@ -26,6 +27,14 @@ solo_cover_attempts: 0
 - NO Wordstat strips on cover (manifest log only)
 - light/bright underground parking P-42, pine-green jacket, anti-repeat motifs recorded
 
+## Regen attempt 2 (solo cover API)
+
+- Fixed: `pixel_manifest_outfit_matches` PASS — хвойно-зелёная куртка (not black blazer)
+- Fixed: `pixel_hook_title_not_truncated` PASS — full hook readable
+- Visual: 3 Wordstat P0 stickers top-left, confused_math_lady + this_is_fine_dog memes, phone +7 922 001 65 05
+- Still FAIL pixel: host_face (crouch pose), mean_lum 155, collage_inset, pixel_no_wordstat_query_strips (2 strips detected)
+- `cover/cover-budget-result.json` — budget exhausted (2/2)
+
 ## Next
 
-→ Cover-QA → Indexer
+→ Cover-QA re-run or Indexer per budget-exhausted canon
