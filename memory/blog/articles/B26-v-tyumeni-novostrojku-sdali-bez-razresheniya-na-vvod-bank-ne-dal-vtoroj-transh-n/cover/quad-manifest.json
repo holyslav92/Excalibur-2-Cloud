@@ -1,0 +1,254 @@
+{
+  "topic_id": "B26",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Банк не дал второй транш без РВЭ",
+  "cover_hook_highlight": "транш",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени новостройку сдали без РВЭ — банк заблокировал 520 тысяч: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Ипотечный кабинет: герой справа, папка «транш отказ», планшет без РВЭ; high-key, hook слева.",
+      "meme_caption_ru": "",
+      "sticky": "РВЭ в реестре нет",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "скрытая боль, напряжённая челюсть",
+      "meme_picks": [
+        "hide_pain_harold",
+        "smudge_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Подпишите акт с замечаниями» — застройщик зовёт на ключи",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Подъезд новостройки, табличка осмотр, ключи; roll_safe угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Подпишите акт с замечаниями» — застройщик зовё…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Траншевая ипотека",
+        "РВЭ нет",
+        "Осмотр ≠ передача"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "roll_safe"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Подпишите акт с замечаниями» — застройщик зовёт на ключи",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: реестр vs застройщик, 5 мес без РВЭ, 520 тыс; gold paper.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: наш.дом.рф, 5 мес без РВЭ, 520 тыс заморожено — иллюстрация к разбору сделки.",
+      "labels": [
+        "наш.дом.рф",
+        "5 мес без РВЭ",
+        "520 тыс заморожено"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Корпус «сдали», а в реестре разрешения на ввод нет",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Корпус снаружи, табличка сдан, смартфон без РВЭ; bright, no people.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Корпус «сдали», а в реестре разрешения на ввод…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Транш 2 стоп",
+        "Аренда платится",
+        "11 дней срок"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Пять месяцев после «готовности»: что видно на наш.дом.рф",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Ноутбук наш.дом.рф, разрешение не найдено, акт на столе; bright desk.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Пять месяцев после «готовности»: что видно на н…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Акт с замечаниями",
+        "Ключи ≠ передача",
+        "РВЭ нет"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Второй транш на 520 тысяч заморожен — первый платится, аренда тоже",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема: транш 1 → аренда → транш 2 СТОП; this_is_fine_dog угол.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Транш 1 платится, Транш 2 стоп, Банк ждёт РВЭ — иллюстрация к разбору сделки.",
+      "labels": [
+        "Транш 1 платится",
+        "Транш 2 стоп",
+        "Банк ждёт РВЭ"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "this_is_fine_dog"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Семья отказалась: банк предложил рефинансирование, спор ушёл в претензию",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Диаграмма: акт → рефинанс → претензия; gold arrows, no memes.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Акт не подписан, Рефинанс рынок, Претензия — иллюстрация к разбору сделки.",
+      "labels": [
+        "Акт не подписан",
+        "Рефинанс рынок",
+        "Претензия"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Цепочка до акта — таблица: блокировка транша и рост суммы из-за ставки",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bar chart: РВЭ → акт → транш; красный блок нет РВЭ; stonks угол.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Нет РВЭ, Транш блок, Ставка выше — иллюстрация к разбору сделки.",
+      "labels": [
+        "Нет РВЭ",
+        "Транш блок",
+        "Ставка выше"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "stonks"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "cover_motifs": {
+    "composition": "host waist-up right of center, hook zone upper left, phone bottom-right",
+    "location": "bright sunlit bank mortgage desk with construction site wall photo Tyumen",
+    "meme": "hide_pain_harold + smudge_cat corner stickers",
+    "prop_set": "loan folder second tranche denied, tablet our.dom.rf no RVE, yellow sticky",
+    "sticker_set": "hide_pain_harold top-left, smudge_cat bottom-right, ≤15%",
+    "joke": "harold smiles while tablet shows no RVE and bank denies tranche",
+    "outfit": "olive knit vest over cream henley, dark jeans, no blazer",
+    "emotion": "hide-the-pain forced smile tight jaw direct gaze not side-eye",
+    "pose_framing": "medium shot three-quarter right slight low angle not left bust",
+    "action": "holds denied tranche letter points at tablet showing missing RVE"
+  },
+  "cover_emotion": "скрытая боль, напряжённая челюсть",
+  "meme_picks": {
+    "cover": [
+      "hide_pain_harold",
+      "smudge_cat"
+    ],
+    "inline_1": [
+      "roll_safe"
+    ],
+    "inline_5": [
+      "this_is_fine_dog"
+    ],
+    "inline_7": [
+      "stonks"
+    ]
+  },
+  "wordstat_stickers": [
+    "разрешение на ввод",
+    "новостройки тюмень",
+    "ввод в эксплуатацию"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  }
+}
