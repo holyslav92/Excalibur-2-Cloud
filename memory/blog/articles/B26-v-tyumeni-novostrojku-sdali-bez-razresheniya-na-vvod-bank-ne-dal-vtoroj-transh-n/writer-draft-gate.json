@@ -1,0 +1,29 @@
+{
+  "gate": "writer-draft",
+  "status": "PASS",
+  "all_pass": true,
+  "checks": {
+    "html_linter": true,
+    "prose_lead_4_6": true,
+    "no_tldr_opening": true,
+    "no_composite_disclaimer": true,
+    "word_count_1400_1600": true,
+    "word_count_hard_max_1750": true,
+    "h2_count_5_plus": true,
+    "interlink_siblings_2_4": true,
+    "early_cta_tg_max_only": true,
+    "mid_cta_tg_max_nudge": true,
+    "end_cta_full_channels": true,
+    "phone_in_body": true,
+    "brand_first_person_tyumen": true,
+    "comment_magnet_question": true,
+    "spine_once_no_recap": true,
+    "dual_cta_soft": true
+  },
+  "errors": [],
+  "metrics": {
+    "word_count": 1593,
+    "h2_count": 6,
+    "sibling_interlinks": 3
+  }
+}
