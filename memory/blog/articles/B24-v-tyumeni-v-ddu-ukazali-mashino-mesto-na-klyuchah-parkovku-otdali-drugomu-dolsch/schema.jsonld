@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch/#blogposting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch/"
+      },
+      "url": "{{SITE_BASE}}/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch/",
+      "headline": "На P-42 в Тюмени парковку по ДДУ отдали другому — через 3 дня чужая машина",
+      "description": "Место у лифта оплатили, а пользоваться им почему-то должен другой дольщик — такая история в новостройке Тюмени. Застройщик ссылается на «опечатку», но семья не согласна на замену: что теперь решает ДДУ?",
+      "datePublished": "2026-09-13",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}
