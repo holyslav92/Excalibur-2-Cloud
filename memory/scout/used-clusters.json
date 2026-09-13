@@ -5,6 +5,15 @@
   "last_sync": "2026-09-13",
   "clusters": [
     {
+      "cluster_id": "acceptance_defects_penalty",
+      "first_seen": "2026-09-13",
+      "locked_until": "2026-10-13",
+      "source": "live_wp",
+      "slug": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali",
+      "topic_id": "LIVE-V-TYUMENI-V-DDU-OBESCHAL",
+      "title": "В Тюмени в ДДУ обещали чистовую — на приёмке 3 расхождения, акт не подписали"
+    },
+    {
       "cluster_id": "mortgage_rate_hike_before_ddu",
       "first_seen": "2026-09-12",
       "locked_until": "2026-10-12",
