@@ -1,0 +1,77 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B25",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-13",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://krasnodar.allestate.pro/news/01.09.2026/priemka-kvartiry-kak-zafiksirovat-nedochety-po-zakonu",
+        "type": "market_news",
+        "note": "01.09.2026 — правила приёмки 2026, отмена одностороннего акта, денежные требования, лимит 3%"
+      },
+      {
+        "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/priemka-obekta-po-ddu/kak-akt-osmotra-kvartiry-po-ddu-esli-vyyavleny-nedostatki-pri-priemke-kvartiry-v-novostroyke-i-chto-/",
+        "type": "legal_community",
+        "note": "07.09.2026 — акт осмотра vs передаточный акт, отказ застройщика подписывать"
+      },
+      {
+        "url": "https://dzen.ru/a/amtYRpP-tkHrf4uj",
+        "type": "channel",
+        "note": "Свежий тюменский контекст приёмки 2026 (tenant Dzen; fetched 2026-09-13)"
+      },
+      {
+        "url": "https://dzen.ru/a/apkKx6KBtmtj5s0e",
+        "type": "serp_signal",
+        "note": "SERP sibling: приложение чистовой vs факт на приёмке, отказ подписать акт"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "приемка квартиры в новостройке тюмень",
+    "p0_volume": 35,
+    "p0_volume_ru225": null,
+    "support_phrases": [
+      {"phrase": "чистовая отделка новостройка", "volume": 3158, "region": "225"},
+      {"phrase": "новостройки с чистовой отделкой", "volume": 1620, "region": "225"},
+      {"phrase": "предчистовая отделка новостройка", "volume": 3342, "region": "225"},
+      {"phrase": "приемка квартиры в новостройке предчистовая отделка", "volume": 35, "region": "225"},
+      {"phrase": "whitebox новостройка", "volume": 11, "region": "225", "partial": true}
+    ],
+    "rework_from": "приемка квартиры в новостройке тюмень (35) → чистовая/предчистовая отделка новостройка (3158/3342) + приложение ДДУ + акт осмотра",
+    "partial": ["whitebox новостройка — totalCount only (11)"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_ddu_finishing_mismatch_acceptance_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["legal_norms_214fz"],
+    "errors": [],
+    "note": "214-ФЗ ст. 7, 8, ч. 4 ст. 10 verified via consultant.ru; no bank tariff claims"
+  },
+  "key_facts_count": 38,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 2,
+    "first_attempt": "HTTP 524 timeout",
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}

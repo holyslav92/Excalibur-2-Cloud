@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-13",
+    "today_ru": "13.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "воскресенье"
+  },
+  "topic": {
+    "topic_id": "B25",
+    "title": "В Тюмени в ДДУ обещали чистовую — на приёмке голые стены, акт не подписали",
+    "h1": "В Тюмени в ДДУ обещали чистовую — на приёмке голые стены, акт не подписали",
+    "slug": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali",
+    "primary_query": "В Тюмени в ДДУ обещали чистовую — на приёмке голые стены, акт не подписали",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени в ДДУ обещали чистовую — на приёмке голые стены, акт не подписали 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени в ДДУ обещали 4 позиции чистовой — отдали предчистовую",
+          "url": "https://dzen.ru/a/aqJ2-BwIljOW5AE8",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени на приёмке не хватило метров — застройщик отказал в пересчёте ...",
+          "url": "https://dzen.ru/a/apkKx6KBtmtj5s0e",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени семья пришла на первую приёмку квартиры: в приложении обещаны 4 позиции чистовой отделки, а на месте — необходимость делать..."
+        },
+        {
+          "title": "Приемка квартиры у застройщика: чек-лист недостатков 2026 - Fedelis",
+          "url": "https://fedelis.ru/article/priemka-kvartiry-u-zastrojshhika/",
+          "snippet": "На приёмке в тюменской новостройке мужчина развернул рулетку и не досчитался двух квадратных метров: по договору он оплачивал одну площадь, а по факту комнаты вышли меньше. Менеджер посмотрел на замеры, кивнул и сказал, что это «в пределах допуска», цена в ДДУ твёрдая и пересчёту не подлежит."
+        },
+        {
+          "title": "Новости Тюмени сегодня: последние тюменские новости за неделю, новости ...",
+          "url": "https://tumentoday.ru/",
+          "snippet": "На что обратить внимание при приёмке квартиры по ДДУ. Полный чек-лист скрытых и явных дефектов, сроки устранения и как зафиксировать недостатки для претензии."
+        },
+        {
+          "title": "Электронная приёмка квартиры по ДДУ в 2026 году. Как проверить УКЭП ...",
+          "url": "https://moshousing.ru/ehlektronnaya-priyomka-kvartiry-po-ddu-v-2026-godu-kak-proverit-ukehp-zastrojshchika-i-ne-propustit-srok/",
+          "snippet": "Все новости Тюмени и Тюменской области: основные происшествия и события за сегодня, за неделю, тюменская служба новостей."
+        },
+        {
+          "title": "Последние новости Тюмени сегодня - события и происшествия на РБК",
+          "url": "https://t.rbc.ru/",
+          "snippet": "Явитесь на приёмку в установленный срок. Подпишите акт с перечнем несущественных недостатков — они фиксируются и подлежат устранению в течение 60 календарных дней со дня подписания."
+        }
+      ],
+      "searched_at": "2026-09-13"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени в ДДУ обещали чистовую — на приёмке голые стены, акт не подписали 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени в ДДУ обещали 4 позиции чистовой — отдали предчистовую",
+          "url": "https://dzen.ru/a/aqJ2-BwIljOW5AE8",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени на приёмке не хватило метров — застройщик отказал в пересчёте ...",
+          "url": "https://dzen.ru/a/apkKx6KBtmtj5s0e",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени семья пришла на первую приёмку квартиры: в приложении обещаны 4 позиции чистовой отделки, а на месте — необходимость делать..."
+        },
+        {
+          "title": "Новости каждый час на - МегаТюмень",
+          "url": "https://megatyumen.ru/news/",
+          "snippet": "На приёмке в тюменской новостройке мужчина развернул рулетку и не досчитался двух квадратных метров: по договору он оплачивал одну площадь, а по факту комнаты вышли меньше. Менеджер посмотрел на замеры, кивнул и сказал, что это «в пределах допуска», цена в ДДУ твёрдая и пересчёту не подлежит."
+        },
+        {
+          "title": "Приемка квартиры у застройщика: чек-лист недостатков 2026 - Fedelis",
+          "url": "https://fedelis.ru/article/priemka-kvartiry-u-zastrojshhika/",
+          "snippet": "Бензин в Тюмени - последние новости: что происходит на АЗС и когда закончится дефицит 12 сентября 2026 г. 12:05 Рассказываем, что происходит на АЗС и когда закончится дефицит 4698 6"
+        },
+        {
+          "title": "Новости Тюмени сегодня: последние тюменские новости за неделю, новости ...",
+          "url": "https://tumentoday.ru/",
+          "snippet": "На что обратить внимание при приёмке квартиры по ДДУ. Полный чек-лист скрытых и явных дефектов, сроки устранения и как зафиксировать недостатки для претензии."
+        },
+        {
+          "title": "Мартовские чистки в Тюменской области: три крупных ареста и серия ...",
+          "url": "https://nashgorod.ru/news/2026-03-31/martovskie-chistki-v-tyumenskoy-oblasti-tri-krupnyh-aresta-i-seriya-fonovyh-del-5571987",
+          "snippet": "Все новости Тюмени и Тюменской области: основные происшествия и события за сегодня, за неделю, тюменская служба новостей."
+        }
+      ],
+      "searched_at": "2026-09-13"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени в ДДУ обещали чистовую — на приёмке голые стены, акт не подписали official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "На приёмке новостройки в Тюмени нашли мокрую стяжку — ключи не выдали ...",
+          "url": "https://dzen.ru/a/apZvsyWD6W9q5lHp",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени на приёмке не хватило метров — застройщик отказал в пересчёте ...",
+          "url": "https://dzen.ru/a/apkKx6KBtmtj5s0e",
+          "snippet": "Представитель застройщика предложил вариант, звучащий почти по-дружески: подписываете передаточный акт сегодня, недостатки устраняем потом, «в рабочем порядке». Семья не подписала — вписала дефекты в перечень, сняла фото и видео, забрала свой экземпляр с датой и подписями."
+        },
+        {
+          "title": "Кривые стены, щели и опасная проводка: топ-5 недоделок в тюменских ...",
+          "url": "https://nashgorod.ru/news/2025-09-02/krivye-steny-scheli-i-opasnaya-provodka-top-5-nedodelok-v-tyumenskih-novostroykah-5467191",
+          "snippet": "На приёмке в тюменской новостройке мужчина развернул рулетку и не досчитался двух квадратных метров: по договору он оплачивал одну площадь, а по факту комнаты вышли меньше. Менеджер посмотрел на замеры, кивнул и сказал, что это «в пределах допуска», цена в ДДУ твёрдая и пересчёту не подлежит."
+        },
+        {
+          "title": "Приемка квартиры у застройщика: чек-лист недостатков 2026 - Fedelis",
+          "url": "https://fedelis.ru/article/priemka-kvartiry-u-zastrojshhika/",
+          "snippet": "Мы попросили главного специалиста компании по приёмке квартир Ивана Есина рассказать о пяти самых частых недоделках в новостройках, объяснить, почему они возникают и как с ними ..."
+        },
+        {
+          "title": "«Нам с детьми приходится жить в бане»: истории семей, брошенных с ...",
+          "url": "https://ngs.ru/text/realty/2025/08/27/76001441/",
+          "snippet": "На что обратить внимание при приёмке квартиры по ДДУ. Полный чек-лист скрытых и явных дефектов, сроки устранения и как зафиксировать недостатки для претензии."
+        },
+        {
+          "title": "«Мы были в шоке»: приемщики раскрывают проблемы тюменских новостроек",
+          "url": "https://nashgorod.ru/news/2025-05-21/my-byli-v-shoke-priemschiki-raskryvayut-problemy-tyumenskih-novostroek-5394914",
+          "snippet": "Почти два десятка семей в Тюмени, брошенных Петром Божедомовым, сейчас платят кредиты и пытаются самостоятельно достроить свои дома. Их непростые истории — в материале наших коллег ..."
+        }
+      ],
+      "searched_at": "2026-09-13"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени в ДДУ обещали чистовую — на приёмке голые стены, акт не подписали 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "unsupervised_topic_modeling/topics/ru/11/50/100/topics at ... - GitHub",
+          "url": "https://github.com/annontopicmodel/unsupervised_topic_modeling/blob/master/topics/ru/11/50/100/topics",
+          "snippet": ""
+        },
+        {
+          "title": "PExHub/Interested.svg at main · EFPL-PEX/PExHub · GitHub",
+          "url": "https://github.com/EFPL-PEX/PExHub/blob/main/Interested.svg",
+          "snippet": "Contribute to annontopicmodel/unsupervised_topic_modeling development by creating an account on GitHub."
+        },
+        {
+          "title": "[GUIDE] Обход блокировки Twitter (X), Grok / Instagram / Facebook ...",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/discussions/8778",
+          "snippet": "Contribute to EFPL-PEX/PExHub development by creating an account on GitHub."
+        },
+        {
+          "title": "github-trends/plots/python-installers.svg at main · nschloe/github ...",
+          "url": "https://github.com/nschloe/github-trends/blob/main/plots/python-installers.svg",
+          "snippet": "Я сделал свой репозиторий!!! Где будут постепенно появляться инструкции для обхода блокировок тех или иных сервисов для Виндовс, Линукс и Android устройств. Там всё с картинками и нормальной сортировкой. Вот ссылочка, клик."
+        },
+        {
+          "title": "envx/images/view.png at main · mikeleppane/envx · GitHub",
+          "url": "https://github.com/mikeleppane/envx/blob/main/images/view.png",
+          "snippet": ":chart_with_upwards_trend: GitHub star history plots - github-trends/plots/python-installers.svg at main · nschloe/github-trends"
+        },
+        {
+          "title": "HFSAA-Map/resturaunt.svg at main · umerp/HFSAA-Map · GitHub",
+          "url": "https://github.com/umerp/HFSAA-Map/blob/main/resturaunt.svg",
+          "snippet": "A powerful and secure environment variable manager for developers, featuring an intuitive Terminal User Interface (TUI) and comprehensive command-line interface. - envx/images/view.png at main · mikeleppane/envx"
+        }
+      ],
+      "searched_at": "2026-09-13"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени в ДДУ обещали чистовую — на приёмке голые стены, акт не подписали forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "На приёмке новостройки в Тюмени нашли мокрую стяжку — ключи не выдали ...",
+          "url": "https://dzen.ru/a/apZvsyWD6W9q5lHp",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени на приёмке не хватило метров — застройщик отказал в пересчёте ...",
+          "url": "https://dzen.ru/a/apkKx6KBtmtj5s0e",
+          "snippet": "Представитель застройщика предложил вариант, звучащий почти по-дружески: подписываете передаточный акт сегодня, недостатки устраняем потом, «в рабочем порядке». Семья не подписала — вписала дефекты в перечень, сняла фото и видео, забрала свой экземпляр с датой и подписями."
+        },
+        {
+          "title": "Приемка квартиры у застройщика: чек-лист недостатков 2026 - Fedelis",
+          "url": "https://fedelis.ru/article/priemka-kvartiry-u-zastrojshhika/",
+          "snippet": "На приёмке в тюменской новостройке мужчина развернул рулетку и не досчитался двух квадратных метров: по договору он оплачивал одну площадь, а по факту комнаты вышли меньше. Менеджер посмотрел на замеры, кивнул и сказал, что это «в пределах допуска», цена в ДДУ твёрдая и пересчёту не подлежит."
+        },
+        {
+          "title": "Как составить акт осмотра квартиры по ДДУ, если выявлены недостатки при ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/priemka-obekta-po-ddu/kak-akt-osmotra-kvartiry-po-ddu-esli-vyyavleny-nedostatki-pri-priemke-kvartiry-v-novostroyke-i-chto-/",
+          "snippet": "На что обратить внимание при приёмке квартиры по ДДУ. Полный чек-лист скрытых и явных дефектов, сроки устранения и как зафиксировать недостатки для претензии."
+        },
+        {
+          "title": "Акт приема-передачи квартиры по договору купли-продажи и при покупке ...",
+          "url": "https://www.etagi.com/j/post/akt-priema-peredachi-kvartiry-chto-yeto-52416/",
+          "snippet": "При приемке квартиры, приобретенной по договору участия в долевом строительстве, у дольщиков часто возникают вопрос по форме и содержанию акта осмотра, если выявлены строительные ..."
+        },
+        {
+          "title": "Проверка ДДУ: что застройщик не расскажет на встрече",
+          "url": "https://docmashina.ru/blog/proverka-ddu",
+          "snippet": "Пока передаточный акт не подписан, за квартиру — от трещин на стенах до долгов по счетчикам — отвечает прежняя сторона."
+        }
+      ],
+      "searched_at": "2026-09-13"
+    }
+  ],
+  "errors": []
+}
