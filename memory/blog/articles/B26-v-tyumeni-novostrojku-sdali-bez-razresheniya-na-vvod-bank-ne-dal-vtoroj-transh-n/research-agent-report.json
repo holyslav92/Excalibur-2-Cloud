@@ -1,0 +1,78 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B26",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-13",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://www.vedomosti.ru/press_releases/2026/09/03/nashdomrf-perehodit-na-reestrovuyu-formu-razreshitelnoi-dokumentatsii",
+        "type": "official_press",
+        "note": "03.09.2026 — наш.дом.рф переходит на реестровую форму РВЭ (304-ФЗ), проверка ввода онлайн"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/08/24/76604203/",
+        "type": "local_news",
+        "note": "24.08.2026 — Тюмень, РВЭ выдано после 11 лет стройки на Пароходской"
+      },
+      {
+        "url": "https://t-j.ru/guide/split-ipoteka/",
+        "type": "market_news",
+        "note": "15.05.2026 — траншевая ипотека 2026: только Сбер, привязка 2-го транша к вводу"
+      },
+      {
+        "url": "https://navigator-tmn.ru/blog/chto-takoe-transhevaya-ipoteka/",
+        "type": "local_developer",
+        "note": "17.04.2026 — тюменский застройщик, механика траншевой ипотеки"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "разрешение на ввод в эксплуатацию",
+    "p0_volume": 201,
+    "p0_volume_ru225": 16550,
+    "support_phrases": [
+      {"phrase": "разрешения на ввод в эксплуатацию тюмень", "volume": 31, "region": "55+11176"},
+      {"phrase": "разрешение на ввод объекта в эксплуатацию", "volume": 104, "region": "55+11176"},
+      {"phrase": "новостройки тюмень", "volume": 4503, "region": "55+11176"},
+      {"phrase": "траншевая ипотека новостройка", "volume": 4, "region": "55+11176", "note": "weak; overlaps LIVE-TRANSHEVAYA rate cluster"}
+    ],
+    "rework_from": "траншевая ипотека новостройка (4) → P0 «разрешение на ввод в эксплуатацию» (201) + РВЭ/регистрация/транш"
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_rve_delay_blocks_mortgage_tranche_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B12", "B22", "LIVE-TRANSHEVAYA", "B25"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["legal_norms_214fz", "sberbank"],
+    "errors": [],
+    "note": "214-ФЗ ст. 6, 8, 15.5 via consultant.ru; Sber 90-day docs + transhevaya product via sberbank.ru and domclick; no invented bank commission tariffs"
+  },
+  "key_facts_count": 42,
+  "derouter": {
+    "status": "FAIL",
+    "attempts": 2,
+    "first_attempt": "HTTP 524 timeout",
+    "second_attempt": "HTTP 529 service_unavailable",
+    "fallback": "research-notes.md synthesized manually from assembled-research-inputs.md and live fetches (2026-09-13)",
+    "stamp": null
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": null
+  },
+  "incident_report": "none"
+}
