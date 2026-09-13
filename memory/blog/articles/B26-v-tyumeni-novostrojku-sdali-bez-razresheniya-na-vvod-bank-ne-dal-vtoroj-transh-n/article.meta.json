@@ -8,7 +8,7 @@
   "description": "Застройщик позвал на ключи без РВЭ в реестре — банк заблокировал второй транш на 520 тысяч",
   "date": "2026-09-13",
   "wp_category_slugs": [
-    "novostrojki",
+    "pokupka-kvartiry",
     "ipoteka",
     "dokumenty-i-oformlenie"
   ],
@@ -26,5 +26,6 @@
     "quiz": "skip",
     "side_stickers": "skip"
   },
-  "editorial_swarm": false
+  "editorial_swarm": false,
+  "wp_post_id": 10242
 }

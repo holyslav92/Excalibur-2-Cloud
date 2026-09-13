@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh",
+  "topic_id": "B26",
+  "post_id": 10242,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B26-v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh-n/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1137801,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10242 slug=v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh\nOK categories=36,32,54\nOK yoast_social_image=1\nOK featured_image=10243\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10244 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh-inline-03.png\nOK inline_alt=10244\nOK inline_description=10244\nOK inline_image_upload=10245 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh-inline-04.png\nOK inline_alt=10245\nOK inline_description=10245\nOK inline_image_upload=10246 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh-inline-05.png\nOK inline_alt=10246\nOK inline_description=10246\nOK inline_image_upload=10247 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh-inline-01.png\nOK inline_alt=10247\nOK inline_description=10247\nOK inline_image_upload=10248 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh-inline-02.png\nOK inline_alt=10248\nOK inline_description=10248\nOK inline_image_upload=10249 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh-inline-06.png\nOK inline_alt=10249\nOK inline_description=10249\nOK inline_image_upload=10250 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh-inline-07.png\nOK inline_alt=10250\nOK inline_description=10250\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh/",
+    "errors": []
+  }
+}

@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B26 — 2026-09-13
+
+- **topic_id:** B26
+- **slug:** v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh
+- **post_id:** 10242
+- **permalink:** /blog/ipoteka/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh/
+- **featured_image:** 10243
+- **inline_images:** 10244–10250 (7)
+- **wp_category_slugs:** pokupka-kvartiry, ipoteka, dokumenty-i-oformlenie (category_ids=36,32,54)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** replaced invalid slug `novostrojki` → `pokupka-kvartiry`; SFTP root fallback to `.`
+
 ## B25 — 2026-09-13
 
 - **topic_id:** B25

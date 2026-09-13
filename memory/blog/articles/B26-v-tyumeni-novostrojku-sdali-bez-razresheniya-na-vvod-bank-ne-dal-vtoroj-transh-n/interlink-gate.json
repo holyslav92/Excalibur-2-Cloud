@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B26",
+  "slug": "v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh",
+  "candidates_count": 22,
+  "outbound_found": [
+    {
+      "slug": "klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili",
+      "title": "klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili"
+    },
+    {
+      "slug": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli",
+      "title": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli"
+    },
+    {
+      "slug": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi",
+      "title": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
