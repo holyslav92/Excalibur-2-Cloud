@@ -1,0 +1,81 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B24",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-13",
+  "derouter": {
+    "status": "OK",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "note": "Synthesis via gpt-5.6-terra; output relocated to article dir from workspace root"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/08/76628494/",
+        "type": "news",
+        "date": "2026-09-08",
+        "note": "Tyumen JК Aivazovsky — parking + kladovka bundled with apartment promo through 30.09.2026"
+      },
+      {
+        "url": "https://tvgram.ru/news_72ru/121114",
+        "type": "channel",
+        "date": "2026-09-12",
+        "note": "news_72ru — Korney parking spot gift with ready apartment until end September"
+      },
+      {
+        "url": "https://t.me/s/novostroikityumeni",
+        "type": "community",
+        "date": "2026-09-13",
+        "note": "Tyumen newbuild channel — underground parking in September posts"
+      },
+      {
+        "url": "https://pravoved.ru/question/2164005/",
+        "type": "community",
+        "date": "2026-09-13",
+        "note": "Live forum case — parking spot renumbered after DDU registration"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 8430,
+    "p0_volume_ru225": null,
+    "support_phrases": [
+      {"phrase": "машиноместо в новостройке", "volume": 971},
+      {"phrase": "машиноместо дду", "volume": 207},
+      {"phrase": "дду машиноместо", "volume": 207}
+    ],
+    "rework_from": "машиноместо новостройка тюмень 0 → машиноместо в новостройке 971 + P0 новостройки тюмень 8430",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_parking_spot_double_sold_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["consultant_214_fz", "consultant_gk_rf", "consultant_fns", "dom_rf"],
+    "errors": [],
+    "note": "214-FZ st.4/st.4.1/st.9, GK st.398, FNS letter on machine places; no bank tariff claims"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

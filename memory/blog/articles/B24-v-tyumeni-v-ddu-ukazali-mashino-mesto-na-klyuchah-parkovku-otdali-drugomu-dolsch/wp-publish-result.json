@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch",
+  "topic_id": "B24",
+  "post_id": 10215,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B24-v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1105779,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10215 slug=v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch\nOK categories=54,58,36\nOK yoast_social_image=1\nOK featured_image=10216\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10217 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch-inline-01.png\nOK inline_alt=10217\nOK inline_description=10217\nOK inline_image_upload=10218 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch-inline-02.png\nOK inline_alt=10218\nOK inline_description=10218\nOK inline_image_upload=10219 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch-inline-03.png\nOK inline_alt=10219\nOK inline_description=10219\nOK inline_image_upload=10220 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch-inline-05.png\nOK inline_alt=10220\nOK inline_description=10220\nOK inline_image_upload=10221 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch-inline-06.png\nOK inline_alt=10221\nOK inline_description=10221\nOK inline_image_upload=10222 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch-inline-07.png\nOK inline_alt=10222\nOK inline_description=10222\nOK inline_image_upload=10223 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch-inline-04.png\nOK inline_alt=10223\nOK inline_description=10223\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch/",
+    "errors": []
+  }
+}

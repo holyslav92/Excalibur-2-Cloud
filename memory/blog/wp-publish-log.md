@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B24 — 2026-09-13
+
+- **topic_id:** B24
+- **slug:** v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch
+- **post_id:** 10215
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-v-ddu-ukazali-mashino-mesto-na-klyuchah-parkovku-otdali-drugomu-dolsch/
+- **featured_image:** 10216
+- **inline_images:** 10217–10223 (7)
+- **wp_category_slugs:** dokumenty-i-oformlenie, riski-sdelki, pokupka-kvartiry (category_ids=54,58,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B23 — 2026-09-05
 
 - **topic_id:** B23
