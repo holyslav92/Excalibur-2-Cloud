@@ -3,23 +3,6 @@
   "window_days": 14,
   "entries": [
     {
-      "date": "2026-08-31",
-      "topic_id": "B15",
-      "slug": "",
-      "motifs": {
-        "composition": "waist_center_envelope_consent_hook_right_zone",
-        "location": "bright_sunlit_tyumen_meeting_room_window",
-        "meme": "blinking_white_guy_sticker_plus_polite_cat_cutout",
-        "prop_set": "cream_envelope_notary_consent_gold_magnifier_phone_cta",
-        "sticker_set": "yellow_sticky_konvert_warning_gold_tape_corner_only",
-        "joke": "sticky_konvert_ne_dokazatelstvo_envelope_looks_real",
-        "outfit": "white_shirt_sand_vest_rolled_sleeves_no_blazer",
-        "emotion": "stunned_disbelief_direct_gaze_not_side_eye",
-        "pose_framing": "waist_center_forward_not_left_bust",
-        "action": "lifts_consent_from_envelope_stop_gesture_at_phone"
-      }
-    },
-    {
       "date": "2026-09-01",
       "topic_id": "B19",
       "slug": "",
@@ -118,6 +101,23 @@
         "emotion": "hide-the-pain forced smile tight jaw direct gaze not side-eye",
         "pose_framing": "medium shot three-quarter right slight low angle not left bust",
         "action": "holds denied tranche letter points at tablet showing missing rve"
+      }
+    },
+    {
+      "date": "2026-09-14",
+      "topic_id": "B27",
+      "slug": "",
+      "motifs": {
+        "composition": "хозяин в полный рост справа у светлой стены с большим планом квартиры, слева свободная чистая зона под заголовок",
+        "location": "яркий холл жилого комплекса у макета этажа, не офис продаж и не банковский стол",
+        "meme": "disappointed_black_guy и long_cat",
+        "prop_set": "два одинаковых талона брони с условным номером квартиры, план этажа, жёлтая липкая заметка",
+        "sticker_set": "маленькие disappointed_black_guy и long_cat в нижних углах",
+        "joke": "два талона тянутся к одному номеру на плане, а длинный кот визуально соединяет их как нелепую очередь",
+        "outfit": "светло-голубая льняная рубашка с закатанными рукавами, песочные брюки, белые кеды",
+        "emotion": "ошеломлённое недоверие с горькой усмешкой",
+        "pose_framing": "полный рост справа, корпус слегка наклонён к плану",
+        "action": "сравнивает два талона с одним номером квартиры и показывает на совпадение"
       }
     }
   ]
