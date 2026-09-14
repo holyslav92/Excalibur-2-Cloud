@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol",
+  "topic_id": "B27",
+  "post_id": 10281,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1128714,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10281 slug=v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol\nOK categories=36,54,58\nOK yoast_social_image=1\nOK featured_image=10282\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10283 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol-inline-03.png\nOK inline_alt=10283\nOK inline_description=10283\nOK inline_image_upload=10284 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol-inline-04.png\nOK inline_alt=10284\nOK inline_description=10284\nOK inline_image_upload=10285 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol-inline-05.png\nOK inline_alt=10285\nOK inline_description=10285\nOK inline_image_upload=10286 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol-inline-01.png\nOK inline_alt=10286\nOK inline_description=10286\nOK inline_image_upload=10287 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol-inline-02.png\nOK inline_alt=10287\nOK inline_description=10287\nOK inline_image_upload=10288 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol-inline-06.png\nOK inline_alt=10288\nOK inline_description=10288\nOK inline_image_upload=10289 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol-inline-07.png\nOK inline_alt=10289\nOK inline_description=10289\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-zastrojschik-prodal-odnu-kvartiru-dvum-dolschikam-vtoromu-ostavili-tol/",
+    "errors": []
+  }
+}
