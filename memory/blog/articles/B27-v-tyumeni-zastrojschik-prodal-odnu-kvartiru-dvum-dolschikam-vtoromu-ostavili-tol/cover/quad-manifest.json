@@ -1,0 +1,237 @@
+{
+  "topic_id": "B27",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Одну квартиру забронировали дважды",
+  "cover_hook_highlight": "дважды",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени две брони на одну квартиру — семья потеряла лот и 180 тысяч: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Холл ЖК: герой справа, два талона один номер; hook слева.",
+      "meme_caption_ru": "",
+      "sticky": "Бронь не защищает",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие с горькой усмешкой"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Возврат брони и «такая же» квартира с доплатой",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стойка: два бланка брони один номер; wojak угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Возврат брони и «такая же» квартира с доплатой» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Одна неделя",
+        "Две брони",
+        "Бронь не в ЕГРН"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Возврат брони и «такая же» квартира с доплатой",
+      "visual_type": "comparison_table",
+      "scene_hint": "Три колонки сроков, цифры, без людей.",
+      "alt": "сравнительная таблица с колонками к разделу «Возврат брони и «такая же» квартира с доплатой» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Одну планировку забронировали дважды — в одну неделю",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: две квитанции один лот, эскроу; no people.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Одну планировку забронировали дважды — в одну н…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Лот занят",
+        "180 тысяч бронь",
+        "Цену не вносили"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Первая семья подписала ДДУ на 11 дней раньше",
+      "visual_type": "realistic_photo",
+      "scene_hint": "180 тыс. возврат, план секции, +390 тыс.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Первая семья подписала ДДУ на 11 дней раньше» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Возврат 180 тысяч",
+        "Доплата 390 тысяч",
+        "Претензия семьи"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "За четыре дня до эскроу второй семье сказали: лот занят",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема защиты: бронь→ДДУ→эскроу; this_is_fine_dog угол.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Бронь без ЕГРН, Зарегистрированный ДДУ, Эскроу после регистрации — иллюстрация к…",
+      "labels": [
+        "Бронь без ЕГРН",
+        "Зарегистрированный ДДУ",
+        "Эскроу после регистрации"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что защищает на каждом этапе — таблица",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "4 шага проверки, риск между бронью и регистрацией; наш.дом.рф.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: ДДУ и регистрация, Эскроу и цена, наш.дом.рф — иллюстрация к разбору сделки.",
+      "labels": [
+        "ДДУ и регистрация",
+        "Эскроу и цена",
+        "наш.дом.рф"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Бронь, регистрация ДДУ и эскроу: где рвётся цепочка",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Timeline: сверка→регистрация→замена→пауза; pepe_frog угол.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Сверка брони и ДДУ, Замена письменно, Рычаг до аванса — иллюстрация к разбору сделки.",
+      "labels": [
+        "Сверка брони и ДДУ",
+        "Замена письменно",
+        "Рычаг до аванса"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень — 4 502",
+    "договор долевого участия — 373",
+    "регистрация ДДУ — 65"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "хозяин в полный рост справа у светлой стены с большим планом квартиры, слева свободная чистая зона под заголовок",
+    "location": "яркий холл жилого комплекса у макета этажа, не офис продаж и не банковский стол",
+    "meme": "disappointed_black_guy и long_cat",
+    "prop_set": "два одинаковых талона брони с условным номером квартиры, план этажа, жёлтая липкая заметка",
+    "sticker_set": "маленькие disappointed_black_guy и long_cat в нижних углах, с безопасным отступом от лица, телефона и текста",
+    "joke": "два талона тянутся к одному номеру на плане, а длинный кот визуально соединяет их как нелепую очередь",
+    "outfit": "светло-голубая льняная рубашка с закатанными рукавами, песочные брюки, белые кеды",
+    "emotion": "ошеломлённое недоверие с горькой усмешкой",
+    "pose_framing": "полный рост справа, корпус слегка наклонён к плану, открытая ладонь с двумя талонами",
+    "action": "сравнивает два талона с одним номером квартиры и показывает на совпадение"
+  },
+  "cover_emotion": "ошеломлённое недоверие с горькой усмешкой",
+  "meme_picks": {
+    "cover": [
+      "disappointed_black_guy",
+      "long_cat"
+    ],
+    "inline_1": [
+      "wojak"
+    ],
+    "inline_5": [
+      "this_is_fine_dog"
+    ],
+    "inline_7": [
+      "pepe_frog"
+    ]
+  }
+}

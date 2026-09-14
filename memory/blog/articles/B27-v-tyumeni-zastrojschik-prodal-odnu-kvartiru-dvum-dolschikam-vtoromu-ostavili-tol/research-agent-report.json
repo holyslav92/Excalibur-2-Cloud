@@ -1,0 +1,73 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-14",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://all-sro.ru/news/dom-rf-uvelichil-vvod-zhilya-na-22-v-pervom-polugodii-2026-goda-itogi-zasedaniya-nablyudatelnogo-sov/",
+        "type": "industry_news",
+        "note": "09.09.2026 — заседание Набсовета ДОМ.РФ: эскроу-модель, 80% средств выбрано застройщиками"
+      },
+      {
+        "url": "https://mirdizajna.ru/dengi-pokypatelei-jilia-v-rossii-stali-hyje-pokryvat-dolgi-po-eskroy-schetam/",
+        "type": "market_news",
+        "note": "09.09.2026 — замедление поступлений на эскроу, контекст давления на быстрые брони"
+      },
+      {
+        "url": "https://www.advgazeta.ru/novosti/istrebovanie-kvartiry-nevozmozhno-esli-pravo-sobstvennosti-zaregistrirovano-za-drugim-litsom/",
+        "type": "legal_media",
+        "note": "10.08.2026 — разбор Определения ВС РФ № 67-КГ26-3-К8 (29.06.2026) при двух ДДУ на один объект"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4502,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 909, "region": "55+11176"},
+      {"phrase": "договор долевого участия", "volume": 373, "region": "55+11176"},
+      {"phrase": "регистрация ДДУ", "volume": 65, "region": "55+11176"},
+      {"phrase": "регистрация дду в росреестре", "volume": 18, "region": "55+11176"},
+      {"phrase": "эскроу новостройка", "volume": 1, "region": "55+11176", "note": "totalCount-only weak; WORDSTAT PARTIAL"}
+    ],
+    "rework_from": "Scout P0 «новостройки тюмень» (4502) + legal spine «договор долевого участия» (373) + «регистрация ДДУ» (65)"
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "double_sale_same_unit_newbuild",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B20", "B22", "B19", "assignment_lost_to_faster_buyer", "booking_expired_price_hike"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["legal_norms_214fz", "rosreestr_letter", "vs_plenum_10_22"],
+    "errors": [],
+    "note": "214-ФЗ ст. 4, 9, 15.5 via consultant.ru; п. 61 ПП ВС/ВАС № 10/22; письмо Росреестра 05.03.2026. No bank tariff claims."
+  },
+  "key_facts_count": 38,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 2,
+    "first_attempt": "meta-blocker (model refused synthesis)",
+    "second_attempt": "PASS gpt-5.6-terra",
+    "fallback": null,
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
