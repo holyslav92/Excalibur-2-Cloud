@@ -1,0 +1,32 @@
+{
+  "gate": "writer_ready",
+  "status": "PASS",
+  "draft": "drafts/writer.html",
+  "word_count": 1606,
+  "word_count_target": "1400-1600",
+  "h2_count": 6,
+  "interlink_count": 4,
+  "interlink_urls": [
+    "/blog/ipoteka/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/",
+    "/blog/ipoteka/v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi/",
+    "/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/",
+    "/blog/pokupka-kvartiry/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/"
+  ],
+  "dzen_reading_minutes": 9,
+  "checks": {
+    "html_linter": "pass",
+    "early_cta": true,
+    "mid_cta": true,
+    "end_cta": true,
+    "phone": true,
+    "spine_once": true,
+    "comment_magnet": true,
+    "interlink_2_4": true
+  },
+  "warnings": [
+    "word_count 1606 above target 1600 (within hard max)"
+  ],
+  "errors": [],
+  "reviewed_by": "excalibur-blog-writer",
+  "next": "Sol"
+}
