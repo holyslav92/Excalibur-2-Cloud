@@ -394,7 +394,14 @@ def build_inline_alt(
     else:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
         alt = f"{label_ru} по новостройке{tyumen} — иллюстрация к материалу."
-    return clamp_seo_alt(alt)
+    alt = clamp_seo_alt(alt)
+    scene_hint = normalize_text(slot.get("scene_hint"))
+    if scene_hint and scene_hint_overlap_ratio(alt, scene_hint) >= 0.45:
+        tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
+        alt = clamp_seo_alt(
+            f"Иллюстрация к разбору семейной ипотеки и маткапитала при покупке новостройки{tyumen} — материал для покупателя."
+        )
+    return alt
 
 
 def resolve_slot_alt(
