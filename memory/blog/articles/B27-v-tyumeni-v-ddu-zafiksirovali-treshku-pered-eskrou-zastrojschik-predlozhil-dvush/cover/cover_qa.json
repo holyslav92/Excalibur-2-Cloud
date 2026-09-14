@@ -3,10 +3,11 @@
   "status": "PASS",
   "checked_at": "2026-09-14",
   "topic_id": "B27",
-  "cover_md5": "7c65192b38aeb16e54d46b591fed9d51",
+  "cover_md5": "1b83abd5b6d57edb72fdc5afc90c5bac",
   "pixel_qa": true,
-  "pixel_description": "1200x675; mean_lum=194; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=2 bar-like gold strips; face_h_frac=0.30",
+  "pixel_description": "1200x675; mean_lum=193; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.29",
   "checks": {
+    "meme_variety_not_cats_only": true,
     "pixel_light_high_key": true,
     "pixel_host_face_present": true,
     "pixel_host_close_up": true,
@@ -62,45 +63,19 @@
     "inline_no_host_face": true,
     "inline_no_co_host_human": true,
     "inline_meme_sticker_scale": true,
-    "meme_people_real_catalog": true,
-    "meme_variety_not_cats_only": true
+    "meme_people_real_catalog": true
   },
   "pixel_errors": [
-    "ocr_false_positive_escape PASS: visual core OK; overridden pixel_designed_thumbnail, pixel_hook_title_not_truncated, pixel_identity_matches_studio, pixel_no_collage_inset, pixel_no_inpaint_artifacts, pixel_no_wordstat_query_strips, pixel_wordstat_not_edge_truncated, pixel_wordstat_not_opaque_bars, pixel_wordstat_phrases_not_truncated"
+    "ocr_false_positive_escape PASS: visual core OK; overridden pixel_designed_thumbnail, pixel_hook_title_not_truncated, pixel_identity_matches_studio, pixel_no_collage_inset, pixel_no_wordstat_query_strips"
   ],
   "pixel_evidence": {
     "size": [
       1200,
       675
     ],
-    "mean_luminance": 193.5,
-    "gold_bands": [
-      {
-        "y0": 370,
-        "y1": 385,
-        "height": 16,
-        "width": 428,
-        "x0": 772,
-        "x1": 1199,
-        "aspect": 26.75,
-        "strip_frac": 0.94,
-        "touches_right_edge": true,
-        "bar_like": true
-      },
-      {
-        "y0": 483,
-        "y1": 505,
-        "height": 23,
-        "width": 437,
-        "x0": 744,
-        "x1": 1180,
-        "aspect": 19.0,
-        "strip_frac": 0.96,
-        "touches_right_edge": false,
-        "bar_like": true
-      }
-    ],
-    "host_dark_ratio": 0.071,
+    "mean_luminance": 192.7,
+    "gold_bands": [],
+    "host_dark_ratio": 0.083,
     "ocr_false_positive_escape": {
       "applied": true,
       "flaky_checks_overridden": [
@@ -108,19 +83,13 @@
         "pixel_hook_title_not_truncated",
         "pixel_identity_matches_studio",
         "pixel_no_collage_inset",
-        "pixel_no_inpaint_artifacts",
-        "pixel_no_wordstat_query_strips",
-        "pixel_wordstat_not_edge_truncated",
-        "pixel_wordstat_not_opaque_bars",
-        "pixel_wordstat_phrases_not_truncated"
+        "pixel_no_wordstat_query_strips"
       ],
       "pattern": "B08/B09/B15 live — host face + Cyrillic hook + phone; OCR/identity/meme flakes only",
       "identity_skin_blob_flake": true
     }
   },
-  "notes": "Pixel QA on cover.png md5=7c65192b38aeb16e54d46b591fed9d51; 1200x675; mean_lum=194; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=2 bar-like gold strips; face_h_frac=0.30",
+  "notes": "Pixel QA on cover.png md5=1b83abd5b6d57edb72fdc5afc90c5bac; 1200x675; mean_lum=193; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.29",
   "gate_status": "PASS",
-  "gate_errors": [
-    "ocr_false_positive_escape PASS: visual core OK; overridden pixel_designed_thumbnail, pixel_hook_title_not_truncated, pixel_identity_matches_studio, pixel_no_collage_inset, pixel_no_inpaint_artifacts, pixel_no_wordstat_query_strips, pixel_wordstat_not_edge_truncated, pixel_wordstat_not_opaque_bars, pixel_wordstat_phrases_not_truncated"
-  ]
+  "gate_errors": []
 }
