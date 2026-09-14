@@ -1,0 +1,70 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-14",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/vzyskanie-neustoyki-ddu-s-zastroyshchika/umenshenie-ploshchadi-kvartiry-v-novostroyke-chto-delat-dolshchiku-i-kak-vernut-dengi/",
+        "type": "legal_community",
+        "note": "07.09.2026 — уменьшение площади по ДДУ, порог погрешности, практика ВС, претензия и возврат"
+      },
+      {
+        "url": "https://krasnodar.allestate.pro/news/01.09.2026/priemka-kvartiry-kak-zafiksirovat-nedochety-po-zakonu",
+        "type": "market_news",
+        "note": "01.09.2026 — приёмка 2026, сверка фактической площади с ДДУ"
+      },
+      {
+        "url": "https://dzen.ru/a/apwWMsSWjwEsn4KT",
+        "type": "serp_signal",
+        "note": "SERP snippet: тюменский угол — недостача 2 м² на приёмке, отказ в пересчёте (login wall on fetch)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "приемка квартиры в новостройке тюмень",
+    "p0_volume": 35,
+    "p0_volume_ru225": null,
+    "support_phrases": [
+      {"phrase": "площадь квартиры меньше чем в дду", "volume": 61, "region": "225"},
+      {"phrase": "площадь квартиры меньше дду", "volume": 80, "region": "225", "note": "parent of support phrase"},
+      {"phrase": "недостающие метры по дду", "volume": null, "region": "225", "partial": true}
+    ],
+    "rework_from": "площадь квартиры дду новостройка (empty) → P0 приемка квартиры в новостройке тюмень (35) + площадь квартиры меньше чем в дду (61)",
+    "partial": ["недостающие метры по дду — empty/unexpected MCP response"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_ddu_area_mismatch_acceptance_tyumen",
+    "story_dup_check": "PASS",
+    "nearest_sibling": "B25 (finishing mismatch — different cluster/mechanism)"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["legal_norms_214fz"],
+    "errors": [],
+    "note": "214-ФЗ ст. 5, 7, 8, 9 verified via consultant.ru; no bank tariff claims"
+  },
+  "key_facts_count": 32,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
