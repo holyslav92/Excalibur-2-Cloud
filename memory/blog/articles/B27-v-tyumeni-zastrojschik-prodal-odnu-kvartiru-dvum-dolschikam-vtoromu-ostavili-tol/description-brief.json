@@ -1,0 +1,9 @@
+{
+  "topic_id": "B27",
+  "description": "Две семьи внесли по 180 тысяч за одну квартиру в Тюмени. Первой достались ДДУ и эскроу, второй предложили похожий лот — но уже с доплатой 390 тысяч.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
