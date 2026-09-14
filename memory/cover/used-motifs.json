@@ -3,23 +3,6 @@
   "window_days": 14,
   "entries": [
     {
-      "date": "2026-08-31",
-      "topic_id": "B15",
-      "slug": "",
-      "motifs": {
-        "composition": "waist_center_envelope_consent_hook_right_zone",
-        "location": "bright_sunlit_tyumen_meeting_room_window",
-        "meme": "blinking_white_guy_sticker_plus_polite_cat_cutout",
-        "prop_set": "cream_envelope_notary_consent_gold_magnifier_phone_cta",
-        "sticker_set": "yellow_sticky_konvert_warning_gold_tape_corner_only",
-        "joke": "sticky_konvert_ne_dokazatelstvo_envelope_looks_real",
-        "outfit": "white_shirt_sand_vest_rolled_sleeves_no_blazer",
-        "emotion": "stunned_disbelief_direct_gaze_not_side_eye",
-        "pose_framing": "waist_center_forward_not_left_bust",
-        "action": "lifts_consent_from_envelope_stop_gesture_at_phone"
-      }
-    },
-    {
       "date": "2026-09-01",
       "topic_id": "B19",
       "slug": "",
@@ -118,6 +101,23 @@
         "emotion": "hide-the-pain forced smile tight jaw direct gaze not side-eye",
         "pose_framing": "medium shot three-quarter right slight low angle not left bust",
         "action": "holds denied tranche letter points at tablet showing missing rve"
+      }
+    },
+    {
+      "date": "2026-09-14",
+      "topic_id": "B27",
+      "slug": "",
+      "motifs": {
+        "composition": "асимметричная сцена с героем справа по пояс, крупной сравнительной таблицей площади на переднем плане и свободной светлой зоной слева под заголовок",
+        "location": "светлый офис застройщика для приёмки квартир с панорамными окнами, стендом планировок и столом проверки документов",
+        "meme": "disappointed_black_guy и long_cat как небольшие уместные стикеры реакции на разницу в площади",
+        "prop_set": "распечатка дду, обмерный план бти, рулетка, калькулятор, папка с передаточным актом и две выделенные цифры 54,2 и 52,1",
+        "sticker_set": "disappointed_black_guy в верхнем углу сравнительной зоны и long_cat у нижнего края",
+        "joke": "герой сверяет обещанную площадь с фактической, а длинный кот визуально подчёркивает исчезнувшие метры",
+        "outfit": "светлая горчично-синяя рубашка с закатанными рукавами и тонкий серо-бежевый жилет, без чёрного пиджака",
+        "emotion": "изумление, переходящее в скептическое раздражение из-за неожиданно меньшей площади",
+        "pose_framing": "три четверти, средний план справа, корпус развёрнут к таблице, взгляд на документ, не боковой портрет",
+        "action": "герой резко сопоставляет две площади на прозрачной планшетной доске, удерживая рулетку и лист обмера"
       }
     }
   ]
