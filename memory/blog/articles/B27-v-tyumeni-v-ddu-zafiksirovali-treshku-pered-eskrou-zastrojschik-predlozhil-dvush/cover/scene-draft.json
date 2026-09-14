@@ -1,0 +1,83 @@
+{
+  "cover_emotion": "недоверие и ошеломление, приподнятые брови",
+  "cover_motifs": {
+    "composition": "host standing left three-quarter, two floor plans center, hook zone upper right, phone bottom-right",
+    "location": "bright sunlit developer sales office Tyumen with glass wall and newbuild model",
+    "meme": "disappointed_black_guy + crying_cat corner stickers reacting to layout swap",
+    "prop_set": "registered DDU with 3-room plan, bank escrow pack with 2-room plan, yellow sticky same price",
+    "sticker_set": "disappointed_black_guy top-left, crying_cat bottom-right, ≤15%, clear of hook/face/phone",
+    "joke": "cat cries while black guy points at two different floor plans same price tag",
+    "outfit": "coral linen shirt open over white tee, slate chinos, brown loafers, no blazer",
+    "emotion": "disbelief wide eyes tense jaw direct gaze not side-eye bust",
+    "pose_framing": "full-body three-quarter left leaning on desk both hands on plans not talking-head",
+    "action": "spreads two floor plans 3-room vs 2-room points at escrow folder not signed"
+  },
+  "wordstat_stickers": [
+    "планировки квартир новостройка",
+    "новостройки тюмень купить",
+    "эскроу новостройка"
+  ],
+  "meme_picks": {
+    "cover": [
+      "disappointed_black_guy",
+      "crying_cat"
+    ],
+    "inline_1": [
+      "wojak"
+    ],
+    "inline_5": [
+      "blinking_white_guy"
+    ],
+    "inline_7": [
+      "james_doakes"
+    ]
+  },
+  "slots": {
+    "cover": {
+      "scene_hint": "Светлый офис продаж застройщика в Тюмени: ведущий в коралловой рубашке стоит слева, ошеломлённо сравнивает два плана — трёшка в ДДУ и двушка в банковском комплекте; high-key белый фон, солнечный блик, жёлтый стикер «та же цена», телефон +7 922 001 65 05, без поисковых строк.",
+      "alt": "В офисе продаж сравнивают план трёхкомнатной квартиры из ДДУ и двухкомнатной из банковского комплекта перед эскроу.",
+      "cover_emotion": "недоверие и ошеломление, приподнятые брови",
+      "meme_picks": [
+        "disappointed_black_guy",
+        "crying_cat"
+      ]
+    },
+    "inline_1": {
+      "scene_hint": "Реалистичное фото без лица хоста: зарегистрированный ДДУ с приложением-планом трёшки на светлом столе, видны три комнаты и условный номер; high-key, маленький wojak в углу.",
+      "alt": "Приложение к зарегистрированному ДДУ с планом трёхкомнатной квартиры и условным номером объекта.",
+      "meme_picks": [
+        "wojak"
+      ]
+    },
+    "inline_2": {
+      "scene_hint": "Сравнительная таблица на белом фоне: колонки «Трёшка в ДДУ» vs «Двушка в банке», строки комнаты/цена/предмет; золотые акценты, torn paper, без мемов.",
+      "alt": "Таблица сравнения трёхкомнатной квартиры в ДДУ и двухкомнатной в банковском комплекте по той же цене."
+    },
+    "inline_3": {
+      "scene_hint": "Реалистичное фото: два комплекта документов на столе — ДДУ с трёшкой и банковский пакет с двушкой, папка эскроу не подписана; bright office, no people, no memes.",
+      "alt": "На столе два комплекта документов на разные квартиры перед открытием эскроу."
+    },
+    "inline_4": {
+      "scene_hint": "Реалистичное фото: календарь с отметкой 19 дней, штамп «бронь снята», пустой лот на плане этажа; bright desk, no host face, no memes.",
+      "alt": "Календарь показывает 19 дней до истечения ипотечного одобрения после снятия брони."
+    },
+    "inline_5": {
+      "scene_hint": "Bar timeline chart: этапы бронь → ДДУ → эскроу как разные блоки, красная зона «эскроу не предмет»; blinking_white_guy tiny corner, gold accents.",
+      "alt": "Шкала этапов сделки: бронь, ДДУ и эскроу — разные документы, эскроу не меняет предмет договора.",
+      "meme_picks": [
+        "blinking_white_guy"
+      ]
+    },
+    "inline_6": {
+      "scene_hint": "Process flow: три комнаты → две комнаты, площадь меньше, цена та же — стрелки и красный флаг; white gold collage, no memes.",
+      "alt": "Схема замены трёхкомнатной квартиры на двухкомнатную при той же цене."
+    },
+    "inline_7": {
+      "scene_hint": "Structure diagram: план из ДДУ vs объект в банке, чеклист «не подписывать вслепую»; james_doakes tiny corner, bright infographic.",
+      "alt": "Схема сверки плана из ДДУ и объекта в банковском комплекте перед подписью.",
+      "meme_picks": [
+        "james_doakes"
+      ]
+    }
+  }
+}

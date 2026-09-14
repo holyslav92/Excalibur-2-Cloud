@@ -1,0 +1,246 @@
+{
+  "topic_id": "B27",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Перед эскроу трёшку заменили на двушку",
+  "cover_hook_highlight": "трёшку",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени в ДДУ зафиксировали трёшку — за 19 дней до эскроу предложили двушку, сделку остановили.",
+      "scene_hint": "Офис продаж: герой слева, два плана трёшка/двушка; high-key, sticky, телефон.",
+      "meme_caption_ru": "",
+      "sticky": "та же цена",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "недоверие и ошеломление, приподнятые брови",
+      "meme_picks": [
+        "disappointed_black_guy",
+        "crying_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "В зарегистрированном ДДУ — трёшка с планом и условным номером",
+      "visual_type": "realistic_photo",
+      "scene_hint": "ДДУ план трёшки, 3 комнаты, номер; wojak угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «В зарегистрированном ДДУ — трёшка с планом и ус…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Три комнаты",
+        "План в приложении",
+        "Условный номер",
+        "Регистрация"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "wojak"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "В зарегистрированном ДДУ — трёшка с планом и условным номером",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица трёшка ДДУ vs двушка банк; gold paper, no meme.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Двушка, Та же цена, Банк комплект — иллюстрация к разбору сделки.",
+      "labels": [
+        "Двушка",
+        "Та же цена",
+        "Банк комплект",
+        "Меняется предмет"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Накануне эскроу менеджер предлагает двушку по той же цене",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Два комплекта ДДУ/банк на столе, эскроу не подписан; no meme.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Накануне эскроу менеджер предлагает двушку по т…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Два комплекта",
+        "Эскроу не открыли",
+        "Банк не подписали",
+        "Деньги не ушли"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Семья не открывает эскроу и не подписывает банковский комплект",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Календарь 19 дней, штамп бронь снята, пустой лот на плане; bright, no meme.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Семья не открывает эскроу и не подписывает банк…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Бронь сняли",
+        "Лот ушёл",
+        "19 дней",
+        "Ипотека истекла"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Бронь сняли, лот ушёл, ипотечное одобрение истекло через 19 дней",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bar chart: бронь→ДДУ→эскроу, красная зона «не предмет»; blinking_white_guy угол.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Эскроу не предмет, ДДУ не исправит, Бронь не заменит — иллюстрация к разбору сделки.",
+      "labels": [
+        "Эскроу не предмет",
+        "ДДУ не исправит",
+        "Бронь не заменит",
+        "Разные этапы"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "blinking_white_guy"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Эскроу защищает деньги, но не подменяет предмет в ДДУ",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow: 3 комнаты→2 комнаты, площадь↓, цена=; стрелки, red flag, no meme.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Три комнаты, Две комнаты, Площадь меньше — иллюстрация к разбору сделки.",
+      "labels": [
+        "Три комнаты",
+        "Две комнаты",
+        "Площадь меньше",
+        "Цена та же"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что сверять перед эскроу — таблица трёшки в договоре и двушки в банке",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Diagram: план ДДУ vs объект банка, чеклист; james_doakes угол, bright.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: План из ДДУ, Объект в банке, Не подписывать — иллюстрация к разбору сделки.",
+      "labels": [
+        "План из ДДУ",
+        "Объект в банке",
+        "Не подписывать",
+        "Сроки договора"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "james_doakes"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "планировки квартир новостройка",
+    "новостройки тюмень купить",
+    "эскроу новостройка"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "host standing left three-quarter, two floor plans center, hook zone upper right, phone bottom-right",
+    "location": "bright sunlit developer sales office Tyumen with glass wall and newbuild model",
+    "meme": "disappointed_black_guy + crying_cat corner stickers reacting to layout swap",
+    "prop_set": "registered DDU with 3-room plan, bank escrow pack with 2-room plan, yellow sticky same price",
+    "sticker_set": "disappointed_black_guy top-left, crying_cat bottom-right, ≤15%, clear of hook/face/phone",
+    "joke": "cat cries while black guy points at two different floor plans same price tag",
+    "outfit": "coral linen shirt open over white tee, slate chinos, brown loafers, no blazer",
+    "emotion": "disbelief wide eyes tense jaw direct gaze not side-eye bust",
+    "pose_framing": "full-body three-quarter left leaning on desk both hands on plans not talking-head",
+    "action": "spreads two floor plans 3-room vs 2-room points at escrow folder not signed"
+  },
+  "cover_emotion": "недоверие и ошеломление, приподнятые брови"
+}

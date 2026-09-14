@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush",
+  "topic_id": "B27",
+  "post_id": 10294,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1106327,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10294 slug=v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush\nOK categories=36,54,34\nOK yoast_social_image=1\nOK featured_image=10295\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10296 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush-inline-01.png\nOK inline_alt=10296\nOK inline_description=10296\nOK inline_image_upload=10297 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush-inline-02.png\nOK inline_alt=10297\nOK inline_description=10297\nOK inline_image_upload=10298 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush-inline-03.png\nOK inline_alt=10298\nOK inline_description=10298\nOK inline_image_upload=10299 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush-inline-04.png\nOK inline_alt=10299\nOK inline_description=10299\nOK inline_image_upload=10300 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush-inline-05.png\nOK inline_alt=10300\nOK inline_description=10300\nOK inline_image_upload=10301 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush-inline-06.png\nOK inline_alt=10301\nOK inline_description=10301\nOK inline_image_upload=10302 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush-inline-07.png\nOK inline_alt=10302\nOK inline_description=10302\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush/",
+    "errors": []
+  }
+}

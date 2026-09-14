@@ -1,0 +1,64 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-14",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://tyumen-info.ru/society/2026/09/07/39768.html",
+        "type": "local_news",
+        "note": "07.09.2026 — опрос ГУС Тюменской области о знании механизма эскроу; локальный fresh signal недели"
+      },
+      {
+        "url": "https://www.cbr.ru/banking_sector/equity_const_financing/",
+        "type": "official",
+        "note": "ЦБ РФ — модель эскроу, ЕИСЖС/ДОМ.РФ, данные на 01.07.2026"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel signal URL"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "планировки квартир новостройка",
+    "p0_volume": 1825,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 1918},
+      {"phrase": "новостройки тюмень купить", "volume": 2410},
+      {"phrase": "эскроу новостройка", "volume": 468},
+      {"phrase": "эскроу счет новостройка", "volume": 370}
+    ],
+    "rework_from": "дду новостройка тюмень weak → планировка+новостройка → final P0 «планировки квартир новостройка» 1825",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_layout_changed_before_escrow_tyumen",
+    "story_dup_check": "PASS",
+    "h1_fingerprint": "DDU_LAYOUT_LOCKED_BEFORE_ESCROW_DEVELOPER_OFFERS_SMALLER_UNIT_SAME_PRICE"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["214_fz_consultant", "cbr", "dom_rf"],
+    "errors": [],
+    "note": "214-ФЗ ст. 4/9/15.4/15.5 via consultant.ru; escrow model via cbr.ru; EISZH/DOM.RF context via domrf.ru/about. No bank tariff claims."
+  },
+  "key_facts_count": 24,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}

@@ -3,6 +3,7 @@
 
 ## Blog Articles
 
+- [В Тюмени в ДДУ зафиксировали трёшку — за 19 дней до эскроу предложили двушку, сделку остановили]({{SITE_BASE}}/v-tyumeni-v-ddu-zafiksirovali-treshku-pered-eskrou-zastrojschik-predlozhil-dvush/): В Тюмени в ДДУ зафиксировали трёшку — за 19 дней до эскроу предложили двушку, сделку остановили
 - [Пожилого продавца вели по телефону — родственники сорвали сделку]({{SITE_BASE}}/v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/): Пожилого продавца вели по телефону — родственники сорвали сделку
 - [Квартиру продавали по доверенности. Хозяин был на СВО]({{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/): Доверенность на продажу квартиры: как проверить волю собственника на СВО до аванса
 - [В Тюмени расписку за квартиру написали — денег на счёте нет]({{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/): В Тюмени расписку за квартиру написали — денег на счёте нет
