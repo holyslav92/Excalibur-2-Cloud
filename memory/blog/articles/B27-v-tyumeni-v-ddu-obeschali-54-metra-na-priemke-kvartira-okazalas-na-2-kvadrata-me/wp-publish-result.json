@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me",
+  "topic_id": "B27",
+  "post_id": 10268,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1158523,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10268 slug=v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=10269\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10270 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me-inline-01.png\nOK inline_alt=10270\nOK inline_description=10270\nOK inline_image_upload=10271 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me-inline-02.png\nOK inline_alt=10271\nOK inline_description=10271\nOK inline_image_upload=10272 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me-inline-03.png\nOK inline_alt=10272\nOK inline_description=10272\nOK inline_image_upload=10273 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me-inline-04.png\nOK inline_alt=10273\nOK inline_description=10273\nOK inline_image_upload=10274 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me-inline-05.png\nOK inline_alt=10274\nOK inline_description=10274\nOK inline_image_upload=10275 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me-inline-06.png\nOK inline_alt=10275\nOK inline_description=10275\nOK inline_image_upload=10276 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me-inline-07.png\nOK inline_alt=10276\nOK inline_description=10276\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-v-ddu-obeschali-54-metra-na-priemke-kvartira-okazalas-na-2-kvadrata-me/",
+    "errors": []
+  }
+}
