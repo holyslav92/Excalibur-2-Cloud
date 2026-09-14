@@ -1,0 +1,74 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-14",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/news/semeynaya-ipoteka-aktualnye-usloviya-na-sentyabr-2026/",
+        "type": "official news",
+        "note": "сентябрь 2026 — ДОМ.РФ: условия семейной ипотеки без изменений"
+      },
+      {
+        "url": "https://dzen.ru/a/alHtbNVlSA96y_rH",
+        "type": "community/channel",
+        "note": "Шакин: одобрение ≠ готовая сделка, эскроу на первичке в Тюмени"
+      },
+      {
+        "url": "https://navigator-tmn.ru/blog/semejnaya-ipoteka-2026/",
+        "type": "local market",
+        "note": "тюменский контекст новостроек и семейной ипотеки 2026"
+      },
+      {
+        "url": "https://kvarnado.ru/semejnaya-ipoteka/guide-do-skolki-let-dejstvuet-semejnaya-ipoteka",
+        "type": "editorial",
+        "note": "риск срыва при исполнении 7 лет до кредитного договора"
+      },
+      {
+        "url": "https://harant.ru/questions/q-146376/",
+        "type": "community Q&A",
+        "note": "предварительное одобрение ≠ финальное соответствие условиям"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "семейная ипотека тюмень",
+    "p0_volume": 1227,
+    "p0_volume_ru225": 1740,
+    "support_phrases": [
+      {"phrase": "семейная ипотека", "volume": 9962},
+      {"phrase": "новостройки тюмень", "volume": 8390},
+      {"phrase": "материнский капитал на покупку жилья", "volume": 72},
+      {"phrase": "материнский капитал новостройка", "volume": 11}
+    ],
+    "rework_from": "маткапитал новостройка (11) → семейная ипотека тюмень (1227) P0",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_matkapital_child_age_limit_before_escrow_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["minfin", "dom_rf", "sfr"],
+    "errors": [],
+    "note": "Family mortgage age/rate/limit and matkapital timing verified via Minfin + DOM.RF + SFR person pages"
+  },
+  "key_facts_count": 24,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}
