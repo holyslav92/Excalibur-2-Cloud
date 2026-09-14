@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-14
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l
+- **post_id:** 10307
+- **permalink:** /blog/ipoteka/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l/
+- **featured_image:** 10308
+- **inline_images:** 10309–10315 (7)
+- **wp_category_slugs:** ipoteka, matkapital-i-sdelki (category_ids=32,48)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26

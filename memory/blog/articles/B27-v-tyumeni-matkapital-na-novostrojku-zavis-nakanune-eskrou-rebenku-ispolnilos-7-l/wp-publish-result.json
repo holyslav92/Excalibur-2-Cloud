@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l",
+  "topic_id": "B27",
+  "post_id": 10307,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1078039,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10307 slug=v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l\nOK categories=32,48\nOK yoast_social_image=1\nOK featured_image=10308\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10309 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l-inline-01.png\nOK inline_alt=10309\nOK inline_description=10309\nOK inline_image_upload=10310 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l-inline-02.png\nOK inline_alt=10310\nOK inline_description=10310\nOK inline_image_upload=10311 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l-inline-03.png\nOK inline_alt=10311\nOK inline_description=10311\nOK inline_image_upload=10312 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l-inline-04.png\nOK inline_alt=10312\nOK inline_description=10312\nOK inline_image_upload=10313 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l-inline-05.png\nOK inline_alt=10313\nOK inline_description=10313\nOK inline_image_upload=10314 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l-inline-06.png\nOK inline_alt=10314\nOK inline_description=10314\nOK inline_image_upload=10315 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l-inline-07.png\nOK inline_alt=10315\nOK inline_description=10315\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l/",
+    "errors": []
+  }
+}
