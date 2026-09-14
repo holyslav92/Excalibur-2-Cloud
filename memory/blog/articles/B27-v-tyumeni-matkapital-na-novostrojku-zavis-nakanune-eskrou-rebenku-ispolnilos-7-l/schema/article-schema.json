@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l/#blogposting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l/"
+      },
+      "url": "{{SITE_BASE}}/v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l/",
+      "headline": "Ребёнку исполнилось 7 лет накануне эскроу — семейная ипотека сорвалась",
+      "description": "Ребёнку исполнилось 7 лет между одобрением и кредитным договором — семейная ипотека под 6% сорвалась, бронь сняли",
+      "datePublished": "2026-09-14",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}

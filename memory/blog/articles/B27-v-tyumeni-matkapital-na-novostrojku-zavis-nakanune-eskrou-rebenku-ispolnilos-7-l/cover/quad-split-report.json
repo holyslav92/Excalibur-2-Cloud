@@ -1,0 +1,298 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "BLOCK",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          567
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 567,
+            "end": 586
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0089,
+            "per_panel_crop_loss": {
+              "top_left": 0.0069,
+              "top_right": 0.0069,
+              "bottom_left": 0.0089,
+              "bottom_right": 0.0089
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 3,
+              "top": 0,
+              "right": 1011,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Ребёнку исполнилось 7 лет накануне эскроу — семейная ипотека сорвалась в Тюмени: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1036,
+              "top": 0,
+              "right": 2044,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Ипотеку одобрили» — и семья забронировала двуш…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Ипотеку одобрили» — и семья забронировала двушку в новостройке"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 586,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 586,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Семь лет через неделю, Возраст на дату кредита, До шести лет — иллюстрация к…",
+            "h2_anchor": "«Ипотеку одобрили» — и семья забронировала двушку в новостройке"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1037,
+              "top": 586,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 586,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «День рождения ребёнка попал между одобрением и…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "День рождения ребёнка попал между одобрением и кредитным договором"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-matkapital-na-novostrojku-zavis-nakanune-eskrou-rebenku-ispolnilos-7-l/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          566
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 566,
+            "end": 585
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0089,
+            "per_panel_crop_loss": {
+              "top_left": 0.0089,
+              "top_right": 0.0089,
+              "bottom_left": 0.0069,
+              "bottom_right": 0.0069
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 4,
+              "top": 0,
+              "right": 1010,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Банк на финальной сверке: ребёнку уже 7 — семей…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Банк на финальной сверке: ребёнку уже 7 — семейная ипотека срывается"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1037,
+              "top": 0,
+              "right": 2043,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Платёж плюс 18 тысяч, Бронь сняли на третий, Деньги не ушли — иллюстрация к…",
+            "h2_anchor": "Маткапитал в первоначальном взносе — почему это не «зависший сертификат»"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 3,
+              "top": 585,
+              "right": 1011,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 585,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: День рождения ребёнка, Дата кредитного договора, Сверить до брони — иллюстрация к разбору…",
+            "h2_anchor": "Финал: застройщик снял бронь, на эскроу деньги не ушли"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1036,
+              "top": 585,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 585,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Платёж без льготки, Статус заявления СФР, Сначала календарь — иллюстрация к разбору…",
+            "h2_anchor": "Какие даты сверить до брони — таблица"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — «Ипотеку одобрили» — и семья забронировала двушку в новостройке",
+    "skip inline_2: already correct under H2 — «Ипотеку одобрили» — и семья забронировала двушку в новостройке",
+    "skip inline_3: already correct under H2 — День рождения ребёнка попал между одобрением и кредитным договором",
+    "injected inline_4 after H2 — Банк на финальной сверке: ребёнку уже 7 — семейная ипотека срывается",
+    "injected inline_5 after H2 — Маткапитал в первоначальном взносе — почему это не «зависший сертификат»",
+    "injected inline_6 after H2 — Финал: застройщик снял бронь, на эскроу деньги не ушли",
+    "injected inline_7 after H2 — Какие даты сверить до брони — таблица"
+  ],
+  "errors": [
+    "skip inline_1: H2 not found — Ипотеку одобрили — бронь двушки",
+    "skip inline_2: H2 not found — Ипотеку одобрили — бронь двушки",
+    "skip inline_3: H2 not found — ДР ребёнка между одобрением и кредитом",
+    "inline_1 figure count after inject=0 (need exactly 1)",
+    "inline_2 figure count after inject=0 (need exactly 1)",
+    "inline_3 figure count after inject=0 (need exactly 1)"
+  ]
+}

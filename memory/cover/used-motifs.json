@@ -3,23 +3,6 @@
   "window_days": 14,
   "entries": [
     {
-      "date": "2026-08-31",
-      "topic_id": "B15",
-      "slug": "",
-      "motifs": {
-        "composition": "waist_center_envelope_consent_hook_right_zone",
-        "location": "bright_sunlit_tyumen_meeting_room_window",
-        "meme": "blinking_white_guy_sticker_plus_polite_cat_cutout",
-        "prop_set": "cream_envelope_notary_consent_gold_magnifier_phone_cta",
-        "sticker_set": "yellow_sticky_konvert_warning_gold_tape_corner_only",
-        "joke": "sticky_konvert_ne_dokazatelstvo_envelope_looks_real",
-        "outfit": "white_shirt_sand_vest_rolled_sleeves_no_blazer",
-        "emotion": "stunned_disbelief_direct_gaze_not_side_eye",
-        "pose_framing": "waist_center_forward_not_left_bust",
-        "action": "lifts_consent_from_envelope_stop_gesture_at_phone"
-      }
-    },
-    {
       "date": "2026-09-01",
       "topic_id": "B19",
       "slug": "",
@@ -118,6 +101,23 @@
         "emotion": "hide-the-pain forced smile tight jaw direct gaze not side-eye",
         "pose_framing": "medium shot three-quarter right slight low angle not left bust",
         "action": "holds denied tranche letter points at tablet showing missing rve"
+      }
+    },
+    {
+      "date": "2026-09-14",
+      "topic_id": "B27",
+      "slug": "",
+      "motifs": {
+        "composition": "хозяин у круглого стола шоу-рум новостройки календарь 7 лет",
+        "location": "зал продаж новостройки тюмень панорамное окно макет квартала",
+        "meme": "pepe_frog и doge corner stickers",
+        "prop_set": "календарь 7 лет маткапитал бронь снята макет двушки",
+        "sticker_set": "pepe_frog bottom-left doge bottom-right",
+        "joke": "календарь 7 лет перечёркивает лист брони",
+        "outfit": "молочно-голубая рубашка песочные брюки no blazer",
+        "emotion": "ошеломлённая растерянность сжатые губы",
+        "pose_framing": "поясной центр наклон вперёд не left bust",
+        "action": "сверяет календарь 7 лет с датой кредита и бронью"
       }
     }
   ]
