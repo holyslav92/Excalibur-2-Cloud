@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-15
+
+- **topic_id:** B27
+- **slug:** v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis
+- **post_id:** 10394
+- **permalink:** /blog/proverka-pered-pokupkoj/v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis/
+- **featured_image:** 10395
+- **inline_images:** 10396–10402 (7)
+- **wp_category_slugs:** pokupka-kvartiry, proverka-pered-pokupkoj, dokumenty-i-oformlenie (category_ids=36,34,54)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26

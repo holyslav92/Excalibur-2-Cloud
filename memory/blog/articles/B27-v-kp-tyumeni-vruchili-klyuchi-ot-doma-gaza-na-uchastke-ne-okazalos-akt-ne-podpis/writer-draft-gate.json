@@ -1,0 +1,32 @@
+{
+  "gate": "writer-draft",
+  "status": "BLOCK",
+  "checks": {
+    "word_count_1400_1600": false,
+    "word_count_hard_max_1750": false,
+    "h2_count_5_8": true,
+    "interlink_2_4": true,
+    "html_linter": true,
+    "no_composite_disclaimer": true,
+    "early_cta": true,
+    "mid_cta": true,
+    "end_cta": true,
+    "comment_magnet": true,
+    "tg_max_early": true,
+    "phone_once": true,
+    "no_h1": true,
+    "no_tldr_lead": true
+  },
+  "errors": [
+    "word_count_1400_1600",
+    "word_count_hard_max_1750"
+  ],
+  "metrics": {
+    "word_count": 1791,
+    "word_count_target": "1400-1600",
+    "word_count_hard_max": 1750,
+    "dzen_minutes_est": 9,
+    "h2_count": 6,
+    "interlink_count": 4
+  }
+}

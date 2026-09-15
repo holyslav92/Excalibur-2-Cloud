@@ -1,0 +1,28 @@
+{
+  "slug": "v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis",
+  "topic_id": "B27",
+  "post_id": 10394,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1065461,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10394 slug=v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis\nOK categories=36,34,54\nOK yoast_social_image=1\nOK featured_image=10395\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10396 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis-inline-01.png\nOK inline_alt=10396\nOK inline_description=10396\nOK inline_image_upload=10397 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis-inline-02.png\nOK inline_alt=10397\nOK inline_description=10397\nOK inline_image_upload=10398 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis-inline-03.png\nOK inline_alt=10398\nOK inline_description=10398\nOK inline_image_upload=10399 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis-inline-05.png\nOK inline_alt=10399\nOK inline_description=10399\nOK inline_image_upload=10400 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis-inline-04.png\nOK inline_alt=10400\nOK inline_description=10400\nOK inline_image_upload=10401 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis-inline-06.png\nOK inline_alt=10401\nOK inline_description=10401\nOK inline_image_upload=10402 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis-inline-07.png\nOK inline_alt=10402\nOK inline_description=10402\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis/",
+    "errors": []
+  }
+}
