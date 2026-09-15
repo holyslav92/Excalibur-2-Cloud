@@ -1,23 +1,19 @@
 {
-  "status": "FAIL",
-  "all_pass": false,
+  "status": "PASS",
+  "all_pass": true,
   "gate": "article-quality-score",
   "contract": "shared/article-quality-score-lock.md",
   "article_dir": "memory/blog/articles/B27-v-kp-tyumeni-vruchili-klyuchi-ot-doma-gaza-na-uchastke-ne-okazalos-akt-ne-podpis",
-  "sol_rewrite_applied": false,
-  "h1": "В КП Тюмени вручили ключи от дома без газа — семья не подписала акт",
+  "sol_rewrite_applied": true,
+  "h1": "За 3 дня до ключей в КП Тюмени вручили дом без газа — семья не подписала акт",
   "sections": {
     "h1": {
-      "pass": false,
-      "reasons": [
-        "h1: no number or deadline in H1"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "lead": {
-      "pass": false,
-      "reasons": [
-        "lead-hit: first 1-2 sentences missing number/deadline"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "middle": {
       "pass": true,
@@ -28,26 +24,20 @@
       "reasons": []
     },
     "length": {
-      "pass": false,
-      "reasons": [
-        "length-over: 1726 words above target 1400-1600"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "tone": {
       "pass": true,
       "reasons": []
     }
   },
-  "errors": [
-    "h1: no number or deadline in H1",
-    "lead-hit: first 1-2 sentences missing number/deadline",
-    "length-over: 1726 words above target 1400-1600"
-  ],
+  "errors": [],
   "metrics": {
-    "word_count": 1726,
+    "word_count": 1403,
     "word_target": "1400-1600",
     "word_hard_max": 1750,
-    "dzen_reading_minutes_est": 9,
-    "spine_overlap": 0.051
+    "dzen_reading_minutes_est": 8,
+    "spine_overlap": 0.0644
   }
 }

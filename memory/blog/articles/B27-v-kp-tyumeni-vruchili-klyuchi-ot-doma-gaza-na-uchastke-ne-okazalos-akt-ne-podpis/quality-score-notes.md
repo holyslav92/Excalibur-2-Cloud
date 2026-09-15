@@ -1,15 +1,13 @@
 # Quality score notes (для Sol, один проход)
 
-H1: В КП Тюмени вручили ключи от дома без газа — семья не подписала акт
+H1: За 3 дня до ключей в КП Тюмени вручили дом без газа — семья не подписала акт
 
 Исправь **только** структуру/тон по FAIL ниже. Факты из drafts/writer.html не менять.
 Без self-score loop. Без padding до 1800+. Target 1400–1600 слов.
 
-## H1 FAIL
-- h1: no number or deadline in H1
-
 ## LEAD FAIL
-- lead-hit: first 1-2 sentences missing number/deadline
+- prose-lead-too-short:3-sentences
+- lead: prose too short (3 sentences, need 4-6)
 
-## LENGTH FAIL
-- length-over: 1726 words above target 1400-1600
+## FINALE FAIL
+- lecture-tail:\d{1,3}[-‑]ФЗ
