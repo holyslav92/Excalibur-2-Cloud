@@ -1063,3 +1063,35 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260915-0422-schema-derouter-b27-wrong-slug
+status: open
+run_date: 2026-09-15
+role: excalibur-blog-schema
+topic_id: B27
+article_dir: memory/blog/articles/B27-v-tyumeni-prajs-zhk-vyros-pered-ddu
+severity: medium
+category: api
+
+### What went wrong
+- Derouter schema (utility tier) first run with bare `--output schema.jsonld` wrote JSON to repo root, not `--article-dir`; content matched B28 slug/headline instead of B27 inputs.
+- Retry with full `--output memory/blog/articles/B27-.../schema.jsonld` returned HTTP 529 (service overloaded).
+
+### How the agent recovered this run
+- Wrote `schema.jsonld` manually from `assembled-schema-inputs.md` + B22 template (Organization, Person, BlogPosting only; no FAQ — article has no «Частые вопросы» section).
+- `excalibur_blog_schema_gate.py` → PASS.
+
+### Durable fix needed before next run
+- Derouter schema skill: default `--output` to `<article-dir>/schema.jsonld` when `--article-dir` is set.
+- Investigate Terra schema cross-topic bleed (B28 headline on B27 prompt).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+- `skills/schema-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+- pending
+
