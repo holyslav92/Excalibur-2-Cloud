@@ -1,0 +1,72 @@
+{
+  "cover_emotion": "недоверчивое изумление: герой понял, почему родители не хотят забирать ключи",
+  "cover_motifs": {
+    "composition": "host full-body left stepping back from handover table, hook zone upper right, phone bottom-right",
+    "location": "bright sunlit tyumen newbuild courtyard entrance with crosswalk to distant parking lot visible",
+    "meme": "disappointed_black_guy + crying_cat corner stickers ≤15%",
+    "prop_set": "unsigned inspection act, key tray pushed aside, photo of parking route on tablet, yellow sticky",
+    "sticker_set": "disappointed_black_guy top-left, crying_cat bottom-right, yellow sticky hook only",
+    "joke": "keys stay on tray while host points at parking across road — parents would refuse",
+    "outfit": "sage green linen shirt over white tee, khaki chinos, no blazer",
+    "emotion": "baffled disbelief tense half-smile direct gaze not side-eye",
+    "pose_framing": "full-body three-quarter left dynamic stepping back not left bust talking-head",
+    "action": "pushes key tray away, points at distant parking across crosswalk, holds unsigned inspection act"
+  },
+  "wordstat_stickers": [
+    "новостройки тюмень от застройщика",
+    "приемка квартиры в новостройке",
+    "квартира для пожилых родителей"
+  ],
+  "slots": {
+    "cover": {
+      "scene_hint": "High-key двор новостройки Тюмени, солнечный блик. Герой слева в полный рост в зелёной рубашке отступает от стола приёмки, отодвигает лоток с ключами, показывает на парковку через проезжую часть, в руке неподписанный акт осмотра. Справа зона заголовка; маленькие disappointed_black_guy и crying_cat по углам.",
+      "alt": "Риэлтор на приёмке новостройки отодвигает ключи и показывает на дальнюю парковку через дорогу.",
+      "cover_emotion": "недоверчивое изумление: герой понял, почему родители не хотят забирать ключи",
+      "meme_picks": [
+        "disappointed_black_guy",
+        "crying_cat"
+      ]
+    },
+    "inline_1": {
+      "scene_hint": "Реалистичное светлое фото без хоста: тихий двор с лавочкой и клумбами слева, справа видна парковка через проезжую часть. Маленький james_doakes в углу.",
+      "alt": "Сравнение тихого двора с лавочкой и дальней парковки через дорогу у новостройки.",
+      "meme_picks": [
+        "james_doakes"
+      ]
+    },
+    "inline_2": {
+      "scene_hint": "Сравнительная таблица на белом фоне: колонки «На экскурсии» и «На приёмке». Строки: двор без машин, парковка через дорогу, путь с пакетами, фото маршрута, акт осмотра. Без персонажей.",
+      "alt": "Таблица сравнивает обещания на экскурсии и реальность на приёмке квартиры.",
+      "meme_picks": []
+    },
+    "inline_3": {
+      "scene_hint": "Реалистичное фото без хоста: маленький лифт в подъезде, очередь пожилых с сумками, табличка «до 10 минут ожидания». High-key, без лиц крупно.",
+      "alt": "Очередь у малого лифта в подъезде новостройки в часы пик.",
+      "meme_picks": []
+    },
+    "inline_4": {
+      "scene_hint": "Реалистичное фото из квартиры: окно на шумную магистраль, внизу виден тихий двор. На подоконнике телефон с записью шума. Без людей.",
+      "alt": "Вид из окна квартиры на магистраль при тихом дворе снизу.",
+      "meme_picks": []
+    },
+    "inline_5": {
+      "scene_hint": "Схема процесса: отделка сходится → акт не подписан → ключи не выдали → замечания в акте → письменный запрос. Маленький wojak в углу.",
+      "alt": "Схема шагов семьи после отказа подписать акт приёмки и не забрать ключи.",
+      "meme_picks": [
+        "wojak"
+      ]
+    },
+    "inline_6": {
+      "scene_hint": "Столбчатая шкала на светлом фоне: 214-ФЗ, проектная декларация, статьи 7 и 19, ПП № 2226, наш.дом.рф, фото и видео как доказательства. Без мемов.",
+      "alt": "Временная шкала правовых оснований и документов для проверки перед подписью.",
+      "meme_picks": []
+    },
+    "inline_7": {
+      "scene_hint": "Структурная диаграмма: центр «Проверить до подписи», вокруг пять узлов — маршрут от парковки, окна в квартире, лифт в пик, сверка с договором, не подписывать вслепую. Маленький roll_safe в углу.",
+      "alt": "Диаграмма пяти проверок перед подписанием акта приёмки квартиры.",
+      "meme_picks": [
+        "roll_safe"
+      ]
+    }
+  }
+}
