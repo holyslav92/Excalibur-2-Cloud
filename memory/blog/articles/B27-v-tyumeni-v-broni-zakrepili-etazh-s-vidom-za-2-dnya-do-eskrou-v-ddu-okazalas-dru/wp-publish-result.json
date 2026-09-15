@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili",
+  "topic_id": "B27",
+  "post_id": 10420,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-v-broni-zakrepili-etazh-s-vidom-za-2-dnya-do-eskrou-v-ddu-okazalas-dru/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1160520,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10420 slug=v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili\nOK categories=36,54,34\nOK yoast_social_image=1\nOK featured_image=10421\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10422 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili-inline-04.png\nOK inline_alt=10422\nOK inline_description=10422\nOK inline_image_upload=10423 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili-inline-05.png\nOK inline_alt=10423\nOK inline_description=10423\nOK inline_image_upload=10424 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili-inline-01.png\nOK inline_alt=10424\nOK inline_description=10424\nOK inline_image_upload=10425 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili-inline-02.png\nOK inline_alt=10425\nOK inline_description=10425\nOK inline_image_upload=10426 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili-inline-03.png\nOK inline_alt=10426\nOK inline_description=10426\nOK inline_image_upload=10427 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili-inline-06.png\nOK inline_alt=10427\nOK inline_description=10427\nOK inline_image_upload=10428 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili-inline-07.png\nOK inline_alt=10428\nOK inline_description=10428\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili/",
+    "errors": []
+  }
+}
