@@ -1063,3 +1063,31 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260915-0420-schema-derouter-529
+status: open
+run_date: 2026-09-15
+role: excalibur-blog-schema
+topic_id: B29
+article_dir: memory/blog/articles/B29-v-tyumeni-novostrojku-vybrali-dlya-roditelej-na-priemke-sorvalos
+severity: medium
+category: api
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --role schema` returned `DEROUTER SCHEMA BLOCKER` with HTTP 529 `server_is_overloaded` on first attempt.
+
+### How the agent recovered this run
+- Assembled `schema.jsonld` from `assembled-schema-inputs.md` using the canonical B25 `@graph` template (Organization, Person, BlogPosting); `schema_gate.py` PASS.
+
+### Durable fix needed before next run
+- Retry Derouter schema role when 529 clears; consider idempotent local template fallback script for mechanical JSON-LD when Derouter unavailable.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+- `skills/schema-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+- pending
