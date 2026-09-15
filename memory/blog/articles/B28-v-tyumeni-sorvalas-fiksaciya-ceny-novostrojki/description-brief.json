@@ -1,0 +1,9 @@
+{
+  "topic_id": "B28",
+  "description": "В Тюмени семья уже открыла эскроу и получила одобрение ипотеки. Но в проекте ДДУ появилась индексация — обещанная цена исчезла за пять дней до сделки.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
