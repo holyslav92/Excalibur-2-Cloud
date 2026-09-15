@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-prajs-zhk-vyros-pered-ddu",
+  "topic_id": "B27",
+  "post_id": 10365,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-prajs-zhk-vyros-pered-ddu/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-prajs-zhk-vyros-pered-ddu/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1178830,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10365 slug=v-tyumeni-prajs-zhk-vyros-pered-ddu\nOK categories=36,32\nOK yoast_social_image=1\nOK featured_image=10366\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10367 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prajs-zhk-vyros-pered-ddu-inline-03.png\nOK inline_alt=10367\nOK inline_description=10367\nOK inline_image_upload=10368 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prajs-zhk-vyros-pered-ddu-inline-04.png\nOK inline_alt=10368\nOK inline_description=10368\nOK inline_image_upload=10369 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prajs-zhk-vyros-pered-ddu-inline-05.png\nOK inline_alt=10369\nOK inline_description=10369\nOK inline_image_upload=10370 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prajs-zhk-vyros-pered-ddu-inline-06.png\nOK inline_alt=10370\nOK inline_description=10370\nOK inline_image_upload=10371 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prajs-zhk-vyros-pered-ddu-inline-01.png\nOK inline_alt=10371\nOK inline_description=10371\nOK inline_image_upload=10372 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prajs-zhk-vyros-pered-ddu-inline-02.png\nOK inline_alt=10372\nOK inline_description=10372\nOK inline_image_upload=10374 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-prajs-zhk-vyros-pered-ddu-inline-07.png\nOK inline_alt=10374\nOK inline_description=10374\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-prajs-zhk-vyros-pered-ddu/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-prajs-zhk-vyros-pered-ddu/",
+    "errors": []
+  }
+}
