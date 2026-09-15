@@ -1063,3 +1063,59 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260915-1041-schema-derouter-output-root
+status: open
+run_date: 2026-09-15
+role: excalibur-blog-schema
+topic_id: B27
+article_dir: memory/blog/articles/B27-v-tyumeni-zastrojschik-ne-soglasoval-pereustupku-avans-350-tysyach-zavis-za-3-dn
+severity: low
+category: script
+
+### What went wrong
+- Derouter schema run reported `WROTE schema.jsonld` but file landed in repo root (`/workspace/schema.jsonld`) instead of `--article-dir`; first gate run failed `missing schema.jsonld`.
+- First Derouter attempt returned HTTP 529 `server_is_overloaded`; succeeded on retry after 10s sleep.
+
+### How the agent recovered this run
+- Moved root `schema.jsonld` into article_dir; added `mainEntityOfPage` + `#blogposting` @id to match B26 pattern; gate PASS.
+
+### Durable fix needed before next run
+- `excalibur_blog_derouter_opus_chat.py`: resolve `--output` relative to `--article-dir` when article-dir is set (not cwd).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+- pending
+
+## INC-20260915-1041-schema-derouter-output-root
+status: open
+run_date: 2026-09-15
+role: excalibur-blog-schema
+topic_id: B27
+article_dir: memory/blog/articles/B27-v-tyumeni-zastrojschik-ne-soglasoval-pereustupku-avans-350-tysyach-zavis-za-3-dn
+severity: low
+category: script
+
+### What went wrong
+- Derouter schema run reported `WROTE schema.jsonld` but file landed in repo root (`/workspace/schema.jsonld`) instead of `--article-dir`; first gate run failed `missing schema.jsonld`.
+- First Derouter attempt returned HTTP 529 `server_is_overloaded`; succeeded on retry after 10s sleep.
+
+### How the agent recovered this run
+- Moved root `schema.jsonld` into article_dir; added `mainEntityOfPage` + `#blogposting` @id to match B26 pattern; gate PASS.
+
+### Durable fix needed before next run
+- `excalibur_blog_derouter_opus_chat.py`: resolve `--output` relative to `--article-dir` when article-dir is set (not cwd).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+- pending
