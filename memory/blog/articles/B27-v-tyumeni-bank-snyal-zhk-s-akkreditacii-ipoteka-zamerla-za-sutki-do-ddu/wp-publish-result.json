@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu",
+  "topic_id": "B27",
+  "post_id": 10381,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1111063,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10381 slug=v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=10382\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10383 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu-inline-03.png\nOK inline_alt=10383\nOK inline_description=10383\nOK inline_image_upload=10384 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu-inline-04.png\nOK inline_alt=10384\nOK inline_description=10384\nOK inline_image_upload=10385 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu-inline-05.png\nOK inline_alt=10385\nOK inline_description=10385\nOK inline_image_upload=10386 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu-inline-06.png\nOK inline_alt=10386\nOK inline_description=10386\nOK inline_image_upload=10387 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu-inline-07.png\nOK inline_alt=10387\nOK inline_description=10387\nOK inline_image_upload=10388 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu-inline-01.png\nOK inline_alt=10388\nOK inline_description=10388\nOK inline_image_upload=10389 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu-inline-02.png\nOK inline_alt=10389\nOK inline_description=10389\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu/",
+    "errors": []
+  }
+}

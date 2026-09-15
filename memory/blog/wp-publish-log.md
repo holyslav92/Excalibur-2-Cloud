@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-15
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu
+- **post_id:** 10381
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-bank-snyal-zhk-s-akkreditacii-ipoteka-zamerla-za-sutki-do-ddu/
+- **featured_image:** 10382
+- **inline_images:** 10383–10389 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31, default_primary_slug)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26
