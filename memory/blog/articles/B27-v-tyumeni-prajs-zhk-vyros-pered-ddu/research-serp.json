@@ -1,0 +1,208 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-15",
+    "today_ru": "15.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B27",
+    "title": "В Тюмени прайс ЖК вырос перед ДДУ",
+    "h1": "В Тюмени прайс ЖК вырос перед ДДУ",
+    "slug": "v-tyumeni-prajs-zhk-vyros-pered-ddu",
+    "primary_query": "В Тюмени прайс ЖК вырос перед ДДУ",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени прайс ЖК вырос перед ДДУ 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Рынок жилья в Тюмени в 2026 году: аналитика, цены на новостройки и ...",
+          "url": "http://www.realto.ru/journal/articles/rynok-zhilya-v-tyumeni-v-2026-godu-analitika-ceny-na-novostrojki-i-prognozy-ekspertov/",
+          "snippet": ""
+        },
+        {
+          "title": "Рынок новостроек Тюмени: анализ продаж ДДУ. Итоги июня 2026 года",
+          "url": "https://katigarov.ru/blog-developa/tpost/rynok-novostroek-tyumeni-iyun-2026",
+          "snippet": "Ценовой разрыв между готовым и строящимся жильем достигает 300-500 тысяч рублей в пользу вторички, что становится решающим фактором для аудитории с ограниченным бюджетом."
+        },
+        {
+          "title": "Рынок недвижимости Тюмени в 2026 году: реалии и прогнозы",
+          "url": "https://nashgorod.ru/news/2026-07-03/kulbity-nedvizhimosti-kak-tyumenskiy-rynok-zhilya-perenes-pervuyu-polovinu-2026-goda-5629963",
+          "snippet": "Подробный анализ рынка новостроек Тюмени за июнь 2026 года. Рейтинг застройщиков и жилых комплексов, продажи квартир по ДДУ, объем рынка, структура сделок и главные выводы по итогам месяца."
+        },
+        {
+          "title": "Новостройки (ЖК) срок сдачи 2026 год в Тюмень",
+          "url": "https://tyumen.cian.ru/novostroyki-2026/",
+          "snippet": "Тюменский рынок недвижимости пережил несколько ключевых изменений за первые месяцы 2026 года. \"Наш город\" рассказывает о них и анализирует прогнозы экспертов."
+        },
+        {
+          "title": "Стоимость квартир в Тюмени: актуальные цены на сентябрь 2026 и динамика ...",
+          "url": "https://www.mirkvartir.ru/tyumen/tseny/",
+          "snippet": "Новостройки (ЖК) срок сдачи 2026 год в Тюмень от застройщиков. 52 жилых комплекса с актуальными ценами, планировками, фото и отзывами покупателей. Продажа квартир в новостройках на старте ..."
+        },
+        {
+          "title": "Рынок жилья Тюмени в 2026 году: ставка на выравнивание",
+          "url": "https://t.rbc.ru/tyumen/19/02/2026/6996cd729a7947064fecdc6c",
+          "snippet": "В данном разделе собрана информация о ценах продажи квартир в Тюмени и динамики их изменения."
+        }
+      ],
+      "searched_at": "2026-09-15"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени прайс ЖК вырос перед ДДУ 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Рынок жилья в Тюмени в 2026 году: аналитика, цены на новостройки и ...",
+          "url": "http://www.realto.ru/journal/articles/rynok-zhilya-v-tyumeni-v-2026-godu-analitika-ceny-na-novostrojki-i-prognozy-ekspertov/",
+          "snippet": ""
+        },
+        {
+          "title": "Стоимость квартир в Тюмени: актуальные цены на сентябрь 2026 и динамика ...",
+          "url": "https://www.mirkvartir.ru/tyumen/tseny/",
+          "snippet": "Ценовой разрыв между готовым и строящимся жильем достигает 300-500 тысяч рублей в пользу вторички, что становится решающим фактором для аудитории с ограниченным бюджетом."
+        },
+        {
+          "title": "Рынок недвижимости Тюмени в 2026 году: реалии и прогнозы",
+          "url": "https://nashgorod.ru/news/2026-07-03/kulbity-nedvizhimosti-kak-tyumenskiy-rynok-zhilya-perenes-pervuyu-polovinu-2026-goda-5629963",
+          "snippet": "В данном разделе собрана информация о ценах продажи квартир в Тюмени и динамики их изменения."
+        },
+        {
+          "title": "Рынок новостроек Тюмени: анализ продаж ДДУ. Итоги июня 2026 года",
+          "url": "https://katigarov.ru/blog-developa/tpost/rynok-novostroek-tyumeni-iyun-2026",
+          "snippet": "Тюменский рынок недвижимости пережил несколько ключевых изменений за первые месяцы 2026 года. \"Наш город\" рассказывает о них и анализирует прогнозы экспертов."
+        },
+        {
+          "title": "Новостройки (ЖК) срок сдачи 2026 год в Тюмень",
+          "url": "https://tyumen.cian.ru/novostroyki-2026/",
+          "snippet": "Подробный анализ рынка новостроек Тюмени за июнь 2026 года. Рейтинг застройщиков и жилых комплексов, продажи квартир по ДДУ, объем рынка, структура сделок и главные выводы по итогам месяца."
+        },
+        {
+          "title": "Рынок жилья Тюмени в 2026 году: ставка на выравнивание",
+          "url": "https://t.rbc.ru/tyumen/19/02/2026/6996cd729a7947064fecdc6c",
+          "snippet": "Новостройки (ЖК) срок сдачи 2026 год в Тюмень от застройщиков. 52 жилых комплекса с актуальными ценами, планировками, фото и отзывами покупателей. Продажа квартир в новостройках на старте ..."
+        }
+      ],
+      "searched_at": "2026-09-15"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени прайс ЖК вырос перед ДДУ official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Как сэкономить на ЖКХ в Тюмени в 2026 году: субсидии и льготы",
+          "url": "https://nashgorod.ru/news/2026-09-09/tarify-zhkh-vzletyat-pochti-na-28-kak-tyumentsam-zakonno-umenshit-platezhku-5678632",
+          "snippet": ""
+        },
+        {
+          "title": "Тарифы ЖКХ в Тюменской области с 1 октября 2026 года: на сколько ...",
+          "url": "https://megatyumen.ru/obshestvo/tarify-zhkh-v-tyumenskoj-oblasti-s-1-oktyabrya-2026-goda-kak-vyrastut-platezhi-za-vodu-teplo-svet-i-gaz/",
+          "snippet": "С октября тарифы ЖКХ в Тюменской области вырастут, местами - почти на 28%. Рассказываем, кому положена компенсация от государства и как законно платить меньше."
+        },
+        {
+          "title": "На сколько в Тюмени и Тюменской области повысят тарифы ЖКХ в 2026 году ...",
+          "url": "https://72.ru/text/house/2025/12/09/76161811/",
+          "snippet": "Первое повышение произошло 1 января 2026 года: тогда тарифы выросли на 1,7%. Второй, основной этап начинается 1 октября — и именно он даст ощутимую прибавку в квитанциях."
+        },
+        {
+          "title": "Рынок новостроек Тюмени: анализ продаж ДДУ. Итоги июня 2026 года",
+          "url": "https://katigarov.ru/blog-developa/tpost/rynok-novostroek-tyumeni-iyun-2026",
+          "snippet": "Недавно правительство России утвердило предельные значения индексации платы за жилищно-коммунальные услуги на 2026 год. Тюменской области этот показатель для изменений с 1 октября установили на уровне 17,2%, но местным властям разрешили повысить коммуналку еще больше."
+        },
+        {
+          "title": "В Тюменской области утверждено повышение тарифов ЖКХ на 2026 год",
+          "url": "https://t.rbc.ru/tyumen/17/12/2025/694229fd9a79477c2c3d81d9",
+          "snippet": "Подробный анализ рынка новостроек Тюмени за июнь 2026 года. Рейтинг застройщиков и жилых комплексов, продажи квартир по ДДУ, объем рынка, структура сделок и главные выводы по итогам месяца."
+        },
+        {
+          "title": "Тарифы ЖКХ в Тюмени поднимут почти на 30% в 2026 году",
+          "url": "https://360.ru/news/obschestvo/tarify-zhkh-v-tjumeni-podnimut-pochti-na-30-v-2026-godu/",
+          "snippet": "Губернатором Тюменской области Александром Моором подписано постановление об увеличении платы за коммунальные услуги в 2026 году. Документ опубликован на официальном сайте."
+        }
+      ],
+      "searched_at": "2026-09-15"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени прайс ЖК вырос перед ДДУ 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 4,
+      "results": [
+        {
+          "title": "bullet_hell/icon.svg at main · TheCreator109/bullet_hell · GitHub",
+          "url": "https://github.com/TheCreator109/bullet_hell/blob/main/icon.svg",
+          "snippet": ""
+        },
+        {
+          "title": "hemnet-commuter/app/hemnet.svg at master · ewels/hemnet-commuter",
+          "url": "https://github.com/ewels/hemnet-commuter/blob/master/app/hemnet.svg",
+          "snippet": "Contribute to TheCreator109/bullet_hell development by creating an account on GitHub."
+        },
+        {
+          "title": "macOS-Wallpapers/10-14-Day.jpg at main · LAYTAT/macOS-Wallpapers",
+          "url": "https://github.com/LAYTAT/macOS-Wallpapers/blob/main/10-14-Day.jpg",
+          "snippet": "Move everything into /app and write Docker instructions."
+        },
+        {
+          "title": "strikt-langextract/articles.csv at main - GitHub",
+          "url": "https://github.com/kkkkkaaaaattttteeeee/strikt-langextract/blob/main/articles.csv",
+          "snippet": "Every default macOS wallpaper from Cheetah to Tahoe in 5K/6K, plus bundled Apple desktop pictures. PRs welcome! - macOS-Wallpapers/10-14-Day.jpg at main · LAYTAT/macOS-Wallpapers."
+        }
+      ],
+      "searched_at": "2026-09-15"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени прайс ЖК вырос перед ДДУ forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Тарифы ЖКХ в Тюмени с 1 октября 2026: что подорожает",
+          "url": "https://nashgorod.ru/news/2026-09-08/treshkam-prigotovitsya-po-komu-v-tyumeni-silnee-vsego-udarit-rost-tarifov-zhkh-5677585",
+          "snippet": ""
+        },
+        {
+          "title": "Как сэкономить на ЖКХ в Тюмени в 2026 году: субсидии и льготы",
+          "url": "https://nashgorod.ru/news/2026-09-09/tarify-zhkh-vzletyat-pochti-na-28-kak-tyumentsam-zakonno-umenshit-platezhku-5678632",
+          "snippet": "С 1 октября 2026 года в Тюмени вырастут тарифы на ЖКХ. Разбираемся, что подорожает сильнее всего и сколько придется доплачивать за коммунальные услуги."
+        },
+        {
+          "title": "В Тюмени 14 месяцев платили по ДДУ — перед сдачей остаток подняли",
+          "url": "https://dzen.ru/a/apgAlVE6NU7Ddz8V",
+          "snippet": "С октября тарифы ЖКХ в Тюменской области вырастут, местами - почти на 28%. Рассказываем, кому положена компенсация от государства и как законно платить меньше."
+        },
+        {
+          "title": "Тюменские власти определились с ростом тарифов ЖКХ в 2026 году: на ...",
+          "url": "https://tumen.dk.ru/news/237234015",
+          "snippet": "За месяц до сдачи дома тюменской семье пришло письмо, в котором остаток по рассрочке вырос примерно на 400 000 ₽. До этого они четырнадцать месяцев платили ровно по графику из зарегистрированного ДДУ и внесли около сорока процентов цены квартиры — ни одной просрочки, ни одного переноса."
+        },
+        {
+          "title": "Тарифы ЖКХ в Тюменской области с 1 октября 2026 года: на сколько ...",
+          "url": "https://megatyumen.ru/obshestvo/tarify-zhkh-v-tyumenskoj-oblasti-s-1-oktyabrya-2026-goda-kak-vyrastut-platezhi-za-vodu-teplo-svet-i-gaz/",
+          "snippet": "Департамент тарифной и ценовой политики разработал проект постановления об увеличении стоимости услуг ЖКХ в регионе. Коммуналка подорожает дважды, в Тюмени значительно."
+        },
+        {
+          "title": "Рынок новостроек Тюмени: анализ продаж ДДУ. Итоги июня 2026 года",
+          "url": "https://katigarov.ru/blog-developa/tpost/rynok-novostroek-tyumeni-iyun-2026",
+          "snippet": "Первое повышение произошло 1 января 2026 года: тогда тарифы выросли на 1,7%. Второй, основной этап начинается 1 октября — и именно он даст ощутимую прибавку в квитанциях."
+        }
+      ],
+      "searched_at": "2026-09-15"
+    }
+  ],
+  "errors": []
+}

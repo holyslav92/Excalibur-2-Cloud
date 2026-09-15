@@ -1,0 +1,76 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-15",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/14/76634868/",
+        "type": "news",
+        "note": "14.09.2026 — рассрочка в новостройке «Зелёные аллеи», локальный рынок сентября"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/08/76619954/",
+        "type": "news",
+        "note": "08.09.2026 — скидка до 400 тыс. ₽ на отдельные лоты; прайс меняется по лотам"
+      },
+      {
+        "url": "https://novostroikino.ru/blog/bronirovanie-kvartiry-v-novostroyke-2026/",
+        "type": "market",
+        "note": "06.08.2026 — фиксация цены в брони vs прайс-лист, аванс vs услуга"
+      },
+      {
+        "url": "https://dzen.ru/a/aK_aWZEMcEXfHpSi",
+        "type": "channel",
+        "note": "Dzen energy mirror — прогноз +50% (не факт рынка; контраст для casus)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "цены на новостройки в тюмени",
+    "p0_volume": 60,
+    "p0_volume_ru225": 225,
+    "support_phrases": [
+      {"phrase": "цены на квартиры в тюмени новостройки", "volume": 49},
+      {"phrase": "новостройки в тюмени от застройщика цены", "volume": 53},
+      {"phrase": "новостройки тюмень цена", "volume": 190, "note": "parent bucket region 55"}
+    ],
+    "rework_from": "scout P0 locked «цены на новостройки в тюмени» (60 Tyumen)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "developer_pricelist_hike_before_ddu_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": [
+      "B22 — bank mortgage rate hike before DDU, not developer pricelist",
+      "B06 — secondary auto-valuation, not Tyumen newbuild pricelist",
+      "LIVE booking_expired_price_hike — developer removed subsidy, not +480k pricelist"
+    ]
+  },
+  "comment_magnet_angle": "Застройщик поднял цену на ~480 тысяч за девять дней до ДДУ — вы бы доплатили по новому прайсу или развернулись, даже если бронь сгорит?",
+  "dzen_top_energy_mirror": "Почему цены на недвижимость в России могут вырасти на 50% — localized to Tyumen newbuild pricelist spike before DDU signing",
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": [],
+    "errors": [],
+    "note": "214-FZ st.5 and ZoZPP st.16 via consultant.ru; no bank tariff claims in notes"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
