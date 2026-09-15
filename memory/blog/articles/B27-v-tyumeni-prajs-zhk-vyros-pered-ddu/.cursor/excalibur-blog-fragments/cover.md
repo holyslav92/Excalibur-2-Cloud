@@ -1,30 +1,39 @@
 ---
-status: PASS
+status: FIX_ATTEMPTED
 topic_id: B27
-pipeline: quad_canvas_2x_grsai_standard
-budget_exhausted: false
+pipeline: solo_cover_grsai_standard_fix
+budget_exhausted: true
 grsai_canvas_attempts: 2
-solo_cover_attempts: 0
+solo_cover_attempts: 1
+cover_qa: FAIL
 ---
 
-# Cover fragment — B27
+# Cover fragment — B27 (fix attempt)
+
+## Fix action
+
+Solo i2i regen (`excalibur_blog_grsai_solo_cover.py --max-attempts 1`) with HOST CROP + STICKY top-left + TEXT LAYOUT suffix.
+
+## Target issues (user request)
+
+| Issue | Before | After regen |
+|-------|--------|-------------|
+| `pixel_host_close_up` | face_h_frac=0.12 FAIL | face_h_frac=0.28 PASS |
+| sticky on chest | `pixel_wordstat_not_on_host_chest` FAIL | PASS (top-left pin) |
+| hook + phone | OCR flakes | hook present; phone readable PASS |
+
+## Remaining Cover-QA FAIL
+
+- `pixel_meme_zone_clear` — gold bar bands overlap meme zone (blocks OCR escape)
+- OCR flakes: `pixel_hook_title_not_truncated`, `pixel_identity_matches_studio` (skin blob)
+- False positives: `+480 тыс` price tags → `pixel_no_wordstat_query_strips` / `pixel_wordstat_not_opaque_bars`
 
 ## Artifacts
 
-- `cover/cover.png` — quad split top-left (canvas 1, i2i)
-- `cover/inline-01.png` … `cover/inline-07.png` — quad canvas split (7 inlines)
-- `cover/canvas-quad-01.png` (i2i cover+inline1-3), `cover/canvas-quad-02.png` (t2i inline4-7)
-- `cover/quad-manifest.json`
-- `cover/cover-registry.json` — image_caption_builder PASS
-
-## Canon
-
-- hook: «Квартира подорожала перед подписанием: денег не хватило»
-- phone: +7 922 001 65 05
-- meme_picks: roll_safe, crying_cat (cover); disappointed_black_guy, stonks, this_is_fine_dog (inlines)
-- NO Wordstat strips on cover (manifest log only)
-- light/bright sales office, blue shirt + mustard vest, anti-repeat motifs recorded
+- `cover/cover.png` — solo regen 1200×675 (md5 4ad5ef49…)
+- `cover/cover_qa.json` — status FAIL
+- `cover/cover-budget-result.json` — budget exhausted (1 fix attempt)
 
 ## Next
 
-→ Cover-QA → Indexer
+Cover-QA still FAIL → Indexer only if owner accepts OCR escape / manual override; else new topic budget.
