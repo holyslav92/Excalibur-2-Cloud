@@ -1,0 +1,20 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-15",
+  "topic_id": "B29",
+  "article_dir": "memory/blog/articles/B29-v-tyumeni-novostrojku-vybrali-dlya-roditelej-na-priemke-sorvalos",
+  "slug": "v-tyumeni-novostrojku-vybrali-dlya-roditelej-na-priemke-sorvalos",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "cover_qa_status": "PASS",
+  "articles_indexed_total": 18,
+  "b29_in_llms": true,
+  "notes": "article.meta.json отсутствовал до Indexer — синтезирован из title-brief.json для включения B29 в llms; Schema (schema.jsonld) всё ещё нужен перед Publish",
+  "errors": []
+}
