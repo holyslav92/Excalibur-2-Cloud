@@ -979,7 +979,9 @@ def trigger_bootstrap_http(url: str, root: Path) -> str:
 def publish_via_sftp(env: dict[str, str], php: str, public_base: str, *, bootstrap_name: str = "excalibur-blog-publish-once.php") -> str:
     remote = bootstrap_name
     data = php.encode("utf-8")
-    url = public_base.rstrip("/") + "/" + remote
+    import time
+
+    url = public_base.rstrip("/") + "/" + remote + "?_=" + str(int(time.time()))
     root = project_root()
 
     uploaded_remote_path = upload_bootstrap_sftp(env, remote, data)
@@ -1619,7 +1621,9 @@ def main() -> int:
     if SITE_BASE_PLACEHOLDER in (payload.get("schema_jsonld") or ""):
         print("BLOCKER: schema still contains {{SITE_BASE}} after expand", file=sys.stderr)
         return 2
-    out = publish_via_sftp(env, php, public)
+    topic_id = str(payload.get("topic_id") or "post").strip().lower()
+    bootstrap_name = f"excalibur-blog-publish-{topic_id}.php"
+    out = publish_via_sftp(env, php, public, bootstrap_name=bootstrap_name)
     print(out)
 
     media = evaluate_publish_output(out, payload)

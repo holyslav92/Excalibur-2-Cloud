@@ -1,5 +1,50 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-15
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-prajs-zhk-vyros-pered-ddu
+- **post_id:** 10365
+- **permalink:** /blog/ipoteka/v-tyumeni-prajs-zhk-vyros-pered-ddu/
+- **featured_image:** 10366
+- **inline_images:** 10367–10374 (7)
+- **wp_category_slugs:** pokupka-kvartiry, ipoteka (category_ids=36,32)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** wp_category_slugs newbuild → pokupka-kvartiry+ipoteka (novostrojki not in registry); first attempt race on shared bootstrap → wrong post_id; retry with topic-scoped bootstrap PASS
+
+## B29 — 2026-09-15
+
+- **topic_id:** B29
+- **slug:** v-tyumeni-novostrojku-vybrali-dlya-roditelej-na-priemke-sorvalos
+- **post_id:** 10348
+- **permalink:** /blog/proverka-pered-pokupkoj/v-tyumeni-novostrojku-vybrali-dlya-roditelej-na-priemke-sorvalos/
+- **featured_image:** 10349
+- **inline_images:** 10351–10360 (7)
+- **wp_category_slugs:** pokupka-kvartiry, dokumenty-i-oformlenie, proverka-pered-pokupkoj (category_ids=36,54,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** pre-publish added schema.jsonld + description-brief.json; link-verify fix punycode для наш.дом.рф; first HTTP trigger returned WP homepage (bootstrap at wrong SFTP root) — republished with `FTP_ROOT=.` + curl trigger; SFTP root fallback to `.`
+
+## B28 — 2026-09-15
+
+- **topic_id:** B28
+- **slug:** v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki
+- **post_id:** 10324
+- **permalink:** /blog/ipoteka/v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki/
+- **featured_image:** 10343
+- **inline_images:** 10344–10355 (7)
+- **wp_category_slugs:** pokupka-kvartiry, dokumenty-i-oformlenie, ipoteka (category_ids=36,54,32)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** replaced invalid slug `novostrojki` → valid WP categories; first publish attempt hit shared bootstrap race (wrong slug); fixed `excalibur_blog_wp_publish.py` topic-specific bootstrap + cache-bust query; SFTP root fallback to `.`
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26

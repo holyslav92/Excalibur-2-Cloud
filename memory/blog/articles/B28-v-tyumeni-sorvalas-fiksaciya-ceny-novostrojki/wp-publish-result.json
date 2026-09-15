@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki",
+  "topic_id": "B28",
+  "post_id": 10324,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B28-v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1039633,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10324 slug=v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki\nOK categories=36,54,32\nOK yoast_social_image=1\nOK featured_image=10343\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10344 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki-inline-01.png\nOK inline_alt=10344\nOK inline_description=10344\nOK inline_image_upload=10345 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki-inline-02.png\nOK inline_alt=10345\nOK inline_description=10345\nOK inline_image_upload=10346 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki-inline-03.png\nOK inline_alt=10346\nOK inline_description=10346\nOK inline_image_upload=10347 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki-inline-04.png\nOK inline_alt=10347\nOK inline_description=10347\nOK inline_image_upload=10350 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki-inline-05.png\nOK inline_alt=10350\nOK inline_description=10350\nOK inline_image_upload=10353 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki-inline-06.png\nOK inline_alt=10353\nOK inline_description=10353\nOK inline_image_upload=10355 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki-inline-07.png\nOK inline_alt=10355\nOK inline_description=10355\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki/",
+    "errors": []
+  }
+}

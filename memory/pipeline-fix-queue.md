@@ -1095,3 +1095,59 @@ category: api
 ### Fixer resolution
 - pending
 
+## INC-20260915-0500-publish-shared-bootstrap-race
+status: open
+run_date: 2026-09-15
+role: excalibur-blog-publish
+topic_id: B28
+article_dir: memory/blog/articles/B28-v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki
+severity: high
+category: concurrency
+
+### What went wrong
+- Concurrent publishes (B27/B28/B29) shared one remote bootstrap filename `excalibur-blog-publish-once.php`; HTTP trigger executed another topic's payload (B28 first attempt returned B29 slug on post 10324).
+
+### How the agent recovered this run
+- Patched `excalibur_blog_wp_publish.py` to upload `excalibur-blog-publish-{topic_id}.php` and append `?_=timestamp` on trigger URL.
+- Retried B28 publish → correct slug, 7/7 inline, live-page PASS.
+
+### Durable fix needed before next run
+- None (patch landed); monitor parallel slot publishes.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_wp_publish.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+- pending
+
+## INC-20260915-0500-publish-shared-bootstrap-race
+status: open
+run_date: 2026-09-15
+role: excalibur-blog-publish
+topic_id: B28
+article_dir: memory/blog/articles/B28-v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki
+severity: high
+category: concurrency
+
+### What went wrong
+- Concurrent publishes (B27/B28/B29) shared one remote bootstrap filename `excalibur-blog-publish-once.php`; HTTP trigger executed another topic's payload (B28 first attempt returned B29 slug on post 10324).
+
+### How the agent recovered this run
+- Patched `excalibur_blog_wp_publish.py` to upload `excalibur-blog-publish-{topic_id}.php` and append `?_=timestamp` on trigger URL.
+- Retried B28 publish → correct slug, 7/7 inline, live-page PASS.
+
+### Durable fix needed before next run
+- None (patch landed); monitor parallel slot publishes.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_wp_publish.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+- pending
+
