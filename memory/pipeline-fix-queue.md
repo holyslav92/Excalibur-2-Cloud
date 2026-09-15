@@ -1151,3 +1151,23 @@ category: concurrency
 ### Fixer resolution
 - pending
 
+
+## INC-20260915-0500-publish-http-homepage-bootstrap
+status: open
+run_date: 2026-09-15
+role: excalibur-blog-publish
+topic_id: B29
+article_dir: memory/blog/articles/B29-v-tyumeni-novostrojku-vybrali-dlya-roditelej-na-priemke-sorvalos
+severity: medium
+category: publish
+
+### What went wrong
+- SFTP bootstrap with non-dot FTP_ROOT: urllib HTTP trigger returned WP homepage HTML instead of OK post=.
+- Missing schema.jsonld, description-brief.json, link-verify.json at handoff.
+- link-verify failed on Cyrillic https://наш.дом.рф.
+
+### How the agent recovered this run
+- Added schema + description-brief; punycode href; FTP_ROOT=. + curl trigger → post 10348; live-page PASS.
+
+### Fixer resolution
+- pending
