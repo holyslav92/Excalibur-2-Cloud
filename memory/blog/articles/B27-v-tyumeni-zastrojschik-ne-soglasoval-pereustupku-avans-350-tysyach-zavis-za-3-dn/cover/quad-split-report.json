@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-zastrojschik-ne-soglasoval-pereustupku-avans-350-tysyach-zavis-za-3-dn/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1020,
+          572
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 572,
+            "end": 580
+          },
+          "v_gutter_px": {
+            "start": 1020,
+            "end": 1028
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1020,
+              "bottom": 572
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1020,
+              "bottom": 572
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени сорвалась переуступка — аванс 350 тысяч завис за 3 дня: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1028,
+              "top": 0,
+              "right": 2048,
+              "bottom": 572
+            },
+            "raw_box_px": {
+              "left": 1028,
+              "top": 0,
+              "right": 2048,
+              "bottom": 572
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Вернули 120 тысяч, 230 удержали: квартира ушла…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Вернули 120 тысяч, 230 удержали: квартира ушла другому покупателю"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 580,
+              "right": 1020,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 580,
+              "right": 1020,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: 19 дней, Согласования нет, ДДУ и справка — иллюстрация к разбору сделки.",
+            "h2_anchor": "Вернули 120 тысяч, 230 удержали: квартира ушла другому покупателю"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1028,
+              "top": 580,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1028,
+              "top": 580,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Скидка к прайсу» — и 350 тысяч ушли первому до…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Скидка к прайсу» — и 350 тысяч ушли первому дольщику"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-zastrojschik-ne-soglasoval-pereustupku-avans-350-tysyach-zavis-za-3-dn/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1016,
+          567
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 567,
+            "end": 584
+          },
+          "v_gutter_px": {
+            "start": 1016,
+            "end": 1032
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0079,
+            "per_panel_crop_loss": {
+              "top_left": 0.0079,
+              "top_right": 0.0079,
+              "bottom_left": 0.0059,
+              "bottom_right": 0.0059
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 4,
+              "top": 0,
+              "right": 1012,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Девятнадцать дней аванса: согласования в офисе…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Девятнадцать дней аванса: согласования в офисе продаж ещё не было"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1036,
+              "top": 0,
+              "right": 2044,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2048,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Вернули 120 тыс., Удержали 230 тыс., Соглашение — иллюстрация к разбору сделки.",
+            "h2_anchor": "За три дня до оформления — несогласование и цена напрямую от застройщика"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 3,
+              "top": 584,
+              "right": 1013,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 584,
+              "right": 1016,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Эскроу, Аванс цеденту, Справка — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что проверить до перевода по переуступке — таблица"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1035,
+              "top": 584,
+              "right": 2045,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 584,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Регистрация уступки, Согласие, Оплата ДДУ — иллюстрация к разбору сделки.",
+            "h2_anchor": "Эскроу, цессия и «согласие»: где ломается цепочка"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Вернули 120 тысяч, 230 удержали: квартира ушла другому покупателю",
+    "skip inline_2: already correct under H2 — Вернули 120 тысяч, 230 удержали: квартира ушла другому покупателю",
+    "skip inline_3: already correct under H2 — «Скидка к прайсу» — и 350 тысяч ушли первому дольщику",
+    "moved inline_4 → H2 — Девятнадцать дней аванса: согласования в офисе продаж ещё не было (was under [за три дня до оформления — несогласование и цена напрямую от застройщика]; removed=1)",
+    "moved inline_5 → H2 — За три дня до оформления — несогласование и цена напрямую от застройщика (was under [вернули 120 тысяч, 230 удержали: квартира ушла другому покупателю]; removed=1)",
+    "skip inline_6: already correct under H2 — Что проверить до перевода по переуступке — таблица",
+    "skip inline_7: already correct under H2 — Эскроу, цессия и «согласие»: где ломается цепочка"
+  ]
+}
