@@ -3,57 +3,6 @@
   "window_days": 14,
   "entries": [
     {
-      "date": "2026-08-31",
-      "topic_id": "B15",
-      "slug": "",
-      "motifs": {
-        "composition": "waist_center_envelope_consent_hook_right_zone",
-        "location": "bright_sunlit_tyumen_meeting_room_window",
-        "meme": "blinking_white_guy_sticker_plus_polite_cat_cutout",
-        "prop_set": "cream_envelope_notary_consent_gold_magnifier_phone_cta",
-        "sticker_set": "yellow_sticky_konvert_warning_gold_tape_corner_only",
-        "joke": "sticky_konvert_ne_dokazatelstvo_envelope_looks_real",
-        "outfit": "white_shirt_sand_vest_rolled_sleeves_no_blazer",
-        "emotion": "stunned_disbelief_direct_gaze_not_side_eye",
-        "pose_framing": "waist_center_forward_not_left_bust",
-        "action": "lifts_consent_from_envelope_stop_gesture_at_phone"
-      }
-    },
-    {
-      "date": "2026-09-01",
-      "topic_id": "B19",
-      "slug": "",
-      "motifs": {
-        "composition": "ведущий в правой нижней трети в рост от колен",
-        "location": "светлый шоурум новостройки у макета жилого квартала",
-        "meme": "bad_luck_brian и grumpy_cat как маленькие реакции",
-        "prop_set": "красная карточка бронь снята, папка эскроу, макет новостройки",
-        "sticker_set": "bad_luck_brian левый нижний grumpy_cat правый верхний",
-        "joke": "одобрение есть но бронь снята",
-        "outfit": "бирюзовая поло песочные брюки",
-        "emotion": "ошеломлённое недоверие прямой взгляд",
-        "pose_framing": "динамичный кадр от колен корпус к камере",
-        "action": "показывает красную карточку отмены брони"
-      }
-    },
-    {
-      "date": "2026-09-01",
-      "topic_id": "B20",
-      "slug": "",
-      "motifs": {
-        "composition": "горизонтальная сцена с героем в три четверти справа, двумя крупными вариантами решения на переднем плане и свободной светлой зоной слева под заголовок",
-        "location": "светлый коридор многофункционального центра с окном, стойкой регистрации и папкой документов, не шоурум",
-        "meme": "two_buttons и surprised_tom как небольшие реакционные стикеры в верхнем и нижнем углах",
-        "prop_set": "папка с новым дду, два листа с различающимися реквизитами ооо, смартфон с таймером 72 часа, пластиковая карточка с надписью эскроу",
-        "sticker_set": "two_buttons рядом с двумя вариантами договора и surprised_tom в отдельном углу",
-        "joke": "герой тянется одновременно к двум кнопкам подписать и проверить инн, пока таймер брони нервно отсчитывает последние часы",
-        "outfit": "светлая терракотовая overshirt поверх кремовой футболки, серо-бежевые брюки, тонкие часы",
-        "emotion": "ошарашенное недоверие с поднятыми бровями и напряжённой полуулыбкой",
-        "pose_framing": "средний план по пояс, герой справа, корпус развёрнут к документам",
-        "action": "сравнивает старую вывеску на телефоне с новым заголовком дду и пытается выбрать между подписанием и проверкой реквизитов"
-      }
-    },
-    {
       "date": "2026-09-04",
       "topic_id": "B22",
       "slug": "",
@@ -118,6 +67,40 @@
         "emotion": "hide-the-pain forced smile tight jaw direct gaze not side-eye",
         "pose_framing": "medium shot three-quarter right slight low angle not left bust",
         "action": "holds denied tranche letter points at tablet showing missing rve"
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "topic_id": "B28",
+      "slug": "",
+      "motifs": {
+        "composition": "хозяин кадра стоит справа в полный рост у светлого круглого стола, между ним и камерой разложены два контрастных листа расчёта; слева остаётся чистая светлая зона для заголовка",
+        "location": "яркий шоурум новостройки в тюмени с белыми стенами, макетом жилого квартала и солнечным светом из панорамного окна",
+        "meme": "disappointed_black_guy и surprised_tom как маленькие реакционные стикеры",
+        "prop_set": "два листа расчёта с разными итогами, папка проекта дду, ручка, карточка бронирования, миниатюрный макет дома",
+        "sticker_set": "disappointed_black_guy в нижнем левом углу, surprised_tom в верхнем правом углу",
+        "joke": "обещание цены на одном листе сталкивается с внезапно выросшей суммой на втором",
+        "outfit": "светлая кремовая водолазка, песочные брюки, тонкая карамельная куртка-оверсайз",
+        "emotion": "ошеломлённое недоверие с напряжённой полуулыбкой",
+        "pose_framing": "вертикальный полный рост справа, корпус слегка наклонён к столу, взгляд прямо в камеру",
+        "action": "одной рукой держит старый расчёт, другой приподнимает новый лист с большей суммой"
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "topic_id": "B29",
+      "slug": "",
+      "motifs": {
+        "composition": "host full-body left stepping back from handover table hook zone upper right phone bottom-right",
+        "location": "bright sunlit tyumen newbuild courtyard entrance crosswalk to distant parking",
+        "meme": "disappointed_black_guy + crying_cat corner stickers",
+        "prop_set": "unsigned inspection act key tray parking route photo on tablet yellow sticky",
+        "sticker_set": "disappointed_black_guy top-left crying_cat bottom-right",
+        "joke": "keys stay on tray while host points at parking across road",
+        "outfit": "sage green linen shirt white tee khaki chinos no blazer",
+        "emotion": "baffled disbelief direct gaze not side-eye",
+        "pose_framing": "full-body three-quarter left stepping back not left bust",
+        "action": "pushes key tray away points at distant parking holds unsigned act"
       }
     }
   ]
