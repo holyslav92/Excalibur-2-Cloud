@@ -1,0 +1,33 @@
+{
+  "gate": "writer-draft",
+  "status": "BLOCK",
+  "all_pass": false,
+  "checks": {
+    "html_linter": true,
+    "word_count_1400_1600": false,
+    "word_count_hard_max_1750": true,
+    "h2_count_6": true,
+    "interlink_siblings_2_4": true,
+    "early_cta_tg_max_only": true,
+    "mid_cta_tg_max_nudge": true,
+    "end_cta_full_channels": true,
+    "phone_in_body": true,
+    "comment_magnet_question": true,
+    "no_composite_disclaimer": true,
+    "prose_lead_4_6": true
+  },
+  "errors": [
+    "word_count_1400_1600"
+  ],
+  "metrics": {
+    "word_count": 1190,
+    "h2_count": 6,
+    "sibling_interlinks": 3,
+    "interlink_urls": [
+      "/blog/ipoteka/v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi/",
+      "/blog/proverka-pered-pokupkoj/v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali/",
+      "/blog/ipoteka/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/"
+    ],
+    "lead_sentences": 4
+  }
+}
