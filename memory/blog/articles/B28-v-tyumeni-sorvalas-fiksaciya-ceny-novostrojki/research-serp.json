@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-15",
+    "today_ru": "15.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B28",
+    "title": "В Тюмени сорвалась фиксация цены новостройки",
+    "h1": "В Тюмени сорвалась фиксация цены новостройки",
+    "slug": "v-tyumeni-sorvalas-fiksaciya-ceny-novostrojki",
+    "primary_query": "В Тюмени сорвалась фиксация цены новостройки",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени сорвалась фиксация цены новостройки 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Новостройки (ЖК) в Тюмень от застройщиков. В базе Циан 161 жилой ...",
+          "url": "https://tyumen.cian.ru/novostroyki/",
+          "snippet": ""
+        },
+        {
+          "title": "Новостройки в Тюмени от застройщика",
+          "url": "https://tyumen.domclick.ru/novostrojki",
+          "snippet": "🏘️ Сколько ЖК от застройщиков? Мы нашли 161 жилой комплекс в Тюмень — актуальные цены и планировки тоже найдутся на Циане."
+        },
+        {
+          "title": "Строящиеся новостройки (ЖК) в Тюмень",
+          "url": "https://tyumen.cian.ru/novostroyki-stroyashiesya/",
+          "snippet": "Ищете объявления о продаже или покупке новостроек в Тюмени от застройщика? Чтобы купить или продать недвижимость, используйте удобную форму поиска и фильтры."
+        },
+        {
+          "title": "Домострой — Новостройки Тюмени от застройщика, цены на квартиры",
+          "url": "https://tyumen.domostroyrf.ru/",
+          "snippet": "Строящиеся новостройки (ЖК) в Тюмень от застройщиков. 89 жилых комплексов с актуальными ценами, планировками, фото и отзывами покупателей. Продажа квартир в строящихся новостройках в Тюмень ..."
+        },
+        {
+          "title": "Купить квартиру в Тюмени, новостройки от застройщика",
+          "url": "https://ttis.ru/",
+          "snippet": "38 жилых комплексов, 97 домов, 2 038 квартир в Тюмени. Цены, планировки, фото строительства, проектные декларации, акции от застройщиков Тюмени"
+        },
+        {
+          "title": "Строящиеся новостройки (ЖК) в Тюмени от застройщика",
+          "url": "https://tyumen.domclick.ru/novostrojki/stroyashhiesya",
+          "snippet": "Официальный сайт застройщика ГК «ТИС» — продажа квартир в новостройках ЖК Этика, ЖК Гринвуд, ЖК ДОК и OK Salut (Салют). Выбрать квартиру, посмотреть планировки и цены."
+        }
+      ],
+      "searched_at": "2026-09-15"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени сорвалась фиксация цены новостройки 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Рынок жилья в Тюмени в 2026 году: аналитика, цены на новостройки и ...",
+          "url": "http://www.realto.ru/journal/articles/rynok-zhilya-v-tyumeni-v-2026-godu-analitika-ceny-na-novostrojki-i-prognozy-ekspertov/",
+          "snippet": ""
+        },
+        {
+          "title": "Рынок недвижимости Тюмени в 2026 году: реалии и прогнозы",
+          "url": "https://nashgorod.ru/news/2026-07-03/kulbity-nedvizhimosti-kak-tyumenskiy-rynok-zhilya-perenes-pervuyu-polovinu-2026-goda-5629963",
+          "snippet": "Реальное положение дел на рынке новостроек Тюмени. Прогнозы экспертов, влияние вторичного фонда на первичные продажи и причины скрытых скидок от девелоперов."
+        },
+        {
+          "title": "Цены на жилье продолжают снижаться в Тюмени: почему",
+          "url": "https://nashgorod.ru/news/2026-07-23/rynok-lomaet-shablony-v-tyumeni-prodolzhaetsya-snizhenie-tsen-na-novostroyki-5643343",
+          "snippet": "Тюменский рынок недвижимости пережил несколько ключевых изменений за первые месяцы 2026 года. \"Наш город\" рассказывает о них и анализирует прогнозы экспертов."
+        },
+        {
+          "title": "На 10, 6 % снизилась стоимость квадратного метра в новостройках Тюмени ...",
+          "url": "https://tyumen-info.ru/society/2026/05/21/12340.html",
+          "snippet": "В Тюмени за полгода значительно снизились цены на новостройки. Аналитики оценивают объемы снижения в пределах от 0,6% до 10,6%."
+        },
+        {
+          "title": "Цены на новостройки в Тюмени упали на 10,6% В Тюмени стоимость ...",
+          "url": "https://vk.com/wall-46013226_418054",
+          "snippet": "На 10, 6 % снизилась стоимость квадратного метра в новостройках Тюмени за первые пять месяцев 2026 года"
+        },
+        {
+          "title": "Новостройки Тюмени: Небольшой Рост Цен В I Квартале 2026 Года",
+          "url": "https://kvobzor.ru/news/i51996",
+          "snippet": "Цены на новостройки в Тюмени упали на 10,6% В Тюмени стоимость квадратного метра в новостройках снизилась на 10,6% за первые пять месяцев 2026 года."
+        }
+      ],
+      "searched_at": "2026-09-15"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени сорвалась фиксация цены новостройки official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Новостройки (ЖК) в Тюмень от застройщиков. В базе Циан 161 жилой ...",
+          "url": "https://tyumen.cian.ru/novostroyki/",
+          "snippet": ""
+        },
+        {
+          "title": "Строящиеся новостройки (ЖК) в Тюмень",
+          "url": "https://tyumen.cian.ru/novostroyki-stroyashiesya/",
+          "snippet": "Новостройки (ЖК) в Тюмень от застройщиков. 161 жилой комплекс с актуальными ценами, планировками, фото и отзывами покупателей. Продажа квартир в новостройках в Тюмень площадью от 15,19 м² от 2,55 ..."
+        },
+        {
+          "title": "Новостройки в Тюмени от застройщика",
+          "url": "https://tyumen.domclick.ru/novostrojki",
+          "snippet": "Строящиеся новостройки (ЖК) в Тюмень от застройщиков. 89 жилых комплексов с актуальными ценами, планировками, фото и отзывами покупателей. Продажа квартир в строящихся новостройках в Тюмень ..."
+        },
+        {
+          "title": "Новостройки в Тюмени от ПСК Дом, официальный сайт застройщика №1",
+          "url": "https://72dom.com/",
+          "snippet": "Ищете объявления о продаже или покупке новостроек в Тюмени от застройщика? Чтобы купить или продать недвижимость, используйте удобную форму поиска и фильтры."
+        },
+        {
+          "title": "Новостройки Тюмени 2026 — цены от застройщиков, 17 ЖК",
+          "url": "https://www.radar-novostroek.ru/novostrojki/tyumen",
+          "snippet": "Мы ежемесячно делимся подробностями со стройки в нашем блоге. Там вы можете выбрать интересующий вас проект и узнать, какие работы были проведены в указанном месяце."
+        },
+        {
+          "title": "Купить квартиру в Тюмени, новостройки от застройщика",
+          "url": "https://ttis.ru/",
+          "snippet": "Новостройки в Тюмени от 3 застройщика: 17 ЖК, 7 592 квартир в продаже. Ежедневное обновление цен — бесплатно."
+        }
+      ],
+      "searched_at": "2026-09-15"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени сорвалась фиксация цены новостройки 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "imagehost/STMemoryBooks/startup.png at main · aikohanasaki/imagehost ...",
+          "url": "https://github.com/aikohanasaki/imagehost/blob/main/STMemoryBooks/startup.png",
+          "snippet": ""
+        },
+        {
+          "title": "CoreObs/screenshots/server.png at main · crocofied/CoreObs",
+          "url": "https://github.com/crocofied/CoreObs/blob/main/screenshots/server.png",
+          "snippet": "Contribute to aikohanasaki/imagehost development by creating an account on GitHub."
+        },
+        {
+          "title": "Фиксация изменений в проекте - Документация по GitHub",
+          "url": "https://docs.github.com/ru/pull-requests/committing-changes-to-your-project",
+          "snippet": "Dashboard to manage your entire server infrastructure - crocofied/CoreObs"
+        },
+        {
+          "title": "Изменение фиксации в GitHub Desktop",
+          "url": "https://docs.github.com/ru/desktop/managing-commits/amending-a-commit-in-github-desktop",
+          "snippet": "Вы можете управлять изменениями кода в репозитории путем группирования работы в фиксациях."
+        },
+        {
+          "title": "GitHub - xiv3r/ttl-bypass: Bypass anti-tethering and anti-hotspot ...",
+          "url": "https://github.com/xiv3r/ttl-bypass",
+          "snippet": "Для изменения последней фиксации можно использовать GitHub Desktop. Изменение фиксации — это способ изменения последней фиксации, выполненной в текущей ветви. Это может быть полезно, если вам нужно изменить сообщение фиксации или если вы забыли включить изменения в фиксацию."
+        },
+        {
+          "title": "ISTIFANO/images/github.svg at main · ISTIFANO/ISTIFANO",
+          "url": "https://github.com/ISTIFANO/ISTIFANO/blob/main/images/github.svg",
+          "snippet": "GitHub - xiv3r/ttl-bypass: Bypass anti-tethering and anti-hotspot sharing (TTL=1) using OpenWRT nftables on a Wi-Fi repeater or extender. · GitHub. Simple nftables ttl config that can bypass any wifi anti-tethering and anti-hotspot sharing using openwrt router. 👇. Openwrt extender with nftables ttl generator (ip ttl set 64) 👇."
+        }
+      ],
+      "searched_at": "2026-09-15"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени сорвалась фиксация цены новостройки forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Цены на жилье продолжают снижаться в Тюмени: почему",
+          "url": "https://nashgorod.ru/news/2026-07-23/rynok-lomaet-shablony-v-tyumeni-prodolzhaetsya-snizhenie-tsen-na-novostroyki-5643343",
+          "snippet": ""
+        },
+        {
+          "title": "Рынок вывернулся наизнанку. В Тюмени готовые квартиры стоят дешевле ...",
+          "url": "https://nashgorod.ru/news/2026-06-22/rynok-vyvernulsya-naiznanku-v-tyumeni-gotovye-kvartiry-stoyat-deshevle-stroyaschihsya-5621718",
+          "snippet": "В Тюмени за полгода значительно снизились цены на новостройки. Аналитики оценивают объемы снижения в пределах от 0,6% до 10,6%."
+        },
+        {
+          "title": "Выбор тает, а цены растут: что происходит с доступными новостройками в ...",
+          "url": "https://press-release.ru/branches/realestate/__28_05_2026_13_10/",
+          "snippet": "Теперь все поменялось: в Тюмени только что сданные новостройки стали стоить дешевле, чем еще строящееся жилье. При этом разница на пике может достигать 13 тысяч за квадратный метр. Такой аналитикой поделились с редакцией «Нашего города» в сервисе «Объектив РФ»."
+        },
+        {
+          "title": "«Жадность застройщиков» не виновата: эксперт объяснил, из чего ...",
+          "url": "https://tumentoday.ru/2026/07/15/zhadnost_zastroyshchikov_ne_vinovata_ekspert_obyasnil_iz_chego_skladyvayetsya_tsena_novostroyek_v_tyumeni_i_na_severe/",
+          "snippet": "Из-за вымывания ликвидных лотов в массовом сегменте недвижимости в Тюмени предложение в апреле 2026 года резко уменьшилось."
+        },
+        {
+          "title": "Рынок жилья в Тюмени в 2026 году: аналитика, цены на новостройки и ...",
+          "url": "http://www.realto.ru/journal/articles/rynok-zhilya-v-tyumeni-v-2026-godu-analitika-ceny-na-novostrojki-i-prognozy-ekspertov/",
+          "snippet": "В Тюмени, Югре и на Ямале проблема не только в цене квадратного метра, но и в том, что доходы, ипотечная нагрузка и стоимость жизни растут неравномерно."
+        },
+        {
+          "title": "Новостройки Тюмени: цены снижаются, разрыв между объявлением и сделкой ...",
+          "url": "https://kvobzor.ru/news/i52148",
+          "snippet": "Реальное положение дел на рынке новостроек Тюмени. Прогнозы экспертов, влияние вторичного фонда на первичные продажи и причины скрытых скидок от девелоперов."
+        }
+      ],
+      "searched_at": "2026-09-15"
+    }
+  ],
+  "errors": []
+}
