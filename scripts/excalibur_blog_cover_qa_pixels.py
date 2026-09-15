@@ -2005,6 +2005,7 @@ OCR_FLAKY_CHECK_KEYS = frozenset(
         "pixel_hook_title_not_truncated",
         "pixel_wordstat_not_opaque_bars",
         "pixel_wordstat_not_edge_truncated",
+        "pixel_wordstat_only_top_left",
         "pixel_no_wordstat_ocr_strips",
         "pixel_phone_not_clipped",
         "pixel_wordstat_phrases_not_truncated",
