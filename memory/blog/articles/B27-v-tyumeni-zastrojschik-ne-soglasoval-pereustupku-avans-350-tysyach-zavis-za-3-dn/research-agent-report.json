@@ -1,0 +1,70 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-15",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/a/alm_Hspc2E9VNA0Z",
+        "type": "channel",
+        "note": "14.09.2026 — tenant Dzen: чеклист переуступки Тюмень, 55+ ЖК на ЦИАН, эскроу ≠ доплата, порядок до аванса"
+      },
+      {
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "15.09.2026 — tenant TG: контекст проверки новостроек и рисков аванса"
+      },
+      {
+        "url": "https://www.mk.ru/realestate/2026/08/30/stalo-izvestno-v-kakikh-gorodakh-maksimalnye-skidki-na-kvartiry-v-pereustupkakh.html",
+        "type": "news",
+        "note": "30.08.2026 — Движение.ру: рынок переуступок, Тюмень в выборке"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel (scout signal)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить новостройку в Тюмени",
+    "p0_volume": 902,
+    "p0_volume_ru225": 1916,
+    "support_phrases": [
+      {"phrase": "переуступка новостройки", "volume": 18},
+      {"phrase": "договор переуступки новостройки", "volume": 5},
+      {"phrase": "купить новостройку в тюмени от застройщика", "volume": 456},
+      {"phrase": "новостройки тюмень купить в ипотеку", "volume": 86}
+    ],
+    "rework_from": "scout probes «переуступка новостройки» (18) / «договор переуступки новостройки» (5) → buyer spine «купить новостройку в Тюмени» (902)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "assignment_developer_consent_denied_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["214_fz", "218_fz", "rosreestr_tyumen"],
+    "errors": [],
+    "note": "Legal norms 214/218-ФЗ and Tyumen Rosreestr fee 350 ₽; no bank/developer tariff claims in casus"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
