@@ -1,0 +1,295 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-prajs-zhk-vyros-pered-ddu/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1017,
+          566
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 566,
+            "end": 581
+          },
+          "v_gutter_px": {
+            "start": 1017,
+            "end": 1032
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 2.5,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0108,
+            "per_panel_crop_loss": {
+              "top_left": 0.0108,
+              "top_right": 0.0098,
+              "bottom_left": 0.0,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 5,
+              "top": 0,
+              "right": 1011,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1017,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Квартира подорожала перед подписанием: денег не хватило: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1037,
+              "top": 0,
+              "right": 2043,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2048,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Сделку остановили до аванса: ДДУ не подписали» — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Сделку остановили до аванса: ДДУ не подписали"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 581,
+              "right": 1017,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 581,
+              "right": 1017,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Одобрение ≠ цена, Бронь отдельно, Ставка та же — иллюстрация к разбору сделки.",
+            "h2_anchor": "Сделку остановили до аванса: ДДУ не подписали"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1032,
+              "top": 581,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 581,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Ипотеку одобрили» — и семья забронировала лот…» — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Ипотеку одобрили» — и семья забронировала лот по прайсу ЖК"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-prajs-zhk-vyros-pered-ddu/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 567,
+              "end": 602
+            },
+            "v_gutter_px": {
+              "start": 1016,
+              "end": 1032
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 8.5,
+              "v_center_offset_px": 0.0,
+              "max_aspect_crop_loss": 0.0374,
+              "per_panel_crop_loss": {
+                "top_left": 0.0079,
+                "top_right": 0.0079,
+                "bottom_left": 0.0374,
+                "bottom_right": 0.0374
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Между одобрением и ДДУ прайс-лист может обновит…» — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Между одобрением и ДДУ прайс-лист может обновиться"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Одобрение есть, Кредит тот же, Суммы не хватило — иллюстрация к разбору сделки.",
+            "h2_anchor": "За 9 дней до подписания прислали новый прайс: +480 000 ₽"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: ДДУ не подписали, Эскроу пуст, Возврат по брони — иллюстрация к разбору сделки.",
+            "h2_anchor": "Одобренной суммы не хватило — банк не расширил кредит"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Прайс лота, Договор брони, Проект ДДУ — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что сверять до подписания — таблица прайс, бронь, ДДУ"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Сделку остановили до аванса: ДДУ не подписали",
+    "skip inline_2: already correct under H2 — Сделку остановили до аванса: ДДУ не подписали",
+    "skip inline_3: already correct under H2 — «Ипотеку одобрили» — и семья забронировала лот по прайсу ЖК",
+    "moved inline_4 → H2 — Между одобрением и ДДУ прайс-лист может обновиться (was under [за 9 дней до подписания прислали новый прайс: +480 000 ₽]; removed=1)",
+    "moved inline_5 → H2 — За 9 дней до подписания прислали новый прайс: +480 000 ₽ (was under [одобренной суммы не хватило — банк не расширил кредит]; removed=1)",
+    "moved inline_6 → H2 — Одобренной суммы не хватило — банк не расширил кредит (was under [сделку остановили до аванса: дду не подписали]; removed=1)",
+    "skip inline_7: already correct under H2 — Что сверять до подписания — таблица прайс, бронь, ДДУ"
+  ]
+}
