@@ -1,0 +1,73 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-16",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://finuslugi.ru/navigator/kak-ehto-rabotaet/stat_obyazatelno-li-strakhovanie-ipoteki",
+        "type": "news",
+        "note": "15.09.2026 — обновление страницы: обязательное залоговое vs добровольное личное/титульное; жалоба в ЦБ при навязывании"
+      },
+      {
+        "url": "https://www.sibdom.ru/realtynews/26071/",
+        "type": "news",
+        "note": "09.09.2026 — банки перестали требовать титульное страхование на вторичке; рынок сжимает лишние полисы"
+      },
+      {
+        "url": "https://polis812.ru/blog/navyazyvanie-strahovok-i-dopuslug-pri-ipoteke-chto-obyazatelno-a-ot-chego-mozhno-otkazatsya/",
+        "type": "market",
+        "note": "02.06.2026 — навязывание допуслуг при ипотеке, каналы жалоб"
+      },
+      {
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "Tenant TG: локальный контекст новостроек/ипотеки июль–август 2026"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel (scout signal)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4802,
+    "p0_volume_ru225": 8947,
+    "support_phrases": [
+      {"phrase": "страхование ипотеки тюмень", "volume": 29},
+      {"phrase": "дду тюмень", "volume": 19}
+    ],
+    "rework_from": "scout probes «страхование ипотеки тюмень» (29) → «дду тюмень» (19) → P0 newbuild jargon «новостройки тюмень» (4802)",
+    "partial": ["top_requests API 499 transient on 2026-09-16 research run"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "hidden_insurance_rider_before_ddu_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["102-fz", "214-fz", "tbank"],
+    "errors": [],
+    "note": "Mortgage insurance obligations verified via 102-FZ art.31 ConsultantPlus + T-Bank official help page; no exact bank tariff claims. Sber/DOM.RF insurance pages 500 from cloud — not used."
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
