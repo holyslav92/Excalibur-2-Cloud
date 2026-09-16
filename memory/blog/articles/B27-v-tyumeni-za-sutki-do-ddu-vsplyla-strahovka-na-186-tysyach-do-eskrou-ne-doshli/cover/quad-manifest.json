@@ -1,0 +1,262 @@
+{
+  "topic_id": "B27",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Застройщик добавил страховку перед ДДУ",
+  "cover_hook_highlight": "страховку",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени за сутки до ДДУ всплыла страховка на 186 тысяч — до эскроу не дошли: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Подписание: герой слева, стоп к допсоглашению 186 тыс; hook справа.",
+      "meme_caption_ru": "",
+      "sticky": "186 тысяч внезапно",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "шок и недоверие, приподнятые брови, напряжённая челюсть",
+      "meme_picks": [
+        "this_is_fine_dog",
+        "woman_yelling_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Ипотеку одобрили» — и семья забронировала новостройку",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Шоурум: макет, чек брони, одобрение; success_kid угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Ипотеку одобрили» — и семья забронировала ново…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Новостройка",
+        "Бронь оплачена",
+        "Страховки нет"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "success_kid"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Ипотеку одобрили» — и семья забронировала новостройку",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: бронь, ДДУ, эскроу, пакет 186 тыс; gold paper.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: ДДУ завтра, Пакет 186 тысяч, Времени нет — иллюстрация к разбору сделки.",
+      "labels": [
+        "ДДУ завтра",
+        "Пакет 186 тысяч",
+        "Времени нет"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Между бронью и ДДУ оставались сутки",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Вечер: смартфон PDF допсоглашения, календарь «завтра ДДУ».",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Между бронью и ДДУ оставались сутки» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Файл в чате",
+        "До визита сутки",
+        "Партнёр застройщика"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "В чате всплыло допсоглашение на 186 тысяч",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Смартфон: чат менеджера, PDF «186 000 ₽» подсветка.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «В чате всплыло допсоглашение на 186 тысяч» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "186 тысяч вне расчёта",
+        "Считать заново",
+        "Спросить банк письменно",
+        "Ставка без полиса",
+        "Проверить страховую"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Страховой пакет не был в ипотечном расчёте",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема: допсоглашение → отказ → эскроу СТОП; doge угол.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: ДДУ не подписали, Эскроу не открыли, Бронь 48 часов — иллюстрация к разбору сделки.",
+      "labels": [
+        "ДДУ не подписали",
+        "Эскроу не открыли",
+        "Бронь 48 часов",
+        "Деньги не ушли",
+        "Бронь сгорела"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "doge"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Семья остановилась: эскроу не открыли, бронь сгорела",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Bar chart: бронь → страховка → эскроу; красный блок 186 тыс.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Все расходы, Бронь и платёж, Страхование жизни — иллюстрация к разбору сделки.",
+      "labels": [
+        "Все расходы",
+        "Бронь и платёж",
+        "Страхование жизни",
+        "Имущественный полис",
+        "ДДУ и эскроу"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить до подписания ДДУ — таблица",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Диаграмма: банк письменно → полисы → сохранить чат; stonks.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Позиция банка письменно, Сравнить варианты, Обновить расчёт — иллюстрация к разбору…",
+      "labels": [
+        "Позиция банка письменно",
+        "Сравнить варианты",
+        "Обновить расчёт",
+        "Сохранить сообщение",
+        "Остановить сделку"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "stonks"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "cover_motifs": {
+    "composition": "host full-body left third, stop gesture, hook zone upper right, phone bottom-right",
+    "location": "bright sunlit developer signing lounge with newbuild model wall Tyumen",
+    "meme": "this_is_fine_dog + woman_yelling_cat corner stickers",
+    "prop_set": "insurance addendum stack 186k highlighted, DDU folder, yellow sticky, phone CTA",
+    "sticker_set": "this_is_fine_dog top-right, woman_yelling_cat bottom-left, ≤15%",
+    "joke": "fine dog sits calm while yelling-cat reacts to surprise 186k insurance pile",
+    "outfit": "steel-blue open collar shirt rolled sleeves sand chinos no blazer",
+    "emotion": "shocked disbelief raised brows tense jaw direct gaze not side-eye",
+    "pose_framing": "full-body three-quarter left dynamic stop palm not talking-head bust",
+    "action": "blocks insurance addendum stack with stop gesture points at 186k line"
+  },
+  "cover_emotion": "шок и недоверие, приподнятые брови, напряжённая челюсть",
+  "meme_picks": {
+    "cover": [
+      "this_is_fine_dog",
+      "woman_yelling_cat"
+    ],
+    "inline_1": [
+      "success_kid"
+    ],
+    "inline_5": [
+      "doge"
+    ],
+    "inline_7": [
+      "stonks"
+    ]
+  },
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "страхование ипотеки тюмень",
+    "дду тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  }
+}
