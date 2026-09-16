@@ -1,6 +1,7 @@
 {
   "role": "sol_trim",
-  "method": "sol_trim_retry",
-  "word_count_before": 2091,
-  "word_count_after": 1728
+  "method": "sol_trim_chunk",
+  "parts": 3,
+  "word_count_before": 1677,
+  "word_count_after": 1197
 }
