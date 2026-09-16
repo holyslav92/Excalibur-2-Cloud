@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1017,
+          570
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 570,
+            "end": 582
+          },
+          "v_gutter_px": {
+            "start": 1017,
+            "end": 1031
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1017,
+              "bottom": 570
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1017,
+              "bottom": 570
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени за сутки до ДДУ всплыла страховка на 186 тысяч — до эскроу не дошли: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1031,
+              "top": 0,
+              "right": 2048,
+              "bottom": 570
+            },
+            "raw_box_px": {
+              "left": 1031,
+              "top": 0,
+              "right": 2048,
+              "bottom": 570
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Ипотеку одобрили» — и семья забронировала ново…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Ипотеку одобрили» — и семья забронировала новостройку"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 582,
+              "right": 1017,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 582,
+              "right": 1017,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: ДДУ завтра, Пакет 186 тысяч, Времени нет — иллюстрация к разбору сделки.",
+            "h2_anchor": "«Ипотеку одобрили» — и семья забронировала новостройку"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1031,
+              "top": 582,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1031,
+              "top": 582,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Между бронью и ДДУ оставались сутки» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Между бронью и ДДУ оставались сутки"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1013,
+          567
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 567,
+            "end": 587
+          },
+          "v_gutter_px": {
+            "start": 1013,
+            "end": 1034
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 1.0,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0099,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0059,
+              "bottom_left": 0.0089,
+              "bottom_right": 0.0099
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1013,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1013,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «В чате всплыло допсоглашение на 186 тысяч» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "В чате всплыло допсоглашение на 186 тысяч"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1037,
+              "top": 0,
+              "right": 2045,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 0,
+              "right": 2048,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: ДДУ не подписали, Эскроу не открыли, Бронь 48 часов — иллюстрация к разбору сделки.",
+            "h2_anchor": "Страховой пакет не был в ипотечном расчёте"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 587,
+              "right": 1008,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 587,
+              "right": 1013,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Все расходы, Бронь и платёж, Страхование жизни — иллюстрация к разбору сделки.",
+            "h2_anchor": "Семья остановилась: эскроу не открыли, бронь сгорела"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1039,
+              "top": 587,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 587,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Позиция банка письменно, Сравнить варианты, Обновить расчёт — иллюстрация к разбору…",
+            "h2_anchor": "Что проверить до подписания ДДУ — таблица"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — «Ипотеку одобрили» — и семья забронировала новостройку",
+    "skip inline_2: already correct under H2 — «Ипотеку одобрили» — и семья забронировала новостройку",
+    "skip inline_3: already correct under H2 — Между бронью и ДДУ оставались сутки",
+    "injected inline_4 after H2 — В чате всплыло допсоглашение на 186 тысяч",
+    "injected inline_5 after H2 — Страховой пакет не был в ипотечном расчёте",
+    "injected inline_6 after H2 — Семья остановилась: эскроу не открыли, бронь сгорела",
+    "injected inline_7 after H2 — Что проверить до подписания ДДУ — таблица"
+  ]
+}
