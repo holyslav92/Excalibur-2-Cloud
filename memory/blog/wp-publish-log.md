@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-16
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-bank-otkazal-sozaemschiku-semejnaya-ipoteka-pered-eskrou
+- **post_id:** 10433
+- **permalink:** /blog/ipoteka/v-tyumeni-bank-otkazal-sozaemschiku-semejnaya-ipoteka-pered-eskrou/
+- **featured_image:** 10434
+- **inline_images:** 10435–10441 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry (category_ids=32,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** B27 absent from topic_defaults — set wp_category_slugs in article.meta.json; SFTP root fallback to `.`
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26
