@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli",
+  "topic_id": "B27",
+  "post_id": 10446,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1136885,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10446 slug=v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli\nOK categories=36,54,34\nOK yoast_social_image=1\nOK featured_image=10447\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10448 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli-inline-01.png\nOK inline_alt=10448\nOK inline_description=10448\nOK inline_image_upload=10449 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli-inline-02.png\nOK inline_alt=10449\nOK inline_description=10449\nOK inline_image_upload=10450 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli-inline-03.png\nOK inline_alt=10450\nOK inline_description=10450\nOK inline_image_upload=10451 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli-inline-07.png\nOK inline_alt=10451\nOK inline_description=10451\nOK inline_image_upload=10452 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli-inline-04.png\nOK inline_alt=10452\nOK inline_description=10452\nOK inline_image_upload=10453 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli-inline-05.png\nOK inline_alt=10453\nOK inline_description=10453\nOK inline_image_upload=10454 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli-inline-06.png\nOK inline_alt=10454\nOK inline_description=10454\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli/",
+    "errors": []
+  }
+}
