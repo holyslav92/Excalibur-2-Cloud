@@ -1,0 +1,164 @@
+{
+  "research_date": "2026-09-16",
+  "topic_id": "B27",
+  "cluster_id": "parking_declaration_mismatch_tyumen",
+  "casus_verified_publicly": false,
+  "casus_mode": "editorial_tyumen_newbuild",
+  "facts": [
+    {
+      "id": "law_mm_object",
+      "category": "legal",
+      "claim": "Машино-место — объект долевого строительства по 214-ФЗ (п. 2 ст. 1).",
+      "source_url": "https://www.consultant.ru/document/cons_doc_LAW_51038/",
+      "source_type": "official",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "law_ddu_pd_match",
+      "category": "legal",
+      "claim": "Условия ДДУ по ч. 4 и 4.2 ст. 4 должны соответствовать проектной декларации на момент заключения (ч. 4.1 ст. 4).",
+      "source_url": "https://lawyersocial.net/laws/214fz/statia_4/",
+      "source_type": "official",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "law_conditional_number",
+      "category": "legal",
+      "claim": "В ДДУ указывают условный номер объекта долевого строительства в соответствии с проектной декларацией (п. 1 ч. 4 ст. 4).",
+      "source_url": "https://lawyersocial.net/laws/214fz/statia_4/",
+      "source_type": "official",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "law_escrow_after_reg",
+      "category": "legal",
+      "claim": "Денежные средства на счёт эскроу вносятся после регистрации ДДУ (ст. 15.5 ч. 4 214-ФЗ).",
+      "source_url": "https://www.consultant.ru/document/cons_doc_LAW_51038/",
+      "source_type": "official",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "law_pd_monthly_update",
+      "category": "legal",
+      "claim": "Изменения в проектную декларацию по сведениям о проекте вносятся ежемесячно не позднее 10-го числа следующего месяца (ч. 4 ст. 19).",
+      "source_url": "https://www.consultant.ru/law/podborki/sroki_vneseniya_izmenenij_v_proektnuyu_deklaraciyu/",
+      "source_type": "official",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "pd_section_153",
+      "category": "official_docs",
+      "claim": "Машино-места в ПД учитываются в разделе 15.1.2.1 и детализируются в 15.3.1; гостевые и зависимые ММ не продаются по ДДУ (МР Минстроя 03.05.2023).",
+      "source_url": "https://egov-buryatia.ru/rsgji/%D0%9C%D0%A0_%D0%9F%D0%94_%D0%BE%D1%82_03.05.2023.pdf",
+      "source_type": "official",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "pd_eiszh_corpus",
+      "category": "practice",
+      "claim": "На наш.дом.рф нужно выбирать конкретный корпус и этап — параметры паркинга и номера у соседних корпусов могут отличаться.",
+      "source_url": "https://novostroikino.ru/blog/proektnaya-deklaratsiya-zastroyshchika-kak-proverit-dokumenty-2026/",
+      "source_type": "market",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "bron_not_pd",
+      "category": "practice",
+      "claim": "Бронь до ДДУ не подтверждает наличие объекта в проектной декларации и не равна ДДУ.",
+      "source_url": "https://www.glavbukh.ru/hl/2077622-zakonna-li-oplata-broni-do-ddu-bez-vozvrata-deneg",
+      "source_type": "market",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "ddu_mm_separate_or_joint",
+      "category": "practice",
+      "claim": "Машино-место на стройке можно включить в тот же ДДУ, что квартиру, или оформить отдельным ДДУ; расчёты через эскроу.",
+      "source_url": "https://nomo.moscow/blog/parking-i-kladovye/",
+      "source_type": "market",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "escrow_per_ddu",
+      "category": "legal",
+      "claim": "Счёт эскроу открывается для учёта денег по конкретному договору участия (ст. 15.5 ч. 2); два ДДУ — как правило два счёта.",
+      "source_url": "https://www.consultant.ru/document/cons_doc_LAW_51038/",
+      "source_type": "official",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "bank_not_universal_refusal",
+      "category": "constraint",
+      "claim": "Нет нормы 214-ФЗ, обязывающей любой банк отказать в эскроу при расхождении номера; остановка пакета — по правилам банка и комплекта документов.",
+      "source_url": null,
+      "source_type": "inference_from_scout",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "checklist_sravni_mm",
+      "category": "practice",
+      "claim": "При проверке ДДУ сверяют, входит ли машино-место в предмет договора, с проектной декларацией на наш.дом.рф.",
+      "source_url": "https://www.sravni.ru/text/kak-proverit-dogovor-dolevogo-uchastiya/",
+      "source_type": "market",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "attachment_parking_mismatch",
+      "category": "community",
+      "claim": "Расхождение схемы парковки или номера секции часто всплывает в приложениях к ДДУ, если не сверить с ПД до подписания (практика брокеров).",
+      "source_url": "https://kvarnado.ru/zastrojshhiki/guide-dogovor-ddu-s-zastroyschikom",
+      "source_type": "community",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "eiszh_pd_sept_2026",
+      "category": "official_docs",
+      "claim": "В ЕИСЖС публикуются актуальные редакции ПД с разделами по машино-местам (пример: ПД от 03–04.09.2026 в выгрузке cdnstroy).",
+      "source_url": "https://id.cdnstroy.ru/dz0m6j9amsexv_r8ruik.pdf",
+      "source_type": "official",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true
+    },
+    {
+      "id": "tyumen_sosedi_context",
+      "category": "market_tyumen",
+      "claim": "На рынке Тюмени у отдельных ЖК заявлены сотни машино-мест с продажей по ДДУ (агрегатор: ЖК «Соседи» — 374 ММ).",
+      "source_url": "https://tyumenskaya.kvmeter.ru/jk/sosedi/",
+      "source_type": "market",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true,
+      "note": "контекст рынка, не casus"
+    },
+    {
+      "id": "casus_spine",
+      "category": "editorial_casus",
+      "claim": "Редакционный сценарий: сверка номера ММ с ПД за 3 дня до ДДУ; номер не найден в корпусе/очереди; банк не открыл эскроу на полный пакет; остановка до аванса.",
+      "source_url": null,
+      "source_type": "scout_handoff",
+      "accessed_at": "2026-09-16",
+      "writer_safe": true,
+      "verified_publicly": false
+    },
+    {
+      "id": "wordstat_p0",
+      "category": "demand",
+      "claim": "Wordstat: «новостройки тюмень» — 4475 (регионы 55+11176); «дду машиноместо» — 217 (RU 225).",
+      "source_url": "mcp-kv wordstat_get_top_requests",
+      "source_type": "wordstat",
+      "accessed_at": "2026-09-16",
+      "writer_safe": false
+    }
+  ]
+}

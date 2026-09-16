@@ -1,0 +1,239 @@
+{
+  "topic_id": "B27",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Парковку забронировали — номера нет",
+  "cover_hook_highlight": "номера",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени за 3 дня до ДДУ не нашли номер машино-места в декларации: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Паркинг-шоурум: герой справа, бронь vs пустая ячейка; high-key flare.",
+      "meme_caption_ru": "",
+      "sticky": "Проверьте до сделки",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие, напряжённая полуулыбка",
+      "meme_picks": [
+        "sacrednik_priest",
+        "surprised_pikachu"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Банк поставил пакет на паузу — эскроу на «квартира + место» не открыли",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: бронь ММ, планшет пауза, заметка ДДУ; stonks угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Банк поставил пакет на паузу — эскроу на «кварт…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Бронь места",
+        "Номер парковки",
+        "Проверка до ДДУ"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "stonks"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Банк поставил пакет на паузу — эскроу на «квартира + место» не открыли",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема: ПД → 15.3 → наш.дом.рф; разрыв бронь/данные; gold paper tape.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Проектная декларация, Раздел 15.3, Данные на наш.дом.рф — иллюстрация к разбору сделки.",
+      "labels": [
+        "Проектная декларация",
+        "Раздел 15.3",
+        "Данные на наш.дом.рф"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "«Номер на брони» — и семья пошла к ДДУ в новостройке",
+      "visual_type": "realistic_photo",
+      "scene_hint": "План паркинга, ноутбук, бронь, календарь 3 дня; bright.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Номер на брони» — и семья пошла к ДДУ в новост…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Три дня до подписи",
+        "Номер не найден",
+        "Пакет на паузе"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За три дня до подписи: в декларации не нашли машино-место",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Ноутбук 15.3, документы кв+ММ, папка ипотеки; no people.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За три дня до подписи: в декларации не нашли ма…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Квартира и место",
+        "Семейная ипотека",
+        "Условия банка"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Бронь, проектная декларация и ДДУ — три разных языка",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: Бронь | ПД | ДДУ — номер, проверка, риск; this_is_fine_dog угол.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Эскроу не открыли, Проверка документов, Риск задержки — иллюстрация к разбору…",
+      "labels": [
+        "Эскроу не открыли",
+        "Проверка документов",
+        "Риск задержки"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "this_is_fine_dog"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что сверять до аванса — таблица",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow: ММ → застройщик → сверка → ДДУ → эскроу; gold arrows, bright.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Подпись ДДУ, Данные застройщика, Парковочное место — иллюстрация к разбору сделки.",
+      "labels": [
+        "Подпись ДДУ",
+        "Данные застройщика",
+        "Парковочное место"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Машино-место, эскроу и ипотека: где рвётся связка",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Timeline: номер→декларация→эскроу; стоп; doge угол.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Сверьте номер, Проверьте декларацию, До открытия эскроу — иллюстрация к разбору сделки.",
+      "labels": [
+        "Сверьте номер",
+        "Проверьте декларацию",
+        "До открытия эскроу"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "doge"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "дду машиноместо",
+    "машино-место"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "host full-body right, parking plan wall, empty slot, hook zone left",
+    "location": "bright newbuild showroom parking plan stand",
+    "meme": "sacrednik_priest + surprised_pikachu corner stickers",
+    "prop_set": "parking reservation printout, tablet declaration, marker",
+    "sticker_set": "sacrednik_priest bottom-left, surprised_pikachu top-right",
+    "joke": "reservation has number, plan shows empty slot",
+    "outfit": "light blue rolled-sleeve shirt, beige chinos, navy belt",
+    "emotion": "stunned disbelief tense half-smile",
+    "pose_framing": "full-body right third, points at empty parking cell",
+    "action": "compares reservation number to parking plan gap"
+  },
+  "cover_emotion": "ошеломлённое недоверие, напряжённая полуулыбка"
+}

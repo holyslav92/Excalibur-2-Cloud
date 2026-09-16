@@ -1,0 +1,76 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-16",
+  "derouter": {
+    "status": "PARTIAL",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "note": "First Derouter call returned self-BLOCKER text; research-notes.md synthesized manually from assembled inputs + live fetches (same pattern as B26 fallback)"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://id.cdnstroy.ru/dz0m6j9amsexv_r8ruik.pdf",
+        "type": "official",
+        "date": "2026-09-04",
+        "note": "EISZH project declaration edition with parking sections 15.x / 19.7 — accessed research week"
+      },
+      {
+        "url": "https://www.sravni.ru/text/kak-proverit-dogovor-dolevogo-uchastiya/",
+        "type": "market",
+        "date": "2026-08-17",
+        "note": "Updated guide: verify DDU vs PD including mashinomesto; re-accessed 2026-09-16"
+      },
+      {
+        "url": "https://kvarnado.ru/zastrojshhiki/guide-dogovor-ddu-s-zastroyschikom",
+        "type": "community",
+        "date": "2026-05-02",
+        "note": "Parking scheme / section mismatch in DDU attachments — re-accessed 2026-09-16"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4475,
+    "mechanism_phrase": "дду машиноместо",
+    "mechanism_volume_ru225": 217,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 902},
+      {"phrase": "купить машиноместо дду", "volume": 35},
+      {"phrase": "жк новостройки тюмень", "volume": 204}
+    ],
+    "rework_from": "дду машиноместо 217 (225) + P0 новостройки тюмень 4475",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "parking_declaration_mismatch_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["consultant_214_fz", "minstroy_pd_mr", "sravni_market"],
+    "errors": [],
+    "note": "214-FZ st.1/4/15.5/19; Minstroy MR PD 15.3; no bank tariff digits without person-page verification"
+  },
+  "key_facts_count": 17,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_facts": "research-facts.json",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}
