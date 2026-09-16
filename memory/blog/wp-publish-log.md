@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-16
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-za-3-dnya-do-ddu-sverili-mashinomesto-v-deklaracii-ne-okazalos-nomera
+- **post_id:** 10472
+- **permalink:** /blog/proverka-pered-pokupkoj/v-tyumeni-za-3-dnya-do-ddu-sverili-mashinomesto-v-deklaracii-ne-okazalos-nomera/
+- **featured_image:** 10473
+- **inline_images:** 10474–10480 (7)
+- **wp_category_slugs:** pokupka-kvartiry, dokumenty-i-oformlenie, proverka-pered-pokupkoj (category_ids=36,54,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26
