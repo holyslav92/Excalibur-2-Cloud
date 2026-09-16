@@ -1,0 +1,254 @@
+{
+  "topic_id": "B27",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Застройщик выдал ключи, но не выплатил неустойку",
+  "cover_hook_highlight": "неустойку",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени застройщик выдал ключи через 9 месяцев — неустойку не выплатил: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Приёмка: герой на коленях справа, ключи, акт, пустой расчёт неустойки; high-key.",
+      "meme_caption_ru": "",
+      "sticky": "Девять месяцев ждали",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "разочарование, опущенные плечи, прямой взгляд",
+      "meme_picks": [
+        "disappointed_black_guy",
+        "long_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Девять месяцев после срока в ДДУ — ключи наконец в дверях",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Подъезд новостройки, дверь с ключами, 271 день; wojak угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Девять месяцев после срока в ДДУ — ключи наконе…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "271-й день просрочки",
+        "Ключи получены",
+        "Акт на приёмке"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "wojak"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Девять месяцев после срока в ДДУ — ключи наконец в дверях",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Шкала: срок ДДУ → 271 день → ключи; аренда+ипотека; gold paper.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Аренда плюс ипотека, Оговорка в акте, Новые дни не идут — иллюстрация к разбору сделки.",
+      "labels": [
+        "Аренда плюс ипотека",
+        "Оговорка в акте",
+        "Новые дни не идут"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Аренда, ипотека и акт с оговоркой о неустойке",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол приёмки: акт с оговоркой, ручка, ключи; bright.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Аренда, ипотека и акт с оговоркой о неустойке» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "«Претензий не имею»",
+        "Не отказ от денег",
+        "Запись в акте"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Претензия, отсрочка 2026 и иск без денег на счёте",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Почта: заказное письмо претензия, конверт, штамп; bright.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Претензия, отсрочка 2026 и иск без денег на счё…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Претензия: 380 тысяч",
+        "Отсрочка до 2026",
+        "Иск подан"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Три даты, которые нельзя смешивать",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: срок ДДУ, дата акта, дата претензии; doakes угол.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Срок из ДДУ, Дата акта, Дата претензии — иллюстрация к разбору сделки.",
+      "labels": [
+        "Срок из ДДУ",
+        "Дата акта",
+        "Дата претензии"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "james_doakes"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что фиксировать до подписи акта — таблица «думают» и «на самом деле»",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема: ключи → оговорка → претензия → иск; gold arrows.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Ключи получил, Неустойка не выплачена, Претензия с расчётом — иллюстрация к…",
+      "labels": [
+        "Ключи получил",
+        "Неустойка не выплачена",
+        "Претензия с расчётом"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Аренда, ипотека и акт с оговоркой о неустойке",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Диаграмма: договор → акт → письмо; pepe угол.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Договор и акт, Заказное письмо, Семь рабочих дней — иллюстрация к разбору сделки.",
+      "labels": [
+        "Договор и акт",
+        "Заказное письмо",
+        "Семь рабочих дней"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "pepe_frog"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "cover_motifs": {
+    "composition": "host kneeling center-right at handover table, hook zone upper left, phone bottom-right",
+    "location": "bright sunlit tyumen newbuild handover room keys tray transfer act on table",
+    "meme": "disappointed_black_guy + long_cat corner stickers",
+    "prop_set": "keys tray, transfer act with penalty clause, empty payment calculation sheet, yellow sticky",
+    "sticker_set": "disappointed_black_guy top-left, long_cat bottom-right, ≤15%",
+    "joke": "keys in hand but penalty payment sheet shows zero rubles transferred",
+    "outfit": "rust orange linen open-collar shirt, light grey trousers, no blazer",
+    "emotion": "disappointed exhaustion dropped shoulders direct gaze not side-eye",
+    "pose_framing": "kneeling medium shot center-right leaning over transfer act not left bust",
+    "action": "holds keys in one hand points at unpaid penalty calculation on table"
+  },
+  "cover_emotion": "разочарование, опущенные плечи, прямой взгляд",
+  "meme_picks": {
+    "cover": [
+      "disappointed_black_guy",
+      "long_cat"
+    ],
+    "inline_1": [
+      "wojak"
+    ],
+    "inline_5": [
+      "james_doakes"
+    ],
+    "inline_7": [
+      "pepe_frog"
+    ]
+  },
+  "wordstat_stickers": [
+    "неустойка застройщика",
+    "претензия застройщику неустойка",
+    "новостройки тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  }
+}
