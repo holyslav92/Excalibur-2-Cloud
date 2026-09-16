@@ -1,0 +1,76 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-16",
+  "cluster_id": "keys_delay_penalty_unpaid",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://rg.ru/2026/09/10/eksperty-rg-rasskazali-kak-dolshchiku-poluchit-kompensaciiu-ot-zastrojshchika.html",
+        "type": "news",
+        "note": "10.09.2026 — эксперты РГ о компенсации дольщику от застройщика; SERP + handoff"
+      },
+      {
+        "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/priemka-obekta-po-ddu/kak-akt-osmotra-kvartiry-po-ddu-esli-vyyavleny-nedostatki-pri-priemke-kvartiry-v-novostroyke-i-chto-/",
+        "type": "legal_community",
+        "note": "07.09.2026 — акт осмотра, претензия, приёмка"
+      },
+      {
+        "url": "https://harant.ru/blog/nedvizhimost/vzyskanie-neustojki-po-ddu-polnoe-rukovodstvo-na-2026-god/",
+        "type": "legal_community",
+        "note": "13.08.2026 — неустойка, мораторий/отсрочка 2026, претензия"
+      },
+      {
+        "url": "https://vc.ru/legal/2678584-otmena-moratoriya-na-neustoyki-zastroyshchikov-s-2026-goda",
+        "type": "community",
+        "note": "05.01.2026 — отмена моратория на начисление, отсрочка старых выплат"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "tenant_signal",
+        "note": "Tenant channel context"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "неустойка застройщика",
+    "p0_volume": 134,
+    "context_phrase": "новостройки тюмень",
+    "context_volume": 4475,
+    "compare_region": "225",
+    "compare_p0_volume": 8156,
+    "secondary_phrases": [
+      {"phrase": "претензия застройщику неустойка", "volume": 15, "regions": ["55", "11176"]},
+      {"phrase": "неустойка за просрочку застройщика", "volume": 23, "regions": ["55", "11176"]},
+      {"phrase": "мораторий на неустойку с застройщика в 2026", "volume": 6, "regions": ["55", "11176"]}
+    ],
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "note": "Distinct from B12 handover delay/escrow, B26 RVE/tranche, B25 finishing mismatch"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["214_fz", "pp_rf_2227", "eisjs_domrf"],
+    "errors": [],
+    "note": "214-ФЗ ст. 6/8 via LAW_51038; Scout LAW_51040 corrected; no bank tariff claims"
+  },
+  "key_facts_count": 48,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
