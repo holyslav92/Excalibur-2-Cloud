@@ -1,0 +1,213 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-16",
+    "today_ru": "16.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "среда"
+  },
+  "topic": {
+    "topic_id": "B27",
+    "title": "В Тюмени бank отказал созаёмщику по семейной ипотеке — за 4 дня до эскроу сделку остановили",
+    "h1": "В Тюмени бank отказал созаёмщику по семейной ипотеке — за 4 дня до эскроу сделку остановили",
+    "slug": "v-tyumeni-bank-otkazal-sozaemschiku-po-semejnoj-ipoteke-za-4-dnya-do-eskrou-sdel",
+    "primary_query": "В Тюмени бank отказал созаёмщику по семейной ипотеке — за 4 дня до эскроу сделку остановили",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени бank отказал созаёмщику по семейной ипотеке — за 4 дня до эскроу сделку остановили 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Банк отказал по дому? Чеклист старого фонда в Тюмени",
+          "url": "https://dzen.ru/a/am7Yl2tbQE6qXY2F",
+          "snippet": ""
+        },
+        {
+          "title": "Отказ по семейной ипотеке: причины и что делать в 2026",
+          "url": "https://ugsdom.ru/blog/otkaz-po-semeynoy-ipoteke-prichiny",
+          "snippet": "Чтобы ипотека на старый фонд не закончилась потерей денег, сначала проверяйте дом и документы, затем согласовывайте объект с банком и только после этого платите продавцу."
+        },
+        {
+          "title": "Тюменский финансист назвала причины для отказа в семейной ипотеке ...",
+          "url": "https://dzen.ru/news/instory/0bfe7173-d79b-5bc7-a95f-e430b9c0f4f5",
+          "snippet": "Почему банк отказывает в семейной ипотеке на строительство дома: как проверить семью, ПДН, БКИ, участок, подрядчика, смету и эскроу перед повторной заявкой."
+        },
+        {
+          "title": "Банк отказал в ипотеке: причины отказа и что делать дальше",
+          "url": "https://bankrt.ru/blog/otkazali-v-ipoteke-chto-delat-dalshe/",
+          "snippet": "Тюменский финансист назвала причины для отказа в семейной ипотеке. Будьте в курсе последних событий | Дзен"
+        },
+        {
+          "title": "Отказ в семейной ипотеке: причины и как обжаловать решение банка",
+          "url": "https://ipotekagood.ru/semya/chto-delat-esli-bank-otkazal-v-semejnoj-ipoteke-prichiny-i-obzhalovanie/",
+          "snippet": "Не спешите сразу подавать заявки в другие банки — это может ухудшить кредитную историю. В статье разбираем причины отказа (ПДН, доход, объект, возраст) и рассказываем как исправить ситуацию."
+        },
+        {
+          "title": "Что делать, если банк отказал в ипотеке на этапе сделки",
+          "url": "https://www.cherehapa.ru/blog/ipoteka/otkaz-banka-na-sdelke",
+          "snippet": "Банк отказал в семейной ипотеке? Узнайте причины, как обжаловать решение и шаги для одобрения — советы, образцы жалоб и чек-лист действий."
+        }
+      ],
+      "searched_at": "2026-09-16"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени бank отказал созаёмщику по семейной ипотеке — за 4 дня до эскроу сделку остановили 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Банк отказал по дому? Чеклист старого фонда в Тюмени",
+          "url": "https://dzen.ru/a/am7Yl2tbQE6qXY2F",
+          "snippet": ""
+        },
+        {
+          "title": "Отказ по семейной ипотеке: причины и что делать в 2026",
+          "url": "https://ugsdom.ru/blog/otkaz-po-semeynoy-ipoteke-prichiny",
+          "snippet": "Чтобы ипотека на старый фонд не закончилась потерей денег, сначала проверяйте дом и документы, затем согласовывайте объект с банком и только после этого платите продавцу."
+        },
+        {
+          "title": "Банк отказал в ипотеке: причины отказа и что делать дальше",
+          "url": "https://bankrt.ru/blog/otkazali-v-ipoteke-chto-delat-dalshe/",
+          "snippet": "Почему банк отказывает в семейной ипотеке на строительство дома: как проверить семью, ПДН, БКИ, участок, подрядчика, смету и эскроу перед повторной заявкой."
+        },
+        {
+          "title": "Оспаривание отказа в семейной ипотеке: помощь адвоката",
+          "url": "https://katsaylidi.ru/blog/otkaz-v-semejnoj-ipoteke/",
+          "snippet": "Не спешите сразу подавать заявки в другие банки — это может ухудшить кредитную историю. В статье разбираем причины отказа (ПДН, доход, объект, возраст) и рассказываем как исправить ситуацию."
+        },
+        {
+          "title": "Банк отказали в сделке по семейной ипотеке с семейным капиталом",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/bank-otkazali-w-sdelke-po-semejnoj-ipoteke-s-semejnym-kapitalom",
+          "snippet": "Получить отказ в семейной ипотеке сегодня — это не просто досадное недоразумение, а сложный юридический факт, последствия которого могут быть вызваны не только плохой кредитной историей, но и изменениями в федеральных нормативных актах, вступившими в силу с февраля 2026 года."
+        },
+        {
+          "title": "Отказ в семейной ипотеке: Отказывают в семейной ипотек с мужем или из ...",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/otkaz-w-semejnoj-ipoteke-9cbe2c13",
+          "snippet": "С февраля 2026 года правила семейной ипотеки ужесточились. Теперь банк проверяет: совпадает ли адрес постоянной регистрации ребёнка с регистрацией одного из родителей (заёмщика или созаёмщика). Логика простая: программа для семей, и по документам семья должна «жить вместе»."
+        }
+      ],
+      "searched_at": "2026-09-16"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени бank отказал созаёмщику по семейной ипотеке — за 4 дня до эскроу сделку остановили official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Отказ по семейной ипотеке: причины и что делать в 2026",
+          "url": "https://ugsdom.ru/blog/otkaz-po-semeynoy-ipoteke-prichiny",
+          "snippet": ""
+        },
+        {
+          "title": "Тюменский финансист назвала причины для отказа в семейной ипотеке ...",
+          "url": "https://dzen.ru/news/instory/0bfe7173-d79b-5bc7-a95f-e430b9c0f4f5",
+          "snippet": "Почему банк отказывает в семейной ипотеке на строительство дома: как проверить семью, ПДН, БКИ, участок, подрядчика, смету и эскроу перед повторной заявкой."
+        },
+        {
+          "title": "Отказ в семейной ипотеке: причины и как обжаловать решение банка",
+          "url": "https://ipotekagood.ru/semya/chto-delat-esli-bank-otkazal-v-semejnoj-ipoteke-prichiny-i-obzhalovanie/",
+          "snippet": "Тюменский финансист назвала причины для отказа в семейной ипотеке. Будьте в курсе последних событий | Дзен"
+        },
+        {
+          "title": "Банк отказал в ипотеке: причины отказа и что делать дальше",
+          "url": "https://bankrt.ru/blog/otkazali-v-ipoteke-chto-delat-dalshe/",
+          "snippet": "Банк отказал в семейной ипотеке? Узнайте причины, как обжаловать решение и шаги для одобрения — советы, образцы жалоб и чек-лист действий."
+        },
+        {
+          "title": "Банк отказал по дому? Чеклист старого фонда в Тюмени",
+          "url": "https://dzen.ru/a/am7Yl2tbQE6qXY2F",
+          "snippet": "В статье разбираем причины отказа (ПДН, доход, объект, возраст) и рассказываем как исправить ситуацию. Полезная информация от ипотечного брокера."
+        },
+        {
+          "title": "Что делать, если банк отказал в ипотеке на этапе сделки",
+          "url": "https://www.cherehapa.ru/blog/ipoteka/otkaz-banka-na-sdelke",
+          "snippet": "Чтобы ипотека на старый фонд не закончилась потерей денег, сначала проверяйте дом и документы, затем согласовывайте объект с банком и только после этого платите продавцу."
+        }
+      ],
+      "searched_at": "2026-09-16"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени бank отказал созаёмщику по семейной ипотеке — за 4 дня до эскроу сделку остановили 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 5,
+      "results": [
+        {
+          "title": "manigandand/asset/nats.svg at main - GitHub",
+          "url": "https://github.com/manigandand/manigandand/blob/main/asset/nats.svg",
+          "snippet": ""
+        },
+        {
+          "title": "eyd/favicon.svg at main · sacha-profeta/eyd · GitHub",
+          "url": "https://github.com/sacha-profeta/eyd/blob/main/favicon.svg",
+          "snippet": "base64 img replaced svg img 964cee0 · 5 years ago History 1 lines (1 loc) · 4.89 KB Preview Code Blame"
+        },
+        {
+          "title": "Управление доступом к личным репозиториям - Документация GitHub",
+          "url": "https://docs.github.com/ru/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration",
+          "snippet": "Contribute to sacha-profeta/eyd development by creating an account on GitHub."
+        },
+        {
+          "title": "gpt-oss/docs/gpt-oss.svg at main · openai/gpt-oss · GitHub",
+          "url": "https://github.com/openai/gpt-oss/blob/main/docs/gpt-oss.svg",
+          "snippet": "Вы можете предоставить людям доступ к репозиториям, принадлежащим личной учетной записи, в качестве участников совместной работы."
+        },
+        {
+          "title": "Texa-Sales-Dashboard-using-Power-BI-/screenshot of sales ... - GitHub",
+          "url": "https://github.com/Tharshini2027/Texa-Sales-Dashboard-using-Power-BI-/tree/main/screenshot%20of%20sales%20dashboard",
+          "snippet": "GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects."
+        }
+      ],
+      "searched_at": "2026-09-16"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени бank отказал созаёмщику по семейной ипотеке — за 4 дня до эскроу сделку остановили forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Банк отказал по дому? Чеклист старого фонда в Тюмени",
+          "url": "https://dzen.ru/a/am7Yl2tbQE6qXY2F",
+          "snippet": ""
+        },
+        {
+          "title": "Тюменский финансист назвала причины для отказа в семейной ипотеке ...",
+          "url": "https://dzen.ru/news/instory/0bfe7173-d79b-5bc7-a95f-e430b9c0f4f5",
+          "snippet": "Чтобы ипотека на старый фонд не закончилась потерей денег, сначала проверяйте дом и документы, затем согласовывайте объект с банком и только после этого платите продавцу."
+        },
+        {
+          "title": "Отказ по семейной ипотеке: причины и что делать в 2026",
+          "url": "https://ugsdom.ru/blog/otkaz-po-semeynoy-ipoteke-prichiny",
+          "snippet": "Тюменский финансист назвала причины для отказа в семейной ипотеке. Будьте в курсе последних событий | Дзен"
+        },
+        {
+          "title": "Банк отказал в ипотеке: причины отказа и что делать дальше",
+          "url": "https://bankrt.ru/blog/otkazali-v-ipoteke-chto-delat-dalshe/",
+          "snippet": "Почему банк отказывает в семейной ипотеке на строительство дома: как проверить семью, ПДН, БКИ, участок, подрядчика, смету и эскроу перед повторной заявкой."
+        },
+        {
+          "title": "Отказ в семейной ипотеке: причины и как обжаловать решение банка",
+          "url": "https://ipotekagood.ru/semya/chto-delat-esli-bank-otkazal-v-semejnoj-ipoteke-prichiny-i-obzhalovanie/",
+          "snippet": "Не спешите сразу подавать заявки в другие банки — это может ухудшить кредитную историю. В статье разбираем причины отказа (ПДН, доход, объект, возраст) и рассказываем как исправить ситуацию."
+        },
+        {
+          "title": "Что делать, если банк отказал в ипотеке на этапе сделки",
+          "url": "https://www.cherehapa.ru/blog/ipoteka/otkaz-banka-na-sdelke",
+          "snippet": "Банк отказал в семейной ипотеке? Узнайте причины, как обжаловать решение и шаги для одобрения — советы, образцы жалоб и чек-лист действий."
+        }
+      ],
+      "searched_at": "2026-09-16"
+    }
+  ],
+  "errors": []
+}

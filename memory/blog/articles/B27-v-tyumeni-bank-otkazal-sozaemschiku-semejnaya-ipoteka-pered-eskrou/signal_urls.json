@@ -1,0 +1,74 @@
+{
+  "topic_id": "B27",
+  "research_date": "2026-09-16",
+  "scout_signal_urls": [
+    "https://dzen.ru/holyslav",
+    "https://www.domrf.ru/",
+    "https://www.consultant.ru/document/cons_doc_LAW_51040/",
+    "https://t.me/Tyumen_Rieltor"
+  ],
+  "research_verified_urls": [
+    {
+      "url": "https://www.infullbroker.ru/articles/pochemu-bank-mozhet-otkazat-v-semejnoj-ipoteke/",
+      "type": "news",
+      "published": "2026-09-08",
+      "note": "Fresh signal this week — co-borrower scoring, family mortgage refusal reasons"
+    },
+    {
+      "url": "https://minfin.gov.ru/ru/press-center/?id_4=40178-izmeneniya_v_programme_semeinaya_ipoteka_v_2026_godu",
+      "type": "official",
+      "published": "2026-01-30",
+      "note": "Mandatory co-borrower spouses from 2026-02-01; third parties if income insufficient"
+    },
+    {
+      "url": "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/instructions/semeinaya-ipoteka/",
+      "type": "official",
+      "published": null,
+      "note": "Dom.RF person instructions — 6%, 20%, 6M limit Tyumen region, co-borrower rules"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/57da6efc7ca337d428cf526d01e70925ce5bdcb0/",
+      "type": "official",
+      "published": null,
+      "note": "214-FZ art 15.4 — DDU escrow payments"
+    },
+    {
+      "url": "https://www.cbr.ru/press/pr/?file=639130820712099203FINSTAB.htm",
+      "type": "official",
+      "published": "2026-04-29",
+      "note": "CBR MPL Q3 2026 for DDU segment"
+    },
+    {
+      "url": "https://dzen.ru/a/anRTB2ni3D3wHiGG",
+      "type": "channel",
+      "published": "2026-08",
+      "note": "Tenant Dzen — Tyumen mortgage refusal checklist"
+    },
+    {
+      "url": "https://dzen.ru/a/akkd9cDdYlsmAw-7",
+      "type": "channel",
+      "published": "2026-07",
+      "note": "Tenant Dzen — family mortgage until Oct 2026, 6M Tyumen"
+    },
+    {
+      "url": "https://harant.ru/questions/q-167938/",
+      "type": "community",
+      "published": "2026-03-21",
+      "note": "Community Q&A — co-borrower status and family mortgage rights"
+    },
+    {
+      "url": "https://www.consultant.ru/law/hotdocs/92674.html",
+      "type": "official",
+      "published": "2026-01-30",
+      "note": "Consultant hotdoc — Minfin co-borrower rule"
+    }
+  ],
+  "writer_safe_urls": [
+    "https://t.me/Tyumen_Rieltor",
+    "https://max.ru/id561413315447_biz",
+    "https://dzen.ru/holyslav",
+    "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/instructions/semeinaya-ipoteka/",
+    "https://minfin.gov.ru/ru/press-center/?id_4=40178-izmeneniya_v_programme_semeinaya_ipoteka_v_2026_godu",
+    "https://www.consultant.ru/document/cons_doc_LAW_51038/57da6efc7ca337d428cf526d01e70925ce5bdcb0/"
+  ]
+}

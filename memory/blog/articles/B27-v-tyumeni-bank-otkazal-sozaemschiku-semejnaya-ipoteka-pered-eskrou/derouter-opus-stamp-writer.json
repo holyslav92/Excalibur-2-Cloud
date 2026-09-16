@@ -1,0 +1,11 @@
+{
+  "script": "scripts/excalibur_blog_writer_chunk.py",
+  "role": "writer",
+  "tier": "powerful",
+  "model": "gpt-6-astra",
+  "method": "writer_chunk_3parts + writer_trim2_3parts",
+  "parts": 3,
+  "trim_pass": true,
+  "contract": "shared/derouter-opus-brain-contract.md",
+  "created_at": "2026-09-16T05:34:00+00:00"
+}
