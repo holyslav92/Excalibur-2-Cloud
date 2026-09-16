@@ -1,0 +1,77 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-16",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://www.infullbroker.ru/articles/pochemu-bank-mozhet-otkazat-v-semejnoj-ipoteke/",
+        "type": "news",
+        "note": "08.09.2026 — отказ в семейной ипотеке, созаёмщики, ПДН, лимит 6 млн"
+      },
+      {
+        "url": "https://dzen.ru/a/anRTB2ni3D3wHiGG",
+        "type": "channel",
+        "note": "Tenant Dzen август 2026 — чеклист отказа ипотеки для Тюмени"
+      },
+      {
+        "url": "https://dzen.ru/a/akkd9cDdYlsmAw-7",
+        "type": "channel",
+        "note": "Tenant Dzen — семейная ипотека до 01.10.2026, лимит 6 млн для Тюмени"
+      },
+      {
+        "url": "https://harant.ru/questions/q-167938/",
+        "type": "community",
+        "note": "21.03.2026 — спорная практика статуса созаёмщика в семейной ипотеке"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "семейная ипотека тюмень",
+    "p0_volume": 1240,
+    "p0_volume_ru225": 1745,
+    "support_phrases": [
+      {"phrase": "созаемщик ипотека", "volume": 515},
+      {"phrase": "купить новостройку в тюмени", "volume": 902},
+      {"phrase": "семейная ипотека тюмень условия", "volume": 464},
+      {"phrase": "ипотека жена созаемщик", "volume": 52},
+      {"phrase": "новостройки тюмени семейная ипотека", "volume": 24}
+    ],
+    "rework_from": "созаемщик ипотeka (515) + локализация → P0 «семейная ипотека тюмень» (1240)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_coborrower_rejected_family_mortgage",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["minfin", "dom_rf", "cbr", "legal_214fz"],
+    "errors": [],
+    "note": "Program params (6%, 20%, 6M Tyumen), co-borrower rule Feb 2026, escrow 214-FZ, CBR MPL Q3 2026 verified via official pages"
+  },
+  "key_facts_count": 32,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "signal_urls": "signal_urls.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
