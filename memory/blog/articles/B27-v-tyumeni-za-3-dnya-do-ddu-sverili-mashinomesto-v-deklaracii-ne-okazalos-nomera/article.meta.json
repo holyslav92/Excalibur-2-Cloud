@@ -20,6 +20,11 @@
     "side_stickers": "skip"
   },
   "date": "2026-09-16",
+  "wp_category_slugs": [
+    "pokupka-kvartiry",
+    "dokumenty-i-oformlenie",
+    "proverka-pered-pokupkoj"
+  ],
   "pipeline_canon": "human-first-v2",
   "editorial_swarm": false
 }
