@@ -222,7 +222,7 @@ def load_text_arg(*, inline: str | None, path: str | None, label: str) -> str:
 
 
 def is_retryable_http(status: int) -> bool:
-    return status in {401, 403, 408, 429, 500, 502, 503, 504, 524}
+    return status in {401, 403, 408, 429, 500, 502, 503, 504, 524, 529}
 
 
 def http_chat_post(
