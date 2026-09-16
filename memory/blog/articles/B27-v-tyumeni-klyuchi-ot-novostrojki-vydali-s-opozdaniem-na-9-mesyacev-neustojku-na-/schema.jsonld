@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-/#blogposting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-/"
+      },
+      "url": "{{SITE_BASE}}/v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-/",
+      "headline": "В Тюмени застройщик выдал ключи через 9 месяцев — неустойку не выплатил",
+      "description": "Ключи от новостройки в Тюмени выдали с опозданием на девять месяцев, а неустойку на счёт так и не перевели — семья подала иск.",
+      "datePublished": "2026-09-16",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}
