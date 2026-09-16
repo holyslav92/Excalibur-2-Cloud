@@ -1,6 +1,6 @@
 {
-  "title": "В Тюмени за сутки до ДДУ всплыла страховка на 186 тысяч",
-  "h1": "В Тюмени за сутки до ДДУ всплыла страховка на 186 тысяч",
+  "title": "В Тюмени за сутки до ДДУ всплыла страховка на 186 тысяч — до эскроу не дошли",
+  "h1": "В Тюмени за сутки до ДДУ всплыла страховка на 186 тысяч — до эскроу не дошли",
   "slug": "v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli",
   "topic_id": "B27",
   "author_id": "svyatoslav-shakin",
@@ -21,5 +21,11 @@
   },
   "date": "2026-09-16",
   "pipeline_canon": "human-first-v2",
-  "editorial_swarm": false
+  "editorial_swarm": false,
+  "wp_category_slugs": [
+    "pokupka-kvartiry",
+    "ipoteka",
+    "proverka-pered-pokupkoj"
+  ],
+  "wp_post_id": 10459
 }

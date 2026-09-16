@@ -1,6 +1,6 @@
 {
-  "status": "FAIL",
-  "all_pass": false,
+  "status": "PASS",
+  "all_pass": true,
   "changes": [
     "cover-registry.json updated",
     "article.html img inline_1 alt updated",
@@ -64,14 +64,6 @@
   "html_alts": [
     {
       "src": "cover/inline-01.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
-    },
-    {
-      "src": "cover/inline-01.png",
       "alt": "реалистичный кадр (без лица хоста) к разделу ««Ипотеку одобрили» — и семья забронировала ново…» в Тюмени — иллюстрация к кейсу о сделке.",
       "pass": true,
       "errors": []
@@ -83,26 +75,10 @@
       "errors": []
     },
     {
-      "src": "cover/inline-02.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
-    },
-    {
       "src": "cover/inline-03.png",
       "alt": "реалистичный кадр (без лица хоста) к разделу «Между бронью и ДДУ оставались сутки» в Тюмени — иллюстрация к кейсу о сделке.",
       "pass": true,
       "errors": []
-    },
-    {
-      "src": "cover/inline-03.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
     },
     {
       "src": "cover/inline-04.png",
@@ -111,48 +87,16 @@
       "errors": []
     },
     {
-      "src": "cover/inline-04.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
-    },
-    {
       "src": "cover/inline-05.png",
       "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: ДДУ не подписали, Эскроу не открыли, Бронь 48 часов — иллюстрация к разбору сделки.",
       "pass": true,
       "errors": []
     },
     {
-      "src": "cover/inline-05.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
-    },
-    {
       "src": "cover/inline-06.png",
       "alt": "график / шкала сроков по новостройке в Тюмени: Все расходы, Бронь и платёж, Страхование жизни — иллюстрация к разбору сделки.",
       "pass": true,
       "errors": []
-    },
-    {
-      "src": "cover/inline-06.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
-    },
-    {
-      "src": "cover/inline-07.png",
-      "alt": "",
-      "pass": false,
-      "errors": [
-        "alt empty"
-      ]
     },
     {
       "src": "cover/inline-07.png",

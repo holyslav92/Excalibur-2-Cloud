@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-16
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli
+- **post_id:** 10459
+- **permalink:** /blog/ipoteka/v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli/
+- **featured_image:** 10460
+- **inline_images:** 10461–10467 (7)
+- **wp_category_slugs:** pokupka-kvartiry, ipoteka, proverka-pered-pokupkoj (category_ids=36,32,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26

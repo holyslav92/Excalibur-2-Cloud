@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli",
+  "topic_id": "B27",
+  "post_id": 10459,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1070368,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10459 slug=v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli\nOK categories=36,32,34\nOK yoast_social_image=1\nOK featured_image=10460\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10461 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli-inline-01.png\nOK inline_alt=10461\nOK inline_description=10461\nOK inline_image_upload=10462 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli-inline-02.png\nOK inline_alt=10462\nOK inline_description=10462\nOK inline_image_upload=10463 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli-inline-03.png\nOK inline_alt=10463\nOK inline_description=10463\nOK inline_image_upload=10464 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli-inline-04.png\nOK inline_alt=10464\nOK inline_description=10464\nOK inline_image_upload=10465 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli-inline-05.png\nOK inline_alt=10465\nOK inline_description=10465\nOK inline_image_upload=10466 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli-inline-06.png\nOK inline_alt=10466\nOK inline_description=10466\nOK inline_image_upload=10467 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli-inline-07.png\nOK inline_alt=10467\nOK inline_description=10467\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-za-sutki-do-ddu-vsplyla-strahovka-na-186-tysyach-do-eskrou-ne-doshli/",
+    "errors": []
+  }
+}
