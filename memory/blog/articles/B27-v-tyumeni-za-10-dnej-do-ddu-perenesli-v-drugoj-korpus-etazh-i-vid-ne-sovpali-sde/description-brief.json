@@ -1,0 +1,9 @@
+{
+  "topic_id": "B27",
+  "description": "Бронь стоила 200 тысяч, но выбранный лот внезапно исчез из сделки. В Тюмени семье предложили другой этаж, другой вид и возврат денег через 45 дней — вместо ДДУ.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
