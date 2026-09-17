@@ -1,0 +1,80 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-17",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/a/apvMa6KBtmtj_w0x",
+        "type": "channel",
+        "note": "2026-09 SERP: Тюмень, ДДУ, запрет аренды до ключей — tenant Dzen cluster"
+      },
+      {
+        "url": "https://dzen.ru/a/aqOeP6KBtmtjPY2d",
+        "type": "channel",
+        "note": "2026-09 SERP: приложение №3, скрытые условия аренды/переуступки"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "16–17.09.2026 — новостройки/ипотека Тюмень, проверка до аванса"
+      },
+      {
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/",
+        "type": "official law",
+        "note": "214-ФЗ ред. от 09.04.2026 — ст. 4, 9, 15.4, 15.5 (ДДУ, эскроу)"
+      },
+      {
+        "url": "https://www.domrf.ru/",
+        "type": "official analytics",
+        "note": "август 2026 — первичная ипотека ~27 тыс. / 158 млрд ₽ (оценка ДОМ.РФ)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 928,
+    "support_phrases": [
+      {"phrase": "квартира в тюмени купить новостройки", "volume": 665},
+      {"phrase": "купить новостройку в тюмени от застройщика", "volume": 465},
+      {"phrase": "студия в тюмени купить в новостройках", "volume": 106},
+      {"phrase": "новостройки тюмень купить в ипотеку", "volume": 92}
+    ],
+    "rework_from": "scout P0 locked «купить новостройку в тюмени» 928",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_ddu_rental_ban_investor_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["214_fz_consultant", "dom_rf"],
+    "errors": [],
+    "note": "214-ФЗ and ДОМ.РФ market stats; no bank tariff claims in topic"
+  },
+  "derouter": {
+    "status": "PASS",
+    "attempts": 3,
+    "model": "gpt-5.6-terra",
+    "note": "HTTP 500 on early attempts; success on retry with article-dir output path"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
