@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-17
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-v-prilozhenii-k-ddu-nashli-zapret-sdavat-kvartiru-investor-ostanovil-e
+- **post_id:** 10511
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-v-prilozhenii-k-ddu-nashli-zapret-sdavat-kvartiru-investor-ostanovil-e/
+- **featured_image:** 10512
+- **inline_images:** 10513–10519 (7)
+- **wp_category_slugs:** pokupka-kvartiry, dokumenty-i-oformlenie, riski-sdelki (category_ids=36,54,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26
