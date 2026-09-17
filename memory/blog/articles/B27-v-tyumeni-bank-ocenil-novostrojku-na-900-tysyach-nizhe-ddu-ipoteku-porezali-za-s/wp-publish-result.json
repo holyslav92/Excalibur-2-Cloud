@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s",
+  "topic_id": "B27",
+  "post_id": 10485,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1033186,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10485 slug=v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s\nOK categories=32,36,54\nOK yoast_social_image=1\nOK featured_image=10486\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10487 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s-inline-01.png\nOK inline_alt=10487\nOK inline_description=10487\nOK inline_image_upload=10488 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s-inline-02.png\nOK inline_alt=10488\nOK inline_description=10488\nOK inline_image_upload=10489 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s-inline-03.png\nOK inline_alt=10489\nOK inline_description=10489\nOK inline_image_upload=10490 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s-inline-04.png\nOK inline_alt=10490\nOK inline_description=10490\nOK inline_image_upload=10491 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s-inline-05.png\nOK inline_alt=10491\nOK inline_description=10491\nOK inline_image_upload=10492 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s-inline-06.png\nOK inline_alt=10492\nOK inline_description=10492\nOK inline_image_upload=10493 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s-inline-07.png\nOK inline_alt=10493\nOK inline_description=10493\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s/",
+    "errors": []
+  }
+}

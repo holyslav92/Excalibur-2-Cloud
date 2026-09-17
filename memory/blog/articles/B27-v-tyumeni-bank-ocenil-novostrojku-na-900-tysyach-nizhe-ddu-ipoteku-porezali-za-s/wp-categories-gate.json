@@ -1,0 +1,14 @@
+{
+  "category_ids": [
+    32,
+    36,
+    54
+  ],
+  "category_slugs": [
+    "ipoteka",
+    "pokupka-kvartiry",
+    "dokumenty-i-oformlenie"
+  ],
+  "errors": [],
+  "status": "PASS"
+}

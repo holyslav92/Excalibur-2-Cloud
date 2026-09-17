@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-17
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s
+- **post_id:** 10485
+- **permalink:** /blog/ipoteka/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s/
+- **featured_image:** 10486
+- **inline_images:** 10487–10493 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry, dokumenty-i-oformlenie (category_ids=32,36,54)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; image caption builder applied pre-publish
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26

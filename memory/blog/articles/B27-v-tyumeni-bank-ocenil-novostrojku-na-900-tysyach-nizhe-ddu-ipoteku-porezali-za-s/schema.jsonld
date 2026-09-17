@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s/#blogposting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s/"
+      },
+      "url": "{{SITE_BASE}}/v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s/",
+      "headline": "В Тюмени оценка новостройки на 900 тысяч ниже ДДУ — банк урезал кредит",
+      "description": "Предварительное одобрение уже в кармане, бронь держит квартиру. Но за сутки до ДДУ выяснилось: банк видит залог на 900 тысяч дешевле — семья решила не искать эти деньги в последний момент.",
+      "datePublished": "2026-09-17",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}
