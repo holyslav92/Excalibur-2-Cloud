@@ -2,16 +2,43 @@
   "version": 1,
   "anti_repeat_days": 30,
   "description": "Closed story clusters — Scout must not reuse until locked_until. Sync via: python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters",
-  "last_sync": "2026-09-13",
+  "last_sync": "2026-09-17",
   "clusters": [
     {
-      "cluster_id": "acceptance_defects_penalty",
-      "first_seen": "2026-09-13",
-      "locked_until": "2026-10-13",
+      "cluster_id": "keys_delay_penalty_unpaid",
+      "first_seen": "2026-09-16",
+      "locked_until": "2026-10-16",
       "source": "live_wp",
-      "slug": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali",
-      "topic_id": "LIVE-V-TYUMENI-V-DDU-OBESCHAL",
-      "title": "В Тюмени в ДДУ обещали чистовую — на приёмке 3 расхождения, акт не подписали"
+      "slug": "v-tyumeni-klyuchi-ot-novostrojki-vydali-s-opozdaniem-na-9-mesyacev-neustojku-na-schet-tak-i-ne-pereveli",
+      "topic_id": "LIVE-V-TYUMENI-KLYUCHI-OT-NOV",
+      "title": "В Тюмени застройщик выдал ключи через 9 месяцев — неустойку не выплатил"
+    },
+    {
+      "cluster_id": "acceptance_defects_penalty",
+      "first_seen": "2026-09-15",
+      "locked_until": "2026-10-15",
+      "source": "live_wp",
+      "slug": "v-tyumeni-novostrojku-vybrali-dlya-roditelej-na-priemke-sorvalos",
+      "topic_id": "LIVE-V-TYUMENI-NOVOSTROJKU-VY",
+      "title": "В Тюмени на приёмке новостройки для родителей — 10 минут до лифта, акт не подписали, ключи не взяли"
+    },
+    {
+      "cluster_id": "booking_expired_price_hike",
+      "first_seen": "2026-09-15",
+      "locked_until": "2026-10-15",
+      "source": "live_wp",
+      "slug": "v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili",
+      "topic_id": "LIVE-V-TYUMENI-V-BRONI-ETAZH-",
+      "title": "В Тюмени за 48 часов до эскроу семья сверила бронь с ДДУ — и отказалась от другой квартиры"
+    },
+    {
+      "cluster_id": "ddu_apartment_vs_apartments_mismatch",
+      "first_seen": "2026-09-15",
+      "locked_until": "2026-10-15",
+      "source": "live_wp",
+      "slug": "v-tyumeni-v-broni-etazh-s-vidom-v-ddu-drugaya-sektsiya-sdelku-ostanovili",
+      "topic_id": "LIVE-V-TYUMENI-V-BRONI-ETAZH-",
+      "title": "В Тюмени за 48 часов до эскроу семья сверила бронь с ДДУ — и отказалась от другой квартиры"
     },
     {
       "cluster_id": "mortgage_rate_hike_before_ddu",
@@ -30,15 +57,6 @@
       "slug": "v-ddu-v-tyumeni-ukazali-4-2-mln-za-nedelyu-do-podpisaniya-na-eskrou-byl-nol",
       "topic_id": "LIVE-V-DDU-V-TYUMENI-UKAZALI-",
       "title": "В ДДУ в Тюмени указали 4,2 млн — на эскроу был ноль"
-    },
-    {
-      "cluster_id": "booking_expired_price_hike",
-      "first_seen": "2026-09-11",
-      "locked_until": "2026-10-11",
-      "source": "live_wp",
-      "slug": "v-tyumeni-odobrili-subsidirovannuyu-ipoteku-zastrojschik-snyal-subsidiyu-za-3-dn",
-      "topic_id": "LIVE-V-TYUMENI-ODOBRILI-SUBSI",
-      "title": "В Тюмени застройщик снял субсидию за 3 дня до ДДУ — бронь сгорела"
     },
     {
       "cluster_id": "installment_penalty_developer",
