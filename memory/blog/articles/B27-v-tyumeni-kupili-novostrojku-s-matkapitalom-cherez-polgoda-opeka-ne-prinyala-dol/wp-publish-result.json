@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol",
+  "topic_id": "B27",
+  "post_id": 10524,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1138004,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10524 slug=v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol\nOK categories=36,32\nOK yoast_social_image=1\nOK featured_image=10525\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10526 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol-inline-03.png\nOK inline_alt=10526\nOK inline_description=10526\nOK inline_image_upload=10527 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol-inline-04.png\nOK inline_alt=10527\nOK inline_description=10527\nOK inline_image_upload=10528 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol-inline-01.png\nOK inline_alt=10528\nOK inline_description=10528\nOK inline_image_upload=10529 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol-inline-02.png\nOK inline_alt=10529\nOK inline_description=10529\nOK inline_image_upload=10530 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol-inline-05.png\nOK inline_alt=10530\nOK inline_description=10530\nOK inline_image_upload=10531 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol-inline-06.png\nOK inline_alt=10531\nOK inline_description=10531\nOK inline_image_upload=10532 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol-inline-07.png\nOK inline_alt=10532\nOK inline_description=10532\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol/",
+    "errors": []
+  }
+}

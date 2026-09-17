@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-17
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol
+- **post_id:** 10524
+- **permalink:** /blog/ipoteka/v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol/
+- **featured_image:** 10525
+- **inline_images:** 10526–10532 (7)
+- **wp_category_slugs:** pokupka-kvartiry, ipoteka (category_ids=36,32)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** `novostrojki` → `pokupka-kvartiry` (нет slug novostrojki в WP); SFTP root fallback to `.`
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26
