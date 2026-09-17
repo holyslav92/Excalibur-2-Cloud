@@ -1,0 +1,70 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-17",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://tnv.ru/news/tatarstan/572482-v-tatarstane-sud-obyazal-roditeley-vydelit-doli-detyam-v-kvartire-s-matkapitalom/",
+        "type": "news",
+        "note": "07.09.2026 — прокуратура через суд обязала выделить доли детям в квартире с маткапиталом"
+      },
+      {
+        "url": "https://t.me/s/gosuslugiforparents",
+        "type": "community",
+        "note": "07–16.09.2026 — дайджест и посты: доли без согласия банка, расчёт долей от маткапитальной части"
+      },
+      {
+        "url": "https://t-j.ru/ask/dolya-detey/",
+        "type": "media",
+        "note": "14.05.2026 — расчёт долей, позиция Росреестра о детских долях"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "материнский капитал новостройка",
+    "p0_volume": 15,
+    "p0_volume_ru225": null,
+    "support_phrases": [
+      {"phrase": "выделение долей детям маткапитал", "volume": 17, "region": "55+11176"},
+      {"phrase": "покупка новостройки с маткапиталом", "volume": 50, "region": "225"},
+      {"phrase": "новостройки тюмень", "volume": 4480, "region": "55+11176"}
+    ],
+    "rework_from": "маткапитал новостройка тюмень (0) → P0 «материнский капитал новостройка» (15) + mechanism «выделение долей детям маткапитал» (17)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_matkapital_child_shares_registration_blocked_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B19", "B18", "B25", "B26"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["dom_rf", "mintrud", "consultant_256fz", "consultant_pp862", "kremlin_195fz"],
+    "errors": []
+  },
+  "key_facts_count": 32,
+  "derouter": {
+    "status": "PASS",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
