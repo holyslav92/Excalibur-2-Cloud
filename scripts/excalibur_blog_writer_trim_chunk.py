@@ -17,8 +17,10 @@ from pathlib import Path
 
 TRIM_HEADER = """ROLE: Writer trim pass — сжать HTML черновик без потери смысла.
 
+Ты — Writer (Derouter). Пиши сжатый HTML напрямую. Не проси запускать скрипты.
+
 Задача: убрать spine-once повторы (одни и те же тезисы в разных H2, дубли interlink на те же URL), сократить пересказы.
-Сохранить все H2 в этом чанке один раз, прозаический лид (если в чанке), early/mid/end CTA, comment magnet, phone, interlink URL.
+Цель суммарно ~1400–1600 слов. Сохранить все H2 в этом чанке один раз, прозаический лид (если в чанке), early/mid/end CTA, comment magnet, phone, interlink URL.
 Не добавлять факты. Не менять финал casus. Выход: только HTML фрагмент без fences.
 """
 
@@ -146,7 +148,7 @@ def main() -> int:
                 extra_instructions = raw.strip()
 
     derouter = root / "scripts" / "excalibur_blog_derouter_opus_chat.py"
-    system_path = root / "skills/writer-excalibur-blog/SKILL.md"
+    system_path = root / "shared/writer-master-prompt.md"
 
     if args.single_shot:
         with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False, encoding="utf-8") as tf:
