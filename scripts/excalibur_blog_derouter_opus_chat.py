@@ -30,8 +30,8 @@ PRIMARY_ENDPOINT = "https://api.derouter.ai/openai/v1/chat/completions"
 FALLBACK_ENDPOINT = "https://api.apikey.cloud/openai/v1/chat/completions"
 DEFAULT_TIMEOUT_SECONDS = 300
 MIN_TIMEOUT_SECONDS = 60
-DEFAULT_MAX_RETRIES = 1
-DEFAULT_RETRY_WAIT_SECONDS = 5
+DEFAULT_MAX_RETRIES = 5
+DEFAULT_RETRY_WAIT_SECONDS = 15
 
 DEFAULT_POWERFUL_MODEL = "gpt-6-astra"
 DEFAULT_TERRA_MODEL = "gpt-5.6-terra"
@@ -222,7 +222,7 @@ def load_text_arg(*, inline: str | None, path: str | None, label: str) -> str:
 
 
 def is_retryable_http(status: int) -> bool:
-    return status in {401, 403, 408, 429, 500, 502, 503, 504, 524}
+    return status in {401, 403, 408, 429, 500, 502, 503, 504, 524, 529}
 
 
 def http_chat_post(
@@ -307,25 +307,24 @@ def call_derouter_chat(
     endpoints = [PRIMARY_ENDPOINT, FALLBACK_ENDPOINT]
     last_error: Exception | None = None
     max_attempts = max_retries + 1
-
     attempts_used = 0
+
     for endpoint in endpoints:
-        if attempts_used >= max_attempts:
-            break
-        try:
-            response = http_chat_post(endpoint, api_key, payload, timeout=timeout)
-            text = extract_assistant_text(response)
-            return text, response, endpoint
-        except DerouterChatRetryable as exc:
-            last_error = exc
-            attempts_used += 1
-            if attempts_used < max_attempts:
-                time.sleep(DEFAULT_RETRY_WAIT_SECONDS)
-                continue
-            break
-        except DerouterChatError as exc:
-            last_error = exc
-            break
+        for attempt in range(max_attempts):
+            try:
+                response = http_chat_post(endpoint, api_key, payload, timeout=timeout)
+                text = extract_assistant_text(response)
+                return text, response, endpoint
+            except DerouterChatRetryable as exc:
+                last_error = exc
+                attempts_used += 1
+                if attempt + 1 < max_attempts:
+                    time.sleep(DEFAULT_RETRY_WAIT_SECONDS)
+                    continue
+                break
+            except DerouterChatError as exc:
+                last_error = exc
+                break
 
     raise DerouterChatError(
         f"Derouter chat API unavailable after {attempts_used} attempt(s); last error: {last_error}"
