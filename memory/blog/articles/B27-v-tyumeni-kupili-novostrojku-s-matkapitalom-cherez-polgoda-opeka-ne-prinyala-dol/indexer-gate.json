@@ -1,0 +1,17 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-17",
+  "topic_id": "B27",
+  "article_dir": "memory/blog/articles/B27-v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol",
+  "slug": "v-tyumeni-kupili-novostrojku-s-matkapitalom-cherez-polgoda-opeka-ne-prinyala-dol",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "cover_qa_status": "PASS",
+  "errors": []
+}
