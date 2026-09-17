@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-17",
+    "today_ru": "17.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "четверг"
+  },
+  "topic": {
+    "topic_id": "B27",
+    "title": "В Тюмени банк оценил новостройку на 900 тысяч ниже ДДУ — ипотеку порезали за сутки до подписания",
+    "h1": "В Тюмени банк оценил новостройку на 900 тысяч ниже ДДУ — ипотеку порезали за сутки до подписания",
+    "slug": "v-tyumeni-bank-ocenil-novostrojku-na-900-tysyach-nizhe-ddu-ipoteku-porezali-za-s",
+    "primary_query": "В Тюмени банк оценил новостройку на 900 тысяч ниже ДДУ — ипотеку порезали за сутки до подписания",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени банк оценил новостройку на 900 тысяч ниже ДДУ — ипотеку порезали за сутки до подписания 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени занизили оценку на 1,2 млн — трейд-ин сорвался перед ДДУ",
+          "url": "https://dzen.ru/a/aqKVIsSWjwEs0gne",
+          "snippet": ""
+        },
+        {
+          "title": "19 дней до 1 октября: банк пересчитал семейную ипотеку — семья ...",
+          "url": "https://dzen.ru/a/aqUM_XOQWXLZm2sq",
+          "snippet": "В Тюмени семья остановила покупку новостройки за сутки до подписания ДДУ. Старую квартиру, которую планировали отдать в trade-in, оценили на 1,2 млн ₽ ниже ориентира, названного в офисе продаж. Новая квартира на севере города уже была забронирована. Ипотека — предварительно одобрена."
+        },
+        {
+          "title": "Рынок недвижимости в Тюмени сжимается: осторожность девелоперов ...",
+          "url": "https://www.pravda.ru/news/districts/2409571-tyumen-housing-market-deficit/",
+          "snippet": "Семья остановилась до подписания ДДУ и кредитного договора. Сначала нужно открыть договор бронирования, проверить срок, цену и условия отказа банка или нехватки первоначального взноса."
+        },
+        {
+          "title": "Рынок вывернулся наизнанку. В Тюмени готовые квартиры стоят дешевле ...",
+          "url": "https://nashgorod.ru/news/2026-06-22/rynok-vyvernulsya-naiznanku-v-tyumeni-gotovye-kvartiry-stoyat-deshevle-stroyaschihsya-5621718",
+          "snippet": "Узнайте, почему в Тюмени сократилось предложение новостроек и в каких сегментах жилья произошел резкий скачок цен из-за дефицита квартир."
+        },
+        {
+          "title": "Ипотека на новостройку: эскроу, ставки и риски",
+          "url": "https://creditprosto.ru/zhurnal/ipoteka-na-novostroyku/",
+          "snippet": "Девелоперы вынуждены снижать цены на построенное жилье, чтобы рассчитаться с банками. Многие годы рынок жил по схеме: пока квартира строится, купить ее дешевле, чем уже готовую. Теперь все поменялось: в Тюмени только что сданные новостройки стали стоить дешевле, чем еще строящееся жилье."
+        },
+        {
+          "title": "В Тюмени за 24 часа до ДДУ банк снял ЖК с аккредитации — ипотека ...",
+          "url": "https://dzen.ru/a/aqjkKEjUgT5jfbTg",
+          "snippet": "Как устроена ипотека на новостройку: счета эскроу, проектное финансирование, ставки и госпрограммы. Риски и пошаговый разбор сделки от заявки до получения ключей."
+        }
+      ],
+      "searched_at": "2026-09-17"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени банк оценил новостройку на 900 тысяч ниже ДДУ — ипотеку порезали за сутки до подписания 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени занизили оценку на 1,2 млн — трейд-ин сорвался перед ДДУ",
+          "url": "https://dzen.ru/a/aqKVIsSWjwEs0gne",
+          "snippet": ""
+        },
+        {
+          "title": "19 дней до 1 октября: банк пересчитал семейную ипотеку — семья ...",
+          "url": "https://dzen.ru/a/aqUM_XOQWXLZm2sq",
+          "snippet": "В Тюмени семья остановила покупку новостройки за сутки до подписания ДДУ. Старую квартиру, которую планировали отдать в trade-in, оценили на 1,2 млн ₽ ниже ориентира, названного в офисе продаж. Новая квартира на севере города уже была забронирована. Ипотека — предварительно одобрена."
+        },
+        {
+          "title": "Рынок недвижимости в Тюмени сжимается: осторожность девелоперов ...",
+          "url": "https://www.pravda.ru/news/districts/2409571-tyumen-housing-market-deficit/",
+          "snippet": "Семья остановилась до подписания ДДУ и кредитного договора. Сначала нужно открыть договор бронирования, проверить срок, цену и условия отказа банка или нехватки первоначального взноса."
+        },
+        {
+          "title": "Ипотека на новостройку: эскроу, ставки и риски",
+          "url": "https://creditprosto.ru/zhurnal/ipoteka-na-novostroyku/",
+          "snippet": "Узнайте, почему в Тюмени сократилось предложение новостроек и в каких сегментах жилья произошел резкий скачок цен из-за дефицита квартир."
+        },
+        {
+          "title": "Рынок вывернулся наизнанку. В Тюмени готовые квартиры стоят дешевле ...",
+          "url": "https://nashgorod.ru/news/2026-06-22/rynok-vyvernulsya-naiznanku-v-tyumeni-gotovye-kvartiry-stoyat-deshevle-stroyaschihsya-5621718",
+          "snippet": "Как устроена ипотека на новостройку: счета эскроу, проектное финансирование, ставки и госпрограммы. Риски и пошаговый разбор сделки от заявки до получения ключей."
+        },
+        {
+          "title": "В Тюмени за 24 часа до ДДУ банк снял ЖК с аккредитации — ипотека ...",
+          "url": "https://dzen.ru/a/aqjkKEjUgT5jfbTg",
+          "snippet": "Девелоперы вынуждены снижать цены на построенное жилье, чтобы рассчитаться с банками. Многие годы рынок жил по схеме: пока квартира строится, купить ее дешевле, чем уже готовую. Теперь все поменялось: в Тюмени только что сданные новостройки стали стоить дешевле, чем еще строящееся жилье."
+        }
+      ],
+      "searched_at": "2026-09-17"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени банк оценил новостройку на 900 тысяч ниже ДДУ — ипотеку порезали за сутки до подписания official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени занизили оценку на 1,2 млн — трейд-ин сорвался перед ДДУ",
+          "url": "https://dzen.ru/a/aqKVIsSWjwEs0gne",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени трейд-ин сорвался за день до ДДУ — бронь сгорела",
+          "url": "https://dzen.ru/a/apuxvqKBtmtj_ibO",
+          "snippet": "В Тюмени семья остановила покупку новостройки за сутки до подписания ДДУ. Старую квартиру, которую планировали отдать в trade-in, оценили на 1,2 млн ₽ ниже ориентира, названного в офисе продаж."
+        },
+        {
+          "title": "Рынок вывернулся наизнанку. В Тюмени готовые квартиры стоят дешевле ...",
+          "url": "https://nashgorod.ru/news/2026-06-22/rynok-vyvernulsya-naiznanku-v-tyumeni-gotovye-kvartiry-stoyat-deshevle-stroyaschihsya-5621718",
+          "snippet": "За сутки до подписания ДДУ тюменской семье прислали в мессенджер новую оценку их старой двушки — на 400-600 тыс. ₽ ниже суммы, которая три недели лежала в расчёте первоначального взноса."
+        },
+        {
+          "title": "Рынок недвижимости в Тюмени сжимается: осторожность девелоперов ...",
+          "url": "https://www.pravda.ru/news/districts/2409571-tyumen-housing-market-deficit/",
+          "snippet": "Девелоперы вынуждены снижать цены на построенное жилье, чтобы рассчитаться с банками. Многие годы рынок жил по схеме: пока квартира строится, купить ее дешевле, чем уже готовую. Теперь все поменялось: в Тюмени только что сданные новостройки стали стоить дешевле, чем еще строящееся жилье."
+        },
+        {
+          "title": "19 дней до 1 октября: банк пересчитал семейную ипотеку — семья ...",
+          "url": "https://dzen.ru/a/aqUM_XOQWXLZm2sq",
+          "snippet": "Узнайте, почему в Тюмени сократилось предложение новостроек и в каких сегментах жилья произошел резкий скачок цен из-за дефицита квартир."
+        },
+        {
+          "title": "В Тюмени за 24 часа до ДДУ банк снял ЖК с аккредитации — ипотека ...",
+          "url": "https://dzen.ru/a/aqjkKEjUgT5jfbTg",
+          "snippet": "Семья остановилась до подписания ДДУ и кредитного договора. Сначала нужно открыть договор бронирования, проверить срок, цену и условия отказа банка или нехватки первоначального взноса."
+        }
+      ],
+      "searched_at": "2026-09-17"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени банк оценил новостройку на 900 тысяч ниже ДДУ — ипотеку порезали за сутки до подписания 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "AcFANcom (AcFAN) · GitHub",
+          "url": "https://github.com/AcFANcom",
+          "snippet": ""
+        },
+        {
+          "title": "uuidv47/assets/logo.svg at master · ali-master/uuidv47 · GitHub",
+          "url": "https://github.com/ali-master/uuidv47/blob/master/assets/logo.svg",
+          "snippet": "Contribution activity September 2026 AcFANcom has no activity yet for this period."
+        },
+        {
+          "title": "Тест 1 ответы.md · GitHub",
+          "url": "https://gist.github.com/itc1205/59855f8db0415513d68baf24fd63bd68",
+          "snippet": "Reversible UUID v4/v7 transformation using SipHash-2-4 cryptography. Hide time-ordering from external APIs while maintaining internal chronological benefits. - uuidv47/assets/logo.svg at master · ali-master/uuidv47."
+        },
+        {
+          "title": "oh-sheet/frontend/assets/mascots/mascot-progress-engrave.svg at main ...",
+          "url": "https://github.com/Oh-Sheet-Team/oh-sheet/blob/main/frontend/assets/mascots/mascot-progress-engrave.svg",
+          "snippet": "Под проектом в PMBook понимается: Выберите один ответ: a. комплекс финансовой документации по проекту."
+        },
+        {
+          "title": "rbacx/coverage.svg at main · Cheater121/rbacx · GitHub",
+          "url": "https://github.com/Cheater121/rbacx/blob/main/coverage.svg",
+          "snippet": "Turn any song into playable piano sheet music. Paste a YouTube link or upload audio — get a PDF score. Open-source pipeline: Basic Pitch transcription, two-hand arrangement, RL-trained engraving. - oh-sheet/frontend/assets/mascots/mascot-progress-engrave.svg at main · Oh-Sheet-Team/oh-sheet."
+        },
+        {
+          "title": "Multi-Page-Sales-Analysis-PowerBI/freight_analysis.png at main · Esraa ...",
+          "url": "https://github.com/Esraa-MOhamed7/Multi-Page-Sales-Analysis-PowerBI/blob/main/freight_analysis.png",
+          "snippet": "RBAC/ABAC/ReBAC policy engine for Python with policy sets, condition DSL, and hot reload - rbacx/coverage.svg at main · Cheater121/rbacx"
+        }
+      ],
+      "searched_at": "2026-09-17"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени банк оценил новостройку на 900 тысяч ниже ДДУ — ипотеку порезали за сутки до подписания forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени занизили оценку на 1,2 млн — трейд-ин сорвался перед ДДУ",
+          "url": "https://dzen.ru/a/aqKVIsSWjwEs0gne",
+          "snippet": ""
+        },
+        {
+          "title": "19 дней до 1 октября: банк пересчитал семейную ипотеку — семья ...",
+          "url": "https://dzen.ru/a/aqUM_XOQWXLZm2sq",
+          "snippet": "В Тюмени семья остановила покупку новостройки за сутки до подписания ДДУ. Старую квартиру, которую планировали отдать в trade-in, оценили на 1,2 млн ₽ ниже ориентира, названного в офисе продаж. Новая квартира на севере города уже была забронирована. Ипотека — предварительно одобрена."
+        },
+        {
+          "title": "Логика покинула чат. Готовое жилье в Тюмени стало стоить дешевле, чем ...",
+          "url": "https://nashgorod.ru/news/2026-04-22/logika-pokinula-chat-gotovoe-zhilie-v-tyumeni-stalo-stoit-deshevle-chem-stroyascheesya-5584566",
+          "snippet": "В середине сентября 2026 года семья с двумя детьми в Тюмени остановила покупку трёшки в новостройке на востоке города."
+        },
+        {
+          "title": "Новости недвижимости Тюмени за сегодня | 72.ру",
+          "url": "https://72.ru/text/realty/",
+          "snippet": "Продолжающийся застрой на рынке жилья привел тюменских девелоперов к вынужденным решениям. Чтобы рассчитаться с банками, застройщики готовы снижать стоимость уже построенного жилья."
+        },
+        {
+          "title": "Самые доступные новостройки эксперты нашли в Челябинске, а просторные ...",
+          "url": "https://rg.ru/2026/06/29/reg-urfo/samye-dostupnye-novostrojki-eksperty-nashli-v-cheliabinske-a-prostornye-v-tiumeni.html",
+          "snippet": "Депутат Госдумы Леонид Слуцкий потребовал ввести «Народную ипотеку» под 3% По итогам I квартала 2026 года средняя стоимость квадратного метра в новостройках достигла около 219 000 рублей"
+        },
+        {
+          "title": "Что Происходит На Рынке Новостроек В Тюмени — Итоги I Квартала, Цены ...",
+          "url": "https://72.ru/text/realty/2026/05/04/76400474/",
+          "snippet": "По данным аналитической платформы bnMAP.pro, всего местные девелоперы продали 1,2 тысячи квартир по средней цене 8,6 миллиона рублей. Объем нереализованных остатков жилья при этом остается высоким..."
+        }
+      ],
+      "searched_at": "2026-09-17"
+    }
+  ],
+  "errors": []
+}

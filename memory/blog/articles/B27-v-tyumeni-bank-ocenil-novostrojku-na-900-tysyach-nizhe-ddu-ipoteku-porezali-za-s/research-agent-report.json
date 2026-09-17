@@ -1,0 +1,72 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-17",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/09/76632224/",
+        "type": "local_news",
+        "note": "09.09.2026 — спрос на вторичку 65,6% vs новостройки 34,4%; доля собственных средств 20–50%; ипотека на вторичке 32%"
+      },
+      {
+        "url": "https://72.ru/text/realty/",
+        "type": "local_news",
+        "note": "15–17.09.2026 — свежий локальный поток новостей недвижимости Тюмени"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "tenant TG — локальный контекст покупки новостройки"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "tenant Dzen channel (scout signal)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "ипотека от застройщика тюмень",
+    "p0_volume": 519,
+    "p0_volume_ru225": null,
+    "support_phrases": [
+      {"phrase": "ипотека от застройщика", "volume": 732},
+      {"phrase": "новостройки тюмень", "volume": 4475},
+      {"phrase": "ипотека тюмень новостройки от застройщика", "volume": 96},
+      {"phrase": "оценка квартиры банк ипотека", "volume": 14},
+      {"phrase": "банк ипотека квартира оценка", "volume": 14}
+    ],
+    "rework_from": "scout P0 locked «ипотека от застройщика тюмень» (519) after weak technical appraisal queries (14/2)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "bank_appraisal_below_ddu_price",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["sberbank", "cbr", "214-fz"],
+    "errors": [],
+    "note": "Sberbank person mortgage pages/PDFs for appraisal cost, price vs fair value, down payment; 214-FZ escrow articles; CBR key rate 14% on 17.09.2026"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
