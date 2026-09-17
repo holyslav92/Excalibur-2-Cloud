@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-za-10-dnej-do-ddu-perenesli-v-drugoj-korpus-etazh-i-vid-ne-sovpali-sde/#blogposting",
+      "url": "{{SITE_BASE}}/v-tyumeni-za-10-dnej-do-ddu-perenesli-v-drugoj-korpus-etazh-i-vid-ne-sovpali-sde/",
+      "headline": "В Тюмени за 10 дней до ДДУ предложили другой корпус — семья отказалась",
+      "description": "Бронь стоила 200 тысяч, но выбранный лот внезапно исчез из сделки. В Тюмени семье предложили другой этаж, другой вид и возврат денег через 45 дней — вместо ДДУ.",
+      "datePublished": "2026-09-17",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-za-10-dnej-do-ddu-perenesli-v-drugoj-korpus-etazh-i-vid-ne-sovpali-sde/"
+      }
+    }
+  ]
+}

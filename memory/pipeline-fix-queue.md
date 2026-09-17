@@ -1063,3 +1063,31 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260917-0820-schema-derouter-500-b27
+status: open
+run_date: 2026-09-17
+role: excalibur-blog-schema
+topic_id: B27
+article_dir: memory/blog/articles/B27-v-tyumeni-za-10-dnej-do-ddu-perenesli-v-drugoj-korpus-etazh-i-vid-ne-sovpali-sde
+severity: blocker
+category: api
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --role schema` → DEROUTER SCHEMA BLOCKER after 3 retries (HTTP 500 server_error from api.derouter.ai)
+- Smoke test (terra + opus) PASS; schema role specifically fails
+
+### How the agent recovered this run
+- Assembled `assembled-schema-inputs.md` per skill
+- Wrote `schema.jsonld` from canonical B25 template + B27 meta/description inputs (no FAQPage; theme_blocks.faq=skip)
+- `excalibur_blog_schema_gate.py` → PASS
+
+### Durable fix needed before next run
+- Investigate transient Derouter 500 on utility tier schema role; retry or fallback endpoint health
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+- `shared/derouter-opus-brain-contract.md`
+
+### Secrets
+- none recorded
