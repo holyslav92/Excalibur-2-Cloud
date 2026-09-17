@@ -2,8 +2,9 @@
 
 H1: На 47-й день срока приостановили регистрацию детских долей в новостройке с маткапиталом
 
-Исправь **только** структуру/тон по FAIL ниже. Факты из drafts/writer.html не менять.
-Без self-score loop. Без padding до 1800+. Target 1400–1600 слов.
+**Статус repair:** PASS (article-quality-score all_pass, 1536 слов)
 
-## FINALE FAIL
-- finale-third-retell: middle scene repeated in closing: «также предупредил рисках договору»
+Исправлено:
+- H1 с «47-й день» (title-brief.json)
+- finale-third-retell: убраны повторы банковского предупреждения и расходов в финале
+- length: 1611 → 1536 слов (1400–1600)
