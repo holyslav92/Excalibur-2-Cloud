@@ -12,7 +12,12 @@ import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlunparse
+
+try:
+    import idna
+except ImportError:  # pragma: no cover
+    idna = None  # type: ignore[assignment]
 
 from excalibur_blog_site_base import (
     SITE_BASE_PLACEHOLDER,
@@ -52,7 +57,29 @@ def extract_links(html: str) -> list[str]:
     return out
 
 
+def encode_idn_url(url: str) -> str:
+    """Encode Unicode hostnames to punycode so urllib can open IDN hrefs."""
+    parsed = urlparse(url)
+    if not parsed.scheme or not parsed.netloc or idna is None:
+        return url
+    host = parsed.netloc
+    port = ""
+    if ":" in host:
+        host, port = host.rsplit(":", 1)
+        port = f":{port}"
+    try:
+        ascii_host = idna.encode(host).decode("ascii")
+    except (idna.IDNAError, UnicodeError):
+        return url
+    if ascii_host == host:
+        return url
+    return urlunparse(
+        (parsed.scheme, f"{ascii_host}{port}", parsed.path, parsed.params, parsed.query, parsed.fragment)
+    )
+
+
 def check_url(url: str, timeout: float, user_agent: str) -> dict[str, Any]:
+    url = encode_idn_url(url)
     ctx = ssl.create_default_context()
     req = urllib.request.Request(
         url,
