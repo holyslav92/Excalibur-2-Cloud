@@ -1,8 +1,8 @@
 {
   "source": "memory/blog/articles/B27-v-tyumeni-za-10-dnej-do-ddu-perenesli-v-drugoj-korpus-etazh-i-vid-ne-sovpali-sde/article.html",
-  "total_links": 12,
-  "failed_count": 1,
-  "verdict": "fail",
+  "total_links": 11,
+  "failed_count": 0,
+  "verdict": "pass",
   "links": [
     {
       "url": "https://t.me/Tyumen_Rieltor",
@@ -19,15 +19,6 @@
       "ok": true,
       "method": "HEAD",
       "error": null,
-      "kind": "external",
-      "skipped": false
-    },
-    {
-      "url": "https://наш.дом.рф",
-      "status": 403,
-      "ok": false,
-      "method": "GET",
-      "error": "HTTP Error 403: Forbidden",
       "kind": "external",
       "skipped": false
     },

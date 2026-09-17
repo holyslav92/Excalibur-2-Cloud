@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-17
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-za-10-dnej-do-ddu-perenesli-v-drugoj-korpus-etazh-i-vid-ne-sovpali-sde
+- **post_id:** 10498
+- **permalink:** /blog/proverka-pered-pokupkoj/v-tyumeni-za-10-dnej-do-ddu-perenesli-v-drugoj-korpus-etazh-i-vid-ne-sovpali-sde/
+- **featured_image:** 10499
+- **inline_images:** 10500–10506 (7)
+- **wp_category_slugs:** pokupka-kvartiry, proverka-pered-pokupkoj (category_ids=36,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** link-verify: removed наш.дом.рф hrefs (cloud 403); SFTP root fallback to `.`
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26
