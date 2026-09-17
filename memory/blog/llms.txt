@@ -17,5 +17,6 @@
 - [В Тюмени новостройку сдали без РВЭ — банк заблокировал 520 тысяч]({{SITE_BASE}}/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh/): Застройщик позвал на ключи без РВЭ в реестре — банк заблокировал второй транш на 520 тысяч
 - [Почти внесли задаток на торгах — квартиру подарили дочери]({{SITE_BASE}}/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/): За 48 часов до задатка на торгах квартиру подарили дочери — что показала свежая ЕГРН
 - [В Тюмени ипотеку одобрили — эскроу сорвал маткапитал]({{SITE_BASE}}/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/): В Тюмени ипотеку одобрили — эскроу сорвал маткапитал
+- [В Тюмени приложение к ДДУ запретило аренду — инвестор отказался от доплаты 240 тысяч]({{SITE_BASE}}/v-tyumeni-v-prilozhenii-k-ddu-nashli-zapret-sdavat-kvartiru-investor-ostanovil-e/): В Тюмени приложение к ДДУ запретило аренду — инвестор отказался от доплаты 240 тысяч
 - [В выписке ЕГРН есть строка, после которой аванс вносить нельзя]({{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/): В выписке ЕГРН есть строка, после которой аванс вносить нельзя
 - [В Тюмени застройщик сменил юрлицо — банк не открыл эскроу]({{SITE_BASE}}/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/): В Тюмени застройщик сменил юрлицо — банк не открыл эскроу
