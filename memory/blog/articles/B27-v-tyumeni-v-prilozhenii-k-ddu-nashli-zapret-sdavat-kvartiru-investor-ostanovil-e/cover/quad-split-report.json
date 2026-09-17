@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-v-prilozhenii-k-ddu-nashli-zapret-sdavat-kvartiru-investor-ostanovil-e/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1016,
+          572
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 572,
+            "end": 585
+          },
+          "v_gutter_px": {
+            "start": 1016,
+            "end": 1032
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 2.5,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0079,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0079,
+              "bottom_right": 0.0079
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 572
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 572
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени приложение к ДДУ запретило аренду — инвестор отказался от доплаты 240 тысяч.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2048,
+              "bottom": 572
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2048,
+              "bottom": 572
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Бронь и ипотека уже «собрали» сделку — аренда б…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Бронь и ипотека уже «собрали» сделку — аренда была в расчёте"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 585,
+              "right": 1012,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 585,
+              "right": 1016,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Страница 14, Приложение №3, Согласие УК — иллюстрация к разбору сделки.",
+            "h2_anchor": "Бронь и ипотека уже «собрали» сделку — аренда была в расчёте"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1036,
+              "top": 585,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 585,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «На 14-й странице приложения №3 — запрет сдавать…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "На 14-й странице приложения №3 — запрет сдавать до регистрации дома"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-v-prilozhenii-k-ddu-nashli-zapret-sdavat-kvartiru-investor-ostanovil-e/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          566
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 566,
+            "end": 587
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1034
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0108,
+            "per_panel_crop_loss": {
+              "top_left": 0.0089,
+              "top_right": 0.0079,
+              "bottom_left": 0.0108,
+              "bottom_right": 0.0099
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 4,
+              "top": 0,
+              "right": 1010,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Два дня до визита в банк: эскроу ещё не открыва…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Два дня до визита в банк: эскроу ещё не открывали"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1038,
+              "top": 0,
+              "right": 2044,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 0,
+              "right": 2048,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Менеджер обещал, Текст приложения, Формулировка решает — иллюстрация к разбору…",
+            "h2_anchor": "Альтернативный лот без запрета — на 240 тысяч дороже"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 5,
+              "top": 587,
+              "right": 1009,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 587,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Договор не подписан, Бронь сгорела, Эскроу не открывали — иллюстрация к разбору сделки.",
+            "h2_anchor": "Инвестор не подписал ДДУ: бронь сгорела, деньги на эскроу не ушли"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1039,
+              "top": 587,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 587,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: До подписи отказ, После регистрации спор, Договор бронирования — иллюстрация к разбору…",
+            "h2_anchor": "До подписи и после регистрации — таблица: что проверить в приложениях"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Бронь и ипотека уже «собрали» сделку — аренда была в расчёте",
+    "skip inline_2: already correct under H2 — Бронь и ипотека уже «собрали» сделку — аренда была в расчёте",
+    "skip inline_3: already correct under H2 — На 14-й странице приложения №3 — запрет сдавать до регистрации дома",
+    "moved inline_4 → H2 — Два дня до визита в банк: эскроу ещё не открывали (was under [альтернативный лот без запрета — на 240 тысяч дороже]; removed=1)",
+    "skip inline_5: already correct under H2 — Альтернативный лот без запрета — на 240 тысяч дороже",
+    "skip inline_6: already correct under H2 — Инвестор не подписал ДДУ: бронь сгорела, деньги на эскроу не ушли",
+    "skip inline_7: already correct under H2 — До подписи и после регистрации — таблица: что проверить в приложениях"
+  ]
+}
