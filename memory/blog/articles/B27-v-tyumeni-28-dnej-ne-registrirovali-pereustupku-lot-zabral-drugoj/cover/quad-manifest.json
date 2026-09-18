@@ -1,0 +1,239 @@
+{
+  "topic_id": "B27",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Переуступка не прошла — квартира ушла другому",
+  "cover_hook_highlight": "Переуступка",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени 28 дней ждали переуступку — квартиру продали другому: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Офис продаж: риэлтор справа, уступка vs план лота; sacrednik+cat.",
+      "meme_caption_ru": "",
+      "sticky": "Ждали четыре недели",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённая тревога, сжатые губы",
+      "meme_picks": [
+        "sacrednik_priest",
+        "crying_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Переуступку подписали в офисе — а в выписке ЕГРН по-прежнему первый дольщик",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Фото стола: договор уступки, ЕГРН на первого дольщика, талон брони; pikachu стикер.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Переуступку подписали в офисе — а в выписке ЕГР…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Договор уступки",
+        "ЕГРН первый дольщик",
+        "Подпись не регистрация"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "surprised_pikachu"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Переуступку подписали в офисе — а в выписке ЕГРН по-прежнему первый дольщик",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема: согласие, условие ДДУ, 4 недели, пакет не подан, дата эскроу.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Согласие в ДДУ, 4 недели тишины, Дата эскроу — иллюстрация к разбору сделки.",
+      "labels": [
+        "Согласие в ДДУ",
+        "4 недели тишины",
+        "Дата эскроу"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Бронь внесли, регистрацию не подали: 28 дней между словами и Росреестром",
+      "visual_type": "realistic_photo",
+      "scene_hint": "МФЦ без людей: пустой лоток, календарь 28 дней, папка брони, нет номера заявления.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Бронь внесли, регистрацию не подали: 28 дней ме…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "28 дней ожидания",
+        "Нет номера заявления",
+        "Бронь оплачена"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Три статуса одной квартиры — таблица: бронь, уступка в ЕГРН, эскроу",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: три карточки статуса — бронь, уступка, эскроу; согласие и опись с номером.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Три статуса одной квартиры — таблица: бронь, ус…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Бронь",
+        "Уступка",
+        "Эскроу"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Согласие застройщика будет на этой неделе» — и четыре недели тишины",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: обещание менеджера vs 4 недели тишины, эскроу, ЕГРН; capybara стикер.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Сутки до эскроу, Лот у другого, Нет записи ЕГРН — иллюстрация к разбору сделки.",
+      "labels": [
+        "Сутки до эскроу",
+        "Лот у другого",
+        "Нет записи ЕГРН"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "capybara_indifference"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "За сутки до открытия эскроу менеджер звонит: лот уже у другого покупателя",
+      "visual_type": "process_flow",
+      "scene_hint": "Процесс: эскроу не открыт, частичный возврат, претензия, лот ушёл, цена выросла.",
+      "alt": "Что происходит после потери лота по переуступке: возврат брони, претензия и поиск другой планировки.",
+      "labels": [
+        "Эскроу не открыли",
+        "Лот ушёл",
+        "Цена выросла"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Эскроу не открыли, бронь вернули частично — лот ушёл, планировку искали дороже",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Timeline: бронь → уступка в ЕГРН → эскроу; три статуса; doge стикер.",
+      "alt": "Три статуса квартиры при переуступке: бронь, запись в ЕГРН и открытие эскроу — что проверить до оплаты.",
+      "labels": [
+        "Бронь не ДДУ",
+        "Уступка в ЕГРН",
+        "Эскроу после регистрации"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "doge"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить новостройку в тюмени — 923 (55+11176)",
+    "переуступка квартиры — 63 (55+11176)",
+    "новостройки тюмень — buyer spine"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "хозяин кадра стоит справа в полный рост у светлой стены с планами этажей, слева остаётся чистая зона под заголовок; на переднем плане раскрытая папка уступки",
+    "location": "яркий офис продаж застройщика с настенной схемой жилого комплекса и стопкой договоров уступки",
+    "meme": "sacrednik_priest и crying_cat как два маленьких стикера в нижних углах, не перекрывают лицо, заголовок и телефон",
+    "prop_set": "папка с договором уступки, лист согласования, настенный план этажа, стопка документов, маркер, жёлтый стикер «Ждали четыре недели»",
+    "sticker_set": "sacrednik_priest, crying_cat",
+    "joke": "договор уже подписан и лежит на столе, но план квартиры на стене визуально «уезжает» к другой отметке покупателя",
+    "outfit": "светлая молочно-голубая рубашка с закатанными рукавами, песочные брюки, тонкий тёмно-зелёный галстук без пиджака",
+    "emotion": "ошеломлённая тревога",
+    "pose_framing": "полный рост справа, корпус слегка наклонён к папке, одна рука держит договор, другая раскрыта в недоумённом жесте",
+    "action": "сверяет подписанный договор уступки с планом лота, который уже отмечен как занятый другим покупателем"
+  },
+  "cover_emotion": "ошеломлённая тревога, сжатые губы"
+}
