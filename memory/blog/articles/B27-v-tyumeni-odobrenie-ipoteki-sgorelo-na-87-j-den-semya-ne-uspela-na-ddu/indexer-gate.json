@@ -1,0 +1,17 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-18",
+  "topic_id": "B27",
+  "article_dir": "memory/blog/articles/B27-v-tyumeni-odobrenie-ipoteki-sgorelo-na-87-j-den-semya-ne-uspela-na-ddu",
+  "slug": "v-tyumeni-odobrenie-ipoteki-sgorelo-na-87-j-den-semya-ne-uspela-na-ddu",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "cover_qa_status": "PASS",
+  "errors": []
+}
