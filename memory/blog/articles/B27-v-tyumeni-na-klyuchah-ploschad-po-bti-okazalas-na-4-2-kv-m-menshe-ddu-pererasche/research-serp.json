@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-18",
+    "today_ru": "18.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "пятница"
+  },
+  "topic": {
+    "topic_id": "B27",
+    "title": "В Тюмени на ключах площадь по БТИ оказалась на 4,2 кв.м меньше ДДУ — перерасчёт отказали",
+    "h1": "В Тюмени на ключах площадь по БТИ оказалась на 4,2 кв.м меньше ДДУ — перерасчёт отказали",
+    "slug": "v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche",
+    "primary_query": "В Тюмени на ключах площадь по БТИ оказалась на 4,2 кв.м меньше ДДУ — перерасчёт отказали",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени на ключах площадь по БТИ оказалась на 4,2 кв.м меньше ДДУ — перерасчёт отказали 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Площадь квартиры меньше по ДДУ: перерасчёт и возврат",
+          "url": "https://zhalobnik.net/baza-znanii/umenshenie-ploschadi-kvartiry-pereraschet/",
+          "snippet": ""
+        },
+        {
+          "title": "Площадь квартиры меньше заявленной: Полное руководство по замерам и ...",
+          "url": "https://www.radiotochki.net/blog/ploshchad-kvartiry-menshe-zayavlennoy-polnoe-rukovodstvo-po-zameram-i-vzyskaniyu-kompensacii.html",
+          "snippet": "Коротко: Если фактическая площадь квартиры по обмерам кадастрового инженера меньше, чем в договоре долевого участия, вы вправе требовать вернуть переплату за каждый недостающий квадратный метр - при условии, что договор предусматривает перерасчёт цены."
+        },
+        {
+          "title": "Как вернуть деньги за разницу в площади по ДДУ",
+          "url": "https://sprosi.pro/articles/prava-potrebitelej/kvartira-po-ploshhadi-menshe-chem-v-dogovore-kak-vernut-pereplatu-za-nedostajushhie-metry/",
+          "snippet": "Купили квартиру, а площадь оказалась меньше заявленной? Узнайте, как правильно провести замеры, сверить с ДДУ и БТИ, и взыскать полную компенсацию с застройщика."
+        },
+        {
+          "title": "Площадь квартиры по ДДУ меньше: как вернуть деньги и взыскать неустойку ...",
+          "url": "https://palata-advokatov.ru/vopros-yuristu/ploshchad-po-ddu-menshe-vozvrat-deneg-i-vzyskanie-neustojki/",
+          "snippet": "Площадь квартиры в новостройке оказалась меньше заявленной в ДДУ? Узнайте, как составить претензию застройщику и вернуть деньги за оплаченные, но отсутствующие квадратные метры."
+        },
+        {
+          "title": "Площадь квартиры не совпадает с ДДУ: возврат по ст. 7 214-ФЗ в 2026 году",
+          "url": "https://favorit-consult.ru/article/ploshhad-kvartiry-ne-sovpadaet-s-ddu/",
+          "snippet": "Как вернуть деньги, если площадь квартиры в новостройке по ДДУ оказалась меньше заявленной на 5 кв.м? Подробная инструкция от юриста: досудебная претензия, расчет неустойки и подача иска."
+        },
+        {
+          "title": "Что делать, если площадь квартиры по обмерам БТИ отличается от площади ...",
+          "url": "https://platinumcity.ru/chto-delat-esli-ploschad-kvartiry-po-obmeram-bti-otlichaetsya-ot-ploschadi-v-ddu/",
+          "snippet": "Что делать? Закон 214-ФЗ защищает вас: при разнице до 5% вы можете получить перерасчёт, а при разнице более 5% — расторгнуть договор."
+        }
+      ],
+      "searched_at": "2026-09-18"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени на ключах площадь по БТИ оказалась на 4,2 кв.м меньше ДДУ — перерасчёт отказали 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Площадь квартиры меньше по ДДУ: перерасчёт и возврат",
+          "url": "https://zhalobnik.net/baza-znanii/umenshenie-ploschadi-kvartiry-pereraschet/",
+          "snippet": ""
+        },
+        {
+          "title": "Площадь квартиры меньше заявленной: Полное руководство по замерам и ...",
+          "url": "https://www.radiotochki.net/blog/ploshchad-kvartiry-menshe-zayavlennoy-polnoe-rukovodstvo-po-zameram-i-vzyskaniyu-kompensacii.html",
+          "snippet": "Коротко: Если фактическая площадь квартиры по обмерам кадастрового инженера меньше, чем в договоре долевого участия, вы вправе требовать вернуть переплату за каждый недостающий квадратный метр - при условии, что договор предусматривает перерасчёт цены."
+        },
+        {
+          "title": "Как вернуть деньги за разницу в площади по ДДУ",
+          "url": "https://sprosi.pro/articles/prava-potrebitelej/kvartira-po-ploshhadi-menshe-chem-v-dogovore-kak-vernut-pereplatu-za-nedostajushhie-metry/",
+          "snippet": "Купили квартиру, а площадь оказалась меньше заявленной? Узнайте, как правильно провести замеры, сверить с ДДУ и БТИ, и взыскать полную компенсацию с застройщика."
+        },
+        {
+          "title": "Площадь квартиры по ДДУ меньше: как вернуть деньги и взыскать неустойку ...",
+          "url": "https://palata-advokatov.ru/vopros-yuristu/ploshchad-po-ddu-menshe-vozvrat-deneg-i-vzyskanie-neustojki/",
+          "snippet": "Площадь квартиры в новостройке оказалась меньше заявленной в ДДУ? Узнайте, как составить претензию застройщику и вернуть деньги за оплаченные, но отсутствующие квадратные метры."
+        },
+        {
+          "title": "Что делать, если площадь квартиры по обмерам БТИ отличается от площади ...",
+          "url": "https://platinumcity.ru/chto-delat-esli-ploschad-kvartiry-po-obmeram-bti-otlichaetsya-ot-ploschadi-v-ddu/",
+          "snippet": "Как вернуть деньги, если площадь квартиры в новостройке по ДДУ оказалась меньше заявленной на 5 кв.м? Подробная инструкция от юриста: досудебная претензия, расчет неустойки и подача иска."
+        },
+        {
+          "title": "Площадь квартиры не совпадает с ДДУ: возврат по ст. 7 214-ФЗ в 2026 году",
+          "url": "https://favorit-consult.ru/article/ploshhad-kvartiry-ne-sovpadaet-s-ddu/",
+          "snippet": "Расхождение между площадью квартиры, указанной в договоре долевого участия, и итоговыми обмерами БТИ — это не та мелочь, которую можно просто проигнорировать."
+        }
+      ],
+      "searched_at": "2026-09-18"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени на ключах площадь по БТИ оказалась на 4,2 кв.м меньше ДДУ — перерасчёт отказали official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Площадь квартиры меньше по ДДУ: перерасчёт и возврат",
+          "url": "https://zhalobnik.net/baza-znanii/umenshenie-ploschadi-kvartiry-pereraschet/",
+          "snippet": ""
+        },
+        {
+          "title": "Как вернуть деньги за разницу в площади по ДДУ",
+          "url": "https://sprosi.pro/articles/prava-potrebitelej/kvartira-po-ploshhadi-menshe-chem-v-dogovore-kak-vernut-pereplatu-za-nedostajushhie-metry/",
+          "snippet": "Нужен документ по этой ситуации? Юрист составит его под ваши обстоятельства. Либо соберите сами в конструкторе - бесплатно, со ссылками на закон."
+        },
+        {
+          "title": "Площадь квартиры не совпадает с ДДУ: возврат по ст. 7 214-ФЗ в 2026 году",
+          "url": "https://favorit-consult.ru/article/ploshhad-kvartiry-ne-sovpadaet-s-ddu/",
+          "snippet": "Площадь квартиры в новостройке оказалась меньше заявленной в ДДУ? Узнайте, как составить претензию застройщику и вернуть деньги за оплаченные, но отсутствующие квадратные метры."
+        },
+        {
+          "title": "Площадь квартиры меньше заявленной: Полное руководство по замерам и ...",
+          "url": "https://www.radiotochki.net/blog/ploshchad-kvartiry-menshe-zayavlennoy-polnoe-rukovodstvo-po-zameram-i-vzyskaniyu-kompensacii.html",
+          "snippet": "Что делать? Закон 214-ФЗ защищает вас: при разнице до 5% вы можете получить перерасчёт, а при разнице более 5% — расторгнуть договор."
+        },
+        {
+          "title": "Причины ошибок в площади здания: БТИ, ЕГРН и как исправить",
+          "url": "https://smway.ru/prichiny-oshibok-v-ploschadi-zdaniya-bti-egrn-i-kak-ispravit/",
+          "snippet": "Купили квартиру, а площадь оказалась меньше заявленной? Узнайте, как правильно провести замеры, сверить с ДДУ и БТИ, и взыскать полную компенсацию с застройщика."
+        },
+        {
+          "title": "Фактическая площадь квартиры меньше или больше ДДУ: что делать",
+          "url": "https://pravoved.ru/question/5023339/",
+          "snippet": "Причины ошибок в площади здания почти всегда сводятся к одному: БТИ и Росреестр считают одну и ту же площадь по разным методикам, а сведения в ЕГРН не совпадают ни с техпаспортом, ни с фактическими обмерами."
+        }
+      ],
+      "searched_at": "2026-09-18"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени на ключах площадь по БТИ оказалась на 4,2 кв.м меньше ДДУ — перерасчёт отказали 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Data_Base_L/ЗаданияПоСтранам_Лабораторная3.sql at main · Annnnonim/Data ...",
+          "url": "https://github.com/Annnnonim/Data_Base_L/blob/main/%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F%D0%9F%D0%BE%D0%A1%D1%82%D1%80%D0%B0%D0%BD%D0%B0%D0%BC_%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F3.sql",
+          "snippet": ""
+        },
+        {
+          "title": "db-practice/src/Lab3.md at main · goryachkinama/db-practice",
+          "url": "https://github.com/goryachkinama/db-practice/blob/main/src/Lab3.md",
+          "snippet": "-- 3. Вывести список стран, население которых больше 5 млн. чел., а площадь меньше 100 тыс. кв. км, и они расположены не в Европе."
+        },
+        {
+          "title": "GitHub - kkwicklss/SQL-academy: Решенные задачи с сайта sql-academy",
+          "url": "https://github.com/kkwicklss/SQL-academy",
+          "snippet": "Вывести список стран мира, площадь которых больше, чем средняя площадь стран той части света, где они находятся."
+        },
+        {
+          "title": "SQL/1.2 Задание Выборка данных at main · BaAlesia/SQL",
+          "url": "https://github.com/BaAlesia/SQL/blob/main/1.2%20%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%92%D1%8B%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85",
+          "snippet": "Если вы попытаетесь перевести 1000 долларов с вашего сберегательного счёта на текущий и вдруг обнаружите, что деньги были списаны, но не зачислены на текущий счёт, вы, скорее всего, расстроитесь. 😿 Для защиты от такого рода ошибок программа, обрабатывающая ваш запрос на перевод денег, сначала начинает транзакцию, затем запускает SQL-запросы, необходимые для перевода денег с одного счёта на другой, и, если все проходит успешно, завершает транзакцию, выполнив команду COMMIT — фиксации изменений."
+        },
+        {
+          "title": "GitHub - allicen/Java-1000: 1000 задач на Java. Навигация по задачам в ...",
+          "url": "https://github.com/allicen/Java-1000",
+          "snippet": "В конце года цену всех книг на складе пересчитывают - снижают ее на 30%. Написать SQL запрос, который из таблицы book выбирает названия, авторов, количества и вычисляет новые цены книг."
+        },
+        {
+          "title": "SQL/SQL Homework1 (Вложенные запросы) at main · kristinakulikova/SQL",
+          "url": "https://github.com/kristinakulikova/SQL/blob/main/SQL%20Homework1%20(%D0%92%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D1%8B)",
+          "snippet": "1000 задач на Java Решение задач с сайта acmp.ru. Задачи в порядке возрастания сложности: Неглухой телефон (1%) A+B (2%) Бисер (2%) Олимпиада (2%) Больше-меньше (3%) Орешки (3%) Эния (3%) Гулливер (4%) Два бандита (4%)"
+        }
+      ],
+      "searched_at": "2026-09-18"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени на ключах площадь по БТИ оказалась на 4,2 кв.м меньше ДДУ — перерасчёт отказали forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Площадь квартиры меньше по ДДУ: перерасчёт и возврат",
+          "url": "https://zhalobnik.net/baza-znanii/umenshenie-ploschadi-kvartiry-pereraschet/",
+          "snippet": ""
+        },
+        {
+          "title": "Как вернуть деньги за разницу в площади по ДДУ",
+          "url": "https://sprosi.pro/articles/prava-potrebitelej/kvartira-po-ploshhadi-menshe-chem-v-dogovore-kak-vernut-pereplatu-za-nedostajushhie-metry/",
+          "snippet": "Коротко: Если фактическая площадь квартиры по обмерам кадастрового инженера меньше, чем в договоре долевого участия, вы вправе требовать вернуть переплату за каждый недостающий квадратный метр - при условии, что договор предусматривает перерасчёт цены."
+        },
+        {
+          "title": "Площадь квартиры меньше заявленной: Полное руководство по замерам и ...",
+          "url": "https://www.radiotochki.net/blog/ploshchad-kvartiry-menshe-zayavlennoy-polnoe-rukovodstvo-po-zameram-i-vzyskaniyu-kompensacii.html",
+          "snippet": "Площадь квартиры в новостройке оказалась меньше заявленной в ДДУ? Узнайте, как составить претензию застройщику и вернуть деньги за оплаченные, но отсутствующие квадратные метры."
+        },
+        {
+          "title": "Площадь квартиры по ДДУ меньше: как вернуть деньги и взыскать неустойку ...",
+          "url": "https://palata-advokatov.ru/vopros-yuristu/ploshchad-po-ddu-menshe-vozvrat-deneg-i-vzyskanie-neustojki/",
+          "snippet": "Купили квартиру, а площадь оказалась меньше заявленной? Узнайте, как правильно провести замеры, сверить с ДДУ и БТИ, и взыскать полную компенсацию с застройщика."
+        },
+        {
+          "title": "Площадь квартиры не совпадает с ДДУ: возврат по ст. 7 214-ФЗ в 2026 году",
+          "url": "https://favorit-consult.ru/article/ploshhad-kvartiry-ne-sovpadaet-s-ddu/",
+          "snippet": "Купил квартиру в новостройке по ДДУ, но при приемке обнаружил, что фактическая площадь на 5 квадратных метров меньше заявленной в договоре. Застройщик отказывается возвращать разницу в стоимости, мотивируя это допустимой погрешностью и изменением конфигурации вентиляционного короба."
+        },
+        {
+          "title": "Расхождение площади по ДДУ и обмерам БТИ в новостройке: доплата или ...",
+          "url": "https://novostroikino.ru/blog/raskhozhdenie-ploshchadi-kvartiry-bti-ddu-doplata-2026/",
+          "snippet": "Из этой статьи вы узнаете, как зафиксировать несоответствие площади и подать претензию застройщику. Разница >5% — расторжение ДДУ — если фактическая площадь отличается от проектной более чем на 5%, дольщик вправе расторгнуть договор (ст. 7 214-ФЗ)."
+        }
+      ],
+      "searched_at": "2026-09-18"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,75 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-18",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://pravo.ppt.ru/pismo/rosreyestr/n-13-00310-26-338221",
+        "type": "official_letter",
+        "note": "Росреестр письмо № 13-00310/26, редакция 18.09.2026 — методика общей площади квартиры"
+      },
+      {
+        "url": "https://novostroikino.ru/blog/raskhozhdenie-ploshchadi-kvartiry-bti-ddu-doplata-2026/",
+        "type": "market_explainer",
+        "note": "2026: расхождение БТИ vs ДДУ, порог в договоре, формула перерасчёта"
+      },
+      {
+        "url": "https://priemka-pro.ru/articles/ploshchad-kvartiry-po-ddu-otlichaetsya-ot-fakticheskoy/",
+        "type": "legal_community",
+        "note": "обновлено 09.07.2026 — нетарифицируемый предел, обмеры, оспаривание"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4446,
+    "p0_volume_ru225": null,
+    "support_phrases": [
+      {"phrase": "приемка квартиры в новостройке", "volume": 128, "region": "55+11176"},
+      {"phrase": "приемка квартиры в новостройке тюмень", "volume": 29, "region": "55+11176"},
+      {"phrase": "купить новостройку в тюмени", "volume": 923, "region": "55+11176"},
+      {"phrase": "площадь по дду", "volume": 5, "region": "55+11176"},
+      {"phrase": "изменение площади по дду", "volume": 2, "region": "55+11176"}
+    ],
+    "rework_from": "площадь по дду (5) → новостройки тюмень (4446) + приемка квартиры в новостройке (128) + БТИ/перерасчёт",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "bti_area_smaller_than_ddu_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["legal_norms_214fz", "rosreestr"],
+    "errors": [],
+    "note": "214-ФЗ ст. 5, 8 via consultant.ru; Росреестр письмо 18.09.2026; no bank tariff claims"
+  },
+  "key_facts_count": 42,
+  "derouter": {
+    "status": "BLOCK",
+    "attempts": 3,
+    "errors": [
+      "HTTP 524 origin_response_timeout (attempt 1-2)",
+      "HTTP 529 server_is_overloaded (attempt 3)"
+    ],
+    "note": "research-notes.md synthesized from assembled-research-inputs.md by conductor after DEROUTER RESEARCH BLOCKER; retry before Writer if stamp required"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": null
+  },
+  "incident_report": "memory/pipeline-fix-queue.md — derouter research API unavailable 2026-09-18 (524/529)"
+}
