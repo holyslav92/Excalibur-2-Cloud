@@ -1,0 +1,78 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-18",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://gelendzhik.allestate.pro/news/16.09.2026/granicy-uchastka-pochemu-vazhno-vyzyvat-geodezista-do-sdelki",
+        "type": "market_news",
+        "note": "16.09.2026 — две границы, погрешность 0,20 м для ИЖС, запрет сделок без границ с 03.2025, риск суда"
+      },
+      {
+        "url": "https://priemka-pro.ru/articles/kak-prinyat-dom-u-zastroyshchika/",
+        "type": "legal_community",
+        "note": "03.07.2026 — приёмка дома и участка у застройщика; забор не подтверждает координаты"
+      },
+      {
+        "url": "https://dzen.ru/a/akdV5fsOLVnDrHSa",
+        "type": "channel",
+        "note": "Dzen 2026 — застройщики ИЖС/КП без выноса границ; акт выноса обязателен до стройки"
+      },
+      {
+        "url": "https://td-ker.ru/rosreestr-raziasnil-chto-delat-esli-fakticheskie-granicy-ychastka-ne-sovpadaut-s-reestrovymi/",
+        "type": "official_media",
+        "note": "Разъяснение Росреестра: реестровая ошибка, межевой план, согласование с соседями"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "коттеджные поселки тюмень",
+    "p0_volume": 1479,
+    "p0_volume_ru225": 2418,
+    "support_phrases": [
+      {"phrase": "границы земельного участка", "volume": 927, "region": "55+11176"},
+      {"phrase": "межевание земельного участка", "volume": 430, "region": "55+11176"},
+      {"phrase": "межевание земельного участка тюмень", "volume": 57, "region": "55+11176"},
+      {"phrase": "дома в тюмени от застройщика", "volume": 255, "region": "55+11176"},
+      {"phrase": "новостройки тюмень", "volume": 3640, "region": "55+11176", "note": "scout context"}
+    ],
+    "rework_from": "отделка/улучшенная отделка ДДУ (weak, B25 overlap) → P0 «коттеджные поселки тюмень» (1479) + mechanism «границы земельного участка» (927)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_kp_plot_boundary_cadastre_mismatch_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["legal_norms_214fz", "rosreestr_guidance"],
+    "errors": [],
+    "note": "214-ФЗ ст. 4 ч. 4.2, 4.5, ст. 7, ст. 8 verified via consultant.ru LAW_51038; no bank tariff claims"
+  },
+  "key_facts_count": 32,
+  "derouter": {
+    "status": "BLOCK",
+    "attempts": 1,
+    "first_attempt": "HTTP 524 timeout",
+    "fallback": "research-notes.md synthesized manually from assembled-research-inputs.md and live fetches (2026-09-18)",
+    "stamp": null
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": null
+  },
+  "incident_report": "none"
+}
