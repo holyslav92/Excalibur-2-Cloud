@@ -25,3 +25,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-09-05 | B23 | v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty | /blog/vtorichka-i-riski/v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty/ | published |
 | 2026-09-13 | B25 | v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali | /blog/proverka-pered-pokupkoj/v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali/ | published |
 | 2026-09-13 | B26 | v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh | /blog/ipoteka/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh/ | published |
+| 2026-09-18 | B27 | v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj | /blog/pokupka-kvartiry/v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj/ | published |

@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj",
+  "topic_id": "B27",
+  "post_id": 10551,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1096764,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10551 slug=v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj\nOK categories=36,54,58\nOK yoast_social_image=1\nOK featured_image=10552\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10553 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj-inline-01.png\nOK inline_alt=10553\nOK inline_description=10553\nOK inline_image_upload=10554 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj-inline-02.png\nOK inline_alt=10554\nOK inline_description=10554\nOK inline_image_upload=10555 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj-inline-05.png\nOK inline_alt=10555\nOK inline_description=10555\nOK inline_image_upload=10556 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj-inline-03.png\nOK inline_alt=10556\nOK inline_description=10556\nOK inline_image_upload=10557 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj-inline-06.png\nOK inline_alt=10557\nOK inline_description=10557\nOK inline_image_upload=10558 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj-inline-07.png\nOK inline_alt=10558\nOK inline_description=10558\nOK inline_image_upload=10559 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj-inline-04.png\nOK inline_alt=10559\nOK inline_description=10559\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj/",
+    "errors": []
+  }
+}
