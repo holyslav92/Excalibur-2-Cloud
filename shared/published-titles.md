@@ -28,3 +28,5 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 | B22 | v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi | В Тюмени банк поднял ставку ипотеки перед ДДУ — бронь сгорела | published |
 | B23 | v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty | V tyumeni v ddu napisali kvartiru v vypiske okazalis apartamenty | published |
 | B25 | v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali | В Тюмени в ДДУ обещали чистовую — на приёмке 3 расхождения, акт не подписали | published |
+| B26 | v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh | В Тюмени новостройку сдали без РВЭ — банк заблокировал 520 тысяч | published |
+| B27 | v-tyumeni-odobrenie-ipoteki-sgorelo-na-87-j-den-semya-ne-uspela-na-ddu | В Тюмени ипотека сгорела на 87-й день: ДДУ не дождались | published |

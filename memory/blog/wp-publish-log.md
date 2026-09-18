@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-18
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-odobrenie-ipoteki-sgorelo-na-87-j-den-semya-ne-uspela-na-ddu
+- **post_id:** 10538
+- **permalink:** /blog/ipoteka/v-tyumeni-odobrenie-ipoteki-sgorelo-na-87-j-den-semya-ne-uspela-na-ddu/
+- **featured_image:** 10539
+- **inline_images:** 10540–10546 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry (category_ids=32,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26
