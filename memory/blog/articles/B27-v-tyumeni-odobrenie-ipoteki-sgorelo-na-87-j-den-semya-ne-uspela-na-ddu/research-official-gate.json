@@ -1,0 +1,15 @@
+{
+  "gate": "research-official",
+  "status": "PASS",
+  "required_entities": [],
+  "entities_checked": [
+    "cbr",
+    "tyumen_oblast_portal",
+    "214_fz_consultant"
+  ],
+  "has_official_verifications_section": true,
+  "errors": [],
+  "warnings": [
+    "Bank-specific mortgage approval validity period (e.g. 90 days) not verified from bank person pages — cloud fetch 500/empty; Writer must cite individual bank decision only"
+  ]
+}

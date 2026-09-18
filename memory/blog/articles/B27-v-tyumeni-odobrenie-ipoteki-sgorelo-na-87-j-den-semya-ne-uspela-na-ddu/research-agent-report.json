@@ -1,0 +1,76 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-18",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "18.09.2026 — tenant TG: риск промежутка между одобрением ипотеки и регистрацией; контекст новостроек"
+      },
+      {
+        "url": "https://www.mk.ru/economics/2026/09/15/semeynaya-ipoteka-na-perepute-stoit-li-rossiyanam-toropitsya-s-oformleniem-zhilishhnogo-kredita.html",
+        "type": "news",
+        "note": "15.09.2026 — семейная ипотека до 01.10.2026; риск откладывать сделку при выбранной квартире"
+      },
+      {
+        "url": "https://72.ru/text/economics/2026/09/14/76632192/",
+        "type": "regional media",
+        "note": "14.09.2026 — ипотечная нагрузка в бюджете тюменской семьи"
+      },
+      {
+        "url": "https://xn--80aacozicjl1agbl4lraw.xn--p1ai/publications/sila-semi-sila-regiona/semeynaya-ipoteka-v-tyumenskoy-oblasti-v-2026-godu-kak-kupit-zhile-i-poluchit-podderzhku-seme-s-detm/",
+        "type": "official regional",
+        "note": "20.07.2026 — семейная ипотека Тюмень; изменения отложены до 01.10.2026"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel (scout signal)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "ипотека тюмень новостройки от застройщика",
+    "p0_volume": 100,
+    "p0_volume_ru225": 146,
+    "support_phrases": [
+      {"phrase": "срок действия одобрения ипотеки", "volume": 44, "region": "225"},
+      {"phrase": "срок действия одобрения семейной ипотеки", "volume": 7, "region": "225"},
+      {"phrase": "одобрение ипотеки срок действия", "volume": 1, "region": "55+11176"}
+    ],
+    "rework_from": "scout P0 locked after newbuild buyer spine rework",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "mortgage_approval_expired_waiting_ddu_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B19", "B22", "B12"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 8,
+    "entities_checked": ["cbr", "tyumen_oblast_portal", "214_fz_consultant"],
+    "errors": [],
+    "note": "Key rate, family mortgage regional params, 214-FZ escrow, CBR borrower standard p.9.1; bank approval validity days NOT verified from bank person pages"
+  },
+  "key_facts_count": 28,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
