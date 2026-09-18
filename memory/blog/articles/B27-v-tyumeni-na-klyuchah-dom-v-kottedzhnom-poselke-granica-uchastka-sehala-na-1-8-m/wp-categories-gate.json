@@ -1,0 +1,14 @@
+{
+  "category_ids": [
+    34,
+    54,
+    32
+  ],
+  "category_slugs": [
+    "proverka-pered-pokupkoj",
+    "dokumenty-i-oformlenie",
+    "ipoteka"
+  ],
+  "errors": [],
+  "status": "PASS"
+}

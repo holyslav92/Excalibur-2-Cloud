@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          567
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 567,
+            "end": 585
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1032
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0079,
+            "per_panel_crop_loss": {
+              "top_left": 0.0069,
+              "top_right": 0.0079,
+              "bottom_left": 0.0069,
+              "bottom_right": 0.0079
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 3,
+              "top": 0,
+              "right": 1011,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Под Тюменью коттедж не приняли — забор разошёлся с кадастром на 1,8 м: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1036,
+              "top": 0,
+              "right": 2044,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2048,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Менеджер торопит с ключами, а в ЕГРН площадь ме…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Менеджер торопит с ключами, а в ЕГРН площадь меньше"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 3,
+              "top": 585,
+              "right": 1011,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 585,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: До подписания акта, Вынос границ, Линия по координатам — иллюстрация к разбору сделки.",
+            "h2_anchor": "Менеджер торопит с ключами, а в ЕГРН площадь меньше"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1036,
+              "top": 585,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 585,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «В буклете десять соток, на земле забор ушёл на…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "В буклете десять соток, на земле забор ушёл на 1,8 метра"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1021,
+          575
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 575,
+            "end": 585
+          },
+          "v_gutter_px": {
+            "start": 1021,
+            "end": 1027
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 4.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0127,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0127,
+              "bottom_right": 0.0127
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1021,
+              "bottom": 575
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1021,
+              "bottom": 575
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «За два часа до акта: кадастровый инженер выноси…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "За два часа до акта: кадастровый инженер выносит точки"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1027,
+              "top": 0,
+              "right": 2048,
+              "bottom": 575
+            },
+            "raw_box_px": {
+              "left": 1027,
+              "top": 0,
+              "right": 2048,
+              "bottom": 575
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Обещание полгода, Последний транш, Банк не перевёл — иллюстрация к разбору сделки",
+            "h2_anchor": "Семья отказалась подписывать: претензия вместо передаточного акта"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 6,
+              "top": 585,
+              "right": 1014,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 585,
+              "right": 1021,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Площадь участка, Передаточный акт, График платежей — иллюстрация к разбору сделки.",
+            "h2_anchor": "«Поправим межу через полгода» — банк остановил последний транш"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1033,
+              "top": 585,
+              "right": 2041,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1027,
+              "top": 585,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Документы до приёмки, Земля и дом, Претензия в день — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что сверять на приёмке дома в КП — таблица бумаги и земли"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Менеджер торопит с ключами, а в ЕГРН площадь меньше",
+    "skip inline_2: already correct under H2 — Менеджер торопит с ключами, а в ЕГРН площадь меньше",
+    "skip inline_3: already correct under H2 — В буклете десять соток, на земле забор ушёл на 1,8 метра",
+    "injected inline_4 after H2 — За два часа до акта: кадастровый инженер выносит точки",
+    "injected inline_5 after H2 — Семья отказалась подписывать: претензия вместо передаточного акта",
+    "injected inline_6 after H2 — «Поправим межу через полгода» — банк остановил последний транш",
+    "injected inline_7 after H2 — Что сверять на приёмке дома в КП — таблица бумаги и земли"
+  ]
+}

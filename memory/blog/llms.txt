@@ -3,6 +3,7 @@
 
 ## Blog Articles
 
+- [Под Тюменью коттедж не приняли — забор разошёлся с кадастром на 1,8 м]({{SITE_BASE}}/v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m/): Забор на 1,8 м не совпал с кадастром — семья не подписала акт на коттедж под Тюменью
 - [Пожилого продавца вели по телефону — родственники сорвали сделку]({{SITE_BASE}}/v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/): Пожилого продавца вели по телефону — родственники сорвали сделку
 - [Квартиру продавали по доверенности. Хозяин был на СВО]({{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/): Доверенность на продажу квартиры: как проверить волю собственника на СВО до аванса
 - [В Тюмени расписку за квартиру написали — денег на счёте нет]({{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/): В Тюмени расписку за квартиру написали — денег на счёте нет

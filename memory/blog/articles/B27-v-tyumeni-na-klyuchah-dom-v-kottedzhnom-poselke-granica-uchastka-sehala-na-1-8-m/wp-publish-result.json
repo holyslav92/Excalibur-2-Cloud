@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m",
+  "topic_id": "B27",
+  "post_id": 10577,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1113076,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10577 slug=v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m\nOK categories=34,54,32\nOK yoast_social_image=1\nOK featured_image=10578\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10579 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m-inline-03.png\nOK inline_alt=10579\nOK inline_description=10579\nOK inline_image_upload=10580 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m-inline-04.png\nOK inline_alt=10580\nOK inline_description=10580\nOK inline_image_upload=10581 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m-inline-01.png\nOK inline_alt=10581\nOK inline_description=10581\nOK inline_image_upload=10582 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m-inline-02.png\nOK inline_alt=10582\nOK inline_description=10582\nOK inline_image_upload=10583 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m-inline-05.png\nOK inline_alt=10583\nOK inline_description=10583\nOK inline_image_upload=10584 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m-inline-06.png\nOK inline_alt=10584\nOK inline_description=10584\nOK inline_image_upload=10585 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m-inline-07.png\nOK inline_alt=10585\nOK inline_description=10585\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m/",
+    "errors": []
+  }
+}

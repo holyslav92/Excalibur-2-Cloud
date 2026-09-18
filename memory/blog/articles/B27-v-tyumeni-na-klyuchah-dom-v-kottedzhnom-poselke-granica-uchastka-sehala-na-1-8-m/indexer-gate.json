@@ -1,0 +1,17 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-18",
+  "topic_id": "B27",
+  "article_dir": "memory/blog/articles/B27-v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m",
+  "slug": "v-tyumeni-na-klyuchah-dom-v-kottedzhnom-poselke-granica-uchastka-sehala-na-1-8-m",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "cover_qa_status": "PASS",
+  "errors": []
+}
