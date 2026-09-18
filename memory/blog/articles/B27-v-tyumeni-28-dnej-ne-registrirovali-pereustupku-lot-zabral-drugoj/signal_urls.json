@@ -1,0 +1,74 @@
+{
+  "topic_id": "B27",
+  "research_date": "2026-09-18",
+  "scout_signal_urls": [
+    "https://dzen.ru/holyslav",
+    "https://www.consultant.ru/document/cons_doc_LAW_51038/",
+    "https://www.domrf.ru/",
+    "https://t.me/Tyumen_Rieltor"
+  ],
+  "verified_signal_urls": [
+    {
+      "url": "https://www.kommersant.ru/doc/8956056",
+      "type": "news",
+      "date": "2026-09-16",
+      "note": "Тюменская область: соотношение эскроу к долгам застройщиков 45%"
+    },
+    {
+      "url": "https://tyumen-info.ru/society/2026/09/07/39768.html",
+      "type": "local",
+      "date": "2026-09-07",
+      "note": "Опрос ГУС ТО об осведомлённости об эскроу"
+    },
+    {
+      "url": "https://tyumen-info.ru/society/2026/09/10/40957.html",
+      "type": "local",
+      "date": "2026-09-10",
+      "note": "Круглый стол по эскроу в Тюмени"
+    },
+    {
+      "url": "https://dzen.ru/a/aqVNUoDLTiGUHy-6",
+      "type": "community",
+      "date": "2026",
+      "note": "Tenant Dzen — переуступка в Тюмени (контекст механики)"
+    },
+    {
+      "url": "https://novostroikino.ru/blog/registratsiya-ddu-v-rosreestre-dvoynaya-prodazha-2026/",
+      "type": "market",
+      "date": "2026-07-16",
+      "note": "Барьер регистрации против двойной продажи лота"
+    },
+    {
+      "url": "https://do.gosuslugi.ru/services/332010803/",
+      "type": "official",
+      "date": null,
+      "note": "Регистрация уступки по ДДУ — срок 18 дней, документы"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/26e3de2d783e453c4faf7fb26c33eecafddc2307/",
+      "type": "official",
+      "date": "2026-04-09",
+      "note": "214-ФЗ ст. 11"
+    },
+    {
+      "url": "https://dzen.ru/holyslav",
+      "type": "channel",
+      "date": null,
+      "note": "Tenant Dzen channel"
+    },
+    {
+      "url": "https://t.me/Tyumen_Rieltor",
+      "type": "channel",
+      "date": null,
+      "note": "Tenant Telegram"
+    }
+  ],
+  "writer_safe_urls": [
+    "https://www.consultant.ru/document/cons_doc_LAW_51038/26e3de2d783e453c4faf7fb26c33eecafddc2307/",
+    "https://www.consultant.ru/document/cons_doc_LAW_51038/7e20edcc51ba599c70fb328204e3ac1226e7d912/",
+    "https://do.gosuslugi.ru/services/332010803/",
+    "https://www.domrf.ru/",
+    "https://dzen.ru/holyslav",
+    "https://t.me/Tyumen_Rieltor"
+  ]
+}

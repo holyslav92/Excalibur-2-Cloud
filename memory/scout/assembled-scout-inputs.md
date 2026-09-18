@@ -1,78 +1,76 @@
-# Scout inputs — 2026-09-13 (B26)
+# Scout inputs — 2026-09-18 (B27, slot 12:00 YEKT)
 
 **CRITICAL EXECUTION CONTEXT:** You are already running inside `excalibur_blog_derouter_opus_chat.py` (utility tier gpt-5.6-terra). The conductor completed all shell/MCP/Wordstat gates. **Your job is ONLY to write the Scout handoff markdown body** — no tool calls, no BLOCKER messages, no refusals. Output the complete handoff text now.
 
-**run_date:** 2026-09-13 (YEKT Sunday slot 15:00)
+**run_date:** 2026-09-18 (YEKT weekday slot **12:00**)
 **tenant:** The Риэлтор — Святослав Шакин, Тюмень (tymenrieltor.ru)
 **topic_market_focus:** newbuild_only
 **dzen_rf_pack:** true
 
 ## Slot constraints (HARD FORBIDDEN)
 
-- NO parking/машино-место/кладовка double-sold (B24 cluster: newbuild_parking_spot_double_sold_tyumen)
-- NO DDU finishing vs acceptance mismatch (B25 cluster: acceptance_defects_penalty / newbuild_ddu_finishing_mismatch)
-- NO same skeleton as last 3 pubs: B23 apartamenty, B24 parking, B25 finishing (all = DDU appendix vs fact)
-- NO frozen cluster in memory/scout/used-clusters.json (30d)
+- NO repeat of **09:00 slot today** (LIVE-V-TYUMENI-ODOBRENIE-IPOT): ипотека «сгорела» на 87-й день одобрения — cluster mortgage approval expired
+- NO acceptance_defects_penalty / KP act refusal plots (B25, LIVE acceptance, LIVE KP gas)
+- NO formula spam skeleton ddu_vs_escrow_amount (last 3 live: insurance 186k, corpus change, matkapital opieka — all escrow/DDU-adjacent)
+- NO frozen secondary clusters in memory/scout/used-clusters.json (30d)
 - NO secondary market plots
 
 ## Anti-repeat preflight (DONE)
 
-- `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters` → 27 active locks (last_sync 2026-09-13)
-- Live WP recent (last ~12): B25 finishing mismatch, B24 parking double-sold, B23 apartments, transhevaya +480k, installment penalty, escrow zero DDU, subsidized mortgage removed, trade-in, bank appraisal -680k, family mortgage recalc, cottage defects 850k, assignment lost 7 days
-- **Rejected:** keys_delay_penalty_unpaid angle — H1 fingerprint duplicate LIVE-V-TYUMENI-ZASTROJSCHIK-P (2026-09-12)
-- **Rejected:** KP plot 12 vs 9.7 sotok — valid but weaker engagement vs RVE+tranche; kept as backup cluster newbuild_kp_plot_area_mismatch_tyumen
+- `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters` → 30 active locks (last_sync 2026-09-18)
+- Live WP recent (~20): ипотека сгорела 87-й день (2026-09-18 09:00), matkapital+опека новостройка, запрет аренды в приложении к ДДУ, перенос в другой корпус, оценка -900k, машино-место в декларации, страховка 186k, ключи +9 мес без неустойки, созаёмщик отказ, бронь vs секция ДДУ, переуступка аванс 350k, КП без газа…
+- **Rejected:** KP участок -2 сotki — BLOCKED as acceptance_defects_penalty cluster
+- **Rejected:** DDU 65 vs 58 sqm — FORMULA SPAM (ddu_vs_escrow_amount skeleton in last 3)
 - `scout_helper.py --check-query` PASS for proposed title+cluster+slug
-- `excalibur_blog_topic_focus.py` PASS (on-focus: новостройк, ипотек)
-- `story_dup.py --text` PASS
+- `excalibur_blog_topic_focus.py` PASS (on-focus: эскроu, новостройк)
+- `story_dup.py --text` PASS → cluster `assignment_lost_to_faster_buyer`
 
 ## Proposed topic (PASS topic_focus + scout_helper + story_dup PASS)
 
-- **topic_id:** B26
-- **title_draft:** В Тюмени новостройку сдали без разрешения на ввод — банк не дал второй транш на 520 тысяч
-- **slug:** v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh
-- **cluster_id (new):** newbuild_rve_delay_blocks_mortgage_tranche_tyumen
-- **top_energy_mirror:** stopped_before_money
-- **newbuild_mechanism:** Дом визуально готов, застройщик зовёт на приёмку/ключи, но **разрешение на ввод в эксплуатацию (РВЭ)** в реестре не появилось 5 месяцев → при **траншевой ипотеке** банк не выдаёт **второй транш** (~520 тыс.) без зарегистрированного права/РВЭ → семья платит аренду + первый транш, не может оформить собственность
-- **why_newbuild_not_secondary:** сюжет целиком в цепочке ДДУ → сдача корпуса → РВЭ → регистрация дольщика → траншевая ипотека; нет продавца вторички, ЕГРН-вторички, наследников или бабушки
-- **story_dup_check:** PASS — distinct from mortgage_rate_hike_before_ddu (ставка накануне ДДУ), LIVE-TRANSHEVAYA (рост суммы 2-го транша на 480к из-за ставки), B12 (перенос сдачи + эскроу), B25/B23/B24 (приложение ДДУ vs факт объекта)
+- **topic_id:** B27
+- **title_draft:** В Тюмени 28 дней ждали регистрацию переуступки — за сутки до эскроу лот забрал другой
+- **slug:** v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj
+- **article_dir:** memory/blog/articles/B27-v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj
+- **cluster_id (new):** assignment_lost_to_faster_buyer
+- **top_energy_mirror:** someone_else_took_object
+- **newbuild_mechanism:** покупатель держит **переуступку** по новостройке (договор уступки + согласие застройщика); застройщик **не регистрирует уступку в реестре 28 дней**; накануне открытия эскроу лот **снимают с брони** и продают другому — первый покупатель теряет объект, аванс/бронь под угрозой
+- **why_newbuild_not_secondary:** цепочка ДДU первоначального дольщика → согласование переуступки → регистрация уступки → эскроu нового покупателя; нет продавца вторички, ЕГРН-сделки между физлицами, наследников или «чистой выписки»
+- **story_dup_check:** PASS — отличается от LIVE переуступка 350k (аванс **завис**, не «лот ушёл другому»), от booking_expired_price_hike (бронь vs секция ДДU), от mortgage approval expired (87-й день ипотеки)
 
 ## Dzen news-casus shape (target PASS)
 
-- **event:** семья в Тюмени купила квартиру в новостройке по ДДУ с траншевой ипотекой; корпус «сдали», пригласили на осмотр
-- **risk:** без РВЭ нельзя зарегистрировать право → банк блокирует второй транш; первый транш уже платится, аренда продолжается, срок одобрения ипотеки истекает
-- **time:** 5 месяцев после даты «готовности» в уведомлении застройщика; за 11 дней до окончания кредитного договора банк прислал отказ во втором транше
-- **finale:** семья отказалась подписывать акт без РВЭ; застройщик сослался на «техническую задержку документов»; банк предложил только рефинансирование под рыночную ставку — ДДУ не расторгли, ключи не получили, спор ушёл в претензию к застройщику и запрос в банк
-- **comment_magnet_angle:** «Застройщик зовёт на ключи, а РВЭ в реестре нет уже пятый месяц: вы бы подписали акт „с замечаниями“ ради второго транша или ждали бы разрешение, даже если ипотека „сгорает“?»
+- **event:** семья в Тюмени нашла переуступку в строящемся ЖК, подписала договор уступки, внесла бронь; застройщик обещал зарегистрировать уступку «на этой неделе»
+- **risk:** без регистрации уступки эскроu не открывают на нового дольщика; пока тянут — лот могут продать повторно
+- **time:** 28 дней ожидания регистрации; за **сутки** до даты открытия эскроu менеджер сообщает, что квартира «уже в брони» у другого покупателя
+- **finale:** семья не успела на эскроu; бронь/аванс застройщик предложил вернуть только частично; договор уступки оспорили через претензию — лот потерян, пришлось искать другую планировку дороже
+- **comment_magnet_angle:** «28 дней регистрацию тянули, а лот сняли за сутки до эскроu: вы бы ждали согласие застройщика или сразу искали другую переуступку, даже если цена уже поднялась?»
 
 ## Klyshin hook
 
-- **klyshin_hook:** none | original: none (fresh Tyumen newbuild RVE+tranche casus without Klyshin)
+- **klyshin_hook:** none | original: none (fresh Tyumen newbuild assignment casus without Klyshin)
 
-## Wordstat MCP-KV (live 2026-09-13)
+## Wordstat MCP-KV (live 2026-09-18)
 
 **Preflight:** wordstat_get_user_info OK (Yandex Cloud API, Folder ID b1g6bq34gkivjj20be06)
 
 | probe | regions | freq (phrase total) |
 |-------|---------|---------------------|
-| неустойка застройщика | 55,11176 | 138 (rejected — fingerprint dup keys_delay_penalty live) |
-| траншевая ипотека новостройка | 55,11176 | 4 (weak; rate-hike tranche cluster taken LIVE-TRANSHEVAYA) |
-| коттеджный поселок тюмень участок | 55,11176 | 34 (backup KP angle) |
-| проектная декларация застройщика | 55,11176 | 22 (weak) |
-| **разрешение на ввод в эксплуатацию** | **55,11176** | **201** |
-| разрешения на ввод в эксплуатацию тюмень | 55,11176 | 31 (local tail) |
-| **разрешение на ввод в эксплуатацию** | **225 (compare)** | **16550** |
-| новостройки тюмень | 55 | 3640 (context spine) |
+| переуступка новостройка | 55,11176 | 19 (weak P0 alone) |
+| переуступка квартиры | 55,11176 | 63 (mixed secondary/newbuild) |
+| переуступка новостройки | 55,11176 | 19 |
+| **купить новостройку в тюмени** | **55,11176** | **923** |
+| купить новостройку в тюмени | 225 (compare) | (buyer spine RU compare) |
+| новостройки тюмень | 55,11176 | 4446 (context) |
 
 **wordstat_rework log:**
-- probe «траншевая ипотека новостройка» 55,11176 → 4 (weak; overlaps transh rate cluster)
-- probe «неустойка застройщика» 55,11176 → 138 (strong but plot blocked by fingerprint)
-- probe «коттеджный поселок тюмень участок» → 34 (weak for P0)
-- **rework:** buyer jargon РВЭ + ввод в эксплуатацию + новостройка Тюмень → **final P0 «разрешение на ввод в эксплуатацию» regions 55,11176,compare225 freq 201 (55+11176) / 16550 (RU225)**
+- probe «переуступка новостройка» 55,11176 → 19 (weak; не drop casus)
+- probe «переуступка квартиры» 55,11176 → 63 (смешанный спрос, не чистый newbuild P0)
+- **rework:** buyer jargon **купить новостройку в тюмени** + hook переуступка/эскроu/застройщик → **final P0 «купить новостройку в тюмени» regions 55,11176,compare225 freq 923 (55+11176)**
 
 ## signal_urls (research)
 
 - https://dzen.ru/holyslav
-- https://www.consultant.ru/document/cons_doc_LAW_51040/ — 214-ФЗ, ввод объекта, права дольщиков
+- https://www.consultant.ru/document/cons_doc_LAW_51040/ — 214-ФЗ, переуступка прав требования по ДДU
 - https://www.domrf.ru/ — реестр застройщиков / проектные декларации
 - https://t.me/klyshin_A — checked, not used
 - {{SITE_BASE}}/blog/
@@ -83,4 +81,4 @@
 Write complete Scout handoff markdown per SKILL.md with all fields:
 wordstat_preflight, top_energy_mirror, newbuild_mechanism, why_newbuild_not_secondary, klyshin_hook, anti_repeat_preflight, dzen_casus_shape PASS (event/risk/time/finale), comment_magnet_angle, wordstat_rework, wordstat P0 with mcp_kv + regions 55,11176,compare225, story_dup_check PASS + cluster_id, h1_fingerprint_check, formula_spam_check, anti_dupe_hard: PASS.
 
-Lock topic_id B26, title, slug, signal_urls, research angles for Research role.
+Lock topic_id B27, title, slug, article_dir, signal_urls, research angles for Research role.

@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B27 — 2026-09-18
+
+- **topic_id:** B27
+- **slug:** v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj
+- **post_id:** 10551
+- **permalink:** /blog/pokupka-kvartiry/v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj/
+- **featured_image:** 10552
+- **inline_images:** 10553–10559 (7)
+- **wp_category_slugs:** pokupka-kvartiry, dokumenty-i-oformlenie, riski-sdelki (category_ids=36,54,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** added wp_category_slugs; image caption builder --apply; SFTP root fallback to `.`
+
 ## B26 — 2026-09-13
 
 - **topic_id:** B26

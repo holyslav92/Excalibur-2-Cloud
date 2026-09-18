@@ -1,0 +1,80 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-18",
+  "derouter_synthesis": {
+    "attempted": true,
+    "status": "BLOCKED",
+    "reason": "Derouter HTTP 524 origin timeout after 2 attempts",
+    "fallback": "manual assembly from assembled-research-inputs.md and live sources per skill structure"
+  },
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://www.kommersant.ru/doc/8956056",
+        "type": "news",
+        "note": "16.09.2026 — эскроу/долг застройщиков; Тюменская область 45%"
+      },
+      {
+        "url": "https://tyumen-info.ru/society/2026/09/07/39768.html",
+        "type": "local",
+        "note": "07.09.2026 — опрос об эскроу в ТО"
+      },
+      {
+        "url": "https://tyumen-info.ru/society/2026/09/10/40957.html",
+        "type": "local",
+        "note": "10.09.2026 — практика эскроу в Тюмени"
+      },
+      {
+        "url": "https://dzen.ru/a/aqVNUoDLTiGUHy-6",
+        "type": "community",
+        "note": "Tenant Dzen — переуступка Тюмень (контекст)"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 923,
+    "support_phrases": [
+      {"phrase": "переуступка новостройка", "volume": 19},
+      {"phrase": "переуступка квартиры", "volume": 63},
+      {"phrase": "переуступка эскроу", "volume": 246, "region": "225"}
+    ],
+    "rework_from": "переуступка новостройка (19) → P0 купить новостройку в тюмени (923) + casus spine переуступка+эскроу+застройщик",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "assignment_lost_to_faster_buyer",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["consultant_214fz", "gosuslugi_rosreestr"],
+    "errors": [],
+    "note": "214-FZ st.11, st.15.5; Gosuslugi registration service 18 days and fee 350 RUB"
+  },
+  "key_facts_count": 24,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_brief": "research-brief.md",
+    "signal_urls": "signal_urls.json",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}

@@ -1,0 +1,291 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          567
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 567,
+            "end": 586
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0089,
+            "per_panel_crop_loss": {
+              "top_left": 0.0069,
+              "top_right": 0.0069,
+              "bottom_left": 0.0089,
+              "bottom_right": 0.0089
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 3,
+              "top": 0,
+              "right": 1011,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени 28 дней ждали переуступку — квартиру продали другому: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1036,
+              "top": 0,
+              "right": 2044,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Переуступку подписали в офисе — а в выписке ЕГР…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Переуступку подписали в офисе — а в выписке ЕГРН по-прежнему первый дольщик"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 586,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 586,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Согласие в ДДУ, 4 недели тишины, Дата эскроу — иллюстрация к разбору сделки.",
+            "h2_anchor": "Переуступку подписали в офисе — а в выписке ЕГРН по-прежнему первый дольщик"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1037,
+              "top": 586,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 586,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Бронь внесли, регистрацию не подали: 28 дней ме…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Бронь внесли, регистрацию не подали: 28 дней между словами и Росреестром"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B27-v-tyumeni-28-dnej-ne-registrirovali-pereustupku-lot-zabral-drugoj/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1014,
+          567
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 567,
+            "end": 585
+          },
+          "v_gutter_px": {
+            "start": 1014,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0069,
+            "per_panel_crop_loss": {
+              "top_left": 0.0059,
+              "top_right": 0.0069,
+              "bottom_left": 0.0059,
+              "bottom_right": 0.0069
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 3,
+              "top": 0,
+              "right": 1011,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1014,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Три статуса одной квартиры — таблица: бронь, ус…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Три статуса одной квартиры — таблица: бронь, уступка в ЕГРН, эскроу"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1036,
+              "top": 0,
+              "right": 2044,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Сутки до эскроу, Лот у другого, Нет записи ЕГРН — иллюстрация к разбору сделки.",
+            "h2_anchor": "«Согласие застройщика будет на этой неделе» — и четыре недели тишины"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 3,
+              "top": 585,
+              "right": 1011,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 585,
+              "right": 1014,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Эскроу не открыли, Лот ушёл, Цена выросла — иллюстрация к разбору сделки.",
+            "h2_anchor": "За сутки до открытия эскроу менеджер звонит: лот уже у другого покупателя"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1036,
+              "top": 585,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 585,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Бронь не ДДУ, Уступка в ЕГРН, Эскроу после регистрации — иллюстрация к разбору сделки.",
+            "h2_anchor": "Эскроу не открыли, бронь вернули частично — лот ушёл, планировку искали дороже"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Переуступку подписали в офисе — а в выписке ЕГРН по-прежнему первый дольщик",
+    "skip inline_2: already correct under H2 — Переуступку подписали в офисе — а в выписке ЕГРН по-прежнему первый дольщик",
+    "skip inline_3: already correct under H2 — Бронь внесли, регистрацию не подали: 28 дней между словами и Росреестром",
+    "injected inline_4 after H2 — Три статуса одной квартиры — таблица: бронь, уступка в ЕГРН, эскроу",
+    "injected inline_5 after H2 — «Согласие застройщика будет на этой неделе» — и четыре недели тишины",
+    "injected inline_6 after H2 — За сутки до открытия эскроу менеджер звонит: лот уже у другого покупателя",
+    "injected inline_7 after H2 — Эскроу не открыли, бронь вернули частично — лот ушёл, планировку искали дороже"
+  ],
+  "errors": []
+}
