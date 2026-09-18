@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche",
+  "topic_id": "B27",
+  "post_id": 10564,
+  "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B27-v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1001437,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10564 slug=v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche\nOK categories=36,54,58\nOK yoast_social_image=1\nOK featured_image=10565\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10566 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche-inline-01.png\nOK inline_alt=10566\nOK inline_description=10566\nOK inline_image_upload=10567 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche-inline-02.png\nOK inline_alt=10567\nOK inline_description=10567\nOK inline_image_upload=10568 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche-inline-03.png\nOK inline_alt=10568\nOK inline_description=10568\nOK inline_image_upload=10569 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche-inline-04.png\nOK inline_alt=10569\nOK inline_description=10569\nOK inline_image_upload=10570 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche-inline-05.png\nOK inline_alt=10570\nOK inline_description=10570\nOK inline_image_upload=10571 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche-inline-06.png\nOK inline_alt=10571\nOK inline_description=10571\nOK inline_image_upload=10572 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche-inline-07.png\nOK inline_alt=10572\nOK inline_description=10572\npermalink={{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche/",
+    "errors": []
+  }
+}
