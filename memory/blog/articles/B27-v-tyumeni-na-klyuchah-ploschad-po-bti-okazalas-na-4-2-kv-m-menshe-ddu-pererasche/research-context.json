@@ -16,15 +16,7 @@
     "h1": "В Тюмени на ключах площадь по БТИ оказалась на 4,2 кв.м меньше ДДУ — перерасчёт отказали",
     "slug": "v-tyumeni-na-klyuchah-ploschad-po-bti-okazalas-na-4-2-kv-m-menshe-ddu-pererasche",
     "primary_query": "В Тюмени на ключах площадь по БТИ оказалась на 4,2 кв.м меньше ДДУ — перерасчёт отказали",
-    "priority": "P0",
-    "cluster_id": "bti_area_smaller_than_ddu_tyumen",
-    "market_focus": "newbuild_only"
-  },
-  "research": {
-    "research_date": "2026-09-18",
-    "status": "PASS",
-    "cluster_id": "bti_area_smaller_than_ddu_tyumen",
-    "fresh_signal_primary": "https://pravo.ppt.ru/pismo/rosreyestr/n-13-00310-26-338221"
+    "priority": "P0"
   },
   "search_queries": [
     {
