@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-",
+  "topic_id": "B28",
+  "post_id": 10629,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B28-v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1063078,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10629 slug=v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-\nOK categories=36,54,34\nOK yoast_social_image=1\nOK featured_image=10630\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10631 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-inline-03.png\nOK inline_alt=10631\nOK inline_description=10631\nOK inline_image_upload=10632 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-inline-04.png\nOK inline_alt=10632\nOK inline_description=10632\nOK inline_image_upload=10633 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-inline-05.png\nOK inline_alt=10633\nOK inline_description=10633\nOK inline_image_upload=10634 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-inline-01.png\nOK inline_alt=10634\nOK inline_description=10634\nOK inline_image_upload=10635 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-inline-02.png\nOK inline_alt=10635\nOK inline_description=10635\nOK inline_image_upload=10636 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-inline-06.png\nOK inline_alt=10636\nOK inline_description=10636\nOK inline_image_upload=10637 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-inline-07.png\nOK inline_alt=10637\nOK inline_description=10637\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal/",
+    "errors": []
+  }
+}

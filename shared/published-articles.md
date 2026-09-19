@@ -26,3 +26,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-09-13 | B25 | v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali | /blog/proverka-pered-pokupkoj/v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali/ | published |
 | 2026-09-13 | B26 | v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh | /blog/ipoteka/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh/ | published |
 | 2026-09-19 | B27 | v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst | /blog/proverka-pered-pokupkoj/v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst/ | published |
+| 2026-09-19 | B28 | v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal- | /blog/proverka-pered-pokupkoj/v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal/ | published |
