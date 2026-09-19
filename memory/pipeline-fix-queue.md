@@ -1063,3 +1063,29 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260919-1225-schema-derouter-output-root
+status: open
+run_date: 2026-09-19
+role: excalibur-blog-schema
+topic_id: B30
+article_dir: memory/blog/articles/B30-v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya
+severity: low
+category: docs
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --output schema.jsonld --article-dir memory/blog/articles/...` записал JSON-LD в **корень репо** (`schema.jsonld`), не в article_dir; schema_gate → missing schema.jsonld.
+
+### How the agent recovered this run
+- Скопировали вывод в article_dir, добавили `url`/`#blogposting` по канону B29; удалили stray `/workspace/schema.jsonld`; gate PASS.
+
+### Durable fix needed before next run
+- В skill/agent: `--output` = repo-relative путь **внутри article_dir** (например `memory/blog/articles/<slug>/schema.jsonld`) **или** научить derouter script резолвить bare `schema.jsonld` относительно `--article-dir`.
+
+### Suggested files to inspect/change
+- `.cursor/skills/schema-excalibur-blog/SKILL.md`
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+
+### Secrets
+- none recorded
+
