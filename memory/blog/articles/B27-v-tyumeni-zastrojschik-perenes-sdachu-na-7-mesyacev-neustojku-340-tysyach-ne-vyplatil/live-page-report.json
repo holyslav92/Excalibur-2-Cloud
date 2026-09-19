@@ -1,0 +1,26 @@
+{
+  "topic_id": "B27",
+  "wp_post_id": 9788,
+  "live_url": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-zastrojschik-perenes-sdachu-na-7-mesyacev-neustojku-340-tysyach-ne-vyplatil/",
+  "http_status": 200,
+  "rewrite_at": "2026-09-05T16:50:00Z",
+  "word_count_before": 1833,
+  "word_count_after": 1508,
+  "h2_before": 6,
+  "h2_after": 5,
+  "derouter_writer": "gpt-6-astra",
+  "derouter_sol": "gpt-6-astra",
+  "live_patch": "body-only OK body_updated=9788",
+  "cuts": [
+    "Убран отдельный H2 «Допсоглашение без неустойки» — beat встроен в H2 просрочки",
+    "Spine once: письмо≠ДДУ / доп без неустойки / ключи≠неустойка — по одному разу",
+    "Удалены lawyer-ish: профессиональный участник, досудебная/судебная плоскость",
+    "Сжато с ~1833 до ~1508 слов"
+  ],
+  "triple_retell_check": {
+    "профессиональный участник": false,
+    "досудебная плоскость": false,
+    "Допсоглашение без неустойки_h2": false,
+    "lead_marker_ждала_новостройку": true
+  }
+}
