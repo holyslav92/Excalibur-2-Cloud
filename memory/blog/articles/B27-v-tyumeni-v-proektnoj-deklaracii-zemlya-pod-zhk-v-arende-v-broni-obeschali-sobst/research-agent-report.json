@@ -1,0 +1,78 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-19",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://io.cdnstroy.ru/ot98ht7c2ijcf_1eb35mz.pdf",
+        "type": "official_eisjhs",
+        "note": "Tyumen declaration № 72-001426 dated 02.09.2026 — section 12 ownership; live PDF fetch 2026-09-19"
+      },
+      {
+        "url": "https://i2.cdnstroy.ru/2v74hehqr4c5c_1e5cesz.pdf",
+        "type": "official_eisjhs",
+        "note": "Tyumen declaration № 72-000935 — lease until 17.11.2026, private landowner; live PDF fetch 2026-09-19"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Tenant Telegram channel live fetch 2026-09-19; newbuild posts incl. promo deadline до 15 сентября"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen — read DDU before booking context for newbuild Tyumen"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4446,
+    "p0_volume_ru225": null,
+    "compare225_phrase": "купить новостройку в тюмени",
+    "compare225_volume": 1936,
+    "support_phrases": [
+      {"phrase": "новостройки в тюмени от застройщика", "volume": 656, "region": "55+11176"},
+      {"phrase": "проектная декларация застройщика", "volume": 25, "region": "55+11176"},
+      {"phrase": "дом рф проектная декларация застройщика", "volume": 11, "region": "55+11176"},
+      {"phrase": "семейная ипотека новостройка", "volume": 90, "region": "55+11176"},
+      {"phrase": "новостройки тюмени семейная ипотека", "volume": 24, "region": "55+11176"}
+    ],
+    "rework_from": "земельный участок аренда застройщик (3) → spine новостройки тюмень (4446) + section 12 mechanism",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_land_lease_not_ownership_declaration_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["legal_norms_214fz", "minstroy_form_239"],
+    "errors": [],
+    "note": "214-ФЗ st. 3, 13, 19, 21 + Minstroy order 239/пр via consultant.ru; Tyumen EISZhS PDFs for section 12 examples; no bank tariff claims"
+  },
+  "key_facts_count": 32,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}

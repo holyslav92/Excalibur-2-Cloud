@@ -1,0 +1,74 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-19",
+    "today_ru": "19.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "суббота"
+  },
+  "topic": {
+    "topic_id": "B27",
+    "title": "В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались",
+    "h1": "В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались",
+    "slug": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst",
+    "primary_query": "В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 0,
+      "results": [],
+      "error": "search failed for 'В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались 2026': <urlopen error _ssl.c:983: The handshake operation timed out>",
+      "searched_at": "2026-09-19"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 0,
+      "results": [],
+      "error": "search failed for 'В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались 2026': <urlopen error _ssl.c:983: The handshake operation timed out>",
+      "searched_at": "2026-09-19"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 0,
+      "results": [],
+      "error": "search failed for 'В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались official docs 2026': <urlopen error _ssl.c:983: The handshake operation timed out>",
+      "searched_at": "2026-09-19"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 0,
+      "results": [],
+      "error": "search failed for 'site:github.com В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались 2026': <urlopen error _ssl.c:983: The handshake operation timed out>",
+      "searched_at": "2026-09-19"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 0,
+      "results": [],
+      "error": "search failed for 'В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались forum problems опыт 2026': <urlopen error _ssl.c:983: The handshake operation timed out>",
+      "searched_at": "2026-09-19"
+    }
+  ],
+  "errors": [
+    "search failed for 'В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались 2026': <urlopen error _ssl.c:983: The handshake operation timed out>",
+    "search failed for 'В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались 2026': <urlopen error _ssl.c:983: The handshake operation timed out>",
+    "search failed for 'В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались official docs 2026': <urlopen error _ssl.c:983: The handshake operation timed out>",
+    "search failed for 'site:github.com В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались 2026': <urlopen error _ssl.c:983: The handshake operation timed out>",
+    "search failed for 'В Тюмени в проектной декларации земля под ЖК в аренде — в брони обещали собственность, за 4 дня до ДДУ отказались forum problems опыт 2026': <urlopen error _ssl.c:983: The handshake operation timed out>"
+  ]
+}
