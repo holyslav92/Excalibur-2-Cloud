@@ -39,7 +39,7 @@
   "blog_hero": "memory/cover/blog-hero.json",
   "inline_types_catalog": "memory/cover/inline-visual-types.json",
   "cover_hook": "Обещали собственность — показали аренду",
-  "cover_hook_highlight": "аренду",
+  "cover_hook_highlight": "",
   "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
   "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
   "slots": {
@@ -47,18 +47,17 @@
       "quadrant": "top_left",
       "role": "cover_editorial_hero",
       "alt": "В Тюмени обещали землю в собственности — декларация показала аренду: что проверить в договоре и эскроу до подписи.",
-      "scene_hint": "Офис продаж: герой сверяет раздел 12 с обещанием собственности; макет ЖК.",
+      "scene_hint": "Clean 1200x675 thumbnail: bright #FFF gradient, host close-up LEFT, plain headline band RIGHT, no collage.",
       "meme_caption_ru": "",
-      "sticky": "Переоформим потом?",
+      "sticky": "",
       "meme_sticker": true,
       "no_meme": false,
       "no_cat": false,
       "no_person": false,
       "no_host_face": false,
-      "cover_emotion": "ошарашенное недоверие с приподнятой бровью и напряжённой гримасой",
+      "cover_emotion": "сосредоточенное недоверие прямой взгляд",
       "meme_picks": [
-        "disappointed_black_guy",
-        "this_is_fine_dog"
+        "disappointed_black_guy"
       ]
     },
     "inline_1": {
@@ -224,16 +223,22 @@
     "realistic_inline_count": "2-4 of 7"
   },
   "cover_motifs": {
-    "composition": "яркая диагональная композиция: герой справа в полный рост по колено, декларация и контрастные карточки документов слева, свободная верхняя зона под заголовок",
-    "location": "светлый офис продаж новостройки с панорамным окном, макетом жилого комплекса и стендом документов",
-    "meme": "disappointed_black_guy и this_is_fine_dog как маленькие реальные мем-стикеры в нижних углах",
-    "prop_set": "прозрачная папка с проектной декларацией, лист с выделенным разделом 12, карточка брони 150000 ₽, макет жилого комплекса, жёлтый стикер",
-    "sticker_set": "disappointed_black_guy в левом нижнем углу и this_is_fine_dog в правом нижнем углу, оба компактные, с запасом от лица, заголовка и телефона",
-    "joke": "на рекламном макете дома сияет надпись о собственности, а герой обнаруживает в декларации аренду земли до 2049 года",
-    "outfit": "светлая терракотовая overshirt-рубашка поверх молочной футболки, светлые брюки, без пиджака",
-    "emotion": "ошарашенное недоверие, приподнятая бровь, сжатые губы и выражение «как это вообще объяснить покупателю»",
-    "pose_framing": "динамичный средний план по колено, корпус развёрнут к камере, одна рука держит папку, другая указывает на раздел 12",
-    "action": "герой сравнивает обещание менеджера на рекламной карточке с пунктом декларации об аренде, слегка отводя папку от себя"
+    "composition": "designed thumbnail: host close-up LEFT 35%, hook typography band RIGHT 52-96%, phone bottom-right, one meme top-left",
+    "location": "clean bright studio gradient #FFFFFF only — NO office props NO documents NO ЖК renders",
+    "meme": "disappointed_black_guy single tiny sticker top-left corner only ≤15%",
+    "prop_set": "none — zero documents zero collage panels zero torn paper",
+    "sticker_set": "disappointed_black_guy top-left 4-14% only, ≥80px from hook and phone",
+    "joke": "side-eye meme reacts to ownership promise vs lease reality",
+    "outfit": "sage green cardigan over white tee, no blazer no vest",
+    "emotion": "focused disbelief direct gaze not side-eye",
+    "pose_framing": "close-up face shoulders LEFT third, not full body not knee-up",
+    "action": "host looks at camera with skeptical raised brow, hands off-frame"
   },
-  "cover_emotion": "растерянное недоверие с напряжённой гримасой"
+  "cover_emotion": "сосредоточенное недоверие прямой взгляд",
+  "meme_picks": {
+    "cover": [
+      "disappointed_black_guy"
+    ]
+  },
+  "solo_cover_attempt": 2
 }
