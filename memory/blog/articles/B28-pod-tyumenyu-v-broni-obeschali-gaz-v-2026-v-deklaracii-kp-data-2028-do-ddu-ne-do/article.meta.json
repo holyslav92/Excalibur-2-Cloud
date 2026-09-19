@@ -12,5 +12,19 @@
     "dokumenty-i-oformlenie",
     "proverka-pered-pokupkoj"
   ],
-  "pipeline_canon": "human-first-v2"
+  "pipeline_canon": "human-first-v2",
+  "meta_ab": {
+    "title_seo": "Газ в КП обещали — декларация указала 2028, семья потеряла 60 тысяч",
+    "title_ctr": "Газ в КП обещали — декларация указала 2028, семья потеряла 60 тысяч",
+    "title_aeo": "Газ в КП обещали — декларация указала 2028, семья потеряла 60 тысяч",
+    "description_seo": "Газ в коттеджном посёлке и проектная декларация",
+    "description_ctr": "Газ в коттеджном посёлке и проектная декларация",
+    "description_aeo": "Газ в коттеджном посёлке и проектная декларация"
+  },
+  "theme_blocks": {
+    "faq": "skip",
+    "quiz": "skip",
+    "side_stickers": "skip"
+  },
+  "editorial_swarm": false
 }
