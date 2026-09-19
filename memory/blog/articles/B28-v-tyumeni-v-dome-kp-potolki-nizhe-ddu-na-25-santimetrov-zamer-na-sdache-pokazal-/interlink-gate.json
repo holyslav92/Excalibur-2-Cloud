@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B28",
+  "slug": "v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-",
+  "candidates_count": 24,
+  "outbound_found": [
+    {
+      "slug": "klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili",
+      "title": "klyuchi-ot-novostrojki-v-tyumeni-perenesli-na-god-dengi-na-eskrou-zamorozili"
+    },
+    {
+      "slug": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli",
+      "title": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli"
+    },
+    {
+      "slug": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali",
+      "title": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali"
+    },
+    {
+      "slug": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst",
+      "title": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
