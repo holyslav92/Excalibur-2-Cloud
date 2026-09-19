@@ -1,0 +1,17 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-19",
+  "topic_id": "B27",
+  "article_dir": "memory/blog/articles/B27-v-tyumeni-rebenku-ispolnilos-7-let-za-5-dnej-do-ddu-semejnuyu-ipoteku-snyali",
+  "slug": "v-tyumeni-rebenku-ispolnilos-7-let-za-5-dnej-do-ddu-semejnuyu-ipoteku-snyali",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "cover_qa_status": "PASS",
+  "errors": []
+}
