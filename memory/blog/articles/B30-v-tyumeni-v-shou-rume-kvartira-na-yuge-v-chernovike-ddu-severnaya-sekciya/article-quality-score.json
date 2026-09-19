@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "all_pass": true,
+  "gate": "article-quality-score",
+  "contract": "shared/article-quality-score-lock.md",
+  "article_dir": "memory/blog/articles/B30-v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya",
+  "sol_rewrite_applied": true,
+  "h1": "За 5 дней до ДДУ шоу-рум на юге — в проекте северная секция",
+  "sections": {
+    "h1": {
+      "pass": true,
+      "reasons": []
+    },
+    "lead": {
+      "pass": true,
+      "reasons": []
+    },
+    "middle": {
+      "pass": true,
+      "reasons": []
+    },
+    "finale": {
+      "pass": true,
+      "reasons": []
+    },
+    "length": {
+      "pass": true,
+      "reasons": []
+    },
+    "tone": {
+      "pass": true,
+      "reasons": []
+    }
+  },
+  "errors": [],
+  "metrics": {
+    "word_count": 1470,
+    "word_target": "1400-1600",
+    "word_hard_max": 1750,
+    "dzen_reading_minutes_est": 8,
+    "spine_overlap": 0.0483
+  }
+}

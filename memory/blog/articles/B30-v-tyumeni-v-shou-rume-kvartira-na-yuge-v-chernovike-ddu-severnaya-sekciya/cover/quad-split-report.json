@@ -1,0 +1,296 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "BLOCK",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B30-v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1018,
+          569
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 569,
+            "end": 581
+          },
+          "v_gutter_px": {
+            "start": 1018,
+            "end": 1029
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 1.0,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0069,
+            "per_panel_crop_loss": {
+              "top_left": 0.0059,
+              "top_right": 0.0069,
+              "bottom_left": 0.0,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 3,
+              "top": 0,
+              "right": 1015,
+              "bottom": 569
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1018,
+              "bottom": 569
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "За 5 дней до ДДУ шоу-рум на юге — в проекте северная секция в Тюмени: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2044,
+              "bottom": 569
+            },
+            "raw_box_px": {
+              "left": 1029,
+              "top": 0,
+              "right": 2048,
+              "bottom": 569
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Солнечная сторона» — так звучало в шоу-руме и…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Солнечная сторона» — так звучало в шоу-руме и в заявке на бронь"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 581,
+              "right": 1018,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 581,
+              "right": 1018,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Окна во двор, Другой корпус, Метраж совпал — иллюстрация к разбору сделки.",
+            "h2_anchor": "Эталонная квартира с окнами во двор: что семья приняла за «свою»"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1029,
+              "top": 581,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1029,
+              "top": 581,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «За пять дней до ДДУ: та же площадь и этаж, но с…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "За пять дней до ДДУ: та же площадь и этаж, но секция B на севере"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B30-v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1016,
+          561
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 561,
+            "end": 587
+          },
+          "v_gutter_px": {
+            "start": 1016,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 2.0,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0187,
+            "per_panel_crop_loss": {
+              "top_left": 0.0187,
+              "top_right": 0.0177,
+              "bottom_left": 0.0118,
+              "bottom_right": 0.0108
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 9,
+              "top": 0,
+              "right": 1006,
+              "bottom": 561
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 561
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Та же цена, просто другой подъезд» — почему эт…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Та же цена, просто другой подъезд» — почему это другой объект"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1042,
+              "top": 0,
+              "right": 2039,
+              "bottom": 561
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 561
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: ДДУ не подписали, Эскроу не открывали, Часть брони удержали — иллюстрация к разбору сделки.",
+            "h2_anchor": "ДДУ не подписали, часть брони удержали, эскроу не открывали"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 6,
+              "top": 587,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 587,
+              "right": 1016,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Секция в ДДУ, Поэтажный план, наш.дом.рф — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что сопоставить до подписи — секция, план на этаже и ID в ЕИСЖС"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1038,
+              "top": 587,
+              "right": 2042,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 587,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Исправленный проект, Пауза до подписи, Окна и вид — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что сопоставить до подписи — секция, план на этаже и ID в ЕИСЖС"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — «Солнечная сторона» — так звучало в шоу-руме и в заявке на бронь",
+    "skip inline_2: already correct under H2 — Эталонная квартира с окнами во двор: что семья приняла за «свою»",
+    "skip inline_3: already correct under H2 — За пять дней до ДДУ: та же площадь и этаж, но секция B на севере",
+    "skip inline_4: already correct under H2 — «Та же цена, просто другой подъезд» — почему это другой объект",
+    "skip inline_5: already correct under H2 — ДДУ не подписали, часть брони удержали, эскроу не открывали",
+    "skip inline_6: already correct under H2 — Что сопоставить до подписи — секция, план на этаже и ID в ЕИСЖС",
+    "skip inline_7: already correct under H2 — Что сопоставить до подписи — секция, план на этаже и ID в ЕИСЖС"
+  ],
+  "errors": [
+    "removed inline_1 from wrong H2 [«солнечная сторона» — так звучало в шоу-руме и в заявке на бронь] but target H2 not found — Эталонная квартира с окнами во двор",
+    "removed inline_2 from wrong H2 [эталонная квартира с окнами во двор: что семья приняла за «свою»] but target H2 not found — Эталонная квартира с окнами во двор",
+    "inline_1 figure count after inject=0 (need exactly 1)",
+    "inline_2 figure count after inject=0 (need exactly 1)"
+  ]
+}
