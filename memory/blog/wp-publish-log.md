@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B29 — 2026-09-19
+
+- **topic_id:** B29
+- **slug:** v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo
+- **post_id:** 10642
+- **permalink:** /blog/ipoteka/v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo/
+- **featured_image:** 10643
+- **inline_images:** 10644–10650 (7)
+- **wp_category_slugs:** pokupka-kvartiry, dokumenty-i-oformlenie, ipoteka (category_ids=36,54,32)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; image caption builder before publish; theme_contract_deploy ENOENT (theme already patched)
+
 ## B27 — 2026-09-19
 
 - **topic_id:** B27
