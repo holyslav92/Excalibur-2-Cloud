@@ -1,0 +1,14 @@
+{
+  "gate": "title",
+  "status": "PASS",
+  "checks": {
+    "topic_focus": "PASS",
+    "scout_story_dup": "PASS",
+    "h1_chars": 54,
+    "h1_max": 70,
+    "forbidden_year_2026_in_h1": false,
+    "verdict_in_brief": "PASS"
+  },
+  "h1": "Банк отменил нулевой взнос за 6 дней до ДДУ — сделка встала",
+  "errors": []
+}
