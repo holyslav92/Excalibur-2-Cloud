@@ -1,0 +1,74 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B27",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-19",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://sosedi.life/articles/kogda-mozhno-utratit-pravo-na-semejnuyu-ipoteku-mezhdu-odobreniem-i-sdelkoj/",
+        "type": "community",
+        "note": "08.09.2026 — возраст ребёнка между одобрением и кредитным договором"
+      },
+      {
+        "url": "https://dzen.ru/a/aqEVPsSWjwEsylTB",
+        "type": "channel",
+        "note": "Dzen SERP 19.09.2026 — угол «7 лет перед ДДУ»"
+      },
+      {
+        "url": "https://72.ru/text/economics/2026/09/14/76632192/",
+        "type": "local",
+        "note": "14.09.2026 — ипотечная нагрузка тюменской семьи с ребёнком (фон)"
+      },
+      {
+        "url": "https://xn--80aacozicjl1agbl4lraw.xn--p1ai/publications/sila-semi-sila-regiona/semeynaya-ipoteka-v-tyumenskoy-oblasti-v-2026-godu-kak-kupit-zhile-i-poluchit-podderzhku-seme-s-detm/",
+        "type": "regional",
+        "note": "Тюменская область — лимиты, дедлайн 01.10.2026"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "семейная ипотека в тюмени",
+    "p0_volume": 1060,
+    "p0_volume_handoff": 1060,
+    "p0_volume_live": 734,
+    "support_phrases": [
+      {"phrase": "семейная ипотека тюмень условия", "volume": 459},
+      {"phrase": "семейная ипотека тюмень 2026", "volume": 375},
+      {"phrase": "новостройки тюмени семейная ипотека", "volume": 24},
+      {"phrase": "семейная ипотека ребенку 7 лет", "volume": 26},
+      {"phrase": "ребенок 7 лет можно семейную ипотеку", "volume": 8}
+    ],
+    "rework_from": "семейная ипотека новостройка тюмень (24) → семейная ипотека в тюмени (1060 handoff / 734 live)",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "family_mortgage_child_age_limit_before_ddu",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 8,
+    "entities_checked": ["minfin", "dom_rf", "sberbank"],
+    "errors": [],
+    "note": "Child age threshold, credit contract date, rate/down/limit verified via Minfin + dom.rf + Sber person pages"
+  },
+  "key_facts_count": 32,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_brief": "research-brief.md",
+    "sources": "sources.json",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "ready_for": ["title", "writer"],
+  "incident_report": "none"
+}

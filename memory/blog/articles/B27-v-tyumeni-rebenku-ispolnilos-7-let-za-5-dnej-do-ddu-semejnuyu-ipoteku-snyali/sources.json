@@ -1,0 +1,108 @@
+{
+  "research_date": "2026-09-19",
+  "topic_id": "B27",
+  "cluster_id": "family_mortgage_child_age_limit_before_ddu",
+  "sources": [
+    {
+      "id": "minfin-family-conditions",
+      "url": "https://minfin.gov.ru/ru/perfomance/govsupport/semya/uslovie/",
+      "type": "official",
+      "entity": "Минфин РФ",
+      "accessed_at": "2026-09-19",
+      "claims": [
+        "ребёнок до 6 лет включительно",
+        "ставка до 6%",
+        "ПВ от 20%",
+        "лимит 6 млн ₽ вне Москвы/СПб",
+        "комбо до 15 млн ₽"
+      ]
+    },
+    {
+      "id": "domrf-instruction",
+      "url": "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/instructions/semeinaya-ipoteka/",
+      "type": "official",
+      "entity": "АО ДОМ.РФ / СПРОСИ.ДОМ.РФ",
+      "accessed_at": "2026-09-19",
+      "claims": [
+        "возраст детей на дату кредитного договора",
+        "уступка по ДДУ не допускается",
+        "одна льготная ипотека на семью с 01.02.2026"
+      ]
+    },
+    {
+      "id": "sber-family-mortgage",
+      "url": "https://www.sberbank.ru/ru/person/credits/home/family",
+      "type": "official",
+      "entity": "Сбербанк",
+      "audience": "физлица",
+      "accessed_at": "2026-09-19",
+      "claims": [
+        "один ребёнок до 6 лет",
+        "двое и более детей до 18 лет",
+        "ребёнок-инвалид"
+      ]
+    },
+    {
+      "id": "sosedi-age-between-approval",
+      "url": "https://sosedi.life/articles/kogda-mozhno-utratit-pravo-na-semejnuyu-ipoteku-mezhdu-odobreniem-i-sdelkoj/",
+      "type": "community",
+      "published_at": "2026-09-08",
+      "accessed_at": "2026-09-19",
+      "claims": [
+        "возраст проверяют на дату кредитного договора",
+        "календарная иллюстрация 6→7 лет между решением и договором"
+      ]
+    },
+    {
+      "id": "tjournal-semeika",
+      "url": "https://t-j.ru/guide/semeika/",
+      "type": "media",
+      "accessed_at": "2026-09-19",
+      "claims": [
+        "ДДУ и кредитный договор обычно в один день",
+        "банк не выдаёт кредит без документов на покупку"
+      ]
+    },
+    {
+      "id": "tyumen-oblast-portal",
+      "url": "https://xn--80aacozicjl1agbl4lraw.xn--p1ai/publications/sila-semi-sila-regiona/semeynaya-ipoteka-v-tyumenskoy-oblasti-v-2026-godu-kak-kupit-zhile-i-poluchit-podderzhku-seme-s-detm/",
+      "type": "regional",
+      "accessed_at": "2026-09-19",
+      "claims": [
+        "лимит 6 млн ₽ для Тюменской области",
+        "новостройки Тюмени — основной сценарий",
+        "вторичка в Тюмени недоступна",
+        "изменения отложены до 01.10.2026"
+      ]
+    },
+    {
+      "id": "72ru-mortgage-load",
+      "url": "https://72.ru/text/economics/2026/09/14/76632192/",
+      "type": "local_media",
+      "published_at": "2026-09-14",
+      "accessed_at": "2026-09-19",
+      "claims": [
+        "локальный фон ипотечной нагрузки семей в Тюмени"
+      ]
+    },
+    {
+      "id": "dzen-serp-signal",
+      "url": "https://dzen.ru/a/aqEVPsSWjwEsylTB",
+      "type": "serp_community",
+      "accessed_at": "2026-09-19",
+      "claims": [
+        "резонанс угла «7 лет перед ДДУ» в выдаче сентября 2026"
+      ]
+    },
+    {
+      "id": "garant-family-mortgage-2026",
+      "url": "https://www.garant.ru/article/1986820/",
+      "type": "legal_media",
+      "accessed_at": "2026-09-19",
+      "claims": [
+        "возраст на дату кредитного договора",
+        "последствия недостоверных сведений с 01.02.2026"
+      ]
+    }
+  ]
+}
