@@ -111,6 +111,10 @@ def main() -> int:
         action="store_true",
         help="Force one Derouter call with full draft (not recommended on longform)",
     )
+    ap.add_argument(
+        "--system-file",
+        help="System prompt for Derouter (default: skills/writer-excalibur-blog/SKILL.md)",
+    )
     args = ap.parse_args()
 
     root = project_root()
@@ -146,7 +150,12 @@ def main() -> int:
                 extra_instructions = raw.strip()
 
     derouter = root / "scripts" / "excalibur_blog_derouter_opus_chat.py"
-    system_path = root / "skills/writer-excalibur-blog/SKILL.md"
+    if args.system_file:
+        system_path = Path(args.system_file)
+        if not system_path.is_absolute():
+            system_path = root / system_path
+    else:
+        system_path = root / "skills/writer-excalibur-blog/SKILL.md"
 
     if args.single_shot:
         with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False, encoding="utf-8") as tf:
