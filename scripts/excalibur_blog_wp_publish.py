@@ -681,14 +681,18 @@ $slashed_excerpt = wp_slash((string) $p['excerpt']);
 $post_id = 0;
 if (!empty($p['post_id'])) {{
     $post_id = (int) $p['post_id'];
-    wp_update_post([
-        'ID' => $post_id,
-        'post_title' => $slashed_title,
-        'post_name' => $slug,
-        'post_content' => $slashed_content,
-        'post_excerpt' => $slashed_excerpt,
-        'post_status' => 'publish',
-    ]);
+    if (!empty($p['featured_only'])) {{
+        echo 'OK skip_post_content_update=1' . PHP_EOL;
+    }} else {{
+        wp_update_post([
+            'ID' => $post_id,
+            'post_title' => $slashed_title,
+            'post_name' => $slug,
+            'post_content' => $slashed_content,
+            'post_excerpt' => $slashed_excerpt,
+            'post_status' => 'publish',
+        ]);
+    }}
 }} else {{
 $existing = get_page_by_path($slug, OBJECT, 'post');
 if ($existing instanceof WP_Post) {{
@@ -1221,6 +1225,17 @@ def check_publish_prerequisites(
                     blockers.append(
                         f"cover/cover.png md5={live_md5} != cover_qa stamped md5={stamped_md5}"
                     )
+            qa_checks = cover_qa.get("checks") if isinstance(cover_qa.get("checks"), dict) else {}
+            if not qa_checks.get("pixel_identity_matches_studio"):
+                blockers.append(
+                    "featured-only BLOCKER: pixel_identity_matches_studio must PASS (no stock face; OCR escape forbidden)"
+                )
+            escape = (cover_qa.get("pixel_evidence") or {}).get("ocr_false_positive_escape") or {}
+            overridden = escape.get("flaky_checks_overridden") or []
+            if escape.get("applied") and "pixel_identity_matches_studio" in overridden:
+                blockers.append(
+                    "featured-only BLOCKER: OCR escape cannot override pixel_identity_matches_studio"
+                )
         return blockers
 
     blockers = []
@@ -1332,6 +1347,15 @@ def check_publish_prerequisites(
         gate_status = str(cover_qa.get("gate_status") or cover_qa.get("status") or "").upper()
         if gate_status != "PASS":
             blockers.append(f"cover/cover_qa.json gate_status={gate_status or 'empty'} (need PASS on pixels)")
+        qa_checks = cover_qa.get("checks") if isinstance(cover_qa.get("checks"), dict) else {}
+        if not qa_checks.get("pixel_identity_matches_studio"):
+            blockers.append(
+                "BLOCKER: pixel_identity_matches_studio must PASS before publish (no stock face)"
+            )
+        escape = (cover_qa.get("pixel_evidence") or {}).get("ocr_false_positive_escape") or {}
+        overridden = escape.get("flaky_checks_overridden") or []
+        if escape.get("applied") and "pixel_identity_matches_studio" in overridden:
+            blockers.append("BLOCKER: OCR escape cannot override pixel_identity_matches_studio")
 
     if not (article_dir / "description-brief.json").is_file():
         blockers.append("description-brief.json missing")
