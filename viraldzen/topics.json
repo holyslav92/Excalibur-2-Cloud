@@ -1,0 +1,19 @@
+{
+  "topics": [
+    "недвижимость",
+    "покупка недвижимости",
+    "ипотека"
+  ],
+  "topic_pages": 1,
+  "topic_limit": 20,
+  "pages": 2,
+  "delay_seconds": 0.7,
+  "min_views": 5000,
+  "top_n": 30,
+  "fetch_content": true,
+  "download_images": true,
+  "recirc": true,
+  "include_feed": true,
+  "channel_only": false,
+  "portable": false
+}
