@@ -1,0 +1,17 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-19",
+  "topic_id": "B28",
+  "article_dir": "memory/blog/articles/B28-v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-",
+  "slug": "v-tyumeni-v-dome-kp-potolki-nizhe-ddu-na-25-santimetrov-zamer-na-sdache-pokazal-",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "cover_qa_status": "PASS",
+  "errors": []
+}
