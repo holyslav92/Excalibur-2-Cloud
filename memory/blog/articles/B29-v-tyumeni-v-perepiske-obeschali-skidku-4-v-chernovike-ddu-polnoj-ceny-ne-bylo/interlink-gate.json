@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B29",
+  "slug": "v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo",
+  "candidates_count": 25,
+  "outbound_found": [
+    {
+      "slug": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli",
+      "title": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli"
+    },
+    {
+      "slug": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi",
+      "title": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi"
+    },
+    {
+      "slug": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali",
+      "title": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali"
+    },
+    {
+      "slug": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst",
+      "title": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
