@@ -1,0 +1,14 @@
+{
+  "gate": "title",
+  "status": "PASS",
+  "checks": {
+    "topic_focus": "PASS",
+    "scout_story_dup": "PASS",
+    "h1_chars": 67,
+    "h1_max": 70,
+    "forbidden_year_2026_in_h1": false,
+    "verdict_in_brief": "PASS"
+  },
+  "h1": "Газ в КП обещали — декларация указала 2028, семья потеряла 60 тысяч",
+  "errors": []
+}
