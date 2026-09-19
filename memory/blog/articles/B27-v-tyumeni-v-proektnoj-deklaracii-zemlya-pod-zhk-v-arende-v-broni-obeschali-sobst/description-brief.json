@@ -1,0 +1,9 @@
+{
+  "topic_id": "B27",
+  "description": "Менеджер уверял: земля под домом своя. Но перед ДДУ семья из Тюмени сверила документы и нашла аренду до 2049 года — хватило ли этого, чтобы остановить сделку?",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
