@@ -1,0 +1,9 @@
+{
+  "topic_id": "B30",
+  "description": "«Просто другой подъезд» — так семье в Тюмени объяснили окна на соседний корпус вместо двора. ДДУ они не подписали, но часть денег за бронь всё равно потеряли.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
