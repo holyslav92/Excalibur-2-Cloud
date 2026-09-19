@@ -1,0 +1,255 @@
+{
+  "topic_id": "B28",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Потолки оказались ниже договора на двадцать пять",
+  "cover_hook_highlight": "ниже",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Под Тюменью дом в КП не приняли — потолки на 25 см ниже обещанного: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Лазер к потолку и ДДU; doakes/long_cat; hook; phone.",
+      "meme_caption_ru": "",
+      "sticky": "Акт не подписали",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие с раздражённой гримасой",
+      "meme_picks": [
+        "james_doakes",
+        "long_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Акт не подписали, ключи не взяли, финальный транш не ушёл на эскроу",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Тумба: приложение ДДU 2,7 м; roll_safe угол; без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Акт не подписали, ключи не взяли, финальный тра…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Приложение ДДU",
+        "Высота 2,7м",
+        "Дом в посёлке",
+        "Не буклет"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "roll_safe"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Акт не подписали, ключи не взяли, финальный транш не ушёл на эскроу",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: 2,70 м vs 2,45 м; гостиная и спальни; дальномер.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Дальномер, Гостиная 2,45, Две спальни — иллюстрация к разбору сделки.",
+      "labels": [
+        "Дальномер",
+        "Гостиная 2,45",
+        "Две спальни",
+        "Жилые комнаты"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "«Два метра семьдесят» — так было в приложении к ДДУ",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Акт, карточка 80k, «конструктивный допуск»; дальномер от пола.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Два метра семьдесят» — так было в приложении к…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Конструктивный допуск",
+        "Скидка 80k",
+        "Подпись акта",
+        "Пункт в документе"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "День передачи: лазер показал 2,45 в гостиной и в спальнях",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Лазер у потолка черновой гостиной; миллиметры, не 25 см.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «День передачи: лазер показал 2,45 в гостиной и…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Допуск отделки",
+        "Миллиметры ровности",
+        "Не четверть метра",
+        "Опора приложение"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Конструктивный допуск» и восемьдесят тысяч за подпись акта",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow: акт → замечания → ключи → эскроу; two_buttons угол.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Акт без подписи, Ключи не выдали, Транш на эскроу — иллюстрация к разбору сделки.",
+      "labels": [
+        "Акт без подписи",
+        "Ключи не выдали",
+        "Транш на эскроу",
+        "Замечания письменно"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "two_buttons"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Через девять дней вернули задаток двести пятьдесят тысяч",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Timeline 9 дней: возврат 250k; не эскроу.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Девять дней, Задаток 250 тысяч, Не эскроу — иллюстрация к разбору сделки.",
+      "labels": [
+        "Девять дней",
+        "Задаток 250 тысяч",
+        "Не эскроу",
+        "Без регистрации"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Замер до акта — таблица: договорные 2,7 м и допуск отделки",
+      "visual_type": "structure_diagram",
+      "scene_hint": "2,7 м → замер → сверка; допуск отделки; capybara угол.",
+      "alt": "Схема проверки договорной высоты потолка и допуска отделки до подписания акта.",
+      "labels": [
+        "Договорные 2,7 м",
+        "Допуск отделки",
+        "Замер до акта",
+        "Сверка с документом"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "capybara_indifference"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "коттеджные поселки тюмень",
+    "дома в тюмени от застройщика"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "горизонтальная сцена приёмки: герой в полный рост справа у лазерного дальномера, слева свободная светлая зона под крупный заголовок и телефон",
+    "location": "светлый черновой коттедж в коттеджном посёлке под Тюменью на передаче, гостиная с высоким проёмом, окнами и солнечным бликом",
+    "meme": "james_doakes как маленькая реакционная наклейка с недоверчивым выражением и long_cat как тонкий забавный акцент в углу",
+    "prop_set": [
+      "лазерный дальномер, направленный к потолку",
+      "папка с приложением к ДДУ",
+      "лист акта с заметными письменными замечаниями",
+      "рулетка на строительной тумбе",
+      "смартфон с номером +7 922 001 65 05"
+    ],
+    "sticker_set": [
+      "james_doakes",
+      "long_cat"
+    ],
+    "joke": "герой показывает на слишком низкий потолок, а long_cat визуально вытягивается вдоль верхней кромки стены, подчёркивая нелепую разницу в 25 сантиметров",
+    "outfit": "светлая горчично-песочная рабочая куртка поверх голубой рубашки, тёмно-синие джинсы и светлые кроссовки",
+    "emotion": "ошеломлённое недоверие, прищур, поднятая бровь и напряжённая гримаса вместо студийной улыбки",
+    "pose_framing": "средний план с лёгкой перспективой снизу, герой стоит справа, корпус развёрнут к дальномеру, одна рука поднята к потолку, не бюст и не боковой взгляд",
+    "action": "герой удерживает лазерный дальномер у потолка и второй рукой раскрывает приложение к ДДУ, сравнивая обещанные 2,7 м с фактической высотой"
+  },
+  "cover_emotion": "ошеломлённое недоверие с раздражённой гримасой"
+}
