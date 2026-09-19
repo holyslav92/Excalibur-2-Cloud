@@ -1,0 +1,295 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B29-v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_too_far_from_center",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 609,
+              "end": 635
+            },
+            "v_gutter_px": {
+              "start": 1014,
+              "end": 1035
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 46.0,
+              "v_center_offset_px": 0.5,
+              "max_aspect_crop_loss": 0.0937,
+              "per_panel_crop_loss": {
+                "top_left": 0.064,
+                "top_right": 0.064,
+                "bottom_left": 0.0937,
+                "bottom_right": 0.0928
+              },
+              "reject_reason": "gutter_too_far_from_center"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени обещали скидку 4% — проект ДДУ без неё остановил сделку: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Минус четыре процента» — так зафиксировали в C…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Минус четыре процента» — так зафиксировали в CRM и переписке"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: 3 дня до эскроу, Вечер, Проект ДДУ — иллюстрация к разбору сделки.",
+            "h2_anchor": "«Минус четыре процента» — так зафиксировали в CRM и переписке"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «За три дня до эскроу: вечером открыли проект ДДУ» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "За три дня до эскроу: вечером открыли проект ДДУ"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B29-v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          561
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 561,
+            "end": 579
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1034
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 6.0,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0177,
+            "per_panel_crop_loss": {
+              "top_left": 0.0177,
+              "top_right": 0.0168,
+              "bottom_left": 0.0,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 9,
+              "top": 0,
+              "right": 1006,
+              "bottom": 561
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 561
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «В договоре — полная прайсовая цена, скидки в те…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "В договоре — полная прайсовая цена, скидки в тексте нет"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1042,
+              "top": 0,
+              "right": 2039,
+              "bottom": 561
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 0,
+              "right": 2048,
+              "bottom": 561
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Прайсовая цена в ДДУ, Без пункта скидки, Расчёт по переписке — иллюстрация к…",
+            "h2_anchor": "«Подпишите сейчас, скидку оформим потом» — семья сказала нет"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 579,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 579,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Эскроу не открывали, Сумма из ДДУ, Статьи 15.4–15.5 — иллюстрация к разбору сделки.",
+            "h2_anchor": "Эскроу не открывали: на счёт должна была уйти сумма из ДДУ"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1034,
+              "top": 579,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 579,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Проект ДДУ, Ипотечное одобрение, Договор бронирования — иллюстрация к разбору сделки.",
+            "h2_anchor": "Одна таблица до подписи — где должна совпасть цена"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — «Минус четыре процента» — так зафиксировали в CRM и переписке",
+    "skip inline_2: already correct under H2 — «Минус четыре процента» — так зафиксировали в CRM и переписке",
+    "skip inline_3: already correct under H2 — За три дня до эскроу: вечером открыли проект ДДУ",
+    "moved inline_4 → H2 — В договоре — полная прайсовая цена, скидки в тексте нет (was under [«подпишите сейчас, скидку оформим потом» — семья сказала нет]; removed=1)",
+    "moved inline_5 → H2 — «Подпишите сейчас, скидку оформим потом» — семья сказала нет (was under [за три дня до эскроу: вечером открыли проект дду]; removed=1)",
+    "skip inline_6: already correct under H2 — Эскроу не открывали: на счёт должна была уйти сумма из ДДУ",
+    "skip inline_7: already correct under H2 — Одна таблица до подписи — где должна совпасть цена"
+  ]
+}
