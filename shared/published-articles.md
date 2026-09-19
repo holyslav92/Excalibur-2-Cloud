@@ -27,3 +27,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-09-13 | B26 | v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh | /blog/ipoteka/v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh/ | published |
 | 2026-09-19 | B27 | v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst | /blog/proverka-pered-pokupkoj/v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst/ | published |
 | 2026-09-19 | B28 | pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do | /blog/proverka-pered-pokupkoj/pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do/ | published |
+| 2026-09-19 | B29 | v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo | /blog/ipoteka/v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo/ | published |

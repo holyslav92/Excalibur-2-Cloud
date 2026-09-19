@@ -3,7 +3,7 @@
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
 ## INC-20260821-0615-content-learner-metrika-credentials
-status: open
+status: needs-human
 run_date: 2026-08-21
 role: excalibur-blog-content-learner
 topic_id: B06
@@ -23,10 +23,11 @@ category: env
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
 - **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9749 ingest skipped; B23 lesson recorded without behavioral signals (newbuild_apartments_instead_flat_ddu_tyumen cluster).
+- **2026-09-19 B29 fixer/post-run:** `excalibur_blog_metrika_fetch.py --days 30` → METRIKA CREDENTIALS BLOCKER; publish B29 post 10642 OK; behavioral ingest backlog unchanged.
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368) и B23 (post 9749) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368), B23 (post 9749) и B29 (post 10642) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -34,6 +35,25 @@ category: env
 
 ### Secrets
 - none recorded (credentials absent)
+
+### Fixer resolution
+status: needs-human
+fixed_at: 2026-09-19
+reason:
+- Cloud Secrets must supply `YANDEX_METRIKA_OAUTH_TOKEN` and `YANDEX_METRIKA_COUNTER_ID`; no safe repo-side substitute.
+needed_decision_or_secret:
+- Owner: OAuth metrika:read + counter id per `shared/yandex-metrika-contract.md`
+- After secrets: `python3 scripts/excalibur_blog_metrika_fetch.py --days 30 --ingest` (backfill B06–B29 published slugs)
+fix_summary:
+- B29 pipeline had no new code incidents; doctor now WARNs on missing Metrika env at preflight.
+files_changed:
+- `scripts/excalibur_blog_doctor.py`
+- `memory/pipeline-fix-queue.md`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_doctor.py`
+- `python3 scripts/excalibur_blog_doctor.py` → errors=0 warnings=1 (Metrika)
+- `python3 scripts/excalibur_blog_metrika_fetch.py --days 30` → METRIKA CREDENTIALS BLOCKER (expected)
+commit: pending
 
 ## INC-20260821-0614-quality-bar-wordstat-pil-b06
 status: fixed

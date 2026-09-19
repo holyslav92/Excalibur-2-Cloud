@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo",
+  "topic_id": "B29",
+  "post_id": 10642,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B29-v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1030443,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10642 slug=v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo\nOK categories=36,54,32\nOK yoast_social_image=1\nOK featured_image=10643\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10644 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo-inline-01.png\nOK inline_alt=10644\nOK inline_description=10644\nOK inline_image_upload=10645 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo-inline-02.png\nOK inline_alt=10645\nOK inline_description=10645\nOK inline_image_upload=10646 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo-inline-03.png\nOK inline_alt=10646\nOK inline_description=10646\nOK inline_image_upload=10647 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo-inline-04.png\nOK inline_alt=10647\nOK inline_description=10647\nOK inline_image_upload=10648 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo-inline-05.png\nOK inline_alt=10648\nOK inline_description=10648\nOK inline_image_upload=10649 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo-inline-06.png\nOK inline_alt=10649\nOK inline_description=10649\nOK inline_image_upload=10650 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo-inline-07.png\nOK inline_alt=10650\nOK inline_description=10650\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-v-perepiske-obeschali-skidku-4-v-chernovike-ddu-polnoj-ceny-ne-bylo/",
+    "errors": []
+  }
+}

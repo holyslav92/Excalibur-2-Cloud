@@ -592,6 +592,16 @@ def main() -> int:
         warnings,
     )
 
+    metrika_token = (os.environ.get("YANDEX_METRIKA_OAUTH_TOKEN") or "").strip()
+    metrika_counter = (os.environ.get("YANDEX_METRIKA_COUNTER_ID") or "").strip()
+    check(
+        bool(metrika_token) and bool(metrika_counter),
+        "YANDEX_METRIKA_OAUTH_TOKEN + YANDEX_METRIKA_COUNTER_ID (content-learner; see shared/yandex-metrika-contract.md)",
+        errors,
+        warnings,
+        warn=True,
+    )
+
     # Dzen + RF canon must be readable before Scout (when pack enabled)
     if tenant.get("dzen_rf_pack", True):
         rf_path = root / "shared/rf-blocked-entities.json"
