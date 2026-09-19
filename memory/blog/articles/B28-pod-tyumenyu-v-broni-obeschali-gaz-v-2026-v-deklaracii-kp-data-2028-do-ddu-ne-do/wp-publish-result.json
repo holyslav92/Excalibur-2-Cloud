@@ -1,0 +1,28 @@
+{
+  "slug": "pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do",
+  "topic_id": "B28",
+  "post_id": 10616,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B28-pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1186749,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10616 slug=pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do\nOK categories=36,54,34\nOK yoast_social_image=1\nOK featured_image=10617\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10618 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do-inline-01.png\nOK inline_alt=10618\nOK inline_description=10618\nOK inline_image_upload=10619 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do-inline-02.png\nOK inline_alt=10619\nOK inline_description=10619\nOK inline_image_upload=10620 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do-inline-03.png\nOK inline_alt=10620\nOK inline_description=10620\nOK inline_image_upload=10621 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do-inline-04.png\nOK inline_alt=10621\nOK inline_description=10621\nOK inline_image_upload=10622 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do-inline-05.png\nOK inline_alt=10622\nOK inline_description=10622\nOK inline_image_upload=10623 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do-inline-06.png\nOK inline_alt=10623\nOK inline_description=10623\nOK inline_image_upload=10624 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do-inline-07.png\nOK inline_alt=10624\nOK inline_description=10624\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do/",
+    "errors": []
+  }
+}
