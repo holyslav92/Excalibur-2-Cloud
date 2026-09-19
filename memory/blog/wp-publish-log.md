@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B29 — 2026-09-19
+
+- **topic_id:** B29
+- **slug:** v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika
+- **post_id:** 10655
+- **permalink:** /blog/ipoteka/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika/
+- **featured_image:** 10656
+- **inline_images:** 10657–10663 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry, dokumenty-i-oformlenie (category_ids=32,36,54)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B27 — 2026-09-19
 
 - **topic_id:** B27

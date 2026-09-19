@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika",
+  "topic_id": "B29",
+  "post_id": 10655,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B29-v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1103523,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10655 slug=v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika\nOK categories=32,36,54\nOK yoast_social_image=1\nOK featured_image=10656\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10657 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika-inline-01.png\nOK inline_alt=10657\nOK inline_description=10657\nOK inline_image_upload=10658 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika-inline-02.png\nOK inline_alt=10658\nOK inline_description=10658\nOK inline_image_upload=10659 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika-inline-03.png\nOK inline_alt=10659\nOK inline_description=10659\nOK inline_image_upload=10660 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika-inline-04.png\nOK inline_alt=10660\nOK inline_description=10660\nOK inline_image_upload=10661 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika-inline-05.png\nOK inline_alt=10661\nOK inline_description=10661\nOK inline_image_upload=10662 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika-inline-06.png\nOK inline_alt=10662\nOK inline_description=10662\nOK inline_image_upload=10663 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika-inline-07.png\nOK inline_alt=10663\nOK inline_description=10663\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika/",
+    "errors": []
+  }
+}
