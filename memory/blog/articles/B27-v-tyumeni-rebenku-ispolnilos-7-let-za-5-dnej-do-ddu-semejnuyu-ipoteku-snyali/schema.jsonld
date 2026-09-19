@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-rebenku-ispolnilos-7-let-za-5-dnej-do-ddu-semejnuyu-ipoteku-snyali/#blogposting",
+      "headline": "В Тюмени ребёнку исполнилось 7 лет — семейную ипотеку сняли",
+      "description": "Банк одобрил — можно выдохнуть? Семья в Тюмени уже считала платёж по льготной ставке, но перед ДДУ получила неподъёмный пересчёт: бронь была, одобрение было — а гарантии ставки не оказалось.",
+      "datePublished": "2026-09-19",
+      "inLanguage": "ru-RU",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-rebenku-ispolnilos-7-let-za-5-dnej-do-ddu-semejnuyu-ipoteku-snyali/"
+      },
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}
