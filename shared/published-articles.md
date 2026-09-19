@@ -28,3 +28,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-09-19 | B27 | v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst | /blog/proverka-pered-pokupkoj/v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst/ | published |
 | 2026-09-19 | B28 | pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do | /blog/proverka-pered-pokupkoj/pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do/ | published |
 | 2026-09-19 | B29 | v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika | /blog/ipoteka/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika/ | published |
+| 2026-09-19 | B30 | v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya | /blog/proverka-pered-pokupkoj/v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya/ | published |
