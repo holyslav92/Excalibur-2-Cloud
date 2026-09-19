@@ -1,0 +1,84 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B30",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-19",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://103news.com/ekaterinburg/429480347/",
+        "type": "regional_news",
+        "note": "18.09.2026 — RG line on Tyumen escrow account openings / Ural CBR"
+      },
+      {
+        "url": "https://tyumen-info.ru/society/2026/09/10/40957.html",
+        "type": "regional_news",
+        "note": "10.09.2026 — Tyumen escrow round table, GU construction"
+      },
+      {
+        "url": "https://72.ru/text/gorod/2026/09/17/76646611/",
+        "type": "regional_media",
+        "note": "17.09.2026 — fresh Tyumen media week"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Tenant Telegram newbuild channel"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen — newbuild casus niche"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4430,
+    "p0_volume_ru225": 927399,
+    "compare225_phrase": "новостройки",
+    "compare225_volume": 927399,
+    "support_phrases": [
+      {"phrase": "квартиры с отделкой тюмень", "volume": 79, "region": "55+11176"},
+      {"phrase": "тюмень новостройки квартира с отделкой", "volume": 25, "region": "55+11176"}
+    ],
+    "rework_from": "orientation/section as H1 mechanism inside spine «новостройки тюмень» 4430",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_showroom_sun_side_vs_ddu_north_section_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B25 finish vs DDU", "B27 declaration land", "B29 bank promo", "floor mismatch Dzen siblings"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["legal_214fz", "domrf", "sanpin_consultant"],
+    "errors": [],
+    "note": "214-FZ art 4 object description; DOM.RF/EISJS; SanPiN insolation context; no bank tariff claims"
+  },
+  "key_facts_count": 28,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

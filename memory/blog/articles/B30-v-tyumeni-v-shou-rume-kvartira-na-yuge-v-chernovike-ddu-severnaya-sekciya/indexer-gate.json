@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-19",
+  "topic_id": "B30",
+  "article_dir": "memory/blog/articles/B30-v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya",
+  "slug": "v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": []
+}

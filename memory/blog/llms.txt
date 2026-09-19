@@ -21,4 +21,5 @@
 - [Почти внесли задаток на торгах — квартиру подарили дочери]({{SITE_BASE}}/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/): За 48 часов до задатка на торгах квартиру подарили дочери — что показала свежая ЕГРН
 - [В Тюмени ипотеку одобрили — эскроу сорвал маткапитал]({{SITE_BASE}}/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/): В Тюмени ипотеку одобрили — эскроу сорвал маткапитал
 - [В выписке ЕГРН есть строка, после которой аванс вносить нельзя]({{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/): В выписке ЕГРН есть строка, после которой аванс вносить нельзя
+- [За 5 дней до ДДУ шоу-рум на юге — в проекте северная секция]({{SITE_BASE}}/v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya/): В шоу-руме квартира на юге — в черновике ДДУ та же площадь, но северная секция
 - [В Тюмени застройщик сменил юрлицо — банк не открыл эскроу]({{SITE_BASE}}/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/): В Тюмени застройщик сменил юрлицо — банк не открыл эскроу

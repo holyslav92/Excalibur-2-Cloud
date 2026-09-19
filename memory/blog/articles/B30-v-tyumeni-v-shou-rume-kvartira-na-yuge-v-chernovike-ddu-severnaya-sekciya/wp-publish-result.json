@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya",
+  "topic_id": "B30",
+  "post_id": 10681,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B30-v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1076744,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10681 slug=v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya\nOK categories=36,54,34\nOK yoast_social_image=1\nOK featured_image=10682\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10683 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya-inline-01.png\nOK inline_alt=10683\nOK inline_description=10683\nOK inline_image_upload=10684 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya-inline-02.png\nOK inline_alt=10684\nOK inline_description=10684\nOK inline_image_upload=10685 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya-inline-03.png\nOK inline_alt=10685\nOK inline_description=10685\nOK inline_image_upload=10686 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya-inline-04.png\nOK inline_alt=10686\nOK inline_description=10686\nOK inline_image_upload=10687 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya-inline-05.png\nOK inline_alt=10687\nOK inline_description=10687\nOK inline_image_upload=10688 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya-inline-06.png\nOK inline_alt=10688\nOK inline_description=10688\nOK inline_image_upload=10689 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya-inline-07.png\nOK inline_alt=10689\nOK inline_description=10689\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-shou-rume-kvartira-na-yuge-v-chernovike-ddu-severnaya-sekciya/",
+    "errors": []
+  }
+}
