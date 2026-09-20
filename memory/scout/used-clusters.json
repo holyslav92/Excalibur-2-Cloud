@@ -5,6 +5,15 @@
   "last_sync": "2026-09-20",
   "clusters": [
     {
+      "cluster_id": "developer_legal_entity_change",
+      "first_seen": "2026-09-20",
+      "locked_until": "2026-10-20",
+      "source": "live_wp",
+      "slug": "za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil",
+      "topic_id": "LIVE-ZA-2-DNYA-DO-ESKROU-V-RE",
+      "title": "За 2 дня до эскроу банк остановил сделку в новостройке Тюмени — в ДДУ чужое юрлицо"
+    },
+    {
       "cluster_id": "bank_appraisal_below_ddu_price",
       "first_seen": "2026-09-17",
       "locked_until": "2026-10-17",
