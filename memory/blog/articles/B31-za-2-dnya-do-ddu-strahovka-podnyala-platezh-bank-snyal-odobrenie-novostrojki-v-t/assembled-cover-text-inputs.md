@@ -1,0 +1,9 @@
+Assembled cover-text inputs — B31
+
+Derouter cover-text role. Output to cover/cover-text.json per skill.
+
+H1: За 2 дня до ДДУ страховка добавила восемнадцать тысяч в месяц — банк снял одобрение ипотеки на новостройку в Тюмени
+Short hook: 5-7 Cyrillic words e.g. «Страховка сорвала ипотеку перед ДДУ»
+Phone: +7 922 001 65 05
+meme_picks from memory/cover/meme-top100.json people+cats on-topic insurance/mortgage stress, anti-repeat 14d used-motifs
+P0 wordstat stickers: купить новостройку в тюмени, страхование ипотеки

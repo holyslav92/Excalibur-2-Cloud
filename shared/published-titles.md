@@ -32,3 +32,4 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 | B27 | v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst | За 4 дня до ДДУ в Тюмени обещали землю в собственности — декларация показала аренду | published |
 | B28 | pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do | Газ в КП обещали — декларация указала 2028, семья потеряла 60 тысяч | published |
 | B29 | v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika | Банк отменил нулевой взнос за 6 дней до ДДУ — сделка встала | published |
+| B30 | za-3-dnya-do-ddu-zapret-pereprodazhi-3-goda-v-pereustupke-novostrojki-tyumen | За 3 дня до сделки запрет остановил уступку новостройки в Тюмени | published |
