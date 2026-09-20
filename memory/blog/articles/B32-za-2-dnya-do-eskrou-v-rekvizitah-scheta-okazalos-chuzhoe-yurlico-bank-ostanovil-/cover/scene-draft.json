@@ -1,0 +1,77 @@
+{
+  "scene_draft_version": "B32",
+  "cover_hook": "За два дня до эскроу чужой ИНН",
+  "cover_hook_highlight": "чужой ИНН",
+  "sticky": "Банк остановил перевод",
+  "mechanism": "Несовпадение получателя в ДДУ: банк остановил перевод на счёт застройщика в новостройке Тюмени до перечисления денег.",
+  "slots": {
+    "cover": {
+      "scene_hint": "Светлая квартира в новой тюменской новостройке: мужчина у окна резко сверяет ДДУ и экран телефона, рядом раскрытая папка с договором и крупно выделенный ИНН; солнечный блик, тревожное удивление.",
+      "cover_emotion": "ошеломлённое недоверие с напряжённым прищуром",
+      "identity": "same person as face-studio-2026-06-23.jpg, medium slim build; new outfit, new pose, new expression; do not copy reference clothes, pose or smile",
+      "composition": "host on the right in a three-quarter medium shot, document and phone in the foreground, clean negative space on the left for hook and sticky",
+      "location": "bright Tyumen newbuild apartment with pale walls, large window and construction handover details",
+      "action": "one hand holds the DDU open to the beneficiary details, the other freezes above the banking app after spotting a different INN",
+      "lighting": "high-key white daylight, warm sun flare and light leak, crisp readable props, no dark cinematic mood",
+      "text_safety": "keep hook, sticky, phone number +7 922 001 65 05 and host face unobstructed; no Wordstat query strips or bars",
+      "meme_direction": "small on-topic catalog reaction sticker in a free corner, expressing disbelief at the bank stop; use only an approved meme-top100 template selected by the manifest"
+    },
+    "inline_1": {
+      "visual_type": "realistic_photo",
+      "placement_group": "pair",
+      "scene_hint": "Bright close-up of a DDU beneficiary section on a kitchen table in a newbuild apartment, with a red mismatch marker and a bank transfer status on a phone; no host face.",
+      "fact_labels": ["ДДУ", "получатель", "ИНН", "назначение платежа"]
+    },
+    "inline_2": {
+      "visual_type": "comparison_table",
+      "placement_group": "pair",
+      "scene_hint": "High-key editorial comparison table showing DDU beneficiary details versus bank payment details, with aligned fields and one highlighted INN mismatch; gold, black and white collage style.",
+      "fact_labels": ["ДДУ", "платёжка", "ИНН", "наименование", "счёт"]
+    },
+    "inline_3": {
+      "visual_type": "process_flow",
+      "placement_group": "single",
+      "scene_hint": "Clean bright process flow from checking DDU реквизиты to bank verification and transfer release or stop, using numbered arrows and a small warning marker at the mismatch step.",
+      "fact_labels": ["проверить", "сверить", "отправить", "остановить"]
+    },
+    "inline_4": {
+      "visual_type": "realistic_photo",
+      "placement_group": "pair",
+      "scene_hint": "Sunny Tyumen bank-service counter with a document folder, payment order and queue ticket on the counter; only hands and objects, no identifiable people or host face.",
+      "fact_labels": ["банк", "платёжное поручение", "проверка", "стоп-перевод"]
+    },
+    "inline_5": {
+      "visual_type": "bar_timeline_chart",
+      "placement_group": "pair",
+      "scene_hint": "Bright horizontal timeline of the final two days before escrow, marking DDU check, bank review, correction and safe payment window with clear day labels.",
+      "fact_labels": ["за 2 дня", "проверка", "исправление", "эскроу"]
+    },
+    "inline_6": {
+      "visual_type": "structure_diagram",
+      "placement_group": "single",
+      "scene_hint": "Informational diagram of the payment chain: покупатель, банк, эскроу-счёт and застройщик, with the beneficiary mismatch highlighted between DDU and bank data.",
+      "fact_labels": ["покупатель", "банк", "эскроу", "застройщик", "получатель"]
+    },
+    "inline_7": {
+      "visual_type": "labeled_checklist",
+      "placement_group": "single",
+      "scene_hint": "Light collage checklist on a white paper sheet: verify developer name, INN, account, bank and DDU version before sending money; readable labels and one yellow warning tab.",
+      "fact_labels": ["название", "ИНН", "счёт", "банк", "версия ДДУ"]
+    }
+  },
+  "cover_motifs": {
+    "composition": "right-side three-quarter host with document and phone foreground, left title zone",
+    "location": "bright Tyumen newbuild apartment",
+    "props": ["ДДУ", "телефон с банковским статусом", "папка документов", "выделенный ИНН"],
+    "outfit": "light sand overshirt over a pale blue T-shirt",
+    "emotion": "ошеломлённое недоверие с напряжённым прищуром",
+    "pose_framing": "three-quarter medium shot, torso angled toward the document, one hand raised in a stopped gesture",
+    "action": "comparing DDU beneficiary details with the banking app after spotting a different INN",
+    "joke": "деньги готовы уйти в эскроу, но банк первым заметил чужой ИНН",
+    "meme": "approved catalog reaction sticker, tiny corner accent, disbelief at the blocked transfer",
+    "stickers": ["small warning tab near the document, away from hook, face and phone"],
+    "sticker_clearance": "minimum 80px from hook, host face and phone number"
+  },
+  "wordstat_stickers": [],
+  "meme_picks": []
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-",
+  "topic_id": "B32",
+  "post_id": 10720,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B32-za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1034069,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10720 slug=za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-\nOK categories=32,34,36\nOK yoast_social_image=1\nOK featured_image=10721\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10722 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-inline-03.png\nOK inline_alt=10722\nOK inline_description=10722\nOK inline_image_upload=10723 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-inline-04.png\nOK inline_alt=10723\nOK inline_description=10723\nOK inline_image_upload=10724 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-inline-05.png\nOK inline_alt=10724\nOK inline_description=10724\nOK inline_image_upload=10725 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-inline-06.png\nOK inline_alt=10725\nOK inline_description=10725\nOK inline_image_upload=10726 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-inline-07.png\nOK inline_alt=10726\nOK inline_description=10726\nOK inline_image_upload=10727 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-inline-01.png\nOK inline_alt=10727\nOK inline_description=10727\nOK inline_image_upload=10728 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-inline-02.png\nOK inline_alt=10728\nOK inline_description=10728\npermalink={{SITE_BASE}}/blog/ipoteka/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil/",
+    "errors": []
+  }
+}

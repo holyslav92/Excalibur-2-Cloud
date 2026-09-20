@@ -1,0 +1,24 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{SITE_BASE}}/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-/#article",
+  "url": "{{SITE_BASE}}/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-/",
+  "headline": "За 2 дня до эскроу банк остановил сделку в новостройке Тюмени — в ДДУ чужое юрлицо",
+  "description": "Святослав Шакин разбирает тюменский кейс: в реквизитах ДДУ всплыл ИНН другой компании — банк заметил несостыковку раньше перевода на эскроу.",
+  "datePublished": "2026-09-20",
+  "author": {
+    "@type": "Person",
+    "@id": "{{SITE_BASE}}/#/schema/person/svyatoslav-shakin",
+    "name": "Святослав Шакин",
+    "sameAs": []
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{SITE_BASE}}/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "{{SITE_BASE}}/#organization",
+    "name": "Excalibur"
+  }
+}

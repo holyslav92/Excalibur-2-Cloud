@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-20",
+    "today_ru": "20.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "воскресенье"
+  },
+  "topic": {
+    "topic_id": "B32",
+    "title": "За 2 дня до эскроу в реквизитах счета оказалось чужое юрлицо банк остановил новостройку Тюмень",
+    "h1": "За 2 дня до эскроу в реквизитах счета оказалось чужое юрлицо банк остановил новостройку Тюмень",
+    "slug": "za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-",
+    "primary_query": "За 2 дня до эскроу в реквизитах счета оказалось чужое юрлицо банк остановил новостройку Тюмень",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "За 2 дня до эскроу в реквизитах счета оказалось чужое юрлицо банк остановил новостройку Тюмень 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Когда пополняется эскроу-счет: сроки и порядок",
+          "url": "https://kvarnado.ru/glossarij/guide-kogda-popolnyaetsya-eskrou-schet-pri-pokupke-kvartiry",
+          "snippet": ""
+        },
+        {
+          "title": "Когда пополняется эскроу счет при покупке квартиры",
+          "url": "https://kvarnado.ru/glossarij/guide-kogda-popolnyaetsya-eskrou-schet",
+          "snippet": "Разбираю, когда пополняется эскроу-счет при покупке квартиры, кто вносит деньги и когда застройщик их получает. Читайте и проверяйте сделку."
+        },
+        {
+          "title": "Эскроу-счет для новостройки 2026 - полное руководство для дольщика",
+          "url": "https://fskfamily.ru/blog/eskrou-schet-kak-eto-rabotaet-i-chto-nuzhno-znat-pokupatelyu-kvartiry-v-novostroyke/",
+          "snippet": "Схема простая: вы открываете эскроу счет через банк, который участвует в проекте, затем пополнить эскроу счет можно только по реквизитам, указанным в договоре."
+        },
+        {
+          "title": "Эскроу-счёт при банкротстве банка: что будет с деньгами в 2026",
+          "url": "https://novostroikino.ru/blog/eskrou-schet-bankrotstvo-banka-novostroyka-2026/",
+          "snippet": "Эскроу-счет для новостройки в 2026 году. Разбираем, как работает механизм защиты дольщиков по 214-ФЗ: от открытия счета до получения ключей. Пошаговая инструкция и разбор рисков."
+        },
+        {
+          "title": "Эскроу-счета в сделках с недвижимостью: правовое регулирование и ...",
+          "url": "https://pravo-pro.ru/blog/posts/eskrou-scheta-v-sdelkah-s-nedvizhimostyu-pravovoe-regulirovanie-i-praktika/",
+          "snippet": "В этой статье разбираем, кому на самом деле принадлежат деньги на эскроу-счёте, как их страхует государство, какой лимит возмещения действует в 2026 году и что конкретно делать дольщику ..."
+        },
+        {
+          "title": "Счета эскроу в долевом строительстве: как защищают дольщика и меняют ...",
+          "url": "https://pravo-pro.ru/blog/posts/scheta-eskrou-v-dolevom-stroitelstve/",
+          "snippet": "Разбираем, что такое эскроу-счет, как он работает при покупке недвижимости, каково его правовое регулирование (ГК РФ, 214-ФЗ) и в каких сделках применяется."
+        }
+      ],
+      "searched_at": "2026-09-20"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "За 2 дня до эскроу в реквизитах счета оказалось чужое юрлицо банк остановил новостройку Тюмень 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Эскроу-счета 2026: что реально защищает покупателя квартиры",
+          "url": "https://alkorspb.ru/journal/eskrou-scheta-2026-chto-real-no-zaschischaet-pokupatelya-checklist/",
+          "snippet": ""
+        },
+        {
+          "title": "Когда списываются деньги с эскроу-счета: сроки и условия",
+          "url": "https://kvarnado.ru/glossarij/guide-kogda-spisyvayutsya-dengi-s-eskrou-scheta",
+          "snippet": "Разбираем механизм эскроу-счетов в новостройках 2026: как работает защита денег, где остаются риски и на что обратить внимание при покупке квартиры по ДДУ."
+        },
+        {
+          "title": "Когда с эскроу-счета списываются деньги: сроки и условия",
+          "url": "https://kvarnado.ru/glossarij/guide-kogda-s-eskrou-scheta-spisyvayutsya-dengi",
+          "snippet": "Деньги с эскроу-счета не уходят застройщику сразу после оплаты ДДУ. Банк перечисляет их только после выполнения условий раскрытия: обычно после ввода дома в эксплуатацию и регистрации права. Я покажу, где покупатели чаще всего ошибаются и что проверить до сделки."
+        },
+        {
+          "title": "Эскроу-счет для новостройки 2026 - полное руководство для дольщика",
+          "url": "https://fskfamily.ru/blog/eskrou-schet-kak-eto-rabotaet-i-chto-nuzhno-znat-pokupatelyu-kvartiry-v-novostroyke/",
+          "snippet": "Разбираю, когда с эскроу-счета списываются деньги, кто получает средства и что проверить покупателю новостройки перед сделкой. Эскроу-счет — это не просто «заморозка» денег, а механизм, где средства дольщика переходят застройщику только после выполнения условий раскрытия."
+        },
+        {
+          "title": "Эскроу-счета в сделках с недвижимостью: правовое регулирование и ...",
+          "url": "https://pravo-pro.ru/blog/posts/eskrou-scheta-v-sdelkah-s-nedvizhimostyu-pravovoe-regulirovanie-i-praktika/",
+          "snippet": "Эскроу-счет для новостройки в 2026 году. Разбираем, как работает механизм защиты дольщиков по 214-ФЗ: от открытия счета до получения ключей. Пошаговая инструкция и разбор рисков."
+        },
+        {
+          "title": "Счета эскроу в долевом строительстве: как защищают дольщика и меняют ...",
+          "url": "https://pravo-pro.ru/blog/posts/scheta-eskrou-v-dolevom-stroitelstve/",
+          "snippet": "Разбираем, что такое эскроу-счет, как он работает при покупке недвижимости, каково его правовое регулирование (ГК РФ, 214-ФЗ) и в каких сделках применяется."
+        }
+      ],
+      "searched_at": "2026-09-20"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "За 2 дня до эскроу в реквизитах счета оказалось чужое юрлицо банк остановил новостройку Тюмень official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Эскроу-счета 2026: что реально защищает покупателя квартиры",
+          "url": "https://alkorspb.ru/journal/eskrou-scheta-2026-chto-real-no-zaschischaet-pokupatelya-checklist/",
+          "snippet": ""
+        },
+        {
+          "title": "Когда с эскроу-счета списываются деньги: сроки и условия",
+          "url": "https://kvarnado.ru/glossarij/guide-kogda-s-eskrou-scheta-spisyvayutsya-dengi",
+          "snippet": "Разбираем механизм эскроу-счетов в новостройках 2026: как работает защита денег, где остаются риски и на что обратить внимание при покупке квартиры по ДДУ."
+        },
+        {
+          "title": "Эскроу-счета в сделках с недвижимостью: правовое регулирование и ...",
+          "url": "https://pravo-pro.ru/blog/posts/eskrou-scheta-v-sdelkah-s-nedvizhimostyu-pravovoe-regulirovanie-i-praktika/",
+          "snippet": "Разбираю, когда с эскроу-счета списываются деньги, кто получает средства и что проверить покупателю новостройки перед сделкой. Эскроу-счет — это не просто «заморозка» денег, а механизм, где средства дольщика переходят застройщику только после выполнения условий раскрытия."
+        },
+        {
+          "title": "Эскроу-счет для новостройки 2026 - полное руководство для дольщика",
+          "url": "https://fskfamily.ru/blog/eskrou-schet-kak-eto-rabotaet-i-chto-nuzhno-znat-pokupatelyu-kvartiry-v-novostroyke/",
+          "snippet": "Разбираем, что такое эскроу-счет, как он работает при покупке недвижимости, каково его правовое регулирование (ГК РФ, 214-ФЗ) и в каких сделках применяется."
+        },
+        {
+          "title": "Эскроу-счет: что это простыми словами, и что нужно знать покупателю ...",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/eskrou-schet-kak-eto-rabotaet-i-chto-nuzhno-znat-pokupatelyu-kvartiry-v-novostrojke",
+          "snippet": "Эскроу-счет для новостройки в 2026 году. Разбираем, как работает механизм защиты дольщиков по 214-ФЗ: от открытия счета до получения ключей. Пошаговая инструкция и разбор рисков."
+        },
+        {
+          "title": "Проблемы эскроу счетов, какие решения выносит суд",
+          "url": "https://pampadu.ru/blog/5448-udobstvo-ili-slozhnosti-v-chem-problemy-eskrou-schetov/",
+          "snippet": "Рассказываем в статье, зачем нужен эскроу-счет, как он работает и в чем его смысл для покупателей квартир в новостройках."
+        }
+      ],
+      "searched_at": "2026-09-20"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com За 2 дня до эскроу в реквизитах счета оказалось чужое юрлицо банк остановил новостройку Тюмень 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "MatesX/preview/windows.jpg at main · kleinlee/MatesX · GitHub",
+          "url": "https://github.com/kleinlee/MatesX/blob/main/preview/windows.jpg",
+          "snippet": ""
+        },
+        {
+          "title": "menaceking/INR.svg at main · boomrioseo-dev/menaceking · GitHub",
+          "url": "https://github.com/boomrioseo-dev/menaceking/blob/main/INR.svg",
+          "snippet": "Contribute to kleinlee/MatesX development by creating an account on GitHub."
+        },
+        {
+          "title": "articles.js · GitHub",
+          "url": "https://gist.github.com/kissarat/dfe96e5ab3e1d68f5707ac207669c104",
+          "snippet": "Contribute to boomrioseo-dev/menaceking development by creating an account on GitHub."
+        },
+        {
+          "title": "Управление подписками - GitHub Enterprise Server 3.18 Docs",
+          "url": "https://docs.github.com/ru/enterprise-server@3.18/subscriptions-and-notifications/how-tos/managing-subscriptions-for-activity-on-github/managing-your-subscriptions",
+          "snippet": "Через пару минут к УАЗам подбежали несколько мужчин и, облив машины бензином, подожгли их. Чтобы погасить разбушевавшееся пламя, полицейским пришлось вызвать пожарных. <\\/p> <p> - Люди не пострадали, а вот автомобили обгорели серьезно, - рассказали местные пожарные."
+        },
+        {
+          "title": "passat/car.svg at master · trabant1100/passat · GitHub",
+          "url": "https://github.com/trabant1100/passat/blob/master/car.svg",
+          "snippet": "В левой боковой панели в списке репозиториев выберите раскрывающееся меню \"Управление уведомлениями\" и щелкните \"Подписки \". Выберите уведомления, из которого требуется отменить подписку."
+        },
+        {
+          "title": "RFD-N/Assets/Logo.png at main · abricoshka/RFD-N · GitHub",
+          "url": "https://github.com/abricoshka/RFD-N/blob/main/Assets/Logo.png",
+          "snippet": "Contribute to trabant1100/passat development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-09-20"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "За 2 дня до эскроу в реквизитах счета оказалось чужое юрлицо банк остановил новостройку Тюмень forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Эскроу-счета 2026: что реально защищает покупателя квартиры",
+          "url": "https://alkorspb.ru/journal/eskrou-scheta-2026-chto-real-no-zaschischaet-pokupatelya-checklist/",
+          "snippet": ""
+        },
+        {
+          "title": "Эскроу-счет для новостройки 2026 - полное руководство для дольщика",
+          "url": "https://fskfamily.ru/blog/eskrou-schet-kak-eto-rabotaet-i-chto-nuzhno-znat-pokupatelyu-kvartiry-v-novostroyke/",
+          "snippet": "Разбираем механизм эскроу-счетов в новостройках 2026: как работает защита денег, где остаются риски и на что обратить внимание при покупке квартиры по ДДУ."
+        },
+        {
+          "title": "Эскроу-счёт простыми словами 2026: как защищает дольщика и что делать ...",
+          "url": "https://realeo.ru/guide/eskrou-schet",
+          "snippet": "Эскроу-счет для новостройки в 2026 году. Разбираем, как работает механизм защиты дольщиков по 214-ФЗ: от открытия счета до получения ключей. Пошаговая инструкция и разбор рисков."
+        },
+        {
+          "title": "Эскроу-счет: что это простыми словами, и что нужно знать покупателю ...",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/eskrou-schet-kak-eto-rabotaet-i-chto-nuzhno-znat-pokupatelyu-kvartiry-v-novostrojke",
+          "snippet": "Эскроу-счёт — это специальный банковский счёт, на котором деньги дольщика лежат в заморозке до тех пор, пока застройщик не сдаст дом. Если стройка остановилась или застройщик обанкротился — дольщик забирает свои деньги обратно. С 1 июля 2019 года это обязательная схема для всех новостроек по 214-ФЗ."
+        },
+        {
+          "title": "Когда с эскроу-счета списываются деньги: сроки и условия",
+          "url": "https://kvarnado.ru/glossarij/guide-kogda-s-eskrou-scheta-spisyvayutsya-dengi",
+          "snippet": "Рассказываем в статье, зачем нужен эскроу-счет, как он работает и в чем его смысл для покупателей квартир в новостройках."
+        },
+        {
+          "title": "Проблемы эскроу счетов, какие решения выносит суд",
+          "url": "https://pampadu.ru/blog/5448-udobstvo-ili-slozhnosti-v-chem-problemy-eskrou-schetov/",
+          "snippet": "Разбираю, когда с эскроу-счета списываются деньги, кто получает средства и что проверить покупателю новостройки перед сделкой. Эскроу-счет — это не просто «заморозка» денег, а механизм, где средства дольщика переходят застройщику только после выполнения условий раскрытия."
+        }
+      ],
+      "searched_at": "2026-09-20"
+    }
+  ],
+  "errors": []
+}
