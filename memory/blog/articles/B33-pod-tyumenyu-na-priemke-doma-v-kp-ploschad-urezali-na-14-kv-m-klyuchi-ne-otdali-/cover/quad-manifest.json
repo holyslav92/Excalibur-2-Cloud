@@ -1,0 +1,238 @@
+{
+  "topic_id": "B33",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "На приёмке дома не хватило 14 метров",
+  "cover_hook_highlight": "14 метров",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "На приёмке дома в КП под Тюменью не хватило 14 кв.м — ключи без доплаты не отдали.",
+      "scene_hint": "Святослав у коттеджа, рулетка, overshirt, high-key.",
+      "meme_caption_ru": "",
+      "sticky": "Ключи без доплаты",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "Озадаченное недоверие: поднятая бровь, лёгкая гримаса «где ещё 14 метров?», выразительный side-eye; не копировать студийную улыбку."
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Дом в коттеджном посёлке под Тюменью — 148 квадратов в договоре",
+      "visual_type": "realistic_photo",
+      "scene_hint": "KP acceptance panel, bright, no face.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Дом в коттеджном посёлке под Тюменью — 148 квад…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "148 м² в договоре",
+        "Дом в КП",
+        "План приложений",
+        "Тюмень"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Дом в коттеджном посёлке под Тюменью — 148 квадратов в договоре",
+      "visual_type": "comparison_table",
+      "scene_hint": "KP acceptance panel, bright, no face.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Приёмка готова, Осмотр дома, Акт не подписан — иллюстрация к разбору сделки.",
+      "labels": [
+        "Приёмка готова",
+        "Осмотр дома",
+        "Акт не подписан",
+        "Замер нужен"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Приглашение на приёмку: всё выглядело готовым",
+      "visual_type": "realistic_photo",
+      "scene_hint": "KP acceptance panel, bright, no face.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Приглашение на приёмку: всё выглядело готовым» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "134 м² по замеру",
+        "Минус комната",
+        "Сверка плана",
+        "Вопрос к застройщику"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Замер показал 134 квадрата — минус целая комната",
+      "visual_type": "realistic_photo",
+      "scene_hint": "KP acceptance panel, bright, no face.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Замер показал 134 квадрата — минус целая комната» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Доплата 420–480",
+        "Ключи под условием",
+        "Семья остановилась",
+        "Без паники"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Уточнили проект» — и доплата около полумиллиона: семья остановила приёмку",
+      "visual_type": "process_flow",
+      "scene_hint": "KP acceptance panel, bright, no face.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: ДДU и план, Письменная претензия, Сохранить замер — иллюстрация к разбору сделки.",
+      "labels": [
+        "ДДU и план",
+        "Письменная претензия",
+        "Сохранить замер",
+        "Не платить сразу"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что сверить в приложениях к ДДУ до подписи акта",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "KP acceptance panel, bright, no face.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Переговоры, Документы, Следующий шаг — иллюстрация к разбору сделки.",
+      "labels": [
+        "Переговоры",
+        "Документы",
+        "Следующий шаг",
+        "Без паники"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Если площадь меньше: переговоры, а не паника",
+      "visual_type": "structure_diagram",
+      "scene_hint": "KP acceptance panel, bright, no face.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Сверьте площадь, Проверьте акт, Тюмень КП — иллюстрация к разбору сделки.",
+      "labels": [
+        "Сверьте площадь",
+        "Проверьте акт",
+        "Тюмень КП",
+        "До ключей"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "коттеджные поселки тюмень",
+    "приемка новостроек тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "Святослав справа в три четверти на фоне фасада коттеджа; рулетка и план образуют диагональ, слева остаётся чистая светлая зона под заголовок.",
+    "location": "готовый коттедж в коттеджном посёлке под Тюменью",
+    "meme": "hide_pain_harold + smudge_cat",
+    "props": [
+      "рулетка",
+      "развёрнутый поэтажный план",
+      "карандаш"
+    ],
+    "stickers": [
+      "hide_pain_harold — маленький стикер в нижнем углу",
+      "smudge_cat — маленький стикер в противоположном нижнем углу"
+    ],
+    "joke": "План обещает метры, а рулетка отвечает неловким молчанием.",
+    "outfit": "песочная overshirt, светлая футболка, тёмные прямые джинсы",
+    "emotion": "bewildered side-eye",
+    "pose_framing": "средний ростовой план в три четверти, не студийный бюст",
+    "action": "измеряет рулеткой фасадную линию и сверяет результат с планом"
+  }
+}

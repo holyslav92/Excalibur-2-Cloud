@@ -3,6 +3,7 @@
 
 ## Blog Articles
 
+- [На приёмке дома в КП под Тюменью не хватило 14 кв.м — ключи без доплаты не отдали]({{SITE_BASE}}/pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali-/): На приёмке дома в КП под Тюменью не хватило 14 кв.м — ключи без доплаты не отдали
 - [Банк отменил нулевой взнос за 6 дней до ДДУ — сделка встала]({{SITE_BASE}}/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika/): Банк отменил нулевой взнос за 6 дней до ДДУ — сделка встала
 - [Пожилого продавца вели по телефону — родственники сорвали сделку]({{SITE_BASE}}/v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/): Пожилого продавца вели по телефону — родственники сорвали сделку
 - [Квартиру продавали по доверенности. Хозяин был на СВО]({{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/): Доверенность на продажу квартиры: как проверить волю собственника на СВО до аванса
