@@ -22,3 +22,4 @@
 - [В Тюмени ипотеку одобрили — эскроу сорвал маткапитал]({{SITE_BASE}}/semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli/): В Тюмени ипотеку одобрили — эскроу сорвал маткапитал
 - [В выписке ЕГРН есть строка, после которой аванс вносить нельзя]({{SITE_BASE}}/v-vypiske-egrn-est-stroka-posle-kotoroj-avans-nelzya/): В выписке ЕГРН есть строка, после которой аванс вносить нельзя
 - [В Тюмени застройщик сменил юрлицо — банк не открыл эскроу]({{SITE_BASE}}/v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot/): В Тюмени застройщик сменил юрлицо — банк не открыл эскроу
+- [За 3 дня до сделки запрет остановил уступку новостройки в Тюмени]({{SITE_BASE}}/za-3-dnya-do-ddu-zapret-pereprodazhi-3-goda-v-pereustupke-novostrojki-tyumen/): За 3 дня до сделки в переуступке всплыл запрет перепродажи на 3 года — покупатель остановил сделку до эскроу.

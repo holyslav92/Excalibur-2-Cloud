@@ -1,0 +1,38 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B30",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-20",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Tenant Telegram — переуступка до ключей, week 2026-09-20"
+      },
+      {
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/",
+        "type": "law",
+        "note": "214-FZ DDU assignment context"
+      },
+      {
+        "url": "https://realo.ru/guide/pereustupka-ddu-2026",
+        "type": "guide",
+        "note": "SERP mechanism context 2026"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 920,
+    "rework_log": "переуступка новостройка тюмень empty → P0 купить новостройку в тюмени"
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "checked_at": "2026-09-20"
+  }
+}

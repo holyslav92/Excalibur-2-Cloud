@@ -85,6 +85,14 @@
         "pose_framing": "средний план справа не бюст",
         "action": "сверяет письмо банка и платёж на телефоне"
       }
+    },
+    {
+      "date": "2026-09-20",
+      "topic_id": "B30",
+      "slug": "za-3-dnya-do-ddu-zapret-pereprodazhi-3-goda-v-pereustupke-novostrojki-tyumen",
+      "motifs": {
+        "meme": "hide_pain_harold,smudge_cat"
+      }
     }
   ]
 }
