@@ -10,7 +10,7 @@ H1: В Тюмени УК потребовала 180 тысяч за 3 дня д�
 - triple-retell-extra: «ввод дома эксплуатацию подключение»
 
 ## FINALE FAIL
-- finale-third-retell: middle scene repeated in closing: «временной управляющей организацией определяется»
+- finale-third-retell: middle scene repeated in closing: «застройщиком временной управляющей организацией»
 
 ## LENGTH FAIL
 - length-hard: 2048 words > 1750

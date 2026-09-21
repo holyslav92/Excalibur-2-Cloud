@@ -1,10 +1,10 @@
 {
-  "status": "FAIL",
-  "all_pass": false,
+  "status": "PASS",
+  "all_pass": true,
   "gate": "article-quality-score",
   "contract": "shared/article-quality-score-lock.md",
   "article_dir": "memory/blog/articles/B33-v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj",
-  "sol_rewrite_applied": false,
+  "sol_rewrite_applied": true,
   "h1": "В Тюмени УК потребовала 180 тысяч за 3 дня до ключей — в ДДУ их нет",
   "sections": {
     "h1": {
@@ -16,42 +16,28 @@
       "reasons": []
     },
     "middle": {
-      "pass": false,
-      "reasons": [
-        "triple-retell: shared phrase in lead+middle+finale: «дома эксплуатацию подключение сетям»",
-        "triple-retell-extra: «ввод дома эксплуатацию подключение»"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "finale": {
-      "pass": false,
-      "reasons": [
-        "finale-third-retell: middle scene repeated in closing: «временной управляющей организацией определяется»"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "length": {
-      "pass": false,
-      "reasons": [
-        "length-hard: 2048 words > 1750",
-        "dzen-minutes: ~11 min > 10"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "tone": {
       "pass": true,
       "reasons": []
     }
   },
-  "errors": [
-    "triple-retell: shared phrase in lead+middle+finale: «дома эксплуатацию подключение сетям»",
-    "triple-retell-extra: «ввод дома эксплуатацию подключение»",
-    "finale-third-retell: middle scene repeated in closing: «временной управляющей организацией определяется»",
-    "length-hard: 2048 words > 1750",
-    "dzen-minutes: ~11 min > 10"
-  ],
+  "errors": [],
   "metrics": {
-    "word_count": 2048,
+    "word_count": 1458,
     "word_target": "1400-1600",
     "word_hard_max": 1750,
-    "dzen_reading_minutes_est": 11,
-    "spine_overlap": 0.087
+    "dzen_reading_minutes_est": 8,
+    "spine_overlap": 0.0682
   }
 }
