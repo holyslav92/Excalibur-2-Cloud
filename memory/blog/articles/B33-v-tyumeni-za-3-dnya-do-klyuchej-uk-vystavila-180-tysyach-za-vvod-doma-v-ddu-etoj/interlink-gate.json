@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "topic_id": "B33",
+  "slug": "v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj",
+  "candidates_count": 29,
+  "outbound_found": [
+    {
+      "slug": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali",
+      "title": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali"
+    },
+    {
+      "slug": "v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh",
+      "title": "v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
