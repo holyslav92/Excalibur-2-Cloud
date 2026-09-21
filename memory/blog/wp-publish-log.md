@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-21
+
+- **topic_id:** B33
+- **slug:** v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj
+- **post_id:** 10746
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj/
+- **featured_image:** 10747
+- **inline_images:** 10748–10754 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** pre-publish fix inline_6 manifest labels (image_alt_human); SFTP root fallback to `.`
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29

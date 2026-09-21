@@ -1,0 +1,80 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-21",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t-l.ru/407943.html",
+        "type": "regional_news",
+        "note": "15.09.2026 — ГЖИ Тюмени, перерасчёт начислений УК (свежий сигнал недели)"
+      },
+      {
+        "url": "https://nashgorod.ru/news/2026-08-07/s-bolnoy-golovy-na-zdorovuyu-tyumenskie-uk-zastavili-zhiltsov-platit-za-nih-nalog-5654482",
+        "type": "regional_news",
+        "note": "07.08.2026 — тюменские УК и спорные строки в платёжках (НДС 5%), handoff anchor"
+      },
+      {
+        "url": "https://tyumen-info.ru/incident/2026/08/07/32066.html",
+        "type": "regional_news",
+        "note": "07.08.2026 — прокуратура, перерасчёт >2 млн ₽ по УК"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4395,
+    "p0_volume_ru225": null,
+    "compare225_phrase": null,
+    "compare225_volume": null,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 895, "region": "55+11176"},
+      {"phrase": "управляющая компания новостройка", "volume": 4, "region": "55+11176"},
+      {"phrase": "акт приемки передачи квартиры", "volume": 9, "region": "55+11176"}
+    ],
+    "rework_from": "узкие УК-запросы weak → spine 4395 + casus в H1",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_uk_handover_fee_not_in_ddu_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B25 finish vs DDU", "B26 RVE vs tranche", "B32 escrow INN", "B30 assignment ban", "B31 insurance requote"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["214fz_consultant", "jk_rf_garant", "minstroy_letter_6284", "sber_mortgage_newbuild_person"],
+    "errors": [],
+    "note": "180 000 ₽ — параметр composite casus, не тариф УК. Сумма последнего транша банка не верифицирована."
+  },
+  "key_facts_count": 18,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

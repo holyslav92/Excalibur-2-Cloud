@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj",
+  "topic_id": "B33",
+  "post_id": 10746,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1041392,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10746 slug=v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=10747\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10748 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj-inline-01.png\nOK inline_alt=10748\nOK inline_description=10748\nOK inline_image_upload=10749 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj-inline-02.png\nOK inline_alt=10749\nOK inline_description=10749\nOK inline_image_upload=10750 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj-inline-03.png\nOK inline_alt=10750\nOK inline_description=10750\nOK inline_image_upload=10751 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj-inline-05.png\nOK inline_alt=10751\nOK inline_description=10751\nOK inline_image_upload=10752 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj-inline-04.png\nOK inline_alt=10752\nOK inline_description=10752\nOK inline_image_upload=10753 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj-inline-06.png\nOK inline_alt=10753\nOK inline_description=10753\nOK inline_image_upload=10754 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj-inline-07.png\nOK inline_alt=10754\nOK inline_description=10754\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-3-dnya-do-klyuchej-uk-vystavila-180-tysyach-za-vvod-doma-v-ddu-etoj/",
+    "errors": []
+  }
+}
