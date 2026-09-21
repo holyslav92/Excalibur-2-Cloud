@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-21
+
+- **topic_id:** B33
+- **slug:** za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu
+- **post_id:** 10772
+- **permalink:** /blog/ipoteka/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu/
+- **featured_image:** 10773
+- **inline_images:** 10774–10780 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry, proverka-pered-pokupkoj (category_ids=32,36,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs); image_caption_builder --apply before publish
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29

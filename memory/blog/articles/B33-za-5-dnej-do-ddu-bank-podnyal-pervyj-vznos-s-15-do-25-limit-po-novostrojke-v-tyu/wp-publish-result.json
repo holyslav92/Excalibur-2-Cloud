@@ -1,0 +1,28 @@
+{
+  "slug": "za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu",
+  "topic_id": "B33",
+  "post_id": 10772,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1003353,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10772 slug=za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu\nOK categories=32,36,34\nOK yoast_social_image=1\nOK featured_image=10773\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10774 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu-inline-01.png\nOK inline_alt=10774\nOK inline_description=10774\nOK inline_image_upload=10775 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu-inline-02.png\nOK inline_alt=10775\nOK inline_description=10775\nOK inline_image_upload=10776 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu-inline-03.png\nOK inline_alt=10776\nOK inline_description=10776\nOK inline_image_upload=10777 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu-inline-04.png\nOK inline_alt=10777\nOK inline_description=10777\nOK inline_image_upload=10778 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu-inline-05.png\nOK inline_alt=10778\nOK inline_description=10778\nOK inline_image_upload=10779 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu-inline-06.png\nOK inline_alt=10779\nOK inline_description=10779\nOK inline_image_upload=10780 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu-inline-07.png\nOK inline_alt=10780\nOK inline_description=10780\npermalink={{SITE_BASE}}/blog/ipoteka/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu/",
+    "errors": []
+  }
+}
