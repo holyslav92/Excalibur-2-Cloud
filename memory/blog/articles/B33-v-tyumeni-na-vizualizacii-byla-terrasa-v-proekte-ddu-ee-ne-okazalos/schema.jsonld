@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos/#article",
+      "url": "{{SITE_BASE}}/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos/",
+      "headline": "За 4 дня до ДДУ семья в Тюмени отказалась подписывать: терраса новостройки осталась на картинке",
+      "description": "За четыре дня до ДДУ семья в Тюмени увидела: терраса есть на рендере и в брони, но исчезла из проекта договора — площадь меньше, цена та же.",
+      "datePublished": "2026-09-21",
+      "author": {
+        "@type": "Person",
+        "@id": "{{SITE_BASE}}/#person-svyatoslav-shakin",
+        "name": "Святослав Шакин",
+        "sameAs": []
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "{{SITE_BASE}}/#organization",
+        "name": "The Риэлтор",
+        "url": "{{SITE_BASE}}/"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos/"
+      }
+    }
+  ]
+}
