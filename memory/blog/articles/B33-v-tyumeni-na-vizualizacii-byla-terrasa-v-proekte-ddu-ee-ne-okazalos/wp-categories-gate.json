@@ -1,0 +1,14 @@
+{
+  "category_ids": [
+    34,
+    36,
+    58
+  ],
+  "category_slugs": [
+    "proverka-pered-pokupkoj",
+    "pokupka-kvartiry",
+    "riski-sdelki"
+  ],
+  "errors": [],
+  "status": "PASS"
+}

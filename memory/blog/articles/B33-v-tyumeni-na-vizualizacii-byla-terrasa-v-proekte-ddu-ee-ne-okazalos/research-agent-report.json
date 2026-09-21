@@ -1,0 +1,74 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-21",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/11/76634906/",
+        "type": "regional_news",
+        "note": "72.ru 11.09.2026 — тюменские новостройки с террасами в маркетинге (неделя 14–21.09)"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта — локальный риелторский контекст"
+      },
+      {
+        "url": "https://double-double.ru/",
+        "type": "developer_marketing",
+        "note": "Официальный сайт ЖК — контекст обещаний террас, не герой casus"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "тюмень купить квартиру в новостройке от застройщика",
+    "p0_volume": 258,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 898, "region": "55+11176"},
+      {"phrase": "купить новостройку в тюмени от застройщика", "volume": 436, "region": "55+11176"},
+      {"phrase": "купить новостройку в тюмени в ипотеку", "volume": 76, "region": "55+11176"},
+      {"phrase": "новостройка квартира с террасой", "volume": 4, "region": "55+11176"}
+    ],
+    "rework_from": "терраса weak (4) → spine 898 + P0 258 + visualization vs DDU project mechanism",
+    "partial": [
+      "дду новостройка что проверить (225 totalCount only)",
+      "проект дду что проверить (225 empty)"
+    ]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_terrace_visualization_missing_ddu_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B32 escrow beneficiary", "B31 insurance", "B30 assignment", "B25 finishing", "B27 declaration land"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["consultant_214fz", "minstroy_854", "domrf"],
+    "errors": [],
+    "note": "214-ФЗ ст. 4/4.1/5; приказ 854/пр; ДОМ.РФ для декларации. Банковские тарифы не заявлялись."
+  },
+  "key_facts_count": 14,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 2,
+    "mode": "retry_after_524",
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

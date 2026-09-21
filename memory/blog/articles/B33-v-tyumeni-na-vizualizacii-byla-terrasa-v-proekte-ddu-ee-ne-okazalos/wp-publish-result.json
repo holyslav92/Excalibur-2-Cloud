@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos",
+  "topic_id": "B33",
+  "post_id": 10759,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1047821,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10759 slug=v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos\nOK categories=34,36,58\nOK yoast_social_image=1\nOK featured_image=10760\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10761 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos-inline-01.png\nOK inline_alt=10761\nOK inline_description=10761\nOK inline_image_upload=10762 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos-inline-02.png\nOK inline_alt=10762\nOK inline_description=10762\nOK inline_image_upload=10763 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos-inline-03.png\nOK inline_alt=10763\nOK inline_description=10763\nOK inline_image_upload=10764 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos-inline-04.png\nOK inline_alt=10764\nOK inline_description=10764\nOK inline_image_upload=10765 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos-inline-05.png\nOK inline_alt=10765\nOK inline_description=10765\nOK inline_image_upload=10766 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos-inline-06.png\nOK inline_alt=10766\nOK inline_description=10766\nOK inline_image_upload=10767 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos-inline-07.png\nOK inline_alt=10767\nOK inline_description=10767\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-na-vizualizacii-byla-terrasa-v-proekte-ddu-ee-ne-okazalos/",
+    "errors": []
+  }
+}
