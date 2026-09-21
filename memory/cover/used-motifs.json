@@ -93,6 +93,22 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-21",
+      "topic_id": "B33",
+      "slug": "",
+      "motifs": {
+        "composition": "поясной кадр по центру в светлом лобби",
+        "location": "яркий холл новой тюменской новостройки",
+        "meme": "woman_yelling_cat roll_safe",
+        "sticker_set": "угловые стикеры 15%",
+        "joke": "ключи в руке счёт как пропуск",
+        "outfit": "песочная overshirt белая футболка",
+        "emotion": "ошеломлённое недоверие",
+        "pose_framing": "фронтальный поясной кадр",
+        "action": "сравнивает ключи со счётом ук"
+      }
     }
   ]
 }
