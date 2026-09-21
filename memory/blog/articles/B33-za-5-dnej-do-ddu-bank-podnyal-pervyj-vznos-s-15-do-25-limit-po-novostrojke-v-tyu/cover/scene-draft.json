@@ -1,0 +1,58 @@
+{
+  "cover_hook": "Банк поднял взнос перед сделкой",
+  "cover_hook_highlight": "взнос",
+  "slots": {
+    "cover": {
+      "scene_hint": "Яркий high-key зал продаж новостройки: ведущий слева в горчичном льняном пиджаке держит письмо банка рядом с бронью, где 15% зачёркнуто и указано 25%; он читает телефон с отвисшей челюстью, солнечный блик на стеклянном столе, лёгкий комичный шок.",
+      "cover_emotion": "jaw-drop disbelief",
+      "cover_motifs": {
+        "composition": "medium shot, host on the left, glass table and revised bank letter in foreground, clear open space for hook at upper center",
+        "location": "bright newbuild sales lounge with light glass walls and warm daylight",
+        "meme": "surprised_pikachu and doge as small catalog stickers",
+        "props": [
+          "phone showing revised down payment notice",
+          "bank revision letter",
+          "reservation receipt",
+          "glass table",
+          "pen"
+        ],
+        "stickers": [
+          {
+            "id": "surprised_pikachu",
+            "placement": "upper-right corner, small reaction sticker"
+          },
+          {
+            "id": "doge",
+            "placement": "lower-left background corner, small reaction sticker"
+          }
+        ],
+        "joke": "The reservation is ready, but the bank suddenly changes 15% to 25% five days before signing.",
+        "outfit": "mustard linen blazer over a white tee with dark navy chinos",
+        "emotion": "jaw-drop disbelief while reading the revised requirement",
+        "pose_framing": "left medium shot, torso turned toward the table, shoulders lifted in stunned reaction, not side-eye and not studio smile",
+        "action": "holds the bank revision letter beside the reservation receipt, visibly comparing 15% crossed out with 25% replacement"
+      }
+    }
+  },
+  "meme_picks": [
+    "surprised_pikachu",
+    "doge"
+  ],
+  "wordstat_stickers": [
+    "купить новостройку в тюмени",
+    "первоначальный взнос новостройка тюмень"
+  ],
+  "cover_requirements": {
+    "phone": "+7 922 001 65 05",
+    "phone_placement": "bottom-right with at least 80px clearance from stickers and face",
+    "lighting": "bright high-key, white and warm daylight, sun flare, light leak, subtle glow",
+    "forbidden": [
+      "Wordstat query strips",
+      "dark cinematic lighting",
+      "black blazer",
+      "side-eye studio smile",
+      "cats-only meme composition",
+      "stickers over hook, face, or phone"
+    ]
+  }
+}

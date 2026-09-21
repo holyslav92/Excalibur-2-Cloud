@@ -1,0 +1,44 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/#person/svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu/#blogposting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/za-5-dnej-do-ddu-bank-podnyal-pervyj-vznos-s-15-do-25-limit-po-novostrojke-v-tyu/"
+      },
+      "headline": "Банк поднял взнос с 15% до 25% за 5 дней до ДДУ в Тюмени — денег не хватило",
+      "description": "За пять дней до ДДУ банк поднял первый взнос с 15% до 25% — семье не хватило 1,1 млн рублей. ДДУ не подписали, эскроу не открыли.",
+      "datePublished": "2026-09-21",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/#person/svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}

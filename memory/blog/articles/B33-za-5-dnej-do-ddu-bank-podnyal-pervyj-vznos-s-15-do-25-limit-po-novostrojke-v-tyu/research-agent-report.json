@@ -1,0 +1,85 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-21",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/instructions/semeinaya-ipoteka/",
+        "type": "official_domrf",
+        "note": "Q&A сотрудников 14–15.09.2026: банк принимает окончательное решение сам"
+      },
+      {
+        "url": "https://tvgram.ru/ipotekahouse/30078",
+        "type": "community",
+        "note": "Telegram @ipotekahouse — сентябрь 2026, ужесточение ПВ на этапе объекта (фон рынка)"
+      },
+      {
+        "url": "https://xn--80aacozicjl1agbl4lraw.xn--p1ai/publications/sila-semi-sila-regiona/semeynaya-ipoteka-v-tyumenskoy-oblasti-v-2026-godu-kak-kupit-zhile-i-poluchit-podderzhku-seme-s-detm/",
+        "type": "official_regional",
+        "note": "Тюменская область: перенос изменений на 01.10.2026, ПВ 20%"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Дзен тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 898,
+    "p0_volume_ru225": 1890,
+    "compare225_phrase": "купить новостройку в тюмени",
+    "compare225_volume": 1890,
+    "support_phrases": [
+      {"phrase": "первоначальный взнос новостройка тюмень", "volume": 94, "region": "55+11176"},
+      {"phrase": "новостройки в тюмени без первоначального взноса", "volume": 59, "region": "55+11176"},
+      {"phrase": "ипотека на новостройку тюмень", "volume": 31, "region": "55+11176"}
+    ],
+    "rework_from": "первоначальный взнос новостройка тюмень 94 → P0 купить новостройку в тюмени 898",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_downpayment_ltv_hike_before_ddu_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B22 rate before DDU", "B29 zero-down promo expiry", "B31 insurance requote"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["cbr", "domrf", "tyumen_oblast_portal", "legal_214fz"],
+    "errors": [],
+    "note": "LTV 15→25% в casus не верифицированы витриной банка; только composite + обзоры"
+  },
+  "key_facts_count": 26,
+  "derouter": {
+    "status": "FAIL",
+    "attempts": 1,
+    "first_attempt": "HTTP 524 origin timeout (~256s)",
+    "fallback": "research-notes.md synthesized manually from assembled-research-inputs.md and live MCP/Web fetches (2026-09-21)",
+    "stamp": null
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": null,
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

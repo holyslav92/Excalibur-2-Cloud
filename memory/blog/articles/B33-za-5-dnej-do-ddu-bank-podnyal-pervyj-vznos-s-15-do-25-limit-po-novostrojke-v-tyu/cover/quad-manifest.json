@@ -1,0 +1,251 @@
+{
+  "topic_id": "B33",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Банк поднял взнос перед сделкой",
+  "cover_hook_highlight": "взнос",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Банк поднял взнос с 15% до 25% за 5 дней до ДДУ в Тюмени — денег не хватило: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "продажи: письмо банка 15-25%, шок, pikachu",
+      "meme_caption_ru": "",
+      "sticky": "Одобрение не гарантия",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "jaw-drop disbelief",
+      "meme_picks": [
+        "surprised_pikachu",
+        "doge"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Пятнадцать процентов в голове — и бронь на новостройке в Тюмени",
+      "visual_type": "realistic_photo",
+      "scene_hint": "офис продаж: бронь 11 млн, 15% взнос, stonks",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Пятнадцать процентов в голове — и бронь на ново…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Пятнадцать в голове",
+        "Бронь на 11 млн",
+        "Взнос 1,65 млн",
+        "Кредит 9,35 млн",
+        "Бронь не банк"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "stonks"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Пятнадцать процентов в голове — и бронь на новостройке в Тюмени",
+      "visual_type": "comparison_table",
+      "scene_hint": "две колонки: расчёт семьи vs решение банка",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Согласование объекта, Доля кредита меньше, Предварительно не финал —…",
+      "labels": [
+        "Согласование объекта",
+        "Доля кредита меньше",
+        "Предварительно не финал",
+        "Решение после проверки",
+        "ДОМ.РФ сентябрь"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Между одобрением и ДДУ: согласование объекта и лимит кредита",
+      "visual_type": "realistic_photo",
+      "scene_hint": "письмо банка: 5 дней, 15%→25%, +1,1 млн",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Между одобрением и ДДУ: согласование объекта и…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "За пять дней",
+        "Взнос до 25%",
+        "Плюс 1,1 млн",
+        "Нужно 2,75 млн",
+        "Кредит 8,25 млн"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За пять дней до подписания: банк поднял первый взнос до двадцати пяти процентов",
+      "visual_type": "realistic_photo",
+      "scene_hint": "зал подписания: нет ДДУ, эскроу закрыт, бронь удержали",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За пять дней до подписания: банк поднял первый…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "ДДУ не подписали",
+        "Эскроу не открыли",
+        "Бронь удержали",
+        "Деньги не нашли"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Около миллиона не нашли — ДДУ не подписали, часть брони удержали",
+      "visual_type": "process_flow",
+      "scene_hint": "поток 4 шага письменно, bad_luck_brian угол",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Бронь до оплаты, Кредит письменно, Взнос письменно — иллюстрация к разбору сделки.",
+      "labels": [
+        "Бронь до оплаты",
+        "Кредит письменно",
+        "Взнос письменно",
+        "Слово предварительно"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "bad_luck_brian"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что сверить до брони и на этапе согласования объекта",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "столбики до и после пересчёта взноса",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Цена 11 млн, Было 1,65 млн, Стало 2,75 млн — иллюстрация к разбору сделки.",
+      "labels": [
+        "Цена 11 млн",
+        "Было 1,65 млн",
+        "Стало 2,75 млн",
+        "Разница 1,1 млн"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Таблица: предварительное одобрение и финальный первый взнос",
+      "visual_type": "structure_diagram",
+      "scene_hint": "схема предварительно vs финал взнос, keyboard_cat",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Миллион или бронь, Одобрение не гарантия, Взнос пересчитают — иллюстрация к разбору…",
+      "labels": [
+        "Миллион или бронь",
+        "Одобрение не гарантия",
+        "Взнос пересчитают",
+        "Сверьте до брони"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "keyboard_cat"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить новостройку в тюмени",
+    "первоначальный взнос новостройка тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "medium shot, host on the left, glass table and revised bank letter in foreground, clear open space for hook at upper center",
+    "location": "bright newbuild sales lounge with light glass walls and warm daylight",
+    "meme": "surprised_pikachu and doge as small catalog stickers",
+    "prop_set": "phone showing revised down payment notice, bank revision letter, reservation receipt, glass table, pen",
+    "sticker_set": "surprised_pikachu upper-right, doge lower-left, ≤15% clearance from hook/face/phone",
+    "joke": "The reservation is ready, but the bank suddenly changes 15% to 25% five days before signing.",
+    "outfit": "mustard linen blazer over a white tee with dark navy chinos",
+    "emotion": "jaw-drop disbelief while reading the revised requirement",
+    "pose_framing": "left medium shot, torso turned toward the table, shoulders lifted in stunned reaction, not side-eye and not studio smile",
+    "action": "holds the bank revision letter beside the reservation receipt, visibly comparing 15% crossed out with 25% replacement"
+  },
+  "meme_picks": [
+    "surprised_pikachu",
+    "doge"
+  ]
+}
