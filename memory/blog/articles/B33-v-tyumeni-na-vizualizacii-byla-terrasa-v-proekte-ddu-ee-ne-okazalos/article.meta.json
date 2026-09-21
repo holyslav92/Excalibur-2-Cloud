@@ -5,11 +5,18 @@
   "wp_category_slugs": [
     "proverka-pered-pokupkoj",
     "pokupka-kvartiry",
-    "novostrojki"
+    "riski-sdelki"
   ],
   "pipeline_canon": "human-first-v2",
+  "editorial_swarm": false,
+  "theme_blocks": {
+    "faq": "skip",
+    "quiz": "skip",
+    "side_stickers": "skip"
+  },
   "title": "За 4 дня до ДДУ семья в Тюмени отказалась подписывать: терраса новостройки осталась на картинке",
   "h1": "За 4 дня до ДДУ семья в Тюмени отказалась подписывать: терраса новостройки осталась на картинке",
   "author_id": "svyatoslav-shakin",
-  "article_mode": "B"
+  "article_mode": "B",
+  "wp_post_id": 10759
 }
