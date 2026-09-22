@@ -1,0 +1,187 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-22",
+    "today_ru": "22.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B33",
+    "title": "В шоу-руме новостройки Тюмени обещали потолки три метра — в экспликации ДДU оказалось 2,68, семья остановила сделку до эскроu",
+    "h1": "В шоу-руме новостройки Тюмени обещали потолки три метра — в экспликации ДДU оказалось 2,68, семья остановила сделку до эскроu",
+    "slug": "v-shou-rume-novostrojki-tyumeni-obeschali-potolki-tri-metra-v-eksplikacii-ddu-ok",
+    "primary_query": "В шоу-руме новостройки Тюмени обещали потолки три метра — в экспликации ДДU оказалось 2,68, семья остановила сделку до эскроu",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В шоу-руме новостройки Тюмени обещали потолки три метра — в экспликации ДДU оказалось 2,68, семья остановила сделку до эскроu 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени в ДДУ обещали 54 метра — на приёмке квартира оказалась на 2 ...",
+          "url": "https://dzen.ru/a/aqeLXh3cWgqrJYO4",
+          "snippet": ""
+        },
+        {
+          "title": "Are 3-meter ceilings a luxury? Not anymore - YouTube",
+          "url": "https://www.youtube.com/watch?v=PG6LJFuZ_eA",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В сентябре 2026 года на приёмке в тюменской новостройке семья вместо обещанных 54,2 м² увидела в документах 52,1 — минус 2,1 квадрата и"
+        },
+        {
+          "title": "В Тюмени обещали скидку 4% — проект ДДУ без неё остановил сделку",
+          "url": "https://dzen.ru/a/aq5mHt8hLg35rJmU",
+          "snippet": "High ceilings completely change the feel of an apartment: more light, air, and space. In this Shorts, we show an apartment in a new building in Tyumen with 3-meter ceilings and an..."
+        },
+        {
+          "title": "В Тюмени в ДДУ обещали чистовую — на приёмке 3 расхождения, акт не ...",
+          "url": "https://dzen.ru/a/aqZXDR3cWgqrIq13",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени семья остановила покупку новостройки: обещанную скидку 4% не включили в проект ДДУ, а подписать предложили полную цену."
+        },
+        {
+          "title": "Рынок жилья в Тюмени просел на 42% в июле: причины, мнение аналитиков",
+          "url": "https://nashgorod.ru/news/2026-08-17/shok-dlya-analitikov-tyumen-neslyhanno-otlichilas-na-rynke-novostroek-5661116",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : На приёмке новостройки в Тюмени семья обнаружила 3 расхождения с обещанной чистовой отделкой — и вместо подготовки к переезду ..."
+        },
+        {
+          "title": "Недвижимость Тюмени — рынок жилья, новостройки и строительство | tyumen ...",
+          "url": "https://tyumen.news/realty/",
+          "snippet": "В Тюмени продажи новостроек в июле упали год к году на 42%. Аналитики считают, что причина - в большом предложении и сложной ипотеке."
+        }
+      ],
+      "searched_at": "2026-09-22"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В шоу-руме новостройки Тюмени обещали потолки три метра — в экспликации ДДU оказалось 2,68, семья остановила сделку до эскроu 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Новостройки (ЖК) в Тюмень от застройщиков. В базе Циан 162 жилых ...",
+          "url": "https://tyumen.cian.ru/novostroyki/",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени в ДДУ обещали 54 метра — на приёмке квартира оказалась на 2 ...",
+          "url": "https://dzen.ru/a/aqeLXh3cWgqrJYO4",
+          "snippet": "Проверили 161 жилой комплекс: квартиры стоят от 1,7 млн ₽ до 231,4 млн ₽, средняя цена — 8,4 млн ₽ в Тюмень. За квадратный метр в жилом комплексе в среднем нужно заплатить 165,7 тыс. ₽/м²."
+        },
+        {
+          "title": "В Тюмени в ДДУ обещали чистовую — на приёмке 3 расхождения, акт не ...",
+          "url": "https://dzen.ru/a/aqZXDR3cWgqrIq13",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В сентябре 2026 года на приёмке в тюменской новостройке семья вместо обещанных 54,2 м² увидела в документах 52,1 — минус 2,1 квадрата и"
+        },
+        {
+          "title": "Рынок недвижимости в Тюмени сжимается: осторожность девелоперов ...",
+          "url": "https://www.pravda.ru/news/districts/2409571-tyumen-housing-market-deficit/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : На приёмке новостройки в Тюмени семья обнаружила 3 расхождения с обещанной чистовой отделкой — и вместо подготовки к переезду ..."
+        },
+        {
+          "title": "Новостройки в Тюмени от застройщика",
+          "url": "https://tyumen.domclick.ru/novostrojki",
+          "snippet": "Узнайте, почему в Тюмени сократилось предложение новостроек и в каких сегментах жилья произошел резкий скачок цен из-за дефицита квартир."
+        },
+        {
+          "title": "Застройщик обещал одни потолки, а получились другие!",
+          "url": "https://www.youtube.com/watch?v=KImLBZZDbk8",
+          "snippet": "⭐ Новостройки (ЖК) в Тюмени с Актуальными Ценами от Застройщиков. В каталоге недвижимости 18 296 объявлений (ЖК) с описанием, планировками, фото и реальными отзывами покупателей. Подобрать и ..."
+        }
+      ],
+      "searched_at": "2026-09-22"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В шоу-руме новостройки Тюмени обещали потолки три метра — в экспликации ДДU оказалось 2,68, семья остановила сделку до эскроu official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-22"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В шоу-руме новостройки Тюмени обещали потолки три метра — в экспликации ДДU оказалось 2,68, семья остановила сделку до эскроu 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Ваш Идеальный Потолок · GitHub",
+          "url": "https://github.com/vip-tyumen/",
+          "snippet": ""
+        },
+        {
+          "title": "ePhoto/design/immich-logo-stacked-light.svg at main - GitHub",
+          "url": "https://github.com/eserviceshub/ePhoto/blob/main/design/immich-logo-stacked-light.svg",
+          "snippet": "Натяжные потолки в Тюмени. Ваш Идеальный Потолок has 2 repositories available. Follow their code on GitHub."
+        },
+        {
+          "title": "accordion/angle-small-down.svg at main · Sevulik/accordion",
+          "url": "https://github.com/Sevulik/accordion/blob/main/angle-small-down.svg",
+          "snippet": "Update and rename Immich-logo-stacked-light.svg to immich-logo-stacke…"
+        },
+        {
+          "title": "menaceking/1.svg at main · boomrioseo-dev/menaceking · GitHub",
+          "url": "https://github.com/boomrioseo-dev/menaceking/blob/main/1.svg",
+          "snippet": "Contribute to Sevulik/accordion development by creating an account on GitHub."
+        },
+        {
+          "title": "oxy.mods/oxy_supporred.png at master · O-n-y/oxy.mods · GitHub",
+          "url": "https://github.com/O-n-y/oxy.mods/blob/master/oxy_supporred.png",
+          "snippet": "Contribute to boomrioseo-dev/menaceking development by creating an account on GitHub."
+        },
+        {
+          "title": "coreutils-tracking/individual-size-results/true.svg at main · uutils ...",
+          "url": "https://github.com/uutils/coreutils-tracking/blob/main/individual-size-results/true.svg",
+          "snippet": "Contribute to O-n-y/oxy.mods development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-09-22"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В шоу-руме новостройки Тюмени обещали потолки три метра — в экспликации ДДU оказалось 2,68, семья остановила сделку до эскроu forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени в ДДУ обещали 54 метра — на приёмке квартира оказалась на 2 ...",
+          "url": "https://dzen.ru/a/aqeLXh3cWgqrJYO4",
+          "snippet": ""
+        },
+        {
+          "title": "Новостройки (ЖК) в Тюмень от застройщиков. В базе Циан 162 жилых ...",
+          "url": "https://tyumen.cian.ru/novostroyki/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В сентябре 2026 года на приёмке в тюменской новостройке семья вместо обещанных 54,2 м² увидела в документах 52,1 — минус 2,1 квадрата и"
+        },
+        {
+          "title": "Are 3-meter ceilings a luxury? Not anymore - YouTube",
+          "url": "https://www.youtube.com/watch?v=PG6LJFuZ_eA",
+          "snippet": "Проверили 161 жилой комплекс: квартиры стоят от 1,7 млн ₽ до 231,4 млн ₽, средняя цена — 8,4 млн ₽ в Тюмень. За квадратный метр в жилом комплексе в среднем нужно заплатить 165,7 тыс. ₽/м²."
+        },
+        {
+          "title": "Новостройки в Тюмени от застройщика",
+          "url": "https://tyumen.domclick.ru/novostrojki",
+          "snippet": "High ceilings completely change the feel of an apartment: more light, air, and space. In this Shorts, we show an apartment in a new building in Tyumen with 3-meter ceilings and an..."
+        },
+        {
+          "title": "В Тюмени обещали скидку 4% — проект ДДУ без неё остановил сделку",
+          "url": "https://dzen.ru/a/aq5mHt8hLg35rJmU",
+          "snippet": "⭐ Новостройки (ЖК) в Тюмени с Актуальными Ценами от Застройщиков. В каталоге недвижимости 18 296 объявлений (ЖК) с описанием, планировками, фото и реальными отзывами покупателей. Подобрать и ..."
+        },
+        {
+          "title": "Самые доступные новостройки эксперты нашли в Челябинске, а просторные ...",
+          "url": "https://rg.ru/2026/06/29/reg-urfo/samye-dostupnye-novostrojki-eksperty-nashli-v-cheliabinske-a-prostornye-v-tiumeni.html",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени семья остановила покупку новостройки: обещанную скидку 4% не включили в проект ДДУ, а подписать предложили полную цену."
+        }
+      ],
+      "searched_at": "2026-09-22"
+    }
+  ],
+  "errors": []
+}
