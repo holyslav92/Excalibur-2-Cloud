@@ -1,0 +1,187 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-22",
+    "today_ru": "22.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B33",
+    "title": "За 5 дней до ДДУ в декларации сдвинули сдачу на два квартала — банк урезал ипотеку на новостройку в Тюмени",
+    "h1": "За 5 дней до ДДУ в декларации сдвинули сдачу на два квартала — банк урезал ипотеку на новостройку в Тюмени",
+    "slug": "za-5-dnej-do-ddu-v-deklaracii-sdvinuli-sdachu-na-dva-kvartala-bank-urezal-ipotek",
+    "primary_query": "За 5 дней до ДДУ в декларации сдвинули сдачу на два квартала — банк урезал ипотеку на новостройку в Тюмени",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "За 5 дней до ДДУ в декларации сдвинули сдачу на два квартала — банк урезал ипотеку на новостройку в Тюмени 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-22"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "За 5 дней до ДДУ в декларации сдвинули сдачу на два квартала — банк урезал ипотеку на новостройку в Тюмени 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Что делать, если застройщик вовремя не сдает дом",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/chto-delat-esli-zastrojshhik-vovremya-ne-sdaet-dom",
+          "snippet": ""
+        },
+        {
+          "title": "Застройщик задержал сдачу новостройки в Москве и МО: неустойка по ДДУ в ...",
+          "url": "https://novostroikino.ru/blog/zaderzhka-sdachi-novostroyki-neustoyka-dolshchika-2026/",
+          "snippet": "Рассказываем в статье, как быть, если застройщик срывает сроки сдачи дома. И что делать, если квартиру в проблемной новостройке вы купили в ипотеку. Обо всем — по порядку."
+        },
+        {
+          "title": "Отмена моратория на неустойку по ДДУ с 2026 года: как дольщику получить ...",
+          "url": "https://favorit-consult.ru/article/otmena-moratoriya-po-ddu/",
+          "snippet": "Разбираемся, с какого момента застройщик официально считается нарушившим сроки, как самостоятельно посчитать неустойку по 214-ФЗ, что изменилось в правилах взыскания в 2026 году и какие шаги дадут результат быстрее, чем полугодовая переписка с отделом продаж."
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома в 2026: как взыскать неустойку по ДДУ ...",
+          "url": "https://t-j.ru/guide/neustoyka/",
+          "snippet": "С 1 января 2026 года в России официально отменён пятилетний мораторий на взыскание неустойки с застройщиков за просрочку передачи квартир по договорам долевого участия (ДДУ). Это значит, что дольщики снова могут требовать компенсацию за каждый день задержки сдачи жилья."
+        },
+        {
+          "title": "Взыскание неустойки с застройщика по ДДУ в 2026 году",
+          "url": "https://pronovostroi.com/tpost/vzyskanie-neustoyki-s-zastroyshchika-2026",
+          "snippet": "Застройщик просрочил сдачу квартиры по договору долевого участия. Как взыскать через суд неустойку, компенсацию морального вреда, затраты на юриста и штраф 50%. Какие документы нужны."
+        },
+        {
+          "title": "Просрочка сдачи квартиры по ДДУ: как рассчитать и взыскать неустойку в ...",
+          "url": "https://fedelis.ru/article/prosrochka-sdachi-kvartiry-po-ddu/",
+          "snippet": "С 1 января 2026 года начисление неустойки возобновлено, однако по требованиям к застройщикам действует отсрочка исполнения ранее присуждённых санкций — до 31 декабря 2026 года."
+        }
+      ],
+      "searched_at": "2026-09-22"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "За 5 дней до ДДУ в декларации сдвинули сдачу на два квартала — банк урезал ипотеку на новостройку в Тюмени official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Что делать, если застройщик вовремя не сдает дом",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/chto-delat-esli-zastrojshhik-vovremya-ne-sdaet-dom",
+          "snippet": ""
+        },
+        {
+          "title": "Отмена моратория на неустойку по ДДУ с 2026 года: как дольщику получить ...",
+          "url": "https://favorit-consult.ru/article/otmena-moratoriya-po-ddu/",
+          "snippet": "Рассказываем в статье, как быть, если застройщик срывает сроки сдачи дома. И что делать, если квартиру в проблемной новостройке вы купили в ипотеку. Обо всем — по порядку."
+        },
+        {
+          "title": "Застройщик задержал сдачу новостройки в Москве и МО: неустойка по ДДУ в ...",
+          "url": "https://novostroikino.ru/blog/zaderzhka-sdachi-novostroyki-neustoyka-dolshchika-2026/",
+          "snippet": "С 1 января 2026 года в России официально отменён пятилетний мораторий на взыскание неустойки с застройщиков за просрочку передачи квартир по договорам долевого участия (ДДУ). Это значит, что дольщики снова могут требовать компенсацию за каждый день задержки сдачи жилья."
+        },
+        {
+          "title": "10 советов взыскания неустойки по ДДУ в 2026 году",
+          "url": "https://h-cons.ru/stati/10-sovetov-vzyskaniya-neustojki-po-ddu",
+          "snippet": "Разбираемся, с какого момента застройщик официально считается нарушившим сроки, как самостоятельно посчитать неустойку по 214-ФЗ, что изменилось в правилах взыскания в 2026 году и какие шаги дадут результат быстрее, чем полугодовая переписка с отделом продаж."
+        },
+        {
+          "title": "Застройщик перенес сроки сдачи объекта по ДДУ",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/zastrojschik-perenes-sroki-sdachi-ob-ekta-po-ddu",
+          "snippet": "Как взыскать неустойку по ДДУ с застройщика за просрочку сдачи дома в максимальном размере в 2026 году? ⭐️Пошаговая инструкция и советы для дольщиков."
+        },
+        {
+          "title": "Просрочка сдачи квартиры по ДДУ: как рассчитать и взыскать неустойку в ...",
+          "url": "https://fedelis.ru/article/prosrochka-sdachi-kvartiry-po-ddu/",
+          "snippet": "Застройщик перенес сроки сдачи объекта по ДДУ. какие документы нужно предоставить в банк и где их взять"
+        }
+      ],
+      "searched_at": "2026-09-22"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com За 5 дней до ДДУ в декларации сдвинули сдачу на два квартала — банк урезал ипотеку на новостройку в Тюмени 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "printproxy/icon.svg at main · dongkid/printproxy · GitHub",
+          "url": "https://github.com/dongkid/printproxy/blob/main/icon.svg",
+          "snippet": ""
+        },
+        {
+          "title": "llm-wiki/docs/images/session-rust.png at master · Pratiyush/llm-wiki",
+          "url": "https://github.com/Pratiyush/llm-wiki/blob/master/docs/images/session-rust.png",
+          "snippet": "Contribute to dongkid/printproxy development by creating an account on GitHub."
+        },
+        {
+          "title": "dirextalk-connect/docs/images/banner.svg at main - GitHub",
+          "url": "https://github.com/YingSuiAI/dirextalk-connect/blob/main/docs/images/banner.svg",
+          "snippet": "LLM-powered knowledge base from your Claude Code, Codex CLI, Copilot, Cursor & Gemini sessions. Karpathy's LLM Wiki pattern — implemented and shipped. - llm-wiki/docs/images/session-rust.png at master · Pratiyush/llm-wiki."
+        },
+        {
+          "title": "YandexContestTasks/PrintCalendar.cpp at main · maksakovaa ... - GitHub",
+          "url": "https://github.com/maksakovaa/YandexContestTasks/blob/main/PrintCalendar.cpp",
+          "snippet": "Bridge local AI coding agents (Claude Code, Cursor, Gemini CLI, Codex) to messaging platforms (Direxio). Chat with your AI dev assistant from anywhere — no public IP required for most platforms. - dirextalk-connect/docs/images/banner.svg at main · YingSuiAI/dirextalk-connect."
+        },
+        {
+          "title": "[Проблема] Запрет вырубает интернет и сильно понижает скорость ...",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/issues/3812",
+          "snippet": "Необходимо напечатать календарь как в примере. Пустые позиции в первой строке заполняйте пробелами. Соседние числа также разделяйте пробелами. Под одно число всегда выделяется два символа."
+        },
+        {
+          "title": "pythontutor_task_solutions/Занятие 02. Условия at master · tmsv ...",
+          "url": "https://github.com/tmsv/pythontutor_task_solutions/blob/master/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2002.%20%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F",
+          "snippet": "Возможно проблема в роутере или настройках сетевой карты, в частности оптимизация трафика. Изменить настройки сетевой карты. Не знаю, не понимаю, решила перезапустить все, включая ноут и роутер хотя тоже это уже делала, и вроде пока работает."
+        }
+      ],
+      "searched_at": "2026-09-22"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "За 5 дней до ДДУ в декларации сдвинули сдачу на два квартала — банк урезал ипотеку на новостройку в Тюмени forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Что делать, если застройщик вовремя не сдает дом",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/chto-delat-esli-zastrojshhik-vovremya-ne-sdaet-dom",
+          "snippet": ""
+        },
+        {
+          "title": "Отмена моратория на неустойку по ДДУ с 2026 года: как дольщику получить ...",
+          "url": "https://favorit-consult.ru/article/otmena-moratoriya-po-ddu/",
+          "snippet": "Рассказываем в статье, как быть, если застройщик срывает сроки сдачи дома. И что делать, если квартиру в проблемной новостройке вы купили в ипотеку. Обо всем — по порядку."
+        },
+        {
+          "title": "Застройщик просрочил сдачу дома в 2026: как взыскать неустойку по ДДУ ...",
+          "url": "https://t-j.ru/guide/neustoyka/",
+          "snippet": "С 1 января 2026 года в России официально отменён пятилетний мораторий на взыскание неустойки с застройщиков за просрочку передачи квартир по договорам долевого участия (ДДУ). Это значит, что дольщики снова могут требовать компенсацию за каждый день задержки сдачи жилья."
+        },
+        {
+          "title": "Застройщик задержал сдачу новостройки в Москве и МО: неустойка по ДДУ в ...",
+          "url": "https://novostroikino.ru/blog/zaderzhka-sdachi-novostroyki-neustoyka-dolshchika-2026/",
+          "snippet": "Застройщик просрочил сдачу квартиры по договору долевого участия. Как взыскать через суд неустойку, компенсацию морального вреда, затраты на юриста и штраф 50%. Какие документы нужны."
+        },
+        {
+          "title": "Как рассчитать неустойку за просрочку сдачи квартиры в 2026 году",
+          "url": "https://www.cian.ru/stati-kak-rasschitat-neustojku-za-sdachu-kvartiry-344301/",
+          "snippet": "Разбираемся, с какого момента застройщик официально считается нарушившим сроки, как самостоятельно посчитать неустойку по 214-ФЗ, что изменилось в правилах взыскания в 2026 году и какие шаги дадут результат быстрее, чем полугодовая переписка с отделом продаж."
+        },
+        {
+          "title": "10 советов взыскания неустойки по ДДУ в 2026 году",
+          "url": "https://h-cons.ru/stati/10-sovetov-vzyskaniya-neustojki-po-ddu",
+          "snippet": "Расчёт неустойки за просрочку сдачи квартиры по ДДУ: формула, пример расчёта, актуальные ставки и порядок взыскания с застройщика в 2026 году."
+        }
+      ],
+      "searched_at": "2026-09-22"
+    }
+  ],
+  "errors": []
+}
