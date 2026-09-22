@@ -1,0 +1,57 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B33-kladovuyu-obeschali-v-cene-kvartiry-v-proekte-ddu-novostrojki-tyumeni-ee-vynesli/cover/cover.png",
+  "last_errors": [
+    "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+    "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+    "pixel_no_text_on_clothing FAIL: dark_ink_frac=0.068 on chest/clothes",
+    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0246 chest_blue=0.135 smear=0.000",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Кладовую', 'обещали', 'подарить', 'потом', 'потребовали', 'доплату'] last_word='доплату' ocr='а довую [#9 ee `ребовали'",
+    "pixel_no_collage_inset FAIL: white_frac=0.527 inset_face=False blob_count=4",
+    "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0198",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model": "grsai-standard",
+      "bytes": 1111043,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_no_text_on_clothing FAIL: dark_ink_frac=0.188 on chest/clothes",
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0240 chest_blue=0.191 smear=0.000",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Кладовую', 'обещали', 'подарить', 'потребовали', 'доплату'] last_word='доплату' ocr='адовук? о\" одарить, потом \\'ребовали'",
+        "pixel_no_collage_inset FAIL: white_frac=0.6 inset_face=False blob_count=5",
+        "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.1006",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model": "grsai-standard",
+      "bytes": 1115792,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+        "pixel_wordstat_not_edge_truncated FAIL: sticker text cut at right edge",
+        "pixel_no_text_on_clothing FAIL: dark_ink_frac=0.068 on chest/clothes",
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0246 chest_blue=0.135 smear=0.000",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Кладовую', 'обещали', 'подарить', 'потом', 'потребовали', 'доплату'] last_word='доплату' ocr='а довую [#9 ee `ребовали'",
+        "pixel_no_collage_inset FAIL: white_frac=0.527 inset_face=False blob_count=4",
+        "pixel_no_wordstat_query_strips FAIL: 0 Wordstat strip(s), 0 bar band(s), paper_frac=0.0198",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Re-run cover_qa_gate on best_candidate — analyze_cover_pixels applies OCR escape before verdict",
+    "Do NOT deep-dive Cover-QA source — if visual OK after escape, proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}
