@@ -99,14 +99,14 @@
       "topic_id": "B33",
       "slug": "",
       "motifs": {
-        "composition": "герой по пояс слева от центра hook справа сверху телефон справа снизу",
-        "location": "светлое окно продаж новостройки тюмень план этажа с ячейкой кладовой",
-        "meme": "distracted_boyfriend grumpy_cat corner stickers",
-        "sticker_set": "distracted_boyfriend top-left grumpy_cat bottom-right",
-        "outfit": "индиго рубашка с закатанными рукавами бежевые chinos без пиджака",
-        "emotion": "возмущённое недоверие широкие глаза",
-        "pose_framing": "средний план три четверти слева",
-        "action": "разводит руками две папки дду"
+        "composition": "герой 3/4 справа два договора слева",
+        "location": "светлый офис продаж новостройки тюмень",
+        "meme": "distracted_boyfriend grumpy_cat",
+        "sticker_set": "distracted_boyfriend grumpy_cat",
+        "outfit": "песочная overshirt белая футболка",
+        "emotion": "тревожное недоверие",
+        "pose_framing": "3/4 справа не бюст",
+        "action": "сверяет дду квартиру и кладовую"
       }
     }
   ]
