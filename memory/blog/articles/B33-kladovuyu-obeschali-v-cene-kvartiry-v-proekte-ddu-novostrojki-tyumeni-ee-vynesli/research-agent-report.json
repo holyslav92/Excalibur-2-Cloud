@@ -1,0 +1,70 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-22",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://stroiki.ru/live/662-kladovye-v-novostrojkah-kak-pravilno-vybrat-mesto-dlya-hraneniya-i-ne-pereplatit/",
+        "type": "news/media",
+        "note": "Stroiki.ru 22.09.2026 — отдельный ДДУ на кладовую, проверка статуса помещения"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/15/76640741/",
+        "type": "regional_news",
+        "note": "72.ru 15.09.2026 — тюменский новостроечный контекст недели"
+      },
+      {
+        "url": "https://metr1.ru/2026/09/16/ekaterinburg-narastil-predlozhenie-novostroek-na-8-4-poka-tjumen-poterjala-6-9/",
+        "type": "news/media",
+        "note": "1metr.ru 16.09.2026 — предложение и цены новостроек Тюмени"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4387,
+    "scout_preflight_p0_volume": 8251,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 898, "region": "55+11176"},
+      {"phrase": "купить кладовую в новостройке от застройщика", "volume": 199, "region": "225"}
+    ],
+    "rework_from": "механизм кладовой — probe 199 RU; spine новостройки тюмень",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_storage_room_booking_vs_ddu_separate_contract_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B21 kladovka paid at keys not delivered", "B27 booking vs declaration", "B32 escrow beneficiary"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 1,
+    "entities_checked": ["consultant_214fz"],
+    "errors": [],
+    "note": "214-ФЗ на Consultant.ru; банковские тарифы не заявлялись"
+  },
+  "key_facts_count": 16,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 2,
+    "mode": "cursor_synthesis_after_model_refusal",
+    "note": "First derouter call returned meta-refusal; research-notes assembled from live MCP/WebFetch inputs per assembled-research-inputs.md",
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
