@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "topic_id": "B33",
+  "slug": "v-shou-rume-novostrojki-tyumeni-obeschali-potolki-tri-metra-v-eksplikacii-ddu-ok",
+  "candidates_count": 29,
+  "outbound_found": [
+    {
+      "slug": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi",
+      "title": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi"
+    },
+    {
+      "slug": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali",
+      "title": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

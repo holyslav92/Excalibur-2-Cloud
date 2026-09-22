@@ -1,0 +1,104 @@
+{
+  "source": "/workspace/memory/blog/articles/B33-v-shou-rume-novostrojki-tyumeni-obeschali-potolki-tri-metra-v-eksplikacii-ddu-ok/article.html",
+  "total_links": 10,
+  "failed_count": 0,
+  "verdict": "pass",
+  "links": [
+    {
+      "url": "https://t.me/Tyumen_Rieltor",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
+      "url": "https://max.ru/id561413315447_biz",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
+      "url": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali/"
+    },
+    {
+      "url": "{{SITE_BASE}}/blog/ipoteka/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/blog/ipoteka/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil/"
+    },
+    {
+      "url": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi/"
+    },
+    {
+      "url": "https://dzen.ru/holyslav",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
+      "url": "https://vk.ru/tymenrieltor",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
+      "url": "{{SITE_BASE}}/gajdy/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/gajdy/"
+    },
+    {
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/rieltor-tyumen/"
+    },
+    {
+      "url": "{{SITE_BASE}}/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/"
+    }
+  ]
+}
