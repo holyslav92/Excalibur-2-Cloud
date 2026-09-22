@@ -1,0 +1,295 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B33-za-5-dnej-do-ddu-v-deklaracii-sdvinuli-sdachu-na-dva-kvartala-bank-urezal-ipotek/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1014,
+          565
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 565,
+            "end": 588
+          },
+          "v_gutter_px": {
+            "start": 1014,
+            "end": 1041
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 3.5,
+            "max_aspect_crop_loss": 0.0108,
+            "per_panel_crop_loss": {
+              "top_left": 0.0099,
+              "top_right": 0.0,
+              "bottom_left": 0.0108,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 5,
+              "top": 0,
+              "right": 1009,
+              "bottom": 565
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1014,
+              "bottom": 565
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "За 5 дней до ДДУ в декларации сдвинули срок сдачи новостройки в Тюмени — банк урезал ипотеку.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1041,
+              "top": 0,
+              "right": 2048,
+              "bottom": 565
+            },
+            "raw_box_px": {
+              "left": 1041,
+              "top": 0,
+              "right": 2048,
+              "bottom": 565
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Сдача во II квартале» — так звучало в брони и…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Сдача во II квартале» — так звучало в брони и в офисе продаж"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 5,
+              "top": 588,
+              "right": 1008,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 588,
+              "right": 1014,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: ипотека одобрена, пять дней до подписи, проверка объекта — иллюстрация к…",
+            "h2_anchor": "«Сдача во II квартале» — так звучало в брони и в офисе продаж"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1041,
+              "top": 588,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1041,
+              "top": 588,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Ипотека одобрена, черновик ДДУ лежит в папке —…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Ипотека одобрена, черновик ДДУ лежит в папке — до подписания пять дней"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B33-za-5-dnej-do-ddu-v-deklaracii-sdvinuli-sdachu-na-dva-kvartala-bank-urezal-ipotek/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "aspect_crop_loss_too_high",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 561,
+              "end": 572
+            },
+            "v_gutter_px": {
+              "start": 1018,
+              "end": 1030
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 9.5,
+              "v_center_offset_px": 0.0,
+              "max_aspect_crop_loss": 0.0206,
+              "per_panel_crop_loss": {
+                "top_left": 0.0206,
+                "top_right": 0.0206,
+                "bottom_left": 0.0121,
+                "bottom_right": 0.0121
+              },
+              "reject_reason": "aspect_crop_loss_too_high"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «За пять дней до ДДУ: на dom.rf свежая деклараци…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "За пять дней до ДДУ: на dom.rf свежая декларация и пункт 17.2"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: полгода сдвиг, подписываете или снимаете, комментарий читателя — иллюстрация к разбору…",
+            "h2_anchor": "Банк перепроверил объект — одобренную сумму урезали, эскроу не открыли"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: 17.2.1 первоначальная, 17.2.2 планируемая, решение банка письменно — иллюстрация…",
+            "h2_anchor": "Что сверить в декларации и в решении банка до перевода на эскроу"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: реклама и бронь, проект договора, декларация 17.2 — иллюстрация к разбору сделки.",
+            "h2_anchor": "Таблица: где живёт срок передачи — реклама, бронь, ДДУ, декларация"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — «Сдача во II квартале» — так звучало в брони и в офисе продаж",
+    "skip inline_2: already correct under H2 — «Сдача во II квартале» — так звучало в брони и в офисе продаж",
+    "skip inline_3: already correct under H2 — Ипотека одобрена, черновик ДДУ лежит в папке — до подписания пять дней",
+    "moved inline_4 → H2 — За пять дней до ДДУ: на dom.rf свежая декларация и пункт 17.2 (was under [банк перепроверил объект — одобренную сумму урезали, эскроу не открыли]; removed=1)",
+    "skip inline_5: already correct under H2 — Банк перепроверил объект — одобренную сумму урезали, эскроу не открыли",
+    "skip inline_6: already correct under H2 — Что сверить в декларации и в решении банка до перевода на эскроу",
+    "skip inline_7: already correct under H2 — Таблица: где живёт срок передачи — реклама, бронь, ДДУ, декларация"
+  ]
+}
