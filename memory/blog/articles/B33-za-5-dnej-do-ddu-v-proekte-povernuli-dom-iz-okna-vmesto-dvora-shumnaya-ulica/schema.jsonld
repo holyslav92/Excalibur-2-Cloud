@@ -1,0 +1,18 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{SITE_BASE}}/za-5-dnej-do-ddu-v-proekte-povernuli-dom-iz-okna-vmesto-dvora-shumnaya-ulica/#blogposting",
+  "url": "{{SITE_BASE}}/za-5-dnej-do-ddu-v-proekte-povernuli-dom-iz-okna-vmesto-dvora-shumnaya-ulica/",
+  "headline": "Окна обещали во двор — за 5 дней до ДДУ семья остановила сделку: вместо двора магистраль",
+  "description": "В Тюмени семья внесла 120 000 ₽ за «тихий» вид, но приложение к проекту открыло магистраль. Святослав Шакин разбирает, где заканчиваются слова менеджера и начинаются документы.",
+  "datePublished": "2026-09-22",
+  "author": {
+    "@type": "Person",
+    "name": "Святослав Шакин",
+    "sameAs": []
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{SITE_BASE}}/za-5-dnej-do-ddu-v-proekte-povernuli-dom-iz-okna-vmesto-dvora-shumnaya-ulica/"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-22",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/15/76640741/",
+        "type": "news",
+        "note": "Tyumen 72.ru 15.09.2026 — demo floor vs renders for newbuild purchase context"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/11/76634906/",
+        "type": "news",
+        "note": "Tyumen 72.ru 11.09.2026 — courtyard/park marketing in newbuild Double-Double"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Tenant Telegram channel live fetch 2026-09-22 — newbuild due diligence posts"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Tenant Dzen — scout signal_urls"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 3463,
+    "p0_volume_ru225": null,
+    "compare225_phrase": "купить новостройку в тюмени",
+    "compare225_volume": 679,
+    "support_phrases": [
+      {"phrase": "новостройки в тюмени от застройщика", "volume": 466, "region": "55"},
+      {"phrase": "проектная декларация застройщика", "volume": 21, "region": "55"},
+      {"phrase": "дом рф проектные декларации застройщиков", "volume": 11, "region": "55"}
+    ],
+    "rework_from": "orientation tail weak → spine новостройки тюмень (3463) + project-doc sync before ДДU",
+    "partial": [
+      "изменение проекта дду (55) — MCP empty",
+      "вид из окна новостройка (55) — MCP empty"
+    ]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_section_orientation_window_view_before_ddu_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["legal_norms_214fz", "domrf_eisjhs"],
+    "errors": [],
+    "note": "214-ФЗ st. 4, 7, 9, 19, 21 via consultant.ru; наш.дом.рф for declaration checks; no bank tariff claims"
+  },
+  "key_facts_count": 28,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}

@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B33-za-5-dnej-do-ddu-v-proekte-povernuli-dom-iz-okna-vmesto-dvora-shumnaya-ulica/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1016,
+          566
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 566,
+            "end": 580
+          },
+          "v_gutter_px": {
+            "start": 1016,
+            "end": 1032
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 3.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0098,
+            "per_panel_crop_loss": {
+              "top_left": 0.0098,
+              "top_right": 0.0098,
+              "bottom_left": 0.0,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 5,
+              "top": 0,
+              "right": 1011,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Окна обещали во двор — за 5 дней до ДДУ семья остановила сделку: вместо двора магистраль.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1037,
+              "top": 0,
+              "right": 2043,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2048,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Тихий двор» — так показали макет и менеджер в…» — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Тихий двор» — так показали макет и менеджер в офисе продаж"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 580,
+              "right": 1016,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 580,
+              "right": 1016,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Проект ДДУ, Окна на улицу, Поэтажный план — иллюстрация к разбору сделки.",
+            "h2_anchor": "«Тихий двор» — так показали макет и менеджер в офисе продаж"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1032,
+              "top": 580,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 580,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Генплан «всегда был таким» — а в декларации та…» — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Генплан «всегда был таким» — а в декларации та же схема"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B33-za-5-dnej-do-ddu-v-proekte-povernuli-dom-iz-okna-vmesto-dvora-shumnaya-ulica/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          567
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 567,
+            "end": 586
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0089,
+            "per_panel_crop_loss": {
+              "top_left": 0.0069,
+              "top_right": 0.0069,
+              "bottom_left": 0.0089,
+              "bottom_right": 0.0089
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 3,
+              "top": 0,
+              "right": 1011,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «За пять дней до ДДУ: в проекте договора окна см…» — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "За пять дней до ДДУ: в проекте договора окна смотрят не туда"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1036,
+              "top": 0,
+              "right": 2044,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Сделку остановили, Деньги не ушли, 120 000 на кону — иллюстрация к разбору сделки.",
+            "h2_anchor": "Генплан «всегда был таким» — а в декларации та же схема"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 586,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 586,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Три источника, Лот в приложении, Декларация и план — иллюстрация к разбору сделки.",
+            "h2_anchor": "ДДУ не подписали: спор о ста двадцати тысячах брони"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1037,
+              "top": 586,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 586,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Сверить до аванса, Сохранить переписку, Ручка до ДДУ — иллюстрация к разбору сделки.",
+            "h2_anchor": "До подписи — один лот, три источника и никаких догадок"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — «Тихий двор» — так показали макет и менеджер в офисе продаж",
+    "skip inline_2: already correct under H2 — «Тихий двор» — так показали макет и менеджер в офисе продаж",
+    "skip inline_3: already correct under H2 — Генплан «всегда был таким» — а в декларации та же схема",
+    "moved inline_4 → H2 — За пять дней до ДДУ: в проекте договора окна смотрят не туда (was under [дду не подписали: спор о ста двадцати тысячах брони]; removed=1)",
+    "moved inline_5 → H2 — Генплан «всегда был таким» — а в декларации та же схема (was under [сделку остановили до эскроу — вопрос остался за бронью]; removed=1)",
+    "moved inline_6 → H2 — ДДУ не подписали: спор о ста двадцати тысячах брони (was under [до подписи — один лот, три источника и никаких догадок]; removed=1)",
+    "skip inline_7: already correct under H2 — До подписи — один лот, три источника и никаких догадок"
+  ]
+}
