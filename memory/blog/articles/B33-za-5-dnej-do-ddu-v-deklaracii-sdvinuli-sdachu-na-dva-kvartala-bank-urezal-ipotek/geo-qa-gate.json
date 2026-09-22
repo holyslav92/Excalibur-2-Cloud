@@ -1,6 +1,6 @@
 {
   "gate": "structure",
-  "status": "FAIL",
+  "status": "PASS",
   "article_dir": "memory/blog/articles/B33-za-5-dnej-do-ddu-v-deklaracii-sdvinuli-sdachu-na-dva-kvartala-bank-urezal-ipotek",
   "checks": [
     {
@@ -55,12 +55,10 @@
     },
     {
       "name": "quality_bar_9",
-      "ok": false,
-      "detail": "exit=1"
+      "ok": true,
+      "detail": "exit=0"
     }
   ],
-  "failed": [
-    "quality_bar_9"
-  ],
+  "failed": [],
   "note": "Structural/links/HTML only — does not rewrite prose."
 }
