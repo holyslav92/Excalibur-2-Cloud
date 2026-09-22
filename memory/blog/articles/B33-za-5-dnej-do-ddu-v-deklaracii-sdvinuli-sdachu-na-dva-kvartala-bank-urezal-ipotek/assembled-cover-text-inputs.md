@@ -1,0 +1,23 @@
+Assembled cover-text inputs — B33
+
+Derouter cover-text role. Output ONLY valid JSON to cover/cover-text.json per skill (no markdown fences).
+
+H1: За 5 дней до ДДУ в декларации сдвинули срок сдачи новостройки в Тюмени — банк урезал ипотеку
+Angle: За пять дней до подписания ДДУ свежая проектная декларация изменила срок передачи квартиры с II квартала 2027 на IV квартал 2027 (два квартала). Бронь и черновик ДДУ со старой датой; банк после повторной проверки урезал сумму ипотеки, эскроу не открыли.
+Comment magnet: Если декларацию обновили за неделю до ДДУ и срок сдвинули на полгода — вы подписываете проект или снимаете бронь?
+
+Short hook: ONE line, 5–7 Cyrillic words (prefer ≥2 words ≥5 letters). Example tone: «Декларация сдвинула сдачу — банк урезал ипотеку»
+Phone on cover: +7 922 001 65 05 (phone_cta field if script expects it)
+
+Wordstat stickers (1–3, Tyumen newbuild): новостройки тюмень, купить новостройку в тюмени, проектная декларация
+
+Article facts for inline_labels (3–6 labels per inline_1…inline_7, each 1–4 words, Cyrillic only except whitelisted brands):
+- inline_1: II квартал 2027 в брони; офис продаж; срок передачи; черновик ДДU → use «черновик ДДУ» Cyrillic
+- inline_2: ипотека одобрена; 5 дней до подписи; проверка объекта 3–5 дней; черновик в папке
+- inline_3: dom.rf; раздел 17.2; II vs IV квартал; 5 дней до ДДУ; 214-ФЗ обновление
+- inline_4: сумму урезали; повторная проверка; до подписания стоп; эскроу не открыли; бронь 150–200 тыс
+- inline_5: comment magnet — подписываете или снимаете бронь; полгода сдвиг
+- inline_6: 17.2.1 первоначальная; 17.2.2 планируемая; решение банка письменно; PDF с датой
+- inline_7: таблица документов; реклама vs декларация; бронь vs ДДУ; решение банка
+
+meme_picks from memory/cover/meme-top100.json only. People + cats on cover (not cats-only). On-topic: declaration WTF, bank cut mortgage pain. Anti-repeat 14d — avoid: hide_pain_harold, smudge_cat, disappointed_black_guy, this_is_fine_dog, roll_safe, grumpy_cat, two_buttons, crying_cat, confused_math_lady, cheems. Suggested: side_eye_chloe, polite_cat, blinking_white_guy, wojak, bad_luck_brian, sacrednik_priest, expanding_brain. Slots: cover (1–2), optional inline_1, inline_5, inline_7. BANNED: drake, drake_no_yes, salt_bae, stock_handsome_man.
