@@ -93,6 +93,21 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-22",
+      "topic_id": "B33",
+      "slug": "",
+      "motifs": {
+        "composition": "герой 3/4 справа два договора слева",
+        "location": "светлый офис продаж новостройки тюмень",
+        "meme": "distracted_boyfriend grumpy_cat",
+        "sticker_set": "distracted_boyfriend grumpy_cat",
+        "outfit": "песочная overshirt белая футболка",
+        "emotion": "тревожное недоверие",
+        "pose_framing": "3/4 справа не бюст",
+        "action": "сверяет дду квартиру и кладовую"
+      }
     }
   ]
 }
