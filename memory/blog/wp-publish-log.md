@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-23
+
+- **topic_id:** B33
+- **slug:** v-den-podpisaniya-ddu-rebenku-ispolnilos-7-let-bank-snyal-semejnuyu-ipoteku-na-n
+- **post_id:** 10887
+- **permalink:** /blog/vtorichka-i-riski/v-den-podpisaniya-ddu-rebenku-ispolnilos-7-let-bank-snyal-semejnuyu-ipoteku-na-n/
+- **featured_image:** 10888
+- **inline_images:** 10889–10895 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
