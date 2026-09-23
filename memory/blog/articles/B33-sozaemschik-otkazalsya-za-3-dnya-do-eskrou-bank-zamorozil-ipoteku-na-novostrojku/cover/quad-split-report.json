@@ -1,0 +1,294 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "BLOCK",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B33-sozaemschik-otkazalsya-za-3-dnya-do-eskrou-bank-zamorozil-ipoteku-na-novostrojku/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1017,
+          569
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 569,
+            "end": 584
+          },
+          "v_gutter_px": {
+            "start": 1017,
+            "end": 1031
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0069,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0069,
+              "bottom_right": 0.0069
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1017,
+              "bottom": 569
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1017,
+              "bottom": 569
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Созaёмщик отказался за 3 дня до эскроу — банк заморозил ипотеку на новостройку в Тюмени.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1031,
+              "top": 0,
+              "right": 2048,
+              "bottom": 569
+            },
+            "raw_box_px": {
+              "left": 1031,
+              "top": 0,
+              "right": 2048,
+              "bottom": 569
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Новостройка в Тюмени казалась собранной — ипоте…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Новостройка в Тюмени казалась собранной — ипотека на двоих и бронь"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 3,
+              "top": 584,
+              "right": 1013,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 584,
+              "right": 1017,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Созаёмщик, Отказ подписать, Банк заморозил — иллюстрация к разбору сделки.",
+            "h2_anchor": "Два созаёмщика: кто подписывает и зачем банку оба"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1034,
+              "top": 584,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1031,
+              "top": 584,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «За три дня до эскроу: отказ подписать комплект» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "За три дня до эскроу: отказ подписать комплект"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B33-sozaemschik-otkazalsya-za-3-dnya-do-eskrou-bank-zamorozil-ipoteku-na-novostrojku/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1016,
+          568
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 568,
+            "end": 585
+          },
+          "v_gutter_px": {
+            "start": 1016,
+            "end": 1031
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0088,
+            "per_panel_crop_loss": {
+              "top_left": 0.0059,
+              "top_right": 0.0069,
+              "bottom_left": 0.0079,
+              "bottom_right": 0.0088
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 3,
+              "top": 0,
+              "right": 1013,
+              "bottom": 568
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 568
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Банк приостановил одобрение — счёт эскроу не от…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Банк приостановил одобрение — счёт эскроу не открыли"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1034,
+              "top": 0,
+              "right": 2044,
+              "bottom": 568
+            },
+            "raw_box_px": {
+              "left": 1031,
+              "top": 0,
+              "right": 2048,
+              "bottom": 568
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Сверка дат, Бронь и ДДУ, Состав участников — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что обсудить с банком и застройщиком до новой даты эскроу"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 585,
+              "right": 1012,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 585,
+              "right": 1016,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Таблица этапов, Кто подписывает, ДДУ и кредит — иллюстрация к разбору сделки.",
+            "h2_anchor": "Таблица: бронь, ипотека и эскроу — три разных процесса"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1035,
+              "top": 585,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1031,
+              "top": 585,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Ручка до аванса, Не паника, Сверить роли — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что обсудить с банком и застройщиком до новой даты эскроу"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Новостройка в Тюмени казалась собранной — ипотека на двоих и бронь",
+    "skip inline_2: already correct under H2 — Два созаёмщика: кто подписывает и зачем банку оба",
+    "skip inline_3: already correct under H2 — За три дня до эскроу: отказ подписать комплект",
+    "skip inline_4: already correct under H2 — Банк приостановил одобрение — счёт эскроу не открыли",
+    "skip inline_5: already correct under H2 — Что обсудить с банком и застройщиком до новой даты эскроу",
+    "skip inline_6: already correct under H2 — Таблица: бронь, ипотека и эскроу — три разных процесса",
+    "skip inline_7: already correct under H2 — Что обсудить с банком и застройщиком до новой даты эскроу"
+  ],
+  "errors": [
+    "skip inline_2: H2 not found — Два созaёмщика: кто подписывает и зачем банку оба",
+    "inline_2 figure count after inject=0 (need exactly 1)"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "topic_id": "B33",
+  "slug": "sozaemschik-otkazalsya-za-3-dnya-do-eskrou-bank-zamorozil-ipoteku-na-novostrojku",
+  "candidates_count": 29,
+  "outbound_found": [
+    {
+      "slug": "za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t",
+      "title": "za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t"
+    },
+    {
+      "slug": "za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-",
+      "title": "za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
