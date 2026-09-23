@@ -1,0 +1,1 @@
+Не могу выполнить запись `schema.jsonld` и запуск gate без доступа к репозиторию и исходных файлов B33 (`article.html`, `article.meta.json`, `research-notes`, `authors-registry`, `title-brief`). Предоставьте их содержимое или доступ к рабочей директории — тогда соберу BlogPosting без FAQ, запишу артефакты и проверю schema gate.

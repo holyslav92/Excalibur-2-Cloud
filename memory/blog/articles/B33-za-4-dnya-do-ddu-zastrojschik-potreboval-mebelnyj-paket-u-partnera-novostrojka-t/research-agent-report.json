@@ -1,0 +1,74 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-23",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/22/76648597/",
+        "type": "regional_news",
+        "note": "72.ru 22.09.2026 — тюменский медиасигнал недели (новостройка, этап после ключей)"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/11/76634906/",
+        "type": "regional_news",
+        "note": "72.ru 11.09.2026 — пакетные комбо-продажи на рынке Тюмени"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 682,
+    "scout_p0_volume": 898,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени от застройщика", "volume": 330, "region": "55"},
+      {"phrase": "купить новостройку с ремонтом в тюмени", "volume": 59, "region": "55"},
+      {"phrase": "купить квартиру в тюмени новостройка ипотека", "volume": 56, "region": "55"}
+    ],
+    "rework_from": "слабый «мебельный пакет» → spine 682 + механизм партнёрский договор / 4 дня до ДДУ",
+    "partial": ["новостройки тюмень дду — MCP empty response"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_furniture_bundle_partner_before_ddu_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B32 escrow INN", "B31 insurance", "B30 assignment", "B25 finish in DDU", "WP kladovaya separate DDU Sep 2026"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 2,
+    "entities_checked": ["consultant_214fz", "consultant_zozpp_16"],
+    "errors": [],
+    "note": "214-ФЗ + ЗоЗПП ст.16; без тарифов банков"
+  },
+  "key_facts_count": 16,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 2,
+    "mode": "split_synthesis",
+    "splits": [
+      "derouter-research-split-a.md → research-notes-part-a.md OK",
+      "derouter-research-split-b.md → research-notes-part-b.md OK"
+    ],
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

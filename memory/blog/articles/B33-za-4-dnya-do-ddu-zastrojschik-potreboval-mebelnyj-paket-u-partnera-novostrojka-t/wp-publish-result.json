@@ -1,0 +1,28 @@
+{
+  "slug": "za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t",
+  "topic_id": "B33",
+  "post_id": 10860,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1001951,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10860 slug=za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t\nOK categories=34,36,54\nOK yoast_social_image=1\nOK featured_image=10861\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10862 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t-inline-01.png\nOK inline_alt=10862\nOK inline_description=10862\nOK inline_image_upload=10863 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t-inline-02.png\nOK inline_alt=10863\nOK inline_description=10863\nOK inline_image_upload=10864 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t-inline-03.png\nOK inline_alt=10864\nOK inline_description=10864\nOK inline_image_upload=10865 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t-inline-04.png\nOK inline_alt=10865\nOK inline_description=10865\nOK inline_image_upload=10866 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t-inline-05.png\nOK inline_alt=10866\nOK inline_description=10866\nOK inline_image_upload=10867 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t-inline-06.png\nOK inline_alt=10867\nOK inline_description=10867\nOK inline_image_upload=10868 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t-inline-07.png\nOK inline_alt=10868\nOK inline_description=10868\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/za-4-dnya-do-ddu-zastrojschik-potreboval-mebelnyj-paket-u-partnera-novostrojka-t/",
+    "errors": []
+  }
+}
