@@ -1,0 +1,65 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-23",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/a/aqo1GEjUgT5jhTW5",
+        "type": "community_signal",
+        "note": "SERP fresh Tyumen co-borrower / escrow timing"
+      },
+      {
+        "url": "https://rg.ru/2026/09/15/a-chto-na-schet.html",
+        "type": "news",
+        "note": "September 2026 escrow context"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "tenant channel"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 679,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени от застройщика", "volume": 329, "region": "55"},
+      {"phrase": "новостройка тюмень купить квартиру в ипотеку", "volume": 56, "region": "55"}
+    ],
+    "rework_from": "mechanism jargon + P0 spine 679",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_co_borrower_refused_three_days_before_escrow_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B32 beneficiary INN", "B31 insurance", "B30 assignment"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 1,
+    "entities_checked": ["consultant_214fz"],
+    "errors": [],
+    "note": "214-ФЗ; no bank tariff claims"
+  },
+  "key_facts_count": 14,
+  "derouter": {
+    "status": "PASS",
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "official_gate": "research-official-gate.json"
+  }
+}

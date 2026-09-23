@@ -1,0 +1,30 @@
+Соберу входные материалы из папки B33, запущу schema-derouter, затем проверю schema gate и сохраню обязательный fragment.Не могу выполнить derouter и записать файлы без доступа к репозиторию и shell-инструментам. По контракту нельзя генерировать `schema.jsonld` вручную.
+
+Для B33 нужно выполнить из корня репозитория:
+
+```bash
+ARTICLE_DIR="memory/blog/articles/B33-za-3-dnya-do-eskrou-sozaemschik-otkazalsya-bank-zamorozil-ipoteku-novostrojka-tyumen"
+
+# Соберите assembled-schema-inputs.md из:
+# article.html, article.meta.json, research-notes.md,
+# shared/authors-registry.json и site URL brief/env.
+
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role schema \
+  --system-file skills/schema-excalibur-blog/SKILL.md \
+  --user-file "$ARTICLE_DIR/assembled-schema-inputs.md" \
+  --output "$ARTICLE_DIR/schema.jsonld" \
+  --article-dir "$ARTICLE_DIR"
+
+python3 scripts/excalibur_blog_schema_gate.py \
+  --article-dir "$ARTICLE_DIR" \
+  -o schema-gate.json
+```
+
+После `status: PASS` нужно создать:
+
+```text
+memory/blog/articles/B33-za-3-dnya-do-eskrou-sozaemschik-otkazalsya-bank-zamorozil-ipoteku-novostrojka-tyumen/.cursor/excalibur-blog-fragments/schema.md
+```
+
+с YAML frontmatter по `agents/excalibur-blog-schema.md` / `shared/pipeline-fragment-protocol.md`.
