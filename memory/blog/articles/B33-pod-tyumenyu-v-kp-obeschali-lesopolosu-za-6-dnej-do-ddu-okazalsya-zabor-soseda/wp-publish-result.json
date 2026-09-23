@@ -1,0 +1,28 @@
+{
+  "slug": "pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda",
+  "topic_id": "B33",
+  "post_id": 10873,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1198835,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10873 slug=pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda\nOK categories=36,54,34\nOK yoast_social_image=1\nOK featured_image=10874\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10875 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda-inline-01.png\nOK inline_alt=10875\nOK inline_description=10875\nOK inline_image_upload=10876 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda-inline-02.png\nOK inline_alt=10876\nOK inline_description=10876\nOK inline_image_upload=10877 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda-inline-05.png\nOK inline_alt=10877\nOK inline_description=10877\nOK inline_image_upload=10878 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda-inline-03.png\nOK inline_alt=10878\nOK inline_description=10878\nOK inline_image_upload=10879 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda-inline-06.png\nOK inline_alt=10879\nOK inline_description=10879\nOK inline_image_upload=10880 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda-inline-07.png\nOK inline_alt=10880\nOK inline_description=10880\nOK inline_image_upload=10881 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda-inline-04.png\nOK inline_alt=10881\nOK inline_description=10881\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda/",
+    "errors": []
+  }
+}
