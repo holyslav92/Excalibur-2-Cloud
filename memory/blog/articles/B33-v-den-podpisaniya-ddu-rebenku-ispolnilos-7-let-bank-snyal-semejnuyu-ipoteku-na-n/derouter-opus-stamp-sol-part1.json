@@ -4,13 +4,16 @@
   "tier": "powerful",
   "model": "gpt-6-astra",
   "endpoint": "https://api.derouter.ai/openai/v1/chat/completions",
-  "request_id": "chatcmpl-7ef1374856e1426f99cdba97",
+  "request_id": "chatcmpl-3f2da22b58c840c9b6c8f183",
   "usage": {
-    "prompt_tokens": 7425,
-    "completion_tokens": 1407,
-    "total_tokens": 8832
+    "prompt_tokens": 8640,
+    "completion_tokens": 394,
+    "total_tokens": 9034,
+    "prompt_tokens_details": {
+      "cached_tokens": 6912
+    }
   },
-  "created_at": "2026-09-23T12:35:23.036307+00:00",
+  "created_at": "2026-09-23T12:49:19.656229+00:00",
   "provider": "derouter-rest",
   "user_prompt_chars": 200,
   "contract": "shared/derouter-opus-brain-contract.md"
