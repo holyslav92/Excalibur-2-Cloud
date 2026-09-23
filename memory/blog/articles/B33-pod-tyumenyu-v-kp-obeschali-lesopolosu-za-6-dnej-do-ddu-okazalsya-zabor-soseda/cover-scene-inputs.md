@@ -1,0 +1,468 @@
+КРИТИЧНО: Ты — API Derouter (модель в скрипте excalibur_blog_derouter_opus_chat.py). Все входные данные уже вставлены ниже в этом сообщении. Не отказывайся, не проси запустить скрипты, не пиши мета-комментарии. Верни ТОЛЬКО готовый артефакт роли (полный файл), без преамбулы и без markdown-обёртки вокруг всего ответа.
+{
+  "hook": "Семья потеряла деньги из-за леса",
+  "highlight": "деньги",
+  "sticky": "Лес оказался уже",
+  "wordstat_stickers": [],
+  "inline_labels": {
+    "inline_1": [
+      "15–20 метров обещали",
+      "Полоса уже",
+      "Чужой забор",
+      "Эскроу не открыли"
+    ],
+    "inline_2": [
+      "Рендер — не граница",
+      "Сверьте кадастровый план",
+      "Проверьте ДДУ",
+      "Уточните статус земли"
+    ],
+    "inline_3": [
+      "Проектная декларация",
+      "Кадастровый план",
+      "План посёлка",
+      "Договор брони",
+      "Сравнить до оплаты"
+    ],
+    "inline_4": [
+      "Бронь 220 тысяч",
+      "Вернули 150 тысяч",
+      "Удержали 70 тысяч",
+      "ДДУ не подписали"
+    ],
+    "inline_5": [
+      "Проверить границу",
+      "Уточнить статус земли",
+      "Попросить письменный ответ",
+      "Не спешить с ДДУ"
+    ],
+    "inline_6": [
+      "Банк увидел риск",
+      "Эскроу не открыт",
+      "Покупатели остановились",
+      "Документы не совпали"
+    ],
+    "inline_7": [
+      "Сверьте границы",
+      "Проверьте обещанный лес",
+      "Читайте условия брони",
+      "Пауза дешевле спора"
+    ]
+  },
+  "meme_picks": {
+    "cover": [
+      "roll_safe",
+      "smudge_cat"
+    ],
+    "inline_1": [
+      "hide_pain_harold"
+    ],
+    "inline_5": [
+      "confused_math_lady"
+    ],
+    "inline_7": [
+      "grumpy_cat"
+    ]
+  }
+}
+{
+  "topic_id": "B33",
+  "h1": "Семья под Тюменью отказалась от дома «у леса» — и потеряла 70 тысяч",
+  "title": "Семья под Тюменью отказалась от дома «у леса» — и потеряла 70 тысяч",
+  "subject": "Семья, которая бронировала дом с участком в строящемся коттеджном посёлке под Тюменью",
+  "angle": "За шесть дней до подписания ДДУ кадастровая схема не подтвердила обещанный зелёный буфер: полоса за домом оказалась уже, а по границе стоял соседский забор. Банк отказался открывать эскроу до уточнения статуса полосы. Семья отказалась от сделки, но из 220 000 рублей бронирования ей вернули только 150 000. Заголовок связывает остановленную покупку с конкретной потерей денег.",
+  "comment_magnet_angle": "Если обещанный лес за участком не совпал с кадастровой схемой, справедливо ли удерживать с семьи 70 тысяч рублей за отказ от сделки?",
+  "verdict": "PASS"
+}
+{
+  "canon_id": "the_rieltor_light_meme_no_wordstat_v3",
+  "status": "ok",
+  "owner_lock_permanent": {
+    "status": "LOCKED_ON_MAIN",
+    "pillars_ref": "shared/pipeline-canon.json → owner_lock_permanent",
+    "engagement_bomb": "Dzen engagement; news-casus; prose lead; no TL;DR/bullets; early TG+MAX; comment magnet — see quality-bar-9 + dzen-news-casus",
+    "meme_canon_v1": "meme-top100.json only; people+cats; on-topic funny; stickers ≤15%; sacred hook/face/phone; anti-repeat 14д",
+    "cover_fail_fast": "max 2 full attempts; 15-20 min timebox; cover-budget-result → Indexer; no infinite Cover-QA; no PIL/Kie"
+  },
+  "label_ru": "The Риэлтор — изобретение с нуля, light/bright, мемы, yellow sticky from hook, anti-repeat 14д; Wordstat strips FORBIDDEN on cover",
+  "forbidden_daypart_formula": {
+    "status": "REJECTED_BY_OWNER",
+    "never_use": true,
+    "slots": {
+      "morning": "desk + document",
+      "day": "street/entrance",
+      "evening": "close talk to camera",
+      "night": "split «как продают / что в выписке»"
+    },
+    "note": "Расписание публикаций 09/12/15/17 YEKT (будни) ≠ формула обложки."
+  },
+  "invention_rule": "Cover agent INVENTS every cover from scratch to surprise. No inventory lock. No recurring default props (keys, hologram, desk, balcony, documents-only office). Variety is the product.",
+  "anti_repeat": {
+    "window_days": 14,
+    "log_file": "memory/cover/used-motifs.json",
+    "collision_fields": [
+      "composition",
+      "location",
+      "meme",
+      "prop_set",
+      "sticker_set",
+      "joke",
+      "outfit",
+      "emotion",
+      "pose_framing",
+      "action"
+    ],
+    "preflight_script": "scripts/excalibur_blog_cover_motif_gate.py",
+    "after_14_days_motif_may_return": true,
+    "variety_combo_fail": {
+      "description": "FAIL если новая обложка или последние N (≥2) повторяют связку «чёрный пиджак + бюст слева + боковой взгляд»",
+      "lookback_covers": 3,
+      "outfit_tokens": ["black blazer", "charcoal blazer", "чёрный пиджак", "black t-shirt combo"],
+      "pose_tokens": ["left bust", "talking head", "host large left", "large left bust", "бюст слева"],
+      "emotion_tokens": ["side-eye", "side eye", "боковой взгляд", "skeptical side glance"]
+    }
+  },
+  "variety_lock": {
+    "face_i2i_only": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+    "face_locks": ["bone structure", "hairline", "eye shape", "stubble", "28yo", "medium-slim build"],
+    "invent_every_cover": ["outfit", "location", "action", "emotion", "pose_framing"],
+    "forbidden_defaults": [
+      "black blazer + black t-shirt every run",
+      "left talking-head bust every run",
+      "same side-eye / open-mouth shock as last 2–3 covers"
+    ],
+    "cover_motifs_required": [
+      "composition",
+      "location",
+      "meme",
+      "prop_set",
+      "sticker_set",
+      "joke",
+      "outfit",
+      "emotion",
+      "pose_framing",
+      "action"
+    ],
+    "note": "FACE = WHO (i2i). Outfit/action/emotion/pose = HOW — новые каждый раз под hook."
+  },
+  "title_zone_sacred": {
+    "rule": "Hook title + phone + meme sacred; NO Wordstat query strips/bars anywhere on cover",
+    "wordstat_on_cover": "FORBIDDEN_FOREVER",
+    "phone_required": "+7 922 001 65 05",
+    "forbidden_on_title": ["wordstat tape over hook", "search query bars top-left", "sticker occluding H1", "meme over headline text"]
+  },
+  "light_bright": {
+    "required": true,
+    "style": "high-key, светлые картинки, airy",
+    "effects": ["sun flare", "light leak", "glow", "soft bloom"],
+    "forbidden": ["dark cinematic", "twilight mood panel", "low-key noir", "moody black background"]
+  },
+  "meme_system": {
+    "required": true,
+    "locked_canon": "meme_canon_v1",
+    "catalog": "memory/cover/meme-top100.json",
+    "catalog_rule": "ONLY real internet meme templates from meme-top100.json — never invent faces, never stock co-host, never celebrity banned entries",
+    "variety": {
+      "people_plus_cats": true,
+      "forbid_cats_only_article": true,
+      "note": "Mix people-memes + cat-memes across cover+inlines; NOT cats-only sticker sets. Host Святослав ≠ people-meme — pick ≥1 catalog people-meme when cats are used."
+    },
+    "on_topic_funny": {
+      "required": true,
+      "rule": "Each meme sticker must be on-topic to article hook/stakes AND funny — reaction matches casus (skepticism, pain, WTF), not random cat wallpaper"
+    },
+    "sticker_placement": {
+      "max_frame_share": 0.15,
+      "recommended_share": 0.08,
+      "clearance_px_from_sacred": 80,
+      "sacred_never_cover": ["hook_title", "host_face", "phone_cta"],
+      "zones": {
+        "hook_title": "right 52–96% × 14–40% — meme must not overlap Cyrillic hook",
+        "host_face": "host close-up bbox — meme never on face",
+        "phone": "bottom-right 55–98% × 70–96% — meme never on +7 922 001 65 05"
+      }
+    },
+    "anti_repeat": {
+      "window_days": 14,
+      "log_file": "memory/cover/used-motifs.json",
+      "field": "meme",
+      "gate": "scripts/excalibur_blog_cover_motif_gate.py --meme <catalog_id_or_motif>",
+      "rule": "Same meme id/motif must not repeat within 14 days — pick fresh reaction from catalog"
+    },
+    "manifest_fields": {
+      "cover_text": "meme_picks — slot → catalog id(s) with optional topic_hook one-liner",
+      "quad_manifest": "meme_picks copied from cover-text; cover_motifs.meme logs chosen ids for anti-repeat"
+    },
+    "host_human_rule": "ONLY Святослав (face-studio-2026-06-23.jpg) may be LARGE / hero of any frame — COVER ONLY. No second human hero anywhere.",
+    "people": "Cover: host = only large human. Inline: NO large human; people-memes = SMALL stickers (≤12–15% frame) from meme-top100.json only — never co-host, never presenter pointing at table.",
+    "cats": "meme-cat sticker cutouts — small accent (≤12–15% frame); often enough across weekly posts; not every frame",
+    "per_article_8_set": {
+      "must_include_people": true,
+      "people_source": "cover host ONLY counts as the person in the 8-set; inline people-memes are tiny stickers on 1–2 panels max, never a second hero",
+      "inline_people_meme_max_panels": 2,
+      "inline_people_meme_max_frame_share": 0.15,
+      "cats_frequency": "at least one cat motif per article OR ensure weekly cadence has cats",
+      "forbidden": [
+        "empty office only-documents cover",
+        "sterile host+text without stickers",
+        "stock/generated handsome man as co-host on inline",
+        "invented photogenic stranger called a meme",
+        "meme person in left portrait / talking-head / presenter slot on inline",
+        "meme person >15% of inline frame area"
+      ]
+    }
+  },
+  "wordstat_stickers": {
+    "required_on_cover": false,
+    "forbidden_on_cover": true,
+    "owner_ban": "Yandex Wordstat popular-query phrases as paper strips/bars/overlay — PIL/Photoshop/fixer must NOT add them",
+    "forbidden_examples": [
+      "наследство квартиры",
+      "вступление в наследство",
+      "купить квартиру в тюмени",
+      "банкротство продавца",
+      "вторичка тюмень"
+    ],
+    "scout_topic_only": "Scout still uses live MCP-KV Wordstat for TOPIC choice — never paint queries on cover.png",
+    "optional_on_cover": "one yellow sticky from article HOOK (cover-text.json), not from Wordstat queries",
+    "geo": "memory/cover/wordstat-geo.json",
+    "not": ["random words", "spam wall", "SEO tail dump", "opaque gold strips", "beige query bars", "truncated phrases at edge"]
+  },
+  "pixel_qa_gate": {
+    "required_before_indexer_publish": true,
+    "script": "scripts/excalibur_blog_cover_qa_pixels.py",
+    "gate": "scripts/excalibur_blog_cover_qa_gate.py",
+    "fixer": "scripts/excalibur_blog_cover_fixer.py",
+    "reads": "cover/cover.png bytes only — never trust manifest/prompt alone",
+    "stamp": "cover/cover_qa.json with pixel_qa=true + cover_md5",
+    "publish_block": "scripts/excalibur_blog_wp_publish.py blocks unless pixel PASS + md5 match",
+    "designed_thumbnail": {
+      "rule": "Cover = designed 1200×675 thumbnail, NOT face screenshot. Sacred zones: large hook H1; host close-up face+shoulders with room for type; phone +7 922 001 65 05; one small meme; optional one yellow sticky from hook. NO Wordstat query strips.",
+      "zones": {
+        "hook_title": "right 52–96% × 14–40% (ink outside face bbox)",
+        "yellow_sticky": "center-left optional — hook phrase only, not Wordstat",
+        "phone": "bottom-right 55–98% × 70–96%",
+        "meme": "bottom-right 72–96% × 62–88%"
+      }
+    },
+    "fail_if": [
+      "no large hook title (pixel_hook_title_present)",
+      "hook title occluded / only face features mistaken for title",
+      "no phone +7 922 001 65 05 in bottom-right (pixel_phone_readable)",
+      "no meme sticker in corner (pixel_meme_present)",
+      "Wordstat-like query strips/bars in top-left (pixel_no_wordstat_query_strips)",
+      "layout collapse: face-only crop, labels dumped in corner (pixel_layout_not_collapsed)",
+      "opaque Wordstat bars/strips anywhere",
+      "stickers overlap title or meme zones",
+      "host distant small full-body (face_h_frac < 0.18)",
+      "manifest outfit lie vs pixels (warm outfit + dark blazer torso)",
+      "cover_qa describes prompt not PNG",
+      "PIL template mashup / B06 glue (pixel_no_foreign_article_text, pixel_no_collage_inset, pixel_phone_not_clipped)"
+    ],
+    "pil_mashup_ban": {
+      "status": "FORBIDDEN_FOREVER",
+      "script": "scripts/excalibur_blog_cover_pil_compose.py",
+      "rule": "One coherent generated 16:9 cover only (grsai grsai standard image model REST). Never paste another article template. If grsai fails → GRSAI IMAGE BLOCKER, no upload.",
+      "pixel_gates": [
+        "pixel_no_foreign_article_text",
+        "pixel_no_collage_inset",
+        "pixel_phone_not_clipped",
+        "pixel_hook_title_not_truncated",
+        "pixel_no_wordstat_ocr_strips"
+      ]
+    },
+    "fixer_loop": "Fixer → regen cover panel if layout/hook/phone/meme/query-strip FAIL; never PIL Wordstat overlay/repack; never peel/inpaint person; max 2 fixer rounds",
+    "cover_budget": {
+      "fail_fast": true,
+      "owner_lock_pillar": "cover_fail_fast — max attempts then Indexer, not infinite Cover-QA",
+      "default_max_attempts": 2,
+      "env_override": "EXCALIBUR_COVER_MAX_ATTEMPTS",
+      "script": "scripts/excalibur_blog_grsai_solo_cover.py",
+      "exhausted_report": "cover/cover-budget-result.json",
+      "conductor_timebox_minutes": "15-20"
+    },
+    "short_hook": {
+      "rule": "ONE line, 5-7 Cyrillic words (B08-style), prefer words ≥5 letters for OCR; em dash OK",
+      "forbidden": "novel-length multi-line hooks",
+      "gate": "scripts/excalibur_blog_cover_text_gate.py"
+    },
+    "ocr_false_positive_escape": {
+      "function": "apply_ocr_false_positive_escape",
+      "pattern": "B08/B09 live — host face + Cyrillic hook + phone; only OCR truncation/opaque flakes",
+      "forbidden_remediation": ["PIL mashup", "Kie"]
+    }
+  },
+  "identity_lock": {
+    "face_primary": "memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+    "body_build_refs": [
+      "memory/cover/assets/identity-real/face-hoodie-airpods.jpeg",
+      "memory/cover/assets/identity-real/face-office-selfie.jpeg"
+    ],
+    "not_face_source": [
+      "memory/cover/assets/identity-real/face-greenhouse-yahweh.png",
+      "memory/cover/assets/identity-real/face-immortal-regiment.jpeg"
+    ],
+    "source": "memory/cover/assets/identity-real/",
+    "age": 28,
+    "body_build": "medium-slim per hoodie+office body refs; NOT chubby vs face-studio portrait",
+    "cover_body_rule": "FAIL Cover-QA if host looks heavier/chubbier than face-studio-2026-06-23 or body refs",
+    "face": "face-studio-2026-06-23.jpg only for FACE i2i; match bone structure, hairline, eye shape, stubble, 28yo",
+    "expression_lock": {
+      "keep_every_run": [
+        "bone structure",
+        "hairline",
+        "eye shape",
+        "stubble density",
+        "28yo age",
+        "medium-slim build"
+      ],
+      "free_every_run": [
+        "emotion",
+        "eyebrows",
+        "mouth",
+        "head tilt",
+        "gaze",
+        "hands",
+        "body pose"
+      ],
+      "i2i_prompt_rule": "same person as reference, NEW expression for the hook, do not copy reference smile/pose",
+      "scene_hint_must_name_emotion": true,
+      "fail_if": [
+        "polite studio closed-mouth smile copied 1:1 from reference",
+        "different person",
+        "chubby vs portrait"
+      ],
+      "pass_requires": "hook-matched invented expression (shock, side-eye, grimace, laugh, bewildered, etc.)"
+    },
+    "forbidden_body": ["chubby", "overweight", "puffy face", "puffy cheeks", "double chin", "stocky", "thick waist", "thick neck", "wide torso tight blazer"],
+    "forbidden_scene_clone": [
+      "greenhouse",
+      "Immortal Regiment",
+      "office selfie",
+      "hoodie selfie",
+      "office hologram",
+      "balcony keys sunset"
+    ],
+    "forbidden_faces": ["reconstructed AI hero-ref", "plastic uncanny"]
+  },
+  "pipeline": {
+    "primary": "grsai-rest",
+    "resolution": "2K",
+    "canvases": 2,
+    "panels_per_canvas": 4,
+    "total_images": 8,
+    "split": "2x2 per canvas"
+  },
+  "image_allowlist": {
+    "allowed": [
+      "scripts/excalibur_blog_grsai_gpt_image2_api.py (grsai grsai standard image model REST, Global→China, 2K 16:9)",
+      "scripts/excalibur_blog_grsai_solo_cover.py (solo 1200×675 cover regen)",
+      "scripts/excalibur_blog_derouter_gpt_image2_api.py (optional last resort when EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1)"
+    ],
+    "forbidden_forever": [
+      "scripts/excalibur_blog_kie_gpt_image2_api.py",
+      "scripts/excalibur_blog_cover_pil_compose.py",
+      "KIE_API_KEY for any cover/inline image"
+    ],
+    "forbidden": [
+      "mcp-derouter/start-mcp.sh",
+      "flux2-pro-text-to-image",
+      "flux2-pro-image-to-image",
+      "seedream",
+      "nano_banana",
+      "nano_banana_2",
+      "z-image",
+      "off-pipeline demo canvases / lone prompts without Scout×Wordstat article",
+      "PIL template mashup / B06 glue"
+    ],
+    "timeout_rule": "grsai auth/5xx → retry alternate host (Global→China); optional Derouter fallback; NEVER Kie/Flux/Seedream/nano_banana/z-image/PIL mashup"
+  },
+  "inline_utility": {
+    "catalog": "memory/cover/inline-visual-types.json",
+    "utility_test": "Reader without paragraph extracts fact/order/number/comparison for H2; icon row + 3-word captions = FAIL",
+    "placement_v2": {
+      "not_one_per_h2": true,
+      "allow_per_h2": [0, 1, 2],
+      "pair_pattern": "realistic_photo + informational diagram on same H2 when beat needs both",
+      "total_inline_png": 7
+    },
+    "realistic_mix": {
+      "count_min": 2,
+      "count_max": 4,
+      "subjects": ["apartment_interior", "building_entrance", "mfc_office", "document_closeup", "tyumen_street"],
+      "no_host_face": true,
+      "no_stock_man_hero": true
+    },
+    "style_match_cover": "B02-approved: #FFFFFF high-key, gold/black, torn paper, tape, sun flare, collage",
+    "no_host_face": true,
+    "no_co_host_human": true,
+    "no_stock_model": true,
+    "meme_sticker_max_frame_share": 0.15,
+    "meme_people_catalog": "memory/cover/meme-top100.json",
+    "preferred_types": [
+      "comparison_table",
+      "process_flow",
+      "bar_timeline_chart",
+      "structure_diagram",
+      "labeled_checklist",
+      "fact_card"
+    ],
+    "forbidden": [
+      "host face on inline",
+      "stock model / handsome realtor / generated man as co-host",
+      "large human (non-host) occupying hero slot on inline",
+      "meme person >15% frame or in presenter/portrait slot",
+      "invented face called meme — use meme-top100.json real templates only",
+      "icon row with mood captions",
+      "duplicate labels across cards",
+      "decorative realtor desk scene",
+      "empty UI",
+      "cover copy-paste",
+      "Salt Bae Drake celebrity",
+      "не эскроу as process step"
+    ],
+    "cover_qa_checks": [
+      "inline_utility_all_7",
+      "inline_realistic_mix_2_4",
+      "inline_placement_flexible",
+      "inline_no_host_face",
+      "inline_no_co_host_human",
+      "inline_meme_sticker_scale",
+      "meme_people_real_catalog",
+      "identity_expression_invented",
+      "title_not_occluded",
+      "outfit_invented",
+      "action_invented",
+      "emotion_not_copied_from_recent_covers"
+    ],
+    "image_alt_caption": {
+      "builder": "scripts/excalibur_blog_image_caption_builder.py",
+      "gate": "image_alt_human",
+      "human_ru": "1 short Russian SEO sentence 80-140 chars (cover topic / inline section); featured WP caption empty",
+      "forbidden_forever": [
+        "hook",
+        "CTA",
+        "memes",
+        "scene_hint",
+        "sticky",
+        "prompt",
+        "i2i",
+        "cover slot",
+        "quad",
+        "inline_N",
+        "semicolon prompt lists",
+        "мемы as production tag"
+      ],
+      "never_use_as_alt": ["scene_hint", "cover prompt", "meme-manifest", "quad-manifest production fields"]
+    }
+  },
+  "owner_visual_polish": {
+    "cover_phone_required": "+7 922 001 65 05",
+    "cover_body": "medium-slim vs face-studio-2026-06-23; FAIL if chubby/puffy or wrong person",
+    "cover_expression": "FAIL if host copies studio polite closed-mouth smile 1:1; PASS if NEW hook-matched emotion",
+    "board_stationery": "light tape/pins/strings on white investigation board — high-key, not noir",
+    "meme_density": "cover: 1–2 memes required (host counts as person); inlines: small meme sticker on 2–3 of 7 max — cats and/or catalog people-memes at sticker scale only",
+    "typography": "handsome condensed black Cyrillic + gold accent; zero spelling errors; no Latin garbage",
+    "inline_density": "more informational labels per panel; utility test still required; no empty cells"
+  }
+}

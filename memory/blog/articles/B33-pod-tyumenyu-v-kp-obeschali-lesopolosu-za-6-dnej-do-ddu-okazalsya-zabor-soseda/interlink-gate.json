@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "topic_id": "B33",
+  "slug": "pod-tyumenyu-v-kp-obeschali-lesopolosu-za-6-dnej-do-ddu-okazalsya-zabor-soseda",
+  "candidates_count": 29,
+  "outbound_found": [
+    {
+      "slug": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst",
+      "title": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst"
+    },
+    {
+      "slug": "pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do",
+      "title": "pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

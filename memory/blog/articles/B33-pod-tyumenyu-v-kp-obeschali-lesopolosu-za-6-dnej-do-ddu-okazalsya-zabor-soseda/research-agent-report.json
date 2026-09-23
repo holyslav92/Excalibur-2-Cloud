@@ -1,0 +1,35 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-23",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Tenant Telegram live 2026-09-23"
+      },
+      {
+        "url": "https://72.ru/text/house/2026/04/15/76362690/",
+        "type": "regional_news",
+        "note": "KP under Tyumen context 2026 — not casus identity"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "коттеджные поселки тюмень купить дом",
+    "p0_volume": 44,
+    "support_phrases": [
+      {"phrase": "кадастровый план участка", "volume": 160}
+    ]
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "notes": "214-FZ art.21 land disclosure — ConsultantPlus fetched 2026-09-23; no bank tariff claims in article"
+  }
+}
