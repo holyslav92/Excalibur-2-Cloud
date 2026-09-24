@@ -1,0 +1,236 @@
+{
+  "topic_id": "B33",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Маткапитал не согласовали из-за строки договора",
+  "cover_hook_highlight": "Маткапитал",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "За неделю до ДДУ в Тюмени СФР завернул маткапитал на эскроу в новостройке из-за строки.",
+      "scene_hint": "Лобби новостройки: поло, стоп, ДДУ со стикером; блик.",
+      "meme_caption_ru": "",
+      "sticky": "Подписание пришлось остановить",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "растерянность, брови приподняты, взгляд на строку ДДУ"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Новостройка в Тюмени: ипотека, бронь и маткапитал в одном расчёте",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: ипотека, бронь, маткапитал, эскроу ",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Новостройка в Тюмени: ипотека, бронь и маткапит…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Двое детей",
+        "Договор с застройщиком",
+        "Защищённый счёт эскроу"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Новостройка в Тюмени: ипотека, бронь и маткапитал в одном расчёте",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: неделя до подписания, ипотека, сверка пак",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Неделя до подписания, Ипотека одобрена, Сверка трёх пакетов — иллюстрация к…",
+      "labels": [
+        "Неделя до подписания",
+        "Ипотека одобрена",
+        "Сверка трёх пакетов"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "За неделю до подписания: банк и застройщик говорят «всё сходится»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Офис застройщика: календарь недели, папки банка и ",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За неделю до подписания: банк и застройщик гово…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Проверка СФР",
+        "Строка об оплате",
+        "Маткапитал на эскроу"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Проверка перед СФР: в проекте ДДУ не та формулировка про оплату",
+      "visual_type": "realistic_photo",
+      "scene_hint": "ДДУ с маркером на строке оплаты и листом отказа СФ",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Проверка перед СФР: в проекте ДДУ не та формули…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Заявление вернули",
+        "Не хватает взноса",
+        "Подписание остановили"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Заявление вернули — без сертификата первого взноса не хватало",
+      "visual_type": "process_flow",
+      "scene_hint": "Поток: ДДУ → банк → СФР → стоп на остатке маткапит",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Проект договора, Документы банка, Заявление в СФР — иллюстрация к разбору сделки.",
+      "labels": [
+        "Проект договора",
+        "Документы банка",
+        "Заявление в СФР"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Три пакета, которые должны совпасть до регистрации ДДУ",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Шкала: три пакета, участники, цена, маткапитал, эс",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Участники сделки, Данные квартиры, Цена квартиры — иллюстрация к разбору сделки.",
+      "labels": [
+        "Участники сделки",
+        "Данные квартиры",
+        "Цена квартиры"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Таблица: поля ДДУ, эскроу и будущего заявления в СФР",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема полей ДДУ, эскроу и заявления СФР с чек-лист",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Сверить до подписи, Исправить строку оплаты, Проверить срок брони — иллюстрация к…",
+      "labels": [
+        "Сверить до подписи",
+        "Исправить строку оплаты",
+        "Проверить срок брони"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить новостройку в тюмени",
+    "материнский капитал"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "ростовой ведущий в центре справа, рука жестом «стоп», папка ДДУ в другой руке; слева свободная светлая зона под заголовок",
+    "location": "яркое лобби отдела заселения тюменской новостройки у окна, без офисной темноты",
+    "outfit": "кобальтовое трикотажное поло, светло-серые брюки, тонкие часы",
+    "emotion": "ошеломлённая растерянность",
+    "pose_framing": "ростовой трёхчетвертной ракурс, динамичный шаг назад, жест открытой ладонью «стоп»",
+    "action": "останавливает подписание ДДУ и показывает спорную строку в договоре",
+    "props": [
+      "папка ДДУ",
+      "жёлтый стикер на спорной строке",
+      "небольшой макет нового дома",
+      "лист с символом эскроу без читаемого мелкого текста"
+    ],
+    "meme": [
+      "disaster_girl",
+      "polite_cat"
+    ],
+    "stickers": [
+      "маленький disaster_girl в нижнем левом углу",
+      "маленький polite_cat в верхнем правом углу"
+    ],
+    "joke": "стоп перед подписью из-за одной строки"
+  },
+  "cover_emotion": "растерянность, брови приподняты, взгляд на строку ДДУ"
+}
