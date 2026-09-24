@@ -20,6 +20,11 @@
     "side_stickers": "skip"
   },
   "date": "2026-09-24",
+  "wp_category_slugs": [
+    "ipoteka",
+    "pokupka-kvartiry",
+    "proverka-pered-pokupkoj"
+  ],
   "pipeline_canon": "human-first-v2",
   "editorial_swarm": false
 }
