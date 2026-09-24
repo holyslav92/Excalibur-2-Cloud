@@ -1,0 +1,14 @@
+{
+  "gate": "contract-freshness",
+  "status": "PASS",
+  "contracts_fingerprint": "56b8b82aa99d1a1d",
+  "newest_contract_mtime": 1790175978.0,
+  "missing_contracts": [],
+  "checked": [
+    "schema-gate.json",
+    "drafts/writer.html",
+    "drafts/variant-a.html",
+    "article.html"
+  ],
+  "must_rerun": []
+}

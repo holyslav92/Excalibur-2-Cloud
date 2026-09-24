@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B33",
+  "slug": "matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou",
+  "candidates_count": 29,
+  "outbound_found": [
+    {
+      "slug": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli",
+      "title": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli"
+    },
+    {
+      "slug": "v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty",
+      "title": "v-tyumeni-v-ddu-napisali-kvartiru-v-vypiske-okazalis-apartamenty"
+    },
+    {
+      "slug": "za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t",
+      "title": "za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
