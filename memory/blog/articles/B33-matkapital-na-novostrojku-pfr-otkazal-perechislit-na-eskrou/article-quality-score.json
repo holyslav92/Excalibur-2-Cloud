@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "all_pass": true,
+  "gate": "article-quality-score",
+  "contract": "shared/article-quality-score-lock.md",
+  "article_dir": "memory/blog/articles/B33-matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou",
+  "sol_rewrite_applied": true,
+  "h1": "За 7 дней до ДДУ в Тюмени СФР завернул маткапитал на эскроу — из-за одной строки",
+  "sections": {
+    "h1": {
+      "pass": true,
+      "reasons": []
+    },
+    "lead": {
+      "pass": true,
+      "reasons": []
+    },
+    "middle": {
+      "pass": true,
+      "reasons": []
+    },
+    "finale": {
+      "pass": true,
+      "reasons": []
+    },
+    "length": {
+      "pass": true,
+      "reasons": [
+        "length-short: 1375 words below target 1400-1600 (warn only)"
+      ]
+    },
+    "tone": {
+      "pass": true,
+      "reasons": []
+    }
+  },
+  "errors": [],
+  "metrics": {
+    "word_count": 1375,
+    "word_target": "1400-1600",
+    "word_hard_max": 1750,
+    "dzen_reading_minutes_est": 7,
+    "spine_overlap": 0.0725
+  }
+}

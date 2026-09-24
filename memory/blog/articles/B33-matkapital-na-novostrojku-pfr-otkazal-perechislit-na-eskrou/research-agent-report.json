@@ -1,0 +1,68 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-24",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/gorod/2026/09/23/76658175/",
+        "type": "regional_news",
+        "note": "72.ru 23.09.2026 — тюменский медиасигнал недели (семьи, региональный маткапитал)"
+      },
+      {
+        "url": "https://harant.ru/questions/q-212109/",
+        "type": "community_case",
+        "note": "живой кейс отказов СФР на эскроу (июль 2026)"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 897,
+    "mechanism_phrase": "материнский капитал",
+    "mechanism_volume": 7044,
+    "support_phrases": [
+      {"phrase": "материнский капитал новостройка", "volume": 8, "region": "55"}
+    ],
+    "rework_from": "«материнский капитал новостройка» 8 → spine 897 + mechanism 7044",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_matkapital_pfr_escrow_ddu_wording_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B19 escrow/matkapital other mechanism", "B32 wrong beneficiary INN", "B20 legal entity change"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["sfr", "tyumen_gov"],
+    "errors": []
+  },
+  "key_facts_count": 16,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "official_gate": "research-official-gate.json",
+    "scout_handoff": "scout-handoff.md"
+  },
+  "incident_report": "none"
+}

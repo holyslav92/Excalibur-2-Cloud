@@ -1,0 +1,28 @@
+{
+  "slug": "matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou",
+  "topic_id": "B33",
+  "post_id": 10913,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1102332,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10913 slug=matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou\nOK categories=48,36,34\nOK yoast_social_image=1\nOK featured_image=10914\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10915 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou-inline-01.png\nOK inline_alt=10915\nOK inline_description=10915\nOK inline_image_upload=10916 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou-inline-02.png\nOK inline_alt=10916\nOK inline_description=10916\nOK inline_image_upload=10917 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou-inline-03.png\nOK inline_alt=10917\nOK inline_description=10917\nOK inline_image_upload=10918 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou-inline-04.png\nOK inline_alt=10918\nOK inline_description=10918\nOK inline_image_upload=10919 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou-inline-05.png\nOK inline_alt=10919\nOK inline_description=10919\nOK inline_image_upload=10920 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou-inline-06.png\nOK inline_alt=10920\nOK inline_description=10920\nOK inline_image_upload=10921 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou-inline-07.png\nOK inline_alt=10921\nOK inline_description=10921\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou/",
+    "errors": []
+  }
+}

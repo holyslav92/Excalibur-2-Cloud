@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-24
+
+- **topic_id:** B33
+- **slug:** matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou
+- **post_id:** 10913
+- **permalink:** /blog/proverka-pered-pokupkoj/matkapital-na-novostrojku-pfr-otkazal-perechislit-na-eskrou/
+- **featured_image:** 10914
+- **inline_images:** 10915–10921 (7)
+- **wp_category_slugs:** matkapital-i-sdelki, pokupka-kvartiry, proverka-pered-pokupkoj (category_ids=48,36,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs); pre-publish image alt fix (inline_2/inline_6 scene_hint)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
