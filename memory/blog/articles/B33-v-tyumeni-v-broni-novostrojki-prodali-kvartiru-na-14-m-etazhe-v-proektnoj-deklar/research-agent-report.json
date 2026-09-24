@@ -1,0 +1,74 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-24",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://i8.cdnstroy.ru/883stiew7tiqa_ajddlh.pdf",
+        "type": "official_eisjhs",
+        "note": "Tyumen declaration № 72-001397 dated 09.09.2026 — floors 1–26, 7 passenger + 4 cargo-passenger lifts; live PDF 2026-09-24"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "September 2026 posts incl. 19/19 floor listing and developer-check narrative; live fetch 2026-09-24"
+      },
+      {
+        "url": "https://dzen.ru/holyslav",
+        "type": "channel",
+        "note": "Scout signal — tenant Dzen newbuild context"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4339,
+    "p0_volume_ru225": 8207,
+    "compare225_phrase": "купить новостройку в тюмени",
+    "compare225_volume": 898,
+    "support_phrases": [
+      {"phrase": "новостройки в тюмени от застройщика", "volume": 631, "region": "55+11176"},
+      {"phrase": "жк новостройки тюмень", "volume": 169, "region": "55+11176"},
+      {"phrase": "проектная декларация застройщика", "volume": 24, "region": "55+11176"},
+      {"phrase": "дом рф проектные декларации застройщиков", "volume": 11, "region": "55+11176"},
+      {"phrase": "приемка квартиры в новостройке тюмень", "volume": 27, "region": "55+11176"}
+    ],
+    "rework_from": "scout spine «новостройки тюмень» (4339) + elevator/declaration mechanism in H1",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_elevator_serves_fewer_floors_than_unit_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["legal_norms_214fz", "minstroy_form_239", "eisjhs_tyumen_pdf", "sp_54_13330"],
+    "errors": [],
+    "note": "214-ФЗ st. 4, 19, 21 + Minstroy 239/пр + SP 54.13330 + EISZhS PDF; no bank tariff claims"
+  },
+  "key_facts_count": 28,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 2,
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
