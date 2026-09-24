@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net",
+  "topic_id": "B33",
+  "post_id": 10900,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1114042,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10900 slug=v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net\nOK categories=36,54,34\nOK yoast_social_image=1\nOK featured_image=10901\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10902 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net-inline-03.png\nOK inline_alt=10902\nOK inline_description=10902\nOK inline_image_upload=10903 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net-inline-01.png\nOK inline_alt=10903\nOK inline_description=10903\nOK inline_image_upload=10904 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net-inline-02.png\nOK inline_alt=10904\nOK inline_description=10904\nOK inline_image_upload=10905 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net-inline-04.png\nOK inline_alt=10905\nOK inline_description=10905\nOK inline_image_upload=10906 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net-inline-05.png\nOK inline_alt=10906\nOK inline_description=10906\nOK inline_image_upload=10907 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net-inline-06.png\nOK inline_alt=10907\nOK inline_description=10907\nOK inline_image_upload=10908 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net-inline-07.png\nOK inline_alt=10908\nOK inline_description=10908\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net/",
+    "errors": []
+  }
+}

@@ -1063,3 +1063,29 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260924-schema-output-path
+status: open
+run_date: 2026-09-24
+role: excalibur-blog-schema
+topic_id: B33
+article_dir: memory/blog/articles/B33-v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net
+severity: low
+category: contract
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --output schema.jsonld --article-dir memory/blog/articles/...` writes JSON-LD to repo root `schema.jsonld`, not under `--article-dir`. Skill example matches this bug; `schema_gate` then reports `missing .../schema.jsonld`.
+
+### How the agent recovered this run
+- `mv schema.jsonld` into article dir; gate PASS.
+
+### Durable fix needed before next run
+- Schema skill/agent: `--output memory/blog/articles/<dir>/schema.jsonld` OR teach derouter to resolve bare `schema.jsonld` relative to `--article-dir`.
+
+### Suggested files to inspect/change
+- `skills/schema-excalibur-blog/SKILL.md`
+- `.cursor/agents/excalibur-blog-schema.md`
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+
+### Secrets
+- none recorded

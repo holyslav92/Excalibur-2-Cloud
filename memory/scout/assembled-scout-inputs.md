@@ -1,88 +1,70 @@
-# Scout inputs — 2026-09-19 (B28)
+# Scout inputs — 2026-09-24 (B33)
 
 **CRITICAL EXECUTION CONTEXT:** You are already running inside `excalibur_blog_derouter_opus_chat.py` (utility tier gpt-5.6-terra). The conductor completed all shell/MCP/Wordstat gates. **Your job is ONLY to write the Scout handoff markdown body** — no tool calls, no BLOCKER messages, no refusals. Output the complete handoff text now.
 
-**run_date:** 2026-09-19 (YEKT Saturday slot 12:00 — weekend automation)
+**run_date:** 2026-09-24 (YEKT slot ~12:00)
 **tenant:** The Риэлтор — Святослав Шакин, Тюмень (tymenrieltor.ru)
 **topic_market_focus:** newbuild_only
 **dzen_rf_pack:** true
 
 ## Slot constraints (HARD FORBIDDEN)
 
-- NO B27 today: land lease not ownership in declaration (cluster newbuild_land_lease_not_ownership_declaration_tyumen)
-- NO family mortgage revoked at child 7 years (2026-09-19 live)
-- NO cottage kadastr boundary 1.8m (2026-09-18 live)
-- NO BTI ate 4.2 sqm DDU (2026-09-18 live)
-- NO 28 days assignment lost to another buyer (2026-09-18 live)
-- NO mortgage approval expired day 87 (2026-09-18 live)
-- NO matkapital/opieka kids shares (2026-09-17 live)
-- NO DDU appendix rental ban investor +240k (2026-09-17 live)
-- NO different building 10 days before DDU (2026-09-17 live)
-- NO bank appraisal -900k vs DDU (cluster bank_appraisal_below_ddu_price locked)
-- NO parking not in declaration (2026-09-16 live)
-- NO insurance 186k day before DDU/escrow (2026-09-16 live)
-- NO frozen clusters in memory/scout/used-clusters.json (30d): escrow zero, booking expired price hike, trade-in, installment penalty, keys delay penalty, mortgage rate hike, developer entity change, cellar, acceptance defects, etc.
-- NO secondary market plots
+- NO repeat live 2026-09-22–23 plots: семейная ипотека ребёнку 7 лет в день ДДУ; КП «лес» vs забор соседа; мебельный пакет партнёра за 4 дня до ДДУ; созаёмщик отказался до эскроу; потолки 2,68 в экспликации; окна во двор vs магистраль; сдвиг сдачи в декларации; кладовая отдельным ДДУ; взнос 15→25%; терраса на визуализации; УК 180 тыс. до ключей
+- NO frozen clusters in memory/scout/used-clusters.json (30d): escrow zero mismatch, installment penalty developer, booking expired price hike, trade-in, keys delay penalty, mortgage rate hike, developer entity change, cellar separate DDU, assignment 28d lost buyer, etc.
+- NO secondary market plots (бабушка, банкрот, ЕГРН вторичка, опека…)
 
 ## Anti-repeat preflight (DONE)
 
-- `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters` → 30 active locks (last_sync 2026-09-19)
-- Live WP recent (~12): B27 land lease declaration, family mortgage child 7, cottage kadastr 1.8m, BTI -4.2 sqm, assignment 28d, ipoteka day 87, matkapital day 47, rental ban appendix, other corpus 10d, bank appraisal -900k, parking declaration, insurance 186k
-- `scout_helper.py --check-query` PASS for proposed title+cluster+slug (fingerprint booking_expired — distinct from booking_expired_price_hike price-hike plot and B27 land-lease plot)
-- `excalibur_blog_topic_focus.py` PASS (on-focus: дду)
-- `story_dup.py --text` PASS
+- `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters` → active locks synced 2026-09-24
+- Live WP recent (~15): family mortgage child 7; KP forest fence; furniture partner 4d; co-borrower escrow 3d; ceiling 2,68; windows courtyard; delivery shift; cellar DDU; down payment hike; terrace render; UK 180k keys; etc.
+- `scout_helper.py --check-query` PASS for proposed title+cluster+slug (clean, unique)
+- `scout_helper.py --check-story` ANTI-DUPE HARD PASS (cluster newbuild_render_amenity_missing_declaration_tyumen)
+- `excalibur_blog_topic_focus.py` PASS (on-focus: новострой)
 
 ## Proposed topic (PASS topic_focus + scout_helper + story_dup PASS)
 
-- **topic_id:** B28
-- **title_draft:** Под Тюменью в брони обещали газ в 2026 — в декларации КП дата 2028, до ДДУ не дошли
-- **slug:** v-tyumeni-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-doshli
-- **article_dir:** memory/blog/articles/B28-v-tyumeni-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-doshli
-- **cluster_id (new):** newbuild_kp_gas_declaration_date_mismatch_tyumen
-- **top_energy_mirror:** paper_clean_then_broke
-- **newbuild_mechanism:** Семья покупает готовый дом в коттеджном посёлке под Тюменью по ДДУ. В брони и презентации менеджер зафиксировал «газ подключён / подключение в 2026». Перед подписанием ДДУ открыли проектную декларацию на dom.rf — в графе инженерных сетей **срок ввода газопровода в эксплуатацию: IV квартал 2028**, не 2026. Семья с детьми (отопление, котёл, бюджет) отказалась от ДДУ, бронь 200 тысяч вернули частично, на эскроу не вышли
-- **why_newbuild_not_secondary:** Сюжет только в цепочке покупки дома от застройщика в КП: бронь, проектная декларация 214-ФЗ, ДДУ на дом, сроки коммуникаций застройщика. Нет продавца вторички, ЕГРН-квартиры, наследников, бабушки, опеки или соседской доли
-- **story_dup_check:** PASS — distinct from B27 land lease (different mechanism: gas infrastructure date vs land tenure), cottage kadastr boundary 1.8m (acceptance/plot boundary, not utilities), B25 chistovaya on acceptance (finishing, not gas), booking_expired_price_hike (section/price, not utilities timeline)
+- **topic_id:** B33
+- **title_draft:** В Тюмени на рендере новостройки обещали детский сад во дворе — в декларации объекта его нет, семья сняла бронь
+- **slug:** v-tyumeni-na-renedere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net-semya-snyala-bron
+- **article_dir:** memory/blog/articles/B33-v-tyumeni-na-renedere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net-semya-snyala-bron
+- **cluster_id (new):** newbuild_render_amenity_missing_declaration_tyumen
+- **top_energy_mirror:** paper_clean_then_broke (красивая картинка → официальный документ без обещания)
+- **newbuild_mechanism:** Семья с двумя детьми (3 и 6 лет) выбирает квартиру в новостройке Тюмени. На сайте и в шоу-руме на рендере двора — отдельное здание «детский сад» с подписью. Менеджер в брони пишет «инфраструктура: детсад во дворе». За 5 дней до подписания ДДУ открывают проектную декларацию на dom.rf: в перечне объектов соц. инфраструктуры, которые застройщик обязан построить/передать, **детского сада нет** — только детская площадка. Семья снимает бронь до эскроу, часть аванса удерживают
+- **why_newbuild_not_secondary:** Только цепочка покупки у застройщика: бронь, проектная декларация 214-ФЗ, ДДУ, обещания инфраструктуры ЖК. Нет продавца вторички, наследников, ЕГРН-квартиры, опеки, соседской доли
+- **story_dup_check:** PASS — не пересекается с КП «лесополоса/забор» (земля/границы), не с «окна во двор», не с «сдвиг сдачи», не с «терраса на картинке» (пристрой к квартире), не с booking price-hike cluster
 
 ## Dzen news-casus shape (target PASS)
 
-- **event:** семья с двумя детьми выбрала готовый дом в коттеджном посёлке под Тюменью; менеджер показал участок с табличкой «газ» и в брони написал «коммуникации — газ, подключение 2026»
-- **risk:** без газа дом зимой неэксплуатируем или потребует дорогой альтернативы (электрокотёл/газгольдер); банк при ипотеке на ИЖС/дом может отказать или урезать сумму, если в декларации срок сетей сдвинут на 2+ года
-- **time:** за 6 дней до назначенного подписания ДДУ; вечером перед визитом в банк сверили декларацию на dom.rf
-- **finale:** в декларации — ввод газопровода IV кв. 2028; застройщик предложил «подпишите ДДУ, газ дотащим раньше по внутреннему графику»; семья отказалась; бронь 200 тыс. вернули 140 тыс. (удержали 60 за «бронирование лота»), ДДУ не подписали, эскроу не открывали
-- **comment_magnet_angle:** «Если в брони газ в 2026, а в декларации КП — 2028, вы бы подписали ДДУ, чтобы не потерять бронь, или ушли бы сразу?»
+- **event:** семья с двумя детьми смотрит новостройку в Тюмени; на рендере и в презентации — полноценный детский сад во дворе; бронь 150 тысяч
+- **risk:** без сада во дворе — очередь в соседние ДОУ, логистика с двумя малышами; при продаже/ипотеке обещание «сад рядом» на сайте ≠ юридическая обязанность застройщика
+- **time:** за 5 дней до визита в банк за одобрением итогового ДДУ; вечером сверили декларацию
+- **finale:** в декларации — только детская площадка, сада нет; застройщик: «сад построит город позже, на рендере — концепция»; семья отказалась от ДДУ, вернули 90 тысяч из 150 брони, эскроу не открывали
+- **comment_magnet_angle:** «Если на рендере ЖК есть детский сад, а в проектной декларации его нет — вы бы всё равно шли в ДДУ ради квартиры или снимали бронь?»
 
 ## Klyshin hook
 
-- **klyshin_hook:** none | original: none (fresh Tyumen KP gas-declaration casus without Klyshin)
+- **klyshin_hook:** none | original: none (fresh Tyumen newbuild declaration casus without Klyshin)
 
-## Wordstat MCP-KV (live 2026-09-19)
-
-**Preflight:** wordstat_get_user_info OK (Yandex Cloud API, Folder ID b1g6bq34gkivjj20be06)
+## Wordstat MCP-KV (live 2026-09-24)
 
 | probe | regions | freq (phrase total) |
 |-------|---------|---------------------|
-| коттеджные поселки тюмень | 55,11176 | 1455 |
-| коттеджные поселки | 225 (compare) | 274847 |
-| дома в коттеджных поселках тюмени | 55,11176 | 55 |
-| тюмень купить дом в коттеджном поселке | 55,11176 | 23 |
-| газ коттеджный посёлок | 55,11176 | 3 |
-| подключение газа коттеджный посёлок | 55,11176 | API empty (treat as <5) |
-| новостройки тюмень | 55,11176 | 4430 (context spine) |
-| новостройки тюмени от застройщика с отделкой | 55,11176 | 23 (not used — B25/B27 overlap risk) |
+| новостройки тюмень | 55,11176 | 4294 |
+| новостройки | 225 (compare) | (context) |
+| детский сад новостройка тюмень | 55,11176 | API empty/<5 (weak) |
+| купить новостройку в тюмени | 55,11176 | 897 |
+| новостройки в тюмени от застройщика | 55,11176 | 628 |
 
 **wordstat_rework log:**
-- probe «газ коттеджный посёлок» 55,11176 → 3 (too weak for P0 alone)
-- probe «подключение газа коттеджный посёлок» 55,11176 → empty/<5 (too weak)
-- probe «высота потолков новостройка» 55,11176 → 3 (alternate angle rejected — weak + apartment not KP)
-- **rework:** anchor buyer spine «коттеджные поселки тюмень» (KP/house demand) + gas-date mechanism in H1/body
-- **final P0 «коттеджные поселки тюмень» regions 55,11176,compare225 freq 1455 (55+11176) / RU context «коттеджные поселки» 274847 (225)**
+- probe «детский сад новостройка тюмень» 55,11176 → empty/<5 (too weak for P0 alone)
+- rework: anchor buyer spine «новостройки тюмень» + amenity-on-render vs declaration mechanism in H1/body
+- **final P0 «новостройки тюмень» regions 55,11176,compare225 freq 4294 (55+11176)**
 
 ## signal_urls (research)
 
 - https://dzen.ru/holyslav
-- https://www.domrf.ru/ — реестр застройщиков / проектные декларации (сроки инженерных сетей, газ)
-- https://www.consultant.ru/document/cons_doc_LAW_51040/ — 214-ФЗ, проектная декларация
+- https://www.domrf.ru/ — проектные декларации, перечень объектов соц. инфраструктуры
+- https://www.consultant.ru/document/cons_doc_LAW_51040/ — 214-ФЗ, проектная декларация, изменения
 - https://t.me/klyshin_A — checked, not used
 - {{SITE_BASE}}/blog/
 - https://t.me/Tyumen_Rieltor
@@ -92,4 +74,4 @@
 Write complete Scout handoff markdown per SKILL.md with all fields:
 wordstat_preflight, top_energy_mirror, newbuild_mechanism, why_newbuild_not_secondary, klyshin_hook, anti_repeat_preflight, dzen_casus_shape PASS (event/risk/time/finale), comment_magnet_angle, wordstat_rework, wordstat P0 with mcp_kv + regions 55,11176,compare225, story_dup_check PASS + cluster_id, h1_fingerprint_check, formula_spam_check, anti_dupe_hard: PASS.
 
-Lock topic_id B28, title, slug, article_dir, signal_urls, research angles for Research role.
+Lock topic_id B33, title, slug, article_dir, signal_urls, research angles for Research role.
