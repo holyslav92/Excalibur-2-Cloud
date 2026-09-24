@@ -1,0 +1,17 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-24",
+  "topic_id": "B33",
+  "article_dir": "memory/blog/articles/B33-v-tyumeni-v-broni-novostrojki-prodali-kvartiru-na-14-m-etazhe-v-proektnoj-deklar",
+  "slug": "v-tyumeni-v-broni-novostrojki-prodali-kvartiru-na-14-m-etazhe-v-proektnoj-deklar",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "cover_budget_exhausted": true,
+  "errors": []
+}
