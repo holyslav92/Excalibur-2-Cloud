@@ -1,0 +1,240 @@
+{
+  "topic_id": "B33",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Банк снял ипотеку за четыре дня",
+  "cover_hook_highlight": "ипотеку",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "За четыре дня до ДДУ банк снял ипотеку с последнего этажа в тюменской новостройке — иллюстрация к кейсу о брони.",
+      "scene_hint": "Шоурум: ветровка, бронь, телефон.",
+      "meme_caption_ru": "",
+      "sticky": "Последний этаж сняли",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Последний этаж в новостройке — и переписка «ипотека на любой этаж»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Фасад новостройки, верхний этаж, небо, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу о последнем этаже и переписке «ипотека на любой этаж» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "4 дня до ДДУ",
+        "Последний этаж",
+        "Бронь оплачена",
+        "Эскроу не открыли"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Последний этаж в новостройке — и переписка «ипотека на любой этаж»",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: чат «любой этаж» vs отзыв перед ДДУ.",
+      "alt": "сравнительная таблица: обещание «любой этаж» в чате продаж и отзыв предодобрения перед ДДУ в новостройке Тюмени — иллюстрация к разбору сделки.",
+      "labels": [
+        "Бронь 40–90 тысяч",
+        "Этаж ниже",
+        "Новый платёж",
+        "Ответ банка"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Бронь оплачена, предварительное одобрение легло в бюджет семьи",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Чат продаж на смартфоне, лист брони, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу о брони и предварительном одобрении в новостройке Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "ДДУ не подписали",
+        "Ипотека снята",
+        "Обещание в переписке",
+        "Объект не одобрен"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За четыре дня до ДДУ банк привязал объект — и одобрение сняли",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол застройщика: папка ДДУ, карточка брони, планшет, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу о привязке объекта и снятии одобрения за четыре дня до ДДУ в Тюмени — иллюстрация к кейсу.",
+      "labels": [
+        "Последний этаж",
+        "Бронь оплачена",
+        "Эскроу не открыли",
+        "4 дня до ДДУ"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Менеджер предложил этаж ниже: другая планировка и новый платёж",
+      "visual_type": "process_flow",
+      "scene_hint": "Таймлайн: бронь последнего этажа → чат → за 4 дня до ДДУ → отзыв; success_kid угол.",
+      "alt": "график сроков: от брони последнего этажа до отзыва предодобрения за четыре дня до ДДУ в новостройке Тюмени — иллюстрация к разбору сделки.",
+      "labels": [
+        "Одобрение заёмщика",
+        "Объект не одобрен",
+        "Этаж ниже",
+        "Новая планировка",
+        "Новый платёж"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "ДДУ не подписали, эскроу не открыли — спор по плате за бронь",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Схема: чат → бронь → предодобрение → отзыв → ДДУ не подписан; стрелки, без людей.",
+      "alt": "нумерованный процесс по новостройке в Тюмени: чат продаж, бронь, предодобрение, отзыв перед ДДУ — иллюстрация к разбору сделки.",
+      "labels": [
+        "Письменный ответ банка",
+        "ДДУ не подписали",
+        "Бронь 40–90 тысяч",
+        "Деньги удержали"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить до брони и ДДУ, если смотрите верхние этажи — таблица",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Чек-лист на бумаге: бронь, чат, срок до ДДУ, эскроу; золотая скрепка, без людей.",
+      "alt": "схема проверок до брони и ДДУ при выборе верхних этажей в новостройке Тюмени — иллюстрация к разбору сделки.",
+      "labels": [
+        "Ипотеку сняли",
+        "За 4 дня",
+        "Последний этаж",
+        "Эскроу не открыли"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "ипотека от застройщика тюмень",
+    "купить новостройку в тюмени"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "Портрет справа, хук слева, телефон и мемы с отступом",
+    "location": "шоурум новостройки в Тюмени у окна с видом на светлый фасад нового ЖК",
+    "meme": "woman_yelling_cat и surprised_pikachu, два маленьких угловых стикера",
+    "props": [
+      "смартфон с нейтральным экраном банковского статуса",
+      "карточка брони последнего этажа",
+      "папка ДДУ без читаемых реквизитов"
+    ],
+    "stickers": [
+      "woman_yelling_cat",
+      "surprised_pikachu"
+    ],
+    "joke": "Продажи обещали любой этаж, а банк словно вычеркнул именно последний перед самой сделкой.",
+    "outfit": "молочно-синяя лёгкая ветровка поверх белой футболки, без пиджака",
+    "emotion": "ошеломлённое недоверие",
+    "pose_framing": "поясной три четверти справа к телефону",
+    "action": "сверяет бронь последнего этажа с отзывом на телефоне"
+  }
+}
