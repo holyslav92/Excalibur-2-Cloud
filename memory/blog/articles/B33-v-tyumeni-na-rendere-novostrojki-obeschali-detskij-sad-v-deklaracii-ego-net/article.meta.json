@@ -1,6 +1,6 @@
 {
-  "title": "В Тюмени на рендере новостройки обещали детсад — в декларации его нет",
-  "h1": "В Тюмени на рендере новостройки обещали детсад — в декларации его нет",
+  "title": "В Тюмени за 5 дней до ДДУ обещали детсад на рендере — в декларации его нет",
+  "h1": "В Тюмени за 5 дней до ДДУ обещали детсад на рендере — в декларации его нет",
   "slug": "v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net",
   "topic_id": "B33",
   "author_id": "svyatoslav-shakin",
@@ -20,6 +20,12 @@
     "side_stickers": "skip"
   },
   "date": "2026-09-24",
+  "wp_category_slugs": [
+    "pokupka-kvartiry",
+    "dokumenty-i-oformlenie",
+    "proverka-pered-pokupkoj"
+  ],
   "pipeline_canon": "human-first-v2",
-  "editorial_swarm": false
+  "editorial_swarm": false,
+  "wp_post_id": 10900
 }

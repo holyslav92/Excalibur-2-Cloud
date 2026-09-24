@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B33",
+  "slug": "v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net",
+  "candidates_count": 29,
+  "outbound_found": [
+    {
+      "slug": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali",
+      "title": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali"
+    },
+    {
+      "slug": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst",
+      "title": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst"
+    },
+    {
+      "slug": "pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do",
+      "title": "pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

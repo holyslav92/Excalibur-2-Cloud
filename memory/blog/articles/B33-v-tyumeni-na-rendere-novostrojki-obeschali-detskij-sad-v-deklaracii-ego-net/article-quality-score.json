@@ -1,17 +1,15 @@
 {
-  "status": "FAIL",
-  "all_pass": false,
+  "status": "PASS",
+  "all_pass": true,
   "gate": "article-quality-score",
   "contract": "shared/article-quality-score-lock.md",
   "article_dir": "memory/blog/articles/B33-v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net",
-  "sol_rewrite_applied": false,
-  "h1": "В Тюмени на рендере новостройки обещали детсад — в декларации его нет",
+  "sol_rewrite_applied": true,
+  "h1": "В Тюмени за 5 дней до ДДУ обещали детсад на рендере — в декларации его нет",
   "sections": {
     "h1": {
-      "pass": false,
-      "reasons": [
-        "h1: no number or deadline in H1"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "lead": {
       "pass": true,
@@ -22,10 +20,8 @@
       "reasons": []
     },
     "finale": {
-      "pass": false,
-      "reasons": [
-        "finale-third-retell: middle scene repeated in closing: «дду оставалось пять дней»"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "length": {
       "pass": true,
@@ -36,12 +32,9 @@
       "reasons": []
     }
   },
-  "errors": [
-    "h1: no number or deadline in H1",
-    "finale-third-retell: middle scene repeated in closing: «дду оставалось пять дней»"
-  ],
+  "errors": [],
   "metrics": {
-    "word_count": 1527,
+    "word_count": 1520,
     "word_target": "1400-1600",
     "word_hard_max": 1750,
     "dzen_reading_minutes_est": 8,

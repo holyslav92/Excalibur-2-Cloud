@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-24
+
+- **topic_id:** B33
+- **slug:** v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net
+- **post_id:** 10900
+- **permalink:** /blog/proverka-pered-pokupkoj/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net/
+- **featured_image:** 10901
+- **inline_images:** 10902–10908 (7)
+- **wp_category_slugs:** pokupka-kvartiry, dokumenty-i-oformlenie, proverka-pered-pokupkoj (category_ids=36,54,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** pre-publish fix: dead www.dom.rf hrefs → plain «наш.дом.рф»; image alt builder --apply; SFTP root fallback to `.`
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
