@@ -93,6 +93,21 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-24",
+      "topic_id": "B33",
+      "slug": "",
+      "motifs": {
+        "composition": "рендер и декларация в руках, герой справа",
+        "location": "двор офиса продаж новостройки тюмень",
+        "meme": "james_doakes polite_cat стикеры",
+        "sticker_set": "james_doakes polite_cat",
+        "outfit": "светлая бежевая ветровка",
+        "emotion": "недоверие",
+        "pose_framing": "рост справа",
+        "action": "сверяет рендер с разделом 22"
+      }
     }
   ]
 }
