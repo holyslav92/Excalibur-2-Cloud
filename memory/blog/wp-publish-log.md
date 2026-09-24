@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-24
+
+- **topic_id:** B33
+- **slug:** za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh
+- **post_id:** 10926
+- **permalink:** /blog/ipoteka/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh/
+- **featured_image:** 10927
+- **inline_images:** 10928–10934 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry, proverka-pered-pokupkoj (category_ids=32,36,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
