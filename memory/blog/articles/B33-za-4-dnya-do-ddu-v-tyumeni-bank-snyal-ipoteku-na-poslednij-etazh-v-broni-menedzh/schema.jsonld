@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh/#blogposting",
+      "url": "{{SITE_BASE}}/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh/",
+      "headline": "В новостройке Тюмени обещали «любой этаж» — банк снял ипотеку с последнего за 4 дня до ДДУ",
+      "description": "За четыре дня до ДДУ банк снял ипотеку с квартиры на последнем этаже в новостройке Тюмени: в брони писали «любой этаж», но одобрение заёмщика не равно одобрению конкретного лота.",
+      "datePublished": "2026-09-24",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh/"
+      }
+    }
+  ]
+}

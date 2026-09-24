@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-24",
+  "topic_id": "B33",
+  "article_dir": "memory/blog/articles/B33-za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh",
+  "slug": "za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": []
+}

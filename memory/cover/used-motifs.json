@@ -93,6 +93,23 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-24",
+      "topic_id": "B33",
+      "slug": "",
+      "motifs": {
+        "composition": "портрет справа хук слева телефон и мемы с отступом",
+        "location": "шоурум новостройки тюмени у окна с видом на фасад жк",
+        "meme": "woman_yelling_cat surprised_pikachu corner stickers",
+        "prop_set": "смартфон карточка брони папка дду",
+        "sticker_set": "woman_yelling_cat surprised_pikachu",
+        "joke": "продажи обещали любой этаж банк вычеркнул последний",
+        "outfit": "молочно-синяя ветровка белая футболка",
+        "emotion": "ошеломлённое недоверие",
+        "pose_framing": "поясной три четверти справа к телефону",
+        "action": "сверяет бронь последнего этажа с отзывом на телефоне"
+      }
     }
   ]
 }

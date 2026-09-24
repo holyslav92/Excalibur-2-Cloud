@@ -3,7 +3,7 @@
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
 ## INC-20260821-0615-content-learner-metrika-credentials
-status: open
+status: needs-human
 run_date: 2026-08-21
 role: excalibur-blog-content-learner
 topic_id: B06
@@ -23,10 +23,11 @@ category: env
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
 - **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9749 ingest skipped; B23 lesson recorded without behavioral signals (newbuild_apartments_instead_flat_ddu_tyumen cluster).
+- **2026-09-24 B33 content-learner (expected):** same METRIKA CREDENTIALS BLOCKER; post 10926 ingest skipped until secrets set; B33 publish gates PASS (cover-text JSON retry 1, OCR escape, interlink inbound 3).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368) и B23 (post 9749) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368), B23 (post 9749) и B33 (post 10926) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -34,6 +35,14 @@ category: env
 
 ### Secrets
 - none recorded (credentials absent)
+
+### Fixer resolution
+status: needs-human
+reason:
+- Cloud Secrets / env only — no repo change supplies Yandex Metrika OAuth or counter id.
+needed_decision_or_secret:
+- `YANDEX_METRIKA_OAUTH_TOKEN`, `YANDEX_METRIKA_COUNTER_ID` in Cloud Secrets; then backfill ingest for posts listed above (incl. B33 post 10926).
+fixer_note: 2026-09-24 B33 fixer — publish path OK; incident stays human until secrets set.
 
 ## INC-20260821-0614-quality-bar-wordstat-pil-b06
 status: fixed

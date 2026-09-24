@@ -1,0 +1,28 @@
+{
+  "slug": "za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh",
+  "topic_id": "B33",
+  "post_id": 10926,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1080605,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10926 slug=za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh\nOK categories=32,36,34\nOK yoast_social_image=1\nOK featured_image=10927\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10928 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh-inline-01.png\nOK inline_alt=10928\nOK inline_description=10928\nOK inline_image_upload=10929 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh-inline-02.png\nOK inline_alt=10929\nOK inline_description=10929\nOK inline_image_upload=10930 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh-inline-03.png\nOK inline_alt=10930\nOK inline_description=10930\nOK inline_image_upload=10931 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh-inline-04.png\nOK inline_alt=10931\nOK inline_description=10931\nOK inline_image_upload=10932 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh-inline-05.png\nOK inline_alt=10932\nOK inline_description=10932\nOK inline_image_upload=10933 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh-inline-06.png\nOK inline_alt=10933\nOK inline_description=10933\nOK inline_image_upload=10934 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh-inline-07.png\nOK inline_alt=10934\nOK inline_description=10934\npermalink={{SITE_BASE}}/blog/ipoteka/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/za-4-dnya-do-ddu-v-tyumeni-bank-snyal-ipoteku-na-poslednij-etazh-v-broni-menedzh/",
+    "errors": []
+  }
+}
