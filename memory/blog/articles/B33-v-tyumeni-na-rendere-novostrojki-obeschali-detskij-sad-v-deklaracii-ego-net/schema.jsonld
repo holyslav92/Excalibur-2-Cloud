@@ -25,7 +25,11 @@
     },
     {
       "@type": "BlogPosting",
-      "@id": "{{SITE_BASE}}/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net/#blogposting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net/#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net/"
+      },
       "url": "{{SITE_BASE}}/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net/",
       "headline": "В Тюмени на рендере новостройки обещали детсад — в декларации его нет",
       "description": "На картинке обещали сад, в ЕИСЖС его не нашли. Семья в Тюмени уже внесла 150 тысяч за бронь — и остановилась за пять дней до ДДУ. Что оказалось важнее красивого рендера?",
@@ -36,10 +40,6 @@
       },
       "publisher": {
         "@id": "{{SITE_BASE}}/#organization"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{SITE_BASE}}/v-tyumeni-na-rendere-novostrojki-obeschali-detskij-sad-v-deklaracii-ego-net/"
       }
     }
   ]
