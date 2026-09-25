@@ -93,6 +93,21 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-25",
+      "topic_id": "B33",
+      "slug": "",
+      "motifs": {
+        "composition": "ростовой 3/4 кадр справа",
+        "location": "галерея продаж новостройки тюмень",
+        "meme": "blinking_white_guy polite_cat",
+        "sticker_set": "corners ≤15%",
+        "outfit": "бежевая overshirt",
+        "emotion": "недоумение отказ",
+        "pose_framing": "стоя 3/4 справа",
+        "action": "декларация жест стоп"
+      }
     }
   ]
 }
