@@ -1,0 +1,28 @@
+{
+  "slug": "novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu",
+  "topic_id": "B33",
+  "post_id": 10965,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1057858,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10965 slug=novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu\nOK categories=32,36,58\nOK yoast_social_image=1\nOK featured_image=10966\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10967 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu-inline-01.png\nOK inline_alt=10967\nOK inline_description=10967\nOK inline_image_upload=10968 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu-inline-02.png\nOK inline_alt=10968\nOK inline_description=10968\nOK inline_image_upload=10969 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu-inline-03.png\nOK inline_alt=10969\nOK inline_description=10969\nOK inline_image_upload=10970 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu-inline-04.png\nOK inline_alt=10970\nOK inline_description=10970\nOK inline_image_upload=10971 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu-inline-05.png\nOK inline_alt=10971\nOK inline_description=10971\nOK inline_image_upload=10972 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu-inline-06.png\nOK inline_alt=10972\nOK inline_description=10972\nOK inline_image_upload=10973 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu-inline-07.png\nOK inline_alt=10973\nOK inline_description=10973\npermalink={{SITE_BASE}}/blog/ipoteka/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu/",
+    "errors": []
+  }
+}

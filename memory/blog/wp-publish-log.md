@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-25
+
+- **topic_id:** B33
+- **slug:** novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu
+- **post_id:** 10965
+- **permalink:** /blog/ipoteka/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu/
+- **featured_image:** 10966
+- **inline_images:** 10967–10973 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry, riski-sdelki (category_ids=32,36,58)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
