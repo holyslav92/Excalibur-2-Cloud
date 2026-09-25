@@ -1,0 +1,251 @@
+{
+  "topic_id": "B33",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Двенадцать соток исчезли в кадастре",
+  "cover_hook_highlight": "исчезли",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Дом под Тюменью обещали на 12 сотках, но в кадастре 8 — ДДУ остановили: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Терраса КП: стоп у макета 12/8; doakes+long_cat.",
+      "meme_caption_ru": "",
+      "sticky": "До ДДU",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошарашенное недоверие, жест стоп",
+      "meme_picks": [
+        "james_doakes",
+        "long_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "За четыре дня до ДДУ: на кухне открыли выписку ЕГРН",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Офис продаж: макет лота 12 соток, бронь 250k, без лиц; success_kid угол.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За четыре дня до ДДУ: на кухне открыли выписку…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Коттеджный посёлок",
+        "План лота двенадцать соток",
+        "Бронь двести пятьдесят тысяч",
+        "Дом с участком"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "success_kid"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "За четыре дня до ДДУ: на кухне открыли выписку ЕГРН",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Таблица: бронь 12 соток vs ЕГРН 8; минус 4 сотки, ипотека на паузе; без мема.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Четыре дня до ДДУ, Выписка ЕГРН вечером, Восемь соток в строке — иллюстрация к разбору…",
+      "labels": [
+        "Четыре дня до ДДУ",
+        "Выписка ЕГРН вечером",
+        "Восемь соток в строке",
+        "Минус четыреста метров"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Двенадцать соток на плане — так выглядел участок в брони",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Кухня вечером: выписка ЕГРН + ноутбук со схемой 12/8 соток; без лиц и мема.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Двенадцать соток на плане — так выглядел участо…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Двенадцать в брони",
+        "Восемь в кадастре",
+        "Кадастровый номер",
+        "Раздел двенадцать три",
+        "Сверка приложений"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "В кадастре восемь соток — четыре сотни квадратов «исчезли» с бумаги",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: кадастровая схема, межевой план, рулетка; расхождение площади; без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «В кадастре восемь соток — четыре сотни квадрато…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Погрешность межевания",
+        "Цену не меняли",
+        "Межевой план",
+        "Схема границ",
+        "Эскроу не открывали"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Это погрешность межевания» — подписание поставили на паузу",
+      "visual_type": "comparison_table",
+      "scene_hint": "Схема: бронь 250k → запрос → пауза до ДДU; pepe_frog угол.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Бронь двести пятьдесят, Условия возврата, Письменно застройщику — иллюстрация к…",
+      "labels": [
+        "Бронь двести пятьдесят",
+        "Условия возврата",
+        "Письменно застройщику",
+        "До перевода денег",
+        "Пауза сделки"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "pepe_frog"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "ДДУ так и не подписали: цену «дом с землёй» не согласовали",
+      "visual_type": "process_flow",
+      "scene_hint": "Flow: письмо → цена дом+земля → банк ждёт → без ДДU/эскроу; без мема.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: ДДУ не подписали, Письмо застройщику, Банк ждёт объект — иллюстрация к разбору…",
+      "labels": [
+        "ДДУ не подписали",
+        "Письмо застройщику",
+        "Банк ждёт объект",
+        "Дом с землёй",
+        "До визита в офис"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "До ручки на договоре: бронь, кадастр и раздел 12.3 декларации",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Timeline: бронь → кадастр → §12.3 → подпись; столбики 12 vs 8; pikachu угол.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Раздел двенадцать три, ЕИСЖС декларация, Не общий массив — иллюстрация к разбору сделки.",
+      "labels": [
+        "Раздел двенадцать три",
+        "ЕИСЖС декларация",
+        "Не общий массив",
+        "Сверка до подписи",
+        "Четыре сотки разницы"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "surprised_pikachu"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить новостройку в тюмени",
+    "купить дом в тюмени от застройщика",
+    "дома с участком от застройщика тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "Средний план в три четверти: герой стоит справа от деревянной модели участка, одной рукой удерживает прозрачную папку с планом, другой показывает на две разные отметки площади; слева оставлена чистая светлая зона под заголовок, снизу отдельная зона под телефон",
+    "location": "Светлая открытая терраса офиса продаж коттеджного посёлка под Тюменью, рядом фасад готового коттеджа и деревянная маquette земельного участка",
+    "meme": "james_doakes как маленький стикер с реакцией подозрительного взгляда на несоответствие документов; long_cat как небольшой вытянутый кот в углу рядом с макетом участка",
+    "prop_set": "Прозрачная папка с планом лота, рулетка, деревянная модель участка с разметками 12 и 8 соток, планшет с нейтральной схемой границ, табличка без поисковых фраз",
+    "sticker_set": "james_doakes и long_cat, оба небольшие угловые стикеры, не перекрывают лицо, заголовок и телефон",
+    "joke": "Герой выглядит так, будто четыре сотки не просто исчезли из кадастра, а сбежали с макета участка; long_cat визуально растянулся вдоль слишком короткой границы",
+    "outfit": "Светлая лимонно-жёлтая overshirt-куртка поверх белой футболки, графитовые брюки, без чёрного пиджака",
+    "emotion": "Ошарашенное недоверие и внезапная тревога перед подписанием ДДУ",
+    "pose_framing": "Средний план, герой справа, корпус развёрнут к макету, лицо направлено к зрителю; живая жестовая поза с поднятой ладонью «стоп», не бюст и не боковой взгляд",
+    "action": "Герой сравнивает рулеткой две границы деревянного макета и останавливает подписание, показывая пальцем на разницу между 12 и 8 сотками"
+  },
+  "cover_emotion": "ошарашенное недоверие"
+}

@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-25
+
+- **topic_id:** B33
+- **slug:** pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu
+- **post_id:** 10978
+- **permalink:** /blog/vtorichka-i-riski/pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu/
+- **featured_image:** 10979
+- **inline_images:** 10980–10986 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
