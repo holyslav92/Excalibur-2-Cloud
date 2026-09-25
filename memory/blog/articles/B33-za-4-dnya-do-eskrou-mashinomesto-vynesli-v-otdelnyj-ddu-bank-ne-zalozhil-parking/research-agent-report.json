@@ -1,0 +1,62 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-25",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://rg.ru/2026/09/18/reg-urfo/bolshe-vsego-eskrou-schetov-raskryli-v-tiumenskoj-oblasti-v-autsajderah-iamal.html",
+        "type": "regional_news",
+        "note": "РГ 18.09.2026 — эскроу Тюменская область; прямой fetch CAPTCHA, SERP + syndication 103news"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта, доступ 2026-09-25"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру тюмень от застройщика в новостройке",
+    "p0_volume": 310,
+    "support_phrases": [
+      {"phrase": "квартира в тюмени купить новостройки", "volume": 625, "region": "55+11176"}
+    ],
+    "rework_from": "«машиноместо дду» weak partial → P0 newbuild purchase 310 + anchor 625",
+    "partial": ["машиноместо дду"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_parking_separate_ddu_mortgage_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B21 кладовка отдельно", "B32 чужое юрлицо эскроу", "B27 земля аренда"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 1,
+    "entities_checked": ["consultant_214fz"],
+    "errors": [],
+    "note": "214-ФЗ ст. 4, 15.4–15.5; банковские тарифы не заявлялись"
+  },
+  "key_facts_count": 14,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility",
+    "note": "utility synthesis stamp 2026-09-25; notes assembled with live fetch + handoff"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
