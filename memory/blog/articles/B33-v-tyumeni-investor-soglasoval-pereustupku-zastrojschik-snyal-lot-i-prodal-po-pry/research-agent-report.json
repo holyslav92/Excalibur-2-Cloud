@@ -1,0 +1,66 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-25",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/24/76656999/",
+        "type": "regional_news",
+        "note": "72.ru 24.09.2026 — тюменский realty-сигнал недели"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта 24–25.09.2026 — новостройки и риски застройщиков"
+      },
+      {
+        "url": "https://smartagent.ru/stati/novostrojki/pereustupka-prav-po-ddu-rieltoru-2026",
+        "type": "industry_article",
+        "note": "Разбор переуступки ДДУ 04.09.2026"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 897,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени от застройщика", "volume": 427, "region": "55+11176"},
+      {"phrase": "новостройки в тюмени купить в ипотеку", "volume": 78, "region": "55+11176"},
+      {"phrase": "переуступка тюмень", "volume": 8, "region": "55+11176"},
+      {"phrase": "переуступка новостройки", "volume": 2561, "region": "225"}
+    ],
+    "rework_from": "переуступка тюмень weak → P0 купить новостройку в тюмени + mechanism переуступка"
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_developer_pulled_assignment_sold_direct_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B30 assignment resale ban 3y", "B31 insurance", "B32 escrow entity"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["consultant_214fz"],
+    "errors": []
+  },
+  "derouter": {
+    "status": "PASS",
+    "attempts": 2,
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
