@@ -23,6 +23,7 @@ category: env
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
 - **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9749 ingest skipped; B23 lesson recorded without behavioral signals (newbuild_apartments_instead_flat_ddu_tyumen cluster).
+- **2026-09-25 B33 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 10939 ingest skipped; B33 lesson recorded without behavioral signals (newbuild_developer_pulled_assignment_sold_direct_tyumen cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.

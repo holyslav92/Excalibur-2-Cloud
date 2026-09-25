@@ -1,0 +1,9 @@
+{
+  "topic_id": "B33",
+  "description": "Святослав Шакин, Тюмень: 11 дней ждали банк — за это время лот сняли, а 150 тысяч удержали. Как покупатель остался без переуступки и без этих денег?",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

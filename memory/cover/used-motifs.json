@@ -93,6 +93,21 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-25",
+      "topic_id": "B33",
+      "slug": "",
+      "motifs": {
+        "composition": "трёхчетвертной поясной кадр справа в светлом шоуруме",
+        "location": "шоурум продаж новой тюменской жилой башни",
+        "meme": "roll_safe + smudge_cat",
+        "sticker_set": "roll_safe smudge_cat",
+        "outfit": "песочная льняная рубашка джинсы",
+        "emotion": "нервная усмешка",
+        "pose_framing": "трёхчетвертной справа",
+        "action": "держит отказ указывает на уведомление"
+      }
     }
   ]
 }
