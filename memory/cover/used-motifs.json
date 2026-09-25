@@ -93,6 +93,23 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-25",
+      "topic_id": "B33",
+      "slug": "",
+      "motifs": {
+        "composition": "герой справа у макета участка 12 vs 8",
+        "location": "терраса офиса продаж кп под тюменью",
+        "meme": "james_doakes long_cat",
+        "prop_set": "рулетка папка макет участка",
+        "sticker_set": "james_doakes long_cat corners",
+        "joke": "4 сotki сбежали с макета",
+        "outfit": "лимонная overshirt белая футболка",
+        "emotion": "ошарашенное недоверие стоп",
+        "pose_framing": "средний план справа прямой взгляд",
+        "action": "сверяет границы макета рулеткой"
+      }
     }
   ]
 }
