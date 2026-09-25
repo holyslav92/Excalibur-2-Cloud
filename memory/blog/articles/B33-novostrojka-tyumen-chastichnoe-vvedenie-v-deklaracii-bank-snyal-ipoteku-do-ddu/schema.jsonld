@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ],
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu/#blogposting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu/"
+      },
+      "url": "{{SITE_BASE}}/novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu/",
+      "headline": "За 4 дня до ДДУ частичный ввод секции сорвал ипотеку в Тюмени",
+      "description": "Соседняя секция сдана — а вашей ипотеке от этого не легче. Святослав Шакин разбирает случай в Тюмени: семье обещали скорые ключи, но после проверки банком пришлось выбирать другую квартиру.",
+      "datePublished": "2026-09-25",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}
