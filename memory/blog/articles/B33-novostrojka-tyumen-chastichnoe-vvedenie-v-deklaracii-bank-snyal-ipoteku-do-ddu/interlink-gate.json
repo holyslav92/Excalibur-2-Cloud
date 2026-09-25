@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B33",
+  "slug": "novostrojka-tyumen-chastichnoe-vvedenie-v-deklaracii-bank-snyal-ipoteku-do-ddu",
+  "candidates_count": 29,
+  "outbound_found": [
+    {
+      "slug": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi",
+      "title": "v-tyumeni-nakanune-ddu-bank-podnyal-stavku-ipoteki-platezh-vyros-sdelku-ostanovi"
+    },
+    {
+      "slug": "v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh",
+      "title": "v-tyumeni-novostrojku-sdali-bez-razresheniya-na-vvod-bank-ne-dal-vtoroj-transh"
+    },
+    {
+      "slug": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst",
+      "title": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

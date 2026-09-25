@@ -20,6 +20,11 @@
     "side_stickers": "skip"
   },
   "date": "2026-09-25",
+  "wp_category_slugs": [
+    "ipoteka",
+    "pokupka-kvartiry",
+    "riski-sdelki"
+  ],
   "pipeline_canon": "human-first-v2",
   "editorial_swarm": false
 }

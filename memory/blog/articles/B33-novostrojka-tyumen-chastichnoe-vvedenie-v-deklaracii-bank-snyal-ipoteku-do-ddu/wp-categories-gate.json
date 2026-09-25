@@ -1,0 +1,14 @@
+{
+  "category_ids": [
+    32,
+    36,
+    58
+  ],
+  "category_slugs": [
+    "ipoteka",
+    "pokupka-kvartiry",
+    "riski-sdelki"
+  ],
+  "errors": [],
+  "status": "PASS"
+}
