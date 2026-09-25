@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "topic_id": "B33",
+  "slug": "za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking",
+  "candidates_count": 29,
+  "outbound_found": [
+    {
+      "slug": "v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo",
+      "title": "v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo"
+    },
+    {
+      "slug": "za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t",
+      "title": "za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

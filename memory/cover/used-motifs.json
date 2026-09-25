@@ -93,6 +93,22 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-25",
+      "topic_id": "B33",
+      "slug": "",
+      "motifs": {
+        "composition": "поясной кадр справа два дду",
+        "location": "офис у паркинга тюменской новостройки",
+        "meme": "stonks polite_cat",
+        "sticker_set": "stonks polite_cat",
+        "joke": "подарок стал дду вне ипотеки",
+        "outfit": "песочная overshirt",
+        "emotion": "недоверчивое изумление",
+        "pose_framing": "поясной справа",
+        "action": "сверяет два дду"
+      }
     }
   ]
 }
