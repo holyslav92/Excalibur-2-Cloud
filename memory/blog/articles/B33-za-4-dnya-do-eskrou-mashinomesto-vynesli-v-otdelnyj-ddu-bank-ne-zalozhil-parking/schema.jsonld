@@ -1,0 +1,24 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{SITE_BASE}}/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking/#article",
+  "url": "{{SITE_BASE}}/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking/",
+  "headline": "В тюменской новостройке паркинг вынесли в отдельный ДДУ за 4 дня до эскроу — банк не заложил",
+  "description": "«Подарок» к квартире — почти 900 тысяч из своего кармана: Святослав Шакин разбирает казус из Тюмени. Кредит на квартиру есть, на паркинг — нет.",
+  "datePublished": "2026-09-25",
+  "author": {
+    "@type": "Person",
+    "@id": "{{SITE_BASE}}/#/schema/person/svyatoslav-shakin",
+    "name": "Святослав Шакин",
+    "sameAs": []
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{SITE_BASE}}/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "{{SITE_BASE}}/#organization",
+    "name": "Excalibur"
+  }
+}
