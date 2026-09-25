@@ -1,0 +1,77 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-25",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://t.me/Tyumen_Rieltor/680",
+        "type": "community",
+        "note": "Telegram tenant channel post 2026-09-23 — live newbuild signal week of research"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/25/76655872/",
+        "type": "regional_news",
+        "note": "72.ru realty desk 25.09.2026 — regional real estate news same day as research"
+      },
+      {
+        "url": "https://im.cdnstroy.ru/mmx8yha56zdqi_s0ok7b.pdf",
+        "type": "official_eisjhs",
+        "note": "EISZhS declaration № 72-001419 dated 04.08.2026 — section 12.3 land cadastre/area; PDF live fetch 2026-09-25"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 892,
+    "p0_volume_ru225": 1928,
+    "compare225_phrase": "купить новостройку в тюмени",
+    "compare225_volume": 1928,
+    "support_phrases": [
+      {"phrase": "купить дом в тюмени от застройщика", "volume": 118, "region": "55+11176"},
+      {"phrase": "дома с участком от застройщика тюмень", "volume": 24, "region": "55+11176"},
+      {"phrase": "коттеджные поселки тюмень", "volume": 1393, "region": "55+11176"},
+      {"phrase": "выписка егрн", "volume": 4358, "region": "55+11176"},
+      {"phrase": "купить новостройку в тюмени от застройщика", "volume": 422, "region": "55+11176"}
+    ],
+    "rework_from": "«участок коттеджный поселок тюмень» weak → mechanism «дом от застройщика» 118 + spine «купить новостройку в тюмени» 892",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_kp_land_area_mismatch_cadastre_before_ddu_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B27 land lease vs ownership", "B28 gas/declaration dates", "B28 KP gas timeline"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["legal_norms_214fz", "minstroy_form_239", "eisjhs_tyumen_declaration_72-001419", "gosuslugi_egrn_direction"],
+    "errors": [],
+    "note": "214-ФЗ st. 4, 19, 21 + Minstroy 239/пр section 12.3; EISZhS PDF section 12.3.1–12.3.2; no bank tariff claims"
+  },
+  "key_facts_count": 24,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
