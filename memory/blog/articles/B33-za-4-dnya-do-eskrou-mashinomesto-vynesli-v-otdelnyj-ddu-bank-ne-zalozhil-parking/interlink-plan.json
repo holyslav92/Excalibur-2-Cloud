@@ -1,0 +1,95 @@
+{
+  "topic_id": "B33",
+  "slug": "za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking",
+  "title": "В тюменской новостройке паркинг вынесли в отдельный ДДУ за 4 дня до эскроу — банк не заложил",
+  "outbound_required_min": 1,
+  "outbound_found": [
+    {
+      "slug": "v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo",
+      "title": "v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo",
+      "permalink": "/blog/vtorichka-i-riski/v-tyumeni-oplatili-kladovku-po-ddu-na-klyuchah-pomescheniya-ne-bylo/",
+      "topic_id": "B21",
+      "post_id": null,
+      "source": "ledger"
+    },
+    {
+      "slug": "za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t",
+      "title": "za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t",
+      "permalink": "/blog/ipoteka/za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t/",
+      "topic_id": "B31",
+      "post_id": 10707,
+      "source": "ledger"
+    }
+  ],
+  "outbound_missing_suggestions": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "permalink": "/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+      "topic_id": "B02",
+      "post_id": 8720,
+      "source": "ledger"
+    },
+    {
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "title": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "permalink": "/blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/",
+      "topic_id": "B03",
+      "post_id": 8813,
+      "source": "ledger"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "permalink": "/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "topic_id": "B04",
+      "post_id": 8823,
+      "source": "ledger"
+    }
+  ],
+  "inbound_targets": [
+    {
+      "slug": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "title": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "permalink": "/blog/vtorichka-i-riski/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/",
+      "topic_id": "B06",
+      "post_id": 8984,
+      "source": "ledger"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "permalink": "/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "topic_id": "B04",
+      "post_id": 8823,
+      "source": "ledger"
+    },
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "permalink": "/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/",
+      "topic_id": "B09",
+      "post_id": 9063,
+      "source": "ledger"
+    }
+  ],
+  "inbound_updates": [
+    {
+      "post_id": 8984,
+      "marker": "data-excalibur-interlink-from=\"za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking\"><b>Читайте также:</b> <a href=\"{{SITE_BASE}}/blog/vtorichka-i-riski/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking/\">В тюменской новостройке паркинг вынесли в отдельный ДДУ за 4 дня до эскроу — банк не заложил</a></p>"
+    },
+    {
+      "post_id": 8823,
+      "marker": "data-excalibur-interlink-from=\"za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking\"><b>Читайте также:</b> <a href=\"{{SITE_BASE}}/blog/vtorichka-i-riski/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking/\">В тюменской новостройке паркинг вынесли в отдельный ДДУ за 4 дня до эскроу — банк не заложил</a></p>"
+    },
+    {
+      "post_id": 9063,
+      "marker": "data-excalibur-interlink-from=\"za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking\"><b>Читайте также:</b> <a href=\"{{SITE_BASE}}/blog/vtorichka-i-riski/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking/\">В тюменской новостройке паркинг вынесли в отдельный ДДУ за 4 дня до эскроу — банк не заложил</a></p>"
+    }
+  ],
+  "new_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking/",
+  "dry_run": false
+}

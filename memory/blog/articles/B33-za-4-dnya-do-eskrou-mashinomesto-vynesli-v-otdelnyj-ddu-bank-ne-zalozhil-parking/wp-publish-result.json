@@ -1,0 +1,28 @@
+{
+  "slug": "za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking",
+  "topic_id": "B33",
+  "post_id": 10952,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 999719,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10952 slug=za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking\nOK categories=32,36,34\nOK yoast_social_image=1\nOK featured_image=10953\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10954 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking-inline-01.png\nOK inline_alt=10954\nOK inline_description=10954\nOK inline_image_upload=10955 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking-inline-02.png\nOK inline_alt=10955\nOK inline_description=10955\nOK inline_image_upload=10956 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking-inline-05.png\nOK inline_alt=10956\nOK inline_description=10956\nOK inline_image_upload=10957 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking-inline-03.png\nOK inline_alt=10957\nOK inline_description=10957\nOK inline_image_upload=10958 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking-inline-06.png\nOK inline_alt=10958\nOK inline_description=10958\nOK inline_image_upload=10959 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking-inline-07.png\nOK inline_alt=10959\nOK inline_description=10959\nOK inline_image_upload=10960 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking-inline-04.png\nOK inline_alt=10960\nOK inline_description=10960\npermalink={{SITE_BASE}}/blog/ipoteka/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/za-4-dnya-do-eskrou-mashinomesto-vynesli-v-otdelnyj-ddu-bank-ne-zalozhil-parking/",
+    "errors": []
+  }
+}
