@@ -1,0 +1,28 @@
+{
+  "slug": "pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu",
+  "topic_id": "B33",
+  "post_id": 10978,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1001406,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10978 slug=pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=10979\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10980 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu-inline-03.png\nOK inline_alt=10980\nOK inline_description=10980\nOK inline_image_upload=10981 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu-inline-01.png\nOK inline_alt=10981\nOK inline_description=10981\nOK inline_image_upload=10982 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu-inline-02.png\nOK inline_alt=10982\nOK inline_description=10982\nOK inline_image_upload=10983 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu-inline-04.png\nOK inline_alt=10983\nOK inline_description=10983\nOK inline_image_upload=10984 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu-inline-05.png\nOK inline_alt=10984\nOK inline_description=10984\nOK inline_image_upload=10985 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu-inline-06.png\nOK inline_alt=10985\nOK inline_description=10985\nOK inline_image_upload=10986 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu-inline-07.png\nOK inline_alt=10986\nOK inline_description=10986\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/pod-tyumenyu-dom-ot-zastrojschika-v-broni-12-sotok-v-kadastre-8-do-ddu/",
+    "errors": []
+  }
+}
