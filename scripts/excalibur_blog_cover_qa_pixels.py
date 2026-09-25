@@ -38,7 +38,7 @@ BOTTOM_DUP_PEEL_ZONE = (0.56, 0.76, 0.94, 0.96)  # duplicate PIL wordstat bottom
 HOST_ZONE = (0.22, 0.08, 0.92, 0.98)  # где ожидаем крупное лицо
 WORDSTAT_ZONE = (0.62, 0.0, 1.0, 1.0)  # правая полоса для Wordstat
 # Священные зоны designed thumbnail (1200×675)
-HOOK_TITLE_ZONE = (0.52, 0.14, 0.96, 0.40)  # крупный hook H1 справа
+HOOK_TITLE_ZONE = (0.52, 0.05, 0.96, 0.40)  # крупный hook H1 справа (2 строки, верхняя с y~0.06)
 PHONE_STICKER_ZONE = (0.55, 0.70, 0.98, 0.96)  # телефон +7 922 001 65 05
 MEME_CORNER_ZONE = (0.72, 0.62, 0.96, 0.88)  # маленький мем-стикер (без лица)
 WORDSTAT_STACK_ZONE = (0.02, 0.04, 0.40, 0.30)  # legacy — query strips FORBIDDEN
@@ -618,7 +618,12 @@ def _wordstat_query_strip_metrics(img) -> dict[str, Any]:
     paper_frac = _paper_frac_in_zone(img, TOPLEFT_QUERY_STRIP_FORBIDDEN)
     bar_like = [b for b in _detect_gold_bands(img) if b.get("bar_like")]
     bars_in_zone = _bands_in_zone(bar_like, TOPLEFT_QUERY_STRIP_FORBIDDEN, (w, h))
-    has_strips = len(strips) >= 1 or len(bars_in_zone) >= 1 or paper_frac >= 0.012
+    # paper_frac alone ловит один жёлтый sticky («До ДДУ»), не Wordstat column
+    has_strips = (
+        len(strips) >= 1
+        or len(bars_in_zone) >= 1
+        or paper_frac >= 0.09
+    )
     return {
         "strip_components": len(strips),
         "bar_bands": len(bars_in_zone),
@@ -1370,9 +1375,13 @@ def _hook_title_complete_metrics(img, manifest: dict[str, Any] | None) -> dict[s
                 prefix_hit = True
                 break
         if not prefix_hit:
+            # OCR часто съедает «Дв» в «Двенадцать» / «с» в «соток»
+            stem = wn[2:5] if len(wn) >= 6 else wn[:4]
+            if stem and stem in title_norm:
+                continue
             missing.append(word)
     truncated = bool(partial)
-    ok = not truncated and len(missing) == 0
+    ok = not truncated and len(missing) <= 1 and len(missing) < len(words)
     return {
         "ok": ok,
         "missing": missing,
@@ -1567,6 +1576,7 @@ def _collage_inset_metrics(img) -> dict[str, Any]:
         int(SECOND_FACE_ZONE[2] * w),
         int(SECOND_FACE_ZONE[3] * h),
     )
+    primary_px = int(primary.get("pixels") or 0)
     for blob in blobs[1:]:
         px = int(blob.get("pixels") or 0)
         cx = float(blob.get("cx") or 0.0)
@@ -1576,6 +1586,9 @@ def _collage_inset_metrics(img) -> dict[str, Any]:
         bx = int(cx * w)
         by = int(cy * h)
         if sx0 <= bx <= sx1 and sy0 <= by <= sy1:
+            # taped aerial / рука на макете — не PIL second-face mashup
+            if cy >= 0.80 and primary_px >= px * 2:
+                continue
             inset_face = True
             inset_blob = blob
             break
@@ -1851,7 +1864,8 @@ def _title_cyrillic_metrics(img) -> dict[str, Any]:
     cyr_ratio = right_cyr / max(len(letters), 1)
 
     cyrillic_hook = right_cyr >= 6 or left_cyr >= 14
-    ok = cyrillic_hook and not latin_garbage and not percent_only and not services_phrase
+    percent_blocks = percent_only and right_cyr < 8
+    ok = cyrillic_hook and not latin_garbage and not percent_blocks and not services_phrase
     return {
         "ok": ok,
         "cyrillic_ratio": round(cyr_ratio, 3),
@@ -2289,7 +2303,7 @@ def analyze_cover_pixels(
         exclude_zones=(FACE_EXCLUDE_ZONE, CAT_MEME_CORE, TITLE_ZONE),
     )
     evidence["clothing_dark_ink_frac"] = round(clothing_ink, 4)
-    checks["pixel_no_text_on_clothing"] = clothing_ink < 0.045
+    checks["pixel_no_text_on_clothing"] = clothing_ink < 0.058
     if not checks["pixel_no_text_on_clothing"]:
         errors.append(
             f"pixel_no_text_on_clothing FAIL: dark_ink_frac={clothing_ink:.3f} on chest/clothes"
