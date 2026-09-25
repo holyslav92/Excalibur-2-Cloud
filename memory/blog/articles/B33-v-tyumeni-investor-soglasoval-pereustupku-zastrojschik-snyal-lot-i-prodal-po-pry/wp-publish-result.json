@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry",
+  "topic_id": "B33",
+  "post_id": 10939,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1115857,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10939 slug=v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=10940\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10941 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry-inline-01.png\nOK inline_alt=10941\nOK inline_description=10941\nOK inline_image_upload=10942 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry-inline-02.png\nOK inline_alt=10942\nOK inline_description=10942\nOK inline_image_upload=10943 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry-inline-03.png\nOK inline_alt=10943\nOK inline_description=10943\nOK inline_image_upload=10944 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry-inline-04.png\nOK inline_alt=10944\nOK inline_description=10944\nOK inline_image_upload=10945 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry-inline-05.png\nOK inline_alt=10945\nOK inline_description=10945\nOK inline_image_upload=10946 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry-inline-06.png\nOK inline_alt=10946\nOK inline_description=10946\nOK inline_image_upload=10947 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry-inline-07.png\nOK inline_alt=10947\nOK inline_description=10947\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry/",
+    "errors": []
+  }
+}

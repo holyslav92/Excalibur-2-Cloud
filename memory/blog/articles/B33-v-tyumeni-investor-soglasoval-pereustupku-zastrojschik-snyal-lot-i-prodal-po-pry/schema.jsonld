@@ -1,0 +1,18 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{SITE_BASE}}/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry/#blogposting",
+  "url": "{{SITE_BASE}}/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{SITE_BASE}}/v-tyumeni-investor-soglasoval-pereustupku-zastrojschik-snyal-lot-i-prodal-po-pry/"
+  },
+  "headline": "В Тюмени застройщик сорвал переуступку — и удержал 150 тысяч",
+  "datePublished": "2026-09-25",
+  "author": {
+    "@type": "Person",
+    "name": "Святослав Шакин",
+    "sameAs": []
+  },
+  "inLanguage": "ru-RU"
+}
