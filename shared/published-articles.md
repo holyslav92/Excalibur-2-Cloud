@@ -31,3 +31,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-09-20 | B30 | za-3-dnya-do-ddu-zapret-pereprodazhi-3-goda-v-pereustupke-novostrojki-tyumen | /blog/proverka-pered-pokupkoj/za-3-dnya-do-ddu-zapret-pereprodazhi-3-goda-v-pereustupke-novostrojki-tyumen/ | published |
 | 2026-09-20 | B31 | za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t | /blog/ipoteka/za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t/ | published |
 | 2026-09-20 | B32 | za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil- | /blog/ipoteka/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil/ | published |
+| 2026-09-26 | B33 | v-tyumeni-za-5-dnej-do-ddu-v-novostrojke-pomenyali-planirovku-v-broni-54-kvadrat | /blog/proverka-pered-pokupkoj/v-tyumeni-za-5-dnej-do-ddu-v-novostrojke-pomenyali-planirovku-v-broni-54-kvadrat/ | published |

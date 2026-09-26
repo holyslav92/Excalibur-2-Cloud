@@ -172,8 +172,20 @@
 - **permalink:** /blog/vtorichka-i-riski/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/
 - **featured_image:** 8985
 - **inline_images:** 8986–8992 (7)
-- **wp_category_slugs:** vtorichka-i-riski (category_id=31)
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** no inbound targets with post_id in ledger (outbound 4 siblings OK)
+
+## B33 — 2026-09-26
+
+- **topic_id:** B33
+- **slug:** v-tyumeni-za-5-dnej-do-ddu-v-novostrojke-pomenyali-planirovku-v-broni-54-kvadrat
+- **post_id:** 11004
+- **permalink:** /blog/proverka-pered-pokupkoj/v-tyumeni-za-5-dnej-do-ddu-v-novostrojke-pomenyali-planirovku-v-broni-54-kvadrat/
+- **featured_image:** 11005
+- **inline_images:** 11006–11012 (7)
+- **wp_category_slugs:** proverka-pered-pokupkoj, pokupka-kvartiry (category_ids=34,36)
 - **schema_meta:** ok
 - **live_page_gate:** PASS
 - **llms_deploy:** PASS (llms.txt, llms-full.txt)
-- **interlink:** no inbound targets with post_id in ledger (outbound 4 siblings OK)
+- **interlink:** inbound 3 targets (8984, 8823, 9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
