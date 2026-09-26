@@ -1,0 +1,75 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "BLOCK",
+  "verdict": "BLOCK",
+  "block_reason": "DEROUTER_RESEARCH_BLOCKER",
+  "research_date": "2026-09-26",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/15/76640741/",
+        "type": "media",
+        "note": "Tyumen newbuild market 15.09.2026"
+      },
+      {
+        "url": "https://t.me/s/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Posts 25–26.09.2026, Tyumen newbuild promos"
+      },
+      {
+        "url": "https://upravdommo.ru/assotsiatsiya/v-moskovskoj-oblasti-razrabotany-rekomendatsii-po-ostekleniyu-balkonov-i-lodzhij-v-mkd",
+        "type": "industry",
+        "note": "Glazing guidance 18.09.2026"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4326,
+    "compare225_phrase": "купить новостройку в тюмени",
+    "compare225_volume": 1928,
+    "support_phrases": [
+      {"phrase": "новостройки в тюмени от застройщика", "volume": 630, "region": "55+11176"},
+      {"phrase": "остекление лоджии новостройка", "volume": 2, "region": "55+11176"},
+      {"phrase": "дду новостройка", "volume": 13, "region": "55+11176"},
+      {"phrase": "семейная ипотека новостройка", "volume": 73, "region": "55+11176"}
+    ],
+    "rework_from": "остекление лоджии (2) → spine новостройки тюмень (4326) + DDU loggia mechanism",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_glazed_loggia_promised_cold_balcony_ddu_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["214fz", "minstroy_854"],
+    "errors": [],
+    "note": "No bank tariff numeric claims; mortgage limit reduction described as composite casus only"
+  },
+  "key_facts_count": 28,
+  "derouter": {
+    "status": "BLOCK",
+    "attempts": 2,
+    "last_error": "HTTP 524 origin timeout",
+    "stamp": null,
+    "note": "research-notes.md assembled locally from live research pending Derouter resynth for canon stamp"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_brief": "research-brief.json",
+    "signal_urls": "signal_urls.json",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}
