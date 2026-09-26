@@ -52,6 +52,7 @@
 8. `## voice_angle`
 9. `## surprising_fact`
 10. `## source_table` — Markdown-таблица с колонками `id | title | url | type | published_at | accessed_at | use`. У каждой строки `accessed_at` = `2026-09-26`. Обязательно добавь свежий 72.ru-сигнал, правительственный источник, ЕИСЖС и Wordstat (для Wordstat URL можно `mcp://wordstat_get_top_requests`).
+    - Для строки ЕИСЖС скопируй URL **строго без изменений**: `https://xn--80az8a.xn--d1aqf.xn--p1ai/api/ext/file/70726F6A6465636C2E646F63732E697A643A287227817A3C4420A45F211C8D82BCCD`. Не меняй домен `xn--d1aqf.xn--p1ai`.
 11. `## writer_safe_urls` — только:
     - https://t.me/Tyumen_Rieltor
     - https://max.ru/id561413315447_biz
