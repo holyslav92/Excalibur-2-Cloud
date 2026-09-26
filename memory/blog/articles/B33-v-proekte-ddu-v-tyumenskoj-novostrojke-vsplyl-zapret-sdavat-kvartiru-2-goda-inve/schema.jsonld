@@ -1,0 +1,42 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve/#blogposting",
+      "headline": "Инвестор свернул сделку — запрет аренды всплыл в ДДУ за 3 дня до эскроу",
+      "description": "За три дня до эскроу в проекте ДДУ всплыл запрет сдавать квартиру на два года — инвестор остановил покупку новостройки в Тюмени до подписания.",
+      "datePublished": "2026-09-26",
+      "inLanguage": "ru-RU",
+      "url": "{{SITE_BASE}}/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve/",
+      "mainEntityOfPage": {
+        "@id": "{{SITE_BASE}}/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve/"
+      },
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}
