@@ -1,0 +1,74 @@
+{
+  "agent": "excalibur-blog",
+  "step": "research_start",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-26",
+    "today_ru": "26.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "суббота"
+  },
+  "topic": {
+    "topic_id": "B33",
+    "title": "В новостройке Тюмени за 5 дней до ключей отключили льготный паркинг — в брони обещали полгода бесплатно",
+    "h1": "В новостройке Тюмени за 5 дней до ключей отключили льготный паркинг — в брони обещали полгода бесплатно",
+    "slug": "v-novostrojke-tyumeni-za-5-dnej-do-klyuchej-otklyuchili-lgotnyj-parking-v-broni-",
+    "primary_query": "В новостройке Тюмени за 5 дней до ключей отключили льготный паркинг — в брони обещали полгода бесплатно",
+    "priority": "P0"
+  },
+  "search_queries": [
+    {
+      "id": "primary_fresh",
+      "query": "В новостройке Тюмени за 5 дней до ключей отключили льготный паркинг — в брони обещали полгода бесплатно 2026",
+      "purpose": "актуальный SERP"
+    },
+    {
+      "id": "title_fresh",
+      "query": "В новостройке Тюмени за 5 дней до ключей отключили льготный паркинг — в брони обещали полгода бесплатно 2026",
+      "purpose": "SERP по человеческому title"
+    },
+    {
+      "id": "official_docs",
+      "query": "В новостройке Тюмени за 5 дней до ключей отключили льготный паркинг — в брони обещали полгода бесплатно official docs 2026",
+      "purpose": "официальные docs"
+    },
+    {
+      "id": "github_evidence",
+      "query": "site:github.com В новостройке Тюмени за 5 дней до ключей отключили льготный паркинг — в брони обещали полгода бесплатно 2026",
+      "purpose": "GitHub evidence"
+    },
+    {
+      "id": "community_experience",
+      "query": "В новостройке Тюмени за 5 дней до ключей отключили льготный паркинг — в брони обещали полгода бесплатно forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы"
+    }
+  ],
+  "next_step": "Research reads research-serp.json, does its own thinking and writes research-notes.md",
+  "writer_allowed_sources": [
+    "shared/writer-master-prompt.md",
+    "research-notes.md",
+    "title-brief.json",
+    "published-titles-only.md"
+  ],
+  "sol_allowed_sources": [
+    "shared/SOUL.md",
+    "shared/soul-examples/",
+    "drafts/writer.html",
+    "title-brief.json",
+    "research-notes.md"
+  ],
+  "writer_titles_only": "published-titles-only.md",
+  "forbidden_sources_for_writer": [
+    "memory/blog/articles/*/article.html",
+    "memory/blog/articles/*/drafts",
+    "memory/topics/ (deleted — do not recreate)",
+    "memory/content-lessons.md",
+    "shared/golden-benchmark",
+    "QA reports",
+    "neighbor research-notes as prose exemplars",
+    "old article bodies"
+  ],
+  "published_titles_count": 26
+}
