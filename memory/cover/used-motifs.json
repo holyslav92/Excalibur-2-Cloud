@@ -93,6 +93,21 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-26",
+      "topic_id": "B33",
+      "slug": "",
+      "motifs": {
+        "composition": "вертикальный трёхчетвертной ростовой портрет у светлого макета новостройки",
+        "location": "светлый офис продаж новостройки в тюмени",
+        "meme": "woman_yelling_cat surprised_pikachu",
+        "sticker_set": "woman_yelling_cat surprised_pikachu corners",
+        "outfit": "голубая рубашка песочный жилет",
+        "emotion": "ошеломлённое недоверие",
+        "pose_framing": "трёхчетвертной рост справа",
+        "action": "сравнивает планы 54 и 49.1 м²"
+      }
     }
   ]
 }
