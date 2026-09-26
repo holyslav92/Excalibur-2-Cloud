@@ -1,0 +1,11 @@
+Assembled cover-text inputs — B33
+
+Derouter cover-text role. Output cover-text.json per skill.
+
+H1: В тюменской новостройке остеклённая лоджия стала холодным балконом за 6 дней до ДДУ
+Casus: бронь ~150k, остекление «включено», за 6 дней до ДДУ в приложении холодный неостеклённый балкон, остекление отдельно ~280–320 тыс, банк урезал лимит ~450 тыс, эскроу не открывали.
+Short hook: 5-7 Cyrillic words (B08 style) e.g. «В брони лоджия — в ДДУ балкон»
+Phone: +7 922 001 65 05
+meme_picks from meme-top100 people+cats on-topic (skepticism/WTF), anti-repeat: avoid hide_pain_harold+smudge_cat combo from B30/B26 recent
+P0 wordstat: купить новостройку в тюмени, новостройки тюмень
+inline_labels: facts from article H2s — 6 дней, 150 000 бронь, 280–320 остекление, 450 лимит, коэффициенты 0,5/0,3, эскроу стоп
