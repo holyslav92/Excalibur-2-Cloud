@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-26
+
+- **topic_id:** B33
+- **slug:** v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve
+- **post_id:** 11069
+- **permalink:** /blog/vtorichka-i-riski/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve/
+- **featured_image:** 11070
+- **inline_images:** 11071–11077 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** preflight: interlink hrefs → relative paths (tyumen-rieltor.ru DNS flake); SFTP root fallback to `.`
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29

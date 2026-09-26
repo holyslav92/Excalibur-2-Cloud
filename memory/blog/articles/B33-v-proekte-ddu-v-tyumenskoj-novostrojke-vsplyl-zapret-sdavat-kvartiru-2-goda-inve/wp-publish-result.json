@@ -1,0 +1,28 @@
+{
+  "slug": "v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve",
+  "topic_id": "B33",
+  "post_id": 11069,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 831882,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11069 slug=v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=11070\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11071 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve-inline-01.png\nOK inline_alt=11071\nOK inline_description=11071\nOK inline_image_upload=11072 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve-inline-02.png\nOK inline_alt=11072\nOK inline_description=11072\nOK inline_image_upload=11073 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve-inline-03.png\nOK inline_alt=11073\nOK inline_description=11073\nOK inline_image_upload=11074 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve-inline-04.png\nOK inline_alt=11074\nOK inline_description=11074\nOK inline_image_upload=11075 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve-inline-05.png\nOK inline_alt=11075\nOK inline_description=11075\nOK inline_image_upload=11076 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve-inline-06.png\nOK inline_alt=11076\nOK inline_description=11076\nOK inline_image_upload=11077 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve-inline-07.png\nOK inline_alt=11077\nOK inline_description=11077\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve/",
+    "errors": []
+  }
+}
