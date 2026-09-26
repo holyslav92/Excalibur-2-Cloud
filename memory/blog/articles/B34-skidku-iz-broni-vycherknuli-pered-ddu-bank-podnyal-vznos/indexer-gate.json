@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-26",
+  "topic_id": "B34",
+  "article_dir": "memory/blog/articles/B34-skidku-iz-broni-vycherknuli-pered-ddu-bank-podnyal-vznos",
+  "slug": "skidku-iz-broni-vycherknuli-pered-ddu-bank-podnyal-vznos",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": []
+}
