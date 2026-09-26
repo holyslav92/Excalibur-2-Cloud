@@ -1,0 +1,28 @@
+{
+  "slug": "za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon",
+  "topic_id": "B33",
+  "post_id": 11030,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1023295,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11030 slug=za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon\nOK categories=36,54,34\nOK yoast_social_image=1\nOK featured_image=11031\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11032 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon-inline-03.png\nOK inline_alt=11032\nOK inline_description=11032\nOK inline_image_upload=11033 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon-inline-04.png\nOK inline_alt=11033\nOK inline_description=11033\nOK inline_image_upload=11034 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon-inline-05.png\nOK inline_alt=11034\nOK inline_description=11034\nOK inline_image_upload=11035 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon-inline-06.png\nOK inline_alt=11035\nOK inline_description=11035\nOK inline_image_upload=11036 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon-inline-07.png\nOK inline_alt=11036\nOK inline_description=11036\nOK inline_image_upload=11037 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon-inline-01.png\nOK inline_alt=11037\nOK inline_description=11037\nOK inline_image_upload=11038 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon-inline-02.png\nOK inline_alt=11038\nOK inline_description=11038\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon/",
+    "errors": []
+  }
+}
