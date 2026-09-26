@@ -1,0 +1,95 @@
+{
+  "topic_id": "B33",
+  "slug": "v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve",
+  "title": "Инвестор свернул сделку — запрет аренды всплыл в ДДУ за 3 дня до эскроу",
+  "outbound_required_min": 1,
+  "outbound_found": [
+    {
+      "slug": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst",
+      "title": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst",
+      "permalink": "/blog/proverka-pered-pokupkoj/v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst/",
+      "topic_id": "B27",
+      "post_id": 10590,
+      "source": "ledger"
+    },
+    {
+      "slug": "za-3-dnya-do-ddu-zapret-pereprodazhi-3-goda-v-pereustupke-novostrojki-tyumen",
+      "title": "za-3-dnya-do-ddu-zapret-pereprodazhi-3-goda-v-pereustupke-novostrojki-tyumen",
+      "permalink": "/blog/proverka-pered-pokupkoj/za-3-dnya-do-ddu-zapret-pereprodazhi-3-goda-v-pereustupke-novostrojki-tyumen/",
+      "topic_id": "B30",
+      "post_id": 10694,
+      "source": "ledger"
+    }
+  ],
+  "outbound_missing_suggestions": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "permalink": "/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+      "topic_id": "B02",
+      "post_id": 8720,
+      "source": "ledger"
+    },
+    {
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "title": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "permalink": "/blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/",
+      "topic_id": "B03",
+      "post_id": 8813,
+      "source": "ledger"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "permalink": "/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "topic_id": "B04",
+      "post_id": 8823,
+      "source": "ledger"
+    }
+  ],
+  "inbound_targets": [
+    {
+      "slug": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "title": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "permalink": "/blog/vtorichka-i-riski/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/",
+      "topic_id": "B06",
+      "post_id": 8984,
+      "source": "ledger"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "permalink": "/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "topic_id": "B04",
+      "post_id": 8823,
+      "source": "ledger"
+    },
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "permalink": "/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/",
+      "topic_id": "B09",
+      "post_id": 9063,
+      "source": "ledger"
+    }
+  ],
+  "inbound_updates": [
+    {
+      "post_id": 8984,
+      "marker": "data-excalibur-interlink-from=\"v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve\"><b>Читайте также:</b> <a href=\"/blog/vtorichka-i-riski/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve/\">Инвестор свернул сделку — запрет аренды всплыл в ДДУ за 3 дня до эскроу</a></p>"
+    },
+    {
+      "post_id": 8823,
+      "marker": "data-excalibur-interlink-from=\"v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve\"><b>Читайте также:</b> <a href=\"/blog/vtorichka-i-riski/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve/\">Инвестор свернул сделку — запрет аренды всплыл в ДДУ за 3 дня до эскроу</a></p>"
+    },
+    {
+      "post_id": 9063,
+      "marker": "data-excalibur-interlink-from=\"v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve\"><b>Читайте также:</b> <a href=\"/blog/vtorichka-i-riski/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve/\">Инвестор свернул сделку — запрет аренды всплыл в ДДУ за 3 дня до эскроу</a></p>"
+    }
+  ],
+  "new_url": "/blog/vtorichka-i-riski/v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve/",
+  "dry_run": false
+}

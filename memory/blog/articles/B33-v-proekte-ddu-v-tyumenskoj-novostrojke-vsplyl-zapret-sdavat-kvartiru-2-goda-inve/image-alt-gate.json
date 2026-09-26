@@ -2,7 +2,6 @@
   "status": "PASS",
   "all_pass": true,
   "changes": [
-    "inline_5: 'Сравнение обещаний в переписке и условий в договоре долевого строительства.' -> 'сравнительная таблица с колонками по новостройке в Тюмени: Обещали сдачу, В ДДУ — запрет, Два года без аренды — иллюстрация к разбору сделки'",
     "cover-registry.json updated",
     "article.html img inline_1 alt updated",
     "article.html img inline_2 alt updated",
