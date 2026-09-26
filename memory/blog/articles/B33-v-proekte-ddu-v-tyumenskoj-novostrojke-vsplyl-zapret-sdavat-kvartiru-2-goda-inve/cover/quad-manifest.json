@@ -1,0 +1,228 @@
+{
+  "topic_id": "B33",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Запрет аренды остановил сделку инвестора",
+  "cover_hook_highlight": "аренды",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Инвестор свернул сделку — запрет аренды всплыл в ДДУ за 3 дня до эскроу в Тюмени.",
+      "scene_hint": "Светлый коворкинг: хост слева у монитора с DDU и чатом, шок от запрета аренды; sun flare, gold collage.",
+      "meme_caption_ru": "",
+      "sticky": "Проверьте ДДУ заранее",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "моргающий шок, wide eyes, без улыбки"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Новостройка в Тюмени под сдачу выглядела готовой к сделке",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Офис продаж: бронь, одобрение ипотеки, планировка; только руки, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Новостройка в Тюмени под сдачу выглядела готово…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "3 дня",
+        "Запрет 2г",
+        "Стоп сделка"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Новостройка в Тюмени под сдачу выглядела готовой к сделке",
+      "visual_type": "process_flow",
+      "scene_hint": "Поток: чат «сдавать можно» → ДДУ личное проживание → санкции; white-gold collage.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Личное, Коммерция, Санкции — иллюстрация к разбору сделки.",
+      "labels": [
+        "Личное",
+        "Коммерция",
+        "Санкции"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Бронь, одобренная ипотека и слова менеджера про аренду",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Смартфон с чатом и распечатка ДДУ на светлом столе; без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Бронь, одобренная ипотека и слова менеджера про…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Бронь",
+        "Ипотека",
+        "Эскроу стоп"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За три дня до эскроу: в проекте ДДУ — не сдавать два года",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Монитор с PDF ДДУ, жёлтый маркер «не сдавать 24 мес»; свет из окна, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За три дня до эскроу: в проекте ДДУ — не сдават…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Проверьте аренду",
+        "Читайте приложения",
+        "Сверьте ЕИСЖС",
+        "Попросите разъяснение"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Инвестор остановился до подписания — на эскроу не пошли",
+      "visual_type": "comparison_table",
+      "scene_hint": "Две колонки переговоры vs договор; gold-white collage, без лиц.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Обещали сдачу, В ДДУ — запрет, Два года без аренды — иллюстрация к разбору сделки",
+      "labels": [
+        "Обещали сдачу",
+        "В ДДУ — запрет",
+        "Два года без аренды",
+        "Ставка уже одобрена"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что сверить в проекте ДДУ, если покупаете под аренду",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Таймлайн 3 дня до эскроу: запрет → без подписи → эскроу стоп; bright chart.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Запрет нашли заранее, Подпись не поставили, Эскроу не открыли — иллюстрация к разбору сделки.",
+      "labels": [
+        "Запрет нашли заранее",
+        "Подпись не поставили",
+        "Эскроу не открыли",
+        "Сделку остановили"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Таблица: где прячется запрет — не только в презентации",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема: презентация → ДДУ → приложения → ЕИСЖС → ответ; tiny meme corner.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Аренда, Приложения, ЕИСЖС — иллюстрация к разбору сделки.",
+      "labels": [
+        "Аренда",
+        "Приложения",
+        "ЕИСЖС",
+        "Письменный ответ"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить новостройку в тюмени",
+    "сдать квартиру в тюмени"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "Хост в левой центральной трети, верхняя правая зона чистая под хук, телефон внизу справа с запасом не менее 80px; монитор в центре-справа.",
+    "location": "Яркий современный коворкинг-уголок с большим окном, белыми поверхностями, солнечным светом и мягким золотистым light leak.",
+    "meme": "blinking_white_guy и polite_cat как маленькие угловые стикеры-реакции, суммарно не более 15% кадра.",
+    "prop_set": "монитор с DDU PDF, смартфон с чатом, распечатка переписки, жёлтый маркер",
+    "sticker_set": "blinking_white_guy у края монитора, polite_cat нижний левый угол, ≥80px от хука лица и телефона",
+    "joke": "Чат менеджера «можно сдавать» против выделенного в DDU запрета аренды на 24 месяца.",
+    "outfit": "Горчичный свитер крупной вязки поверх белой футболки, тёмно-оливковые брюки; не чёрный пиджак.",
+    "emotion": "Моргающее ошеломлённое недоверие, wide eyes, raised eyebrows, half-open mouth; новая мимика, не улыбка из референса.",
+    "pose_framing": "Средний план, хост слева-центрально в развороте к монитору, корпус слегка подан вперёд; не talking-head бюст.",
+    "action": "Одной рукой указывает на выделенный пункт «запрет аренды 24 месяца» на экране, другой держит распечатанный чат менеджера."
+  }
+}
