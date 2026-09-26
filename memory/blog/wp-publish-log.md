@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-26
+
+- **topic_id:** B33
+- **slug:** v-novostrojke-tyumeni-za-5-dnej-do-klyuchej-otklyuchili-lgotnyj-parking-v-broni-
+- **post_id:** 11056
+- **permalink:** /blog/proverka-pered-pokupkoj/v-novostrojke-tyumeni-za-5-dnej-do-klyuchej-otklyuchili-lgotnyj-parking-v-broni/
+- **featured_image:** 11057
+- **inline_images:** 11058–11064 (7)
+- **wp_category_slugs:** pokupka-kvartiry, proverka-pered-pokupkoj, dokumenty-i-oformlenie (category_ids=36,34,54)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** pipeline_canon stamp (`editorial_swarm=false`) before publish; SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
