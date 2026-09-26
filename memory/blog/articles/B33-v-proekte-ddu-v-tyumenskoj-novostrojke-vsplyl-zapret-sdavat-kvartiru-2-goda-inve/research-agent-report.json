@@ -1,0 +1,65 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "research_date": "2026-09-26",
+  "status": "PASS",
+  "decision": "PASS",
+  "freshness": {
+    "status": "PASS",
+    "week_window_start": "2026-09-21",
+    "external_signal": {
+      "title": "Репортаж 72.ru о проблеме в сданной тюменской новостройке",
+      "url": "https://72.ru/text/incidents/2026/09/24/76659941/",
+      "published_at": "2026-09-24",
+      "accessed_at": "2026-09-26",
+      "type": "local_news",
+      "scope_note": "Это свежий независимый локальный сигнал недели, но не доказательство условия об аренде в конкретном ДДУ."
+    },
+    "errors": []
+  },
+  "fact_integrity": {
+    "status": "PASS",
+    "casus_status": "composite_editorial_case",
+    "direct_incident_verification": "not_claimed",
+    "writer_constraints": [
+      "Не утверждать наличие 24-месячного запрета, требования личного проживания или санкции в конкретном ЖК.",
+      "Не называть ЖК, застройщика, банк или адрес.",
+      "Не делать вывод о законности, исполнимости или распространённости такого условия без полного текста документов и юридической оценки.",
+      "Не использовать свежий материал 72.ru как доказательство спорного пункта в ДДУ."
+    ]
+  },
+  "sources": {
+    "source_table": "research-notes.md#source_table",
+    "official_sources": [
+      "http://government.ru/docs/all/97825/?page=3",
+      "https://xn--80az8a.xn--d1aqf.xn--p1ai/api/ext/file/70726F6A6465636C2E646F63732E697A643A287227817A3C4420A45F211C8D82BCCD"
+    ],
+    "wordstat_queries": [
+      "купить новостройку в тюмени",
+      "купить новостройку в тюмени от застройщика",
+      "сдать квартиру в тюмени"
+    ]
+  },
+  "official_source_audit": {
+    "required": false,
+    "status": "PASS",
+    "verified_claims": 0,
+    "entities_checked": [],
+    "errors": [],
+    "note": "В research-notes.md нет точных тарифов, комиссий, ставок, лимитов или иных ценовых claims банка либо застройщика. Официальные источники использованы для общей рамки ДДУ и состава опубликованных документов."
+  },
+  "derouter": {
+    "status": "PASS",
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "outputs": [
+    "assembled-research-inputs.md",
+    "research-notes.md",
+    "research-agent-report.json",
+    "research-official-gate.json"
+  ],
+  "blockers": []
+}

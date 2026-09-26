@@ -93,6 +93,23 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-26",
+      "topic_id": "B33",
+      "slug": "v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve",
+      "motifs": {
+        "composition": "хост в левой центральной трети, верхняя правая зона чистая под хук, телефон внизу справа",
+        "location": "яркий современный коворкинг-уголок с большим окном",
+        "meme": "blinking_white_guy и polite_cat угловые стикеры",
+        "prop_set": "монитор с ddu pdf, смартфон с чатом, распечатка переписки",
+        "sticker_set": "blinking_white_guy у края монитора polite_cat нижний левый угол",
+        "joke": "чат можно сдавать против запрета аренды 24 месяца в ddu",
+        "outfit": "горчичный свитер крупной вязки белая футболка оливковые брюки",
+        "emotion": "моргающее ошеломлённое недоверие wide eyes",
+        "pose_framing": "средний план хост слева-центрально к монитору не бюст",
+        "action": "указывает на запрет аренды на экране держит чат менеджера"
+      }
     }
   ]
 }
