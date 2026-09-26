@@ -1,0 +1,236 @@
+{
+  "topic_id": "B33",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Льготу на паркинг отменили перед ключами",
+  "cover_hook_highlight": "отменили",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "За 5 дней до ключей семье отменили льготу на паркинг в новостройке в Тюмени: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Паркинг новостройки: хост в бежевой куртке, телефон с тарифом УК, ключи, шок.",
+      "meme_caption_ru": "",
+      "sticky": "За пять дней до ключей",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие, не копировать улыбку референса"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "За пять дней до ключей: в кабинете УК льготы уже нет",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Рука с бронью: «6 мес паркинг 0 ₽», ключи на столе, свет, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За пять дней до ключей: в кабинете УК льготы уж…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "За 5 дней",
+        "Льготу отменили",
+        "Паркинг в новостройке"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "За пять дней до ключей: в кабинете УК льготы уже нет",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Таймлайн 5 дней до ключей: обещание → кабинет УК → платный тариф.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Семья с ребёнком, Ключи уже скоро, Льгота была обещана — иллюстрация к разбору сделки.",
+      "labels": [
+        "Семья с ребёнком",
+        "Ключи уже скоро",
+        "Льгота была обещана"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Квартира по ДДУ, машино-место — отдельная цепочка бумаг",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Смартфон: кабинет УК, платный паркинг; ключи и карта рядом, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Квартира по ДДУ, машино-место — отдельная цепоч…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Цена выросла",
+        "Плюс 18 000 ₽",
+        "Оплата ежемесячно"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Три контура до ключей — таблица: бронь, договор на место, тариф УК",
+      "visual_type": "process_flow",
+      "scene_hint": "Поток: бронь → ДДУ квартиры → договор паркинга → тариф УК; разрыв красным.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Проверили договор, Нашли пункт о льготе, Попросили объяснить — иллюстрация к…",
+      "labels": [
+        "Проверили договор",
+        "Нашли пункт о льготе",
+        "Попросили объяснить"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Полгода паркинга за ноль» — так звучало в брони и в коммерческом предложении",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: «обещали в брони» vs «в договоре паркинга»; золото/чёрное.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Застройщик отказал, Ответ получил юрист, Срок — 10 дней — иллюстрация к разбору…",
+      "labels": [
+        "Застройщик отказал",
+        "Ответ получил юрист",
+        "Срок — 10 дней"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Подпишите акт сегодня» — семья поставила подпись на паузу",
+      "visual_type": "process_flow",
+      "scene_hint": "Поток: пауза перед актом → письменный запрос → ответ застройщика.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Собрали документы, Договор и переписка, Подали претензию — иллюстрация к разбору…",
+      "labels": [
+        "Собрали документы",
+        "Договор и переписка",
+        "Подали претензию"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Письменный запрос на продление льготы вместо устного «разберёмся потом»",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема 3 контура: застройщик, договор паркинга, УК — кто за что отвечает.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Не подписывайте сразу, Проверьте условия, Сохраните обещания — иллюстрация к разбору…",
+      "labels": [
+        "Не подписывайте сразу",
+        "Проверьте условия",
+        "Сохраните обещания"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "купить новостройку в тюмени",
+    "паркинг тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "полный рост у шлагбаума, смартфон с тарифом в одной руке и папка с ключами в другой; заголовочная зона свободна сверху слева",
+    "location": "яркий крытый паркинг новой тюменской новостройки у зоны выдачи ключей",
+    "meme": "confused_math_lady + grumpy_cat",
+    "props": [
+      "смартфон с тарифом УК",
+      "папка с ключами",
+      "парковочная карта",
+      "шлагбаум"
+    ],
+    "stickers": [
+      "confused_math_lady — небольшой стикер в правом нижнем углу",
+      "grumpy_cat — небольшой стикер в левом нижнем углу",
+      "жёлтый стикер «За пять дней до ключей»"
+    ],
+    "joke": "Покупатель держит ключи от квартиры, а телефон словно сообщает: «бесплатный паркинг уже испарился»; confused_math_lady подчёркивает непонятную математику обещания, grumpy_cat — реакцию на тариф.",
+    "outfit": "песочно-бежевая лёгкая куртка, белая футболка, тёмные прямые джинсы",
+    "emotion": "ошеломлённое недоверие",
+    "pose_framing": "вертикальный полный рост, лёгкий разворот к экрану, лицо в правой трети кадра",
+    "action": "сверяет тариф в кабинете УК с ключами и папкой документов",
+    "title_safe_zone": "верхняя левая треть; не размещать там лицо, мемы, шлагбаум или текст интерфейса",
+    "phone_safe_zone": "нижняя центрально-правая зона, вокруг телефона +7 922 001 65 05 оставить не менее 80px свободного пространства"
+  }
+}
