@@ -93,6 +93,22 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-26",
+      "topic_id": "B33",
+      "slug": "",
+      "motifs": {
+        "composition": "полный рост у шлагбаума",
+        "location": "паркинг новостройки тюмень",
+        "meme": "confused_math_lady grumpy_cat",
+        "sticker_set": "confused_math_lady grumpy_cat",
+        "joke": "ключи есть тариф платный",
+        "outfit": "бежевая куртка",
+        "emotion": "ошеломлённое недоверие",
+        "pose_framing": "полный рост",
+        "action": "сверяет тариф ук"
+      }
     }
   ]
 }
