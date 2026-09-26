@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-26",
+  "topic_id": "B33",
+  "article_dir": "memory/blog/articles/B33-v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve",
+  "slug": "v-proekte-ddu-v-tyumenskoj-novostrojke-vsplyl-zapret-sdavat-kvartiru-2-goda-inve",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": []
+}
