@@ -1,0 +1,63 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-26",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://formula-agency.ru/tyumen/stati/priemka-kvartiry-v-novostrojke-chto-smotret-v-pervuyu-ochered/",
+        "type": "regional_practice",
+        "note": "Тюмень приёмка 2026 — сверка площади"
+      },
+      {
+        "url": "https://dzen.ru/a/apkKx6KBtmtj5s0e",
+        "type": "channel",
+        "note": "SERP тюменский угол приёмки метража"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 1928,
+    "p0_volume_ru225": 1928,
+    "support_phrases": [
+      {"phrase": "приемка квартиры в новостройке", "volume": 5914, "region": "225"},
+      {"phrase": "взыскать неустойку с застройщика", "volume": 659, "region": "225"}
+    ],
+    "rework_from": "mechanism приёмка 5914 + P0 spine 1928",
+    "partial": ["regions 55+11176 API empty response 2026-09-26; geo in P0 phrase"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "acceptance_act_area_shortfall_mortgage_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B25 отделка приёмка", "B23 апартаменты", "live ceiling height showroom"]
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "verified": [
+      {
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_51040/",
+        "type": "law",
+        "topic": "214-ФЗ ст. 5, 7, 8 — площадь и акт"
+      },
+      {
+        "url": "https://priemka-pro.ru/articles/ploshchad-kvartiry-po-ddu-otlichaetsya-ot-fakticheskoy/",
+        "type": "explainer",
+        "topic": "формула перерасчёта в ДДУ"
+      }
+    ]
+  },
+  "blockers": []
+}
