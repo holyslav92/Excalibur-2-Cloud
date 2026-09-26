@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-26",
+    "today_ru": "26.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "суббота"
+  },
+  "topic": {
+    "topic_id": "B33",
+    "title": "В Тюмени площадь в акте приёмки меньше ДДУ — банк пересчитал ипотеку",
+    "h1": "В Тюмени площадь в акте приёмки меньше ДДУ — банк пересчитал ипотеку",
+    "slug": "v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku",
+    "primary_query": "В Тюмени площадь в акте приёмки меньше ДДУ — банк пересчитал ипотеку",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени площадь в акте приёмки меньше ДДУ — банк пересчитал ипотеку 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Площадь квартиры не совпадает с ДДУ: возврат по ст. 7 214-ФЗ в 2026 году",
+          "url": "https://favorit-consult.ru/article/ploshhad-kvartiry-ne-sovpadaet-s-ddu/",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени на приёмке не хватило метров — застройщик отказал в пересчёте ...",
+          "url": "https://dzen.ru/a/apkKx6KBtmtj5s0e",
+          "snippet": "Несовпадение площади квартиры с ДДУ — не редкость. Закон 214-ФЗ защищает вас: при разнице до 5% вы можете получить перерасчёт, при разнице более 5% — расторгнуть договор."
+        },
+        {
+          "title": "Акт приема-передачи подписан, а площадь квартиры меньше: как вернуть ...",
+          "url": "https://harant.ru/blog/nedvizhimost/podpisali-akt-priema-peredachi-a-kvartira-okazalas-menshe-verhovnyj-sud-zashhitil-dolshhikov/",
+          "snippet": "На приёмке в тюменской новостройке мужчина развернул рулетку и не досчитался двух квадратных метров: по договору он оплачивал одну площадь, а по факту комнаты вышли меньше. Менеджер посмотрел на замеры, кивнул и сказал, что это «в пределах допуска», цена в ДДУ твёрдая и пересчёту не подлежит."
+        },
+        {
+          "title": "Тюменский Росреестр: о расхождении размера общей площади объекта ...",
+          "url": "https://kartgeocentre.ru/vopros-otvet/tjumenskij-rosreestr-o-raskhozhdenii-razmera-obshchej-ploshchadi-obekta-dolevogo-stroitelstva-v-dolevom-stroitelstve-i-v-akte-priema-peredachi",
+          "snippet": "Возврат переплаты за квартиру в новостройке возможен даже после подписания акта: разъясняем позицию Верховного Суда РФ и важные нюансы для дольщиков."
+        },
+        {
+          "title": "Тюменский Росреестр - о расхождении размера общей площади объекта ...",
+          "url": "https://kvobzor.ru/news/i52510",
+          "snippet": "Таким образом, расхождение размера общей площади объекта долевого строительства - квартиры в ДДУ и в акте приема-передачи обусловлено тем, что в договоре общая площадь объекта ..."
+        },
+        {
+          "title": "Уменьшение площади квартиры в новостройке по ДДУ в 2026 году: что ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/vzyskanie-neustoyki-ddu-s-zastroyshchika/umenshenie-ploshchadi-kvartiry-v-novostroyke-chto-delat-dolshchiku-i-kak-vernut-dengi/",
+          "snippet": "Таким образом, расхождение размера общей площади объекта долевого строительства - квартиры в ДДУ и в акте приема-передачи обусловлено тем, что в договоре общая площадь объекта ..."
+        }
+      ],
+      "searched_at": "2026-09-26"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени площадь в акте приёмки меньше ДДУ — банк пересчитал ипотеку 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Площадь квартиры не совпадает с ДДУ: возврат по ст. 7 214-ФЗ в 2026 году",
+          "url": "https://favorit-consult.ru/article/ploshhad-kvartiry-ne-sovpadaet-s-ddu/",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени на приёмке не хватило метров — застройщик отказал в пересчёте ...",
+          "url": "https://dzen.ru/a/apkKx6KBtmtj5s0e",
+          "snippet": "Несовпадение площади квартиры с ДДУ — не редкость. Закон 214-ФЗ защищает вас: при разнице до 5% вы можете получить перерасчёт, при разнице более 5% — расторгнуть договор."
+        },
+        {
+          "title": "Акт приема-передачи подписан, а площадь квартиры меньше: как вернуть ...",
+          "url": "https://harant.ru/blog/nedvizhimost/podpisali-akt-priema-peredachi-a-kvartira-okazalas-menshe-verhovnyj-sud-zashhitil-dolshhikov/",
+          "snippet": "На приёмке в тюменской новостройке мужчина развернул рулетку и не досчитался двух квадратных метров: по договору он оплачивал одну площадь, а по факту комнаты вышли меньше. Менеджер посмотрел на замеры, кивнул и сказал, что это «в пределах допуска», цена в ДДУ твёрдая и пересчёту не подлежит."
+        },
+        {
+          "title": "Уменьшение площади квартиры в новостройке по ДДУ в 2026 году: что ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/vzyskanie-neustoyki-ddu-s-zastroyshchika/umenshenie-ploshchadi-kvartiry-v-novostroyke-chto-delat-dolshchiku-i-kak-vernut-dengi/",
+          "snippet": "Возврат переплаты за квартиру в новостройке возможен даже после подписания акта: разъясняем позицию Верховного Суда РФ и важные нюансы для дольщиков."
+        },
+        {
+          "title": "Почему площадь квартиры в ДДУ и кредитном договоре отличается? Ошибка ...",
+          "url": "https://harant.ru/questions/q-156501/",
+          "snippet": "В настоящей статье мы ответим на вопросы дольщиков об уменьшении площади объекта долевого строительства: может ли застройщик передавать дольщику объект меньшей площади, чем указано в ДДУ ..."
+        },
+        {
+          "title": "В Тюмени в ДДУ обещали 54 метра — на приёмке квартира оказалась на 2 ...",
+          "url": "https://dzen.ru/a/aqeLXh3cWgqrJYO4",
+          "snippet": "- Площадь в ипотечном договоре может быть предварительной или технической ошибкой, но это не влияет на ваши обязательства перед банком, если сумма кредита соответствует сумме по ДДУ."
+        }
+      ],
+      "searched_at": "2026-09-26"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени площадь в акте приёмки меньше ДДУ — банк пересчитал ипотеку official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени в ДДУ обещали 54 метра — на приёмке квартира оказалась на 2 ...",
+          "url": "https://dzen.ru/a/aqeLXh3cWgqrJYO4",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени на приёмке не хватило метров — застройщик отказал в пересчёте ...",
+          "url": "https://dzen.ru/a/apkKx6KBtmtj5s0e",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В сентябре 2026 года на приёмке в тюменской новостройке семья вместо обещанных 54,2 м² увидела в документах 52,1 — минус 2,1 квадрата и"
+        },
+        {
+          "title": "Площадь квартиры не совпадает с ДДУ: возврат по ст. 7 214-ФЗ в 2026 году",
+          "url": "https://favorit-consult.ru/article/ploshhad-kvartiry-ne-sovpadaet-s-ddu/",
+          "snippet": "На приёмке в тюменской новостройке мужчина развернул рулетку и не досчитался двух квадратных метров: по договору он оплачивал одну площадь, а по факту комнаты вышли меньше. Менеджер посмотрел на замеры, кивнул и сказал, что это «в пределах допуска», цена в ДДУ твёрдая и пересчёту не подлежит."
+        },
+        {
+          "title": "Недостает квадратных метров в новостройке по ДДУ: возврат денег",
+          "url": "https://palata-advokatov.ru/vopros-yuristu/menshaya-ploshchad-kvartiry-po-ddu-kak-vernut-dengi/",
+          "snippet": "Какой срок исковой давности для возврата денег за уменьшение площади? Срок исковой давности составляет 3 года с момента получения акта приёмки и кадастрового паспорта."
+        },
+        {
+          "title": "Уменьшение площади квартиры в новостройке по ДДУ в 2026 году: что ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/vzyskanie-neustoyki-ddu-s-zastroyshchika/umenshenie-ploshchadi-kvartiry-v-novostroyke-chto-delat-dolshchiku-i-kak-vernut-dengi/",
+          "snippet": "Купила квартиру в новостройке по ДДУ, но при приемке обнаружила, что фактическая площадь на 4,5 метра меньше указанной в договоре, при этом застройщик отказывается возвращать разницу в стоимости, ссылаясь на пункт о допустимой погрешности."
+        },
+        {
+          "title": "Меньше метров в новостройке: как вернуть деньги за недостающую площадь ...",
+          "url": "https://palata-advokatov.ru/vopros-yuristu/vozvrat-deneg-za-nedostayushchie-metry-po-ddu/",
+          "snippet": "В настоящей статье мы ответим на вопросы дольщиков об уменьшении площади объекта долевого строительства: может ли застройщик передавать дольщику объект меньшей площади, чем указано ..."
+        }
+      ],
+      "searched_at": "2026-09-26"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени площадь в акте приёмки меньше ДДУ — банк пересчитал ипотеку 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "pump-fun-sdk/.github/banner.svg at main · nirholas/pump-fun-sdk",
+          "url": "https://github.com/nirholas/pump-fun-sdk/blob/main/.github/banner.svg",
+          "snippet": ""
+        },
+        {
+          "title": "golobe/vite.svg at main · axenos13520/golobe · GitHub",
+          "url": "https://github.com/axenos13520/golobe/blob/main/vite.svg",
+          "snippet": "Token creation launching, bonding curve trading, AMM migration, tiered fees, creator fee sharing, vanity keygen, MCP server, Telegram bot & live dashboards - nirholas/pump-fun-sdk"
+        },
+        {
+          "title": "TinkerCAD/Island.svg at main · natnew/TinkerCAD · GitHub",
+          "url": "https://github.com/natnew/TinkerCAD/blob/main/Island.svg",
+          "snippet": "Contribute to axenos13520/golobe development by creating an account on GitHub."
+        },
+        {
+          "title": "Chat-Gemini-AI/gemini.svg at main · ZenZN99/Chat-Gemini-AI",
+          "url": "https://github.com/ZenZN99/Chat-Gemini-AI/blob/main/gemini.svg",
+          "snippet": "Contribute to natnew/TinkerCAD development by creating an account on GitHub."
+        },
+        {
+          "title": "Fe: Доработать Страницу «Автопостинг» — Интерактивное Демо-очереди ...",
+          "url": "https://github.com/hexlet-volunteers/hexlet-autoposting/issues/182",
+          "snippet": "The Chat Gemini AI project is an interactive web application built using HTML, CSS, and JavaScript, aiming to simulate an intelligent chat experience similar to ChatGPT using the Gemini API. - Chat-Gemini-AI/gemini.svg at main · ZenZN99/Chat-Gemini-AI."
+        },
+        {
+          "title": "borb_examples/img/jsc_signature.png at master · borb-pdf/borb_examples",
+          "url": "https://github.com/borb-pdf/borb_examples/blob/master/img/jsc_signature.png",
+          "snippet": "Коды и цвета соцсетей в постах берутся из NETWORKS, инлайн-дублирования сетей в файле страницы не осталось. Функция склонения лежит в shared/lib, а не дублируется на странице."
+        }
+      ],
+      "searched_at": "2026-09-26"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени площадь в акте приёмки меньше ДДУ — банк пересчитал ипотеку forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени в ДДУ обещали 54 метра — на приёмке квартира оказалась на 2 ...",
+          "url": "https://dzen.ru/a/aqeLXh3cWgqrJYO4",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени на приёмке не хватило метров — застройщик отказал в пересчёте ...",
+          "url": "https://dzen.ru/a/apkKx6KBtmtj5s0e",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В сентябре 2026 года на приёмке в тюменской новостройке семья вместо обещанных 54,2 м² увидела в документах 52,1 — минус 2,1 квадрата и"
+        },
+        {
+          "title": "Площадь квартиры не совпадает с ДДУ: возврат по ст. 7 214-ФЗ в 2026 году",
+          "url": "https://favorit-consult.ru/article/ploshhad-kvartiry-ne-sovpadaet-s-ddu/",
+          "snippet": "На приёмке в тюменской новостройке мужчина развернул рулетку и не досчитался двух квадратных метров: по договору он оплачивал одну площадь, а по факту комнаты вышли меньше. Менеджер посмотрел на замеры, кивнул и сказал, что это «в пределах допуска», цена в ДДУ твёрдая и пересчёту не подлежит."
+        },
+        {
+          "title": "Уменьшение площади квартиры в новостройке по ДДУ в 2026 году: что ...",
+          "url": "https://www.dvitex.ru/poleznoe/dolevoe-sroitelstvo/vzyskanie-neustoyki-ddu-s-zastroyshchika/umenshenie-ploshchadi-kvartiry-v-novostroyke-chto-delat-dolshchiku-i-kak-vernut-dengi/",
+          "snippet": "Какой срок исковой давности для возврата денег за уменьшение площади? Срок исковой давности составляет 3 года с момента получения акта приёмки и кадастрового паспорта."
+        },
+        {
+          "title": "Площадь квартиры по ДДУ меньше: как вернуть деньги и взыскать неустойку ...",
+          "url": "https://palata-advokatov.ru/vopros-yuristu/ploshchad-po-ddu-menshe-vozvrat-deneg-i-vzyskanie-neustojki/",
+          "snippet": "В настоящей статье мы ответим на вопросы дольщиков об уменьшении площади объекта долевого строительства: может ли застройщик передавать дольщику объект меньшей площади, чем указано ..."
+        },
+        {
+          "title": "Недостает квадратных метров в новостройке по ДДУ: возврат денег",
+          "url": "https://palata-advokatov.ru/vopros-yuristu/menshaya-ploshchad-kvartiry-po-ddu-kak-vernut-dengi/",
+          "snippet": "Как вернуть деньги, если площадь квартиры в новостройке по ДДУ оказалась меньше заявленной на 5 кв.м? Подробная инструкция от юриста: досудебная претензия, расчет неустойки и подача иска."
+        }
+      ],
+      "searched_at": "2026-09-26"
+    }
+  ],
+  "errors": []
+}

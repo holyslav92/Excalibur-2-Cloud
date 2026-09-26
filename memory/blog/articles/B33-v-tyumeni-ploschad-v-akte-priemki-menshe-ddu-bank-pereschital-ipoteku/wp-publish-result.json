@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku",
+  "topic_id": "B33",
+  "post_id": 10991,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 952363,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10991 slug=v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku\nOK categories=36,34,32\nOK yoast_social_image=1\nOK featured_image=10992\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10993 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku-inline-04.png\nOK inline_alt=10993\nOK inline_description=10993\nOK inline_image_upload=10994 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku-inline-02.png\nOK inline_alt=10994\nOK inline_description=10994\nOK inline_image_upload=10995 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku-inline-01.png\nOK inline_alt=10995\nOK inline_description=10995\nOK inline_image_upload=10996 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku-inline-05.png\nOK inline_alt=10996\nOK inline_description=10996\nOK inline_image_upload=10997 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku-inline-03.png\nOK inline_alt=10997\nOK inline_description=10997\nOK inline_image_upload=10998 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku-inline-06.png\nOK inline_alt=10998\nOK inline_description=10998\nOK inline_image_upload=10999 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku-inline-07.png\nOK inline_alt=10999\nOK inline_description=10999\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku/",
+    "errors": []
+  }
+}
