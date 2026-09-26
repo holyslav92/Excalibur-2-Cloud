@@ -93,6 +93,23 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-26",
+      "topic_id": "B34",
+      "slug": "skidku-iz-broni-vycherknuli-pered-ddu-bank-podnyal-vznos",
+      "motifs": {
+        "composition": "hero on right in medium-wide three-quarter framing, contract extended forward, clear title zone on left",
+        "location": "sunlit modern new-build sales office in tyumen",
+        "meme": "blinking_white_guy and grumpy_cat, small corner reactions",
+        "prop_set": "contract folder, floor plan, mini жк model, bank letter, pen",
+        "sticker_set": "blinking_white_guy lower-right, grumpy_cat upper-right, yellow sticky hook only",
+        "joke": "the promised discount disappears just before signing while the bank calmly demands more money",
+        "outfit": "terracotta overshirt, cream t-shirt, dark olive chinos",
+        "emotion": "shocked disbelief with raised eyebrows and tense grimace",
+        "pose_framing": "standing medium-wide three-quarter pose on the right, contract pulled toward camera",
+        "action": "pointing at the crossed-out discount and pulling the contract back before signing"
+      }
     }
   ]
 }

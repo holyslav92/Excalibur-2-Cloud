@@ -1,0 +1,68 @@
+{
+  "gate": "structure",
+  "status": "FAIL",
+  "article_dir": "memory/blog/articles/B34-skidku-iz-broni-vycherknuli-pered-ddu-bank-podnyal-vznos",
+  "checks": [
+    {
+      "name": "pipeline_canon",
+      "ok": false,
+      "detail": "exit=1"
+    },
+    {
+      "name": "research_agent_report",
+      "ok": true,
+      "detail": "status=PASS"
+    },
+    {
+      "name": "link_verify",
+      "ok": true,
+      "detail": "exit=0"
+    },
+    {
+      "name": "html_linter",
+      "ok": true,
+      "detail": "exit=0"
+    },
+    {
+      "name": "community_cta",
+      "ok": true,
+      "detail": "exit=0"
+    },
+    {
+      "name": "wp_categories",
+      "ok": true,
+      "detail": "exit=0"
+    },
+    {
+      "name": "interlink",
+      "ok": true,
+      "detail": "exit=0"
+    },
+    {
+      "name": "research_official",
+      "ok": true,
+      "detail": "exit=0"
+    },
+    {
+      "name": "opening_meta",
+      "ok": false,
+      "detail": "exit=1"
+    },
+    {
+      "name": "article_quality_score",
+      "ok": true,
+      "detail": "exit=0"
+    },
+    {
+      "name": "quality_bar_9",
+      "ok": false,
+      "detail": "exit=1"
+    }
+  ],
+  "failed": [
+    "pipeline_canon",
+    "opening_meta",
+    "quality_bar_9"
+  ],
+  "note": "Structural/links/HTML only — does not rewrite prose."
+}
