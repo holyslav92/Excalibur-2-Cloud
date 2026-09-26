@@ -1,0 +1,84 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-26",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/22/76648597/",
+        "type": "regional_news",
+        "note": "72.ru 22.09.2026 — тюменский newbuild контекст (Концепт)"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/18/76647026/",
+        "type": "regional_news",
+        "note": "72.ru 18.09.2026 — малоэтажный «Смородина», ДДU/наш.дом.рф"
+      },
+      {
+        "url": "https://www.fontanka.ru/2026/09/22/76655951/",
+        "type": "media",
+        "note": "22.09.2026 — окно бронь→договор за неделю (отраслевой паттерн)"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Tenant Telegram, live 2026-09-26"
+      },
+      {
+        "url": "https://advokat-sevilia.ru/novosti/vs-rf-pri-dvojnoj-prodazhe-kvartiry-zastrojshchikom-pervyj-dogovor-ne-vsegda-daet-pravo-zabrat-zhile-u-vtorogo-pokupatelya",
+        "type": "jurisprudence",
+        "note": "ВС РФ 29.06.2026 № 67-КГ26-3-К8 — двойная продажа, ст. 398 ГК; fetch 26.09.2026"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "коттеджный поселок тюмень купить дом",
+    "p0_volume": 44,
+    "p0_volume_ru225": null,
+    "compare225_phrase": "дом от застройщика тюмень",
+    "compare225_volume": 634,
+    "support_phrases": [
+      {"phrase": "дома под тюменью от застройщика", "volume": 44, "region": "55+11176"},
+      {"phrase": "тюмень дома под ключ от застройщика", "volume": 38, "region": "55+11176"},
+      {"phrase": "купить дом под тюменью от застройщика", "volume": 19, "region": "55+11176"},
+      {"phrase": "договор бронирования застройщик", "volume": null, "region": "55+11176", "note": "WORDSTAT PARTIAL — MCP empty response"}
+    ],
+    "rework_from": null,
+    "partial": ["договор бронирования застройщик"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_kp_booking_cancelled_same_lot_sold_other_buyer_tyumen",
+    "story_dup_check": "PASS"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["legal_norms_214fz", "zozpp_32", "gk_398"],
+    "errors": [],
+    "note": "214-ФЗ ст. 19/4, ЗоЗПП ст. 32, ГК ст. 398; no bank tariff claims"
+  },
+  "key_facts_count": 24,
+  "derouter": {
+    "status": "BLOCK",
+    "attempts": 2,
+    "stamp": "derouter-opus-stamp-research.json",
+    "note": "Utility tier returned refusal text instead of notes; research-notes.md completed from live-fetch inputs by Research conductor"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
