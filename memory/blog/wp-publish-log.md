@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-26
+
+- **topic_id:** B33
+- **slug:** za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon
+- **post_id:** 11030
+- **permalink:** /blog/proverka-pered-pokupkoj/za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon/
+- **featured_image:** 11031
+- **inline_images:** 11032–11038 (7)
+- **wp_category_slugs:** pokupka-kvartiry, dokumenty-i-oformlenie, proverka-pered-pokupkoj (category_ids=36,54,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063); first interlink HTTP 500 + webfetch timeout, retry OK
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29

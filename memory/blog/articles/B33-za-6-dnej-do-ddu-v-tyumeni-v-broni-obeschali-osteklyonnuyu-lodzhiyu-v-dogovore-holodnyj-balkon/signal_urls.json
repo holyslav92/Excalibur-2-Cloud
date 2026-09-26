@@ -1,0 +1,90 @@
+{
+  "topic_id": "B33",
+  "assembled_at": "2026-09-26",
+  "scout_handoff_urls": [
+    "https://dzen.ru/holyslav",
+    "https://www.domrf.ru/",
+    "https://www.consultant.ru/document/cons_doc_LAW_51040/",
+    "https://t.me/Tyumen_Rieltor"
+  ],
+  "verified": [
+    {
+      "url": "https://72.ru/text/realty/2026/09/15/76640741/",
+      "type": "media",
+      "freshness": "2026-09-15",
+      "note": "Тюмень, новостройки на финальной стадии",
+      "accessed_at": "2026-09-26"
+    },
+    {
+      "url": "https://72.ru/text/gorod/2026/09/17/76640743/",
+      "type": "media",
+      "freshness": "2026-09-17",
+      "note": "Акции застройщиков Тюмени",
+      "accessed_at": "2026-09-26"
+    },
+    {
+      "url": "https://72.ru/text/realty/2026/09/22/76648597/",
+      "type": "media",
+      "freshness": "2026-09-22",
+      "note": "Новостройка Тюменская слобода",
+      "accessed_at": "2026-09-26"
+    },
+    {
+      "url": "https://t.me/s/Tyumen_Rieltor",
+      "type": "community",
+      "freshness": "2026-09-25",
+      "note": "Посты о новостройках Тюмени, лоджии в карточках",
+      "accessed_at": "2026-09-26"
+    },
+    {
+      "url": "https://upravdommo.ru/assotsiatsiya/v-moskovskoj-oblasti-razrabotany-rekomendatsii-po-ostekleniyu-balkonov-i-lodzhij-v-mkd",
+      "type": "industry",
+      "freshness": "2026-09-18",
+      "note": "Холодное vs тёплое остекление",
+      "accessed_at": "2026-09-26"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_51038/6837eb5962d010b4c55b5544c6cc4415019883b5/",
+      "type": "legal",
+      "freshness": "static",
+      "note": "214-ФЗ ст. 4 — план, лоджии/балконы",
+      "accessed_at": "2026-09-26"
+    },
+    {
+      "url": "https://pravo.ppt.ru/prikaz/minstroy/n-854-pr-89720",
+      "type": "official",
+      "freshness": "static",
+      "note": "Приказ Минстроя 854/пр коэффициенты",
+      "accessed_at": "2026-09-26"
+    },
+    {
+      "url": "https://dzen.ru/holyslav",
+      "type": "channel",
+      "freshness": "ongoing",
+      "note": "Канал тенанта",
+      "accessed_at": "2026-09-26"
+    },
+    {
+      "url": "https://www.domrf.ru/",
+      "type": "official",
+      "freshness": "ongoing",
+      "note": "ДОМ.РФ",
+      "accessed_at": "2026-09-26"
+    },
+    {
+      "url": "https://9111.ru/questions/19170724/",
+      "type": "community",
+      "freshness": "reference",
+      "note": "Остекление: реклама vs ДДУ",
+      "accessed_at": "2026-09-26"
+    },
+    {
+      "url": "https://novostroikino.ru/blog/bronirovanie-kvartiry-v-novostroyke-2026/",
+      "type": "media",
+      "freshness": "2026",
+      "note": "Бронирование и ДДУ",
+      "accessed_at": "2026-09-26"
+    }
+  ],
+  "scout_url_note": "LAW_51040 в handoff — для 214-ФЗ использовать LAW_51038; 51040 не верифицировался как основной якорь темы"
+}

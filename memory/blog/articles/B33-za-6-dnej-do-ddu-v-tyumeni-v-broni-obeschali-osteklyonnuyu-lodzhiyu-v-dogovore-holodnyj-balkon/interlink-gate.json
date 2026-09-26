@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B33",
+  "slug": "za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon",
+  "candidates_count": 29,
+  "outbound_found": [
+    {
+      "slug": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali",
+      "title": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali"
+    },
+    {
+      "slug": "pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do",
+      "title": "pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do"
+    },
+    {
+      "slug": "v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika",
+      "title": "v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
