@@ -1,0 +1,72 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-26",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/instructions/semeinaya-ipoteka/",
+        "type": "official_community",
+        "note": "Q&A сотрудника ДОМ.РФ 23–26.09.2026 — финальное решение после полного пакета документов"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor/684",
+        "type": "channel",
+        "note": "26.09.2026 — свежий пост канала тенанта (не подтверждает casus B34)"
+      },
+      {
+        "url": "https://pronovostroy.ru/topic/36819-включение-суммы-брони-в-дду/",
+        "type": "community_forum",
+        "note": "Живой вопрос: бронь оплачена, в проекте ДДУ цена/учёт брони иная"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["11176"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 892,
+    "support_phrases": [
+      {"phrase": "новостройки тюмень", "volume": 4326},
+      {"phrase": "первоначальный взнос ипотека новостройка", "volume": 60},
+      {"phrase": "скидка застройщика новостройка", "volume": 5}
+    ],
+    "rework_from": "scout spine 892 + booking/price casus in H1; probe «срок сдачи новостройки» weak (6)",
+    "partial": [
+      "бронирование квартиры новостройка — MCP empty response",
+      "скидка застройщика дду — MCP empty response"
+    ]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_booking_discount_revoked_before_ddu_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B22 rate before DDU", "B29 zero-down promo", "B33 acceptance area"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["dom_rf", "tyumen_oblast_portal", "cbr"],
+    "errors": [],
+    "note": "Family mortgage params and CBR key rate; no named retail bank tariff claims"
+  },
+  "key_facts_count": 26,
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none",
+  "derouter": {
+    "attempts": 3,
+    "final": "PASS",
+    "note": "Attempt 1 wrote meta to repo root; attempt 2 HTTP 524; attempt 3 OK"
+  }
+}
