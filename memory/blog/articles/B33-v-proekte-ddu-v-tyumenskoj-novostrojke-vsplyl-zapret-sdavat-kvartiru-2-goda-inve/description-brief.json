@@ -1,0 +1,9 @@
+{
+  "topic_id": "B33",
+  "description": "Менеджер разрешил аренду. PDF оказался против. Святослав Шакин разбирает случай в Тюмени: инвестор отказался от конкретного лота — не от идеи купить квартиру под сдачу.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
