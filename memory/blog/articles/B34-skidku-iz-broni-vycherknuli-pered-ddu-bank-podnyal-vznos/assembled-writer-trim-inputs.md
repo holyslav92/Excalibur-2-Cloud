@@ -1,0 +1,1 @@
+ROLE: Writer trim — целевой объём **1400–1600 слов** (сейчас ~1950). Убрать повторы одной мысли в разных H2, дубли interlink на B22 (оставить один раз). Сохранить все 6 H2, comment magnet, CTAs, 2–4 уникальных sibling interlink (B22, B29, B30, B19). Не резать финал casus и agency ending.
