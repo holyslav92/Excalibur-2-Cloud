@@ -1,0 +1,86 @@
+{
+  "topic_id": "B33",
+  "slug": "za-6-dnej-do-ddu-v-tyumeni-v-broni-obeschali-osteklyonnuyu-lodzhiyu-v-dogovore-holodnyj-balkon",
+  "cover_family": "brand_collage",
+  "style_preset": "the_rieltor_twilight_gold",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "file": "cover/cover.png",
+  "alt": "В тюменской новостройке остеклённая лоджия стала холодным балконом за 6 дней до ДДУ.",
+  "aspect_ratio": "16:9",
+  "canvas_source": "cover/canvas-quad-01.png",
+  "generated_at": "2026-09-26T08:02:13+00:00",
+  "assets": [
+    {
+      "role": "cover",
+      "slot": "cover",
+      "file": "cover/cover.png",
+      "alt": "В тюменской новостройке остеклённая лоджия стала холодным балконом за 6 дней до ДДУ.",
+      "h2_anchor": null,
+      "visual_type": "cover_editorial_hero",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_1",
+      "file": "cover/inline-01.png",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Лоджия, балкон и коэффициенты: почему меняется…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "h2_anchor": "Лоджия, балкон и коэффициенты: почему меняется цена квартиры",
+      "visual_type": "realistic_photo",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_2",
+      "file": "cover/inline-02.png",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: 280–320 тысяч, Лимит минус 450 000, Холодный балкон — иллюстрация к разбору…",
+      "h2_anchor": "Лоджия, балкон и коэффициенты: почему меняется цена квартиры",
+      "visual_type": "comparison_table",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_3",
+      "file": "cover/inline-03.png",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Трёшка в новостройке Тюмени: на стенде лоджия,…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "h2_anchor": "Трёшка в новостройке Тюмени: на стенде лоджия, в брони — остекление",
+      "visual_type": "realistic_photo",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_4",
+      "file": "cover/inline-04.png",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За шесть дней до ДДУ: в приложении холодный бал…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "h2_anchor": "За шесть дней до ДДУ: в приложении холодный балкон и отдельная цена остекления",
+      "visual_type": "realistic_photo",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_5",
+      "file": "cover/inline-05.png",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Проверьте приложение, Сверьте условия, До подписания ДДУ — иллюстрация к разбору сделки.",
+      "h2_anchor": "Банк урезал лимит — ипотека перестала сходиться",
+      "visual_type": "structure_diagram",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_6",
+      "file": "cover/inline-06.png",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Лоджия 0,5, Балкон 0,3, Цена в приложении — иллюстрация к разбору сделки.",
+      "h2_anchor": "Подпись не поставили: эскроу не открывали, бронь удержали не целиком",
+      "visual_type": "process_flow",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "role": "inline",
+      "slot": "inline_7",
+      "file": "cover/inline-07.png",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Балкон или лоджия, Цена остекления отдельно, Запросите расчёт — иллюстрация к разбору сделки.",
+      "h2_anchor": "Что сверить в плане и спецификации до подписи ДДУ",
+      "visual_type": "bar_timeline_chart",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}
