@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor",
+  "topic_id": "B33",
+  "post_id": 11082,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1017401,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11082 slug=v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor\nOK categories=34,36,32\nOK yoast_social_image=1\nOK featured_image=11083\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11084 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor-inline-01.png\nOK inline_alt=11084\nOK inline_description=11084\nOK inline_image_upload=11085 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor-inline-02.png\nOK inline_alt=11085\nOK inline_description=11085\nOK inline_image_upload=11086 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor-inline-03.png\nOK inline_alt=11086\nOK inline_description=11086\nOK inline_image_upload=11087 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor-inline-05.png\nOK inline_alt=11087\nOK inline_description=11087\nOK inline_image_upload=11088 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor-inline-04.png\nOK inline_alt=11088\nOK inline_description=11088\nOK inline_image_upload=11089 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor-inline-06.png\nOK inline_alt=11089\nOK inline_description=11089\nOK inline_image_upload=11090 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor-inline-07.png\nOK inline_alt=11090\nOK inline_description=11090\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor/",
+    "errors": []
+  }
+}
