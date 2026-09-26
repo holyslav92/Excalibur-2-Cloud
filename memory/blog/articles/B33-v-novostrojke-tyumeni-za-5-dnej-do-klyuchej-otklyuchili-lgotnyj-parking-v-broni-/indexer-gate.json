@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-26",
+  "topic_id": "B33",
+  "article_dir": "memory/blog/articles/B33-v-novostrojke-tyumeni-za-5-dnej-do-klyuchej-otklyuchili-lgotnyj-parking-v-broni-",
+  "slug": "v-novostrojke-tyumeni-za-5-dnej-do-klyuchej-otklyuchili-lgotnyj-parking-v-broni-",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": []
+}
