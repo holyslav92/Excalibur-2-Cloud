@@ -1087,3 +1087,27 @@ category: publish
 
 ### Secrets
 - none recorded
+
+## INC-20260927-0500-publish-interlink-site-base-permalink
+status: open
+run_date: 2026-09-27
+role: excalibur-blog-publish
+topic_id: B33
+article_dir: memory/blog/articles/B33-za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd
+severity: low
+category: script
+
+### What went wrong
+- `post_publish_interlink.py` ignored `wp-publish-result.json` permalink when stored as `{{SITE_BASE}}/blog/...` → inbound «Читайте также» used hardcoded `/blog/vtorichka-i-riski/{slug}/`.
+
+### How the agent recovered this run
+- Strip `{{SITE_BASE}}` before path handling; re-ran interlink (markers already present → skip on siblings; canonical URL in plan).
+
+### Durable fix needed before next run
+- Covered by `post_publish_interlink.py` SITE_BASE_PLACEHOLDER strip.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_post_publish_interlink.py`
+
+### Secrets
+- none recorded
