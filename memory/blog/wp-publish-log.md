@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B34 — 2026-09-27
+
+- **topic_id:** B34
+- **slug:** za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach
+- **post_id:** 11118
+- **permalink:** /blog/ipoteka/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach/
+- **featured_image:** 11119
+- **inline_images:** 11120–11126 (7)
+- **wp_category_slugs:** pokupka-kvartiry, proverka-pered-pokupkoj, ipoteka (category_ids=36,34,32)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** deduped inline `data-slot` (inline_1…inline_7) before publish; SFTP root fallback to `.`
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
