@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B35 — 2026-09-27
+
+- **topic_id:** B35
+- **slug:** investor-sveril-ddu-studiya-okazalas-kommerciej
+- **post_id:** 11144
+- **permalink:** /blog/proverka-pered-pokupkoj/investor-sveril-ddu-studiya-okazalas-kommerciej/
+- **featured_image:** 11145
+- **inline_images:** 11146–11152 (7)
+- **wp_category_slugs:** pokupka-kvartiry, dokumenty-i-oformlenie, proverka-pered-pokupkoj (category_ids=36,54,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29

@@ -34,3 +34,4 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 | B29 | v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika | Банк отменил нулевой взнос за 6 дней до ДДУ — сделка встала | published |
 | B30 | za-3-dnya-do-ddu-zapret-pereprodazhi-3-goda-v-pereustupke-novostrojki-tyumen | За 3 дня до сделки запрет остановил уступку новостройки в Тюмени | published |
 | B31 | za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t | За 2 дня до ДДУ страховка добавила восемнадцать тысяч в месяц — банк снял одобрение ипотеки на новостройку в Тюмени | published |
+| B32 | za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil- | За 2 дня до эскроу банк остановил сделку в новостройке Тюмени — в ДДУ чужое юрлицо | published |
