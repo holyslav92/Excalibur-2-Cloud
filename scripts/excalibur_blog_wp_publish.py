@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import base64
 import hashlib
+import html as html_lib
 import io
 import json
 import os
@@ -1681,6 +1682,7 @@ def main() -> int:
         body_probe = ""
         if first_paragraph:
             body_probe = re.sub(r"<[^>]+>", " ", first_paragraph.group(1))
+            body_probe = html_lib.unescape(body_probe)
             body_probe = re.sub(r"\s+", " ", body_probe).strip()[:120]
         live_errors = inspect_live_page(
             live_html,
