@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B33-za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1022,
+          572
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 572,
+            "end": 583
+          },
+          "v_gutter_px": {
+            "start": 1022,
+            "end": 1034
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 1.5,
+            "v_center_offset_px": 4.0,
+            "max_aspect_crop_loss": 0.0098,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0098,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1022,
+              "bottom": 572
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1022,
+              "bottom": 572
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В новостройке Тюмени за 5 дней до ключей УК потребовала 180 тысяч — семья остановила приёмку.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1034,
+              "top": 0,
+              "right": 2048,
+              "bottom": 572
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 0,
+              "right": 2048,
+              "bottom": 572
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Новостройка в Тюмени: семья дошла до передачи к…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Новостройка в Тюмени: семья дошла до передачи ключей"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 5,
+              "top": 583,
+              "right": 1017,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 583,
+              "right": 1022,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Счёт на 180, Взнос в УК, Пять дней до акта — иллюстрация к разбору сделки.",
+            "h2_anchor": "Новостройка в Тюмени: семья дошла до передачи ключей"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1034,
+              "top": 583,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 583,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Банк не выпустил финальный транш — ключи на пау…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Банк не выпустил финальный транш — ключи на паузе"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B33-za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          560
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 560,
+            "end": 575
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1034
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 8.5,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0187,
+            "per_panel_crop_loss": {
+              "top_left": 0.0187,
+              "top_right": 0.0178,
+              "bottom_left": 0.0104,
+              "bottom_right": 0.0121
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 9,
+              "top": 0,
+              "right": 1005,
+              "bottom": 560
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 560
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «За пять дней до акта — счёт на 180 тысяч «в УК»» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "За пять дней до акта — счёт на 180 тысяч «в УК»"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1043,
+              "top": 0,
+              "right": 2039,
+              "bottom": 560
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 0,
+              "right": 2048,
+              "bottom": 560
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Банк удержал транш, Ключи на паузе, Наличные не стали — иллюстрация к разбору…",
+            "h2_anchor": "В ДДУ такой строки не было — отказ переводить наличными"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 578,
+              "right": 1015,
+              "bottom": 1149
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 575,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Цена в ДДУ, ЖКУ после акта, Взнос отдельно — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что проверить в пакете до подписи акта приёма-передачи"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1034,
+              "top": 578,
+              "right": 2048,
+              "bottom": 1148
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 575,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Договор управления, Акт приёма-передачи, Пакет документов — иллюстрация к разбору сделки",
+            "h2_anchor": "Таблица: цена ДДУ, ЖКУ и «членский взнос» — три разных разговора"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Новостройка в Тюмени: семья дошла до передачи ключей",
+    "skip inline_2: already correct under H2 — Новостройка в Тюмени: семья дошла до передачи ключей",
+    "skip inline_3: already correct under H2 — Банк не выпустил финальный транш — ключи на паузе",
+    "moved inline_4 → H2 — За пять дней до акта — счёт на 180 тысяч «в УК» (was under [банк не выпустил финальный транш — ключи на паузе]; removed=1)",
+    "moved inline_5 → H2 — В ДДУ такой строки не было — отказ переводить наличными (was under [что проверить в пакете до подписи акта приёма-передачи]; removed=1)",
+    "moved inline_6 → H2 — Что проверить в пакете до подписи акта приёма-передачи (was under [таблица: цена дду, жку и «членский взнос» — три разных разговора]; removed=1)",
+    "skip inline_7: already correct under H2 — Таблица: цена ДДУ, ЖКУ и «членский взнос» — три разных разговора"
+  ]
+}
