@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "url": "{{SITE_BASE}}"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/#person-svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "sameAs": [
+        "{{SITE_BASE}}/authors/svyatoslav-shakin/"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/investor-sveril-ddu-studiya-okazalas-kommerciej/#blogposting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/investor-sveril-ddu-studiya-okazalas-kommerciej/"
+      },
+      "url": "{{SITE_BASE}}/investor-sveril-ddu-studiya-okazalas-kommerciej/",
+      "headline": "Инвестор в Тюмени за 2 дня до эскроу остановил сделку: студия стала коммерцией в ДДУ",
+      "description": "Инвестор в Тюмени за 2 дня до эскроу остановил сделку: студия стала коммерцией в ДДУ",
+      "datePublished": "2026-09-27",
+      "author": {
+        "@id": "{{SITE_BASE}}/#person-svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}
