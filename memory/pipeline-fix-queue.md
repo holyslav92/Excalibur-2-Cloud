@@ -1063,3 +1063,27 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260927-0455-publish-live-body-probe-nbsp
+status: open
+run_date: 2026-09-27
+role: excalibur-blog-publish
+topic_id: B33
+article_dir: memory/blog/articles/B33-za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd
+severity: medium
+category: publish
+
+### What went wrong
+- WP upload succeeded (post 11095) but live-page gate BLOCK: body probe contained literal `&nbsp;` while live HTML plain text uses U+00A0 → false «expected article body probe not found».
+
+### How the agent recovered this run
+- `html.unescape` on body_probe in `excalibur_blog_wp_publish.py`; re-run publish to stamp ledger/interlink/llms.
+
+### Durable fix needed before next run
+- Covered by commit `fix(publish): unescape HTML entities in live body probe`.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_wp_publish.py`
+
+### Secrets
+- none recorded

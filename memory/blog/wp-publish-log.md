@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-27
+
+- **topic_id:** B33
+- **slug:** za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd
+- **post_id:** 11095
+- **permalink:** /blog/proverka-pered-pokupkoj/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd/
+- **featured_image:** 11106 (refresh run; first attempt 11096)
+- **inline_images:** 11107–11113 (7)
+- **wp_category_slugs:** proverka-pered-pokupkoj, pokupka-kvartiry (category_ids=34,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS (after body_probe `html.unescape` fix for `&nbsp;`)
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound targets B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT; first publish pass blocked on live gate false negative
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
