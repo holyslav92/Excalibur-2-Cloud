@@ -1,0 +1,71 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B35",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-27",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://www.1tv.ru/news/2026-09-17/553453",
+        "type": "news",
+        "note": "Первый канал 17.09.2026 — студия vs юридический объект (вторичка; медиа-контекст недели)"
+      },
+      {
+        "url": "https://rutube.ru/video/226c0f0716f8ee650e7552fb6f94d2b8/",
+        "type": "news_mirror",
+        "note": "Зеркало сюжета 17.09.2026"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта Тюмень"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 4350,
+    "p0_volume_scout_preflight": 8246,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 891, "region": "55+11176"},
+      {"phrase": "новостройки тюмени студии", "volume": 168, "region": "55+11176"},
+      {"phrase": "студия в тюмени купить в новостройках", "volume": 113, "region": "55+11176"},
+      {"phrase": "нежилые помещения в новостройках", "volume": 404, "region": "225"},
+      {"phrase": "купить нежилое помещение новостройка", "volume": 270, "region": "225"}
+    ],
+    "rework_from": "«проверка договоров долевого участия» weak (4) → spine новостройки/студии + механизм назначения в ДДУ",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_ddu_commercial_vs_residential_studio_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B23 apartaments vs flat EGRN", "B33 townhouse type", "B32 escrow beneficiary", "B31 insurance requote"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["consultant_214fz", "rospotrebnadzor_faq"],
+    "errors": [],
+    "note": "214-ФЗ ст.4 назначение жилое/нежилое; банковские тарифы не заявлялись"
+  },
+  "key_facts_count": 17,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}
