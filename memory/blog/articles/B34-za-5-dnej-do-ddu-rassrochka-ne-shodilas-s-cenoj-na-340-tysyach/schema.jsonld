@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach/#blogposting",
+      "url": "{{SITE_BASE}}/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach/",
+      "headline": "За 5 дней до ДДУ в Тюмени рассрочка разошлась с ценой на 340 тысяч — семья остановила регистрацию",
+      "description": "Ежемесячный платёж семью устроил, но финальный взнос внезапно добавил к цене 340 тысяч ₽. В тюменской новостройке документы остановили у порога Росреестра — пока не выяснилась причина.",
+      "datePublished": "2026-09-27",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach/"
+      }
+    }
+  ]
+}
