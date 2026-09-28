@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-28
+
+- **topic_id:** B33
+- **slug:** v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch
+- **post_id:** 11170
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch/
+- **featured_image:** 11171
+- **inline_images:** 11172–11178 (7)
+- **wp_category_slugs:** vtorichka-i-riski (category_id=31, default_primary_slug — no B33 topic_defaults)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
