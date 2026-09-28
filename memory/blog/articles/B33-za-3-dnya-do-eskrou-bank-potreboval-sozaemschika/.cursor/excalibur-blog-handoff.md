@@ -98,3 +98,17 @@ h1_fingerprint_check: PASS | fingerprint: 3-days-before-escrow + family-mortgage
 formula_spam_check: PASS | last3_mechanisms: zero-down promotion; insurance payment increase; wrong escrow entity
 anti_dupe_hard: PASS
 ```
+
+=== EXCALIBUR BLOG PUBLISH ===
+topic_id: B33
+slug: za-3-dnya-do-eskrou-bank-potreboval-sozaemschika
+article_dir: memory/blog/articles/B33-za-3-dnya-do-eskrou-bank-potreboval-sozaemschika
+publish_date: 2026-09-28
+verdict: PASS
+permalink: /blog/ipoteka/za-3-dnya-do-eskrou-bank-potreboval-sozaemschika/
+post_id: 11183
+featured_image: 11184
+inline_images: 11185-11191 (7)
+schema_meta: ok
+blockers: none
+PIPELINE DONE

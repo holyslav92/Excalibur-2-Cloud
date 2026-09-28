@@ -1,0 +1,28 @@
+{
+  "slug": "za-3-dnya-do-eskrou-bank-potreboval-sozaemschika",
+  "topic_id": "B33",
+  "post_id": 11183,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/za-3-dnya-do-eskrou-bank-potreboval-sozaemschika/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-za-3-dnya-do-eskrou-bank-potreboval-sozaemschika/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1038254,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11183 slug=za-3-dnya-do-eskrou-bank-potreboval-sozaemschika\nOK categories=32,36,34\nOK yoast_social_image=1\nOK featured_image=11184\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11185 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-bank-potreboval-sozaemschika-inline-01.png\nOK inline_alt=11185\nOK inline_description=11185\nOK inline_image_upload=11186 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-bank-potreboval-sozaemschika-inline-02.png\nOK inline_alt=11186\nOK inline_description=11186\nOK inline_image_upload=11187 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-bank-potreboval-sozaemschika-inline-03.png\nOK inline_alt=11187\nOK inline_description=11187\nOK inline_image_upload=11188 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-bank-potreboval-sozaemschika-inline-04.png\nOK inline_alt=11188\nOK inline_description=11188\nOK inline_image_upload=11189 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-bank-potreboval-sozaemschika-inline-05.png\nOK inline_alt=11189\nOK inline_description=11189\nOK inline_image_upload=11190 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-bank-potreboval-sozaemschika-inline-06.png\nOK inline_alt=11190\nOK inline_description=11190\nOK inline_image_upload=11191 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-bank-potreboval-sozaemschika-inline-07.png\nOK inline_alt=11191\nOK inline_description=11191\npermalink={{SITE_BASE}}/blog/ipoteka/za-3-dnya-do-eskrou-bank-potreboval-sozaemschika/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/za-3-dnya-do-eskrou-bank-potreboval-sozaemschika/",
+    "errors": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "topic_id": "B33",
+  "slug": "za-3-dnya-do-eskrou-bank-potreboval-sozaemschika",
+  "candidates_count": 29,
+  "outbound_found": [
+    {
+      "slug": "v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika",
+      "title": "v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
