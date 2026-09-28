@@ -1,0 +1,14 @@
+{
+  "category_ids": [
+    54,
+    36,
+    34
+  ],
+  "category_slugs": [
+    "dokumenty-i-oformlenie",
+    "pokupka-kvartiry",
+    "proverka-pered-pokupkoj"
+  ],
+  "errors": [],
+  "status": "PASS"
+}
