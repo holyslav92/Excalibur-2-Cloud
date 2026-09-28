@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "warnings": [
+    "image_placement: duplicate h2_anchor across slots (OK for intentional pairs)",
+    "inline_2: prompt_negatives missing RU/EN no-meme clause",
+    "inline_3: prompt_negatives missing RU/EN no-meme clause",
+    "inline_4: prompt_negatives missing RU/EN no-meme clause",
+    "inline_6: prompt_negatives missing RU/EN no-meme clause"
+  ],
+  "wordstat_sticker_count": 3,
+  "inline_meme_slots": [
+    "inline_1",
+    "inline_5",
+    "inline_7"
+  ]
+}
