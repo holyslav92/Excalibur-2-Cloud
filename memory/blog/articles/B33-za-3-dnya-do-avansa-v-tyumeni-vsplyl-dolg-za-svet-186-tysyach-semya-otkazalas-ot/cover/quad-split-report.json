@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B33-za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1021,
+          566
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 566,
+            "end": 585
+          },
+          "v_gutter_px": {
+            "start": 1021,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 3.0,
+            "max_aspect_crop_loss": 0.0147,
+            "per_panel_crop_loss": {
+              "top_left": 0.0147,
+              "top_right": 0.0089,
+              "bottom_left": 0.0127,
+              "bottom_right": 0.0069
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 7,
+              "top": 0,
+              "right": 1013,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1021,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "За 3 дня до аванса в Тюмени всплыл долг за свет 186 тысяч — семья отказалась от сделки.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1037,
+              "top": 0,
+              "right": 2043,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «На словах коммуналка закрыта, выписка без обрем…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "На словах коммуналка закрыта, выписка без обременений"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 6,
+              "top": 585,
+              "right": 1014,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 585,
+              "right": 1021,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: ЕГРН чистая, Свет отдельно, Лицевой счёт — иллюстрация к разбору сделки.",
+            "h2_anchor": "На словах коммуналка закрыта, выписка без обременений"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1036,
+              "top": 585,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 585,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Вторичка в Тюмени выглядела собранной — ипотека…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Вторичка в Тюмени выглядела собранной — ипотека и цена"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B33-za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1010,
+          561
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 561,
+            "end": 574
+          },
+          "v_gutter_px": {
+            "start": 1010,
+            "end": 1038
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 8.5,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0173,
+            "per_panel_crop_loss": {
+              "top_left": 0.0129,
+              "top_right": 0.0129,
+              "bottom_left": 0.0173,
+              "bottom_right": 0.0173
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 6,
+              "top": 0,
+              "right": 1003,
+              "bottom": 561
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1010,
+              "bottom": 561
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «За три дня до аванса: справка ЖКУ и цифра 186 4…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "За три дня до аванса: справка ЖКУ и цифра 186 400"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1044,
+              "top": 0,
+              "right": 2041,
+              "bottom": 561
+            },
+            "raw_box_px": {
+              "left": 1038,
+              "top": 0,
+              "right": 2048,
+              "bottom": 561
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Каждый счёт, Фото счётчиков, Полгода квитанций — иллюстрация к разбору сделки.",
+            "h2_anchor": "Продавец торгуется скидкой — семья не внесла аванс"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 579,
+              "right": 1010,
+              "bottom": 1147
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 574,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Капремонт отдельно, Долг переходит, Условие в авансе — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что запросить по ЖКУ и лицевому счёту до аванса"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1038,
+              "top": 579,
+              "right": 2048,
+              "bottom": 1147
+            },
+            "raw_box_px": {
+              "left": 1038,
+              "top": 574,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Таблица проверок, УК и свет, Газ вода — иллюстрация к разбору сделки.",
+            "h2_anchor": "Таблица: что проверить до аванса на вторичке"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — На словах коммуналка закрыта, выписка без обременений",
+    "skip inline_2: already correct under H2 — На словах коммуналка закрыта, выписка без обременений",
+    "skip inline_3: already correct under H2 — Вторичка в Тюмени выглядела собранной — ипотека и цена",
+    "moved inline_4 → H2 — За три дня до аванса: справка ЖКУ и цифра 186 400 (was under [продавец торгуется скидкой — семья не внесла аванс]; removed=1)",
+    "moved inline_5 → H2 — Продавец торгуется скидкой — семья не внесла аванс (was under [что запросить по жку и лицевому счёту до аванса]; removed=1)",
+    "skip inline_6: already correct under H2 — Что запросить по ЖКУ и лицевому счёту до аванса",
+    "skip inline_7: already correct under H2 — Таблица: что проверить до аванса на вторичке"
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "topic_id": "B33",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Коммунальный долг до аванса",
+  "cover_hook_highlight": "долг",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "За 3 дня до аванса в Тюмени всплыл долг за свет 186 тысяч — семья отказалась от сделки.",
+      "scene_hint": "Светлая кухня Тюмень: герой с уведомлением о долге за свет, ключи, золотой блик.",
+      "meme_caption_ru": "",
+      "sticky": "Семья не внесла аванс",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломление с тревожным прищуром"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "На словах коммуналка закрыта, выписка без обременений",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Подъезд вторички: электрощиток и квитанция, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «На словах коммуналка закрыта, выписка без обрем…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Ипотека одобрена",
+        "Двушка в рынке",
+        "Аванс в пятницу"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "На словах коммуналка закрыта, выписка без обременений",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: обычный платёж vs долг 186 тысяч.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: ЕГРН чистая, Свет отдельно, Лицевой счёт — иллюстрация к разбору сделки.",
+      "labels": [
+        "ЕГРН чистая",
+        "Свет отдельно",
+        "Лицевой счёт"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Вторичка в Тюмени выглядела собранной — ипотека и цена",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: договор, выписка, калькулятор, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Вторичка в Тюмени выглядела собранной — ипотека…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "186400 рублей",
+        "Три дня",
+        "Справка ЖКУ"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За три дня до аванса: справка ЖКУ и цифра 186 400",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Схема: справка, лицевой счёт, оплата, договор.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За три дня до аванса: справка ЖКУ и цифра 186 4…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Скидка с цены",
+        "Давят сегодня",
+        "Аванс не внесли"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Продавец торгуется скидкой — семья не внесла аванс",
+      "visual_type": "process_flow",
+      "scene_hint": "Окно МФЦ: талон очереди и папка документов.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Каждый счёт, Фото счётчиков, Полгода квитанций — иллюстрация к разбору сделки.",
+      "labels": [
+        "Каждый счёт",
+        "Фото счётчиков",
+        "Полгода квитанций"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что запросить по ЖКУ и лицевому счёту до аванса",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Белый фон, золотые метки этапов без персон.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Капремонт отдельно, Долг переходит, Условие в авансе — иллюстрация к разбору сделки.",
+      "labels": [
+        "Капремонт отдельно",
+        "Долг переходит",
+        "Условие в авансе"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Таблица: что проверить до аванса на вторичке",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Чеклист проверок до аванса на белом фоне.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Таблица проверок, УК и свет, Газ вода — иллюстрация к разбору сделки.",
+      "labels": [
+        "Таблица проверок",
+        "УК и свет",
+        "Газ вода"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени вторичка",
+    "капремонт при покупке квартиры"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "Герой в правой трети кадра, уведомление о задолженности круп",
+    "location": "светлая кухня в квартире вторичного фонда в Тюмени",
+    "meme": "маленький одобренный people-reaction стикер из meme-top100.j",
+    "meme_picks": [],
+    "props": [
+      "уведомление о задолженности за электричество"
+    ],
+    "stickers": [
+      "один небольшой people-reaction стикер в дальнем верхнем углу"
+    ],
+    "joke": "Сделка почти у финиша, но коммунальный сюрприз оказался боль",
+    "outfit": "светлая голубая рубашка с закатанными рукавами и тонкий горчичный жилет",
+    "emotion": "ошеломление, тревожный прищур, напряжённые брови, губы слегка приоткрыты",
+    "pose_framing": "средний план по пояс, корпус развёрнут к документу, голова резко повернута к зрителю",
+    "action": "герой раскрывает уведомление о долге и одновременно сжимает ключи от квартиры"
+  },
+  "cover_emotion": "ошеломление с тревожным прищуром"
+}

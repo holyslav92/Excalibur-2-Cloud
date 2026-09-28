@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": { "@id": "{{SITE_BASE}}/#organization" }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot/#blogposting",
+      "url": "{{SITE_BASE}}/za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot/",
+      "headline": "За 3 дня до аванса в Тюмени всплыл долг за свет 186 тысяч — семья отказалась от сделки",
+      "description": "Справка по электроэнергии показала долг 186 400 ₽ за три дня до аванса — семья не внесла задаток за вторичку в Тюмени.",
+      "datePublished": "2026-09-28",
+      "inLanguage": "ru-RU",
+      "author": { "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin" },
+      "publisher": { "@id": "{{SITE_BASE}}/#organization" },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot/"
+      }
+    }
+  ]
+}
