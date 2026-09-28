@@ -1063,3 +1063,28 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260928-1316-schema-derouter-output-cwd
+status: open
+run_date: 2026-09-28
+role: excalibur-blog-schema
+topic_id: B33
+category: script
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --role schema --output schema.jsonld --article-dir memory/blog/articles/B33-...` printed `WROTE schema.jsonld` but file landed in repo root, not under `--article-dir`; first `schema_gate` FAIL `missing schema.jsonld`.
+
+### How the agent recovered this run
+- Copied/enriched JSON from `/workspace/schema.jsonld` into article dir; removed stray root `schema.jsonld`; gate PASS.
+
+### Durable fix needed before next run
+- Resolve `--output` relative to `--article-dir` when both set (or document that output is always cwd-relative).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+(fixed_at pending)
