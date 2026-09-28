@@ -1,0 +1,9 @@
+{
+  "topic_id": "B35",
+  "description": "На витрине — студия под аренду, а в ДДУ внезапно «нежилое помещение». Инвестор из Тюмени сверил документы с дом.рф и за два дня до эскроу нажал на паузу.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
