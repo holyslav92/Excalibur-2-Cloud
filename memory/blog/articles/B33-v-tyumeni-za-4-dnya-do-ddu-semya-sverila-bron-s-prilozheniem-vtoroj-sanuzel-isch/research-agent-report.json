@@ -1,0 +1,72 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-28",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/22/76648597/",
+        "type": "regional_news",
+        "note": "72.ru 22.09.2026 — планировки и санузел в пакете отделки, Тюмень"
+      },
+      {
+        "url": "https://72.ru/text/gorod/2026/09/17/76640743/",
+        "type": "regional_news",
+        "note": "72.ru 17.09.2026 — акция с ремонтом санузла, новостройка АСТРО"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта, посты конца сентября 2026"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "квартиры в тюмени новостройки",
+    "p0_volume": 1047,
+    "p0_volume_ru225": 2347,
+    "support_phrases": [
+      {"phrase": "новостройки тюмень", "volume": 4350, "region": "55+11176"},
+      {"phrase": "квартира в новостройке от застройщика тюмень", "volume": 374, "region": "55+11176"},
+      {"phrase": "квартиры в ипотеку тюмень новостройки", "volume": 79, "region": "55+11176"},
+      {"phrase": "планировка квартира новостройка", "volume": 29, "region": "55+11176"}
+    ],
+    "rework_from": "«планировка квартира новостройка» 29 → spine 1047 + bathroom appendix vs booking",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "ddu_second_bathroom_missing_bron_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B32 escrow INN", "B27 land lease", "B25 finish on keys", "B31 insurance", "layout sqm-only posts"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["consultant_214fz"],
+    "errors": [],
+    "note": "214-ФЗ ст.4 план/ДДУ/эскроу; банковские тарифы не заявлялись"
+  },
+  "key_facts_count": 22,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_research_inputs": "assembled-research-inputs.md",
+    "assembled_writer_inputs": "assembled-writer-inputs.md",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

@@ -1,0 +1,247 @@
+{
+  "topic_id": "B33",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "За четыре дня исчез второй санузел",
+  "cover_hook_highlight": "исчез",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В новостройке Тюмени за 4 дня до ДДУ исчез второй санузел — семья остановила регистрацию.",
+      "scene_hint": "Шоу-рум: ведущий слева в розовой рубашке, два плана wc vs один; flare.",
+      "meme_caption_ru": "",
+      "sticky": "Регистрацию остановили",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошарашенное недоумение"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "В шоу-руме было два санузла, а в приложении к ДДУ — один",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Витрина шоу-рума: две двери санузлов и планшет с одним wc на плане, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «В шоу-руме было два санузла, а в приложении к Д…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Бронь 2 wc",
+        "ДДУ 1 wc",
+        "4 дня до ДДУ"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "В шоу-руме было два санузла, а в приложении к ДДУ — один",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: колонки Бронь vs Приложение к ДДУ, планировка и состав, золото.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Бронь ≠ договор, План в приложении, Сверка до подписи — иллюстрация к разбору…",
+      "labels": [
+        "Бронь ≠ договор",
+        "План в приложении",
+        "Сверка до подписи"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Почему бронь не заменяет приложение к договору",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол продаж: бланк брони с планом-приложением, ручка, окно на стройку, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Почему бронь не заменяет приложение к договору» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Шоу-рум 2 wc",
+        "Бронь 2 wc",
+        "План 1 wc"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Что именно исчезло между бронью и проектом ДДУ",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стопка ДДУ и приложение с планом, жёлтая закладка на расхождении, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Что именно исчезло между бронью и проектом ДДУ» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Не подписали договор",
+        "Эскроу не открывали",
+        "Письмо застройщику",
+        "Исправить план"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Почему регистрацию остановили до эскроу",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Таймлайн: бронь, сверка, стоп регистрации, до эскроу — столбики и даты.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Сверили два документа, Нашли расхождение, Регистрацию остановили — иллюстрация к разбору…",
+      "labels": [
+        "Сверили два документа",
+        "Нашли расхождение",
+        "Регистрацию остановили",
+        "До эскроу не дошли"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что проверить в приложении к ДДУ до регистрации",
+      "visual_type": "process_flow",
+      "scene_hint": "Блок-схема проверки приложения: ипотека, дата, пауза, стрелки шагов.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Ипотека одобрена, Дата регистрации, Пауза до подписи — иллюстрация к разбору сделки",
+      "labels": [
+        "Ипотека одобрена",
+        "Дата регистрации",
+        "Пауза до подписи",
+        "Потом не исправят"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Как не принять решение под давлением даты",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Структурная диаграмма с ветвлением и corner-мемом, high-key коллаж.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: План из приложения, План из брони, Сравнить до подписи — иллюстрация к разбору сделки.",
+      "labels": [
+        "План из приложения",
+        "План из брони",
+        "Сравнить до подписи",
+        "Вопрос застройщику"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "meme_picks": {
+    "cover": [
+      "confused_math_lady",
+      "smudge_cat"
+    ],
+    "inline_1": [
+      "blinking_white_guy"
+    ],
+    "inline_5": [
+      "two_buttons"
+    ],
+    "inline_7": [
+      "disappointed_black_guy"
+    ]
+  },
+  "wordstat_stickers": [
+    "квартира тюмень новостройка",
+    "проверить договор дду",
+    "планировка квартиры"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "ведущий слева, хук справа, телефон внизу справа",
+    "location": "светлый шоу-рум новостройки, макет санузлов",
+    "meme": "confused_math_lady и smudge_cat мелкие угловые стикеры",
+    "prop_set": "два плана квартиры, бланк брони, жёлтый стикер «Регистрацию остановили»",
+    "sticker_set": "confused_math_lady и smudge_cat в углах, не на хук/лицо/телефон",
+    "joke": "два wc минус один в приложении",
+    "outfit": "розовая вельветовая рубашка, чиносы, без пиджака",
+    "emotion": "ошарашенное недоумение, приподнятые брови, рот приоткрыт — не студийная улыбка",
+    "pose_framing": "средний план влево, не бюст",
+    "action": "сравнивает два плана, считает wc пальцем",
+    "lighting": "high-key flare",
+    "identity": "i2i новая одежда и мимика",
+    "text_safety": "без Wordstat-полос"
+  }
+}

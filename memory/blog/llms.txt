@@ -4,6 +4,7 @@
 ## Blog Articles
 
 - [Банк отменил нулевой взнос за 6 дней до ДДУ — сделка встала]({{SITE_BASE}}/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika/): Банк отменил нулевой взнос за 6 дней до ДДУ — сделка встала
+- [В новостройке Тюмени за 4 дня до ДДУ исчез второй санузел — семья остановила регистрацию]({{SITE_BASE}}/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch/): В Тюмени Святослав Шакин разбирает случай: в брони обещали два санузла, а в приложении к ДДУ оставили один. Цена та же — но семья решила не торопиться с регистрацией.
 - [Пожилого продавца вели по телефону — родственники сорвали сделку]({{SITE_BASE}}/v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/): Пожилого продавца вели по телефону — родственники сорвали сделку
 - [Квартиру продавали по доверенности. Хозяин был на СВО]({{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/): Доверенность на продажу квартиры: как проверить волю собственника на СВО до аванса
 - [В Тюмени расписку за квартиру написали — денег на счёте нет]({{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/): В Тюмени расписку за квартиру написали — денег на счёте нет

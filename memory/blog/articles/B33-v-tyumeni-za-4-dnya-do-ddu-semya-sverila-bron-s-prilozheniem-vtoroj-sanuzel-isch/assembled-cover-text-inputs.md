@@ -1,0 +1,8 @@
+Derouter cover-text role — B33 — output cover/cover-text.json only.
+
+H1: В новостройке Тюмени за 4 дня до ДДУ исчез второй санузел — семья остановила регистрацию
+Angle: Family compared booking PDF (2 bathrooms) with DDU appendix plan (1 bathroom) 4 days before registration; same price; stopped registration before escrow; Tyumen newbuild.
+comment_magnet: Если в брони два санузла, а в ДДУ один — подписывали бы «как есть» или срывали сделку?
+Hook: 5–7 Cyrillic words, simple Russian, who+what happened.
+phone_cta on cover: +7 922 001 65 05
+meme_picks from meme-top100.json only; people+cats variety; slots cover, inline_1, inline_5, inline_7; avoid drake, hide_pain_harold+smudge_cat (B30), two_buttons+crying_cat (B31).

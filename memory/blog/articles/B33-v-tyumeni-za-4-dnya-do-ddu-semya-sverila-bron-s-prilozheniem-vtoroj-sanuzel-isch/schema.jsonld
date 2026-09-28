@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch/#blogposting",
+      "url": "{{SITE_BASE}}/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch/",
+      "headline": "В новостройке Тюмени за 4 дня до ДДУ исчез второй санузел — семья остановила регистрацию",
+      "description": "В Тюмени Святослав Шакин разбирает случай: в брони обещали два санузла, а в приложении к ДДУ оставили один. Цена та же — но семья решила не торопиться с регистрацией.",
+      "datePublished": "2026-09-28",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch/"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch",
+  "topic_id": "B33",
+  "post_id": 11170,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1117721,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11170 slug=v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=11171\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11172 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch-inline-01.png\nOK inline_alt=11172\nOK inline_description=11172\nOK inline_image_upload=11173 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch-inline-02.png\nOK inline_alt=11173\nOK inline_description=11173\nOK inline_image_upload=11174 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch-inline-03.png\nOK inline_alt=11174\nOK inline_description=11174\nOK inline_image_upload=11175 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch-inline-04.png\nOK inline_alt=11175\nOK inline_description=11175\nOK inline_image_upload=11176 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch-inline-05.png\nOK inline_alt=11176\nOK inline_description=11176\nOK inline_image_upload=11177 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch-inline-06.png\nOK inline_alt=11177\nOK inline_description=11177\nOK inline_image_upload=11178 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch-inline-07.png\nOK inline_alt=11178\nOK inline_description=11178\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-4-dnya-do-ddu-semya-sverila-bron-s-prilozheniem-vtoroj-sanuzel-isch/",
+    "errors": []
+  }
+}
