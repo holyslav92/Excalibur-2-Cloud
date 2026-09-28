@@ -1,0 +1,84 @@
+{
+  "scene_draft_version": "B33",
+  "cover_hook": "За четыре дня чистовая у подрядчика",
+  "cover_hook_highlight": "чистовая",
+  "sticky": "Эскроу на паузе",
+  "mechanism": "За четыре дня до ДДУ застройщик выдал отдельный договор на чистовую только у партнёрского подрядчика вне цены ДДУ — банк поставил эскроу на паузу.",
+  "slots": {
+    "cover": {
+      "scene_hint": "Светлый павильон отделки у новостройки Тюмени: ведущий справа в мятной рубашке в шоке сравнивает договор подрядчика и проект ДДУ, образцы плитки на стенде, солнечный блик.",
+      "cover_emotion": "ошарашенное недоверие с приподнятой бровью",
+      "identity": "same person as face-studio-2026-06-23.jpg, medium slim; NEW outfit pose expression; do not copy reference clothes pose smile",
+      "composition": "host right three-quarter medium shot, hook zone upper left, phone bottom-right",
+      "location": "bright Tyumen newbuild sales finish pavilion with tile samples and partner contractor stand",
+      "action": "holds separate finishing contract in one hand and DDU draft in the other, pointing at missing finish clause",
+      "lighting": "high-key white daylight sun flare light leak airy #FFFFFF no dark cinematic",
+      "text_safety": "hook sticky phone +7 922 001 65 05 unobstructed; NO Wordstat query strips",
+      "meme_direction": "tiny blinking_white_guy and grumpy_cat corner stickers ≤15%, never on hook face phone"
+    },
+    "inline_1": {
+      "visual_type": "realistic_photo",
+      "placement_group": "pair",
+      "scene_hint": "Bright newbuild showroom corner with family brochure and paid reservation receipt on table, finish price list visible; no faces.",
+      "fact_labels": ["Трёшка с чистовой", "Бронь оплачена", "Ипотека одобрена"]
+    },
+    "inline_2": {
+      "visual_type": "comparison_table",
+      "placement_group": "pair",
+      "scene_hint": "High-key collage table: DDU price column vs separate contractor contract 520k highlighted in gold tape style.",
+      "fact_labels": ["Договор отделки", "Не в цене ДДУ", "Партнёрский подрядчик"]
+    },
+    "inline_3": {
+      "visual_type": "realistic_photo",
+      "placement_group": "single",
+      "scene_hint": "Sunlit desk with DDU appendix pages open showing empty finish section beside glossy brochure promising chistovaya; hands only.",
+      "fact_labels": ["Проект ДДУ", "Чистовой нет", "Обещали в брони"]
+    },
+    "inline_4": {
+      "visual_type": "realistic_photo",
+      "placement_group": "single",
+      "scene_hint": "Bank mortgage desk with paused escrow status on monitor and returned reservation papers; no host face.",
+      "fact_labels": ["Эскроу на паузе", "Отказ от подрядчика", "ДДУ не подписали"]
+    },
+    "inline_5": {
+      "visual_type": "process_flow",
+      "placement_group": "single",
+      "scene_hint": "Bright numbered flow: bron → DDU → contractor contract → bank escrow pause with warning icon on contractor step.",
+      "fact_labels": ["Бронь и прайс", "ДДУ и отделка", "До перевода денег"]
+    },
+    "inline_6": {
+      "visual_type": "structure_diagram",
+      "placement_group": "single",
+      "scene_hint": "Diagram linking reservation, DDU, contractor agreement and escrow gate with finish surcharge branch highlighted.",
+      "fact_labels": ["Таблица отделки", "Сумма вне цены", "Сравнить до аванса"]
+    },
+    "inline_7": {
+      "visual_type": "bar_timeline_chart",
+      "placement_group": "single",
+      "scene_hint": "Four-day timeline bar chart before DDU signing: contract drop, bank pause, partial refund, no escrow opened.",
+      "fact_labels": ["Ручка до аванса", "Не паника", "Сохранить переписку"]
+    }
+  },
+  "cover_motifs": {
+    "composition": "host right three-quarter with dual contracts foreground, left hook zone, phone bottom-right",
+    "location": "bright Tyumen newbuild finish pavilion with partner contractor stand",
+    "meme": "blinking_white_guy + grumpy_cat tiny corner stickers",
+    "prop_set": "отдельный договор подрядчика, проект ДДУ, образцы плитки, жёлтый стикер",
+    "sticker_set": "blinking_white_guy top-left corner, grumpy_cat bottom-left, ≥80px from hook face phone",
+    "joke": "чистовая в брони превратилась в полмиллиона у партнёра",
+    "outfit": "mint green linen shirt rolled sleeves charcoal trousers no blazer",
+    "emotion": "ошарашенное недоверие с приподнятой бровью прямой взгляд",
+    "pose_framing": "standing waist-up three-quarter right slight low angle not left bust",
+    "action": "сравнивает договор подрядчика с проектом ДДУ у стенда отделки"
+  },
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "купить новостройку в тюмени"
+  ],
+  "meme_picks": {
+    "cover": ["blinking_white_guy", "grumpy_cat"],
+    "inline_1": ["distracted_boyfriend"],
+    "inline_5": ["confused_math_lady"],
+    "inline_7": ["this_is_fine_dog"]
+  }
+}
