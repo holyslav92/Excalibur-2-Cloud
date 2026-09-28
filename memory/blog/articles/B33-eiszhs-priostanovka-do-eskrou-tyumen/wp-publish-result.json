@@ -1,0 +1,28 @@
+{
+  "slug": "eiszhs-priostanovka-do-eskrou-tyumen",
+  "topic_id": "B33",
+  "post_id": 11157,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/eiszhs-priostanovka-do-eskrou-tyumen/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-eiszhs-priostanovka-do-eskrou-tyumen/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1153172,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11157 slug=eiszhs-priostanovka-do-eskrou-tyumen\nOK categories=32,34,36\nOK yoast_social_image=1\nOK featured_image=11158\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11159 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/eiszhs-priostanovka-do-eskrou-tyumen-inline-03.png\nOK inline_alt=11159\nOK inline_description=11159\nOK inline_image_upload=11160 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/eiszhs-priostanovka-do-eskrou-tyumen-inline-04.png\nOK inline_alt=11160\nOK inline_description=11160\nOK inline_image_upload=11161 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/eiszhs-priostanovka-do-eskrou-tyumen-inline-05.png\nOK inline_alt=11161\nOK inline_description=11161\nOK inline_image_upload=11162 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/eiszhs-priostanovka-do-eskrou-tyumen-inline-06.png\nOK inline_alt=11162\nOK inline_description=11162\nOK inline_image_upload=11163 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/eiszhs-priostanovka-do-eskrou-tyumen-inline-07.png\nOK inline_alt=11163\nOK inline_description=11163\nOK inline_image_upload=11164 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/eiszhs-priostanovka-do-eskrou-tyumen-inline-01.png\nOK inline_alt=11164\nOK inline_description=11164\nOK inline_image_upload=11165 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/eiszhs-priostanovka-do-eskrou-tyumen-inline-02.png\nOK inline_alt=11165\nOK inline_description=11165\npermalink={{SITE_BASE}}/blog/ipoteka/eiszhs-priostanovka-do-eskrou-tyumen/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/eiszhs-priostanovka-do-eskrou-tyumen/",
+    "errors": []
+  }
+}

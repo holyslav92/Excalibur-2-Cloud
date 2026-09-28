@@ -1,0 +1,244 @@
+{
+  "topic_id": "B33",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Приостановка в ЕИСЖС — эскроу не открыли",
+  "cover_hook_highlight": "Приостановка",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "За 2 дня до эскроу семья увидела в ЕИСЖС приостановку стройки в Тюмени — и не открыла счёт.",
+      "scene_hint": "Новостройка: экран ЕИСЖС с приостановкой, телефон с банком.",
+      "meme_caption_ru": "",
+      "sticky": "Успели проверить стройку",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "настороженное облегчение после остановки сделки"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Где смотреть документы, если статус в реестре не сходится с обещаниями",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Ноутбук с карточкой корпуса на наш.дом.рф, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Где смотреть документы, если статус в реестре н…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "ЕИСЖС",
+        "приостановка стройки",
+        "за 2 дня",
+        "счёт не открыли"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Где смотреть документы, если статус в реестре не сходится с обещаниями",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: офис vs ЕИСЖС vs банк.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: проверить объект, статус стройки, до открытия счёта — иллюстрация к разбору…",
+      "labels": [
+        "проверить объект",
+        "статус стройки",
+        "до открытия счёта",
+        "Тюмень"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Семейная ипотека одобрена — к эскроу оставалось два дня",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Светлая квартира-новостройка, одобрение ипотеки на столе.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Семейная ипотека одобрена — к эскроу оставалось…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "эскроу-счёт",
+        "новостройка",
+        "проверка документов",
+        "решение семьи"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "В офисе корпус «в графике», вечером — карточка на наш.дом.рф",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Офис продаж и экран с расхождением статуса, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «В офисе корпус «в графике», вечером — карточка…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Банк без реквизитов",
+        "Перевод не состоялся",
+        "Бронь поджимает",
+        "Пауза сделки",
+        "Тюмень"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "В ЕИСЖС по их корпусу всплыла приостановка строительства",
+      "visual_type": "process_flow",
+      "scene_hint": "Поток: пауза → без перевода → письменные ответы.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Не платить напрямую, Эскроу обязателен, Спешка опасна — иллюстрация к разбору…",
+      "labels": [
+        "Не платить напрямую",
+        "Эскроу обязателен",
+        "Спешка опасна",
+        "Документы важнее",
+        "До аванса"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Банк не выдал реквизиты эскроу — перевод так и не состоялся",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема: ЕИСЖС → ДДУ → банк → эскроу.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Сверка корпуса, Декларация и ДДУ, Дата проверки — иллюстрация к разбору сделки.",
+      "labels": [
+        "Сверка корпуса",
+        "Декларация и ДДУ",
+        "Дата проверки",
+        "Письменный ответ",
+        "Банк отдельно"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что сверить по корпусу в ЕИСЖС до открытия счёта",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Таймлайн два дня до эскроу, метки проверок.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Агентство решения, Не паника, Документы решают — иллюстрация к разбору сделки.",
+      "labels": [
+        "Агентство решения",
+        "Не паника",
+        "Документы решают",
+        "Ручка до аванса",
+        "Тюмень"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки Тюмень",
+    "эскроу счёт",
+    "договор долевого участия"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "left title zone, host right with phone showing EISZHS status",
+    "location": "bright Tyumen newbuild sales office corner",
+    "props": [
+      "телефон с наш.дом.рф",
+      "папка ДДУ",
+      "бронь",
+      "банковское одобрение"
+    ],
+    "outfit": "olive linen blazer over white tee",
+    "emotion": "настороженное облегчение после остановки сделки",
+    "pose_framing": "medium three-quarter, leaning toward phone screen",
+    "action": "showing EISZHS suspension line before escrow deadline",
+    "joke": "офис говорит «в графике», экран — приостановка",
+    "meme": "roll_safe tiny corner sticker",
+    "stickers": [
+      "yellow sticky away from hook and phone"
+    ],
+    "sticker_clearance": "minimum 80px from hook, host face and phone number"
+  }
+}

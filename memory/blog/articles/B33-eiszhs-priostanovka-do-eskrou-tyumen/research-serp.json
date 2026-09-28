@@ -1,0 +1,94 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-28",
+    "today_ru": "28.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "понедельник"
+  },
+  "topic": {
+    "topic_id": "B33",
+    "title": "ЕИСЖС приостановка до эскроу Тюмень",
+    "h1": "ЕИСЖС приостановка до эскроу Тюмень",
+    "slug": "eiszhs-priostanovka-do-eskrou-tyumen",
+    "primary_query": "ЕИСЖС приостановка до эскроу Тюмень",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "ЕИСЖС приостановка до эскроу Тюмень 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-28"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "ЕИСЖС приостановка до эскроу Тюмень 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-28"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "ЕИСЖС приостановка до эскроу Тюмень official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-28"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com ЕИСЖС приостановка до эскроу Тюмень 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "GitHub - imputnet/helium-windows: Helium Browser for Windows",
+          "url": "https://github.com/imputnet/helium-windows",
+          "snippet": ""
+        },
+        {
+          "title": "GitHub - IPTVRU2026/IPTVMIR: DropTV — 9000+ рабочих IPTV каналов ...",
+          "url": "https://github.com/IPTVRU2026/IPTVMIR",
+          "snippet": "Follow the \"Visual Studio\" section of the official Windows build instructions. Make sure to read through the entire section and install/configure all the required components. If your Visual Studio is installed in a directory other than the default, you'll need to set a few environment variables to point the toolchains to your installation path."
+        },
+        {
+          "title": "GitHub - justxor/pythonroamap2026: Python полная дорожная карта для ...",
+          "url": "https://github.com/justxor/pythonroamap2026",
+          "snippet": "Скопируйте и вставьте в любой IPTV плеер. Если плейлист временно не работает — подождите следующего обновления. Последнее обновление: 27.02.2026."
+        },
+        {
+          "title": "ГАЙД от 23.02.2026 по установке фикс ... - GitHub",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/discussions/10241",
+          "snippet": "Полный и актуальный маршрут изучения Python в 2026 году: от Hello, World до Senior / архитектора. С практикой, схемами, примерами кода и только бесплатными ресурсами."
+        },
+        {
+          "title": "Обход замедления YouTube в России + ответы на вопросы (15 сентября)",
+          "url": "https://github.com/ValdikSS/GoodbyeDPI/issues/378",
+          "snippet": "Гайд по дополненному zapret-discord-youtube-1.9.7 с измененным ALT11 сделан для пользователей из РФ, у которых в следствие блокировки от РКН (Роскомнадзор) наблюдаются проблемы с доступом к интернет-ресурсам с серверами на Google, Amazon, Cloudflare и др."
+        },
+        {
+          "title": "NexPlayer/rookietl.svg at main · bothype/NexPlayer · GitHub",
+          "url": "https://github.com/bothype/NexPlayer/blob/main/rookietl.svg",
+          "snippet": "Можно заблокировать локальные серверы провайдера, чтобы YouTube использовал общие для города или региона у другого провайдера, в надежде, что с ними не будет проблем."
+        }
+      ],
+      "searched_at": "2026-09-28"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "ЕИСЖС приостановка до эскроу Тюмень forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 0,
+      "results": [],
+      "searched_at": "2026-09-28"
+    }
+  ],
+  "errors": []
+}

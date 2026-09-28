@@ -1,0 +1,24 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{SITE_BASE}}/eiszhs-priostanovka-do-eskrou-tyumen/#article",
+  "url": "{{SITE_BASE}}/eiszhs-priostanovka-do-eskrou-tyumen/",
+  "headline": "За 2 дня до эскроу семья увидела в ЕИСЖС приостановку стройки в Тюмени — и не открыла счёт",
+  "description": "В Тюмени бронь новостройки едва не превратилась в необратимый шаг: Святослав Шакин показывает, какой сигнал остановил сделку раньше перевода денег.",
+  "datePublished": "2026-09-28",
+  "author": {
+    "@type": "Person",
+    "@id": "{{SITE_BASE}}/#/schema/person/svyatoslav-shakin",
+    "name": "Святослав Шакин",
+    "sameAs": []
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{SITE_BASE}}/eiszhs-priostanovka-do-eskrou-tyumen/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "{{SITE_BASE}}/#organization",
+    "name": "Excalibur"
+  }
+}

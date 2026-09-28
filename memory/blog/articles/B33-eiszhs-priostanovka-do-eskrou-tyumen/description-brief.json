@@ -1,0 +1,9 @@
+{
+  "topic_id": "B33",
+  "description": "В Тюмени бронь новостройки едва не превратилась в необратимый шаг: Святослав Шакин показывает, какой сигнал остановил сделку раньше перевода денег.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
