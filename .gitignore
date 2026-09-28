@@ -15,3 +15,5 @@ tmp/
 
 # test runtime fixtures
 memory/blog/articles/_cta_gate_fixture/
+memory/blog/trend-radar/data/
+vendor/viraldzen/**/__pycache__/

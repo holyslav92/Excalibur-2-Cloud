@@ -487,8 +487,8 @@ def main() -> int:
                 print(f"  [{w['severity']}] {gate} | {label} | {w.get('topic_id', '')} ({w.get('source', '')})")
                 print(f"  {w['message']}")
             print(
-                "BLOCKER: SCOUT ANTI-DUPE HARD — distinct newbuild mechanism required "
-                "(shared/dzen-top-angle-newbuild-lock.md)."
+                "BLOCKER: SCOUT ANTI-DUPE HARD — distinct mechanism required for slot rubric "
+                "(shared/slot-rubric-lock.md + viral energy mirror)."
             )
             return 1
         print("✅ ANTI-DUPE HARD PASS")
@@ -613,8 +613,8 @@ def main() -> int:
                 print(f"  [{w['severity']}] {gate} | {label} | {w.get('topic_id', '')} ({w.get('source', '')})")
                 print(f"  {w['message']}")
             print(
-                "BLOCKER: SCOUT ANTI-DUPE HARD — pick distinct newbuild mechanism + top-energy "
-                "(shared/dzen-top-angle-newbuild-lock.md). Wordstat rework ≠ same story/formula."
+                "BLOCKER: SCOUT ANTI-DUPE HARD — pick distinct rubric mechanism + top-energy "
+                "(shared/slot-rubric-lock.md). Wordstat rework ≠ same story/formula."
             )
             return 1
 

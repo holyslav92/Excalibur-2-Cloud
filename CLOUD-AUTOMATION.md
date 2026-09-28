@@ -1,4 +1,4 @@
-# Excalibur-2-Cloud — Cloud Automation (4×/будни, longform)
+# Excalibur-2-Cloud — Cloud Automation (5×/будни, longform)
 
 **Только после** `memory/setup/status.json` → `complete: true`.
 
@@ -9,29 +9,30 @@
 1. **Engagement bomb** — Dzen likes/comments/subs; news-casus актуалочка; прозаический лид 4–6 предложений; early TG+MAX; comment magnet; **ending landing = agency, not panic** (heat сохраняем); **no** TL;DR / «Быстрый инсайт» / opening bullets; **no** sugar-happy ending / checklist-as-finale / «risks everywhere never buy» takeaway.
 2. **Meme canon v1** — `meme-top100.json` only; people+cats; on-topic funny; stickers ≤15%; sacred hook/face/phone; anti-repeat 14д.
 3. **Cover fail-fast** — max 2 solo attempts; ≤15–20 min cover timebox; budget exhausted → Indexer; no infinite Cover-QA loop; no PIL/Kie escape.
-4. **Newbuild + top-energy Scout** — `shared/dzen-top-angle-newbuild-lock.md`: mirror Dzen top-10 **energy**, plot **ONLY newbuild**; HARD anti-dupe (30d cluster + H1 fingerprint + formula spam); **4 slots/day 09/12/15/17 YEKT** — не резать.
+4. **Trend Radar + slot rubric** — `excalibur_blog_trend_radar.py` (ViralDzen) перед Scout; `shared/slot-rubric-lock.md` (2× новостройки, 2× вторичка, 1× аренда); HARD anti-dupe; **5 slots/day 09/12/15/17/19 YEKT**.
 
 См. `AGENTS.md`, `shared/quality-bar-9.md`, `memory/cover/cover-canon.json`, Writer/Sol/Cover skills.
 
 Тенант: **The Риэлтор** / tymenrieltor.ru — longform **~1400–1600 слов** (≈8–10 мин, hard FAIL >1750), cover + 7 inline-quad (гибкое размещение в HTML: 0/1/пара на H2).
 
-## Расписание (owner: 9–17 YEKT)
+## Расписание (owner: 9–19 YEKT)
 
-**4 запуска в будни** (пн–пт), часовой пояс **Asia/Yekaterinburg (YEKT, UTC+5)**:
+**5 запусков в будни** (пн–пт), часовой пояс **Asia/Yekaterinburg (YEKT, UTC+5)**:
 
-| Слот | Время YEKT |
-|------|------------|
-| 1 | 09:00 |
-| 2 | 12:00 |
-| 3 | 15:00 |
-| 4 | 17:00 |
+| Слот | Время YEKT | Рубрика |
+|------|------------|---------|
+| 1 | 09:00 | новостройки |
+| 2 | 12:00 | новостройки |
+| 3 | 15:00 | вторичка |
+| 4 | 17:00 | вторичка |
+| 5 | 19:00 | аренда |
 
-- Окно владельца: **09:00–17:00** YEKT. Слот **20:00 не используется**.
+- Окно: **09:00–19:00** YEKT (`runs_per_day: 5`).
 - Выходные (сб–вс): longform automation **не запускать**, если owner не попросил отдельно.
 
 ### Cursor Automation (не GitHub Actions)
 
-Настройте **4 отдельных триггера** в [Cursor → Automations](https://cursor.com/docs/cloud-agent/automations) на будни:
+Настройте **5 отдельных триггеров** в [Cursor → Automations](https://cursor.com/docs/cloud-agent/automations) на будни:
 
 | Триггер | Расписание (YEKT) | Пример cron (TZ=Asia/Yekaterinburg) |
 |---------|-------------------|-------------------------------------|
@@ -39,6 +40,7 @@
 | 2 | пн–пт 12:00 | `0 12 * * 1-5` |
 | 3 | пн–пт 15:00 | `0 15 * * 1-5` |
 | 4 | пн–пт 17:00 | `0 17 * * 1-5` |
+| 5 | пн–пт 19:00 | `0 19 * * 1-5` |
 
 Канонические слоты дублируются в `shared/tenant-config.json` → `publish_schedule.slots_local`.
 
@@ -51,7 +53,7 @@
 Каждый запуск automation обрабатывает **ровно одну** longform-статью от темы до готовых PNG:
 
 ```text
-Scout? → research_start → Research → Title → Writer → Sol
+Trend Radar → Scout? → research_start → Research → Title → Writer → Sol
 → Stylo → Description → Cover-text || Schema → Cover → Cover-QA → Indexer
 → Publish? → Fixer → merge → Content-learner
 ```
@@ -144,7 +146,7 @@ Cover + inline PNG **only grsai grsai standard image model** (Derouter image = o
 3. Optional last resort: `EXCALIBUR_IMAGE_FALLBACK_DEROUTER=1` → Derouter image REST (`excalibur_blog_derouter_gpt_image2_api.py`).
 4. grsai down → `GRSAI IMAGE BLOCKER` — diagnose/retry; **STOP**
 
-**Text roles unchanged:** Derouter Astra/Terra via `excalibur_blog_derouter_opus_chat.py`.
+**Text roles:** Derouter Opus 5.5 (Writer/Sol) + Terra utility via `excalibur_blog_derouter_opus_chat.py`.
 
 **FORBIDDEN FOREVER:** Kie (`KIE_API_KEY`, `excalibur_blog_kie_gpt_image2_api.py`), PIL template mashup (`excalibur_blog_cover_pil_compose.py`). Never `--fallback-kie`. Never upload mashup when APIs fail.
 
@@ -152,26 +154,27 @@ Cover + inline PNG **only grsai grsai standard image model** (Derouter image = o
 
 ## Automation prompt
 
-> **OWNER: re-save required** — после каждого обновления `CLOUD-AUTOMATION.md` на `main` владелец **обязан один раз** вставить блок ниже в **Instructions** каждого из **4 Cursor Automations** (09/12/15/17 YEKT) и нажать Save. UI Automations **не** подтягивает git автоматически; без re-save weekday runs отстают от weekend Grok.
+> **OWNER: re-save required** — после каждого обновления `CLOUD-AUTOMATION.md` на `main` владелец **обязан один раз** вставить блок ниже в **Instructions** каждого из **5 Cursor Automations** (09/12/15/17/19 YEKT) и нажать Save. UI Automations **не** подтягивает git автоматически; без re-save weekday runs отстают от канона.
 
-Скопируй блок ниже в **Instructions** каждого из 4 Cursor Automations (09/12/15/17 YEKT; `runs_per_day: 4` — **never 2**):
+Скопируй блок ниже в **Instructions** каждого из 5 Cursor Automations (09/12/15/17/19 YEKT; `runs_per_day: 5`):
 
 ```text
-Прочитай AGENTS.md + shared/owner-runtime-lock.json + shared/pipeline-canon.json + shared/tenant-config.json + shared/quality-bar-9.md + shared/article-quality-score-lock.md + shared/dzen-news-casus.md + shared/dzen-top-angle-newbuild-lock.md + CLOUD-AUTOMATION.md.
+Прочитай AGENTS.md + shared/owner-runtime-lock.json + shared/pipeline-canon.json + shared/tenant-config.json + shared/quality-bar-9.md + shared/article-quality-score-lock.md + shared/dzen-news-casus.md + shared/slot-rubric-lock.md + CLOUD-AUTOMATION.md.
 Если setup_complete != true — остановись (Setup).
 Игнорируй Automation Memory. Memories = OFF.
 
 Ты — ТОНКИЙ ДИРИЖЁР (default Composer — НЕ переключать модель). Прозу текстовых ролей пишет ТОЛЬКО
 scripts/excalibur_blog_derouter_opus_chat.py:
-  powerful gpt-6-astra → writer/sol/title/description/cover-text (Dzen-facing copy + article prose; NEVER claude-opus-5 / Opus)
-  utility gpt-5.6-terra → scout/research/schema/cover-scene
-Не пиши Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene своей моделью.
+  powerful claude-opus-5-5 → writer/sol (fallback gpt-6-astra после quality-score repair — excalibur_blog_powerful_tier_fallback.py)
+  utility gpt-5.6-terra → scout/research/title/description/cover-text/schema/cover-scene/trend-radar
+Не пиши Scout/Research/Title/Writer/Sol/Description/Cover-text/Schema/Cover-scene/Trend Radar своей моделью.
 DEROUTER <ROLE> BLOCKER → стоп пайплайна. Нет run_budget / circuit breaker.
 
 doctor + today (doctor FAIL если config ≠ shared/owner-runtime-lock.json).
 dzen_rf_pack: shared/dzen-content-rules.md + rf-blocked-entities.json.
-needs_scout → Scout (signal_urls из tenant) — handoff prose через derouter --role scout.
-Scout HARD gates перед handoff: live blog ~20 + ledger + `--sync-used-clusters` + MCP-KV Wordstat + shared/dzen-news-casus.md + **shared/newbuild-focus-lock.md** + **shared/dzen-top-angle-newbuild-lock.md** (mirror top-10 ENERGY, plot ONLY newbuild; DENY secondary retitle; DENY guide/checklist) + `topic_focus.py` newbuild gate + `scout_helper.py --check-query` (**HARD anti-dupe:** 30d cluster + H1 fingerprint + formula spam last-3 + frozen secondary — fail before Writer via research_start; Klyshin optional, fresh only, newbuild hook only).
+Каждый слот: EXCALIBUR_BLOG_SLOT=<HH:MM> или авто → python3 scripts/excalibur_blog_slot_rubric.py --json → slot_rubric.
+Сначала Trend Radar: python3 scripts/excalibur_blog_trend_radar.py --slot <HH:MM> → memory/blog/trend-radar/trend-radar.json (mechanics only, delay≥0.7).
+needs_scout → Scout — handoff через derouter --role scout; quad gate: trend-radar + Wordstat + news-casus + slot rubric (shared/slot-rubric-lock.md, rubric_per_slot) + topic_focus + scout_helper **HARD anti-dupe** (30d cluster + H1 fingerprint + formula spam).
 research_start → Research → Title → Writer → Sol — каждый шаг через derouter --role <…>.
 Title/Writer/Sol: цель = Dzen engagement (лайки, комментарии, подписки); news-casus актуалочка (событие → финал → практика **один раз**); **spine once** — не пересказывать casus в лиде+середине+итоге; **учебный хвост после casus FAIL** (214-ФЗ простыня, таблицы-гайды перед end CTA); прозаический лид → early TG+MAX; comment magnet; ending landing — agency not panic; H1 forbidden: «чеклист», «N шагов»; body **1400–1600** (hard FAIL > **1750** / >10 мин Дзен), useful part AFTER story.
 Description: news card energy (shared/dzen-description-rules.md), not SEO checklist blurb.
@@ -184,13 +187,13 @@ Conversion + engagement (shared/quality-bar-9.md + SOUL + tenant-config cta_chan
   Interlink 2–4 sibling из shared/published-articles.md (status=published)
   Comment magnet: один острый вопрос для комментариев (gate comment_magnet_question)
 
-После Sol: Stylo → article quality score gate (`excalibur_blog_quality_score_gate.py` → `article-quality-score.json` all_pass; FAIL → один `--repair` Sol; no self-score 9.0 loop) → pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → `quality-bar-9.json` all_pass.
+После Sol: Stylo → article quality score gate (`excalibur_blog_quality_score_gate.py` → `article-quality-score.json` all_pass; FAIL → один `--repair` Sol; still FAIL → `--fallback-powerful` / gpt-6-astra Writer+Sol; no self-score 9.0 loop) → pipeline_canon stamp + opening_meta + html_linter + quality-bar-9 gate → `quality-bar-9.json` all_pass.
 Description → Cover-text || Schema → Cover (grsai standard only — **never vip**; hook H1 + phone + meme picks from meme-top100.json — on-topic funny, people+cats, ≤15% sticker, never on hook/face/phone — **NO Wordstat query strips**) → `excalibur_blog_image_caption_builder.py --apply` (short SEO alt/caption, never scene_hint) → Cover-QA pixel gate (`pixel_no_wordstat_query_strips`, `pixel_hook_title_present`, `pixel_phone_readable`, `pixel_meme_present`, `pixel_layout_not_collapsed`; meme_variety_not_cats_only when meme_picks present; Fixer: regen cover panel only, **max 2 rounds**) → Indexer.
 
 Cover timebox: ≤15–20 min total on cover regen+QA. Hard budget `EXCALIBUR_COVER_MAX_ATTEMPTS=2` (solo cover + panel regen). After budget exhausted → read `cover/cover-budget-result.json` → Indexer anyway if visual OK; NEVER infinite Cover-QA loop or deep-dive grep of `cover_qa_pixels.py`. Short hook 5–7 Cyrillic words (cover-text gate). OCR false-positive escape in pixel gate (B08/B09 pattern).
 
 Publish ТОЛЬКО если FTP secrets настроены И EXCALIBUR_BLOG_ALLOW_PUBLISH=yes на процессе И quality-bar-9.json all_pass И article-quality-score.json all_pass (или `--media-refresh --featured-only` для cover-only: pixel Cover-QA PASS + wp_post_id); иначе STOP после Indexer.
-Live = SFTP replace (не жди merge article в main для сайта). Код/канон — в main. Schedule: 4 Cursor Automations / weekday slots 09/12/15/17 YEKT (runs_per_day: 4 — never cut to 2).
+Live = SFTP replace (не жди merge article в main для сайта). Код/канон — в main. Schedule: 5 Cursor Automations / weekday slots 09/12/15/17/19 YEKT (runs_per_day: 5).
 
 Один run = одна статья. Fixer → merge code fixes → content-learner.
 ```

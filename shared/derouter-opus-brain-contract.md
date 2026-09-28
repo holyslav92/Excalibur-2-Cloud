@@ -13,8 +13,9 @@
 
 | Tier | Model id (Derouter) | Env override | Роли |
 |------|---------------------|--------------|------|
-| **powerful** | `gpt-6-astra` | `DEROUTER_POWERFUL_MODEL` (legacy: `DEROUTER_OPUS_MODEL`) | writer, sol, title, description, cover-text |
-| **utility** | `gpt-5.6-terra` | `DEROUTER_TERRA_MODEL` | scout, research, schema, cover-scene |
+| **powerful** | `claude-opus-5-5` | `DEROUTER_POWERFUL_MODEL` (legacy: `DEROUTER_OPUS_MODEL`) | writer, sol |
+| **powerful fallback** | `gpt-6-astra` | после FAIL quality-score + один repair (`excalibur_blog_powerful_tier_fallback.py`) | writer, sol |
+| **utility** | `gpt-5.6-terra` (`gpt-6-terra` на Derouter нет — 2026-09-28) | `DEROUTER_TERRA_MODEL` | scout, research, title, description, cover-text, schema, cover-scene, trend-radar |
 
 `resolve_model` выбирает tier по `--role`. **Не** используй глобальный `DEROUTER_TEXT_MODEL` как override всех ролей — если задан, он не переводит powerful-роли на utility.
 

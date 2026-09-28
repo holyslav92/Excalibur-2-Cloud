@@ -93,8 +93,12 @@ def validate_writing_model(lock: dict[str, Any], tenant: dict[str, Any]) -> list
     if model != powerful_lock.get("model"):
         errors.append(f"tenant powerful model {model!r} != lock {powerful_lock.get('model')!r}")
     forbidden = {m.lower() for m in (powerful_lock.get("forbidden_powerful_models") or [])}
-    if model.lower() in forbidden or "opus" in model.lower():
+    allowed_powerful = str(powerful_lock.get("model") or "").lower()
+    model_lower = model.lower()
+    if model_lower in forbidden:
         errors.append(f"forbidden powerful model active in tenant: {model}")
+    elif "opus" in model_lower and model_lower != allowed_powerful:
+        errors.append(f"powerful model must be lock model {powerful_lock.get('model')!r}, got {model!r}")
 
     if set(powerful.get("roles") or []) != set(powerful_lock.get("roles") or []):
         errors.append("tenant powerful.roles != owner-runtime-lock")
@@ -108,18 +112,19 @@ def validate_writing_model(lock: dict[str, Any], tenant: dict[str, Any]) -> list
 
     legacy_env = str(powerful_lock.get("legacy_env") or "DEROUTER_OPUS_MODEL")
     legacy_val = os.environ.get(legacy_env, "").strip()
-    if legacy_val:
-        if "opus" in legacy_val.lower() and "astra" not in legacy_val.lower():
-            errors.append(f"{legacy_env}={legacy_val} forbids Opus as active Writer/Sol model")
+    lock_model = str(powerful_lock.get("model") or "")
+    if legacy_val and legacy_val != lock_model:
+        if legacy_val.lower() in forbidden:
+            errors.append(f"{legacy_env}={legacy_val} is forbidden powerful model")
+        elif legacy_val != lock_model:
+            errors.append(f"{legacy_env}={legacy_val} != lock {lock_model}")
     powerful_env = os.environ.get(str(powerful_lock.get("model_env") or "DEROUTER_POWERFUL_MODEL"), "").strip()
     if powerful_env:
-        if "opus" in powerful_env.lower() and "astra" not in powerful_env.lower():
+        if powerful_env.lower() in forbidden:
+            errors.append(f"{powerful_lock.get('model_env')}={powerful_env} is forbidden")
+        elif powerful_env != lock_model:
             errors.append(
-                f"{powerful_lock.get('model_env')}={powerful_env} forbids Opus as active Writer/Sol model"
-            )
-        if powerful_env != powerful_lock.get("model"):
-            errors.append(
-                f"{powerful_lock.get('model_env')}={powerful_env} != lock {powerful_lock.get('model')}"
+                f"{powerful_lock.get('model_env')}={powerful_env} != lock {lock_model}"
             )
     return errors
 
@@ -180,7 +185,9 @@ def validate_scout_clusters(lock: dict[str, Any], root: Path) -> list[str]:
     for rel in (
         scout_lock.get("angle_lock_doc"),
         scout_lock.get("newbuild_lock_doc"),
+        scout_lock.get("slot_rubric_lock_doc"),
         scout_lock.get("topic_focus_script"),
+        scout_lock.get("slot_rubric_script"),
         hard_lock.get("gate_script"),
         hard_lock.get("helper_script"),
     ):

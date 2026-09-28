@@ -25,10 +25,10 @@ class OwnerRuntimeLockTests(unittest.TestCase):
     def test_lock_file_exists_and_has_core_keys(self) -> None:
         lock = load_lock(ROOT)
         self.assertEqual(lock.get("status"), "LOCKED_ON_MAIN")
-        self.assertEqual((lock.get("schedule") or {}).get("runs_per_day"), 4)
+        self.assertEqual((lock.get("schedule") or {}).get("runs_per_day"), 5)
         self.assertEqual(
             (lock.get("writing_model") or {}).get("powerful", {}).get("model"),
-            "gpt-6-astra",
+            "claude-opus-5-5",
         )
         self.assertTrue((lock.get("scout") or {}).get("anti_dupe_hard", {}).get("enabled"))
         self.assertEqual(
@@ -74,8 +74,8 @@ class OwnerRuntimeLockTests(unittest.TestCase):
     def test_tenant_schedule_four_slots(self) -> None:
         tenant = json.loads((ROOT / "shared/tenant-config.json").read_text(encoding="utf-8"))
         sched = tenant["publish_schedule"]
-        self.assertEqual(sched["runs_per_day"], 4)
-        self.assertEqual(sched["slots_local"], ["09:00", "12:00", "15:00", "17:00"])
+        self.assertEqual(sched["runs_per_day"], 5)
+        self.assertEqual(sched["slots_local"], ["09:00", "12:00", "15:00", "17:00", "19:00"])
 
     def test_forbidden_opus_model_in_tenant_fails(self) -> None:
         lock = load_lock(ROOT)
@@ -83,14 +83,14 @@ class OwnerRuntimeLockTests(unittest.TestCase):
         bad = json.loads(json.dumps(tenant))
         bad["writing_model"]["powerful"]["model"] = "claude-opus-5"
         errors = validate_writing_model(lock, bad)
-        self.assertTrue(any("forbidden" in e or "gpt-6-astra" in e for e in errors))
+        self.assertTrue(any("forbidden" in e or "claude-opus-5-5" in e for e in errors))
 
     def test_forbidden_opus_env_fails(self) -> None:
         lock = load_lock(ROOT)
         tenant = json.loads((ROOT / "shared/tenant-config.json").read_text(encoding="utf-8"))
-        with mock.patch.dict(os.environ, {"DEROUTER_POWERFUL_MODEL": "claude-opus-5"}, clear=False):
+        with mock.patch.dict(os.environ, {"DEROUTER_POWERFUL_MODEL": "claude-opus-4-6"}, clear=False):
             errors = validate_writing_model(lock, tenant)
-        self.assertTrue(any("Opus" in e for e in errors))
+        self.assertTrue(errors, "expected env override mismatch or forbidden model")
 
     def test_drift_two_slots_fails_validation(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

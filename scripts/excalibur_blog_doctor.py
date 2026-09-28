@@ -191,6 +191,7 @@ def main() -> int:
         "excalibur-blog-setup-voice",
         "excalibur-blog-setup-visual",
         "excalibur-blog-director",
+        "excalibur-blog-trend-radar",
         "excalibur-blog-scout",
         "excalibur-blog-research",
         "excalibur-blog-title",
@@ -219,7 +220,7 @@ def main() -> int:
     cursor_agent_files = sorted((root / ".cursor/agents").glob("excalibur-blog-*.md"))
     check(
         len(cursor_agent_files) == len(CANONICAL_PIPELINE_AGENTS),
-        f"19 pipeline agent files in .cursor/agents (got {len(cursor_agent_files)})",
+        f"20 pipeline agent files in .cursor/agents (got {len(cursor_agent_files)})",
         errors,
         warnings,
     )
@@ -495,25 +496,19 @@ def main() -> int:
     derouter_powerful_env = os.environ.get("DEROUTER_POWERFUL_MODEL", "").strip()
     derouter_opus_env = os.environ.get("DEROUTER_OPUS_MODEL", "").strip()
     powerful_cfg = (tenant.get("writing_model") or {}).get("powerful") or {}
-    powerful_model = str(powerful_cfg.get("model") or "gpt-6-astra")
+    powerful_model = str(powerful_cfg.get("model") or "claude-opus-5-5")
     powerful_check = derouter_powerful_env or derouter_opus_env or powerful_model
     check(
-        powerful_model == "gpt-6-astra",
-        "tenant powerful model gpt-6-astra (Writer/Sol/Title/Description/Cover-text)",
+        powerful_model == "claude-opus-5-5",
+        "tenant powerful model claude-opus-5-5 (Writer/Sol)",
         errors,
         warnings,
     )
     if powerful_check:
         check(
-            "astra" in powerful_check.lower(),
-            f"powerful tier env/config is Astra ({powerful_check})",
-            errors,
-            warnings,
-            warn=not derouter_key,
-        )
-        check(
-            "opus" not in powerful_check.lower() or "astra" in powerful_check.lower(),
-            f"powerful tier not Opus ({powerful_check})",
+            "claude-opus-5-5" in powerful_check.lower()
+            or powerful_check.lower() == "claude-opus-5-5",
+            f"powerful tier env/config is Opus 5.5 ({powerful_check})",
             errors,
             warnings,
             warn=not derouter_key,
@@ -580,18 +575,19 @@ def main() -> int:
     powerful_roles = set((brain.get("powerful") or {}).get("roles") or [])
     utility_roles = set((brain.get("utility") or {}).get("roles") or [])
     check(
-        {"writer", "sol", "title", "description", "cover-text"}.issubset(powerful_roles),
-        "tenant writing_model.powerful.roles includes writer/sol/title/description/cover-text",
+        {"writer", "sol"}.issubset(powerful_roles),
+        "tenant writing_model.powerful.roles includes writer/sol",
         errors,
         warnings,
     )
     check(
-        {"scout", "research", "schema", "cover-scene"}.issubset(utility_roles),
-        "tenant writing_model.utility.roles includes scout/research/schema/cover-scene",
+        {"scout", "research", "title", "description", "cover-text", "schema", "cover-scene", "trend-radar"}.issubset(
+            utility_roles
+        ),
+        "tenant writing_model.utility.roles includes scout/research/title/description/cover-text/schema/cover-scene/trend-radar",
         errors,
         warnings,
     )
-
     # Dzen + RF canon must be readable before Scout (when pack enabled)
     if tenant.get("dzen_rf_pack", True):
         rf_path = root / "shared/rf-blocked-entities.json"

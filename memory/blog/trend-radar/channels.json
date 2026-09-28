@@ -1,0 +1,71 @@
+{
+  "version": "2026-09-28",
+  "tenant": "the-rieltor",
+  "discovery_note": "Отобраны через ViralDzen channel/collect + хабы недвижимости/ипотека. Только mechanics/energy для Scout — не копировать сюжеты.",
+  "channels": [
+    {
+      "slug": "klyshin",
+      "url": "https://dzen.ru/klyshin",
+      "title": "Алексей Клышин — юрист по недвижимости",
+      "why": "Референс energy: casus+число, юридический heat; стабильно в топе RE-контента Дзена.",
+      "rubrics": ["novostroyki", "vtorichka"],
+      "collect": "channel-only"
+    },
+    {
+      "slug": "bankiru",
+      "url": "https://dzen.ru/bankiru",
+      "title": "Банки.ру",
+      "why": "Ипотека/ставки/банки — вирусные объяснялки с цифрами; зеркало спроса Wordstat.",
+      "rubrics": ["novostroyki", "vtorichka"],
+      "collect": "channel-only"
+    },
+    {
+      "slug": "yuridicheskie-aspekty-nedvizhimosti",
+      "url": "https://dzen.ru/topic/yuridicheskie-aspekty-nedvizhimosti",
+      "title": "Хаб: Юридические аспекты недвижимости (~90k подписчиков)",
+      "why": "Агрегатор lawyer-casus по сделкам; высокий viral_score на вторичке и спорах.",
+      "rubrics": ["vtorichka", "novostroyki"],
+      "collect": "topic"
+    },
+    {
+      "slug": "nedvizhimost",
+      "url": "https://dzen.ru/topic/nedvizhimost",
+      "title": "Хаб: Недвижимость",
+      "why": "Широкий RE-хаб для cross-rubric angles и headline formulas.",
+      "rubrics": ["novostroyki", "vtorichka", "arenda"],
+      "collect": "topic"
+    },
+    {
+      "slug": "arenda-nedvizhimosti",
+      "url": "https://dzen.ru/topic/arenda-nedvizhimosti",
+      "title": "Хаб: Аренда недвижимости",
+      "why": "Прямой слот arenda — механики залога, выселения, договора.",
+      "rubrics": ["arenda"],
+      "collect": "topic"
+    },
+    {
+      "slug": "kvartiry",
+      "url": "https://dzen.ru/topic/kvartiry",
+      "title": "Хаб: Квартиры",
+      "why": "Смешанный спрос квартиры/newbuild/вторичка; хорош для headline mining.",
+      "rubrics": ["novostroyki", "vtorichka"],
+      "collect": "topic"
+    },
+    {
+      "slug": "ipoteka",
+      "url": "https://dzen.ru/topic/ipoteka",
+      "title": "Хаб: Ипотека",
+      "why": "Ставки, одобрение, отказ — casus с деньгами на столе.",
+      "rubrics": ["novostroyki", "vtorichka"],
+      "collect": "topic"
+    },
+    {
+      "slug": "pokupka-nedvizhimosti",
+      "url": "https://dzen.ru/topic/pokupka-nedvizhimosti",
+      "title": "Хаб: Покупка недвижимости",
+      "why": "Покупательские casus almost-lost / stopped before money.",
+      "rubrics": ["novostroyki", "vtorichka"],
+      "collect": "topic"
+    }
+  ]
+}

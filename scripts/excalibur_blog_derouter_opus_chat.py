@@ -33,7 +33,7 @@ MIN_TIMEOUT_SECONDS = 60
 DEFAULT_MAX_RETRIES = 1
 DEFAULT_RETRY_WAIT_SECONDS = 5
 
-DEFAULT_POWERFUL_MODEL = "gpt-6-astra"
+DEFAULT_POWERFUL_MODEL = "claude-opus-5-5"
 DEFAULT_TERRA_MODEL = "gpt-5.6-terra"
 DEFAULT_POWERFUL_MODEL_ENV = "DEROUTER_POWERFUL_MODEL"
 LEGACY_POWERFUL_MODEL_ENV = "DEROUTER_OPUS_MODEL"
@@ -59,12 +59,15 @@ VALID_ROLES = frozenset(
         "cover-text",
         "schema",
         "cover-scene",
+        "trend-radar",
         "smoke",
     }
 )
 
-POWERFUL_ROLES = frozenset({"writer", "sol", "title", "description", "cover-text"})
-UTILITY_ROLES = frozenset({"scout", "research", "schema", "cover-scene"})
+POWERFUL_ROLES = frozenset({"writer", "sol"})
+UTILITY_ROLES = frozenset(
+    {"scout", "research", "title", "description", "cover-text", "schema", "cover-scene", "trend-radar"}
+)
 
 
 class DerouterChatError(RuntimeError):
@@ -141,7 +144,7 @@ def model_aliases_for_tier(tier: str, base_model: str) -> list[str]:
 
 def is_powerful_family(model: str) -> bool:
     lower = model.lower()
-    return "astra" in lower or "opus" in lower
+    return "astra" in lower or ("opus" in lower and "claude-opus-5-5" in lower)
 
 
 def powerful_env_model() -> str:
@@ -197,8 +200,8 @@ def resolve_model(role: str, override: str | None, root: Path) -> tuple[str, str
 
     if tier == "powerful" and not is_powerful_family(model):
         raise DerouterChatError(
-            f"Role {role!r} requires GPT-6 Astra powerful tier; got {model!r}. "
-            f"Set {tier_block.get('model_env') or DEFAULT_POWERFUL_MODEL_ENV}=gpt-6-astra"
+            f"Role {role!r} requires powerful tier (claude-opus-5-5 or gpt-6-astra fallback); got {model!r}. "
+            f"Set {tier_block.get('model_env') or DEFAULT_POWERFUL_MODEL_ENV}=claude-opus-5-5"
         )
 
     if tier == "utility" and "terra" not in model.lower():

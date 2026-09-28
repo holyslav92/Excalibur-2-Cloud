@@ -2,12 +2,13 @@
   "version": "human-first-v2",
   "owner_runtime_lock": "shared/owner-runtime-lock.json",
   "description": "Research → Title → Writer(meaning) → Sol(style) → Stylo(voice) → Description → Cover||Schema → Cover-QA → Indexer → Publish",
-  "pipeline_agents_count": 19,
+  "pipeline_agents_count": 20,
   "pipeline_agents": [
     "excalibur-blog-setup",
     "excalibur-blog-setup-voice",
     "excalibur-blog-setup-visual",
     "excalibur-blog-director",
+    "excalibur-blog-trend-radar",
     "excalibur-blog-scout",
     "excalibur-blog-research",
     "excalibur-blog-title",
@@ -213,20 +214,16 @@
   "owner_lock_permanent": {
     "status": "LOCKED_ON_MAIN",
     "note": "Owner mandate — permanent canon, not chat memory. Do not weaken without explicit owner override.",
-    "newbuild_focus": {
+    "slot_rubric_mix": {
       "status": "LOCKED_ON_MAIN",
       "owner": "Святослав Шакин",
-      "owner_date": "2026-08-31",
-      "market": "newbuild_only",
+      "owner_date": "2026-09-28",
+      "market": "rubric_per_slot",
       "geo": "Tyumen",
-      "products": ["apartments", "houses", "cottage_village", "townhouse", "izhs"],
-      "audience": ["families_with_children", "investors"],
-      "conversion": "message_for_newbuild_purchase",
-      "deny_secondary_market_topics": true,
-      "wordstat_weak_rework_newbuild_jargon": true,
-      "frozen_secondary_clusters": "shared/scout-story-clusters.json",
-      "dzen_top_angle_lock": "shared/dzen-top-angle-newbuild-lock.md",
-      "docs": ["shared/newbuild-focus-lock.md", "shared/topic-focus-contract.md", "shared/dzen-top-angle-newbuild-lock.md"]
+      "daily_mix": {"novostroyki": 2, "vtorichka": 2, "arenda": 1},
+      "slots_yekt": ["09:00", "12:00", "15:00", "17:00", "19:00"],
+      "trend_radar": "memory/blog/trend-radar/trend-radar.json",
+      "docs": ["shared/slot-rubric-lock.md", "shared/topic-focus-contract.md", "shared/newbuild-focus-lock.md"]
     },
     "dzen_engagement": {
       "status": "LOCKED_ON_MAIN",
