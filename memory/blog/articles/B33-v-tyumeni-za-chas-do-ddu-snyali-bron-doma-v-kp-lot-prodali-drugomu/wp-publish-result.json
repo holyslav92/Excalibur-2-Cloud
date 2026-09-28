@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu",
+  "topic_id": "B33",
+  "post_id": 11043,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1305632,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11043 slug=v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu\nOK categories=36,54,34\nOK yoast_social_image=1\nOK featured_image=11044\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11045 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu-inline-01.png\nOK inline_alt=11045\nOK inline_description=11045\nOK inline_image_upload=11046 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu-inline-02.png\nOK inline_alt=11046\nOK inline_description=11046\nOK inline_image_upload=11047 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu-inline-03.png\nOK inline_alt=11047\nOK inline_description=11047\nOK inline_image_upload=11048 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu-inline-04.png\nOK inline_alt=11048\nOK inline_description=11048\nOK inline_image_upload=11049 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu-inline-05.png\nOK inline_alt=11049\nOK inline_description=11049\nOK inline_image_upload=11050 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu-inline-06.png\nOK inline_alt=11050\nOK inline_description=11050\nOK inline_image_upload=11051 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu-inline-07.png\nOK inline_alt=11051\nOK inline_description=11051\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu/",
+    "errors": []
+  }
+}

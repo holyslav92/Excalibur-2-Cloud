@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B33",
+  "slug": "v-tyumeni-za-chas-do-ddu-snyali-bron-doma-v-kp-lot-prodali-drugomu",
+  "candidates_count": 29,
+  "outbound_found": [
+    {
+      "slug": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst",
+      "title": "v-tyumeni-v-proektnoj-deklaracii-zemlya-pod-zhk-v-arende-v-broni-obeschali-sobst"
+    },
+    {
+      "slug": "pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do",
+      "title": "pod-tyumenyu-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-do"
+    },
+    {
+      "slug": "za-3-dnya-do-ddu-zapret-pereprodazhi-3-goda-v-pereustupke-novostrojki-tyumen",
+      "title": "za-3-dnya-do-ddu-zapret-pereprodazhi-3-goda-v-pereustupke-novostrojki-tyumen"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
