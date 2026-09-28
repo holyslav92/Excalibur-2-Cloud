@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-28",
+    "today_ru": "28.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "понедельник"
+  },
+  "topic": {
+    "topic_id": "B33",
+    "title": "За 3 дня до эскроу банк потребовал созаёмщика",
+    "h1": "За 3 дня до эскроу банк потребовал созаёмщика",
+    "slug": "za-3-dnya-do-eskrou-bank-potreboval-sozaemschika",
+    "primary_query": "За 3 дня до эскроу банк потребовал созаёмщика",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "За 3 дня до эскроу банк потребовал созаёмщика 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Когда раскрывается эскроу-счет: сроки и условия",
+          "url": "https://kvarnado.ru/glossarij/guide-kogda-raskryvaetsya-eskrou-schet",
+          "snippet": ""
+        },
+        {
+          "title": "Решение № 2-1022/2026 2-1022/2026~М-419/2026 М-419/2026 от 8 апреля ...",
+          "url": "https://sudact.ru/regular/doc/bo1d8iDyPGrX/",
+          "snippet": "Эскроу-счет раскрывается не по желанию покупателя, а после выполнения условий договора и регистрации передачи квартиры. Я всегда советую заранее проверить срок действия счета, условия раскрытия и документы, чтобы деньги не зависли из-за формальности."
+        },
+        {
+          "title": "Как расторгнуть ДДУ и вернуть деньги с эскроу: все варианты в 2026 году",
+          "url": "https://www.sravni.ru/text/kak-rastorgnut-ddu-i-vernut-dengi-s-eskrou-vse-varianty-v-2026-godu/",
+          "snippet": "Нефтеюганский районный суд (Ханты-Мансийский автономный округ-Югра) - Гражданское Дело № 2-1022/2026 УИД 86RS0007-01-2026-000722-34 Р Е Ш Е Н И Е Именем Российской Федерации 26 марта 2026 года город Нефтеюганск Нефтеюганский районный суд ..."
+        },
+        {
+          "title": "Эскроу-счёт при банкротстве банка: что будет с деньгами в 2026",
+          "url": "https://novostroikino.ru/blog/eskrou-schet-bankrotstvo-banka-novostroyka-2026/",
+          "snippet": "Банк, являющийся эскроу-агентом, обязан закрыть счета эскроу не позднее трех рабочих дней после дня получения уведомления Росреестра о погашении записи о ДДУ в ЕГРН."
+        },
+        {
+          "title": "Эскроу-счёт простыми словами 2026: как защищает дольщика и что делать ...",
+          "url": "https://realeo.ru/guide/eskrou-schet",
+          "snippet": "В этой статье разбираем, кому на самом деле принадлежат деньги на эскроу-счёте, как их страхует государство, какой лимит возмещения действует в 2026 году и что конкретно делать дольщику ..."
+        },
+        {
+          "title": "Когда с эскроу-счета списываются деньги: сроки и условия",
+          "url": "https://kvarnado.ru/glossarij/guide-kogda-s-eskrou-scheta-spisyvayutsya-dengi",
+          "snippet": "Этот гайд — пошаговый разбор: что такое эскроу простыми словами, как работает механика, что покрывает, какой банк выбрать и что конкретно делать при разных сценариях."
+        }
+      ],
+      "searched_at": "2026-09-28"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "За 3 дня до эскроу банк потребовал созаёмщика 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Эскроу-счёт при банкротстве банка: что будет с деньгами в 2026",
+          "url": "https://novostroikino.ru/blog/eskrou-schet-bankrotstvo-banka-novostroyka-2026/",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени банк отказал созаёмщику по семейной ипотеке за 4 дня до эскроу ...",
+          "url": "https://dzen.ru/a/aqo1GEjUgT5jhTW5",
+          "snippet": "В этой статье разбираем, кому на самом деле принадлежат деньги на эскроу-счёте, как их страхует государство, какой лимит возмещения действует в 2026 году и что конкретно делать дольщику ..."
+        },
+        {
+          "title": "Банкротство застройщика и эскроу-счёт: как проверить возврат 5,8 млн ...",
+          "url": "https://financecalc.ru/blog/bankrotstvo-zastrojshika-eskrou-chto-vernut",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени банк отказал жене-созаёмщику за 4 дня до открытия эскроу — покупка новостройки остановилась, хотя квартиру уже ..."
+        },
+        {
+          "title": "Эскроу-счета и риски 2026: Как застройщики обходят 214-ФЗ",
+          "url": "https://novostroikino.ru/blog/eskrou-scheta-v-2026-novye-zakony-o-kotorykh-molchat-menedzhery-prodazh/",
+          "snippet": "Банкротство застройщика и эскроу-счёт: как вернуть цену ДДУ, куда направят ипотечные деньги и когда действует страховой лимит АСВ 10 млн ₽ в 2026 году."
+        },
+        {
+          "title": "Эскроу-счёт простыми словами 2026: как защищает дольщика и что делать ...",
+          "url": "https://realeo.ru/guide/eskrou-schet",
+          "snippet": "В условиях жесткого контроля за проектным финансированием застройщикам невыгодно держать деньги на счетах эскроу - они «заморожены» банком до ввода дома в эксплуатацию."
+        },
+        {
+          "title": "Как расторгнуть ДДУ и вернуть деньги с эскроу: все варианты в 2026 году",
+          "url": "https://www.sravni.ru/text/kak-rastorgnut-ddu-i-vernut-dengi-s-eskrou-vse-varianty-v-2026-godu/",
+          "snippet": "Этот гайд — пошаговый разбор: что такое эскроу простыми словами, как работает механика, что покрывает, какой банк выбрать и что конкретно делать при разных сценариях."
+        }
+      ],
+      "searched_at": "2026-09-28"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "За 3 дня до эскроу банк потребовал созаёмщика official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Эскроу-счёт при банкротстве банка: что будет с деньгами в 2026",
+          "url": "https://novostroikino.ru/blog/eskrou-schet-bankrotstvo-banka-novostroyka-2026/",
+          "snippet": ""
+        },
+        {
+          "title": "Эскроу-счёт простыми словами 2026: как защищает дольщика и что делать ...",
+          "url": "https://realeo.ru/guide/eskrou-schet",
+          "snippet": "В этой статье разбираем, кому на самом деле принадлежат деньги на эскроу-счёте, как их страхует государство, какой лимит возмещения действует в 2026 году и что конкретно делать дольщику ..."
+        },
+        {
+          "title": "Счета эскроу в банке \\ 2026-2025-2024 год \\ Акты, образцы, формы ...",
+          "url": "https://www.consultant.ru/law/podborki/scheta_jeskrou_v_banke/",
+          "snippet": "Этот гайд — пошаговый разбор: что такое эскроу простыми словами, как работает механика, что покрывает, какой банк выбрать и что конкретно делать при разных сценариях."
+        },
+        {
+          "title": "Бенефициар по договору эскроу: как прописать условия раскрытия | Юрист",
+          "url": "https://vitvet.com/articles/eskrou/beneficiar_po_dogovoru_eskrou/",
+          "snippet": "Подборка наиболее важных документов по вопросу Счета эскроу в банке нормативно-правовые акты формы статьи консультации экспертов и многое другое."
+        },
+        {
+          "title": "Эскроу-счет для новостройки 2026 - полное руководство для дольщика",
+          "url": "https://fskfamily.ru/blog/eskrou-schet-kak-eto-rabotaet-i-chto-nuzhno-znat-pokupatelyu-kvartiry-v-novostroyke/",
+          "snippet": "Разберем, какие положения договора эскроу критичны для бенефициара и как избежать блокировки средств на финальном этапе сделки."
+        },
+        {
+          "title": "Документы для открытия счёта Эскроу - Банк ДОМ.РФ",
+          "url": "https://domrfbank.ru/for-developers/escrow/documents/",
+          "snippet": "Эскроу-счет для новостройки в 2026 году. Разбираем, как работает механизм защиты дольщиков по 214-ФЗ: от открытия счета до получения ключей. Пошаговая инструкция и разбор рисков."
+        }
+      ],
+      "searched_at": "2026-09-28"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com За 3 дня до эскроу банк потребовал созаёмщика 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "GitHub - Danspers/Tinkoff-start: Экзамен по программированию",
+          "url": "https://github.com/Danspers/Tinkoff-start",
+          "snippet": ""
+        },
+        {
+          "title": "GitHub - lexeler/Catching-skins-for-0.03-in-Standoff2",
+          "url": "https://github.com/Lexeler/Catching-skins-for-0.03-in-Standoff2",
+          "snippet": "Экзамен по программированию на стажировку в Тинькофф. Его проходят все разработчики, а также QA, ML и SRE-инженеры. Экзамен содержит 6 задач разной сложности, и 5 часов на решение. Каждая задача оценивается по 100-бальной шкале. В качестве решения задачи - код на одном из предложенных языках: Файлы репозитория: prorgamm_*.py - мой вариант решения."
+        },
+        {
+          "title": "PHYSICS/img/process.png at master · Zhengsh123/PHYSICS · GitHub",
+          "url": "https://github.com/Zhengsh123/PHYSICS/blob/master/img/process.png",
+          "snippet": "Ловля скинов за 0.03 путем временного создания запроса и его отмены через 1.5 секунды. Поддержка русского и английского языков для OCR."
+        },
+        {
+          "title": "best-of-Agent-Harnesses/assets/landscape.svg at main - GitHub",
+          "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses/blob/main/assets/landscape.svg",
+          "snippet": "Official GitHub repo for Scaling Physical Reasoning with the PHYSICS Dataset (NeurIPS25). - PHYSICS/img/process.png at master · Zhengsh123/PHYSICS."
+        },
+        {
+          "title": "New-Grad-Jobs-2027/images/covers/cover.png at main · zapplyjobs/New ...",
+          "url": "https://github.com/zapplyjobs/New-Grad-Jobs-2027/blob/main/images/covers/cover.png",
+          "snippet": "🏆 Ranked list of 167 AI agent harnesses, plus copy-paste templates (AGENTS.md, safe Claude Code settings, a minimal harness) and step-by-step playbooks. MCP server, llms.txt & JSON. Rescored weekly. - best-of-Agent-Harnesses/assets/landscape.svg at main · RyanAlberts/best-of-Agent-Harnesses."
+        },
+        {
+          "title": "aitour26-WRK532-building-agentic-solutions-with-copilot-studio/img ...",
+          "url": "https://github.com/microsoft/aitour26-WRK532-building-agentic-solutions-with-copilot-studio/blob/main/img/Banner-MS-AI-Tour-26.png",
+          "snippet": "2027 entry-level jobs in tech, finance, healthcare & more — new grad US roles across software, business, operations & beyond - zapplyjobs/New-Grad-Jobs-2027"
+        }
+      ],
+      "searched_at": "2026-09-28"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "За 3 дня до эскроу банк потребовал созаёмщика forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени банк отказал созаёмщику по семейной ипотеке за 4 дня до эскроу ...",
+          "url": "https://dzen.ru/a/aqo1GEjUgT5jhTW5",
+          "snippet": ""
+        },
+        {
+          "title": "Поступление денег на Эскроу счет: Подскажите, пожалуйста, деньги в ...",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/postuplenie-deneg-na-jeskrou-schet",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени банк отказал жене-созаёмщику за 4 дня до открытия эскроу — покупка новостройки остановилась, хотя квартиру уже ..."
+        },
+        {
+          "title": "Эскроу-счёт при банкротстве банка: что будет с деньгами в 2026",
+          "url": "https://novostroikino.ru/blog/eskrou-schet-bankrotstvo-banka-novostroyka-2026/",
+          "snippet": "Возможно, банк не получил документы, на основании которых он делает перечисление денежных средств. Можно позвонить менеджеру Домклик по сопровождению вашей сделки."
+        },
+        {
+          "title": "Созаёмщик по ипотеке: 3 риска, которые приведут к долгу в 2 млн",
+          "url": "https://financecalc.ru/blog/sozaemshchik-po-ipoteke-3-riska-kotorye-privedut-k-dolgu-v-2-mln",
+          "snippet": "В этой статье разбираем, кому на самом деле принадлежат деньги на эскроу-счёте, как их страхует государство, какой лимит возмещения действует в 2026 году и что конкретно делать дольщику ..."
+        },
+        {
+          "title": "Когда с эскроу-счета списываются деньги: сроки и условия",
+          "url": "https://kvarnado.ru/glossarij/guide-kogda-s-eskrou-scheta-spisyvayutsya-dengi",
+          "snippet": "Разбираем три риска, которые превращают подпись «созаёмщик» в личный долг, и три способа защититься заранее — пока банк не перевёл взыскание на вас. Чем созаёмщик отличается от поручителя? Созаёмщик — полноценный должник банка. Не помощник, не гарант."
+        },
+        {
+          "title": "Сколько раскрывается эскроу-счет: сроки и условия",
+          "url": "https://kvarnado.ru/glossarij/guide-skolko-raskryvaetsya-eskrou-schet",
+          "snippet": "Эскроу-счет — это не просто «заморозка» денег, а механизм, где средства дольщика переходят застройщику только после выполнения условий раскрытия. Я советую заранее проверить договор, банк и этап готовности дома, чтобы не ждать перечисления дольше нужного."
+        }
+      ],
+      "searched_at": "2026-09-28"
+    }
+  ],
+  "errors": []
+}
