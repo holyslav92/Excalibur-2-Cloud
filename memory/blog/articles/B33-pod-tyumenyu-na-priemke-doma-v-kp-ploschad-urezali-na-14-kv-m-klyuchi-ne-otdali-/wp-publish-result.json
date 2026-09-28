@@ -1,0 +1,28 @@
+{
+  "slug": "pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali-",
+  "topic_id": "B33",
+  "post_id": 10733,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali-/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1070802,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=10733 slug=pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali-\nOK categories=34,36,58\nOK yoast_social_image=1\nOK featured_image=10734\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=10735 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali-inline-01.png\nOK inline_alt=10735\nOK inline_description=10735\nOK inline_image_upload=10736 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali-inline-02.png\nOK inline_alt=10736\nOK inline_description=10736\nOK inline_image_upload=10737 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali-inline-03.png\nOK inline_alt=10737\nOK inline_description=10737\nOK inline_image_upload=10738 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali-inline-04.png\nOK inline_alt=10738\nOK inline_description=10738\nOK inline_image_upload=10739 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali-inline-05.png\nOK inline_alt=10739\nOK inline_description=10739\nOK inline_image_upload=10740 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali-inline-06.png\nOK inline_alt=10740\nOK inline_description=10740\nOK inline_image_upload=10741 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali-inline-07.png\nOK inline_alt=10741\nOK inline_description=10741\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/pod-tyumenyu-na-priemke-doma-v-kp-ploschad-urezali-na-14-kv-m-klyuchi-ne-otdali/",
+    "errors": []
+  }
+}
