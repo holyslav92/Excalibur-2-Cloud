@@ -1,0 +1,251 @@
+{
+  "topic_id": "B33",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "УК потребовала 180 тысяч до ключей",
+  "cover_hook_highlight": "потребовала",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В новостройке Тюмени за 5 дней до ключей УК потребовала 180 тысяч — семья остановила приёмку.",
+      "scene_hint": "Светлое лобби новостройки: стоп-жест у закрытой двери, пустой кошелёк и телефон с зависшим платежом.",
+      "meme_caption_ru": "",
+      "sticky": "Семья отказалась платить",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие, брови вверх, не студийная улыбка"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Новостройка в Тюмени: семья дошла до передачи ключей",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Пустая новостройка: коробка ключей, «5 дней», без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Новостройка в Тюмени: семья дошла до передачи к…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "До ключей 5 дней",
+        "Требуют 180 тысяч",
+        "В договоре суммы нет"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Новостройка в Тюмени: семья дошла до передачи ключей",
+      "visual_type": "comparison_table",
+      "scene_hint": "High-key коллаж: два столбца документов, красная подсветка расхождения.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Счёт на 180, Взнос в УК, Пять дней до акта — иллюстрация к разбору сделки.",
+      "labels": [
+        "Счёт на 180",
+        "Взнос в УК",
+        "Пять дней до акта"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Банк не выпустил финальный транш — ключи на паузе",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Подъезд: закрытая дверь, ключи на паузе, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Банк не выпустил финальный транш — ключи на пау…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "В ДДУ нет строки",
+        "Наличные не стали",
+        "Письмо с основанием"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За пять дней до акта — счёт на 180 тысяч «в УК»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Счёт на 180 и письмо про взнос в УК, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За пять дней до акта — счёт на 180 тысяч «в УК»» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Финальный транш",
+        "Банк не выпустил",
+        "Акт не подписан"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "В ДДУ такой строки не было — отказ переводить наличными",
+      "visual_type": "process_flow",
+      "scene_hint": "Поток: отказ от наличных → транш на паузе → ключи ждут.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Банк удержал транш, Ключи на паузе, Наличные не стали — иллюстрация к разбору…",
+      "labels": [
+        "Банк удержал транш",
+        "Ключи на паузе",
+        "Наличные не стали"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что проверить в пакете до подписи акта приёма-передачи",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Три горизонтальные шкалы с разными иконками платежей, золотые метки.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Цена в ДДУ, ЖКУ после акта, Взнос отдельно — иллюстрация к разбору сделки.",
+      "labels": [
+        "Цена в ДДУ",
+        "ЖКУ после акта",
+        "Взнос отдельно"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Таблица: цена ДДУ, ЖКУ и «членский взнос» — три разных разговора",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Блок-схема цепочки подписей перед выдачей ключей, стрелки вниз.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Договор управления, Акт приёма-передачи, Пакет документов — иллюстрация к разбору сделки",
+      "labels": [
+        "Договор управления",
+        "Акт приёма-передачи",
+        "Пакет документов"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "купить новостройку в тюмени"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "хост справа, дверь и ключница в глубине, зона заголовка слева",
+    "location": "светлое лобби тюменской новостройки, sun flare",
+    "outfit": "Светлая молочно-бежевая куртка-оверсайз поверх голубой рубашки, тёмно-синие джинсы; без чёрного пиджака.",
+    "emotion": "Ошеломлённое недоверие и раздражённое «это откуда взялось?»",
+    "pose_framing": "средний план, стоп-жест, не бюст слева",
+    "action": "стоп у двери, смотрит на зависший платёж в телефоне",
+    "props": [
+      "закрытая дверь квартиры",
+      "ключница без выданных ключей",
+      "телефон с нейтральным экраном зависшего платежа без читаемого текста",
+      "небольшая папка ДДУ без читаемых надписей",
+      "пустой открытый кошелёк"
+    ],
+    "meme": "woman_yelling_cat + disaster_girl",
+    "stickers": [
+      "woman_yelling_cat — маленький стикер в нижнем левом углу, реакция на абсурдный взнос",
+      "disaster_girl — маленький стикер в верхнем правом углу, ирония над сорванной выдачей ключей"
+    ],
+    "joke": "ключи почти в руках — дверь закрыта, взнос вне ДДУ",
+    "lighting": "High-key daylight, тёплый sun flare и мягкий световой leak, бело-золотая палитра, без тёмной кинематографичности.",
+    "prop_set": "закрытая дверь квартиры, ключница без выданных ключей, телефон с нейтральным экраном зависшего платежа без читаемого текста, небольшая папка ДДУ без читаемых надписей, пустой открытый кошелёк",
+    "sticker_set": "woman_yelling_cat — маленький стикер в нижнем левом углу, реакция на абсурдный взнос; disaster_girl — маленький стикер в верхнем правом углу, ирония над сорванной выдачей ключей"
+  },
+  "meme_picks": {
+    "cover": [
+      "woman_yelling_cat",
+      "disaster_girl"
+    ],
+    "inline_1": [
+      "this_is_fine_dog"
+    ],
+    "inline_5": [
+      "success_kid"
+    ],
+    "inline_7": [
+      "expanding_brain"
+    ]
+  }
+}

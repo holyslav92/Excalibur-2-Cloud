@@ -1,0 +1,24 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{SITE_BASE}}/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd/#article",
+  "url": "{{SITE_BASE}}/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd/",
+  "headline": "В новостройке Тюмени за 5 дней до ключей УК потребовала 180 тысяч — семья остановила приёмку",
+  "description": "За пять дней до ключей семья в тюменской новостройке получила требование около 180 000 ₽ «в УК» — в ДДУ этой строки не было. Отказ остановил приёмку и финальный транш по ипотеке.",
+  "datePublished": "2026-09-27",
+  "dateModified": "2026-09-27",
+  "inLanguage": "ru-RU",
+  "author": {
+    "@type": "Person",
+    "@id": "{{SITE_BASE}}/author/svyatoslav-shakin/",
+    "name": "Святослав Шакин",
+    "url": "{{SITE_BASE}}/author/svyatoslav-shakin/",
+    "sameAs": [
+      "{{SITE_BASE}}/author/svyatoslav-shakin/"
+    ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{SITE_BASE}}/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd/"
+  }
+}

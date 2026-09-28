@@ -1,0 +1,28 @@
+{
+  "slug": "za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd",
+  "topic_id": "B33",
+  "post_id": 11095,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1070769,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11095 slug=za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd\nOK categories=34,36\nOK yoast_social_image=1\nOK featured_image=11106\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11107 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd-inline-01-1.png\nOK inline_alt=11107\nOK inline_description=11107\nOK inline_image_upload=11108 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd-inline-02-1.png\nOK inline_alt=11108\nOK inline_description=11108\nOK inline_image_upload=11109 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd-inline-04-1.png\nOK inline_alt=11109\nOK inline_description=11109\nOK inline_image_upload=11110 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd-inline-05-1.png\nOK inline_alt=11110\nOK inline_description=11110\nOK inline_image_upload=11111 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd-inline-03-1.png\nOK inline_alt=11111\nOK inline_description=11111\nOK inline_image_upload=11112 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd-inline-06-1.png\nOK inline_alt=11112\nOK inline_description=11112\nOK inline_image_upload=11113 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd-inline-07-1.png\nOK inline_alt=11113\nOK inline_description=11113\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/za-5-dnej-do-klyuchej-v-tyumenskoj-novostrojke-potrebovali-180-tysyach-v-uk-v-dd/",
+    "errors": []
+  }
+}
