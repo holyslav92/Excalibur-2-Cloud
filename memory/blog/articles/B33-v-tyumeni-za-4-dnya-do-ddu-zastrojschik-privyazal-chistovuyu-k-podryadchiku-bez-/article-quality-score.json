@@ -1,10 +1,10 @@
 {
-  "status": "FAIL",
-  "all_pass": false,
+  "status": "PASS",
+  "all_pass": true,
   "gate": "article-quality-score",
   "contract": "shared/article-quality-score-lock.md",
   "article_dir": "memory/blog/articles/B33-v-tyumeni-za-4-dnya-do-ddu-zastrojschik-privyazal-chistovuyu-k-podryadchiku-bez-",
-  "sol_rewrite_applied": false,
+  "sol_rewrite_applied": true,
   "h1": "В Тюмени за 4 дня до ДДУ застройщик привязал чистовую к подрядчику — без допсоглашения эскроу не открыли",
   "sections": {
     "h1": {
@@ -12,45 +12,32 @@
       "reasons": []
     },
     "lead": {
-      "pass": false,
-      "reasons": [
-        "lead: prose too long (7 sentences, need 4-6)"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "middle": {
-      "pass": false,
-      "reasons": [
-        "triple-retell: shared phrase in lead+middle+finale: «520 580 тысяч рублей»"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "finale": {
-      "pass": false,
-      "reasons": [
-        "finale-third-retell: middle scene repeated in closing: «отдельный договор партнёрским подрядчиком»"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "length": {
-      "pass": false,
-      "reasons": [
-        "length-hard: 1847 words > 1750"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "tone": {
       "pass": true,
       "reasons": []
     }
   },
-  "errors": [
-    "lead: prose too long (7 sentences, need 4-6)",
-    "triple-retell: shared phrase in lead+middle+finale: «520 580 тысяч рублей»",
-    "finale-third-retell: middle scene repeated in closing: «отдельный договор партнёрским подрядчиком»",
-    "length-hard: 1847 words > 1750"
-  ],
+  "errors": [],
   "metrics": {
-    "word_count": 1847,
+    "word_count": 1543,
     "word_target": "1400-1600",
     "word_hard_max": 1750,
-    "dzen_reading_minutes_est": 10,
-    "spine_overlap": 0.0609
+    "dzen_reading_minutes_est": 8,
+    "spine_overlap": 0.0502
   }
 }
