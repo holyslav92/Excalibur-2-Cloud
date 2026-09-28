@@ -14,7 +14,7 @@
 
 ## Расписание (не менять)
 
-4 weekday-слота YEKT: **09:00, 12:00, 15:00, 17:00** — `shared/tenant-config.json` → `publish_schedule.runs_per_day: 4`.  
+5 weekday-слотов YEKT: **09:00, 12:00, 15:00, 17:00, 19:00** — рубрика по `shared/slot-rubric-lock.md`.  
 Weekend automation **не** запускать без отдельного owner-запроса.
 
 ## Разрешённая ENERGY (не plot)

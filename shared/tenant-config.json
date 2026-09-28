@@ -1,16 +1,16 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "setup_complete": true,
   "brand_name": "The Риэлтор",
   "language": "ru",
-  "niche": "Новостройки Тюмени: квартиры и дома от застройщика (ЖК, ДДУ, эскроу, КП, ИЖС, таунхаус); семьи с детьми и инвесторы",
+  "niche": "Недвижимость Тюмени: новостройки, вторичка, аренда — casus до сделки/договора",
   "topic_focus_profile": "real_estate",
-  "topic_market_focus": "newbuild_only",
+  "topic_market_focus": "rubric_per_slot",
   "content_goals": [
-    "News-casus про новостройки Тюмени: риски ДДУ, эскроу, срок сдачи, переуступка, семейная ипотека — до брони/аванса",
-    "Аудитория: семьи с детьми и инвесторы, которые пишут Святославу за покупку новостройки",
-    "Лиды на консультацию личного риэлтора Святослава Шакина (TG/MAX/телефон)",
-    "Публикации в блог сайта и зеркало на Дзен «Советы от риелтора»"
+    "News-casus по рубрике слота (новостройки / вторичка / аренда) — Тюмень, stakes, финал с agency",
+    "Trend Radar (ViralDzen) + Wordstat + anti-dupe перед Scout",
+    "Лиды на консультацию Святослава Шакина (TG/MAX/телефон)",
+    "Блог tymenrieltor.ru + Дзен «Советы от риелтора»"
   ],
   "author_id": "svyatoslav-shakin",
   "publish_format": "longform",
@@ -18,10 +18,25 @@
   "publish_schedule": {
     "timezone": "Asia/Yekaterinburg",
     "weekdays_only": true,
-    "slots_local": ["09:00", "12:00", "15:00", "17:00"],
-    "runs_per_day": 4,
-    "window_local": "09:00-17:00",
-    "note": "Longform Cursor Automation: 4 weekday slots YEKT (owner 9–17). NOT 20:00. Daily short posts on site — отдельный поток. Publish only when FTP secrets + EXCALIBUR_BLOG_ALLOW_PUBLISH=yes on process (never git)."
+    "slots_local": ["09:00", "12:00", "15:00", "17:00", "19:00"],
+    "slot_rubric_map": {
+      "09:00": "novostroyki",
+      "12:00": "novostroyki",
+      "15:00": "vtorichka",
+      "17:00": "vtorichka",
+      "19:00": "arenda"
+    },
+    "runs_per_day": 5,
+    "window_local": "09:00-19:00",
+    "note": "5 weekday slots YEKT. Trend Radar before Scout each slot. Publish only with FTP + EXCALIBUR_BLOG_ALLOW_PUBLISH=yes."
+  },
+  "trend_radar": {
+    "enabled": true,
+    "script": "scripts/excalibur_blog_trend_radar.py",
+    "handoff": "memory/blog/trend-radar/trend-radar.json",
+    "channels": "memory/blog/trend-radar/channels.json",
+    "viraldzen_vendor": "vendor/viraldzen",
+    "min_delay": 0.7
   },
   "image_generation": {
     "provider": "grsai-rest",
@@ -45,7 +60,7 @@
     "site": "{{SITE_BASE}}",
     "site_path": "/",
     "telegram_lead": "https://t.me/Tyumen_Rieltor",
-    "telegram_personal": "https://t.me/holyslav92",
+    "telegram_personal": "https://t.me/[REDACTED]",
     "phone": "+79220016505",
     "phone_display": "+7 922 001 65 05",
     "max": "https://max.ru/id561413315447_biz",
@@ -71,7 +86,7 @@
     "https://t.me/klyshin_A",
     "https://dzen.ru/holyslav",
     "{{SITE_BASE}}/blog/",
-    "https://t.me/holyslav92"
+    "memory/blog/trend-radar/trend-radar.json"
   ],
   "scout_klyshin_topic_bank": "memory/scout/klyshin-topic-bank.json",
   "writing_model": {
@@ -82,15 +97,25 @@
     "contract": "shared/derouter-opus-brain-contract.md",
     "fail_loud_if_unavailable": true,
     "powerful": {
-      "model": "gpt-6-astra",
+      "model": "claude-opus-5-5",
       "model_env": "DEROUTER_POWERFUL_MODEL",
-      "family": "gpt-6-astra",
-      "roles": ["writer", "sol", "title", "description", "cover-text"]
+      "family": "claude-opus-5-5",
+      "fallback_model": "gpt-6-astra",
+      "roles": ["writer", "sol"]
     },
     "utility": {
       "model": "gpt-5.6-terra",
       "model_env": "DEROUTER_TERRA_MODEL",
-      "roles": ["scout", "research", "schema", "cover-scene"]
+      "roles": [
+        "scout",
+        "research",
+        "title",
+        "description",
+        "cover-text",
+        "schema",
+        "cover-scene",
+        "trend-radar"
+      ]
     }
   },
   "interlink_old_articles": true,
@@ -104,6 +129,6 @@
     "design_code": "memory/cover/cover-design-code.json",
     "style_preset": "memory/cover/quad-style-the-rieltor.json"
   },
-  "comment": "The Риэлтор / tymenrieltor.ru. Secrets only in Cloud (PUBLIC_SITE_URL, SFTP, EXCALIBUR_BLOG_ALLOW_PUBLISH). Do not enable publish in git.",
+  "comment": "The Риэлтор / tymenrieltor.ru only. Secrets in Cloud only.",
   "owner_runtime_lock": "shared/owner-runtime-lock.json"
 }

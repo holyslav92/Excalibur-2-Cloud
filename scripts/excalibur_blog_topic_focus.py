@@ -247,7 +247,55 @@ def newbuild_only_for_tenant() -> bool:
     return focus in {"newbuild_only", "newbuild", "novostroyka_only", "novostroyka"}
 
 
+def rubric_per_slot_for_tenant() -> bool:
+    tenant = _tenant_config()
+    focus = str(tenant.get("topic_market_focus") or "").strip().lower()
+    return focus in {"rubric_per_slot", "slot_rubric", "multi_rubric"}
+
+
+def active_slot_rubric() -> str:
+    import os
+
+    env_r = os.environ.get("EXCALIBUR_BLOG_RUBRIC", "").strip().lower()
+    if env_r in {"novostroyki", "vtorichka", "arenda"}:
+        return env_r
+    try:
+        from excalibur_blog_slot_rubric import current_slot_local, rubric_for_slot
+
+        return rubric_for_slot(current_slot_local(project_root()))
+    except Exception:
+        return "novostroyki"
+
+
+RENT_REQUIRED_PATTERNS: tuple[str, ...] = (
+    r"аренд",
+    r"съём",
+    r"съем",
+    r"найм",
+    r"квартирант",
+    r"залог",
+    r"выселен",
+    r"собственник",
+    r"арендатор",
+)
+
+SECONDARY_REQUIRED_PATTERNS: tuple[str, ...] = (
+    r"вторич",
+    r"продав",
+    r"покупател",
+    r"егрн",
+    r"обремен",
+    r"сделк",
+    r"квартир",
+    r"дом\b",
+    r"ипотек",
+)
+
+
 def core_focus_hint() -> str:
+    if rubric_per_slot_for_tenant():
+        rub = active_slot_rubric()
+        return f"Tyumen real-estate casus — slot rubric {rub} (see shared/slot-rubric-lock.md)"
     if newbuild_only_for_tenant():
         return (
             "Tyumen newbuild only (novostroyka/DDU/escrow/developer/JK/"
@@ -293,7 +341,7 @@ def focus_check(text: str) -> dict[str, Any]:
                 "allow_hit": None,
             }
 
-    if newbuild_only_for_tenant():
+    if newbuild_only_for_tenant() and not rubric_per_slot_for_tenant():
         for pat in SECONDARY_MARKET_DENY_PATTERNS:
             if re.search(pat, blob, flags=re.IGNORECASE):
                 return {
@@ -322,7 +370,31 @@ def focus_check(text: str) -> dict[str, Any]:
             "allow_hit": None,
         }
 
-    if newbuild_only_for_tenant():
+    if rubric_per_slot_for_tenant():
+        rubric = active_slot_rubric()
+        required = NEWBUILD_REQUIRED_PATTERNS
+        blocker = "SLOT RUBRIC BLOCKER"
+        if rubric == "vtorichka":
+            required = SECONDARY_REQUIRED_PATTERNS
+        elif rubric == "arenda":
+            required = RENT_REQUIRED_PATTERNS
+        hit = None
+        for pat in required:
+            if re.search(pat, blob, flags=re.IGNORECASE):
+                hit = pat
+                break
+        if not hit:
+            return {
+                "status": "BLOCK",
+                "blocker": blocker,
+                "reason": (
+                    f"no marker for slot rubric {rubric} — see shared/slot-rubric-lock.md"
+                ),
+                "deny_hit": None,
+                "allow_hit": allow_hit,
+                "slot_rubric": rubric,
+            }
+    elif newbuild_only_for_tenant():
         newbuild_hit = None
         for pat in NEWBUILD_REQUIRED_PATTERNS:
             if re.search(pat, blob, flags=re.IGNORECASE):

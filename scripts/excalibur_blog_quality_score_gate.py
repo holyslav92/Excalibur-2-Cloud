@@ -522,6 +522,11 @@ def main() -> int:
     ap.add_argument("--root", default=".")
     ap.add_argument("-o", "--output", default="article-quality-score.json")
     ap.add_argument("--repair", action="store_true", help="At most one Derouter Sol pass on FAIL")
+    ap.add_argument(
+        "--fallback-powerful",
+        action="store_true",
+        help="After repair still FAIL → Writer+Sol on gpt-6-astra (owner lock)",
+    )
     ap.add_argument("--sol-rewrite", action="store_true", help="Mark sol_rewrite_applied in report")
     args = ap.parse_args()
 
@@ -552,6 +557,23 @@ def main() -> int:
             else:
                 report = evaluate(article_dir, root, sol_rewrite_applied=True)
                 report["repair_attempted"] = True
+
+    if not report.get("all_pass") and args.fallback_powerful:
+        fb_script = root / "scripts" / "excalibur_blog_powerful_tier_fallback.py"
+        if fb_script.is_file():
+            import subprocess
+            import sys
+
+            proc = subprocess.run(
+                [sys.executable, str(fb_script), "--article-dir", str(article_dir)],
+                cwd=root,
+                check=False,
+            )
+            report["powerful_fallback_attempted"] = True
+            report["powerful_fallback_exit"] = proc.returncode
+            if proc.returncode == 0:
+                report = evaluate(article_dir, root, sol_rewrite_applied=True)
+                report["powerful_fallback_applied"] = True
 
     out = article_dir / Path(args.output).name
     out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

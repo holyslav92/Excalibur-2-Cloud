@@ -1,8 +1,8 @@
-# Newbuild Focus Lock (HARD — owner permanent)
+# Newbuild Focus Lock (reference — novostroyki slot)
 
 **Владелец:** Святослав Шакин  
-**Дата:** 2026-08-31  
-**Статус:** `LOCKED_ON_MAIN` — не ослаблять без явного owner override.
+**Дата:** 2026-08-31 (обновлено 2026-09-28)  
+**Статус:** справочник для рубрики `novostroyki`; общий расписание/микс — `shared/slot-rubric-lock.md`.
 
 ## Мандат
 
@@ -31,7 +31,7 @@ TG https://t.me/Tyumen_Rieltor · MAX https://max.ru/id561413315447_biz · +7 92
 Слабый спрос → **rework** Tyumen newbuild hook (семейная ипотека, эскроу, ДДУ,
 уступка, срок сдачи, отделка, КП) — **не** drop на вторичку.
 
-Gate: `scripts/excalibur_blog_topic_focus.py` при `topic_market_focus: newbuild_only`.
+Gate: `scripts/excalibur_blog_topic_focus.py` при рубрике слота `novostroyki`.
 
 ### Klyshin
 

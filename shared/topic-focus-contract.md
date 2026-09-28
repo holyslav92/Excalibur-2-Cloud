@@ -8,9 +8,8 @@
 индексацию вместо ядра канала. B137 — в Meta (запрещена в РФ) без чтения
 полного Дзен-канона.
 
-**Owner lock (2026-08-31):** `shared/newbuild-focus-lock.md` — **только новостройки
-Тюмень** (квартиры + дома от застройщика). Вторичка как тема = **BLOCK**.
-См. `topic_market_focus: newbuild_only` в `shared/tenant-config.json`.
+**Owner lock (2026-09-28):** `shared/slot-rubric-lock.md` — рубрика по слоту
+(новостройки / вторичка / аренда). См. `topic_market_focus: rubric_per_slot` в `shared/tenant-config.json`.
 
 **До Scout обязательно:** `shared/dzen-content-rules.md` +
 `shared/rf-blocked-entities.json` + `shared/newbuild-focus-lock.md`.
@@ -22,14 +21,11 @@
 
 **Профиль тенанта:** `shared/tenant-config.json` → `topic_focus_profile`.
 По умолчанию — Cursor/AI ядро ниже. Для `real_estate` (The Риэлтор) при
-`topic_market_focus: newbuild_only` — **только новостройки Тюмень**: квартиры
-и дома от застройщика (ЖК, ДДУ, эскроу, переуступка, КП, ИЖС, таунхаус).
-Маркеры buyer demand: новостройка, ДДУ, эскроу, застройщик, ЖК, семейная ипотека,
-срок сдачи, отделка, бронь, коттедж, КП… (см. `NEWBUILD_REQUIRED_PATTERNS` в
-`scripts/excalibur_blog_topic_focus.py`).
+`topic_market_focus: rubric_per_slot` — маркеры зависят от слота (`excalibur_blog_slot_rubric.py`):
+новостройки / вторичка / аренда (см. `NEWBUILD_REQUIRED_PATTERNS`, `SECONDARY_REQUIRED_PATTERNS`,
+`RENT_REQUIRED_PATTERNS` в `scripts/excalibur_blog_topic_focus.py`).
 
-**DENY при newbuild_only:** вторичка / вторичный рынок как сюжет (`SECONDARY_MARKET_DENY_PATTERNS`).
-Слабый Wordstat → rework newbuild hook, **не** drop на вторичку.
+Слабый Wordstat → rework в жаргоне **текущей рубрики**, не смена рубрики без слота.
 
 ### Cursor / AI (default profile)
 
@@ -73,7 +69,7 @@ Scout может выбрать **новость сегодняшнего дня
 | Индексация/кабинеты поиска | Яндекс Вебмастер «добавить сайт», Google Search Console |
 | Чистый SEO-аудит без агента | «скорость загрузки», «индексация сайта» без Cursor-агентного workflow |
 | Абстрактный AI-хайп без применения | «новая AGI модель», если читателю нечего с ней делать |
-| **Вторичка как тема** (при `topic_market_focus: newbuild_only`) | «вторичка в тюмени», ЕГРН/наследство/маткапитал на вторичке, бабушка/доверенность, ПНД, супружеская доля — см. `shared/newbuild-focus-lock.md` |
+| **Тема не по рубрике слота** | вторичка в слоте новостроек (и наоборот) без rework — см. `shared/slot-rubric-lock.md` |
 | **RF / Дзен DENY heroes** | Meta, Facebook, Instagram, Threads, Muse Code/Spark, LinkedIn, Twitter/X, Discord, Signal/Viber-how-to, VPN/обход блокировок |
 
 **Исключение уже опубликованных** исторических статей (B91–B99, старый

@@ -1,53 +1,73 @@
 {
-  "version": "2026-09-05",
+  "version": "2026-09-28",
   "status": "LOCKED_ON_MAIN",
   "description": "Single source of truth for owner runtime locks. Doctor FAIL-CLOSED if repo config disagrees.",
   "owner_mandate": "Do not weaken without explicit owner override.",
   "schedule": {
     "timezone": "Asia/Yekaterinburg",
     "weekdays_only": true,
-    "runs_per_day": 4,
-    "slots_local": ["09:00", "12:00", "15:00", "17:00"],
-    "forbidden_runs_per_day": [1, 2, 3],
+    "runs_per_day": 5,
+    "slots_local": ["09:00", "12:00", "15:00", "17:00", "19:00"],
+    "forbidden_runs_per_day": [1, 2, 3, 4],
     "forbidden_slot_sets": [["09:00", "17:00"], ["09:00", "12:00"]],
     "tenant_path": "shared/tenant-config.json",
-    "tenant_key": "publish_schedule"
+    "tenant_key": "publish_schedule",
+    "slot_rubric_doc": "shared/slot-rubric-lock.md"
+  },
+  "trend_radar": {
+    "agent": "excalibur-blog-trend-radar",
+    "script": "scripts/excalibur_blog_trend_radar.py",
+    "handoff": "memory/blog/trend-radar/trend-radar.json",
+    "channels": "memory/blog/trend-radar/channels.json",
+    "viraldzen_vendor": "vendor/viraldzen",
+    "min_delay_seconds": 0.7,
+    "placement": "before_scout_every_slot"
   },
   "writing_model": {
     "script": "scripts/excalibur_blog_derouter_opus_chat.py",
     "contract": "shared/derouter-opus-brain-contract.md",
     "fail_loud_if_unavailable": true,
     "powerful": {
-      "model": "gpt-6-astra",
+      "model": "claude-opus-5-5",
       "model_env": "DEROUTER_POWERFUL_MODEL",
       "legacy_env": "DEROUTER_OPUS_MODEL",
-      "roles": ["writer", "sol", "title", "description", "cover-text"]
+      "fallback_model": "gpt-6-astra",
+      "fallback_after_quality_repair": true,
+      "roles": ["writer", "sol"]
     },
     "utility": {
       "model": "gpt-5.6-terra",
       "model_env": "DEROUTER_TERRA_MODEL",
+      "note": "gpt-6-terra not listed on Derouter /v1/models as of 2026-09-28",
       "roles": [
         "scout",
         "research",
+        "title",
+        "description",
+        "cover-text",
         "schema",
-        "cover-scene"
+        "cover-scene",
+        "trend-radar"
       ]
     },
     "forbidden_powerful_models": [
-      "claude-opus-5",
       "claude-opus-4",
-      "claude-opus",
-      "opus-5",
+      "claude-opus-4-6",
+      "claude-opus-4-7",
+      "claude-opus-4-8",
+      "claude-opus-5",
       "gpt-5-opus"
     ],
     "forbidden_global_text_override_env": "DEROUTER_TEXT_MODEL"
   },
   "scout": {
-    "topic_market_focus": "newbuild_only",
+    "topic_market_focus": "rubric_per_slot",
     "geo": "Tyumen",
     "angle_lock_doc": "shared/dzen-top-angle-newbuild-lock.md",
+    "slot_rubric_lock_doc": "shared/slot-rubric-lock.md",
     "newbuild_lock_doc": "shared/newbuild-focus-lock.md",
     "topic_focus_script": "scripts/excalibur_blog_topic_focus.py",
+    "slot_rubric_script": "scripts/excalibur_blog_slot_rubric.py",
     "anti_dupe_hard": {
       "enabled": true,
       "gate_script": "scripts/excalibur_blog_scout_story_dup.py",
@@ -71,7 +91,8 @@
     "max_sol_rewrites": 1,
     "repair_flag": "--repair",
     "required_before_publish": true,
-    "forbidden_self_score_loop": true
+    "forbidden_self_score_loop": true,
+    "powerful_fallback_script": "scripts/excalibur_blog_powerful_tier_fallback.py"
   },
   "quality_bar_9": {
     "contract": "shared/quality-bar-9.md",
@@ -122,11 +143,13 @@
     "word_quota_1800_2100",
     "runs_per_day\": 2",
     "runs_per_day: 2",
-    "2 слотов в день"
+    "2 слотов в день",
+    "topic_market_focus\": \"newbuild_only\""
   ],
   "forbidden_active_doc_globs": [
     "AGENTS.md",
     "CLOUD-AUTOMATION.md",
+    "shared/slot-rubric-lock.md",
     "shared/newbuild-focus-lock.md",
     "shared/dzen-top-angle-newbuild-lock.md",
     "shared/derouter-opus-brain-contract.md",
@@ -144,15 +167,20 @@
     "owner_resave_required": true,
     "required_markers": [
       "shared/owner-runtime-lock.json",
-      "gpt-6-astra",
+      "claude-opus-5-5",
       "gpt-5.6-terra",
+      "gpt-6-astra",
+      "Trend Radar",
+      "excalibur_blog_trend_radar.py",
+      "trend-radar.json",
+      "slot-rubric-lock.md",
+      "rubric_per_slot",
       "excalibur_blog_quality_score_gate.py",
       "article-quality-score.json",
-      "shared/dzen-top-angle-newbuild-lock.md",
       "HARD anti-dupe",
-      "09/12/15/17",
-      "runs_per_day: 4",
-      "4 Cursor Automations",
+      "09/12/15/17/19",
+      "runs_per_day: 5",
+      "5 Cursor Automations",
       "EXCALIBUR_BLOG_ALLOW_PUBLISH=yes",
       "quality-bar-9.json",
       "excalibur_blog_image_caption_builder.py",
@@ -165,7 +193,10 @@
     "forbidden_markers": [
       "1800–2200",
       "1800-2200",
-      "runs_per_day: 2"
+      "runs_per_day: 2",
+      "runs_per_day: 4",
+      "4 Cursor Automations",
+      "newbuild_only"
     ]
   },
   "doctor": {

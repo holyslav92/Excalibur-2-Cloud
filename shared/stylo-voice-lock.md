@@ -72,4 +72,4 @@ python3 scripts/excalibur_blog_stylo_learn.py --recompute
 ## Scout
 
 Gold URL/тексты — **только style-gold**. `plot_for_scout: false` в meta.  
-Scout по-прежнему: Wordstat × news-casus × **newbuild_only** × 30d anti-repeat.
+Scout по-прежнему: Trend Radar × Wordstat × news-casus × **slot rubric** × 30d anti-repeat.
