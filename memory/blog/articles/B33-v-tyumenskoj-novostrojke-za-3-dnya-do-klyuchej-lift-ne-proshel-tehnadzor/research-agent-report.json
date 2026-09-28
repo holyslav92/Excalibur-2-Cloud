@@ -1,0 +1,70 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-26",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/incidents/2026/09/24/76659941/",
+        "type": "local_news",
+        "note": "24.09.2026 — Тюмень, инцидент у лифта в новостройке; контекст недели, не главный casus B33"
+      },
+      {
+        "url": "https://urban-media.ru/blog/vnikaem/pochemu-v-novostroyke-ne-rabotaet-lift-i-chto-delat-zhiltsam/",
+        "type": "media",
+        "note": "31.08.2026 — лифты в новостройках, ипотека + аренда при простое лифта"
+      },
+      {
+        "url": "https://72.ru/text/incidents/2025/10/27/76093711/",
+        "type": "local_news",
+        "note": "27.10.2025 — Тюмень, застревание в лифте новостройки (локальный прецедент)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "квартира в тюмени купить новостройки",
+    "p0_volume": 625,
+    "p0_volume_ru225": 1440,
+    "support_phrases": [
+      {"phrase": "приемка квартиры в новостройке", "volume": 125, "region": "55+11176"},
+      {"phrase": "приемка квартиры в новостройке тюмень", "volume": 28, "region": "55+11176"},
+      {"phrase": "купить квартиру тюмень от застройщика в новостройке", "volume": 310, "region": "55+11176"}
+    ],
+    "rework_from": "scout handoff P0 «квартира в тюмени купить новостройки» 625 + приёмка/лифт angle"
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_elevator_technical_inspection_blocked_keys_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B25", "B26", "B12", "B21"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 6,
+    "entities_checked": ["legal_norms_214fz", "pp_rf_1744_elevators"],
+    "errors": [],
+    "note": "214-ФЗ ст. 6, 7, 8 and ПП № 1744 via consultant.ru; no bank tariff digits"
+  },
+  "key_facts_count": 38,
+  "derouter": {
+    "status": "INVALID_BLOCKER",
+    "attempts": 1,
+    "model": "gpt-5.6-terra",
+    "note": "API returned spurious DEROUTER RESEARCH BLOCKER; research-notes.md synthesized by conductor from assembled-research-inputs.md and live fetches 2026-09-26",
+    "stamp": "memory/blog/articles/B33-v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor/derouter-opus-stamp-research.json"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "incident_report": "none"
+}

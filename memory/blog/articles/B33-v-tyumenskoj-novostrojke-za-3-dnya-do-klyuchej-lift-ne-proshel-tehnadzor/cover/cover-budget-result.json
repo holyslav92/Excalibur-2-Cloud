@@ -1,0 +1,57 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B33-v-tyumenskoj-novostrojke-za-3-dnya-do-klyuchej-lift-ne-proshel-tehnadzor/cover/cover.png",
+  "last_errors": [
+    "pixel_host_face_present FAIL: no compact host face blob (pixels=15444 h_frac=0.305)",
+    "pixel_host_close_up FAIL: face_h_frac=0.50 w_frac=0.54 (need close-up)",
+    "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (host_face_skin_blob_too_small)",
+    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0575 chest_blue=0.005 smear=0.000",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['осмотр'] last_word='осмотр' ocr='За три ДНЯ ЛИР не прошёл'",
+    "pixel_no_collage_inset FAIL: white_frac=0.458 inset_face=True blob_count=5",
+    "pixel_meme_present FAIL: orange_fur=307 legacy=60 host_face=False",
+    "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.1679",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model": "grsai-standard",
+      "error": "The read operation timed out"
+    },
+    {
+      "attempt": 2,
+      "model": "grsai-standard",
+      "bytes": 991036,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_host_face_present FAIL: no compact host face blob (pixels=15444 h_frac=0.305)",
+        "pixel_host_close_up FAIL: face_h_frac=0.50 w_frac=0.54 (need close-up)",
+        "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (host_face_skin_blob_too_small)",
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0575 chest_blue=0.005 smear=0.000",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['осмотр'] last_word='осмотр' ocr='За три ДНЯ ЛИР не прошёл'",
+        "pixel_no_collage_inset FAIL: white_frac=0.458 inset_face=True blob_count=5",
+        "pixel_meme_present FAIL: orange_fur=307 legacy=60 host_face=False",
+        "pixel_no_wordstat_query_strips FAIL: 2 Wordstat strip(s), 0 bar band(s), paper_frac=0.1679",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Re-run cover_qa_gate on best_candidate — analyze_cover_pixels applies OCR escape before verdict",
+    "Do NOT deep-dive Cover-QA source — if visual OK after escape, proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ],
+  "cover_qa_after_budget": {
+    "checked_at": "2026-09-26",
+    "status": "FAIL",
+    "gate_status": "FAIL",
+    "ocr_escape_applied": false,
+    "blocker": "COVER_QA_BLOCKER — host not identity-real close-up; wordstat query strips; not designed thumbnail",
+    "proceed_indexer": true,
+    "proceed_publish": false
+  }
+}

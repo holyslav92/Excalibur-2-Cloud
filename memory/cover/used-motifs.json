@@ -93,6 +93,21 @@
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
       }
+    },
+    {
+      "date": "2026-09-26",
+      "topic_id": "B33",
+      "slug": "",
+      "motifs": {
+        "composition": "хозяин кадра в полный рост справа у закрытых дверей лифта",
+        "location": "просторный белый холл тюменской новостройки с латунными деталями",
+        "meme": "blinking_white_guy и polite_cat",
+        "sticker_set": "blinking_white_guy top-left polite_cat bottom-right",
+        "outfit": "светло-голубая рубашка песочные брюки белые кеды",
+        "emotion": "ошеломлённое недоверие",
+        "pose_framing": "полный рост справа",
+        "action": "папка с актом карточка недопуска"
+      }
     }
   ]
 }

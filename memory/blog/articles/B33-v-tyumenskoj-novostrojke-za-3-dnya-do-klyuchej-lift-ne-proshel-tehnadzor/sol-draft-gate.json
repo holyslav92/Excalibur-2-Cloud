@@ -1,0 +1,21 @@
+{
+  "gate": "sol-draft",
+  "status": "PASS",
+  "all_pass": true,
+  "checks": {
+    "html_linter": true,
+    "word_count_1400_1600": true,
+    "word_count_hard_max_1750": true,
+    "spine_once_no_recap": true,
+    "comment_magnet_question": true,
+    "no_composite_disclaimer": true,
+    "inline_figures_7": true,
+    "h2_count_6": true
+  },
+  "errors": [],
+  "metrics": {
+    "word_count": 1525,
+    "inline_figures": 7,
+    "h2_count": 6
+  }
+}
