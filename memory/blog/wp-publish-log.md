@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B33 — 2026-09-28
+
+- **topic_id:** B33
+- **slug:** v-tyumeni-za-4-dnya-do-ddu-zastrojschik-privyazal-chistovuyu-k-podryadchiku-bez-
+- **post_id:** 11196
+- **permalink:** /blog/proverka-pered-pokupkoj/v-tyumeni-za-4-dnya-do-ddu-zastrojschik-privyazal-chistovuyu-k-podryadchiku-bez/
+- **featured_image:** 11197
+- **inline_images:** 11198–11204 (7)
+- **wp_category_slugs:** dokumenty-i-oformlenie, pokupka-kvartiry, proverka-pered-pokupkoj (category_ids=54,36,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29

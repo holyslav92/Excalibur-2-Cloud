@@ -3,6 +3,11 @@
   "h1": "В Тюмени за 4 дня до ДДУ застройщик привязал чистовую к подрядчику — без допсоглашения эскроу не открыли",
   "slug": "v-tyumeni-za-4-dnya-do-ddu-zastrojschik-privyazal-chistovuyu-k-podryadchiku-bez-",
   "topic_id": "B33",
+  "wp_category_slugs": [
+    "dokumenty-i-oformlenie",
+    "pokupka-kvartiry",
+    "proverka-pered-pokupkoj"
+  ],
   "author_id": "svyatoslav-shakin",
   "article_mode": "B",
   "description": "В Тюмени за 4 дня до ДДУ застройщик привязал чистовую к подрядчику — без допсоглашения эскроу не открыли",
@@ -21,5 +26,6 @@
   },
   "date": "2026-09-28",
   "pipeline_canon": "human-first-v2",
-  "editorial_swarm": false
+  "editorial_swarm": false,
+  "wp_post_id": 11196
 }
