@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v",
+  "topic_id": "B33",
+  "post_id": 11131,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B33-v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1103261,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11131 slug=v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v\nOK categories=36,34,54\nOK yoast_social_image=1\nOK featured_image=11132\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11133 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v-inline-04.png\nOK inline_alt=11133\nOK inline_description=11133\nOK inline_image_upload=11134 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v-inline-05.png\nOK inline_alt=11134\nOK inline_description=11134\nOK inline_image_upload=11135 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v-inline-01.png\nOK inline_alt=11135\nOK inline_description=11135\nOK inline_image_upload=11136 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v-inline-02.png\nOK inline_alt=11136\nOK inline_description=11136\nOK inline_image_upload=11137 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v-inline-06.png\nOK inline_alt=11137\nOK inline_description=11137\nOK inline_image_upload=11138 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v-inline-07.png\nOK inline_alt=11138\nOK inline_description=11138\nOK inline_image_upload=11139 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v-inline-03.png\nOK inline_alt=11139\nOK inline_description=11139\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-v-broni-obeschali-taunhaus-s-otdelnym-vhodom-v-ddu-okazalas-kvartira-v/",
+    "errors": []
+  }
+}
