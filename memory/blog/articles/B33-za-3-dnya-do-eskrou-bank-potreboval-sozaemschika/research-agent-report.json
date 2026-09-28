@@ -1,0 +1,68 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B33",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-28",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://tyumen-info.ru/society/2026/09/27/45953.html",
+        "type": "regional_news",
+        "note": "tyumen-info.ru 27.09.2026 — семейная ипотека с 01.10.2026"
+      },
+      {
+        "url": "https://lenta.ru/articles/2026/09/25/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-godu/",
+        "type": "news",
+        "note": "Lenta.ru 25.09.2026 — изменения программы"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "семейная ипотека тюмень",
+    "p0_volume": 1309,
+    "support_phrases": [
+      {"phrase": "семейная ипотека тюмень 2026", "volume": 422, "region": "55+11176"},
+      {"phrase": "купить новостройку в тюмени", "volume": 891, "region": "55+11176"},
+      {"phrase": "семейная ипотека созaёмщик", "volume": 5476, "region": "225", "note": "mechanism RU-wide"},
+      {"phrase": "созaёмщик семейная ипотека", "volume": null, "region": "55+11176", "note": "weak <10"}
+    ],
+    "rework_from": "«созaёмщик семейная ипотека» Tyumen weak → P0 «семейная ипотека тюмень» 1309",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_family_mortgage_coborrower_before_escrow_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B29 zero-down", "B31 insurance requote", "B32 wrong escrow entity", "B19 matcap escrow"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["minfin", "domrf", "sberbank", "consultant_214fz"],
+    "errors": []
+  },
+  "key_facts_count": 17,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "official_gate": "research-official-gate.json"
+  },
+  "incident_report": "none"
+}

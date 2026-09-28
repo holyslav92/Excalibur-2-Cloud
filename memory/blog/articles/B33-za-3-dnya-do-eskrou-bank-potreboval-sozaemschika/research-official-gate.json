@@ -1,0 +1,13 @@
+{
+  "gate": "research-official",
+  "status": "PASS",
+  "required_entities": [
+    "sberbank"
+  ],
+  "entities_checked": [
+    "sberbank"
+  ],
+  "has_official_verifications_section": true,
+  "errors": [],
+  "warnings": []
+}
