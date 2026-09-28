@@ -1,0 +1,4 @@
+Derouter cover-text — B33. Output cover/cover-text.json per skill. Short hook 5-7 Cyrillic words on EISZHS suspension before escrow Tyumen newbuild. meme_picks from meme-top100 on-topic people+cats.
+
+H1: За 2 дня до эскроу семья увидела в ЕИСЖС приостановку стройки в Тюмени — и не открыла счёт
+description: see description-brief.json in article dir.
