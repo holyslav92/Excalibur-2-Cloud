@@ -1,0 +1,28 @@
+{
+  "slug": "za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach",
+  "topic_id": "B34",
+  "post_id": 11118,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1053816,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11118 slug=za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach\nOK categories=36,34,32\nOK yoast_social_image=1\nOK featured_image=11119\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11120 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach-inline-03.png\nOK inline_alt=11120\nOK inline_description=11120\nOK inline_image_upload=11121 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach-inline-04.png\nOK inline_alt=11121\nOK inline_description=11121\nOK inline_image_upload=11122 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach-inline-05.png\nOK inline_alt=11122\nOK inline_description=11122\nOK inline_image_upload=11123 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach-inline-01.png\nOK inline_alt=11123\nOK inline_description=11123\nOK inline_image_upload=11124 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach-inline-02.png\nOK inline_alt=11124\nOK inline_description=11124\nOK inline_image_upload=11125 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach-inline-06.png\nOK inline_alt=11125\nOK inline_description=11125\nOK inline_image_upload=11126 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach-inline-07.png\nOK inline_alt=11126\nOK inline_description=11126\npermalink={{SITE_BASE}}/blog/ipoteka/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/za-5-dnej-do-ddu-rassrochka-ne-shodilas-s-cenoj-na-340-tysyach/",
+    "errors": []
+  }
+}
