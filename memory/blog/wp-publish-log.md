@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B34 — 2026-09-26
+
+- **topic_id:** B34
+- **slug:** skidku-iz-broni-vycherknuli-pered-ddu-bank-podnyal-vznos
+- **post_id:** 11017
+- **permalink:** /blog/ipoteka/skidku-iz-broni-vycherknuli-pered-ddu-bank-podnyal-vznos/
+- **featured_image:** 11018
+- **inline_images:** 11019–11025 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry, proverka-pered-pokupkoj (category_ids=32,36,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29

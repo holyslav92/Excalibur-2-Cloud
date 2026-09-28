@@ -1063,3 +1063,28 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260926-0746-schema-derouter-b34
+status: open
+run_date: 2026-09-26
+role: excalibur-blog-schema
+topic_id: B34
+article_dir: memory/blog/articles/B34-skidku-iz-broni-vycherknuli-pered-ddu-bank-podnyal-vznos
+severity: medium
+category: derouter
+
+### What went wrong
+- First `excalibur_blog_derouter_opus_chat.py --role schema -o schema.jsonld` wrote assistant prose (tool-narration) to repo root `schema.jsonld`, not JSON-LD; gate FAIL missing file in article_dir.
+- Retry with repo-relative `-o memory/blog/articles/.../schema.jsonld` returned valid BlogPosting JSON but wrong Person `sameAs` (dzen/vk typos) and non-canonical `@id` vs `authors-registry.json` / B31 graph order.
+
+### How the agent recovered this run
+- Added OUTPUT CONTRACT line to `assembled-schema-inputs.md`; reran Derouter with full `--output` path under article_dir.
+- Post-Derouter aligned Organization/Person/BlogPosting nodes to registry + neighbor schema pattern; removed FAQPage (none in HTML).
+- `excalibur_blog_schema_gate.py` → PASS.
+
+### Durable fix needed before next run
+- Skill/agent: document `--output memory/blog/articles/<dir>/schema.jsonld` (bare `schema.jsonld` lands in repo root).
+- Optional: schema role post-processor or gate warning on Person `sameAs` drift from `shared/authors-registry.json`.
+
+### Secrets
+- none recorded

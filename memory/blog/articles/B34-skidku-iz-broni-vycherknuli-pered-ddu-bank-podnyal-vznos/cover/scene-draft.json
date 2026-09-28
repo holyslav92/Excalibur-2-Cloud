@@ -1,0 +1,153 @@
+{
+  "cover_hook": "Скидку из брони вычеркнули перед ДДУ",
+  "cover_hook_highlight": "вычеркнули",
+  "sticky": "Банк поднял взнос",
+  "phone": "+7 922 001 65 05",
+  "slots": {
+    "cover": {
+      "scene_hint": "Светлый офис продаж новостройки в Тюмени: тот же герой в терракотовой overshirt-рубашке резко отводит договор от камеры, увидев зачёркнутую скидку; яркий солнечный контровик, чистая зона под заголовок.",
+      "cover_emotion": "ошеломлённое недоверие с поднятыми бровями, напряжённая гримаса и короткий жест «как так?»; не улыбка и не выражение с референса",
+      "identity_direction": "same person as face-studio-2026-06-23.jpg, realistic identity i2i, medium slim build, preserve facial structure, hairline, eyes and light stubble; new outfit, new action and new expression; do not copy reference clothes, pose or smile",
+      "composition": "bright high-key editorial collage, hero standing three-quarter view on the right half, contract held forward at chest height, title zone clear on the left, phone in a separate clean lower corner, generous negative space",
+      "location": "sunlit modern Tyumen new-build sales office with pale glass, light wood and a small model of apartment blocks; no dark cinematic office, no desk-bound portrait",
+      "action": "hero physically pulls a contract back from signing, one finger pointing at the missing discount line, other hand clutching a small folder; visual implication of an unexpected bank recalculation",
+      "outfit": "terracotta overshirt over a cream T-shirt, dark olive chinos, simple watch; no black blazer",
+      "pose_framing": "medium-wide standing three-quarter framing, body angled toward camera, shoulders tense, contract extended slightly forward; not a left-side bust and not a side-eye pose",
+      "meme_stickers": [
+        {
+          "id": "blinking_white_guy",
+          "placement": "small lower-right reaction sticker, away from hook, face and phone",
+          "scale": "under 6% of frame",
+          "purpose": "comedic disbelief at the last-minute contract change"
+        },
+        {
+          "id": "grumpy_cat",
+          "placement": "small upper-right corner accent, away from hook, face and phone",
+          "scale": "under 5% of frame",
+          "purpose": "annoyed reaction to the increased initial payment"
+        }
+      ],
+      "sticker_clearance": "all meme stickers remain corner accents, total sticker area under 15%, at least 80px from the host face and phone, never overlap the hook",
+      "text_rules": "render only the supplied cover hook, highlighted word «вычеркнули», sticky «Банк поднял взнос» and phone «+7 922 001 65 05»; no Wordstat queries, no query strips, no extra invented text",
+      "lighting_style": "white high-key palette with gold and black accents, warm sun flare, light leak, subtle glow, torn-paper collage and restrained tape details; bright and readable, never dark cinematic"
+    },
+    "inline_1": {
+      "visual_type": "realistic_photo",
+      "placement_group": "pair",
+      "scene_hint": "Светлая квартира в новостройке: папка с бронью и ключ-карта лежат на кухонной столешнице рядом с планом квартиры, без лиц и без хост-персонажа.",
+      "fact_labels": [
+        "бронь новостройки",
+        "скидка в расчёте",
+        "Тюмень"
+      ]
+    },
+    "inline_2": {
+      "visual_type": "comparison_table",
+      "placement_group": "pair",
+      "scene_hint": "Инфографика на белом фоне сравнивает расчёт со скидкой и проект договора без скидки, отдельно показывает разницу первого взноса 76 тыс. рублей.",
+      "fact_labels": [
+        "скидка около 380 тыс. ₽",
+        "скидка отсутствует в проекте ДДУ",
+        "+76 тыс. ₽ к взносу"
+      ]
+    },
+    "inline_3": {
+      "visual_type": "realistic_photo",
+      "scene_hint": "Светлый коридор офиса продаж: крупный план договора на планшете и календаря с отметкой «3 дня до ДДУ», без людей и лиц.",
+      "fact_labels": [
+        "3 дня до ДДУ",
+        "проект договора",
+        "проверка условий"
+      ]
+    },
+    "inline_4": {
+      "visual_type": "realistic_photo",
+      "scene_hint": "Светлая зона эскроу в банке: руки клиента пересчитывают купюры и банковские документы рядом с папкой сделки, без лиц и стокового героя.",
+      "fact_labels": [
+        "эскроу",
+        "первый взнос",
+        "пересчёт банком"
+      ]
+    },
+    "inline_5": {
+      "visual_type": "structure_diagram",
+      "scene_hint": "Чистая схема стрелками показывает цепочку: скидка в брони → изменение цены в ДДУ → пересчёт LTV → увеличение первого взноса; маленький wojak в углу.",
+      "fact_labels": [
+        "бронь",
+        "ДДУ",
+        "LTV",
+        "первый взнос"
+      ],
+      "sticker": {
+        "id": "wojak",
+        "placement": "tiny corner accent",
+        "scale": "under 4% of frame"
+      }
+    },
+    "inline_6": {
+      "visual_type": "fact_card",
+      "scene_hint": "Яркая карточка с крупными числами объясняет разницу: около 380 тыс. рублей ожидаемой скидки и 76 тыс. рублей дополнительного взноса.",
+      "fact_labels": [
+        "≈380 тыс. ₽ скидки",
+        "+76 тыс. ₽ взноса",
+        "банк пересчитал LTV"
+      ]
+    },
+    "inline_7": {
+      "visual_type": "process_flow",
+      "scene_hint": "Пошаговый светлый маршрут проверки сделки: бронь → проект ДДУ → расчёт банка → эскроу; в углу небольшой вежливый кот-стикер.",
+      "fact_labels": [
+        "сверить бронь",
+        "проверить проект ДДУ",
+        "уточнить расчёт банка",
+        "подтвердить сумму эскроу"
+      ],
+      "sticker": {
+        "id": "polite_cat",
+        "placement": "tiny lower-right corner accent",
+        "scale": "under 4% of frame"
+      }
+    }
+  },
+  "cover_motifs": {
+    "composition": "hero on right in medium-wide three-quarter framing, contract extended forward, clear title zone on left",
+    "location": "sunlit modern new-build sales office in Tyumen",
+    "meme": "blinking_white_guy and grumpy_cat, small corner reactions",
+    "props": [
+      "contract folder",
+      "apartment floor plan",
+      "small new-build model",
+      "bank document",
+      "pen"
+    ],
+    "stickers": [
+      "blinking_white_guy",
+      "grumpy_cat"
+    ],
+    "joke": "the promised discount disappears just before signing while the bank calmly demands more money",
+    "outfit": "terracotta overshirt, cream T-shirt, dark olive chinos",
+    "emotion": "shocked disbelief with raised eyebrows and tense grimace",
+    "pose_framing": "standing medium-wide three-quarter pose on the right, contract pulled toward camera",
+    "action": "pointing at the crossed-out discount and pulling the contract back before signing"
+  },
+  "wordstat_stickers": [
+    "купить новостройку в тюмени",
+    "новостройки тюмень"
+  ],
+  "wordstat_rendering": "manifest log only; do not paint or typeset these phrases on the cover",
+  "anti_repeat": {
+    "avoid": [
+      "black blazer",
+      "left bust",
+      "side-eye",
+      "default desk",
+      "dark cinematic lighting"
+    ],
+    "invented_variation": {
+      "outfit": "terracotta overshirt",
+      "emotion": "alarmed disbelief",
+      "pose": "standing three-quarter with contract pulled forward",
+      "location": "sunlit new-build sales office"
+    }
+  }
+}
