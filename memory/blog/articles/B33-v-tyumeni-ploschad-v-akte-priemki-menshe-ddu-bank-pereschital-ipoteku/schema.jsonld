@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{SITE_BASE}}/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku/",
+  "headline": "В тюменской новостройке в акте минус 1,8 метра к ДДУ — банк пересчитал ипотеку за день до регистрации",
+  "description": "В Тюмени площадь квартиры в акте приёмки оказалась на 1,8 квадратного метра меньше указанной в ДДУ. Банк пересчитал параметры ипотеки за день до регистрации сделки.",
+  "url": "{{SITE_BASE}}/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku/",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-26",
+  "inLanguage": "ru-RU",
+  "author": {
+    "@type": "Person",
+    "name": "Святослав Шакин",
+    "identifier": "svyatoslav-shakin"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{SITE_BASE}}/v-tyumeni-ploschad-v-akte-priemki-menshe-ddu-bank-pereschital-ipoteku/"
+  },
+  "articleSection": "Недвижимость",
+  "keywords": [
+    "Тюмень",
+    "новостройка",
+    "ДДУ",
+    "акт приёмки",
+    "ипотека",
+    "площадь квартиры"
+  ]
+}
