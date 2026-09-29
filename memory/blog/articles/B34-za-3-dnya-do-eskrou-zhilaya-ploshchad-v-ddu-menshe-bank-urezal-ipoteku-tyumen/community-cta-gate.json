@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "article_dir": "memory/blog/articles/B34-za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen",
+  "cta_required": true,
+  "required": [
+    "https://t.me/Tyumen_Rieltor",
+    "https://max.ru/id561413315447_biz",
+    "tel:+79220016505"
+  ],
+  "present": {
+    "https://t.me/Tyumen_Rieltor": false,
+    "https://max.ru/id561413315447_biz": false,
+    "tel:+79220016505": true,
+    "cta_channels.max": false
+  },
+  "errors": [
+    "missing required CTA href https://t.me/Tyumen_Rieltor",
+    "missing required CTA href https://max.ru/id561413315447_biz",
+    "missing MAX URL https://max.ru/id561413315447_biz"
+  ]
+}
