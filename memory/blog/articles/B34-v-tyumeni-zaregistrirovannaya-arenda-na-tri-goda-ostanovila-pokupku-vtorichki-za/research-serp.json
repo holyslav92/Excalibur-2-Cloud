@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-29",
+    "today_ru": "29.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B34",
+    "title": "В Тюмени зарегистрированная аренда на три года остановила покупку вторички за неделю до аванса",
+    "h1": "В Тюмени зарегистрированная аренда на три года остановила покупку вторички за неделю до аванса",
+    "slug": "v-tyumeni-zaregistrirovannaya-arenda-na-tri-goda-ostanovila-pokupku-vtorichki-za",
+    "primary_query": "В Тюмени зарегистрированная аренда на три года остановила покупку вторички за неделю до аванса",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени зарегистрированная аренда на три года остановила покупку вторички за неделю до аванса 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени три года платили за квартиру — собственник продал её другим ...",
+          "url": "https://dzen.ru/a/apJmOWni3D3wbqdk",
+          "snippet": ""
+        },
+        {
+          "title": "Квартиру в Тюмени остановили за день до аванса — родственники пошли в ...",
+          "url": "https://dzen.ru/a/apJ3Uq3UpQP2s7_9",
+          "snippet": "Семья потеряла три года, но не потеряла деньги на второй квартире: выписку заказали до финального платежа и до аванса — и этого хватило, чтобы остановиться в одном шаге от двойного убытка."
+        },
+        {
+          "title": "Как прекратить запись об аренде в ЕГРН, если срок договора истек ...",
+          "url": "https://corconsult.ru/blog/no-arenda",
+          "snippet": "Если вы выходите на вторичку в Тюмени — подключите меня до аванса, а не после расчётов. Проверю продавца и документы, покажу, где нужна остановка, а где всё в порядке."
+        },
+        {
+          "title": "Какими законами регулируется аренда квартир в 2026 году",
+          "url": "https://realty.yandex.ru/journal/post/kakimi-zakonami-reguliruetsya-arenda-kvartir-v-2022/",
+          "snippet": "Если вы подписали это соглашение и просто не подали его на регистрацию, достаточно обратиться в Росреестр с заявлением и приложенными к нему правоустанавливающими документами."
+        },
+        {
+          "title": "Аренда недвижимости: споры и судебная практика",
+          "url": "https://spravka-pomosh.ru/obzor-sudebnoj-praktiki-po-sporam-ob-arende-nedvizhimosti.html",
+          "snippet": "Самый главный закон о сдаче жилья в аренду в России — это Гражданский кодекс (ГК РФ). Этот документ очень подробно описывает отношения между наймодателем и нанимателем."
+        },
+        {
+          "title": "Судебная практика по договору аренды - nalog-nalog.ru",
+          "url": "https://nalog-nalog.ru/dogovory/sudebnaya_praktika_po_dogovoru_arendy/",
+          "snippet": "Ниже представлен подробный обзор актуальной судебной практики, основанной на материалах КонсультантПлюс, ВладейЛегко и аналитических обзорах за 2023‑2025 годы․"
+        }
+      ],
+      "searched_at": "2026-09-29"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени зарегистрированная аренда на три года остановила покупку вторички за неделю до аванса 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени кладовка «в подарок» остановила сделку — в ЕГРН её не было",
+          "url": "https://dzen.ru/a/apK5ka3UpQP2tSmm",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени квартиру продали дважды — второй аванс остановили",
+          "url": "https://dzen.ru/a/apVavvWX808c958T",
+          "snippet": "Риелтор продавца называл кладовку подарком к квартире — показывал ключи, фотографии металлической клетки внизу, говорил, что помещением пользуются много лет и «так у всех в доме». За три дня до аванса покупатели заказали расширенную выписку ЕГРН по квартире."
+        },
+        {
+          "title": "Покупаете квартиру с прописанными: 4 проверки до аванса и кто может ...",
+          "url": "https://financecalc.ru/blog/v-kvartire-ostayutsya-zaregistrirovannye-lyudi-kak-proverit-pravo-prozhivaniya",
+          "snippet": "Заказали вторые покупатели — и увидели то, что первым стоило увидеть ещё до передачи аванса. Сделку поставили на паузу, второй аванс не ушёл вообще. То есть одних спасла бумага."
+        },
+        {
+          "title": "В Тюмени застройщик потребовал акт с дефектами — иначе без ключей | The ...",
+          "url": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-na-priemke-naschitali-defekty-zastrojschik-potreboval-podpisat-akt/",
+          "snippet": "В квартире остаются зарегистрированные жильцы: у кого может сохраниться право проживания и какие документы проверить покупателю до аванса."
+        },
+        {
+          "title": "Прокуратура Тюменской области остановила незаконную попытку купить ...",
+          "url": "https://tumentoday.ru/2026/04/16/prokuratura_tyumenskoy_oblasti_ostanovila_nezakonnuyu_popytku_kupit_boleye_260_ga_selkhozzemel/",
+          "snippet": "В Тюмени застройщик потребовал акт с дефектами — иначе без ключей. Приёмка заняла два часа, список дефектов перевалил за несколько десятков пунктов — и ключи семье в тот день так и не отдали."
+        },
+        {
+          "title": "Аренда помещения с правом выкупа — новости на сайте застройщика ЭНКО в ...",
+          "url": "https://enco.ru/news/arenda-pomeshcheniya-s-pravom-vykupa/",
+          "snippet": "Прокуратура Тюменской области остановила незаконную попытку купить более 260 га сельхозземель. Территории хотел выкупить арендовавший их предприниматель."
+        }
+      ],
+      "searched_at": "2026-09-29"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени зарегистрированная аренда на три года остановила покупку вторички за неделю до аванса official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Квартиру в Тюмени остановили за день до аванса — родственники пошли в ...",
+          "url": "https://dzen.ru/a/apJ3Uq3UpQP2s7_9",
+          "snippet": ""
+        },
+        {
+          "title": "Аренда недвижимости: споры и судебная практика",
+          "url": "https://spravka-pomosh.ru/obzor-sudebnoj-praktiki-po-sporam-ob-arende-nedvizhimosti.html",
+          "snippet": "Если вы выходите на вторичку в Тюмени — подключите меня до аванса, а не после расчётов. Проверю продавца и документы, покажу, где нужна остановка, а где всё в порядке."
+        },
+        {
+          "title": "В Тюмени сосед остановил покупку доли перед авансом",
+          "url": "https://dzen.ru/a/apPdnF_t_ztB_LYv",
+          "snippet": "Ниже представлен подробный обзор актуальной судебной практики, основанной на материалах КонсультантПлюс, ВладейЛегко и аналитических обзорах за 2023‑2025 годы․"
+        },
+        {
+          "title": "Как прекратить запись об аренде в ЕГРН, если срок договора истек ...",
+          "url": "https://corconsult.ru/blog/no-arenda",
+          "snippet": "В Тюмени покупатель уже выбрал комнату в коммунальной квартире, сошёлся с продавцом по цене и согласовал день внесения аванса. На последнем осмотре в общий коридор вышел сосед и спросил, знает ли покупатель, что комнату продают без его отказа."
+        },
+        {
+          "title": "Покупаете квартиру с прописанными: 4 проверки до аванса и кто может ...",
+          "url": "https://financecalc.ru/blog/v-kvartire-ostayutsya-zaregistrirovannye-lyudi-kak-proverit-pravo-prozhivaniya",
+          "snippet": "Если вы подписали это соглашение и просто не подали его на регистрацию, достаточно обратиться в Росреестр с заявлением и приложенными к нему правоустанавливающими документами."
+        },
+        {
+          "title": "Какими законами регулируется аренда квартир в 2026 году",
+          "url": "https://realty.yandex.ru/journal/post/kakimi-zakonami-reguliruetsya-arenda-kvartir-v-2022/",
+          "snippet": "В квартире остаются зарегистрированные жильцы: у кого может сохраниться право проживания и какие документы проверить покупателю до аванса."
+        }
+      ],
+      "searched_at": "2026-09-29"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени зарегистрированная аренда на три года остановила покупку вторички за неделю до аванса 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com/favicon.ico",
+          "snippet": ""
+        },
+        {
+          "title": "Sign in to GitHub · GitHub",
+          "url": "https://github.com/login",
+          "snippet": "Б о х я я Ї ™ я , \\ Б \" 4 я я я я Џ 0 ящ н я ц 8 @ л я я я я - њ я ь ы ; : з я я љ Щ я я O L я я Ъ ц я р с я ц ч я б б я ч Ю я щ !"
+        },
+        {
+          "title": "Download GitHub Desktop",
+          "url": "https://desktop.github.com/download/",
+          "snippet": "GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects."
+        },
+        {
+          "title": "GitHub Docs",
+          "url": "https://docs.github.com/",
+          "snippet": "Focus on what matters instead of fighting with Git. Whether you're new to Git or a seasoned user, GitHub Desktop simplifies your development workflow. Experience the latest features and bug fixes before they're released. Looking for Windows? Need to download the installer for Windows? Do you use a Mac with Intel chip?"
+        },
+        {
+          "title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub",
+          "url": "https://github.com/",
+          "snippet": "Documentation for new users, developers, administrators, and all of GitHub's products."
+        },
+        {
+          "title": "jtbin/mister at master · jotego/jtbin · GitHub",
+          "url": "https://github.com/jotego/jtbin/tree/master/mister",
+          "snippet": "Write, test, and fix code quickly with GitHub Copilot, from simple boilerplate to complex features. From your first line of code to final deployment, GitHub provides AI and automation tools to help you build and ship better software faster. A Copilot chat window with the 'Ask' mode enabled."
+        }
+      ],
+      "searched_at": "2026-09-29"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени зарегистрированная аренда на три года остановила покупку вторички за неделю до аванса forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Прокуратура Тюменской области остановила незаконную попытку купить ...",
+          "url": "https://tumentoday.ru/2026/04/16/prokuratura_tyumenskoy_oblasti_ostanovila_nezakonnuyu_popytku_kupit_boleye_260_ga_selkhozzemel/",
+          "snippet": ""
+        },
+        {
+          "title": "Квартиру в Тюмени остановили за день до аванса — родственники пошли в ...",
+          "url": "https://dzen.ru/a/apJ3Uq3UpQP2s7_9",
+          "snippet": "Изучив материалы дела, прокуратура области доказала: сельским хозяйством предприниматель начал заниматься только в 2025 году, а до этого он просто покупал и перепродавал участки."
+        },
+        {
+          "title": "В Тюмени сосед остановил покупку доли перед авансом",
+          "url": "https://dzen.ru/a/apPdnF_t_ztB_LYv",
+          "snippet": "Если вы выходите на вторичку в Тюмени — подключите меня до аванса, а не после расчётов. Проверю продавца и документы, покажу, где нужна остановка, а где всё в порядке."
+        },
+        {
+          "title": "Что делать, если продавец или арендодатель не возвращает аванс или ...",
+          "url": "https://fklaw.ru/chto-delat-esli-prodavets-ili-arendodatel-ne-vozvraschaet-avans-ili-zadatok-za-kvartiru/",
+          "snippet": "В Тюмени покупатель уже выбрал комнату в коммунальной квартире, сошёлся с продавцом по цене и согласовал день внесения аванса. На последнем осмотре в общий коридор вышел сосед и спросил, знает ли покупатель, что комнату продают без его отказа."
+        },
+        {
+          "title": "Возврат аванса по договору аренды до вступления его в силу",
+          "url": "https://pravoved.ru/question/4875384/",
+          "snippet": "Вернули аванс за квартиру? Узнайте, как вернуть деньги, если продавец или арендодатель уклоняется. Пошаговая инструкция и законные методы."
+        },
+        {
+          "title": "Актуальная судебная практика по договорам аренды помещений",
+          "url": "https://www.klerk.ru/law/articles/439693/",
+          "snippet": "Арендодатель отказывается возвращать аванс по договору аренды, который не вступил в силу, а помещение занято. Узнайте, как законно вернуть уплаченные деньги."
+        }
+      ],
+      "searched_at": "2026-09-29"
+    }
+  ],
+  "errors": []
+}
