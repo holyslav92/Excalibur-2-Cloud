@@ -1,0 +1,17 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-29",
+  "topic_id": "B34",
+  "article_dir": "memory/blog/articles/B34-v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka",
+  "slug": "v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": [],
+  "notes": "article.meta.json stamped via pipeline_canon --stamp (was missing; required for llms generator)"
+}
