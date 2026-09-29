@@ -1092,4 +1092,14 @@ category: api
 - none recorded
 
 ### Fixer resolution
-- pending
+fixed_at: 2026-09-29
+fix_summary:
+- Powerful tier HTTP 402 budget_exceeded auto-retries fallback_model (gpt-6-astra); writes derouter-opus-budget-fallback.json on success.
+files_changed:
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+- `shared/derouter-opus-brain-contract.md`
+- `tests/test_derouter_resolve_model.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_derouter_opus_chat.py`
+- `python3 -m unittest tests.test_derouter_resolve_model`
+commit: e12154e0
