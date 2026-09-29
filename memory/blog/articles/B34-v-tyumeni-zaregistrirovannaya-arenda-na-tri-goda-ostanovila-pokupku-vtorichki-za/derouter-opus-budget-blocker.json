@@ -1,0 +1,8 @@
+{
+  "role": "sol",
+  "attempted_model": "claude-opus-5-5",
+  "error": "Derouter HTTP 402 budget_exceeded: 0 concurrent claude-opus-5-5 slots",
+  "request_id": "req_98c537d6e7dc42b7ba74344e",
+  "timestamp_utc": "2026-09-29T13:35:00Z",
+  "continuation": "Sol chunk retried with DEROUTER_POWERFUL_MODEL=gpt-6-astra (powerful tier; not Composer). Formal quality-score fallback script not invoked."
+}
