@@ -1,0 +1,233 @@
+{
+  "topic_id": "B30",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Два санузла стали одним в ДДУ",
+  "cover_hook_highlight": "санузла",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "За 2 дня до ДДУ в новостройке Тюмени исчез второй санузел — сделку остановили: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Шоу-рум: жилет, план с двумя санузлами, черновик ДДУ, two_buttons pikachu",
+      "meme_caption_ru": "",
+      "sticky": "Сверьте экспликацию",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "недоверие и удивление",
+      "meme_picks": [
+        "two_buttons",
+        "surprised_pikachu"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "В шоу-руме два санузла — так семья и выбрала квартиру",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Шоу-рум с планом двух санузлов",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «В шоу-руме два санузла — так семья и выбрала кв…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Шоу-рум",
+        "Два санузла",
+        "План на экране",
+        "Семья выбрала"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "В шоу-руме два санузла — так семья и выбрала квартиру",
+      "visual_type": "comparison_table",
+      "scene_hint": "gold comparison chart collage",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Бронь 55 тысяч, Ипотека под площадь, Документы готовят — иллюстрация к разбору…",
+      "labels": [
+        "Бронь 55 тысяч",
+        "Ипотека под площадь",
+        "Документы готовят"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Бронь на 55 тысяч и ипотека под эту площадь",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Черновик ДДУ на столе",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Бронь на 55 тысяч и ипотека под эту площадь» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Два дня до ДДУ",
+        "Экспликация",
+        "Один санузел",
+        "Вопрос менеджеру"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За два дня до ДДУ: в экспликации остался один санузел",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Второй черновик без санузла",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За два дня до ДДУ: в экспликации остался один с…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Второй черновик",
+        "Снова один",
+        "Без гостевого",
+        "Не подписали"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Обещали поправить проект — второй черновик снова без гостевого",
+      "visual_type": "process_flow",
+      "scene_hint": "numbered flow diagram collage",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Стоп до эскроу, Бронь под вопросом, Деньги не ушли — иллюстрация к разбору сделки.",
+      "labels": [
+        "Стоп до эскроу",
+        "Бронь под вопросом",
+        "Деньги не ушли"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "ДДУ не подписали, на эскроу деньги не пошли",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "timeline bar chart collage",
+      "alt": "график / шкала сроков по новостройке в Тюмени: План и экспликация, Сверка помещений, До подписи — иллюстрация к разбору сделки.",
+      "labels": [
+        "План и экспликация",
+        "Сверка помещений",
+        "До подписи"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что смотреть в приложении к ДДУ до подписи",
+      "visual_type": "structure_diagram",
+      "scene_hint": "structure diagram with labels",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Приложение к ДДУ, Площади, Санузлы — иллюстрация к разбору сделки.",
+      "labels": [
+        "Приложение к ДДУ",
+        "Площади",
+        "Санузлы",
+        "До оплаты"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить новостройку в тюмени",
+    "новостройки тюмень",
+    "планировка квартиры новостройка"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "cover_motifs": {
+    "composition": "host three-quarter right comparing floor plan to DDU appendix, hook upper left, phone bottom-right",
+    "location": "bright sunlit tyumen newbuild sales gallery with large wall screen floor plan",
+    "meme": "two_buttons + surprised_pikachu corner stickers",
+    "prop_set": "rolled floor plan, ddu appendix pages, yellow sticky",
+    "sticker_set": "two_buttons top-left, surprised_pikachu bottom-left, yellow sticky hook only",
+    "joke": "pikachu shocked that second bathroom vanished from explication",
+    "outfit": "steel blue open collar shirt rolled sleeves dark chinos no blazer",
+    "emotion": "skeptical raised brow direct gaze not studio smile",
+    "pose_framing": "standing waist-up three-quarter right pointing at plan not left bust",
+    "action": "holds DDU appendix next to showroom screen showing two bathrooms"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  }
+}
