@@ -6,4 +6,4 @@ H1: В Тюмени дарственная остановила сделку з�
 Без self-score loop. Без padding до 1800+. Target 1400–1600 слов.
 
 ## FINALE FAIL
-- finale-third-retell: middle scene repeated in closing: «если квартиру недавно подарили»
+- finale-third-retell: middle scene repeated in closing: «выпиской егрн переходе прав»
