@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/za-nedelyu-do-avansa-v-tyumeni-vsplyla-darstvennaya-pensionerka-oformila-kvartir/#blogposting",
+      "url": "{{SITE_BASE}}/za-nedelyu-do-avansa-v-tyumeni-vsplyla-darstvennaya-pensionerka-oformila-kvartir/",
+      "headline": "В Тюмени дарственная остановила сделку за 7 дней до аванса",
+      "description": "Сын торопил с авансом 420 000 ₽, а квартира оказалась подарком от матери-пенсионерки четыре месяца назад. Святослав Шакин, Тюмень: вы бы платили до разговора с дарителем?",
+      "datePublished": "2026-09-29",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/za-nedelyu-do-avansa-v-tyumeni-vsplyla-darstvennaya-pensionerka-oformila-kvartir/"
+      }
+    }
+  ]
+}
