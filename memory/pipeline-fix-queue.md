@@ -1063,3 +1063,33 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260929-1400-sol-writer-derouter-402-budget-b34
+status: fixed
+run_date: 2026-09-29
+role: excalibur-blog-sol
+topic_id: B34
+article_dir: memory/blog/articles/B34-v-tyumeni-zaregistrirovannaya-arenda-na-tri-goda-ostanovila-pokupku-vtorichki-za
+severity: medium
+category: api
+
+### What went wrong
+- Sol (and env-forced opus path) hit Derouter HTTP 402 `budget_exceeded: 0 concurrent claude-opus-5-5 slots` when `DEROUTER_POWERFUL_MODEL=claude-opus-5-5`.
+- Agent manually retried with `DEROUTER_POWERFUL_MODEL=gpt-6-astra`; `derouter-opus-budget-blocker.json` stamped; publish completed.
+
+### How the agent recovered this run
+- Sol chunk + merge on gpt-6-astra; quality-bar/stylo PASS; WP publish OK.
+
+### Durable fix needed before next run
+- `excalibur_blog_derouter_opus_chat.py`: on powerful-tier 402 budget_exceeded, auto-try `fallback_model` (gpt-6-astra) like 404 alias loop; optional `derouter-opus-budget-fallback.json` stamp.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+- `shared/derouter-opus-brain-contract.md`
+- `tests/test_derouter_resolve_model.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+- pending
