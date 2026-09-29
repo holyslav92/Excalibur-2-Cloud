@@ -23,6 +23,7 @@ from excalibur_blog_quality_bar_9_gate import (
     count_inline_figures,
     word_count,
 )
+from excalibur_blog_unrelated_news_glue import check_no_unrelated_calendar_news_glue
 
 H2_EXPECT = 6
 INLINE_MIN = 7
@@ -66,6 +67,7 @@ def main() -> int:
 
     spine_ok, spine_errors = check_spine_once_no_recap(html)
     composite_ok, composite_errors = check_no_composite_disclaimer(html)
+    glue_ok, glue_errors = check_no_unrelated_calendar_news_glue(html, article_dir=article_dir)
     magnet_ok, magnet_errors = check_comment_magnet(html)
 
     checks = {
@@ -75,6 +77,7 @@ def main() -> int:
         "spine_once_no_recap": spine_ok,
         "comment_magnet_question": magnet_ok,
         "no_composite_disclaimer": composite_ok,
+        "no_unrelated_calendar_news_glue": glue_ok,
         "inline_figures_7": inlines >= INLINE_MIN,
         "h2_count_6": h2c >= H2_EXPECT,
     }
@@ -90,6 +93,8 @@ def main() -> int:
         errors.extend(spine_errors)
     if composite_errors:
         errors.extend(composite_errors)
+    if glue_errors:
+        errors.extend(glue_errors)
     if magnet_errors:
         errors.extend(magnet_errors)
     if not checks["inline_figures_7"]:
