@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B34 — 2026-09-29
+
+- **topic_id:** B34
+- **slug:** za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen
+- **post_id:** 11235
+- **permalink:** /blog/ipoteka/za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen/
+- **featured_image:** 11236
+- **inline_images:** 11237–11243 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry, proverka-pered-pokupkoj (category_ids=32,36,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; image_caption_builder --apply before publish; theme_contract_deploy ENOENT skip
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
