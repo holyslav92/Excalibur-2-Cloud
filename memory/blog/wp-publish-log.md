@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B34 — 2026-09-29
+
+- **topic_id:** B34
+- **slug:** za-nedelyu-do-avansa-v-tyumeni-vsplyla-darstvennaya-pensionerka-oformila-kvartir
+- **post_id:** 11261
+- **permalink:** /blog/vtorichka-i-riski/za-nedelyu-do-avansa-v-tyumeni-vsplyla-darstvennaya-pensionerka-oformila-kvartir/
+- **featured_image:** 11262
+- **inline_images:** 11263–11269 (7)
+- **wp_category_slugs:** vtorichka-i-riski, proverka-pered-pokupkoj, pokupka-kvartiry (category_ids=31,34,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
