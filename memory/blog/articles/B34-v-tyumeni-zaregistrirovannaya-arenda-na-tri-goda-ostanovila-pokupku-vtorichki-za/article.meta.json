@@ -20,6 +20,18 @@
     "side_stickers": "skip"
   },
   "date": "2026-09-29",
+  "wp_category_slugs": [
+    "vtorichka-i-riski",
+    "proverka-pered-pokupkoj",
+    "pokupka-kvartiry"
+  ],
+  "interlink_siblings": [
+    "B09",
+    "B10",
+    "B14",
+    "B05"
+  ],
   "pipeline_canon": "human-first-v2",
-  "editorial_swarm": false
+  "editorial_swarm": false,
+  "wp_post_id": 11284
 }
