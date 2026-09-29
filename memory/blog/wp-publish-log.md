@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B34 — 2026-09-29
+
+- **topic_id:** B34
+- **slug:** v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka
+- **post_id:** 11222
+- **permalink:** /blog/ipoteka/v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka/
+- **featured_image:** 11223
+- **inline_images:** 11224–11230 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry, proverka-pered-pokupkoj (category_ids=32,36,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29

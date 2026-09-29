@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka",
+  "topic_id": "B34",
+  "post_id": 11222,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1099021,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11222 slug=v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka\nOK categories=32,36,34\nOK yoast_social_image=1\nOK featured_image=11223\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11224 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka-inline-01.png\nOK inline_alt=11224\nOK inline_description=11224\nOK inline_image_upload=11225 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka-inline-02.png\nOK inline_alt=11225\nOK inline_description=11225\nOK inline_image_upload=11226 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka-inline-03.png\nOK inline_alt=11226\nOK inline_description=11226\nOK inline_image_upload=11227 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka-inline-04.png\nOK inline_alt=11227\nOK inline_description=11227\nOK inline_image_upload=11228 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka-inline-05.png\nOK inline_alt=11228\nOK inline_description=11228\nOK inline_image_upload=11229 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka-inline-06.png\nOK inline_alt=11229\nOK inline_description=11229\nOK inline_image_upload=11230 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka-inline-07.png\nOK inline_alt=11230\nOK inline_description=11230\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-za-5-dnej-do-eskrou-bank-potreboval-svidetelstvo-o-rozhdenii-vtorogo-rebenka/",
+    "errors": []
+  }
+}
