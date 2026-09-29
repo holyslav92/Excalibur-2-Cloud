@@ -1,0 +1,235 @@
+{
+  "topic_id": "B34",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Дарственная остановила сделку за неделю",
+  "cover_hook_highlight": "Дарственная",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени дарственная остановила сделку за 7 дней до аванса: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Юркабинет: песочный пиджак, выписка дарственная, блик.",
+      "meme_caption_ru": "",
+      "sticky": "Аванс пока не вносили",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "оцепеневшее недоверие"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Выписка без обременений — и ощущение, что цепочка закрыта",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: выписка ЕГРН без обременений и ключи, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Выписка без обременений — и ощущение, что цепоч…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Двушка найдена",
+        "Ипотека одобрена",
+        "Аванс через неделю"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Выписка без обременений — и ощущение, что цепочка закрыта",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: видно в выписке vs скрыто в истории.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Один собственник, Обременений нет, ЕГРН чистая — иллюстрация к разбору сделки.",
+      "labels": [
+        "Один собственник",
+        "Обременений нет",
+        "ЕГРН чистая",
+        "История не видна"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Таблица: документы по переходу права до передачи денег",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Штамп на договоре дарения, 4 месяца назад, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Таблица: документы по переходу права до передач…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Дарственная от матери",
+        "Четыре месяца назад",
+        "Мать пенсионерка",
+        "Юрист запросил цепочку"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Двушка в Тюмени: ипотека одобрена, торг согласован, аванс через неделю",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Банк: закрытый конверт аванс 420 тыс, календарь неделя, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Двушка в Тюмени: ипотека одобрена, торг согласо…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Аванс 420 тысяч",
+        "Встреча через неделю",
+        "Пауза без денег",
+        "Сделку остановили"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "За семь дней до аванса: в истории всплывает дарственная от матери",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Яркая горизонтальная инфографика сроков сделки, золотые маркеры.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Нотариус с 2025, Договор дарения, Закон о нотариусе — иллюстрация к разбору сделки.",
+      "labels": [
+        "Нотариус с 2025",
+        "Договор дарения",
+        "Закон о нотариусе",
+        "Сверка с ЕГРН"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Четыре месяца между подарком и продажей — аванс 420 тысяч не пошёл на стол",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема: договор, дарительница, история, без аванса.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Запросить договор, Спросить дарительницу, Проверить историю — иллюстрация к…",
+      "labels": [
+        "Запросить договор",
+        "Спросить дарительницу",
+        "Проверить историю",
+        "Не вносить аванс"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Нотариальная форма с 2025 года и что смотреть в цепочке переходов",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Блок-схема пакета бумаг на белом фоне, коллаж B02.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Договор дарения, Выписка переходов, Таблица документов — иллюстрация к разбору сделки.",
+      "labels": [
+        "Договор дарения",
+        "Выписка переходов",
+        "Таблица документов",
+        "До передачи денег"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру в тюмени вторичка",
+    "оформление квартиры на родственника",
+    "дарение близкому родственнику"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "Герой справа, выписка с дарственной в руке, заголовок слева",
+    "location": "светлая юркабинет Тюмень, окно",
+    "meme": "bad_luck_brian стикер",
+    "meme_picks": [
+      "bad_luck_brian"
+    ],
+    "prop_set": "выписка ЕГРН, папка аванс, календарь 7 дней, жёлтый стикер",
+    "sticker_set": "bad_luck_brian ≤10% верхний левый",
+    "joke": "дарственная ломает неделю до аванса",
+    "outfit": "песочный пиджак, мятная футболка, светлые брюки",
+    "emotion": "оцепеневшее недоверие, взгляд в камеру",
+    "pose_framing": "средний план по грудь, три четверти к зрителю",
+    "action": "выписка с дарственной и смартфон об авансе, нормальные руки"
+  },
+  "cover_emotion": "оцепеневшее недоверие"
+}
