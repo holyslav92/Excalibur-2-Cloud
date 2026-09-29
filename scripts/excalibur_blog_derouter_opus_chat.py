@@ -166,6 +166,34 @@ def is_model_not_found_error(exc: Exception) -> bool:
     return False
 
 
+def is_powerful_budget_exceeded_error(exc: Exception) -> bool:
+    """HTTP 402 budget_exceeded on claude-opus-5-5 concurrent slots — retry gpt-6-astra."""
+    if not isinstance(exc, DerouterChatError):
+        return False
+    if exc.status == 402:
+        return True
+    lower = str(exc).lower()
+    return "budget_exceeded" in lower or ("402" in lower and "budget" in lower)
+
+
+def powerful_fallback_model_id(root: Path) -> str:
+    writing = load_writing_model_config(root)
+    block = tier_config(writing, "powerful")
+    fb = str(block.get("fallback_model") or "").strip()
+    if fb:
+        return fb
+    lock_path = root / "shared" / "owner-runtime-lock.json"
+    if lock_path.is_file():
+        try:
+            lock = json.loads(lock_path.read_text(encoding="utf-8"))
+            fb2 = str((lock.get("writing_model") or {}).get("powerful", {}).get("fallback_model") or "").strip()
+            if fb2:
+                return fb2
+        except (json.JSONDecodeError, OSError):
+            pass
+    return "gpt-6-astra"
+
+
 def resolve_model(role: str, override: str | None, root: Path) -> tuple[str, str]:
     """Возвращает (model_id, tier). Источник истины — tenant-config role map."""
     writing = load_writing_model_config(root)
@@ -348,7 +376,12 @@ def call_derouter_with_aliases(
     root: Path | None = None,
 ) -> tuple[str, dict[str, Any], str, str]:
     aliases = model_aliases_for_tier(tier, model)
+    if tier == "powerful" and root is not None:
+        fb = powerful_fallback_model_id(root)
+        if fb and fb not in aliases:
+            aliases.append(fb)
     last_error: Exception | None = None
+    budget_fallback_from: str | None = None
     for candidate in aliases:
         try:
             text, response, endpoint = call_derouter_chat(
@@ -363,11 +396,27 @@ def call_derouter_with_aliases(
             )
             if candidate != model:
                 print(f"NOTE model alias accepted: {candidate} (configured {model})")
+            if budget_fallback_from and article_dir is not None:
+                note_path = article_dir / "derouter-opus-budget-fallback.json"
+                note = {
+                    "role": role,
+                    "attempted_model": budget_fallback_from,
+                    "fallback_model": candidate,
+                    "reason": "Derouter HTTP 402 budget_exceeded on powerful tier",
+                }
+                note_path.write_text(json.dumps(note, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             return text, response, endpoint, candidate
         except DerouterChatError as exc:
             last_error = exc
             if is_model_not_found_error(exc):
                 print(f"WARN model {candidate!r} not accepted: {exc}", file=sys.stderr)
+                continue
+            if tier == "powerful" and is_powerful_budget_exceeded_error(exc):
+                print(
+                    f"WARN powerful budget_exceeded on {candidate!r}; trying fallback tier model",
+                    file=sys.stderr,
+                )
+                budget_fallback_from = budget_fallback_from or candidate
                 continue
             raise
     raise DerouterChatError(

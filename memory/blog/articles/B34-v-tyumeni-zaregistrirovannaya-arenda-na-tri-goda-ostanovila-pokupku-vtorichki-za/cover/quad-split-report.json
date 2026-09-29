@@ -1,0 +1,298 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "BLOCK",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-v-tyumeni-zaregistrirovannaya-arenda-na-tri-goda-ostanovila-pokupku-vtorichki-za/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1016,
+          574
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 574,
+            "end": 586
+          },
+          "v_gutter_px": {
+            "start": 1016,
+            "end": 1032
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 4.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0098,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0098,
+              "bottom_right": 0.0098
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 574
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 574
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени аренда на 3 года в ЕГРН остановила сделку: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2048,
+              "bottom": 574
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2048,
+              "bottom": 574
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «На первом осмотре квартира выглядела пустой, вы…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "На первом осмотре квартира выглядела пустой, выписка без обременений"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 5,
+              "top": 586,
+              "right": 1011,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 586,
+              "right": 1016,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: первый осмотр пустой, выписка без обременений, комната не доказательство —…",
+            "h2_anchor": "На первом осмотре квартира выглядела пустой, выписка без обременений"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1037,
+              "top": 586,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 586,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Продавец обещал выезд к ключам — покупатели ава…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Продавец обещал выезд к ключам — покупатели аванс не внесли"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-v-tyumeni-zaregistrirovannaya-arenda-na-tri-goda-ostanovila-pokupku-vtorichki-za/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1014,
+          568
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 568,
+            "end": 586
+          },
+          "v_gutter_px": {
+            "start": 1014,
+            "end": 1034
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 1.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0079,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0079,
+              "bottom_right": 0.0079
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1014,
+              "bottom": 568
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1014,
+              "bottom": 568
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Почему смена собственника не освобождает кварти…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Почему смена собственника не освобождает квартиру от найма"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1034,
+              "top": 0,
+              "right": 2048,
+              "bottom": 568
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 0,
+              "right": 2048,
+              "bottom": 568
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: статья 675 ГК, покупатель — наймодатель, права третьих лиц — иллюстрация к…",
+            "h2_anchor": "В Тюмени до аванса оставалась неделя — ипотека уже одобрена"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 586,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 586,
+              "right": 1014,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: найм до 5 лет, нужен акт выезда, снять запись ЕГРН — иллюстрация к разбору сделки.",
+            "h2_anchor": "Повторный осмотр: жилец, письменный договор на три года и регистрация"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1038,
+              "top": 586,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 586,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: проверка до аванса, выписка и договор, повторный осмотр — иллюстрация к разбору сделки.",
+            "h2_anchor": "До аванса на вторичке: что запросить и таблица проверок"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "injected inline_1 after H2 — На первом осмотре квартира выглядела пустой, выписка без обременений",
+    "injected inline_2 after H2 — На первом осмотре квартира выглядела пустой, выписка без обременений",
+    "injected inline_3 after H2 — Продавец обещал выезд к ключам — покупатели аванс не внесли",
+    "injected inline_4 after H2 — Почему смена собственника не освобождает квартиру от найма",
+    "injected inline_5 after H2 — В Тюмени до аванса оставалась неделя — ипотека уже одобрена",
+    "injected inline_6 after H2 — Повторный осмотр: жилец, письменный договор на три года и регистрация",
+    "injected inline_7 after H2 — До аванса на вторичке: что запросить и таблица проверок"
+  ],
+  "errors": [
+    "skip inline_1: H2 not found — Первый осмотр пустой, выписка чистая",
+    "skip inline_2: H2 not found — Первый осмотр пустой, выписка чистая",
+    "skip inline_3: H2 not found — Обещание выезда, аванс не внесли",
+    "inline_1 figure count after inject=0 (need exactly 1)",
+    "inline_2 figure count after inject=0 (need exactly 1)",
+    "inline_3 figure count after inject=0 (need exactly 1)"
+  ]
+}

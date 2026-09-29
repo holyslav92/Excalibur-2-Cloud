@@ -1,0 +1,61 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-29",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://financecalc.ru/blog/v-kvartire-ostayutsya-zaregistrirovannye-lyudi-kak-proverit-pravo-prozhivaniya",
+        "type": "news_explainer",
+        "note": "17.09.2026 — ЕГРН об обременениях и проверки до аванса"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/04/76622643/",
+        "type": "local_news",
+        "note": "04.09.2026 — риски вторички, арендаторы вне выписки"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени вторичка",
+    "p0_volume": 3413,
+    "support_phrases": [
+      {
+        "phrase": "регистрация договора аренды в росреестре",
+        "volume": 5362,
+        "regions": "225"
+      },
+      {
+        "phrase": "при продаже квартиры аренда",
+        "volume": 601,
+        "regions": "225"
+      }
+    ],
+    "rework_log": "Scout P0 buyer spine; lease registration as support not H1"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 5,
+    "entities_checked": ["gk_rf_consultant"],
+    "errors": [],
+    "notes": "ГК РФ ст. 460, 621, 674, 675, 682 via consultant.ru; no bank tariff claims"
+  },
+  "derouter": {
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "blockers": []
+}
