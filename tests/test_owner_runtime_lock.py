@@ -25,6 +25,8 @@ class OwnerRuntimeLockTests(unittest.TestCase):
     def test_lock_file_exists_and_has_core_keys(self) -> None:
         lock = load_lock(ROOT)
         self.assertEqual(lock.get("status"), "LOCKED_ON_MAIN")
+        mech = lock.get("slot_rubric_mechanism") or {}
+        self.assertEqual(mech.get("quality_bar_check"), "no_foreign_slot_rubric_mechanism")
         self.assertEqual((lock.get("schedule") or {}).get("runs_per_day"), 5)
         self.assertEqual(
             (lock.get("writing_model") or {}).get("powerful", {}).get("model"),

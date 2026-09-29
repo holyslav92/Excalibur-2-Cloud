@@ -218,11 +218,14 @@
       "status": "LOCKED_ON_MAIN",
       "owner": "Святослав Шакин",
       "owner_date": "2026-09-28",
+      "mechanism_purity_owner_date": "2026-09-29",
       "market": "rubric_per_slot",
       "geo": "Tyumen",
       "daily_mix": {"novostroyki": 2, "vtorichka": 2, "arenda": 1},
       "slots_yekt": ["09:00", "12:00", "15:00", "17:00", "19:00"],
       "trend_radar": "memory/blog/trend-radar/trend-radar.json",
+      "gate": "no_foreign_slot_rubric_mechanism",
+      "gate_script": "scripts/excalibur_blog_slot_rubric_mechanism.py",
       "docs": ["shared/slot-rubric-lock.md", "shared/topic-focus-contract.md", "shared/newbuild-focus-lock.md"]
     },
     "dzen_engagement": {

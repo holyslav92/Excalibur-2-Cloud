@@ -21,6 +21,7 @@ if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
 from excalibur_blog_composite_disclaimer import check_no_composite_disclaimer
+from excalibur_blog_slot_rubric_mechanism import check_no_foreign_slot_rubric_mechanism
 from excalibur_blog_unrelated_news_glue import check_no_unrelated_calendar_news_glue
 
 
@@ -75,6 +76,7 @@ REQUIRED_CHECKS = (
     "no_tldr_opening",
     "no_composite_disclaimer",
     "no_unrelated_calendar_news_glue",
+    "no_foreign_slot_rubric_mechanism",
     "comment_magnet_question",
     "cover_qa_pass",
     "cover_phone_on_cover",
@@ -645,6 +647,10 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
     checks["no_composite_disclaimer"] = composite_ok
     glue_ok, glue_errors = check_no_unrelated_calendar_news_glue(html, article_dir=article_dir)
     checks["no_unrelated_calendar_news_glue"] = glue_ok
+    rubric_mech_ok, rubric_mech_errors = check_no_foreign_slot_rubric_mechanism(
+        html, article_dir=article_dir
+    )
+    checks["no_foreign_slot_rubric_mechanism"] = rubric_mech_ok
     magnet_ok, magnet_errors = check_comment_magnet(html)
     checks["comment_magnet_question"] = magnet_ok
     checks["cover_phone_on_cover"] = check_cover_phone(article_dir)
@@ -690,6 +696,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
                 errors.extend(composite_errors)
             elif key == "no_unrelated_calendar_news_glue" and glue_errors:
                 errors.extend(glue_errors)
+            elif key == "no_foreign_slot_rubric_mechanism" and rubric_mech_errors:
+                errors.extend(rubric_mech_errors)
             elif key == "comment_magnet_question" and magnet_errors:
                 errors.extend(magnet_errors)
             elif key == "image_alt_human" and alt_errors:

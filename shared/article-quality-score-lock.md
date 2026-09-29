@@ -57,6 +57,7 @@ python3 scripts/excalibur_blog_quality_score_gate.py --article-dir <dir> --repai
 - TL;DR / «Быстрый инсайт» / bullet-dump в первом экране
 - disclaimer «случай собирательный / без фамилий / механика повторяется» (gate `no_composite_disclaimer`)
 - календарный viral headline **другой рубрики**, не объявленный в H1/subject casus (gate `no_unrelated_calendar_news_glue`)
+- механика **чужой рубрики слота** в H1/теле (gate `no_foreign_slot_rubric_mechanism`; см. `shared/slot-rubric-lock.md`)
 - лид <4 или >6 предложений
 - первая строка без числа и без consequence-beat
 - mandate «рубка» 1–2 предложения на весь текст (короткие удары — только в первой строке)

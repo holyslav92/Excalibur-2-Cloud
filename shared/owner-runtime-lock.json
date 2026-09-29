@@ -100,6 +100,14 @@
     "output": "quality-bar-9.json",
     "required_before_publish": true
   },
+  "slot_rubric_mechanism": {
+    "owner": "Святослав Шакин",
+    "owner_date": "2026-09-29",
+    "contract": "shared/slot-rubric-lock.md",
+    "gate_script": "scripts/excalibur_blog_slot_rubric_mechanism.py",
+    "quality_bar_check": "no_foreign_slot_rubric_mechanism",
+    "required_before_publish": true
+  },
   "stylo": {
     "gate": "scripts/excalibur_blog_stylo.py",
     "max_sol_rewrites": 1,
@@ -188,7 +196,8 @@
       "never vip",
       "1400–1600",
       "1750",
-      "Memories = OFF"
+      "Memories = OFF",
+      "no_foreign_slot_rubric_mechanism"
     ],
     "forbidden_markers": [
       "1800–2200",
