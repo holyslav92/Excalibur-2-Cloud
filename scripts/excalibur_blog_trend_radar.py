@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Any
 
 from excalibur_blog_slot_rubric import RUBRIC_LABELS, current_slot_local, rubric_for_slot
+from excalibur_blog_slot_rubric_mechanism import title_has_foreign_mechanism_for_rubric
 
 RUBRIC_PATTERNS: dict[str, tuple[str, ...]] = {
     "novostroyki": (
@@ -168,6 +169,8 @@ def pick_angles(rows: list[dict[str, Any]], rubric: str, limit: int = 5) -> list
     for row in rows:
         title = str(row.get("title") or "")
         if classify_rubric(title) != rubric:
+            continue
+        if title_has_foreign_mechanism_for_rubric(title, rubric):
             continue
         formula = headline_formula(title)
         if formula in seen_formulas:

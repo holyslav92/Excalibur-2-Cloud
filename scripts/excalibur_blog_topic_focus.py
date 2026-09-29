@@ -394,6 +394,22 @@ def focus_check(text: str) -> dict[str, Any]:
                 "allow_hit": allow_hit,
                 "slot_rubric": rubric,
             }
+        from excalibur_blog_slot_rubric_mechanism import foreign_mechanism_hits
+
+        foreign = foreign_mechanism_hits(blob, rubric)
+        if foreign:
+            return {
+                "status": "BLOCK",
+                "blocker": "SLOT RUBRIC MECHANISM BLOCKER",
+                "reason": (
+                    f"topic uses foreign rubric mechanism for slot {rubric}: "
+                    f"{', '.join(foreign[:4])} — do not mix rubrics; "
+                    "see shared/slot-rubric-lock.md"
+                ),
+                "deny_hit": foreign[0],
+                "allow_hit": allow_hit,
+                "slot_rubric": rubric,
+            }
     elif newbuild_only_for_tenant():
         newbuild_hit = None
         for pat in NEWBUILD_REQUIRED_PATTERNS:

@@ -22,6 +22,7 @@ if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
 from excalibur_blog_composite_disclaimer import check_no_composite_disclaimer
+from excalibur_blog_slot_rubric_mechanism import check_no_foreign_slot_rubric_mechanism
 from excalibur_blog_unrelated_news_glue import check_no_unrelated_calendar_news_glue
 from excalibur_blog_opening_meta_gate import count_prose_sentences, opening_tldr_errors, strip_early_cta
 from excalibur_blog_quality_bar_9_gate import (
@@ -428,6 +429,11 @@ def evaluate(
     glue_ok, glue_errors = check_no_unrelated_calendar_news_glue(html, article_dir=article_dir)
     sections["calendar_news_glue"] = SectionResult(
         "calendar_news_glue", glue_ok, glue_errors if not glue_ok else []
+    )
+
+    rubric_ok, rubric_errors = check_no_foreign_slot_rubric_mechanism(html, article_dir=article_dir)
+    sections["slot_rubric_mechanism"] = SectionResult(
+        "slot_rubric_mechanism", rubric_ok, rubric_errors if not rubric_ok else []
     )
 
     all_pass = all(s.pass_ for s in sections.values())

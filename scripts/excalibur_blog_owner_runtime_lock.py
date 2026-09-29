@@ -196,6 +196,43 @@ def validate_scout_clusters(lock: dict[str, Any], root: Path) -> list[str]:
     return errors
 
 
+def validate_slot_rubric_mechanism(lock: dict[str, Any], root: Path) -> list[str]:
+    errors: list[str] = []
+    mech = lock.get("slot_rubric_mechanism") or {}
+    gate_script = str(mech.get("gate_script") or "")
+    check_name = str(mech.get("quality_bar_check") or "")
+    if not gate_script or not (root / gate_script).is_file():
+        errors.append("slot_rubric_mechanism gate_script missing")
+        return errors
+    qb_path = root / str((lock.get("quality_bar_9") or {}).get("gate") or "")
+    if qb_path.is_file():
+        qb_body = qb_path.read_text(encoding="utf-8")
+        if check_name not in qb_body:
+            errors.append(f"quality_bar_9_gate missing check {check_name!r}")
+        if "excalibur_blog_slot_rubric_mechanism" not in qb_body:
+            errors.append("quality_bar_9_gate missing slot_rubric_mechanism import")
+    else:
+        errors.append("quality_bar_9_gate script missing")
+
+    for rel in (
+        "scripts/excalibur_blog_quality_score_gate.py",
+        "scripts/excalibur_blog_sol_draft_gate.py",
+        "scripts/excalibur_blog_trend_radar.py",
+        "scripts/excalibur_blog_topic_focus.py",
+    ):
+        path = root / rel
+        if not path.is_file():
+            errors.append(f"slot_rubric_mechanism wiring file missing: {rel}")
+            continue
+        body = path.read_text(encoding="utf-8")
+        if "excalibur_blog_slot_rubric_mechanism" not in body:
+            errors.append(f"{rel} missing slot_rubric_mechanism wiring")
+    contract = str(mech.get("contract") or "")
+    if contract and not (root / contract).is_file():
+        errors.append(f"slot_rubric_mechanism contract missing: {contract}")
+    return errors
+
+
 def validate_pipeline_wiring(lock: dict[str, Any], root: Path) -> list[str]:
     errors: list[str] = []
     wiring = lock.get("pipeline_wiring") or {}
@@ -349,6 +386,7 @@ def validate_owner_runtime_lock(root: Path | None = None) -> list[str]:
     errors.extend(validate_pipeline_canon(lock, canon))
     errors.extend(validate_scout_clusters(lock, root))
     errors.extend(validate_pipeline_wiring(lock, root))
+    errors.extend(validate_slot_rubric_mechanism(lock, root))
     errors.extend(validate_images(lock, tenant, root))
     errors.extend(validate_automation_instructions(lock, root))
     errors.extend(validate_forbidden_active_phrases(lock, root))

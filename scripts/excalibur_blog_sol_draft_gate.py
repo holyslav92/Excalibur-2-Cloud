@@ -23,6 +23,7 @@ from excalibur_blog_quality_bar_9_gate import (
     count_inline_figures,
     word_count,
 )
+from excalibur_blog_slot_rubric_mechanism import check_no_foreign_slot_rubric_mechanism
 from excalibur_blog_unrelated_news_glue import check_no_unrelated_calendar_news_glue
 
 H2_EXPECT = 6
@@ -68,6 +69,9 @@ def main() -> int:
     spine_ok, spine_errors = check_spine_once_no_recap(html)
     composite_ok, composite_errors = check_no_composite_disclaimer(html)
     glue_ok, glue_errors = check_no_unrelated_calendar_news_glue(html, article_dir=article_dir)
+    rubric_mech_ok, rubric_mech_errors = check_no_foreign_slot_rubric_mechanism(
+        html, article_dir=article_dir
+    )
     magnet_ok, magnet_errors = check_comment_magnet(html)
 
     checks = {
@@ -78,6 +82,7 @@ def main() -> int:
         "comment_magnet_question": magnet_ok,
         "no_composite_disclaimer": composite_ok,
         "no_unrelated_calendar_news_glue": glue_ok,
+        "no_foreign_slot_rubric_mechanism": rubric_mech_ok,
         "inline_figures_7": inlines >= INLINE_MIN,
         "h2_count_6": h2c >= H2_EXPECT,
     }
@@ -95,6 +100,8 @@ def main() -> int:
         errors.extend(composite_errors)
     if glue_errors:
         errors.extend(glue_errors)
+    if rubric_mech_errors:
+        errors.extend(rubric_mech_errors)
     if magnet_errors:
         errors.extend(magnet_errors)
     if not checks["inline_figures_7"]:
