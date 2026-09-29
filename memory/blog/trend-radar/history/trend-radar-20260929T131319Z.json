@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-09-29T13:13:19.889053+00:00",
+  "slot_local": "17:00",
+  "slot_rubric": "vtorichka",
+  "slot_rubric_label": "вторичка",
+  "data_dir": "memory/blog/trend-radar/data/20260929T131319Z",
+  "viral_db": "memory/blog/trend-radar/data/20260929T130753Z/viral.sqlite",
+  "sources_used": [
+    "klyshin",
+    "bankiru",
+    "yuridicheskie-aspekty-nedvizhimosti",
+    "nedvizhimost",
+    "arenda-nedvizhimosti"
+  ],
+  "rubrics": {
+    "novostroyki": {
+      "label": "новостройки",
+      "angles": [],
+      "count": 0
+    },
+    "vtorichka": {
+      "label": "вторичка",
+      "angles": [
+        {
+          "headline_formula": "casus+число: «7 смертных грехов покупателя квартиры»",
+          "first_line_hook": "7 смертных грехов покупателя квартиры",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 162,
+          "read_through": 0.4444,
+          "viral_score": 3.4972,
+          "source_url": "https://dzen.ru/a/XLmtcugWMwCyk9aL",
+          "channel": "Алексей Клышин юрист по недвижимости"
+        }
+      ],
+      "count": 1
+    },
+    "arenda": {
+      "label": "аренда жилья",
+      "angles": [],
+      "count": 0
+    }
+  },
+  "policy": "MECHANICS_AND_ENERGY_ONLY — do not copy plots or body text"
+}
