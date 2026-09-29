@@ -15,8 +15,8 @@
     },
     {
       "name": "link_verify",
-      "ok": false,
-      "detail": "existing verdict=None"
+      "ok": true,
+      "detail": "exit=0"
     },
     {
       "name": "html_linter",
@@ -25,8 +25,8 @@
     },
     {
       "name": "community_cta",
-      "ok": false,
-      "detail": "exit=1"
+      "ok": true,
+      "detail": "exit=0"
     },
     {
       "name": "wp_categories",
@@ -40,31 +40,26 @@
     },
     {
       "name": "research_official",
-      "ok": false,
-      "detail": "exit=120"
+      "ok": true,
+      "detail": "exit=0"
     },
     {
       "name": "opening_meta",
-      "ok": false,
-      "detail": "exit=120"
+      "ok": true,
+      "detail": "exit=0"
     },
     {
       "name": "article_quality_score",
-      "ok": false,
-      "detail": "exit=120"
+      "ok": true,
+      "detail": "exit=0"
     },
     {
       "name": "quality_bar_9",
       "ok": false,
-      "detail": "exit=120"
+      "detail": "exit=1"
     }
   ],
   "failed": [
-    "link_verify",
-    "community_cta",
-    "research_official",
-    "opening_meta",
-    "article_quality_score",
     "quality_bar_9"
   ],
   "note": "Structural/links/HTML only — does not rewrite prose."

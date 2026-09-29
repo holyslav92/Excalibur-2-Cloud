@@ -1,33 +1,27 @@
 {
-  "status": "FAIL",
-  "all_pass": false,
+  "status": "PASS",
+  "all_pass": true,
   "gate": "article-quality-score",
   "contract": "shared/article-quality-score-lock.md",
   "article_dir": "memory/blog/articles/B34-za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen",
-  "sol_rewrite_applied": false,
-  "h1": "В новостройке Тюмени площадь в ДДУ урезали — ипотека не сошлась",
+  "sol_rewrite_applied": true,
+  "h1": "За 3 дня до эскроу в новостройке Тюмени площадь в ДДУ урезали — ипотека не сошлась",
   "sections": {
     "h1": {
-      "pass": false,
-      "reasons": [
-        "h1: no number or deadline in H1"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "lead": {
-      "pass": false,
-      "reasons": [
-        "lead-hit: first 1-2 sentences missing consequence beat"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "middle": {
       "pass": true,
       "reasons": []
     },
     "finale": {
-      "pass": false,
-      "reasons": [
-        "finale-third-retell: middle scene repeated in closing: «кухня коридор санузел лоджия»"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "length": {
       "pass": true,
@@ -38,16 +32,12 @@
       "reasons": []
     }
   },
-  "errors": [
-    "h1: no number or deadline in H1",
-    "lead-hit: first 1-2 sentences missing consequence beat",
-    "finale-third-retell: middle scene repeated in closing: «кухня коридор санузел лоджия»"
-  ],
+  "errors": [],
   "metrics": {
-    "word_count": 1585,
+    "word_count": 1407,
     "word_target": "1400-1600",
     "word_hard_max": 1750,
     "dzen_reading_minutes_est": 8,
-    "spine_overlap": 0.072
+    "spine_overlap": 0.0676
   }
 }
