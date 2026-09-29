@@ -1,0 +1,34 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-29",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://rg.ru/2026/09/18/reg-urfo/bolshe-vsego-eskrou-schetov-raskryli-v-tiumenskoj-oblasti-v-autsajderah-iamal.html",
+        "type": "regional_news",
+        "note": "РГ 18.09.2026 — эскроу и новостройки Тюменской области"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 1913,
+    "rework_log": "newbuild pledge-before-escrow anchored on Tyumen newbuild buy spine"
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "notes": "214-ФЗ / dom.rf context in research-notes; no invented bank rates"
+  },
+  "blockers": []
+}

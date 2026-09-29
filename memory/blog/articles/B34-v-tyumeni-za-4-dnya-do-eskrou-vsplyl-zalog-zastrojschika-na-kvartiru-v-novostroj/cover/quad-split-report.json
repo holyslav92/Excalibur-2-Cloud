@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-v-tyumeni-za-4-dnya-do-eskrou-vsplyl-zalog-zastrojschika-na-kvartiru-v-novostroj/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1021,
+          573
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 573,
+            "end": 582
+          },
+          "v_gutter_px": {
+            "start": 1021,
+            "end": 1029
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 1.5,
+            "v_center_offset_px": 1.0,
+            "max_aspect_crop_loss": 0.0078,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0078,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1021,
+              "bottom": 573
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1021,
+              "bottom": 573
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "За 4 дня до эскроу всплыл залог застройщика — сделку остановили в Тюмени: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1029,
+              "top": 0,
+              "right": 2048,
+              "bottom": 573
+            },
+            "raw_box_px": {
+              "left": 1029,
+              "top": 0,
+              "right": 2048,
+              "bottom": 573
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «За четыре дня до эскроу: чей залог в выписке» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "За четыре дня до эскроу: чей залог в выписке"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 582,
+              "right": 1017,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 582,
+              "right": 1021,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Три разных банка, Ипотека семьи, Счёт эскроу — иллюстрация к разбору сделки.",
+            "h2_anchor": "За четыре дня до эскроу: чей залог в выписке"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1029,
+              "top": 582,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1029,
+              "top": 582,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Почему слово «залог» в выписке не приговор, но…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Почему слово «залог» в выписке не приговор, но и не мелочь"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-v-tyumeni-za-4-dnya-do-eskrou-vsplyl-zalog-zastrojschika-na-kvartiru-v-novostroj/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1012,
+          565
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 565,
+            "end": 588
+          },
+          "v_gutter_px": {
+            "start": 1012,
+            "end": 1035
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0099,
+            "per_panel_crop_loss": {
+              "top_left": 0.0079,
+              "top_right": 0.0089,
+              "bottom_left": 0.0089,
+              "bottom_right": 0.0099
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 4,
+              "top": 0,
+              "right": 1008,
+              "bottom": 565
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1012,
+              "bottom": 565
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Что проверить до перевода денег, если в выписке…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Что проверить до перевода денег, если в выписке всплыл залог"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1039,
+              "top": 0,
+              "right": 2043,
+              "bottom": 565
+            },
+            "raw_box_px": {
+              "left": 1035,
+              "top": 0,
+              "right": 2048,
+              "bottom": 565
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Письмо застройщика, Снятие залога, ДДУ и выписка — иллюстрация к разбору сделки.",
+            "h2_anchor": "«Это обычно»: почему семье этого не хватило"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 588,
+              "right": 1007,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 588,
+              "right": 1012,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Не приговор, Проектное финанс, Смотреть детали — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что на самом деле написано в строке про залог"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1040,
+              "top": 588,
+              "right": 2043,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1035,
+              "top": 588,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Пять шагов, Свежий ЕГРН, Дом рф сверка — иллюстрация к разбору сделки.",
+            "h2_anchor": "Три разных «банка» в одной покупке"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — За четыре дня до эскроу: чей залог в выписке",
+    "skip inline_2: already correct under H2 — За четыре дня до эскроу: чей залог в выписке",
+    "skip inline_3: already correct under H2 — Почему слово «залог» в выписке не приговор, но и не мелочь",
+    "injected inline_4 after H2 — Что проверить до перевода денег, если в выписке всплыл залог",
+    "injected inline_5 after H2 — «Это обычно»: почему семье этого не хватило",
+    "injected inline_6 after H2 — Что на самом деле написано в строке про залог",
+    "injected inline_7 after H2 — Три разных «банка» в одной покупке"
+  ]
+}

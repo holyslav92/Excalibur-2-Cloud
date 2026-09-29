@@ -1,0 +1,88 @@
+Готовый input для Derouter `cover-scene`:
+
+```bash
+ARTICLE="memory/blog/articles/B34-newbuild-pledge-escrow"
+
+cat > /tmp/B34-cover-scene-inputs.md <<'EOF'
+ЗАДАЧА
+Сформировать scene-draft.json для обложки longform-статьи B34.
+Не переписывать cover_hook и не добавлять Wordstat-запросы на изображение.
+Вернуть только валидный JSON с полями:
+- slots.cover.scene_hint
+- slots.cover.cover_emotion
+- cover_motifs.composition
+- cover_motifs.location
+- cover_motifs.meme
+- cover_motifs.props
+- cover_motifs.stickers
+- cover_motifs.joke
+- cover_motifs.outfit
+- cover_motifs.emotion
+- cover_motifs.pose_framing
+- cover_motifs.action
+- wordstat_stickers
+
+ДАННЫЕ СТАТЬИ
+topic_id: B34
+h1: За 4 дня до эскроу всплыл залог застройщика — сделку остановили
+subject: залог застройщика в новостройке перед открытием эскроу
+angle: запись о залоге в сведениях по новостройке нельзя ни игнорировать, ни считать автоматическим запретом; банк покупателя может потребовать документы до открытия эскроу
+verdict: PASS
+
+COVER-ТЕКСТ
+cover_hook: За четыре дня залог всплыл
+cover_hook_highlight: залог
+sticky: Эскроу не открыли
+phone: +7 922 001 65 05
+
+ОБЯЗАТЕЛЬНЫЕ ОГРАНИЧЕНИЯ
+- bright, high-key, light/meme visual language; no dark cinematic lighting
+- invent a new outfit, location, action, emotion and pose/framing
+- do not use default black blazer, desk/balcony/key/hologram inventory
+- host identity must use face-studio-2026-06-23.jpg only for identity; do not copy its clothes, pose or smile
+- medium slim body, realistic person
+- cover must communicate: a pledge record surfaced four days before escrow opening, buyer bank paused the deal, documents are required
+- phone must remain readable and isolated
+- no Wordstat query strips, no search bars, no checklist title
+- meme stickers must be small corner accents, total <=15%, never cover hook, face or phone; keep at least 80px clearance
+- use both people-meme and cat-meme variety where appropriate
+- meme ids are fixed: hide_pain_harold and smudge_cat
+- no host face on inline images is relevant only to later inline generation
+
+MEME PICKS
+1. hide_pain_harold — placement: corner — scale: sticker
+2. smudge_cat — placement: corner — scale: sticker
+
+ТЕКСТОВЫЙ СМЫСЛ ДЛЯ ВИЗУАЛЬНОЙ ИНТЕРПРЕТАЦИИ
+Семья уже забронировала трёшку, ипотека одобрена, эскроу планировали открыть в пятницу. В свежей выписке появилась строка «залог в пользу банка». Менеджер застройщика сказал, что это обычное проектное финансирование, но банк покупателей остановил сделку до получения документов о снятии залога или его влиянии на права дольщика.
+
+НЕ ДЕЛАТЬ
+- не изображать юридический документ крупным планом как единственный объект
+- не делать тревожную тёмную драму
+- не превращать сцену в офисный stock-photo
+- не показывать несколько крупных людей
+- не использовать визуальную формулу «чёрный пиджак + бюст слева + боковой взгляд»
+EOF
+
+python3 scripts/excalibur_blog_derouter_opus_chat.py \
+  --role cover-scene \
+  --system-file skills/cover-excalibur-blog/SKILL.md \
+  --user-file /tmp/B34-cover-scene-inputs.md \
+  --output "$ARTICLE/cover/scene-draft.json" \
+  --article-dir "$ARTICLE"
+```
+
+После получения `scene-draft.json`:
+
+```bash
+python3 scripts/excalibur_blog_quad_manifest.py \
+  --article-dir "$ARTICLE" \
+  --merge \
+  --merge-scene-draft
+
+python3 scripts/excalibur_blog_quad_manifest_preflight.py \
+  --article-dir "$ARTICLE" \
+  --apply-canon
+```
+
+`wordstat_stickers` должен остаться пустым: на обложке запрещены поисковые фразы и query strips.
