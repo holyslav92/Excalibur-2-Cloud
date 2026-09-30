@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": { "@id": "{{SITE_BASE}}/#organization" }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/za-6-dnej-do-avansa-v-tyumeni-na-vtorichke-vsplylo-bankrotstvo-prodavca-semya-ne/#blogposting",
+      "url": "{{SITE_BASE}}/za-6-dnej-do-avansa-v-tyumeni-na-vtorichke-vsplylo-bankrotstvo-prodavca-semya-ne/",
+      "headline": "За 6 дней до аванса на вторичке Тюмени всплыло банкротство продавца — семья не перевела деньги",
+      "description": "Тюменская семья уже выбрала комнаты детям, когда Святослав Шакин нашёл продавца в реестре банкротств. Чистая ЕГРН не спасла бы 420 тысяч аванса.",
+      "datePublished": "2026-09-30",
+      "inLanguage": "ru-RU",
+      "author": { "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin" },
+      "publisher": { "@id": "{{SITE_BASE}}/#organization" },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/za-6-dnej-do-avansa-v-tyumeni-na-vtorichke-vsplylo-bankrotstvo-prodavca-semya-ne/"
+      }
+    }
+  ]
+}
