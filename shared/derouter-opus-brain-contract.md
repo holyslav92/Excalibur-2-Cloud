@@ -21,6 +21,8 @@
 
 При 404 model id скрипт пробует алиасы (`gpt-5.6-terra`, `openai/gpt-5.6-terra` для utility; `gpt-6-astra`, `openai/gpt-6-astra` для powerful) и при smoke может зафиксировать рабочий id в tenant-config.
 
+При **HTTP 402 `budget_exceeded`** на `claude-opus-5-5` (0 concurrent opus slots) для **powerful** ролей writer/sol скрипт **автоматически** пробует `fallback_model` (`gpt-6-astra` из tenant-config / owner-runtime-lock), пишет `derouter-opus-budget-fallback.json` в `--article-dir`. Ручной `DEROUTER_POWERFUL_MODEL=gpt-6-astra` для обхода не нужен.
+
 ## Thin Cursor conductor (HARD)
 
 Cursor Cloud Agent — **тонкий дирижёр**: git, shell, MCP Wordstat, image REST, Python gates.  

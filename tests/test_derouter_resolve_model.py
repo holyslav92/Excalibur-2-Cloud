@@ -105,5 +105,41 @@ class DerouterResolveModelTests(unittest.TestCase):
                 self.assertIn("astra", model.lower())
 
 
+class DerouterBudgetFallbackTests(unittest.TestCase):
+    def test_budget_exceeded_detection(self) -> None:
+        from scripts.excalibur_blog_derouter_opus_chat import (
+            DerouterChatError,
+            is_powerful_budget_exceeded_error,
+        )
+
+        exc = DerouterChatError(
+            "Derouter HTTP 402 budget_exceeded: 0 concurrent claude-opus-5-5 slots",
+            status=402,
+        )
+        self.assertTrue(is_powerful_budget_exceeded_error(exc))
+        self.assertFalse(is_powerful_budget_exceeded_error(DerouterChatError("HTTP 500", status=500)))
+
+    def test_powerful_fallback_model_from_tenant(self) -> None:
+        from scripts.excalibur_blog_derouter_opus_chat import powerful_fallback_model_id
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "shared").mkdir()
+            (root / "shared" / "tenant-config.json").write_text(
+                json.dumps(
+                    {
+                        "writing_model": {
+                            "powerful": {
+                                "model": "claude-opus-5-5",
+                                "fallback_model": "gpt-6-astra",
+                            }
+                        }
+                    }
+                ),
+                encoding="utf-8",
+            )
+            self.assertEqual(powerful_fallback_model_id(root), "gpt-6-astra")
+
+
 if __name__ == "__main__":
     unittest.main()
