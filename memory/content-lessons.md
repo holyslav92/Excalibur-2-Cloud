@@ -18,3 +18,4 @@
 | [LESSON-20260901-1338-B20-sol-trim-spine-once](content-lessons/LESSON-20260901-1338-B20-sol-trim-spine-once.md) | B20 | proposed | structure |
 | [LESSON-20260901-1338-B20-cover-ocr-escape-no-budget-exhaust](content-lessons/LESSON-20260901-1338-B20-cover-ocr-escape-no-budget-exhaust.md) | B20 | proposed | structure |
 | [LESSON-20260905-1107-B23-apartments-flat-ddu-cluster](content-lessons/LESSON-20260905-1107-B23-apartments-flat-ddu-cluster.md) | B23 | proposed | geo |
+| [LESSON-20260930-0811-B34-dvor-bez-mashin-fire-lane-cluster](content-lessons/LESSON-20260930-0811-B34-dvor-bez-mashin-fire-lane-cluster.md) | B34 | proposed | geo |
