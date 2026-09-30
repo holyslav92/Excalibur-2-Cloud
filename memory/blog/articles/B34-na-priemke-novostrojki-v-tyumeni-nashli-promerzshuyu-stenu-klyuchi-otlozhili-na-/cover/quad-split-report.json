@@ -1,0 +1,303 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "BLOCK",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-na-priemke-novostrojki-v-tyumeni-nashli-promerzshuyu-stenu-klyuchi-otlozhili-na-/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_too_far_from_center",
+          "rejected_gutter": {
+            "h_gutter_px": {
+              "start": 566,
+              "end": 576
+            },
+            "v_gutter_px": {
+              "start": 1079,
+              "end": 1089
+            },
+            "gutter_quality": {
+              "h_center_offset_px": 5.0,
+              "v_center_offset_px": 60.0,
+              "max_aspect_crop_loss": 0.0677,
+              "per_panel_crop_loss": {
+                "top_left": 0.0677,
+                "top_right": 0.0477,
+                "bottom_left": 0.051,
+                "bottom_right": 0.0642
+              },
+              "reject_reason": "gutter_too_far_from_center"
+            }
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "На приёмке в Тюмени нашли промёрзшую стену — ключи через 40 дней: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Ключи «на пороге»: ипотека уже идёт, аренда не…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Ключи «на пороге»: ипотека уже идёт, аренда не отменилась"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: осмотр стен, тепловизор, фото дефекта — иллюстрация к разбору сделки.",
+            "h2_anchor": "Ключи «на пороге»: ипотека уже идёт, аренда не отменилась"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «На стене в детской — холод, пятно и запах сырос…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "На стене в детской — холод, пятно и запах сырости"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-na-priemke-novostrojki-v-tyumeni-nashli-promerzshuyu-stenu-klyuchi-otlozhili-na-/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1023,
+          575
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 575,
+            "end": 579
+          },
+          "v_gutter_px": {
+            "start": 1023,
+            "end": 1025
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 1.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1023,
+              "bottom": 575
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1023,
+              "bottom": 575
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу ««Подпишите акт, за 40 дней всё высохнет» — устн…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "«Подпишите акт, за 40 дней всё высохнет» — устное обещание"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1025,
+              "top": 0,
+              "right": 2048,
+              "bottom": 575
+            },
+            "raw_box_px": {
+              "left": 1025,
+              "top": 0,
+              "right": 2048,
+              "bottom": 575
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: ипотека идёт, аренда рядом, двойной платёж — иллюстрация к разбору сделки.",
+            "h2_anchor": "Семья отказалась: передаточный акт не подписали в тот день"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 579,
+              "right": 1023,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 579,
+              "right": 1023,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: таблица актов, фото дефекта, тепловизор — иллюстрация к разбору сделки.",
+            "h2_anchor": "Сорок дней, ипотека и аренда — это не одна неустойка"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1025,
+              "top": 579,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1025,
+              "top": 579,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: письменная претензия, срок устранения, регистрация ждёт — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что зафиксировать до подписи — таблица актов и доказательств"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Ключи «на пороге»: ипотека уже идёт, аренда не отменилась",
+    "skip inline_2: already correct under H2 — Ключи «на пороге»: ипотека уже идёт, аренда не отменилась",
+    "skip inline_3: already correct under H2 — На стене в детской — холод, пятно и запах сырости",
+    "skip inline_4: already correct under H2 — «Подпишите акт, за 40 дней всё высохнет» — устное обещание",
+    "skip inline_5: already correct under H2 — Семья отказалась: передаточный акт не подписали в тот день",
+    "skip inline_6: already correct under H2 — Сорок дней, ипотека и аренда — это не одна неустойка",
+    "skip inline_7: already correct under H2 — Что зафиксировать до подписи — таблица актов и доказательств"
+  ],
+  "errors": [
+    "skip inline_1: H2 not found — Ипотека и аренда",
+    "skip inline_2: H2 not found — Ипотека и аренда",
+    "skip inline_3: H2 not found — Промёрзшая стена",
+    "inline_1 figure count after inject=0 (need exactly 1)",
+    "inline_2 figure count after inject=0 (need exactly 1)",
+    "inline_3 figure count after inject=0 (need exactly 1)"
+  ]
+}

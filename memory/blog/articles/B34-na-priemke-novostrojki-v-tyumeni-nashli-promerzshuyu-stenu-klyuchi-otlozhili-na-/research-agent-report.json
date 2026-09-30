@@ -1,0 +1,72 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-30",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://moscow.allestate.pro/news/27.09.2026/kak-ne-podpisat-akt-s-defektami-sovety-yuristov",
+        "type": "news",
+        "note": "2026-09-27 — приёмка осенью 2026, отказ от «чистого» акта, сроки устранения vs ЗоЗПП"
+      },
+      {
+        "url": "https://72.ru/text/incidents/2026/09/24/76659941/",
+        "type": "local_news",
+        "note": "2026-09-24 — тюменский новострой, спор жильцов и застройщика вокруг дефекта"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "channel",
+        "note": "tenant signal URL, локальная повестка новостроек"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "приемка квартиры в новостройке тюмень",
+    "p0_volume": 28,
+    "p0_volume_ru225": 59,
+    "support_phrases": [
+      {"phrase": "новостройки тюмень", "volume": 3547, "region": "55"},
+      {"phrase": "приемка квартиры в новостройке", "volume": 122, "region": "55+11176"},
+      {"phrase": "специалист по приемке квартир в новостройке тюмени", "volume": 6, "region": "55+11176"},
+      {"phrase": "промерзание стены в квартире", "volume": 161, "region": "225"},
+      {"phrase": "неустойка застройщик просрочка передачи квартиры", "volume": 183, "region": "225", "partial": true}
+    ],
+    "rework_from": "новостройки тюмень (3547) → приемка квартиры в новостройке (122) → P0 приемка квартиры в новостройке тюмень (28)",
+    "partial": ["неустойка застройщик просрочка передачи квартиры — totalCount only (183)"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_acceptance_frost_damaged_wall_keys_delayed_tyumen",
+    "story_dup_check": "PASS",
+    "sibling_note": "B25 — чистовая/предчистовая; B34 — промёрзшая стена + 40 дней ключей"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["legal_norms_214fz"],
+    "errors": [],
+    "note": "ст. 6, 7, 8, ч. 4 ст. 10 214-ФЗ via consultant.ru; no bank tariff numeric claims"
+  },
+  "key_facts_count": 42,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}

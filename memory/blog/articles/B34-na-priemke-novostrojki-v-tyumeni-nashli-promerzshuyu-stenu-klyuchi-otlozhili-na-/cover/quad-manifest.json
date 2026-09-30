@@ -1,0 +1,244 @@
+{
+  "topic_id": "B34",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Промёрзшая стена — ключи через сорок дней",
+  "cover_hook_highlight": "Промёрзшая",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "На приёмке в Тюмени нашли промёрзшую стену — ключи через 40 дней: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Детская новостройки: герой в светлой куртке держит ключи, касается промёрзшей стены, high-key блик.",
+      "meme_caption_ru": "",
+      "sticky": "Акт не подписываем",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломление и недоверие"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Ключи «на пороге»: ипотека уже идёт, аренда не отменилась",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Светлый стол: ипотечный график, договор аренды и калькулятор, без людей, high-key.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Ключи «на пороге»: ипотека уже идёт, аренда не…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "приёмка квартиры",
+        "промёрзшая стена",
+        "существенный недостаток",
+        "акт не подписан"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Ключи «на пороге»: ипотека уже идёт, аренда не отменилась",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: ипотека vs аренда vs двойной платёж, цифры крупно, белый фон, gold-black.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: осмотр стен, тепловизор, фото дефекта — иллюстрация к разбору сделки.",
+      "labels": [
+        "осмотр стен",
+        "тепловизор",
+        "фото дефекта",
+        "письменная претензия"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "На стене в детской — холод, пятно и запах сырости",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Крупный план промёрзшего угла стены в детской, пятно сырости, термометр, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «На стене в детской — холод, пятно и запах сырос…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "передаточный акт",
+        "отказ от подписи",
+        "исправление дефекта",
+        "ключи через 40 дней"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "«Подпишите акт, за 40 дней всё высохнет» — устное обещание",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Подоконник: акт приёмки, рука отказывается подписывать, смартфон, без лиц, high-key.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Подпишите акт, за 40 дней всё высохнет» — устн…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "акт не подписали",
+        "устное обещание",
+        "40 дней срок",
+        "ключи отложены"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Семья отказалась: передаточный акт не подписали в тот день",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема шагов: дефект → фото → акт → отказ → письменный срок, стрелки gold-black.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: ипотека идёт, аренда рядом, двойной платёж — иллюстрация к разбору сделки.",
+      "labels": [
+        "ипотека идёт",
+        "аренда рядом",
+        "двойной платёж",
+        "неустойка отдельно"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Сорок дней, ипотека и аренда — это не одна неустойка",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Таймлайн 40 дней: ипотека, аренда, неустойка — столбцы и даты, белый фон.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: таблица актов, фото дефекта, тепловизор — иллюстрация к разбору сделки.",
+      "labels": [
+        "таблица актов",
+        "фото дефекта",
+        "тепловизор",
+        "экспертиза до подписи"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что зафиксировать до подписи — таблица актов и доказательств",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Таблица документов приёмки: акт, претензия, фото, ответ — колонки назначение/шаг.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: письменная претензия, срок устранения, регистрация ждёт — иллюстрация к разбору сделки.",
+      "labels": [
+        "письменная претензия",
+        "срок устранения",
+        "регистрация ждёт",
+        "без устных обещаний"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень",
+    "приемка новостройки",
+    "промерзание стены"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "outfit": "светлая утеплённая куртка цвета топлёного молока, горчичный шарф, без чёрного пиджака",
+    "emotion": "недоверие и возмущение",
+    "pose_framing": "средний план, герой справа, рука к стене",
+    "action": "ключи в одной руке, ладонь к холодной стене",
+    "location": "светлая детская новостройки Тюмень",
+    "composition": "герой справа, промёрзший угол слева, зона под hook, sun flare",
+    "meme": "roll_safe + smudge_cat мелко, не на hook/лицо/телефон",
+    "props": [
+      "ключи",
+      "акт",
+      "термометр"
+    ],
+    "stickers": [
+      "meme угол",
+      "стрелка к стене"
+    ],
+    "joke": "ключи есть, стена — нет тепла",
+    "meme_picks": [
+      "roll_safe",
+      "smudge_cat"
+    ]
+  },
+  "cover_emotion": "ошеломление и недоверие"
+}

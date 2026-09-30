@@ -23,6 +23,7 @@ category: env
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
 - **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9749 ingest skipped; B23 lesson recorded without behavioral signals (newbuild_apartments_instead_flat_ddu_tyumen cluster).
+- **2026-09-30 B34 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 11297 ingest skipped; B34 lesson recorded without behavioral signals (newbuild_acceptance_frost_damaged_wall_keys_delayed_tyumen cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
@@ -1063,3 +1064,111 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260929-1400-sol-writer-derouter-402-budget-b34
+status: fixed
+run_date: 2026-09-29
+role: excalibur-blog-sol
+topic_id: B34
+article_dir: memory/blog/articles/B34-v-tyumeni-zaregistrirovannaya-arenda-na-tri-goda-ostanovila-pokupku-vtorichki-za
+severity: medium
+category: api
+
+### What went wrong
+- Sol (and env-forced opus path) hit Derouter HTTP 402 `budget_exceeded: 0 concurrent claude-opus-5-5 slots` when `DEROUTER_POWERFUL_MODEL=claude-opus-5-5`.
+- Agent manually retried with `DEROUTER_POWERFUL_MODEL=gpt-6-astra`; `derouter-opus-budget-blocker.json` stamped; publish completed.
+
+### How the agent recovered this run
+- Sol chunk + merge on gpt-6-astra; quality-bar/stylo PASS; WP publish OK.
+
+### Durable fix needed before next run
+- `excalibur_blog_derouter_opus_chat.py`: on powerful-tier 402 budget_exceeded, auto-try `fallback_model` (gpt-6-astra) like 404 alias loop; optional `derouter-opus-budget-fallback.json` stamp.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+- `shared/derouter-opus-brain-contract.md`
+- `tests/test_derouter_resolve_model.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-30
+fix_summary:
+- `excalibur_blog_derouter_opus_chat.py`: on powerful-tier HTTP 402 budget_exceeded, auto-try `fallback_model` (gpt-6-astra); stamp `derouter-opus-budget-fallback.json`.
+files_changed:
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+- `shared/derouter-opus-brain-contract.md`
+- `tests/test_derouter_resolve_model.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_derouter_opus_chat.py`
+- `python3 -m unittest tests.test_derouter_resolve_model.DerouterBudgetFallbackTests`
+commit: f3fbdd46
+status: fixed
+run_date: 2026-09-30
+role: excalibur-blog-cover-text
+topic_id: B34
+article_dir: memory/blog/articles/B34-na-priemke-novostrojki-v-tyumeni-nashli-promerzshuyu-stenu-klyuchi-otlozhili-na-
+severity: low
+category: api
+
+### What went wrong
+- Derouter cover-text attempt 1 wrote empty/invalid JSON (`Expecting value: line 1 column 1`); gate retry 1 in `.cover-text-retry-user.md`.
+
+### How the agent recovered this run
+- `excalibur_blog_cover_text_derouter.py` JSON retry on attempt 2 → `cover-text-gate.json` PASS.
+
+### Durable fix needed before next run
+- None — gate-retry wrapper already canonical (B22 meme path + JSON retry loop).
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_cover_text_derouter.py`
+- `skills/cover-text-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-30
+fix_summary:
+- Confirmed existing cover_text_derouter JSON + gate retry handled B34 without new code.
+files_changed:
+- none (contract already canonical)
+checks_run:
+- B34 `cover-text-gate.json` PASS after retry 1
+commit: n/a
+
+## INC-20260930-0631-quality-score-lead-repair-b34
+status: fixed
+run_date: 2026-09-30
+role: excalibur-blog-sol
+topic_id: B34
+article_dir: memory/blog/articles/B34-na-priemke-novostrojki-v-tyumeni-nashli-promerzshuyu-stenu-klyuchi-otlozhili-na-
+severity: low
+category: prompt
+
+### What went wrong
+- First Sol pass: article-quality-score FAIL `lead-hit` (first 1–2 sentences missing consequence beat); one `--repair` Sol pass required.
+
+### How the agent recovered this run
+- Quality-score repair Sol → `article-quality-score.json` PASS; quality-bar-9 PASS at 1528 words; publish post 11297.
+
+### Durable fix needed before next run
+- None — expected quality-score → ≤1 Sol repair contract (`shared/article-quality-score-lock.md`).
+
+### Suggested files to inspect/change
+- `shared/article-quality-score-lock.md`
+- `skills/sol-excalibur-blog/SKILL.md`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-09-30
+fix_summary:
+- No code change — B34 confirms canonical lead repair loop; `no_unrelated_calendar_news_glue` PASS after repair.
+files_changed:
+- none
+checks_run:
+- B34 `article-quality-score.json` + `quality-bar-9.json` all_pass
+commit: n/a
