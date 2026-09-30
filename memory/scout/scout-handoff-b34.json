@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-09-30T10:25:00+00:00",
+  "slot_local": "15:00",
+  "slot_rubric": "vtorichka",
+  "topic_id": "B34",
+  "slug": "za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichka-tyumen-prodavec-umolchal",
+  "title_draft": "В Тюмени за 4 дня до аванса пристав запретил регистрацию вторички — продавец умолчал",
+  "article_dir": "memory/blog/articles/B34-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichka-tyumen-prodavec-umolchal",
+  "cluster_id": "secondary_fssp_registration_ban_before_advance_tyumen",
+  "viral_mechanism": "almost_lost_before_advance",
+  "wordstat_p0_phrase": "купить квартиру в тюмени вторичка",
+  "wordstat_p0_volume_tyumen": 3305,
+  "wordstat_p0_regions": "55,11176",
+  "wordstat_compare_ru_volume": 6219,
+  "anti_dupe_hard": "PASS",
+  "dzen_casus_shape": "PASS",
+  "comment_magnet_angle": "Если перед авансом всплывает запрет пристава, а продавец клянётся «снимут за два дня» — вы бы внесли аванс или развернулись?",
+  "gates": {
+    "scout_helper_check_query": "PASS",
+    "story_dup": "PASS",
+    "topic_focus": "PASS",
+    "trend_radar": "PASS"
+  }
+}
