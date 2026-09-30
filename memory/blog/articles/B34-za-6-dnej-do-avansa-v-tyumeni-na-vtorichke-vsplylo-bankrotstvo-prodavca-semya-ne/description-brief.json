@@ -1,0 +1,9 @@
+{
+  "topic_id": "B34",
+  "description": "Тюменская семья уже выбрала комнаты детям, когда Святослав Шакин нашёл продавца в реестре банкротств. Чистая ЕГРН не спасла бы 420 тысяч аванса.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
