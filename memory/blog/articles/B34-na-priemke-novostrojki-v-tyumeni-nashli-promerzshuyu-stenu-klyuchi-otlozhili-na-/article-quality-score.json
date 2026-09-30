@@ -1,10 +1,10 @@
 {
-  "status": "FAIL",
-  "all_pass": false,
+  "status": "PASS",
+  "all_pass": true,
   "gate": "article-quality-score",
   "contract": "shared/article-quality-score-lock.md",
   "article_dir": "memory/blog/articles/B34-na-priemke-novostrojki-v-tyumeni-nashli-promerzshuyu-stenu-klyuchi-otlozhili-na-",
-  "sol_rewrite_applied": false,
+  "sol_rewrite_applied": true,
   "h1": "На приёмке в Тюмени нашли промёрзшую стену — ключи через 40 дней",
   "sections": {
     "h1": {
@@ -12,10 +12,8 @@
       "reasons": []
     },
     "lead": {
-      "pass": false,
-      "reasons": [
-        "lead-hit: first 1-2 sentences missing consequence beat"
-      ]
+      "pass": true,
+      "reasons": []
     },
     "middle": {
       "pass": true,
@@ -42,14 +40,12 @@
       "reasons": []
     }
   },
-  "errors": [
-    "lead-hit: first 1-2 sentences missing consequence beat"
-  ],
+  "errors": [],
   "metrics": {
-    "word_count": 1545,
+    "word_count": 1528,
     "word_target": "1400-1600",
     "word_hard_max": 1750,
     "dzen_reading_minutes_est": 8,
-    "spine_overlap": 0.0694
+    "spine_overlap": 0.0692
   }
 }
