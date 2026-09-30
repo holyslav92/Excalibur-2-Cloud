@@ -1063,3 +1063,31 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260930-0742-schema-skill-prose
+status: open
+run_date: 2026-09-30
+role: excalibur-blog-schema
+topic_id: B34
+article_dir: memory/blog/articles/B34-v-novostrojke-tyumeni-v-broni-obeschali-dvor-bez-mashin-v-proekte-poyavilsya-pro
+severity: medium
+category: prompt
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --role schema --system-file skills/schema-excalibur-blog/SKILL.md` returned Russian conductor prose instead of JSON-LD (twice); first run also wrote `schema.jsonld` to repo root when `--output schema.jsonld` without article-dir prefix.
+
+### How the agent recovered this run
+- Retried with `--system-prompt` JSON-only one-liner and `--output memory/blog/articles/B34-.../schema.jsonld`; gate PASS after aligning Person `@id` / `mainEntityOfPage` with B33 pattern.
+
+### Durable fix needed before next run
+- Add derouter-only system snippet for schema role (not full SKILL.md conductor text) or post-process/extract JSON from model output; document required `--output` path under article dir.
+
+### Suggested files to inspect/change
+- `skills/schema-excalibur-blog/SKILL.md`
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+- pending
