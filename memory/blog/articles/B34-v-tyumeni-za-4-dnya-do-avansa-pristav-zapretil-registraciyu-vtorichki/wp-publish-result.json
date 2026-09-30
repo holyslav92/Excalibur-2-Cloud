@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki",
+  "topic_id": "B34",
+  "post_id": 11323,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1110951,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11323 slug=v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki\nOK categories=31,34\nOK yoast_social_image=1\nOK featured_image=11334\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11335 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki-inline-01-1.png\nOK inline_alt=11335\nOK inline_description=11335\nOK inline_image_upload=11336 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki-inline-02-1.png\nOK inline_alt=11336\nOK inline_description=11336\nOK inline_image_upload=11337 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki-inline-03-1.png\nOK inline_alt=11337\nOK inline_description=11337\nOK inline_image_upload=11338 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki-inline-04-1.png\nOK inline_alt=11338\nOK inline_description=11338\nOK inline_image_upload=11339 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki-inline-05-1.png\nOK inline_alt=11339\nOK inline_description=11339\nOK inline_image_upload=11340 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki-inline-06-1.png\nOK inline_alt=11340\nOK inline_description=11340\nOK inline_image_upload=11341 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki-inline-07-1.png\nOK inline_alt=11341\nOK inline_description=11341\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki/",
+    "errors": []
+  }
+}

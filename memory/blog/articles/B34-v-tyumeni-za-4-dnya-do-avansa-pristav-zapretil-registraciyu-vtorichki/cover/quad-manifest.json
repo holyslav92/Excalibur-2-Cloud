@@ -1,0 +1,257 @@
+{
+  "topic_id": "B34",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Покупатели Тюмени отменили аванс из-за запрета",
+  "cover_hook_highlight": "запрета",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Во вторичке Тюмени — запрет пристава сорвал аванс за 4 дня: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "МФЦ Тюмень: герой справа, ЕГРН, жест стоп конверту, календарь 4 дня.",
+      "cover_emotion": "ошеломлённое недоверие, жест стоп",
+      "meme_caption_ru": "",
+      "sticky": "Не внесли деньги",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Вторичка в Тюмени: ипотека одобрена, до нотариуса четыре дня",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Руки у стойки МФЦ: выписка ЕГРН, заявление, закрытый конверт аванса, без лиц, дневной свет.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Вторичка в Тюмени: ипотека одобрена, до нотариу…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "4 дня до нотариуса",
+        "Ипотека одобрена",
+        "Аванс 400 000 ₽"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Вторичка в Тюмени: ипотека одобрена, до нотариуса четыре дня",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: ЕГРН без ипотеки vs риски — залог, согласие супруга, без людей.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Выписка отдельно, База ФССП, Аванс под вопросом — иллюстрация к разбору сделки.",
+      "labels": [
+        "Выписка отдельно",
+        "База ФССП",
+        "Аванс под вопросом"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Свежая ЕГРН без ипотеки — почему все успокоились",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: выписка ЕГРН, лист ФССП «запрет», калькулятор, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Свежая ЕГРН без ипотеки — почему все успокоились» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Проверка ФССП",
+        "Долг 620 000 ₽",
+        "Нашли производство"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Расширенная проверка: исполнительное производство и запрет на регистрацию",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Вход МФЦ Тюмень: стеклянные двери, табличка, спина с папкой, без лица хоста.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Расширенная проверка: исполнительное производст…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Запрет регистрации",
+        "Решение пристава",
+        "Не самозапрет",
+        "Сделка остановлена"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Обещание «снимут за два дня» — аванс около 400 тысяч так и не ушёл",
+      "visual_type": "process_flow",
+      "scene_hint": "Процесс: обещание 2 дня → нет постановления → риск; grumpy_cat.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: 400 тысяч на счёте, Нотариус перенос, Бумаги не показали — иллюстрация к разбору…",
+      "labels": [
+        "400 тысяч на счёте",
+        "Нотариус перенос",
+        "Бумаги не показали"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Запрет пристава, арест и самозапрет — не путать",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Шкала: запрет пристава vs арест vs самозапрет — три дорожки, золотые метки.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Статья 229-ФЗ, Росреестр, Три вида ограничений — иллюстрация к разбору сделки.",
+      "labels": [
+        "Статья 229-ФЗ",
+        "Росреестр",
+        "Три вида ограничений"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что сверить по ФССП и ЕГРН до аванса",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема: отмена запрета → ЕГРН → аванс; confused_math_lady.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Ждать отмену, Получить постановление, Взять свежую ЕГРН — иллюстрация к разбору сделки.",
+      "labels": [
+        "Ждать отмену",
+        "Получить постановление",
+        "Взять свежую ЕГРН",
+        "Только потом аванс"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "вторичка Тюмень",
+    "запрет пристава"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "герой справа до колен, титульная зона слева, папка и календарь 4 дня у стойки МФЦ",
+    "location": "светлый современный холл МФЦ в Тюмени, стойка приёма документов, стеклянные перегородки, дневное солнце",
+    "meme": "roll_safe + smudge_cat",
+    "props": [
+      "жёлтая папка с выпиской ЕГРН без читаемых персональных данных",
+      "лист с крупной нейтральной отметкой «регистрация: стоп»",
+      "календарь с выделенными четырьмя днями",
+      "закрытый конверт для аванса",
+      "табличка стойки МФЦ без брендов"
+    ],
+    "stickers": [
+      {
+        "id": "roll_safe",
+        "placement": "маленький стикер в нижнем левом углу, не более 12% кадра"
+      },
+      {
+        "id": "smudge_cat",
+        "placement": "маленький стикер у нижнего края рядом с закрытым конвертом, не более 10% кадра"
+      }
+    ],
+    "joke": "Roll Safe: сначала ЕГРН, потом аванс; кот смотрит на конверт.",
+    "outfit": "светло-голубая рубашка с закатанными рукавами, песочный жилет без пиджака, тёмно-синие брюки, тонкие часы",
+    "emotion": "ошеломлённое недоверие",
+    "pose_framing": "динамичный трёхчетвертной разворот вправо, кадр до колен, одна рука удерживает папку у груди, другая выставлена вперёд жестом «стоп»",
+    "action": "останавливает передачу аванса у стойки МФЦ после обнаружения запрета на регистрацию",
+    "meme_picks": {
+      "cover": [
+        "roll_safe",
+        "smudge_cat"
+      ],
+      "inline_1": [
+        "hide_pain_harold"
+      ],
+      "inline_5": [
+        "grumpy_cat"
+      ],
+      "inline_7": [
+        "confused_math_lady"
+      ]
+    }
+  },
+  "cover_emotion": "ошеломлённое недоверие, жест стоп"
+}

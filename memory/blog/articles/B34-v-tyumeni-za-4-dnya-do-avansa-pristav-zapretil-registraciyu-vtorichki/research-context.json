@@ -1,0 +1,88 @@
+{
+  "agent": "excalibur-blog",
+  "step": "research_start",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-30",
+    "today_ru": "30.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "среда"
+  },
+  "topic": {
+    "topic_id": "B34",
+    "title": "В Тюмени за 4 дня до аванса пристав запретил регистрацию вторички",
+    "h1": "В Тюмени за 4 дня до аванса пристав запретил регистрацию вторички",
+    "slug": "v-tyumeni-za-4-dnya-do-avansa-pristav-zapretil-registraciyu-vtorichki",
+    "primary_query": "В Тюмени за 4 дня до аванса пристав запретил регистрацию вторички",
+    "priority": "P0"
+  },
+  "search_queries": [
+    {
+      "id": "primary_fresh",
+      "query": "В Тюмени за 4 дня до аванса пристав запретил регистрацию вторички 2026",
+      "purpose": "актуальный SERP"
+    },
+    {
+      "id": "title_fresh",
+      "query": "В Тюмени за 4 дня до аванса пристав запретил регистрацию вторички 2026",
+      "purpose": "SERP по человеческому title"
+    },
+    {
+      "id": "official_docs",
+      "query": "В Тюмени за 4 дня до аванса пристав запретил регистрацию вторички official docs 2026",
+      "purpose": "официальные docs"
+    },
+    {
+      "id": "github_evidence",
+      "query": "site:github.com В Тюмени за 4 дня до аванса пристав запретил регистрацию вторички 2026",
+      "purpose": "GitHub evidence"
+    },
+    {
+      "id": "community_experience",
+      "query": "В Тюмени за 4 дня до аванса пристав запретил регистрацию вторички forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы"
+    }
+  ],
+  "next_step": "Research reads research-serp.json, does its own thinking and writes research-notes.md",
+  "writer_allowed_sources": [
+    "shared/writer-master-prompt.md",
+    "research-notes.md",
+    "title-brief.json",
+    "published-titles-only.md"
+  ],
+  "sol_allowed_sources": [
+    "shared/SOUL.md",
+    "shared/soul-examples/",
+    "drafts/writer.html",
+    "title-brief.json",
+    "research-notes.md"
+  ],
+  "writer_titles_only": "published-titles-only.md",
+  "forbidden_sources_for_writer": [
+    "memory/blog/articles/*/article.html",
+    "memory/blog/articles/*/drafts",
+    "memory/topics/ (deleted — do not recreate)",
+    "memory/content-lessons.md",
+    "shared/golden-benchmark",
+    "QA reports",
+    "neighbor research-notes as prose exemplars",
+    "old article bodies"
+  ],
+  "published_titles_count": 27,
+  "scout_handoff": {
+    "slot_rubric": "vtorichka",
+    "cluster_id": "secondary_fssp_registration_ban_before_advance_tyumen",
+    "viral_mechanism": "almost lost перед авансом — запрет ФССП на регистрацию",
+    "dzen_casus_shape": "PASS",
+    "anti_dupe_hard": "PASS",
+    "signal_urls": [
+      "https://t.me/Tyumen_Rieltor",
+      "https://dzen.ru/holyslav",
+      "https://dzen.ru/a/aqcTwkjUgT5jdBjX"
+    ]
+  },
+  "research_complete": true,
+  "research_date": "2026-09-30"
+}

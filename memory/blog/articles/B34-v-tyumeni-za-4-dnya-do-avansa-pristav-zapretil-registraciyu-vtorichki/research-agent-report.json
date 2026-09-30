@@ -1,0 +1,58 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-30",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://vladis.ru/blog/kak-prodat-kvartiru-s-arestom-ot-pristavov",
+        "type": "news/industry",
+        "note": "20.09.2026 — запрет ФССП vs арест, блокировка регистрации"
+      },
+      {
+        "url": "https://dzen.ru/a/aqcTwkjUgT5jdBjX",
+        "type": "community/trend",
+        "note": "Trend Radar 30.09.2026 — спрос на вторичку, almost-lost energy"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Региональный канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени вторичка",
+    "p0_volume": 3305,
+    "related_phrase": "выписка из егрн при покупке квартиры",
+    "related_volume": 357,
+    "partial": ["запрет пристава на регистрацию квартиры — totalCount 146 only"]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["fssp_229fz", "fssp_bd_ip"],
+    "errors": [],
+    "note": "FSSP registration-ban mechanics via 229-FZ st.64/80 + Consultant form App.62 + fssp.gov.ru; no bank tariff claims"
+  },
+  "key_facts_count": 20,
+  "casus_status": "MODELED_NOT_PRESS_REPORTED",
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json"
+  },
+  "blockers": [],
+  "incident_report": "none"
+}
