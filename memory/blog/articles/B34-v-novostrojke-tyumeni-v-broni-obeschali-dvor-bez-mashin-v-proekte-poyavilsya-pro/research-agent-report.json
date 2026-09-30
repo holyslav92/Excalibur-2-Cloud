@@ -51,7 +51,7 @@
     "errors": [],
     "note": "214-ФЗ st. 19, 21 + СП 4.13130.2013 п. 8.1.4–8.1.9 via consultant.ru; no bank/developer tariff claims"
   },
-  "key_facts_count": 24,
+  "key_facts_count": 11,
   "derouter": {
     "status": "PASS",
     "attempts": 2,
