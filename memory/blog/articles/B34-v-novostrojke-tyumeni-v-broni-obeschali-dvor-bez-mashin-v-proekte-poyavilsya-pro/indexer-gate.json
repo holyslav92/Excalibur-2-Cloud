@@ -1,0 +1,17 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-30",
+  "topic_id": "B34",
+  "article_dir": "memory/blog/articles/B34-v-novostrojke-tyumeni-v-broni-obeschali-dvor-bez-mashin-v-proekte-poyavilsya-pro",
+  "slug": "v-novostrojke-tyumeni-v-broni-obeschali-dvor-bez-mashin-v-proekte-poyavilsya-pro",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": [],
+  "cover_qa_status": "PASS"
+}

@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-30",
+    "today_ru": "30.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "среда"
+  },
+  "topic": {
+    "topic_id": "B34",
+    "title": "В новостройке Тюмени в брони обещали двор без машин — в проекте появился проезд",
+    "h1": "В новостройке Тюмени в брони обещали двор без машин — в проекте появился проезд",
+    "slug": "v-novostrojke-tyumeni-v-broni-obeschali-dvor-bez-mashin-v-proekte-poyavilsya-pro",
+    "primary_query": "В новостройке Тюмени в брони обещали двор без машин — в проекте появился проезд",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В новостройке Тюмени в брони обещали двор без машин — в проекте появился проезд 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Тюмень готовят к дворам без машин и новым платным парковкам",
+          "url": "https://nashgorod.ru/news/2026-02-10/tyumen-gotovyat-k-dvoram-bez-mashin-i-novym-platnym-parkovkam-5548186",
+          "snippet": ""
+        },
+        {
+          "title": "Тюмень объединит парки и дворы в единый зеленый каркас: можно будет ...",
+          "url": "https://nashgorod.ru/news/2026-03-23/tyumen-budut-peredelyvat-cherez-ves-gorod-poyavitsya-edinyy-parkovyy-marshrut-5567687",
+          "snippet": "В то же время в Тюмени активно расширяется сеть платных парковок. Только в 2026 году, по данным городской администрации, появится 1237 новых мест. Автомобилизация растёт стремительно."
+        },
+        {
+          "title": "В Тюмени хотят создать парковый маршрут через весь город",
+          "url": "https://tumentoday.ru/2026/03/23/v_tyumeni_khotyat_sozdat_parkovyy_marshrut_cherez_ves_gorod/",
+          "snippet": "В Тюмени хотят связать набережную, парки и дворы в непрерывный маршрут. Урбанисты рассказали, получится ли убрать машины из жизни пешеходов и что может помешать глобальному проекту."
+        },
+        {
+          "title": "Как в Тюмени создают всесезонные пространства - 28 сентября 2026 | 72.ру",
+          "url": "https://72.ru/text/realty/2026/09/28/76661918/?erid=2SDnjbxkjb9",
+          "snippet": "Парки, набережные и благоустроенные дворы планируют объединить в единую сеть непрерывных маршрутов. Удастся ли «сшить» город и как это возможно, узнали тюменские журналисты. В Тюмени приступили к разработке природно-рекреационного каркаса - проект уже называют стратегическим."
+        },
+        {
+          "title": "Создатели | Квартиры от застройщика в Тюмени | Что меняется при ...",
+          "url": "https://www.instagram.com/reel/DXoOJEzszcu/",
+          "snippet": "Тюмень: дворы, которые не зависят от сезона. Узнайте о секретах создания всесезонных пространств. - Недвижимость - 28 сентября 2026 | 72.ру"
+        },
+        {
+          "title": "Двор без машин — как современные тренды урбанистики меняют облик городов",
+          "url": "https://rossoshru.ru/2026/06/26/dvor-bez-mashin-kak-sovremennye-trendy/",
+          "snippet": "102 likes, 2 comments - sozdateli on April 27, 2026: \"Что меняется при переезде в новостройку? • закрытый двор без случайных машин и людей; • видеонаблюдение на территории и в подъездах; • безбарьерная среда ..."
+        }
+      ],
+      "searched_at": "2026-09-30"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В новостройке Тюмени в брони обещали двор без машин — в проекте появился проезд 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Тюмень готовят к дворам без машин и новым платным парковкам",
+          "url": "https://nashgorod.ru/news/2026-02-10/tyumen-gotovyat-k-dvoram-bez-mashin-i-novym-platnym-parkovkam-5548186",
+          "snippet": ""
+        },
+        {
+          "title": "Будем платить за всё и много. В Тюмени заканчиваются бесплатные ...",
+          "url": "https://nashgorod.ru/news/2025-09-09/budem-platit-za-vsyo-i-mnogo-v-tyumeni-zakanchivayutsya-besplatnye-parkovki-5471585",
+          "snippet": "В то же время в Тюмени активно расширяется сеть платных парковок. Только в 2026 году, по данным городской администрации, появится 1237 новых мест. Автомобилизация растёт стремительно."
+        },
+        {
+          "title": "Тюменские дворы без машин: топ ЖК от АН «Сова»",
+          "url": "https://vsluh.ru/novosti/nedvizhimost/tyumenskie-dvory-bez-mashin-top-zhk-ot-an-sova_364685/",
+          "snippet": "Для многих тюменцев это превратит парковку в постоянную строчку расходов, ибо месячные траты на стоянку в центре вырастут многократно."
+        },
+        {
+          "title": "Как в Тюмени создают всесезонные пространства - 28 сентября 2026 | 72.ру",
+          "url": "https://72.ru/text/realty/2026/09/28/76661918/?erid=2SDnjbxkjb9",
+          "snippet": "В Тюмени один за другим появляются проекты, реализующие жизнеутверждающие принципы «нового урбанизма», в числе которых «двор без машин» — гарант безопасности, спокойствия и комфорта."
+        },
+        {
+          "title": "Создатели | Квартиры от застройщика в Тюмени | Что меняется при ...",
+          "url": "https://www.instagram.com/reel/DXoOJEzszcu/",
+          "snippet": "Тюмень: дворы, которые не зависят от сезона. Узнайте о секретах создания всесезонных пространств. - Недвижимость - 28 сентября 2026 | 72.ру"
+        },
+        {
+          "title": "Двор без машин — как современные тренды урбанистики меняют облик городов",
+          "url": "https://rossoshru.ru/2026/06/26/dvor-bez-mashin-kak-sovremennye-trendy/",
+          "snippet": "102 likes, 2 comments - sozdateli on April 27, 2026: \"Что меняется при переезде в новостройку? • закрытый двор без случайных машин и людей; • видеонаблюдение на территории и в подъездах; • безбарьерная среда ..."
+        }
+      ],
+      "searched_at": "2026-09-30"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В новостройке Тюмени в брони обещали двор без машин — в проекте появился проезд official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Тюмень готовят к дворам без машин и новым платным парковкам",
+          "url": "https://nashgorod.ru/news/2026-02-10/tyumen-gotovyat-k-dvoram-bez-mashin-i-novym-platnym-parkovkam-5548186",
+          "snippet": ""
+        },
+        {
+          "title": "Бульвар науки и двор без машин:",
+          "url": "https://www.kp.ru/daily/277783.4/5251203/",
+          "snippet": "Согласно планам мэрии, в 2026 году в городе появится ещё 1237 платных парковочных мест. Власти подчёркивают, что такая система — часть комплексной транспортной политики и развития ..."
+        },
+        {
+          "title": "Создатели | Квартиры от застройщика в Тюмени | Что меняется при ...",
+          "url": "https://www.instagram.com/reel/DXoOJEzszcu/",
+          "snippet": "Он объединяет закрытые дворы, полностью свободные от машин. Здесь обустроены сенсорный сад, зелёный лабиринт, детская игровая зона, воркаут-площадка и поле для стритбола, амфитеатр, качели и зеркальные инсталляции. Есть и площадь для встреч и мероприятий. По вечерам бульвар подсвечивается."
+        },
+        {
+          "title": "Тюмень | Тюменцы жалуются: их двор занят «автохламом» с красивыми ...",
+          "url": "https://www.instagram.com/reel/DWid9HMCtFq/",
+          "snippet": "102 likes, 2 comments - sozdateli on April 27, 2026: \"Что меняется при переезде в новостройку? • закрытый двор без случайных машин и людей; • видеонаблюдение на территории и в подъездах; • безбарьерная среда ..."
+        },
+        {
+          "title": "Тюмень растёт рекордами, но не живёт: как город превратился в спальник ...",
+          "url": "https://nashgorod.ru/news/2026-01-27/tyumen-rastyot-rekordami-no-ne-zhivyot-kak-gorod-prevratilsya-v-spalnik-5541420",
+          "snippet": "В Сургуте ищут владельца автомобиля, из-за которого рабочие не смогли полностью заасфальтировать парковку у дома №36/2 на Комсомольском проспекте. Машину не удалось убрать даже при содействии Госавтоинспекции, сообщили в пресс-службе мэрии."
+        },
+        {
+          "title": "Двор без машин: концепция в современном девелопменте - 24 июля 2026 ...",
+          "url": "https://www.fontanka.ru/2026/07/24/76551725/?erid=2SDnjcBefG7",
+          "snippet": "Каждое утро Тюмень выглядит как большой спальный район: дворы пустеют, люди уезжают, город выключается. Мы строим рекордные объёмы жилья, но продолжаем жить маятником — дом, пробка, работа, пробка, дом. Новые кварталы растут быстрее, чем жизнь в них, а ощущения полноценного города пока нет."
+        }
+      ],
+      "searched_at": "2026-09-30"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В новостройке Тюмени в брони обещали двор без машин — в проекте появился проезд 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "jsx-tsx-logos/jsx-logo.svg at master · KewinDousse/jsx-tsx-logos",
+          "url": "https://github.com/KewinDousse/jsx-tsx-logos/blob/master/jsx-logo.svg",
+          "snippet": ""
+        },
+        {
+          "title": "GitHub - Antonflame/AFItemsEffects: Плагин на накладывание эффектов на ...",
+          "url": "https://github.com/Antonflame/AFItemsEffects",
+          "snippet": "Contribute to KewinDousse/jsx-tsx-logos development by creating an account on GitHub."
+        },
+        {
+          "title": "instruction for remnawave · GitHub",
+          "url": "https://gist.github.com/firsss/1bda1b1df93f24973a57d531498ba332",
+          "snippet": "AFItemsEffects - плагин на накладывание эффектов на предметы (в том числе и броню). За добавление и удаление эффектов с брони можно снимать валюту (Vault или PlayerPoints, настраивается для каждого уровня эффекта)."
+        },
+        {
+          "title": "vexa/assets/architecture.svg at main · Vexa-ai/vexa · GitHub",
+          "url": "https://github.com/Vexa-ai/vexa/blob/main/assets/architecture.svg",
+          "snippet": "Instantly share code, notes, and snippets. 1. [Архитектура и выбор схемы] (#1-архитектура-и-выбор-схемы) 2. [Требования] (#2-требования) 3. [Установка панели с нуля] (#3-установка-панели-с-нуля) 4. [Установка нод] (#4-установка-нод) 5. [Config Profiles (актуальные шаблоны 2026 для РФ)] (#5-config-profiles) 6."
+        },
+        {
+          "title": "JeNo-Pocket/images/JeNoPocket_PID_2S.png at main · WE-are-FPV/JeNo ...",
+          "url": "https://github.com/WE-are-FPV/JeNo-Pocket/blob/main/images/JeNoPocket_PID_2S.png",
+          "snippet": "Open-source meeting transcription API for Google Meet, Microsoft Teams & Zoom. Auto-join bots, real-time WebSocket transcripts, MCP server for AI agents. Self-host or use hosted SaaS. - vexa/assets/architecture.svg at main · Vexa-ai/vexa."
+        },
+        {
+          "title": "100-Days-Of-ML-Code/Info-graphs/Day 54.jpg at master · Avik-Jain/100 ...",
+          "url": "https://github.com/Avik-Jain/100-Days-Of-ML-Code/blob/master/Info-graphs/Day%2054.jpg",
+          "snippet": "2.5\" drone FPV frame compatible with Air Unit O4 Lite (or any Nano camera) and designed for Freestyle, Freeride and Cinematic. - JeNo-Pocket/images/JeNoPocket_PID_2S.png at main · WE-are-FPV/JeNo-Pocket."
+        }
+      ],
+      "searched_at": "2026-09-30"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В новостройке Тюмени в брони обещали двор без машин — в проекте появился проезд forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Тюмень готовят к дворам без машин и новым платным парковкам",
+          "url": "https://nashgorod.ru/news/2026-02-10/tyumen-gotovyat-k-dvoram-bez-mashin-i-novym-platnym-parkovkam-5548186",
+          "snippet": ""
+        },
+        {
+          "title": "Тюмень | Тюменцы жалуются: их двор занят «автохламом» с красивыми ...",
+          "url": "https://www.instagram.com/reel/DWid9HMCtFq/",
+          "snippet": "В Москве уже внедрили подобные инициативы, и там дворы без автомобилей стали обычным явлением, в Тюмени к такому пока не привыкли."
+        },
+        {
+          "title": "Бульвар науки и двор без машин:",
+          "url": "https://www.kp.ru/daily/277783.4/5251203/",
+          "snippet": "В Сургуте ищут владельца автомобиля, из-за которого рабочие не смогли полностью заасфальтировать парковку у дома №36/2 на Комсомольском проспекте. Машину не удалось убрать даже при содействии Госавтоинспекции, сообщили в пресс-службе мэрии."
+        },
+        {
+          "title": "Создатели | Квартиры от застройщика в Тюмени | Что меняется при ...",
+          "url": "https://www.instagram.com/reel/DXoOJEzszcu/",
+          "snippet": "Тюмень получила ещё один современный жилой квартал, построенный благодаря механизму комплексного развития территории (КРТ) на землях, принадлежащих федеральному центру. Жилой комплекс комфорт-класса «Авторский» возведён на участках, переданных компанией ДОМ.РФ, его общая площадь — 8,4 гектара."
+        },
+        {
+          "title": "Двор без машин: что значит двор и дома без машин - рассказываем что ...",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/chto-takoe-dvor-bez-mashin",
+          "snippet": "102 likes, 2 comments - sozdateli on April 27, 2026: \"Что меняется при переезде в новостройку? • закрытый двор без случайных машин и людей; • видеонаблюдение на территории и в подъездах; • безбарьерная среда ..."
+        },
+        {
+          "title": "Что значит двор без машин в ЖК: концепция, закон и правила парковки",
+          "url": "https://unistroyrf.ru/blog/zakritii_dvor_bez_mashin/",
+          "snippet": "Вместе с представителем застройщика ЖК Хрустальный Парк разобрали все плюсы и минусы такого подхода к проектированию жилых комплексов, а также поговорили о том, как девелоперы сегодня решают вопрос с парковой во дворах без машин."
+        }
+      ],
+      "searched_at": "2026-09-30"
+    }
+  ],
+  "errors": []
+}

@@ -23,10 +23,11 @@ category: env
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
 - **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9749 ingest skipped; B23 lesson recorded without behavioral signals (newbuild_apartments_instead_flat_ddu_tyumen cluster).
+- **2026-09-30 B34 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 11310 ingest skipped; B34 lesson recorded without behavioral signals (newbuild_carfree_yard_fire_lane_tyumen cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368) и B23 (post 9749) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368), B23 (post 9749) и B34 (post 11310) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -1063,3 +1064,31 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20260930-0742-schema-skill-prose
+status: open
+run_date: 2026-09-30
+role: excalibur-blog-schema
+topic_id: B34
+article_dir: memory/blog/articles/B34-v-novostrojke-tyumeni-v-broni-obeschali-dvor-bez-mashin-v-proekte-poyavilsya-pro
+severity: medium
+category: prompt
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --role schema --system-file skills/schema-excalibur-blog/SKILL.md` returned Russian conductor prose instead of JSON-LD (twice); first run also wrote `schema.jsonld` to repo root when `--output schema.jsonld` without article-dir prefix.
+
+### How the agent recovered this run
+- Retried with `--system-prompt` JSON-only one-liner and `--output memory/blog/articles/B34-.../schema.jsonld`; gate PASS after aligning Person `@id` / `mainEntityOfPage` with B33 pattern.
+
+### Durable fix needed before next run
+- Add derouter-only system snippet for schema role (not full SKILL.md conductor text) or post-process/extract JSON from model output; document required `--output` path under article dir.
+
+### Suggested files to inspect/change
+- `skills/schema-excalibur-blog/SKILL.md`
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+- pending
