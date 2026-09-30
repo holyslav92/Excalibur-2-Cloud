@@ -23,6 +23,7 @@ category: env
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
 - **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9749 ingest skipped; B23 lesson recorded without behavioral signals (newbuild_apartments_instead_flat_ddu_tyumen cluster).
+- **2026-09-30 B34 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 11297 ingest skipped; B34 lesson recorded without behavioral signals (newbuild_acceptance_frost_damaged_wall_keys_delayed_tyumen cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
@@ -1102,9 +1103,7 @@ files_changed:
 checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_derouter_opus_chat.py`
 - `python3 -m unittest tests.test_derouter_resolve_model.DerouterBudgetFallbackTests`
-commit: pending
-
-## INC-20260930-0630-cover-text-invalid-json-b34
+commit: f3fbdd46
 status: fixed
 run_date: 2026-09-30
 role: excalibur-blog-cover-text
