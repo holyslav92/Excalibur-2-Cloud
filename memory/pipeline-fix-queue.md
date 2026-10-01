@@ -1064,3 +1064,43 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20261001-0845-dual-cta-avansa-novostroyki-b34
+status: fixed
+run_date: 2026-10-01
+role: excalibur-blog-fixer
+topic_id: B34
+article_dir: memory/blog/articles/B34-za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke
+severity: medium
+category: script
+
+### What went wrong
+- Quality-bar-9 Sol repair pass 1 fixed CTA markup/brand; pass 2 needed for `no_foreign_slot_rubric_mechanism` («Подключаюсь до аванса» в слоте novostroyki).
+- `check_dual_cta` считал «до аванса» валидной deal-фразой для любого слота → Sol получал противоречивые сигналы (dual PASS path vs slot rubric FAIL).
+
+### How the agent recovered this run
+- Второй quality-bar Sol repair заменил «до аванса» на «до открытия эскроу»; publish post 11372 OK.
+- Cover OCR escape + theme_contract_deploy ENOENT — уже канон (B11/B20); Metrika credentials — открытый env INC, не B34.
+
+### Durable fix needed before next run
+- Slot-aware `check_dual_cta`: не подсказывать «до аванса» для novostroyki/arenda; novostroyki-safe deal phrases в gate.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `tests/test_quality_bar_9_gate.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-10-01
+fix_summary:
+- `check_dual_cta(html, article_dir)` — rubric-aware deal phrases; «до аванса» только vtorichka/без рубрики; добавлены эскроу/подписи фразы.
+files_changed:
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `tests/test_quality_bar_9_gate.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_quality_bar_9_gate.py`
+- `python3 -m unittest tests.test_quality_bar_9_gate.DualCtaSlotRubricTest`
+- `python3 scripts/excalibur_blog_quality_bar_9_gate.py --article-dir memory/blog/articles/B34-za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke` → PASS
+commit: pending
