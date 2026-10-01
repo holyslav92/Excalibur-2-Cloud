@@ -1,0 +1,14 @@
+{
+  "category_ids": [
+    36,
+    34,
+    32
+  ],
+  "category_slugs": [
+    "pokupka-kvartiry",
+    "proverka-pered-pokupkoj",
+    "ipoteka"
+  ],
+  "errors": [],
+  "status": "PASS"
+}

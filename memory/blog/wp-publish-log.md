@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B34 — 2026-10-01
+
+- **topic_id:** B34
+- **slug:** shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali
+- **post_id:** 11359
+- **permalink:** /blog/ipoteka/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali/
+- **featured_image:** 11360
+- **inline_images:** 11361–11367 (7)
+- **wp_category_slugs:** pokupka-kvartiry, proverka-pered-pokupkoj, ipoteka (category_ids=36,34,32)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** SFTP root fallback to `.`; theme_contract_deploy ENOENT (theme already patched on prior runs)
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
