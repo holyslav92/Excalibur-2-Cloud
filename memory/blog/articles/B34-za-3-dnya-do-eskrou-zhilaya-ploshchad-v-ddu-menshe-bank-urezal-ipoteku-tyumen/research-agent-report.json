@@ -1,0 +1,43 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-29",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://rg.ru/2026/09/18/reg-urfo/bolshe-vsego-eskrou-schetov-raskryli-v-tiumenskoj-oblasti-v-autsajderah-iamal.html",
+        "type": "regional_news",
+        "note": "РГ 18.09.2026 — эскроу/ДДУ активность Тюменской области"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/15/76640741/",
+        "type": "regional_news",
+        "note": "72.ru 15.09.2026 — новостройки Тюмени, осмотр перед покупкой"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 891,
+    "rework_log": "жилая площадь дду → spine P0 891 + RF «площадь квартиры дду» 434"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["214-FZ", "GK-RF-escrow"],
+    "errors": []
+  },
+  "blockers": [],
+  "assembled_inputs": "assembled-research-inputs.md"
+}

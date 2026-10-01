@@ -1,0 +1,232 @@
+{
+  "topic_id": "B34",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Площадь в ДДУ урезали перед эскроу",
+  "cover_hook_highlight": "урезали",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "За 3 дня до эскроу в новостройке Тюмени площадь в ДДУ урезали — ипотека не сошлась.",
+      "scene_hint": "Офис Тюмени: льняная рубашка, side-eye 68 vs 60 м².",
+      "meme_caption_ru": "",
+      "sticky": "Не сошлась",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённый side-eye между 68 и 60 м²"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Новостройка в Тюмени: бронь, одобрение и 68 квадратов жилой",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: бронь 68 м², ручка, ключи; без людей, high-key.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Новостройка в Тюмени: бронь, одобрение и 68 ква…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "68 м² в брони",
+        "ипотека одобрена",
+        "бронь оплачена",
+        "новостройка Тюмень"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Новостройка в Тюмени: бронь, одобрение и 68 квадратов жилой",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: бронь 68 vs ДДУ 60 м², лимит −420–480 тыс.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: 60 м² в приложении, минус 8 метров, цена та же — иллюстрация к разбору сделки.",
+      "labels": [
+        "60 м² в приложении",
+        "минус 8 метров",
+        "цена та же",
+        "три дня до эскроу"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Три дня до эскроу: в приложении к ДДУ другая жилая площадь",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Приложение ДДУ: жилая 60 м² подчёркнута; без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Три дня до эскроу: в приложении к ДДУ другая жи…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "лимит пересчитали",
+        "420–480 тысяч",
+        "кредит меньше",
+        "ответ банка"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Банк пересчитал лимит, и не хватает сотен тысяч",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Неподписанный ДДУ, папка, лист сверки; без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Банк пересчитал лимит, и не хватает сотен тысяч» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "ДДУ не подписали",
+        "деньги не ушли",
+        "доплата наличными",
+        "офис молчит"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Офис предложил доплатить, а семья не подписала ДДУ",
+      "visual_type": "process_flow",
+      "scene_hint": "Светлая инфографика из трёх шагов; без людей.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: доплата отказ, пауза сделки, письменный запрос — иллюстрация к разбору сделки.",
+      "labels": [
+        "доплата отказ",
+        "пауза сделки",
+        "письменный запрос",
+        "без эскроу"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Где сверять жилую, общую и лоджию до подписи",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Таймлайн: бронь → ДДУ → банк → эскроу, стоп на проверке.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: бронь, одобрение, приложение — иллюстрация к разбору сделки.",
+      "labels": [
+        "бронь",
+        "одобрение",
+        "приложение",
+        "до эскроу"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Таблица: бронь → одобрение → приложение к ДДУ",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Чек-лист: приложения, площади, ипотека, ответ; без людей.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: ручка до аванса, сверка на бумаге, не паника — иллюстрация к разбору сделки.",
+      "labels": [
+        "ручка до аванса",
+        "сверка на бумаге",
+        "не паника",
+        "Тюмень"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить новостройку в тюмени",
+    "площадь квартиры дду",
+    "новостройки тюмень купить в ипотеку"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "Хозяин квартиры в светлом офисе продаж сидит за кухонным столом, справа от него два листа с планировкой и приложением к ДДУ; заголовок остаётся в чистой верхней зоне, телефон — внизу справа.",
+    "location": "Светлый high-key офис продаж новостройки в Тюмени с большим окном, солнечным бликом и бело-золотыми деталями.",
+    "meme": "Два маленьких угловых стикера из каталога: roll_safe передаёт неловкое «всё под контролем», grumpy_cat — недовольство цифрами; оба не пересекаются с лицом, заголовком и телефоном.",
+    "props": "Распечатка брони «68 м²», приложение к ДДУ «60 м² жилой», жёлтый стикер «Ипотека не сошлась», калькулятор, ручка, папка с документами.",
+    "stickers": "roll_safe и grumpy_cat, каждый не более 15% кадра, в дальних углах с отступом не менее 80 px от заголовка, лица и номера телефона.",
+    "joke": "Герой буквально сверяет две площади, а маленькие мемы комментируют ситуацию: уверенность из брони столкнулась с сердитой реальностью приложения.",
+    "outfit": "Шалфейно-зелёная льняная рубашка с закатанными рукавами, светлые брюки; без пиджака и без тёмного делового образа.",
+    "emotion": "Ошеломлённый side-eye: приподнятая бровь, сжатые губы, взгляд от цифры 60 м² к плану 68 м².",
+    "pose_framing": "Поясной трёхчетвертной ракурс за столом, герой чуть наклонён к бумагам; много светлого воздуха для текста.",
+    "action": "Сравнивает распечатку брони 68 м² с таблицей приложения к ДДУ, где указано 60 м² жилой площади."
+  }
+}

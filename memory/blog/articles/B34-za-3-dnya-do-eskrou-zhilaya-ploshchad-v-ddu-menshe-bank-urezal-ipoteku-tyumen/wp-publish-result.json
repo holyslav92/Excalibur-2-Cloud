@@ -1,0 +1,28 @@
+{
+  "slug": "za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen",
+  "topic_id": "B34",
+  "post_id": 11235,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1058762,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11235 slug=za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen\nOK categories=32,36,34\nOK yoast_social_image=1\nOK featured_image=11236\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11237 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen-inline-01.png\nOK inline_alt=11237\nOK inline_description=11237\nOK inline_image_upload=11238 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen-inline-02.png\nOK inline_alt=11238\nOK inline_description=11238\nOK inline_image_upload=11239 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen-inline-03.png\nOK inline_alt=11239\nOK inline_description=11239\nOK inline_image_upload=11240 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen-inline-04.png\nOK inline_alt=11240\nOK inline_description=11240\nOK inline_image_upload=11241 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen-inline-05.png\nOK inline_alt=11241\nOK inline_description=11241\nOK inline_image_upload=11242 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen-inline-06.png\nOK inline_alt=11242\nOK inline_description=11242\nOK inline_image_upload=11243 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/09/za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen-inline-07.png\nOK inline_alt=11243\nOK inline_description=11243\npermalink={{SITE_BASE}}/blog/ipoteka/za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/za-3-dnya-do-eskrou-zhilaya-ploshchad-v-ddu-menshe-bank-urezal-ipoteku-tyumen/",
+    "errors": []
+  }
+}
