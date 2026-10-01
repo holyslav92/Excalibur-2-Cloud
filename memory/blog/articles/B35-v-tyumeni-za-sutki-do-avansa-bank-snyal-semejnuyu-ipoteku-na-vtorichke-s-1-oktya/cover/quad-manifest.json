@@ -1,0 +1,243 @@
+{
+  "topic_id": "B35",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Ипотеку пересчитали перед авансом",
+  "cover_hook_highlight": "пересчитал",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "В Тюмени за сутки до аванса пересчитали семейную ипотеку на вторичке — с 1 октября лимит не сошёлся.",
+      "scene_hint": "Светлая прихожая в Тюмени: пересчёт семейной ипотеки перед авансом.",
+      "meme_caption_ru": "",
+      "sticky": "Аванс не внесли",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Квартира на 5,4 миллиона — ипотека закрывала разрыв",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Подъезд вторички, дневной свет, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Квартира на 5,4 миллиона — ипотека закрывала ра…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "вторичное жильё",
+        "до аванса",
+        "семейная ипотека",
+        "с 1 октября",
+        "лимит не сошёлся"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Квартира на 5,4 миллиона — ипотека закрывала разрыв",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: одобрение vs пересчёт лимита.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: банк пересчитал, семейная ипотека, вторичное жильё — иллюстрация к разбору сделки",
+      "labels": [
+        "банк пересчитал",
+        "семейная ипотека",
+        "вторичное жильё",
+        "новый лимит"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Вторичка в Тюмени: одобрение казалось готовым",
+      "visual_type": "process_flow",
+      "scene_hint": "Стол: договор, ключи, калькулятор.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: 1 октября, лимит банка, покупка квартиры — иллюстрация к разбору сделки.",
+      "labels": [
+        "1 октября",
+        "лимит банка",
+        "покупка квартиры",
+        "вторичка"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true,
+      "placement_group": "single"
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "30 сентября: письмо о пересчёте под правила с 1 октября",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Нейтральный стол с документами без читаемого текста.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «30 сентября: письмо о пересчёте под правила с 1…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "300 тысяч аванс",
+        "лимит 6 млн",
+        "пересчёт банка",
+        "не внесли"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true,
+      "placement_group": "single"
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "За сутки до аванса: лимит 6 миллионов не сходится с ценой",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Схема: цена 5,4 млн vs лимит 6 млн.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: письмо банка, 30 сентября, новые правила — иллюстрация к разбору сделки.",
+      "labels": [
+        "письмо банка",
+        "30 сентября",
+        "новые правила",
+        "Тюмень"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "placement_group": "single"
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что сверить по семейной ипотеке на вторичке до аванса",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Чек-лист проверок до аванса.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: таблица проверок, дата договора, перечень городов — иллюстрация к разбору сделки.",
+      "labels": [
+        "таблица проверок",
+        "дата договора",
+        "перечень городов",
+        "ДОМ.РФ"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true,
+      "placement_group": "pair"
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Таблица: дата договора, лимит, вторичка в перечне",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Экран с абстрактной схемой проверок без мелкого текста.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Таблица: дата договора, лимит, вторичка в переч…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "условия письменно",
+        "возврат аванса",
+        "до перевода",
+        "соглашение"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "placement_group": "pair"
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "семейная ипотека вторичное жилье",
+    "купить квартиру в тюмени вторичка"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "вертикальный средний план справа; слева свободная светлая зона под hook, телефон и лист расчёта в нижней трети, маленький meme-sticker в дальнем углу",
+    "location": "светлая прихожая квартиры на вторичном рынке в Тюмени, у двери видны нейтральные коробки и связка ключей без брендов",
+    "outfit": "светлая голубая рубашка с закатанными рукавами, песочные брюки, без пиджака",
+    "emotion": "ошеломлённое недоверие перед авансом",
+    "pose_framing": "medium three-quarter portrait справа, корпус слегка развёрнут к листу, лицо не перекрыто текстом",
+    "action": "сверяет банковский пересчёт на листе с калькулятором в телефоне, второй рукой придерживает ключи",
+    "props": [
+      "лист с нейтральной таблицей платежа без мелкого читаемого текста",
+      "смартфон с абстрактным экраном калькулятора",
+      "связка ключей",
+      "неподписанная папка для аванса"
+    ],
+    "stickers": "один маленький on-topic people-or-cat meme из memory/cover/meme-top100.json, не более 15% кадра; выбрать ID после проверки 14-day anti-repeat",
+    "meme": "реакция «условия изменились в последний момент»; каталоговый шаблон подобрать только из meme-top100.json",
+    "joke": "ключи уже в руке, а банковский лимит внезапно не сходится",
+    "light_style": "high-key daylight, мягкий солнечный flare, белый фон, золотые акценты и чёрные контуры; не cinematic, не тёмная сцена"
+  },
+  "cover_emotion": "ошеломлённое недоверие: приподнятые брови, напряжённая полуулыбка «это серьёзно?», взгляд попеременно на расчёт и экран"
+}

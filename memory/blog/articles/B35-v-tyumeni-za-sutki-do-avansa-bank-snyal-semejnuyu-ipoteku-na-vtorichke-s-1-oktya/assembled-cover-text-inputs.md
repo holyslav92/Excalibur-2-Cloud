@@ -1,0 +1,11 @@
+Assembled cover-text inputs — B35
+
+article_dir: memory/blog/articles/B35-v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya
+Derouter cover-text role. Output ONLY valid JSON to cover/cover-text.json per skill.
+
+H1: В Тюмени за сутки до аванса пересчитали семейную ипотеку на вторичке — с 1 октября лимит не сошёлся
+Short hook: 5-7 Cyrillic words e.g. «Семейную ипотеку пересчитали перед авансом»
+Phone: +7 922 001 65 05
+meme_picks from memory/cover/meme-top100.json people+cats on-topic mortgage stress, anti-repeat 14d
+P0 wordstat stickers: семейная ипотека вторичное жилье, купить квартиру в тюмени вторичка
+slot: vtorichka

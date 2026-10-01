@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya",
+  "topic_id": "B35",
+  "post_id": 11385,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B35-v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1015765,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11385 slug=v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya\nOK categories=31,32,36\nOK yoast_social_image=1\nOK featured_image=11386\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11387 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya-inline-03.png\nOK inline_alt=11387\nOK inline_description=11387\nOK inline_image_upload=11388 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya-inline-01.png\nOK inline_alt=11388\nOK inline_description=11388\nOK inline_image_upload=11389 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya-inline-02.png\nOK inline_alt=11389\nOK inline_description=11389\nOK inline_image_upload=11390 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya-inline-04.png\nOK inline_alt=11390\nOK inline_description=11390\nOK inline_image_upload=11391 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya-inline-05.png\nOK inline_alt=11391\nOK inline_description=11391\nOK inline_image_upload=11392 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya-inline-06.png\nOK inline_alt=11392\nOK inline_description=11392\nOK inline_image_upload=11393 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya-inline-07.png\nOK inline_alt=11393\nOK inline_description=11393\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya/",
+    "errors": []
+  }
+}

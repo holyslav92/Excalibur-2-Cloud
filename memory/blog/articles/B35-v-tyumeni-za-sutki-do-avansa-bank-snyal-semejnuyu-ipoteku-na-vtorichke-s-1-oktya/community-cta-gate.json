@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "article_dir": "memory/blog/articles/B35-v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya",
+  "cta_required": true,
+  "required": [
+    "https://t.me/Tyumen_Rieltor",
+    "https://max.ru/id561413315447_biz",
+    "tel:+79220016505"
+  ],
+  "present": {
+    "https://t.me/Tyumen_Rieltor": false,
+    "https://max.ru/id561413315447_biz": false,
+    "tel:+79220016505": true,
+    "cta_channels.max": false
+  },
+  "errors": [
+    "missing required CTA href https://t.me/Tyumen_Rieltor",
+    "missing required CTA href https://max.ru/id561413315447_biz",
+    "missing MAX URL https://max.ru/id561413315447_biz"
+  ]
+}
