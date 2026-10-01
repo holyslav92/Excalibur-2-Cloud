@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-09-01",
+    "today_ru": "01.09.2026",
+    "year": 2026,
+    "month": 9,
+    "month_name_ru": "сентябрь",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B22",
+    "title": "В Тюмени на новостройку обещали ипотеку без взноса — банк потребовал 890 тысяч",
+    "h1": "В Тюмени на новостройку обещали ипотеку без взноса — банк потребовал 890 тысяч",
+    "slug": "v-tyumeni-na-novostrojku-obeschali-ipoteku-bez-vznosa-bank-potreboval-890-tysyac",
+    "primary_query": "В Тюмени на новостройку обещали ипотеку без взноса — банк потребовал 890 тысяч",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени на новостройку обещали ипотеку без взноса — банк потребовал 890 тысяч 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Ипотека без первоначального взноса в Тюмени в 2026 году: как это ...",
+          "url": "https://novostroyki-tumeni.ru/article/ipoteka-bez-pervonachalnogo-vznosa-v-tyumeni-2026",
+          "snippet": ""
+        },
+        {
+          "title": "Ипотека Без Первоначального Взноса в Тюмени от СберБанка Онлайн в 2026 ...",
+          "url": "https://tyumen.domclick.ru/ipoteka/programs/without-proof-income",
+          "snippet": "Разбираем, что стоит за такими предложениями на самом деле и какие способы снизить размер взноса действительно работают."
+        },
+        {
+          "title": "Тюмень в ипотечном капкане: купить квартиру без первоначального взноса ...",
+          "url": "https://realnest.ru/news/tiumen-v-ipotechnom-kapkane-kupit-kvartiru-bez-pervonachalnogo-vznosa-uzhe-nevozmozhno",
+          "snippet": "Вы можете купить в ипотеку без первоначального взноса квартиру, комнату, апартаменты, таунхаус, жилой дом или его часть. На какую сумму кредита я могу рассчитывать? Банк всегда одобряет максимальную сумму, которую может выдать."
+        },
+        {
+          "title": "Ипотека на квартиру без первоначального взноса в Тюмени",
+          "url": "https://tyumen.domclick.ru/ipoteka/programs/without-proof-income/kvartira",
+          "snippet": "В условиях роста цен на недвижимость найти квартиру без первоначального взноса становится практически невозможным. В Тюмени ситуация с ипотечным кредитованием уже обострилась."
+        },
+        {
+          "title": "Тюмень в ипотечном капкане: купить квартиру без первоначального взноса ...",
+          "url": "https://nedvij24.ru/nedvizhimost/tyumen-v-ipotechnom-kapkane-kupit-kvartiru-bez-pervonachalnogo-vznosa-uzhe-nevozmozhno.html",
+          "snippet": "С услугой «Без отчёта об оценке» банк сам оценит вашу квартиру, а вам ничего не придётся делать. Ставка рассчитывается индивидуально для каждого клиента в пределах указанного диапазона. Чтобы узнать точную ставку, подайте заявку на кредит. Определяется требованиями Федерального закона № 353-ФЗ."
+        },
+        {
+          "title": "Новостройки без первоначального взноса в Тюмени",
+          "url": "https://www.etagi.com/zastr/bez-pervonachalnogo-vznosa/",
+          "snippet": "В условиях роста цен на недвижимость найти квартиру без первоначального взноса становится практически невозможным. В Тюмени ситуация с ипотечным кредитованием уже обострилась."
+        }
+      ],
+      "searched_at": "2026-09-01"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени на новостройку обещали ипотеку без взноса — банк потребовал 890 тысяч 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Ипотека без первоначального взноса в Тюмени в 2026 году: как это ...",
+          "url": "https://novostroyki-tumeni.ru/article/ipoteka-bez-pervonachalnogo-vznosa-v-tyumeni-2026",
+          "snippet": ""
+        },
+        {
+          "title": "Ипотека Без Первоначального Взноса в Тюмени от СберБанка Онлайн в 2026 ...",
+          "url": "https://tyumen.domclick.ru/ipoteka/programs/without-proof-income",
+          "snippet": "Разбираем, что стоит за такими предложениями на самом деле и какие способы снизить размер взноса действительно работают."
+        },
+        {
+          "title": "Индивидуальный предприниматель Сергей Дегтяренко пытается обанкротиться ...",
+          "url": "https://72.ru/text/realty/2025/07/15/75702584/",
+          "snippet": "Вы можете купить в ипотеку без первоначального взноса квартиру, комнату, апартаменты, таунхаус, жилой дом или его часть. На какую сумму кредита я могу рассчитывать? Банк всегда одобряет максимальную сумму, которую может выдать."
+        },
+        {
+          "title": "Кому в Тюмени девелопер поможет закрыть ипотеку - 27 августа 2026 | 72.ру",
+          "url": "https://72.ru/text/realty/2026/08/27/76610181/?erid=2SDnjcbeJ9H",
+          "snippet": "В них Сергей Дегтяренко обещал заказчикам оплачивать ипотеку на время задержки строительства. А в преддверии 2025 года тюменцы узнали, что их подрядчик готовится к банкротству."
+        },
+        {
+          "title": "Ипотека на квартиру без первоначального взноса в Тюмени",
+          "url": "https://tyumen.domclick.ru/ipoteka/programs/without-proof-income/kvartira",
+          "snippet": "В статье рассказывается о проблеме трейд-ин в Тюмени и о том, как девелоперы помогают закрыть ипотеку. Узнайте, кто может воспользоваться уникальным шансом улучшить жилищные условия."
+        },
+        {
+          "title": "Новостройки без первоначального взноса в Тюмени",
+          "url": "https://www.etagi.com/zastr/bez-pervonachalnogo-vznosa/",
+          "snippet": "С услугой «Без отчёта об оценке» банк сам оценит вашу квартиру, а вам ничего не придётся делать. Ставка рассчитывается индивидуально для каждого клиента в пределах указанного диапазона. Чтобы узнать точную ставку, подайте заявку на кредит. Определяется требованиями Федерального закона № 353-ФЗ."
+        }
+      ],
+      "searched_at": "2026-09-01"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени на новостройку обещали ипотеку без взноса — банк потребовал 890 тысяч official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Ипотека без первоначального взноса в Тюмени в 2026 году: как это ...",
+          "url": "https://novostroyki-tumeni.ru/article/ipoteka-bez-pervonachalnogo-vznosa-v-tyumeni-2026",
+          "snippet": ""
+        },
+        {
+          "title": "Ипотека Без Первоначального Взноса в Тюмени от СберБанка Онлайн в 2026 ...",
+          "url": "https://tyumen.domclick.ru/ipoteka/programs/without-proof-income",
+          "snippet": "«Ипотека без первоначального взноса» — один из самых частых запросов при выборе новостройки в Тюмени, и один из самых запутанных. В 2026 году банки в чистом виде такую ипотеку почти не выдают — то, что рекламируют под этим названием, чаще всего работает иначе, чем кажется на первый взгляд."
+        },
+        {
+          "title": "Ипотека без первоначального взноса в Тюмени",
+          "url": "https://tumen.vbr.ru/banki/ipoteka/bez_pervonachalnogo_vznosa/",
+          "snippet": "Банк вправе отказать в предоставлении ипотечного кредита без объяснения причин. Подробнее об условиях кредитования, необходимых документах, ограничениях на сайте sberbank.ru."
+        },
+        {
+          "title": "Тюмень в ипотечном капкане: купить квартиру без первоначального взноса ...",
+          "url": "https://realnest.ru/news/tiumen-v-ipotechnom-kapkane-kupit-kvartiru-bez-pervonachalnogo-vznosa-uzhe-nevozmozhno",
+          "snippet": "Взять ипотечный кредит без первоначального взноса на новостройку , вторичное жилье , квартиру или дом в Тюмени. Условия оформления ипотеки без первого взноса в 2026 году в 14 банках."
+        },
+        {
+          "title": "Новостройки без первоначального взноса в Тюмени",
+          "url": "https://www.etagi.com/zastr/bez-pervonachalnogo-vznosa/",
+          "snippet": "В условиях роста цен на недвижимость найти квартиру без первоначального взноса становится практически невозможным. В Тюмени ситуация с ипотечным кредитованием уже обострилась."
+        },
+        {
+          "title": "Ипотека без первоначального взноса в Тюмени в 2026 году с минимальными ...",
+          "url": "https://topbanki.ru/ipoteka/bez_vznosa/tyumen/",
+          "snippet": "Мы можем помочь оформить ипотеку без первого взноса на новостройки эффективно: корректно заполним документы, отправим заявку сразу в несколько банков, выберем лучший вариант."
+        }
+      ],
+      "searched_at": "2026-09-01"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени на новостройку обещали ипотеку без взноса — банк потребовал 890 тысяч 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Обзор 10 Vpn-сервисов В 2026 Году: Что Я Тестировал Лично, Что Работает ...",
+          "url": "https://gist.github.com/BoberSdoh/ec67b2175d1f9cecaf6ad24a5278084e",
+          "snippet": ""
+        },
+        {
+          "title": "GitHub - YarTsin/tinkoff: tests and tasks from Tinkoff · GitHub",
+          "url": "https://github.com/YarTsin/tinkoff",
+          "snippet": "10 реально рабочих VPN в 2026 — что я пробовал лично За последний год я перепробовал около 15 разных VPN-сервисов. Часть отвалилась после первых дней, часть до сих пор работает стабильно."
+        },
+        {
+          "title": "У всех дс не работает сейчас? · bol-van zapret · Discussion #840",
+          "url": "https://github.com/bol-van/zapret/discussions/840",
+          "snippet": "Если в течении часа не получается, попробуйте просто переписать решение и разобраться в нем. Через какое-то время все повторить. Постепенно сработает либо память, либо логика."
+        },
+        {
+          "title": "BeyondSingleObject/assets/teaser.png at main · KohsukeIde ...",
+          "url": "https://github.com/KohsukeIde/BeyondSIngleObject/blob/main/assets/teaser.png",
+          "snippet": "Ниже в треде подсказали решение, чтобы окно не держать, и оно помогло: Создаете текстовик, пишете туда этот текст, тип файла в .bat, запуск от админа - работает как раньше, окно это держать не нужно."
+        },
+        {
+          "title": "epic-extension-gallery.github.io/favicon.svg at main · epic-extension ...",
+          "url": "https://github.com/epic-extension-gallery/epic-extension-gallery.github.io/blob/main/favicon.svg",
+          "snippet": "[CVPR 2026 Findings] Beyond Single Object: Learning 3D Relations with Large Language Models - BeyondSingleObject/assets/teaser.png at main · KohsukeIde/BeyondSingleObject"
+        },
+        {
+          "title": "skill-icons/assets/reactnative-auto.svg at main - GitHub",
+          "url": "https://github.com/LelouchFR/skill-icons/blob/main/assets/reactnative-auto.svg",
+          "snippet": "Contribute to epic-extension-gallery/epic-extension-gallery.github.io development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-09-01"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени на новостройку обещали ипотеку без взноса — банк потребовал 890 тысяч forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Ипотека без первоначального взноса в Тюмени в 2026 году: как это ...",
+          "url": "https://novostroyki-tumeni.ru/article/ipoteka-bez-pervonachalnogo-vznosa-v-tyumeni-2026",
+          "snippet": ""
+        },
+        {
+          "title": "Тюмень в ипотечном капкане: купить квартиру без первоначального взноса ...",
+          "url": "https://realnest.ru/news/tiumen-v-ipotechnom-kapkane-kupit-kvartiru-bez-pervonachalnogo-vznosa-uzhe-nevozmozhno",
+          "snippet": "«Ипотека без первоначального взноса» — один из самых частых запросов при выборе новостройки в Тюмени, и один из самых запутанных. В 2026 году банки в чистом виде такую ипотеку почти не выдают — то, что рекламируют под этим названием, чаще всего работает иначе, чем кажется на первый взгляд."
+        },
+        {
+          "title": "Тюмень в ипотечном капкане: купить квартиру без первоначального взноса ...",
+          "url": "https://nedvij24.ru/nedvizhimost/tyumen-v-ipotechnom-kapkane-kupit-kvartiru-bez-pervonachalnogo-vznosa-uzhe-nevozmozhno.html",
+          "snippet": "В условиях роста цен на недвижимость найти квартиру без первоначального взноса становится практически невозможным. В Тюмени ситуация с ипотечным кредитованием уже обострилась."
+        },
+        {
+          "title": "Ипотека Без Первоначального Взноса в Тюмени от СберБанка Онлайн в 2026 ...",
+          "url": "https://tyumen.domclick.ru/ipoteka/programs/without-proof-income",
+          "snippet": "В условиях роста цен на недвижимость найти квартиру без первоначального взноса становится практически невозможным. В Тюмени ситуация с ипотечным кредитованием уже обострилась."
+        },
+        {
+          "title": "Ипотека без первоначального взноса на новостройку 2026",
+          "url": "https://gradbase.ru/guide/ipoteka-bez-pervonachal-nogo-vznosa-novostrojka",
+          "snippet": "Вы можете купить в ипотеку без первоначального взноса квартиру, комнату, апартаменты, таунхаус, жилой дом или его часть. На какую сумму кредита я могу рассчитывать? Банк всегда одобряет максимальную сумму, которую может выдать."
+        },
+        {
+          "title": "Новостройки без первоначального взноса в Тюмени",
+          "url": "https://www.etagi.com/zastr/bez-pervonachalnogo-vznosa/",
+          "snippet": "Ипотека без первоначального взноса на новостройку в 2026: маткапитал, военная ипотека, залог жилья, субсидии. Таблица условий, риски и пошаговая инструкция."
+        }
+      ],
+      "searched_at": "2026-09-01"
+    }
+  ],
+  "errors": []
+}
