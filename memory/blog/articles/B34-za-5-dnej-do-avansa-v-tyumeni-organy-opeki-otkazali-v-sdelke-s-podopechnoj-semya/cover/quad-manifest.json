@@ -1,0 +1,243 @@
+{
+  "topic_id": "B34",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Опека остановила сделку до аванса",
+  "cover_hook_highlight": "остановила",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "За 5 дней до аванса в Тюмени органы опеки отказали в сделке с подопечной — семья не внесла аванс.",
+      "scene_hint": "Жест стоп перед конвертом, письмо опеки, телефон, светлый интерьер.",
+      "meme_caption_ru": "",
+      "sticky": "Сначала письмо, потом деньги",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Чистая выписка, одобренная ипотека и одна фраза сына",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Ипотека, ЕГРН и календарь аванса на столе, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Чистая выписка, одобренная ипотека и одна фраза…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "ипотека одобрена",
+        "ЕГРН чистая",
+        "380 тысяч",
+        "аванс 5 дней"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Чистая выписка, одобренная ипотека и одна фраза сына",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема: без письма опеки — стоп, сначала документ, потом деньги.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: выписка ЕГРН, одобренная ипотека, права опекуна — иллюстрация к разбору сделки.",
+      "labels": [
+        "выписка ЕГРН",
+        "одобренная ипотека",
+        "права опекуна"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Почему всё решила не выписка, а жильё для самой продавщицы",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Отказ опеки и конверт на стойке, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Почему всё решила не выписка, а жильё для самой…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "отказ из опеки",
+        "нет жилья для мамы",
+        "аванс не внесли",
+        "ДКП не подписали"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Что проверить до аванса, если квартиру продаёт опекун",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: разрешение опеки и договор — совпадение квартиры и цены.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: письменное разрешение, та же квартира, та же цена — иллюстрация к разбору сделки.",
+      "labels": [
+        "письменное разрешение",
+        "та же квартира",
+        "та же цена",
+        "те же расчёты"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "ЕГРН чистая, ипотека одобрена: почему все расслабились",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Схема пяти ловушек до аванса, маленький grumpy_cat в углу.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: пять ловушек, ЕГРН не решает, банк не про опеку — иллюстрация к разбору сделки.",
+      "labels": [
+        "пять ловушек",
+        "ЕГРН не решает",
+        "банк не про опеку",
+        "предварительный риск",
+        "пять дней спасли деньги"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Разрешение есть»: что стояло за этой фразой",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема: что проверяет опека vs что показывает ЕГРН.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: решает жильё, ЕГРН не отвечает, отдельная проверка опеки — иллюстрация к разбору сделки.",
+      "labels": [
+        "решает жильё",
+        "ЕГРН не отвечает",
+        "отдельная проверка опеки",
+        "другая квартира не гарантия"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Письмо, которого не оказалось",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Чек-лист до аванса и итог «380 тысяч сохранено», без людей.",
+      "alt": "чеклист ошибок vs правильный путь по новостройке в Тюмени: до аванса, проверить опекуна, сверить цену — иллюстрация к разбору сделки.",
+      "labels": [
+        "до аванса",
+        "проверить опекуна",
+        "сверить цену",
+        "не платить без бумаги",
+        "сохранено 380 000 ₽"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру Тюмень",
+    "аванс за квартиру",
+    "органы опеки"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "Host on the right in a medium three-quarter framing; document and sealed envelope in the foreground; large clear title zone on the left; small meme stickers in distant corners.",
+    "location": "Светлая современная квартира с прихожей и зоной переговоров, дневной рассеянный свет, без офисного стола и без тёмной кинематографичности.",
+    "meme": [
+      "roll_safe",
+      "smudge_cat"
+    ],
+    "props": [
+      "письмо из органа опеки с читаемым нейтральным заголовком без лишнего текста",
+      "закрытый конверт с отметкой «380 000 ₽»",
+      "смартфон"
+    ],
+    "stickers": [
+      "roll_safe — маленький стикер в верхнем дальнем углу как реакция на попытку заплатить без документа",
+      "smudge_cat — маленький стикер в нижнем дальнем углу как растерянная реакция"
+    ],
+    "joke": "Герой буквально останавливает конверт ладонью: сначала разрешение опеки, потом аванс.",
+    "outfit": "Горчичный вязаный свитер, светлые брюки, без пиджака и без офисного образа.",
+    "emotion": "ошарашенное недоверие, переходящее в облегчение",
+    "pose_framing": "Средний трёхчетвертной план справа, корпус развёрнут к конверту, одна ладонь в жесте стоп, другая держит письмо; не talking-head и не бюст слева.",
+    "action": "Останавливает передачу запечатанного конверта и одновременно показывает письменное разрешение из опеки."
+  },
+  "cover_emotion": "ошарашенное недоверие с заметным облегчением"
+}

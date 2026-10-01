@@ -1,0 +1,118 @@
+# Writer B34: остановлен, черновик не создан
+
+Чанк 1/3 не пишу и `excalibur_blog_writer_chunk.py` не вызываю. Входных данных для смысла статьи нет. Если отправить такой user-file в Derouter, модель придумает casus, а Writer skill это запрещает: «все факты только из research».
+
+## Что не так во входных данных
+
+1. **Research не прошёл.** Вместо `research-notes.md` в user-file попал отказ Research-агента. Агент не подтвердил отказ органов опеки и обстоятельства сделки, у источников нет `accessed_at`, research-gate не пройден, статуса `PASS` нет.
+2. **Нет `title-brief.json`.** Нет утверждённого H1, `comment_magnet_angle` и списка H2. В чанке вместо них стоит «H2 в этом чанке: (см. research)», а research пустой. Строка «Comment magnet from handoff» есть, но текста магнита в ней нет.
+3. **Нет casus.** Неизвестно, что произошло, когда, какие суммы, чем всё закончилось. Без финала news-casus считается FAIL (урок «Расписку написали»). HIT первой строки «casus + число» тоже собрать не из чего.
+4. **Нужно сверить рубрику.** Вход требует `vtorichka`, а skill работает с `shared/newbuild-focus-lock.md`. Нужно подтвердить, что слот B34 действительно во вторичке, иначе статья упадёт на gate `no_foreign_slot_rubric_mechanism`.
+
+Готово только interlink: в ledger 10 sibling со `status=published` (B02–B12). Когда появится тема, 2–4 из них можно будет подобрать по смыслу. Например, B07 и B08 подойдут для истории про согласие органов опеки, если она связана с наследством или семьёй.
+
+## Что нужно, чтобы продолжить
+
+- **Research для B34** со статусом `PASS`. В нём должен быть casus с финалом, проверенные факты о порядке выдачи согласия органами опеки, источники с `accessed_at` и официальные проверки.
+- **`title-brief.json`**: H1, `comment_magnet_angle`, рубрика `vtorichka` и шесть H2.
+- После этого я соберу user-file заново и запущу Derouter: три чанка, тип long-form.
+
+```text
+drafts/writer.html — НЕ СОЗДАН
+=== EXCALIBUR BLOG WRITER ===
+draft: blocked
+next: Research (rerun B34) → Title → Writer
+status: WRITER INPUT BLOCKER — research FAIL, title-brief missing
+incident_report: memory/pipeline-fix-queue.md#INC-B34-research-refusal-passed-to-writer
+```
+
+## Предлагаемая запись в `memory/pipeline-fix-queue.md`
+
+```text
+INC-B34-research-refusal-passed-to-writer (2026-10-01)
+Что: в assembled writer inputs B34 вместо research-notes передан текст отказа Research
+(нет Derouter utility gpt-5.6-terra и live-fetch). Нет title-brief.json, нет comment_magnet_angle, H2 = «(см. research)».
+Риск: Writer придумал бы casus и факты про опеку.
+Fix: assembler должен блокировать Writer, если research-agent-report.json.status != PASS
+или нет title-brief.json; отказ Research не должен проходить как research-notes.
+```
+
+Записать этот инцидент в файл или сначала перезапустить Research для B34?
+
+# Writer B34 остановлен: нет research, писать не из чего
+
+Чанк 2/3 не пишу. В assembled inputs нет материала для смысла статьи, а правила Writer запрещают выдумывать.
+
+## Почему стоп
+
+1. **Research не прошёл.** Scout сам сообщает, что не смог подготовить `research-notes.md` и `research-agent-report.json`. У него не было доступа к utility tier и live-fetch, и он не проверил:
+   - отказ органов опеки и обстоятельства сделки;
+   - источники и даты обращения к ним;
+   - официальные верификации.
+
+   Статус research-gate не `PASS`. Правило Writer: «все факты только из research». Если писать по пересказу handoff, получится выдуманный casus и выдуманный финал.
+2. **Нет плана H2.** Задание указывает «H2 в этом чанке: (см. research)», но research нет. Неизвестно, какие из 6 H2 средние. Если писать вслепую, чанки 1 и 3 почти наверняка продублируются, а это прямой путь к тройному пересказу (FAIL).
+3. **Нет `title-brief.json` и comment magnet.** Строка «Comment magnet from handoff» есть, но самого угла (`comment_magnet_angle`) во входах нет.
+4. **Запуск модели.** По контракту прозу пишет Derouter powerful tier через `scripts/excalibur_blog_writer_chunk.py`, а не я напрямую. Отправлять туда пустой research бессмысленно: модель тоже выдумает факты.
+
+## Что ещё заметил (для Orchestrator)
+
+- **Interlink:** B12 (`klyuchi-ot-novostrojki...-eskrou-zamorozili`) лежит в `/vtorichka-i-riski/`, но по смыслу это новостройка и эскроу. Для слота «вторичка + опека» это риск gate `no_foreign_slot_rubric_mechanism`. B12 не брать. Подходящие кандидаты: B07, B08, B10 (наследство, брак, пожилой продавец).
+- **Рубрика:** слот помечен vtorichka, а `newbuild-focus-lock.md` задаёт фокус на новостройки. Нужно подтвердить, что B34 осознанное исключение.
+
+## Что нужно, чтобы продолжить
+
+- `research-notes.md` с проверенным casus: опека, сделка, **завершённый финал**, цифры, право со ссылками и `accessed_at`. Research-gate должен быть `PASS`.
+- `title-brief.json` с H1, списком 6 H2 по чанкам и `comment_magnet_angle`.
+- После этого перезапуск всех трёх чанков, не только второго, чтобы spine остался единым.
+
+## Handoff
+
+```text
+drafts/writer.html — НЕ создан
+=== EXCALIBUR BLOG WRITER ===
+draft: BLOCKED (no verified research; H2 plan missing; title-brief missing)
+next: Scout/Research rerun → research-gate PASS → Writer 3 chunks
+incident_report: memory/pipeline-fix-queue.md#INC-B34-research-missing
+  - research-gate not PASS, Writer received retelling only
+  - chunk H2 list = "(см. research)" — unresolved placeholder
+  - interlink candidate B12 = newbuild/escrow in vtorichka slot → exclude
+  - rubric vtorichka vs newbuild-focus-lock — confirm with owner
+
+# Blocker: Writer chunk 3/3 for B34 not written
+
+I can't write this chunk. The research step failed, and drafting would mean inventing the facts.
+
+## What's wrong with the inputs
+
+1. **There are no research notes.** The `research-notes.md` slot holds the Research agent's refusal, not research. It says it could not verify the guardianship authority's refusal, the deal details, sources or `accessed_at`. Its gate status is not PASS. The skill requires every fact to come from research, so prose built on that text would be made up.
+2. **There is no list of H2s.** The chunk asks for "remaining H2s (see research)", but research has none. I can't tell which of the 6 H2s are already covered in chunks 1 and 2, so I risk repeating them.
+3. **There is no `title-brief.json` or comment magnet.** The inputs say "Comment magnet from handoff", but no Scout handoff is attached. There is no H1 and no `comment_magnet_angle`.
+4. **There are no chunks 1 and 2.** Without them I can't keep the story in one line. The practice section and the ending must follow from this case's final outcome, which I don't have. Writing them blind breaks the "told once" rule and the "agency ending" rule.
+5. **There is a calendar risk.** The date is 2026-10-01, and the guardianship case has no facts. That invites filling the gap with unrelated October 1 news, which breaks `no_unrelated_calendar_news_glue`.
+
+Writing generic guardianship advice without a finished event would be a how-to frame instead of a news case. The lock and the "Расписку написали" lesson both mark that as a FAIL.
+
+## What's needed to resume
+
+- [ ] Rerun Research with the required Derouter utility tier and live sources. It must produce `research-notes.md` with gate status PASS, covering:
+  - a specific day with a number,
+  - the timeline,
+  - the **final outcome** (guardianship refusal: what happened to the deposit or the deal),
+  - the relevant law in plain language.
+- [ ] `title-brief.json` with the H1, the 6 H2s and `comment_magnet_angle`.
+- [ ] The output of chunks 1 and 2 (or a rerun of all 3 chunks), so chunk 3 doesn't duplicate them.
+- [ ] Interlinks are ready: the ledger has 10 `status=published` entries in `vtorichka-i-riski`. Likely relevant are B07 (inheritance), B08 (marriage) and B03 (gift to a daughter). I'll pick 2–4 once the H2s exist.
+
+## Handoff
+
+```text
+drafts/writer.html — NOT WRITTEN
+=== EXCALIBUR BLOG WRITER ===
+draft: blocked
+next: Research (rerun) → Writer chunks 1–3
+DEROUTER WRITER BLOCKER: research gate not PASS; research-notes.md contains a research-agent refusal, not facts; no title-brief/H2/comment magnet; chunks 1–2 missing
+incident_report: memory/pipeline-fix-queue.md#INC-B34-research-missing (proposed: "Writer received a research-agent refusal instead of research-notes; the conductor must not start Writer until research gate=PASS")
+```
+
+I can add the proposed INC entry to `memory/pipeline-fix-queue.md` if you want. The conductor should check `research-gate=PASS` before calling `excalibur_blog_writer_chunk.py`.

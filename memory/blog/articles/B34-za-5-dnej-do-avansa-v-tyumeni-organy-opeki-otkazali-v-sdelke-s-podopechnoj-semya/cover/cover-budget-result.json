@@ -1,0 +1,58 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B34-za-5-dnej-do-avansa-v-tyumeni-organy-opeki-otkazali-v-sdelke-s-podopechnoj-semya/cover/cover.png",
+  "last_errors": [
+    "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (not_svyatoslav_vs_studio_portrait)",
+    "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+    "pixel_wordstat_not_on_host_chest FAIL: paper_frac=0.030 on vest",
+    "pixel_wordstat_only_top_left FAIL: paper_frac=0.018 outside top-left zone",
+    "pixel_no_inpaint_artifacts FAIL: face_blue=0.0021 chest_blue=0.001 smear=0.000",
+    "pixel_hook_title_not_truncated FAIL: truncated=True missing=['Опека', 'сделку'] last_word='аванса' ocr='вка остановил: елку до аванс:'",
+    "pixel_no_collage_inset FAIL: white_frac=0.463 inset_face=False blob_count=3",
+    "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.1969",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model": "grsai-standard-tier",
+      "bytes": 1100283,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (not_svyatoslav_vs_studio_portrait)",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['сделку', 'аванса'] last_word='аванса' ocr='опека остановила ея ММ эранс:'",
+        "pixel_no_collage_inset FAIL: white_frac=0.508 inset_face=False blob_count=3",
+        "pixel_no_wordstat_query_strips FAIL: 3 Wordstat strip(s), 0 bar band(s), paper_frac=0.2227",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model": "grsai-standard-tier",
+      "bytes": 1144913,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (not_svyatoslav_vs_studio_portrait)",
+        "pixel_wordstat_not_opaque_bars FAIL: 2 horizontal opaque bar(s)",
+        "pixel_wordstat_not_on_host_chest FAIL: paper_frac=0.030 on vest",
+        "pixel_wordstat_only_top_left FAIL: paper_frac=0.018 outside top-left zone",
+        "pixel_no_inpaint_artifacts FAIL: face_blue=0.0021 chest_blue=0.001 smear=0.000",
+        "pixel_hook_title_not_truncated FAIL: truncated=True missing=['Опека', 'сделку'] last_word='аванса' ocr='вка остановил: елку до аванс:'",
+        "pixel_no_collage_inset FAIL: white_frac=0.463 inset_face=False blob_count=3",
+        "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.1969",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Re-run cover_qa_gate on best_candidate — analyze_cover_pixels applies OCR escape before verdict",
+    "Do NOT deep-dive Cover-QA source — if visual OK after escape, proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}

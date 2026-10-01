@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-10-01",
+    "today_ru": "01.10.2026",
+    "year": 2026,
+    "month": 10,
+    "month_name_ru": "октябрь",
+    "weekday_ru": "четверг"
+  },
+  "topic": {
+    "topic_id": "B34",
+    "title": "За 5 дней до аванса в Тюмени органы опеки отказали в сделке с подопечной — семья не внесла аванс",
+    "h1": "За 5 дней до аванса в Тюмени органы опеки отказали в сделке с подопечной — семья не внесла аванс",
+    "slug": "za-5-dnej-do-avansa-v-tyumeni-organy-opeki-otkazali-v-sdelke-s-podopechnoj-semya",
+    "primary_query": "За 5 дней до аванса в Тюмени органы опеки отказали в сделке с подопечной — семья не внесла аванс",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "За 5 дней до аванса в Тюмени органы опеки отказали в сделке с подопечной — семья не внесла аванс 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "За 6 дней до аванса в Тюмени на ... - Дзен",
+          "url": "https://dzen.ru/a/ar0KgIwtABJAoUYv",
+          "snippet": ""
+        },
+        {
+          "title": "Перед авансом в Тюмени нашли прописанных — сделку остановили",
+          "url": "https://dzen.ru/a/apQJyl_t_ztB_fCj",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : За шесть дней до аванса в 420 тысяч рублей тюменская семья с двумя детьми узнала, что продавец их будущей трёшки уже в банкротстве — и"
+        },
+        {
+          "title": "Прекращение опеки: отказ, освобождение, лишение опекуна",
+          "url": "https://pravo-pro.ru/blog/posts/prekrashchenie-opeki/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : Сделка встала не из-за цены, не из-за банка и не из-за торга. Из-за двух человек, которых в квартире не было, — а в бумагах они были."
+        },
+        {
+          "title": "Судебные и нормативные акты РФ :: Крупнейшая в сети база судебных и ...",
+          "url": "https://sudact.ru/",
+          "snippet": "Прежде чем обращаться в орган опеки, стоит понять: отказ — это не формальность. Хотя закон и признаёт просьбу опекуна самостоятельным основанием для освобождения, на практике орган ..."
+        },
+        {
+          "title": "Предварительный договор при покупке квартиры в Тюмени: чеклист до ...",
+          "url": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/predvaritelnyj-dogovor-pri-pokupke-kvartiry-v-tyumeni-cheklist-do-avansa-v-2026-godu/",
+          "snippet": "Судебные и нормативные акты РФ Интернет-ресурс Судебные и нормативные акты РФ (СудАкт) - крупнейшая в сети база судебных актов, судебных решений и нормативных документов."
+        },
+        {
+          "title": "Недействительные сделки в банкротстве: основания, сроки и последствия ...",
+          "url": "https://bankirro.ru/bankrotstvo-fizicheskih-lic/nedejstvitelnye-sdelki-v-bankrotstve/",
+          "snippet": "Устная договорённость о цене не защищает покупателя при конфликте. Срок обозначьте календарной датой: «основной договор подписывается не позднее 25 августа 2026 года»."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "За 5 дней до аванса в Тюмени органы опеки отказали в сделке с подопечной — семья не внесла аванс 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "За 6 дней до аванса в Тюмени на ... - Дзен",
+          "url": "https://dzen.ru/a/ar0KgIwtABJAoUYv",
+          "snippet": ""
+        },
+        {
+          "title": "Опека и попечительство - судебная практика",
+          "url": "https://sudact.ru/practice/opeka-i-popechitelstvo2/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : За шесть дней до аванса в 420 тысяч рублей тюменская семья с двумя детьми узнала, что продавец их будущей трёшки уже в банкротстве — и"
+        },
+        {
+          "title": "Прекращение опеки: отказ, освобождение, лишение опекуна",
+          "url": "https://pravo-pro.ru/blog/posts/prekrashchenie-opeki/",
+          "snippet": "Опека над гражданами, признанными судом недееспособными, устанавливается для защиты их прав и интересов, с тем чтобы опекуны - лица, являющиеся представителями подопечных в ..."
+        },
+        {
+          "title": "Судебные и нормативные акты РФ :: Крупнейшая в сети база судебных и ...",
+          "url": "https://sudact.ru/",
+          "snippet": "Прежде чем обращаться в орган опеки, стоит понять: отказ — это не формальность. Хотя закон и признаёт просьбу опекуна самостоятельным основанием для освобождения, на практике орган ..."
+        },
+        {
+          "title": "Опека отказала в одобрении сделки - а аванс был уже внесён. Что я не ...",
+          "url": "https://dzen.ru/a/ai29Wg6RPnTsfymf",
+          "snippet": "Судебные и нормативные акты РФ Интернет-ресурс Судебные и нормативные акты РФ (СудАкт) - крупнейшая в сети база судебных актов, судебных решений и нормативных документов."
+        },
+        {
+          "title": "Согласие органов опеки на сделку с недвижимостью несовершеннолетнего ...",
+          "url": "https://pravo-pro.ru/blog/posts/soglasie-opeki-na-sdelku-s-nedvizhimostyu-nesovershennoletnih/",
+          "snippet": "Объяснил: отказ опеки - это обстоятельство, которое от нас обоих не зависит. По ст. 381 ГК РФ в таких случаях задаток (а точнее аванс - у нас был именно аванс) возвращается."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "За 5 дней до аванса в Тюмени органы опеки отказали в сделке с подопечной — семья не внесла аванс official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "«Опеке нужно показать работу»: в Тюмени разгорелся скандал вокруг ...",
+          "url": "https://fedpress.ru/article/3440065",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени пенсионерка запинала приемного сына своей дочери. В результате ...",
+          "url": "https://vk.com/wall612255421_1348",
+          "snippet": "Органы опеки забрали пятилетнего ребенка прямо из детсада из-за скандального видео - подробности на ..."
+        },
+        {
+          "title": "В Тюмени спорят из-за изъятия трёхлетнего ребёнка После инцидента с ...",
+          "url": "https://vk.com/wall-184220566_427950",
+          "snippet": "В результате под удар попала сама мать: органы опеки изъяли.. 2026 | ВКонтакте Дина Бачкова перейти к странице Посты ДиныВсе постыПост на стене Дина Бачкова запись закреплена 07-06-2026 ."
+        },
+        {
+          "title": "В Тюмени бабушка избила внука — его забрали органы опеки у приемной ...",
+          "url": "https://72.ru/text/incidents/2026/06/07/76465895/",
+          "snippet": "В Тюмени спорят из-за изъятия трёхлетнего ребёнка После инцидента с трёхлетним мальчиком органы опеки временно забрали его из семьи."
+        },
+        {
+          "title": "Территориальные органы опеки, попечительства и охраны прав детства",
+          "url": "https://soc.admtyumen.ru/OIGV/dsrto/about/structure/opeka.htm",
+          "snippet": "В Тюмени бабушка избила ребенка в подъезде. Органы опеки забрали мальчика у приемной мамы. - Происшествия - 7 июня 2026 | 72.ру"
+        },
+        {
+          "title": "«Опеке нужно показать работу»: в Тюмени разгорелся скандал вокруг ...",
+          "url": "https://dzen.ru/a/aiexaIv7R3hKlxN-",
+          "snippet": "Территориальные органы опеки, попечительства и охраны прав детства Интервал между буквами и строками: Стандартный Средний Большой Шрифт: Arial Times New Roman Показывать изображения и видео Да Нет Свернуть настройки"
+        }
+      ],
+      "searched_at": "2026-10-01"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com За 5 дней до аванса в Тюмени органы опеки отказали в сделке с подопечной — семья не внесла аванс 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "pog5/left.github.svg at main · pog5/pog5 · GitHub",
+          "url": "https://github.com/pog5/pog5/blob/main/left.github.svg",
+          "snippet": ""
+        },
+        {
+          "title": "coralnpu-main-forfpga_20260714/fpga/my_onestep_to_fpga/phine ... - GitHub",
+          "url": "https://github.com/beckybao666/coralnpu-main-forfpga_20260714/blob/main/fpga/my_onestep_to_fpga/phine_vu9p/rtl/vendor/opentitan/hw/top_earlgrey/ip_autogen/pwm/dv/doc/tb.svg",
+          "snippet": "Repository for my profile page. :). Contribute to pog5/pog5 development by creating an account on GitHub."
+        },
+        {
+          "title": "inkos/assets/arch-pipeline.svg at master · Narcooo/inkos · GitHub",
+          "url": "https://github.com/Narcooo/inkos/blob/master/assets/arch-pipeline.svg",
+          "snippet": "Contribute to beckybao666/coralnpu-main-forfpga_20260714 development by creating an account on GitHub."
+        },
+        {
+          "title": "application-development-exercises/2026/5_app_development_backend ...",
+          "url": "https://github.com/Creative-Cucumbers/application-development-exercises/blob/main/2026/5_app_development_backend_authentication_and_debugging/assets/day5_debug_component_diagram.svg",
+          "snippet": "Story Creation AI Agent for novel, scripts, translation, interactive games, and IP content - Narcooo/inkos"
+        },
+        {
+          "title": "gstack-skills/docs/images/github-2026.png at main · XuanYaoTech/gstack ...",
+          "url": "https://github.com/XuanYaoTech/gstack-skills/blob/main/docs/images/github-2026.png",
+          "snippet": "Contribute to Creative-Cucumbers/application-development-exercises development by creating an account on GitHub."
+        },
+        {
+          "title": "ABD/framework.png at main · Star-chy/ABD · GitHub",
+          "url": "https://github.com/Star-chy/ABD/blob/main/framework.png",
+          "snippet": "Use Garry Tan's exact Claude Code setup: 15 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA - XuanYaoTech/gstack-skills"
+        }
+      ],
+      "searched_at": "2026-10-01"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "За 5 дней до аванса в Тюмени органы опеки отказали в сделке с подопечной — семья не внесла аванс forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "За 3 дня до аванса в Тюмени всплыл долг за свет 186 тысяч — семья ...",
+          "url": "https://dzen.ru/a/arp0wIwtABJAlCih",
+          "snippet": ""
+        },
+        {
+          "title": "«Опеке нужно показать работу»: в Тюмени разгорелся скандал вокруг ...",
+          "url": "https://fedpress.ru/article/3440065",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : За три дня до аванса в 350 тысяч семья из Тюмени узнала, что на двушке висит долг за свет в 186 400 рублей, и остановила сделку."
+        },
+        {
+          "title": "Опека и попечительство - судебная практика",
+          "url": "https://sudact.ru/practice/opeka-i-popechitelstvo2/",
+          "snippet": "Органы опеки забрали пятилетнего ребенка прямо из детсада из-за скандального видео - подробности на ..."
+        },
+        {
+          "title": "Ко мне пришли органы опеки. Что делать? | ОВД-Инфо",
+          "url": "https://ovdinfo.legal/instruction/esli-prishla-opeka",
+          "snippet": "Опека над гражданами, признанными судом недееспособными, устанавливается для защиты их прав и интересов, с тем чтобы опекуны - лица, являющиеся представителями подопечных в ..."
+        },
+        {
+          "title": "Прекращение опеки: отказ, освобождение, лишение опекуна",
+          "url": "https://pravo-pro.ru/blog/posts/prekrashchenie-opeki/",
+          "snippet": "Известны случаи, когда родители или дети участвовали в акции протеста, а после этого к ним приходили органы опеки. Насколько это страшно, какие полномочия у органов опеки и что делать в случае их визитов ..."
+        },
+        {
+          "title": "В Тюмени бабушка избила внука — его забрали органы опеки у приемной ...",
+          "url": "https://72.ru/text/incidents/2026/06/07/76465895/",
+          "snippet": "Время чтения: 12 минут Кратко Прекращение опеки — это официальное завершение прав и обязанностей опекуна, которое происходит по решению органа опеки либо в силу прямого указания закона."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    }
+  ],
+  "errors": []
+}

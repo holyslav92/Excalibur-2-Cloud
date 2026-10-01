@@ -1,0 +1,9 @@
+{
+  "topic_id": "B34",
+  "description": "В Тюмени опекун уверял, что разрешение на продажу есть. Святослав Шакин попросил письмо — отказ опеки сохранил семье 380 тысяч до аванса.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

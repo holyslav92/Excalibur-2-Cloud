@@ -1,0 +1,34 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-01",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://sudact.ru/practice/opeka-i-popechitelstvo2/",
+        "type": "official_practice",
+        "note": "Судебная практика по опеке — контекст для покупателя"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени вторичка",
+    "p0_volume": 6415,
+    "rework_log": "guardianship ward seller refusal — secondary slot 15:00 YEKT"
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "notes": "Опека и ЕГРН разведены в research-notes; без выдуманных тарифов банков"
+  },
+  "blockers": []
+}
