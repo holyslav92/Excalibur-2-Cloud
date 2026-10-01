@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-10-01",
+    "today_ru": "01.10.2026",
+    "year": 2026,
+    "month": 10,
+    "month_name_ru": "октябрь",
+    "weekday_ru": "четверг"
+  },
+  "topic": {
+    "topic_id": "B35",
+    "title": "В Тюмени за сутки до аванса банк снял семейную ипотеку на вторичке — с 1 октября лимит не сошёлся",
+    "h1": "В Тюмени за сутки до аванса банк снял семейную ипотеку на вторичке — с 1 октября лимит не сошёлся",
+    "slug": "v-tyumeni-za-sutki-do-avansa-bank-snyal-semejnuyu-ipoteku-na-vtorichke-s-1-oktya",
+    "primary_query": "В Тюмени за сутки до аванса банк снял семейную ипотеку на вторичке — с 1 октября лимит не сошёлся",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени за сутки до аванса банк снял семейную ипотеку на вторичке — с 1 октября лимит не сошёлся 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "19 дней до 1 октября: банк пересчитал семейную ипотеку — семья ...",
+          "url": "https://dzen.ru/a/aqUM_XOQWXLZm2sq",
+          "snippet": ""
+        },
+        {
+          "title": "Семейная ипотека станет неподъемной: неутешительный прогноз для рынка ...",
+          "url": "https://72.ru/text/realty/2026/09/29/76665356/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В середине сентября 2026 года семья с двумя детьми в Тюмени остановила покупку трёшки в новостройке на востоке города."
+        },
+        {
+          "title": "Семейная ипотека с 1 октября 2026 года: изменение условий и ставки ...",
+          "url": "https://blog.domclick.ru/novosti/post/chto-izmenitsya-v-usloviyah-semejnoj-ipoteki-s-1-oktyabrya-2026-goda-prognozy-ekspertov",
+          "snippet": "Семейная ипотека в Тюмени меняет условия с 1 октября. Платежи по семейной ипотеке вырастут, что повлияет на рынок недвижимости. - Недвижимость - 29 сентября 2026 | 72.ру"
+        },
+        {
+          "title": "Как изменения условий \"Семейной ипотеки\" сказались на спросе на жилье ...",
+          "url": "https://rg.ru/2026/09/29/metr-do-finisha.html",
+          "snippet": "️ Что будет с семейной ипотекой с 1 октября 2026 года — прогнозы экспертов. ️ Как изменятся условия семейной ипотеки, какая будет ипотечная ставка и какие будут новые правила получения."
+        },
+        {
+          "title": "Квартиру в Тюмени остановили за день до аванса — родственники пошли в ...",
+          "url": "https://dzen.ru/a/apJ3Uq3UpQP2s7_9",
+          "snippet": "Количество заявок на \"Семейную ипотеку\" с 1 по 28 сентября на 48% больше, чем за аналогичный период в августе."
+        },
+        {
+          "title": "В России изменятся правила семейной ипотеки",
+          "url": "https://lenta.ru/news/2026/09/24/v-rf-izmenyatsya-pravila-semeynoy-ipoteki/",
+          "snippet": "Квартиру в Тюмени сняли с расчётов за один рабочий день до аванса. К тому вечеру покупатель уже дважды был на осмотре, банк прошёл предварительную проверку, договор лежал распечатанным ..."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени за сутки до аванса банк снял семейную ипотеку на вторичке — с 1 октября лимит не сошёлся 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "19 дней до 1 октября: банк пересчитал семейную ипотеку — семья ...",
+          "url": "https://dzen.ru/a/aqUM_XOQWXLZm2sq",
+          "snippet": ""
+        },
+        {
+          "title": "Семейная ипотека станет неподъемной: неутешительный прогноз для рынка ...",
+          "url": "https://72.ru/text/realty/2026/09/29/76665356/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В середине сентября 2026 года семья с двумя детьми в Тюмени остановила покупку трёшки в новостройке на востоке города."
+        },
+        {
+          "title": "За 3 дня до аванса в Тюмени всплыл долг за свет 186 тысяч — семья ...",
+          "url": "https://dzen.ru/a/arp0wIwtABJAlCih",
+          "snippet": "Семейная ипотека в Тюмени меняет условия с 1 октября. Платежи по семейной ипотеке вырастут, что повлияет на рынок недвижимости. - Недвижимость - 29 сентября 2026 | 72.ру"
+        },
+        {
+          "title": "Как изменения условий \"Семейной ипотеки\" сказались на спросе на жилье ...",
+          "url": "https://rg.ru/2026/09/29/metr-do-finisha.html",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : За три дня до аванса в 350 тысяч семья из Тюмени узнала, что на двушке висит долг за свет в 186 400 рублей, и остановила сделку."
+        },
+        {
+          "title": "Семейная ипотека с 1 октября 2026 года: изменение условий и ставки ...",
+          "url": "https://blog.domclick.ru/novosti/post/chto-izmenitsya-v-usloviyah-semejnoj-ipoteki-s-1-oktyabrya-2026-goda-prognozy-ekspertov",
+          "snippet": "Количество заявок на \"Семейную ипотеку\" с 1 по 28 сентября на 48% больше, чем за аналогичный период в августе."
+        },
+        {
+          "title": "Все новости Тюмени за последние сутки | 72.ру",
+          "url": "https://72.ru/text/",
+          "snippet": "️ Что будет с семейной ипотекой с 1 октября 2026 года — прогнозы экспертов. ️ Как изменятся условия семейной ипотеки, какая будет ипотечная ставка и какие будут новые правила получения."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени за сутки до аванса банк снял семейную ипотеку на вторичке — с 1 октября лимит не сошёлся official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "19 дней до 1 октября: банк пересчитал семейную ипотеку — семья ...",
+          "url": "https://dzen.ru/a/aqUM_XOQWXLZm2sq",
+          "snippet": ""
+        },
+        {
+          "title": "Семейная ипотека станет неподъемной: неутешительный прогноз для рынка ...",
+          "url": "https://72.ru/text/realty/2026/09/29/76665356/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В середине сентября 2026 года семья с двумя детьми в Тюмени остановила покупку трёшки в новостройке на востоке города."
+        },
+        {
+          "title": "За 3 дня до аванса в Тюмени всплыл долг за свет 186 тысяч — семья ...",
+          "url": "https://dzen.ru/a/arp0wIwtABJAlCih",
+          "snippet": "Семейная ипотека в Тюмени меняет условия с 1 октября. Платежи по семейной ипотеке вырастут, что повлияет на рынок недвижимости. - Недвижимость - 29 сентября 2026 | 72.ру"
+        },
+        {
+          "title": "Что изменится в условиях Семейной ипотеки с 1 октября 2026 года ...",
+          "url": "https://blog.domclick.ru/novosti/post/chto-izmenitsya-v-usloviyah-semejnoj-ipoteki-s-1-oktyabrya-2026-goda-prognozy-ekspertov",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : За три дня до аванса в 350 тысяч семья из Тюмени узнала, что на двушке висит долг за свет в 186 400 рублей, и остановила сделку."
+        },
+        {
+          "title": "Как изменения условий \"Семейной ипотеки\" сказались на спросе на жилье ...",
+          "url": "https://rg.ru/2026/09/29/metr-do-finisha.html",
+          "snippet": "️ Что будет с семейной ипотекой с 1 октября 2026 года — прогнозы экспертов. ️ Как изменятся условия семейной ипотеки, какая будет ипотечная ставка и какие будут новые правила получения."
+        },
+        {
+          "title": "Все новости Тюмени за последние сутки | 72.ру",
+          "url": "https://72.ru/text/",
+          "snippet": "Количество заявок на \"Семейную ипотеку\" с 1 по 28 сентября на 48% больше, чем за аналогичный период в августе."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени за сутки до аванса банк снял семейную ипотеку на вторичке — с 1 октября лимит не сошёлся 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "dashboard-icons/svg/eliza-os.svg at main · homarr-labs ... - GitHub",
+          "url": "https://github.com/homarr-labs/dashboard-icons/blob/main/svg/eliza-os.svg",
+          "snippet": ""
+        },
+        {
+          "title": "BibleQuizzing/8f78aa4f642e5182811cedb5d3696e53.svg at main ... - GitHub",
+          "url": "https://github.com/SmashcardsService/BibleQuizzing/blob/main/8f78aa4f642e5182811cedb5d3696e53.svg",
+          "snippet": "Your definitive source for dashboard icons. Contribute to homarr-labs/dashboard-icons development by creating an account on GitHub."
+        },
+        {
+          "title": "pasture-ai/docs/screenshots/geometric-breeding.svg at main ...",
+          "url": "https://github.com/SuperInstance/pasture-ai/blob/main/docs/screenshots/geometric-breeding.svg",
+          "snippet": "Coach your team to victory in this Bible Quizzing game! - BibleQuizzing/8f78aa4f642e5182811cedb5d3696e53.svg at main · SmashcardsService/BibleQuizzing"
+        },
+        {
+          "title": "hermes-desktop/previews/skills.png at main · fathah/hermes-desktop",
+          "url": "https://github.com/fathah/hermes-desktop/blob/main/previews/skills.png",
+          "snippet": "AI system for resource allocation and management. Contribute to SuperInstance/pasture-ai development by creating an account on GitHub."
+        },
+        {
+          "title": "Super-Mario-Bros.-Remastered-Public-Mac/icon32.png at main · yuriko ...",
+          "url": "https://github.com/yuriko-shimizu/Super-Mario-Bros.-Remastered-Public-Mac/blob/main/icon32.png",
+          "snippet": "Desktop Companion for Hermes Agent. Contribute to fathah/hermes-desktop development by creating an account on GitHub."
+        },
+        {
+          "title": "godot-engine/icon.svg at master · Shadows-of-Fire/godot-engine",
+          "url": "https://github.com/Shadows-of-Fire/godot-engine/blob/master/icon.svg",
+          "snippet": "Contribute to yuriko-shimizu/Super-Mario-Bros.-Remastered-Public-Mac development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени за сутки до аванса банк снял семейную ипотеку на вторичке — с 1 октября лимит не сошёлся forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "19 дней до 1 октября: банк пересчитал семейную ипотеку — семья ...",
+          "url": "https://dzen.ru/a/aqUM_XOQWXLZm2sq",
+          "snippet": ""
+        },
+        {
+          "title": "Семейная ипотека станет неподъемной: неутешительный прогноз для рынка ...",
+          "url": "https://72.ru/text/realty/2026/09/29/76665356/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В середине сентября 2026 года семья с двумя детьми в Тюмени остановила покупку трёшки в новостройке на востоке города."
+        },
+        {
+          "title": "Новые условия семейной ипотеки с 1 октября 2026 года: ставки, сумма ...",
+          "url": "https://lenta.ru/articles/2026/09/25/izmeneniya-v-programme-semeynoy-ipoteki-s-1-otyabrya-2026-goda/",
+          "snippet": "Семейная ипотека в Тюмени меняет условия с 1 октября. Платежи по семейной ипотеке вырастут, что повлияет на рынок недвижимости. - Недвижимость - 29 сентября 2026 | 72.ру"
+        },
+        {
+          "title": "Что изменится в условиях Семейной ипотеки с 1 октября 2026 года ...",
+          "url": "https://blog.domclick.ru/novosti/post/chto-izmenitsya-v-usloviyah-semejnoj-ipoteki-s-1-oktyabrya-2026-goda-prognozy-ekspertov",
+          "snippet": "Семейная ипотека с 1 октября 2026: новые ставки, максимальные суммы кредита и другие условия, которые ..."
+        },
+        {
+          "title": "Семейная ипотека c 1 октября 2026 года: новые условия",
+          "url": "https://www.cian.ru/stati-semejnaja-ipoteka-poslednie-izmenenija-329380/",
+          "snippet": "️ Что будет с семейной ипотекой с 1 октября 2026 года — прогнозы экспертов. ️ Как изменятся условия семейной ипотеки, какая будет ипотечная ставка и какие будут новые правила получения."
+        },
+        {
+          "title": "Продавец закрыл ипотеку, но залог сорвал сделку в Тюмени",
+          "url": "https://dzen.ru/a/apO5_V_t_ztB-7nG",
+          "snippet": "Рассказываем, кто может рассчитывать на льготный кредит с 1 октября 2026 года, как число детей в семье влияет на ставку, на какой срок дают семейную ипотеку, насколько теперь выгодна эта программа и что по ней можно купить."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,55 @@
+{
+  "agent": "excalibur-blog-research",
+  "research_date": "2026-10-01",
+  "status": "PASS",
+  "verdict": "PASS",
+  "fresh_signal": {
+    "status": "PASS",
+    "required_window": {
+      "start": "2026-09-28",
+      "end": "2026-10-01"
+    },
+    "qualifying_sources": [
+      {
+        "id": "ria-2026-09-30",
+        "type": "media",
+        "published_at": "2026-09-30",
+        "url": "https://ria.ru/20260930/ipoteka-2121331369.html"
+      },
+      {
+        "id": "lenta-2026-10-01",
+        "type": "media",
+        "published_at": "2026-10-01",
+        "url": "https://lenta.ru/news/2026/10/01/long-sem-ipo/"
+      }
+    ],
+    "reason": "Два независимых новостных сигнала опубликованы в заданном окне и подтверждены текущей официальной страницей ДОМ.РФ."
+  },
+  "source_table": {
+    "required_signals_present": true,
+    "all_accessed_at": "2026-10-01",
+    "local_context_source": "tyumen-local-2026-09-09"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": [
+      "ДОМ.РФ",
+      "Минфин России"
+    ],
+    "errors": []
+  },
+  "fact_integrity": {
+    "casus_claim_status": "UNSUPPORTED_AS_REPORTED_EVENT",
+    "reason": "Источники не документируют конкретный тюменский случай, название банка, письмо кредитора или снятие одобрения за сутки до аванса.",
+    "writer_constraint": "Не представлять рабочий H1 как подтверждённый новостной эпизод; право на программу для конкретной вторички проверять у кредитора и по применимому перечню."
+  },
+  "derouter": {
+    "role": "research",
+    "stamp": "derouter-opus-stamp-research.json",
+    "model_tier": "utility",
+    "model": "gpt-5.6-terra"
+  },
+  "incident_report": "none"
+}

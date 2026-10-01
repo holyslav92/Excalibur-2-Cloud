@@ -1,0 +1,48 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "research_date": "2026-10-01",
+  "status": "BLOCK",
+  "reason_code": "STALE_OR_INVENTED_SIGNAL",
+  "reason": "Не подтверждён внешний сигнал из текущей недели (2026-09-28—2026-10-01): основной новостной материал опубликован 2026-09-18, а последние видимые комментарии датированы 2026-09-23. В источниках и поиске на 2026-10-01 не найдено более поздней новости, поста канала, судебного обновления или dated community activity по этому делу.",
+  "fresh_signal_requirement": {
+    "window_start": "2026-09-28",
+    "window_end": "2026-10-01",
+    "status": "BLOCK",
+    "verified_current_week_sources": [],
+    "latest_relevant_source": {
+      "title": "Областной суд поддержал гражданку Германии в споре о недвижимости в Тюмени — обсуждение новости",
+      "url": "https://72.ru/text/realty/2026/09/18/76647653/comments/",
+      "latest_visible_activity_date": "2026-09-23",
+      "accessed_at": "2026-10-01"
+    }
+  },
+  "sources_checked": [
+    {
+      "url": "https://72.ru/text/realty/2026/09/18/76647653/",
+      "type": "news",
+      "published_at": "2026-09-18",
+      "accessed_at": "2026-10-01"
+    },
+    {
+      "url": "https://72.ru/text/realty/2026/09/18/76647653/comments/",
+      "type": "community",
+      "latest_visible_activity_date": "2026-09-23",
+      "accessed_at": "2026-10-01"
+    },
+    {
+      "url": "http://www.kremlin.ru/acts/bank/8671/print",
+      "type": "official",
+      "accessed_at": "2026-10-01"
+    }
+  ],
+  "official_source_audit": {
+    "required": false,
+    "status": "PASS",
+    "verified_claims": 0,
+    "entities_checked": [],
+    "errors": [],
+    "note": "В Research нет тарифов, комиссий, условий банков или иных точных числовых claims компаний."
+  },
+  "next_required_action": "Нужен новый внешний сигнал этой недели по тому же делу либо Scout должен выбрать другую тему; до этого Writer не запускать."
+}
