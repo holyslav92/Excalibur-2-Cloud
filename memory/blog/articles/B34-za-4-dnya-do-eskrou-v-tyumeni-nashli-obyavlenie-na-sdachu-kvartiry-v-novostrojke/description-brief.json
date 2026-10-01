@@ -1,0 +1,9 @@
+{
+  "topic_id": "B34",
+  "description": "У семьи уже было одобрение, когда в выдаче всплыло «сдам» — с тем же корпусом и планировкой. До эскроу оставались дни, а банк в Тюмени отозвал ипотеку.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
