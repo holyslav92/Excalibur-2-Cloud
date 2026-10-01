@@ -2,12 +2,12 @@
   "version": 1,
   "anti_repeat_days": 30,
   "description": "Closed story clusters — Scout must not reuse until locked_until. Sync via: python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters",
-  "last_sync": "2026-09-28",
+  "last_sync": "2026-09-29",
   "clusters": [
     {
       "cluster_id": "egrn_line_blocks_advance",
-      "first_seen": "2026-09-28",
-      "locked_until": "2026-10-28",
+      "first_seen": "2026-09-29",
+      "locked_until": "2026-10-29",
       "source": "article_meta",
       "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
       "topic_id": "B09",
@@ -15,8 +15,8 @@
     },
     {
       "cluster_id": "deceased_spouse_share_surprise",
-      "first_seen": "2026-09-28",
-      "locked_until": "2026-10-28",
+      "first_seen": "2026-09-29",
+      "locked_until": "2026-10-29",
       "source": "article_meta",
       "slug": "skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo",
       "topic_id": "B08",
@@ -24,12 +24,21 @@
     },
     {
       "cluster_id": "inheritance_son_first_marriage_no_refusal",
-      "first_seen": "2026-09-28",
-      "locked_until": "2026-10-28",
+      "first_seen": "2026-09-29",
+      "locked_until": "2026-10-29",
       "source": "article_meta",
       "slug": "nasledstvo-kvartiry-syn-ot-pervogo-braka-ne-otkazalsya",
       "topic_id": "B07",
       "title": "Наследству на квартиру два года. Сын от первого брака отказ не писал Наследству на квартиру два года. Сын от первого брака отказ не писал  Наследству на квартиру два года. Сын от первого брака отказ не писал"
+    },
+    {
+      "cluster_id": "escrow_not_opened_after_mortgage",
+      "first_seen": "2026-09-28",
+      "locked_until": "2026-10-28",
+      "source": "live_wp",
+      "slug": "v-tyumeni-za-4-dnya-do-ddu-zastrojschik-privyazal-chistovuyu-k-podryadchiku-bez",
+      "topic_id": "LIVE-V-TYUMENI-ZA-4-DNYA-DO-D",
+      "title": "В Тюмени за 4 дня до ДДУ застройщик привязал чистовую к подрядчику — без допсоглашения эскроу не открыли"
     },
     {
       "cluster_id": "bank_appraisal_below_ddu_price",

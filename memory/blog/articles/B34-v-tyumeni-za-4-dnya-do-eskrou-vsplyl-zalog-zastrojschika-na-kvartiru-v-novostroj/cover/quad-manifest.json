@@ -1,0 +1,267 @@
+{
+  "topic_id": "B34",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "За четыре дня залог всплыл",
+  "cover_hook_highlight": "залог",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "За 4 дня до эскроу всплыл залог застройщика — сделку остановили в Тюмени: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Светлый офис новостройки: герой указывает на строку залога в выписке, план трёшки на столе.",
+      "meme_caption_ru": "",
+      "sticky": "Эскроу не открыли",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "напряжённое недоумение, прищур, сжатые губы"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "За четыре дня до эскроу: чей залог в выписке",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стройка Тюмень: пара смотрит на корпус, без крупных лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За четыре дня до эскроу: чей залог в выписке» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Трёшка в брони",
+        "Ипотека одобрена",
+        "Эскроу в пятницу",
+        "Ребёнок выбрал",
+        "Офис продаж"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "За четыре дня до эскроу: чей залог в выписке",
+      "visual_type": "comparison_table",
+      "scene_hint": "Инфографика трёх банков в сделке, без лиц.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Три разных банка, Ипотека семьи, Счёт эскроу — иллюстрация к разбору сделки.",
+      "labels": [
+        "Три разных банка",
+        "Ипотека семьи",
+        "Счёт эскроу",
+        "Залог застройщика",
+        "214‑ФЗ"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Почему слово «залог» в выписке не приговор, но и не мелочь",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Выписка и календарь с датой эскроу через 4 дня.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Почему слово «залог» в выписке не приговор, но…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Свежая выписка",
+        "Четыре дня",
+        "Другой банк",
+        "Строка залога",
+        "Деньги на счёте"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Что проверить до перевода денег, если в выписке всплыл залог",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Ноутбук dom.rf и папка ДДУ на столе.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Что проверить до перевода денег, если в выписке…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Менеджер успокаивает",
+        "Банк тормозит",
+        "Наш дом рф",
+        "Юрлица разные",
+        "Даты не сходятся"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "«Это обычно»: почему семье этого не хватило",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема: письмо застройщику → ответ банка.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Письмо застройщика, Снятие залога, ДДУ и выписка — иллюстрация к разбору сделки.",
+      "labels": [
+        "Письмо застройщика",
+        "Снятие залога",
+        "ДДУ и выписка",
+        "Ответ банка",
+        "Пауза без паники"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что на самом деле написано в строке про залог",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Таймлайн бронь—выписка—пауза—эскроу.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Не приговор, Проектное финанс, Смотреть детали — иллюстрация к разбору сделки.",
+      "labels": [
+        "Не приговор",
+        "Проектное финанс",
+        "Смотреть детали",
+        "Бумага решает",
+        "Не со слов"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Три разных «банка» в одной покупке",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Диаграмма потоков: ипотека, эскроу, залог застройщика.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Пять шагов, Свежий ЕГРН, Дом рф сверка — иллюстрация к разбору сделки.",
+      "labels": [
+        "Пять шагов",
+        "Свежий ЕГРН",
+        "Дом рф сверка",
+        "Свой банк",
+        "До перевода"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить новостройку в тюмени",
+    "новостройки тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "host right third, EGRN print with pledge line, hook zone upper left, phone bot",
+    "location": "bright newbuild sales office Tyumen with floor plan and window light",
+    "meme": "hide_pain_harold + smudge_cat corner stickers",
+    "meme_picks": [
+      {
+        "id": "hide_pain_harold",
+        "placement": "corner",
+        "scale": "sticker"
+      },
+      {
+        "id": "smudge_cat",
+        "placement": "corner",
+        "scale": "sticker"
+      }
+    ],
+    "props": [
+      "rolled floor plan",
+      "EGRN excerpt print",
+      "escrow calendar"
+    ],
+    "stickers": "hide_pain_harold top-left, smudge_cat bottom-right",
+    "joke": "manager says pledge is normal while buyer bank freezes escrow",
+    "outfit": "terracotta linen shirt rolled sleeves, light grey chinos, no blazer",
+    "emotion": "tense disbelief, squint, jaw set, direct gaze",
+    "pose_framing": "waist-up three-quarter left, leaning over table not bust crop",
+    "action": "points at pledge line on print while other hand on phone"
+  },
+  "cover_emotion": "напряжённое недоумение, прищур, сжатые губы",
+  "meme_picks": [
+    {
+      "id": "hide_pain_harold",
+      "placement": "corner",
+      "scale": "sticker"
+    },
+    {
+      "id": "smudge_cat",
+      "placement": "corner",
+      "scale": "sticker"
+    }
+  ]
+}
