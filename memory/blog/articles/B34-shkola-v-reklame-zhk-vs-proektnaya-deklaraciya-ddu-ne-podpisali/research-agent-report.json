@@ -1,0 +1,77 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-01",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://tumentoday.ru/2026/09/17/v_tyumeni_na_ulitse_bratyev_bondarevykh_stroyat_shkolu_lira_s_detskim_sadom/",
+        "type": "regional_news",
+        "note": "Тюмень 17.09.2026 — стройка школы «Лира», свежий сигнал недели"
+      },
+      {
+        "url": "https://t-l.ru/406500.html",
+        "type": "regional_news",
+        "note": "Тюменская линия — этапность стройки школы рядом с новостройками"
+      },
+      {
+        "url": "https://enco.ru/news/shkola-lira-budet-postroena-v-lokatsii-ayvazovskiy/",
+        "type": "official_developer",
+        "note": "График ввода школы до 2031 — контекст длинного горизонта vs реклама"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 3553,
+    "support_phrases": [
+      {"phrase": "купить новостройку в тюмени", "volume": 686, "region": "55"},
+      {"phrase": "купить новостройку в тюмени", "volume": 900, "region": "11176"},
+      {"phrase": "проектная декларация застройщика", "volume": 31, "region": "55"},
+      {"phrase": "семейная ипотека новостройка тюмень", "volume": 15, "region": "55"}
+    ],
+    "rework_from": "узкие инфраструктурные хвосты → spine 3553 + PD/школа casus",
+    "partial": []
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_pd_school_deadline_vs_ads_tyumen",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B28 газ/КП vs PD", "B27 земля в аренде vs бронь", "B25 чистовая в ДДУ"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["214fz_consultant", "minstroy_pd_form", "fz_reklama_eiszhs_practice"],
+    "errors": [],
+    "note": "Нормы 214-ФЗ и форма PD — Консультант; ч.7 ст.28 ФЗ «О рекламе» — через official_verifications + sovetreklama как практика. Банковские тарифы не заявлялись."
+  },
+  "key_facts_count": 18,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 1,
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json",
+    "official_gate": "research-official-gate.json"
+  },
+  "content_evidence_gate": {
+    "status": "SKIP",
+    "reason": "runs after Writer per structure_gate; not applicable at research step"
+  },
+  "incident_report": "none"
+}

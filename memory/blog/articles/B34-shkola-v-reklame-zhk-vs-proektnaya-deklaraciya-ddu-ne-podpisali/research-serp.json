@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-10-01",
+    "today_ru": "01.10.2026",
+    "year": 2026,
+    "month": 10,
+    "month_name_ru": "октябрь",
+    "weekday_ru": "четверг"
+  },
+  "topic": {
+    "topic_id": "B34",
+    "title": "Школа в рекламе ЖК vs проектная декларация — ДДУ не подписали",
+    "h1": "Школа в рекламе ЖК vs проектная декларация — ДДУ не подписали",
+    "slug": "shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali",
+    "primary_query": "Школа в рекламе ЖК vs проектная декларация — ДДУ не подписали",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "Школа в рекламе ЖК vs проектная декларация — ДДУ не подписали 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Застройщик не построил школу и детский сад — дольщик вправе взыскать ...",
+          "url": "https://moshousing.ru/zastrojshchik-ne-postroil-shkolu-i-detskij-sad-dolshchik-vprave-vzyskat-kompensaciyu-cherez-sud/",
+          "snippet": ""
+        },
+        {
+          "title": "Если школа в рекламе ЖК — застройщик обязан ее построить или нет?",
+          "url": "https://dzen.ru/a/acMAEg2DMQBBAKed",
+          "snippet": "Соразмерное уменьшение цены ДДУ за отсутствие обещанной инфраструктуры — от 800 000 до 1 500 000 рублей. Правовые основания, расчёт компенсации и алгоритм подачи иска в 2026 году."
+        },
+        {
+          "title": "Школы в ДДУ 2026: как застройщики строят инфраструктуру |",
+          "url": "https://pleada.shop/blog/sotsialnaya-infrastruktura-v-ddu-2026-obyazatelstva-zastroishchika/",
+          "snippet": "Статья автора «Mapestate.ru» в Дзене : Маркетинговый рендер — это визуализация концепции, а не технический документ."
+        },
+        {
+          "title": "Реклама застройщика: что обязательно на сайте по 214-ФЗ",
+          "url": "https://zakonchek.ru/blog/reklama-zastroyschika-214-fz",
+          "snippet": "Короткий ответ Социальная инфраструктура в ДДУ 2026: как застройщики обязываются строить школы в СПб. Разбираем, как застройщики обязываются строить школы по ДДУ к 2026 году. Какие гарантии есть у дольщиков и как выбрать ..."
+        },
+        {
+          "title": "Школа и сад у новостройки: как проверить в 2026 году",
+          "url": "https://novostroikino.ru/blog/detskie-sady-i-shkoly-ryadom-s-novostroykoy-2026/",
+          "snippet": "Ссылка на проектную декларацию По 214-ФЗ застройщик обязан публиковать проектную декларацию на официальном сайте наш.дом.рф. И в любой рекламе ЖК должна быть ссылка на конкретную ..."
+        },
+        {
+          "title": "С ПИК взыскали 24 млн рублей за задержку строительства школы",
+          "url": "https://www.gazeta.ru/business/news/2026/08/14/29106151.shtml",
+          "snippet": "Как узнать, будет ли в новостройке своя школа и детский сад, сколько мест положено по нормативу и как проверить это по документам до покупки квартиры в Москве и МО."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "Школа в рекламе ЖК vs проектная декларация — ДДУ не подписали 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Застройщик не построил школу и детский сад — дольщик вправе взыскать ...",
+          "url": "https://moshousing.ru/zastrojshchik-ne-postroil-shkolu-i-detskij-sad-dolshchik-vprave-vzyskat-kompensaciyu-cherez-sud/",
+          "snippet": ""
+        },
+        {
+          "title": "Если школа в рекламе ЖК — застройщик обязан ее построить или нет?",
+          "url": "https://dzen.ru/a/acMAEg2DMQBBAKed",
+          "snippet": "Соразмерное уменьшение цены ДДУ за отсутствие обещанной инфраструктуры — от 800 000 до 1 500 000 рублей. Правовые основания, расчёт компенсации и алгоритм подачи иска в 2026 году."
+        },
+        {
+          "title": "Застройщиков могут обязать указывать в рекламе полную стоимость ...",
+          "url": "https://adindex.ru/news/right/2026/03/20/343405.phtml",
+          "snippet": "Статья автора «Mapestate.ru» в Дзене : Маркетинговый рендер — это визуализация концепции, а не технический документ."
+        },
+        {
+          "title": "Школы в ДДУ 2026: как застройщики строят инфраструктуру |",
+          "url": "https://pleada.shop/blog/sotsialnaya-infrastruktura-v-ddu-2026-obyazatelstva-zastroishchika/",
+          "snippet": "Новости Бизнес СМИ AdIndex из рубрики Право — Застройщиков могут обязать указывать в рекламе полную стоимость объектов — Также девелоперам нельзя будет заявлять о развитой инфраструктуре, если ее фактически нет. Под ..."
+        },
+        {
+          "title": "Реклама застройщика: что обязательно на сайте по 214-ФЗ",
+          "url": "https://zakonchek.ru/blog/reklama-zastroyschika-214-fz",
+          "snippet": "Короткий ответ Социальная инфраструктура в ДДУ 2026: как застройщики обязываются строить школы в СПб. Разбираем, как застройщики обязываются строить школы по ДДУ к 2026 году. Какие гарантии есть у дольщиков и как выбрать ..."
+        },
+        {
+          "title": "Школа и сад у новостройки: как проверить в 2026 году",
+          "url": "https://novostroikino.ru/blog/detskie-sady-i-shkoly-ryadom-s-novostroykoy-2026/",
+          "snippet": "Ссылка на проектную декларацию По 214-ФЗ застройщик обязан публиковать проектную декларацию на официальном сайте наш.дом.рф. И в любой рекламе ЖК должна быть ссылка на конкретную ..."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "Школа в рекламе ЖК vs проектная декларация — ДДУ не подписали official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Если школа в рекламе ЖК — застройщик обязан ее построить или нет?",
+          "url": "https://dzen.ru/a/acMAEg2DMQBBAKed",
+          "snippet": ""
+        },
+        {
+          "title": "Застройщик не построил школу и детский сад — дольщик вправе взыскать ...",
+          "url": "https://moshousing.ru/zastrojshchik-ne-postroil-shkolu-i-detskij-sad-dolshchik-vprave-vzyskat-kompensaciyu-cherez-sud/",
+          "snippet": "Статья автора «Mapestate.ru» в Дзене : Маркетинговый рендер — это визуализация концепции, а не технический документ."
+        },
+        {
+          "title": "Застройщиков могут обязать указывать в рекламе полную стоимость ...",
+          "url": "https://adindex.ru/news/right/2026/03/20/343405.phtml",
+          "snippet": "Соразмерное уменьшение цены ДДУ за отсутствие обещанной инфраструктуры — от 800 000 до 1 500 000 рублей. Правовые основания, расчёт компенсации и алгоритм подачи иска в 2026 году."
+        },
+        {
+          "title": "Реклама застройщика: что обязательно на сайте по 214-ФЗ",
+          "url": "https://zakonchek.ru/blog/reklama-zastroyschika-214-fz",
+          "snippet": "Новости Бизнес СМИ AdIndex из рубрики Право — Застройщиков могут обязать указывать в рекламе полную стоимость объектов — Также девелоперам нельзя будет заявлять о развитой инфраструктуре, если ее фактически нет. Под ..."
+        },
+        {
+          "title": "В рекламе не указали, где размещена проектная декларация",
+          "url": "https://sovetreklama.org/2025/07/v-reklame-ne-ukazali-gde-razmeshhena-proektnaja-deklaracija/",
+          "snippet": "Ссылка на проектную декларацию По 214-ФЗ застройщик обязан публиковать проектную декларацию на официальном сайте наш.дом.рф. И в любой рекламе ЖК должна быть ссылка на конкретную ..."
+        },
+        {
+          "title": "А В Рекламе У Застройщика И Сад И Школа? - Правовед.ru",
+          "url": "https://pravoved.ru/question/4505919/",
+          "snippet": "В силу части 7 статьи 5 ФЗ «О рекламе» не допускается реклама, в которой отсутствует часть существенной информации о рекламируемом товаре, об условиях его приобретения или ..."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com Школа в рекламе ЖК vs проектная декларация — ДДУ не подписали 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "GitHub - MrBrockGit/ForestRanger_2026: Проектная (учебная) практика, 1 ...",
+          "url": "https://github.com/MrBrockGit/ForestRanger_2026",
+          "snippet": ""
+        },
+        {
+          "title": "OFF-Prfoject · GitHub",
+          "url": "https://github.com/OFF-Prfoject",
+          "snippet": "Проектная (учебная) практика, 1 курс ИТ- и ИБ-направлений - MrBrockGit/ForestRanger_2026"
+        },
+        {
+          "title": "GitHub - MaratKorzhilov/practice-2026-1: Проектная (учебная) практика ...",
+          "url": "https://github.com/MaratKorzhilov/practice-2026-1",
+          "snippet": "Осенняя проектная школа Фарпост 2025 Отличные мысли! Оформлю это в стильный README.md, который покажет системный подход и понимание продукта."
+        },
+        {
+          "title": "GitHub - s00n3/locus: Сайт цифровой проектной школы ЛОКУС — Цифровая ...",
+          "url": "https://github.com/s00n3/locus",
+          "snippet": "This branch is up to date with mospol/practice-2025-1:master."
+        },
+        {
+          "title": "dist/vite.svg at main · userprabash/dist · GitHub",
+          "url": "https://github.com/userprabash/dist/blob/main/vite.svg",
+          "snippet": "Сайт цифровой проектной школы ЛОКУС — Цифровая кафедра Сеченовского университета - s00n3/locus"
+        },
+        {
+          "title": "GitHub",
+          "url": "https://github.com/facebookresearch/sam2/blob/main/assets/model_diagram.png?raw=true",
+          "snippet": "Contribute to userprabash/dist development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "Школа в рекламе ЖК vs проектная декларация — ДДУ не подписали forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Если школа в рекламе ЖК — застройщик обязан ее построить или нет?",
+          "url": "https://dzen.ru/a/acMAEg2DMQBBAKed",
+          "snippet": ""
+        },
+        {
+          "title": "Реклама застройщика: что обязательно на сайте по 214-ФЗ",
+          "url": "https://zakonchek.ru/blog/reklama-zastroyschika-214-fz",
+          "snippet": "Статья автора «Mapestate.ru» в Дзене : Маркетинговый рендер — это визуализация концепции, а не технический документ."
+        },
+        {
+          "title": "ДДУ: 12 пунктов, на которые смотрят юристы — чек-лист 2026",
+          "url": "https://novostroyker.ru/blog/sovety/dolevoe-uchastie-12-punktov-yurista",
+          "snippet": "Ссылка на проектную декларацию По 214-ФЗ застройщик обязан публиковать проектную декларацию на официальном сайте наш.дом.рф. И в любой рекламе ЖК должна быть ссылка на конкретную ..."
+        },
+        {
+          "title": "Что такое проектная декларация 2026 — ИнвестераПро",
+          "url": "https://investera.pro/help/chto-takoe-proektnaya-deklaraciya-2026",
+          "snippet": "Что проверить в договоре долевого участия: 12 ключевых пунктов от юриста — сроки, эскроу, штрафы, цена, отделка и риски покупателя."
+        },
+        {
+          "title": "Документация - ЖК Форма - Форум-групп девелоперская компания",
+          "url": "https://forum-gd.ru/forum-siti-dokumenty",
+          "snippet": "Проектная декларация по 214-ФЗ: две части, ЕИСЖС, срок сдачи и эскроу. Что сверить с рекламой и ДДУ до аванса. Кейс IV кв. 2026 и II кв. 2027."
+        },
+        {
+          "title": "Признание договора долевого участия недействительным судебная практика",
+          "url": "https://alexeydemidov.ru/blog/priznanie-dogovora-dolevogo-uchastiya-nedeystvitelnym-sudebnaya-praktika/",
+          "snippet": "Официальный пакет документов ЖК Форма. Полная юридическая документация от застройщика Форум-групп: проектная декларация, разрешения на строительство и ввод в эксплуатацию, ДДУ."
+        }
+      ],
+      "searched_at": "2026-10-01"
+    }
+  ],
+  "errors": []
+}
