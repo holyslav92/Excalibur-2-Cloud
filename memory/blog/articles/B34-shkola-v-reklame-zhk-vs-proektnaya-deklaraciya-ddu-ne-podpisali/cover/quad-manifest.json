@@ -1,0 +1,239 @@
+{
+  "topic_id": "B34",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Реклама обещает школу — документы ставят срок",
+  "cover_hook_highlight": "срок",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Школа в рекламе ЖК — в декларации 2030, ДДУ не подписали: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Шоурум: герой справа, PD 2030, рендер школы, flare, заголовок слева.",
+      "meme_caption_ru": "",
+      "sticky": "Смотрим декларацию",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломлённое недоверие, взгляд на дату 2030",
+      "meme_picks": [
+        "confused_math_lady",
+        "polite_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "ДДУ не подписали, оформление остановили до денег по сделке",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стойка: буклет со школой, ноутбук наш.дом.рф, календари, бронь; james_doakes в углу.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «ДДУ не подписали, оформление остановили до дене…» — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Рендер со школой",
+        "Три календаря",
+        "Наш дом точка рф"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "james_doakes"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "ДДУ не подписали, оформление остановили до денег по сделке",
+      "visual_type": "comparison_table",
+      "scene_hint": "Two-column infographic: glossy brochure promise vs official declaration dates.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Четырнадцать дней, Декларация по дому, Бронь на руках — иллюстрация к разбору…",
+      "labels": [
+        "Четырнадцать дней",
+        "Декларация по дому",
+        "Бронь на руках"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "«Школа рядом» — на рендере, в буклете и у менеджера",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стена шоурума: рендер школы, буклеты, поиск по PD, блик.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу ««Школа рядом» — на рендере, в буклете и у менед…» — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Школа к 2030",
+        "Первый класс три года",
+        "Поиск по документу"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За четырнадцать дней до ДДУ: вечером открыли проектную декларацию",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Кухня: ноутбук наш.дом.рф, распечатка, лист не подписываем.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За четырнадцать дней до ДДУ: вечером открыли пр…» — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Распечатка с датой",
+        "Сейчас не подписываем",
+        "Без скандала"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "В декларации школа к 2030 — а первый класс через три года",
+      "visual_type": "process_flow",
+      "scene_hint": "5 шагов: PD 2030, класс 3 года, без ДДУ; capybara в углу.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: ДДУ не подписали, Ни рубля, План три года — иллюстрация к разбору сделки.",
+      "labels": [
+        "ДДУ не подписали",
+        "Ни рубля",
+        "План три года"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "capybara_indifference"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "«Подпишите ДДУ, это общий план района» — семья сказала нет",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Timeline: ребёнок vs школа 2030; банк перенесли.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Договор не подписали, Деньги не ушли, Пауза до аванса — иллюстрация к разбору сделки.",
+      "labels": [
+        "Договор не подписали",
+        "Деньги не ушли",
+        "Пауза до аванса"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Раздел 22 и три смысла «школы» — таблица до подписи",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Диаграмма раздел 22: рендер, план, срок PD; surprised_tom угол.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: Раздел двадцать два, Три смысла школы, До подписи — иллюстрация к разбору сделки.",
+      "labels": [
+        "Раздел двадцать два",
+        "Три смысла школы",
+        "До подписи"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "surprised_tom"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмень — 3553",
+    "купить новостройку в тюмени — 686",
+    "проектная декларация застройщика — узкий спрос, topic anchor"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "ведущий стоит справа в светлом шоуруме перед большим рендером школы; слева оставлена чистая белая зона под заголовок, внизу отдельная чистая зона под телефон",
+    "location": "яркий офис-продаж с настенным рендером жилого комплекса и школы, рядом стойка с раскрытой проектной декларацией",
+    "meme": "confused_math_lady и polite_cat",
+    "prop_set": "распечатка проектной декларации с выделенным разделом 22 и датой 2030, буклет ЖК с изображением школы, красный маркер, три маленьких настольных календаря",
+    "sticker_set": "маленький confused_math_lady в верхнем правом углу и маленький polite_cat у нижнего левого края, оба вне зон заголовка, лица и телефона",
+    "joke": "на глянцевом рендере школа уже сияет, а три календаря рядом с документом комично показывают, сколько ещё ждать",
+    "outfit": "светло-голубая рубашка с закатанными рукавами, песочные брюки, тонкие золотистые часы",
+    "emotion": "ошеломлённое недоверие после чтения срока 2030",
+    "pose_framing": "ростовой трёхчетвертной кадр справа, корпус чуть наклонён к документу, лицо развёрнуто к зрителю",
+    "action": "ведущий держит раскрытую распечатку раздела 22 и пальцем указывает на выделенную дату 2030"
+  },
+  "cover_emotion": "ошеломлённое недоверие, взгляд на дату 2030"
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali",
+  "topic_id": "B34",
+  "post_id": 11359,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 979053,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11359 slug=shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali\nOK categories=36,34,32\nOK yoast_social_image=1\nOK featured_image=11360\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11361 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali-inline-03.png\nOK inline_alt=11361\nOK inline_description=11361\nOK inline_image_upload=11362 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali-inline-04.png\nOK inline_alt=11362\nOK inline_description=11362\nOK inline_image_upload=11363 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali-inline-05.png\nOK inline_alt=11363\nOK inline_description=11363\nOK inline_image_upload=11364 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali-inline-06.png\nOK inline_alt=11364\nOK inline_description=11364\nOK inline_image_upload=11365 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali-inline-01.png\nOK inline_alt=11365\nOK inline_description=11365\nOK inline_image_upload=11366 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali-inline-02.png\nOK inline_alt=11366\nOK inline_description=11366\nOK inline_image_upload=11367 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali-inline-07.png\nOK inline_alt=11367\nOK inline_description=11367\npermalink={{SITE_BASE}}/blog/ipoteka/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali/",
+    "errors": []
+  }
+}
