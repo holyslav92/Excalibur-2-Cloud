@@ -3,9 +3,9 @@
   "status": "PASS",
   "checked_at": "2026-08-21",
   "topic_id": "B07",
-  "cover_md5": "9741c8be92439436ec791d901636bece",
+  "cover_md5": "67ad76ffbfd2897421527f096d29b00e",
   "pixel_qa": true,
-  "pixel_description": "1200x675; mean_lum=219; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.33",
+  "pixel_description": "1200x675; mean_lum=215; host_crop=medium bust; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.18",
   "checks": {
     "pixel_light_high_key": true,
     "pixel_host_close_up": true,
@@ -60,11 +60,9 @@
       1200,
       675
     ],
-    "mean_luminance": 218.8,
+    "mean_luminance": 214.5,
     "gold_bands": [],
-    "host_dark_ratio": 0.059
+    "host_dark_ratio": 0.087
   },
-  "notes": "Pixel QA on cover.png md5=9741c8be92439436ec791d901636bece; 1200x675; mean_lum=219; host_crop=close-up face+shoulders; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.33",
-  "gate_status": "PASS",
-  "gate_errors": []
+  "notes": "Pixel QA on cover.png md5=67ad76ffbfd2897421527f096d29b00e; 1200x675; mean_lum=215; host_crop=medium bust; garment=light/warm garment dominant; wordstat=0 paper-gold regions; face_h_frac=0.18"
 }

@@ -541,8 +541,10 @@ def build_solo_cover_prompt(
 
     bans = (
         "BAN HARD: ANY Cyrillic/latin text on clothes/jacket/vest/chest/torso; Wordstat/search-keyword strips/bars; "
-        "beige/gold query labels top-left; blue/cyan outline halos on hair/face; smeared ghost text; black blazer; "
-        "mustard+navy vest repeat; dark cinematic; chubby host; polite studio smile copy; text on skin."
+        "stacked off-white rounded suggestion bars top-left; beige rectangle on forehead/hair; "
+        "FORBIDDEN WORDS anywhere on cover: «наследство», «наследство квартиры», «наследники», "
+        "«вступление в наследство», «купить квартиру в тюмени», «банкротство продавца», «вторичка тюмень»; "
+        "blue/cyan outline halos on hair/face; black blazer; dark cinematic; chubby host; polite studio smile."
     )
 
     return (
@@ -560,7 +562,8 @@ def build_solo_cover_prompt(
         f"{compact(scene, COVER_SCENE_HINT_COMPACT)}. "
         "Close-up face+shoulders LEFT or center-left (~35% frame) — NOT full-bleed face crop, room for headline right. "
         "Tiny thinking-cat meme sticker bottom-right corner ONLY — ≥80px clear margin from phone/headline. "
-        "ZERO Wordstat/search-keyword strips — never paint query bars; optional one yellow sticky from hook only. "
+        "ZERO Wordstat/search-keyword strips — top-left must be CLEAN board/wall only; "
+        "one yellow sticky «Обещаний продавца мало» center-left allowed; NO other labels. "
         "Sun flare, tape/pins aesthetic on board only, perfect Cyrillic, #FFF bright."
     )
 
