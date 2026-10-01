@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "sameAs": [
+        "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali/#blogposting",
+      "headline": "Школа в рекламе ЖК — в декларации 2030, ДДУ не подписали",
+      "description": "На рендере школа была «рядом», а в декларации — через четыре года. Тюменская семья сверила даты до ДДУ и поняла: ребёнка ждёт совсем другой маршрут.",
+      "datePublished": "2026-10-01",
+      "inLanguage": "ru-RU",
+      "url": "{{SITE_BASE}}/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/shkola-v-reklame-zhk-vs-proektnaya-deklaraciya-ddu-ne-podpisali/"
+      },
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      }
+    }
+  ]
+}
