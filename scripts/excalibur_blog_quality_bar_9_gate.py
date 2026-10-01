@@ -386,13 +386,28 @@ def check_socials(html: str) -> bool:
     return check_end_cta(html)
 
 
-def check_dual_cta(html: str) -> bool:
+def check_dual_cta(html: str, article_dir: Path | None = None) -> bool:
     low = (html or "").lower()
     consult = any(x in low for x in ("консультац", "напишите", "напиши", "написать", "telegram"))
-    deal = any(
-        x in low
-        for x in ("к делу", "подключаюсь", "веду сделк", "от звонка до регистрации", "до аванса")
-    )
+    deal_phrases = [
+        "к делу",
+        "подключаюсь",
+        "веду сделк",
+        "от звонка до регистрации",
+        "до подпис",
+        "до эскроу",
+        "между бронью",
+        "до открытия эскроу",
+    ]
+    rubric: str | None = None
+    if article_dir is not None:
+        from excalibur_blog_slot_rubric_mechanism import resolve_article_slot_rubric
+
+        rubric = resolve_article_slot_rubric(article_dir)
+    # «до аванса» — механика вторички; не подсказывать Sol в novostroyki/arenda (B34 pass-2 repair).
+    if rubric not in ("novostroyki", "arenda"):
+        deal_phrases.append("до аванса")
+    deal = any(x in low for x in deal_phrases)
     banned = any(x in low for x in ("лучший риэлтор", "нулевой риск", "гарантия нул"))
     return consult and deal and not banned
 
@@ -624,7 +639,7 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
     checks["end_cta_full_channels"] = check_end_cta(html)
     interlink_ok, interlink_count = check_interlinks(html, root, article_dir)
     checks["interlink_siblings_2_4"] = interlink_ok
-    checks["dual_cta_soft"] = check_dual_cta(html)
+    checks["dual_cta_soft"] = check_dual_cta(html, article_dir)
     checks["word_count_1400_1600"] = WORD_TARGET_MIN <= wc <= WORD_TARGET_MAX
     checks["word_count_hard_max_1750"] = wc <= WORD_HARD_MAX
     reading_min = estimate_dzen_reading_minutes(wc)

@@ -1,0 +1,28 @@
+{
+  "slug": "za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke",
+  "topic_id": "B34",
+  "post_id": 11372,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1178724,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11372 slug=za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke\nOK categories=32,36,34\nOK yoast_social_image=1\nOK featured_image=11373\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11374 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke-inline-01.png\nOK inline_alt=11374\nOK inline_description=11374\nOK inline_image_upload=11375 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke-inline-02.png\nOK inline_alt=11375\nOK inline_description=11375\nOK inline_image_upload=11376 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke-inline-03.png\nOK inline_alt=11376\nOK inline_description=11376\nOK inline_image_upload=11377 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke-inline-04.png\nOK inline_alt=11377\nOK inline_description=11377\nOK inline_image_upload=11378 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke-inline-05.png\nOK inline_alt=11378\nOK inline_description=11378\nOK inline_image_upload=11379 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke-inline-06.png\nOK inline_alt=11379\nOK inline_description=11379\nOK inline_image_upload=11380 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke-inline-07.png\nOK inline_alt=11380\nOK inline_description=11380\npermalink={{SITE_BASE}}/blog/ipoteka/za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke/",
+    "errors": []
+  }
+}

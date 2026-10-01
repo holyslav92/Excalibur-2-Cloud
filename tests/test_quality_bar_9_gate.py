@@ -76,6 +76,35 @@ class QualityBar9GateTest(unittest.TestCase):
             self.assertFalse(_stamped_cover_qa_visual_pass(article))
 
 
+class DualCtaSlotRubricTest(unittest.TestCase):
+    def test_novostroyki_dual_cta_does_not_require_do_avansa_phrase(self) -> None:
+        from excalibur_blog_quality_bar_9_gate import check_dual_cta
+
+        with tempfile.TemporaryDirectory() as td:
+            ad = Path(td)
+            (ad / "article.meta.json").write_text(
+                json.dumps({"slot_rubric": "novostroyki"}, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            html = (
+                "<p>Напишите на консультацию — подключаюсь к делу до открытия эскроу, "
+                "дальше веду сделку до регистрации.</p>"
+            )
+            self.assertTrue(check_dual_cta(html, ad))
+
+    def test_vtorichka_dual_cta_still_accepts_do_avansa(self) -> None:
+        from excalibur_blog_quality_bar_9_gate import check_dual_cta
+
+        with tempfile.TemporaryDirectory() as td:
+            ad = Path(td)
+            (ad / "article.meta.json").write_text(
+                json.dumps({"slot_rubric": "vtorichka"}, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            html = "<p>Напишите на консультацию — подключусь до аванса.</p>"
+            self.assertTrue(check_dual_cta(html, ad))
+
+
 class StampCoverQaEscapePreserveTest(unittest.TestCase):
     def test_stamp_preserves_manual_escape_when_pixel_reruns_fail(self) -> None:
         from excalibur_blog_cover_qa_pixels import PixelQAResult, stamp_cover_qa_json

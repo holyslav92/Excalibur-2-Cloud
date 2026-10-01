@@ -23,6 +23,7 @@ category: env
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
 - **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9749 ingest skipped; B23 lesson recorded without behavioral signals (newbuild_apartments_instead_flat_ddu_tyumen cluster).
+- **2026-10-01 B34 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 11372 ingest skipped; B34 lesson recorded without behavioral signals (newbuild_family_mortgage_rental_listing_before_escrow_tyumen cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
@@ -1063,3 +1064,43 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20261001-0845-dual-cta-avansa-novostroyki-b34
+status: fixed
+run_date: 2026-10-01
+role: excalibur-blog-fixer
+topic_id: B34
+article_dir: memory/blog/articles/B34-za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke
+severity: medium
+category: script
+
+### What went wrong
+- Quality-bar-9 Sol repair pass 1 fixed CTA markup/brand; pass 2 needed for `no_foreign_slot_rubric_mechanism` («Подключаюсь до аванса» в слоте novostroyki).
+- `check_dual_cta` считал «до аванса» валидной deal-фразой для любого слота → Sol получал противоречивые сигналы (dual PASS path vs slot rubric FAIL).
+
+### How the agent recovered this run
+- Второй quality-bar Sol repair заменил «до аванса» на «до открытия эскроу»; publish post 11372 OK.
+- Cover OCR escape + theme_contract_deploy ENOENT — уже канон (B11/B20); Metrika credentials — открытый env INC, не B34.
+
+### Durable fix needed before next run
+- Slot-aware `check_dual_cta`: не подсказывать «до аванса» для novostroyki/arenda; novostroyki-safe deal phrases в gate.
+
+### Suggested files to inspect/change
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `tests/test_quality_bar_9_gate.py`
+
+### Secrets
+- none recorded
+
+### Fixer resolution
+fixed_at: 2026-10-01
+fix_summary:
+- `check_dual_cta(html, article_dir)` — rubric-aware deal phrases; «до аванса» только vtorichka/без рубрики; добавлены эскроу/подписи фразы.
+files_changed:
+- `scripts/excalibur_blog_quality_bar_9_gate.py`
+- `tests/test_quality_bar_9_gate.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_quality_bar_9_gate.py`
+- `python3 -m unittest tests.test_quality_bar_9_gate.DualCtaSlotRubricTest`
+- `python3 scripts/excalibur_blog_quality_bar_9_gate.py --article-dir memory/blog/articles/B34-za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke` → PASS
+commit: 52a450ff
