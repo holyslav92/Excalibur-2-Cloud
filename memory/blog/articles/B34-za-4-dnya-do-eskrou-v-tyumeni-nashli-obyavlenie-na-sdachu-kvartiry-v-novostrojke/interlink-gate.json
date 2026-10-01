@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "topic_id": "B34",
+  "slug": "za-4-dnya-do-eskrou-v-tyumeni-nashli-obyavlenie-na-sdachu-kvartiry-v-novostrojke",
+  "candidates_count": 30,
+  "outbound_found": [
+    {
+      "slug": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli",
+      "title": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli"
+    },
+    {
+      "slug": "za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t",
+      "title": "za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
