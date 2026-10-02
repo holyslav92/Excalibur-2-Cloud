@@ -1,95 +1,100 @@
-# Scout inputs — 2026-09-19 (B28)
+# Scout inputs — 2026-10-02 (B34)
 
 **CRITICAL EXECUTION CONTEXT:** You are already running inside `excalibur_blog_derouter_opus_chat.py` (utility tier gpt-5.6-terra). The conductor completed all shell/MCP/Wordstat gates. **Your job is ONLY to write the Scout handoff markdown body** — no tool calls, no BLOCKER messages, no refusals. Output the complete handoff text now.
 
-**run_date:** 2026-09-19 (YEKT Saturday slot 12:00 — weekend automation)
-**tenant:** The Риэлтор — Святослав Шакин, Тюмень (tymenrieltor.ru)
-**topic_market_focus:** newbuild_only
-**dzen_rf_pack:** true
+**SLOT RUBRIC OVERRIDE (2026-09-28 owner, HARD for this run):** `shared/slot-rubric-lock.md` + `shared/pipeline-canon.json` → `slot_rubric_mix` replace legacy «только новостройки» **per slot**. This run: **15:00 YEKT → `vtorichka` ONLY** (`python3 scripts/excalibur_blog_slot_rubric.py --current` → vtorichka). `shared/newbuild-focus-lock.md` applies to **`novostroyki` slots only**. Secondary market casus is **REQUIRED**, not forbidden. Do **not** reject for «secondary plot» — reject only if anti-dupe/Wordstat/slot mechanism fails (already PASS below).
 
-## Slot constraints (HARD FORBIDDEN)
+**run_date:** 2026-10-02  
+**slot:** 15:00 YEKT  
+**slot_rubric:** vtorichka (вторичка) — NOT newbuild-only for this slot (`shared/slot-rubric-lock.md`)  
+**topic_id:** B34  
+**tenant:** The Риэлтор — Святослав Шакин, Тюмень  
+**dzen_rf_pack:** true  
 
-- NO B27 today: land lease not ownership in declaration (cluster newbuild_land_lease_not_ownership_declaration_tyumen)
-- NO family mortgage revoked at child 7 years (2026-09-19 live)
-- NO cottage kadastr boundary 1.8m (2026-09-18 live)
-- NO BTI ate 4.2 sqm DDU (2026-09-18 live)
-- NO 28 days assignment lost to another buyer (2026-09-18 live)
-- NO mortgage approval expired day 87 (2026-09-18 live)
-- NO matkapital/opieka kids shares (2026-09-17 live)
-- NO DDU appendix rental ban investor +240k (2026-09-17 live)
-- NO different building 10 days before DDU (2026-09-17 live)
-- NO bank appraisal -900k vs DDU (cluster bank_appraisal_below_ddu_price locked)
-- NO parking not in declaration (2026-09-16 live)
-- NO insurance 186k day before DDU/escrow (2026-09-16 live)
-- NO frozen clusters in memory/scout/used-clusters.json (30d): escrow zero, booking expired price hike, trade-in, installment penalty, keys delay penalty, mortgage rate hike, developer entity change, cellar, acceptance defects, etc.
-- NO secondary market plots
+## Slot constraints (HARD FORBIDDEN — owner + live WP)
+
+Do NOT recycle these recent plots (even with new title):
+- банкрот продавца на вторичке (2026-09-30 live)
+- дарственная пенсионерка / остановила сделку (2026-09-29)
+- долг за свет 186 тыс. перед авансом (B33, 2026-09-28)
+- семейная ипотека на вторичке с 1 октября / лимит не сошёлся (2026-10-01 live)
+- запрет пристава сорвал аванс (2026-09-30 live)
+- аренда 3 года в ЕГРН остановила покупку (2026-09-29)
+- NO retitle newbuild (ДДУ/эскроу/бронь) into this vtorichka slot
+
+## Trend Radar (slot 15:00, rubric vtorichka)
+
+Source: `memory/blog/trend-radar/trend-radar.json` (generated 2026-10-02T10:22:30Z)
+
+- **viral_mechanism (SAME energy only):** `almost lost перед ключами/деньгами` — top angle Life «С 1 октября вырастет спрос на вторичную недвижимость…» (views 38614, viral_score 8.52)
+- **Mirror for this topic:** `someone_else_took_object` + `clock_ran_out` — семья «успела» по цене, но не по авансу; другой покупатель забрал объект на фоне октябрьского спроса на вторичку (без сюжета семейной ипотеки 1 октября)
 
 ## Anti-repeat preflight (DONE)
 
-- `python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters` → 30 active locks (last_sync 2026-09-19)
-- Live WP recent (~12): B27 land lease declaration, family mortgage child 7, cottage kadastr 1.8m, BTI -4.2 sqm, assignment 28d, ipoteka day 87, matkapital day 47, rental ban appendix, other corpus 10d, bank appraisal -900k, parking declaration, insurance 186k
-- `scout_helper.py --check-query` PASS for proposed title+cluster+slug (fingerprint booking_expired — distinct from booking_expired_price_hike price-hike plot and B27 land-lease plot)
-- `excalibur_blog_topic_focus.py` PASS (on-focus: дду)
-- `story_dup.py --text` PASS
+```bash
+python3 scripts/excalibur_blog_scout_story_dup.py --sync-used-clusters
+# → 14 active locks (last_sync 2026-10-02)
+```
 
-## Proposed topic (PASS topic_focus + scout_helper + story_dup PASS)
+Live WP / ledger recent (~12): кладовая из брони 190k (newbuild), презентация 35 vs ДДУ 89 (newbuild), семейная ипотека вторичка 1 окт, эскроу+«сдам» newbuild, школа в рекламе ЖК, банкрот продавца, запрет пристава, двор без машин, промёрзшая стена, аренда в ЕГРН, дарственная, долг за свет B33.
 
-- **topic_id:** B28
-- **title_draft:** Под Тюменью в брони обещали газ в 2026 — в декларации КП дата 2028, до ДДУ не дошли
-- **slug:** v-tyumeni-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-doshli
-- **article_dir:** memory/blog/articles/B28-v-tyumeni-v-broni-obeschali-gaz-v-2026-v-deklaracii-kp-data-2028-do-ddu-ne-doshli
-- **cluster_id (new):** newbuild_kp_gas_declaration_date_mismatch_tyumen
-- **top_energy_mirror:** paper_clean_then_broke
-- **newbuild_mechanism:** Семья покупает готовый дом в коттеджном посёлке под Тюменью по ДДУ. В брони и презентации менеджер зафиксировал «газ подключён / подключение в 2026». Перед подписанием ДДУ открыли проектную декларацию на dom.rf — в графе инженерных сетей **срок ввода газопровода в эксплуатацию: IV квартал 2028**, не 2026. Семья с детьми (отопление, котёл, бюджет) отказалась от ДДУ, бронь 200 тысяч вернули частично, на эскроу не вышли
-- **why_newbuild_not_secondary:** Сюжет только в цепочке покупки дома от застройщика в КП: бронь, проектная декларация 214-ФЗ, ДДУ на дом, сроки коммуникаций застройщика. Нет продавца вторички, ЕГРН-квартиры, наследников, бабушки, опеки или соседской доли
-- **story_dup_check:** PASS — distinct from B27 land lease (different mechanism: gas infrastructure date vs land tenure), cottage kadastr boundary 1.8m (acceptance/plot boundary, not utilities), B25 chistovaya on acceptance (finishing, not gas), booking_expired_price_hike (section/price, not utilities timeline)
+**Proposed cluster (NEW):** `secondary_rival_buyer_snatched_advance_tyumen`
+
+**title_draft:** В Тюмени на вторичке согласовали цену — через час другой покупатель внёс аванс
+
+**slug hint:** v-tyumeni-na-vtorichke-soglasovali-tsenu-cherez-chas-drugoj-pokupatel-vnes-avanс
+
+```bash
+python3 scripts/excalibur_blog_scout_helper.py --check-query "В Тюмени на вторичке согласовали цену — через час другой покупатель внёс аванс secondary_rival_buyer_snatched_advance_tyumen clock_ran_out"
+# → ANTI-DUPE HARD PASS, NO CANNIBALIZATION RISK
+
+python3 scripts/excalibur_blog_topic_focus.py --text "В Тюмени на вторичке согласовали цену — через час другой покупатель внёс аванс"
+# → TOPIC FOCUS PASS (allow_hit=аванс, vtorichka slot)
+
+python3 scripts/excalibur_blog_slot_rubric.py --current
+# → vtorichka
+```
+
+Rejected candidates (for rework log):
+- bank appraisal −620k before advance → 42% overlap with bankruptcy «семья не перевела деньги» skeleton (BLOCK)
+- kapremont / MFO pledge in EGRN → cluster lock `egrn_line_blocks_advance` B09 (BLOCK)
+- seller price hike after mortgage → `mortgage_rate_hike_before_ddu` lock (BLOCK)
 
 ## Dzen news-casus shape (target PASS)
 
-- **event:** семья с двумя детьми выбрала готовый дом в коттеджном посёлке под Тюменью; менеджер показал участок с табличкой «газ» и в брони написал «коммуникации — газ, подключение 2026»
-- **risk:** без газа дом зимой неэксплуатируем или потребует дорогой альтернативы (электрокотёл/газгольдер); банк при ипотеке на ИЖС/дом может отказать или урезать сумму, если в декларации срок сетей сдвинут на 2+ года
-- **time:** за 6 дней до назначенного подписания ДДУ; вечером перед визитом в банк сверили декларацию на dom.rf
-- **finale:** в декларации — ввод газопровода IV кв. 2028; застройщик предложил «подпишите ДДУ, газ дотащим раньше по внутреннему графику»; семья отказалась; бронь 200 тыс. вернули 140 тыс. (удержали 60 за «бронирование лота»), ДДУ не подписали, эскроу не открывали
-- **comment_magnet_angle:** «Если в брони газ в 2026, а в декларации КП — 2028, вы бы подписали ДДУ, чтобы не потерять бронь, или ушли бы сразу?»
+- **event:** семья в Тюмени нашла двушку на вторичке, торг согласовали с продавцом устно и в переписке; риэлтор предупредил про очередь покупателей после всплеска спроса с 1 октября
+- **risk:** без задатка/аванса продавец legally free — другой покупатель вносит аванс первым; у семьи остаются одобренная ипотека и потерянный объект
+- **time:** «через час» после согласования цены, накануне планируемого аванса
+- **finale:** продавец принял аванс от другого, объявление сняли; семья не успела перевести деньги, вернулись в поиск на перегретом рынке
+- **comment_magnet_angle:** «Вы бы внесли аванс в тот же день без расширенной выписки или до конца проверили — даже если квартиру могут забрать?»
 
-## Klyshin hook
+## Wordstat MCP-KV (live, regions 55+11176, compare 225)
 
-- **klyshin_hook:** none | original: none (fresh Tyumen KP gas-declaration casus without Klyshin)
+**wordstat_preflight:** `wordstat_get_user_info` → OK (Yandex Cloud API)
 
-## Wordstat MCP-KV (live 2026-09-19)
+| probe | freq (55+11176) | note |
+|-------|-----------------|------|
+| покупка квартиры на вторичке тюмень | API empty | rework |
+| вторичное жилье тюмень | 1113 | spine candidate |
+| купить квартиру вторичка тюмень | **3348** | **final P0** |
+| аванс при покупке квартиры | 13 | casus lexicon |
+| обременение при покупке квартиры | 30 | not this plot |
+| ипотека на вторичку тюмень | 48 | secondary |
+| семейная ипотека на вторичку в тюмени | 18 | **avoid plot** (live WP) |
 
-**Preflight:** wordstat_get_user_info OK (Yandex Cloud API, Folder ID b1g6bq34gkivjj20be06)
+**compare 225:** «купить квартиру в тюmeni вторichka» → **6220**
 
-| probe | regions | freq (phrase total) |
-|-------|---------|---------------------|
-| коттеджные поселки тюмень | 55,11176 | 1455 |
-| коттеджные поселки | 225 (compare) | 274847 |
-| дома в коттеджных поселках тюмени | 55,11176 | 55 |
-| тюмень купить дом в коттеджном поселке | 55,11176 | 23 |
-| газ коттеджный посёлок | 55,11176 | 3 |
-| подключение газа коттеджный посёлок | 55,11176 | API empty (treat as <5) |
-| новостройки тюмень | 55,11176 | 4430 (context spine) |
-| новостройки тюмени от застройщика с отделкой | 55,11176 | 23 (not used — B25/B27 overlap risk) |
+**wordstat_rework:** probe «вторичное жилье тюmenь» 1113 → probe «купить квартиру вторichka tюmenь» **3348** → final P0 «купить квартиру в тюmeni вторichka» **3348** (55+11176)
 
-**wordstat_rework log:**
-- probe «газ коттеджный посёлок» 55,11176 → 3 (too weak for P0 alone)
-- probe «подключение газа коттеджный посёлок» 55,11176 → empty/<5 (too weak)
-- probe «высота потолков новостройка» 55,11176 → 3 (alternate angle rejected — weak + apartment not KP)
-- **rework:** anchor buyer spine «коттеджные поселки тюмень» (KP/house demand) + gas-date mechanism in H1/body
-- **final P0 «коттеджные поселки тюмень» regions 55,11176,compare225 freq 1455 (55+11176) / RU context «коттеджные поселки» 274847 (225)**
+**klyshin_hook:** none (optional not used; fresh Tyumen casus without Klyshin)
 
-## signal_urls (research)
+## Handoff fields to emit (complete)
 
-- https://dzen.ru/holyslav
-- https://www.domrf.ru/ — реестр застройщиков / проектные декларации (сроки инженерных сетей, газ)
-- https://www.consultant.ru/document/cons_doc_LAW_51040/ — 214-ФЗ, проектная декларация
-- https://t.me/klyshin_A — checked, not used
-- {{SITE_BASE}}/blog/
-- https://t.me/Tyumen_Rieltor
-
-## Output required
-
-Write complete Scout handoff markdown per SKILL.md with all fields:
-wordstat_preflight, top_energy_mirror, newbuild_mechanism, why_newbuild_not_secondary, klyshin_hook, anti_repeat_preflight, dzen_casus_shape PASS (event/risk/time/finale), comment_magnet_angle, wordstat_rework, wordstat P0 with mcp_kv + regions 55,11176,compare225, story_dup_check PASS + cluster_id, h1_fingerprint_check, formula_spam_check, anti_dupe_hard: PASS.
-
-Lock topic_id B28, title, slug, article_dir, signal_urls, research angles for Research role.
+- slot_rubric: vtorichka
+- viral_mechanism: almost_lost_before_keys_money → someone_else_took_object
+- top_energy_mirror: someone_else_took_object / clock_ran_out
+- vtorichka_mechanism: конкуренция покупателей + аванс на вторичке (не ДДУ/эскроу)
+- dzen_casus_shape: PASS
+- comment_magnet_angle: (see above)
+- wordstat + story_dup + anti_dupe_hard: PASS
+- research_start command with --topic-id B34
