@@ -1,0 +1,273 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1024,
+          576
+        ],
+        "split_meta": {
+          "split_mode": "mechanical_center",
+          "h_gutter_px": null,
+          "v_gutter_px": null,
+          "requested_mode": "auto",
+          "fallback_reason": "gutter_bands_not_found"
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1024,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Согласовали цену на двушку забрали авансом в Тюмени: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 0,
+              "right": 2048,
+              "bottom": 576
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Через час: другой покупатель внёс аванс — кварт…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Через час: другой покупатель внёс аванс — квартиру сняли с продажи"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 576,
+              "right": 1024,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Через час, Внёс аванс, Сняли объявление — иллюстрация к разбору сделки.",
+            "h2_anchor": "Через час: другой покупатель внёс аванс — квартиру сняли с продажи"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1024,
+              "top": 576,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Двушка на вторичке в Тюмени: цену согласовали,…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Двушка на вторичке в Тюмени: цену согласовали, а объявление ещё висело"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1014,
+          566
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 566,
+            "end": 586
+          },
+          "v_gutter_px": {
+            "start": 1014,
+            "end": 1034
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0079,
+            "per_panel_crop_loss": {
+              "top_left": 0.0079,
+              "top_right": 0.0079,
+              "bottom_left": 0.0079,
+              "bottom_right": 0.0079
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 4,
+              "top": 0,
+              "right": 1010,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1014,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Переписка о цене и очередь из просмотров» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Переписка о цене и очередь из просмотров"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1038,
+              "top": 0,
+              "right": 2044,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 0,
+              "right": 2048,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Аванс не задаток, Разная сила защиты, Нужен договор — иллюстрация к разбору сделки.",
+            "h2_anchor": "Финал для семьи: ипотека на руках, объекта уже нет"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 586,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 586,
+              "right": 1014,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Расширенная выписка ЕГРН, Проверить собственников, Сверить обременения — иллюстрация к…",
+            "h2_anchor": "Почему «договорились» и «зафиксировали деньгами» — разные вещи"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1038,
+              "top": 586,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 586,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Сначала документы, Потом деньги, Цена письменно — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что успеть проверить, если объект горячий, а время давит"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Через час: другой покупатель внёс аванс — квартиру сняли с продажи",
+    "skip inline_2: already correct under H2 — Через час: другой покупатель внёс аванс — квартиру сняли с продажи",
+    "skip inline_3: already correct under H2 — Двушка на вторичке в Тюмени: цену согласовали, а объявление ещё висело",
+    "moved inline_4 → H2 — Переписка о цене и очередь из просмотров (was under [финал для семьи: ипотека на руках, объекта уже нет]; removed=1)",
+    "moved inline_5 → H2 — Финал для семьи: ипотека на руках, объекта уже нет (was under [почему «договорились» и «зафиксировали деньгами» — разные вещи]; removed=1)",
+    "moved inline_6 → H2 — Почему «договорились» и «зафиксировали деньгами» — разные вещи (was under [что успеть проверить, если объект горячий, а время давит]; removed=1)",
+    "moved inline_7 → H2 — Что успеть проверить, если объект горячий, а время давит (was under [таблица: переписка, аванс, задаток, предварительный договор]; removed=1)"
+  ]
+}
