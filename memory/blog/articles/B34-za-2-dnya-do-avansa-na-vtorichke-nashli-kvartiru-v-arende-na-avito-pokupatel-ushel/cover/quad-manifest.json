@@ -1,0 +1,246 @@
+{
+  "topic_id": "B34",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Квартиру сдали, покупатель ушёл без аванса",
+  "cover_hook_highlight": "сдали",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Мужчина у входа в квартиру сравнивает фотографии на телефоне, пока покупатель уходит из подъезда.",
+      "scene_hint": "Подъезд вторички Тюмени: терракотовая рубашка, фото на смартфоне, покупатель у двери.",
+      "meme_caption_ru": "",
+      "sticky": "Аванс не внесли",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "ошеломление, сжатые губы, взгляд на экран"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Выписка без найма — семья уже считала квартиру своей",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Прихожая: ипотека, ключи, «2 дня», без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Выписка без найма — семья уже считала квартиру…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "ипотека одобрена",
+        "аванс через два дня",
+        "квартира согласована"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Выписка без найма — семья уже считала квартиру своей",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: ЕГРН без найма vs фактическое проживание; gold-black collage.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: ЕГРН без жильцов, обременений нет, проверка пройдена — иллюстрация к разбору…",
+      "labels": [
+        "ЕГРН без жильцов",
+        "обременений нет",
+        "проверка пройдена"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "За два дня до аванса: на Авито активное «сдам» с теми же фото",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема: карточки продажи и аренды, одинаковые фото; красные связи, золото.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Авито: «сдам», те же фотографии, объявление активно — иллюстрация к разбору сделки.",
+      "labels": [
+        "Авито: «сдам»",
+        "те же фотографии",
+        "объявление активно"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "За два дня до аванса: на Авито активное «сдам» с теми же фото",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Гостиная сдаваемой квартиры, смартфон с карточкой аренды, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «За два дня до аванса: на Авито активное «сдам»…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "продавец: «старое»",
+        "объявление не сняли",
+        "срок не объяснили"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Продавец говорит «старое объявление», жилец — ещё восемь месяцев",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Шкала: слова продавца vs «8 месяцев» жильца; grumpy_cat угол.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: жилец подтвердил аренду, живёт восемь месяцев, квартира занята — иллюстрация к разбору сделки",
+      "labels": [
+        "жилец подтвердил аренду",
+        "живёт восемь месяцев",
+        "квартира занята"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Аванс не внесли — покупатель ушёл смотреть другой вариант",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Диаграмма: стоп авансу → покупатель ищет другой объект; стрелки.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: аванс не внесли, покупатель ушёл, выбрали другой объект — иллюстрация к разбору сделки.",
+      "labels": [
+        "аванс не внесли",
+        "покупатель ушёл",
+        "выбрали другой объект"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что сверить до аванса: площадки, жильцы, ЕГРН и условия возврата",
+      "visual_type": "labeled_checklist",
+      "scene_hint": "Чек-лист: площадки, жильцы, ЕГРН, возврат; math lady угол.",
+      "alt": "чеклист ошибок vs правильный путь по новостройке в Тюмени: проверь аренду заранее, до передачи денег, сверь фотографии — иллюстрация к…",
+      "labels": [
+        "проверь аренду заранее",
+        "до передачи денег",
+        "сверь фотографии"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить квартиру тюмень вторичка",
+    "снять квартиру тюмень",
+    "проверить квартиру перед покупкой"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "Вертикальный динамичный поясной кадр: ведущий расположен справа, свободная светлая зона слева и сверху оставлена под hook; на дальнем плане у выхода уходит размытая фигура покупателя.",
+    "location": "Светлый подъезд у входа в квартиру на вторичном рынке Тюмени, с дневным солнцем из стеклянной двери.",
+    "meme": "hide_pain_harold, smudge_cat",
+    "props": [
+      "смартфон с нейтральной карточкой аренды без читаемого текста",
+      "связка ключей",
+      "тонкая папка с документами",
+      "лист с одинаковыми миниатюрами фотографий квартиры"
+    ],
+    "stickers": "hide_pain_harold — маленький стикер в правом верхнем углу; smudge_cat — маленький стикер внизу справа. Каждый не больше 15% кадра, не пересекает лицо, hook и обязательный телефон, отступ от телефона не менее 80 px.",
+    "joke": "Герой уже держит ключи и документы, но экран телефона показывает, что квартира словно успела «уйти в аренду» раньше сделки; Harold скрывает боль, кот недоверчиво смотрит на совпадение фото.",
+    "outfit": "Терракотовая рубашка-оверсайз поверх кремовой футболки, светлые брюки; без чёрного пиджака.",
+    "emotion": "Сдержанное ошеломление и раздражённая ясность после обнаружения активной аренды.",
+    "pose_framing": "Поясной кадр в три четверти, корпус наклонён к экрану, одна рука держит смартфон, другая — ключи и папку; не бюст слева и не боковой talking-head.",
+    "action": "Сверяет на телефоне совпадающие фотографии продажи и аренды, замечая, как покупатель разворачивается к выходу.",
+    "light_style": "High-key дневной свет, солнечный flare у двери, белые стены, мягкий золотой glow, бумажный collage и тонкие чёрные акценты; без тёмного cinematic-эффекта.",
+    "title_zone": "Чистая светлая зона слева и сверху для hook; номер телефона размещается отдельно и не перекрывается стикерами или предметами.",
+    "wordstat_stickers_log_only": [
+      "купить квартиру тюмень вторичка",
+      "снять квартиру тюмень",
+      "проверить квартиру перед покупкой"
+    ],
+    "prop_set": "смартфон с нейтральной карточкой аренды без читаемого текста, связка ключей, тонкая папка с документами, лист с одинаковыми миниатюрами фотографий квартиры",
+    "sticker_set": "hide_pain_harold — маленький стикер в правом верхнем углу; smudge_cat — маленький стикер внизу справа. Каждый не больше 15% кадра, не пересекает лицо, hook и обязательный телефон, отступ от телефона не менее 80 px.",
+    "meme_picks": [
+      "hide_pain_harold",
+      "smudge_cat"
+    ]
+  },
+  "cover_emotion": "ошеломление, сжатые губы, взгляд на экран"
+}
