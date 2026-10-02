@@ -2,6 +2,34 @@
 
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
+## INC-20261002-1255-schema-derouter-refusal
+status: open
+run_date: 2026-10-02
+role: excalibur-blog-schema
+topic_id: B34
+article_dir: memory/blog/articles/B34-za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel
+severity: medium
+category: derouter
+
+### What went wrong
+- First `excalibur_blog_derouter_opus_chat.py --role schema` with `--output schema.jsonld` (repo root) returned prose refusal instead of JSON-LD; wrote junk to `/workspace/schema.jsonld`.
+- Terra model interpreted SKILL «не пиши schema Cursor» as self-refusal even inside Derouter script.
+
+### How the agent recovered this run
+- Retried with `--output "$ART/schema.jsonld"` and user-file preamble: «You are invoked BY derouter; output JSON-LD only».
+- Second call produced valid BlogPosting; `schema_gate.py` → PASS.
+
+### Durable fix needed before next run
+- Document canonical `--output "$ART/schema.jsonld"` in schema skill/examples (not bare `schema.jsonld`).
+- Optional: post-process schema role to strip markdown fences / reject non-JSON assistant text before write.
+
+### Suggested files to inspect/change
+- `.cursor/skills/schema-excalibur-blog/SKILL.md`
+- `scripts/excalibur_blog_derouter_opus_chat.py` (schema output validation)
+
+### Secrets
+none
+
 ## INC-20260821-0615-content-learner-metrika-credentials
 status: open
 run_date: 2026-08-21
