@@ -1,0 +1,66 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-02",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://primpress.ru/article/138669",
+        "type": "news",
+        "note": "01.10.2026 — ФЗ 289-ФЗ, Авито/Циан → ФНС; не путать с ЕГРН"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "канал тенанта"
+      },
+      {
+        "url": "https://www.forum.kvartira-bez-agenta.ru/",
+        "type": "community",
+        "note": "форум вторички — проверка до сделки"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени вторичка",
+    "p0_volume": 3348,
+    "rework_log": "scout P0 retained; support «тюмень ипотека вторичное жилье» 131; narrow probes проверка/аванс — text only"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["gk_rf", "218-fz", "rosreestr_prikaz_p0514"],
+    "errors": []
+  },
+  "derouter": {
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json",
+    "attempts": [
+      {
+        "at": "2026-10-02",
+        "result": "BLOCKER",
+        "reason": "HTTP 524 timeout (full assembled inputs)"
+      },
+      {
+        "at": "2026-10-02",
+        "result": "OK",
+        "payload": "derouter-research-payload.md",
+        "chars": 10775
+      }
+    ]
+  },
+  "artifacts": {
+    "research_notes": "research-notes.md",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "scout_handoff": "scout-handoff.md"
+  },
+  "blockers": []
+}
