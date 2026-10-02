@@ -1,0 +1,44 @@
+# Cover-text B34 — новостройки Тюмень, плата за содержание в презентации vs ДДУ
+
+Output ONLY valid JSON for cover/cover-text.json (no markdown fence).
+
+## Hard rules
+- hook: ONE line, 5–7 Russian words (max 7), prefer words ≥5 letters; who + what happened + stakes
+- highlight: exactly one word FROM hook (case-insensitive match)
+- sticky: ≤5 words, reaction sticker text
+- phone_cta: "+7 922 001 65 05"
+- wordstat_stickers: 1–3 phrases from Wordstat below (Cyrillic, not copy of hook verbatim)
+- inline_labels: inline_1 … inline_7, each 3–6 labels, each label 1–4 words, facts from article
+- meme_picks: real ids from memory/cover/meme-top100.json only; slots cover (1–2 ids), inline_1, inline_5, inline_7; people+cats variety (not cats-only); BANNED: drake, drake_no_yes, salt_bae, stock_handsome_man; avoid repeating last-14d: hide_pain_harold, smudge_cat, roll_safe, grumpy_cat, two_buttons, crying_cat, confused_math_lady, cheems, disappointed_black_guy, this_is_fine_dog
+
+## title-brief.json
+```json
+{
+  "topic_id": "B34",
+  "h1": "В Тюмени 35 ₽ в презентации ЖК, 89 ₽ в ДДУ — банк урезал ипотеку",
+  "subject": "Плата за содержание в презентации новостройки и приложении к ДДУ",
+  "angle": "Контраст между тарифом в презентации ЖК и суммой в ДДУ привёл к снижению ипотечного лимита примерно на 620 тысяч рублей.",
+  "comment_magnet_angle": "Если в презентации 35 ₽, а в ДДУ 89 ₽ за квадрат — вы подписали бы, чтобы не потерять бронь, или развернулись бы сразу?"
+}
+```
+
+## Wordstat (Tyumen, live research)
+- P0: новостройки тюмень (4360)
+- купить новостройку в тюмени (905)
+- договор долевого участия (392)
+- плата за содержание жилья (6)
+
+## Key facts for labels (from article.html)
+- Презентация: «содержание от 35 ₽/м² с ключей»; ~60 м² → ~2100 ₽/мес в бюджете
+- Бронь 150 000 ₽; предодобрение ипотеки «впритык»
+- Приложение №3 к ДДУ: 89 ₽/м², индексация, капремонт отдельно → ~5300 ₽/мес на 60 м²
+- Капремонт минимум Тюменская область 14,62 ₽/м² с 01.07.2025 (ФКР)
+- Банк урезал лимит ~620 000 ₽ до подписания ДДУ
+- Ключевая ставка ЦБ 14,00% с 24.07.2026
+- Претензия по брони → 150 000 вернули; ДДУ не подписали; эскроу не открывали
+- H2 themes: слайд 35 ₽; бронь и ипотека; приложение 89 ₽; −620 тыс; претензия; таблица сверки; чеклист до эскроу
+
+## Sample meme ids (pick from catalog, not limited to this list)
+roll_safe, disappointed_black_guy, confused_math_lady, two_buttons, blinking_white_guy, wojak, bad_luck_brian, side_eye_chloe, sacrednik_priest, smudge_cat, grumpy_cat, crying_cat, polite_cat
+
+Return JSON object only.
