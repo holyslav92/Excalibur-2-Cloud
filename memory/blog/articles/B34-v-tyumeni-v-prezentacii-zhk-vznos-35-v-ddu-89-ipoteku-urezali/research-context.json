@@ -1,0 +1,77 @@
+{
+  "agent": "excalibur-blog",
+  "step": "research_start",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-10-02",
+    "today_ru": "02.10.2026",
+    "year": 2026,
+    "month": 10,
+    "month_name_ru": "октябрь",
+    "weekday_ru": "пятница"
+  },
+  "topic": {
+    "topic_id": "B34",
+    "title": "В Тюмени в презентации ЖК взнос 35 — в ДДУ 89, ипотеку урезали",
+    "h1": "В Тюмени в презентации ЖК взнос 35 — в ДДУ 89, ипотеку урезали",
+    "slug": "v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali",
+    "primary_query": "В Тюмени в презентации ЖК взнос 35 — в ДДУ 89, ипотеку урезали",
+    "priority": "P0"
+  },
+  "search_queries": [
+    {
+      "id": "primary_fresh",
+      "query": "В Тюмени в презентации ЖК взнос 35 — в ДДУ 89, ипотеку урезали 2026",
+      "purpose": "актуальный SERP"
+    },
+    {
+      "id": "title_fresh",
+      "query": "В Тюмени в презентации ЖК взнос 35 — в ДДУ 89, ипотеку урезали 2026",
+      "purpose": "SERP по человеческому title"
+    },
+    {
+      "id": "official_docs",
+      "query": "В Тюмени в презентации ЖК взнос 35 — в ДДУ 89, ипотеку урезали official docs 2026",
+      "purpose": "официальные docs"
+    },
+    {
+      "id": "github_evidence",
+      "query": "site:github.com В Тюмени в презентации ЖК взнос 35 — в ДДУ 89, ипотеку урезали 2026",
+      "purpose": "GitHub evidence"
+    },
+    {
+      "id": "community_experience",
+      "query": "В Тюмени в презентации ЖК взнос 35 — в ДДУ 89, ипотеку урезали forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы"
+    }
+  ],
+  "slot_rubric": "novostroyki",
+  "cluster_id": "newbuild_management_fee_ddu_appendix_vs_sales_tyumen",
+  "scout_handoff": ".cursor/excalibur-blog-handoff.md",
+  "next_step": "Title → Writer",
+  "writer_allowed_sources": [
+    "shared/writer-master-prompt.md",
+    "research-notes.md",
+    "title-brief.json",
+    "published-titles-only.md"
+  ],
+  "sol_allowed_sources": [
+    "shared/SOUL.md",
+    "shared/soul-examples/",
+    "drafts/writer.html",
+    "title-brief.json",
+    "research-notes.md"
+  ],
+  "writer_titles_only": "published-titles-only.md",
+  "forbidden_sources_for_writer": [
+    "memory/blog/articles/*/article.html",
+    "memory/blog/articles/*/drafts",
+    "memory/topics/ (deleted — do not recreate)",
+    "memory/content-lessons.md",
+    "shared/golden-benchmark",
+    "QA reports",
+    "neighbor research-notes as prose exemplars",
+    "old article bodies"
+  ],
+  "published_titles_count": 27
+}
