@@ -1,5 +1,30 @@
 {
   "topic_id": "B34",
   "slug": "v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans",
-  "wp_category_slugs": ["vtorichka"]
+  "wp_category_slugs": [
+    "vtorichka-i-riski",
+    "proverka-pered-pokupkoj"
+  ],
+  "title": "В Тюмени согласовали цену на двушку — через 1 час её забрали авансом",
+  "h1": "В Тюмени согласовали цену на двушку — через 1 час её забрали авансом",
+  "author_id": "svyatoslav-shakin",
+  "article_mode": "B",
+  "description": "В Тюмени согласовали цену на двушку — через 1 час её забрали авансом",
+  "meta_ab": {
+    "title_seo": "В Тюмени согласовали цену на двушку — через 1 час её забрали авансом",
+    "title_ctr": "В Тюмени согласовали цену на двушку — через 1 час её забрали авансом",
+    "title_aeo": "В Тюмени согласовали цену на двушку — через 1 час её забрали авансом",
+    "description_seo": "В Тюмени согласовали цену на двушку — через 1 час её забрали авансом",
+    "description_ctr": "В Тюмени согласовали цену на двушку — через 1 час её забрали авансом",
+    "description_aeo": "В Тюмени согласовали цену на двушку — через 1 час её забрали авансом"
+  },
+  "theme_blocks": {
+    "faq": "skip",
+    "quiz": "skip",
+    "side_stickers": "skip"
+  },
+  "date": "2026-10-02",
+  "pipeline_canon": "human-first-v2",
+  "editorial_swarm": false,
+  "wp_post_id": 11424
 }
