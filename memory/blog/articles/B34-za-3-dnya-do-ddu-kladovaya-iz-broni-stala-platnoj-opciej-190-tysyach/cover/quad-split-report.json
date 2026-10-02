@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-za-3-dnya-do-ddu-kladovaya-iz-broni-stala-platnoj-opciej-190-tysyach/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          568
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 568,
+            "end": 584
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1032
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0059,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0059,
+              "bottom_left": 0.0,
+              "bottom_right": 0.0059
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 568
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 568
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени кладовая из брони стала платной за 3 дня — 190 тысяч: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1035,
+              "top": 0,
+              "right": 2045,
+              "bottom": 568
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2048,
+              "bottom": 568
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Презентация и цена пакета: квартира плюс кладов…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Презентация и цена пакета: квартира плюс кладовая"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 584,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 584,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: одна цена за пакет, кладовая без номера, обещание в чате — иллюстрация к…",
+            "h2_anchor": "Презентация и цена пакета: квартира плюс кладовая"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1035,
+              "top": 584,
+              "right": 2045,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 584,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «В брони кладовая была «в комплекте» — ипотеку о…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "В брони кладовая была «в комплекте» — ипотеку одобрили с запасом"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-za-3-dnya-do-ddu-kladovaya-iz-broni-stala-platnoj-opciej-190-tysyach/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          570
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 570,
+            "end": 586
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1031
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 2.0,
+            "v_center_offset_px": 1.0,
+            "max_aspect_crop_loss": 0.0108,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0089,
+              "bottom_right": 0.0108
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 570
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 570
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «За три дня до ДДУ: в проекте опция на 190 тысяч» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "За три дня до ДДУ: в проекте опция на 190 тысяч"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1031,
+              "top": 0,
+              "right": 2048,
+              "bottom": 570
+            },
+            "raw_box_px": {
+              "left": 1031,
+              "top": 0,
+              "right": 2048,
+              "bottom": 570
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: не подписали в пятницу, запросить письменно, сверить бронь и ДДУ — иллюстрация к…",
+            "h2_anchor": "Банк пересчитал лимит — застройщик торопит подписать"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 586,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 586,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: номер помещения, площадь кладовой, цена в ДДУ — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что сверить в приложениях к ДДУ до эскроу"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1036,
+              "top": 586,
+              "right": 2042,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1031,
+              "top": 586,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: пауза до ответа банка, новый расчёт, 190 000 рублей — иллюстрация к разбору сделки.",
+            "h2_anchor": "Таблица: опции в новостройке, которые ломают ипотеку"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Презентация и цена пакета: квартира плюс кладовая",
+    "skip inline_2: already correct under H2 — Презентация и цена пакета: квартира плюс кладовая",
+    "skip inline_3: already correct under H2 — В брони кладовая была «в комплекте» — ипотеку одобрили с запасом",
+    "skip inline_4: already correct under H2 — За три дня до ДДУ: в проекте опция на 190 тысяч",
+    "skip inline_5: already correct under H2 — Банк пересчитал лимит — застройщик торопит подписать",
+    "skip inline_6: already correct under H2 — Что сверить в приложениях к ДДУ до эскроу",
+    "skip inline_7: already correct under H2 — Таблица: опции в новостройке, которые ломают ипотеку"
+  ]
+}
