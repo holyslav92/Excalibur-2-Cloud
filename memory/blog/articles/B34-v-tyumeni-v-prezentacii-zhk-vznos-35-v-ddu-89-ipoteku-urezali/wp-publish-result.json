@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali",
+  "topic_id": "B34",
+  "post_id": 11398,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1062368,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11398 slug=v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali\nOK categories=32,36,34\nOK yoast_social_image=1\nOK featured_image=11399\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11400 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali-inline-01.png\nOK inline_alt=11400\nOK inline_description=11400\nOK inline_image_upload=11401 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali-inline-02.png\nOK inline_alt=11401\nOK inline_description=11401\nOK inline_image_upload=11402 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali-inline-03.png\nOK inline_alt=11402\nOK inline_description=11402\nOK inline_image_upload=11403 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali-inline-04.png\nOK inline_alt=11403\nOK inline_description=11403\nOK inline_image_upload=11404 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali-inline-05.png\nOK inline_alt=11404\nOK inline_description=11404\nOK inline_image_upload=11405 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali-inline-06.png\nOK inline_alt=11405\nOK inline_description=11405\nOK inline_image_upload=11406 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali-inline-07.png\nOK inline_alt=11406\nOK inline_description=11406\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali/",
+    "errors": []
+  }
+}

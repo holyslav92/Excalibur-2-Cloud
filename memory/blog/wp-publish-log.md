@@ -1,5 +1,21 @@
 # Excalibur BLOG — WP publish log
 
+## B34 — 2026-10-02
+
+- **topic_id:** B34
+- **slug:** v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali
+- **post_id:** 11398
+- **permalink:** /blog/ipoteka/v-tyumeni-v-prezentacii-zhk-vznos-35-v-ddu-89-ipoteku-urezali/
+- **featured_image:** 11399
+- **inline_images:** 11400–11406 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry, proverka-pered-pokupkoj (category_ids=32,36,34)
+- **slot_rubric:** novostroyki
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** quality-bar CTA tweak (dual_cta_soft без ложного vtorichka «аванс»); SFTP root fallback to `.`
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29

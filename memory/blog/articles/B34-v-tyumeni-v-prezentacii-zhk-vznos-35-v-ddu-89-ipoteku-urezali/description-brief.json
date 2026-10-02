@@ -1,0 +1,9 @@
+{
+  "topic_id": "B34",
+  "description": "Бронь уже оплачена, а цифра из приложения к ДДУ меняет решение банка. В Тюмени Святослав Шакин показывает, почему слайд отдела продаж не спасает сделку.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

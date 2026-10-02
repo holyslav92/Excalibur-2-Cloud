@@ -1,0 +1,176 @@
+{
+  "generated_at": "2026-10-02T05:22:20.116424+00:00",
+  "slot_local": "09:00",
+  "slot_rubric": "novostroyki",
+  "slot_rubric_label": "новостройки",
+  "data_dir": "memory/blog/trend-radar/data/20261002T051419Z",
+  "viral_db": "memory/blog/trend-radar/data/20261002T051419Z/viral.sqlite",
+  "sources_used": [
+    "klyshin",
+    "bankiru",
+    "yuridicheskie-aspekty-nedvizhimosti",
+    "nedvizhimost",
+    "arenda-nedvizhimosti"
+  ],
+  "rubrics": {
+    "novostroyki": {
+      "label": "новостройки",
+      "angles": [
+        {
+          "headline_formula": "casus+число: «Потерять квартиру из-за сдачи ее в аренду: 3…»",
+          "first_line_hook": "Потерять квартиру из-за сдачи ее в аренду: 3 ситуации из практики",
+          "mechanism": "договор vs реальность",
+          "views": 231795,
+          "read_through": 0.7844,
+          "viral_score": 10.3106,
+          "source_url": "https://dzen.ru/a/YA7B343-ezstBMCs",
+          "channel": "СИЛА ПРАВА"
+        },
+        {
+          "headline_formula": "casus+число: «Стоит ли гордиться быстрой сдачей квартиры внаём?»",
+          "first_line_hook": "Стоит ли гордиться быстрой сдачей квартиры внаём?",
+          "mechanism": "часы/срок съели аванс",
+          "views": 1102,
+          "read_through": 0.8185,
+          "viral_score": 8.5149,
+          "source_url": "https://dzen.ru/a/ZsJMPq_HcwHbEpkv",
+          "channel": "Управляющий недвижимостью"
+        },
+        {
+          "headline_formula": "casus+число: «Нужен ли диван в квартире под сдачу?»",
+          "first_line_hook": "Нужен ли диван в квартире под сдачу?",
+          "mechanism": "часы/срок съели аванс",
+          "views": 1248,
+          "read_through": 0.6434,
+          "viral_score": 8.3214,
+          "source_url": "https://dzen.ru/a/ZwLGyDA8gSnKtcXR",
+          "channel": "Управляющий недвижимостью"
+        },
+        {
+          "headline_formula": "casus+число: «Какие ошибки чаще всего допускаются при сдаче коммерческой…»",
+          "first_line_hook": "Какие ошибки чаще всего допускаются при сдаче коммерческой недвижимости в аренду и как их избежать?",
+          "mechanism": "договор vs реальность",
+          "views": 653,
+          "read_through": 0.7335,
+          "viral_score": 5.4293,
+          "source_url": "https://dzen.ru/a/Zw5pftVFrQtV--_v",
+          "channel": "Инвестиции Вквадрате | Редевелопмент недвижимости"
+        }
+      ],
+      "count": 4
+    },
+    "vtorichka": {
+      "label": "вторичка",
+      "angles": [
+        {
+          "headline_formula": "casus+число: «С 1 октября вырастет спрос на вторичную недвижимость.…»",
+          "first_line_hook": "С 1 октября вырастет спрос на вторичную недвижимость. Что будет с ценами на квартиры",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 38628,
+          "read_through": 0.4391,
+          "viral_score": 8.5225,
+          "source_url": "https://dzen.ru/a/aqcTwkjUgT5jdBjX",
+          "channel": "Life"
+        },
+        {
+          "headline_formula": "casus+число: «Вторичка Москвы снова растет 2-х значными темпами. Обвал…»",
+          "first_line_hook": "Вторичка Москвы снова растет 2-х значными темпами. Обвал рынка снова отменяется",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 3443,
+          "read_through": 0.497,
+          "viral_score": 8.0649,
+          "source_url": "https://dzen.ru/a/aoAp6RlHcjMVnGqv",
+          "channel": "Веселый Инвестор"
+        },
+        {
+          "headline_formula": "casus+число: «Как легально «кидают» при покупке загородного дома в…»",
+          "first_line_hook": "Как легально «кидают» при покупке загородного дома в России: реальная угроза для каждого покупателя!",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 17158,
+          "read_through": 0.4092,
+          "viral_score": 7.4044,
+          "source_url": "https://dzen.ru/a/Zw9N_lUREDllN79D",
+          "channel": "Окулов PRO | Недвижимость с торгов"
+        },
+        {
+          "headline_formula": "casus+число: «Продажа недвижимости иностранцам в 2025: как не попасть…»",
+          "first_line_hook": "Продажа недвижимости иностранцам в 2025: как не попасть на штраф в 30% и провести сделку без ошибок.",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 357,
+          "read_through": 0.5882,
+          "viral_score": 5.3837,
+          "source_url": "https://dzen.ru/a/aDAzvTAsXitb1xjS",
+          "channel": "«Ваше Право» — простые ответы на сложные вопросы. Юридические лайфхаки."
+        },
+        {
+          "headline_formula": "casus+число: «7 смертных грехов покупателя квартиры»",
+          "first_line_hook": "7 смертных грехов покупателя квартиры",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 162,
+          "read_through": 0.4444,
+          "viral_score": 3.4972,
+          "source_url": "https://dzen.ru/a/XLmtcugWMwCyk9aL",
+          "channel": "Алексей Клышин юрист по недвижимости"
+        }
+      ],
+      "count": 5
+    },
+    "arenda": {
+      "label": "аренда жилья",
+      "angles": [
+        {
+          "headline_formula": "casus+число: «Ситуация на рынке съёмного жилья в конце лета…»",
+          "first_line_hook": "Ситуация на рынке съёмного жилья в конце лета 2024 года",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 1822,
+          "read_through": 0.8304,
+          "viral_score": 8.8462,
+          "source_url": "https://dzen.ru/a/Zp-6-sDy-BEa7hcY",
+          "channel": "Управляющий недвижимостью"
+        },
+        {
+          "headline_formula": "casus+число: «Как правильно уйти с рынка аренды недвижимости, чтобы…»",
+          "first_line_hook": "Как правильно уйти с рынка аренды недвижимости, чтобы не потерять все?",
+          "mechanism": "договор vs реальность",
+          "views": 1170,
+          "read_through": 0.8145,
+          "viral_score": 8.6351,
+          "source_url": "https://dzen.ru/a/Ybp6LjO-M10LrIrW",
+          "channel": "Управляющий недвижимостью"
+        },
+        {
+          "headline_formula": "casus+число: «С 1 августа аренда квартир поставит годовой рекорд.…»",
+          "first_line_hook": "С 1 августа аренда квартир поставит годовой рекорд. Как изменятся цены в начале высокого сезона",
+          "mechanism": "договор vs реальность",
+          "views": 68100,
+          "read_through": 0.4048,
+          "viral_score": 8.5587,
+          "source_url": "https://dzen.ru/a/alVXMNVlSA961thI",
+          "channel": "Life"
+        },
+        {
+          "headline_formula": "casus+число: «Чем различаются собственники разных классов арендных квартир?»",
+          "first_line_hook": "Чем различаются собственники разных классов арендных квартир?",
+          "mechanism": "договор vs реальность",
+          "views": 1459,
+          "read_through": 0.7587,
+          "viral_score": 8.5567,
+          "source_url": "https://dzen.ru/a/ZrvOO8GGsTVyT065",
+          "channel": "Управляющий недвижимостью"
+        },
+        {
+          "headline_formula": "casus+число: «На рынке аренды жилья случился важный перелом»",
+          "first_line_hook": "На рынке аренды жилья случился важный перелом",
+          "mechanism": "договор vs реальность",
+          "views": 5578,
+          "read_through": 0.471,
+          "viral_score": 8.4563,
+          "source_url": "https://dzen.ru/a/arEgsN8hLg35vFUk",
+          "channel": "УРА.РУ"
+        }
+      ],
+      "count": 5
+    }
+  },
+  "policy": "MECHANICS_AND_ENERGY_ONLY — do not copy plots or body text"
+}
