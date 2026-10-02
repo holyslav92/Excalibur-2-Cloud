@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B34",
+  "slug": "za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel",
+  "candidates_count": 30,
+  "outbound_found": [
+    {
+      "slug": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk",
+      "title": "skidku-dva-milliona-obeschali-a-v-kvartire-pryatali-risk"
+    },
+    {
+      "slug": "v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v",
+      "title": "v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v"
+    },
+    {
+      "slug": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal",
+      "title": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal"
+    },
+    {
+      "slug": "za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot",
+      "title": "za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

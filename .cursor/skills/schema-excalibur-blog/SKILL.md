@@ -7,16 +7,30 @@ description: Excalibur BLOG Schema — BlogPosting + optional FAQPage, author re
 
 ## Thin conductor + Derouter utility (HARD)
 
-**Не пиши schema.jsonld моделью Cursor:**
+**Не пиши schema.jsonld моделью Cursor** (Composer). Derouter utility tier (gpt-5.6-terra):
+
+```bash
+ART=memory/blog/articles/<topic_id>-<slug>
+python3 scripts/excalibur_blog_schema_derouter.py \
+  --article-dir "$ART" \
+  --system-file skills/schema-excalibur-blog/SKILL.md \
+  --user-file "$ART/assembled-schema-inputs.md"
+```
+
+Скрипт пишет **`$ART/schema.jsonld`** (не bare `schema.jsonld` в корне репо), снимает markdown fences, валидирует JSON и **один retry** при prose/refusal (INC-20261002-1255).
+
+Прямой вызов Derouter (без retry) — только если wrapper недоступен; **обязательно** полный путь output:
 
 ```bash
 python3 scripts/excalibur_blog_derouter_opus_chat.py \
   --role schema \
   --system-file skills/schema-excalibur-blog/SKILL.md \
-  --user-file <assembled-schema-inputs.md> \
-  --output schema.jsonld \
-  --article-dir <article_dir>
+  --user-file "$ART/assembled-schema-inputs.md" \
+  --output "$ART/schema.jsonld" \
+  --article-dir "$ART"
 ```
+
+Bare `--output schema.jsonld` без `--article-dir` пишет в корень репо — **запрещено**. С `--article-dir` bare имя файла резолвится в каталог статьи.
 
 `DEROUTER SCHEMA BLOCKER` → стоп. Контракт: `shared/derouter-opus-brain-contract.md`.
 

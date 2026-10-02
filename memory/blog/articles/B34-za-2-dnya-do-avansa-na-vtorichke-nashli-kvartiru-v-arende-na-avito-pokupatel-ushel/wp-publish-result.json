@@ -1,0 +1,28 @@
+{
+  "slug": "za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel",
+  "topic_id": "B34",
+  "post_id": 11437,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1135700,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11437 slug=za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel\nOK categories=31,34\nOK yoast_social_image=1\nOK featured_image=11438\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11439 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel-inline-02.png\nOK inline_alt=11439\nOK inline_description=11439\nOK inline_image_upload=11440 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel-inline-01.png\nOK inline_alt=11440\nOK inline_description=11440\nOK inline_image_upload=11441 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel-inline-03.png\nOK inline_alt=11441\nOK inline_description=11441\nOK inline_image_upload=11442 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel-inline-04.png\nOK inline_alt=11442\nOK inline_description=11442\nOK inline_image_upload=11443 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel-inline-05.png\nOK inline_alt=11443\nOK inline_description=11443\nOK inline_image_upload=11444 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel-inline-06.png\nOK inline_alt=11444\nOK inline_description=11444\nOK inline_image_upload=11445 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel-inline-07.png\nOK inline_alt=11445\nOK inline_description=11445\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel/",
+    "errors": []
+  }
+}

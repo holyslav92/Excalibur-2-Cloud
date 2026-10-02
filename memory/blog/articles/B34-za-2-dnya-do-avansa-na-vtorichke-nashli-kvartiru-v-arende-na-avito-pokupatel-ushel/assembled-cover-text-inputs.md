@@ -1,0 +1,11 @@
+Cover-text B34 — vtorichka Tyumen: 2 days before advance, active Avito rent listing with same photos, buyer walked away.
+Hook ONE line 5-7 Cyrillic words (short B08-style), meme_canon v1 from meme-top100 (people+cats, not cats-only), phone +7 922 001 65 05 bottom-right on cover.
+Facts from article for inline_labels (1-4 words each, 3-6 per inline_1..inline_7): ipoteka odobrena; avans through 2 days; EGRN clean no registered rent; Avito active «sdam» same photos; seller «staroe»; tenant 8 months; no advance; check rent before money.
+wordstat_stickers: Tyumen secondary market phrases (live Wordstat).
+{
+  "topic_id": "B34",
+  "h1": "В Тюмени на вторичке за 2 дня до аванса нашли квартиру в аренде на Авито — покупатель ушёл",
+  "title": "В Тюмени на вторичке за 2 дня до аванса нашли квартиру в аренде на Авито — покупатель ушёл",
+  "subject": "квартира на вторичном рынке в Тюмени с активным объявлением об аренде на Авито",
+  "angle": "Покупатель почти внес аванс за согласованную и одобренную ипотекой квартиру, но за два дня до сделки обнаружил активное объявление об аренде с теми же фотографиями. Продавец назвал его старым, однако проживающий подтвердил, что будет жить ещё около восьми месяцев — аванс не внесли, покупатель выбрал другой объект."
+}

@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/#person-svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "sameAs": []
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel/#article",
+      "url": "{{SITE_BASE}}/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel/",
+      "headline": "В Тюмени на вторичке за 2 дня до аванса нашли квартиру в аренде на Авито — покупатель ушёл",
+      "description": "Семья в Тюмени почти внесла аванс за вторичку с одобренной ипотекой, но за два дня до сделки нашла на Авито активное объявление об аренде с теми же фото — аванс не внесли.",
+      "datePublished": "2026-10-02",
+      "author": {
+        "@id": "{{SITE_BASE}}/#person-svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "isPartOf": {
+        "@id": "{{SITE_BASE}}/#website"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/za-2-dnya-do-avansa-na-vtorichke-nashli-kvartiru-v-arende-na-avito-pokupatel-ushel/"
+      },
+      "inLanguage": "ru-RU"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{SITE_BASE}}/#website",
+      "url": "{{SITE_BASE}}/",
+      "name": "The Риэлтор",
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "inLanguage": "ru-RU"
+    }
+  ]
+}

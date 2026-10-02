@@ -340,6 +340,18 @@ def build_cover_alt(
     """One short Russian SEO sentence from title/topic — never scene_hint painting."""
     slot = slot or (manifest.get("slots") or {}).get("cover") or {}
     scene_hint = normalize_text(slot.get("scene_hint"))
+    existing = normalize_text(slot.get("alt"))
+    if existing:
+        bad, _ = is_prompt_like_alt(
+            existing,
+            scene_hint=scene_hint,
+            host_name=host_name,
+            manifest=manifest,
+            meta=meta,
+            seo_length=True,
+        )
+        if not bad:
+            return clamp_seo_alt(existing)
     title = normalize_text(meta.get("h1") or meta.get("title") or manifest.get("cover_hook"))
     if not title:
         title = "Новостройка в Тюмени: проверка договора перед подписью"
