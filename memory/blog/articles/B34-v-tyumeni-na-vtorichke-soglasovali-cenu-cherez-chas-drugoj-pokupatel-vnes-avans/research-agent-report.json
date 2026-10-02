@@ -1,0 +1,56 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-02",
+  "cluster_id": "secondary_rival_buyer_snatched_advance_tyumen",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://realty.ria.ru/20261001/rossija-2121528358.html",
+        "type": "news",
+        "note": "РИА Новости 01.10.2026 — семейная ипотека с 1 октября, контекст спроса"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/30/76670157/",
+        "type": "regional_news",
+        "note": "72.ru 30.09.2026 — условия семейной ипотеки с 1 октября"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/29/76665356/",
+        "type": "regional_news",
+        "note": "72.ru 29.09.2026 — эксперты Тюмени о вторичке после изменений семейки"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта, accessed 2026-10-02"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени вторичка",
+    "p0_volume_tyumen": 3348,
+    "p0_volume_rf": 6220,
+    "rework_log": "probe вторичное жилье тюмень 1113 → final P0 купить квартиру вторичка тюмень 3348 (Scout handoff)"
+  },
+  "official_source_audit": {
+    "required": false,
+    "status": "PASS",
+    "verified_claims": 0,
+    "entities_checked": [],
+    "notes": "Нет банковских тарифных claims; ГК РФ ст. 380/429 — legal_reference в source_table",
+    "errors": []
+  },
+  "derouter": {
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "assembled_inputs": "assembled-research-inputs.md"
+  },
+  "blockers": []
+}
