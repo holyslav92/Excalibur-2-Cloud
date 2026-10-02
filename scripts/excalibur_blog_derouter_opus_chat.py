@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -24,6 +25,8 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
+
+SCHEMA_FENCE_RE = re.compile(r"^```(?:json|jsonld)?\s*|\s*```$", re.MULTILINE)
 
 DEFAULT_API_KEY_ENV = "DEROUTER_API_KEY"
 PRIMARY_ENDPOINT = "https://api.derouter.ai/openai/v1/chat/completions"
@@ -282,6 +285,34 @@ def extract_assistant_text(response: dict[str, Any]) -> str:
     if not isinstance(content, str) or not content.strip():
         raise DerouterChatError("Derouter returned empty assistant content")
     return content
+
+
+def resolve_output_path(output: str, article_path: Path | None, root: Path) -> Path:
+    """Bare filenames like schema.jsonld resolve under --article-dir when set."""
+    out = Path(output)
+    if out.is_absolute():
+        return out
+    if article_path is not None and len(out.parts) == 1:
+        return article_path / out
+    return root / out
+
+
+def normalize_schema_jsonld_text(text: str) -> str:
+    raw = (text or "").strip()
+    if not raw:
+        raise ValueError("empty schema output")
+    if raw.startswith("```"):
+        raw = SCHEMA_FENCE_RE.sub("", raw).strip()
+    if not raw.lstrip().startswith("{"):
+        preview = raw.replace("\n", " ")[:160]
+        raise ValueError(f"schema output must be JSON object, not prose: {preview!r}")
+    try:
+        parsed = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"invalid JSON: {exc}") from exc
+    if not isinstance(parsed, dict):
+        raise ValueError("schema JSON-LD root must be a JSON object")
+    return json.dumps(parsed, ensure_ascii=False, indent=2) + "\n"
 
 
 def call_derouter_chat(
@@ -573,11 +604,16 @@ def run_chat(args: argparse.Namespace) -> int:
         return 2
 
     if args.output:
-        out = Path(args.output)
-        if not out.is_absolute():
-            out = root / out
+        out = resolve_output_path(args.output, article_path, root)
+        out_text = text
+        if role == "schema":
+            try:
+                out_text = normalize_schema_jsonld_text(text)
+            except ValueError as exc:
+                print_blocker(role, str(exc))
+                return 2
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(text if text.endswith("\n") else text + "\n", encoding="utf-8")
+        out.write_text(out_text if out_text.endswith("\n") else out_text + "\n", encoding="utf-8")
         print(f"WROTE {out.relative_to(root) if out.is_relative_to(root) else out}")
 
     stamp_path = resolve_stamp_path(article_dir=args.article_dir, role=role, root=root)

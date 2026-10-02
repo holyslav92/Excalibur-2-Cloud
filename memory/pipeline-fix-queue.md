@@ -3,7 +3,7 @@
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
 ## INC-20261002-1255-schema-derouter-refusal
-status: open
+status: fixed
 run_date: 2026-10-02
 role: excalibur-blog-schema
 topic_id: B34
@@ -29,6 +29,24 @@ category: derouter
 
 ### Secrets
 none
+
+### Fixer resolution
+fixed_at: 2026-10-02
+fix_summary:
+- Added `excalibur_blog_schema_derouter.py` (article_dir/schema.jsonld, system preamble, JSON-LD validate + 1 retry).
+- `derouter_opus_chat`: bare output filenames resolve under `--article-dir`; schema role rejects prose/invalid JSON before write.
+- Schema skill documents `$ART/schema.jsonld` and wrapper as canonical path (INC-20261002-1255).
+files_changed:
+- `scripts/excalibur_blog_schema_derouter.py`
+- `scripts/excalibur_blog_derouter_opus_chat.py`
+- `scripts/excalibur_blog_doctor.py`
+- `skills/schema-excalibur-blog/SKILL.md`
+- `.cursor/skills/schema-excalibur-blog/SKILL.md`
+- `tests/test_schema_derouter.py`
+checks_run:
+- `python3 -m py_compile scripts/excalibur_blog_derouter_opus_chat.py scripts/excalibur_blog_schema_derouter.py`
+- `python3 -m unittest tests.test_schema_derouter`
+commit: pending
 
 ## INC-20260821-0615-content-learner-metrika-credentials
 status: open
