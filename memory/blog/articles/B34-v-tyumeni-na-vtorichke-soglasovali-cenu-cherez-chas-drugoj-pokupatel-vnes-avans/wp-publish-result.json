@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans",
+  "topic_id": "B34",
+  "post_id": 11424,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1040615,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11424 slug=v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans\nOK categories=31,34\nOK yoast_social_image=1\nOK featured_image=11425\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11426 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans-inline-03.png\nOK inline_alt=11426\nOK inline_description=11426\nOK inline_image_upload=11427 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans-inline-04.png\nOK inline_alt=11427\nOK inline_description=11427\nOK inline_image_upload=11428 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans-inline-01.png\nOK inline_alt=11428\nOK inline_description=11428\nOK inline_image_upload=11429 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans-inline-02.png\nOK inline_alt=11429\nOK inline_description=11429\nOK inline_image_upload=11430 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans-inline-05.png\nOK inline_alt=11430\nOK inline_description=11430\nOK inline_image_upload=11431 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans-inline-06.png\nOK inline_alt=11431\nOK inline_description=11431\nOK inline_image_upload=11432 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans-inline-07.png\nOK inline_alt=11432\nOK inline_description=11432\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-na-vtorichke-soglasovali-cenu-cherez-chas-drugoj-pokupatel-vnes-avans/",
+    "errors": []
+  }
+}
