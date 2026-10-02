@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-02T05:54:53.481512+00:00",
+  "generated_at": "2026-10-02T05:22:20.116424+00:00",
   "slot_local": "09:00",
   "slot_rubric": "novostroyki",
   "slot_rubric_label": "новостройки",
-  "data_dir": "memory/blog/trend-radar/data/20261002T050135Z",
-  "viral_db": "memory/blog/trend-radar/data/20261002T050135Z/viral.sqlite",
+  "data_dir": "memory/blog/trend-radar/data/20261002T051419Z",
+  "viral_db": "memory/blog/trend-radar/data/20261002T051419Z/viral.sqlite",
   "sources_used": [
     "klyshin",
     "bankiru",
@@ -45,13 +45,33 @@
           "viral_score": 8.3214,
           "source_url": "https://dzen.ru/a/ZwLGyDA8gSnKtcXR",
           "channel": "Управляющий недвижимостью"
+        },
+        {
+          "headline_formula": "casus+число: «Какие ошибки чаще всего допускаются при сдаче коммерческой…»",
+          "first_line_hook": "Какие ошибки чаще всего допускаются при сдаче коммерческой недвижимости в аренду и как их избежать?",
+          "mechanism": "договор vs реальность",
+          "views": 653,
+          "read_through": 0.7335,
+          "viral_score": 5.4293,
+          "source_url": "https://dzen.ru/a/Zw5pftVFrQtV--_v",
+          "channel": "Инвестиции Вквадрате | Редевелопмент недвижимости"
         }
       ],
-      "count": 3
+      "count": 4
     },
     "vtorichka": {
       "label": "вторичка",
       "angles": [
+        {
+          "headline_formula": "casus+число: «С 1 октября вырастет спрос на вторичную недвижимость.…»",
+          "first_line_hook": "С 1 октября вырастет спрос на вторичную недвижимость. Что будет с ценами на квартиры",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 38628,
+          "read_through": 0.4391,
+          "viral_score": 8.5225,
+          "source_url": "https://dzen.ru/a/aqcTwkjUgT5jdBjX",
+          "channel": "Life"
+        },
         {
           "headline_formula": "casus+число: «Вторичка Москвы снова растет 2-х значными темпами. Обвал…»",
           "first_line_hook": "Вторичка Москвы снова растет 2-х значными темпами. Обвал рынка снова отменяется",
@@ -63,14 +83,24 @@
           "channel": "Веселый Инвестор"
         },
         {
-          "headline_formula": "casus+число: «Россияне бросились скупать вторичку: число сделок в июле…»",
-          "first_line_hook": "Россияне бросились скупать вторичку: число сделок в июле 2026 стало максимальным с начала года",
+          "headline_formula": "casus+число: «Как легально «кидают» при покупке загородного дома в…»",
+          "first_line_hook": "Как легально «кидают» при покупке загородного дома в России: реальная угроза для каждого покупателя!",
           "mechanism": "almost lost перед ключами/деньгами",
-          "views": 4602,
-          "read_through": 0.3696,
-          "viral_score": 7.7692,
-          "source_url": "https://dzen.ru/a/aoaw9MKMDjssgvdh",
-          "channel": "Веселый Инвестор"
+          "views": 17158,
+          "read_through": 0.4092,
+          "viral_score": 7.4044,
+          "source_url": "https://dzen.ru/a/Zw9N_lUREDllN79D",
+          "channel": "Окулов PRO | Недвижимость с торгов"
+        },
+        {
+          "headline_formula": "casus+число: «Продажа недвижимости иностранцам в 2025: как не попасть…»",
+          "first_line_hook": "Продажа недвижимости иностранцам в 2025: как не попасть на штраф в 30% и провести сделку без ошибок.",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 357,
+          "read_through": 0.5882,
+          "viral_score": 5.3837,
+          "source_url": "https://dzen.ru/a/aDAzvTAsXitb1xjS",
+          "channel": "«Ваше Право» — простые ответы на сложные вопросы. Юридические лайфхаки."
         },
         {
           "headline_formula": "casus+число: «7 смертных грехов покупателя квартиры»",
@@ -83,7 +113,7 @@
           "channel": "Алексей Клышин юрист по недвижимости"
         }
       ],
-      "count": 3
+      "count": 5
     },
     "arenda": {
       "label": "аренда жилья",
@@ -134,7 +164,7 @@
           "mechanism": "договор vs реальность",
           "views": 5578,
           "read_through": 0.471,
-          "viral_score": 8.4562,
+          "viral_score": 8.4563,
           "source_url": "https://dzen.ru/a/arEgsN8hLg35vFUk",
           "channel": "УРА.РУ"
         }

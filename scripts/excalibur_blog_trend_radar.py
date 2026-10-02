@@ -126,6 +126,7 @@ def run_collect(root: Path, out_dir: Path, source: dict[str, Any], defaults: dic
             str(out_dir),
             "--delay",
             str(delay),
+            "--no-images",
         ]
     elif slug:
         args = [
@@ -140,6 +141,7 @@ def run_collect(root: Path, out_dir: Path, source: dict[str, Any], defaults: dic
             str(out_dir),
             "--delay",
             str(delay),
+            "--no-images",
             "--pick",
             "1",
         ]
