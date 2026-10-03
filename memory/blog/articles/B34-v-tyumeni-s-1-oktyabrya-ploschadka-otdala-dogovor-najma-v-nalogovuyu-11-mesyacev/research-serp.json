@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-10-03",
+    "today_ru": "03.10.2026",
+    "year": 2026,
+    "month": 10,
+    "month_name_ru": "октябрь",
+    "weekday_ru": "суббота"
+  },
+  "topic": {
+    "topic_id": "B34",
+    "title": "В Тюмени с 1 октября площадка отдала договор найма в налоговую — 11 месяцев не спасли",
+    "h1": "В Тюмени с 1 октября площадка отдала договор найма в налоговую — 11 месяцев не спасли",
+    "slug": "v-tyumeni-s-1-oktyabrya-ploschadka-otdala-dogovor-najma-v-nalogovuyu-11-mesyacev",
+    "primary_query": "В Тюмени с 1 октября площадка отдала договор найма в налоговую — 11 месяцев не спасли",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени с 1 октября площадка отдала договор найма в налоговую — 11 месяцев не спасли 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "С 1 октября 2026 года регистрировать договоры найма квартир (в некой ...",
+          "url": "https://pikabu.ru/story/s_1_oktyabrya_2026_goda_registrirovat_dogovoryi_nayma_kvartir_v_nekoy_novoy_gis_ne_nuzhno__zakona_net_sistemyi_net_14357009",
+          "snippet": ""
+        },
+        {
+          "title": "Пролонгация договора аренды на 11 месяцев подлежит регистрации \\ 2026 ...",
+          "url": "https://www.consultant.ru/law/podborki/prolongaciya_dogovora_arendy_na_11_mesyacev_podlezhit_registracii/",
+          "snippet": "Короткий ответ для тех, кто сдаёт квартиру: с 1 октября 2026 года никаких новых обязанностей по регистрации договоров найма жилья у вас не появляется."
+        },
+        {
+          "title": "Изменения налогового законодательства с 1 октября 2026 года и еще ...",
+          "url": "https://www.buhgalteria.ru/article/izmeneniya-nalogovogo-zakonodatelstva-s-1-oktyabrya-2026-goda-i-eshche-neskolko-novykh-norm",
+          "snippet": "Суд признал, что при продлении договор аренды не подлежал государственной регистрации, так как срок продления (срок аренды по новому договору) был менее одного года."
+        },
+        {
+          "title": "Что меняется для арендодателя и арендатора, если срок договора ...",
+          "url": "https://finance.rambler.ru/realty/56871535-chto-menyaetsya-dlya-arendodatelya-i-arendatora-esli-srok-dogovora-prevyshaet-11-mesyatsev/",
+          "snippet": "Тарифы на ЖКХ с 1 октября 2026 года, на сколько вырастут по регионам и кому положена субсидия С 1 октября 2026 года пройдет основной этап индексации тарифов на коммунальные услуги."
+        },
+        {
+          "title": "Нужно ли платить налог с аренды квартиры в 2026 году и как это сделать ...",
+          "url": "https://rg.ru/post/nuzhno-li-platit-nalog-s-arendy-kvartiry-i-kak-eto-sdelat-pravilno.html",
+          "snippet": "Многие договоры аренды в России заключаются не более чем на 11 месяцев. Все дело в том, что договор на 12 месяцев и больше нужно регистрировать в Росреестре. А это лишнее время, и, главное, лишнее внимание со стороны налоговой."
+        },
+        {
+          "title": "Договор аренды на 11 месяцев: нужна ли регистрация и как продлить",
+          "url": "https://demyrent.ru/blog/dogovor-arendy-na-11-mesyacev",
+          "snippet": "Сдача квартиры в аренду в 2026 году всегда означает обязанность платить налог. При этом многие собственники до сих пор считают, что договор аренды на 11 месяцев или перевод \"на карту без..."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени с 1 октября площадка отдала договор найма в налоговую — 11 месяцев не спасли 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "С 1 октября 2026 года регистрировать договоры найма квартир (в некой ...",
+          "url": "https://pikabu.ru/story/s_1_oktyabrya_2026_goda_registrirovat_dogovoryi_nayma_kvartir_v_nekoy_novoy_gis_ne_nuzhno__zakona_net_sistemyi_net_14357009",
+          "snippet": ""
+        },
+        {
+          "title": "Нужно ли платить налог с аренды квартиры в 2026 году и как это сделать ...",
+          "url": "https://rg.ru/post/nuzhno-li-platit-nalog-s-arendy-kvartiry-i-kak-eto-sdelat-pravilno.html",
+          "snippet": "Короткий ответ для тех, кто сдаёт квартиру: с 1 октября 2026 года никаких новых обязанностей по регистрации договоров найма жилья у вас не появляется."
+        },
+        {
+          "title": "Изменения налогового законодательства с 1 октября 2026 года и еще ...",
+          "url": "https://www.buhgalteria.ru/article/izmeneniya-nalogovogo-zakonodatelstva-s-1-oktyabrya-2026-goda-i-eshche-neskolko-novykh-norm",
+          "snippet": "Сдача квартиры в аренду в 2026 году всегда означает обязанность платить налог. При этом многие собственники до сих пор считают, что договор аренды на 11 месяцев или перевод \"на карту без..."
+        },
+        {
+          "title": "Регистрация договора найма квартиры в 2026 году: когда обязательна и ...",
+          "url": "https://mylawyer.club/nedvizhimost/kvartira/arenda/naem/registratsiya-dogovora.html",
+          "snippet": "Тарифы на ЖКХ с 1 октября 2026 года, на сколько вырастут по регионам и кому положена субсидия С 1 октября 2026 года пройдет основной этап индексации тарифов на коммунальные услуги."
+        },
+        {
+          "title": "Налоги-2026: что уже действует, что вступило в октябре и что только ...",
+          "url": "https://www.sravni.ru/novost/2026/10/3/nalogi-2026-chto-uzhe-dejstvuet-chto-vstupilo-v-oktyabre-i-chto-tolko-idyot-cherez-gosdumu/",
+          "snippet": "Правило простое: если договор найма подписан на срок от одного года — его нужно зарегистрировать в Росреестре. Краткосрочные договоры (до года) регистрации не требуют. Именно поэтому большинство владельцев квартир заключают договоры ровно на 11 месяцев и продлевают их по доп. соглашению."
+        },
+        {
+          "title": "Налог при сдаче квартиры в аренду в 2026 году: НДФЛ, самозанятый и ИП ...",
+          "url": "https://mylawyer.club/nedvizhimost/kvartira/arenda/sdacha/nalog-za-sd/kak-ne-platit-zakonnymi-sposobami.html",
+          "snippet": "Налоговая реформа, стартовавшая 1 января, продолжает разворачиваться: с 1 октября заработали новые правила для маркетплейсов, самозанятых и НДС по длящимся договорам, а правительство внесло в Госдуму очередной пакет ..."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени с 1 октября площадка отдала договор найма в налоговую — 11 месяцев не спасли official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "С 1 октября 2026 года регистрировать договоры найма квартир (в некой ...",
+          "url": "https://pikabu.ru/story/s_1_oktyabrya_2026_goda_registrirovat_dogovoryi_nayma_kvartir_v_nekoy_novoy_gis_ne_nuzhno__zakona_net_sistemyi_net_14357009",
+          "snippet": ""
+        },
+        {
+          "title": "Нужно ли платить налог с аренды квартиры в 2026 году и как это сделать ...",
+          "url": "https://rg.ru/post/nuzhno-li-platit-nalog-s-arendy-kvartiry-i-kak-eto-sdelat-pravilno.html",
+          "snippet": "Короткий ответ для тех, кто сдаёт квартиру: с 1 октября 2026 года никаких новых обязанностей по регистрации договоров найма жилья у вас не появляется."
+        },
+        {
+          "title": "Изменения налогового законодательства с 1 октября 2026 года и еще ...",
+          "url": "https://www.buhgalteria.ru/article/izmeneniya-nalogovogo-zakonodatelstva-s-1-oktyabrya-2026-goda-i-eshche-neskolko-novykh-norm",
+          "snippet": "Сдача квартиры в аренду в 2026 году всегда означает обязанность платить налог. При этом многие собственники до сих пор считают, что договор аренды на 11 месяцев или перевод \"на карту без..."
+        },
+        {
+          "title": "Регистрация договора найма квартиры в 2026 году: когда обязательна и ...",
+          "url": "https://mylawyer.club/nedvizhimost/kvartira/arenda/naem/registratsiya-dogovora.html",
+          "snippet": "Тарифы на ЖКХ с 1 октября 2026 года, на сколько вырастут по регионам и кому положена субсидия С 1 октября 2026 года пройдет основной этап индексации тарифов на коммунальные услуги."
+        },
+        {
+          "title": "Налоги-2026: что уже действует, что вступило в октябре и что только ...",
+          "url": "https://www.sravni.ru/novost/2026/10/3/nalogi-2026-chto-uzhe-dejstvuet-chto-vstupilo-v-oktyabre-i-chto-tolko-idyot-cherez-gosdumu/",
+          "snippet": "Правило простое: если договор найма подписан на срок от одного года — его нужно зарегистрировать в Росреестре. Краткосрочные договоры (до года) регистрации не требуют. Именно поэтому большинство владельцев квартир заключают договоры ровно на 11 месяцев и продлевают их по доп. соглашению."
+        },
+        {
+          "title": "С 1 октября 2026 года в России изменится порядок расчёта НДС по ...",
+          "url": "https://rb.ru/news/s-1-oktyabrya-dlya-dolgosrochnyh-dogovorov-izmenitsya-raschyot-nds-prodavcy-ne-smogu-povyshat-cenu-chtoby-zaplatit-nalog/",
+          "snippet": "Налоговая реформа, стартовавшая 1 января, продолжает разворачиваться: с 1 октября заработали новые правила для маркетплейсов, самозанятых и НДС по длящимся договорам, а правительство внесло в Госдуму очередной пакет ..."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени с 1 октября площадка отдала договор найма в налоговую — 11 месяцев не спасли 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "pog5/left.github.svg at main · pog5/pog5 · GitHub",
+          "url": "https://github.com/pog5/pog5/blob/main/left.github.svg",
+          "snippet": ""
+        },
+        {
+          "title": "Для совмещенных не выводится распределение в договор, поскольку ...",
+          "url": "https://github.com/kucheryavenkovn/regop/issues/68",
+          "snippet": "Contribute to pog5/pog5 development by creating an account on GitHub."
+        },
+        {
+          "title": "sql_data_analysis_yandex_praktikum_2022 · GitHub",
+          "url": "https://gist.github.com/ikashkovskiy/692f28ab22a386cf02fa853f34c61a25",
+          "snippet": "Для совмещенных не выводится распределение в договор, поскольку площадка в договоре отличается от площадки на закладке нормативы #68"
+        },
+        {
+          "title": "llamafactory-community/wechat/npu.jpg at main · hiyouga/llamafactory ...",
+          "url": "https://github.com/hiyouga/llamafactory-community/blob/main/wechat/npu.jpg",
+          "snippet": "Для каждой страны посчитайте среднюю стоимость заказов в 2009 году по месяцам. Отберите данные за 2, 5, 7 и 10 месяцы и сложите средние значения стоимости заказов."
+        },
+        {
+          "title": "GitHub - ShvetsAG/SQL_Academy: Решение заданий из тренажера sql-academy ...",
+          "url": "https://github.com/ShvetsAG/SQL_Academy",
+          "snippet": "Contribute to hiyouga/llamafactory-community development by creating an account on GitHub."
+        },
+        {
+          "title": "GitHub - e-katkov/SQL-Academy-Solved-Exercises",
+          "url": "https://github.com/e-katkov/SQL-Academy-Solved-Exercises",
+          "snippet": "Вывести список комнат со всеми удобствами (наличие ТВ, интернета, кухни и кондиционера), а также общее количество дней и сумму за все дни аренды каждой из таких комнат. (сайт)"
+        }
+      ],
+      "searched_at": "2026-10-03"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени с 1 октября площадка отдала договор найма в налоговую — 11 месяцев не спасли forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "С 1 октября 2026 года регистрировать договоры найма квартир (в некой ...",
+          "url": "https://pikabu.ru/story/s_1_oktyabrya_2026_goda_registrirovat_dogovoryi_nayma_kvartir_v_nekoy_novoy_gis_ne_nuzhno__zakona_net_sistemyi_net_14357009",
+          "snippet": ""
+        },
+        {
+          "title": "Нужно ли платить налог с аренды квартиры в 2026 году и как это сделать ...",
+          "url": "https://rg.ru/post/nuzhno-li-platit-nalog-s-arendy-kvartiry-i-kak-eto-sdelat-pravilno.html",
+          "snippet": "Короткий ответ для тех, кто сдаёт квартиру: с 1 октября 2026 года никаких новых обязанностей по регистрации договоров найма жилья у вас не появляется."
+        },
+        {
+          "title": "Изменения налогового законодательства с 1 октября 2026 года и еще ...",
+          "url": "https://www.buhgalteria.ru/article/izmeneniya-nalogovogo-zakonodatelstva-s-1-oktyabrya-2026-goda-i-eshche-neskolko-novykh-norm",
+          "snippet": "При этом многие собственники до сих пор считают, что договор аренды на 11 месяцев или перевод \"на карту без комментариев\" помогают избежать внимания налоговой. Спрос на долгосрочную..."
+        },
+        {
+          "title": "Налоги-2026: что уже действует, что вступило в октябре и что только ...",
+          "url": "https://www.sravni.ru/novost/2026/10/3/nalogi-2026-chto-uzhe-dejstvuet-chto-vstupilo-v-oktyabre-i-chto-tolko-idyot-cherez-gosdumu/",
+          "snippet": "Тарифы на ЖКХ с 1 октября 2026 года, на сколько вырастут по регионам и кому положена субсидия С 1 октября 2026 года пройдет основной этап индексации тарифов на коммунальные услуги."
+        },
+        {
+          "title": "Регистрация договора найма квартиры в 2026 году: когда обязательна и ...",
+          "url": "https://mylawyer.club/nedvizhimost/kvartira/arenda/naem/registratsiya-dogovora.html",
+          "snippet": "Налоговая реформа, стартовавшая 1 января, продолжает разворачиваться: с 1 октября заработали новые правила для маркетплейсов, самозанятых и НДС по длящимся договорам, а правительство внесло в Госдуму очередной пакет ..."
+        },
+        {
+          "title": "Налог при сдаче квартиры в аренду в 2026 году: НДФЛ, самозанятый и ИП ...",
+          "url": "https://mylawyer.club/nedvizhimost/kvartira/arenda/sdacha/nalog-za-sd/kak-ne-platit-zakonnymi-sposobami.html",
+          "snippet": "Правило простое: если договор найма подписан на срок от одного года — его нужно зарегистрировать в Росреестре. Краткосрочные договоры (до года) регистрации не требуют. Именно поэтому большинство владельцев квартир заключают договоры ровно на 11 месяцев и продлевают их по доп. соглашению."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    }
+  ],
+  "errors": []
+}
