@@ -33,7 +33,9 @@
 
 ## Proposed topic (PASS anti-dupe + topic_focus)
 
-- **topic_id:** B34
+> **UPDATE 2026-10-03:** слот закрыт публикацией **B34 ФССП 412k**. Угол ниже перенесён на **B35** — см. `memory/scout/b35-candidate-rent-notarius.md`.
+
+- **topic_id:** B35 *(was B34 in parallel scout run)*
 - **title_draft:** В Тюмени на вторичке нотариус на ДКП нашёл договор ренты — регистрацию не открыли
 - **short_title:** Нотариус на ДКП нашёл договор ренты — регистрацию не открыли
 - **slug:** v-tyumeni-na-vtorichke-notarius-na-dkp-nashol-dogovor-renty-registraciyu-ne-otkryli
