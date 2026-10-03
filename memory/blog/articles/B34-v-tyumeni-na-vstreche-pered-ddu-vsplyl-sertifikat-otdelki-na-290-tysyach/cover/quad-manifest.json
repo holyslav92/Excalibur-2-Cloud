@@ -1,0 +1,233 @@
+{
+  "topic_id": "B34",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "За отделку потребовали доплату перед договором",
+  "cover_hook_highlight": "доплату",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Перед подписанием ДДУ в Тюмени покупателю предъявили сертификат на отделку с доплатой.",
+      "scene_hint": "Шоурум: терракот рубашка, сертификат 290k и ДДУ, шок.",
+      "meme_caption_ru": "",
+      "sticky": "Сделку поставили на паузу",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "В объявлении цена «с отделкой», на столе — проект ДДУ без неё",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Планшет «с отделкой» и проект ДДУ без приложений на столе.",
+      "alt": "Объявление с отделкой и проект ДДУ без приложений на столе перед сделкой.",
+      "labels": [
+        "Цена с отделкой",
+        "Проект договора",
+        "Пустые приложения"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "В объявлении цена «с отделкой», на столе — проект ДДУ без неё",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: реклама с отделкой vs проект ДДУ vs сертификат 290k, золото на белом.",
+      "alt": "Сравнение цены в объявлении, условий ДДУ и отдельного сертификата на отделку.",
+      "labels": [
+        "Сертификат 290 тысяч",
+        "Отдельный платёж",
+        "Сверх цены договора"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Менеджер достаёт сертификат на 290 тысяч: «без него не подписываем»",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Руки с сертификатом 290k над ДДУ на столе, high-key, без лиц.",
+      "alt": "Сертификат на отделку предъявляют перед подписанием договора долевого участия.",
+      "labels": [
+        "КП и объявление",
+        "Проект договора",
+        "290 сверху"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Семья требует сопоставить КП, приложение и стандарт отделки",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Стол: КП, приложение ДДУ, стандарт отделки, фото документов на телефоне, без лиц.",
+      "alt": "Семья сопоставляет коммерческое предложение, приложение и стандарт отделки до оплаты.",
+      "labels": [
+        "Подписание отложено",
+        "Бронь внесена",
+        "Ипотека одобрена",
+        "Фото документов",
+        "Без перевода"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Они уходят без оплаты — подписание ДДУ отложено",
+      "visual_type": "process_flow",
+      "scene_hint": "Шаги: бронь, ипотека, сертификат, пауза без перевода.",
+      "alt": "Подписание ДДУ отложено после появления обязательного сертификата на отделку.",
+      "labels": [
+        "Отделка в цене",
+        "Список работ",
+        "Без сертификата",
+        "Пункт договора",
+        "Дополнительное соглашение"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Четыре вопроса к договору до перевода денег на эскроу",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Шкала 4 вопросов до эскроу: договор, приложение, бумага, 290 сверху.",
+      "alt": "Четыре вопроса к договору до перевода денег на эскроу-счёт.",
+      "labels": [
+        "В договоре",
+        "В приложении",
+        "Отдельная бумага",
+        "290 тысяч сверху",
+        "Список материалов"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Таблица: отделка в цене ДДУ против отдельного сертификата",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Диаграмма: отделка в цене ДДУ vs отдельный сертификат 290k.",
+      "alt": "Сравнение отделки в цене договора и отдельного платного сертификата.",
+      "labels": [
+        "Деньги не ушли",
+        "Реклама против договора",
+        "Решение по бумагам",
+        "Не сегодня или никогда",
+        "Сверка до аванса"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "новостройки тюмени с отделкой под ключ",
+    "дду с отделкой",
+    "квартиры с отделкой от застройщика"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "герой справа в трёхчетвертном среднем плане; слева чистая светлая зона под заголовок; внизу зона под телефон",
+    "location": "светлый шоурум новостройки с образцами чистовой отделки и панорамным окном Тюмень",
+    "meme": "james_doakes + polite_cat угловые стикеры ≤15%",
+    "prop_set": "сертификат 290000, папка ДДУ, образцы плитки, ручка паузы",
+    "sticker_set": "james_doakes нижний левый, polite_cat верхний правый, зазор 80px от телефона и лица",
+    "joke": "почти подписали ДДУ — сертификат на отделку всплыл как обязательная доплата",
+    "outfit": "терракотовая рубашка-оверсайз, светлая футболка, светлые брюки, без чёрного пиджака",
+    "emotion": "растерянное недоверие: приподнятые брови, приоткрытый рот, взгляд на сумму в сертификате",
+    "pose_framing": "средний план справа за столом, корпус к документам, не левый talking-head бюст",
+    "action": "сверяет сертификат на отделку с проектом ДДУ и жестом останавливает подписание"
+  },
+  "cover_emotion": "растерянное недоверие"
+}
