@@ -32,3 +32,4 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-09-20 | B31 | za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t | /blog/ipoteka/za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t/ | published |
 | 2026-09-20 | B32 | za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil- | /blog/ipoteka/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil/ | published |
 | 2026-09-28 | B33 | za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot | /blog/vtorichka-i-riski/za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot/ | published |
+| 2026-10-03 | B34 | v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej | /blog/vtorichka-i-riski/v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej/ | published |

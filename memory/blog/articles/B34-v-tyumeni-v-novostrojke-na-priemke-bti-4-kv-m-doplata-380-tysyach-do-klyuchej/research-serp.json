@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-10-03",
+    "today_ru": "03.10.2026",
+    "year": 2026,
+    "month": 10,
+    "month_name_ru": "октябрь",
+    "weekday_ru": "суббота"
+  },
+  "topic": {
+    "topic_id": "B34",
+    "title": "В Тюмени в новостройке на приёмке БТИ +4 кв.м — доплата 380 тысяч до ключей",
+    "h1": "В Тюмени в новостройке на приёмке БТИ +4 кв.м — доплата 380 тысяч до ключей",
+    "slug": "v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej",
+    "primary_query": "В Тюмени в новостройке на приёмке БТИ +4 кв.м — доплата 380 тысяч до ключей",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени в новостройке на приёмке БТИ +4 кв.м — доплата 380 тысяч до ключей 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени БТИ «съело» 4,2 кв.м ДДУ — в перерасчёте отказали",
+          "url": "https://dzen.ru/a/aq0bWd8hLg35pKQb",
+          "snippet": ""
+        },
+        {
+          "title": "Квартиры в готовых и строящихся домах Тюмени: где можно получить ключи ...",
+          "url": "https://72.ru/text/longread/2026/09/30/76670969/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени семья обнаружила в новостройке минус 4,2 кв. м: в ДДУ было 68,4, а в техпаспорте БТИ на выдаче ключей — 64,2."
+        },
+        {
+          "title": "Новостройки со сроком сдачи в 2026 году в Тюмени — 24 ЖК от ...",
+          "url": "https://realty.yandex.ru/tyumen/kupit/novostrojka/4-i-bolee/sdacha-2026/",
+          "snippet": "В Тюмени можно выбрать квартиру в уже сданном доме или дождаться новой очереди с дополнительными пространствами рядом с домом. - Недвижимость - 30 сентября 2026 | 72.ру"
+        },
+        {
+          "title": "ᐉ Новостройки до 4 млн рублей в Тюмени, купить квартиру от ...",
+          "url": "https://www.etagi.com/zastr/4-mln/",
+          "snippet": "4-комнатные Квартиры в 24 новых ЖК со сроком сдачи в 2026 году по ценам от застройщиков в Тюмени. Планировки, фото, описание, расположение на карте. Скидки и акции."
+        },
+        {
+          "title": "Новостройки в Тюмени - купить квартиру от застройщика в Тюмени 18 004 ...",
+          "url": "https://tyumen.domclick.ru/novostrojki",
+          "snippet": "Купить квартиру в новостройке по цене застройщика до 4600000 руб в Тюмени с полным сопровождением и безопасным способом расчета. В базе недвижимости по данному запросу нашлось 1067 вариантов."
+        },
+        {
+          "title": "Новостройки в Тюмени — 30 ЖК от застройщиков, купить 4-комнатную ...",
+          "url": "https://realty.yandex.ru/tyumen/kupit/novostrojka/4-i-bolee/",
+          "snippet": "⭐ Новостройки (ЖК) в Тюмени с Актуальными Ценами от Застройщиков. В каталоге недвижимости 18 004 объявления (ЖК) с описанием, планировками, фото и реальными отзывами покупателей. Подобрать и купить квартиру в ..."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени в новостройке на приёмке БТИ +4 кв.м — доплата 380 тысяч до ключей 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени БТИ «съело» 4,2 кв.м ДДУ — в перерасчёте отказали",
+          "url": "https://dzen.ru/a/aq0bWd8hLg35pKQb",
+          "snippet": ""
+        },
+        {
+          "title": "Квартиры в готовых и строящихся домах Тюмени: где можно получить ключи ...",
+          "url": "https://72.ru/text/longread/2026/09/30/76670969/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени семья обнаружила в новостройке минус 4,2 кв. м: в ДДУ было 68,4, а в техпаспорте БТИ на выдаче ключей — 64,2."
+        },
+        {
+          "title": "Новостройки со сроком сдачи в 2026 году в Тюмени — 24 ЖК от ...",
+          "url": "https://realty.yandex.ru/tyumen/kupit/novostrojka/4-i-bolee/sdacha-2026/",
+          "snippet": "В Тюмени можно выбрать квартиру в уже сданном доме или дождаться новой очереди с дополнительными пространствами рядом с домом. - Недвижимость - 30 сентября 2026 | 72.ру"
+        },
+        {
+          "title": "Новостройки в Тюмени - купить квартиру от застройщика в Тюмени 18 004 ...",
+          "url": "https://tyumen.domclick.ru/novostrojki",
+          "snippet": "4-комнатные Квартиры в 24 новых ЖК со сроком сдачи в 2026 году по ценам от застройщиков в Тюмени. Планировки, фото, описание, расположение на карте. Скидки и акции."
+        },
+        {
+          "title": "Новостройки (ЖК) в Тюмени",
+          "url": "https://www.avito.ru/tyumen/kvartiry/catalog/novostroyki-ASgBAgICA0SSA8YQ5geOUvLFDvCTmgI",
+          "snippet": "⭐ Новостройки (ЖК) в Тюмени с Актуальными Ценами от Застройщиков. В каталоге недвижимости 18 004 объявления (ЖК) с описанием, планировками, фото и реальными отзывами покупателей. Подобрать и купить квартиру в ..."
+        },
+        {
+          "title": "Новостройки в Тюмени — 30 ЖК от застройщиков, купить 4-комнатную ...",
+          "url": "https://realty.yandex.ru/tyumen/kupit/novostrojka/4-i-bolee/",
+          "snippet": "Купите квартиру в новостройке в Тюмени по выгодной цене: 132 ЖК на Авито. Продажа квартир в жилых комплексах в Тюмени от застройщиков и по переуступке. База новостроек с описаниями: фото, срок сдачи, инфраструктура на ..."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени в новостройке на приёмке БТИ +4 кв.м — доплата 380 тысяч до ключей official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени БТИ «съело» 4,2 кв.м ДДУ — в перерасчёте отказали",
+          "url": "https://dzen.ru/a/aq0bWd8hLg35pKQb",
+          "snippet": ""
+        },
+        {
+          "title": "Квартиры в готовых и строящихся домах Тюмени: где можно получить ключи ...",
+          "url": "https://72.ru/text/longread/2026/09/30/76670969/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени семья обнаружила в новостройке минус 4,2 кв. м: в ДДУ было 68,4, а в техпаспорте БТИ на выдаче ключей — 64,2."
+        },
+        {
+          "title": "Новостройки со сроком сдачи в 2026 году в Тюмени — 24 ЖК от ...",
+          "url": "https://realty.yandex.ru/tyumen/kupit/novostrojka/4-i-bolee/sdacha-2026/",
+          "snippet": "В Тюмени можно выбрать квартиру в уже сданном доме или дождаться новой очереди с дополнительными пространствами рядом с домом. - Недвижимость - 30 сентября 2026 | 72.ру"
+        },
+        {
+          "title": "Потолки выше заявленных: Покупали квартиру, высота потолков была ...",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/potolki-wyshe-zaqwlennyh",
+          "snippet": "4-комнатные Квартиры в 24 новых ЖК со сроком сдачи в 2026 году по ценам от застройщиков в Тюмени. Планировки, фото, описание, расположение на карте. Скидки и акции."
+        },
+        {
+          "title": "Приемка квартиры у застройщика: чек-лист недостатков 2026 - Fedelis",
+          "url": "https://fedelis.ru/article/priemka-kvartiry-u-zastrojshhika/",
+          "snippet": "Если по факту (БТИ/обмеры) 4,2 м вместо заявленных 2,7 м — это преимущество для Вас: больше объём воздуха, лучше вентиляция, выше статус квартиры, проще ремонт (высокие потолки ценятся). Что это даёт: Квартира стала более ценной (на вторичке или перепродаже цена выше на 5-15% при таких потолках)."
+        },
+        {
+          "title": "Лица, на данный момент идёт приёмка квартир, за замерам БТИ площадь ...",
+          "url": "https://pravoved.ru/question/3306763/",
+          "snippet": "Приемка квартиры у застройщика: чек-лист недостатков 2026 Приёмка квартиры в новостройке — самый ответственный этап покупки жилья по договору долевого участия (ДДУ)."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени в новостройке на приёмке БТИ +4 кв.м — доплата 380 тысяч до ключей 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "was-node-suite-comfyui/image/menu_layer_color.jpg at main · RituCodeWeb ...",
+          "url": "https://github.com/RituCodeWeb/was-node-suite-comfyui/blob/main/image/menu_layer_color.jpg",
+          "snippet": ""
+        },
+        {
+          "title": "lol-career/favicon.svg at main · lastdance2077/lol-career · GitHub",
+          "url": "https://github.com/lastdance2077/lol-career/blob/main/favicon.svg",
+          "snippet": "Contribute to RituCodeWeb/was-node-suite-comfyui development by creating an account on GitHub."
+        },
+        {
+          "title": "BibleQuizzing/6128f49fadcdb65b37f2ecc1a3357917.svg at main ...",
+          "url": "https://github.com/SmashcardsService/BibleQuizzing/blob/main/6128f49fadcdb65b37f2ecc1a3357917.svg",
+          "snippet": "Contribute to lastdance2077/lol-career development by creating an account on GitHub."
+        },
+        {
+          "title": "indiesmash/icon.svg at main · hopesofbuzzy/indiesmash · GitHub",
+          "url": "https://github.com/hopesofbuzzy/indiesmash/blob/main/icon.svg",
+          "snippet": "Coach your team to victory in this Bible Quizzing game! - BibleQuizzing/6128f49fadcdb65b37f2ecc1a3357917.svg at main · SmashcardsService/BibleQuizzing."
+        },
+        {
+          "title": "Panels/Cessna, 172.png at main · rogerwilcoaviation/Panels",
+          "url": "https://github.com/rogerwilcoaviation/Panels/blob/main/Cessna%2C%20172.png",
+          "snippet": "A simple tech demo for platformer. Contribute to hopesofbuzzy/indiesmash development by creating an account on GitHub."
+        },
+        {
+          "title": "beautiful-mermaid/hero.png at main · lukilabs/beautiful-mermaid",
+          "url": "https://github.com/lukilabs/beautiful-mermaid/blob/main/hero.png",
+          "snippet": "Contribute to rogerwilcoaviation/Panels development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени в новостройке на приёмке БТИ +4 кв.м — доплата 380 тысяч до ключей forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени БТИ «съело» 4,2 кв.м ДДУ — в перерасчёте отказали",
+          "url": "https://dzen.ru/a/aq0bWd8hLg35pKQb",
+          "snippet": ""
+        },
+        {
+          "title": "Квартиры в готовых и строящихся домах Тюмени: где можно получить ключи ...",
+          "url": "https://72.ru/text/longread/2026/09/30/76670969/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени семья обнаружила в новостройке минус 4,2 кв. м: в ДДУ было 68,4, а в техпаспорте БТИ на выдаче ключей — 64,2."
+        },
+        {
+          "title": "Новостройки со сроком сдачи в 2026 году в Тюмени — 24 ЖК от ...",
+          "url": "https://realty.yandex.ru/tyumen/kupit/novostrojka/4-i-bolee/sdacha-2026/",
+          "snippet": "В Тюмени можно выбрать квартиру в уже сданном доме или дождаться новой очереди с дополнительными пространствами рядом с домом. - Недвижимость - 30 сентября 2026 | 72.ру"
+        },
+        {
+          "title": "Лица, на данный момент идёт приёмка квартир, за замерам БТИ площадь ...",
+          "url": "https://pravoved.ru/question/3306763/",
+          "snippet": "4-комнатные Квартиры в 24 новых ЖК со сроком сдачи в 2026 году по ценам от застройщиков в Тюмени. Планировки, фото, описание, расположение на карте. Скидки и акции."
+        },
+        {
+          "title": "Потолки выше заявленных: Покупали квартиру, высота потолков была ...",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/potolki-wyshe-zaqwlennyh",
+          "snippet": "Заключение юриста по делу: \"Лица, на данный момент идёт приёмка квартир, за замерам БТИ площадь увеличилась на 1, 4 кв.м, застройщик требует\", актуальные консультации на проекте Правовед.ru"
+        },
+        {
+          "title": "Эксперты рассказали, что изменилось в приемке квартиры в 2026 году",
+          "url": "https://realty.ria.ru/20260423/priemka-2088334169.html",
+          "snippet": "Если по факту (БТИ/обмеры) 4,2 м вместо заявленных 2,7 м — это преимущество для Вас: больше объём воздуха, лучше вентиляция, выше статус квартиры, проще ремонт (высокие потолки ценятся)."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej",
+  "topic_id": "B34",
+  "post_id": 11450,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1054204,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11450 slug=v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej\nOK categories=31\nOK yoast_social_image=1\nOK featured_image=11451\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11452 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej-inline-04.png\nOK inline_alt=11452\nOK inline_description=11452\nOK inline_image_upload=11453 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej-inline-02.png\nOK inline_alt=11453\nOK inline_description=11453\nOK inline_image_upload=11454 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej-inline-01.png\nOK inline_alt=11454\nOK inline_description=11454\nOK inline_image_upload=11455 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej-inline-05.png\nOK inline_alt=11455\nOK inline_description=11455\nOK inline_image_upload=11456 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej-inline-03.png\nOK inline_alt=11456\nOK inline_description=11456\nOK inline_image_upload=11457 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej-inline-06.png\nOK inline_alt=11457\nOK inline_description=11457\nOK inline_image_upload=11458 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej-inline-07.png\nOK inline_alt=11458\nOK inline_description=11458\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej/",
+    "errors": []
+  }
+}
