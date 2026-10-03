@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": { "@id": "{{SITE_BASE}}/#organization" }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/za-4-dnya-do-avansa-v-tyumeni-vsplyla-darstvennaya-bank-ostanovil-sdelku/#blogposting",
+      "url": "{{SITE_BASE}}/za-4-dnya-do-avansa-v-tyumeni-vsplyla-darstvennaya-bank-ostanovil-sdelku/",
+      "headline": "За 4 дня до аванса в Тюмени всплыла дарственная полгода назад — банк остановил сделку",
+      "description": "Перед авансом всплыла свежая дарственная — банк снял одобрение ипотеки на вторичке в Тюмени.",
+      "datePublished": "2026-10-03",
+      "inLanguage": "ru-RU",
+      "author": { "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin" },
+      "publisher": { "@id": "{{SITE_BASE}}/#organization" },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/za-4-dnya-do-avansa-v-tyumeni-vsplyla-darstvennaya-bank-ostanovil-sdelku/"
+      }
+    }
+  ]
+}
