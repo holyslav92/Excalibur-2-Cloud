@@ -21,6 +21,21 @@ DEFAULT_FORMULA_SPAM_LAST_N = 3
 
 # Механизмы newbuild для fingerprint / formula-spam (порядок = приоритет).
 MECHANISM_SIGNATURES: list[tuple[str, list[str]]] = [
+    # Аренда — отдельные скелеты, иначе слот 19:00 всегда «unknown»
+    # и ложно падает в formula spam вместе с вторичкой без маркера.
+    (
+        "rent_platform_tax",
+        [r"ндфл", r"налогов", r"самозанят", r"фнс", r"мой\s+налог"],
+    ),
+    (
+        "rent_lease",
+        [r"договор\s+найм", r"договор\s+аренд", r"нанимател", r"квартирант"],
+    ),
+    (
+        "rent_deposit",
+        [r"залог\s+.{0,24}аренд", r"депозит\s+.{0,24}(?:аренд|найм)"],
+    ),
+    ("rent_eviction", [r"выселен"]),
     ("booking_expired", [r"брон", r"bron", r"заброн"]),
     ("escrow_blocked", [r"эскроу", r"escrow"]),
     ("ddu_mismatch", [r"апартамент", r"apartament", r"квартир.*апарт"]),
