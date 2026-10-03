@@ -20,6 +20,10 @@
     "side_stickers": "skip"
   },
   "date": "2026-10-03",
+  "wp_category_slugs": [
+    "vtorichka-i-riski",
+    "ipoteka"
+  ],
   "pipeline_canon": "human-first-v2",
   "editorial_swarm": false
 }
