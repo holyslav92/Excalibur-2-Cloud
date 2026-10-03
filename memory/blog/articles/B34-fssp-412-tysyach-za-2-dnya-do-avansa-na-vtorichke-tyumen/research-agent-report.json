@@ -1,0 +1,39 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-03",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://vsluh.ru/novosti/dengi/tyumenskie-pristavy-prizyvayut-otpusknikov-proveryat-dolgi-pered-vyezdom-za-granitsu_430535/",
+        "type": "regional_news",
+        "note": "2026-09-28 — пресс-служба УФССП Тюмени, БДИП и порог долга >10k"
+      },
+      {
+        "url": "https://72.ru/text/house/2026/08/12/76584267/",
+        "type": "regional_news",
+        "note": "2026-08-12 — запрет регистрации, статистика реализации жилья за долги"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени вторичка",
+    "p0_volume": 3375,
+    "partial_phrases": ["проверка фссп перед покупкой квартиры — totalCount only"],
+    "rework_log": "FSSP-before-advance cluster; BDIP + EGRN split"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": [],
+    "errors": []
+  },
+  "key_facts_count": 9,
+  "blockers": []
+}
