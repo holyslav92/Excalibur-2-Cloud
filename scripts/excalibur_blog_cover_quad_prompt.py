@@ -507,6 +507,52 @@ def build_prompt(
     return "\n".join(line for line in lines if line)
 
 
+_SOLO_MEME_VISUAL = {
+    "grumpy_cat": "Grumpy Cat: tiny orange frowning cat, white cutout",
+    "disappointed_black_guy": "Disappointed Black Guy: tiny side-eye disapproval face, white cutout",
+    "bad_luck_brian": "Bad Luck Brian: tiny awkward yearbook sticker, white cutout",
+    "pop_cat": "Pop Cat: tiny open-mouth orange cat, white cutout",
+    "crying_cat": "Crying Cat: tiny teary orange cat, white cutout",
+    "keyboard_cat": "Keyboard Cat: tiny orange cat at keys, white cutout",
+    "surprised_tom": "Surprised Tom: tiny shocked grey cat face, white cutout",
+}
+
+
+def solo_cover_meme_clause(manifest: dict) -> str:
+    """Стикеры solo-обложки из meme_picks. Полосатый thinking-cat сожжён."""
+    raw = manifest.get("meme_picks") or {}
+    picks: list[str] = []
+    if isinstance(raw, dict):
+        cover_picks = raw.get("cover")
+        if isinstance(cover_picks, list):
+            picks = [str(item).strip() for item in cover_picks if str(item).strip()]
+    if not picks:
+        slot = (manifest.get("slots") or {}).get("cover") or {}
+        slot_picks = slot.get("meme_picks") or []
+        if isinstance(slot_picks, list):
+            picks = [str(item).strip() for item in slot_picks if str(item).strip()]
+    ban = (
+        "FORBIDDEN meme: thinking striped cat, tabby thinking-cat, "
+        "acceptance/consent/EGRN cat, any sticker not listed here."
+    )
+    if not picks:
+        return (
+            "One tiny orange Grumpy Cat sticker at x 70–86% y 58–74%, "
+            "above the phone, ≥80px clear of headline and phone. " + ban
+        )
+    bits = [
+        _SOLO_MEME_VISUAL.get(pid, f"tiny catalog sticker {pid}")
+        for pid in picks[:2]
+    ]
+    return (
+        "Meme stickers ONLY, each ≤12% of frame, never covering hook, host face, or phone: "
+        + "; ".join(bits)
+        + ". Orange cat sticker at x 70–86% y 58–74% (above the phone, white cutout). "
+        "People sticker bottom-LEFT corner only, tiny, not a second host. "
+        + ban
+    )
+
+
 def build_solo_cover_prompt(
     manifest: dict,
     style: dict,
@@ -527,7 +573,11 @@ def build_solo_cover_prompt(
     scene = sanitize_cover_scene_hint(str(cover.get("scene_hint") or ""), highlight)
     sticky = compact(str(cover.get("sticky") or ""), 48)
     outfit = compact(str(motifs.get("outfit") or ""), 100)
-    sticky_line = f' Yellow sticky EXACT «{sticky}» pinned left.' if sticky else ""
+    sticky_line = (
+        f' Small yellow sticky EXACT «{sticky}» bottom-left only — not a wide gold bar, not on the chest.'
+        if sticky
+        else ""
+    )
 
     style_prefix = compact(
         style.get("global_prompt_prefix") or design_code.get("cover_panel_prompt_block") or "",
@@ -553,15 +603,20 @@ def build_solo_cover_prompt(
         f"{short_hook_prompt_line()}\n"
         f"Headline EXACT «{hook}» bold black RIGHT sacred zone (52–96% width, 14–40% height), {highlight_rule}. "
         "Leave clear typography band — do NOT fill headline zone with face.\n"
-        f"Phone EXACT «{COVER_PHONE_CTA}» white torn paper bottom-RIGHT corner (55–98% width, 70–96% height).\n"
+        f"Phone EXACT «{COVER_PHONE_CTA}» on PURE WHITE paper, bottom-RIGHT "
+        "(x 58–98%, y 78–96%). Full digits ending in 05, not clipped, not cream/tan.\n"
         f"{sticky_line}\n"
         f"Host i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}. "
         f"Outfit INVENTED: {outfit}. Expression: {emotion}.\n"
+        "HOST CROP: large close-up face LEFT (~40% width), face height at least 45% of frame, "
+        "heavy five-o'clock stubble identical to the reference, medium-slim, not a different man. "
+        "Bust ends at the collarbone. Hands OUT OF FRAME — no fingers, no pinched paper, no extra digits.\n"
         f"{compact(scene, COVER_SCENE_HINT_COMPACT)}. "
-        "Close-up face+shoulders LEFT or center-left (~35% frame) — NOT full-bleed face crop, room for headline right. "
-        "Tiny thinking-cat meme sticker bottom-right corner ONLY — ≥80px clear margin from phone/headline. "
-        "ZERO Wordstat/search-keyword strips — never paint query bars; optional one yellow sticky from hook only. "
-        "Sun flare, tape/pins aesthetic on board only, perfect Cyrillic, #FFF bright."
+        f"{solo_cover_meme_clause(manifest)} "
+        "ABSOLUTE ZERO Wordstat/Yandex query strips anywhere: no beige or gold keyword bars, "
+        "no vest labels, no chest text, no top-left search column, "
+        "do not paint «семейная ипотека тюмень» or «новостройки тюмень». "
+        "Sun flare, bright #FFF, perfect Cyrillic."
     )
 
 
