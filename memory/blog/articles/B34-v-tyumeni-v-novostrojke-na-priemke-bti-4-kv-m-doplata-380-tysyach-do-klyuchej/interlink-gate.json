@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B34",
+  "slug": "v-tyumeni-v-novostrojke-na-priemke-bti-4-kv-m-doplata-380-tysyach-do-klyuchej",
+  "candidates_count": 30,
+  "outbound_found": [
+    {
+      "slug": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli",
+      "title": "semejnuyu-ipoteku-na-novostrojku-odobrili-eskrou-ne-otkryli"
+    },
+    {
+      "slug": "v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot",
+      "title": "v-tyumeni-zastrojschik-smenil-yurlico-dolschikam-prislali-novyj-ddu-eskrou-ne-ot"
+    },
+    {
+      "slug": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali",
+      "title": "v-tyumeni-v-ddu-obeschali-chistovuyu-na-priemke-golye-steny-akt-ne-podpisali"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
