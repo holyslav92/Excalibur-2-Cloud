@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie",
+  "topic_id": "B34",
+  "post_id": 11476,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1109253,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11476 slug=v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie\nOK categories=31,32\nOK yoast_social_image=1\nOK featured_image=11477\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11478 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie-inline-04.png\nOK inline_alt=11478\nOK inline_description=11478\nOK inline_image_upload=11479 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie-inline-05.png\nOK inline_alt=11479\nOK inline_description=11479\nOK inline_image_upload=11480 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie-inline-06.png\nOK inline_alt=11480\nOK inline_description=11480\nOK inline_image_upload=11481 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie-inline-07.png\nOK inline_alt=11481\nOK inline_description=11481\nOK inline_image_upload=11482 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie-inline-01.png\nOK inline_alt=11482\nOK inline_description=11482\nOK inline_image_upload=11483 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie-inline-02.png\nOK inline_alt=11483\nOK inline_description=11483\nOK inline_image_upload=11484 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie-inline-03.png\nOK inline_alt=11484\nOK inline_description=11484\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie/",
+    "errors": []
+  }
+}

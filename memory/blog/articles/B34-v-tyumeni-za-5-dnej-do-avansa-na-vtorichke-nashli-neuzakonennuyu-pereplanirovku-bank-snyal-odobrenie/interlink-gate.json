@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B34",
+  "slug": "v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie",
+  "candidates_count": 30,
+  "outbound_found": [
+    {
+      "slug": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "title": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami"
+    },
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn"
+    },
+    {
+      "slug": "v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii",
+      "title": "v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii"
+    },
+    {
+      "slug": "v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom",
+      "title": "v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
