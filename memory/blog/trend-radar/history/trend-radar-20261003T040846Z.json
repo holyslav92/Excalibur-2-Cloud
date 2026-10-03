@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-03T04:35:00.846982+00:00",
+  "generated_at": "2026-10-03T04:25:37.636283+00:00",
   "slot_local": "09:00",
   "slot_rubric": "novostroyki",
   "slot_rubric_label": "новостройки",
-  "data_dir": "memory/blog/trend-radar/data/20261003T043500Z",
+  "data_dir": "memory/blog/trend-radar/data/20261003T040846Z",
   "viral_db": "memory/blog/trend-radar/data/20261003T040846Z/viral.sqlite",
   "sources_used": [
     "klyshin",
@@ -17,16 +17,6 @@
       "label": "новостройки",
       "angles": [
         {
-          "headline_formula": "casus+число: «Муж пригрозил разводом, если я не оформлю ипотеку…»",
-          "first_line_hook": "Муж пригрозил разводом, если я не оформлю ипотеку на его маму, и очень удивился исходу..",
-          "mechanism": "деньги/ипотека на столе",
-          "views": 12507,
-          "read_through": 0.8715,
-          "viral_score": 10.4397,
-          "source_url": "https://dzen.ru/a/argJt3GFCAukqsQK",
-          "channel": "КРАСОТА В МЕЛОЧАХ"
-        },
-        {
           "headline_formula": "casus+число: «Потерять квартиру из-за сдачи ее в аренду: 3…»",
           "first_line_hook": "Потерять квартиру из-за сдачи ее в аренду: 3 ситуации из практики",
           "mechanism": "договор vs реальность",
@@ -37,37 +27,37 @@
           "channel": "СИЛА ПРАВА"
         },
         {
-          "headline_formula": "casus+число: ««Хотели как лучше, получилось как всегда»: кому достанется…»",
-          "first_line_hook": "«Хотели как лучше, получилось как всегда»: кому достанется обновлённая семейная ипотека?",
-          "mechanism": "деньги/ипотека на столе",
-          "views": 12680,
-          "read_through": 0.4104,
-          "viral_score": 10.2668,
-          "source_url": "https://dzen.ru/a/ar3-fowtABJApYsy",
-          "channel": "Аргументы недели"
+          "headline_formula": "casus+число: «Стоит ли гордиться быстрой сдачей квартиры внаём?»",
+          "first_line_hook": "Стоит ли гордиться быстрой сдачей квартиры внаём?",
+          "mechanism": "часы/срок съели аванс",
+          "views": 1102,
+          "read_through": 0.8185,
+          "viral_score": 8.5138,
+          "source_url": "https://dzen.ru/a/ZsJMPq_HcwHbEpkv",
+          "channel": "Управляющий недвижимостью"
         },
         {
-          "headline_formula": "casus+число: «Ипотека уже под 28%. Готовы ли россияне брать…»",
-          "first_line_hook": "Ипотека уже под 28%. Готовы ли россияне брать жилье в кредит",
-          "mechanism": "деньги/ипотека на столе",
-          "views": 21893,
-          "read_through": 0.7258,
-          "viral_score": 9.7438,
-          "source_url": "https://dzen.ru/a/ZyGNUmh6LnVlC_Ia",
-          "channel": "Аргументы и факты – aif.ru"
+          "headline_formula": "casus+число: «Нужен ли диван в квартире под сдачу?»",
+          "first_line_hook": "Нужен ли диван в квартире под сдачу?",
+          "mechanism": "часы/срок съели аванс",
+          "views": 1249,
+          "read_through": 0.6429,
+          "viral_score": 8.3213,
+          "source_url": "https://dzen.ru/a/ZwLGyDA8gSnKtcXR",
+          "channel": "Управляющий недвижимостью"
         },
         {
-          "headline_formula": "casus+число: ««Лучше не брать квартиры». Что будет с ипотекой…»",
-          "first_line_hook": "«Лучше не брать квартиры». Что будет с ипотекой в России в 2024 году",
-          "mechanism": "деньги/ипотека на столе",
-          "views": 63543,
-          "read_through": 0.5933,
-          "viral_score": 9.4885,
-          "source_url": "https://dzen.ru/a/ZZ8eHrRsfjYsBQ9L",
-          "channel": "Газета.Ru"
+          "headline_formula": "casus+число: «Какие ошибки чаще всего допускаются при сдаче коммерческой…»",
+          "first_line_hook": "Какие ошибки чаще всего допускаются при сдаче коммерческой недвижимости в аренду и как их избежать?",
+          "mechanism": "договор vs реальность",
+          "views": 653,
+          "read_through": 0.7335,
+          "viral_score": 5.4293,
+          "source_url": "https://dzen.ru/a/Zw5pftVFrQtV--_v",
+          "channel": "Инвестиции Вквадрате | Редевелопмент недвижимости"
         }
       ],
-      "count": 5
+      "count": 4
     },
     "vtorichka": {
       "label": "вторичка",
@@ -103,24 +93,24 @@
           "channel": "Окулов PRO | Недвижимость с торгов"
         },
         {
-          "headline_formula": "casus+число: «Суды заставили покупателя вернуть квартиру спустя 10 лет…»",
-          "first_line_hook": "Суды заставили покупателя вернуть квартиру спустя 10 лет после покупки",
+          "headline_formula": "casus+число: «Продажа недвижимости иностранцам в 2025: как не попасть…»",
+          "first_line_hook": "Продажа недвижимости иностранцам в 2025: как не попасть на штраф в 30% и провести сделку без ошибок.",
           "mechanism": "almost lost перед ключами/деньгами",
-          "views": 3432,
-          "read_through": 0.5277,
-          "viral_score": 6.7225,
-          "source_url": "https://dzen.ru/a/aju-o9iljQq9-fYt",
-          "channel": "DEMIDOV"
+          "views": 358,
+          "read_through": 0.5894,
+          "viral_score": 5.3839,
+          "source_url": "https://dzen.ru/a/aDAzvTAsXitb1xjS",
+          "channel": "«Ваше Право» — простые ответы на сложные вопросы. Юридические лайфхаки."
         },
         {
-          "headline_formula": "casus+число: «Что будет с ценами на вторичку в конце…»",
-          "first_line_hook": "Что будет с ценами на вторичку в конце года. Прогноз и обзор рынка.",
+          "headline_formula": "casus+число: «7 смертных грехов покупателя квартиры»",
+          "first_line_hook": "7 смертных грехов покупателя квартиры",
           "mechanism": "almost lost перед ключами/деньгами",
-          "views": 11506,
-          "read_through": 0.1661,
-          "viral_score": 6.7033,
-          "source_url": "https://dzen.ru/a/ag82Vt863l2cGBOy",
-          "channel": "Константин Барсуков-эксперт недвижимости"
+          "views": 162,
+          "read_through": 0.4444,
+          "viral_score": 3.4972,
+          "source_url": "https://dzen.ru/a/XLmtcugWMwCyk9aL",
+          "channel": "Алексей Клышин юрист по недвижимости"
         }
       ],
       "count": 5

@@ -1,0 +1,34 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "cover/cover.png",
+  "last_errors": [
+    "pixel_identity_matches_studio host_face_skin_blob_too_small",
+    "pixel_hook_title_not_truncated OCR flake",
+    "pixel_wordstat_not_opaque_bars",
+    "pixel_wordstat_not_on_host_chest paper_frac=0.022",
+    "pixel_meme_not_occluded_by_wordstat paper_frac=0.042",
+    "pixel_wordstat_only_top_left paper_frac=0.014",
+    "pixel_phone_readable clipped OCR",
+    "pixel_no_wordstat_query_strips",
+    "pixel_designed_thumbnail not 1200x675"
+  ],
+  "attempts": [
+    {
+      "n": 1,
+      "canvas": "cover/canvas-quad-01.png",
+      "note": "meme_clearance_80px paper near cat zone"
+    },
+    {
+      "n": 2,
+      "canvas": "cover/canvas-quad-01.png",
+      "note": "cat moved lower-right; chest/meme paper detector still FAIL; OCR escape not applied"
+    }
+  ],
+  "next_steps": [
+    "Re-run cover_qa_gate on best_candidate — analyze_cover_pixels applies OCR escape before verdict",
+    "Do NOT deep-dive Cover-QA source — if visual OK after escape, proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}
