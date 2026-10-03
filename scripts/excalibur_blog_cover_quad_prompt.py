@@ -414,6 +414,11 @@ def build_prompt(
             "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic ink, "
             "gold #dcc5a1 one accent only. Torn paper, gold tape/sticky, informative UI cards."
         )
+    if "Wordstat" in style_prefix:
+        style_prefix = style_prefix.replace(
+            "1-3 Wordstat stickers (Тюмень). ",
+            "NO Wordstat query strips — topic research only. ",
+        )
 
     quadrant_labels = ("Top-left", "Top-right", "Bottom-left", "Bottom-right")
     panel_lines: list[str] = []
