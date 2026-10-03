@@ -1,5 +1,22 @@
 # Excalibur BLOG — WP publish log
 
+## B34 — 2026-10-03
+
+- **topic_id:** B34
+- **slug:** v-tyumeni-synu-ispolnilos-sem-let-za-den-do-dogovora-s-zastrojschikom-bank-snyal
+- **h1:** Сыну исполнилось 7 за день до договора — семейную ипотеку сняли
+- **post_id:** 11489
+- **permalink:** /blog/ipoteka/v-tyumeni-synu-ispolnilos-sem-let-za-den-do-dogovora-s-zastrojschikom-bank-snyal/
+- **featured_image:** 11490
+- **inline_images:** 11491–11497 (7)
+- **wp_category_slugs:** ipoteka, pokupka-kvartiry (category_ids=32,36)
+- **schema_meta:** ok
+- **cover_qa:** PASS
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** solo cover без полосы Wordstat; SFTP root fallback to `.`
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
