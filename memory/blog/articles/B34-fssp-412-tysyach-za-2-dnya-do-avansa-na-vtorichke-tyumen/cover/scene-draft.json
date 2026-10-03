@@ -1,0 +1,133 @@
+{
+  "cover_hook": "Долг 412 тысяч нашли до аванса",
+  "cover_hook_highlight": "412 тысяч",
+  "slots": {
+    "cover": {
+      "scene_hint": "Светлая квартира в Тюмени: мужчина в горчичной рубашке поверх голубой футболки резко отодвигает папку с договором, ошеломлённо смотрит на экран с долгом 412 000 рублей; солнечный блик, бело-золотой коллаж, крупная свободная зона под заголовок и номер телефона.",
+      "cover_emotion": "ошеломлённое недоверие с резким прищуром и приоткрытым ртом",
+      "cover_text": "Долг 412 тысяч нашли до аванса",
+      "phone": "+7 922 001 65 05",
+      "identity_reference": "face-studio-2026-06-23.jpg",
+      "image_direction": "same person as reference, new mustard overshirt and pale blue T-shirt, new action and expression, medium slim build, three-quarter framing on the right, do not copy reference clothes, pose or smile; bright high-key lighting, white and gold paper collage, subtle tape accents, no dark cinematic look",
+      "meme_direction": "small catalog people-reaction sticker showing disbelief near the document corner, plus a tiny real-template cat reaction sticker; stickers together no more than 15 percent of frame, never over hook, face or phone, at least 80px clearance"
+    },
+    "inline_1": {
+      "visual_type": "realistic_photo",
+      "placement_group": "pair",
+      "scene_hint": "Светлая вторичная квартира в Тюмени: на столе лежат одобренное ипотечное решение, свежая выписка ЕГРН с отметкой об отсутствии обременений и связка ключей; без людей и лиц, мягкий солнечный свет.",
+      "alt": "Одобренная ипотека, выписка ЕГРН без обременений и ключи от квартиры на столе",
+      "fact_labels": [
+        "ипотека одобрена",
+        "выписка без обременений",
+        "вторичная квартира",
+        "Тюмень"
+      ]
+    },
+    "inline_2": {
+      "visual_type": "realistic_photo",
+      "placement_group": "pair",
+      "scene_hint": "Крупный план ноутбука и распечатки проверки ФССП на светлом столе: выделена сумма 412 000 рублей и дата проверки за два дня до аванса; чистая инфографичная композиция, без людей.",
+      "alt": "Проверка ФССП за два дня до аванса показывает долг 412 000 рублей",
+      "fact_labels": [
+        "проверка ФССП",
+        "412 000 рублей",
+        "за два дня до аванса",
+        "дата проверки"
+      ]
+    },
+    "inline_3": {
+      "visual_type": "utility_catalog",
+      "placement_group": "single",
+      "scene_hint": "Светлая объясняющая схема на белом фоне: выписка ЕГРН показывает сведения об объекте, а БДИП и ФССП — обязательства продавца; две дорожки сходятся перед решением об авансе, gold-black collage.",
+      "alt": "Схема показывает, почему чистая выписка не отражает долг продавца",
+      "fact_labels": [
+        "выписка ЕГРН",
+        "сведения об объекте",
+        "долги продавца",
+        "БДИП и ФССП",
+        "проверка перед авансом"
+      ]
+    },
+    "inline_4": {
+      "visual_type": "realistic_photo",
+      "placement_group": "pair",
+      "scene_hint": "Светлая кухонная столешница: закрытый конверт с надписью «аванс», телефон с непрочитанным обещанием продавца закрыть долг и рядом стопка документов; без людей, без читаемых персональных данных.",
+      "alt": "Покупатели не внесли аванс после обещания продавца закрыть долг",
+      "fact_labels": [
+        "обещание закрыть долг",
+        "аванс не внесён",
+        "переписка с продавцом",
+        "документы сделки"
+      ]
+    },
+    "inline_5": {
+      "visual_type": "realistic_photo",
+      "placement_group": "pair",
+      "scene_hint": "Светлый стол в офисе МФЦ: на нём лежат обезличенные чек-листы БДИП и выписки, ручка и жёлтая папка; рядом визуально разделены поля «долг», «запрет», «аванс», без сотрудников и лиц.",
+      "alt": "Перед авансом сверяют данные БДИП, выписку и наличие запрета на регистрацию",
+      "fact_labels": [
+        "БДИП",
+        "выписка",
+        "запрет на регистрацию",
+        "долг продавца",
+        "до аванса"
+      ]
+    },
+    "inline_6": {
+      "visual_type": "utility_catalog",
+      "placement_group": "single",
+      "scene_hint": "Информативная таблица на белом фоне в стиле gold-black collage: три колонки «долг ФССП», «запрет на регистрацию», «аванс» с понятными последствиями и последовательностью проверки, крупные цифры и стрелки.",
+      "alt": "Таблица связывает долг ФССП, запрет на регистрацию и решение об авансе",
+      "fact_labels": [
+        "долг ФССП",
+        "запрет на регистрацию",
+        "аванс",
+        "последовательность проверки",
+        "риск сделки"
+      ]
+    },
+    "inline_7": {
+      "visual_type": "utility_catalog",
+      "placement_group": "single",
+      "scene_hint": "Светлая пошаговая схема из четырёх карточек: проверить БДИП, сверить выписку, уточнить запрет на регистрацию, затем оформить аванс; белый фон, золотые номера, чёрные стрелки, без людей.",
+      "alt": "Пошаговая схема: сначала проверка, затем аванс по вторичке",
+      "fact_labels": [
+        "проверить БДИП",
+        "сверить выписку",
+        "уточнить запрет",
+        "оформить аванс после проверки"
+      ]
+    }
+  },
+  "wordstat_stickers": [
+    "долг ФССП перед покупкой квартиры",
+    "проверка продавца перед авансом",
+    "запрет на регистрацию квартиры"
+  ],
+  "inline_utility_all_7": true,
+  "inline_realistic_mix_2_4": true,
+  "inline_placement_flexible": true,
+  "inline_no_host_face": true,
+  "inline_no_co_host_human": true,
+  "cover_motifs": {
+    "composition": "hero on right, contract folder and phone in foreground, title-safe negative space on left",
+    "location": "bright modern apartment living room in Tyumen",
+    "meme": "catalog people disbelief reaction with small cat reaction accent",
+    "props": [
+      "folder with sale documents",
+      "smartphone showing 412 000 ₽ debt alert",
+      "rejected advance-payment envelope",
+      "small apartment keys"
+    ],
+    "stickers": [
+      "people-meme disbelief reaction",
+      "tiny cat reaction"
+    ],
+    "joke": "ипотека и выписка выглядят чистыми, а долг всплывает прямо перед авансом",
+    "outfit": "mustard overshirt over a pale blue T-shirt, beige trousers",
+    "emotion": "ошеломлённое недоверие, резкий прищур, приоткрытый рот",
+    "pose_framing": "three-quarter medium shot on the right, one hand stopping the folder, other hand holding the phone",
+    "action": "отодвигает папку с договором после обнаружения долга ФССП"
+  },
+  "cover_emotion": "ошеломлённое недоверие с резким прищуром и приоткрытым ртом"
+}

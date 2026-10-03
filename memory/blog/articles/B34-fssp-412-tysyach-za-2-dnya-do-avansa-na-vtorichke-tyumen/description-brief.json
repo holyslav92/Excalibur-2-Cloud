@@ -1,0 +1,9 @@
+{
+  "topic_id": "B34",
+  "description": "В Тюмени ЕГРН выглядел чистым, но проверка ФССП нашла открытое производство на 412 000 ₽ — всего за два дня до аванса сделку остановили.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

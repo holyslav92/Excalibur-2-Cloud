@@ -19,8 +19,18 @@ DEFAULT_ANTI_REPEAT_DAYS = 30
 DEFAULT_LIVE_LIMIT = 20
 DEFAULT_FORMULA_SPAM_LAST_N = 3
 
-# Механизмы newbuild для fingerprint / formula-spam (порядок = приоритет).
+# Механизмы для fingerprint / formula-spam (порядок = приоритет).
+# Вторичка/аренда — до newbuild, иначе vtorichka-слоты получают unknown и formula_spam FAIL.
 MECHANISM_SIGNATURES: list[tuple[str, list[str]]] = [
+    ("secondary_fssp_enforcement", [r"фссп", r"исполнительн", r"взыскан", r"арест"]),
+    ("secondary_gift_deed", [r"дарствен"]),
+    ("secondary_replan", [r"перепланиров", r"неузаконен"]),
+    ("secondary_rental_listing", [r"авито", r"сда[ёе]т", r"аренд.*объявлен"]),
+    ("secondary_utility_debt", [r"долг\s+за\s+(?:свет|коммунал|жкх)", r"лицев.*сч[её]т"]),
+    ("secondary_capremont_debt", [r"капремонт", r"фонд\s+кап"]),
+    ("secondary_deposit_receipt", [r"расписк", r"задаток"]),
+    ("secondary_egrn_encumbrance", [r"обремен", r"строк.*егрн"]),
+    ("secondary_advance_stop", [r"аванс"]),
     ("booking_expired", [r"брон", r"bron", r"заброн"]),
     ("escrow_blocked", [r"эскроу", r"escrow"]),
     ("ddu_mismatch", [r"апартамент", r"apartament", r"квартир.*апарт"]),
