@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "research_date": "2026-10-03",
+  "topic_id": "B34",
+  "signal": "move.ru listing updated 2026-09-30 plus ZK RF art. 35 consultant 2026-10-03",
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 1,
+    "entities_checked": [],
+    "errors": []
+  }
+}

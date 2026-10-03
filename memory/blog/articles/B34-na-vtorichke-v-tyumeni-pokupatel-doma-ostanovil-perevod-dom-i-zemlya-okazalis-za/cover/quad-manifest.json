@@ -1,0 +1,240 @@
+{
+  "topic_id": "B34",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Покупатель остановил перевод — два хозяина",
+  "cover_hook_highlight": "остановил",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Покупатель остановил перевод: дом и земля в Тюмени — у 2 хозяев: что сверить в двух выписках до перевода.",
+      "scene_hint": "Светлая веранда Тюмени: ржавый лён, палец над телефоном, пауза, две выписки.",
+      "meme_caption_ru": "",
+      "sticky": "Деньги остались у покупателя",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "пауза, сжатые губы, бровь вверх, без улыбки"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Перевод так и не ушёл",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Две выписки и смартфон, палец не нажал перевод, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Перевод так и не ушёл» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Две выписки",
+        "Две фамилии",
+        "Перевод остановлен"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Две фамилии на одном дворе",
+      "visual_type": "comparison_table",
+      "scene_hint": "Дом и участок записаны на разных людей.",
+      "alt": "сравнительная таблица с колонками по вторичке в Тюмени: Две фамилии, Дом отдельно, Земля отдельно — иллюстрация к разбору сделки.",
+      "labels": [
+        "Две фамилии",
+        "Дом отдельно",
+        "Земля отдельно"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Кусок земли под домом — не весь участок",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Двор без людей: золотым контуром только земля под домом.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Кусок земли под домом — не весь участок» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Кусок земли",
+        "Не весь участок",
+        "Проверьте границы"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Два договора вместо одного перевода",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Две папки договоров на светлом столе, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Два договора вместо одного перевода» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Два договора",
+        "Один перевод",
+        "Проверьте залог"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Остановились, пока деньги ваши",
+      "visual_type": "process_flow",
+      "scene_hint": "Шаги: две выписки, залог, согласие супруга, деньги не ушли.",
+      "alt": "нумерованный процесс / таймлайн к разделу «Остановились, пока деньги ваши» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Деньги не ушли",
+        "Залог проверен",
+        "Согласие супруга"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Остановились, пока деньги ваши",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Шкала: сверка выписок, пауза перевода, деньги на счёте.",
+      "alt": "график / шкала сроков по вторичке в Тюмени: Перевод остановлен, Залог проверен, Согласие супруга — иллюстрация к разбору сделки.",
+      "labels": [
+        "Перевод остановлен",
+        "Залог проверен",
+        "Согласие супруга"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Две фамилии на одном дворе",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема: хозяин дома, хозяин земли, две выписки, деньги у покупателя.",
+      "alt": "схема устройства механизма к разделу «Две фамилии на одном дворе» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Две фамилии",
+        "Два хозяина",
+        "Проверьте выписки"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "купить дом в тюмени",
+    "вторичка в тюмени"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "Средний план справа над столом на солнечной веранде, свободная светлая зона слева под заголовок",
+    "location": "Белая деревянная веранда загородного дома в Тюмени с солнечным воздухом и золотым бликом",
+    "meme": "Две крошечные угловые реакции на неловкую паузу перед отменённым переводом",
+    "prop_set": "Две выписки с пометками «дом» и «участок», смартфон с ненажатым переводом, деревянный стол",
+    "sticker_set": "Два небольших стикера в дальних углах, вне лица, заголовка и телефона",
+    "joke": "Продавец уверенно показывал двор, а документы устроили ему тихую проверку на внимательность",
+    "outfit": "Льняная рубашка цвета ржавчины без жилета и пиджака, светлые чиносы",
+    "emotion": "Напряжённая пауза, сжатые губы, поднятая бровь и прямой взгляд в камеру без улыбки",
+    "pose_framing": "Стоит и наклоняется над столом справа, средний план, не бюст",
+    "action": "Две выписки «дом» и «участок» лежат рядом, палец замер над телефоном, перевод не нажат"
+  },
+  "cover_emotion": "пауза, сжатые губы, бровь вверх, без улыбки",
+  "meme_picks": {
+    "cover": [
+      "hide_pain_harold",
+      "grumpy_cat"
+    ],
+    "inline_1": [
+      "confused_math_lady"
+    ],
+    "inline_5": [
+      "smudge_cat"
+    ],
+    "inline_7": [
+      "two_buttons"
+    ]
+  }
+}

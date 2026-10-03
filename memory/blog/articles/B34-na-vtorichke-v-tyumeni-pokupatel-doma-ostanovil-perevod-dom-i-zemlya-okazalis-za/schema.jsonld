@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Покупатель остановил перевод: дом и земля в Тюмени — у 2 хозяев",
+  "description": "В Тюмени сделка на вторичный дом сорвалась у самого перевода: участок оказался записан на другого человека. Покупатель заметил несостыковку — и нажал «отмена».",
+  "datePublished": "2026-10-03",
+  "dateModified": "2026-10-03",
+  "inLanguage": "ru",
+  "url": "{{SITE_BASE}}/pokupatel-ostanovil-perevod-dom-i-zemlya-tyumen/",
+  "mainEntityOfPage": "{{SITE_BASE}}/pokupatel-ostanovil-perevod-dom-i-zemlya-tyumen/",
+  "author": {
+    "@type": "Person",
+    "name": "Святослав Шакин",
+    "jobTitle": "Личный риэлтор в Тюмени",
+    "url": "{{SITE_BASE}}/rieltor-tyumen/",
+    "sameAs": [
+      "{{SITE_BASE}}/",
+      "{{SITE_BASE}}/rieltor-tyumen/",
+      "https://dzen.ru/holyslav",
+      "https://t.me/Tyumen_Rieltor",
+      "https://vk.ru/tymenrieltor"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Риэлтор",
+    "url": "{{SITE_BASE}}/"
+  },
+  "image": "{{SITE_BASE}}/pokupatel-ostanovil-perevod-dom-i-zemlya-tyumen/cover.png"
+}
