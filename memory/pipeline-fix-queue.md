@@ -3,7 +3,7 @@
 Durable incident memory. Fixer closes `status: open` → `fixed` | `needs-human`.
 
 ## INC-20260821-0615-content-learner-metrika-credentials
-status: open
+status: needs-human
 run_date: 2026-08-21
 role: excalibur-blog-content-learner
 topic_id: B06
@@ -23,10 +23,21 @@ category: env
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
 - **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9749 ingest skipped; B23 lesson recorded without behavioral signals (newbuild_apartments_instead_flat_ddu_tyumen cluster).
+- **2026-10-03 B34 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 11450 ingest skipped; B34 lesson recorded without behavioral signals (newbuild_bti_area_surcharge_before_keys_tyumen cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368) и B23 (post 9749) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368), B23 (post 9749) и B34 (post 11450) для post-publish behavioral baseline.
+
+### Fixer resolution
+fixed_at: 2026-10-03
+fix_summary:
+- No code durable fix — credentials absent in Cloud env; content-learner continues Metrika-only BLOCKER + low-confidence lessons.
+status: needs-human
+reason:
+- `YANDEX_METRIKA_OAUTH_TOKEN` and `YANDEX_METRIKA_COUNTER_ID` must be set by owner in Cloud Secrets.
+needed_decision_or_secret:
+- Yandex Metrika OAuth (metrika:read) + counter id
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
