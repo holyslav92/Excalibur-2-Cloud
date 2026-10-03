@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B60-v-tyumeni-zadatok-180-tysyach-v-raspiske-bank-otkazal-prodavec-ostavil-dengi/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1016,
+          569
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 569,
+            "end": 585
+          },
+          "v_gutter_px": {
+            "start": 1016,
+            "end": 1032
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 1.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0079,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0079,
+              "bottom_right": 0.0079
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 569
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 569
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "Расписка на задаток 180 тысяч в Тюмени — банк отказал, продавец оставил деньги: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2048,
+              "bottom": 569
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2048,
+              "bottom": 569
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Что лежало на столе во вторник» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Что лежало на столе во вторник"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 585,
+              "right": 1012,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 585,
+              "right": 1016,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Банк отказал, Ипотека не одобрена, Пятница — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что лежало на столе во вторник"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1036,
+              "top": 585,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 585,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «В пятницу банк прислал отказ» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "В пятницу банк прислал отказ"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B60-v-tyumeni-zadatok-180-tysyach-v-raspiske-bank-otkazal-prodavec-ostavil-dengi/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1018,
+          570
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 570,
+            "end": 582
+          },
+          "v_gutter_px": {
+            "start": 1018,
+            "end": 1030
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0,
+            "per_panel_crop_loss": {
+              "top_left": 0.0,
+              "top_right": 0.0,
+              "bottom_left": 0.0,
+              "bottom_right": 0.0
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1018,
+              "bottom": 570
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1018,
+              "bottom": 570
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Какое слово удержало деньги» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Какое слово удержало деньги"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1030,
+              "top": 0,
+              "right": 2048,
+              "bottom": 570
+            },
+            "raw_box_px": {
+              "left": 1030,
+              "top": 0,
+              "right": 2048,
+              "bottom": 570
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Остановка сделки, До получения денег, Решение банка — иллюстрация к разбору сделки.",
+            "h2_anchor": "Если бы в строке стоял аванс"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 582,
+              "right": 1018,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 582,
+              "right": 1018,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Кто прав, Спор о деньгах, Нужен разбор — иллюстрация к разбору сделки.",
+            "h2_anchor": "До пачки наличных ещё можно остановиться"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1030,
+              "top": 582,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1030,
+              "top": 582,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Святослав смотрит, Строка расписки, Слово «задаток» — иллюстрация к разбору сделки.",
+            "h2_anchor": "В пятницу банк прислал отказ"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Что лежало на столе во вторник",
+    "skip inline_2: already correct under H2 — Что лежало на столе во вторник",
+    "skip inline_3: already correct under H2 — В пятницу банк прислал отказ",
+    "injected inline_4 after H2 — Какое слово удержало деньги",
+    "injected inline_5 after H2 — Если бы в строке стоял аванс",
+    "injected inline_6 after H2 — До пачки наличных ещё можно остановиться",
+    "injected inline_7 after H2 — В пятницу банк прислал отказ"
+  ]
+}

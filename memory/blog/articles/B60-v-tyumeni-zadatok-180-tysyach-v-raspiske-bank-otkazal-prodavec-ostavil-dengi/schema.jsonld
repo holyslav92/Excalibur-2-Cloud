@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{SITE_BASE}}/v-tyumeni-zadatok-180-tysyach-v-raspiske-bank-otkazal-prodavec-ostavil-dengi/",
+  "url": "{{SITE_BASE}}/v-tyumeni-zadatok-180-tysyach-v-raspiske-bank-otkazal-prodavec-ostavil-dengi/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{SITE_BASE}}/v-tyumeni-zadatok-180-tysyach-v-raspiske-bank-otkazal-prodavec-ostavil-dengi/"
+  },
+  "headline": "Расписка на задаток 180 тысяч в Тюмени — банк отказал, продавец оставил деньги",
+  "description": "Одно слово «задаток» в расписке оказалось сильнее отказа банка: 180 тысяч рублей покупателям в Тюмени не вернули.",
+  "datePublished": "2026-10-03",
+  "dateModified": "2026-10-03",
+  "inLanguage": "ru",
+  "author": {
+    "@type": "Person",
+    "name": "Святослав Шакин",
+    "jobTitle": "Личный риэлтор в Тюмени",
+    "url": "{{SITE_BASE}}/rieltor-tyumen/",
+    "sameAs": [
+      "{{SITE_BASE}}/",
+      "{{SITE_BASE}}/rieltor-tyumen/",
+      "https://dzen.ru/holyslav",
+      "https://t.me/Tyumen_Rieltor",
+      "https://vk.ru/tymenrieltor"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Риэлтор",
+    "url": "{{SITE_BASE}}/"
+  }
+}
