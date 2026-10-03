@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B34 — 2026-10-03
+
+- **topic_id:** B34
+- **slug:** v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach
+- **post_id:** 11463
+- **permalink:** /blog/proverka-pered-pokupkoj/v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach/
+- **featured_image:** 11464
+- **inline_images:** 11465–11471 (7)
+- **wp_category_slugs:** pokupka-kvartiry, dokumenty-i-oformlenie, proverka-pered-pokupkoj (category_ids=36,54,34)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** pre-publish CTA/end-channel fix for quality-bar-9; SFTP root fallback to `.`
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29

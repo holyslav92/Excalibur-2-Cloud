@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach",
+  "topic_id": "B34",
+  "post_id": 11463,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1038108,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11463 slug=v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach\nOK categories=36,54,34\nOK yoast_social_image=1\nOK featured_image=11464\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11465 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach-inline-01.png\nOK inline_alt=11465\nOK inline_description=11465\nOK inline_image_upload=11466 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach-inline-02.png\nOK inline_alt=11466\nOK inline_description=11466\nOK inline_image_upload=11467 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach-inline-03.png\nOK inline_alt=11467\nOK inline_description=11467\nOK inline_image_upload=11468 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach-inline-04.png\nOK inline_alt=11468\nOK inline_description=11468\nOK inline_image_upload=11469 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach-inline-05.png\nOK inline_alt=11469\nOK inline_description=11469\nOK inline_image_upload=11470 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach-inline-06.png\nOK inline_alt=11470\nOK inline_description=11470\nOK inline_image_upload=11471 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach-inline-07.png\nOK inline_alt=11471\nOK inline_description=11471\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach/",
+    "errors": []
+  }
+}
