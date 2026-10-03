@@ -1,0 +1,9 @@
+{
+  "topic_id": "B34",
+  "description": "Семья в Тюмени приехала за ключами, но обмер БТИ превратил приёмку в торг: лишние 3,8 м² оценили в 380 тысяч. Акт подписывать сразу или сначала сверить ДДУ?",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
