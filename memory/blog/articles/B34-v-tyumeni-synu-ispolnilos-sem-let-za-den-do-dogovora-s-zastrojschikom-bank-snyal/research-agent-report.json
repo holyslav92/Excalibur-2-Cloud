@@ -1,0 +1,39 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-03",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/29/76665356/",
+        "type": "regional_news",
+        "note": "72.ru 29.09.2026 — тюменский сигнал недели по семейной ипотеке на новостройки"
+      },
+      {
+        "url": "https://www.vedomosti.ru/finance/articles/2026/10/01/1233246-novie-usloviya-semeinoi-ipoteki",
+        "type": "official",
+        "note": "Ведомости 01.10.2026 — ставки и возраст на дату договора"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "семейная ипотека тюмень",
+    "p0_volume": 1233,
+    "support_phrases": [
+      {"phrase": "новостройки тюмень", "volume": 3653, "region": "55"},
+      {"phrase": "купить новостройку в тюмени", "volume": 701, "region": "55"},
+      {"phrase": "семейная ипотека тюмень", "volume": 1566, "region": "11176"}
+    ],
+    "partial": []
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "entities": ["minfin-family-mortgage"],
+    "note": "Ставки и возраст сверены с Ведомостями, РГ и информацией Минфина от 30.09.2026"
+  }
+}

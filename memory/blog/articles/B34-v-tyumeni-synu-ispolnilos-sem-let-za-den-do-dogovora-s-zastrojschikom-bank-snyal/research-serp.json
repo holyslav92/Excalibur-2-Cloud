@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Asia/Yekaterinburg",
+    "today_iso": "2026-10-03",
+    "today_ru": "03.10.2026",
+    "year": 2026,
+    "month": 10,
+    "month_name_ru": "октябрь",
+    "weekday_ru": "суббота"
+  },
+  "topic": {
+    "topic_id": "B34",
+    "title": "В Тюмени сыну исполнилось семь лет за день до договора с застройщиком — банк снял семейную ипотеку на новостройку",
+    "h1": "В Тюмени сыну исполнилось семь лет за день до договора с застройщиком — банк снял семейную ипотеку на новостройку",
+    "slug": "v-tyumeni-synu-ispolnilos-sem-let-za-den-do-dogovora-s-zastrojschikom-bank-snyal",
+    "primary_query": "В Тюмени сыну исполнилось семь лет за день до договора с застройщиком — банк снял семейную ипотеку на новостройку",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени сыну исполнилось семь лет за день до договора с застройщиком — банк снял семейную ипотеку на новостройку 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени ребёнку исполнилось 7 лет — семейную ипотеку сняли",
+          "url": "https://dzen.ru/a/aq4lZU5PhhqP5dUu",
+          "snippet": ""
+        },
+        {
+          "title": "Перед ДДУ ребёнку исполнилось 7 лет — семейную ипотеку пересчитали",
+          "url": "https://dzen.ru/a/aqEVPsSWjwEsylTB",
+          "snippet": "За пять дней до ДДУ семейную ипотеку сняли: квартира уже была в брони, предварительное одобрение банка — на руках, первоначальный взнос и платёж считались по ставке до 6%."
+        },
+        {
+          "title": "В Тюмени за 24 часа до ДДУ банк снял ЖК с аккредитации — ипотека ...",
+          "url": "https://dzen.ru/a/aqjkKEjUgT5jfbTg",
+          "snippet": "В Тюмени семья собиралась подписать ДДУ на дом с участком в 12 соток, а за неделю до сделки выписка ЕГРН показала только 8 — банк остановил открытие эскроу на полную сумму."
+        },
+        {
+          "title": "В России изменятся правила семейной ипотеки",
+          "url": "https://lenta.ru/news/2026/09/24/v-rf-izmenyatsya-pravila-semeynoy-ipoteki/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени банк снял корпус новостройки с аккредитации за 24 часа до подписания ДДУ — ипотечная сделка семьи с детьми остановилась."
+        },
+        {
+          "title": "Возраст ребёнка для семейной ипотеки: дата проверки",
+          "url": "https://sosedi.life/articles/vozrast-rebenka-dlya-semejnoj-ipoteki-na-kakuyu-datu-ego-proveryayut-i-chem-podtverdit/",
+          "snippet": "С 1 октября правила программы семейной ипотеки в России изменятся — теперь размер ставки будет зависеть от количества детей в семье. О нововведениях сообщили на сайте Минфина."
+        },
+        {
+          "title": "Семейная ипотека: Приобретаем квартиру на рубеже исполнения ребенку 7 ...",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/semejnaq-ipoteka-0c40d7e2",
+          "snippet": "Возраст ребёнка проверяют на дату заключения кредитного договора. Разбираем три основания, документы и ситуации с днём рождения до сделки."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени сыну исполнилось семь лет за день до договора с застройщиком — банк снял семейную ипотеку на новостройку 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени ребёнку исполнилось 7 лет — семейную ипотеку сняли",
+          "url": "https://dzen.ru/a/aq4lZU5PhhqP5dUu",
+          "snippet": ""
+        },
+        {
+          "title": "Перед ДДУ ребёнку исполнилось 7 лет — семейную ипотеку пересчитали",
+          "url": "https://dzen.ru/a/aqEVPsSWjwEsylTB",
+          "snippet": "За пять дней до ДДУ семейную ипотеку сняли: квартира уже была в брони, предварительное одобрение банка — на руках, первоначальный взнос и платёж считались по ставке до 6%."
+        },
+        {
+          "title": "Судебные споры с застройщиком: реальные кейсы возврата денег и прав",
+          "url": "https://gazeta-flat.ru/investiczii/sudebnye-spory-s-zastrojshhikom-realnye-kejsy-vozvrata-deneg-i-prav/",
+          "snippet": "В Тюмени семья собиралась подписать ДДУ на дом с участком в 12 соток, а за неделю до сделки выписка ЕГРН показала только 8 — банк остановил открытие эскроу на полную сумму."
+        },
+        {
+          "title": "Семейная ипотека: Приобретаем квартиру на рубеже исполнения ребенку 7 ...",
+          "url": "https://blog.domclick.ru/vopros-rieltoru/semejnaq-ipoteka-0c40d7e2",
+          "snippet": "Реальные судебные споры с застройщиками, примеры возврата денег, компенсаций и устранения дефектов. Разбор типичных ситуаций и важных нюансов."
+        },
+        {
+          "title": "Что делать, если застройщик вовремя не сдает дом",
+          "url": "https://blog.domclick.ru/nedvizhimost/post/chto-delat-esli-zastrojshhik-vovremya-ne-sdaet-dom",
+          "snippet": "Ключевое значение имеет дата подписания кредитного договора. Если он будет подписан до того, как ребёнку исполнится 7 лет — значит, все условия выполнены, и оснований для отказа нет."
+        },
+        {
+          "title": "Семейная ипотека станет неподъемной: неутешительный прогноз для рынка ...",
+          "url": "https://72.ru/text/realty/2026/09/29/76665356/",
+          "snippet": "Рассказываем в статье, как быть, если застройщик срывает сроки сдачи дома. И что делать, если квартиру в проблемной новостройке вы купили в ипотеку. Обо всем — по порядку."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени сыну исполнилось семь лет за день до договора с застройщиком — банк снял семейную ипотеку на новостройку official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени ребёнку исполнилось 7 лет — семейную ипотеку сняли",
+          "url": "https://dzen.ru/a/aq4lZU5PhhqP5dUu",
+          "snippet": ""
+        },
+        {
+          "title": "Перед ДДУ ребёнку исполнилось 7 лет — семейную ипотеку пересчитали",
+          "url": "https://dzen.ru/a/aqEVPsSWjwEsylTB",
+          "snippet": "В пятницу ребёнку исполнилось семь лет, а на следующую среду у семьи была назначена сделка по новостройке в Тюмени."
+        },
+        {
+          "title": "На приёмке в Тюмени нашли брак — застройщик потребовал 190 тысяч",
+          "url": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach/",
+          "snippet": "В Тюмени семья собиралась подписать ДДУ на дом с участком в 12 соток, а за неделю до сделки выписка ЕГРН показала только 8 — банк остановил открытие эскроу на полную сумму."
+        },
+        {
+          "title": "В Тюменской области строительная компания получила деньги на возведение ...",
+          "url": "https://72.ru/text/realty/2025/05/06/75399272/",
+          "snippet": "Семья в Тюмени пришла на приёмку квартиры в новостройке на севере города с чек-листом, фонариком и рулеткой — всё как советуют в интернете, всё правильно. Через четырнадцать дней они получили от застройщика претензию примерно на 190 000 рублей — за то, что не подписали передаточный акт."
+        },
+        {
+          "title": "Судебные споры с застройщиком: реальные кейсы возврата денег и прав",
+          "url": "https://gazeta-flat.ru/investiczii/sudebnye-spory-s-zastrojshhikom-realnye-kejsy-vozvrata-deneg-i-prav/",
+          "snippet": "Многодетная семья с ребенком-инвалидом продолжает ютиться в однушке, ежемесячно платит ипотеку в 50 тысяч рублей за недостроенный дом и думает, что делать дальше."
+        },
+        {
+          "title": "Бастрыкин взялся за историю с обманутыми дольщиками в Тюмени",
+          "url": "https://news.myseldon.com/ru/news/index/329559339",
+          "snippet": "Реальные судебные споры с застройщиками, примеры возврата денег, компенсаций и устранения дефектов. Разбор типичных ситуаций и важных нюансов."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени сыну исполнилось семь лет за день до договора с застройщиком — банк снял семейную ипотеку на новостройку 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "photoshop-mcp/images/recipe-dodge-burn.svg at master - GitHub",
+          "url": "https://github.com/alisaitteke/photoshop-mcp/blob/master/images/recipe-dodge-burn.svg",
+          "snippet": ""
+        },
+        {
+          "title": "was-node-suite-comfyui/image/auto_brightness_node.jpg at main ...",
+          "url": "https://github.com/RituCodeWeb/was-node-suite-comfyui/blob/main/image/auto_brightness_node.jpg",
+          "snippet": "docs (readme): make recipe examples visible with infographics for all … MCP for Adobe Photoshop. 118 tools. Control from Cursor, Claude or custom LLMs. - photoshop-mcp/images/recipe-dodge-burn.svg at master · alisaitteke/photoshop-mcp."
+        },
+        {
+          "title": "threejs-cannones-rigger/cover.png at main · bandinopla/threejs-cannones ...",
+          "url": "https://github.com/bandinopla/threejs-cannones-rigger/blob/main/cover.png",
+          "snippet": "Contribute to RituCodeWeb/was-node-suite-comfyui development by creating an account on GitHub."
+        },
+        {
+          "title": "devicon/icons/sqlite/sqlite-original.svg at master · devicons/devicon",
+          "url": "https://github.com/devicons/devicon/blob/master/icons/sqlite/sqlite-original.svg",
+          "snippet": "Create and position physics colliders in Blender then export them as GLB and load them automatically in ThreeJs with Cannon-es. - threejs-cannones-rigger/cover.png at main · bandinopla/threejs-cannones-rigger"
+        },
+        {
+          "title": "2025CVEBlog/graphs/03_cumulative_growth.png at main · jgamblin ...",
+          "url": "https://github.com/jgamblin/2025CVEBlog/blob/main/graphs/03_cumulative_growth.png",
+          "snippet": "Set of icons representing programming languages, designing & development tools - devicons/devicon"
+        },
+        {
+          "title": "Squeeze3D/assets/teaser.png at main · Rishit-dagli/Squeeze3D",
+          "url": "https://github.com/Rishit-dagli/Squeeze3D/blob/main/assets/teaser.png",
+          "snippet": "Contribute to jgamblin/2025CVEBlog development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени сыну исполнилось семь лет за день до договора с застройщиком — банк снял семейную ипотеку на новостройку forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени ребёнку исполнилось 7 лет — семейную ипотеку сняли",
+          "url": "https://dzen.ru/a/aq4lZU5PhhqP5dUu",
+          "snippet": ""
+        },
+        {
+          "title": "Перед ДДУ ребёнку исполнилось 7 лет — семейную ипотеку пересчитали",
+          "url": "https://dzen.ru/a/aqEVPsSWjwEsylTB",
+          "snippet": "Я, Святослав Шакин, The Риэлтор в Тюмени, разбираю такие календарные расхождения до брони, а не после неё. Практические разборы новостроек и семейной ипотеки — в Telegram и MAX. Семья с одним ребёнком выбирала квартиру в строящемся доме."
+        },
+        {
+          "title": "На приёмке в Тюмени нашли брак — застройщик потребовал 190 тысяч",
+          "url": "{{SITE_BASE}}/blog/pokupka-kvartiry/v-tyumeni-ne-podpisali-akt-s-brakom-zastrojschik-vystavil-shtraf-190-tysyach/",
+          "snippet": "В Тюмени семья собиралась подписать ДДУ на дом с участком в 12 соток, а за неделю до сделки выписка ЕГРН показала только 8 — банк остановил открытие эскроу на полную сумму."
+        },
+        {
+          "title": "В Тюменской области строительная компания получила деньги на возведение ...",
+          "url": "https://72.ru/text/realty/2025/05/06/75399272/",
+          "snippet": "Семья в Тюмени пришла на приёмку квартиры в новостройке на севере города с чек-листом, фонариком и рулеткой — всё как советуют в интернете, всё правильно. Через четырнадцать дней они получили от застройщика претензию примерно на 190 000 рублей — за то, что не подписали передаточный акт."
+        },
+        {
+          "title": "Судебные споры с застройщиком: реальные кейсы возврата денег и прав",
+          "url": "https://gazeta-flat.ru/investiczii/sudebnye-spory-s-zastrojshhikom-realnye-kejsy-vozvrata-deneg-i-prav/",
+          "snippet": "Недвижимость, предложенную в залог, банк оценил в четыре миллиона рублей и именно такую сумму выдал супругам в кредит на строительство дома. А они в свою очередь передали их подрядчику."
+        },
+        {
+          "title": "Бастрыкин взялся за историю с обманутыми дольщиками в Тюмени",
+          "url": "https://news.myseldon.com/ru/news/index/329559339",
+          "snippet": "Реальные судебные споры с застройщиками, примеры возврата денег, компенсаций и устранения дефектов. Разбор типичных ситуаций и важных нюансов."
+        }
+      ],
+      "searched_at": "2026-10-03"
+    }
+  ],
+  "errors": []
+}
