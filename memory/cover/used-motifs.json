@@ -3,95 +3,28 @@
   "window_days": 14,
   "entries": [
     {
-      "date": "2026-09-13",
-      "topic_id": "B25",
-      "slug": "",
-      "motifs": {
-        "composition": "host kneeling left with tape measure, hook zone upper right, phone bottom-right",
-        "location": "bright sunlit tyumen newbuild empty apartment bare walls concrete floor large window",
-        "meme": "confused_math_lady + cheems corner stickers",
-        "prop_set": "rolled ddu appendix, measuring tape, clipboard inspection act, yellow sticky",
-        "sticker_set": "confused_math_lady top-left, cheems bottom-right, yellow sticky hook only",
-        "joke": "math meme subtracts promised clean finish from bare walls equals unsigned act",
-        "outfit": "terracotta open collar shirt rolled sleeves charcoal chinos no blazer",
-        "emotion": "disbelief open mouth wide eyes direct gaze not side-eye",
-        "pose_framing": "kneeling three-quarter left dynamic not talking-head bust",
-        "action": "measures bare wall with tape points at ddu appendix listing clean finish"
-      }
-    },
-    {
-      "date": "2026-09-13",
-      "topic_id": "B26",
-      "slug": "",
-      "motifs": {
-        "composition": "host waist-up right of center, hook zone upper left, phone bottom-right",
-        "location": "bright sunlit bank mortgage desk with construction site wall photo tyumen",
-        "meme": "hide_pain_harold + smudge_cat corner stickers",
-        "sticker_set": "hide_pain_harold top-left, smudge_cat bottom-right",
-        "joke": "harold smiles while tablet shows no rve and bank denies tranche",
-        "outfit": "olive knit vest over cream henley, dark jeans, no blazer",
-        "emotion": "hide-the-pain forced smile tight jaw direct gaze not side-eye",
-        "pose_framing": "medium shot three-quarter right slight low angle not left bust",
-        "action": "holds denied tranche letter points at tablet showing missing rve"
-      }
-    },
-    {
-      "date": "2026-09-19",
-      "topic_id": "B27",
-      "slug": "",
-      "motifs": {
-        "composition": "яркая диагональная композиция герой справа полный рост по колено декларация слева",
-        "location": "светлый офис продаж новостройки панорамное окно макет жк",
-        "meme": "disappointed_black_guy this_is_fine_dog corner stickers",
-        "prop_set": "папка декларации раздел 12 карточка брони 150000 макет жк",
-        "sticker_set": "disappointed_black_guy bottom-left this_is_fine_dog bottom-right",
-        "joke": "макет обещает собственность декларация показывает аренду до 2049",
-        "outfit": "терракотовая overshirt молочная футболка светлые брюки без пиджака",
-        "emotion": "ошарашенное недоверие приподнятая бровь сжатые губы",
-        "pose_framing": "средний план по колeno корпус к камере не бюст слева",
-        "action": "сравнивает рекламную карточку с пунктом декларации об аренде"
-      }
-    },
-    {
-      "date": "2026-09-19",
-      "topic_id": "B28",
-      "slug": "",
-      "motifs": {
-        "composition": "герой справа у дома, заголовок слева, газовая труба к документу",
-        "location": "павильон кп у готового дома, макет газовой трубы",
-        "meme": "roll_safe grumpy_cat угловые стикеры",
-        "prop_set": "декларация раздел сетей, бронь, ключи, газомакет",
-        "sticker_set": "roll_safe grumpy_cat мелко, не на лице/заголовке/телефоне",
-        "joke": "газ 2026 в бумаге стал 2028",
-        "outfit": "песочная куртка, голубая футболка, шарф",
-        "emotion": "скептический шок, не верит 2028",
-        "pose_framing": "средний план к камере, декларация в руке",
-        "action": "сверяет iv кв 2028 с табличкой газ 2026"
-      }
-    },
-    {
-      "date": "2026-09-19",
-      "topic_id": "B29",
-      "slug": "",
-      "motifs": {
-        "composition": "герой справа hook слева табло 0% перечёркнуто",
-        "location": "светлое лобби жк ипотечный уголок",
-        "meme": "two_buttons crying_cat углы",
-        "prop_set": "письмо банка табло 0% смартфон бронь",
-        "sticker_set": "two_buttons crying_cat ≤15%",
-        "joke": "0% на табло банк отменил",
-        "outfit": "голубая рубашка горчичный жилет",
-        "emotion": "шок недоверие",
-        "pose_framing": "средний план справа не бюст",
-        "action": "сверяет письмо банка и платёж на телефоне"
-      }
-    },
-    {
       "date": "2026-09-20",
       "topic_id": "B30",
       "slug": "za-3-dnya-do-ddu-zapret-pereprodazhi-3-goda-v-pereustupke-novostrojki-tyumen",
       "motifs": {
         "meme": "hide_pain_harold,smudge_cat"
+      }
+    },
+    {
+      "date": "2026-10-03",
+      "topic_id": "B34",
+      "slug": "",
+      "motifs": {
+        "composition": "герой слева, проём без стены, план бти, телефон внизу",
+        "location": "светлая трёшка вторички тюмень",
+        "meme": "confused_math_lady и crying_cat",
+        "prop_set": "план бти, рулетка, письмо банка",
+        "sticker_set": "math lady + cat углы",
+        "joke": "ремонт красивый, стены на плане нет",
+        "outfit": "мятная рубашка, бежевые чиносы",
+        "emotion": "недоумение, приподнятая бровь",
+        "pose_framing": "по пояс слева, к проёму",
+        "action": "план бти и рулетка к проёму"
       }
     }
   ]
