@@ -319,6 +319,32 @@ def article_has_tyumen(meta: dict[str, Any]) -> bool:
     return "тюмен" in blob or "tyumen" in blob
 
 
+def slot_rubric(meta: dict[str, Any] | None) -> str:
+    """Рубрика слота из meta. Пусто = новостройки (исторический дефолт билдера)."""
+    if not meta:
+        return ""
+    return str(meta.get("slot_rubric") or "").strip().lower()
+
+
+def market_phrase(meta: dict[str, Any] | None) -> str:
+    rubric = slot_rubric(meta)
+    if rubric == "vtorichka":
+        return "по вторичке"
+    if rubric == "arenda":
+        return "по аренде"
+    return "по новостройке"
+
+
+def cover_alt_pad(meta: dict[str, Any] | None) -> str:
+    """Добивка короткого alt. Эскроу только у новостроек."""
+    rubric = slot_rubric(meta)
+    if rubric == "vtorichka":
+        return "что сверить в расписке до передачи денег"
+    if rubric == "arenda":
+        return "что сверить в договоре до передачи денег"
+    return "что проверить в договоре и эскроу до подписи"
+
+
 def hook_stakes_sentence(manifest: dict[str, Any], meta: dict[str, Any]) -> str:
     hook = normalize_text(manifest.get("cover_hook"))
     if not hook:
@@ -347,7 +373,7 @@ def build_cover_alt(
     if article_has_tyumen(meta) and "тюмен" not in core.casefold():
         core = f"{core} в Тюмени"
     if len(core) < ALT_SEO_MIN:
-        core = f"{core}: что проверить в договоре и эскроу до подписи"
+        core = f"{core}: {cover_alt_pad(meta)}"
     alt = clamp_seo_alt(core)
     # Safety: if still scene-like, fall back to title only.
     if is_prompt_like_alt(
@@ -369,6 +395,14 @@ def shorten_h2(h2: str, *, max_len: int = 72) -> str:
     return text[: max_len - 1].rstrip() + "…"
 
 
+def scrub_scene_painting(text: str) -> str:
+    """H2 статьи может звучать как кадр. В alt это ломает image_alt_human."""
+    cleaned = text
+    cleaned = re.sub(r"на\s+столе", "в бумагах", cleaned, flags=re.I)
+    cleaned = re.sub(r"лежат\s+\w+", "есть бумаги", cleaned, flags=re.I)
+    return cleaned
+
+
 def visual_type_label(visual_type: str, labels_map: dict[str, str]) -> str:
     key = normalize_text(visual_type)
     return labels_map.get(key) or VISUAL_TYPE_FALLBACK_RU.get(key) or "Инфографика"
@@ -382,18 +416,19 @@ def build_inline_alt(
 ) -> str:
     visual_type = normalize_text(slot.get("visual_type"))
     label_ru = visual_type_label(visual_type, labels_map)
-    h2 = shorten_h2(normalize_text(slot.get("h2_anchor")), max_len=48)
+    h2 = scrub_scene_painting(shorten_h2(normalize_text(slot.get("h2_anchor")), max_len=48))
     panel_labels = [normalize_text(x) for x in (slot.get("labels") or []) if normalize_text(x)]
+    market = market_phrase(meta)
 
     if panel_labels and visual_type not in {"realistic_photo", "cover_editorial_hero"}:
         facts = ", ".join(panel_labels[:3])
-        alt = f"{label_ru} по новостройке в Тюмени: {facts} — иллюстрация к разбору сделки."
+        alt = f"{label_ru} {market} в Тюмени: {facts} — иллюстрация к разбору сделки."
     elif h2:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
         alt = f"{label_ru} к разделу «{h2}»{tyumen} — иллюстрация к кейсу о сделке."
     else:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
-        alt = f"{label_ru} по новостройке{tyumen} — иллюстрация к материалу."
+        alt = f"{label_ru} {market}{tyumen} — иллюстрация к материалу."
     return clamp_seo_alt(alt)
 
 
