@@ -164,6 +164,21 @@
 - **llms_deploy:** PASS (llms.txt, llms-full.txt)
 - **interlink:** no inbound targets with post_id in ledger (outbound 3 siblings OK)
 
+## B34 — 2026-10-03
+
+- **topic_id:** B34
+- **slug:** v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie
+- **post_id:** 11476
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie/
+- **featured_image:** 11477
+- **inline_images:** 11478–11484 (7)
+- **wp_category_slugs:** vtorichka-i-riski, ipoteka (category_ids=31,32)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06, B04, B09 (3 targets)
+- **notes:** pre-publish quality-bar-9 image_alt_human fix (inline_5/6 h2-based alts); SFTP root fallback to `.`
+
 ## B06 — 2026-08-21
 
 - **topic_id:** B06

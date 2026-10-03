@@ -1,6 +1,6 @@
 {
-  "source": "/workspace/memory/blog/articles/B34-v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie/article.html",
-  "total_links": 7,
+  "source": "memory/blog/articles/B34-v-tyumeni-za-5-dnej-do-avansa-na-vtorichke-nashli-neuzakonennuyu-pereplanirovku-bank-snyal-odobrenie/article.html",
+  "total_links": 11,
   "failed_count": 0,
   "verdict": "pass",
   "links": [
@@ -63,14 +63,52 @@
       "checked_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/"
     },
     {
-      "url": "{{SITE_BASE}}",
+      "url": "https://dzen.ru/holyslav",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
+      "url": "https://vk.ru/tymenrieltor",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "error": null,
+      "kind": "external",
+      "skipped": false
+    },
+    {
+      "url": "{{SITE_BASE}}/gajdy/",
       "status": 200,
       "ok": true,
       "method": "HEAD",
       "error": null,
       "kind": "internal_relative",
       "skipped": false,
-      "checked_url": "{{SITE_BASE}}"
+      "checked_url": "{{SITE_BASE}}/gajdy/"
+    },
+    {
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/rieltor-tyumen/"
+    },
+    {
+      "url": "{{SITE_BASE}}/",
+      "status": 200,
+      "ok": true,
+      "method": "HEAD",
+      "error": null,
+      "kind": "internal_relative",
+      "skipped": false,
+      "checked_url": "{{SITE_BASE}}/"
     }
   ]
 }
