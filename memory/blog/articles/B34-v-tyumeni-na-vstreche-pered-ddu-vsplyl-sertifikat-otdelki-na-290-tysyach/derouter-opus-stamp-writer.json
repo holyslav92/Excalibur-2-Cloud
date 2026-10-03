@@ -1,0 +1,9 @@
+{
+  "role": "writer",
+  "tier": "powerful",
+  "model": "claude-opus-5-5",
+  "method": "writer_chunk",
+  "parts": 3,
+  "trim": "writer_trim_chunk",
+  "word_count_final": 1568
+}

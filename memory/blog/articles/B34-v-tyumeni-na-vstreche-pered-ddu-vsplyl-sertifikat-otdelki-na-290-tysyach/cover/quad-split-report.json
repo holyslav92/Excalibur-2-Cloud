@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1013,
+          565
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 565,
+            "end": 579
+          },
+          "v_gutter_px": {
+            "start": 1013,
+            "end": 1036
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 4.0,
+            "v_center_offset_px": 0.5,
+            "max_aspect_crop_loss": 0.0089,
+            "per_panel_crop_loss": {
+              "top_left": 0.0089,
+              "top_right": 0.0079,
+              "bottom_left": 0.0,
+              "bottom_right": 0.007
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 4,
+              "top": 0,
+              "right": 1008,
+              "bottom": 565
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1013,
+              "bottom": 565
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "В Тюмени перед ДДУ потребовали 290 тысяч за отделку — сделка встала: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1040,
+              "top": 0,
+              "right": 2044,
+              "bottom": 565
+            },
+            "raw_box_px": {
+              "left": 1036,
+              "top": 0,
+              "right": 2048,
+              "bottom": 565
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «В объявлении цена «с отделкой», на столе — прое…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "В объявлении цена «с отделкой», на столе — проект ДДУ без неё"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 0,
+              "top": 579,
+              "right": 1013,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 579,
+              "right": 1013,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Сертификат 290 тысяч, Отдельный платёж, Сверх цены договора — иллюстрация к…",
+            "h2_anchor": "В объявлении цена «с отделкой», на столе — проект ДДУ без неё"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1036,
+              "top": 581,
+              "right": 2048,
+              "bottom": 1150
+            },
+            "raw_box_px": {
+              "left": 1036,
+              "top": 579,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Менеджер достаёт сертификат на 290 тысяч: «без…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Менеджер достаёт сертификат на 290 тысяч: «без него не подписываем»"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-v-tyumeni-na-vstreche-pered-ddu-vsplyl-sertifikat-otdelki-na-290-tysyach/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1016,
+          568
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 568,
+            "end": 585
+          },
+          "v_gutter_px": {
+            "start": 1016,
+            "end": 1032
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.5,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0079,
+            "per_panel_crop_loss": {
+              "top_left": 0.0059,
+              "top_right": 0.0059,
+              "bottom_left": 0.0079,
+              "bottom_right": 0.0079
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 3,
+              "top": 0,
+              "right": 1013,
+              "bottom": 568
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1016,
+              "bottom": 568
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Семья требует сопоставить КП, приложение и стан…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Семья требует сопоставить КП, приложение и стандарт отделки"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1035,
+              "top": 0,
+              "right": 2045,
+              "bottom": 568
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 0,
+              "right": 2048,
+              "bottom": 568
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: Отделка в цене, Список работ, Без сертификата — иллюстрация к разбору сделки.",
+            "h2_anchor": "Они уходят без оплаты — подписание ДДУ отложено"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 585,
+              "right": 1012,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 585,
+              "right": 1016,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: В договоре, В приложении, Отдельная бумага — иллюстрация к разбору сделки.",
+            "h2_anchor": "Четыре вопроса к договору до перевода денег на эскроу"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1036,
+              "top": 585,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1032,
+              "top": 585,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Деньги не ушли, Реклама против договора, Решение по бумагам — иллюстрация к разбору…",
+            "h2_anchor": "Таблица: отделка в цене ДДУ против отдельного сертификата"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — В объявлении цена «с отделкой», на столе — проект ДДУ без неё",
+    "skip inline_2: already correct under H2 — В объявлении цена «с отделкой», на столе — проект ДДУ без неё",
+    "skip inline_3: already correct under H2 — Менеджер достаёт сертификат на 290 тысяч: «без него не подписываем»",
+    "moved inline_4 → H2 — Семья требует сопоставить КП, приложение и стандарт отделки (was under [они уходят без оплаты — подписание дду отложено]; removed=1)",
+    "moved inline_5 → H2 — Они уходят без оплаты — подписание ДДУ отложено (was under [четыре вопроса к договору до перевода денег на эскроу]; removed=1)",
+    "moved inline_6 → H2 — Четыре вопроса к договору до перевода денег на эскроу (was under [таблица: отделка в цене дду против отдельного сертификата]; removed=1)",
+    "skip inline_7: already correct under H2 — Таблица: отделка в цене ДДУ против отдельного сертификата"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-03",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://rnrf.ru/news/32013-problemy-priemki-zhk-pervyy-nagatinskiy-s-nezavershennoy-otdelkoy/",
+        "type": "market_news",
+        "note": "23.09.2026 — приёмка при незавершённой отделке (контекст расхождения обещаний и факта)"
+      },
+      {
+        "url": "https://novorossiysk.allestate.pro/news/26.09.2026/sroki-sdachi-novostroyki-sorvany-chto-delat-dolschiku/",
+        "type": "market_news",
+        "note": "26.09.2026 — допсоглашения, неустойка после снятия моратория с 01.01.2026"
+      },
+      {
+        "url": "https://harant.ru/questions/q-217852/",
+        "type": "legal_community",
+        "note": "30.07.2026 — отделка в гарантийном письме vs ДДУ"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмени с отделкой под ключ",
+    "p0_volume": 63,
+    "p0_volume_mcp_narrow": 9,
+    "support_phrases": [
+      {"phrase": "отделка новостройки под ключ", "volume": 1099, "region": "225"},
+      {"phrase": "квартиры с отделкой от застройщика", "volume": 22558, "region": "225"},
+      {"phrase": "дду с отделкой", "volume": 129, "region": "225"},
+      {"phrase": "квартиры с отделкой дду", "volume": 80, "region": "225"}
+    ],
+    "rework_from": "scout P0 63 confirmed on RU spine; narrow geo MCP 9 — not blocker",
+    "partial": [
+      "сертификат отделки от застройщика — totalCount only (4)",
+      "проверка дду перед подписанием — totalCount only (9)"
+    ]
+  },
+  "overlap_check": {
+    "file": "published-titles-only.md",
+    "duplicates_found": false,
+    "cluster_id": "newbuild_finish_certificate_upsell_before_ddu",
+    "story_dup_check": "PASS",
+    "distinct_from": ["B25 finish at acceptance", "B21 storage in DDU", "SERP ~300k at keys not before DDU"]
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["legal_norms_214fz"],
+    "errors": [],
+    "note": "214-ФЗ ст. 4, 5, 7, 10 via consultant.ru; no bank tariff claims"
+  },
+  "key_facts_count": 28,
+  "derouter": {
+    "status": "PASS",
+    "attempts": 3,
+    "mode": "split_synthesis_after_524",
+    "splits": [
+      "assembled-research-inputs.md full doc: HTTP 524 timeout",
+      "derouter-research-split-a.md → research-notes-part-a.md OK",
+      "derouter-research-split-b.md → research-notes-part-b.md OK (merged research-notes.md)"
+    ],
+    "stamp": "derouter-opus-stamp-research.json",
+    "model": "gpt-5.6-terra",
+    "tier": "utility"
+  },
+  "outputs": {
+    "research_notes": "research-notes.md",
+    "research_context": "research-context.json",
+    "research_serp": "research-serp.json",
+    "assembled_inputs": "assembled-research-inputs.md",
+    "derouter_stamp": "derouter-opus-stamp-research.json"
+  },
+  "incident_report": "none"
+}
