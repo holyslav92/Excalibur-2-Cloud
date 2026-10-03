@@ -102,3 +102,7 @@ WRITER DRAFT:
 <p>Позвоните: <b>+7 922 001 65 05</b> или напишите в <a href="{{SITE_BASE}}/contacts/">Telegram и MAX</a>. Разборы сделок, которые остановили вовремя, выкладываю в канале.</p>
 <p><a href="{{SITE_BASE}}/">Святослав, Excalibur, недвижимость Тюмени</a></p>
 </div>
+
+## LENGTH TARGET (HARD)
+Итог article.html: **1450–1580 слов**. Не короче 1400. Сохрани все H2, inline slots, CTA, interlinks.
+

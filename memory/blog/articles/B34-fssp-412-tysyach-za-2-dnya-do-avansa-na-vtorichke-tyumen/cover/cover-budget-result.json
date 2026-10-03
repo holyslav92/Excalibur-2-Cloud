@@ -1,0 +1,52 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 2,
+  "best_candidate": "/workspace/memory/blog/articles/B34-fssp-412-tysyach-za-2-dnya-do-avansa-na-vtorichke-tyumen/cover/cover.png",
+  "last_errors": [
+    "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (not_svyatoslav_vs_studio_portrait)",
+    "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Чистая', 'скрыла'] last_word='скрыла' ocr='1истая выписка крыла долг в ФСС!'",
+    "pixel_no_collage_inset FAIL: white_frac=0.592 inset_face=True blob_count=3",
+    "pixel_meme_present FAIL: orange_fur=38 legacy=34 host_face=True",
+    "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.0995",
+    "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model": "grsai-standard",
+      "bytes": 1055599,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (not_svyatoslav_vs_studio_portrait)",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['выписка', 'скрыла'] last_word='скрыла' ocr='Чистая BbInntn” ДОЛГ 2 wv... |'",
+        "pixel_no_collage_inset FAIL: white_frac=0.579 inset_face=True blob_count=4",
+        "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.1462",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    },
+    {
+      "attempt": 2,
+      "model": "grsai-standard",
+      "bytes": 1085845,
+      "host": "grsaiapi.com",
+      "qa_status": "FAIL",
+      "qa_errors": [
+        "pixel_identity_matches_studio FAIL: host is not recognizably Svyatoslav vs studio ref (not_svyatoslav_vs_studio_portrait)",
+        "pixel_hook_title_not_truncated FAIL: truncated=False missing=['Чистая', 'скрыла'] last_word='скрыла' ocr='1истая выписка крыла долг в ФСС!'",
+        "pixel_no_collage_inset FAIL: white_frac=0.592 inset_face=True blob_count=3",
+        "pixel_meme_present FAIL: orange_fur=38 legacy=34 host_face=True",
+        "pixel_no_wordstat_query_strips FAIL: 1 Wordstat strip(s), 0 bar band(s), paper_frac=0.0995",
+        "pixel_designed_thumbnail FAIL: cover is not a designed 1200×675 thumbnail"
+      ],
+      "qa_fail": true
+    }
+  ],
+  "next_steps": [
+    "Re-run cover_qa_gate on best_candidate — analyze_cover_pixels applies OCR escape before verdict",
+    "Do NOT deep-dive Cover-QA source — if visual OK after escape, proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B34",
+  "slug": "fssp-412-tysyach-za-2-dnya-do-avansa-na-vtorichke-tyumen",
+  "candidates_count": 30,
+  "outbound_found": [
+    {
+      "slug": "skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo",
+      "title": "skazali-v-brake-ne-byl-a-v-tyumeni-pered-avansom-vsplyla-umershaya-zhena-i-neofo"
+    },
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn"
+    },
+    {
+      "slug": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal",
+      "title": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal"
+    },
+    {
+      "slug": "v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom",
+      "title": "v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

@@ -25,9 +25,7 @@
     },
     "length": {
       "pass": true,
-      "reasons": [
-        "length-short: 1310 words below target 1400-1600 (warn only)"
-      ]
+      "reasons": []
     },
     "tone": {
       "pass": true,
@@ -44,10 +42,10 @@
   },
   "errors": [],
   "metrics": {
-    "word_count": 1310,
+    "word_count": 1421,
     "word_target": "1400-1600",
     "word_hard_max": 1750,
-    "dzen_reading_minutes_est": 7,
+    "dzen_reading_minutes_est": 8,
     "spine_overlap": 0.0923
   }
 }
