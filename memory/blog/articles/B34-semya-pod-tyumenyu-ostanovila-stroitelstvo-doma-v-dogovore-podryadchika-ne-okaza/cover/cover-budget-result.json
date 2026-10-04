@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "reason": "cover_budget_exhausted",
+  "max_attempts": 1,
+  "best_candidate": "/workspace/memory/blog/articles/B34-semya-pod-tyumenyu-ostanovila-stroitelstvo-doma-v-dogovore-podryadchika-ne-okaza/cover/cover.png",
+  "last_errors": [],
+  "attempts": [
+    {
+      "attempt": 1,
+      "model": "standard-image",
+      "error": "The read operation timed out"
+    }
+  ],
+  "next_steps": [
+    "Re-run cover_qa_gate on best_candidate — analyze_cover_pixels applies OCR escape before verdict",
+    "Do NOT deep-dive Cover-QA source — if visual OK after escape, proceed Indexer",
+    "Never PIL mashup / Kie; regen only via grsai solo cover within budget"
+  ]
+}

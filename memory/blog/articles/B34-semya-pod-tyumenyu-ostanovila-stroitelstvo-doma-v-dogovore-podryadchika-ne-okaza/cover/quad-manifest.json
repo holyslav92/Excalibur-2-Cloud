@@ -1,0 +1,225 @@
+{
+  "topic_id": "B34",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Семья остановила перевод за новый дом",
+  "cover_hook_highlight": "перевод",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Под Тюменью остановили договор на дом без эскроу: их уже 600: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Светлый шатёр, белая рубашка, договор на столе, скептический взгляд, нормальные руки, солнце.",
+      "meme_caption_ru": "",
+      "sticky": "Реквизиты вместо защиты",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "скептический боковой взгляд"
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Договор лежал без строки про счёт",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Светлый стол, открытый договор подряда, реквизиты фирмы, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Договор лежал без строки про счёт» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "офис застройщика",
+        "реквизиты фирмы",
+        "договор на столе"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Договор лежал без строки про счёт",
+      "visual_type": "comparison_table",
+      "scene_hint": "Схема: реквизиты фирмы против счёта эскроу, без людей.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: договор подряда, счёт эскроу, участок под дом — иллюстрация к разбору сделки.",
+      "labels": [
+        "договор подряда",
+        "счёт эскроу",
+        "участок под дом"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что в сентябре сказали в областном стройуправлении",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Схема: закон 186-ФЗ с 1 марта 2025, эскроу не обязателен, без людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Что в сентябре сказали в областном стройуправле…» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "с 1 марта 2025",
+        "закон 186",
+        "эскроу не обязателен"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Где закон про эскроу на дом начинает работать",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Светлый участок под дом, макет, папка договора, без лиц.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Где закон про эскроу на дом начинает работать» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "участок под дом",
+        "семейный проект",
+        "договор подряда"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Перевод фирме так и не ушёл",
+      "visual_type": "process_flow",
+      "scene_hint": "process diagram boxes and arrows, high-key, no people",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: счёт открывает заказчик, деньги на счёте, выплата после приёмки — иллюстрация к…",
+      "labels": [
+        "счёт открывает заказчик",
+        "деньги на счёте",
+        "выплата после приёмки"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Что смотреть в тексте, пока деньги ещё ваши",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "bar chart infographic, high-key, no people",
+      "alt": "график / шкала сроков по новостройке в Тюмени: около 600 домов, 581 сданный дом, 1500 договоров — иллюстрация к разбору сделки.",
+      "labels": [
+        "около 600 домов",
+        "581 сданный дом",
+        "1500 договоров"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Дом почти ваш — если бумага совпала с деньгами",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Сравнение августа: 1441 договор и 581 сданный дом, без людей.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: 1441 договор в августе, счёт эскроу, выплата после приёмки — иллюстрация к разбору…",
+      "labels": [
+        "1441 договор в августе",
+        "счёт эскроу",
+        "выплата после приёмки"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "строительство домов в тюмени",
+    "счет эскроу"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "host standing right of center, hook zone upper left, phone text bottom right, meme stickers in corners",
+    "location": "bright sunlit contractor canopy near a timber house model, white table, open podryad contract, Tyumen summer",
+    "meme": "side_eye_chloe + polite_cat corner stickers",
+    "prop_set": "open contractor contract, timber house model, yellow sticky",
+    "sticker_set": "side_eye_chloe top-left, polite_cat bottom-left, clear of hook face and phone",
+    "joke": "side-eye at a contract that says protected while the payment line is just the firm account",
+    "outfit": "white oxford rolled sleeves, rust chinos, no blazer no vest",
+    "emotion": "skeptical side glance at the empty escrow line, lips pressed, not a studio smile",
+    "pose_framing": "standing three-quarter from the right, waist-up, both hands on the table edge of the folder, not a left bust",
+    "action": "points at the payment clause that has only company bank details and no escrow account"
+  },
+  "cover_emotion": "скептический боковой взгляд на пустую строку договора, губы сжаты, брови чуть сведены"
+}
