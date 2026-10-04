@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat",
+  "topic_id": "B34",
+  "post_id": 11596,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1115516,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11596 slug=v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat\nOK categories=31,34\nOK yoast_social_image=1\nOK featured_image=11597\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11598 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat-inline-04.png\nOK inline_alt=11598\nOK inline_description=11598\nOK inline_image_upload=11599 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat-inline-05.png\nOK inline_alt=11599\nOK inline_description=11599\nOK inline_image_upload=11600 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat-inline-06.png\nOK inline_alt=11600\nOK inline_description=11600\nOK inline_image_upload=11601 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat-inline-07.png\nOK inline_alt=11601\nOK inline_description=11601\nOK inline_image_upload=11602 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat-inline-01.png\nOK inline_alt=11602\nOK inline_description=11602\nOK inline_image_upload=11603 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat-inline-02.png\nOK inline_alt=11603\nOK inline_description=11603\nOK inline_image_upload=11604 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat-inline-03.png\nOK inline_alt=11604\nOK inline_description=11604\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat/",
+    "errors": []
+  }
+}

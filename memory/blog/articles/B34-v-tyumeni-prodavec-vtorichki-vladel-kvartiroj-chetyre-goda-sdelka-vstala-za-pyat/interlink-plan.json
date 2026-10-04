@@ -1,0 +1,103 @@
+{
+  "topic_id": "B34",
+  "slug": "v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat",
+  "title": "В Тюмени налог через 15 месяцев остановил продажу вторички",
+  "outbound_required_min": 1,
+  "outbound_found": [
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "permalink": "/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/",
+      "topic_id": "B09",
+      "post_id": 9063,
+      "source": "ledger"
+    },
+    {
+      "slug": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal",
+      "title": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal",
+      "permalink": "/blog/vtorichka-i-riski/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/",
+      "topic_id": "B14",
+      "post_id": 9320,
+      "source": "ledger"
+    },
+    {
+      "slug": "za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot",
+      "title": "za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot",
+      "permalink": "/blog/vtorichka-i-riski/za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot/",
+      "topic_id": "B33",
+      "post_id": 11209,
+      "source": "ledger"
+    }
+  ],
+  "outbound_missing_suggestions": [
+    {
+      "slug": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "title": "raspisku-na-kvartiru-napisali-deneg-na-schete-net",
+      "permalink": "/blog/vtorichka-i-riski/raspisku-na-kvartiru-napisali-deneg-na-schete-net/",
+      "topic_id": "B02",
+      "post_id": 8720,
+      "source": "ledger"
+    },
+    {
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "title": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "permalink": "/blog/vtorichka-i-riski/pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri/",
+      "topic_id": "B03",
+      "post_id": 8813,
+      "source": "ledger"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "permalink": "/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "topic_id": "B04",
+      "post_id": 8823,
+      "source": "ledger"
+    }
+  ],
+  "inbound_targets": [
+    {
+      "slug": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "title": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "permalink": "/blog/vtorichka-i-riski/avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami/",
+      "topic_id": "B06",
+      "post_id": 8984,
+      "source": "ledger"
+    },
+    {
+      "slug": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "title": "doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero",
+      "permalink": "/blog/vtorichka-i-riski/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/",
+      "topic_id": "B04",
+      "post_id": 8823,
+      "source": "ledger"
+    },
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "permalink": "/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/",
+      "topic_id": "B09",
+      "post_id": 9063,
+      "source": "ledger"
+    }
+  ],
+  "inbound_updates": [
+    {
+      "post_id": 8984,
+      "marker": "data-excalibur-interlink-from=\"v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat\"><b>Читайте также:</b> <a href=\"{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat/\">В Тюмени налог через 15 месяцев остановил продажу вторички</a></p>"
+    },
+    {
+      "post_id": 8823,
+      "marker": "data-excalibur-interlink-from=\"v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat\"><b>Читайте также:</b> <a href=\"{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat/\">В Тюмени налог через 15 месяцев остановил продажу вторички</a></p>"
+    },
+    {
+      "post_id": 9063,
+      "marker": "data-excalibur-interlink-from=\"v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat\"",
+      "html": "<p class=\"excalibur-interlink-readalso\" data-excalibur-interlink-from=\"v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat\"><b>Читайте также:</b> <a href=\"{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat/\">В Тюмени налог через 15 месяцев остановил продажу вторички</a></p>"
+    }
+  ],
+  "new_url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat/",
+  "dry_run": false
+}

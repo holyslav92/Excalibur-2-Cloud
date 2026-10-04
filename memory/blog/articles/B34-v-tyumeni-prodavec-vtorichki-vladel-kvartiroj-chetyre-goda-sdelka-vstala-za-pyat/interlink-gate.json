@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "topic_id": "B34",
+  "slug": "v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat",
+  "candidates_count": 30,
+  "outbound_found": [
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn"
+    },
+    {
+      "slug": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal",
+      "title": "v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal"
+    },
+    {
+      "slug": "za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot",
+      "title": "za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}
