@@ -1,0 +1,9 @@
+{
+  "topic_id": "B34",
+  "description": "В Тюмени покупательница уже готовилась к новостройке. Святослав Шакин заметил в бумагах деталь: деньги вносил один человек, а владельцем становился другой.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

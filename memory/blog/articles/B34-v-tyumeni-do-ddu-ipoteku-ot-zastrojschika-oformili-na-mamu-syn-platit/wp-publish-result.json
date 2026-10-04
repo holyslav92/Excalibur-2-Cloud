@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit",
+  "topic_id": "B34",
+  "post_id": 11568,
+  "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 959165,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11568 slug=v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit\nOK categories=32,34\nOK yoast_social_image=1\nOK featured_image=11569\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11570 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit-inline-01.png\nOK inline_alt=11570\nOK inline_description=11570\nOK inline_image_upload=11571 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit-inline-02.png\nOK inline_alt=11571\nOK inline_description=11571\nOK inline_image_upload=11572 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit-inline-03.png\nOK inline_alt=11572\nOK inline_description=11572\nOK inline_image_upload=11573 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit-inline-04.png\nOK inline_alt=11573\nOK inline_description=11573\nOK inline_image_upload=11574 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit-inline-05.png\nOK inline_alt=11574\nOK inline_description=11574\nOK inline_image_upload=11575 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit-inline-06.png\nOK inline_alt=11575\nOK inline_description=11575\nOK inline_image_upload=11576 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit-inline-07.png\nOK inline_alt=11576\nOK inline_description=11576\npermalink={{SITE_BASE}}/blog/ipoteka/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/ipoteka/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit/",
+    "errors": []
+  }
+}
