@@ -507,6 +507,27 @@ def build_prompt(
     return "\n".join(line for line in lines if line)
 
 
+def solo_catalog_meme_line(manifest: dict) -> str:
+    """Стикер только из meme-top100. Полосатый thinking-cat сожжён — его не рисовать."""
+    motifs = manifest.get("cover_motifs") or {}
+    picks = manifest.get("meme_picks") or {}
+    cover_ids: list[str] = []
+    if isinstance(picks, dict):
+        raw = picks.get("cover") or []
+        if isinstance(raw, list):
+            cover_ids = [str(item).strip() for item in raw if str(item).strip()]
+    meme = compact(str(motifs.get("meme") or ""), 140)
+    label = meme or (", ".join(cover_ids) if cover_ids else "one meme-top100 sticker")
+    ids = ", ".join(cover_ids) if cover_ids else label
+    return (
+        f"ONE tiny real catalog sticker ONLY, ids: {ids}. Template: {label}. "
+        "Place it in the box x=72–94% y=56–70%, ≤12% of the frame, ABOVE the phone paper, "
+        "≥80px clear of the headline, the host face, and the phone digits. "
+        "Paint the real internet template, not a newly invented sad face. "
+        "FORBIDDEN: thinking striped cat, orange tabby thinking-cat, random drawn sad face."
+    )
+
+
 def build_solo_cover_prompt(
     manifest: dict,
     style: dict,
@@ -558,8 +579,10 @@ def build_solo_cover_prompt(
         f"Host i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}. "
         f"Outfit INVENTED: {outfit}. Expression: {emotion}.\n"
         f"{compact(scene, COVER_SCENE_HINT_COMPACT)}. "
-        "Close-up face+shoulders LEFT or center-left (~35% frame) — NOT full-bleed face crop, room for headline right. "
-        "Tiny thinking-cat meme sticker bottom-right corner ONLY — ≥80px clear margin from phone/headline. "
+        "Close-up face+shoulders LEFT (~35% frame), crop at collarbone — hands OUT of frame. "
+        "If a hand is visible it must have exactly five normal fingers. "
+        "NOT a full-bleed face crop; leave the right band for the headline. "
+        f"{solo_catalog_meme_line(manifest)} "
         "ZERO Wordstat/search-keyword strips — never paint query bars; optional one yellow sticky from hook only. "
         "Sun flare, tape/pins aesthetic on board only, perfect Cyrillic, #FFF bright."
     )
