@@ -352,6 +352,9 @@ def http_json(
         raise GrsaiApiError(f"grsai HTTP {exc.code}: {snippet}") from exc
     except urllib.error.URLError as exc:
         raise GrsaiRetryable(f"grsai network error: {exc.reason}") from exc
+    except (TimeoutError, OSError) as exc:
+        # Python 3.10+ urlopen по таймауту кидает TimeoutError, не URLError.
+        raise GrsaiRetryable(f"grsai network error: {exc}") from exc
 
     try:
         parsed = json.loads(body)
@@ -609,9 +612,11 @@ def generate_image(
     target_w, target_h = parse_size_wh(target_size)
     mode = "i2i" if ref_images else "t2i"
 
+    # Сначала async: синхронный json часто держит сокет дольше таймаута
+    # и не отдаёт тело. Async возвращает id, дальше опрос /v1/api/result.
     paths_to_try: list[tuple[str, str]] = [
-        ("api_generate_json", "json"),
         ("api_generate_async", "async"),
+        ("api_generate_json", "json"),
         ("images_generations", ""),
         ("draw_completions", ""),
     ]
@@ -625,6 +630,7 @@ def generate_image(
             for attempt in range(max_retries + 1):
                 attempts += 1
                 try:
+                    post_timeout = 90 if path_name.startswith("api_generate") else timeout
                     if path_name == "api_generate_json":
                         parsed, endpoint = call_api_generate(
                             host=host,
@@ -635,7 +641,7 @@ def generate_image(
                             aspect_ratio=aspect,
                             quality=quality,
                             reply_type=reply_type,
-                            timeout=timeout,
+                            timeout=post_timeout,
                         )
                     elif path_name == "api_generate_async":
                         parsed, endpoint = call_api_generate(
@@ -647,7 +653,7 @@ def generate_image(
                             aspect_ratio=aspect,
                             quality=quality,
                             reply_type="async",
-                            timeout=timeout,
+                            timeout=post_timeout,
                         )
                     elif path_name == "images_generations":
                         parsed, endpoint = call_images_generations(
