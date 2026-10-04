@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "verdict": "pass",
+  "research_date": "2026-10-04",
+  "topic_id": "B34",
+  "signal": "community_this_week",
+  "signal_url": "https://novostroikino.ru/blog/sozaemshchik-i-poruchitel-po-ipoteke-na-novostroyku/",
+  "signal_published_at": "2026-10-02",
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 7,
+    "entities_checked": ["fns", "sberbank"],
+    "errors": []
+  }
+}
