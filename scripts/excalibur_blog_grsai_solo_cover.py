@@ -164,6 +164,12 @@ def main() -> int:
         "MANDATORY visible dark five-o'clock-shadow stubble on jaw, chin and upper lip — "
         "same density and pattern as reference; NEVER clean-shaven, NEVER fashion-model jaw. "
         "Bone structure, hairline, stubble pattern, eye shape MUST match studio portrait. "
+        "HAIR LOCK: dark brown like the reference — NOT blond, NOT light brown, NOT grey. "
+        "A lighter-haired outdoor stranger is FAIL. "
+        "HANDS LOCK: crop at the collarbone, both hands outside the frame. "
+        "Do not draw fingers. If a hand slips in, exactly five normal fingers, no extras, no fusion. "
+        "SHIRT LOCK: do NOT paint a white shirt and do NOT copy the reference blazer. "
+        "MEME LOCK: no thinking striped cat, no invented sad cartoon face. "
         "NEW invented outfit and emotion/scene — do NOT clone reference blazer/pose/background."
     )
     prompt = prompt + identity_suffix
@@ -195,6 +201,16 @@ def main() -> int:
         if attempt > 1 and last_errors and needs_text_layout_retry(last_errors):
             attempt_prompt = prompt + "\n" + TEXT_LAYOUT_RETRY_SUFFIX
             print("retry: TEXT_LAYOUT_LOCK suffix (hook/phone/layout/wordstat-strip miss)", flush=True)
+        elif attempt > 1 and last_errors and any(
+            "pixel_identity" in err or "not_svyatoslav" in err for err in last_errors
+        ):
+            attempt_prompt = (
+                prompt
+                + "\nIDENTITY RETRY: previous frame was a different man. "
+                "Copy the studio portrait face: dark brown hair, dark stubble, round-oval jaw, dark brows. "
+                "NOT lighter hair, NOT clean-shaven, NOT a white shirt, NOT outdoors."
+            )
+            print("retry: IDENTITY_LOCK suffix (face did not match studio portrait)", flush=True)
         else:
             attempt_prompt = prompt
         print(f"attempt {attempt}/{max_attempts} model={model}", flush=True)
