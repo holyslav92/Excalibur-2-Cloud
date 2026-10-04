@@ -36,4 +36,3 @@ lessons, benchmarks, QA reports или соседние research-notes как о
 | B31 | za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t | За 2 дня до ДДУ страховка добавила восемнадцать тысяч в месяц — банк снял одобрение ипотеки на новостройку в Тюмени | published |
 | B32 | za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil- | За 2 дня до эскроу банк остановил сделку в новостройке Тюмени — в ДДУ чужое юрлицо | published |
 | B33 | za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot | За 3 дня до аванса в Тюмени всплыл долг за свет 186 тысяч — семья отказалась от сделки | published |
-| B34 | v-tyumeni-prodavec-vtorichki-vladel-kvartiroj-chetyre-goda-sdelka-vstala-za-pyat | В Тюмени налог через 15 месяцев остановил продажу вторички | published |

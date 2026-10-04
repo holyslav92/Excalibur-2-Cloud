@@ -1,0 +1,39 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-04",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/a/aqjnEN8hLg35izyx",
+        "type": "community",
+        "note": "Дзен 2026-09-21, собрано 2026-10-04, 34952 просмотра: ФНС, когда не платить налог с продажи квартиры"
+      },
+      {
+        "url": "https://www.gazeta.press/social/23354761/nalog-s-prodazhi-kvartiry.shtml",
+        "type": "news",
+        "note": "Газета.Ru 06.08.2026 — шкала 13/15 и срок 5 лет"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "налог с продажи квартиры",
+    "p0_volume": 476,
+    "rework_log": "Tyumen 55 = 476, oblast 11176 = 642, RU 225 = 58182; holding-period angle kept"
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "notes": "Сроки 3/5 лет, вычет 1 млн или расходы, коэффициент 0,7 сверены со страницей ФНС. Банковские тарифы не заявляются."
+  },
+  "blockers": []
+}
