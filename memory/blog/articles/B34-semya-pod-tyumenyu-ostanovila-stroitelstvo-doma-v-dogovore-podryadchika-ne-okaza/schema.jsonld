@@ -1,0 +1,27 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{SITE_BASE}}/semya-pod-tyumenyu-ostanovila-stroitelstvo-doma-v-dogovore-podryadchika-ne-okaza/#article",
+  "url": "{{SITE_BASE}}/semya-pod-tyumenyu-ostanovila-stroitelstvo-doma-v-dogovore-podryadchika-ne-okaza/",
+  "headline": "Под Тюменью остановили договор на дом без эскроу: их уже 600",
+  "description": "Святослав Шакин рассказывает о ситуации под Тюменью, где семья остановила строительство дома по договору подряда без счёта эскроу и не перевела деньги. Таких договоров, по данным публикации, уже около 600.",
+  "datePublished": "2026-10-04",
+  "inLanguage": "ru",
+  "author": {
+    "@type": "Person",
+    "@id": "{{SITE_BASE}}/#/schema/person/svyatoslav-shakin",
+    "name": "Святослав Шакин",
+    "sameAs": [
+      "{{SITE_BASE}}/#/schema/person/svyatoslav-shakin"
+    ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{SITE_BASE}}/semya-pod-tyumenyu-ostanovila-stroitelstvo-doma-v-dogovore-podryadchika-ne-okaza/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "{{SITE_BASE}}/#organization",
+    "name": "The Риэлтор"
+  }
+}
