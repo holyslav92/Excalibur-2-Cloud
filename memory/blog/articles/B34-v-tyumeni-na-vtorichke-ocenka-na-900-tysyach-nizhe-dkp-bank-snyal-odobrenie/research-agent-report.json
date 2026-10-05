@@ -1,0 +1,56 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-05",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/10/02/76673072/",
+        "type": "regional_news",
+        "note": "72.ru 02.10.2026 — рост интереса к вторичке"
+      },
+      {
+        "url": "https://72.ru/text/economics/2026/10/05/76678646/",
+        "type": "regional_news",
+        "note": "72.ru 05.10.2026 — семейная ипотека (фон, не spine)"
+      },
+      {
+        "url": "https://www.irn.ru/news/160752-spros-na-vtorichku-vyros-do-rekordnogo-urovnya-kak.html",
+        "type": "industry_news",
+        "note": "IRN 02.10.2026 — рекорд спроса на вторичку"
+      },
+      {
+        "url": "https://dzen.ru/a/alc8GjRgISluH81l",
+        "type": "community/channel",
+        "note": "Tenant Dzen — оценка до аванса, min(DKP, оценка)"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176"],
+    "p0_phrase": "купить вторичное жилье в тюмени",
+    "p0_volume": 749,
+    "rework_log": "narrow «оценка для ипотеки» 28 → spine P0 749 + sibling «продажа… вторичка» 724"
+  },
+  "slot_rubric": "vtorichka",
+  "viral_mechanism": "paper_clean_then_broke",
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 2,
+    "entities_checked": ["102-fz", "domclick_explainer"],
+    "errors": [],
+    "notes": "No bank LTV/tariff numbers claimed; 102-FZ + Domclick person explainer in official_verifications"
+  },
+  "derouter": {
+    "stamp": "derouter-opus-stamp-research.json",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "note": "First full-input attempts HTTP 524; success with explicit no-refuse handoff in assembled-research-inputs.md"
+  },
+  "blockers": []
+}
