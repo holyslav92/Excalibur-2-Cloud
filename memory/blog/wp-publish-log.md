@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B34 — 2026-10-05
+
+- **topic_id:** B34
+- **slug:** v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie
+- **post_id:** 11622
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie/
+- **featured_image:** 11623
+- **inline_images:** 11624–11630 (7)
+- **wp_category_slugs:** vtorichka-i-riski, proverka-pered-pokupkoj, pokupka-kvartiry (category_ids=31,34,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to 3 sibling posts (8984, 8823, 9063)
+- **notes:** CTA blocks aligned to quality-bar-9; SFTP root fallback to `.`
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
