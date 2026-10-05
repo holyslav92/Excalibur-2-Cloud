@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B34",
+  "slug": "v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku",
+  "candidates_count": 30,
+  "outbound_found": [
+    {
+      "slug": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami",
+      "title": "avtoocenka-kvartiry-na-dva-milliona-nizhe-rynka-circ-s-prosmotrami"
+    },
+    {
+      "slug": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn",
+      "title": "ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn"
+    },
+    {
+      "slug": "v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii",
+      "title": "v-tyumeni-kupili-kvartiru-s-otkrytoj-kuhnej-rosreestr-otkazal-v-registracii"
+    },
+    {
+      "slug": "za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot",
+      "title": "za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

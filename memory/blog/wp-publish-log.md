@@ -1,5 +1,20 @@
 # Excalibur BLOG — WP publish log
 
+## B34 — 2026-10-05
+
+- **topic_id:** B34
+- **slug:** v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku
+- **post_id:** 11609
+- **permalink:** /blog/vtorichka-i-riski/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku/
+- **featured_image:** 11610
+- **inline_images:** 11611–11617 (7)
+- **wp_category_slugs:** vtorichka-i-riski, proverka-pered-pokupkoj, pokupka-kvartiry (category_ids=31,34,36)
+- **schema_meta:** ok
+- **live_page_gate:** PASS
+- **llms_deploy:** PASS (llms.txt, llms-full.txt)
+- **interlink:** inbound applied to B06 (8984), B04 (8823), B09 (9063)
+- **notes:** pre-publish fix — deduped `data-slot` inline markers; SFTP root fallback to `.`
+
 ## B29 — 2026-09-19
 
 - **topic_id:** B29
