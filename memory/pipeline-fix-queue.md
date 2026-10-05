@@ -1063,3 +1063,21 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20261005-1300-schema-derouter-output-root
+status: open
+run_date: 2026-10-05
+role: excalibur-blog-schema
+topic_id: B34
+article_dir: memory/blog/articles/B34-v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie
+severity: low
+category: contract
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --output schema.jsonld --article-dir memory/blog/articles/B34-...` from repo root wrote `schema.jsonld` to project root, not under `article_dir` (stamp still landed in article dir).
+
+### How the agent recovered this run
+- Copied valid JSON-LD from `/workspace/schema.jsonld` into `memory/blog/articles/B34-.../schema.jsonld`, removed stray root file; `excalibur_blog_schema_gate.py` → PASS.
+
+### Durable fix needed before next run
+- Skill/agent prompt: `--output` must be repo-relative path under article dir (e.g. `memory/blog/articles/<dir>/schema.jsonld`) or resolve `--output` relative to `--article-dir` when basename only.
