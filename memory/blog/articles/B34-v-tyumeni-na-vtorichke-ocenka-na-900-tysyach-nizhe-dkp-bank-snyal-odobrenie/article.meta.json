@@ -11,5 +11,11 @@
     "proverka-pered-pokupkoj",
     "pokupka-kvartiry"
   ],
-  "pipeline_canon": "human-first-v2"
+  "pipeline_canon": "human-first-v2",
+  "editorial_swarm": false,
+  "theme_blocks": {
+    "faq": "skip",
+    "quiz": "skip",
+    "side_stickers": "skip"
+  }
 }
