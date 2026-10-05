@@ -319,6 +319,28 @@ def article_has_tyumen(meta: dict[str, Any]) -> bool:
     return "тюмен" in blob or "tyumen" in blob
 
 
+def article_is_vtorichka(meta: dict[str, Any]) -> bool:
+    blob = " ".join(
+        str(meta.get(k) or "")
+        for k in ("title", "h1", "slug", "description")
+    ).casefold()
+    return "вторич" in blob
+
+
+def market_context_phrase(meta: dict[str, Any] | None) -> str:
+    if meta and article_is_vtorichka(meta):
+        return "по вторичке в Тюмени" if article_has_tyumen(meta) else "по вторичке"
+    if meta and article_has_tyumen(meta):
+        return "по новостройке в Тюмени"
+    return "по новостройке"
+
+
+def cover_alt_padding(meta: dict[str, Any]) -> str:
+    if article_is_vtorichka(meta):
+        return "что сверить в ДКП и банковской оценке до аванса"
+    return "что проверить в договоре и эскроу до подписи"
+
+
 def hook_stakes_sentence(manifest: dict[str, Any], meta: dict[str, Any]) -> str:
     hook = normalize_text(manifest.get("cover_hook"))
     if not hook:
@@ -347,7 +369,7 @@ def build_cover_alt(
     if article_has_tyumen(meta) and "тюмен" not in core.casefold():
         core = f"{core} в Тюмени"
     if len(core) < ALT_SEO_MIN:
-        core = f"{core}: что проверить в договоре и эскроу до подписи"
+        core = f"{core}: {cover_alt_padding(meta)}"
     alt = clamp_seo_alt(core)
     # Safety: if still scene-like, fall back to title only.
     if is_prompt_like_alt(
@@ -387,13 +409,13 @@ def build_inline_alt(
 
     if panel_labels and visual_type not in {"realistic_photo", "cover_editorial_hero"}:
         facts = ", ".join(panel_labels[:3])
-        alt = f"{label_ru} по новостройке в Тюмени: {facts} — иллюстрация к разбору сделки."
+        alt = f"{label_ru} {market_context_phrase(meta)}: {facts} — иллюстрация к разбору сделки."
     elif h2:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
         alt = f"{label_ru} к разделу «{h2}»{tyumen} — иллюстрация к кейсу о сделке."
     else:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
-        alt = f"{label_ru} по новостройке{tyumen} — иллюстрация к материалу."
+        alt = f"{label_ru} {market_context_phrase(meta)} — иллюстрация к материалу."
     return clamp_seo_alt(alt)
 
 
