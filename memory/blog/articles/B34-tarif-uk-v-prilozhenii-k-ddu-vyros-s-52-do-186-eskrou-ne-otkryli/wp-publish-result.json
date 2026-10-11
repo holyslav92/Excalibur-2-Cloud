@@ -1,0 +1,28 @@
+{
+  "slug": "tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli",
+  "topic_id": "B34",
+  "post_id": 11635,
+  "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1145385,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11635 slug=tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli\nOK categories=36,54,34\nOK yoast_social_image=1\nOK featured_image=11636\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11637 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli-inline-01.png\nOK inline_alt=11637\nOK inline_description=11637\nOK inline_image_upload=11638 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli-inline-02.png\nOK inline_alt=11638\nOK inline_description=11638\nOK inline_image_upload=11639 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli-inline-03.png\nOK inline_alt=11639\nOK inline_description=11639\nOK inline_image_upload=11640 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli-inline-04.png\nOK inline_alt=11640\nOK inline_description=11640\nOK inline_image_upload=11641 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli-inline-05.png\nOK inline_alt=11641\nOK inline_description=11641\nOK inline_image_upload=11642 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli-inline-06.png\nOK inline_alt=11642\nOK inline_description=11642\nOK inline_image_upload=11643 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli-inline-07.png\nOK inline_alt=11643\nOK inline_description=11643\npermalink={{SITE_BASE}}/blog/proverka-pered-pokupkoj/tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/proverka-pered-pokupkoj/tarif-uk-v-prilozhenii-k-ddu-vyros-s-52-do-186-eskrou-ne-otkryli/",
+    "errors": []
+  }
+}
