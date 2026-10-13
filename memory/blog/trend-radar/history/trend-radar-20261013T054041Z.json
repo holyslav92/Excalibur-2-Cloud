@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-10-13T05:56:50.143070+00:00",
+  "slot_local": "09:00",
+  "slot_rubric": "novostroyki",
+  "slot_rubric_label": "новостройки",
+  "data_dir": "memory/blog/trend-radar/data/20261013T054041Z",
+  "viral_db": "memory/blog/trend-radar/data/20261013T054041Z/viral.sqlite",
+  "sources_used": [
+    "klyshin",
+    "bankiru",
+    "yuridicheskie-aspekty-nedvizhimosti",
+    "nedvizhimost",
+    "arenda-nedvizhimosti"
+  ],
+  "rubrics": {
+    "novostroyki": {
+      "label": "новостройки",
+      "angles": [],
+      "count": 0
+    },
+    "vtorichka": {
+      "label": "вторичка",
+      "angles": [
+        {
+          "headline_formula": "casus+число: «Почему растут цены на вторичном рынке недвижимости? И…»",
+          "first_line_hook": "Почему растут цены на вторичном рынке недвижимости? И когда это закончится? Логическое объяснение, «на пальцах»",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 27809,
+          "read_through": 0.5722,
+          "viral_score": 8.5891,
+          "source_url": "https://dzen.ru/a/X7Yh5UL5yh2hGcvB",
+          "channel": "Простая Недвижимость"
+        },
+        {
+          "headline_formula": "casus+число: «С 1 октября вырастет спрос на вторичную недвижимость.…»",
+          "first_line_hook": "С 1 октября вырастет спрос на вторичную недвижимость. Что будет с ценами на квартиры",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 38649,
+          "read_through": 0.4389,
+          "viral_score": 8.4852,
+          "source_url": "https://dzen.ru/a/aqcTwkjUgT5jdBjX",
+          "channel": "Life"
+        },
+        {
+          "headline_formula": "casus+число: «Вторичка Москвы снова растет 2-х значными темпами. Обвал…»",
+          "first_line_hook": "Вторичка Москвы снова растет 2-х значными темпами. Обвал рынка снова отменяется",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 3464,
+          "read_through": 0.4983,
+          "viral_score": 8.0486,
+          "source_url": "https://dzen.ru/a/aoAp6RlHcjMVnGqv",
+          "channel": "Веселый Инвестор"
+        },
+        {
+          "headline_formula": "casus+число: «7 смертных грехов покупателя квартиры»",
+          "first_line_hook": "7 смертных грехов покупателя квартиры",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 162,
+          "read_through": 0.4444,
+          "viral_score": 3.4972,
+          "source_url": "https://dzen.ru/a/XLmtcugWMwCyk9aL",
+          "channel": "Алексей Клышин юрист по недвижимости"
+        }
+      ],
+      "count": 4
+    },
+    "arenda": {
+      "label": "аренда жилья",
+      "angles": [],
+      "count": 0
+    }
+  },
+  "policy": "MECHANICS_AND_ENERGY_ONLY — do not copy plots or body text"
+}

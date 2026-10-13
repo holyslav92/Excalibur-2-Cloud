@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": { "@id": "{{SITE_BASE}}/#organization" }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet/#blogposting",
+      "url": "{{SITE_BASE}}/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet/",
+      "headline": "В Тюмени новый адрес в паспорте остановил сделку на 10 дней",
+      "description": "На вторичке в Тюмени паспорт уже с новой пропиской, а выписка ЕГРН ещё неделю показывает старую — разбор до аванса.",
+      "datePublished": "2026-10-13",
+      "inLanguage": "ru-RU",
+      "author": { "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin" },
+      "publisher": { "@id": "{{SITE_BASE}}/#organization" },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet/"
+      }
+    }
+  ]
+}

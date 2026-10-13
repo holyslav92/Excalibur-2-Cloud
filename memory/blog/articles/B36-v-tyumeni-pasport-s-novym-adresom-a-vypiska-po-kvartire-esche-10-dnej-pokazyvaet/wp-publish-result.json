@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet",
+  "topic_id": "B36",
+  "post_id": 11674,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B36-v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1061232,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11674 slug=v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet\nOK categories=31,34,36\nOK yoast_social_image=1\nOK featured_image=11675\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11676 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet-inline-03.png\nOK inline_alt=11676\nOK inline_description=11676\nOK inline_image_upload=11677 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet-inline-05.png\nOK inline_alt=11677\nOK inline_description=11677\nOK inline_image_upload=11678 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet-inline-04.png\nOK inline_alt=11678\nOK inline_description=11678\nOK inline_image_upload=11679 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet-inline-06.png\nOK inline_alt=11679\nOK inline_description=11679\nOK inline_image_upload=11680 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet-inline-01.png\nOK inline_alt=11680\nOK inline_description=11680\nOK inline_image_upload=11681 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet-inline-02.png\nOK inline_alt=11681\nOK inline_description=11681\nOK inline_image_upload=11682 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet-inline-07.png\nOK inline_alt=11682\nOK inline_description=11682\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet/",
+    "errors": []
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-10-13",
+    "today_ru": "13.10.2026",
+    "year": 2026,
+    "month": 10,
+    "month_name_ru": "октябрь",
+    "weekday_ru": "вторник"
+  },
+  "topic": {
+    "topic_id": "B35",
+    "title": "В Тюмени наследство, через 3 дня дарение — квартиру за 25 миллионов уже продают",
+    "h1": "В Тюмени наследство, через 3 дня дарение — квартиру за 25 миллионов уже продают",
+    "slug": "v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu",
+    "primary_query": "В Тюмени наследство, через 3 дня дарение — квартиру за 25 миллионов уже продают",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени наследство, через 3 дня дарение — квартиру за 25 миллионов уже продают 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Наследство | Юрист Клышин Алексей | Дзен",
+          "url": "https://dzen.ru/a/arySwTyuwHTvf8gy",
+          "snippet": ""
+        },
+        {
+          "title": "Суд в Тюмени подтвердил право вдовы на квартиру погибшего в СВО мужа",
+          "url": "https://nashgorod.ru/news/2026-10-05/chut-ne-ostalas-na-ulitse-vdova-pogibshego-boytsa-svo-dokazala-pravo-na-nasledstvo-5699107",
+          "snippet": "Статья автора «Юрист Клышин Алексей» в Дзене : Через 3 дня - дарение. И квартира за 25 млн уже продается Клиент сам выбрал квартиру и пришел к нам на сопровождение."
+        },
+        {
+          "title": "«Наследство подарил за день до смерти»: внук уговорил дедушку подписать ...",
+          "url": "https://dzen.ru/a/arI24rOTaSH2yqXB",
+          "snippet": "После его гибели вдова продолжила распоряжаться жильем — она смогла доказать, что платит за квартиру и сдает ее в аренду уже от своего лица. Другим наследником является несовершеннолетний сын погибшего и его вдовы. В итоге суд решил, что право на наследство фактически наступило."
+        },
+        {
+          "title": "Максим Степанов | Раздел • Дарение • Вторичка | После смерти матери ...",
+          "url": "https://www.instagram.com/reel/DbV_7B5RObe/",
+          "snippet": "Если квартира выбыла из собственности дедушки при жизни (то есть подписан договор дарения и зарегистрирован переход права в ЕГРН), то да: это имущество не входит в наследственную массу — наследовать уже нечего."
+        },
+        {
+          "title": "В Тюмени на продажу выставили трехэтажную квартиру за 25 миллионов ...",
+          "url": "https://72.ru/text/realty/2025/02/21/75139715/",
+          "snippet": "После смерти матери наследники решили не затягивать с продажей квартиры. Нашли покупателя. Договорились о цене между собой. Сделку оформили без независимой оценки стоимости недвижимости."
+        },
+        {
+          "title": "Квартира по наследству: оформление, налоги, продажа — гайд 2026",
+          "url": "https://gradbase.ru/guide/kvartira-po-nasledstvu",
+          "snippet": "В Тюмени выставили на продажу трехэтажную квартиру за 25 миллионов рублей. Площадь такого жилья составляет 140 квадратных метров. Собственник указал в объявлении, что трехэтажная «эксклюзивная» квартира находится в ЖК «Новин». Дом сдан в декабре 2022 года."
+        }
+      ],
+      "searched_at": "2026-10-13"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени наследство, через 3 дня дарение — квартиру за 25 миллионов уже продают 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Тюменцу, убившему родителей из-за долгов, светит пожизненное",
+          "url": "https://megatyumen.ru/criminal/oba-videli-chto-ih-lishaet-zhizni-sobstvennyj-syn-kotorogo-oni-ochen-lyubili-tyumencu-ubivshemu-roditelej-iz-za-dolgov-svetit-pozhiznennoe/",
+          "snippet": ""
+        },
+        {
+          "title": "Суд в Тюмени подтвердил право вдовы на квартиру погибшего в СВО мужа",
+          "url": "https://nashgorod.ru/news/2026-10-05/chut-ne-ostalas-na-ulitse-vdova-pogibshego-boytsa-svo-dokazala-pravo-na-nasledstvo-5699107",
+          "snippet": "В Тюмени в июле 2025 года произошло страшное преступление. Житель областной столицы решил закрыть долги с помощью убийства родителей."
+        },
+        {
+          "title": "В Тюмени прокурор просит пожизненного лишения свободы за двойное ...",
+          "url": "https://www.tumen.kp.ru/online/news/6722594/",
+          "snippet": "После его гибели вдова продолжила распоряжаться жильем — она смогла доказать, что платит за квартиру и сдает ее в аренду уже от своего лица. Другим наследником является несовершеннолетний сын погибшего и его вдовы. В итоге суд решил, что право на наследство фактически наступило."
+        },
+        {
+          "title": "Житель Тюменской области убил родителей из-за недвижимости на 12 млн ...",
+          "url": "https://www.tumen.kp.ru/online/news/6599691/",
+          "snippet": "Фото: прокуратура Тюменской области. Прокурор на суде потребовал для 35-летнего тюменца, которого обвиняют в убийстве двух человек из-за наследства, пожизненный срок."
+        },
+        {
+          "title": "35-летний тюменец обвиняется в убийстве родителей ради наследства",
+          "url": "https://tumentoday.ru/2025/09/18/35letniy_tyumenets_obvinyayetsya_v_ubiystve_roditeley_radi_nasledstva_/",
+          "snippet": "Суд наложил арест на квартиру, находящуюся в собственности подозреваемого. Общая стоимость недвижимости убитых составила более 12 миллионов рублей."
+        },
+        {
+          "title": "18 лет получил житель Тюмени за убийство родителей ради наследства",
+          "url": "https://www.ntv.ru/novosti/2957265",
+          "snippet": "В результате оперативно-розыскных мероприятий были обнаружены тела 66-летнего мужчины в частном доме и его 73-летней супруги в квартире на улице Мориса Тореза в Тюмени."
+        }
+      ],
+      "searched_at": "2026-10-13"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени наследство, через 3 дня дарение — квартиру за 25 миллионов уже продают official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Наследство | Юрист Клышин Алексей | Дзен",
+          "url": "https://dzen.ru/a/arySwTyuwHTvf8gy",
+          "snippet": ""
+        },
+        {
+          "title": "Тюменцу, убившему родителей из-за долгов, светит пожизненное",
+          "url": "https://megatyumen.ru/criminal/oba-videli-chto-ih-lishaet-zhizni-sobstvennyj-syn-kotorogo-oni-ochen-lyubili-tyumencu-ubivshemu-roditelej-iz-za-dolgov-svetit-pozhiznennoe/",
+          "snippet": "Статья автора «Юрист Клышин Алексей» в Дзене : Через 3 дня - дарение. И квартира за 25 млн уже продается Клиент сам выбрал квартиру и пришел к нам на сопровождение."
+        },
+        {
+          "title": "Погрязший в долгах тюменец жестоко расправился с родителями из-за их ...",
+          "url": "https://news.rambler.ru/incidents/55397245-pogryazshiy-v-dolgah-tyumenets-zhestoko-raspravilsya-s-roditelyami-iz-za-ih-nedvizhimosti/",
+          "snippet": "В Тюмени в июле 2025 года произошло страшное преступление. Житель областной столицы решил закрыть долги с помощью убийства родителей."
+        },
+        {
+          "title": "Решение № 2-9396/2025 2-9396/2025~М-7750/2025 М-7750/2025 от 13 ноября ...",
+          "url": "https://sudact.ru/regular/doc/IRWsVr0RLDdV/",
+          "snippet": "Молодой тюменец решился на убийство своих ближайших родственников из-за желания завладеть их многомиллионным имуществом."
+        },
+        {
+          "title": "Житель Тюменской области убил родителей из-за недвижимости на 12 млн ...",
+          "url": "https://www.tumen.kp.ru/online/news/6599691/",
+          "snippet": "Со свидетельством о смерти истец обратился к нотариусу, который ему устно пояснил, что он пропустил срок принятия наследства и вопрос с принятием наследства теперь нужно решать ..."
+        },
+        {
+          "title": "Суд в Тюмени подтвердил право вдовы на квартиру погибшего в СВО мужа",
+          "url": "https://nashgorod.ru/news/2026-10-05/chut-ne-ostalas-na-ulitse-vdova-pogibshego-boytsa-svo-dokazala-pravo-na-nasledstvo-5699107",
+          "snippet": "Силовики завершили предварительное расследование по резонансному уголовному делу против 35-летнего жителя Тюменской области, его обвиняют в убийстве родственников из-за наследства."
+        }
+      ],
+      "searched_at": "2026-10-13"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени наследство, через 3 дня дарение — квартиру за 25 миллионов уже продают 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "GitHub - massgravel/Microsoft-Activation-Scripts: Open-source Windows ...",
+          "url": "https://github.com/massgravel/Microsoft-Activation-Scripts",
+          "snippet": ""
+        },
+        {
+          "title": "diego4yala/assets/radar-skills.svg at main - GitHub",
+          "url": "https://github.com/diego4yala/diego4yala/blob/main/assets/radar-skills.svg",
+          "snippet": "Open-source Windows and Office activator featuring HWID, Ohook, TSforge, and Online KMS activation methods, along with advanced troubleshooting. How to Activate Windows / Office / Extended Security Updates (ESU)? Click the Start Menu, type PowerShell, and open it. Copy and paste the code below and press Enter. Script not launching?"
+        },
+        {
+          "title": "Коды подразделений МВД (УФМС).csv · GitHub",
+          "url": "https://gist.github.com/ZlobnyiSerg/7f8594f41cdf842703ac0cce3e4c6817",
+          "snippet": "Contribute to diego4yala/diego4yala development by creating an account on GitHub."
+        },
+        {
+          "title": "Управление удаленными репозиториями - Документация GitHub",
+          "url": "https://docs.github.com/ru/get-started/git-basics/managing-remote-repositories",
+          "snippet": "\"3438\";\"1 ОВД Г. НАЛЬЧИКА\";\"072-001\"; \"3439\";\"2 ОВД Г. НАЛЬЧИКА\";\"072-002\"; \"3440\";\"3 ОВД Г. НАЛЬЧИКА\";\"072-003\"; \"3441\";\"УРВАНСКИЙ РОВД РЕСПУБЛИКИ КАБАРДИНО-БАЛКАРИЯ\";\"072-004\"; \"3442\";\"ЗОЛЬСКИЙ РОВД РЕСПУБЛИКИ КАБАРДИНО-БАЛКАРИЯ\";\"072-005\";"
+        },
+        {
+          "title": "Download GitHub Desktop",
+          "url": "https://desktop.github.com/download/",
+          "snippet": "Эта ошибка означает, что вы попытались добавить удаленный репозиторий с именем, которое уже существует в локальном репозитории. ... Чтобы устранить эту проблему, можно:"
+        },
+        {
+          "title": "whisper/approach.png at main · openai/whisper · GitHub",
+          "url": "https://github.com/openai/whisper/blob/main/approach.png",
+          "snippet": "Focus on what matters instead of fighting with Git. Whether you're new to Git or a seasoned user, GitHub Desktop simplifies your development workflow. Experience the latest features and bug fixes before they're released. Looking for Windows? Need to download the installer for Windows? Do you use a Mac with Intel chip?"
+        }
+      ],
+      "searched_at": "2026-10-13"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени наследство, через 3 дня дарение — квартиру за 25 миллионов уже продают forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Наследство | Юрист Клышин Алексей | Дзен",
+          "url": "https://dzen.ru/a/arySwTyuwHTvf8gy",
+          "snippet": ""
+        },
+        {
+          "title": "Тюменцу, убившему родителей из-за долгов, светит пожизненное",
+          "url": "https://megatyumen.ru/criminal/oba-videli-chto-ih-lishaet-zhizni-sobstvennyj-syn-kotorogo-oni-ochen-lyubili-tyumencu-ubivshemu-roditelej-iz-za-dolgov-svetit-pozhiznennoe/",
+          "snippet": "Статья автора «Юрист Клышин Алексей» в Дзене : Через 3 дня - дарение. И квартира за 25 млн уже продается Клиент сам выбрал квартиру и пришел к нам на сопровождение."
+        },
+        {
+          "title": "Решение № 2-9396/2025 2-9396/2025~М-7750/2025 М-7750/2025 от 13 ноября ...",
+          "url": "https://sudact.ru/regular/doc/IRWsVr0RLDdV/",
+          "snippet": "В Тюмени в июле 2025 года произошло страшное преступление. Житель областной столицы решил закрыть долги с помощью убийства родителей."
+        },
+        {
+          "title": "Суд в Тюмени подтвердил право вдовы на квартиру погибшего в СВО мужа",
+          "url": "https://nashgorod.ru/news/2026-10-05/chut-ne-ostalas-na-ulitse-vdova-pogibshego-boytsa-svo-dokazala-pravo-na-nasledstvo-5699107",
+          "snippet": "Со свидетельством о смерти истец обратился к нотариусу, который ему устно пояснил, что он пропустил срок принятия наследства и вопрос с принятием наследства теперь нужно решать ..."
+        },
+        {
+          "title": "Решение по делу № 2-5065/2025 от 31.07.2025 | Центральный районный суд ...",
+          "url": "https://www.zakonrf.info/gorsud/doc-3e49a1d4-695a-5e48-9a54-7cffef811ffc/",
+          "snippet": "Жительница Тюменской области доказала свое право на наследство, оставшееся после гибели ее мужа в СВО. Об этом сообщает объединенная пресс-служба судебной системы региона."
+        },
+        {
+          "title": "«Наследство подарил за день до смерти»: внук уговорил дедушку подписать ...",
+          "url": "https://dzen.ru/a/arI24rOTaSH2yqXB",
+          "snippet": "Представитель третьего лица Администрации г.Тюмени в письменном отзыве сообщил, что спорный жилой дом не находится в собственности муниципального образования городской округ Тюмень."
+        }
+      ],
+      "searched_at": "2026-10-13"
+    }
+  ],
+  "errors": []
+}

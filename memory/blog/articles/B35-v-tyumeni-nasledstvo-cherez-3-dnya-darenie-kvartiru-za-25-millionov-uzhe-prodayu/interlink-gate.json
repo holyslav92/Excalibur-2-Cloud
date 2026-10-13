@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "topic_id": "B35",
+  "slug": "v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu",
+  "candidates_count": 32,
+  "outbound_found": [
+    {
+      "slug": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri",
+      "title": "pochti-vnesli-zadatok-za-48-chasov-do-torgov-kvartiru-podarili-docheri"
+    },
+    {
+      "slug": "za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot",
+      "title": "za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot"
+    },
+    {
+      "slug": "v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro",
+      "title": "v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro"
+    },
+    {
+      "slug": "v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet",
+      "title": "v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet"
+    }
+  ],
+  "outbound_required_min": 1,
+  "errors": []
+}

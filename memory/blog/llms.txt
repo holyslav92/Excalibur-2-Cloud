@@ -4,8 +4,10 @@
 ## Blog Articles
 
 - [Банк отменил нулевой взнос за 6 дней до ДДУ — сделка встала]({{SITE_BASE}}/v-tyumeni-za-shest-dnej-do-ddu-bank-snyal-ipoteku-bez-vznosa-ot-zastrojschika/): Банк отменил нулевой взнос за 6 дней до ДДУ — сделка встала
+- [На вторичке Тюмени внесли аванс — рейтинг 800 не показал долги]({{SITE_BASE}}/v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro/): На вторичке Тюмени внесли аванс — продавец показал рейтинг 800 и отказался открыть остальные кредитные бюро. Разбор риска до ДКП.
 - [Пожилого продавца вели по телефону — родственники сорвали сделку]({{SITE_BASE}}/v-tyumeni-rodstvenniki-ostanovili-prodazhu-pozhilogo-prodavca-veli-po-telefonu-v/): Пожилого продавца вели по телефону — родственники сорвали сделку
 - [Квартиру продавали по доверенности. Хозяин был на СВО]({{SITE_BASE}}/doverennost-ne-bronya-prodavec-priletel-odin-a-kvartiru-prodavali-chetvero/): Доверенность на продажу квартиры: как проверить волю собственника на СВО до аванса
+- [В Тюмени наследство, через 3 дня дарение — квартиру за 25 миллионов уже продают]({{SITE_BASE}}/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu/): На вторичке в Тюмени наследство, дарение через 3 дня и продажа за 25 млн — разбор рисков цепочки до аванса.
 - [В Тюмени расписку за квартиру написали — денег на счёте нет]({{SITE_BASE}}/raspisku-na-kvartiru-napisali-deneg-na-schete-net/): В Тюмени расписку за квартиру написали — денег на счёте нет
 - [В Тюмени не подтвердили согласие супруги — аванс остановили]({{SITE_BASE}}/v-tyumeni-poddelnoe-soglasie-suprugi-ostanovilo-sdelku-pered-avansom/): В Тюмени не подтвердили согласие супруги — аванс остановили
 - [За 2 дня до эскроу банк остановил сделку в новостройке Тюмени — в ДДУ чужое юрлицо]({{SITE_BASE}}/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil-/): За 2 дня до эскроу банк остановил сделку в новостройке Тюмени — в ДДУ чужое юрлицо

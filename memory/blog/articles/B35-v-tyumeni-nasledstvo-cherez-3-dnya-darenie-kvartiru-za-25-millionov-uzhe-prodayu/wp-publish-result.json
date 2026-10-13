@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu",
+  "topic_id": "B35",
+  "post_id": 11661,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B35-v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1076197,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11661 slug=v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu\nOK categories=31,34,36\nOK yoast_social_image=1\nOK featured_image=11698\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11699 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu-inline-01-1.png\nOK inline_alt=11699\nOK inline_description=11699\nOK inline_image_upload=11700 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu-inline-02-1.png\nOK inline_alt=11700\nOK inline_description=11700\nOK inline_image_upload=11701 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu-inline-04-1.png\nOK inline_alt=11701\nOK inline_description=11701\nOK inline_image_upload=11702 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu-inline-05-1.png\nOK inline_alt=11702\nOK inline_description=11702\nOK inline_image_upload=11703 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu-inline-06-1.png\nOK inline_alt=11703\nOK inline_description=11703\nOK inline_image_upload=11704 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu-inline-03-1.png\nOK inline_alt=11704\nOK inline_description=11704\nOK inline_image_upload=11705 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu-inline-07-1.png\nOK inline_alt=11705\nOK inline_description=11705\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu/",
+    "errors": []
+  }
+}

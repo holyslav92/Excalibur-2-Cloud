@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "all_pass": true,
+  "gate": "article-quality-score",
+  "contract": "shared/article-quality-score-lock.md",
+  "article_dir": "memory/blog/articles/B36-v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet",
+  "sol_rewrite_applied": false,
+  "h1": "В Тюмени новый адрес в паспорте остановил сделку на 10 дней",
+  "sections": {
+    "h1": {
+      "pass": true,
+      "reasons": []
+    },
+    "lead": {
+      "pass": true,
+      "reasons": []
+    },
+    "middle": {
+      "pass": true,
+      "reasons": []
+    },
+    "finale": {
+      "pass": true,
+      "reasons": []
+    },
+    "length": {
+      "pass": true,
+      "reasons": [
+        "length-short: 1365 words below target 1400-1600 (warn only)"
+      ]
+    },
+    "tone": {
+      "pass": true,
+      "reasons": []
+    },
+    "calendar_news_glue": {
+      "pass": true,
+      "reasons": []
+    },
+    "slot_rubric_mechanism": {
+      "pass": true,
+      "reasons": []
+    }
+  },
+  "errors": [],
+  "metrics": {
+    "word_count": 1365,
+    "word_target": "1400-1600",
+    "word_hard_max": 1750,
+    "dzen_reading_minutes_est": 7,
+    "spine_overlap": 0.0799
+  }
+}

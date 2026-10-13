@@ -1,0 +1,1 @@
+Schema B36 slug v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet. URLs only {{SITE_BASE}}/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet/ no /blog/

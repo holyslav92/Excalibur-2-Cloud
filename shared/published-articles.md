@@ -32,3 +32,6 @@ Publish / Indexer обновляют по мере выхода.
 | 2026-09-20 | B31 | za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t | /blog/ipoteka/za-2-dnya-do-ddu-strahovka-podnyala-platezh-bank-snyal-odobrenie-novostrojki-v-t/ | published |
 | 2026-09-20 | B32 | za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil- | /blog/ipoteka/za-2-dnya-do-eskrou-v-rekvizitah-scheta-okazalos-chuzhoe-yurlico-bank-ostanovil/ | published |
 | 2026-09-28 | B33 | za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot | /blog/vtorichka-i-riski/za-3-dnya-do-avansa-v-tyumeni-vsplyl-dolg-za-svet-186-tysyach-semya-otkazalas-ot/ | published |
+| 2026-10-13 | B34 | v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro | /blog/vtorichka-i-riski/v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro/ | published |
+| 2026-10-13 | B35 | v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu | /blog/vtorichka-i-riski/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu/ | published |
+| 2026-10-13 | B36 | v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet | /blog/vtorichka-i-riski/v-tyumeni-pasport-s-novym-adresom-a-vypiska-po-kvartire-esche-10-dnej-pokazyvaet/ | published |
