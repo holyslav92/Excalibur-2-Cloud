@@ -37,33 +37,32 @@ class OneBreathCanonTest(unittest.TestCase):
         self.assertEqual(WORD_TARGET_MAX, 2200)
         self.assertEqual(WORD_HARD_MAX, 2400)
 
-    def test_inline_placement_flexible_pair_and_skip(self) -> None:
-        from excalibur_blog_quality_bar_9_gate import check_inline_placement_flexible
+    def test_cover_adjacent_stack_gate_pass(self) -> None:
+        from excalibur_blog_quality_bar_9_gate import check_no_cover_adjacent_image_stack
 
         html = """
-        <h2>История</h2>
-        <figure class="inline-quad" data-slot="inline_1"><img src="a.png" alt="a"></figure>
-        <figure class="inline-quad" data-slot="inline_2"><img src="b.png" alt="b"></figure>
-        <p>текст</p>
-        <h2>Практика</h2>
-        <p>без картинки</p>
-        <h2>Финал</h2>
-        <figure class="inline-quad" data-slot="inline_3"><img src="c.png" alt="c"></figure>
+        <p>лид</p>
+        <h2>H1</h2><p>текст</p>
+        <h2>H2</h2><p>текст</p>
+        <h2>H3</h2><p>абзац</p>
+        <figure class="inline-quad" data-slot="inline_1"><img src="a.png" alt="схема"></figure>
         """
-        ok, errors = check_inline_placement_flexible(html)
+        ok, errors = check_no_cover_adjacent_image_stack(html)
         self.assertTrue(ok, errors)
 
-    def test_inline_placement_rigid_first_seven_fails(self) -> None:
-        from excalibur_blog_quality_bar_9_gate import check_inline_placement_flexible
+    def test_cover_adjacent_stack_fails_first_h2_figure(self) -> None:
+        from excalibur_blog_quality_bar_9_gate import check_no_cover_adjacent_image_stack
 
         parts = []
         for i in range(1, 8):
             parts.append(f"<h2>H{i}</h2>")
-            parts.append(
-                f'<figure class="inline-quad" data-slot="inline_{i}">'
-                f'<img src="inline-{i:02d}.png" alt="x"></figure>'
-            )
-        ok, errors = check_inline_placement_flexible("".join(parts))
+            if i == 1:
+                parts.append(
+                    f'<figure class="inline-quad" data-slot="inline_{i}">'
+                    f'<img src="inline-{i:02d}.png" alt="x"></figure>'
+                )
+            parts.append("<p>текст</p>")
+        ok, errors = check_no_cover_adjacent_image_stack("".join(parts))
         self.assertFalse(ok)
         self.assertTrue(errors)
 
@@ -100,13 +99,7 @@ class OneBreathCanonTest(unittest.TestCase):
     def test_manifest_assigns_realistic_photo_types(self) -> None:
         from excalibur_blog_quad_manifest import assign_inline_placements
 
-        h2s = [
-            "Квартира на сделке",
-            "Документы в МФЦ",
-            "Срок регистрации",
-            "Что проверить",
-            "Финал",
-        ]
+        h2s = [f"Секция {i}" for i in range(1, 11)]
         inline_keys = tuple(f"inline_{i}" for i in range(1, 8))
         types_catalog = json.loads(
             (ROOT / "memory/cover/inline-visual-types.json").read_text(encoding="utf-8")
@@ -117,7 +110,9 @@ class OneBreathCanonTest(unittest.TestCase):
         self.assertGreaterEqual(realistic, 2)
         self.assertLessEqual(realistic, 4)
         pairs = [p for p in plan if p.get("placement_group") == "pair"]
-        self.assertGreaterEqual(len(pairs), 2)
+        self.assertEqual(len(pairs), 0)
+        anchors = [p["h2_anchor"] for p in plan]
+        self.assertEqual(len(anchors), len(set(anchors)))
 
 
 if __name__ == "__main__":

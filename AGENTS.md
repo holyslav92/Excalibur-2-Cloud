@@ -100,7 +100,7 @@ python3 scripts/excalibur_blog_research_start.py --topic-id B111 --title "…"
 - `alt` / caption / WP Media с production-токенами (hook, CTA, memes, scene_hint, semicolon prompt list)
 - Запуск пайплайна до завершения Setup
 - Cover regen >2 full attempts или >15–20 мин на cover / deep-dive pixel OCR source вместо Indexer
-- **Inline placement FAIL:** обязательная схема «1 PNG под каждым H2»; <2 или >4 realistic inline; stock-man hero на inline
+- **Inline placement FAIL:** figure до первого H2 или в первых двух секциях H2 (две «обложки» под WP featured); соседние figure; >1 PNG на H2; alt повторяет H1/cover_hook; <2 или >4 realistic inline; stock-man hero на inline
 - Novel-length cover hook (>7 слов / многострочный) — ломает OCR
 - **Foreign slot rubric mechanism FAIL:** слот `novostroyki`/`vtorichka`/`arenda`, а в H1/теле чужая отличительная механика (бронь/ДДУ во вторичке, дарственная/аванс в аренде…); gate `no_foreign_slot_rubric_mechanism`; **ипотека** и другие общие слова — не автоматический FAIL
 

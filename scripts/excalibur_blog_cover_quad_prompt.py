@@ -464,12 +464,20 @@ def build_prompt(
                 f"{label} inline: {inline_panel_prompt(slot(key), types_catalog, slot_key=key)}"
             )
 
+    cover_hook_ban = ""
+    if has_cover:
+        hook_txt = compact(manifest.get("cover_hook", ""), SHORT_HOOK_MAX_CHARS)
+        if hook_txt:
+            cover_hook_ban = (
+                f" Inline panels: NEVER repeat cover hook «{hook_txt}» or H1 title text; "
+                "section-specific labels only (diagram/table/timeline)."
+            )
     ban_line = (
         "Ban: dark/low-key; inventory props; celebrity memes; EXCALIBUR stamp; chubby host; "
         f"stock/generated man co-host on inline; large meme person on inline; "
         f"meme_canon_v1: only {MEME_CATALOG_REL} real ids; people+cats not cats-only; "
         "on-topic funny stickers ≤15% never on hook/face/phone; "
-        f"{INLINE_BAN_EXTRA}."
+        f"{INLINE_BAN_EXTRA}.{cover_hook_ban}"
     )
     reference_line = (
         f"Cover TL only: i2i face-studio-2026-06-23 ({BODY_LOCK}); {I2I_EXPRESSION_LOCK}; invent scene; no AI hero-ref. "

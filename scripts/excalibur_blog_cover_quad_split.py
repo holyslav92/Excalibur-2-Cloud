@@ -516,7 +516,10 @@ def _figure_insert_pos(html: str, h2: str) -> int | None:
     )
     if fig_iter:
         return section_start + fig_iter[-1].end()
-    return section_start
+    from excalibur_blog_inline_placement import figure_insert_offset_after_lead_paragraph
+
+    lead_offset = figure_insert_offset_after_lead_paragraph(section)
+    return section_start + lead_offset
 
 
 def inject_figures(

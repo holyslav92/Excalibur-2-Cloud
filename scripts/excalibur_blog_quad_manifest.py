@@ -99,77 +99,27 @@ def assign_inline_placements(
     inline_keys: tuple[str, ...],
     types_catalog: dict,
 ) -> list[dict[str, Any]]:
-    """Flexible placement: 2–4 realistic_photo, pairs on same H2, some H2s with 0 images."""
+    """Размещение inline: не рядом с WP cover — только с 3-й секции H2, по одной на бит."""
+    from excalibur_blog_inline_placement import FIRST_INLINE_H2_INDEX, spread_h2_indices
+
     n = len(inline_keys)
+    h2_indices = spread_h2_indices(len(h2s), n, first_index=FIRST_INLINE_H2_INDEX)
+
     realistic_target = min(REALISTIC_INLINE_MAX, max(REALISTIC_INLINE_MIN, min(3, n // 2)))
-    h2_scores = [(score_realistic_h2(h), i, h) for i, h in enumerate(h2s)]
+    h2_scores = [(score_realistic_h2(h2s[i]), i) for i in h2_indices]
     h2_scores.sort(key=lambda x: (-x[0], x[1]))
-    realistic_h2_indices = [i for _, i, _ in h2_scores[: max(realistic_target, REALISTIC_INLINE_MIN)]]
+    realistic_slots = {h2_scores[i][1] for i in range(min(realistic_target, len(h2_scores)))}
 
     assignments: list[dict[str, Any]] = []
     used_types: set[str] = set()
-    pair_h2: int | None = realistic_h2_indices[0] if realistic_h2_indices else None
-
-    slot_idx = 0
-    # Pair: realistic + diagram on strongest photo H2.
-    if pair_h2 is not None and slot_idx < n:
-        h2 = h2s[pair_h2]
-        assignments.append(
-            {
-                "slot_key": inline_keys[slot_idx],
-                "h2_anchor": h2,
-                "visual_type": REALISTIC_INLINE_VISUAL_TYPE,
-                "placement_group": "pair",
-            }
-        )
-        used_types.add(REALISTIC_INLINE_VISUAL_TYPE)
-        slot_idx += 1
-        if slot_idx < n:
-            vt = pick_visual_type(h2, types_catalog, used_types, allow_realistic=False)
-            used_types.add(vt)
-            assignments.append(
-                {
-                    "slot_key": inline_keys[slot_idx],
-                    "h2_anchor": h2,
-                    "visual_type": vt,
-                    "placement_group": "pair",
-                }
-            )
-            slot_idx += 1
-
-    # Remaining realistic slots on other high-score H2s (one each).
-    for h2_i in realistic_h2_indices[1:]:
-        if slot_idx >= n:
-            break
-        if any(a["h2_anchor"] == h2s[h2_i] and a["visual_type"] == REALISTIC_INLINE_VISUAL_TYPE for a in assignments):
-            continue
-        if sum(1 for a in assignments if a["visual_type"] == REALISTIC_INLINE_VISUAL_TYPE) >= realistic_target:
-            break
-        assignments.append(
-            {
-                "slot_key": inline_keys[slot_idx],
-                "h2_anchor": h2s[h2_i],
-                "visual_type": REALISTIC_INLINE_VISUAL_TYPE,
-                "placement_group": None,
-            }
-        )
-        used_types.add(REALISTIC_INLINE_VISUAL_TYPE)
-        slot_idx += 1
-
-    # Diagram-only slots spread across H2s with lowest figure load (allow skips).
-    h2_load = {h: 0 for h in h2s}
-    for a in assignments:
-        h2_load[a["h2_anchor"]] = h2_load.get(a["h2_anchor"], 0) + 1
-
-    while slot_idx < n:
-        # Prefer H2 with load 0, then 1 (avoid triple-stacking unless needed).
-        candidates = sorted(
-            range(len(h2s)),
-            key=lambda i: (h2_load.get(h2s[i], 0), i),
-        )
-        h2_i = candidates[0]
+    realistic_assigned = 0
+    for slot_idx, h2_i in enumerate(h2_indices):
         h2 = h2s[h2_i]
-        vt = pick_visual_type(h2, types_catalog, used_types, allow_realistic=False)
+        if h2_i in realistic_slots and realistic_assigned < realistic_target:
+            vt = REALISTIC_INLINE_VISUAL_TYPE
+            realistic_assigned += 1
+        else:
+            vt = pick_visual_type(h2, types_catalog, used_types, allow_realistic=False)
         used_types.add(vt)
         assignments.append(
             {
@@ -179,8 +129,6 @@ def assign_inline_placements(
                 "placement_group": None,
             }
         )
-        h2_load[h2] = h2_load.get(h2, 0) + 1
-        slot_idx += 1
 
     return assignments
 
@@ -223,10 +171,12 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
     h2s = extract_h2_titles(article_dir / "article.html")
     inline_count = _load_tenant_inline_count(root, preserve)
     inline_keys = active_inline_keys(inline_count)
-    min_h2 = 5
+    from excalibur_blog_inline_placement import min_h2_count_for_inline_slots
+
+    min_h2 = min_h2_count_for_inline_slots(len(inline_keys))
     if len(h2s) < min_h2:
         raise ValueError(
-            f"article needs at least {min_h2} real H2 anchors for flexible inline placement; "
+            f"article needs at least {min_h2} real H2 anchors for cover-safe inline placement; "
             f"found {len(h2s)}"
         )
     topic_id = meta.get("topic_id") or article_dir.name.split("-")[0]
@@ -333,9 +283,11 @@ def build_manifest(article_dir: Path, root: Path, preserve: dict | None) -> dict
         "wordstat_stickers": wordstat_stickers[:3],
         "cover_phone_cta": str((preserve or {}).get("cover_phone_cta") or "+7 922 001 65 05"),
         "image_placement": {
-            "mode": "flexible_v2",
-            "not_one_per_h2": True,
-            "allow_pair_same_h2": True,
+            "mode": "cover_safe_v1",
+            "first_inline_h2_index": 2,
+            "opening_h2_sections_without_images": 2,
+            "max_figures_per_h2": 1,
+            "no_adjacent_figures": True,
             "realistic_count_target": f"{REALISTIC_INLINE_MIN}-{REALISTIC_INLINE_MAX}",
         },
     }

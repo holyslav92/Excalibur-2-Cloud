@@ -79,11 +79,11 @@ PRIMARY: **grsai grsai standard image model** (`GRSAI_API_KEY`, Global→China, 
 9. **Expression invention (HARD)** — эмоция/мимика/поза **новые каждый run** под hook; `scene_hint` + `cover_emotion` + `cover_motifs.emotion/action/outfit/pose_framing`. i2i: «same person, NEW outfit+action+expression, do not copy reference clothes/pose/smile». Копия студийной улыбки 1:1 = FAIL.
 10. **REJECTED daypart formula** — never morning desk / day street / evening close / night split.
 
-## Inline canon (v4 — flexible placement + realistic mix)
+## Inline canon (v5 — cover-safe placement + realistic mix)
 
-Канон: `memory/cover/inline-visual-types.json` + `cover-canon.json` → `inline_utility` + `placement_v2`.
+Канон: `memory/cover/inline-visual-types.json` + `scripts/excalibur_blog_inline_placement.py` → `cover_safe_v1`.
 
-1. **Размещение:** **не** 1 PNG под каждым H2. Допустимы **0, 1 или пара** (realistic_photo + diagram) на бит. Всего **7** inline PNG; inject гибкий (`image_placement.mode=flexible_v2`).
+1. **Размещение:** WP featured = единственная «обложка» под H1. Inline **только с 3-й секции H2**, после ≥1 абзаца, **max 1** PNG на H2, **без** соседних figure и **без** повтора H1/cover_hook. Всего **7** inline; manifest `image_placement.mode=cover_safe_v1`; inject через `excalibur_blog_cover_quad_split.py --inject-html`.
 2. **Микс:** **2–4** `realistic_photo` (квартира, подъезд, МФЦ, документ, улица Тюмени — high-key, **без лица хоста**, без stock-man hero) + остальное — informational (таблицы/схемы с цифрами).
 3. **Стиль** = одобренная обложка B02: #FFFFFF high-key, gold/black, torn paper, tape, sun flare, collage.
 4. **NO host face** on inline — host только на cover.
@@ -91,7 +91,7 @@ PRIMARY: **grsai grsai standard image model** (`GRSAI_API_KEY`, Global→China, 
 6. **Meme stickers** — cats or catalog people-memes only; ≤15% frame; corner accent; real templates from `meme-top100.json`.
 7. **Тест пользы (FAIL):** diagram учит факт/порядок/число; photo даёт узнаваемый контекст бита; ряд иконок+3 слова = FAIL.
 8. **Типы:** realistic_photo + comparison_table → process_flow → bar_timeline_chart → structure_diagram → labeled_checklist.
-9. **Labels** = факты из статьи. Gates: `inline_utility_all_7` + `inline_realistic_mix_2_4` + `inline_placement_flexible` + `inline_no_host_face` + `inline_no_co_host_human`.
+9. **Labels** = факты из статьи. Gates: `inline_utility_all_7` + `inline_realistic_mix_2_4` + `no_cover_adjacent_image_stack` + `inline_no_host_face` + `inline_no_co_host_human`.
 
 ## Runbook
 
