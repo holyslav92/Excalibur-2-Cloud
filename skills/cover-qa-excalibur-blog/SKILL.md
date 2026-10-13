@@ -39,7 +39,7 @@ Cover slot → solo i2i; inline → utility t2i. Derouter primary, Kie посл�
 9. **identity-real** — 4 live-файла на месте.
 10. **Inline utility (все 7)** — каждый inline проходит тест пользы: факт/порядок/число/сравнение **или** узнаваемый realistic-контекст; не ряд иконок+3 слова; не host face.
 11. **inline_realistic_mix_2_4** — manifest: 2–4 слота `realistic_photo`, остальное informational; no stock-man hero.
-12. **inline_placement_flexible** — HTML: не rigid 1:1 под первыми N H2; допустимы H2 без картинки и **пара подряд** на одном бите.
+12. **no_cover_adjacent_image_stack** — HTML: нет figure до 1-го H2 и в первых двух секциях H2; max 1 figure на H2; нет соседних figure; alt не дублирует H1/cover_hook.
 13. **inline_no_host_face** — ни на одном inline нет лица Святослава / identity-real.
 14. **inline_no_co_host_human** — нет stock model / generated man / handsome realtor / large meme person как co-host или presenter на inline.
 15. **inline_meme_sticker_scale** — если мем-человек на inline, он ≤15% кадра, угол/край, не герой.

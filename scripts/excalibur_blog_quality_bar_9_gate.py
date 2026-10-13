@@ -68,7 +68,7 @@ REQUIRED_CHECKS = (
     "spine_once_no_recap",
     "h2_count_5_plus",
     "inline_figures_7",
-    "inline_placement_flexible",
+    "no_cover_adjacent_image_stack",
     "inline_realistic_mix_2_4",
     "no_sol_artifact",
     "no_unlabeled_live_inventory",
@@ -159,22 +159,15 @@ def check_spine_once_no_recap(html: str) -> tuple[bool, list[str]]:
     return (not errors, errors)
 
 
+def check_no_cover_adjacent_image_stack(html: str, article_dir: Path | None = None) -> tuple[bool, list[str]]:
+    from excalibur_blog_inline_placement import check_no_cover_adjacent_image_stack as _check
+
+    return _check(html, article_dir=article_dir)
+
+
 def check_inline_placement_flexible(html: str) -> tuple[bool, list[str]]:
-    """PASS when placement is not rigid 1:1 first-N H2s — allow 0, pair, or skip."""
-    per_h2 = count_figures_per_h2(html)
-    if not per_h2:
-        return True, []
-    values = list(per_h2.values())
-    has_zero = any(v == 0 for v in values)
-    has_pair = any(v >= 2 for v in values)
-    # Rigid legacy: first len(values) H2s each have exactly 1 figure and none skipped/paired.
-    first_n = min(len(values), INLINE_MIN)
-    rigid = all(values[i] == 1 for i in range(first_n)) and not has_zero and not has_pair
-    if rigid and len(values) >= INLINE_MIN:
-        return False, ["inline_placement: rigid 1:1 under first H2s — use 0/1/pair mix"]
-    if not (has_zero or has_pair):
-        return False, ["inline_placement: need at least one H2 with 0 images or a pair (2+)"]
-    return True, []
+    """Deprecated alias — use check_no_cover_adjacent_image_stack."""
+    return check_no_cover_adjacent_image_stack(html)
 
 
 def check_inline_realistic_mix(manifest_path: Path) -> tuple[bool, list[str]]:
@@ -633,8 +626,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
     checks["spine_once_no_recap"] = spine_ok
     checks["h2_count_5_plus"] = h2c >= H2_MIN
     checks["inline_figures_7"] = inlines >= INLINE_MIN
-    placement_ok, placement_errors = check_inline_placement_flexible(html)
-    checks["inline_placement_flexible"] = placement_ok
+    placement_ok, placement_errors = check_no_cover_adjacent_image_stack(html, article_dir=article_dir)
+    checks["no_cover_adjacent_image_stack"] = placement_ok
     realistic_ok, realistic_errors = check_inline_realistic_mix(article_dir / "cover" / "quad-manifest.json")
     checks["inline_realistic_mix_2_4"] = realistic_ok
     checks["no_sol_artifact"] = check_no_sol_artifact(html)
@@ -682,7 +675,7 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
                 errors.append(f"h2 count {h2c} < {H2_MIN}")
             elif key == "inline_figures_7":
                 errors.append(f"inline figures {inlines} < {INLINE_MIN}")
-            elif key == "inline_placement_flexible" and placement_errors:
+            elif key == "no_cover_adjacent_image_stack" and placement_errors:
                 errors.extend(placement_errors)
             elif key == "inline_realistic_mix_2_4" and realistic_errors:
                 errors.extend(realistic_errors)

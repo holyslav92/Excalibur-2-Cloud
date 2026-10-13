@@ -1268,6 +1268,14 @@ def check_publish_prerequisites(
         if article_html.count(f'data-slot="{slot}"') != 1:
             blockers.append(f"article.html requires exactly one {slot} slot")
 
+    from excalibur_blog_inline_placement import check_no_cover_adjacent_image_stack
+
+    stack_ok, stack_errors = check_no_cover_adjacent_image_stack(
+        article_html, article_dir=article_dir
+    )
+    if not stack_ok:
+        blockers.extend(stack_errors)
+
     meta_path = article_dir / "article.meta.json"
     try:
         meta = json.loads(meta_path.read_text(encoding="utf-8"))

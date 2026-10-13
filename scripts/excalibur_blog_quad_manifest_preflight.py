@@ -82,14 +82,12 @@ def validate_quad_manifest(manifest: dict[str, Any], root: Path | None = None) -
                 f"inline_realistic_mix: {realistic_n} realistic_photo slots; "
                 f"need {REALISTIC_INLINE_MIN}-{REALISTIC_INLINE_MAX}"
             )
-        if pair_groups < 1:
-            warnings.append(
-                "image_placement: no placement_group=pair slot; canon recommends one photo+diagram pair"
+        if pair_groups > 0:
+            errors.append(
+                "image_placement: placement_group=pair forbidden (no adjacent inline figures under same H2)"
             )
         if len(h2_anchors) != len(set(h2_anchors)):
-            warnings.append(
-                "image_placement: duplicate h2_anchor across slots (OK for intentional pairs)"
-            )
+            errors.append("image_placement: duplicate h2_anchor — max one inline per H2 section")
 
         meme_on: list[str] = []
         for key in active_inline_keys(inline_count):

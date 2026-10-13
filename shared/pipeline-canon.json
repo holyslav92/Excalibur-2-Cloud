@@ -301,7 +301,7 @@
           "repeat_same_numbers_flags_three_times",
           "lecture_tails_after_casus_finale"
         ],
-        "image_placement": "not_one_per_h2_allow_0_1_or_pair",
+        "image_placement": "cover_safe_one_per_h2_from_section_3_no_adjacent",
         "realistic_inline_count": "2-4",
         "informational_inline_rest": true,
         "docs": ["shared/quality-bar-9.md", "memory/cover/inline-visual-types.json"]
