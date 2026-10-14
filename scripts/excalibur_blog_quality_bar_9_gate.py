@@ -22,6 +22,7 @@ if str(_SCRIPTS_DIR) not in sys.path:
 
 from excalibur_blog_composite_disclaimer import check_no_composite_disclaimer
 from excalibur_blog_slot_rubric_mechanism import check_no_foreign_slot_rubric_mechanism
+from excalibur_blog_inline_cover_separation import combined_inline_cover_checks
 from excalibur_blog_unrelated_news_glue import check_no_unrelated_calendar_news_glue
 
 
@@ -69,6 +70,7 @@ REQUIRED_CHECKS = (
     "h2_count_5_plus",
     "inline_figures_7",
     "inline_placement_flexible",
+    "inline_no_cover_stack",
     "inline_realistic_mix_2_4",
     "no_sol_artifact",
     "no_unlabeled_live_inventory",
@@ -635,6 +637,18 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
     checks["inline_figures_7"] = inlines >= INLINE_MIN
     placement_ok, placement_errors = check_inline_placement_flexible(html)
     checks["inline_placement_flexible"] = placement_ok
+    title_brief = ""
+    title_path = article_dir / "title-brief.json"
+    if title_path.is_file():
+        try:
+            tb = load_json(title_path)
+            title_brief = str(tb.get("title") or tb.get("h1") or "")
+        except json.JSONDecodeError:
+            pass
+    cover_stack_ok, cover_stack_errors = combined_inline_cover_checks(
+        html, article_dir=article_dir, title_brief=title_brief
+    )
+    checks["inline_no_cover_stack"] = cover_stack_ok
     realistic_ok, realistic_errors = check_inline_realistic_mix(article_dir / "cover" / "quad-manifest.json")
     checks["inline_realistic_mix_2_4"] = realistic_ok
     checks["no_sol_artifact"] = check_no_sol_artifact(html)
@@ -684,6 +698,8 @@ def evaluate(article_dir: Path, root: Path, *, skip_cover_qa: bool = False) -> d
                 errors.append(f"inline figures {inlines} < {INLINE_MIN}")
             elif key == "inline_placement_flexible" and placement_errors:
                 errors.extend(placement_errors)
+            elif key == "inline_no_cover_stack" and cover_stack_errors:
+                errors.extend(cover_stack_errors)
             elif key == "inline_realistic_mix_2_4" and realistic_errors:
                 errors.extend(realistic_errors)
             elif key == "interlink_siblings_2_4":

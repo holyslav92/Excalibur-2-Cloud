@@ -100,11 +100,21 @@ def assign_inline_placements(
     types_catalog: dict,
 ) -> list[dict[str, Any]]:
     """Flexible placement: 2–4 realistic_photo, pairs on same H2, some H2s with 0 images."""
+    # Theme shows featured cover under H1 — never anchor first inlines on H2 #1.
+    min_h2_index = 1
+
+    def eligible_indices(indices: list[int]) -> list[int]:
+        return [i for i in indices if i >= min_h2_index and i < len(h2s)]
+
     n = len(inline_keys)
     realistic_target = min(REALISTIC_INLINE_MAX, max(REALISTIC_INLINE_MIN, min(3, n // 2)))
     h2_scores = [(score_realistic_h2(h), i, h) for i, h in enumerate(h2s)]
     h2_scores.sort(key=lambda x: (-x[0], x[1]))
-    realistic_h2_indices = [i for _, i, _ in h2_scores[: max(realistic_target, REALISTIC_INLINE_MIN)]]
+    realistic_h2_indices = eligible_indices(
+        [i for _, i, _ in h2_scores[: max(realistic_target, REALISTIC_INLINE_MIN)]]
+    )
+    if not realistic_h2_indices and len(h2s) > min_h2_index:
+        realistic_h2_indices = list(range(min_h2_index, min(len(h2s), min_h2_index + 3)))
 
     assignments: list[dict[str, Any]] = []
     used_types: set[str] = set()
@@ -164,9 +174,14 @@ def assign_inline_placements(
     while slot_idx < n:
         # Prefer H2 with load 0, then 1 (avoid triple-stacking unless needed).
         candidates = sorted(
-            range(len(h2s)),
+            eligible_indices(list(range(len(h2s)))),
             key=lambda i: (h2_load.get(h2s[i], 0), i),
         )
+        if not candidates:
+            candidates = sorted(
+                range(len(h2s)),
+                key=lambda i: (h2_load.get(h2s[i], 0), i),
+            )
         h2_i = candidates[0]
         h2 = h2s[h2_i]
         vt = pick_visual_type(h2, types_catalog, used_types, allow_realistic=False)

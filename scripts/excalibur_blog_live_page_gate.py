@@ -14,6 +14,7 @@ from excalibur_blog_html_linter import (
     extract_thematic_faq_bodies,
     is_faq_section_heading,
 )
+from excalibur_blog_inline_cover_separation import check_inline_no_cover_stack
 
 FORBIDDEN = {
     "engagement_quiz": r"engagement-quiz|КВЕСТ\s+[«\"]?КОНТЕНТ-ЗАВОД",
@@ -165,7 +166,11 @@ def inspect(
     if not entry:
         errors.append("article-content container missing")
     else:
-        article_image_tags = re.findall(r"<img\b[^>]*>", entry.group(1), flags=re.I)
+        entry_html = entry.group(1)
+        stack_ok, stack_errors = check_inline_no_cover_stack(entry_html)
+        if not stack_ok:
+            errors.extend([f"live {e}" for e in stack_errors])
+        article_image_tags = re.findall(r"<img\b[^>]*>", entry_html, flags=re.I)
         for tag in article_image_tags:
             alt = re.search(r"\balt=[\"']([^\"']*)", tag, flags=re.I)
             if not alt or not alt.group(1).strip():
