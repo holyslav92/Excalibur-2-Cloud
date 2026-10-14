@@ -497,26 +497,35 @@ def _remove_slot_figures(html: str, slot_key: str) -> tuple[str, int, list[str]]
     return "".join(parts), count, preceding
 
 
-def _figure_insert_pos(html: str, h2: str) -> int | None:
-    """Byte offset where the next inline figure for ``h2`` should be inserted."""
+def _count_figures_in_h2_section(html: str, h2: str) -> int:
     pattern = re.compile(rf"<h2[^>]*>\s*{re.escape(h2)}\s*</h2>", re.I | re.S)
     match = pattern.search(html)
     if not match:
-        return None
+        return 0
     section_start = match.end()
     next_h2 = re.search(r"<h2\b", html[section_start:], flags=re.I)
     section_end = section_start + next_h2.start() if next_h2 else len(html)
     section = html[section_start:section_end]
-    fig_iter = list(
-        re.finditer(
-            r'<figure[^>]*class="[^"]*inline-quad[^"]*"[^>]*>[\s\S]*?</figure>\s*',
+    return len(
+        re.findall(
+            r'<figure[^>]*class="[^"]*inline-(?:quad|visual)[^"]*"[^>]*>',
             section,
             flags=re.I,
         )
     )
-    if fig_iter:
-        return section_start + fig_iter[-1].end()
-    return section_start
+
+
+def _figure_insert_pos(html: str, h2: str) -> int | None:
+    """Insert after prose in the H2 section — never flush under theme featured cover."""
+    from excalibur_blog_inline_cover_separation import figure_insert_after_paragraphs
+
+    existing = _count_figures_in_h2_section(html, h2)
+    paragraphs_after = 1 + existing
+    return figure_insert_after_paragraphs(
+        html,
+        h2,
+        paragraphs_after=paragraphs_after,
+    )
 
 
 def inject_figures(

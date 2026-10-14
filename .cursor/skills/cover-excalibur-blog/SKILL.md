@@ -83,7 +83,7 @@ PRIMARY: **grsai grsai standard image model** (`GRSAI_API_KEY`, Global→China, 
 
 Канон: `memory/cover/inline-visual-types.json` + `cover-canon.json` → `inline_utility` + `placement_v2`.
 
-1. **Размещение:** **не** 1 PNG под каждым H2. Допустимы **0, 1 или пара** (realistic_photo + diagram) на бит. Всего **7** inline PNG; inject гибкий (`image_placement.mode=flexible_v2`).
+1. **Размещение:** featured cover уже под H1 на сайте — **первый inline не раньше 2-го H2**, после абзаца прозы; **не** две figure подряд; alt ≠ hook обложки. Gate `inline_no_cover_stack`. **Не** 1 PNG под каждым H2. Допустимы **0, 1 или пара** (realistic_photo + diagram) на бит с текстом между. Всего **7** inline PNG; inject `inject_figures` (`image_placement.mode=flexible_v2`).
 2. **Микс:** **2–4** `realistic_photo` (квартира, подъезд, МФЦ, документ, улица Тюмени — high-key, **без лица хоста**, без stock-man hero) + остальное — informational (таблицы/схемы с цифрами).
 3. **Стиль** = одобренная обложка B02: #FFFFFF high-key, gold/black, torn paper, tape, sun flare, collage.
 4. **NO host face** on inline — host только на cover.

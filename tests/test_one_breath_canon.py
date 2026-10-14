@@ -42,12 +42,14 @@ class OneBreathCanonTest(unittest.TestCase):
 
         html = """
         <h2>История</h2>
-        <figure class="inline-quad" data-slot="inline_1"><img src="a.png" alt="a"></figure>
-        <figure class="inline-quad" data-slot="inline_2"><img src="b.png" alt="b"></figure>
-        <p>текст</p>
+        <p>Текст первого раздела без картинки — обложка уже в теме под H1.</p>
         <h2>Практика</h2>
-        <p>без картинки</p>
+        <p>Длинный абзац перед парой иллюстраций в середине статьи, не под обложкой.</p>
+        <figure class="inline-quad" data-slot="inline_1"><img src="a.png" alt="a"></figure>
+        <p>Между картинками обязательно есть проза.</p>
+        <figure class="inline-quad" data-slot="inline_2"><img src="b.png" alt="b"></figure>
         <h2>Финал</h2>
+        <p>Ещё один абзац перед одиночной схемой в финальном разделе.</p>
         <figure class="inline-quad" data-slot="inline_3"><img src="c.png" alt="c"></figure>
         """
         ok, errors = check_inline_placement_flexible(html)

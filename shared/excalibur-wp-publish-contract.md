@@ -64,7 +64,9 @@ python3 scripts/excalibur_blog_wp_publish.py \
    - **Подпись (caption)** ← **пустая строка** для featured (Dzen syndication leak); inline caption тоже пустая
    - **Описание (description)** ← alt → `post_content`
    - **Заголовок** ← укороченный alt → `post_title`
-5. **Inline images** — все локальные `<img src="cover/...">` загружаются в Media Library:
+5. **Inline images** — все локальные `<img src="cover/...">` загружаются в Media Library.
+   **Cover stack (HARD):** тема показывает `cover.png` как featured **под H1**; в `post_content` **не** ставить первый inline под 1-м H2 и **не** две `<figure>` подряд. Gate до publish: `inline_no_cover_stack` в `quality-bar-9.json`. Inject после Cover: `excalibur_blog_cover_quad_split.py` → `inject_figures` (абзац прозы перед figure).
+   Далее по каждому inline:
    - alt из HTML `alt="..."` или registry asset `alt` → `_wp_attachment_image_alt`
    - caption / description / title аналогично (description дополняется `h2_anchor` из registry, если есть)
    - `src` в `post_content` заменяется на WP media URL (HTML `alt` в теле поста сохраняется)
