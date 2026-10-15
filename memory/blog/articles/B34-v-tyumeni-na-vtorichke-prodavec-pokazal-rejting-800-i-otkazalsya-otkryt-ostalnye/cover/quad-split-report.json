@@ -1,0 +1,290 @@
+{
+  "agent": "excalibur-blog-cover-quad-split",
+  "status": "PASS",
+  "splits": [
+    {
+      "canvas_index": 1,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-v-tyumeni-na-vtorichke-prodavec-pokazal-rejting-800-i-otkazalsya-otkryt-ostalnye/cover/canvas-quad-01.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1015,
+          567
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 567,
+            "end": 587
+          },
+          "v_gutter_px": {
+            "start": 1015,
+            "end": 1033
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 1.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0108,
+            "per_panel_crop_loss": {
+              "top_left": 0.0069,
+              "top_right": 0.0069,
+              "bottom_left": 0.0108,
+              "bottom_right": 0.0108
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "cover": {
+            "file": "cover/cover.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 3,
+              "top": 0,
+              "right": 1011,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1015,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "На вторичке Тюмени внесли аванс — рейтинг 800 не показал долги: что проверить в договоре и эскроу до подписи.",
+            "h2_anchor": null
+          },
+          "inline_1": {
+            "file": "cover/inline-01.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1036,
+              "top": 0,
+              "right": 2044,
+              "bottom": 567
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 0,
+              "right": 2048,
+              "bottom": 567
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Как остановить сделку и не потерять лицо» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Как остановить сделку и не потерять лицо"
+          },
+          "inline_2": {
+            "file": "cover/inline-02.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 5,
+              "top": 587,
+              "right": 1009,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 587,
+              "right": 1015,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: ЦККИ запрос, Личные данные, Отказ продавца — иллюстрация к разбору сделки.",
+            "h2_anchor": "Как остановить сделку и не потерять лицо"
+          },
+          "inline_3": {
+            "file": "cover/inline-03.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1038,
+              "top": 587,
+              "right": 2042,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1033,
+              "top": 587,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Аванс ушёл — и вдруг просят только одну кредитн…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Аванс ушёл — и вдруг просят только одну кредитную историю"
+          }
+        }
+      }
+    },
+    {
+      "canvas_index": 2,
+      "manifest": "cover/quad-manifest.json",
+      "split": {
+        "source_canvas": "memory/blog/articles/B34-v-tyumeni-na-vtorichke-prodavec-pokazal-rejting-800-i-otkazalsya-otkryt-ostalnye/cover/canvas-quad-02.png",
+        "source_size_px": [
+          2048,
+          1152
+        ],
+        "panel_size_px": [
+          1014,
+          566
+        ],
+        "split_meta": {
+          "split_mode": "gutter_detect",
+          "h_gutter_px": {
+            "start": 566,
+            "end": 586
+          },
+          "v_gutter_px": {
+            "start": 1014,
+            "end": 1034
+          },
+          "requested_mode": "auto",
+          "gutter_quality": {
+            "h_center_offset_px": 0.0,
+            "v_center_offset_px": 0.0,
+            "max_aspect_crop_loss": 0.0079,
+            "per_panel_crop_loss": {
+              "top_left": 0.0079,
+              "top_right": 0.0079,
+              "bottom_left": 0.0079,
+              "bottom_right": 0.0079
+            },
+            "reject_reason": null
+          }
+        },
+        "output_size_px": [
+          1200,
+          675
+        ],
+        "outputs": {
+          "inline_4": {
+            "file": "cover/inline-04.png",
+            "quadrant": "top_left",
+            "box_px": {
+              "left": 4,
+              "top": 0,
+              "right": 1010,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 0,
+              "right": 1014,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "реалистичный кадр (без лица хоста) к разделу «Рейтинг 800 на экране, а остальные бюро — «это…» в Тюмени — иллюстрация к кейсу о сделке.",
+            "h2_anchor": "Рейтинг 800 на экране, а остальные бюро — «это личное»"
+          },
+          "inline_5": {
+            "file": "cover/inline-05.png",
+            "quadrant": "top_right",
+            "box_px": {
+              "left": 1038,
+              "top": 0,
+              "right": 2044,
+              "bottom": 566
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 0,
+              "right": 2048,
+              "bottom": 566
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Следующий объект, Документы сразу, Без аванса — иллюстрация к разбору сделки.",
+            "h2_anchor": "ЦККИ и полный пакет: что мы закладываем до ДКП"
+          },
+          "inline_6": {
+            "file": "cover/inline-06.png",
+            "quadrant": "bottom_left",
+            "box_px": {
+              "left": 4,
+              "top": 586,
+              "right": 1010,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 0,
+              "top": 586,
+              "right": 1014,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "график / шкала сроков по новостройке в Тюмени: Кредитные бюро, Все отчёты, Не одна — иллюстрация к разбору сделки.",
+            "h2_anchor": "Когда долги ближе к миллиону, одна страница не спасает"
+          },
+          "inline_7": {
+            "file": "cover/inline-07.png",
+            "quadrant": "bottom_right",
+            "box_px": {
+              "left": 1038,
+              "top": 586,
+              "right": 2044,
+              "bottom": 1152
+            },
+            "raw_box_px": {
+              "left": 1034,
+              "top": 586,
+              "right": 2048,
+              "bottom": 1152
+            },
+            "size_px": [
+              1200,
+              675
+            ],
+            "aspect_ratio": "16:9",
+            "alt": "схема устройства механизма по новостройке в Тюмени: Святослав Шакин, До аванса, Вторичка — иллюстрация к разбору сделки.",
+            "h2_anchor": "Что запросить у продавца вторички до следующего аванса"
+          }
+        }
+      }
+    }
+  ],
+  "manifest": "cover/quad-manifest.json",
+  "html_inject": [
+    "skip inline_1: already correct under H2 — Как остановить сделку и не потерять лицо",
+    "skip inline_2: already correct under H2 — Как остановить сделку и не потерять лицо",
+    "skip inline_3: already correct under H2 — Аванс ушёл — и вдруг просят только одну кредитную историю",
+    "injected inline_4 after H2 — Рейтинг 800 на экране, а остальные бюро — «это личное»",
+    "injected inline_5 after H2 — ЦККИ и полный пакет: что мы закладываем до ДКП",
+    "injected inline_6 after H2 — Когда долги ближе к миллиону, одна страница не спасает",
+    "injected inline_7 after H2 — Что запросить у продавца вторички до следующего аванса"
+  ]
+}

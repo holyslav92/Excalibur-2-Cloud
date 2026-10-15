@@ -1,0 +1,1 @@
+Schema BlogPosting B35. slug v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu. HARD: all article URLs {{SITE_BASE}}/v-tyumeni-nasledstvo-cherez-3-dnya-darenie-kvartiru-za-25-millionov-uzhe-prodayu/ — NEVER /blog/ prefix.

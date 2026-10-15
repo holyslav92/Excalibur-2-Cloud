@@ -1,0 +1,1 @@
+Cover-text B35 vtorichka. Short hook 5-7 Cyrillic words: наследство, три дня, дарение, 25 миллионов. Phone +7 922 001 65 05. One catalog cat meme on-topic, NOT hide_pain_harold (used B34), NOT thinking striped cat, NOT blinking_white_guy. title-brief.json in article dir.

@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro",
+  "topic_id": "B34",
+  "post_id": 11648,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-v-tyumeni-na-vtorichke-prodavec-pokazal-rejting-800-i-otkazalsya-otkryt-ostalnye/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1057232,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11648 slug=v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro\nOK categories=31,34,36\nOK yoast_social_image=1\nOK featured_image=11688\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11689 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro-inline-03-1.png\nOK inline_alt=11689\nOK inline_description=11689\nOK inline_image_upload=11690 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro-inline-04-1.png\nOK inline_alt=11690\nOK inline_description=11690\nOK inline_image_upload=11691 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro-inline-05-1.png\nOK inline_alt=11691\nOK inline_description=11691\nOK inline_image_upload=11692 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro-inline-06-1.png\nOK inline_alt=11692\nOK inline_description=11692\nOK inline_image_upload=11693 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro-inline-01-1.png\nOK inline_alt=11693\nOK inline_description=11693\nOK inline_image_upload=11694 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro-inline-02-1.png\nOK inline_alt=11694\nOK inline_description=11694\nOK inline_image_upload=11695 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro-inline-07-1.png\nOK inline_alt=11695\nOK inline_description=11695\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-na-vtorichke-vnesli-avans-prodavec-pokazal-rejting-800-skryl-bjuro/",
+    "errors": []
+  }
+}

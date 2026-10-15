@@ -1,53 +1,43 @@
 {
-  "generated_at": "2026-09-28T13:26:09.109393+00:00",
-  "slot_local": "17:00",
-  "slot_rubric": "vtorichka",
-  "slot_rubric_label": "вторичка",
-  "data_dir": "memory/blog/trend-radar/data/20260928T131408Z",
-  "viral_db": "memory/blog/trend-radar/data/20260928T131408Z/viral.sqlite",
+  "generated_at": "2026-10-13T05:56:50.143070+00:00",
+  "slot_local": "09:00",
+  "slot_rubric": "novostroyki",
+  "slot_rubric_label": "новостройки",
+  "data_dir": "memory/blog/trend-radar/data/20261013T054041Z",
+  "viral_db": "memory/blog/trend-radar/data/20261013T054041Z/viral.sqlite",
   "sources_used": [
     "klyshin",
     "bankiru",
     "yuridicheskie-aspekty-nedvizhimosti",
-    "nedvizhimost"
+    "nedvizhimost",
+    "arenda-nedvizhimosti"
   ],
   "rubrics": {
     "novostroyki": {
       "label": "новостройки",
-      "angles": [
-        {
-          "headline_formula": "casus+число: «Какие ошибки чаще всего допускаются при сдаче коммерческой…»",
-          "first_line_hook": "Какие ошибки чаще всего допускаются при сдаче коммерческой недвижимости в аренду и как их избежать?",
-          "mechanism": "договор vs реальность",
-          "views": 653,
-          "read_through": 0.7335,
-          "viral_score": 5.4293,
-          "source_url": "https://dzen.ru/a/Zw5pftVFrQtV--_v",
-          "channel": "Инвестиции Вквадрате | Редевелопмент недвижимости"
-        },
-        {
-          "headline_formula": "casus+число: «Ипотека при разводе 2026: кто платит, кто живёт,…»",
-          "first_line_hook": "Ипотека при разводе 2026: кто платит, кто живёт, кто в минусе",
-          "mechanism": "деньги/ипотека на столе",
-          "views": 3873,
-          "read_through": 0.0596,
-          "viral_score": 5.2991,
-          "source_url": "https://dzen.ru/a/afwzq891e0pRDUew",
-          "channel": "Юридический дневник"
-        }
-      ],
-      "count": 2
+      "angles": [],
+      "count": 0
     },
     "vtorichka": {
       "label": "вторичка",
       "angles": [
         {
+          "headline_formula": "casus+число: «Почему растут цены на вторичном рынке недвижимости? И…»",
+          "first_line_hook": "Почему растут цены на вторичном рынке недвижимости? И когда это закончится? Логическое объяснение, «на пальцах»",
+          "mechanism": "almost lost перед ключами/деньгами",
+          "views": 27809,
+          "read_through": 0.5722,
+          "viral_score": 8.5891,
+          "source_url": "https://dzen.ru/a/X7Yh5UL5yh2hGcvB",
+          "channel": "Простая Недвижимость"
+        },
+        {
           "headline_formula": "casus+число: «С 1 октября вырастет спрос на вторичную недвижимость.…»",
           "first_line_hook": "С 1 октября вырастет спрос на вторичную недвижимость. Что будет с ценами на квартиры",
           "mechanism": "almost lost перед ключами/деньгами",
-          "views": 38614,
-          "read_through": 0.4392,
-          "viral_score": 8.5457,
+          "views": 38649,
+          "read_through": 0.4389,
+          "viral_score": 8.4852,
           "source_url": "https://dzen.ru/a/aqcTwkjUgT5jdBjX",
           "channel": "Life"
         },
@@ -55,60 +45,29 @@
           "headline_formula": "casus+число: «Вторичка Москвы снова растет 2-х значными темпами. Обвал…»",
           "first_line_hook": "Вторичка Москвы снова растет 2-х значными темпами. Обвал рынка снова отменяется",
           "mechanism": "almost lost перед ключами/деньгами",
-          "views": 3430,
-          "read_through": 0.4977,
-          "viral_score": 8.0734,
+          "views": 3464,
+          "read_through": 0.4983,
+          "viral_score": 8.0486,
           "source_url": "https://dzen.ru/a/aoAp6RlHcjMVnGqv",
           "channel": "Веселый Инвестор"
         },
         {
-          "headline_formula": "casus+число: «Как легально «кидают» при покупке загородного дома в…»",
-          "first_line_hook": "Как легально «кидают» при покупке загородного дома в России: реальная угроза для каждого покупателя!",
+          "headline_formula": "casus+число: «7 смертных грехов покупателя квартиры»",
+          "first_line_hook": "7 смертных грехов покупателя квартиры",
           "mechanism": "almost lost перед ключами/деньгами",
-          "views": 17158,
-          "read_through": 0.4092,
-          "viral_score": 7.4047,
-          "source_url": "https://dzen.ru/a/Zw9N_lUREDllN79D",
-          "channel": "Окулов PRO | Недвижимость с торгов"
-        },
-        {
-          "headline_formula": "casus+число: «Продажа недвижимости иностранцам в 2025: как не попасть…»",
-          "first_line_hook": "Продажа недвижимости иностранцам в 2025: как не попасть на штраф в 30% и провести сделку без ошибок.",
-          "mechanism": "almost lost перед ключами/деньгами",
-          "views": 357,
-          "read_through": 0.5882,
-          "viral_score": 5.3837,
-          "source_url": "https://dzen.ru/a/aDAzvTAsXitb1xjS",
-          "channel": "«Ваше Право» — простые ответы на сложные вопросы. Юридические лайфхаки."
-        },
-        {
-          "headline_formula": "casus+число: «Закон о маркетплейсах признали провальным: Минэк в панике…»",
-          "first_line_hook": "Закон о маркетплейсах признали провальным: Минэк в панике меняет правила- 5 срочных поправок, которые ударят по доходам …",
-          "mechanism": "almost lost перед ключами/деньгами",
-          "views": 1622,
-          "read_through": 0.18,
-          "viral_score": 5.3585,
-          "source_url": "https://dzen.ru/a/aeYog2hwjSQMxvCL",
-          "channel": "Юридический дневник"
+          "views": 162,
+          "read_through": 0.4444,
+          "viral_score": 3.4972,
+          "source_url": "https://dzen.ru/a/XLmtcugWMwCyk9aL",
+          "channel": "Алексей Клышин юрист по недвижимости"
         }
       ],
-      "count": 5
+      "count": 4
     },
     "arenda": {
       "label": "аренда жилья",
-      "angles": [
-        {
-          "headline_formula": "casus+число: «Как правильно сдавать квартиру в аренду: юридические аспекты…»",
-          "first_line_hook": "Как правильно сдавать квартиру в аренду: юридические аспекты и практические советы",
-          "mechanism": "договор vs реальность",
-          "views": 29,
-          "read_through": 0.5172,
-          "viral_score": 3.6714,
-          "source_url": "https://dzen.ru/a/Z98Ak0cB3gepTEXw",
-          "channel": "Недвижимость.ru"
-        }
-      ],
-      "count": 1
+      "angles": [],
+      "count": 0
     }
   },
   "policy": "MECHANICS_AND_ENERGY_ONLY — do not copy plots or body text"
