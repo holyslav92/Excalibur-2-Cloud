@@ -1,0 +1,39 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B61",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-04",
+  "model": "gpt-5.6-terra",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://www.kommersant.ru/doc/9002823",
+        "type": "news",
+        "note": "Коммерсантъ 02.10.2026 — Минфин предложил с 2027 складывать продажу жилья с зарплатой"
+      },
+      {
+        "url": "https://realty.rbc.ru/news/6abb6b14e34e8a792705e6e2",
+        "type": "news",
+        "note": "РБК Недвижимость 02.10.2026 — шкала 13–22% и пример +225 тысяч на другом объекте"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить квартиру в тюмени вторичка",
+    "p0_volume": 3416,
+    "rework_log": "налог с продажи квартиры 642 (55+11176) vs 58182 (225); final P0 вторичка Тюмень 3416"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["nk_rf_224", "nk_rf_210", "nk_rf_217_1"],
+    "errors": [],
+    "notes": "Ст. 224, 210, 217.1 НК РФ на КонсультантПлюс; банковские тарифы не заявляются"
+  },
+  "blockers": []
+}

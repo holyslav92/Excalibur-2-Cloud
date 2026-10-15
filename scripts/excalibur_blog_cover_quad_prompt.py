@@ -414,6 +414,13 @@ def build_prompt(
             "Dense RU editorial collage, WHITE #FFFFFF, BLACK #141821 Cyrillic ink, "
             "gold #dcc5a1 one accent only. Torn paper, gold tape/sticky, informative UI cards."
         )
+    # Owner lock: Wordstat query strips на обложке запрещены. Префикс стиля ещё
+    # содержит устаревшую фразу «1-3 Wordstat stickers» — она заставляет модель
+    # рисовать поисковые ленты (LESSON B12).
+    style_prefix = style_prefix.replace(
+        "1-3 Wordstat stickers (Тюмень). ",
+        "NO Wordstat query strips. ",
+    )
 
     quadrant_labels = ("Top-left", "Top-right", "Bottom-left", "Bottom-right")
     panel_lines: list[str] = []
@@ -446,12 +453,22 @@ def build_prompt(
             " ZERO Wordstat/search-keyword strips on canvas — FORBIDDEN forever; "
             "NO beige/gold query bars top-left; NO text on clothes/chest."
         )
+        cover_meme_ids = [
+            str(x).strip()
+            for x in ((manifest.get("meme_picks") or {}).get("cover") or [])
+            if str(x).strip()
+        ]
+        meme_line = (
+            "stickers " + "+".join(cover_meme_ids) + " corners only, not on hook/face/phone"
+            if cover_meme_ids
+            else "1-2 meme stickers"
+        )
         panel_lines.append(
             f"TL COVER TXT «{cover_hook_text}» bold Cyrillic black, {highlight_rule}.{sticky_lock} "
             f"Phone EXACT «{COVER_PHONE_CTA}» readable CTA sticker. "
-            f"Host i2i left ({BODY_LOCK}); {emotion_clause} sun flare; "
+            f"Host i2i ({BODY_LOCK}); {emotion_clause} sun flare; "
             f"{compact(cover_scene, COVER_SCENE_HINT_COMPACT)}; "
-            f"1-2 meme stickers; {BOARD_STATIONERY};{wordstat_line} #FFF; perfect Cyrillic"
+            f"{meme_line}; {BOARD_STATIONERY};{wordstat_line} #FFF; perfect Cyrillic"
         )
         inline_keys = [k for k in canvas_slots if k != "cover"]
         for label, key in zip(quadrant_labels[1:], inline_keys[:3]):
@@ -559,7 +576,9 @@ def build_solo_cover_prompt(
         f"Outfit INVENTED: {outfit}. Expression: {emotion}.\n"
         f"{compact(scene, COVER_SCENE_HINT_COMPACT)}. "
         "Close-up face+shoulders LEFT or center-left (~35% frame) — NOT full-bleed face crop, room for headline right. "
-        "Tiny thinking-cat meme sticker bottom-right corner ONLY — ≥80px clear margin from phone/headline. "
+        "Same face as the studio reference: short dark-brown hair, light stubble, oval face, 28. "
+        "Tiny stickers side_eye_chloe and polite_cat in far corners only — NOT a thinking striped cat, "
+        "≥80px clear of phone, headline and face. One visible hand, five fingers, other hand out of frame. "
         "ZERO Wordstat/search-keyword strips — never paint query bars; optional one yellow sticky from hook only. "
         "Sun flare, tape/pins aesthetic on board only, perfect Cyrillic, #FFF bright."
     )

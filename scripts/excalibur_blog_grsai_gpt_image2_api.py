@@ -55,7 +55,7 @@ DEFAULT_HOSTS = [
 DEFAULT_TIMEOUT_SECONDS = 600
 MIN_TIMEOUT_SECONDS = 240
 DEFAULT_POLL_INTERVAL_SECONDS = 3
-DEFAULT_POLL_MAX_SECONDS = 540
+DEFAULT_POLL_MAX_SECONDS = 900
 DEFAULT_MAX_RETRIES = 1
 DEFAULT_RETRY_WAIT_SECONDS = 5
 URL_TTL_SECONDS = 7200  # 2h — download result URL within this window
@@ -352,6 +352,10 @@ def http_json(
         raise GrsaiApiError(f"grsai HTTP {exc.code}: {snippet}") from exc
     except urllib.error.URLError as exc:
         raise GrsaiRetryable(f"grsai network error: {exc.reason}") from exc
+    except TimeoutError as exc:
+        # urlopen на длинном i2i иногда роняет голый TimeoutError, не URLError.
+        # Это не фатальная ошибка модели: следующий path/host должен получить шанс.
+        raise GrsaiHostFailed(f"grsai timeout: {exc}") from exc
 
     try:
         parsed = json.loads(body)
@@ -609,9 +613,11 @@ def generate_image(
     target_w, target_h = parse_size_wh(target_size)
     mode = "i2i" if ref_images else "t2i"
 
+    # Async первым: синхронный /generate на i2i часто висит до таймаута,
+    # а задача всё равно дорисовывается и отдаётся через poll.
     paths_to_try: list[tuple[str, str]] = [
-        ("api_generate_json", "json"),
         ("api_generate_async", "async"),
+        ("api_generate_json", "json"),
         ("images_generations", ""),
         ("draw_completions", ""),
     ]
