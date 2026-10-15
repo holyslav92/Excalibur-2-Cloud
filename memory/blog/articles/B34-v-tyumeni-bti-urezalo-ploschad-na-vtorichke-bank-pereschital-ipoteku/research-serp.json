@@ -1,0 +1,218 @@
+{
+  "agent": "excalibur-blog",
+  "date_context": {
+    "timezone": "Europe/Moscow",
+    "today_iso": "2026-10-05",
+    "today_ru": "05.10.2026",
+    "year": 2026,
+    "month": 10,
+    "month_name_ru": "октябрь",
+    "weekday_ru": "понедельник"
+  },
+  "topic": {
+    "topic_id": "B34",
+    "title": "В Тюмени БТИ урезало площадь на вторичке банк пересчитал ипотеку",
+    "h1": "В Тюмени БТИ урезало площадь на вторичке банк пересчитал ипотеку",
+    "slug": "v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku",
+    "primary_query": "В Тюмени БТИ урезало площадь на вторичке банк пересчитал ипотеку",
+    "priority": "P0"
+  },
+  "searches": [
+    {
+      "query_id": "primary_fresh",
+      "query": "В Тюмени БТИ урезало площадь на вторичке банк пересчитал ипотеку 2026",
+      "purpose": "актуальный SERP",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени за сутки до аванса пересчитали семейную ипотеку на вторичке ...",
+          "url": "https://dzen.ru/a/ar5p5M4BhR87M3aD",
+          "snippet": ""
+        },
+        {
+          "title": "19 дней до 1 октября: банк пересчитал семейную ипотеку — семья ...",
+          "url": "https://dzen.ru/a/aqUM_XOQWXLZm2sq",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : За сутки до аванса в 300 тысяч банк пересчитал семейной паре из Тюмени ипотеку на двушку за 5,4 миллиона — семья остановила сделку ..."
+        },
+        {
+          "title": "Ипотека в 2026 году: обзор программ и условий",
+          "url": "https://realty.yandex.ru/journal/post/ipoteka-v-2026-godu/",
+          "snippet": "В середине сентября 2026 года семья с двумя детьми в Тюмени остановила покупку трёшки в новостройке на востоке города."
+        },
+        {
+          "title": "Ипотеку одобрили, но обременение в ЕГРН сорвало регистрацию",
+          "url": "{{SITE_BASE}}/blog/ipoteka/ipoteku-odobrili-a-registraciyu-otmenili-stroka-v-egrn/",
+          "snippet": "В 2026 году ипотечный рынок ждут новые ограничения льготных госпрограмм. Рассказываем, какие варианты ипотеки в этих условиях предлагают банки клиентам сегодня."
+        },
+        {
+          "title": "Другая площадь в ЕГРН: банк не дает ипотеку",
+          "url": "https://sudzakon.ru/nesovpadenie-ploshhadi-v-egrn-i-otkaz-banka-v-ipoteke-ispravlyaem-kadastrovye-svedeniya/",
+          "snippet": "Читайте также: Бронь новостройки в Тюмени — за двое суток цена выросла на 380 тысяч Читайте также: В Тюмени застройщик сменил юрлицо — банк не открыл эскроу"
+        },
+        {
+          "title": "В Тюмени БТИ «съело» 4,2 кв.м ДДУ — в перерасчёте отказали",
+          "url": "https://dzen.ru/a/aq0bWd8hLg35pKQb",
+          "snippet": "В выписке ЕГРН другая площадь, банк стопорит ипотеку? Разберем причины, порядок исправления и тактику защиты прав. Обращайтесь за стратегией."
+        }
+      ],
+      "searched_at": "2026-10-05"
+    },
+    {
+      "query_id": "title_fresh",
+      "query": "В Тюмени БТИ урезало площадь на вторичке банк пересчитал ипотеку 2026",
+      "purpose": "SERP по человеческому title",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Другая площадь в ЕГРН: банк не дает ипотеку",
+          "url": "https://sudzakon.ru/nesovpadenie-ploshhadi-v-egrn-i-otkaz-banka-v-ipoteke-ispravlyaem-kadastrovye-svedeniya/",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени за сутки до аванса пересчитали семейную ипотеку на вторичке ...",
+          "url": "https://dzen.ru/a/ar5p5M4BhR87M3aD",
+          "snippet": "В выписке ЕГРН другая площадь, банк стопорит ипотеку? Разберем причины, порядок исправления и тактику защиты прав. Обращайтесь за стратегией."
+        },
+        {
+          "title": "19 дней до 1 октября: банк пересчитал семейную ипотеку — семья ...",
+          "url": "https://dzen.ru/a/aqUM_XOQWXLZm2sq",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : За сутки до аванса в 300 тысяч банк пересчитал семейной паре из Тюмени ипотеку на двушку за 5,4 миллиона — семья остановила сделку ..."
+        },
+        {
+          "title": "Уменьшение площади квартиры при покупке в ипотеку: что делать, если по ...",
+          "url": "https://100yuristov.com/q/511694/",
+          "snippet": "В середине сентября 2026 года семья с двумя детьми в Тюмени остановила покупку трёшки в новостройке на востоке города."
+        },
+        {
+          "title": "Причины ошибок в площади здания: БТИ, ЕГРН и как исправить",
+          "url": "https://smway.ru/prichiny-oshibok-v-ploschadi-zdaniya-bti-egrn-i-kak-ispravit/",
+          "snippet": "Разбираем, как поступить, если площадь купленной в ипотеку квартиры меньше указанной в кредитном договоре (54,1 кв.м) и ДДУ (52 кв.м), а по замерам БТИ — 52,9 кв.м с учётом лоджии."
+        },
+        {
+          "title": "Пересчет площади после перепланировки: внесение в ЕГРН",
+          "url": "https://mosoblreg.ru/pereschet-ploshchadi-posle-pereplanirovki-egrn/",
+          "snippet": "Разная площадь одного объекта в БТИ и в ЕГРН — это не ошибка сама по себе, а следствие двух несовпадающих методик подсчета."
+        }
+      ],
+      "searched_at": "2026-10-05"
+    },
+    {
+      "query_id": "official_docs",
+      "query": "В Тюмени БТИ урезало площадь на вторичке банк пересчитал ипотеку official docs 2026",
+      "purpose": "официальные docs",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "В Тюмени БТИ «съело» 4,2 кв.м ДДУ — в перерасчёте отказали",
+          "url": "https://dzen.ru/a/aq0bWd8hLg35pKQb",
+          "snippet": ""
+        },
+        {
+          "title": "19 дней до 1 октября: банк пересчитал семейную ипотеку — семья ...",
+          "url": "https://dzen.ru/a/aqUM_XOQWXLZm2sq",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени семья обнаружила в новостройке минус 4,2 кв. м: в ДДУ было 68,4, а в техпаспорте БТИ на выдаче ключей — 64,2."
+        },
+        {
+          "title": "Другая площадь в ЕГРН: банк не дает ипотеку",
+          "url": "https://sudzakon.ru/nesovpadenie-ploshhadi-v-egrn-i-otkaz-banka-v-ipoteke-ispravlyaem-kadastrovye-svedeniya/",
+          "snippet": "В середине сентября 2026 года семья с двумя детьми в Тюмени остановила покупку трёшки в новостройке на востоке города."
+        },
+        {
+          "title": "Продавец закрыл ипотеку, но залог сорвал сделку в Тюмени",
+          "url": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-prodavec-pokazal-spravku-o-zakrytii-ipoteki-bank-vse-esche-derzhal-zal/",
+          "snippet": "В выписке ЕГРН другая площадь, банк стопорит ипотеку? Разберем причины, порядок исправления и тактику защиты прав. Обращайтесь за стратегией."
+        },
+        {
+          "title": "Причины ошибок в площади здания: БТИ, ЕГРН и как исправить",
+          "url": "https://smway.ru/prichiny-oshibok-v-ploschadi-zdaniya-bti-egrn-i-kak-ispravit/",
+          "snippet": "Август 2026-го, обычная тюменская вторичка и обычная же ошибка восприятия. Справка о закрытом кредите в руках продавца читается как «квартира чистая»."
+        },
+        {
+          "title": "Уменьшение площади квартиры при покупке в ипотеку: что делать, если по ...",
+          "url": "https://100yuristov.com/q/511694/",
+          "snippet": "Разная площадь одного объекта в БТИ и в ЕГРН — это не ошибка сама по себе, а следствие двух несовпадающих методик подсчета."
+        }
+      ],
+      "searched_at": "2026-10-05"
+    },
+    {
+      "query_id": "github_evidence",
+      "query": "site:github.com В Тюмени БТИ урезало площадь на вторичке банк пересчитал ипотеку 2026",
+      "purpose": "GitHub evidence",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "unsupervised_topic_modeling/topics/ru/13/100/50/topics at ... - GitHub",
+          "url": "https://github.com/annontopicmodel/unsupervised_topic_modeling/blob/master/topics/ru/13/100/50/topics",
+          "snippet": ""
+        },
+        {
+          "title": "[Решение] EA app и Ubisoft connect #2419 - GitHub",
+          "url": "https://github.com/Flowseal/zapret-discord-youtube/issues/2419",
+          "snippet": "Contribute to annontopicmodel/unsupervised_topic_modeling development by creating an account on GitHub."
+        },
+        {
+          "title": "yandex_python_data_analyst_5_Pandas для анализа данных",
+          "url": "https://gist.github.com/dsibi/bbf6f3d445768fda730a81ea326bd04b",
+          "snippet": "Там тоже при заходе в игру к мультиплееру не подключает. Хочу добавить, что данный батник на данный момент работает только с EA app и в нем также не работает дискорд и ютуб."
+        },
+        {
+          "title": "Задача «Площадь прямоугольного треугольника» Условие Напишите программу ...",
+          "url": "https://gist.github.com/DanilaOak/22e0c02cd843e14acec80bc6e45a49d1",
+          "snippet": "Библиотека Pandas оказалась таким универсальным инструментом, что годится для исследования любых данных, которые вообще можно собрать в таблицу."
+        },
+        {
+          "title": "mlp/tex/bba598cb7af5c491427b0b8e8e0c8904.svg at master - GitHub",
+          "url": "https://github.com/filipecalasans/mlp/blob/master/tex/bba598cb7af5c491427b0b8e8e0c8904.svg?invert_in_darkmode&sanitize=true",
+          "snippet": "Задача «Площадь прямоугольного треугольника» Условие Напишите программу, которая считывает длины двух катетов в прямоугольном треугольнике и выводит его площадь."
+        },
+        {
+          "title": "inkos/assets/arch-pipeline.svg at master · Narcooo/inkos · GitHub",
+          "url": "https://github.com/Narcooo/inkos/blob/master/assets/arch-pipeline.svg",
+          "snippet": "Multilayer Perceptron Implementation in Python. Contribute to filipecalasans/mlp development by creating an account on GitHub."
+        }
+      ],
+      "searched_at": "2026-10-05"
+    },
+    {
+      "query_id": "community_experience",
+      "query": "В Тюмени БТИ урезало площадь на вторичке банк пересчитал ипотеку forum problems опыт 2026",
+      "purpose": "форумы и живые проблемы",
+      "result_count": 6,
+      "results": [
+        {
+          "title": "Другая площадь в ЕГРН: банк не дает ипотеку",
+          "url": "https://sudzakon.ru/nesovpadenie-ploshhadi-v-egrn-i-otkaz-banka-v-ipoteke-ispravlyaem-kadastrovye-svedeniya/",
+          "snippet": ""
+        },
+        {
+          "title": "В Тюмени за сутки до аванса пересчитали семейную ипотеку на вторичке ...",
+          "url": "https://dzen.ru/a/ar5p5M4BhR87M3aD",
+          "snippet": "В выписке ЕГРН другая площадь, банк стопорит ипотеку? Разберем причины, порядок исправления и тактику защиты прав. Обращайтесь за стратегией."
+        },
+        {
+          "title": "В Тюмени БТИ «съело» 4,2 кв.м ДДУ — в перерасчёте отказали",
+          "url": "https://dzen.ru/a/aq0bWd8hLg35pKQb",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : За сутки до аванса в 300 тысяч банк пересчитал семейной паре из Тюмени ипотеку на двушку за 5,4 миллиона — семья остановила сделку ..."
+        },
+        {
+          "title": "Причины ошибок в площади здания: БТИ, ЕГРН и как исправить",
+          "url": "https://smway.ru/prichiny-oshibok-v-ploschadi-zdaniya-bti-egrn-i-kak-ispravit/",
+          "snippet": "Статья автора «Советы от риэлтора | Святослав Шакин» в Дзене : В Тюмени семья обнаружила в новостройке минус 4,2 кв. м: в ДДУ было 68,4, а в техпаспорте БТИ на выдаче ключей — 64,2."
+        },
+        {
+          "title": "Фактическая площадь квартиры меньше или больше ДДУ: что делать",
+          "url": "https://pravoved.ru/question/5023339/",
+          "snippet": "Разная площадь одного объекта в БТИ и в ЕГРН — это не ошибка сама по себе, а следствие двух несовпадающих методик подсчета."
+        },
+        {
+          "title": "Уменьшение площади квартиры при покупке в ипотеку: что делать, если по ...",
+          "url": "https://100yuristov.com/q/511694/",
+          "snippet": "Проверьте методику расчёта — убедитесь, что площадь посчитана правильно (с учётом понижающих коэффициентов для балконов/лоджий). При несогласии — направьте письменную претензию."
+        }
+      ],
+      "searched_at": "2026-10-05"
+    }
+  ],
+  "errors": []
+}

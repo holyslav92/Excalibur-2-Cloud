@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#person",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "url": "{{SITE_BASE}}/rieltor-tyumen/",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "{{SITE_BASE}}/",
+        "{{SITE_BASE}}/rieltor-tyumen/",
+        "{{SITE_BASE}}/kontakty/",
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku/#article",
+      "url": "{{SITE_BASE}}/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku/",
+      "headline": "В Тюмени на вторичке акт БТИ снял 6 м² — ипотека сорвала ДКП",
+      "description": "Свежий акт БТИ насчитал в тюменской двушке 48 м² вместо 54 из объявления — ипотечная сделка на вторичке рассыпалась за сутки до нотариуса. Банк пересчитал лимит и попросил добрать взнос; ДКП не подписали, аванс не ушёл с карты.",
+      "datePublished": "2026-10-05",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#person"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "mainEntityOfPage": {
+        "@id": "{{SITE_BASE}}/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku/"
+      },
+      "inLanguage": "ru-RU"
+    }
+  ]
+}

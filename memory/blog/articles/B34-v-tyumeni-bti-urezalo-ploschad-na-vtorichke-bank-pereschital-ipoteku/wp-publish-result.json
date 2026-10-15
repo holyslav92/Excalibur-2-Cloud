@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku",
+  "topic_id": "B34",
+  "post_id": 11609,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1021382,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11609 slug=v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku\nOK categories=31,34,36\nOK yoast_social_image=1\nOK featured_image=11610\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11611 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku-inline-04.png\nOK inline_alt=11611\nOK inline_description=11611\nOK inline_image_upload=11612 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku-inline-01.png\nOK inline_alt=11612\nOK inline_description=11612\nOK inline_image_upload=11613 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku-inline-03.png\nOK inline_alt=11613\nOK inline_description=11613\nOK inline_image_upload=11614 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku-inline-05.png\nOK inline_alt=11614\nOK inline_description=11614\nOK inline_image_upload=11615 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku-inline-06.png\nOK inline_alt=11615\nOK inline_description=11615\nOK inline_image_upload=11616 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku-inline-07.png\nOK inline_alt=11616\nOK inline_description=11616\nOK inline_image_upload=11617 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku-inline-02.png\nOK inline_alt=11617\nOK inline_description=11617\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-bti-urezalo-ploschad-na-vtorichke-bank-pereschital-ipoteku/",
+    "errors": []
+  }
+}
