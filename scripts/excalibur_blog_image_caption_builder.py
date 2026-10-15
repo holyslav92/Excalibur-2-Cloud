@@ -347,7 +347,13 @@ def build_cover_alt(
     if article_has_tyumen(meta) and "тюмен" not in core.casefold():
         core = f"{core} в Тюмени"
     if len(core) < ALT_SEO_MIN:
-        core = f"{core}: что проверить в договоре и эскроу до подписи"
+        market = market_phrase(meta)
+        if market == "новостройке":
+            core = f"{core}: что проверить в договоре до подписи"
+        elif market == "аренде":
+            core = f"{core}: что проверить в договоре до передачи денег"
+        else:
+            core = f"{core}: что проверить в выписке до аванса"
     alt = clamp_seo_alt(core)
     # Safety: if still scene-like, fall back to title only.
     if is_prompt_like_alt(
@@ -374,6 +380,22 @@ def visual_type_label(visual_type: str, labels_map: dict[str, str]) -> str:
     return labels_map.get(key) or VISUAL_TYPE_FALLBACK_RU.get(key) or "Инфографика"
 
 
+def market_phrase(meta: dict[str, Any] | None) -> str:
+    """Подпись картинки следует рубрике слота, а не всегда «новостройке»."""
+    rubric = str((meta or {}).get("slot_rubric") or "").strip().lower()
+    return {
+        "vtorichka": "вторичке",
+        "novostroyki": "новостройке",
+        "arenda": "аренде",
+    }.get(rubric, "сделке")
+
+
+def public_visual_label(label_ru: str) -> str:
+    """Убрать производственные скобки вроде «без лица хоста» из подписи."""
+    text = re.sub(r"\s*\([^)]*\)", "", label_ru or "")
+    return normalize_text(text) or "Иллюстрация"
+
+
 def build_inline_alt(
     slot: dict[str, Any],
     *,
@@ -381,19 +403,20 @@ def build_inline_alt(
     meta: dict[str, Any] | None = None,
 ) -> str:
     visual_type = normalize_text(slot.get("visual_type"))
-    label_ru = visual_type_label(visual_type, labels_map)
+    label_ru = public_visual_label(visual_type_label(visual_type, labels_map))
     h2 = shorten_h2(normalize_text(slot.get("h2_anchor")), max_len=48)
     panel_labels = [normalize_text(x) for x in (slot.get("labels") or []) if normalize_text(x)]
+    market = market_phrase(meta)
 
     if panel_labels and visual_type not in {"realistic_photo", "cover_editorial_hero"}:
         facts = ", ".join(panel_labels[:3])
-        alt = f"{label_ru} по новостройке в Тюмени: {facts} — иллюстрация к разбору сделки."
+        alt = f"{label_ru} по {market} в Тюмени: {facts} — иллюстрация к разбору сделки."
     elif h2:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
         alt = f"{label_ru} к разделу «{h2}»{tyumen} — иллюстрация к кейсу о сделке."
     else:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
-        alt = f"{label_ru} по новостройке{tyumen} — иллюстрация к материалу."
+        alt = f"{label_ru} по {market}{tyumen} — иллюстрация к материалу."
     return clamp_seo_alt(alt)
 
 
