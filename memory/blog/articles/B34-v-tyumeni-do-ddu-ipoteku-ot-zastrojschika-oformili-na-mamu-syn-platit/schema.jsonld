@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit/#article",
+      "mainEntityOfPage": "{{SITE_BASE}}/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit/",
+      "url": "{{SITE_BASE}}/v-tyumeni-do-ddu-ipoteku-ot-zastrojschika-oformili-na-mamu-syn-platit/",
+      "headline": "В Тюмени остановили сделку: сын платит ипотеку, а в ДДУ — 0 доли",
+      "description": "В Тюмени покупательница уже готовилась к новостройке. Святослав Шакин заметил в бумагах деталь: деньги вносил один человек, а владельцем становился другой.",
+      "datePublished": "2026-10-04",
+      "dateModified": "2026-10-04",
+      "inLanguage": "ru",
+      "author": {
+        "@type": "Person",
+        "name": "Святослав Шакин",
+        "jobTitle": "Личный риэлтор в Тюмени",
+        "url": "{{SITE_BASE}}/rieltor-tyumen/",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "The Риэлтор",
+          "url": "{{SITE_BASE}}/"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Риэлтор",
+        "url": "{{SITE_BASE}}/"
+      }
+    }
+  ]
+}
