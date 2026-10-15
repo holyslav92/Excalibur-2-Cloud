@@ -101,6 +101,24 @@ def pick_identity_reference(topic_id: str = "", slug: str = "") -> dict[str, str
     return FACE_PRIMARY
 
 
+def face_i2i_pack_specs() -> tuple[dict[str, str | bool], ...]:
+    """Полный identity pack для cover i2i: studio + office + hoodie + greenhouse + immortal."""
+    return IDENTITY_REAL_FILES
+
+
+def resolve_face_i2i_pack_paths(*, root: Path | None = None) -> list[Path]:
+    """Полный identity pack для cover i2i — один ref = риск stock-лица."""
+    root = root or project_root()
+    paths: list[Path] = []
+    for spec in face_i2i_pack_specs():
+        path = root / IDENTITY_REAL_DIR / str(spec["file"])
+        if path.is_file() and path.stat().st_size > 1024:
+            paths.append(path)
+    if not paths:
+        paths.append(ensure_identity_reference(root))
+    return paths
+
+
 def resolve_identity_reference_path(
     topic_id: str = "",
     slug: str = "",
