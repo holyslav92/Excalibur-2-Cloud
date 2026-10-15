@@ -2,3 +2,4 @@ Pillow
 numpy
 paramiko
 pytesseract
+viraldzen @ git+https://github.com/Horosheff/ViralDzen.git

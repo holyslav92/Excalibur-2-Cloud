@@ -13,6 +13,11 @@ node_modules/
 .cursor/canvases/
 tmp/
 
+# ViralDzen local exports (не коммитить выгрузки)
+data/
+viraldzen/data/
+handoff.md
+
 # test runtime fixtures
 memory/blog/articles/_cta_gate_fixture/
 memory/blog/trend-radar/data/
