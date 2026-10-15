@@ -1,0 +1,38 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B30",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-19",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://dzen.ru/a/ap5WRsSWjwEsshy7",
+        "type": "channel",
+        "note": "Dzen holyslav SERP 2026-09-19 — newbuild DDU mismatch context (different plot: floor)"
+      },
+      {
+        "url": "https://kadgeoresurs.ru/blog/vsyo-ob-eksplikatsii-pomeshchenij-chto-eto-zachem-nuzhna/",
+        "type": "community",
+        "note": "Explication explainer accessed 2026-09-19"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Tenant Telegram"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "купить новостройку в тюмени",
+    "p0_volume": 920
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "entities_verified": ["214-ФЗ escrow framework"]
+  },
+  "notes": "Composite layout/explication mismatch casus; stop before escrow"
+}

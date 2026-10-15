@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-v-makete-kvartiry-byl-vtoroj-sanuzel-v-eksplikacii-ddu-ego-ne-okazalos/#blogposting",
+      "url": "{{SITE_BASE}}/v-tyumeni-v-makete-kvartiry-byl-vtoroj-sanuzel-v-eksplikacii-ddu-ego-ne-okazalos/",
+      "headline": "За 2 дня до ДДУ в новостройке Тюмени исчез второй санузел — сделку остановили",
+      "description": "Макет с двумя санузлами, в экспликации ДДУ один — семья остановила сделку за два дня до подписания, до эскроу.",
+      "datePublished": "2026-09-19",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-v-makete-kvartiry-byl-vtoroj-sanuzel-v-eksplikacii-ddu-ego-ne-okazalos/"
+      }
+    }
+  ]
+}
