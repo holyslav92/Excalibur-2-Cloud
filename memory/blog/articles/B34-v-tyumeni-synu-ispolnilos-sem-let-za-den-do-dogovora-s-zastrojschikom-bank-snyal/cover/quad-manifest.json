@@ -1,0 +1,253 @@
+{
+  "topic_id": "B34",
+  "canvas_file": "cover/canvas-quad-01.png",
+  "layout": "2x2",
+  "pipeline": "quad_canvas_2x_image_api_longform",
+  "inline_count": 7,
+  "canvases": [
+    {
+      "index": 1,
+      "canvas_file": "cover/canvas-quad-01.png",
+      "batch_file": "cover/quad-mcp-batch-01.json",
+      "prompt_file": "cover/quad-mcp-prompt-01.txt",
+      "result_file": "cover/quad-mcp-result-01.json",
+      "slots": [
+        "cover",
+        "inline_1",
+        "inline_2",
+        "inline_3"
+      ],
+      "has_cover": true
+    },
+    {
+      "index": 2,
+      "canvas_file": "cover/canvas-quad-02.png",
+      "batch_file": "cover/quad-mcp-batch-02.json",
+      "prompt_file": "cover/quad-mcp-prompt-02.txt",
+      "result_file": "cover/quad-mcp-result-02.json",
+      "slots": [
+        "inline_4",
+        "inline_5",
+        "inline_6",
+        "inline_7"
+      ],
+      "has_cover": false
+    }
+  ],
+  "style_preset": "the_rieltor_twilight_gold",
+  "style_file": "memory/cover/quad-style-the-rieltor.json",
+  "blog_hero": "memory/cover/blog-hero.json",
+  "inline_types_catalog": "memory/cover/inline-visual-types.json",
+  "cover_hook": "Сыну исполнилось 7 — ипотеку сняли вовремя",
+  "cover_hook_highlight": "ипотеку",
+  "cover_hook_contract": "shared/blog-cover-quad-canvas-contract.md",
+  "mcp_note": "PRIMARY: grsai grsai standard image model (GRSAI_API_KEY) — 2K 16:9, one job per canvas (2×). Cover agent invents cover_hook + scene_hint/alt before --write-batch. Host lock = blog-hero.json (navy blazer, not hoodie).",
+  "slots": {
+    "cover": {
+      "quadrant": "top_left",
+      "role": "cover_editorial_hero",
+      "alt": "Сыну исполнилось 7 за день до договора — семейную ипотеку сняли в Тюмени: что проверить в договоре и эскроу до подписи.",
+      "scene_hint": "Светлый офис продаж, ведущий слева крупно в белой футболке, руки вне кадра, без бумаг на груди.",
+      "meme_caption_ru": "",
+      "sticky": "День решал всё",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": false,
+      "cover_emotion": "шок, широко раскрытые глаза, слегка приоткрытый рот",
+      "meme_picks": [
+        "disappointed_black_guy",
+        "grumpy_cat"
+      ]
+    },
+    "inline_1": {
+      "quadrant": "top_right",
+      "h2_anchor": "Если день рождения рядом со сделкой",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Пустая светлая квартира, чистовая отделка, папка на подоконнике. Людей нет. Стикер side_eye_chloe.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Если день рождения рядом со сделкой» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Возраст: 7 лет",
+        "Дата договора",
+        "Возраст ребёнка"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "side_eye_chloe"
+      ]
+    },
+    "inline_2": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Если день рождения рядом со сделкой",
+      "visual_type": "process_flow",
+      "scene_hint": "Схема: день рождения → подготовка договора → дата договора → проверка банка. Без людей.",
+      "alt": "нумерованный процесс / таймлайн по новостройке в Тюмени: 10 процентов, 6 миллионов, Семейная ипотека — иллюстрация к разбору сделки.",
+      "labels": [
+        "10 процентов",
+        "6 миллионов",
+        "Семейная ипотека"
+      ],
+      "placement_group": "pair",
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_3": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Пятница, когда сыну исполнилось семь",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Крупный план договора с датой подписи, ручка и ключи. Людей нет.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Пятница, когда сыну исполнилось семь» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Платёж 35973",
+        "Платёж 64476",
+        "Разница 28503"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_4": {
+      "quadrant": "top_left",
+      "h2_anchor": "Что сказали в банке про дату договора",
+      "visual_type": "realistic_photo",
+      "scene_hint": "Уведомление «Семейная ипотека — не одобрено» и календарь. Без логотипов и людей.",
+      "alt": "реалистичный кадр (без лица хоста) к разделу «Что сказали в банке про дату договора» в Тюмени — иллюстрация к кейсу о сделке.",
+      "labels": [
+        "Эскроу не открыли",
+        "Деньги не перевели",
+        "Договор не завершён"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_5": {
+      "quadrant": "top_right",
+      "h2_anchor": "Какой платёж считали накануне",
+      "visual_type": "comparison_table",
+      "scene_hint": "Таблица: 6% на 30 лет — 35 973 ₽; 10% на 15 лет — 64 476 ₽. Без людей. Стикер success_kid.",
+      "alt": "сравнительная таблица с колонками по новостройке в Тюмени: Дети, Ставка, Возраст 7 лет — иллюстрация к разбору сделки.",
+      "labels": [
+        "Дети",
+        "Ставка",
+        "Возраст 7 лет"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "success_kid"
+      ]
+    },
+    "inline_6": {
+      "quadrant": "bottom_left",
+      "h2_anchor": "Почему с застройщиком не подписали",
+      "visual_type": "bar_timeline_chart",
+      "scene_hint": "Шкала: день рождения 7 лет → следующий день → подпись → ответ банка. Без людей.",
+      "alt": "график / шкала сроков по новостройке в Тюмени: Проверьте возраст, Сверьте ставку, Читайте договор — иллюстрация к разбору сделки.",
+      "labels": [
+        "Проверьте возраст",
+        "Сверьте ставку",
+        "Читайте договор"
+      ],
+      "meme_sticker": false,
+      "no_meme": true,
+      "no_cat": true,
+      "no_person": true,
+      "no_host_face": true
+    },
+    "inline_7": {
+      "quadrant": "bottom_right",
+      "h2_anchor": "Что проверить в одобрении до дня договора",
+      "visual_type": "structure_diagram",
+      "scene_hint": "Схема: дата договора → возраст ребёнка → меньше 7 или 7 и старше. Без людей. Стикер cheems.",
+      "alt": "схема устройства механизма по новостройке в Тюмени: День рождения, Дата договора, Правило 7 лет — иллюстрация к разбору сделки.",
+      "labels": [
+        "День рождения",
+        "Дата договора",
+        "Правило 7 лет"
+      ],
+      "meme_sticker": true,
+      "no_meme": false,
+      "no_cat": false,
+      "no_person": false,
+      "no_host_face": true,
+      "meme_picks": [
+        "cheems"
+      ]
+    }
+  },
+  "cover_keys_ru": [],
+  "wordstat_stickers": [
+    "семейная ипотека тюмень",
+    "новостройки тюмень"
+  ],
+  "cover_phone_cta": "+7 922 001 65 05",
+  "image_placement": {
+    "mode": "flexible_v2",
+    "not_one_per_h2": true,
+    "allow_pair_same_h2": true,
+    "realistic_count_target": "2-4"
+  },
+  "quad_canon": {
+    "meme_allowed_slots": [
+      "cover",
+      "inline_1",
+      "inline_5",
+      "inline_7"
+    ],
+    "no_meme_no_cat_slots": [
+      "inline_2",
+      "inline_3",
+      "inline_4",
+      "inline_6"
+    ],
+    "canvas_2_no_host_face": true,
+    "meme_inline_target": "2-3 of 7 inlines (pattern: 01, 05, 07)",
+    "image_placement_v2": "0_or_1_or_pair_per_h2_not_mandatory_one_each",
+    "realistic_inline_count": "2-4 of 7"
+  },
+  "cover_motifs": {
+    "composition": "крупное лицо слева, hook справа, телефон внизу справа, руки вне кадра",
+    "location": "светлый офис продаж новостройки без бумаг на груди",
+    "meme": "disappointed_black_guy и grumpy_cat",
+    "props": "размытый макет ЖК на дальнем фоне, без папки в руках",
+    "stickers": "grumpy_cat над телефоном, disappointed_black_guy внизу слева",
+    "joke": "сыну стукнуло семь за день до договора, и банк снял семейную ипотеку",
+    "outfit": "белая футболка без принтов",
+    "emotion": "шок, широко раскрытые глаза",
+    "pose_framing": "крупный план слева до ключиц, руки вне кадра",
+    "action": "смотрит на заголовок, не держит документы"
+  },
+  "cover_emotion": "шок, широко раскрытые глаза, слегка приоткрытый рот",
+  "meme_picks": {
+    "cover": [
+      "disappointed_black_guy",
+      "grumpy_cat"
+    ],
+    "inline_1": [
+      "side_eye_chloe"
+    ],
+    "inline_5": [
+      "success_kid"
+    ],
+    "inline_7": [
+      "cheems"
+    ]
+  }
+}
