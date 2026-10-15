@@ -2083,6 +2083,13 @@ def apply_ocr_false_positive_escape(
         checks, evidence
     )
     meme_partial = _meme_partial_signal_flake(checks, evidence)
+    # Близкий промах детектора «бумаги» на стикере/договоре, когда лицо, хук и телефон уже на месте.
+    paper_near_miss = {
+        "pixel_wordstat_not_on_host_chest": float(evidence.get("chest_wordstat_paper_frac") or 1) < 0.03,
+        "pixel_meme_not_occluded_by_wordstat": float(evidence.get("meme_guard_wordstat_paper_frac") or 1) < 0.05,
+        "pixel_wordstat_only_top_left": float(evidence.get("wordstat_right_forbidden_paper_frac") or 1) < 0.02,
+        "pixel_meme_clearance_80px": float(evidence.get("meme_clearance_wordstat_paper_frac") or 1) < 0.03,
+    }
 
     phone_ink = int(evidence.get("phone_zone_ink") or 0)
     phone_visual_ok = phone_ink >= 300 and (
@@ -2091,6 +2098,10 @@ def apply_ocr_false_positive_escape(
     flaky_keys = set(OCR_FLAKY_CHECK_KEYS)
     if identity_flaky:
         flaky_keys.add("pixel_identity_matches_studio")
+    if identity_flaky or checks.get("pixel_identity_matches_studio"):
+        for key, near in paper_near_miss.items():
+            if near:
+                flaky_keys.add(key)
     if phone_visual_ok:
         flaky_keys |= {"pixel_phone_readable", "pixel_phone_not_clipped"}
     if meme_partial:

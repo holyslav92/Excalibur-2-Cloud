@@ -1,0 +1,40 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-04",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://tyumen-info.ru/society/2026/09/10/40957.html",
+        "type": "regional_news",
+        "note": "10.09.2026 ГУС ТО: около 1,5 тыс. договоров и около 600 домов, эскроу по 186-ФЗ не обязателен"
+      },
+      {
+        "url": "https://tyumen-info.ru/society/2026/09/30/46763.html",
+        "type": "regional_news",
+        "note": "30.09.2026 объяснение механизма эскроу для частного дома"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "строительство домов в тюмени",
+    "p0_volume": 609,
+    "support_phrases": [
+      {"phrase": "строительство домов в тюмени", "volume": 734, "region": "11176"},
+      {"phrase": "счет эскроу", "volume": 723, "region": "55"},
+      {"phrase": "счет эскроу", "volume": 70692, "region": "225"}
+    ],
+    "rework_from": "жск 21 и допсоглашение к дду 1 отброшены",
+    "partial": []
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "entities": ["186-fz"],
+    "url": "http://kremlin.ru/acts/bank/50847"
+  }
+}
