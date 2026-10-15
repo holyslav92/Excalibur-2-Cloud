@@ -1,0 +1,44 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-11",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://ria.ru/20261001/uslugi-2121338307.html",
+        "type": "news",
+        "note": "Вторая индексация ЖКУ с 01.10.2026"
+      },
+      {
+        "url": "https://tmn.aif.ru/society/novye-rascenki-s-1-oktyabrya-2026-goda-vyrosli-tarify-zhkh-na-chem-sekonomit",
+        "type": "news",
+        "note": "Тюмень: индекс 17,2%, примеры тарифов 01.10.2026"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Тенантский канал — контекст покупателей новостроек"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "новостройки тюмень",
+    "p0_volume": 5670,
+    "partial": true,
+    "partial_reason": "wordstat_get_top_requests 400 Invalid query on 2026-10-11; volumes from Scout handoff dynamics 2025-10"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 3,
+    "entities_checked": ["government_index_3413-r", "214-fz", "vs_plenum_22"],
+    "errors": []
+  },
+  "casus_boundary": "composite_scout_scenario_not_verified_press",
+  "blockers": []
+}

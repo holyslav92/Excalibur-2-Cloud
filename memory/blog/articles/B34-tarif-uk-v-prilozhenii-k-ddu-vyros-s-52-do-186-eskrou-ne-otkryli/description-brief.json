@@ -1,0 +1,9 @@
+{
+  "topic_id": "B34",
+  "description": "Тариф всплыл не в ДДУ, а в приложении: 186 вместо 52. Святослав Шакин из Тюмени разбирает, почему после этого бронь на 150 тысяч уже не выглядит формальностью.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}
