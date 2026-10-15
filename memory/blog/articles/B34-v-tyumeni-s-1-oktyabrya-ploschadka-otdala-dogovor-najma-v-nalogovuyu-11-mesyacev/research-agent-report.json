@@ -1,0 +1,41 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-03",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://ura.news/news/1053132812",
+        "type": "regional_news",
+        "note": "URA.RU 02.10.2026 — ставки аренды однушек в Тюмени −4,2% за год"
+      },
+      {
+        "url": "https://www.dubna.ru/article/2026/10/v-rossii-nachali-vyvodit-iz-teni-arendu-zhilya",
+        "type": "news",
+        "note": "03.10.2026 перепечатка вирусного тезиса про регистрацию аренды"
+      },
+      {
+        "url": "https://pikabu.ru/story/s_1_oktyabrya_2026_goda_registrirovat_dogovoryi_nayma_kvartir_v_nekoy_novoy_gis_ne_nuzhno__zakona_net_sistemyi_net_14357009",
+        "type": "community",
+        "note": "разбор: ГИС Аренда не принята, 289-ФЗ не про частный найм"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "договор аренды квартиры",
+    "p0_volume": 1715,
+    "rework_log": "налог со сдачи квартиры 19 в Тюмени — слабо, casus не сменяли"
+  },
+  "official_source_audit": {
+    "status": "PASS",
+    "notes": "289-ФЗ publication.pravo.gov.ru; ст. 674 ГК consultant; ПП 766 через новость Гаранта. Тарифов банка нет."
+  },
+  "slot_rubric": "arenda",
+  "fact_correction": "Вирусный тезис «площадка сдала найм в ФНС» в статью как закон не переносить.",
+  "blockers": []
+}

@@ -105,6 +105,21 @@ class ImageCaptionBuilderTests(unittest.TestCase):
         prompt_like, _ = is_prompt_like_alt(alt, seo_length=True)
         self.assertFalse(prompt_like)
         self.assertIn("Сравнительная таблица", alt)
+        self.assertIn("по новостройке", alt)
+
+    def test_rent_inline_alt_not_newbuild(self) -> None:
+        slot = {
+            "visual_type": "comparison_table",
+            "h2_anchor": "Что включилось первого октября",
+            "labels": ["Площадки и партнёры", "Частный найм нет"],
+        }
+        alt = build_inline_alt(
+            slot,
+            labels_map={"comparison_table": "Сравнительная таблица"},
+            meta={"h1": "Найм в Тюмени", "slot_rubric": "arenda"},
+        )
+        self.assertIn("по аренде", alt)
+        self.assertNotIn("новострой", alt.casefold())
 
     def test_cover_caption_must_be_empty(self) -> None:
         ok, errors = cover_caption_must_be_empty("Подпись, которую Дзен покажет как текст")

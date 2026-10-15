@@ -85,6 +85,33 @@ class ScoutAntiDupeHardTests(unittest.TestCase):
         warnings = check_formula_spam(candidate, sources, root=ROOT)
         self.assertTrue(any(w.get("gate") == "formula_spam" for w in warnings), warnings)
 
+    def test_rent_tax_not_formula_spam_when_last_three_unknown(self) -> None:
+        candidate = (
+            "В Тюмени с 1 октября площадка отдала договор найма в налоговую — "
+            "11 месяцев не спасли"
+        )
+        self.assertEqual(extract_mechanism_signature(candidate), "rent_platform_tax")
+        sources = []
+        for i, title in enumerate(
+            (
+                "дарственная всплыла перед авансом",
+                "расписка на задаток банк отказал",
+                "перепланировка сняла одобрение на вторичке",
+            )
+        ):
+            sources.append(
+                {
+                    "topic_id": f"LIVE{i}",
+                    "slug": f"live-{i}",
+                    "title": title,
+                    "text": title,
+                    "source": "live_wp",
+                    "date": (self.today - timedelta(days=i)).isoformat(),
+                }
+            )
+        warnings = check_formula_spam(candidate, sources, root=ROOT)
+        self.assertEqual(warnings, [])
+
     def test_anti_dupe_hard_pass_distinct_mechanism(self) -> None:
         candidate = "Trade-in: застройщик не принял старую квартиру — бронь сняли"
         sources = [

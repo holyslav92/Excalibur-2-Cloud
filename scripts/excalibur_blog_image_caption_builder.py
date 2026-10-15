@@ -374,6 +374,16 @@ def visual_type_label(visual_type: str, labels_map: dict[str, str]) -> str:
     return labels_map.get(key) or VISUAL_TYPE_FALLBACK_RU.get(key) or "Инфографика"
 
 
+def rubric_topic_phrase(meta: dict[str, Any] | None) -> str:
+    """Фраза рубрики для alt: аренда и вторичка не подписываются как новостройка."""
+    rubric = str((meta or {}).get("slot_rubric") or "").strip().casefold()
+    if rubric == "arenda":
+        return "по аренде"
+    if rubric == "vtorichka":
+        return "по вторичке"
+    return "по новостройке"
+
+
 def build_inline_alt(
     slot: dict[str, Any],
     *,
@@ -384,16 +394,17 @@ def build_inline_alt(
     label_ru = visual_type_label(visual_type, labels_map)
     h2 = shorten_h2(normalize_text(slot.get("h2_anchor")), max_len=48)
     panel_labels = [normalize_text(x) for x in (slot.get("labels") or []) if normalize_text(x)]
+    topic = rubric_topic_phrase(meta)
 
     if panel_labels and visual_type not in {"realistic_photo", "cover_editorial_hero"}:
         facts = ", ".join(panel_labels[:3])
-        alt = f"{label_ru} по новостройке в Тюмени: {facts} — иллюстрация к разбору сделки."
+        alt = f"{label_ru} {topic} в Тюмени: {facts} — иллюстрация к разбору."
     elif h2:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
-        alt = f"{label_ru} к разделу «{h2}»{tyumen} — иллюстрация к кейсу о сделке."
+        alt = f"{label_ru} к разделу «{h2}»{tyumen} — иллюстрация к кейсу."
     else:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
-        alt = f"{label_ru} по новостройке{tyumen} — иллюстрация к материалу."
+        alt = f"{label_ru} {topic}{tyumen} — иллюстрация к материалу."
     return clamp_seo_alt(alt)
 
 
