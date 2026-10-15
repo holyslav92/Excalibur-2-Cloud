@@ -1,0 +1,74 @@
+{
+  "topic_id": "B60",
+  "phone": "+7 922 001 65 05",
+  "identity_reference": "face-studio-2026-06-23.jpg",
+  "cover_emotion": "напряжённое недоверие, приподнятая бровь, прямой взгляд, не улыбаться",
+  "scene_hint": "Bright high-key meeting room in an ordinary Tyumen resale apartment, large window, white table, medium waist-up framing with the same man from the identity reference on the right, wearing a sea-green linen shirt and light trousers, leaning toward the table and pointing at one word on a handwritten receipt while holding the sheet with his other hand, normal five-finger hands, tense skeptical expression, title area at upper left, phone area at lower right, small corner stickers only, no construction, no residential complex model",
+  "cover_motifs": {
+    "composition": "Герой справа по пояс, заголовок слева сверху, телефон внизу справа, мелкие стикеры по углам",
+    "location": "Светлая переговорная в обычной вторичке Тюмени, большое окно, белый стол, без макета ЖК",
+    "meme": "blinking_white_guy и polite_cat как мелкие угловые стикеры",
+    "outfit": "Льняная рубашка цвета морской волны, светлые брюки, без пиджака и чёрного блейзера",
+    "emotion": "Недоверие, приподнятая бровь, прямой взгляд",
+    "pose_framing": "Средний план справа, корпус повёрнут к столу, не бюст слева",
+    "action": "Указывает на слово в расписке, вторая рука держит лист, пальцы нормальные",
+    "prop_set": [
+      "одна расписка",
+      "ручка",
+      "пустой стакан воды"
+    ],
+    "sticker_set": [
+      "blinking_white_guy в верхнем левом углу",
+      "polite_cat в нижнем левом углу"
+    ],
+    "joke": "Слово в расписке оказалось сильнее отказа банка"
+  },
+  "slots": {
+    "cover": {
+      "scene_hint": "Bright high-key meeting room in an ordinary Tyumen resale apartment, large window, white table, medium waist-up framing with the same man from the identity reference on the right, wearing a sea-green linen shirt and light trousers, leaning toward the table and pointing at one word on a handwritten receipt while holding the sheet with his other hand, normal five-finger hands, tense skeptical expression, title area at upper left, phone area at lower right, small corner stickers only, no construction, no residential complex model",
+      "alt": "В переговорной Тюмени герой показывает на расписке слово, которое неожиданно меняет разговор с банком"
+    },
+    "inline_1": {
+      "visual_type": "realistic_photo",
+      "placement_group": "pair",
+      "scene_hint": "Bright realistic close-up of a white table with a handwritten receipt, black pen, blank water glass and neatly arranged supporting papers, no people, no readable logos, high-key daylight",
+      "alt": "Расписка на столе показывает, какие сведения стороны обычно фиксируют до обращения в банк"
+    },
+    "inline_2": {
+      "visual_type": "comparison_table",
+      "placement_group": "pair",
+      "scene_hint": "Clean informational comparison graphic on white paper showing two columns for a receipt and a verbal promise, with clear Russian labels, gold and black accents, realistic stationery, no people",
+      "alt": "Сравнение расписки и устной договорённости помогает увидеть разницу в доказательствах"
+    },
+    "inline_3": {
+      "visual_type": "realistic_photo",
+      "placement_group": "pair",
+      "scene_hint": "Bright realistic tabletop scene with a sealed bank envelope beside a receipt and a pen, neutral resale apartment meeting room background, no people, no logos, no construction imagery",
+      "alt": "Конверт банка рядом с распиской подчёркивает, какие документы могут повлиять на решение"
+    },
+    "inline_4": {
+      "visual_type": "process_flow",
+      "placement_group": "single",
+      "scene_hint": "Informational process flow on a white background showing four steps from agreement to signed receipt, document review and bank submission, Russian labels, gold and black arrows, no people",
+      "alt": "Пошаговая схема показывает, когда подготовить расписку и что проверить перед подачей"
+    },
+    "inline_5": {
+      "visual_type": "bar_timeline_chart",
+      "placement_group": "single",
+      "scene_hint": "Clear horizontal timeline graphic on white paper comparing the order of signing, payment and bank review, Russian labels and simple numeric markers, high-key gold and black editorial style",
+      "alt": "Таймлайн помогает сопоставить дату подписи, оплату и проверку документов банком"
+    },
+    "inline_6": {
+      "visual_type": "structure_diagram",
+      "placement_group": "single",
+      "scene_hint": "Educational structure diagram of a strong receipt with labeled blocks for parties, amount, purpose, date, signatures and transfer details, Russian labels, white background, no people",
+      "alt": "Схема расписки выделяет обязательные сведения, без которых документ теряет убедительность"
+    },
+    "inline_7": {
+      "visual_type": "labeled_checklist",
+      "placement_group": "single",
+      "scene_hint": "Useful checklist graphic on white paper for reviewing a receipt before signing, with six concise Russian labels, check marks, gold and black accents, pen at the edge, no people",
+      "alt": "Чек-лист перед подписью помогает проверить сумму, стороны, дату и назначение платежа"
+    }
+  }
+}

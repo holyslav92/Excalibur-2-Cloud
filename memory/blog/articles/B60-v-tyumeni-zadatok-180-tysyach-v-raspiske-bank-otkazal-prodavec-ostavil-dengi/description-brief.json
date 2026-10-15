@@ -1,0 +1,9 @@
+{
+  "topic_id": "B60",
+  "description": "Одно слово «задаток» в расписке оказалось сильнее отказа банка: 180 тысяч рублей покупателям в Тюмени не вернули.",
+  "rhythm": "klyshin_case_hook",
+  "geo": "Тюмень",
+  "not_equal_title": true,
+  "not_truncated_lead": true,
+  "verdict": "PASS"
+}

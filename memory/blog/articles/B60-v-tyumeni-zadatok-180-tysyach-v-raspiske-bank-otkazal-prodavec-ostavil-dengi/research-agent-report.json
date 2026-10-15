@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-10-03",
+  "topic_id": "B60",
+  "slot_rubric": "vtorichka",
+  "signal": "https://dzen.ru/a/ao0nwdfT2QW8coTZ",
+  "official_source_audit": {
+    "status": "PASS",
+    "entities": [
+      "gk_rf_380",
+      "gk_rf_381"
+    ],
+    "note": "Тарифы банков не утверждаются"
+  }
+}

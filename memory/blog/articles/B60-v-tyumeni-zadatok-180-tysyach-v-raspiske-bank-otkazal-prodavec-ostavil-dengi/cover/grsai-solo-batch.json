@@ -1,0 +1,18 @@
+{
+  "pipeline": "grsai_solo_cover",
+  "slot": "cover",
+  "output_canvas": "cover/cover.png",
+  "prefer_local_reference": true,
+  "local_reference": "/workspace/memory/cover/assets/identity-real/face-studio-2026-06-23.jpg",
+  "jobs": [
+    {
+      "slot": "cover",
+      "tool": "grsai-rest",
+      "mcp_args": {
+        "prompt": "Close-up cover photo, 16:9, high-key, warm off-white, not a collage grid.\nFACE LOCK: the man is a LARGE close-up, face height at least half the frame, left side, exact same person as the studio reference: 28 years old, dark short hair, full hairline, heavy dark stubble, no glasses, skeptical raised eyebrow, medium-slim. Pale sea-green shirt. Hands out of frame. No blue halo.\nHEADLINE on the right, one line, huge solid black Cyrillic, simple font: «Задаток в расписке не вернули». Spell Задаток with a visible Cyrillic letter З at the start. All letters black and complete. Do not use gold inside letters.\nPHONE bottom-right on a small white card, only these digits, large and complete: +7 922 001 65 05\nORANGE CAT: a bright orange Keyboard Cat sticker in the lower-right, clearly orange fur (not white, not grey), small, above the phone, not covering digits, no blue objects, no text on the cat.\nNo query bars, no receipt, no second person, no thinking cat, no glasses, no black jacket.",
+        "aspect_ratio": "16:9",
+        "resolution": "2K"
+      }
+    }
+  ]
+}
