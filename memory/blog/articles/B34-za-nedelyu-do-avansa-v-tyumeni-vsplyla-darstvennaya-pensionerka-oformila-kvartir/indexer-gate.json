@@ -1,0 +1,16 @@
+{
+  "agent": "excalibur-blog-indexer",
+  "status": "PASS",
+  "checked_at": "2026-09-29",
+  "topic_id": "B34",
+  "article_dir": "memory/blog/articles/B34-za-nedelyu-do-avansa-v-tyumeni-vsplyla-darstvennaya-pensionerka-oformila-kvartir",
+  "slug": "za-nedelyu-do-avansa-v-tyumeni-vsplyla-darstvennaya-pensionerka-oformila-kvartir",
+  "llms_artifacts": [
+    "memory/blog/llms.txt",
+    "memory/blog/llms-full.txt"
+  ],
+  "secret_scan": "PASS",
+  "has_site_base_placeholder": true,
+  "article_html_edited": false,
+  "errors": []
+}

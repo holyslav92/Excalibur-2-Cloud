@@ -1,0 +1,56 @@
+{
+  "agent": "excalibur-blog-research",
+  "topic_id": "B34",
+  "status": "PASS",
+  "verdict": "PASS",
+  "research_date": "2026-09-29",
+  "fresh_signal": {
+    "required": true,
+    "found": true,
+    "sources": [
+      {
+        "url": "https://72.ru/text/realty/2026/09/29/76665356/",
+        "type": "regional_news",
+        "note": "72.ru 29.09.2026 — рынок Тюмени, дедлайн семейной ипотеки (контекст срочности до аванса)"
+      },
+      {
+        "url": "https://newstyumen.ru/society/2026/09/24/98780.html",
+        "type": "regional_news",
+        "note": "newstyumen.ru 24.09.2026 — новые правила семейной ипотеки"
+      },
+      {
+        "url": "https://72.ru/text/realty/2026/09/04/76622643/",
+        "type": "regional_news",
+        "note": "72.ru 04.09.2026 — выписка ЕГРН не заменяет проверку цепочки переходов"
+      },
+      {
+        "url": "https://t.me/Tyumen_Rieltor",
+        "type": "community",
+        "note": "Канал тенанта"
+      }
+    ]
+  },
+  "wordstat": {
+    "regions": ["55", "11176", "225"],
+    "p0_phrase": "оформление квартиры на родственника",
+    "p0_volume_local": 21,
+    "p0_volume_ru_compare": 2058,
+    "buyer_spine": "купить квартиру в тюмени вторичка",
+    "buyer_spine_volume": 3413,
+    "rework_log": "weak «продажа квартиры после дарения» 3 → P0 оформление на родственника + Tyumen вторичка buyer spine"
+  },
+  "official_source_audit": {
+    "required": true,
+    "status": "PASS",
+    "verified_claims": 4,
+    "entities_checked": ["gk_rf", "pravo_gov_459_fz"],
+    "errors": []
+  },
+  "derouter": {
+    "role": "research",
+    "tier": "utility",
+    "model": "gpt-5.6-terra",
+    "stamp": "derouter-opus-stamp-research.json"
+  },
+  "blockers": []
+}
