@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_BASE}}/#organization",
+      "name": "The Риэлтор",
+      "url": "{{SITE_BASE}}/",
+      "logo": "{{SITE_BASE}}/wp-content/uploads/logo.png"
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin",
+      "name": "Святослав Шакин",
+      "jobTitle": "Личный риэлтор в Тюмени",
+      "worksFor": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "sameAs": [
+        "https://dzen.ru/holyslav",
+        "https://t.me/Tyumen_Rieltor",
+        "https://vk.ru/tymenrieltor",
+        "https://wa.me/79220016505"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "{{SITE_BASE}}/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie/#blogposting",
+      "headline": "На вторичке оценка срезала 900 тысяч — ипотеку остановили",
+      "description": "Чистая выписка ЕГРН и предварительное одобрение не спасли покупателя: банковская оценка оказалась на 900 тысяч ниже цены в ДКП, поэтому ипотеку приостановили до аванса.",
+      "datePublished": "2026-10-05",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@id": "{{SITE_BASE}}/rieltor-tyumen/#svyatoslav-shakin"
+      },
+      "publisher": {
+        "@id": "{{SITE_BASE}}/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{SITE_BASE}}/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie/"
+      },
+      "url": "{{SITE_BASE}}/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie/"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie",
+  "topic_id": "B34",
+  "post_id": 11622,
+  "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie/",
+  "publish_method": "sftp",
+  "cover_evidence": {
+    "path": "memory/blog/articles/B34-v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie/cover/cover.png",
+    "source": "existing_file",
+    "decode_verified": true,
+    "bytes": 1171167,
+    "detected_format": "png"
+  },
+  "raw_output": "OK post=11622 slug=v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie\nOK categories=31,34,36\nOK yoast_social_image=1\nOK featured_image=11623\nOK featured_alt=1\nOK featured_description=1\nOK schema_meta=1\nOK skip_theme_faq_meta=1\nOK skip_engagement_quiz_meta=1\nOK skip_side_stickers_meta=1\nOK inline_image_upload=11624 src=cover/inline-03.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie-inline-03.png\nOK inline_alt=11624\nOK inline_description=11624\nOK inline_image_upload=11625 src=cover/inline-02.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie-inline-02.png\nOK inline_alt=11625\nOK inline_description=11625\nOK inline_image_upload=11626 src=cover/inline-01.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie-inline-01.png\nOK inline_alt=11626\nOK inline_description=11626\nOK inline_image_upload=11627 src=cover/inline-04.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie-inline-04.png\nOK inline_alt=11627\nOK inline_description=11627\nOK inline_image_upload=11628 src=cover/inline-05.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie-inline-05.png\nOK inline_alt=11628\nOK inline_description=11628\nOK inline_image_upload=11629 src=cover/inline-06.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie-inline-06.png\nOK inline_alt=11629\nOK inline_description=11629\nOK inline_image_upload=11630 src=cover/inline-07.png url={{SITE_BASE}}/wp-content/uploads/2026/10/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie-inline-07.png\nOK inline_alt=11630\nOK inline_description=11630\npermalink={{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie/\n",
+  "media_check": {
+    "featured_ok": true,
+    "inline_ok": 7,
+    "expected_inline": 7,
+    "errors": []
+  },
+  "verdict": "pass",
+  "live_page": {
+    "gate": "live-page",
+    "status": "PASS",
+    "permalink": "{{SITE_BASE}}/blog/vtorichka-i-riski/v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie/",
+    "errors": []
+  }
+}

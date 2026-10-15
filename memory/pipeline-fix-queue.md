@@ -23,10 +23,11 @@ category: env
 - **2026-08-28 B12 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9250 ingest skipped; B12 lessons recorded without behavioral signals (cover fixer round1, sol trim, ddu_escrow cluster).
 - **2026-08-31 B15 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9368 ingest skipped; B15 lessons recorded without behavioral signals (cover budget OCR escape repeat, forged_spouse_consent cluster).
 - **2026-09-05 B23 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 9749 ingest skipped; B23 lesson recorded without behavioral signals (newbuild_apartments_instead_flat_ddu_tyumen cluster).
+- **2026-10-05 B34 content-learner:** same METRIKA CREDENTIALS BLOCKER; post 11622 ingest skipped; B34 lesson recorded without behavioral signals (secondary_bank_appraisal_below_dkp_price_tyumen cluster).
 
 ### Durable fix needed before next run
 - Добавить Yandex Metrika OAuth + counter id в Cloud Secrets.
-- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368) и B23 (post 9749) для post-publish behavioral baseline.
+- Повторить ingest после publish B06, B10 (post 9161), B11 (post 9230), B12 (post 9250), B15 (post 9368), B23 (post 9749) и B34 (post 11622) для post-publish behavioral baseline.
 
 ### Suggested files to inspect/change
 - `shared/yandex-metrika-contract.md`
@@ -1063,3 +1064,21 @@ checks_run:
 - `python3 -m py_compile scripts/excalibur_blog_image_caption_builder.py`
 - `python3 -m unittest tests.test_image_caption_builder`
 commit: cddd091
+
+## INC-20261005-1300-schema-derouter-output-root
+status: open
+run_date: 2026-10-05
+role: excalibur-blog-schema
+topic_id: B34
+article_dir: memory/blog/articles/B34-v-tyumeni-na-vtorichke-ocenka-na-900-tysyach-nizhe-dkp-bank-snyal-odobrenie
+severity: low
+category: contract
+
+### What went wrong
+- `excalibur_blog_derouter_opus_chat.py --output schema.jsonld --article-dir memory/blog/articles/B34-...` from repo root wrote `schema.jsonld` to project root, not under `article_dir` (stamp still landed in article dir).
+
+### How the agent recovered this run
+- Copied valid JSON-LD from `/workspace/schema.jsonld` into `memory/blog/articles/B34-.../schema.jsonld`, removed stray root file; `excalibur_blog_schema_gate.py` → PASS.
+
+### Durable fix needed before next run
+- Skill/agent prompt: `--output` must be repo-relative path under article dir (e.g. `memory/blog/articles/<dir>/schema.jsonld`) or resolve `--output` relative to `--article-dir` when basename only.

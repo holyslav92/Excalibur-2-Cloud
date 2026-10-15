@@ -1,0 +1,5 @@
+{
+  "reason": "quality_score_fail_after_repair",
+  "fallback_model": "gpt-6-astra",
+  "from_model": "claude-opus-5-5"
+}
