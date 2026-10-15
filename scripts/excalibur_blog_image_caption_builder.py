@@ -311,6 +311,26 @@ def outfit_phrase_from_motifs(motifs: dict[str, Any]) -> str:
     return ""
 
 
+def market_noun(meta: dict[str, Any] | None) -> str:
+    """Рубрика слота в alt: вторичка и аренда не получают слово «новостройка»."""
+    rubric = str((meta or {}).get("slot_rubric") or "").strip().casefold()
+    if rubric == "vtorichka":
+        return "вторичке"
+    if rubric == "arenda":
+        return "аренде"
+    return "новостройке"
+
+
+def cover_length_pad(meta: dict[str, Any] | None) -> str:
+    """Добивка короткого alt без чужой механики слота."""
+    rubric = str((meta or {}).get("slot_rubric") or "").strip().casefold()
+    if rubric == "vtorichka":
+        return "что сверить в двух выписках до перевода"
+    if rubric == "arenda":
+        return "что проверить в договоре до оплаты"
+    return "что проверить в договоре и эскроу до подписи"
+
+
 def article_has_tyumen(meta: dict[str, Any]) -> bool:
     blob = " ".join(
         str(meta.get(k) or "")
@@ -347,7 +367,7 @@ def build_cover_alt(
     if article_has_tyumen(meta) and "тюмен" not in core.casefold():
         core = f"{core} в Тюмени"
     if len(core) < ALT_SEO_MIN:
-        core = f"{core}: что проверить в договоре и эскроу до подписи"
+        core = f"{core}: {cover_length_pad(meta)}"
     alt = clamp_seo_alt(core)
     # Safety: if still scene-like, fall back to title only.
     if is_prompt_like_alt(
@@ -385,15 +405,20 @@ def build_inline_alt(
     h2 = shorten_h2(normalize_text(slot.get("h2_anchor")), max_len=48)
     panel_labels = [normalize_text(x) for x in (slot.get("labels") or []) if normalize_text(x)]
 
+    noun = market_noun(meta)
     if panel_labels and visual_type not in {"realistic_photo", "cover_editorial_hero"}:
         facts = ", ".join(panel_labels[:3])
-        alt = f"{label_ru} по новостройке в Тюмени: {facts} — иллюстрация к разбору сделки."
+        alt = f"{label_ru} по {noun} в Тюмени: {facts} — иллюстрация к разбору сделки."
+        hint = normalize_text(slot.get("scene_hint"))
+        if h2 and hint and scene_hint_overlap_ratio(alt, hint) >= 0.45:
+            tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
+            alt = f"{label_ru} к разделу «{h2}»{tyumen} — иллюстрация к кейсу о сделке."
     elif h2:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
         alt = f"{label_ru} к разделу «{h2}»{tyumen} — иллюстрация к кейсу о сделке."
     else:
         tyumen = " в Тюмени" if meta and article_has_tyumen(meta) else ""
-        alt = f"{label_ru} по новостройке{tyumen} — иллюстрация к материалу."
+        alt = f"{label_ru} по {noun}{tyumen} — иллюстрация к материалу."
     return clamp_seo_alt(alt)
 
 
